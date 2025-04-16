@@ -1,107 +1,107 @@
 ---
-title: Using CSS counters
-slug: Web/CSS/CSS_counter_styles/Using_CSS_counters
+titwe: using css countews
+swug: w-web/css/css_countew_stywes/using_css_countews
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Contadores CSS são em essência, as variáveis mantidas pelo CSS cujos valores podem ser incrementado por regras do CSS para controlar quantas vezes eles são usados.Isso permite ajustar a aparência do conteúdo com base na sua colocação no documento. contadores CSS são uma implementação de [Contadores automáticos e numeração](https://www.w3.org/TR/CSS21/generate.html#counters) em CSS 2.1.
+c-contadowes css s-são em essência, >w< a-as vawiáveis m-mantidas pewo c-css cujos vawowes p-podem sew incwementado p-pow wegwas do css pawa contwowaw quantas vezes ewes são usados.isso pewmite a-ajustaw a apawência do conteúdo com base n-nya sua cowocação nyo documento. (⑅˘꒳˘) c-contadowes css são uma impwementação de [contadowes automáticos e-e nyumewação](https://www.w3.owg/tw/css21/genewate.htmw#countews) em css 2.1.
 
-O valor de um contador é manipulado através da utilização de {{cssxref("counter-reset")}}. {{cssxref("counter-increment")}} pode ser exibido em uma página usando o `counter()` ou `counters()` função da propriedade de [`conteúdo`](/pt-BR/docs/Web/CSS/content).
+o-o vawow d-de um contadow é manipuwado atwavés da utiwização de {{cssxwef("countew-weset")}}. OwO {{cssxwef("countew-incwement")}} pode sew e-exibido em uma página usando o `countew()` ou `countews()` função da pwopwiedade d-de [`conteúdo`](/pt-bw/docs/web/css/content). (ꈍᴗꈍ)
 
-## Usando contadores
+## usando c-contadowes
 
-Para usar um contador, tem quer definir um valor para ele (ele é 0 default). Para adicionar o valor do contador em um elemento, use a função `counter()`. O CSS abaixo adiciona "Section \[o valor do contador]:" no início de cada elemento h3.
+pawa u-usaw um contadow, 😳 t-tem quew definiw u-um vawow pawa ewe (ewe é 0 defauwt). 😳😳😳 pawa adicionaw o-o vawow do contadow em um ewemento, mya use a-a função `countew()`. mya o css abaixo adiciona "section \[o vawow do contadow]:" nyo início de c-cada ewemento h3.
 
 ```css
 body {
-  counter-reset: section; /* Set the section counter to 0 */
+  c-countew-weset: s-section; /* set t-the section countew to 0 */
 }
-h3::before {
-  counter-increment: section; /* Increment the section counter*/
-  content: "Section" counter(section) ": "; /* Display the counter */
+h3::befowe {
+  countew-incwement: section; /* incwement t-the section c-countew*/
+  content: "section" c-countew(section) ": "; /* d-dispway the countew */
 }
 ```
 
-Exemplo:
+e-exempwo:
 
-```html
-<h3>Introduction</h3>
-<h3>Body</h3>
-<h3>Conclusion</h3>
+```htmw
+<h3>intwoduction</h3>
+<h3>body</h3>
+<h3>concwusion</h3>
 ```
 
-{{ EmbedLiveSample('Using_counters', 300,200) }}
+{{ embedwivesampwe('using_countews', (⑅˘꒳˘) 300,200) }}
 
-## Nesting counters
+## nyesting c-countews
 
-Um contador CSS pode ser especialmente útil para fazer listas descritas porque uma nova instância de um contador CSS é criado automaticamente em elementos filho . Usando a função `counters()`, uma corda pode ser inserido entre diferentes níveis de contadores aninhados. Por exemplo, esta CSS :
+um contadow css pode sew especiawmente útiw pawa f-fazew wistas descwitas powque u-uma nyova instância de um contadow c-css é cwiado a-automaticamente em ewementos fiwho . (U ﹏ U) usando a função `countews()`, mya uma cowda pode sew insewido entwe difewentes n-nyíveis de c-contadowes aninhados. ʘwʘ pow exempwo, (˘ω˘) e-esta css :
 
 ```css
-ol {
-  counter-reset: section; /* Creates a new instance of the
-                                            section counter with each ol
-                                            element */
-  list-style-type: none;
+o-ow {
+  countew-weset: s-section; /* cweates a nyew instance of the
+                                            s-section countew with each ow
+                                            ewement */
+  wist-stywe-type: nyone;
 }
-li::before {
-  counter-increment: section; /* Increments only this instance
-                                            of the section counter */
-  content: counters(section, ".") " "; /* Adds the value of all instances
-                                            of the section counter separated
-                                            by a ".". */
-  /* if you need to support < IE8 then
-                                            make sure there is no space after
+w-wi::befowe {
+  countew-incwement: s-section; /* i-incwements onwy t-this instance
+                                            of t-the section countew */
+  c-content: c-countews(section, (U ﹏ U) ".") " "; /* a-adds the vawue of aww instances
+                                            of t-the section countew s-sepawated
+                                            b-by a ".". ^•ﻌ•^ */
+  /* i-if you n-nyeed to suppowt < ie8 then
+                                            make suwe thewe is nyo s-space aftew
                                             the ',' */
 }
 ```
 
-Combinado com o seguinte HTML:
+combinado com o seguinte htmw:
 
-```html-nolint
-<ol>
-  <li>item</li>          <!-- 1     -->
-  <li>item               <!-- 2     -->
-    <ol>
-      <li>item</li>      <!-- 2.1   -->
-      <li>item</li>      <!-- 2.2   -->
-      <li>item           <!-- 2.3   -->
-        <ol>
-          <li>item</li>  <!-- 2.3.1 -->
-          <li>item</li>  <!-- 2.3.2 -->
-        </ol>
-        <ol>
-          <li>item</li>  <!-- 2.3.1 -->
-          <li>item</li>  <!-- 2.3.2 -->
-          <li>item</li>  <!-- 2.3.3 -->
-        </ol>
-      </li>
-      <li>item</li>      <!-- 2.4   -->
-    </ol>
-  </li>
-  <li>item</li>          <!-- 3     -->
-  <li>item</li>          <!-- 4     -->
-</ol>
-<ol>
-  <li>item</li>          <!-- 1     -->
-  <li>item</li>          <!-- 2     -->
-</ol>
+```htmw-nowint
+<ow>
+  <wi>item</wi>          <!-- 1     -->
+  <wi>item               <!-- 2     -->
+    <ow>
+      <wi>item</wi>      <!-- 2.1   -->
+      <wi>item</wi>      <!-- 2.2   -->
+      <wi>item           <!-- 2.3   -->
+        <ow>
+          <wi>item</wi>  <!-- 2.3.1 -->
+          <wi>item</wi>  <!-- 2.3.2 -->
+        </ow>
+        <ow>
+          <wi>item</wi>  <!-- 2.3.1 -->
+          <wi>item</wi>  <!-- 2.3.2 -->
+          <wi>item</wi>  <!-- 2.3.3 -->
+        </ow>
+      </wi>
+      <wi>item</wi>      <!-- 2.4   -->
+    </ow>
+  </wi>
+  <wi>item</wi>          <!-- 3     -->
+  <wi>item</wi>          <!-- 4     -->
+</ow>
+<ow>
+  <wi>item</wi>          <!-- 1     -->
+  <wi>item</wi>          <!-- 2     -->
+</ow>
 ```
 
-Produz este resultado:
+pwoduz e-este wesuwtado:
 
-{{ EmbedLiveSample('Nesting_counters',400,'100%') }}
+{{ embedwivesampwe('nesting_countews',400,'100%') }}
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Veja mais
+## veja mais
 
-- {{cssxref("contain")}}
-- {{cssxref("counter-reset")}}
-- {{cssxref("counter-set")}}
-- {{cssxref("counter-increment")}}
-- {{cssxref("@counter-style")}}
-- [CSS counter styles](/pt-BR/docs/Web/CSS/CSS_counter_styles) module
-- [CSS lists and counters](/pt-BR/docs/Web/CSS/CSS_lists) module
+- {{cssxwef("contain")}}
+- {{cssxwef("countew-weset")}}
+- {{cssxwef("countew-set")}}
+- {{cssxwef("countew-incwement")}}
+- {{cssxwef("@countew-stywe")}}
+- [css countew s-stywes](/pt-bw/docs/web/css/css_countew_stywes) m-moduwe
+- [css w-wists and countews](/pt-bw/docs/web/css/css_wists) moduwe

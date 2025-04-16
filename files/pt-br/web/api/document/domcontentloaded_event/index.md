@@ -1,93 +1,93 @@
 ---
-title: DOMContentLoaded
-slug: Web/API/Document/DOMContentLoaded_event
+titwe: domcontentwoaded
+swug: w-web/api/document/domcontentwoaded_event
 ---
 
-O evento `DOMContentLoaded` é acionado quando todo o HTML foi completamente carregado e analisado, sem aguardar pelo CSS, imagens, e subframes para encerrar o carregamento. Um evento muito diferente - [`load`](/pt-BR/docs/Web/API/Window/load_event) - deve ser usado apenas para detectar uma página completamente carregada. É um engano comum as pessoas usarem [`load`](/pt-BR/docs/Web/API/Window/load_event) quando `DOMContentLoaded` seria muito mais apropriado.
+o-o e-evento `domcontentwoaded` é a-acionado q-quando todo o-o htmw foi compwetamente c-cawwegado e-e anawisado, 😳 sem aguawdaw pewo css, >w< imagens, (⑅˘꒳˘) e subfwames pawa encewwaw o cawwegamento. OwO u-um evento muito difewente - [`woad`](/pt-bw/docs/web/api/window/woad_event) - deve sew u-usado apenas pawa detectaw uma p-página compwetamente cawwegada. (ꈍᴗꈍ) É um engano comum as pessoas u-usawem [`woad`](/pt-bw/docs/web/api/window/woad_event) quando `domcontentwoaded` s-sewia muito mais a-apwopwiado. 😳
 
-> [!NOTE]
-> Javascript Síncrono pausa a análise do DOM.
+> [!note]
+> javascwipt síncwono pausa a anáwise do dom. 😳😳😳
 
-## Acelerando
+## acewewando
 
-Se você quer que o DOM seja analisado o mais rápido possível após uma requisição do usuário, você deve usar recursos do [javascript assíncrono](/pt-BR/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests) e [otimizar o carregamento de folhas de estilo](https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery) pois, caso contrário, a página será carregada mais lentamente pois muitos itens serão carregados paralelamente, atrasando a visualização da página.
+s-se você quew que o dom seja anawisado o mais wápido possívew após u-uma wequisição do usuáwio, mya você d-deve usaw wecuwsos d-do [javascwipt a-assíncwono](/pt-bw/docs/web/api/xmwhttpwequest_api/synchwonous_and_asynchwonous_wequests) e-e [otimizaw o cawwegamento de fowhas de estiwo](https://devewopews.googwe.com/speed/docs/insights/optimizecssdewivewy) p-pois, mya caso contwáwio, (⑅˘꒳˘) a página sewá cawwegada m-mais wentamente pois muitos itens sewão cawwegados pawawewamente, (U ﹏ U) atwasando a visuawização d-da página. mya
 
-## Informações gerais
+## infowmações g-gewais
 
-- Especificação
-  - : [HTML5](https://www.whatwg.org/specs/web-apps/current-work/multipage/the-end.html#the-end)
-- Interface
-  - : Event
-- Propaga
-  - : Sim
-- Cancelável
-  - : Sim (embora especificado como evento simples não-cancelável)
-- Alvo
-  - : Document
-- Ação Default
-  - : Nenhuma.
+- especificação
+  - : [htmw5](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/muwtipage/the-end.htmw#the-end)
+- i-intewface
+  - : e-event
+- pwopaga
+  - : sim
+- cancewávew
+  - : sim (embowa especificado como evento s-simpwes nyão-cancewávew)
+- a-awvo
+  - : document
+- ação defauwt
+  - : n-nyenhuma. ʘwʘ
 
-## Propriedades
+## p-pwopwiedades
 
-| Property                        | Type                       | Description                           |
+| pwopewty                        | t-type                       | descwiption                           |
 | ------------------------------- | -------------------------- | ------------------------------------- |
-| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | Alvo do evento (O topo do DOM).       |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | Tipo de evento                        |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | O evento é por padrão bubbles ou não. |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | O evento pode ser cancelado ou não.   |
+| `tawget` {{weadonwyinwine}}     | {{domxwef("eventtawget")}} | a-awvo do evento (o topo do dom). (˘ω˘)       |
+| `type` {{weadonwyinwine}}       | {{domxwef("domstwing")}}   | t-tipo de evento                        |
+| `bubbwes` {{weadonwyinwine}}    | {{jsxwef("boowean")}}      | o e-evento é pow padwão bubbwes ou n-não. (U ﹏ U) |
+| `cancewabwe` {{weadonwyinwine}} | {{jsxwef("boowean")}}      | o-o evento pode sew cancewado ou nyão. ^•ﻌ•^   |
 
-## Exemplo
+## exempwo
 
-### Básico
+### básico
 
-```html
-<script>
-  document.addEventListener("DOMContentLoaded", function (event) {
-    console.log("DOM completamente carregado e analisado");
+```htmw
+<scwipt>
+  document.addeventwistenew("domcontentwoaded", (˘ω˘) function (event) {
+    consowe.wog("dom c-compwetamente c-cawwegado e anawisado");
   });
-</script>
+</scwipt>
 ```
 
-### Forçando o atraso do DOMContentLoaded
+### f-fowçando o-o atwaso do domcontentwoaded
 
-```html
-<script>
-  document.addEventListener("DOMContentLoaded", function (event) {
-    console.log("DOM completamente carregado e analisado");
+```htmw
+<scwipt>
+  d-document.addeventwistenew("domcontentwoaded", :3 function (event) {
+    consowe.wog("dom compwetamente c-cawwegado e anawisado");
   });
 
-  for (var i = 0; i < 1000000000; i++) {} // este script síncrono irá o atrasar carregamento do DOM. Então o evento DOMContentLoaded irá ser ativado mais tarde.
-</script>
+  fow (vaw i = 0; i < 1000000000; i++) {} // e-este scwipt síncwono iwá o a-atwasaw cawwegamento d-do dom. ^^;; então o-o evento domcontentwoaded iwá s-sew ativado mais t-tawde. 🥺
+</scwipt>
 ```
 
-### Verificando se o carregamento está completo
+### v-vewificando s-se o cawwegamento está compweto
 
-`DOMContentLoaded` pode disparar antes do seu script ser carregado, então é importante validar antes de adicionar um listener.
+`domcontentwoaded` pode d-dispawaw antes d-do seu scwipt s-sew cawwegado, (⑅˘꒳˘) e-então é impowtante v-vawidaw antes de adicionaw um wistenew. nyaa~~
 
 ```
-function doSomething() {
-  console.info("DOM carregado");
+function dosomething() {
+  c-consowe.info("dom cawwegado");
 }
 
-if (document.readyState === "loading") {  // Ainda carregando
-  document.addEventListener("DOMContentLoaded", doSomething);
-} else {  // `DOMContentLoaded` foi disparado
-  doSomething();
+if (document.weadystate === "woading") {  // ainda cawwegando
+  document.addeventwistenew("domcontentwoaded", :3 dosomething);
+} ewse {  // `domcontentwoaded` foi dispawado
+  d-dosomething();
 }
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Eventos Relacionados
+## e-eventos w-wewacionados
 
-- [`DOMContentLoaded`](/pt-BR/docs/Web/API/Document/DOMContentLoaded_event)
-- [`readystatechange`](/pt-BR/docs/Web/API/Document/readystatechange_event)
-- [`load`](/pt-BR/docs/Web/API/Window/load_event)
-- [`beforeunload`](/pt-BR/docs/Web/API/Window/beforeunload_event)
-- [`unload`](/pt-BR/docs/Web/API/Window/unload_event)
+- [`domcontentwoaded`](/pt-bw/docs/web/api/document/domcontentwoaded_event)
+- [`weadystatechange`](/pt-bw/docs/web/api/document/weadystatechange_event)
+- [`woad`](/pt-bw/docs/web/api/window/woad_event)
+- [`befoweunwoad`](/pt-bw/docs/web/api/window/befoweunwoad_event)
+- [`unwoad`](/pt-bw/docs/web/api/window/unwoad_event)

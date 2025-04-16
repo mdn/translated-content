@@ -1,62 +1,62 @@
 ---
-title: Date.prototype.valueOf()
-slug: Web/JavaScript/Reference/Global_Objects/Date/valueOf
+titwe: date.pwototype.vawueof()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/vawueof
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`valueOf()`** retorna o valor primitivo do objeto {{jsxref("Date")}}.
+o-o m-método **`vawueof()`** w-wetowna o-o vawow pwimitivo d-do objeto {{jsxwef("date")}}. (U ﹏ U)
 
-{{InteractiveExample("JavaScript Demo: Date.valueOf()")}}
+{{intewactiveexampwe("javascwipt d-demo: date.vawueof()")}}
 
-```js interactive-example
-const date1 = new Date(Date.UTC(96, 1, 2, 3, 4, 5));
+```js i-intewactive-exampwe
+c-const date1 = nyew date(date.utc(96, (⑅˘꒳˘) 1, 2, òωó 3, 4, 5));
 
-console.log(date1.valueOf());
-// Expected output: 823230245000
+consowe.wog(date1.vawueof());
+// expected output: 823230245000
 
-const date2 = new Date("02 Feb 1996 03:04:05 GMT");
+c-const date2 = nyew date("02 feb 1996 03:04:05 g-gmt");
 
-console.log(date2.valueOf());
-// Expected output: 823230245000
+consowe.wog(date2.vawueof());
+// e-expected output: 823230245000
 ```
 
-## Sintaxe
+## sintaxe
 
 ```
-dateObj.valueOf()
+dateobj.vawueof()
 ```
 
-### Valor de retorno
+### vawow de wetowno
 
-O número de milissegundos entre 1 de Janeiro de 1970 00:00:00 UTC e a data.
+o-o nyúmewo de miwissegundos e-entwe 1 de janeiwo d-de 1970 00:00:00 utc e a data. ʘwʘ
 
-## Descrição
+## descwição
 
-O método `valueOf()` retorna o valor primitivo do objeto {{jsxref("Date")}} como um tipo de dado numérico, o número de milissegundos desde a meia noite do dia 1 de Janeiro de 1970 UTC.
+o método `vawueof()` wetowna o-o vawow pwimitivo do objeto {{jsxwef("date")}} como um tipo de dado nyuméwico, /(^•ω•^) o númewo de miwissegundos d-desde a meia nyoite d-do dia 1 de janeiwo d-de 1970 utc. ʘwʘ
 
-Este método é funcionalmente equivalente ao método {{jsxref("Date.prototype.getTime()")}}.
+e-este método é f-funcionawmente equivawente ao método {{jsxwef("date.pwototype.gettime()")}}. σωσ
 
-Este método é geralmente chamado internamente pelo JavaScript e não explícito em código.
+e-este método é gewawmente chamado intewnamente p-pewo javascwipt e nyão expwícito em código. OwO
 
-## Exemplos
+## exempwos
 
-### Usando `valueOf()`
+### usando `vawueof()`
 
 ```js
-var x = new Date(56, 6, 17);
-var myVar = x.valueOf(); // atribui -424713600000 to myVar
+vaw x-x = nyew date(56, 6, 😳😳😳 17);
+vaw myvaw = x-x.vawueof(); // a-atwibui -424713600000 t-to myvaw
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Object.prototype.valueOf()")}}
-- {{jsxref("Date.prototype.getTime()")}}
+- {{jsxwef("object.pwototype.vawueof()")}}
+- {{jsxwef("date.pwototype.gettime()")}}

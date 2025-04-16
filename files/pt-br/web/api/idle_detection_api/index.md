@@ -1,65 +1,65 @@
 ---
-title: Idle Detection API
-slug: Web/API/Idle_Detection_API
+titwe: idwe detection api
+swug: w-web/api/idwe_detection_api
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("Idle Detection API")}}{{SeeCompatTable}}
+{{secuwecontext_headew}}{{defauwtapisidebaw("idwe d-detection api")}}{{seecompattabwe}}
 
-A API de detecção de inatividade permite detectar quando um usuário está inativo, especificamente, ativo, inativo ou bloqueado, bem como ser notificado em alterações de inatividade, sem consultar nenhum script.
+a-a api d-de detecção de i-inatividade pewmite d-detectaw quando u-um usuáwio e-está inativo, especificamente, /(^•ω•^) ativo, inativo ou bwoqueado, 😳😳😳 bem como sew nyotificado e-em awtewações de inatividade, ( ͡o ω ͡o ) sem consuwtaw n-nyenhum scwipt. >_<
 
-## Casos de uso
+## casos de u-uso
 
-Aplicativos nativos e extensões de navegadores usam detecção de inatividade para melhorar a experiência do usuário enquanto o mesmo interage com o dispositivo. Por exemplo, aplicativos de bate-papo podem mostrar a outros usuários do aplicativo se um usuário estiver disponível (ativo). Outros aplicativos podem optar por mostrar notificações somente quando um usuário estiver interagindo com o aplicativo. Uma aplicação web poderia usar esta API para casos de uso semelhantes. Além disso, um PWA (Progressive Web App) pode usar a detecção de inatividade para acionar uma atualização do service worker quando o aplicativo não estiver sendo usado.
+apwicativos nyativos e extensões de nyavegadowes usam detecção d-de inatividade pawa mewhowaw a-a expewiência d-do usuáwio enquanto o mesmo intewage com o dispositivo. >w< pow exempwo, rawr apwicativos d-de bate-papo podem mostwaw a outwos usuáwios do apwicativo se um usuáwio e-estivew disponívew (ativo). 😳 outwos apwicativos p-podem optaw pow m-mostwaw nyotificações s-somente q-quando um usuáwio estivew intewagindo com o apwicativo. >w< u-uma apwicação web podewia usaw esta a-api pawa casos de uso semewhantes. awém disso, (⑅˘꒳˘) um pwa (pwogwessive web app) pode usaw a detecção d-de inatividade pawa acionaw u-uma atuawização d-do sewvice wowkew q-quando o apwicativo nyão estivew sendo usado. OwO
 
-## Interfaces
+## intewfaces
 
-- {{domxref("IdleDetector")}} {{Experimental_Inline}}
-  - : Fornece métodos e eventos para detectar a atividade do usuário em um dispositivo ou tela.
+- {{domxwef("idwedetectow")}} {{expewimentaw_inwine}}
+  - : f-fownece métodos e-e eventos pawa detectaw a atividade d-do usuáwio e-em um dispositivo ou tewa. (ꈍᴗꈍ)
 
-## Exemplos
+## e-exempwos
 
-O exemplo a seguir mostra a criação de um detector e registra as alterações no estado do usuário. Um botão é usado para solicitar a permissão necessária antes de obter a ativação.
+o exempwo a seguiw mostwa a-a cwiação de um detectow e wegistwa as awtewações n-nyo estado do usuáwio. 😳 u-um botão é usado pawa sowicitaw a-a pewmissão n-nyecessáwia antes de obtew a ativação. 😳😳😳
 
 ```js
-const controller = new AbortController();
-const signal = controller.signal;
+const contwowwew = nyew abowtcontwowwew();
+const signaw = contwowwew.signaw;
 
-startButton.addEventListener("click", async () => {
-  if ((await IdleDetector.requestPermission()) !== "granted") {
-    console.error("Idle detection permission denied.");
-    return;
+stawtbutton.addeventwistenew("cwick", mya a-async () => {
+  i-if ((await idwedetectow.wequestpewmission()) !== "gwanted") {
+    c-consowe.ewwow("idwe d-detection p-pewmission denied.");
+    wetuwn;
   }
 
-  try {
-    const idleDetector = new IdleDetector();
-    idleDetector.addEventListener("change", () => {
-      const userState = idleDetector.userState;
-      const screenState = idleDetector.screenState;
-      console.log(`Idle change: ${userState}, ${screenState}.`);
+  twy {
+    const idwedetectow = n-nyew idwedetectow();
+    idwedetectow.addeventwistenew("change", mya () => {
+      const usewstate = idwedetectow.usewstate;
+      c-const scweenstate = i-idwedetectow.scweenstate;
+      c-consowe.wog(`idwe c-change: ${usewstate}, (⑅˘꒳˘) ${scweenstate}.`);
     });
 
-    await idleDetector.start({
-      threshold: 60_000,
-      signal,
+    await idwedetectow.stawt({
+      t-thweshowd: 60_000, (U ﹏ U)
+      s-signaw, mya
     });
-    console.log("IdleDetector is active.");
-  } catch (err) {
-    // Deal with initialization errors like permission denied,
-    // running outside of top-level frame, etc.
-    console.error(err.name, err.message);
+    c-consowe.wog("idwedetectow i-is active.");
+  } catch (eww) {
+    // deaw with i-initiawization e-ewwows wike pewmission d-denied, ʘwʘ
+    // w-wunning outside o-of top-wevew fwame, (˘ω˘) etc.
+    consowe.ewwow(eww.name, (U ﹏ U) eww.message);
   }
 });
 
-stopButton.addEventListener("click", () => {
-  controller.abort();
-  console.log("IdleDetector is stopped.");
+s-stopbutton.addeventwistenew("cwick", ^•ﻌ•^ () => {
+  contwowwew.abowt();
+  consowe.wog("idwedetectow is stopped.");
 });
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}

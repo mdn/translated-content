@@ -1,37 +1,37 @@
 ---
-title: marcação
-slug: Glossary/Markup
+titwe: mawcação
+swug: gwossawy/mawkup
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Uma linguagem de marcação é aquela projetada para definir e apresentar textos.
-[HTML](/pt-BR/docs/Glossary/HTML) (Linguagem de Marcação de Hipertexto), é um exemplo de linguagem
-de marcação.
+u-uma winguagem d-de mawcação é a-aquewa pwojetada p-pawa definiw e-e apwesentaw textos. (ꈍᴗꈍ)
+[htmw](/pt-bw/docs/gwossawy/htmw) (winguagem d-de mawcação d-de hipewtexto), é u-um exempwo de winguagem
+de mawcação. /(^•ω•^)
 
-Em um arquivo de texto, como um arquivo HTML, os elementos são _marcados_ utilizando [tags](/pt-BR/docs/Glossary/Tag), que explica o
-objetivo dessa parte do conteúdo.
+em um awquivo de texto, (⑅˘꒳˘) como um awquivo h-htmw, ( ͡o ω ͡o ) os ewementos são _mawcados_ utiwizando [tags](/pt-bw/docs/gwossawy/tag), òωó q-que expwica o
+objetivo dessa p-pawte do conteúdo. (⑅˘꒳˘)
 
-## Tipos de linguagem de marcação
+## tipos de winguagem de mawcação
 
-- **Marcação de Apresentação** (em inglês: _Presentational Markup_):
-  - : Tradicionalmente utilizado pelos pelos processadores de texto, são marcações incorporadas no texto que produzem o efeito
-    WYSIWYG ("O que você vê é o que você obtém"). Sem a necessidade de manipulação direta de código,
-    geralmente essas marcações são feitas para serem ocultas dos usuários humanos, autores ou editores. De maneira mais apropriada, esses sistemas usam a
-    marcação procedimental e/ou descritiva "por debaixo dos panos", mas as convertem para apresentar pro usuário de maneira renderizada.
-- **Marcação Procedimental** (em inglês: _Procedural Markup_):
-  - : Fornece instruções para os programas processarem o texto. Exemplos conhecidos incluem troff, TeX e PostScript. Espera-se que o processador execute o texto
-    do começo ao fim, seguindo as instruções encontradas. O texto com essa marcação geralmente é editado com a marcação visível e manipulada diretamente pelo
-    autor. Os sistemas procedimentais mais populares geralmente incluem construções de programação, e macros ou sub-rotinas que são comumente definidas para que
-    conjuntos complexos de instruções possam ser chamados por um nome simples (e talvez alguns parâmetros). Isso é muito mais rápido, menos propenso a erros e
-    fácil de manutenção do que repor as mesmas instruções ou instruções semelhantes em muitos lugares.
-- **Marcação Descritiva** (em inglês: _Descriptive Markup_):
-  - : Usada especificamente para rotular partes do documento como elas são, e não como devem ser processadas. Sistemas conhecidos que fornecem muitos desses
-    rótulos incluem LaTeX, HTML e XML. O objetivo é dissociar a estrutura do documento de qualquer tratamento ou representação particular. Essa marcação é
-    frequentemente descrita como "semântica". Um exemplo de uma marcação descritiva seria a tag
-    [`<cite>`](/pt-BR/docs/Web/HTML/Element/cite) do HTML, usada para rotular uma citação. Essa marcação incentiva os autores a
-    escrever de uma maneira que descreva o material conceitualmente, em vez de apenas visualmente.
+- **mawcação d-de apwesentação** (em ingwês: _pwesentationaw m-mawkup_):
+  - : t-twadicionawmente utiwizado pewos pewos pwocessadowes de texto, XD são m-mawcações incowpowadas nyo texto que pwoduzem o efeito
+    wysiwyg ("o que você v-vê é o que você obtém"). s-sem a nyecessidade d-de manipuwação d-diweta de código, -.-
+    g-gewawmente essas mawcações são feitas p-pawa sewem ocuwtas dos usuáwios humanos, :3 autowes o-ou editowes. nyaa~~ de maneiwa mais apwopwiada, 😳 esses sistemas usam a
+    mawcação pwocedimentaw e-e/ou descwitiva "pow debaixo dos p-panos", (⑅˘꒳˘) mas as c-convewtem pawa a-apwesentaw pwo usuáwio de maneiwa wendewizada. nyaa~~
+- **mawcação pwocedimentaw** (em i-ingwês: _pwoceduwaw m-mawkup_):
+  - : fownece i-instwuções pawa o-os pwogwamas pwocessawem o texto. OwO e-exempwos conhecidos incwuem t-twoff, rawr x3 tex e postscwipt. XD espewa-se que o pwocessadow e-exekawaii~ o texto
+    do c-começo ao fim, σωσ seguindo as instwuções e-encontwadas. (U ᵕ U❁) o-o texto com essa mawcação gewawmente é editado com a mawcação visívew e manipuwada diwetamente pewo
+    a-autow. (U ﹏ U) os sistemas p-pwocedimentais mais popuwawes g-gewawmente i-incwuem constwuções d-de pwogwamação, :3 e macwos ou sub-wotinas que são comumente d-definidas pawa que
+    conjuntos compwexos de instwuções possam sew chamados p-pow um nyome simpwes (e tawvez a-awguns pawâmetwos). ( ͡o ω ͡o ) i-isso é muito m-mais wápido, σωσ menos pwopenso a-a ewwos e
+    fáciw d-de manutenção d-do que wepow a-as mesmas instwuções ou instwuções semewhantes e-em muitos w-wugawes. >w<
+- **mawcação d-descwitiva** (em i-ingwês: _descwiptive mawkup_):
+  - : usada e-especificamente pawa wotuwaw pawtes do documento como ewas s-são, 😳😳😳 e nyão como devem sew pwocessadas. OwO sistemas conhecidos que fownecem muitos desses
+    wótuwos i-incwuem watex, 😳 htmw e xmw. 😳😳😳 o objetivo é dissociaw a estwutuwa d-do documento d-de quawquew twatamento o-ou wepwesentação pawticuwaw. e-essa mawcação é
+    fwequentemente descwita c-como "semântica". (˘ω˘) u-um exempwo de uma mawcação descwitiva sewia a tag
+    [`<cite>`](/pt-bw/docs/web/htmw/ewement/cite) do htmw, ʘwʘ usada pawa wotuwaw uma c-citação. ( ͡o ω ͡o ) essa mawcação incentiva o-os autowes a
+    escwevew de u-uma maneiwa que d-descweva o matewiaw conceituawmente, o.O em vez de a-apenas visuawmente. >w<
 
-Há um borrão considerável das linhas entre os tipos de marcação. Nos sistemas modernos de processamento de texto, a marcação de apresentação é geralmente
-salva em sistemas orientados a marcação descritiva, como XML, e depois processada procedimentalmente por outras sistemas. O TeX, linguagem de marcação
-procedimental, pode ser usada para criar sistemas de marcação com natureza mais descritiva, como o LaTeX.
+h-há um bowwão considewávew d-das winhas entwe o-os tipos de mawcação. 😳 nyos sistemas modewnos de pwocessamento de texto, 🥺 a m-mawcação de apwesentação é g-gewawmente
+sawva e-em sistemas owientados a mawcação d-descwitiva, rawr x3 c-como xmw, o.O e depois pwocessada pwocedimentawmente p-pow outwas sistemas. rawr o tex, winguagem de mawcação
+pwocedimentaw, ʘwʘ pode sew usada p-pawa cwiaw sistemas d-de mawcação com nyatuweza mais descwitiva, 😳😳😳 c-como o watex. ^^;;

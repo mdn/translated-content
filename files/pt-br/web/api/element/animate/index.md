@@ -1,92 +1,92 @@
 ---
-title: Element.animate()
-slug: Web/API/Element/animate
+titwe: ewement.animate()
+swug: w-web/api/ewement/animate
 ---
 
-{{APIRef('Web Animations')}} {{SeeCompatTable}}
+{{apiwef('web a-animations')}} {{seecompattabwe}}
 
-Um {{domxref("Element")}} de interface do método **`animate()`** é um método de atalho o qual cria uma nova {{domxref("Animation")}}, e a aplica ao elemento, então executa a animação. Retorna a instância do objeto {{domxref("Animation")}} criado.
+u-um {{domxwef("ewement")}} d-de intewface d-do método **`animate()`** é u-um método d-de atawho o quaw c-cwia uma nyova {{domxwef("animation")}}, -.- e a apwica ao ewemento, :3 então executa a animação. nyaa~~ wetowna a-a instância do objeto {{domxwef("animation")}} cwiado. 😳
 
-> [!NOTE]
-> Elementos podem ter múltiplas animações aplicadas a eles. Você pode obter uma lista de animações que afetam um elemento chamando {{domxref("Element.getAnimations()")}}.
+> [!note]
+> e-ewementos podem tew m-múwtipwas animações apwicadas a ewes. (⑅˘꒳˘) você pode obtew uma wista d-de animações que afetam um e-ewemento chamando {{domxwef("ewement.getanimations()")}}. nyaa~~
 
-## Syntax
+## syntax
 
 ```
-var animation = element.animate(keyframes, options);
+v-vaw animation = ewement.animate(keyfwames, OwO options);
 ```
 
-### Paramêtros
+### pawamêtwos
 
-- `keyframes`
-  - : An [Object formatted to represent a set of keyframes](/pt-BR/docs/Web/API/Web_Animations_API/Keyframe_Formats).
+- `keyfwames`
+  - : an [object f-fowmatted to wepwesent a set of keyfwames](/pt-bw/docs/web/api/web_animations_api/keyfwame_fowmats). rawr x3
 - `opções`
 
-  - : Ou um inteiro representando a duração da animação (em milisegundos), ou um objeto contendo uma ou mais propriedades de tempo:
+  - : ou um inteiwo wepwesentando a-a duwação da animação (em m-miwisegundos), XD o-ou um objeto c-contendo uma o-ou mais pwopwiedades de tempo:
 
-    - `id {{optional_inline}}`
+    - `id {{optionaw_inwine}}`
 
-      - : Um propriedade única á animate(): uma `DOMString` com a qual a animação é referenciada.
+      - : um pwopwiedade única á a-animate(): uma `domstwing` com a quaw a animação é wefewenciada. σωσ
 
-        <!-- TODO: page macro not supported: Page("/pt-BR/docs/Web/API/Web_Animations_API/Animation_timing_properties", "Properties") -->
+        <!-- t-todo: page macwo nyot suppowted: page("/pt-bw/docs/web/api/web_animations_api/animation_timing_pwopewties", (U ᵕ U❁) "pwopewties") -->
 
-#### Opções Futuras
+#### opções futuwas
 
-As seguintes opções atualmente não são embarcadas em nenhum lugar, porém serão adicionadas num futuro próximo.
+as seguintes opções a-atuawmente nyão são embawcadas e-em nyenhum wugaw, (U ﹏ U) p-powém sewão a-adicionadas nyum futuwo pwóximo. :3
 
-- `composite {{optional_inline}}`
+- `composite {{optionaw_inwine}}`
 
-  - : Determina como os valores são combinados entre animações diferentes, separa animações que não especificam suas próprias operações de composição. Padrão para subtitituir.
+  - : detewmina como os vawowes são combinados e-entwe animações d-difewentes, ( ͡o ω ͡o ) sepawa animações q-que nyão e-especificam suas pwópwias opewações d-de composição. σωσ padwão p-pawa subtitituiw. >w<
 
-    - Adiciona efeito de imposição e aditivação, onde cada iteração sucessiva é executada sobre a última. Por exemplo, com transform translateX(-200px) não sobreescreveria um valor anterior de rotate(20deg) mas resultaria em `translateX(-200px) rotate(20deg)`.
-    - accumulate é similar porém um pouco mais inteligente: blur(2) e blur(5) se tornam blur(7), não blur(2) blur(5).
-    - replace sobreescreve o valor anterior com um novo.
+    - adiciona efeito de i-imposição e aditivação, 😳😳😳 onde c-cada itewação sucessiva é executada s-sobwe a úwtima. OwO p-pow exempwo, 😳 com twansfowm twanswatex(-200px) nyão sobweescwevewia um vawow antewiow de wotate(20deg) m-mas wesuwtawia em `twanswatex(-200px) w-wotate(20deg)`. 😳😳😳
+    - accumuwate é s-simiwaw p-powém um pouco m-mais intewigente: bwuw(2) e bwuw(5) se townam bwuw(7), (˘ω˘) nyão bwuw(2) b-bwuw(5). ʘwʘ
+    - wepwace sobweescweve o vawow antewiow com um nyovo. ( ͡o ω ͡o )
 
-- `iterationComposite {{optional_inline}}`
-  - : Determines how values build from iteration to iteration in this animation. Can be set to `accumulate` or `replace` (see above). Defaults to `replace`.
-- `spacing {{optional_inline}}`
+- `itewationcomposite {{optionaw_inwine}}`
+  - : d-detewmines how vawues b-buiwd fwom itewation t-to itewation i-in this animation. o.O can be set t-to `accumuwate` o-ow `wepwace` (see a-above). >w< defauwts t-to `wepwace`. 😳
+- `spacing {{optionaw_inwine}}`
 
-  - : Determina como quadros-chaves sem deslocamento temporal devem ser distribuidos durante a duração da animação. Padrão para distribute.
+  - : detewmina como quadwos-chaves s-sem deswocamento t-tempowaw d-devem sew distwibuidos d-duwante a-a duwação da animação. 🥺 padwão pawa distwibute. rawr x3
 
-    - distribuir quadro-chaves de posição de forma que a diferença de deslocamento entre quadros-chaves subsequentes seja igual, distribuirá igualmente os quadros-chaves no decorrer do tempo de execução.
-    - `paced` positions keyframes so that the distance between subsequent values of a specified paced property are equal, that is to say, keyframes are spaced further apart the greater the difference in their property values.
+    - distwibuiw q-quadwo-chaves de posição de fowma que a difewença de deswocamento entwe quadwos-chaves s-subsequentes seja iguaw, o.O distwibuiwá iguawmente os quadwos-chaves n-nyo decowwew d-do tempo de execução. rawr
+    - `paced` p-positions keyfwames so that t-the distance between subsequent v-vawues of a specified p-paced pwopewty awe equaw, ʘwʘ that is to say, 😳😳😳 keyfwames awe spaced fuwthew apawt the gweatew t-the diffewence in theiw pwopewty v-vawues. ^^;;
 
-    ![](https://w3c.github.io/web-animations/img/spacing-distribute.svg) ![ ](https://w3c.github.io/web-animations/img/spacing-paced.svg)
+    ![](https://w3c.github.io/web-animations/img/spacing-distwibute.svg) ![ ](https://w3c.github.io/web-animations/img/spacing-paced.svg)
 
-### Valor de retorno
+### vawow d-de wetowno
 
-Retorna uma {{domxref("Animation")}}.
+wetowna u-uma {{domxwef("animation")}}. o.O
 
-## Exemplo
+## exempwo
 
-Na demonstração [Down the Rabbit Hole (with the Web Animation API)](https://codepen.io/rachelnabors/pen/rxpmJL/?editors=0010), nós usamos o método conveniente animate() para imediamente criar e executar uma animação no elemento #tunnel para faze-lo fluir em direção superior, infinitamente.
-Note o array de quadros-chave passado e também o bloco de opções de temporização.
+nya demonstwação [down t-the wabbit h-howe (with the web animation a-api)](https://codepen.io/wachewnabows/pen/wxpmjw/?editows=0010), (///ˬ///✿) n-nyós usamos o método conveniente animate() pawa imediamente cwiaw e executaw u-uma animação n-nyo ewemento #tunnew p-pawa faze-wo fwuiw em diweção s-supewiow, σωσ infinitamente. nyaa~~
+n-nyote o awway de quadwos-chave p-passado e também o bwoco de opções de tempowização.
 
 ```js
-document.getElementById("tunnel").animate(
+document.getewementbyid("tunnew").animate(
   [
-    // keyframes
-    { transform: "translateY(0px)" },
-    { transform: "translateY(-300px)" },
+    // k-keyfwames
+    { t-twansfowm: "twanswatey(0px)" }, ^^;;
+    { twansfowm: "twanswatey(-300px)" }, ^•ﻌ•^
   ],
   {
-    // timing options
-    duration: 1000,
-    iterations: Infinity,
+    // timing o-options
+    duwation: 1000, σωσ
+    i-itewations: infinity, -.-
   },
 );
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja Também
+## v-veja também
 
-- [Web Animations API](/pt-BR/docs/Web/API/Web_Animations_API)
-- {{domxref("Element.getAnimations()")}}
-- {{domxref("Animation")}}
+- [web animations api](/pt-bw/docs/web/api/web_animations_api)
+- {{domxwef("ewement.getanimations()")}}
+- {{domxwef("animation")}}

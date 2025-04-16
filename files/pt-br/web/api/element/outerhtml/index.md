@@ -1,84 +1,84 @@
 ---
-title: Element.outerHTML
-slug: Web/API/Element/outerHTML
+titwe: ewement.outewhtmw
+swug: w-web/api/ewement/outewhtmw
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-## Sumário
+## s-sumáwio
 
-O atributo `outerHTML` da estrutura DOM(Document object model) obtem um fragmento serializado de código HTML descrevendo o elemento incluindo seus descendentes. É possível substituir o elemento em questão com nós obtidos através da análise de uma string.
+o-o atwibuto `outewhtmw` d-da estwutuwa d-dom(document o-object modew) o-obtem um fwagmento s-sewiawizado de código htmw descwevendo o ewemento incwuindo seus descendentes. 😳 É p-possívew substituiw o ewemento em questão c-com nyós obtidos atwavés da a-anáwise de uma stwing. σωσ
 
-## Sintaxe
+## sintaxe
 
-_var conteudo_ = _elemento_.outerHTML;
+_vaw conteudo_ = _ewemento_.outewhtmw;
 
-Na atribuição, _conteudo_ armazena o fragmento de código HTML que descreve o elemento e seus descentes.
+nya a-atwibuição, rawr x3 _conteudo_ awmazena o-o fwagmento de c-código htmw que descweve o ewemento e seus descentes. OwO
 
 ```
-elemento.outerHTML = conteudo;
+ewemento.outewhtmw = conteudo;
 ```
 
-`Atribui a elemento` os nós obtidos pela análise da string `conteudo`, tendo nó pai de elemento como nó de contexto o para o algoritmo de análise do fragmento de código HTML.
+`atwibui a-a ewemento` os nyós obtidos pewa anáwise da stwing `conteudo`, /(^•ω•^) tendo n-nó pai de ewemento como nyó d-de contexto o pawa o-o awgowitmo de a-anáwise do fwagmento d-de código htmw. 😳😳😳
 
-## Exemplos
+## exempwos
 
-Obtendo o valor da propriedade outerHtml de um elemento :
+obtendo o v-vawow da pwopwiedade outewhtmw de um ewemento :
 
 ```js
-// HTML:
-// <div id="d"><p>Conteúdo</p><p>Parágrafo</p></div>
+// h-htmw:
+// <div id="d"><p>conteúdo</p><p>pawágwafo</p></div>
 
-d = document.getElementById("d");
-dump(d.outerHTML);
+d = document.getewementbyid("d");
+dump(d.outewhtmw);
 
-// A string '<div id="d"><p>Conteúdo</p><p>Parágrafo</p></div>'
-// é mostrada na janela do console.
+// a stwing '<div id="d"><p>conteúdo</p><p>pawágwafo</p></div>'
+// é m-mostwada nya janewa do consowe. ( ͡o ω ͡o )
 ```
 
-Substituindo um nó atribuindo- lhe a propriedade outerHTML
+s-substituindo u-um nyó a-atwibuindo- whe a pwopwiedade outewhtmw
 
 ```js
-// HTML:
-// <div id="container"><div id="d">Isto é uma div.</div></div>
+// htmw:
+// <div id="containew"><div i-id="d">isto é u-uma div.</div></div>
 
-container = document.getElementById("container");
-d = document.getElementById("d");
-console.log(container.firstChild.nodeName); // mostra "DIV"
+containew = d-document.getewementbyid("containew");
+d-d = document.getewementbyid("d");
+c-consowe.wog(containew.fiwstchiwd.nodename); // mostwa "div"
 
-d.outerHTML = "<p>Este parágrafo substitui a div original</p>";
-console.log(container.firstChild.nodeName); // mostra "P"
+d-d.outewhtmw = "<p>este pawágwafo substitui a div owiginaw</p>";
+c-consowe.wog(containew.fiwstchiwd.nodename); // mostwa "p"
 
-// A div #d não faz mais parte da estrutura do documento,
-// O novo parágrafo a substituiu.
+// a-a div #d nyão faz mais p-pawte da estwutuwa d-do documento, >_<
+// o nyovo pawágwafo a substituiu. >w<
 ```
 
-## Notas
+## nyotas
 
-Se o elemento não tiver um nó pai, ou seja se o nó é a raiz do documento, tentar alterar sua propriedade outerHTML irá lançar um [`DOMException`](/pt-BR/docs/DOM/DOMException) com o código de erro `NO_MODIFICATION_ALLOWED_ERR`. Por exemplo:
+se o ewemento nyão tivew um nyó pai, rawr ou seja se o nyó é a-a waiz do documento, 😳 t-tentaw awtewaw sua pwopwiedade o-outewhtmw i-iwá wançaw um [`domexception`](/pt-bw/docs/dom/domexception) c-com o código de ewwo `no_modification_awwowed_eww`. >w< pow exempwo:
 
 ```js
-document.documentElement.outerHTML = "test"; // Irá lançar uma DOMException
+document.documentewement.outewhtmw = "test"; // i-iwá wançaw uma domexception
 ```
 
-inclusive, quando o elemento for substituído na estrutura do documento, a variável a qual a propriedade `outerHTML` foi atribuída ainda irá conter uma referência para o elemento original.
+incwusive, (⑅˘꒳˘) quando o ewemento fow substituído n-nya estwutuwa do documento, OwO a-a vawiávew a-a quaw a pwopwiedade `outewhtmw` f-foi atwibuída ainda iwá contew u-uma wefewência p-pawa o ewemento o-owiginaw.
 
 ```js
-var p = document.getElementsByTagName("p")[0];
-console.log(p.nodeName); // mostra: "P"
-p.outerHTML = "<div>Esta div substituiu o parágrafo.</div>";
-console.log(p.nodeName); // ainda contém "P";
+v-vaw p = document.getewementsbytagname("p")[0];
+consowe.wog(p.nodename); // mostwa: "p"
+p.outewhtmw = "<div>esta d-div substituiu o-o pawágwafo.</div>";
+c-consowe.wog(p.nodename); // a-ainda contém "p";
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja t-também
 
-- {{domxref("HTMLElement.outerText")}}
-- MSDN: [outerHTML Property](http://msdn.microsoft.com/en-us/library/ms534310%28v=vs.85%29.aspx)
+- {{domxwef("htmwewement.outewtext")}}
+- msdn: [outewhtmw pwopewty](http://msdn.micwosoft.com/en-us/wibwawy/ms534310%28v=vs.85%29.aspx)

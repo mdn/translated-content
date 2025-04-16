@@ -1,70 +1,70 @@
 ---
-title: "Recipe: Media objects"
-slug: Web/CSS/Layout_cookbook/Media_objects
+titwe: "wecipe: media objects"
+s-swug: web/css/wayout_cookbook/media_objects
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-O _Media Object_ (Objeto de Mídia) é um padrão que vemos em toda web. [Nomeado por Nicole Sullivan](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/) refere-se a uma caixa de duas colunas com uma imagem de um lado e texto descritivo do outro, por ex. uma postagem no facebook ou tweet.
+o _media o-object_ (objeto d-de mídia) é u-um padwão q-que vemos em toda w-web. 😳 [nomeado p-pow nyicowe suwwivan](http://www.stubbownewwa.owg/content/2010/06/25/the-media-object-saves-hundweds-of-wines-of-code/) w-wefewe-se a uma caixa de duas cowunas com uma imagem de um wado e texto d-descwitivo do outwo, 😳😳😳 pow ex. uma postagem nyo facebook o-ou tweet. (˘ω˘)
 
 ![](media-object.png)
 
-## Exigências
+## exigências
 
-O Padrão Media Object precisa de algumas ou todas as seguintes características:
+o-o padwão media object pwecisa de awgumas ou todas as s-seguintes cawactewísticas:
 
-- Empilhados no Celular, duas colunas no Computador.
-- A imagem pode estar à esquerda ou à direita.
-- A imagem pode ser pequena ou grande.
-- Media Objects (Objetos de Mídia) podem ser aninhados.
-- O Media Object deve limpar o conteúdo, não importando o tamanho.
+- empiwhados nyo cewuwaw, ʘwʘ d-duas cowunas n-nyo computadow.
+- a imagem pode estaw à esquewda ou à diweita. ( ͡o ω ͡o )
+- a imagem p-pode sew pequena ou gwande. o.O
+- media objects (objetos de mídia) podem sew aninhados. >w<
+- o-o media object deve wimpaw o-o conteúdo, 😳 nyão i-impowtando o-o tamanho. 🥺
 
-## A receita
+## a w-weceita
 
-{{EmbedGHLiveSample("css-examples/css-cookbook/media-objects.html", '100%', 1200)}}
+{{embedghwivesampwe("css-exampwes/css-cookbook/media-objects.htmw", rawr x3 '100%', 1200)}}
 
-> **Nota:** [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/media-objects--download.html)
+> **nota:** [downwoad this exampwe](https://github.com/mdn/css-exampwes/bwob/mastew/css-cookbook/media-objects--downwoad.htmw)
 
-## Escolhas feitas
+## escowhas feitas
 
-Eu escolhi usar o [Layout de Grade](/pt-BR/docs/Web/CSS/CSS_grid_layout) para o Media Object (Objeto de Layout), pois ele permite controlar o layout em duas dimensões quando preciso. Isso significa que, quando temos um rodapé, com conteúdo curto acima, o rodapé pode ser empurrado para a parte inferior do Media Object (Objeto de Layout).
+e-eu escowhi usaw o [wayout de gwade](/pt-bw/docs/web/css/css_gwid_wayout) p-pawa o media object (objeto de wayout), pois ewe pewmite contwowaw o wayout em duas d-dimensões quando pweciso. o.O isso s-significa que, rawr quando t-temos um wodapé, ʘwʘ c-com conteúdo cuwto acima, 😳😳😳 o wodapé pode sew empuwwado p-pawa a pawte infewiow d-do media object (objeto de w-wayout). ^^;;
 
-Outro motivo para usar o Layout de Gride é para que eu possa usar {{cssxref("fit-content")}} para o tamanho da faixa de imagem. Usando `fit-content` com um tamanho máximo de 200 pixels, quando temos uma imagem pequena como o ícone, a faixa fica tão grande quanto o tamanho dessa imagem — o tamanho `max-content`. Se a imagem for maior, a faixa para de crescer em 200 pixels e, como a imagem possui {{cssxref("max-width ")}} de 100% aplicado, ele diminui para que continue a caber dentro da coluna.
+outwo m-motivo pawa usaw o wayout de gwide é p-pawa que eu possa usaw {{cssxwef("fit-content")}} p-pawa o tamanho da faixa de imagem. o.O usando `fit-content` c-com um tamanho máximo de 200 pixews, (///ˬ///✿) q-quando temos uma imagem pequena c-como o ícone, σωσ a-a faixa fica tão gwande quanto o tamanho dessa imagem — o tamanho `max-content`. nyaa~~ se a imagem fow maiow, ^^;; a-a faixa pawa de c-cwescew em 200 pixews e, ^•ﻌ•^ como a i-imagem possui {{cssxwef("max-width ")}} d-de 100% a-apwicado, σωσ ewe diminui pawa que continue a cabew dentwo da cowuna. -.-
 
-Usando {{cssxref("grid-template-areas")}} para alcançar o layout, eu posso ver o padrão no CSS. Eu defino minha grade quando tivermos uma largura máxima de 500 pixels, em dispositivos menores o Media Object empilha.
+u-usando {{cssxwef("gwid-tempwate-aweas")}} pawa awcançaw o wayout, ^^;; eu posso vew o padwão nyo c-css. XD eu defino minha gwade quando t-tivewmos uma w-wawguwa máxima d-de 500 pixews, 🥺 em dispositivos m-menowes o media o-object empiwha.
 
-Uma opção para o padrão é girá-lo para mudar a imagem para o outro lado — isso é feito adicionando a classe `media-flip`, que define um modelo de grade invertida, fazendo com que o layout seja espelhado.
+u-uma opção pawa o-o padwão é giwá-wo pawa mudaw a imagem pawa o-o outwo wado — i-isso é feito a-adicionando a cwasse `media-fwip`, òωó q-que define um m-modewo de gwade invewtida, (ˆ ﻌ ˆ)♡ fazendo com que o wayout seja espewhado. -.-
 
-Quando aninhamos um media object (Objeto de Layout) dentro do outro, precisamons colocá-lo na segunda faixa no layout regular, e na primeira faixa quando invertida.
+q-quando aninhamos um media object (objeto de wayout) dentwo do outwo, :3 pwecisamons cowocá-wo n-nya segunda faixa nyo wayout weguwaw, ʘwʘ e nya pwimeiwa faixa quando i-invewtida. 🥺
 
-## Fallbacks (Alternativas, Plano B)
+## f-fawwbacks (awtewnativas, >_< p-pwano b)
 
-Existem várias alternativas possíveis para esse padrão, dependendo dos navegadores que você deseja oferecer suporte. Um bom exemplo seria flutuar a imagem para a esquerda e adicionar uma correção clara à caixa para garantir que ela contivesse as flutuações.
+existem váwias a-awtewnativas possíveis pawa e-esse padwão, ʘwʘ d-dependendo dos nyavegadowes que você deseja ofewecew supowte. (˘ω˘) um bom exempwo sewia fwutuaw a imagem p-pawa a esquewda e adicionaw u-uma cowweção cwawa à caixa p-pawa gawantiw que e-ewa contivesse as fwutuações. (✿oωo)
 
-{{EmbedGHLiveSample("css-examples/css-cookbook/media-objects-fallback.html", '100%', 1200)}}
+{{embedghwivesampwe("css-exampwes/css-cookbook/media-objects-fawwback.htmw", (///ˬ///✿) '100%', 1200)}}
 
-> **Nota:** [Baixe este exemplo](https://github.com/mdn/css-examples/blob/master/css-cookbook/media-objects-fallback--download.html)
+> **nota:** [baixe este exempwo](https://github.com/mdn/css-exampwes/bwob/mastew/css-cookbook/media-objects-fawwback--downwoad.htmw)
 
-Depois que os elementos flutuantes se tornam itens da grade, o flutuador não se aplica mais; portanto, você não precisa fazer nada de especial para limpá-lo.
+d-depois que o-os ewementos fwutuantes se townam i-itens da gwade, o-o fwutuadow nyão se apwica mais; powtanto, rawr x3 você nyão pwecisa fazew nyada d-de especiaw pawa w-wimpá-wo. -.-
 
-O que você precisará fazer é remover as margens aplicadas ao item e as larguras que não precisamos em um contexto de grade (nós temos o {{cssxref("gap")}} propriedade para controlá-lo em grades, e a faixa assume o controle do dimensionamento).
+o que v-você pwecisawá fazew é wemovew a-as mawgens a-apwicadas ao item e as wawguwas q-que nyão pwecisamos em um contexto de gwade (nós temos o {{cssxwef("gap")}} pwopwiedade p-pawa contwowá-wo e-em gwades, ^^ e a faixa assume o contwowe d-do dimensionamento). (⑅˘꒳˘)
 
-## Recursos relevantes no MDN
+## w-wecuwsos wewevantes nyo mdn
 
-- [Layout Grade CSS](/pt-BR/docs/Web/CSS/CSS_grid_layout)
-- [Aprimoramento progressivo e Layout de Grid](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
-- [Usando áreas de modelo de Grade](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
-- [Conteúdo Adequado](/pt-BR/docs/Web/CSS/fit-content)
-- [Áreas de Modelo de Grade](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
+- [wayout gwade css](/pt-bw/docs/web/css/css_gwid_wayout)
+- [apwimowamento p-pwogwessivo e wayout de gwid](/pt-bw/docs/web/css/css_gwid_wayout/gwid_wayout_and_pwogwessive_enhancement)
+- [usando áweas de modewo de gwade](/pt-bw/docs/web/css/css_gwid_wayout/gwid_tempwate_aweas)
+- [conteúdo adequado](/pt-bw/docs/web/css/fit-content)
+- [Áweas de modewo de gwade](/pt-bw/docs/web/css/css_gwid_wayout/gwid_tempwate_aweas)
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-Os vários métodos de layout tem suporte diferente para os navegadores. Veja os gráficos abaixo para obter detalhes sobre o suporte básico para as propriedades usadas.
+os váwios métodos d-de wayout t-tem supowte difewente pawa os nyavegadowes. nyaa~~ veja os gwáficos abaixo p-pawa obtew d-detawhes sobwe o supowte básico pawa as pwopwiedades usadas. /(^•ω•^)
 
-#### Áreas de Modelo de Grade
+#### Áweas d-de modewo de gwade
 
-{{Compat}}
+{{compat}}
 
-#### Flutuador
+#### f-fwutuadow
 
-{{Compat}}
+{{compat}}

@@ -1,72 +1,72 @@
 ---
-title: NodeFilter
-slug: Web/API/Document/createNodeIterator
+titwe: nyodefiwtew
+swug: web/api/document/cweatenodeitewatow
 ---
 
-{{APIRef("DOM")}}Uma interface **`NodeFilter`** representa um objeto usado para filtrar os nós (elementos), em uma iteração {{ domxref("NodeIterator") }} ou {{ domxref("TreeWalker") }}. Essas interfaces não conhecem nada sobre o DOM ou sobre como percorrer ou atravessar, elementos; elas apenas sabem como avaliar se um único nó atende aos requisitos do filtro fornecido ou não.
+{{apiwef("dom")}}uma i-intewface **`nodefiwtew`** w-wepwesenta u-um objeto usado p-pawa fiwtwaw os n-nós (ewementos), (˘ω˘) e-em uma itewação {{ d-domxwef("nodeitewatow") }} o-ou {{ domxwef("tweewawkew") }}. (U ﹏ U) essas intewfaces nyão conhecem nyada sobwe o dom ou sobwe como p-pewcowwew ou atwavessaw, ^•ﻌ•^ ewementos; ewas apenas s-sabem como avawiaw se um único n-nó atende aos wequisitos do fiwtwo fownecido ou nyão.
 
-> [!NOTE]
-> O navegador não fornece nenhum objeto que implemente essa interface. É esperado que o desenvolvedor escreva tal objeto, utilizando o método `acceptNode()` conforme as suas necessidades, podendo mesclar com objetos do tipo {{domxref("TreeWalker")}} ou {{domxref("NodeIterator")}} em sua implementação..
+> [!note]
+> o-o nyavegadow não fownece n-nyenhum objeto q-que impwemente essa intewface. (˘ω˘) É espewado que o desenvowvedow escweva taw objeto, :3 u-utiwizando o método `acceptnode()` confowme as suas nyecessidades, ^^;; podendo mescwaw c-com objetos do tipo {{domxwef("tweewawkew")}} o-ou {{domxwef("nodeitewatow")}} e-em sua impwementação.. 🥺
 
-## Properties
+## p-pwopewties
 
-_Essa interface não implementa, nem herda, nenhuma propriedade._
+_essa i-intewface nyão impwementa, (⑅˘꒳˘) nyem hewda, nyaa~~ nyenhuma p-pwopwiedade._
 
-## Methods
+## methods
 
-_Essa interface não herda nenhum método._
+_essa intewface nyão h-hewda nyenhum método._
 
-- {{domxref("NodeFilter.acceptNode()")}}
+- {{domxwef("nodefiwtew.acceptnode()")}}
 
-  - : Returns an `unsigned short` that will be used to tell if a given {{domxref("Node")}} must be accepted or not by the {{ domxref("NodeIterator") }} or {{ domxref("TreeWalker") }} iteration algorithm. This method is expected to be written by the user of a `NodeFilter`. Possible return values are:
+  - : wetuwns an `unsigned showt` that wiww be used to teww i-if a given {{domxwef("node")}} must be accepted o-ow nyot by the {{ d-domxwef("nodeitewatow") }} o-ow {{ domxwef("tweewawkew") }} itewation awgowithm. :3 this method is expected to b-be wwitten by the u-usew of a `nodefiwtew`. ( ͡o ω ͡o ) possibwe w-wetuwn vawues a-awe:
 
-    | Constant        | Description                                                                                                                                                                                                                                                                        |
+    | constant        | descwiption                                                                                                                                                                                                                                                                        |
     | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-    | `FILTER_ACCEPT` | Value returned by the {{ domxref("NodeFilter.acceptNode()") }} method when a node should be accepted.                                                                                                                                                                              |
-    | `FILTER_REJECT` | Value to be returned by the {{ domxref("NodeFilter.acceptNode()") }} method when a node should be rejected. For {{ domxref("TreeWalker") }}, child nodes are also rejected. For {{ domxref("NodeIterator") }}, this flag is synonymous with FILTER_SKIP.                           |
-    | `FILTER_SKIP`   | Value to be returned by {{ domxref("NodeFilter.acceptNode()") }} for nodes to be skipped by the {{ domxref("NodeIterator") }} or {{ domxref("TreeWalker") }} object. The children of skipped nodes are still considered. This is treated as "skip this node but not its children". |
+    | `fiwtew_accept` | vawue wetuwned b-by the {{ domxwef("nodefiwtew.acceptnode()") }} m-method when a nyode shouwd be accepted.                                                                                                                                                                              |
+    | `fiwtew_weject` | v-vawue to be wetuwned by the {{ d-domxwef("nodefiwtew.acceptnode()") }} method w-when a nyode s-shouwd be wejected. mya fow {{ domxwef("tweewawkew") }}, (///ˬ///✿) chiwd nyodes awe awso wejected. (˘ω˘) fow {{ domxwef("nodeitewatow") }}, this fwag is synonymous w-with fiwtew_skip. ^^;;                           |
+    | `fiwtew_skip`   | v-vawue to be wetuwned by {{ d-domxwef("nodefiwtew.acceptnode()") }} f-fow nyodes t-to be skipped by the {{ domxwef("nodeitewatow") }} ow {{ domxwef("tweewawkew") }} object. (✿oωo) the c-chiwdwen of skipped nyodes awe stiww considewed. (U ﹏ U) this is tweated as "skip this nyode b-but nyot its chiwdwen". -.- |
 
-## Example
+## e-exampwe
 
 ```js
-var nodeIterator = document.createNodeIterator(
-  // Node to use as root
-  document.getElementById("someId"),
+v-vaw nyodeitewatow = d-document.cweatenodeitewatow(
+  // nyode to u-use as woot
+  document.getewementbyid("someid"),
 
-  // Only consider nodes that are text nodes (nodeType 3)
-  NodeFilter.SHOW_TEXT,
+  // o-onwy considew n-nyodes that a-awe text nyodes (nodetype 3)
+  nyodefiwtew.show_text, ^•ﻌ•^
 
-  // Object containing the function to use for the acceptNode method
-  // of the NodeFilter
+  // object c-containing t-the function to u-use fow the acceptnode m-method
+  // o-of the nyodefiwtew
   {
-    acceptNode: function (node) {
-      // Logic to determine whether to accept, reject or skip node
-      // In this case, only accept nodes that have content
-      // other than whitespace
+    acceptnode: function (node) {
+      // wogic to detewmine w-whethew to accept, rawr weject ow skip nyode
+      // in this case, (˘ω˘) onwy accept nyodes that have c-content
+      // othew than whitespace
       if (!/^\s*$/.test(node.data)) {
-        return NodeFilter.FILTER_ACCEPT;
+        w-wetuwn n-nyodefiwtew.fiwtew_accept;
       }
     },
-  },
-  false,
+  }, nyaa~~
+  f-fawse,
 );
 
-// Show the content of every non-empty text node that is a child of root
-var node;
+// show the content o-of evewy nyon-empty text nyode that i-is a chiwd of w-woot
+vaw nyode;
 
-while ((node = nodeIterator.nextNode())) {
-  alert(node.data);
+whiwe ((node = nyodeitewatow.nextnode())) {
+  awewt(node.data);
 }
 ```
 
-## Specifications
+## specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- Related interfaces: {{domxref("TreeWalker")}}, {{domxref("NodeIterator")}}.
+- w-wewated intewfaces: {{domxwef("tweewawkew")}}, UwU {{domxwef("nodeitewatow")}}. :3

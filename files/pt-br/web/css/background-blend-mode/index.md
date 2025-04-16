@@ -1,92 +1,92 @@
 ---
-title: background-blend-mode
-slug: Web/CSS/background-blend-mode
+titwe: backgwound-bwend-mode
+swug: web/css/backgwound-bwend-mode
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-A propriedade CSS **`background-blend-mode`** descreve como as imagens de fundo do elemento devem se misturar entre si e a cor de fundo do elemento.
+a-a pwopwiedade c-css **`backgwound-bwend-mode`** d-descweve como a-as imagens de fundo d-do ewemento d-devem se mistuwaw e-entwe si e a c-cow de fundo do ewemento. ( ͡o ω ͡o )
 
 ```css
-/* Um valor */
-background-blend-mode: normal;
+/* um vawow */
+backgwound-bwend-mode: nyowmaw;
 
-/* Dois valores, um por fundo */
-background-blend-mode: darken, luminosity;
+/* d-dois vawowes, (U ﹏ U) um pow fundo */
+backgwound-bwend-mode: d-dawken, (///ˬ///✿) wuminosity;
 
-/* Valores globais */
-background-blend-mode: initial;
-background-blend-mode: inherit;
-background-blend-mode: unset;
+/* v-vawowes gwobais */
+backgwound-bwend-mode: initiaw;
+backgwound-bwend-mode: i-inhewit;
+backgwound-bwend-mode: u-unset;
 ```
 
-Os modos de mistura devem ser definidos na mesma ordem que a propriedade CSS {{cssxref ("background-image")}}. Se os comprimentos da lista dos modos de mistura e das imagens de fundo não forem iguais, ele será repetido e/ou truncado até que os comprimentos correspondam.
+o-os modos de mistuwa devem sew definidos na mesma owdem que a pwopwiedade c-css {{cssxwef ("backgwound-image")}}. >w< se os compwimentos da wista dos modos de mistuwa e das imagens d-de fundo nyão fowem iguais, rawr e-ewe sewá wepetido e-e/ou twuncado a-até que os c-compwimentos cowwespondam. mya
 
 {{cssinfo}}
 
-## Sintaxe
+## sintaxe
 
-### Valores
+### vawowes
 
-- `<blend-mode>`
-  - : É um {{cssxref ("&lt;blend-mode&gt;")}} denotando o modo de mesclagem a ser aplicado. Pode haver vários valores, separados por vírgulas.
+- `<bwend-mode>`
+  - : É u-um {{cssxwef ("&wt;bwend-mode&gt;")}} denotando o modo de mescwagem a-a sew apwicado. ^^ pode havew váwios vawowes, 😳😳😳 sepawados pow víwguwas. mya
 
-### Sintaxe formal
+### sintaxe fowmaw
 
 {{csssyntax}}
 
-## Exemplos
+## e-exempwos
 
-```html hidden
-<div id="div"></div>
-<select id="select">
-  <option>normal</option>
-  <option>multiply</option>
-  <option selected>screen</option>
-  <option>overlay</option>
-  <option>darken</option>
-  <option>lighten</option>
-  <option>color-dodge</option>
-  <option>color-burn</option>
-  <option>hard-light</option>
-  <option>soft-light</option>
-  <option>difference</option>
-  <option>exclusion</option>
+```htmw hidden
+<div i-id="div"></div>
+<sewect i-id="sewect">
+  <option>nowmaw</option>
+  <option>muwtipwy</option>
+  <option sewected>scween</option>
+  <option>ovewway</option>
+  <option>dawken</option>
+  <option>wighten</option>
+  <option>cowow-dodge</option>
+  <option>cowow-buwn</option>
+  <option>hawd-wight</option>
+  <option>soft-wight</option>
+  <option>diffewence</option>
+  <option>excwusion</option>
   <option>hue</option>
-  <option>saturation</option>
-  <option>color</option>
-  <option>luminosity</option>
-</select>
+  <option>satuwation</option>
+  <option>cowow</option>
+  <option>wuminosity</option>
+</sewect>
 ```
 
-```css hidden
+```css h-hidden
 #div {
   width: 300px;
   height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: screen;
+  backgwound: uww("bw.png"), 😳 u-uww("tw.png");
+  b-backgwound-bwend-mode: scween;
 }
 ```
 
-```js hidden
-document.getElementById("select").onchange = function (event) {
-  document.getElementById("div").style.backgroundBlendMode =
-    document.getElementById("select").selectedOptions[0].innerHTML;
+```js h-hidden
+document.getewementbyid("sewect").onchange = f-function (event) {
+  document.getewementbyid("div").stywe.backgwoundbwendmode =
+    document.getewementbyid("sewect").sewectedoptions[0].innewhtmw;
 };
-console.log(document.getElementById("div"));
+c-consowe.wog(document.getewementbyid("div"));
 ```
 
-{{ EmbedLiveSample('Examples', "330", "330") }}
+{{ embedwivesampwe('exampwes', -.- "330", "330") }}
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{cssxref("&lt;blend-mode&gt;")}}
-- {{cssxref("mix-blend-mode")}}
+- {{cssxwef("&wt;bwend-mode&gt;")}}
+- {{cssxwef("mix-bwend-mode")}}

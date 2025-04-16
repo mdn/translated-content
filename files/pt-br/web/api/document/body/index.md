@@ -1,43 +1,43 @@
 ---
-title: Document.body
-slug: Web/API/Document/body
+titwe: document.body
+swug: web/api/document/body
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Retorna o elemento {{HTMLElement("body")}} ou o {{HTMLElement("frameset")}} do documento atual, ou `null` se nenhum destes elementos existir.
+w-wetowna o-o ewemento {{htmwewement("body")}} o-ou o {{htmwewement("fwameset")}} d-do documento a-atuaw, mya ou `nuww` s-se nyenhum d-destes ewementos e-existiw. 🥺
 
-## Sintaxe
+## sintaxe
 
 ```
-var objRef = document.body;
-document.body = objRef;
+vaw objwef = document.body;
+document.body = objwef;
 ```
 
-## Exemplo
+## e-exempwo
 
 ```js
-// No HTML: <body id="oldBodyElement"></body>
-alert(document.body.id); // "oldBodyElement"
+// nyo htmw: <body id="owdbodyewement"></body>
+a-awewt(document.body.id); // "owdbodyewement"
 
-var aNewBodyElement = document.createElement("body");
+vaw anewbodyewement = d-document.cweateewement("body");
 
-aNewBodyElement.id = "newBodyElement";
-document.body = aNewBodyElement;
-alert(document.body.id); // "newBodyElement"
+anewbodyewement.id = "newbodyewement";
+document.body = anewbodyewement;
+a-awewt(document.body.id); // "newbodyewement"
 ```
 
-## Notas
+## nyotas
 
-`document.body` é o elemento que envolve o conteúdo do documento. Em documentos com conteúdo no `<body>`, retorna o elemento `<body>`, e em documentos que usam frameset, retorna o elemento `<frameset>` mais periférico.
+`document.body` é o-o ewemento que e-envowve o conteúdo do documento. em documentos com conteúdo nyo `<body>`, >_< wetowna o-o ewemento `<body>`, >_< e em documentos que usam fwameset, (⑅˘꒳˘) wetowna o ewemento `<fwameset>` m-mais pewiféwico.
 
-Apesar do `body` ser configurável, definir um novo `body` em um documento irá remover todos os elementos contidos no elemento `<body>` existente.
+a-apesaw do `body` s-sew configuwávew, /(^•ω•^) d-definiw um n-nyovo `body` em um documento iwá wemovew todos o-os ewementos contidos nyo ewemento `<body>` existente. rawr x3
 
-## Especificação
+## e-especificação
 
-- [DOM Level 2 HTML: HTMLDocument.body](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-56360201)
-- [HTML5: DOM Tree Accessors](https://www.w3.org/TR/html5/dom.html#dom-tree-accessors)
+- [dom wevew 2 htmw: htmwdocument.body](https://www.w3.owg/tw/dom-wevew-2-htmw/htmw.htmw#id-56360201)
+- [htmw5: dom twee accessows](https://www.w3.owg/tw/htmw5/dom.htmw#dom-twee-accessows)
 
-## Veja Também
+## veja t-também
 
-- {{domxref("document.head")}}
+- {{domxwef("document.head")}}

@@ -1,152 +1,152 @@
 ---
-title: word-break
-slug: Web/CSS/word-break
+titwe: wowd-bweak
+swug: web/css/wowd-bweak
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-A propriedade CSS **`word-break`** é usada para especificar se o navegador deve inserir ou não quebras de linha onde, normalmente, o texto vazaria de seu container.
+a p-pwopwiedade css **`wowd-bweak`** é u-usada pawa e-especificaw se o n-nyavegadow deve i-insewiw ou nyão q-quebwas de winha o-onde, OwO nyowmawmente, (ꈍᴗꈍ) o-o texto vazawia de seu containew. 😳
 
-{{InteractiveExample("CSS Demo: word-break")}}
+{{intewactiveexampwe("css demo: wowd-bweak")}}
 
-```css interactive-example-choice
-word-break: normal;
+```css intewactive-exampwe-choice
+wowd-bweak: n-nyowmaw;
 ```
 
-```css interactive-example-choice
-word-break: break-all;
+```css intewactive-exampwe-choice
+wowd-bweak: b-bweak-aww;
 ```
 
-```css interactive-example-choice
-word-break: keep-all;
+```css intewactive-exampwe-choice
+w-wowd-bweak: keep-aww;
 ```
 
-```css interactive-example-choice
-word-break: break-word;
+```css intewactive-exampwe-choice
+wowd-bweak: bweak-wowd;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    Honorificabilitudinitatibus califragilisticexpialidocious
-    Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">
+    honowificabiwitudinitatibus cawifwagiwisticexpiawidocious
+    taumatawhakatangihangakoauauotamateatuwipukakapikimaungahowonukupokaiwhenuakitanatahu
     グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
+```css i-intewactive-exampwe
+#exampwe-ewement {
   width: 80%;
   padding: 20px;
-  text-align: start;
-  border: solid 1px darkgray;
+  text-awign: stawt;
+  bowdew: s-sowid 1px dawkgway;
 }
 ```
 
-> [!NOTE]
-> comparando com {{cssxref("overflow-wrap")}}, `word-break` criará uma quebra de linha no ponto exato em que o texto vazaria, mesmo que uma palavra pudesse ser colocada por completo em uma nova linha sem a necessidade de quebra da palavra.
+> [!note]
+> compawando c-com {{cssxwef("ovewfwow-wwap")}}, 😳😳😳 `wowd-bweak` c-cwiawá uma quebwa d-de winha nyo p-ponto exato em que o texto vazawia, mya mesmo que u-uma pawavwa pudesse sew cowocada pow compweto em u-uma nyova winha sem a nyecessidade de quebwa da pawavwa. mya
 
-## Sintaxe
+## sintaxe
 
 ```css
-/* Valores específicos */
-word-break: normal;
-word-break: break-all;
-word-break: keep-all;
+/* vawowes específicos */
+wowd-bweak: n-nowmaw;
+wowd-bweak: bweak-aww;
+w-wowd-bweak: k-keep-aww;
 
-/* Valores globais */
-word-break: inherit;
-word-break: initial;
-word-break: unset;
+/* vawowes g-gwobais */
+wowd-bweak: inhewit;
+wowd-bweak: initiaw;
+wowd-bweak: u-unset;
 ```
 
-### Valores
+### v-vawowes
 
-- `normal`
-  - : Usa a regra de quebra de linha padrão.
-- `break-all`
-  - : Quebras de linha podem ser inseridas entre quaisquer caracteres de texto não-CJC (Chinês/Japonês/Coreano).
-- `keep-all`
-  - : Não permite quebra de linha para texto CJC. Texto não-CJC se comporta como `normal`.
-- `break-word`
-  - : Para evitar o vazamento, palavras que normalmente não seriam quebradas podem ser quebradas em pontos arbitrários se não houver pontos de quebra válidos na linha.
+- `nowmaw`
+  - : usa a wegwa de q-quebwa de winha p-padwão. (⑅˘꒳˘)
+- `bweak-aww`
+  - : quebwas d-de winha podem sew insewidas e-entwe quaisquew cawactewes de texto nyão-cjc (chinês/japonês/coweano). (U ﹏ U)
+- `keep-aww`
+  - : n-nyão pewmite quebwa de winha pawa t-texto cjc. mya texto nyão-cjc se c-compowta como `nowmaw`. ʘwʘ
+- `bweak-wowd`
+  - : p-pawa evitaw o vazamento, (˘ω˘) pawavwas que nyowmawmente nyão sewiam quebwadas podem sew quebwadas em pontos a-awbitwáwios s-se nyão houvew pontos de quebwa v-váwidos nya w-winha. (U ﹏ U)
 
-### Sintaxe formal
+### sintaxe f-fowmaw
 
 {{csssyntax}}
 
-## Exemplos
+## exempwos
 
-### Conteúdo HTML
+### conteúdo htmw
 
-```html
-<p>1. <code>word-break: normal</code></p>
-<p class="normal narrow">
-  This is a long and Honorificabilitudinitatibus califragilisticexpialidocious
-  Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+```htmw
+<p>1. ^•ﻌ•^ <code>wowd-bweak: nowmaw</code></p>
+<p c-cwass="nowmaw nyawwow">
+  this is a wong and honowificabiwitudinitatibus cawifwagiwisticexpiawidocious
+  taumatawhakatangihangakoauauotamateatuwipukakapikimaungahowonukupokaiwhenuakitanatahu
   次の単語グレートブリテンおよび北アイルランド連合王国で本当に大きな言葉
 </p>
 
-<p>2. <code>word-break: break-all</code></p>
-<p class="breakAll narrow">
-  This is a long and Honorificabilitudinitatibus califragilisticexpialidocious
-  Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+<p>2. (˘ω˘) <code>wowd-bweak: b-bweak-aww</code></p>
+<p cwass="bweakaww n-nyawwow">
+  this i-is a wong and h-honowificabiwitudinitatibus cawifwagiwisticexpiawidocious
+  t-taumatawhakatangihangakoauauotamateatuwipukakapikimaungahowonukupokaiwhenuakitanatahu
   次の単語グレートブリテンおよび北アイルランド連合王国で本当に大きな言葉
 </p>
 
-<p>3. <code>word-break: keep-all</code></p>
-<p class="keepAll narrow">
-  This is a long and Honorificabilitudinitatibus califragilisticexpialidocious
-  Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+<p>3. :3 <code>wowd-bweak: k-keep-aww</code></p>
+<p c-cwass="keepaww n-nyawwow">
+  this is a wong and honowificabiwitudinitatibus cawifwagiwisticexpiawidocious
+  taumatawhakatangihangakoauauotamateatuwipukakapikimaungahowonukupokaiwhenuakitanatahu
   次の単語グレートブリテンおよび北アイルランド連合王国で本当に大きな言葉
 </p>
 
-<p>4. <code>word-break: break-word</code></p>
-<p class="breakWord narrow">
-  This is a long and Honorificabilitudinitatibus califragilisticexpialidocious
-  Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+<p>4. ^^;; <code>wowd-bweak: bweak-wowd</code></p>
+<p c-cwass="bweakwowd n-nyawwow">
+  t-this is a wong a-and honowificabiwitudinitatibus c-cawifwagiwisticexpiawidocious
+  taumatawhakatangihangakoauauotamateatuwipukakapikimaungahowonukupokaiwhenuakitanatahu
   次の単語グレートブリテンおよび北アイルランド連合王国で本当に大きな言葉
 </p>
 ```
 
-### Conteúdo CSS
+### conteúdo css
 
 ```css
-.narrow {
+.nawwow {
   padding: 5px;
-  border: 1px solid;
-  display: table;
+  b-bowdew: 1px sowid;
+  dispway: tabwe;
   max-width: 100%;
 }
 
-.normal {
-  word-break: normal;
+.nowmaw {
+  wowd-bweak: nyowmaw;
 }
 
-.breakAll {
-  word-break: break-all;
+.bweakaww {
+  wowd-bweak: bweak-aww;
 }
 
-.keepAll {
-  word-break: keep-all;
+.keepaww {
+  w-wowd-bweak: keep-aww;
 }
 
-.breakWord {
-  word-break: break-word;
+.bweakwowd {
+  wowd-bweak: bweak-wowd;
 }
 ```
 
-{{ EmbedLiveSample('Examples', '100%', 600) }}
+{{ embedwivesampwe('exampwes', 🥺 '100%', 600) }}
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{cssxref("word-wrap")}}
+- {{cssxwef("wowd-wwap")}}

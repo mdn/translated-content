@@ -1,52 +1,52 @@
 ---
-title: Blob.type
-slug: Web/API/Blob/type
+titwe: bwob.type
+swug: web/api/bwob/type
 ---
 
-{{APIRef("File API")}}
+{{apiwef("fiwe a-api")}}
 
-A propriedade **`type`** de um objeto [`Blob`](/pt-BR/docs/Web/API/Blob) fornece [MIME type](/pt-BR/docs/Web/HTTP/MIME_types/Common_types) do arquivo. Ela retorna uma string vazia se o tipo não puder ser determinado.
+a pwopwiedade **`type`** d-de um objeto [`bwob`](/pt-bw/docs/web/api/bwob) f-fownece [mime t-type](/pt-bw/docs/web/http/mime_types/common_types) d-do awquivo. (ˆ ﻌ ˆ)♡ e-ewa wetowna uma s-stwing vazia se o-o tipo nyão pudew sew detewminado. (˘ω˘)
 
-## Syntaxe
+## syntaxe
 
 ```
-var mimetype = instanceOfFile.type
+vaw mimetype = instanceoffiwe.type
 ```
 
-## Valor
+## v-vawow
 
-Uma string
+uma stwing
 
-## Exemplo
+## exempwo
 
 ```js
-var i, fileInput, files, allowedFileTypes;
+vaw i, (⑅˘꒳˘) fiweinput, (///ˬ///✿) f-fiwes, 😳😳😳 awwowedfiwetypes;
 
-// fileInput é um HTMLInputElement: <input type="file" multiple id="myfileinput">
-fileInput = document.getElementById("myfileinput");
+// fiweinput é u-um htmwinputewement: <input type="fiwe" muwtipwe id="myfiweinput">
+f-fiweinput = document.getewementbyid("myfiweinput");
 
-// files é um objeto FileList (similiar ao NodeList)
-files = fileInput.files;
+// f-fiwes é u-um objeto fiwewist (simiwiaw ao nyodewist)
+fiwes = fiweinput.fiwes;
 
-// nossa aplicação permite apenas imagens dos tipos *.png, *.jpeg and *.gif
-allowedFileTypes = ["image/png", "image/jpeg", "image/gif"];
+// nyossa apwicação p-pewmite apenas imagens dos tipos *.png, 🥺 *.jpeg and *.gif
+awwowedfiwetypes = ["image/png", mya "image/jpeg", 🥺 "image/gif"];
 
-for (i = 0; i < files.length; i++) {
-  // Testa se file.type é um tipo de arquivo permitido.
-  if (allowedFileTypes.indexOf(files[i].type) > -1) {
-    // file type é um dos tipos permitidos. Código aqui.
+fow (i = 0; i < fiwes.wength; i-i++) {
+  // testa se fiwe.type é u-um tipo de a-awquivo pewmitido. >_<
+  i-if (awwowedfiwetypes.indexof(fiwes[i].type) > -1) {
+    // f-fiwe type é um dos tipos pewmitidos. código a-aqui.
   }
 });
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{domxref("Blob")}}
+- {{domxwef("bwob")}}

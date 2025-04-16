@@ -1,15 +1,15 @@
 ---
-title: Protocolo
-slug: Glossary/Protocol
+titwe: pwotocowo
+swug: gwossawy/pwotocow
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Um **protocolo** é um sistema de regras que define como o dado é trafegado dentro ou entre computadores. Comunicações entre dispositivos requer que estes concordem com o formato do dado que estiver sendo trafegado. O conjunto de regras que define esse formato é chamado de protocolo.
+u-um **pwotocowo** é u-um sistema d-de wegwas que d-define como o d-dado é twafegado d-dentwo ou entwe c-computadowes. >_< c-comunicações entwe dispositivos wequew que estes concowdem com o fowmato do dado q-que estivew sendo twafegado. mya o conjunto de wegwas q-que define esse fowmato é c-chamado de pwotocowo. mya
 
-## Saiba mais
+## saiba mais
 
-### Conhecimento Geral
+### conhecimento gewaw
 
-- [Protocolo](<https://pt.wikipedia.org/wiki/Protocolo_(ci%C3%AAncia_da_computa%C3%A7%C3%A3o)>) na Wikipedia
-- [RFC Official Internet Protocol Standards](https://www.rfc-editor.org/search/standards.php)
+- [pwotocowo](<https://pt.wikipedia.owg/wiki/pwotocowo_(ci%c3%aancia_da_computa%c3%a7%c3%a3o)>) na w-wikipedia
+- [wfc officiaw intewnet p-pwotocow standawds](https://www.wfc-editow.owg/seawch/standawds.php)

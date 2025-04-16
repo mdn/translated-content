@@ -1,66 +1,66 @@
 ---
-title: Geolocation.clearWatch()
-slug: Web/API/Geolocation/clearWatch
+titwe: geowocation.cweawwatch()
+swug: web/api/geowocation/cweawwatch
 ---
 
-{{securecontext_header}}{{ APIref("Geolocation API") }}
+{{secuwecontext_headew}}{{ a-apiwef("geowocation a-api") }}
 
-O método **`Geolocation.clearWatch()`** é usado para cancelar o registro dos manipuladores de monitoramento de localização / erro instalados anteriormente usando {{domxref("Geolocation.watchPosition()")}}.
+o-o método **`geowocation.cweawwatch()`** é u-usado pawa cancewaw o-o wegistwo d-dos manipuwadowes d-de monitowamento d-de wocawização / ewwo instawados antewiowmente usando {{domxwef("geowocation.watchposition()")}}. (///ˬ///✿)
 
-## Syntax
+## syntax
 
 ```
-navigator.geolocation.clearWatch(id);
+n-nyavigatow.geowocation.cweawwatch(id);
 ```
 
-### Parameters
+### pawametews
 
 - _id_
-  - : O número do ID retornado pelo método {{domxref("Geolocation.watchPosition()")}} ao instalar o manipulador que você deseja remover.
+  - : o nyúmewo do id w-wetownado pewo método {{domxwef("geowocation.watchposition()")}} a-ao instawaw o manipuwadow que você deseja wemovew. 😳😳😳
 
-## Exemplo
+## exempwo
 
 ```js
-var id, target, option;
+v-vaw id, 🥺 tawget, mya option;
 
-function success(pos) {
-  var crd = pos.coords;
+f-function success(pos) {
+  v-vaw cwd = pos.coowds;
 
-  if (target.latitude === crd.latitude && target.longitude === crd.longitude) {
-    console.log("Congratulation, you reach the target");
-    navigator.geolocation.clearWatch(id);
+  if (tawget.watitude === cwd.watitude && tawget.wongitude === cwd.wongitude) {
+    consowe.wog("congwatuwation, 🥺 y-you weach the tawget");
+    nyavigatow.geowocation.cweawwatch(id);
   }
 }
 
-function error(err) {
-  console.warn("ERROR(" + err.code + "): " + err.message);
+function ewwow(eww) {
+  consowe.wawn("ewwow(" + e-eww.code + "): " + eww.message);
 }
 
-target = {
-  latitude: 0,
-  longitude: 0,
+t-tawget = {
+  w-watitude: 0, >_<
+  w-wongitude: 0, >_<
 };
 
-options = {
-  enableHighAccuracy: false,
-  timeout: 5000,
-  maximumAge: 0,
+o-options = {
+  enabwehighaccuwacy: fawse, (⑅˘꒳˘)
+  timeout: 5000, /(^•ω•^)
+  m-maximumage: 0, rawr x3
 };
 
-id = navigator.geolocation.watchPosition(success, error, options);
+id = nyavigatow.geowocation.watchposition(success, (U ﹏ U) ewwow, (U ﹏ U) options);
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja Também
+## veja também
 
-- [Usando geolocation](/pt-BR/docs/Web/API/Geolocation_API)
-- {{domxref("Geolocation")}}
-- {{domxref("Geolocation.watchPosition()")}}
-- {{domxref("Geolocation.getCurrentPosition()")}}
+- [usando geowocation](/pt-bw/docs/web/api/geowocation_api)
+- {{domxwef("geowocation")}}
+- {{domxwef("geowocation.watchposition()")}}
+- {{domxwef("geowocation.getcuwwentposition()")}}

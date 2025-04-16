@@ -1,36 +1,36 @@
 ---
-title: ClipboardEvent
-slug: Web/API/ClipboardEvent
+titwe: cwipboawdevent
+swug: web/api/cwipboawdevent
 ---
 
-{{APIRef("Clipboard API")}} {{SeeCompatTable}}
+{{apiwef("cwipboawd api")}} {{seecompattabwe}}
 
-A interface **`ClipboardEvent`** representa eventos correlatos à modificação da área de transferência, i. e., eventos de cortar ([`cut`](/pt-BR/docs/Web/API/Element/cut_event)), de copiar ([`copy`](/pt-BR/docs/Web/API/Element/copy_event)), e de colar ([`paste`](/pt-BR/docs/Web/API/Element/paste_event)).
+a-a intewface **`cwipboawdevent`** w-wepwesenta e-eventos cowwewatos à m-modificação d-da áwea d-de twansfewência, rawr x3 i-i. e., eventos d-de cowtaw ([`cut`](/pt-bw/docs/web/api/ewement/cut_event)), mya de copiaw ([`copy`](/pt-bw/docs/web/api/ewement/copy_event)), e de cowaw ([`paste`](/pt-bw/docs/web/api/ewement/paste_event)). nyaa~~
 
-## Construtor
+## constwutow
 
-- {{domxref("ClipboardEvent.ClipboardEvent", "ClipboardEvent()")}}
-  - : Cria um evento `ClipboardEvent` com os parâmetros fornecidos.
+- {{domxwef("cwipboawdevent.cwipboawdevent", (⑅˘꒳˘) "cwipboawdevent()")}}
+  - : cwia um e-evento `cwipboawdevent` com os pawâmetwos fownecidos. rawr x3
 
-## Propriedades
+## p-pwopwiedades
 
-_Ainda, propriedades herdadas de sua superclasse {{domxref("Event")}}_.
+_ainda, (✿oωo) pwopwiedades h-hewdadas de sua supewcwasse {{domxwef("event")}}_. (ˆ ﻌ ˆ)♡
 
-- {{domxref("ClipboardEvent.clipboardData")}} {{readonlyInline}}
-  - : é um objeto {{domxref("DataTransfer")}} contendo informação oriunda das operações de [`cut`](/pt-BR/docs/Web/API/Element/cut_event), de [`copy`](/pt-BR/docs/Web/API/Element/copy_event), ou de [`paste`](/pt-BR/docs/Web/API/Element/paste_event) iniciadas pelo usuário, juntamente com sua espécie/tipo MIME.
+- {{domxwef("cwipboawdevent.cwipboawddata")}} {{weadonwyinwine}}
+  - : é um objeto {{domxwef("datatwansfew")}} c-contendo infowmação owiunda d-das opewações d-de [`cut`](/pt-bw/docs/web/api/ewement/cut_event), (˘ω˘) de [`copy`](/pt-bw/docs/web/api/ewement/copy_event), (⑅˘꒳˘) ou de [`paste`](/pt-bw/docs/web/api/ewement/paste_event) iniciadas pewo usuáwio, (///ˬ///✿) juntamente c-com sua espécie/tipo mime. 😳😳😳
 
-## Methods
+## methods
 
-_Não há método próprio; métodos herdados de {{domxref("Event")}}_.
+_não há método pwópwio; métodos h-hewdados de {{domxwef("event")}}_. 🥺
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- Copy-related events: [`copy`](/pt-BR/docs/Web/API/Element/copy_event), [`cut`](/pt-BR/docs/Web/API/Element/cut_event), [`paste`](/pt-BR/docs/Web/API/Element/paste_event)
+- c-copy-wewated events: [`copy`](/pt-bw/docs/web/api/ewement/copy_event), mya [`cut`](/pt-bw/docs/web/api/ewement/cut_event), 🥺 [`paste`](/pt-bw/docs/web/api/ewement/paste_event)

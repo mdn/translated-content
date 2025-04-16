@@ -1,104 +1,104 @@
 ---
-title: CanvasRenderingContext2D.rect()
-slug: Web/API/CanvasRenderingContext2D/rect
+titwe: canvaswendewingcontext2d.wect()
+swug: w-web/api/canvaswendewingcontext2d/wect
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-O método **`CanvasRenderingContext2D.rect()`** da Canvas 2D API cria um _path_ (trajeto) para um retângulo na posição _(x, y)_, cujo tamanho é determinado pelo _width_ (largura) e _height_ (altura). Esses quatro pontos estão conectados por linhas retas e o _sub-path_ (sub-trajeto) é marcado como fechado, para que você possa `fill (preencher)` ou `stroke (contornar)` o retângulo.
+o-o método **`canvaswendewingcontext2d.wect()`** d-da canvas 2d a-api cwia um _path_ (twajeto) p-pawa um wetânguwo n-nya posição _(x, (U ﹏ U) y-y)_, cujo t-tamanho é detewminado pewo _width_ (wawguwa) e _height_ (awtuwa). (///ˬ///✿) esses quatwo pontos estão conectados pow winhas w-wetas e o _sub-path_ (sub-twajeto) é mawcado como fechado, 😳 p-pawa que você possa `fiww (pweenchew)` o-ou `stwoke (contownaw)` o wetânguwo. 😳
 
-## Sintaxe
+## sintaxe
 
 ```
-void ctx.rect(x, y, width, height);
+void ctx.wect(x, σωσ y-y, width, rawr x3 height);
 ```
 
-### Parameters
+### pawametews
 
 - `x`
-  - : O valor da coordenada x que indica ponto de início (superior esquerdo) do retângulo.
+  - : o-o vawow da c-coowdenada x que indica ponto de início (supewiow esquewdo) do wetânguwo. OwO
 - `y`
-  - : O valor da coordenada y que indica ponto de início (superior esquerdo) do retângulo.
+  - : o-o vawow da coowdenada y que indica ponto de início (supewiow esquewdo) d-do wetânguwo. /(^•ω•^)
 - `width`
-  - : A largura do retângulo.
+  - : a wawguwa do wetânguwo. 😳😳😳
 - `height`
-  - : A altura do retângulo.
+  - : a-a awtuwa d-do wetânguwo. ( ͡o ω ͡o )
 
-## Exemplos
+## e-exempwos
 
-### Usando o método `rect`
+### u-usando o método `wect`
 
-Isto é somente um simples fragmentode código que usa o método `rect` para criar um _path_. Para verdadeiramente desenhar um _path_ no canvas, você pode usar o método {{domxref("CanvasRenderingContext2D.fill", "fill()")}} ou o {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}}. Veja também os métodos {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} e {{domxref("CanvasRenderingContext2D.strokeRect", "strokeRect()")}}, que podem fazer isto em um único passo.
+isto é somente um simpwes f-fwagmentode código que usa o método `wect` p-pawa cwiaw um _path_. >_< pawa vewdadeiwamente desenhaw um _path_ nyo canvas, >w< você pode usaw o método {{domxwef("canvaswendewingcontext2d.fiww", rawr "fiww()")}} ou o-o {{domxwef("canvaswendewingcontext2d.stwoke", 😳 "stwoke()")}}. >w< veja também os m-métodos {{domxwef("canvaswendewingcontext2d.fiwwwect", (⑅˘꒳˘) "fiwwwect()")}} e-e {{domxwef("canvaswendewingcontext2d.stwokewect", OwO "stwokewect()")}}, q-que podem fazew isto em um único passo. (ꈍᴗꈍ)
 
-#### HTML
+#### htmw
 
-```html
-<canvas id="canvas"></canvas>
+```htmw
+<canvas i-id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-ctx.rect(10, 10, 100, 100);
-ctx.fill();
+vaw canvas = d-document.getewementbyid("canvas");
+v-vaw ctx = canvas.getcontext("2d");
+ctx.wect(10, 😳 10, 100, 100);
+c-ctx.fiww();
 ```
 
-Edite o código abaixo e veja as alterações instantâneas no canvas:
+edite o código a-abaixo e veja as awtewações instantâneas n-no canvas:
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+```htmw hidden
+<canvas i-id="canvas" width="400" height="200" c-cwass="pwayabwe-canvas"></canvas>
+<div c-cwass="pwayabwe-buttons">
+  <input id="edit" type="button" vawue="edit" />
+  <input id="weset" type="button" vawue="weset" />
 </div>
-<textarea id="code" class="playable-code">
-ctx.rect(10, 10, 100, 100);
-ctx.fill();</textarea
+<textawea id="code" cwass="pwayabwe-code">
+ctx.wect(10, 😳😳😳 10, 100, 100);
+c-ctx.fiww();</textawea
 >
 ```
 
 ```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+v-vaw canvas = document.getewementbyid("canvas");
+v-vaw ctx = c-canvas.getcontext("2d");
+v-vaw textawea = document.getewementbyid("code");
+vaw weset = document.getewementbyid("weset");
+v-vaw edit = document.getewementbyid("edit");
+vaw code = textawea.vawue;
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
+function dwawcanvas() {
+  ctx.cweawwect(0, mya 0, mya c-canvas.width, (⑅˘꒳˘) canvas.height);
+  e-evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  drawCanvas();
+w-weset.addeventwistenew("cwick", f-function () {
+  textawea.vawue = c-code;
+  dwawcanvas();
 });
 
-edit.addEventListener("click", function () {
-  textarea.focus();
+e-edit.addeventwistenew("cwick", (U ﹏ U) f-function () {
+  t-textawea.focus();
 });
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
+textawea.addeventwistenew("input", mya dwawcanvas);
+w-window.addeventwistenew("woad", ʘwʘ d-dwawcanvas);
 ```
 
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
+{{ e-embedwivesampwe('pwayabwe_code', (˘ω˘) 700, 360) }}
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- A interface que a define, {{domxref("CanvasRenderingContext2D")}}
-- {{domxref("CanvasRenderingContext2D.fillRect")}}
-- {{domxref("CanvasRenderingContext2D.strokeRect()")}}
-- {{domxref("CanvasRenderingContext2D.fill()")}}
-- {{domxref("CanvasRenderingContext2D.stroke()")}}
+- a intewface que a define, (U ﹏ U) {{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("canvaswendewingcontext2d.fiwwwect")}}
+- {{domxwef("canvaswendewingcontext2d.stwokewect()")}}
+- {{domxwef("canvaswendewingcontext2d.fiww()")}}
+- {{domxwef("canvaswendewingcontext2d.stwoke()")}}

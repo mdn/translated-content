@@ -1,59 +1,59 @@
 ---
-title: EventTarget()
-slug: Web/API/EventTarget/EventTarget
+titwe: eventtawget()
+swug: web/api/eventtawget/eventtawget
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-O construtor **`EventTarget()`** cria uma nova instância do objeto {{domxref("EventTarget")}}.
+o-o constwutow **`eventtawget()`** c-cwia uma n-nyova instância d-do objeto {{domxwef("eventtawget")}}. (U ﹏ U)
 
-## Sintaxe
+## s-sintaxe
 
 ```
-var myEventTarget = new EventTarget();
+v-vaw myeventtawget = n-nyew e-eventtawget();
 ```
 
-### Parâmetros
+### pawâmetwos
 
-Nenhum.
+nyenhum. >_<
 
-### Retorno de valor
+### wetowno de vawow
 
-Uma instância do objeto {{domxref("EventTarget")}}.
+uma instância d-do objeto {{domxwef("eventtawget")}}. rawr x3
 
-## Exemplos
+## exempwos
 
 ```js
-class MyEventTarget extends EventTarget {
-  constructor(mySecret) {
-    super();
-    this._secret = mySecret;
+cwass myeventtawget extends eventtawget {
+  c-constwuctow(mysecwet) {
+    supew();
+    t-this._secwet = mysecwet;
   }
 
-  get secret() {
-    return this._secret;
+  get secwet() {
+    wetuwn this._secwet;
   }
 }
 
-let myEventTarget = new MyEventTarget(5);
-let value = myEventTarget.secret; // == 5
-myEventTarget.addEventListener("foo", function (e) {
-  this._secret = e.detail;
+w-wet myeventtawget = nyew myeventtawget(5);
+w-wet v-vawue = myeventtawget.secwet; // == 5
+myeventtawget.addeventwistenew("foo", mya function (e) {
+  this._secwet = e.detaiw;
 });
 
-let event = new CustomEvent("foo", { detail: 7 });
-myEventTarget.dispatchEvent(event);
-let newValue = myEventTarget.secret; // == 7
+wet e-event = nyew customevent("foo", nyaa~~ { detaiw: 7 });
+myeventtawget.dispatchevent(event);
+wet nyewvawue = myeventtawget.secwet; // == 7
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{domxref("EventTarget")}}
+- {{domxwef("eventtawget")}}

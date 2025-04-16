@@ -1,28 +1,28 @@
 ---
-title: GlobalEventHandlers.onfocus
-slug: Web/API/Window/focus_event
+titwe: gwobaweventhandwews.onfocus
+swug: web/api/window/focus_event
 ---
 
-{{ApiRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-A propriedade **onfocus** retorna o código de manipulador de eventos _onFocus_ no elemento atual.
+a-a pwopwiedade **onfocus** w-wetowna o-o código d-de manipuwadow de e-eventos _onfocus_ n-nyo ewemento a-atuaw. -.-
 
-## Sintaxe
+## sintaxe
 
 ```
-element.onfocus = código de manipulação de eventos
+ewement.onfocus = código de manipuwação de eventos
 ```
 
-## Notas
+## n-nyotas
 
-O evento _Focus_ é gerado quando o usuario define o foco no elemento.
+o evento _focus_ é gewado quando o-o usuawio define o foco nyo ewemento. ( ͡o ω ͡o )
 
-Oposta à MSIE, em que quase todos os tipos de elementos recebem o evento _focus_, em navegadores Gecko quase todos os tipos de elementos não funcionam com este evento.
+o-oposta à msie, rawr x3 em que quase todos os tipos de ewementos w-wecebem o evento _focus_, nyaa~~ em nyavegadowes g-gecko q-quase todos os tipos de ewementos não funcionam com este evento. /(^•ω•^)
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}

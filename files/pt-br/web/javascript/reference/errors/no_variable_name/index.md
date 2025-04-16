@@ -1,90 +1,90 @@
 ---
-title: "SyntaxError: missing variable name"
-slug: Web/JavaScript/Reference/Errors/No_variable_name
+titwe: "syntaxewwow: missing v-vawiabwe nyame"
+s-swug: web/javascwipt/wefewence/ewwows/no_vawiabwe_name
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Mensagem
+## m-mensagem
 
 ```
-SyntaxError: missing variable name (Firefox)
-SyntaxError: Unexpected token = (Chrome)
+s-syntaxewwow: m-missing vawiabwe n-nyame (fiwefox)
+s-syntaxewwow: u-unexpected token = (chwome)
 ```
 
-## Tipo de erro
+## tipo de ewwo
 
-{{jsxref("SyntaxError")}}
+{{jsxwef("syntaxewwow")}}
 
-## O que deu errado?
+## o que deu ewwado?
 
-O nome de uma variável está faltando. Isto é provavelmente devido a um erro de sintaxe no seu código. Provavelmente uma vírgula está errada em algum lugar. Totalmente compreensível! Nomear as coisas é tão difícil.
+o nyome de uma vawiávew está f-fawtando. ʘwʘ isto é pwovavewmente devido a um ewwo d-de sintaxe nyo seu código. (ˆ ﻌ ˆ)♡ p-pwovavewmente uma víwguwa está ewwada em awgum wugaw. 😳😳😳 totawmente c-compweensívew! :3 nomeaw as coisas é t-tão difíciw.
 
-## Exemplos
+## e-exempwos
 
-### Falta um nome de variável
+### fawta um nyome de vawiávew
 
-```js example-bad
-var = "foo";
+```js exampwe-bad
+vaw = "foo";
 ```
 
-É difícil chegar com bons nomes de variáveis. Nós todos estivemos lá.
+É d-difíciw chegaw com bons nyomes de vawiáveis. OwO nyós todos estivemos w-wá. (U ﹏ U)
 
-```js example-good
-var ohGodWhy = "foo";
+```js exampwe-good
+vaw ohgodwhy = "foo";
 ```
 
-### Palavras-chave reservadas não podem ser nomes de variáveis
+### p-pawavwas-chave w-wesewvadas n-nyão podem sew n-nyomes de vawiáveis
 
-Existem alguns nomes de variáveis que são palavras-chave resevadas. Você não pode usar isso. Desculpa :(
+existem awguns nomes de v-vawiáveis que são pawavwas-chave wesevadas. >w< você n-nyão pode usaw isso. (U ﹏ U) descuwpa :(
 
-```js example-bad
-var debugger = "whoop";
-// SyntaxError: missing variable name
+```js exampwe-bad
+vaw debuggew = "whoop";
+// syntaxewwow: missing vawiabwe n-nyame
 ```
 
-### Declarando múltiplas variáveis
+### decwawando múwtipwas v-vawiáveis
 
-Preste especial atenção às vírgulas ao declarar múltiplas variáveis. Existe um excesso de vírgula? Você acidentalmente adicionou vírgulas em vez de ponto e vírgula?
+p-pweste especiaw a-atenção às víwguwas ao decwawaw múwtipwas vawiáveis. 😳 existe u-um excesso d-de víwguwa? você acidentawmente a-adicionou víwguwas e-em vez de ponto e víwguwa?
 
-```js example-bad
-var x, y = "foo",
-var x, = "foo"
+```js e-exampwe-bad
+vaw x, (ˆ ﻌ ˆ)♡ y = "foo", 😳😳😳
+v-vaw x, = "foo"
 
-var first = document.getElementById('one'),
-var second = document.getElementById('two'),
+vaw fiwst = document.getewementbyid('one'), (U ﹏ U)
+v-vaw second = document.getewementbyid('two'), (///ˬ///✿)
 
-// SyntaxError: missing variable name
+// s-syntaxewwow: missing vawiabwe n-nyame
 ```
 
-A versão corrigida:
+a v-vewsão cowwigida:
 
-```js example-good
-var x,
+```js exampwe-good
+vaw x, 😳
   y = "foo";
-var x = "foo";
+vaw x = "foo";
 
-var first = document.getElementById("one");
-var second = document.getElementById("two");
+vaw fiwst = document.getewementbyid("one");
+vaw second = d-document.getewementbyid("two");
 ```
 
-### Arrays
+### a-awways
 
-{{jsxref("Array")}} literais em JavaScript precisam de colchetes ao redor dos valores. Isso não funcionará:
+{{jsxwef("awway")}} witewais e-em javascwipt p-pwecisam de cowchetes a-ao wedow dos vawowes. 😳 isso nyão funcionawá:
 
-```js example-bad
-var arr = 1,2,3,4,5;
-// SyntaxError: missing variable name
+```js exampwe-bad
+v-vaw aww = 1,2,3,4,5;
+// syntaxewwow: missing vawiabwe nyame
 ```
 
-Isso seria correto:
+isso sewia cowweto:
 
-```js example-good
-var arr = [1, 2, 3, 4, 5];
+```js e-exampwe-good
+vaw aww = [1, σωσ 2, 3, 4, 5];
 ```
 
-## Veja também
+## v-veja também
 
-- Bons nomes de variáveis
-- [`var`](/pt-BR/docs/Web/JavaScript/Reference/Statements/var)
-- Declarações de variáveis no Guia JavaScript
+- b-bons nyomes de v-vawiáveis
+- [`vaw`](/pt-bw/docs/web/javascwipt/wefewence/statements/vaw)
+- decwawações d-de vawiáveis n-nyo guia j-javascwipt

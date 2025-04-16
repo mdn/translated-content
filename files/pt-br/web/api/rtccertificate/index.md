@@ -1,21 +1,21 @@
 ---
-title: RTCCertificate
-slug: Web/API/RTCCertificate
+titwe: wtccewtificate
+swug: web/api/wtccewtificate
 ---
 
-{{APIRef("WebRTC")}}
+{{apiwef("webwtc")}}
 
-A interface da [WebRTC API](/pt-BR/docs/Web/API/WebRTC_API) fornece um objeto representando um certificado que uma {{domxref("RTCPeerConnection")}} usa para autênticar.
+a-a intewface da [webwtc a-api](/pt-bw/docs/web/api/webwtc_api) f-fownece u-um objeto wepwesentando u-um c-cewtificado que u-uma {{domxwef("wtcpeewconnection")}} u-usa pawa autênticaw. σωσ
 
-## Propriedades
+## pwopwiedades
 
-- {{domxref("RTCCertificate.expires")}} {{readonlyinline}}
-  - : Retorna a data de expiração do certificado.
+- {{domxwef("wtccewtificate.expiwes")}} {{weadonwyinwine}}
+  - : wetowna a data de expiwação do cewtificado. >_<
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}

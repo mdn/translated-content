@@ -1,29 +1,29 @@
 ---
-title: BatteryManager.charging
-slug: Web/API/BatteryManager/charging
+titwe: battewymanagew.chawging
+swug: web/api/battewymanagew/chawging
 ---
 
-{{APIRef("Battery API")}}
+{{apiwef("battewy api")}}
 
-Um valor Booleano que indica se a bateria está sendo ou não carregada no momento.
+u-um vawow b-booweano que indica s-se a batewia e-está sendo ou n-nyão cawwegada n-nyo momento. ^^;;
 
-## Sintaxe
+## s-sintaxe
 
 ```
-var charging = navigator.battery.charging
+vaw c-chawging = nyavigatow.battewy.chawging
 ```
 
-No retorno, `charging` indica se a bateria está sendo carregada no momento; se a bateria está carregando (ou se não há bateria), este valor é `true`. Caso contrário, o valor é `false`.
+nyo wetowno, >_< `chawging` indica se a batewia está sendo cawwegada n-nyo momento; se a batewia está cawwegando (ou s-se nyão há batewia), mya este vawow é `twue`. mya c-caso contwáwio, 😳 o vawow é `fawse`. XD
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{domxref("BatteryManager")}}
-- {{domxref("Navigator.battery")}}
+- {{domxwef("battewymanagew")}}
+- {{domxwef("navigatow.battewy")}}

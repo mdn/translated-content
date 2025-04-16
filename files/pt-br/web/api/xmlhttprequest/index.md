@@ -1,668 +1,668 @@
 ---
-title: XMLHttpRequest
-slug: Web/API/XMLHttpRequest
+titwe: xmwhttpwequest
+swug: web/api/xmwhttpwequest
 ---
 
-{{AvailableInWorkers("window_and_worker_except_service")}}
+{{avaiwabweinwowkews("window_and_wowkew_except_sewvice")}}
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest a-api")}}
 
-`XMLHttpRequest` é um objeto que fornece funcionalidade ao cliente para transferir dados entre um cliente e um servidor. Ele fornece uma maneira fácil de recuperar dados de um URL sem ter que fazer uma atualização de página inteira. Isso permite que uma página da Web atualize apenas uma parte do conteúdo sem interromper o que o usuário esteja fazendo. XMLHttpRequest é usado constantemente na programação de [AJAX](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data).
+`xmwhttpwequest` é u-um o-objeto que fownece f-funcionawidade a-ao cwiente pawa t-twansfewiw dados e-entwe um cwiente e-e um sewvidow. :3 ewe fownece uma maneiwa fáciw de wecupewaw dados de um uww sem t-tew que fazew uma atuawização de página inteiwa. 😳 i-isso pewmite que uma página d-da web atuawize apenas uma pawte do conteúdo sem intewwompew o-o que o usuáwio esteja fazendo. (U ﹏ U) x-xmwhttpwequest é u-usado constantemente nya pwogwamação de [ajax](/pt-bw/docs/weawn/javascwipt/cwient-side_web_apis/fetching_data). >w<
 
-`XMLHttpRequest` foi originalmente projetado pela Microsoft e adotado pela Mozilla, Apple e Google. Está sendo padronizado pela [WHATWG](https://xhr.spec.whatwg.org/). Apesar do nome, XMLHttpRequest pode ser usado para recuperar qualquer tipo de dados, e não apenas XML, suportando também, protocolos diferentes de [HTTP](/pt-BR/HTTP) (incluindo file e ftp ).
+`xmwhttpwequest` foi owiginawmente pwojetado p-pewa micwosoft e adotado pewa moziwwa, UwU appwe e googwe. 😳 está sendo padwonizado p-pewa [naniwg](https://xhw.spec.naniwg.owg/). XD apesaw do nyome, (✿oωo) x-xmwhttpwequest p-pode sew usado p-pawa wecupewaw q-quawquew tipo de dados, e nyão apenas xmw, ^•ﻌ•^ supowtando t-também, mya pwotocowos difewentes de [http](/pt-bw/http) (incwuindo f-fiwe e ftp ). (˘ω˘)
 
-Para criar uma instância de XMLHttpRequest , basta fazer isso:
+pawa cwiaw uma instância de xmwhttpwequest , nyaa~~ basta fazew isso:
 
 ```
-var myRequest = new XMLHttpRequest();
+vaw m-mywequest = nyew xmwhttpwequest();
 ```
 
-Para obter detalhes sobre como usar XMLHttpRequest , consulte [Usando XMLHttpRequest](/pt-BR/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest).
+p-pawa obtew d-detawhes sobwe c-como usaw xmwhttpwequest , :3 consuwte [usando xmwhttpwequest](/pt-bw/docs/dom/xmwhttpwequest/using_xmwhttpwequest). (✿oωo)
 
-## Propriedades
+## pwopwiedades
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th>Atributo</th>
-      <th>Tipo</th>
-      <th>Descrição</th>
-    </tr>
-    <tr id="onreadystatechange">
+    <tw>
+      <th>atwibuto</th>
+      <th>tipo</th>
+      <th>descwição</th>
+    </tw>
+    <tw i-id="onweadystatechange">
       <td>
-        <p><code>onreadystatechange</code></p>
+        <p><code>onweadystatechange</code></p>
       </td>
-      <td><code>Function?</code></td>
+      <td><code>function?</code></td>
       <td>
         <p>
-          A função de objeto JavaScript que é chamado sempre que o atributo
-          readyState sofre alteração. A função de callback é chamada a partir da
-          thread existente na interface de usuário.
+          a função d-de objeto javascwipt q-que é chamado sempwe que o-o atwibuto
+          weadystate s-sofwe awtewação. (U ﹏ U) a função de cawwback é chamada a-a pawtiw da
+          thwead e-existente nya intewface de usuáwio. (ꈍᴗꈍ)
         </p>
-        <div class="warning">
-          <strong>Aviso:</strong> Este não deve ser usado com chamadas síncronas
-          e não deve ser utilizado a partir do código nativo.
+        <div c-cwass="wawning">
+          <stwong>aviso:</stwong> e-este nyão deve sew usado com chamadas síncwonas
+          e nyão deve sew utiwizado a pawtiw do código nyativo. (˘ω˘)
         </div>
       </td>
-    </tr>
-    <tr id="readyState">
-      <td><code>readyState</code></td>
-      <td><code>retorna o cabeçalho da requisição.</code></td>
+    </tw>
+    <tw i-id="weadystate">
+      <td><code>weadystate</code></td>
+      <td><code>wetowna o-o cabeçawho da wequisição.</code></td>
       <td>
         <p></p>
-        <table class="standard-table">
+        <tabwe c-cwass="standawd-tabwe">
           <tbody>
-            <tr>
-              <td class="header">Valor</td>
-              <td class="header">Estado</td>
-              <td class="header">Descrição</td>
-            </tr>
-            <tr>
+            <tw>
+              <td c-cwass="headew">vawow</td>
+              <td c-cwass="headew">estado</td>
+              <td cwass="headew">descwição</td>
+            </tw>
+            <tw>
               <td><code>0</code></td>
-              <td><code>UNSENT</code></td>
-              <td><code>open() não foi chamado ainda.</code></td>
-            </tr>
-            <tr>
+              <td><code>unsent</code></td>
+              <td><code>open() nyão foi chamado ainda.</code></td>
+            </tw>
+            <tw>
               <td><code>1</code></td>
-              <td><code>OPENED</code></td>
-              <td><code>send() não foi chamado ainda.</code></td>
-            </tr>
-            <tr>
+              <td><code>opened</code></td>
+              <td><code>send() n-nyão foi chamado ainda.</code></td>
+            </tw>
+            <tw>
               <td><code>2</code></td>
-              <td><code>HEADERS_RECEIVED</code></td>
+              <td><code>headews_weceived</code></td>
               <td>
                 <code
-                  >send() foi chamado, e cabeçalhos e status estão
-                  disponíveis.</code
+                  >send() foi chamado, ^^ e cabeçawhos e status estão
+                  d-disponíveis.</code
                 >
               </td>
-            </tr>
-            <tr>
+            </tw>
+            <tw>
               <td><code>3</code></td>
-              <td><code>LOADING</code></td>
-              <td>Download; responseText contém dados parciais.</td>
-            </tr>
-            <tr>
+              <td><code>woading</code></td>
+              <td>downwoad; wesponsetext c-contém dados p-pawciais.</td>
+            </tw>
+            <tw>
               <td><code>4</code></td>
-              <td><code>DONE</code></td>
-              <td>A operação está concluída.</td>
-            </tr>
+              <td><code>done</code></td>
+              <td>a o-opewação está concwuída.</td>
+            </tw>
           </tbody>
-        </table>
+        </tabwe>
       </td>
-    </tr>
-    <tr id="response">
-      <td><code>response</code></td>
-      <td>ArrayBuffer, Document,Blob, DOMString</td>
+    </tw>
+    <tw id="wesponse">
+      <td><code>wesponse</code></td>
+      <td>awwaybuffew, (⑅˘꒳˘) d-document,bwob, rawr d-domstwing</td>
       <td>
         <p>
-          Retorna um objeto JavaScript de tipo
-          {{domxref("ArrayBuffer")}}, {{domxref("Blob")}} ou
-          {{domxref("Document")}}, de acordo com o que estiver contido
-          no <code><a href="#responseType">responseType</a>. </code>Retorna
-          <code>null</code> se a request não esteja completa ou não obteve
-          sucesso.
+          w-wetowna u-um objeto javascwipt de tipo
+          {{domxwef("awwaybuffew")}}, :3 {{domxwef("bwob")}} ou
+          {{domxwef("document")}}, OwO d-de a-acowdo com o que e-estivew contido
+          n-nyo <code><a h-hwef="#wesponsetype">wesponsetype</a>. (ˆ ﻌ ˆ)♡ </code>wetowna
+          <code>nuww</code> se a wequest nyão esteja compweta ou n-nyão obteve
+          sucesso. :3
         </p>
       </td>
-    </tr>
-    <tr id="responseText">
-      <td><code>responseText</code> {{ReadOnlyInline()}}</td>
-      <td><code>DOMString</code></td>
+    </tw>
+    <tw id="wesponsetext">
+      <td><code>wesponsetext</code> {{weadonwyinwine()}}</td>
+      <td><code>domstwing</code></td>
       <td>
-        A resposta à <em>request</em>, em formato texto, retorna null se a
-        solicitação não teve êxito ou que ainda não foi enviada.
+        a wesposta à <em>wequest</em>, -.- em fowmato texto, -.- wetowna n-nyuww se a
+        sowicitação nyão teve êxito ou que ainda n-nyão foi enviada. òωó
       </td>
-    </tr>
-    <tr id="responseType">
-      <td><code>responseType</code></td>
-      <td><code>XMLHttpRequestResponseType</code></td>
+    </tw>
+    <tw i-id="wesponsetype">
+      <td><code>wesponsetype</code></td>
+      <td><code>xmwhttpwequestwesponsetype</code></td>
       <td>
-        <p>Pode ser configurado para alterar o tipo de resposta.</p>
-        <table class="standard-table" style="width: auto">
+        <p>pode sew c-configuwado pawa awtewaw o tipo d-de wesposta.</p>
+        <tabwe cwass="standawd-tabwe" s-stywe="width: a-auto">
           <tbody>
-            <tr>
-              <td class="header">Valor</td>
-              <td class="header">
-                Tipo de dados de <code>resposta</code> de propriedade
+            <tw>
+              <td cwass="headew">vawow</td>
+              <td cwass="headew">
+                tipo de dados de <code>wesposta</code> de pwopwiedade
               </td>
-            </tr>
-            <tr>
-              <td><code>""</code> (string vazia)</td>
-              <td>String (este é o padrão)</td>
-            </tr>
-            <tr>
-              <td><code>"arraybuffer"</code></td>
+            </tw>
+            <tw>
+              <td><code>""</code> (stwing vazia)</td>
+              <td>stwing (este é o-o padwão)</td>
+            </tw>
+            <tw>
+              <td><code>"awwaybuffew"</code></td>
               <td>
                 <a
-                  href="/en/JavaScript_typed_arrays/ArrayBuffer"
-                  ><code>ArrayBuffer</code></a
+                  hwef="/en/javascwipt_typed_awways/awwaybuffew"
+                  ><code>awwaybuffew</code></a
                 >
               </td>
-            </tr>
-            <tr>
-              <td><code>"blob"</code></td>
-              <td>{{ domxref("Blob") }}</td>
-            </tr>
-            <tr>
+            </tw>
+            <tw>
+              <td><code>"bwob"</code></td>
+              <td>{{ d-domxwef("bwob") }}</td>
+            </tw>
+            <tw>
               <td><code>"document"</code></td>
-              <td>{{ domxref("Document") }}</td>
-            </tr>
-            <tr>
+              <td>{{ domxwef("document") }}</td>
+            </tw>
+            <tw>
               <td><code>"json"</code></td>
               <td>
-                Objeto JavaScript, analisado a partir de uma seqüência de
-                caracteres JSON retornado pelo servidor.
+                o-objeto javascwipt, 😳 a-anawisado a pawtiw de uma seqüência de
+                c-cawactewes json w-wetownado pewo sewvidow. nyaa~~
               </td>
-            </tr>
-            <tr>
+            </tw>
+            <tw>
               <td><code>"text"</code></td>
-              <td>String</td>
-            </tr>
-            <tr>
-              <td><code>"moz-blob"</code></td>
+              <td>stwing</td>
+            </tw>
+            <tw>
+              <td><code>"moz-bwob"</code></td>
               <td>
-                Usado pelo Firefox para permitir recuperar dados parciais do
-                tipo {{ domxref("Blob") }},de eventos de progresso. Isso
-                permite que o manipulador de eventos de progresso iniciar o
-                processamento de dados enquanto ele ainda está sendo recebido.
+                usado p-pewo fiwefox p-pawa pewmitiw wecupewaw dados pawciais do
+                tipo {{ domxwef("bwob") }},de e-eventos d-de pwogwesso. (⑅˘꒳˘) i-isso
+                pewmite que o-o manipuwadow de e-eventos de pwogwesso iniciaw o
+                p-pwocessamento de dados enquanto ewe ainda está sendo wecebido. 😳
               </td>
-            </tr>
-            <tr>
+            </tw>
+            <tw>
               <td><code>"moz-chunked-text"</code></td>
               <td>
                 <p>
-                  Semelhante ao "text" , mas o <em>streaming </em>ainda está
-                  fluindo. Isto significa que o valor na response , só está
-                  disponível durante a expedição do "progress" do evento e
-                  contém apenas os dados recebidos desde a última "progress" do
-                  evento.
+                  semewhante a-ao "text" , (U ﹏ U) mas o-o <em>stweaming </em>ainda está
+                  fwuindo. /(^•ω•^) isto s-significa que o-o vawow nya wesponse , OwO só está
+                  disponívew duwante a expedição d-do "pwogwess" do evento e
+                  contém apenas os dados wecebidos desde a úwtima "pwogwess" d-do
+                  evento. ( ͡o ω ͡o )
                 </p>
                 <p>
-                  Quando response é acessado durante um evento "progress", este
-                  contém uma string com os dados. Caso contrário, retorna null .
+                  quando wesponse é a-acessado d-duwante um evento "pwogwess", XD este
+                  contém uma stwing com o-os dados. /(^•ω•^) caso contwáwio, /(^•ω•^) w-wetowna nyuww . 😳😳😳
                 </p>
-                <p>Este modo atualmente só funciona no Firefox.</p>
+                <p>este modo atuawmente só funciona n-nyo fiwefox.</p>
               </td>
-            </tr>
-            <tr>
-              <td><code>"moz-chunked-arraybuffer"</code></td>
+            </tw>
+            <tw>
+              <td><code>"moz-chunked-awwaybuffew"</code></td>
               <td>
                 <p>
-                  Semelhante ao <code>"arraybuffer"</code>, mas está fluindo.
-                  Isto significa que o valor na response , só está disponível
-                  durante a expedição do "progress" do evento e contém apenas os
-                  dados recebidos desde a última "progress" do evento.
+                  semewhante ao <code>"awwaybuffew"</code>, (ˆ ﻌ ˆ)♡ m-mas está fwuindo. :3
+                  isto significa que o vawow nya w-wesponse , òωó só está disponívew
+                  d-duwante a expedição d-do "pwogwess" do evento e-e contém apenas os
+                  d-dados wecebidos d-desde a úwtima "pwogwess" d-do evento. 🥺
                 </p>
                 <p>
-                  Quando response é acessado durante um "progress" evento que
-                  contém uma seqüência com os dados. Caso contrário, retorna
-                  null .
+                  quando w-wesponse é acessado d-duwante um "pwogwess" evento que
+                  c-contém u-uma seqüência c-com os dados. (U ﹏ U) caso contwáwio, XD wetowna
+                  n-nyuww . ^^
                 </p>
-                <p>Este modo atualmente só funciona no Firefox.</p>
+                <p>este modo atuawmente só f-funciona nyo f-fiwefox.</p>
                 <p>.</p>
               </td>
-            </tr>
+            </tw>
           </tbody>
-        </table>
-        <div class="note">
-          <strong>Nota:</strong> Começando com 11,0 Gecko (Firefox 11.0 / 11.0
-          Thunderbird / SeaMonkey 2.8), bem como WebKit construir 528, esses
-          navegadores não permitem que você use o atributo responseType ao
-          executar solicitações síncronas. Tentativas de fazer isso geram uma
-          exceção do tipo NS_ERROR_DOM_INVALID_ACCESS_ERR. Esta mudança foi
-          proposta para padronização junto à W3C.
+        </tabwe>
+        <div cwass="note">
+          <stwong>nota:</stwong> começando com 11,0 g-gecko (fiwefox 11.0 / 11.0
+          t-thundewbiwd / s-seamonkey 2.8), o.O b-bem como webkit constwuiw 528, 😳😳😳 e-esses
+          nyavegadowes nyão pewmitem que você use o atwibuto wesponsetype ao
+          e-executaw sowicitações síncwonas. /(^•ω•^) t-tentativas de fazew isso gewam u-uma
+          exceção do tipo n-nys_ewwow_dom_invawid_access_eww. 😳😳😳 esta mudança f-foi
+          p-pwoposta pawa p-padwonização junto à w-w3c. ^•ﻌ•^
         </div>
       </td>
-    </tr>
-    <tr id="responseXML">
-      <td><code>responseXML</code> {{ReadOnlyInline()}}</td>
-      <td><code>Document?</code></td>
+    </tw>
+    <tw i-id="wesponsexmw">
+      <td><code>wesponsexmw</code> {{weadonwyinwine()}}</td>
+      <td><code>document?</code></td>
       <td>
         <p>
-          A resposta ao pedido como um DOM
+          a wesposta ao pedido como um dom
           <code
-            ><a class="internal" href="/en/DOM/document"
-              >Document</a
+            ><a cwass="intewnaw" hwef="/en/dom/document"
+              >document</a
             ></code
           >
-          objeto, ou null se o pedido não foi bem sucedida, ainda não foi
-          enviado, ou não pode ser analisado como XML ou HTML. A resposta é
-          analisado como se fosse um <code>text/html</code> stream. Quando o
-          responseType está definido para "document" e que a solicitação tenha
-          sido feita de forma assíncrona, a resposta é analisado como se fosse
-          um <code>text/html</code> stream.
+          objeto, 🥺 ou nyuww se o pedido nyão f-foi bem sucedida, o.O a-ainda não foi
+          e-enviado, (U ᵕ U❁) ou nyão pode s-sew anawisado como xmw ou htmw. ^^ a wesposta é
+          anawisado c-como se fosse u-um <code>text/htmw</code> stweam. (⑅˘꒳˘) q-quando o
+          wesponsetype está definido p-pawa "document" e-e que a sowicitação tenha
+          s-sido f-feita de fowma assíncwona, :3 a wesposta é anawisado como se fosse
+          um <code>text/htmw</code> s-stweam. (///ˬ///✿)
         </p>
-        <div class="note">
-          <strong>Nota:</strong> Se o servidor não se aplica o text/xml
-          cabeçalho Content-Type, você pode usar overrideMimeType() para forçar
-          XMLHttpRequest para analisá-lo como XML de qualquer maneira.
+        <div c-cwass="note">
+          <stwong>nota:</stwong> s-se o sewvidow n-nyão se apwica o-o text/xmw
+          cabeçawho c-content-type, :3 v-você pode usaw ovewwidemimetype() p-pawa fowçaw
+          x-xmwhttpwequest pawa a-anawisá-wo como xmw de quawquew maneiwa. 🥺
         </div>
       </td>
-    </tr>
-    <tr id="status">
-      <td><code>status</code> {{ReadOnlyInline()}}</td>
-      <td><code>unsigned short</code></td>
+    </tw>
+    <tw i-id="status">
+      <td><code>status</code> {{weadonwyinwine()}}</td>
+      <td><code>unsigned showt</code></td>
       <td>
-        O status de resposta da requisição. Este é o retorno do codigo da
-        requisição HTTP (por exemplo, status é 200 qual a solicitação for
-        bem-sucedida).
+        o-o status d-de wesposta da wequisição. mya e-este é o wetowno do codigo da
+        wequisição h-http (pow exempwo, XD s-status é 200 q-quaw a sowicitação fow
+        bem-sucedida). -.-
       </td>
-    </tr>
-    <tr id="statusText">
-      <td><code>statusText</code> {{ReadOnlyInline()}}</td>
-      <td><code>DOMString</code></td>
+    </tw>
+    <tw id="statustext">
+      <td><code>statustext</code> {{weadonwyinwine()}}</td>
+      <td><code>domstwing</code></td>
       <td>
-        A cadeia de resposta retornado pelo servidor HTTP. Ao contrário do
-        status , o que inclui todo o texto da mensagem de resposta (" 200 OK ",
-        por exemplo).
+        a-a cadeia de wesposta wetownado pewo sewvidow h-http. o.O ao c-contwáwio do
+        status , (˘ω˘) o q-que incwui todo o texto da mensagem d-de wesposta (" 200 o-ok ", (U ᵕ U❁)
+        pow exempwo). rawr
       </td>
-    </tr>
-    <tr id="timeout">
+    </tw>
+    <tw id="timeout">
       <td><code>timeout</code></td>
-      <td><code>unsigned long</code></td>
+      <td><code>unsigned w-wong</code></td>
       <td>
         <p>
-          <br />O número de milissegundos de um pedido pode tomar antes de ser
-          automaticamente encerrada. Um valor de 0 (que é o padrão) significa
-          que não há tempo limite.
+          <bw />o nyúmewo de miwissegundos d-de um pedido pode t-tomaw antes de sew
+          a-automaticamente encewwada. 🥺 um vawow d-de 0 (que é o-o padwão) significa
+          q-que nyão há tempo wimite. rawr x3
         </p>
-        <div class="note">
-          <strong>Nota:</strong> Você não pode usar um tempo limite para
-          solicitações síncronas com uma janela proprietária.
+        <div cwass="note">
+          <stwong>nota:</stwong> você nyão pode usaw um tempo wimite pawa
+          sowicitações síncwonas com uma janewa pwopwietáwia.
         </div>
       </td>
-    </tr>
-    <tr id="upload">
-      <td><code>upload</code></td>
-      <td><code>XMLHttpRequestUpload</code></td>
+    </tw>
+    <tw id="upwoad">
+      <td><code>upwoad</code></td>
+      <td><code>xmwhttpwequestupwoad</code></td>
       <td>
-        O processo de upload pode ser rastreado através da ação de retorno de um
-        evento para upload.
+        o pwocesso de upwoad pode sew wastweado atwavés d-da ação de w-wetowno de um
+        evento pawa upwoad. ( ͡o ω ͡o )
       </td>
-    </tr>
-    <tr id="withCredentials">
-      <td><code>withCredentials</code></td>
-      <td><code>boolean</code></td>
+    </tw>
+    <tw i-id="withcwedentiaws">
+      <td><code>withcwedentiaws</code></td>
+      <td><code>boowean</code></td>
       <td>
         <p>
-          Indica se ou não de cross-site Access-Control solicitações devem ser
-          feitas usando credenciais, como cookies ou cabeçalhos de autorização.
-          O padrão é false .
+          i-indica se ou nyão d-de cwoss-site access-contwow s-sowicitações devem sew
+          f-feitas usando c-cwedenciais, σωσ como cookies ou cabeçawhos d-de autowização. rawr x3
+          o padwão é f-fawse . (ˆ ﻌ ˆ)♡
         </p>
-        <div class="note">
-          <strong>Nota:</strong> Esta não afeta as solicitações no mesmo local.
+        <div c-cwass="note">
+          <stwong>nota:</stwong> esta nyão afeta as sowicitações n-nyo mesmo w-wocaw.
         </div>
-        <div class="note">
-          <strong>Nota:</strong> Começando com 11,0 Gecko (Firefox 11.0 / 11.0
-          Thunderbird / SeaMonkey 2.8), Gecko não permite que você use os
-          atributos withCredentials ao realizar solicitações síncronas. Ao
-          tentar fazer isso o sistema gera uma exceção do tipo
-          NS_ERROR_DOM_INVALID_ACCESS_ERR.
+        <div c-cwass="note">
+          <stwong>nota:</stwong> c-começando com 11,0 g-gecko (fiwefox 11.0 / 11.0
+          t-thundewbiwd / s-seamonkey 2.8), rawr g-gecko n-nyão pewmite que você use os
+          a-atwibutos w-withcwedentiaws a-ao weawizaw sowicitações síncwonas. :3 a-ao
+          tentaw fazew isso o sistema g-gewa uma exceção do tipo
+          n-nys_ewwow_dom_invawid_access_eww. rawr
         </div>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### Propriedades não-padrão
+### p-pwopwiedades n-nyão-padwão
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th>Attribute</th>
-      <th>Type</th>
-      <th>Description</th>
-    </tr>
-    <tr id="channel">
-      <td><code>channel</code> {{ReadOnlyInline()}}</td>
-      <td><code>nsIChannel</code></td>
+    <tw>
+      <th>attwibute</th>
+      <th>type</th>
+      <th>descwiption</th>
+    </tw>
+    <tw i-id="channew">
+      <td><code>channew</code> {{weadonwyinwine()}}</td>
+      <td><code>nsichannew</code></td>
       <td>
-        O canal utilizado pelo objecto aquando da execução do pedido. Esta é
-        null se o canal não foi criado ainda. No caso de um pedido de múltiplas
-        partes, isto é o canal inicial, não as diferentes partes do pedido de
-        várias partes.
-        <strong>Requer privilégios elevados para o acesso.</strong>
+        o canaw utiwizado p-pewo objecto aquando da execução d-do pedido. (˘ω˘) esta é
+        n-nyuww se o canaw nyão foi cwiado ainda. (ˆ ﻌ ˆ)♡ nyo caso de um pedido de múwtipwas
+        p-pawtes, mya isto é o canaw iniciaw, (U ᵕ U❁) n-nyão as d-difewentes pawtes do pedido de
+        váwias pawtes. mya
+        <stwong>wequew pwiviwégios e-ewevados pawa o acesso.</stwong>
       </td>
-    </tr>
-    <tr id="mozAnon">
-      <td><code>mozAnon</code> {{ReadOnlyInline()}}</td>
-      <td><code>boolean</code></td>
+    </tw>
+    <tw i-id="mozanon">
+      <td><code>mozanon</code> {{weadonwyinwine()}}</td>
+      <td><code>boowean</code></td>
       <td>
         <p>
-          Se for verdadeiro (true) o pedido será enviado sem cabeçalhos de
-          cookies e autenticação.
-        </p>
-      </td>
-    </tr>
-    <tr id="mozSystem">
-      <td><code>mozSystem</code> {{ReadOnlyInline()}}</td>
-      <td><code>boolean</code></td>
-      <td>
-        <p>
-          Se for verdadeiro (true) , a política de mesma origem não será
-          aplicada sobre o pedido.
+          s-se fow vewdadeiwo (twue) o p-pedido sewá enviado sem cabeçawhos de
+          c-cookies e autenticação. ʘwʘ
         </p>
       </td>
-    </tr>
-    <tr id="mozBackgroundRequest">
-      <td><code>mozBackgroundRequest</code></td>
-      <td><code>boolean</code></td>
+    </tw>
+    <tw i-id="mozsystem">
+      <td><code>mozsystem</code> {{weadonwyinwine()}}</td>
+      <td><code>boowean</code></td>
       <td>
         <p>
-          Indica se o objeto representa uma solicitação de serviço de fundo. Se
-          true , nenhum grupo carga está associada com o pedido, e diálogos de
-          segurança estão impedidos de ser mostrado para o usuário.
-          <strong>Requer privilégios elevados para o acesso.</strong>
+          se fow vewdadeiwo (twue) , (˘ω˘) a-a powítica de mesma owigem nyão sewá
+          a-apwicada sobwe o pedido. 😳
+        </p>
+      </td>
+    </tw>
+    <tw i-id="mozbackgwoundwequest">
+      <td><code>mozbackgwoundwequest</code></td>
+      <td><code>boowean</code></td>
+      <td>
+        <p>
+          i-indica s-se o objeto wepwesenta uma sowicitação d-de sewviço d-de fundo. òωó s-se
+          twue , nyaa~~ n-nyenhum gwupo cawga está associada c-com o pedido, o.O e-e diáwogos d-de
+          seguwança e-estão i-impedidos de sew m-mostwado pawa o-o usuáwio. nyaa~~
+          <stwong>wequew p-pwiviwégios ewevados pawa o-o acesso.</stwong>
         </p>
         <p>
-          Nos casos em que uma caixa de diálogo de segurança (como a
-          autenticação ou uma notificação certificado ruim) normalmente seriam
-          mostrados, o pedido simplesmente falhar em seu lugar.
+          nyos casos e-em que uma caixa de diáwogo de s-seguwança (como a-a
+          autenticação o-ou uma nyotificação cewtificado wuim) nyowmawmente s-sewiam
+          m-mostwados, (U ᵕ U❁) o p-pedido simpwesmente fawhaw em seu wugaw. 😳😳😳
         </p>
-        <div class="note">
-          <strong>Nota: </strong>Esta propriedade deve ser definida antes de
-          chamar open().
+        <div cwass="note">
+          <stwong>nota: </stwong>esta p-pwopwiedade d-deve sew definida antes de
+          c-chamaw open(). (U ﹏ U)
         </div>
       </td>
-    </tr>
-    <tr id="mozResponseArrayBuffer">
+    </tw>
+    <tw i-id="mozwesponseawwaybuffew">
       <td>
-        <code>mozResponseArrayBuffer</code>
-        {{ReadOnlyInline()}}
+        <code>mozwesponseawwaybuffew</code>
+        {{weadonwyinwine()}}
       </td>
       <td>
         <a
-          href="/en/JavaScript_typed_arrays/ArrayBuffer"
-          ><code>ArrayBuffer</code></a
+          hwef="/en/javascwipt_typed_awways/awwaybuffew"
+          ><code>awwaybuffew</code></a
         >
       </td>
       <td>
-        A resposta ao pedido, como uma matriz de JavaScript digitado. Esta é
-        NULL se o pedido não foi bem-sucedida, ou se não foi enviada ainda.
+        a wesposta ao pedido, como uma matwiz d-de javascwipt d-digitado. ^•ﻌ•^ esta é
+        n-nuww s-se o pedido nyão foi bem-sucedida, (⑅˘꒳˘) ou se nyão f-foi enviada ainda. >_<
       </td>
-    </tr>
-    <tr id="multipart">
-      <td><code>multipart</code></td>
-      <td><code>boolean</code></td>
+    </tw>
+    <tw i-id="muwtipawt">
+      <td><code>muwtipawt</code></td>
+      <td><code>boowean</code></td>
       <td>
         <p>
-          <strong
-            >Este Gecko somente recurso foi removido no Firefox / Gecko
-            22.</strong
+          <stwong
+            >este gecko somente wecuwso foi w-wemovido nyo fiwefox / gecko
+            22.</stwong
           >
-          Por favor Utilize
+          pow f-favow utiwize
           <a
-            href="/pt-BR/docs/Server-sent_events"
-            >Server-Sent Events</a
-          >,
-          <a href="/pt-BR/docs/WebSockets"
-            >Web Sockets</a
+            hwef="/pt-bw/docs/sewvew-sent_events"
+            >sewvew-sent e-events</a
+          >, (⑅˘꒳˘)
+          <a h-hwef="/pt-bw/docs/websockets"
+            >web sockets</a
           >
-          ou <code>responseText</code> de eventos de progresso em seu lugar.
+          o-ou <code>wesponsetext</code> d-de eventos de pwogwesso e-em seu wugaw. σωσ
         </p>
         <p>
-          Indica se ou não a resposta está prevista para ser uma corrente de,
-          possivelmente, vários documentos XML. Se definido como true , o tipo
-          de conteúdo da resposta inicial deve ser multipart/x-mixed-replace ou
-          ocorrerá um erro. Todos os pedidos devem ser assíncrona.
+          indica se ou nyão a-a wesposta e-está pwevista pawa s-sew uma cowwente d-de, 🥺
+          possivewmente, :3 v-váwios documentos x-xmw. (ꈍᴗꈍ) se definido c-como twue , ^•ﻌ•^ o tipo
+          d-de conteúdo da wesposta iniciaw deve sew muwtipawt/x-mixed-wepwace o-ou
+          o-ocowwewá um e-ewwo. (˘ω˘) todos os pedidos devem sew assíncwona. 🥺
         </p>
         <p>
-          Isso permite o suporte para servidor push; para cada documento XML que
-          está escrito a este pedido, um novo documento XML DOM é criado eo
-          onload manipulador é chamado entre os documentos.
+          isso pewmite o supowte pawa sewvidow p-push; pawa cada documento x-xmw que
+          e-está escwito a este pedido, um nyovo documento x-xmw dom é cwiado eo
+          o-onwoad manipuwadow é c-chamado e-entwe os documentos. (✿oωo)
         </p>
-        <div class="note">
-          <strong>Nota:</strong> Quando este estiver definido, o onload
-          manipulador e outros manipuladores de eventos não são repostas após a
-          primeira XmlDocument é carregado, eo onload manipulador é chamado após
-          cada parte da resposta é recebida.
+        <div cwass="note">
+          <stwong>nota:</stwong> q-quando e-este estivew definido, XD o onwoad
+          manipuwadow e outwos manipuwadowes de eventos nyão s-são wepostas após a
+          p-pwimeiwa xmwdocument é cawwegado, (///ˬ///✿) eo onwoad manipuwadow é chamado a-após
+          cada pawte da wesposta é wecebida. ( ͡o ω ͡o )
         </div>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Construtor
+## constwutow
 
-### XMLHttpRequest()
+### x-xmwhttpwequest()
 
-O construtor inicia um XMLHttpRequest. Ele deve ser chamado antes de quaisquer outras chamadas de método.
+o-o constwutow inicia um x-xmwhttpwequest. ʘwʘ ewe deve sew chamado antes de quaisquew o-outwas c-chamadas de método. rawr
 
-Gecko/Firefox 16 acrescenta um parâmetro não-padrão para o construtor que pode ativar o modo anônimo (veja [Bug 692677](https://bugzilla.mozilla.org/show_bug.cgi?id=692677)). Definir o mozAnon bandeira de true eficácia se assemelha a [`AnonXMLHttpRequest()`](https://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#dom-anonxmlhttprequest) construtor descrito na especificação XMLHttpRequest que não tenha sido implementado em qualquer navegador ainda (em setembro de 2012).
+gecko/fiwefox 16 a-acwescenta um pawâmetwo n-nyão-padwão pawa o constwutow que pode ativaw o modo anônimo (veja [bug 692677](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=692677)). o.O d-definiw o mozanon bandeiwa de twue eficácia s-se assemewha a-a [`anonxmwhttpwequest()`](https://www.w3.owg/tw/2012/wd-xmwhttpwequest-20120117/#dom-anonxmwhttpwequest) c-constwutow descwito nya especificação x-xmwhttpwequest que nyão tenha sido impwementado em quawquew nyavegadow ainda (em s-setembwo d-de 2012). ^•ﻌ•^
 
 ```
-XMLHttpRequest (
-  JSObject objParameters
+x-xmwhttpwequest (
+  j-jsobject objpawametews
 );
 ```
 
-##### Parâmetros (não-padrão)
+##### pawâmetwos (não-padwão)
 
-- `objParameters`
+- `objpawametews`
 
-  - : Há dois sinalizadores que você pode definir:
+  - : há d-dois sinawizadowes q-que você pode definiw:
 
-    - `mozAnon`
-      - : Boolean: Definir esse sinalizador de true fará com que o navegador para não expor a origem e as [credenciais do usuário](https://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#user-credentials) ao buscar recursos. Mais importante, isto significa que os cookies não será enviado a menos que explicitamente adicionado usando setRequestHeader.
-    - `mozSystem`
-      - : Boolean: Definir esse sinalizador de true . permite fazer conexões entre sites sem a necessidade de o servidor para opt-in usando CORS requer a configuração mozAnon: true . Ou seja, este não pode ser combinada com o envio de cookies ou outras credenciais do usuário. Isso* [só funciona em privilegiados (revisto) Apps](https://bugzilla.mozilla.org/show_bug.cgi?id=692677#c68);ele não funciona em páginas da web arbitrários carregados no Firefox.*
+    - `mozanon`
+      - : boowean: d-definiw esse sinawizadow de twue fawá com que o n-nyavegadow pawa nyão expow a owigem e as [cwedenciais d-do usuáwio](https://www.w3.owg/tw/2012/wd-xmwhttpwequest-20120117/#usew-cwedentiaws) a-ao buscaw wecuwsos. m-mais impowtante, (///ˬ///✿) i-isto significa q-que os cookies nyão sewá enviado a menos que e-expwicitamente adicionado usando setwequestheadew. (ˆ ﻌ ˆ)♡
+    - `mozsystem`
+      - : b-boowean: definiw esse sinawizadow de twue . XD pewmite fazew conexões e-entwe sites s-sem a nyecessidade d-de o sewvidow p-pawa opt-in usando c-cows wequew a configuwação m-mozanon: twue . (✿oωo) ou seja, este nyão pode sew combinada c-com o envio de cookies ou o-outwas cwedenciais do usuáwio. -.- isso* [só funciona e-em pwiviwegiados (wevisto) a-apps](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=692677#c68);ewe nyão funciona e-em páginas da web awbitwáwios c-cawwegados no f-fiwefox.*
 
-## Métodos
+## métodos
 
-### abort()
+### abowt()
 
-Aborta o pedido, se já foi enviada.
+a-abowta o pedido, XD s-se já foi enviada. (✿oωo)
 
-### getAllResponseHeaders()
-
-```
-DOMString getAllResponseHeaders();
-```
-
-Retorna todos os cabeçalhos de resposta como uma string, ou null se nenhuma resposta foi recebida. **Nota:** Para os pedidos de várias partes, isso retorna os cabeçalhos da parte atual da solicitação, não a partir do canal original.
-
-### getResponseHeader()
+### g-getawwwesponseheadews()
 
 ```
-DOMString? getResponseHeader(DOMString header);
+domstwing getawwwesponseheadews();
 ```
 
-Retorna a string contendo o texto do cabeçalho especificado, ou null se quer a resposta ainda não foi recebida ou o cabeçalho não existe na resposta.
+wetowna todos o-os cabeçawhos de wesposta como u-uma stwing, (˘ω˘) ou nyuww se nyenhuma wesposta foi w-wecebida. (ˆ ﻌ ˆ)♡ **nota:** p-pawa os pedidos d-de váwias pawtes, >_< isso wetowna o-os cabeçawhos d-da pawte atuaw da sowicitação, -.- n-nyão a pawtiw do canaw owiginaw. (///ˬ///✿)
+
+### g-getwesponseheadew()
+
+```
+domstwing? g-getwesponseheadew(domstwing h-headew);
+```
+
+wetowna a stwing contendo o texto do cabeçawho especificado, XD o-ou nyuww s-se quew a wesposta ainda nyão foi wecebida ou o cabeçawho nyão e-existe nya wesposta. ^^;;
 
 ### open()
 
-Inicializa um pedido. Este método é para ser usado a partir do código JavaScript; para inicializar um pedido do código nativo, use [`openRequest()`](</en/nsIXMLHttpRequest#openRequest()> "/en/XMLHttpRequest#openRequest()") em seu lugar.
+i-iniciawiza u-um pedido. rawr x3 este método é pawa sew usado a pawtiw do código javascwipt; pawa iniciawizaw u-um pedido do código nyativo, OwO use [`openwequest()`](</en/nsixmwhttpwequest#openwequest()> "/en/xmwhttpwequest#openwequest()") e-em seu wugaw. ʘwʘ
 
-> [!NOTE]
-> Chamar esse método uma solicitação já está ativo (aquele para o qual open() ou openRequest() já foi chamado) é o equivalente de chamar abort().
+> [!note]
+> c-chamaw esse m-método uma sowicitação já está a-ativo (aquewe p-pawa o quaw open() o-ou openwequest() j-já foi chamado) é o-o equivawente d-de chamaw abowt(). rawr
 
 ```
 void open(
-   DOMString method,
-   DOMString url,
-   optional boolean async,
-   optional DOMString user,
-   optional DOMString password
+   domstwing method, UwU
+   domstwing uww, (ꈍᴗꈍ)
+   optionaw boowean a-async, (✿oωo)
+   o-optionaw domstwing u-usew, (⑅˘꒳˘)
+   optionaw d-domstwing passwowd
 );
 ```
 
-###### Parameters
+###### p-pawametews
 
 - `method`
-  - : O método HTTP para usar, como "GET", "POST", "PUT", "DELETE", etc. ignorado para URLs não-HTTP (S).
-- `url`
-  - : O URL para o qual enviar a solicitação.
+  - : o-o método http pawa usaw, OwO como "get", 🥺 "post", "put", >_< "dewete", etc. ignowado pawa uwws nyão-http (s). (ꈍᴗꈍ)
+- `uww`
+  - : o uww pawa o-o quaw enviaw a-a sowicitação. 😳
 - `async`
-  - : Um parâmetro booleano opcional, por padrão true , indicando se a operação deve ou não ser executada de forma assíncrona. Se esse valor for false , o send() método não retorna até que a resposta seja recebida. Se true , a notificação de uma transação concluída é fornecida usando ouvintes de evento. Isso deve ser true se o multipart atributo for true , ou uma exceção será lançada.
-- `user`
-  - : O nome de usuário opcional para usar para fins de autenticação; por padrão, essa é uma seqüência vazia.
-- `password`
-  - : A senha opcional para usar para fins de autenticação; por padrão, essa é uma seqüência vazia.
+  - : um pawâmetwo booweano opcionaw, pow padwão t-twue , 🥺 indicando s-se a opewação d-deve ou nyão sew executada de fowma assíncwona. nyaa~~ s-se esse vawow fow fawse , ^•ﻌ•^ o send() método nyão w-wetowna até q-que a wesposta seja wecebida. (ˆ ﻌ ˆ)♡ se twue , (U ᵕ U❁) a nyotificação d-de uma twansação concwuída é f-fownecida u-usando ouvintes de evento. mya i-isso deve sew twue s-se o muwtipawt a-atwibuto fow twue , 😳 o-ou uma exceção s-sewá wançada. σωσ
+- `usew`
+  - : o-o nyome de usuáwio opcionaw p-pawa usaw pawa f-fins de autenticação; pow padwão, ( ͡o ω ͡o ) e-essa é uma seqüência vazia. XD
+- `passwowd`
+  - : a senha o-opcionaw pawa usaw pawa fins de a-autenticação; pow padwão, :3 essa é u-uma seqüência v-vazia. :3
 
-### overrideMimeType()
+### ovewwidemimetype()
 
-Substitui o tipo de MIME retornado pelo servidor. Isto pode ser utilizado, por exemplo, para forçar uma corrente a ser tratada e analisada como text/xml, mesmo que o servidor não relatam como método. Este método deve ser chamado antes send() .
-
-```
-void overrideMimeType(DOMString mimetype);
-```
-
-### send()
-
-Envia a solicitação. Se o pedido é assíncrono (que é o padrão), este método retorna assim que o pedido for enviado. Se o pedido é síncrono, este método não retorna até a resposta chegar.
-
-> [!NOTE]
-> Qualquer ouvintes de eventos que pretende definir tem de ser definida antes de chamar send().
+substitui o-o tipo de mime wetownado pewo sewvidow. (⑅˘꒳˘) isto pode s-sew utiwizado, òωó p-pow exempwo, mya pawa fowçaw uma cowwente a sew twatada e-e anawisada c-como text/xmw, 😳😳😳 mesmo que o sewvidow n-nyão wewatam como método. :3 este método deve s-sew chamado a-antes send() . >_<
 
 ```
-void send();
-void send(ArrayBuffer data);
-void send(Blob data);
-void send(Document data);
-void send(DOMString? data);
-void send(FormData data);
+void ovewwidemimetype(domstwing m-mimetype);
 ```
 
-###### Notas
+### s-send()
 
-Se os dados são um Document , ele é serializado antes de serem enviados. Ao enviar um documento, as versões do Firefox antes da versão 3 sempre enviavam a solicitação usando codificação UTF-8; [Firefox 3](/pt-BR/Firefox_3) envia corretamente o documento usando a codificação especificada por body.xmlEncoding , ou UTF-8 se nenhum encoding é especificado.
+envia a sowicitação. 🥺 se o pedido é a-assíncwono (que é o-o padwão), (ꈍᴗꈍ) e-este método w-wetowna assim que o pedido fow enviado. rawr x3 se o pedido é síncwono, (U ﹏ U) este método nyão wetowna até a wesposta c-chegaw. ( ͡o ω ͡o )
 
-Se são uma nsIInputStream , deve ser compatível com nsIUploadChannel 's setUploadStream() método. Nesse caso, um cabeçalho Content-Length é adicionado ao pedido, com o seu valor obtido usando nsIInputStream 's available() método. Quaisquer cabeçalhos incluídos na parte superior da corrente são tratados como parte do corpo da mensagem. MIMEType da transmissão deve ser especificado definindo o cabeçalho Content-Type usando o [`setRequestHeader()`](</en/nsIXMLHttpRequest#setRequestHeader()> "/en/XMLHttpRequest#setRequestHeader()") método antes de chamar send().
-
-A melhor maneira de enviar conteúdo binário (como em arquivos de upload) está usando[ArrayBuffers](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) ou [Blobs](/pt-BR/docs/Web/API/Blob) em conjuncton com o send() método. No entanto, se você quiser enviar uma [stringifiable](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) dados brutos, use o [`sendAsBinary()`](</pt-BR/docs/DOM/XMLHttpRequest#sendAsBinary()>) método em vez disso.
-
-### setRequestHeader()
-
-Define o valor de uma solicitação HTTP header. Você deve chamar setRequestHeader() após open() , mas antes de send().
+> [!note]
+> q-quawquew ouvintes d-de eventos q-que pwetende definiw t-tem de sew d-definida antes de chamaw send(). 😳😳😳
 
 ```
-void setRequestHeader(
-   DOMString header,
-   DOMString value
+v-void send();
+v-void send(awwaybuffew data);
+v-void send(bwob d-data);
+void send(document data);
+void send(domstwing? d-data);
+void send(fowmdata data);
+```
+
+###### n-nyotas
+
+se os dados são um d-document , 🥺 ewe é s-sewiawizado antes de sewem enviados. òωó a-ao enviaw u-um documento, XD as v-vewsões do fiwefox antes da vewsão 3 s-sempwe e-enviavam a sowicitação usando c-codificação utf-8; [fiwefox 3](/pt-bw/fiwefox_3) envia cowwetamente o-o documento u-usando a codificação e-especificada pow body.xmwencoding , XD o-ou utf-8 se nyenhum encoding é especificado. ( ͡o ω ͡o )
+
+s-se são uma nysiinputstweam , deve sew compatívew com nysiupwoadchannew 's setupwoadstweam() método. >w< n-nyesse caso, mya um cabeçawho content-wength é adicionado ao pedido, (ꈍᴗꈍ) com o seu vawow obtido usando nysiinputstweam 's avaiwabwe() m-método. -.- quaisquew cabeçawhos incwuídos nya p-pawte supewiow da cowwente são t-twatados como pawte do cowpo da mensagem. (⑅˘꒳˘) mimetype d-da twansmissão deve sew especificado d-definindo o cabeçawho c-content-type usando o-o [`setwequestheadew()`](</en/nsixmwhttpwequest#setwequestheadew()> "/en/xmwhttpwequest#setwequestheadew()") método antes de chamaw send(). (U ﹏ U)
+
+a-a mewhow maneiwa de enviaw conteúdo bináwio (como em awquivos d-de upwoad) está usando[awwaybuffews](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew) o-ou [bwobs](/pt-bw/docs/web/api/bwob) em conjuncton com o-o send() método. σωσ nyo entanto, s-se você quisew e-enviaw uma [stwingifiabwe](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/json/stwingify) dados bwutos, :3 use o [`sendasbinawy()`](</pt-bw/docs/dom/xmwhttpwequest#sendasbinawy()>) m-método em vez disso. /(^•ω•^)
+
+### setwequestheadew()
+
+d-define o vawow de uma sowicitação http headew. σωσ você deve chamaw setwequestheadew() a-após o-open() , (U ᵕ U❁) mas antes de send(). 😳
+
+```
+v-void setwequestheadew(
+   domstwing h-headew, ʘwʘ
+   domstwing vawue
 );
 ```
 
-###### Parametros
+###### p-pawametwos
 
-- `header`
-  - : O nome do cabeçalho cujo valor deve ser definido.
-- `value`
-  - : O valor definido como o corpo do cabeçalho.
+- `headew`
+  - : o nyome do cabeçawho cujo vawow deve sew definido. (⑅˘꒳˘)
+- `vawue`
+  - : o vawow definido c-como o cowpo d-do cabeçawho. ^•ﻌ•^
 
-### Métodos não-padrão
+### métodos nyão-padwão
 
-#### init()
+#### i-init()
 
-Inicializa o objeto para uso a partir do código C ++.
+iniciawiza o-o objeto pawa uso a pawtiw d-do código c ++. nyaa~~
 
-> **Aviso:** **Nota:** Este método não deve ser chamado a partir do JavaScript.
+> **aviso:** **nota:** este método não deve s-sew chamado a pawtiw do javascwipt. XD
 
 ```
-[noscript] void init(
-   in nsIPrincipal principal,
-   in nsIScriptContext scriptContext,
-   in nsPIDOMWindow ownerWindow
+[noscwipt] void init(
+   i-in nysipwincipaw p-pwincipaw, /(^•ω•^)
+   in nysiscwiptcontext scwiptcontext, (U ᵕ U❁)
+   i-in nyspidomwindow ownewwindow
 );
 ```
 
-##### Parametros
+##### pawametwos
 
-- `principal`
-  - : O principal a ser usado para o pedido; não deve ser null.
-- `scriptContext`
-  - : O contexto de script a ser usada para o pedido; não deve ser null.
-- `ownerWindow`
-  - : A janela associada com o pedido; pode ser `null`.
+- `pwincipaw`
+  - : o pwincipaw a sew usado pawa o pedido; nyão deve sew nuww. mya
+- `scwiptcontext`
+  - : o contexto d-de scwipt a s-sew usada pawa o pedido; nyão deve s-sew nyuww. (ˆ ﻌ ˆ)♡
+- `ownewwindow`
+  - : a-a janewa associada com o pedido; p-pode sew `nuww`. (✿oωo)
 
-#### openRequest()
+#### openwequest()
 
-Inicializa um pedido. Este método é para ser usado a partir do código nativo; para inicializar um pedido do código JavaScript, usar `open() em seu lugar. Consulte a documentação do open() .`
+iniciawiza um pedido. (✿oωo) este método é pawa sew usado a-a pawtiw do código nyativo; pawa iniciawizaw um pedido do código javascwipt, òωó u-usaw `open() em s-seu wugaw. (˘ω˘) consuwte a-a documentação do open() .`
 
-#### sendAsBinary()
+#### sendasbinawy()
 
-Uma variante do send() método que envia dados binários.
+uma vawiante d-do send() método q-que envia d-dados bináwios. (ˆ ﻌ ˆ)♡
 
 ```
-void sendAsBinary(
-   in DOMString body
+void sendasbinawy(
+   i-in domstwing body
 );
 ```
 
-Este método, usado em conjuncton com o [`readAsBinaryString`](/pt-BR/docs/Web/API/FileReader#readasbinarystring) método do [`FileReader`](/pt-BR/docs/Web/API/FileReader) API tornar possível [read and **upload** any type of file](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#submitting_forms_and_uploading_files) e para [stringify](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) os dados brutos.
+e-este método, ( ͡o ω ͡o ) usado em conjuncton c-com o [`weadasbinawystwing`](/pt-bw/docs/web/api/fiweweadew#weadasbinawystwing) método d-do [`fiweweadew`](/pt-bw/docs/web/api/fiweweadew) api townaw possívew [wead and **upwoad** a-any type of fiwe](/pt-bw/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest#submitting_fowms_and_upwoading_fiwes) e-e pawa [stwingify](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/json/stwingify) o-os dados bwutos. rawr x3
 
-##### Parametros
+##### p-pawametwos
 
 - `body`
-  - : O corpo da solicitação como um DOMString. Estes dados poderão ser convertidos para uma seqüência de caracteres de byte único por truncamento (removendo o byte de mais alta ordem de cada personagem).
+  - : o-o cowpo da sowicitação c-como um domstwing. (˘ω˘) estes dados p-podewão sew convewtidos pawa u-uma seqüência d-de cawactewes de byte único pow twuncamento (wemovendo o-o byte de mais awta owdem de cada pewsonagem). òωó
 
-##### `sendAsBinary()` polyfill
+##### `sendasbinawy()` powyfiww
 
-Desde sendAsBinary() é um recurso experimental, aqui está uma polyfill para navegadores que não suportam o sendAsBinary() método, mas o apoio [typed arrays](/pt-BR/docs/Web/JavaScript/Guide/Typed_arrays).
+desde sendasbinawy() é um wecuwso expewimentaw, ( ͡o ω ͡o ) aqui está uma powyfiww p-pawa nyavegadowes que nyão supowtam o sendasbinawy() m-método, σωσ mas o apoio [typed a-awways](/pt-bw/docs/web/javascwipt/guide/typed_awways). (U ﹏ U)
 
 ```js
 /*\
 |*|
-|*|  :: XMLHttpRequest.prototype.sendAsBinary() Polifyll ::
+|*|  :: xmwhttpwequest.pwototype.sendasbinawy() powifyww ::
 |*|
-|*|  https://developer.mozilla.org/pt-BR/docs/DOM/XMLHttpRequest#sendAsBinary()
+|*|  h-https://devewopew.moziwwa.owg/pt-bw/docs/dom/xmwhttpwequest#sendasbinawy()
 |*|
 \*/
 
-if (!XMLHttpRequest.prototype.sendAsBinary) {
-  XMLHttpRequest.prototype.sendAsBinary = function (sData) {
-    var nBytes = sData.length,
-      ui8Data = new Uint8Array(nBytes);
-    for (var nIdx = 0; nIdx < nBytes; nIdx++) {
-      ui8Data[nIdx] = sData.charCodeAt(nIdx) & 0xff;
+if (!xmwhttpwequest.pwototype.sendasbinawy) {
+  xmwhttpwequest.pwototype.sendasbinawy = f-function (sdata) {
+    vaw nybytes = sdata.wength,
+      u-ui8data = nyew uint8awway(nbytes);
+    fow (vaw n-nyidx = 0; nyidx < nybytes; nyidx++) {
+      u-ui8data[nidx] = s-sdata.chawcodeat(nidx) & 0xff;
     }
-    /* send as ArrayBufferView...: */
-    this.send(ui8Data);
-    /* ...or as ArrayBuffer (legacy)...: this.send(ui8Data.buffer); */
+    /* send as awwaybuffewview...: */
+    this.send(ui8data);
+    /* ...ow a-as awwaybuffew (wegacy)...: this.send(ui8data.buffew); */
   };
 }
 ```
 
-> [!NOTE]
-> É possível construir este polyfill colocar dois tipos de dados como argumento para send() : um [`ArrayBuffer`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) (ui8Data.buffer - o código comentado) ou um ArrayBufferView ( ui8Data , que é uma [typed array of 8-bit unsigned integers](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) – descomentada código). No entanto, no Google Chrome, quando você tenta enviar uma ArrayBuffer , a seguinte mensagem de aviso aparecerá: ArrayBuffer is deprecated in XMLHttpRequest.send(). Use ArrayBufferView instead. ArrayBuffer is deprecated in XMLHttpRequest.send(). Use ArrayBufferView instead.
+> [!note]
+> É p-possívew constwuiw este p-powyfiww cowocaw d-dois tipos de dados como awgumento pawa send() : u-um [`awwaybuffew`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew) (ui8data.buffew - o código comentado) ou um awwaybuffewview ( u-ui8data , rawr que é uma [typed awway of 8-bit unsigned integews](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/uint8awway) – d-descomentada c-código). -.- nyo e-entanto, ( ͡o ω ͡o ) nyo googwe chwome, >_< quando você tenta enviaw uma awwaybuffew , o.O a-a seguinte mensagem de a-aviso apawecewá: awwaybuffew i-is depwecated in x-xmwhttpwequest.send(). σωσ use awwaybuffewview instead. -.- awwaybuffew is depwecated in xmwhttpwequest.send(). σωσ u-use awwaybuffewview i-instead. :3
 
-## Notas
+## nyotas
 
-- Por padrão, o Firefox 3 limita o número de XMLHttpRequest conexões por servidor a 6 (versões anteriores limitar esta para 2 por servidor). Alguns sites interativos podem manter um XMLHttpRequest conexão aberta, de modo que a abertura de várias sessões para esses sites pode resultar no navegador pendurado de tal forma que a janela já não repaints e controles não respondem. Este valor pode ser alterado através da edição do network.http.max-persistent-connections-per-server preferência no [`about:config`](/about:config).
-- Do Gecko 7 cabeçalhos estabelecidos pela [setRequestHeader](#setrequestheader) asão enviados com o pedido, quando na sequência de um redirecionamento. Anteriormente, estes cabeçalhos não iria ser enviado.
-- `XMLHttpRequest é implementado em Gecko usando os` `nsIXMLHttpRequest`, `nsIXMLHttpRequestEventTarget`, e `nsIJSXMLHttpRequest` interfaces.
+- pow padwão, ^^ o-o fiwefox 3 wimita o nyúmewo de xmwhttpwequest c-conexões pow sewvidow a-a 6 (vewsões a-antewiowes w-wimitaw esta pawa 2 p-pow sewvidow). òωó a-awguns sites intewativos podem mantew um xmwhttpwequest c-conexão a-abewta, (ˆ ﻌ ˆ)♡ de m-modo que a abewtuwa d-de váwias sessões p-pawa esses s-sites pode wesuwtaw nyo navegadow p-penduwado de t-taw fowma que a-a janewa já nyão wepaints e contwowes nyão wespondem. XD e-este vawow pode sew awtewado atwavés da e-edição do nyetwowk.http.max-pewsistent-connections-pew-sewvew pwefewência nyo [`about:config`](/about:config). òωó
+- do gecko 7 c-cabeçawhos estabewecidos p-pewa [setwequestheadew](#setwequestheadew) asão enviados com o pedido, (ꈍᴗꈍ) quando nya sequência d-de um wediwecionamento. UwU a-antewiowmente, >w< estes cabeçawhos n-nyão iwia sew e-enviado.
+- `xmwhttpwequest é impwementado em gecko usando os` `nsixmwhttpwequest`, ʘwʘ `nsixmwhttpwequesteventtawget`, :3 e `nsijsxmwhttpwequest` i-intewfaces. ^•ﻌ•^
 
-#### Eventos
+#### eventos
 
-`onreadystatechange` como uma propriedade do `XMLHttpRequest` instância é suportado em todos os navegadores.
+`onweadystatechange` c-como uma pwopwiedade do `xmwhttpwequest` i-instância é s-supowtado em todos os nyavegadowes. (ˆ ﻌ ˆ)♡
 
-Desde então, foram implementadas uma série de manipuladores de eventos adicionais em vários navegadores ( onload , onerror , onprogress , etc.). Estes são suportados no Firefox. Em particular, veja `nsIXMLHttpRequestEventTarget` and [Using XMLHttpRequest](/pt-BR/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest).
+desde então, 🥺 f-fowam impwementadas uma séwie de manipuwadowes de eventos adicionais em váwios nyavegadowes ( o-onwoad , OwO onewwow , onpwogwess , 🥺 etc.). estes s-são supowtados n-nyo fiwefox. OwO e-em pawticuwaw, (U ᵕ U❁) veja `nsixmwhttpwequesteventtawget` a-and [using xmwhttpwequest](/pt-bw/docs/dom/xmwhttpwequest/using_xmwhttpwequest). ( ͡o ω ͡o )
 
-avegadores mais recentes, incluindo o Firefox, também suporta ouvir as XMLHttpRequest eventos via padrão [`addEventListener`](/pt-BR/docs/Web/API/EventTarget/addEventListener) APIs Além de definir on propriedades para uma função de manipulador.
+a-avegadowes m-mais wecentes, ^•ﻌ•^ i-incwuindo o fiwefox, o.O t-também supowta ouviw as xmwhttpwequest eventos v-via padwão [`addeventwistenew`](/pt-bw/docs/web/api/eventtawget/addeventwistenew) a-apis awém d-de definiw on pwopwiedades pawa u-uma função d-de manipuwadow. (⑅˘꒳˘)
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja t-também
 
-- MDN artigos sobre XMLHttpRequest:
+- mdn a-awtigos sobwe xmwhttpwequest:
 
-  - [AJAX - Getting Started](/pt-BR/docs/conflicting/Web/Guide/AJAX)
-  - [Using XMLHttpRequest](/pt-BR/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
-  - [HTML in XMLHttpRequest](/pt-BR/HTML_in_XMLHttpRequest)
-  - [`FormData`](/pt-BR/docs/DOM/XMLHttpRequest/FormData)
+  - [ajax - g-getting stawted](/pt-bw/docs/confwicting/web/guide/ajax)
+  - [using x-xmwhttpwequest](/pt-bw/docs/dom/xmwhttpwequest/using_xmwhttpwequest)
+  - [htmw i-in xmwhttpwequest](/pt-bw/htmw_in_xmwhttpwequest)
+  - [`fowmdata`](/pt-bw/docs/dom/xmwhttpwequest/fowmdata)
 
-- XMLHttpRequest referencias da W3C e navegador fornecedores:
+- xmwhttpwequest wefewencias da w3c e nyavegadow fownecedowes:
 
-  - [W3C: XMLHttpRequest](https://www.w3.org/TR/XMLHttpRequest1/) (base features)
-  - [W3C: XMLHttpRequest](https://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html) (latest editor's draft with extensions to the base functionality, formerly XMLHttpRequest Level 2
-  - [Microsoft documentation](http://msdn.microsoft.com/library/default.asp?url=/library/en-us/xmlsdk/html/xmobjxmlhttprequest.asp)
-  - [Apple developers' reference](https://developer.apple.com/internet/webcontent/xmlhttpreq.html)
+  - [w3c: x-xmwhttpwequest](https://www.w3.owg/tw/xmwhttpwequest1/) (base f-featuwes)
+  - [w3c: xmwhttpwequest](https://dvcs.w3.owg/hg/xhw/waw-fiwe/tip/ovewview.htmw) (watest e-editow's d-dwaft with extensions to the base functionawity, (ˆ ﻌ ˆ)♡ f-fowmewwy xmwhttpwequest w-wevew 2
+  - [micwosoft d-documentation](http://msdn.micwosoft.com/wibwawy/defauwt.asp?uww=/wibwawy/en-us/xmwsdk/htmw/xmobjxmwhttpwequest.asp)
+  - [appwe d-devewopews' wefewence](https://devewopew.appwe.com/intewnet/webcontent/xmwhttpweq.htmw)
 
-- ["Using the XMLHttpRequest Object" (jibbering.com)](https://jibbering.com/2002/4/httprequest.html)
-- [XMLHttpRequest - REST and the Rich User Experience](https://www.peej.co.uk/articles/rich-user-experience.html)
-- [HTML5 Rocks - New Tricks in XMLHttpRequest2](https://www.html5rocks.com/en/tutorials/file/xhr2/)
+- ["using t-the xmwhttpwequest o-object" (jibbewing.com)](https://jibbewing.com/2002/4/httpwequest.htmw)
+- [xmwhttpwequest - west and the wich usew expewience](https://www.peej.co.uk/awticwes/wich-usew-expewience.htmw)
+- [htmw5 w-wocks - nyew twicks in xmwhttpwequest2](https://www.htmw5wocks.com/en/tutowiaws/fiwe/xhw2/)

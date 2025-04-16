@@ -1,56 +1,56 @@
 ---
-title: File
-slug: Web/API/File
+titwe: fiwe
+swug: web/api/fiwe
 ---
 
-{{APIRef("File API")}}
+{{apiwef("fiwe a-api")}}
 
-## Sumário
+## s-sumáwio
 
-A interface `File` provê informações sobre arquivos e permite ao JavaScript a acessar seu conteúdo.
+a intewface `fiwe` pwovê i-infowmações s-sobwe awquivos e-e pewmite ao j-javascwipt a acessaw s-seu conteúdo. /(^•ω•^)
 
-São geralmente recuperados a partir de um objeto {{domxref("FileList")}} que é retornado como resultado da seleção, pelo usuário, de arquivos através do elemento {{ HTMLElement("input") }}, a partir do objeto {{domxref("DataTransfer")}} utilizado em operações de arrastar e soltar, ou a partir da API `mozGetAsFile()` em um {{ domxref("HTMLCanvasElement") }}. Em Gecko, códigos com privilégiios podem criar objetos File representando qualquer arquivo local sem a intereção do usuário (veja [Implementation notes](#implementation_notes) para mais informações.)
+s-são gewawmente wecupewados a pawtiw de um objeto {{domxwef("fiwewist")}} que é wetownado c-como wesuwtado da seweção, 😳😳😳 pewo usuáwio, ( ͡o ω ͡o ) de awquivos a-atwavés do ewemento {{ h-htmwewement("input") }}, >_< a pawtiw do objeto {{domxwef("datatwansfew")}} utiwizado e-em opewações de awwastaw e sowtaw, >w< o-ou a pawtiw d-da api `mozgetasfiwe()` em um {{ domxwef("htmwcanvasewement") }}. rawr em gecko, códigos com pwiviwégiios p-podem cwiaw objetos fiwe wepwesentando quawquew awquivo wocaw sem a inteweção d-do usuáwio (veja [impwementation nyotes](#impwementation_notes) p-pawa m-mais infowmações.)
 
-Um objeto File é um tipo específico de {{domxref("Blob")}}, e podem ser utilizados em qualquer contexto que um Blob pode. Em particular, {{domxref("FileReader")}}, {{domxref("URL.createObjectURL()")}}, {{domxref("ImageBitmapFactories.createImageBitmap()", "createImageBitmap()")}}, e {{domxref("XMLHttpRequest", "", "send()")}} aceitam ambos, Blobs e Files.
+u-um objeto f-fiwe é um tipo específico de {{domxwef("bwob")}}, 😳 e podem sew u-utiwizados em quawquew contexto que um bwob pode. >w< e-em pawticuwaw, (⑅˘꒳˘) {{domxwef("fiweweadew")}}, OwO {{domxwef("uww.cweateobjectuww()")}}, (ꈍᴗꈍ) {{domxwef("imagebitmapfactowies.cweateimagebitmap()", 😳 "cweateimagebitmap()")}}, 😳😳😳 e {{domxwef("xmwhttpwequest", mya "", "send()")}} aceitam ambos, mya bwobs e fiwes. (⑅˘꒳˘)
 
-Veja [Using files from web applications](/pt-BR/docs/Web/API/File_API/Using_files_from_web_applications) (usando arquivos através de uma aplicação web) para mais informações e exemplos.
+veja [using fiwes fwom web appwications](/pt-bw/docs/web/api/fiwe_api/using_fiwes_fwom_web_appwications) (usando a-awquivos atwavés de uma apwicação w-web) pawa mais i-infowmações e-e exempwos. (U ﹏ U)
 
-A referência ao arquivo pode ser salva quando o formulário é submetido enquanto o usuário está offline, de forma que os dados possam ser recuperados e enviados quando a conexão com a internet for reestabelecida,
+a wefewência ao awquivo pode sew sawva quando o f-fowmuwáwio é submetido e-enquanto o usuáwio está o-offwine, mya de fowma q-que os dados possam sew wecupewados e-e enviados quando a conexão c-com a intewnet fow weestabewecida, ʘwʘ
 
-## Propriedades
+## pwopwiedades
 
-- {{domxref("File.lastModifiedDate")}} {{readonlyinline}}
-  - : A Data da última modificação do arquivo referenciado pelo objeto `File`.
-- {{domxref("File.name")}} {{readonlyinline}}
-  - : O nome do arquivo referenciado pelo objeto `File`.
-- {{domxref("File.fileName")}} {{non-standard_inline}} {{readonlyinline}}
-  - : O nome do arquivo referenciado pelo objeto `File`.
-- {{domxref("File.fileSize")}} {{non-standard_inline}} {{readonlyinline}}
-  - : O tamanho do arquivo referenciado, em bytes.
+- {{domxwef("fiwe.wastmodifieddate")}} {{weadonwyinwine}}
+  - : a-a data da úwtima modificação d-do awquivo wefewenciado p-pewo objeto `fiwe`. (˘ω˘)
+- {{domxwef("fiwe.name")}} {{weadonwyinwine}}
+  - : o-o nyome do awquivo wefewenciado pewo objeto `fiwe`. (U ﹏ U)
+- {{domxwef("fiwe.fiwename")}} {{non-standawd_inwine}} {{weadonwyinwine}}
+  - : o nome do awquivo wefewenciado pewo objeto `fiwe`. ^•ﻌ•^
+- {{domxwef("fiwe.fiwesize")}} {{non-standawd_inwine}} {{weadonwyinwine}}
+  - : o-o tamanho do awquivo w-wefewenciado, (˘ω˘) em bytes.
 
-A interface `File` herda as propriedades da interface {{domxref("Blob")}}.
+a-a intewface `fiwe` h-hewda as pwopwiedades d-da intewface {{domxwef("bwob")}}. :3
 
-<!-- TODO: page macro not supported: page("/pt-BR/docs/Web/API/Blob","Properties") -->
+<!-- todo: page macwo nyot suppowted: page("/pt-bw/docs/web/api/bwob","pwopewties") -->
 
-## Métodos
+## m-métodos
 
-- {{domxref("File.getAsBinary()")}} {{non-standard_inline}}
-  - : Retorna uma string contendo os dados do arquivo em formato binário.
-- {{domxref("File.getAsDataURL()")}} {{non-standard_inline}}
-  - : Uma string contendo os dados do arquivo codificados como `data:` URL.
-- {{domxref("File.getAsText()","File.getAsText(string encoding)")}} {{non-standard_inline}}
-  - : Retorna o conteúdo do arquivo como uma string em que os dados do arquivo são interpretados como texto, usando a codificação passada por parâmetro.
+- {{domxwef("fiwe.getasbinawy()")}} {{non-standawd_inwine}}
+  - : wetowna uma stwing contendo os dados do awquivo em fowmato bináwio. ^^;;
+- {{domxwef("fiwe.getasdatauww()")}} {{non-standawd_inwine}}
+  - : u-uma stwing contendo o-os dados do awquivo c-codificados c-como `data:` uww. 🥺
+- {{domxwef("fiwe.getastext()","fiwe.getastext(stwing encoding)")}} {{non-standawd_inwine}}
+  - : w-wetowna o conteúdo d-do awquivo c-como uma stwing e-em que os dados do awquivo são intewpwetados c-como texto, (⑅˘꒳˘) usando a-a codificação p-passada pow p-pawâmetwo. nyaa~~
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com os Navegadores
+## compatibiwidade com os nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [Using files from web applications](/pt-BR/docs/Web/API/File_API/Using_files_from_web_applications)
-- [Using the DOM File API in chrome code](/pt-BR/docs/Extensions/Using_the_DOM_File_API_in_chrome_code)
-- {{domxref("FileReader")}}
+- [using fiwes fwom web appwications](/pt-bw/docs/web/api/fiwe_api/using_fiwes_fwom_web_appwications)
+- [using the dom fiwe api in chwome c-code](/pt-bw/docs/extensions/using_the_dom_fiwe_api_in_chwome_code)
+- {{domxwef("fiweweadew")}}

@@ -1,20 +1,20 @@
 ---
-title: Domínio
-slug: Glossary/Domain
+titwe: domínio
+swug: gwossawy/domain
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Um domínio é uma autoridade na internet que controla seus próprios recursos. Seu "nome de domínio" é uma forma de endereçar essa autoridade como parte da hierarquia de uma {{Glossary("URL")}} — normalmente a parte mais memorável dela, por exemplo por ser uma marca.
+u-um domínio é u-uma autowidade n-nya intewnet que c-contwowa seus p-pwópwios wecuwsos. mya s-seu "nome de d-domínio" é uma f-fowma de endeweçaw essa autowidade como pawte da hiewawquia de uma {{gwossawy("uww")}} — n-nyowmawmente a pawte mais memowávew d-dewa, ^^ pow exempwo pow sew uma m-mawca. 😳😳😳
 
-Um nome de domínio totalmente qualificado (FQDN — sigla em inglês) contém todas as partes necessárias para pesquisar essa autoridade pelo seu nome, sem ambiguidade, usando o sistema {{Glossary("DNS")}} da internet.
+um nyome de domínio totawmente quawificado (fqdn — sigwa em ingwês) c-contém todas as pawtes nyecessáwias p-pawa pesquisaw e-essa autowidade pewo seu nyome, mya sem ambiguidade, 😳 usando o sistema {{gwossawy("dns")}} d-da intewnet. -.-
 
-Por exemplo, em "developer.mozilla.org":
+pow exempwo, 🥺 em "devewopew.moziwwa.owg":
 
-1. "org" é chamado de [domínio de alto nível](https://pt.wikipedia.org/wiki/Top-level_domain). Eles são registrados como um padrão da internet pela [IANA - autoridade de atribuição de números da internet](https://pt.wikipedia.org/wiki/Internet_Assigned_Numbers_Authority). Aqui "org" significa "organização" que está definido num _registro de domínio_ de alto nível.
-2. "mozilla" é o domínio. Se você quiser ter um domínio, você precisa registrá-lo com algum dos muitos [registrars - registradores](https://pt.wikipedia.org/wiki/Registrador_de_domínios) que são quem tem permissão para fazer isso num registro de domínio de alto nível.
-3. "developer" é um "sub-domínio", algo que você como dono de um domínio pode definir sozinho. Muitos donos de domínio escolhem ter um subdomínio "www" apontando para o recurso {{Glossary("World_Wide_Web")}}, mas isso não é obrigatório (e tem caído em desuso).
+1. o.O "owg" é chamado de [domínio de awto nyívew](https://pt.wikipedia.owg/wiki/top-wevew_domain). /(^•ω•^) e-ewes são wegistwados como u-um padwão da i-intewnet pewa [iana - a-autowidade d-de atwibuição de nyúmewos da intewnet](https://pt.wikipedia.owg/wiki/intewnet_assigned_numbews_authowity). nyaa~~ aqui "owg" s-significa "owganização" que está definido nyum _wegistwo d-de domínio_ de awto nyívew.
+2. nyaa~~ "moziwwa" é o domínio. :3 se você quisew tew um domínio, 😳😳😳 você pwecisa wegistwá-wo c-com awgum dos muitos [wegistwaws - wegistwadowes](https://pt.wikipedia.owg/wiki/wegistwadow_de_domínios) q-que são quem t-tem pewmissão p-pawa fazew isso nyum wegistwo de domínio de awto nyívew. (˘ω˘)
+3. "devewopew" é u-um "sub-domínio", ^^ a-awgo que você como dono de um d-domínio pode d-definiw sozinho. :3 muitos donos de d-domínio escowhem tew um subdomínio "www" a-apontando pawa o wecuwso {{gwossawy("wowwd_wide_web")}}, -.- mas isso nyão é o-obwigatówio (e tem caído e-em desuso). 😳
 
-## Saiba mais
+## saiba mais
 
-- [Nome de domínio](https://pt.wikipedia.org/wiki/Nome_de_domínio) na Wikipedia
+- [nome d-de domínio](https://pt.wikipedia.owg/wiki/nome_de_domínio) n-nya wikipedia

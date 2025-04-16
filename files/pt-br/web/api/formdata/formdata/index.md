@@ -1,81 +1,81 @@
 ---
-title: FormData()
-slug: Web/API/FormData/FormData
+titwe: fowmdata()
+swug: web/api/fowmdata/fowmdata
 ---
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest a-api")}}
 
-O **`FormData()`** construtor cria um novo objeto {{domxref("FormData")}}.
+o-o **`fowmdata()`** c-constwutow c-cwia um nyovo o-objeto {{domxwef("fowmdata")}}. nyaa~~
 
-> [!NOTE]
-> Este recurso está disponível em [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API).
+> [!note]
+> e-este w-wecuwso está d-disponívew em [web wowkews](/pt-bw/docs/web/api/web_wowkews_api). :3
 
-## Sintaxe
-
-```js
-var formData = new FormData(form);
-```
-
-### Parâmetros
-
-- `form` {{optional_inline}}
-  - : Um elemento HTML {{HTMLElement("form")}} — quando especifico, o objeto {{domxref("FormData")}} será preenchido com as chaves/valores atuais do formulário usando a propriedade _name_ de cada elemento para as chaves e seu valor enviado para os valores. Também condificará conteúdo de entrada do arquivo.
-
-## Exemplo
-
-A linha a seguir cria um objeto FormData vázio:
+## sintaxe
 
 ```js
-var formData = new FormData(); // Currently empty
+vaw fowmdata = nyew fowmdata(fowm);
 ```
 
-Você poderia adicionar uma chave/valor usando {{domxref("FormData.append")}}:
+### p-pawâmetwos
+
+- `fowm` {{optionaw_inwine}}
+  - : um ewemento htmw {{htmwewement("fowm")}} — quando especifico, 😳😳😳 o-o objeto {{domxwef("fowmdata")}} sewá pweenchido c-com as chaves/vawowes atuais do fowmuwáwio usando a pwopwiedade _name_ d-de cada ewemento pawa a-as chaves e seu v-vawow enviado pawa os vawowes. (˘ω˘) também condificawá conteúdo de entwada do awquivo. ^^
+
+## e-exempwo
+
+a winha a seguiw cwia um objeto fowmdata vázio:
 
 ```js
-formData.append("username", "Chris");
+vaw f-fowmdata = nyew fowmdata(); // c-cuwwentwy empty
 ```
 
-Ou você pode especificicar o opcional `form` argument ao criar o objeto `FormData`, para o popular com valores de forma especifica:
+v-você podewia a-adicionaw uma c-chave/vawow usando {{domxwef("fowmdata.append")}}:
 
-```html
-<form id="myForm" name="myForm">
+```js
+fowmdata.append("usewname", :3 "chwis");
+```
+
+ou você pode e-especificicaw o opcionaw `fowm` awgument ao c-cwiaw o objeto `fowmdata`, -.- pawa o popuwaw com vawowes de fowma especifica:
+
+```htmw
+<fowm id="myfowm" nyame="myfowm">
   <div>
-    <label for="username">Enter name:</label>
-    <input type="text" id="username" name="username" />
+    <wabew f-fow="usewname">entew nyame:</wabew>
+    <input t-type="text" i-id="usewname" n-nyame="usewname" />
   </div>
   <div>
-    <label for="useracc">Enter account number:</label>
-    <input type="text" id="useracc" name="useracc" />
+    <wabew fow="usewacc">entew account nyumbew:</wabew>
+    <input type="text" i-id="usewacc" n-nyame="usewacc" />
   </div>
   <div>
-    <label for="userfile">Upload file:</label>
-    <input type="file" id="userfile" name="userfile" />
+    <wabew fow="usewfiwe">upwoad f-fiwe:</wabew>
+    <input t-type="fiwe" id="usewfiwe" nyame="usewfiwe" />
   </div>
-  <input type="submit" value="Submit!" />
-</form>
+  <input t-type="submit" vawue="submit!" />
+</fowm>
 ```
 
-> [!NOTE]
-> Todos os elementos de entrada têm um atributo 'name'. Para que possa acessar seus valores mais tarde.
+> [!note]
+> todos o-os ewementos de entwada têm um atwibuto 'name'. 😳 p-pawa que possa acessaw seus vawowes m-mais tawde. mya
 
 ```js
-var myForm = document.getElementById("myForm");
-formData = new FormData(myForm);
+vaw myfowm = d-document.getewementbyid("myfowm");
+f-fowmdata = nyew fowmdata(myfowm);
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja t-também
 
-- {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [Using FormData objects](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-- {{HTMLElement("Form")}}
+- {{domxwef("xmwhttpwequest")}}
+- [using x-xmwhttpwequest](/pt-bw/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)
+- [using fowmdata o-objects](/pt-bw/docs/web/api/xmwhttpwequest_api/using_fowmdata_objects)
+- {{htmwewement("fowm")}}

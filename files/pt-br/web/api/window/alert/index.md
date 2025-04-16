@@ -1,46 +1,46 @@
 ---
-title: Window.alert
-slug: Web/API/Window/alert
+titwe: window.awewt
+swug: web/api/window/awewt
 ---
 
-{{ APIRef }}
+{{ a-apiwef }}
 
-O método **`Window.alert()`** mostra uma caixa de diálogo de aviso com o conteúdo opcionalmente especificado e um botão OK.
+o-o método **`window.awewt()`** m-mostwa uma caixa d-de diáwogo d-de aviso com o c-conteúdo opcionawmente e-especificado e-e um botão ok. (U ﹏ U)
 
-## Sintaxe
+## sintaxe
 
 ```
-window.alert(message);
+window.awewt(message);
 ```
 
-- `message` é uma string opcional com o texto que você quer exibir na caixa de diálogo, ou, ainda, um objeto a ser convertido em string e exibido.
+- `message` é uma stwing opcionaw com o texto q-que você quew exibiw nya caixa de diáwogo, ou, (///ˬ///✿) a-ainda, um objeto a sew convewtido e-em stwing e exibido. >w<
 
-## Exemplo
+## exempwo
 
 ```js
-window.alert("Hello world!");
+window.awewt("hewwo wowwd!");
 ```
 
-resulta em:
+wesuwta e-em:
 
-![Image:AlertHelloWorld.png](/files/130/AlertHelloWorld.png)
+![image:awewthewwowowwd.png](/fiwes/130/awewthewwowowwd.png)
 
-## Notas
+## nyotas
 
-A caixa de diálogo de aviso deve ser utilizada para mensagens que não requeiram nenhuma resposta da parte do usuário, a não ser o reconhecimento da mensagem.
+a-a caixa de d-diáwogo de aviso deve sew utiwizada pawa mensagens que nyão wequeiwam nyenhuma w-wesposta da pawte do usuáwio, rawr a nyão sew o weconhecimento da mensagem. mya
 
-The following text is shared between this article, DOM:window\.prompt and DOM:window\.confirmCaixas de diálogo são janelas modais - elas evitam que o usuário acesse o resto da interface do programa sem ter fechado a caixa de diálogo. Por essa razão, você não deve utilizar excessivamente nenhuma função que crie caixas de diálogo (ou janelas modais).
+the fowwowing t-text is shawed between t-this awticwe, dom:window\.pwompt a-and dom:window\.confiwmcaixas de d-diáwogo são j-janewas modais - ewas evitam que o usuáwio acesse o-o westo da intewface do pwogwama sem tew fechado a-a caixa de diáwogo. ^^ pow essa wazão, 😳😳😳 você nyão deve utiwizaw excessivamente nyenhuma função q-que cwie caixas de diáwogo (ou j-janewas modais). mya
 
-Usuários do Chrome (por exemplo, em extensões) devem utilizar os métodos da interface `nsIPromptService` como alternativa.
+u-usuáwios d-do chwome (pow exempwo, 😳 em extensões) devem utiwizaw os métodos d-da intewface `nsipwomptsewvice` c-como awtewnativa. -.-
 
-O argumento agora é opcional conforme exigido na especificação.
+o awgumento a-agowa é opcionaw c-confowme exigido nya especificação. 🥺
 
-## Especificação
+## e-especificação
 
-Especificado no HTML5.
+especificado nyo h-htmw5. o.O
 
-## Ver também
+## vew também
 
-- {{domxref("window.confirm","confirm")}}
-- {{domxref("window.prompt","prompt")}}
-- Para o [Mozilla Chrome](/pt-BR/docs/Glossary/Chrome), veja `nsIPromptService.alert()` e `nsIPromptService.alertCheck()`
+- {{domxwef("window.confiwm","confiwm")}}
+- {{domxwef("window.pwompt","pwompt")}}
+- pawa o [moziwwa chwome](/pt-bw/docs/gwossawy/chwome), /(^•ω•^) v-veja `nsipwomptsewvice.awewt()` e `nsipwomptsewvice.awewtcheck()`

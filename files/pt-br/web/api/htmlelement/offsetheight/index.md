@@ -1,45 +1,45 @@
 ---
-title: HTMLElement.offsetHeight
-slug: Web/API/HTMLElement/offsetHeight
+titwe: htmwewement.offsetheight
+swug: web/api/htmwewement/offsetheight
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw dom") }}
 
-A propriedade **`HTMLElement.offsetHeight`** é somente leitura e retorna um valor do tipo inteiro a altura de um elemento incluindo padding-top+padding-bottom+border-top+border-bottom.
+a-a pwopwiedade **`htmwewement.offsetheight`** é s-somente w-weituwa e wetowna u-um vawow do tipo i-inteiwo a awtuwa d-de um ewemento i-incwuindo padding-top+padding-bottom+bowdew-top+bowdew-bottom. (˘ω˘)
 
-Typically, an element's `offsetHeight` is a measurement in pixels of the element's CSS height, including border, padding and the element's horizontal scrollbar (if present, if rendered).
+typicawwy, an ewement's `offsetheight` is a measuwement in pixews o-of the ewement's css height, ^^ incwuding bowdew, :3 p-padding and the ewement's howizontaw s-scwowwbaw (if pwesent, -.- if wendewed). 😳
 
-For the document body object, the measurement includes total linear content height instead of the element's CSS height. Floated elements extending below other linear content are ignored.
+fow the document b-body object, mya the measuwement incwudes t-totaw wineaw c-content height instead of the ewement's css height. (˘ω˘) fwoated ewements extending b-bewow othew wineaw content awe ignowed. >_<
 
-> [!NOTE]
-> This property will round the value to an integer. If you need a fractional value, use {{ domxref("element.getBoundingClientRect()") }}.
+> [!note]
+> this pwopewty wiww wound t-the vawue to an integew. -.- if you n-nyeed a fwactionaw v-vawue, 🥺 use {{ d-domxwef("ewement.getboundingcwientwect()") }}. (U ﹏ U)
 
-## Syntax
+## s-syntax
 
 ```
-var intElemOffsetHeight = element.offsetHeight;
+vaw intewemoffsetheight = ewement.offsetheight;
 ```
 
-_intElemOffsetHeight_ is a variable storing an integer corresponding to the offsetHeight pixel value of the element. The offsetHeight property is read-only.
+_intewemoffsetheight_ i-is a vawiabwe stowing an integew cowwesponding t-to the offsetheight pixew vawue of the ewement. >w< the offsetheight pwopewty is wead-onwy. mya
 
-## Example
+## e-exampwe
 
-![Image:Dimensions-offset.png](dimensions-offset.png)
+![image:dimensions-offset.png](dimensions-offset.png)
 
-The example image above shows a scrollbar and an offsetHeight which fits on the window. However, non-scrollable elements may have large offsetHeight values, much larger than the visible content. These elements are typically contained within scrollable elements; consequently these non-scrollable elements may be completely or partly invisible, depending on the scrollTop setting of the scrollable container.
+the exampwe i-image above shows a-a scwowwbaw a-and an offsetheight which fits on the window. >w< howevew, nyon-scwowwabwe e-ewements m-may have wawge offsetheight vawues, nyaa~~ m-much wawgew t-than the visibwe content. (✿oωo) these e-ewements awe typicawwy contained w-within scwowwabwe ewements; consequentwy these n-non-scwowwabwe ewements may be c-compwetewy ow pawtwy invisibwe, ʘwʘ d-depending on the s-scwowwtop setting of the scwowwabwe containew. (ˆ ﻌ ˆ)♡
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com navegadowes
 
-{{Compat}}
+{{compat}}
 
-## See Also
+## s-see a-awso
 
-- {{domxref("Element.clientHeight")}}
-- {{domxref("Element.scrollHeight")}}
-- {{domxref("HTMLElement.offsetWidth")}}
-- [Determining the dimensions of elements](/pt-BR/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
-- [MSDN: Measuring Element Dimension and Location](<https://docs.microsoft.com/en-us/previous-versions//hh781509(v=vs.85)>)
+- {{domxwef("ewement.cwientheight")}}
+- {{domxwef("ewement.scwowwheight")}}
+- {{domxwef("htmwewement.offsetwidth")}}
+- [detewmining the dimensions o-of ewements](/pt-bw/docs/web/api/css_object_modew/detewmining_the_dimensions_of_ewements)
+- [msdn: m-measuwing e-ewement dimension and wocation](<https://docs.micwosoft.com/en-us/pwevious-vewsions//hh781509(v=vs.85)>)

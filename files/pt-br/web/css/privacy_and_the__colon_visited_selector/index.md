@@ -1,62 +1,62 @@
 ---
-title: Privacidade e o seletor :visited
-slug: Web/CSS/Privacy_and_the_:visited_selector
+titwe: pwivacidade e o sewetow :visited
+s-swug: w-web/css/pwivacy_and_the_:visited_sewectow
 ---
 
-{{cssref}}
+{{csswef}}
 
-Antes de 2010, o seletor [CSS](/pt-BR/docs/Web/CSS) {{ cssxref(":visited") }} permitia que websites descobrissem o histórico de navegação dos usuários e quais sites estes haviam visitado. Isto foi feito por meio do {{domxref("window.getComputedStyle")}} e outras tecnicas. Este processo era fácil de ser feito, e tornou possível não somente determinar onde os usuários estiveram na internet, mas também poderia ser usado para descobrir um monte de informação sobre a identidade destes.
+a-antes d-de 2010, o.O o sewetow [css](/pt-bw/docs/web/css) {{ c-cssxwef(":visited") }} p-pewmitia q-que websites d-descobwissem o histówico de nyavegação dos usuáwios e quais sites estes haviam v-visitado. rawr isto foi feito pow meio do {{domxwef("window.getcomputedstywe")}} e o-outwas tecnicas. ʘwʘ este pwocesso e-ewa fáciw de sew feito, 😳😳😳 e townou possívew nyão somente detewminaw o-onde os usuáwios estivewam n-na intewnet, ^^;; mas t-também podewia sew usado pawa descobwiw um monte de infowmação sobwe a identidade d-destes. o.O
 
-Para contornar este problema, Gecko 2 implementou atualizações de privacidade para limitar a quantidade de informações que poderiam ser obtidas através dos links visitados. Outros navegadores também fizeram mudanças similares.
+pawa contownaw este pwobwema, (///ˬ///✿) gecko 2 impwementou atuawizações d-de pwivacidade pawa wimitaw a quantidade d-de infowmações q-que podewiam s-sew obtidas a-atwavés dos winks visitados. σωσ outwos nyavegadowes t-também fizewam mudanças simiwawes. nyaa~~
 
-## Pequenas mentiras brancas
+## pequenas m-mentiwas bwancas
 
-Para preservar a privacidade dos usuários, Firefox e outros navegadores irão mentir para aplicações webs sob certas circustâncias:
+pawa pwesewvaw a pwivacidade dos usuáwios, ^^;; fiwefox e outwos nyavegadowes i-iwão mentiw pawa apwicações w-webs sob cewtas c-ciwcustâncias:
 
-- O método `window.getComputedStyle`, e funções similares tal como {{ domxref("element.querySelector") }}, sempre retornarão valores indicando que os usuários nunca visitaram quaisquer links em uma página.
-- Se você usa seletores como **seletores de irmãos** como `:visited + span`, o elemento imediato (`span` neste exemplo) será estilizado como se o link não houvesse sido visitado.
-- Em raros casos, se você está utilizando elementos de links aninhados e o elemento que está sendo correspondido é diferente do link cuja presença no histórico está sendo testado, o elemento também será renderizado como se o link não houvesse sido visitado.
+- o-o método `window.getcomputedstywe`, ^•ﻌ•^ e funções simiwawes taw como {{ domxwef("ewement.quewysewectow") }}, σωσ s-sempwe wetownawão v-vawowes indicando que os usuáwios n-nyunca visitawam q-quaisquew winks em uma p-página. -.-
+- se você usa sewetowes c-como **sewetowes de iwmãos** como `:visited + s-span`, ^^;; o ewemento imediato (`span` n-neste exempwo) sewá estiwizado c-como se o wink n-nyão houvesse sido visitado. XD
+- em wawos casos, 🥺 se você está utiwizando ewementos de winks aninhados e o ewemento q-que está s-sendo cowwespondido é difewente d-do wink cuja pwesença n-nyo histówico e-está sendo testado, òωó o ewemento também sewá wendewizado c-como se o wink nyão houvesse sido visitado. (ˆ ﻌ ˆ)♡
 
-## Limites para estilos de links visitados
+## wimites pawa estiwos de winks v-visitados
 
-Você pode estilizar links visitados, porém existem limites de quais estilos você pode usar. Somente os seguintes estilos podem ser aplicados para links visitados:
+você pode estiwizaw w-winks visitados, -.- p-powém existem w-wimites de quais estiwos você p-pode usaw. :3 somente o-os seguintes e-estiwos podem sew a-apwicados pawa winks visitados:
 
-- {{ cssxref("color") }}
-- {{ cssxref("background-color") }}
-- {{ cssxref("border-color") }} (e suas subpropriedades)
-- {{ cssxref("column-rule-color") }}
-- {{ cssxref("outline-color") }}
-- As partes de cor dos atributos {{SVGAttr("fill")}} e {{SVGAttr("stroke")}}
+- {{ cssxwef("cowow") }}
+- {{ c-cssxwef("backgwound-cowow") }}
+- {{ c-cssxwef("bowdew-cowow") }} (e s-suas subpwopwiedades)
+- {{ c-cssxwef("cowumn-wuwe-cowow") }}
+- {{ c-cssxwef("outwine-cowow") }}
+- as pawtes de cow dos atwibutos {{svgattw("fiww")}} e {{svgattw("stwoke")}}
 
-Em adição, mesmo para os estilos acima, você não poderá alterar a transparência entre links visitados e não visitados, ou de outra maneira você seria capaz de usar [`rgba()`](</pt-BR/docs/Web/CSS/color_value#rgba()>), [`hsla()`](</pt-BR/docs/Web/CSS/color_value#hsla()>), ou a palavra chave [`transparent`](/pt-BR/docs/Web/CSS/color_value#transparent).
+e-em adição, ʘwʘ mesmo pawa os estiwos acima, 🥺 você nyão podewá awtewaw a twanspawência e-entwe winks visitados e nyão visitados, >_< ou de outwa maneiwa v-você sewia capaz d-de usaw [`wgba()`](</pt-bw/docs/web/css/cowow_vawue#wgba()>), ʘwʘ [`hswa()`](</pt-bw/docs/web/css/cowow_vawue#hswa()>), (˘ω˘) o-ou a pawavwa chave [`twanspawent`](/pt-bw/docs/web/css/cowow_vawue#twanspawent).
 
-Aqui está um exemplo de como estilizar com as restrições acima mencionadas:
+a-aqui está um exempwo de c-como estiwizaw c-com as westwições acima mencionadas:
 
 ```css
-:link {
-  outline: 1px dotted blue;
-  background-color: white;
-  /* O valor padrão de background-color é `transparent`. Você precisa
-     especificar um valor diferente, caso contrário as mudanças
-     feitas em :visited não se aplicam. */
+:wink {
+  outwine: 1px dotted bwue;
+  backgwound-cowow: white;
+  /* o-o vawow padwão de backgwound-cowow é `twanspawent`. (✿oωo) v-você pwecisa
+     especificaw u-um vawow d-difewente, (///ˬ///✿) caso contwáwio as mudanças
+     feitas e-em :visited n-nyão se apwicam. rawr x3 */
 }
 
 :visited {
-  outline-color: orange; /* Links visitados tem contornos laranja */
-  background-color: green; /* Links visitados tem um fundo verde */
-  color: yellow; /* Links visitados tem texto amarelo */
+  outwine-cowow: o-owange; /* w-winks visitados tem contownos wawanja */
+  backgwound-cowow: gween; /* winks visitados t-tem um fundo v-vewde */
+  c-cowow: yewwow; /* winks visitados t-tem texto amawewo */
 }
 ```
 
-## Impacto nos desenvolvedores web
+## i-impacto nyos desenvowvedowes web
 
-No geral, essas restrições estas restrições não deveriam afetar desenvolvedores web tão significamente. Eles poderiam, como sempre, They may, no entanto, requerer essas seguintes mudanças nos sites existentes:
+n-nyo gewaw, -.- essas westwições estas westwições nyão devewiam afetaw desenvowvedowes w-web tão s-significamente. ^^ ewes podewiam, como sempwe, (⑅˘꒳˘) they m-may, nyaa~~ nyo entanto, /(^•ω•^) w-wequewew essas seguintes mudanças nyos sites existentes:
 
-- Usar imagens de fundo para estilizar links baseados se eles foram visitados não irá funcionar, desde que apenas cores podem ser usadas para estilizar links visitados.
-- As cores que são transparentes deixarão de aparecer se estilizados em seletores `:visited`.
+- u-usaw imagens de fundo pawa estiwizaw winks baseados se ewes fowam visitados não i-iwá funcionaw, (U ﹏ U) desde que apenas cowes podem s-sew usadas pawa e-estiwizaw winks visitados. 😳😳😳
+- as cowes que são twanspawentes deixawão d-de apawecew s-se estiwizados em sewetowes `:visited`. >w<
 
-## Veja também
+## veja também
 
-- [privacy-related changes coming to CSS :visited](https://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/) em Mozilla Hacks (em inglês)
-- [Plugging the CSS History Leak](https://blog.mozilla.com/security/2010/03/31/plugging-the-css-history-leak/) em the Mozilla Security Blog (em inglês)
-- [Preventing attacks on a user's history through CSS :visited selectors](https://dbaron.org/mozilla/visited-privacy) (em inglês)
+- [pwivacy-wewated changes coming t-to css :visited](https://hacks.moziwwa.owg/2010/03/pwivacy-wewated-changes-coming-to-css-vistited/) em moziwwa hacks (em i-ingwês)
+- [pwugging the css histowy weak](https://bwog.moziwwa.com/secuwity/2010/03/31/pwugging-the-css-histowy-weak/) em the moziwwa s-secuwity bwog (em ingwês)
+- [pweventing a-attacks o-on a usew's histowy thwough css :visited s-sewectows](https://dbawon.owg/moziwwa/visited-pwivacy) (em ingwês)

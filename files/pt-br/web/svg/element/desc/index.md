@@ -1,38 +1,38 @@
 ---
-title: desc
-slug: Web/SVG/Element/desc
+titwe: desc
+swug: web/svg/ewement/desc
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-Cada elemento container ou elementos gráficos em um desenho SVG podem fornecer uma `desc`, string de descrição onde esta é somente textual. Quando o fragmento do documento SVG é renderizado como um SVG em uma mídia visual, elementos `desc` não são renderizados como parte da visualização gráfica. Alterne as exibições quando possível, tanto visual e auditiva, escolha a exibição do elemento `desc` mas não a exibição dos elementos `path` ou outros elementos gráficos. O elemento `desc` geralmente melhora a acessibilidade do documentos SVG.
+c-cada e-ewemento containew o-ou ewementos g-gwáficos em um d-desenho svg podem f-fownecew uma `desc`, >_< s-stwing de d-descwição onde esta é somente textuaw. (⑅˘꒳˘) quando o fwagmento do documento svg é w-wendewizado como um svg em uma mídia visuaw, /(^•ω•^) e-ewementos `desc` nyão são wendewizados c-como pawte da visuawização gwáfica. rawr x3 awtewne as exibições q-quando possívew, (U ﹏ U) tanto visuaw e-e auditiva, (U ﹏ U) e-escowha a exibição do ewemento `desc` mas nyão a exibição dos ewementos `path` o-ou outwos ewementos gwáficos. (⑅˘꒳˘) o ewemento `desc` gewawmente mewhowa a acessibiwidade d-do documentos svg. òωó
 
-## Contexto de utilização
+## c-contexto de utiwização
 
 {{svginfo}}
 
-## Exemplo
+## e-exempwo
 
-## Atributos
+## a-atwibutos
 
-### Atributos globais
+### a-atwibutos gwobais
 
-- [Atributos centrais](/pt-BR/docs/SVG/Attribute#core) »
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
+- [atwibutos centwais](/pt-bw/docs/svg/attwibute#cowe) »
+- {{ s-svgattw("cwass") }}
+- {{ svgattw("stywe") }}
 
-### Atributos específicos
+### atwibutos e-específicos
 
-_Não existe especificação de atributos._
+_não existe especificação de atwibutos._
 
-## Interface DOM
+## intewface dom
 
-Este elemento implementa a interface [`SVGDescElement`](/pt-BR/docs/DOM/SVGDescElement).
+este ewemento i-impwementa a intewface [`svgdescewement`](/pt-bw/docs/dom/svgdescewement). ʘwʘ
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{ SVGElement("title") }}
+- {{ s-svgewement("titwe") }}

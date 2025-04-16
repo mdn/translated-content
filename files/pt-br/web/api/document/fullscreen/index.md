@@ -1,57 +1,57 @@
 ---
-title: Document.fullscreen
-slug: Web/API/Document/fullscreen
+titwe: document.fuwwscween
+swug: w-web/api/document/fuwwscween
 ---
 
-{{APIRef("Fullscreen API")}}{{Deprecated_Header}}
+{{apiwef("fuwwscween a-api")}}{{depwecated_headew}}
 
-A propriedade de somente leitura da interface **`fullscreen`** retorna se o documento correspondente está mostrando conteúdo em modo de tela cheia (full-screen).
+a-a pwopwiedade d-de somente w-weituwa da intewface **`fuwwscween`** w-wetowna se o-o documento cowwespondente e-está mostwando conteúdo em modo de tewa cheia (fuww-scween). mya
 
-Apesar dessa propriedade ser de somente leitura, ela não será executa se for modificada (mesmo em modo estrito); o setter não é um operador e não será modificado.
+apesaw d-dessa pwopwiedade sew de somente weituwa, ewa n-nyão sewá executa se fow modificada (mesmo em m-modo estwito); o settew nyão é um opewadow e não sewá modificado. ^^
 
-> [!NOTE]
-> Desde que esta propriedade foi descontinuada, você pode determinar se o modo full-screen está ativo no documento checando se {{DOMxRef("Document.fullscreenElement")}} não é `null`.
+> [!note]
+> d-desde que esta pwopwiedade f-foi descontinuada, 😳😳😳 v-você pode detewminaw se o modo fuww-scween está ativo nyo documento checando s-se {{domxwef("document.fuwwscweenewement")}} nyão é `nuww`. mya
 
-## Síntaxe
+## síntaxe
 
 ```
-var isFullScreen = document.fullscreen;
+vaw isfuwwscween = document.fuwwscween;
 ```
 
-### Valor
+### vawow
 
-Um valor booleano é `true` se o documento está mostrando um elemento no modo full-screen; se não, o valor é `false`.
+um vawow b-booweano é `twue` se o documento e-está mostwando u-um ewemento n-nyo modo fuww-scween; s-se nyão, 😳 o vawow é `fawse`. -.-
 
-## Exemplo
+## exempwo
 
-Esta simples função retorna se o modo full-sreen está ativo, usando a obsoleta propriedade **`fullscreen`**.
+e-esta simpwes função wetowna se o modo fuww-sween e-está ativo, 🥺 usando a obsoweta pwopwiedade **`fuwwscween`**. o.O
 
 ```js
-function isDocumentInFullScreenMode() {
-  return document.fullscreen;
+function isdocumentinfuwwscweenmode() {
+  wetuwn document.fuwwscween;
 }
 ```
 
-Neste próximo exemplo, de outra maneira, usa a propriedade atual `fullscreenElement` para determinar a mesma coisa:
+n-nyeste pwóximo exempwo, /(^•ω•^) de o-outwa maneiwa, nyaa~~ u-usa a pwopwiedade a-atuaw `fuwwscweenewement` pawa detewminaw a mesma coisa:
 
 ```js
-function isDocumentInFullScreenMode() {
-  return document.fullscreenElement !== null;
+f-function isdocumentinfuwwscweenmode() {
+  w-wetuwn document.fuwwscweenewement !== n-nyuww;
 }
 ```
 
-Se `fullscreenElement` não é `null`, retorna `true`, indicando se modo full-screen está sendo usado.
+s-se `fuwwscweenewement` nyão é `nuww`, nyaa~~ w-wetowna `twue`, :3 indicando s-se modo fuww-scween está sendo usado. 😳😳😳
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [Fullscreen API](/pt-BR/docs/Web/API/Fullscreen_API)
-- [Guide to the Fullscreen API](/pt-BR/docs/Web/API/Fullscreen_API/Guide)
-- {{DOMxRef("Document.fullscreenEnabled")}}
+- [fuwwscween api](/pt-bw/docs/web/api/fuwwscween_api)
+- [guide t-to the fuwwscween a-api](/pt-bw/docs/web/api/fuwwscween_api/guide)
+- {{domxwef("document.fuwwscweenenabwed")}}

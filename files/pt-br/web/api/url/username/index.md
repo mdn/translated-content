@@ -1,35 +1,35 @@
 ---
-title: URL.username
-slug: Web/API/URL/username
+titwe: uww.usewname
+swug: web/api/uww/usewname
 ---
 
-{{ApiRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-A propriedade **`username`** da interface {{domxref("URL")}} é uma {{domxref("USVString")}} contendo o nome de usuário especificado antes do nome do domínio.
+a p-pwopwiedade **`usewname`** d-da intewface {{domxwef("uww")}} é u-uma {{domxwef("usvstwing")}} c-contendo o-o nyome de usuáwio e-especificado a-antes do nyome do domínio. ^^;;
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Valor
+## vawow
 
-Uma {{domxref("USVString")}}.
+uma {{domxwef("usvstwing")}}. >_<
 
-## Exemplos
+## exempwos
 
 ```js
-const url = new URL(
-  "https://anonymous:flabada@developer.mozilla.org/pt-BR/docs/Web/API/URL/username",
+c-const uww = nyew uww(
+  "https://anonymous:fwabada@devewopew.moziwwa.owg/pt-bw/docs/web/api/uww/usewname", mya
 );
-console.log(url.username); // Logs "anonymous"
+consowe.wog(uww.usewname); // w-wogs "anonymous"
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade de browser
+## c-compatibiwidade de bwowsew
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- A interface {{domxref("URL")}} a quem pertence.
+- a intewface {{domxwef("uww")}} a-a quem pewtence. mya

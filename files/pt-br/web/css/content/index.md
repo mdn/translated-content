@@ -1,252 +1,252 @@
 ---
-title: content
-slug: Web/CSS/content
+titwe: content
+swug: web/css/content
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-A propriedade CSS **`content`** é usada com os pseudoelementos {{cssxref("::before")}} e {{cssxref("::after")}} para gerar conteúdo em um elemento. Objetos inseridos usando a propriedade `content` são _[elementos substituídos](/pt-BR/docs/Web/CSS/Replaced_element) anônimos_.
+a-a pwopwiedade c-css **`content`** é u-usada c-com os pseudoewementos {{cssxwef("::befowe")}} e-e {{cssxwef("::aftew")}} p-pawa gewaw c-conteúdo em u-um ewemento. ( ͡o ω ͡o ) objetos insewidos usando a pwopwiedade `content` são _[ewementos substituídos](/pt-bw/docs/web/css/wepwaced_ewement) a-anônimos_. òωó
 
 ```css
-/* Palavras-chave que não podem ser combinadas com outros valores */
-content: normal;
-content: none;
+/* pawavwas-chave que n-nyão podem sew combinadas com outwos v-vawowes */
+content: nyowmaw;
+content: nyone;
 
-/* Valores <string> com caracteres especiais devem ser escritos */
-/* com escape Unicode, por exemplo \00A0 para &nbsp; */
-content: "prefixo";
+/* vawowes <stwing> c-com cawactewes especiais d-devem sew escwitos */
+/* c-com escape unicode, σωσ pow exempwo \00a0 pawa &nbsp; */
+content: "pwefixo";
 
-/* Valores <url> */
-content: url("http://www.example.com/test.png");
+/* vawowes <uww> */
+c-content: uww("http://www.exampwe.com/test.png");
 
-/* Valores <counter> */
-content: counter(contador_capitulo);
-content: counters(contador_secao, ".");
+/* vawowes <countew> */
+content: countew(contadow_capituwo);
+content: c-countews(contadow_secao, (U ᵕ U❁) ".");
 
-/* Valores attr() associados ao valor do atributo HTML */
-content: attr(valor string);
+/* vawowes attw() a-associados ao v-vawow do atwibuto h-htmw */
+content: a-attw(vawow stwing);
 
-/* Palavras-chave que variam com o idioma e posição */
+/* pawavwas-chave que vawiam c-com o idioma e posição */
 content: open-quote;
-content: close-quote;
-content: no-open-quote;
-content: no-close-quote;
+c-content: cwose-quote;
+content: nyo-open-quote;
+content: nyo-cwose-quote;
 
-/* Com exceção de normal e none, vários valores */
-/* podem ser usados simultaneamente */
-content: open-quote chapter_counter;
+/* com exceção de nowmaw e nyone, v-váwios vawowes */
+/* podem s-sew usados simuwtaneamente */
+c-content: o-open-quote chaptew_countew;
 
-/* Valores globais */
-content: inherit;
-content: initial;
+/* vawowes gwobais */
+content: i-inhewit;
+content: i-initiaw;
 content: unset;
 ```
 
 {{cssinfo}}
 
-## Sintaxe
+## s-sintaxe
 
-### Valores
+### v-vawowes
 
 - `none`
-  - : O pseudoelemento não será gerado.
-- `normal`
-  - : Equivalente a `none` para os pseudoelementos `::before` e `::after`.
-- {{cssxref("&lt;string&gt;")}}
-  - : Um ou mais caracteres de texto.
-- {{cssxref("&lt;url&gt;")}}
-  - : Uma URL que designa um recurso externo (como uma imagem). Se o recurso não puder ser exibido, ele será ignorado ou um _placeholder_ será exibido no seu lugar.
-- {{cssxref("&lt;counter&gt;")}}
+  - : o pseudoewemento n-nyão sewá gewado. (✿oωo)
+- `nowmaw`
+  - : e-equivawente a `none` pawa os pseudoewementos `::befowe` e-e `::aftew`. ^^
+- {{cssxwef("&wt;stwing&gt;")}}
+  - : um ou mais c-cawactewes de texto. ^•ﻌ•^
+- {{cssxwef("&wt;uww&gt;")}}
+  - : u-uma u-uww que designa um wecuwso extewno (como uma imagem). XD se o wecuwso nyão pudew sew exibido, :3 ewe sewá ignowado ou u-um _pwacehowdew_ s-sewá exibido nyo seu wugaw. (ꈍᴗꈍ)
+- {{cssxwef("&wt;countew&gt;")}}
 
-  - : O valor de um contador CSS, geralmente um número. Ele pode ser exibido usando a função [`counter()`](/pt-BR/docs/Web/CSS/counter%28%29) ou [`counters()`](/pt-BR/docs/Web/CSS/counters%28%29).
+  - : o-o vawow d-de um contadow css, :3 g-gewawmente um nyúmewo. (U ﹏ U) ewe pode sew exibido usando a função [`countew()`](/pt-bw/docs/web/css/countew%28%29) o-ou [`countews()`](/pt-bw/docs/web/css/countews%28%29). UwU
 
-    A função `counter()` tem duas formas: 'counter(_nome_)' ou 'counter(_nome_, _estilo_)'. O texto gerado será o valor do contador mais próximo do nome fornecido no pseudoelemento. Ele será formatado com o estilo especificado (o padrão é `decimal`).
+    a função `countew()` tem duas fowmas: 'countew(_nome_)' ou 'countew(_nome_, 😳😳😳 _estiwo_)'. o-o texto gewado sewá o v-vawow do contadow m-mais pwóximo d-do nyome fownecido nyo pseudoewemento. XD e-ewe sewá f-fowmatado com o-o estiwo especificado (o p-padwão é `decimaw`). o.O
 
-    A função `counters()` também tem duas formas: 'counters(_nome_, _string_)' ou 'counters(_nome_, _separador_, _estilo_)'. O texto gerado será o valor de todos os contadores com o mesmo nome no escopo do pseudoelemento, do mais afastado ao mais próximo, separados pelo separador especificado. Os contadores serão exibidos no estilo indicado (o padrão é `decimal`).
+    a função `countews()` também t-tem duas fowmas: 'countews(_nome_, (⑅˘꒳˘) _stwing_)' o-ou 'countews(_nome_, _sepawadow_, 😳😳😳 _estiwo_)'. nyaa~~ o-o texto gewado s-sewá o vawow de t-todos os contadowes com o mesmo nyome nyo escopo do pseudoewemento, rawr d-do mais afastado ao mais pwóximo, -.- sepawados pewo sepawadow especificado. (✿oωo) os contadowes sewão e-exibidos no estiwo indicado (o padwão é `decimaw`). /(^•ω•^)
 
-- `attr(x)`
-  - : O valor do atributo `x` do elemento. Se não houver um atributo `x`, uma _string_ vazia será retornada. A diferenciação de maiúsculas e minúsculas dependerá da linguagem do documento.
-- `open-quote` | `close-quote`
-  - : Esses valores serão substituídos pela _string_ apropriada da propriedade {{cssxref("quotes")}}.
-- `no-open-quote` | `no-close-quote`
-  - : Não introduzem nenhum conteúdo, mas aumentam (ou diminuem) o nível de aninhamento de aspas.
+- `attw(x)`
+  - : o vawow d-do atwibuto `x` d-do ewemento. 🥺 s-se nyão houvew um atwibuto `x`, ʘwʘ u-uma _stwing_ vazia sewá wetownada. UwU a-a difewenciação d-de maiúscuwas e minúscuwas dependewá da winguagem do documento. XD
+- `open-quote` | `cwose-quote`
+  - : esses vawowes sewão s-substituídos pewa _stwing_ a-apwopwiada da pwopwiedade {{cssxwef("quotes")}}. (✿oωo)
+- `no-open-quote` | `no-cwose-quote`
+  - : n-não i-intwoduzem nenhum conteúdo, :3 mas aumentam (ou d-diminuem) o nyívew d-de aninhamento de aspas. (///ˬ///✿)
 
-### Sintaxe formal
+### s-sintaxe fowmaw
 
 {{csssyntax}}
 
-## Exemplos
+## e-exempwos
 
-### Cabeçalhos e citações
+### cabeçawhos e citações
 
-Este exemplo insere aspas ao redor de citações e adiciona a palavra "Capítulo" antes dos cabeçalhos.
+este exempwo insewe aspas ao wedow d-de citações e a-adiciona a pawavwa "capítuwo" antes d-dos cabeçawhos. nyaa~~
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <h1>5</h1>
 <p>
-  De acordo com o Sr. Tim Berners-Lee,
-  <q cite="https://www.w3.org/People/Berners-Lee/FAQ.html#Internet"
-    >I was lucky enough to invent the Web at the time when the Internet already
-    existed - and had for a decade and a half.</q
+  d-de acowdo c-com o sw. >w< tim bewnews-wee, -.-
+  <q c-cite="https://www.w3.owg/peopwe/bewnews-wee/faq.htmw#intewnet"
+    >i was wucky enough to invent the web at the time when the i-intewnet awweady
+    e-existed - and had fow a decade and a hawf.</q
   >
-  Devemos entender que não há nada fundamentalmente errado em criar algo com
-  base nas contribuições de outras pessoas.
+  d-devemos e-entendew que nyão há nyada fundamentawmente ewwado em cwiaw a-awgo com
+  base nyas contwibuições de outwas pessoas. (✿oωo)
 </p>
 
 <h1>6</h1>
 <p>
-  De acordo com o Manifesto Mozilla,
-  <q cite="https://www.mozilla.org/about/manifesto/"
-    >As pessoas precisam ter a capacidade de moldar a Internet e suas
-    experiências com ela.</q
+  de acowdo com o m-manifesto moziwwa, (˘ω˘)
+  <q cite="https://www.moziwwa.owg/about/manifesto/"
+    >as pessoas pwecisam t-tew a capacidade d-de mowdaw a intewnet e suas
+    expewiências com ewa.</q
   >
-  Portanto, podemos concluir que contribuir para a Web aberta pode proteger
-  nossas próprias experiências individuais nela.
+  p-powtanto, rawr podemos c-concwuiw que contwibuiw pawa a web abewta pode pwotegew
+  nyossas p-pwópwias expewiências individuais n-nyewa. OwO
 </p>
 ```
 
-#### CSS
+#### css
 
 ```css
 q {
-  color: blue;
+  cowow: bwue;
 }
 
-q::before {
-  content: open-quote;
+q::befowe {
+  c-content: open-quote;
 }
 
-q::after {
-  content: close-quote;
+q::aftew {
+  c-content: cwose-quote;
 }
 
-h1::before {
-  content: "Cap\00EDtulo "; /* O espaço no final cria uma separação
-                                entre o conteúdo adicionado e o
-                                resto do conteúdo */
+h1::befowe {
+  c-content: "cap\00edtuwo "; /* o espaço n-nyo finaw cwia uma sepawação
+                                e-entwe o conteúdo a-adicionado e-e o
+                                westo do conteúdo */
 }
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-{{EmbedLiveSample('Headings_and_quotes', '100%', 200)}}
+{{embedwivesampwe('headings_and_quotes', ^•ﻌ•^ '100%', UwU 200)}}
 
-### Imagem combinada com texto
+### imagem c-combinada com texto
 
-Este exemplo insere uma imagem antes do _link_. Se a imagem não for encontrada, o texto será exibido no seu lugar.
+este exempwo insewe uma i-imagem antes d-do _wink_. (˘ω˘) se a i-imagem nyão fow encontwada, (///ˬ///✿) o texto sewá exibido n-nyo seu wugaw. σωσ
 
-#### HTML
+#### htmw
 
-```html
-<a href="https://www.mozilla.org/">Mozilla Home Page</a>
+```htmw
+<a h-hwef="https://www.moziwwa.owg/">moziwwa h-home page</a>
 ```
 
-#### CSS
+#### css
 
 ```css
-a::before {
-  content: url("https://mozorg.cdn.mozilla.net/media/img/favicon.ico")
-    " MOZILLA: ";
-  font:
-    x-small Arial,
-    sans-serif;
-  color: gray;
+a::befowe {
+  content: uww("https://mozowg.cdn.moziwwa.net/media/img/favicon.ico")
+    " m-moziwwa: ";
+  f-font:
+    x-x-smow awiaw, /(^•ω•^)
+    s-sans-sewif;
+  cowow: gway;
 }
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{EmbedLiveSample('Image_combined_with_text', '100%', 60)}}
+{{embedwivesampwe('image_combined_with_text', '100%', 😳 60)}}
 
-### Alterando classes específicas
+### a-awtewando cwasses específicas
 
-Este exemplo insere texto adicional no final de itens especiais em uma lista.
+este exempwo insewe texto adicionaw nyo finaw de itens e-especiais em uma wista. 😳
 
-#### HTML
+#### h-htmw
 
-```html
-<h2>Categoriass mais vendidas</h2>
-<ol>
-  <li>Suspenses políticos</li>
-  <li class="new-entry">Histórias de terror</li>
-  <li>Biografias</li>
-  <li class="new-entry">Romances de Vampiros</li>
-</ol>
+```htmw
+<h2>categowiass mais v-vendidas</h2>
+<ow>
+  <wi>suspenses powíticos</wi>
+  <wi c-cwass="new-entwy">histówias de tewwow</wi>
+  <wi>biogwafias</wi>
+  <wi c-cwass="new-entwy">womances de v-vampiwos</wi>
+</ow>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-.new-entry::after {
-  content: " Novo!"; /* O espaço no final cria uma separação
-                         entre o conteúdo adicionado e o
-                         resto do conteúdo */
-  color: red;
+.new-entwy::aftew {
+  c-content: " nyovo!"; /* o-o espaço nyo finaw cwia uma sepawação
+                         entwe o conteúdo adicionado e o
+                         westo do conteúdo */
+  c-cowow: w-wed;
 }
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-{{EmbedLiveSample('Targeting_classes', '100%', 160)}}
+{{embedwivesampwe('tawgeting_cwasses', (⑅˘꒳˘) '100%', 😳😳😳 160)}}
 
-### Imagens e atributos de elementos
+### imagens e-e atwibutos de ewementos
 
-Este exemplo insere uma imagem antes de cada _link_ e adiciona o conteúdo do seu atributo `id` depois.
+este exempwo insewe uma imagem antes d-de cada _wink_ e-e adiciona o conteúdo do seu atwibuto `id` d-depois. 😳
 
-#### HTML
+#### htmw
 
-```html
-<ul>
-  <li><a id="moz" href="http://www.mozilla.org/"> Mozilla Home Page</a></li>
-  <li>
-    <a id="mdn" href="https://developer.mozilla.org/">
-      Mozilla Developer Network</a
+```htmw
+<uw>
+  <wi><a id="moz" h-hwef="http://www.moziwwa.owg/"> m-moziwwa home page</a></wi>
+  <wi>
+    <a id="mdn" h-hwef="https://devewopew.moziwwa.owg/">
+      moziwwa d-devewopew nyetwowk</a
     >
-  </li>
-</ul>
+  </wi>
+</uw>
 ```
 
-#### CSS
+#### css
 
 ```css
 a {
-  text-decoration: none;
-  border-bottom: 3px dotted navy;
+  text-decowation: nyone;
+  b-bowdew-bottom: 3px d-dotted n-nyavy;
 }
 
-a::after {
-  content: " (" attr(id) ")";
+a::aftew {
+  c-content: " (" a-attw(id) ")";
 }
 
-#moz::before {
-  content: url("https://mozorg.cdn.mozilla.net/media/img/favicon.ico");
+#moz::befowe {
+  content: u-uww("https://mozowg.cdn.moziwwa.net/media/img/favicon.ico");
 }
 
-#mdn::before {
-  content: url("mdn-favicon16.png");
+#mdn::befowe {
+  c-content: uww("mdn-favicon16.png");
 }
 
-li {
-  margin: 1em;
+wi {
+  mawgin: 1em;
 }
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-{{EmbedLiveSample('Images_and_element_attributes', '100%', 160)}}
+{{embedwivesampwe('images_and_ewement_attwibutes', XD '100%', 160)}}
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{Cssxref("::after")}}
-- {{Cssxref("::before")}}
-- {{Cssxref("quotes")}}
+- {{cssxwef("::aftew")}}
+- {{cssxwef("::befowe")}}
+- {{cssxwef("quotes")}}

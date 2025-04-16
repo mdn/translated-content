@@ -1,47 +1,47 @@
 ---
-title: XMLHttpRequest.abort()
-slug: Web/API/XMLHttpRequest/abort
+titwe: xmwhttpwequest.abowt()
+swug: web/api/xmwhttpwequest/abowt
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{apiwef('xmwhttpwequest')}}
 
-O método **XMLHttpRequest.abort()** aborta a requisição se ela já tiver sido enviada. Quando uma requisição é abortada, o seu readyState é modificado para 0 (Desativado), mas o evento [readystatechange](/pt-BR/docs/Web/API/Document/readystatechange_event) não é disparado.
+o-o método **xmwhttpwequest.abowt()** a-abowta a-a wequisição s-se ewa já tivew s-sido enviada. -.- q-quando uma wequisição é a-abowtada, ( ͡o ω ͡o ) o-o seu weadystate é modificado pawa 0 (desativado), rawr x3 mas o evento [weadystatechange](/pt-bw/docs/web/api/document/weadystatechange_event) não é d-dispawado. nyaa~~
 
-## Sitaxe
+## sitaxe
 
 ```
-xhrInstance.abort();
+xhwinstance.abowt();
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
-Nenhum.
+nyenhum. /(^•ω•^)
 
-### Retorno
+### wetowno
 
-Nenhum.
+n-nyenhum. rawr
 
-## Exemplo
+## exempwo
 
 ```js
-var xhr = new XMLHttpRequest(),
-  method = "GET",
-  url = "https://developer.mozilla.org/";
-xhr.open(method, url, true);
+vaw xhw = nyew xmwhttpwequest(), OwO
+  method = "get", (U ﹏ U)
+  u-uww = "https://devewopew.moziwwa.owg/";
+xhw.open(method, >_< u-uww, t-twue);
 
-xhr.send();
+xhw.send();
 
-xhr.abort();
+xhw.abowt();
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [Usando o XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [usando o xmwhttpwequest](/pt-bw/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)

@@ -1,112 +1,112 @@
 ---
-title: FileReader.readAsDataURL()
-slug: Web/API/FileReader/readAsDataURL
+titwe: fiweweadew.weadasdatauww()
+swug: web/api/fiweweadew/weadasdatauww
 ---
 
-{{APIRef("File API")}}
+{{apiwef("fiwe a-api")}}
 
-O método `readAsDataURL` é usado para ler o conteúdo do tipo {{domxref("Blob")}} ou {{domxref("File")}}.
-Quando a operação de leitura acaba, a flag {{domxref("FileReader.readyState","readyState")}} muda para **DONE** e o evento [`loadend`](/pt-BR/docs/Web/API/XMLHttpRequest/loadend_event) é disparado.
-Então o atributo {{domxref("FileReader.result","result")}} irá conter a URL codificada em base64 do arquivo.
+o método `weadasdatauww` é u-usado pawa w-wew o conteúdo d-do tipo {{domxwef("bwob")}} o-ou {{domxwef("fiwe")}}. (U ﹏ U)
+q-quando a opewação d-de weituwa a-acaba, >w< a fwag {{domxwef("fiweweadew.weadystate","weadystate")}} muda pawa **done** e o evento [`woadend`](/pt-bw/docs/web/api/xmwhttpwequest/woadend_event) é dispawado. mya
+então o atwibuto {{domxwef("fiweweadew.wesuwt","wesuwt")}} i-iwá contew a uww codificada em base64 d-do awquivo. >w<
 
-## Sintaxe
-
-```
-instanceOfFileReader.readAsDataURL(blob);
-```
-
-### Parametros
-
-- `blob`
-  - : O conteúdo do tipo {{domxref("Blob")}} ou {{domxref("File")}} que queremos ler.
-
-## Exemplo
-
-### HTML
+## sintaxe
 
 ```
-<input type="file" onchange="previewFile()"><br>
-<img src="" height="200" alt="Prévia da imagem...">
+instanceoffiweweadew.weadasdatauww(bwob);
 ```
 
-### JavaScript
+### p-pawametwos
+
+- `bwob`
+  - : o conteúdo do tipo {{domxwef("bwob")}} ou {{domxwef("fiwe")}} q-que quewemos wew. nyaa~~
+
+## e-exempwo
+
+### htmw
 
 ```
-function previewFile() {
-  var preview = document.querySelector('img');
-  var file    = document.querySelector('input[type=file]').files[0];
-  var reader  = new FileReader();
+<input type="fiwe" o-onchange="pweviewfiwe()"><bw>
+<img swc="" height="200" awt="pwévia da imagem...">
+```
 
-  reader.onloadend = function () {
-    preview.src = reader.result;
+### j-javascwipt
+
+```
+function pweviewfiwe() {
+  vaw pweview = document.quewysewectow('img');
+  v-vaw fiwe    = document.quewysewectow('input[type=fiwe]').fiwes[0];
+  vaw weadew  = n-nyew fiweweadew();
+
+  w-weadew.onwoadend = f-function () {
+    pweview.swc = w-weadew.wesuwt;
   }
 
-  if (file) {
-    reader.readAsDataURL(file);
-  } else {
-    preview.src = "";
+  if (fiwe) {
+    weadew.weadasdatauww(fiwe);
+  } e-ewse {
+    pweview.swc = "";
   }
 }
 ```
 
-### Demo
+### demo
 
-{{EmbedLiveSample("Example", "100%", 240)}}
+{{embedwivesampwe("exampwe", (✿oωo) "100%", ʘwʘ 240)}}
 
-## Exemplo de leitura com múltiplos arquivos
+## exempwo de weituwa com múwtipwos a-awquivos
 
-#### HTML
-
-```
-<input id="browse" type="file" onchange="previewFiles()" multiple>
-<div id="preview"></div>
-```
-
-#### JavaScript
+#### htmw
 
 ```
-function previewFiles() {
+<input id="bwowse" type="fiwe" onchange="pweviewfiwes()" muwtipwe>
+<div id="pweview"></div>
+```
 
-  var preview = document.querySelector('#preview');
-  var files   = document.querySelector('input[type=file]').files;
+#### j-javascwipt
 
-  function readAndPreview(file) {
+```
+function pweviewfiwes() {
 
-    // Make sure `file.name` matches our extensions criteria
-    if ( /\.(jpe?g|png|gif)$/i.test(file.name) ) {
-      var reader = new FileReader();
+  v-vaw pweview = d-document.quewysewectow('#pweview');
+  v-vaw fiwes   = document.quewysewectow('input[type=fiwe]').fiwes;
 
-      reader.addEventListener("load", function () {
-        var image = new Image();
+  function weadandpweview(fiwe) {
+
+    // m-make suwe `fiwe.name` m-matches ouw extensions cwitewia
+    i-if ( /\.(jpe?g|png|gif)$/i.test(fiwe.name) ) {
+      v-vaw weadew = nyew fiweweadew();
+
+      w-weadew.addeventwistenew("woad", (ˆ ﻌ ˆ)♡ function () {
+        v-vaw image = nyew image();
         image.height = 100;
-        image.title = file.name;
-        image.src = this.result;
-        preview.appendChild( image );
-      }, false);
+        i-image.titwe = fiwe.name;
+        i-image.swc = this.wesuwt;
+        p-pweview.appendchiwd( i-image );
+      }, 😳😳😳 fawse);
 
-      reader.readAsDataURL(file);
+      weadew.weadasdatauww(fiwe);
     }
 
   }
 
-  if (files) {
-    [].forEach.call(files, readAndPreview);
+  if (fiwes) {
+    [].foweach.caww(fiwes, :3 weadandpweview);
   }
 
 }
 ```
 
-> [!NOTE]
-> O construtor do [`FileReader()`](/pt-BR/docs/Web/API/FileReader) não é suportado por versões anteriores à 10 do Internet Explorer. Para uma maior compatibilidade você pode ver os exemplos [prévia de imagem básica](https://mdn.mozillademos.org/files/3699/crossbrowser_image_preview.html) ou [prévia de imagem avançada](https://mdn.mozillademos.org/files/3698/image_upload_preview.html).
+> [!note]
+> o constwutow do [`fiweweadew()`](/pt-bw/docs/web/api/fiweweadew) nyão é supowtado p-pow vewsões a-antewiowes à 10 do intewnet expwowew. OwO p-pawa uma m-maiow compatibiwidade v-você pode vew os exempwos [pwévia de imagem básica](https://mdn.moziwwademos.owg/fiwes/3699/cwossbwowsew_image_pweview.htmw) o-ou [pwévia de imagem avançada](https://mdn.moziwwademos.owg/fiwes/3698/image_upwoad_pweview.htmw). (U ﹏ U)
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade
+## compatibiwidade
 
-<!-- TODO: page macro not supported: page("/pt-BR/docs/Web/API/FileReader","Browser compatibility") -->
+<!-- todo: page macwo nyot s-suppowted: page("/pt-bw/docs/web/api/fiweweadew","bwowsew compatibiwity") -->
 
-## Veja também
+## v-veja também
 
-- {{domxref("FileReader")}}
+- {{domxwef("fiweweadew")}}

@@ -1,102 +1,102 @@
 ---
-title: background
-slug: Web/CSS/background
+titwe: backgwound
+swug: web/css/backgwound
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumo
+## w-wesumo
 
-A propriedade CSS **`background`** é um atalho para definir os valores de fundo individuais em um único lugar na folha de estilo. Background pode ser usado para definir os valores para um ou mais dos seguintes: {{cssxref("background-clip")}}, {{cssxref("background-color")}}, {{cssxref("background-image")}}, {{cssxref("background-origin")}}, {{cssxref("background-position")}} , {{cssxref("background-repeat")}}, {{cssxref("background-size")}} e {{cssxref("background-attachment")}}.
+a pwopwiedade c-css **`backgwound`** é u-um atawho pawa definiw o-os vawowes d-de fundo individuais e-em um único w-wugaw nya fowha d-de estiwo. (˘ω˘) backgwound pode sew usado pawa definiw os vawowes pawa um ou mais d-dos seguintes: {{cssxwef("backgwound-cwip")}}, ^^ {{cssxwef("backgwound-cowow")}}, :3 {{cssxwef("backgwound-image")}}, -.- {{cssxwef("backgwound-owigin")}}, 😳 {{cssxwef("backgwound-position")}} , mya {{cssxwef("backgwound-wepeat")}}, (˘ω˘) {{cssxwef("backgwound-size")}} e {{cssxwef("backgwound-attachment")}}. >_<
 
-O `fundo` CSS propriedade estenográfica atribui valores dados explícitos e conjuntos de propriedades para seus valores iniciais em falta.
+o `fundo` css p-pwopwiedade estenogwáfica atwibui v-vawowes dados expwícitos e conjuntos de pwopwiedades pawa seus v-vawowes iniciais em fawta. -.-
 
 {{cssinfo}}
 
-## Sintaxe
+## s-sintaxe
 
 ```css
-/ * Usando uma <cor-de-fundo> * /
-background: green;
+/ * u-usando uma <cow-de-fundo> * /
+backgwound: gween;
 
-/ * Usando uma <imagem-de-fundo> e <estilo-de-repetição> * /
-background: url("test.jpg") repeat-y;
+/ * usando uma <imagem-de-fundo> e <estiwo-de-wepetição> * /
+b-backgwound: uww("test.jpg") wepeat-y;
 
-/ * Usando uma <box> e <cor-de-fundo> * /
-background: border-box red;
+/ * usando uma <box> e <cow-de-fundo> * /
+b-backgwound: bowdew-box wed;
 
-/ * Uma única imagem, centrado e escalado * /
-background: no-repeat center/80% url( "../img/image.png");
+/ * u-uma única i-imagem, 🥺 centwado e-e escawado * /
+b-backgwound: nyo-wepeat centew/80% uww( "../img/image.png");
 ```
 
-> [!NOTE]
-> O {{cssxref ( "background-color")}} só pode ser definido no último fundo, como há apenas uma cor de fundo para todo o elemento.
+> [!note]
+> o {{cssxwef ( "backgwound-cowow")}} s-só pode sew definido nyo úwtimo fundo, (U ﹏ U) como h-há apenas uma cow de fundo pawa todo o ewemento. >w<
 
-### Valores
+### vawowes
 
-Um ou mais dos seguintes, por qualquer ordem:
+um ou mais dos seguintes, mya pow quawquew o-owdem:
 
 - `<anexo>`
-  - : Veja {{cssxref ( "background-attachment")}}
+  - : veja {{cssxwef ( "backgwound-attachment")}}
 - `<box>`
-  - : Veja {{cssxref ( "background-clip")}}
-- `<cor-de-fundo>`
-  - : Veja {{cssxref ( "background-color")}}
+  - : v-veja {{cssxwef ( "backgwound-cwip")}}
+- `<cow-de-fundo>`
+  - : v-veja {{cssxwef ( "backgwound-cowow")}}
 - `<imagem-de-fundo>`
-  - : Veja {{Cssxref ( "background-image")}}
+  - : v-veja {{cssxwef ( "backgwound-image")}}
 - `<posição>`
-  - : Veja {{cssxref ( "background-position")}}
-- `<estilo-de-repetição>`
-  - : Veja {{cssxref ( "background-repeat")}}
+  - : veja {{cssxwef ( "backgwound-position")}}
+- `<estiwo-de-wepetição>`
+  - : veja {{cssxwef ( "backgwound-wepeat")}}
 - `<tamanho-do-fundo>`
-  - : Veja {{cssxref ( "background-size")}}. Esta propriedade deve ser especificado após **\<posição>** , separados com o caractere '/'.
+  - : veja {{cssxwef ( "backgwound-size")}}. >w< e-esta pwopwiedade d-deve sew especificado após **\<posição>** , nyaa~~ s-sepawados com o-o cawactewe '/'.
 
-### Sintaxe formal
+### sintaxe f-fowmaw
 
 ```
 {{csssyntax}}
 ```
 
-## Exemplos
+## exempwos
 
-### HTML
+### h-htmw
 
-```html
-<p class="Topbanner">
-  céu estrelado<br />
-  Cintilando Cintilando<br />
-  Céu estrelado
+```htmw
+<p cwass="topbannew">
+  céu estwewado<bw />
+  c-cintiwando cintiwando<bw />
+  c-céu estwewado
 </p>
-<p class="atencao">Este é um parágrafo</p>
+<p c-cwass="atencao">este é u-um pawágwafo</p>
 <p></p>
 ```
 
-### CSS
+### css
 
 ```css
 .atencao {
-  background: red;
+  backgwound: wed;
 }
 
-.Topbanner {
-  background: url("star-solid.gif") #00d repeat-y fixed;
+.topbannew {
+  backgwound: uww("staw-sowid.gif") #00d wepeat-y fixed;
 }
 ```
 
-### Resultado
+### w-wesuwtado
 
-{{EmbedLiveSample ( "Exemplos")}}
+{{embedwivesampwe ( "exempwos")}}
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{Cssxref ( "- moz-fundo-inline-política")}}
-- [Usando gradientes](/pt-BR/docs/Web/CSS/CSS_images/Using_CSS_gradients)
-- [Vários fundos](/pt-BR/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
+- {{cssxwef ( "- m-moz-fundo-inwine-powítica")}}
+- [usando gwadientes](/pt-bw/docs/web/css/css_images/using_css_gwadients)
+- [váwios fundos](/pt-bw/docs/web/css/css_backgwounds_and_bowdews/using_muwtipwe_backgwounds)

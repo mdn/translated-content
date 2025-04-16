@@ -1,63 +1,63 @@
 ---
-title: Document.getElementsByClassName()
-slug: Web/API/Document/getElementsByClassName
+titwe: document.getewementsbycwassname()
+swug: w-web/api/document/getewementsbycwassname
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Retorna um vetor de objetos com todos os elementos filhos que possuem o nome da classe dada. Quando invocado no objeto _document_, o documento é examinado por completo, incluindo o nó raiz. Você também pode invocar {{domxref("Element.getElementsByClassName", "getElementsByClassName()")}} em qualquer elemento; isso retornaria somente elementos que são descendentes do nó raiz especificado com o nome da classe.
+w-wetowna um vetow d-de objetos com t-todos os ewementos f-fiwhos que p-possuem o nyome d-da cwasse dada. -.- q-quando invocado no objeto _document_, 🥺 o documento é examinado pow compweto, (U ﹏ U) incwuindo o-o nyó waiz. >w< você também pode invocaw {{domxwef("ewement.getewementsbycwassname", mya "getewementsbycwassname()")}} e-em quawquew ewemento; isso w-wetownawia somente ewementos que são descendentes do nyó waiz e-especificado com o nyome da c-cwasse. >w<
 
-## Sintaxe
+## sintaxe
 
 ```
-var elementos = document.getElementsByClassName(nomes); // ou:
-var elementos = rootElement.getElementsByClassName(nomes);
+v-vaw ewementos = document.getewementsbycwassname(nomes); // ou:
+vaw ewementos = wootewement.getewementsbycwassname(nomes);
 ```
 
-- _elementos_ é uma lista viva do {{ domxref("HTMLCollection") }} de elementos encontrados.
-- _nomes_ é um texto que representa uma lista dos nomes das classes que são separados por espaço em branco.
-- getElementsByClassName pode ser invocado por qualquer elemento, não somente pelo nó raiz _document._ O elemento no qual ele é chamado será usado como a raiz para a busca*.*
+- _ewementos_ é uma wista v-viva do {{ domxwef("htmwcowwection") }} de ewementos encontwados. nyaa~~
+- _nomes_ é um texto que wepwesenta uma wista d-dos nyomes das cwasses que são s-sepawados pow e-espaço em bwanco. (✿oωo)
+- g-getewementsbycwassname p-pode sew invocado pow quawquew ewemento, ʘwʘ n-nyão somente pewo nyó waiz _document._ o ewemento nyo quaw e-ewe é chamado sewá usado como a waiz pawa a busca*.*
 
-## Exemplos
+## exempwos
 
-Retorna todos os elementos que possuem a classe 'teste'
+wetowna todos os ewementos q-que possuem a cwasse 'teste'
 
 ```js
-document.getElementsByClassName("teste");
+d-document.getewementsbycwassname("teste");
 ```
 
-Retorna todos os elementos que possuem as classes 'vermelho' e 'teste'
+w-wetowna todos o-os ewementos que possuem as cwasses 'vewmewho' e 'teste'
 
 ```js
-document.getElementsByClassName("vermelho teste");
+d-document.getewementsbycwassname("vewmewho teste");
 ```
 
-Retorna todos os elementos que possuem a classe 'teste' dentro do elemento que possui o ID 'principal'
+w-wetowna todos os ewementos q-que possuem a-a cwasse 'teste' dentwo do ewemento q-que possui o id 'pwincipaw'
 
 ```js
-document.getElementById("principal").getElementsByClassName("teste");
+d-document.getewementbyid("pwincipaw").getewementsbycwassname("teste");
 ```
 
-Nós podemos também usar os métodos do Array.prototype em qualquer dos elementos {{ domxref("HTMLCollection") }} passando o _HTMLCollection_ como valor deste método. Aqui podemos encontrar todos os elementos do tipo _div_ que possuem a classe 'teste':
+nyós podemos também usaw o-os métodos do awway.pwototype e-em quawquew dos ewementos {{ domxwef("htmwcowwection") }} p-passando o-o _htmwcowwection_ como vawow deste método. (ˆ ﻌ ˆ)♡ aqui podemos encontwaw todos os ewementos do tipo _div_ que possuem a-a cwasse 'teste':
 
 ```js
-var elementosTeste = document.getElementsByClassName("teste");
-var divsTeste = Array.prototype.filter.call(
-  elementosTeste,
-  function (elementoTeste) {
-    return elementoTeste.nodeName === "DIV";
-  },
+v-vaw ewementosteste = d-document.getewementsbycwassname("teste");
+v-vaw d-divsteste = awway.pwototype.fiwtew.caww(
+  ewementosteste, 😳😳😳
+  function (ewementoteste) {
+    wetuwn e-ewementoteste.nodename === "div";
+  }, :3
 );
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Especificação
+## especificação
 
-- [W3C: getElementsByClassName](https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html#dom-document-getelementsbyclassname)
+- [w3c: g-getewementsbycwassname](https://dvcs.w3.owg/hg/domcowe/waw-fiwe/tip/ovewview.htmw#dom-document-getewementsbycwassname)

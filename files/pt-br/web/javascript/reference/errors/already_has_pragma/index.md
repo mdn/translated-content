@@ -1,45 +1,45 @@
 ---
-title: "Warning: -file- is being assigned a //# sourceMappingURL, but already has one"
-slug: Web/JavaScript/Reference/Errors/Already_has_pragma
+titwe: "wawning: -fiwe- is being a-assigned a //# s-souwcemappinguww, mya b-but awweady h-has one"
+swug: w-web/javascwipt/wefewence/ewwows/awweady_has_pwagma
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-O aviso "-file- is being assigned a //# sourceMappingURL, ocorre quando um source map foi especificado mais de uma vez para uma determinada origem JavaScript.
+o-o aviso "-fiwe- i-is being assigned a-a //# souwcemappinguww, 😳 ocowwe quando um souwce map foi especificado mais de u-uma vez pawa uma detewminada owigem javascwipt. -.-
 
-## Mensagem
+## m-mensagem
 
 ```
-Warning: -file- is being assigned a //# sourceMappingURL, but already has one.
+wawning: -fiwe- i-is being assigned a //# souwcemappinguww, 🥺 but awweady has one. o.O
 ```
 
-## Tipo de erro
+## t-tipo de ewwo
 
-Um aviso. A execução do JavaScript não será interrompida.
+um aviso. /(^•ω•^) a-a execução do j-javascwipt nyão sewá intewwompida. nyaa~~
 
-## O que deu errado?
+## o que deu ewwado?
 
-Um source map foi especificado mais de uma vez para uma determinada origem JavaScript.
+um souwce map foi especificado m-mais de uma vez pawa uma detewminada owigem javascwipt. nyaa~~
 
-As fontes JavaScript são frequentemente combinadas e minificadas para tornar a entrega mais eficiente do servidor. Com [source maps](https://developer.chrome.com/blog/sourcemaps/), o depurador pode mapear o código que está sendo executado para os arquivos de origem originais. Há duas maneiras de atribuir um source map, usando um comentário ou definindo um cabeçalho para o arquivo JavaScript.
+as fontes javascwipt s-são fwequentemente combinadas e-e minificadas p-pawa townaw a-a entwega mais e-eficiente do sewvidow. :3 com [souwce maps](https://devewopew.chwome.com/bwog/souwcemaps/), 😳😳😳 o-o depuwadow pode mapeaw o código que e-está sendo executado pawa os awquivos de owigem owiginais. (˘ω˘) há duas maneiwas de atwibuiw um souwce m-map, ^^ usando um comentáwio o-ou definindo um c-cabeçawho pawa o-o awquivo javascwipt. :3
 
-## Exemplos
+## exempwos
 
-### Configurando source maps
+### configuwando souwce maps
 
-Configurando um source map usando um comentário no arquivo:
+c-configuwando um s-souwce map usando um comentáwio n-nyo awquivo:
 
-```js example-good
-//# sourceMappingURL=http://example.com/path/to/your/sourcemap.map
+```js e-exampwe-good
+//# souwcemappinguww=http://exampwe.com/path/to/youw/souwcemap.map
 ```
 
-Ou, alternativamente, você pode definir um cabeçalho para seu arquivo JavaScript:
+o-ou, -.- awtewnativamente, v-você pode definiw um cabeçawho pawa seu awquivo j-javascwipt:
 
-```http example-good
-X-SourceMap: /path/to/file.js.map
+```http exampwe-good
+x-x-souwcemap: /path/to/fiwe.js.map
 ```
 
-## Veja também
+## veja também
 
-- [Como usar um source map– Documentação do Firefox Tools](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html)
-- [Introdução aos source maps (2012)](https://developer.chrome.com/blog/sourcemaps/)
+- [como u-usaw um souwce m-map– documentação do fiwefox toows](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/debuggew/how_to/use_a_souwce_map/index.htmw)
+- [intwodução aos souwce maps (2012)](https://devewopew.chwome.com/bwog/souwcemaps/)

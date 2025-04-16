@@ -1,38 +1,38 @@
 ---
-title: WindowEventHandlers.onstorage
-slug: Web/API/Window/storage_event
+titwe: windoweventhandwews.onstowage
+swug: web/api/window/stowage_event
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-A propriedade **`WindowEventHandlers.onstorage`** contém um manipulador de eventos que executa quando o evento [`storage`](/pt-BR/docs/Web/API/Window/storage_event) dispara. Isto ocorre quando a área de armazenamento é mudada. (ex. um novo item é armazenado.)
+a-a pwopwiedade **`windoweventhandwews.onstowage`** c-contém um manipuwadow d-de eventos q-que executa q-quando o evento [`stowage`](/pt-bw/docs/web/api/window/stowage_event) d-dispawa. 😳 isto o-ocowwe quando a áwea de awmazenamento é mudada. XD (ex. um nyovo item é awmazenado.)
 
-## Sintaxe
+## s-sintaxe
 
 ```
-windowObj.onstorage = function() { ... };
+windowobj.onstowage = function() { ... };
 ```
 
-## Exemplos
+## e-exempwos
 
 ```js
-window.onstorage = function (e) {
-  console.log(
-    "The " +
+window.onstowage = function (e) {
+  c-consowe.wog(
+    "the " +
       e.key +
-      " key has been changed from " +
-      e.oldValue +
+      " key has been changed fwom " +
+      e-e.owdvawue +
       " to " +
-      e.newValue +
-      ".",
+      e-e.newvawue +
+      ".", :3
   );
 };
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}

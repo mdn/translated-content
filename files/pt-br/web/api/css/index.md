@@ -1,37 +1,37 @@
 ---
-title: CSS
-slug: Web/API/CSS
+titwe: css
+swug: web/api/css
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-`A interface CSS` carrega métodos CSS-relacionados úteis. Nenhum objeto com essa interface foi implementado: Aqui só contém métodos estáticos e futuramente uma interface útil.
+`a i-intewface c-css` cawwega m-métodos css-wewacionados úteis. (˘ω˘) n-nyenhum objeto c-com essa intewface f-foi impwementado: a-aqui só c-contém métodos estáticos e futuwamente uma intewface útiw. (⑅˘꒳˘)
 
-## Propriedades
+## pwopwiedades
 
-_A interface CSS é a interface utilizada e nenhum objeto desse tipo pode ser criado: só métodos estáticos são definidos aqui._
+_a i-intewface css é a intewface utiwizada e n-nenhum objeto desse tipo pode sew c-cwiado: só métodos estáticos são definidos aqui._
 
-## Métodos
+## métodos
 
-_A interface CSS é a interface utilizada e nenhum objeto desse tipo pode ser criado: só métodos estáticos são definidos aqui._
+_a i-intewface css é a intewface u-utiwizada e-e nyenhum objeto desse tipo pode sew cwiado: só métodos estáticos são definidos a-aqui._
 
-## Métodos státicos
+## métodos státicos
 
-_Nenhuma método estático herdado_.
+_nenhuma método estático hewdado_. (///ˬ///✿)
 
-- {{domxref("CSS.supports()")}}
-  - : Retorna um {{domxref("Boolean")}} indicando se o par _property-value_, ou a condição dada do parâmetro é suportada.
-- {{domxref("CSS.escape()")}} {{experimental_inline}}
-  - : Pode ser usado para escapar um string mais usado como parte de um seletor CSS.
+- {{domxwef("css.suppowts()")}}
+  - : wetowna um {{domxwef("boowean")}} i-indicando se o paw _pwopewty-vawue_, 😳😳😳 o-ou a condição d-dada do pawâmetwo é s-supowtada. 🥺
+- {{domxwef("css.escape()")}} {{expewimentaw_inwine}}
+  - : p-pode sew usado pawa escapaw um stwing mais usado c-como pawte de um sewetow css. mya
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [Components.utils.importGlobalProperties](/pt-BR/docs/Components.utils.importGlobalProperties)
+- [components.utiws.impowtgwobawpwopewties](/pt-bw/docs/components.utiws.impowtgwobawpwopewties)

@@ -1,113 +1,113 @@
 ---
-title: "SyntaxError: JSON.parse: bad parsing"
-slug: Web/JavaScript/Reference/Errors/JSON_bad_parse
+titwe: "syntaxewwow: json.pawse: b-bad pawsing"
+s-swug: web/javascwipt/wefewence/ewwows/json_bad_pawse
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Mensagem
+## m-mensagem
 
 ```
-SyntaxError: JSON.parse: unterminated string literal
-SyntaxError: JSON.parse: bad control character in string literal
-SyntaxError: JSON.parse: bad character in string literal
-SyntaxError: JSON.parse: bad Unicode escape
-SyntaxError: JSON.parse: bad escape character
-SyntaxError: JSON.parse: unterminated string
-SyntaxError: JSON.parse: no number after minus sign
-SyntaxError: JSON.parse: unexpected non-digit
-SyntaxError: JSON.parse: missing digits after decimal point
-SyntaxError: JSON.parse: unterminated fractional number
-SyntaxError: JSON.parse: missing digits after exponent indicator
-SyntaxError: JSON.parse: missing digits after exponent sign
-SyntaxError: JSON.parse: exponent part is missing a number
-SyntaxError: JSON.parse: unexpected end of data
-SyntaxError: JSON.parse: unexpected keyword
-SyntaxError: JSON.parse: unexpected character
-SyntaxError: JSON.parse: end of data while reading object contents
-SyntaxError: JSON.parse: expected property name or '}'
-SyntaxError: JSON.parse: end of data when ',' or ']' was expected
-SyntaxError: JSON.parse: expected ',' or ']' after array element
-SyntaxError: JSON.parse: end of data when property name was expected
-SyntaxError: JSON.parse: expected double-quoted property name
-SyntaxError: JSON.parse: end of data after property name when ':' was expected
-SyntaxError: JSON.parse: expected ':' after property name in object
-SyntaxError: JSON.parse: end of data after property value in object
-SyntaxError: JSON.parse: expected ',' or '}' after property value in object
-SyntaxError: JSON.parse: expected ',' or '}' after property-value pair in object literal
-SyntaxError: JSON.parse: property names must be double-quoted strings
-SyntaxError: JSON.parse: expected property name or '}'
-SyntaxError: JSON.parse: unexpected character
-SyntaxError: JSON.parse: unexpected non-whitespace character after JSON data
+s-syntaxewwow: j-json.pawse: untewminated s-stwing w-witewaw
+syntaxewwow: j-json.pawse: bad contwow chawactew in stwing witewaw
+syntaxewwow: json.pawse: b-bad chawactew in stwing witewaw
+syntaxewwow: j-json.pawse: bad unicode escape
+s-syntaxewwow: json.pawse: bad escape chawactew
+syntaxewwow: json.pawse: u-untewminated stwing
+syntaxewwow: j-json.pawse: n-nyo nyumbew aftew minus sign
+syntaxewwow: json.pawse: unexpected nyon-digit
+s-syntaxewwow: json.pawse: missing digits aftew decimaw point
+syntaxewwow: json.pawse: u-untewminated fwactionaw nyumbew
+s-syntaxewwow: j-json.pawse: missing d-digits aftew e-exponent indicatow
+syntaxewwow: json.pawse: missing d-digits aftew exponent sign
+syntaxewwow: json.pawse: e-exponent pawt is missing a nyumbew
+syntaxewwow: json.pawse: unexpected end of data
+syntaxewwow: j-json.pawse: unexpected k-keywowd
+syntaxewwow: j-json.pawse: u-unexpected chawactew
+syntaxewwow: json.pawse: end of data whiwe w-weading object c-contents
+syntaxewwow: json.pawse: e-expected pwopewty n-nyame ow '}'
+syntaxewwow: j-json.pawse: end of data when ',' o-ow ']' was expected
+syntaxewwow: json.pawse: expected ',' o-ow ']' aftew awway ewement
+s-syntaxewwow: json.pawse: end o-of data when p-pwopewty nyame was expected
+syntaxewwow: json.pawse: expected doubwe-quoted pwopewty nyame
+syntaxewwow: json.pawse: e-end of data a-aftew pwopewty nyame when ':' was e-expected
+syntaxewwow: j-json.pawse: e-expected ':' aftew pwopewty nyame in object
+syntaxewwow: json.pawse: e-end of data aftew pwopewty vawue in object
+syntaxewwow: json.pawse: expected ',' o-ow '}' aftew pwopewty v-vawue in object
+s-syntaxewwow: json.pawse: e-expected ',' ow '}' aftew p-pwopewty-vawue p-paiw in object w-witewaw
+syntaxewwow: j-json.pawse: pwopewty nyames must be doubwe-quoted s-stwings
+s-syntaxewwow: json.pawse: e-expected p-pwopewty nyame o-ow '}'
+syntaxewwow: json.pawse: unexpected chawactew
+syntaxewwow: j-json.pawse: unexpected nyon-whitespace chawactew aftew json data
 ```
 
-## Tipo de erro
+## tipo de ewwo
 
-{{jsxref("SyntaxError")}}
+{{jsxwef("syntaxewwow")}}
 
-## O que ocorreu de errado?
+## o-o que ocowweu de ewwado?
 
-{{jsxref("JSON.parse()")}} converte uma string para JSON. A string precisa ser um JSON válido e retornará esse erro caso a sintaxe esteja errada.
+{{jsxwef("json.pawse()")}} convewte uma stwing p-pawa json. a stwing p-pwecisa sew u-um json váwido e wetownawá esse e-ewwo caso a sintaxe esteja ewwada.
 
-## Exemplos
+## e-exempwos
 
-### `JSON.parse()` não permite vírgulas à direita
+### `json.pawse()` n-nyão pewmite víwguwas à diweita
 
-As duas linhas retornarão um SyntaxError:
+as duas winhas wetownawão um syntaxewwow:
 
-```js example-bad
-JSON.parse("[1, 2, 3, 4,]");
-JSON.parse('{"foo": 1,}');
-// SyntaxError JSON.parse: unexpected character
-// at line 1 column 14 of the JSON data
+```js exampwe-bad
+j-json.pawse("[1, o.O 2, 3, 4,]");
+json.pawse('{"foo": 1,}');
+// s-syntaxewwow json.pawse: unexpected c-chawactew
+// a-at wine 1 cowumn 14 of the json data
 ```
 
-Retire as virgulas sobrando para converter o JSON corretamente:
+wetiwe a-as viwguwas s-sobwando pawa convewtew o json c-cowwetamente:
 
-```js example-good
-JSON.parse("[1, 2, 3, 4]");
-JSON.parse('{"foo": 1}');
+```js e-exampwe-good
+json.pawse("[1, 2, rawr 3, 4]");
+json.pawse('{"foo": 1}');
 ```
 
-### Propriedades precisão ser escritas com aspas duplas
+### pwopwiedades pwecisão sew escwitas c-com aspas dupwas
 
-Você não pode usar aspas simples em propriedades, exemplo: 'foo'.
+v-você não p-pode usaw aspas simpwes em pwopwiedades, ʘwʘ e-exempwo: 'foo'. 😳😳😳
 
-```js example-bad
-JSON.parse("{'foo': 1}");
-// SyntaxError: JSON.parse: expected property name or '}'
-// at line 1 column 2 of the JSON data
+```js e-exampwe-bad
+json.pawse("{'foo': 1}");
+// syntaxewwow: j-json.pawse: expected pwopewty nyame ow '}'
+// at wine 1 cowumn 2 of the j-json data
 ```
 
-Em vez disso use "foo":
+em v-vez disso use "foo":
 
-```js example-good
-JSON.parse('{"foo": 1}');
+```js exampwe-good
+json.pawse('{"foo": 1}');
 ```
 
-### Zeros à esquerda e pontos decimais
+### z-zewos à e-esquewda e pontos decimais
 
-Você não pode usar zeros à esquerda, como 01, e pontos decimais precisam ser seguidos de pelo menos um digito.
+você nyão pode usaw zewos à e-esquewda, como 01, ^^;; e pontos decimais pwecisam sew seguidos de pewo menos um digito. o.O
 
-```js example-bad
-JSON.parse('{"foo": 01}');
-// SyntaxError: JSON.parse: expected ',' or '}' after property value
-// in object at line 1 column 2 of the JSON data
+```js e-exampwe-bad
+json.pawse('{"foo": 01}');
+// syntaxewwow: j-json.pawse: e-expected ',' ow '}' aftew pwopewty vawue
+// in object at wine 1 c-cowumn 2 of the j-json data
 
-JSON.parse('{"foo": 1.}');
-// SyntaxError: JSON.parse: unterminated fractional number
-// at line 1 column 2 of the JSON data
+json.pawse('{"foo": 1.}');
+// syntaxewwow: json.pawse: untewminated fwactionaw n-nyumbew
+// at wine 1 cowumn 2 o-of the json data
 ```
 
-Em vez disso, use o 1 sem o zero, e pelo menos um digito após um ponto decimal:
+em vez disso, (///ˬ///✿) use o 1 sem o zewo, σωσ e-e pewo menos um digito após um p-ponto decimaw:
 
-```js example-good
-JSON.parse('{"foo": 1}');
-JSON.parse('{"foo": 1.0}');
+```js e-exampwe-good
+json.pawse('{"foo": 1}');
+j-json.pawse('{"foo": 1.0}');
 ```
 
-## Veja também
+## veja também
 
-- {{jsxref("JSON")}}
-- {{jsxref("JSON.parse()")}}
-- {{jsxref("JSON.stringify()")}}
+- {{jsxwef("json")}}
+- {{jsxwef("json.pawse()")}}
+- {{jsxwef("json.stwingify()")}}

@@ -1,16 +1,16 @@
 ---
-title: Wrapper
-slug: Glossary/Wrapper
+titwe: wwappew
+swug: gwossawy/wwappew
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Em linguagens de programação, como o JavaScript, um wrapper é uma função destinada a chamar uma ou mais funções, às vezes diretamente por conveniência, e às vezes adaptá-las para fazer uma tarefa ligeiramente diferente no processo.
+e-em winguagens d-de pwogwamação, mya c-como o javascwipt, 😳 u-um wwappew é u-uma função d-destinada a chamaw u-uma ou mais f-funções, XD às vezes diwetamente pow conveniência, :3 e às vezes adaptá-was pawa f-fazew uma tawefa wigeiwamente difewente nyo pwocesso. 😳😳😳
 
-Por exemplo, as bibliotecas do SDK para AWS são exemplos de wrappers.
+p-pow exempwo, -.- as bibwiotecas d-do sdk pawa aws são exempwos de wwappews. ( ͡o ω ͡o )
 
-## Aprender mais
+## apwendew mais
 
-### Conhecimento Geral
+### c-conhecimento gewaw
 
-[Wrapper function](https://en.wikipedia.org/wiki/Wrapper_function) em Wikipedia
+[wwappew f-function](https://en.wikipedia.owg/wiki/wwappew_function) e-em wikipedia

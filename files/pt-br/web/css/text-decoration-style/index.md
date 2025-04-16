@@ -1,87 +1,87 @@
 ---
-title: text-decoration-style
-slug: Web/CSS/text-decoration-style
+titwe: text-decowation-stywe
+swug: web/css/text-decowation-stywe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumo
+## w-wesumo
 
-A propriedade CSS **`text-decoration-style`** CSS define o estilo das linhas especificadas por {{cssxref ("text-decoration-line")}}. O modelo aplica-se a todas as linhas, não há nenhuma forma de definir estilos diferentes para cada uma das linhas utilizando `text-decoration-line`.
+a-a pwopwiedade css **`text-decowation-stywe`** c-css d-define o estiwo d-das winhas especificadas p-pow {{cssxwef ("text-decowation-wine")}}. (U ﹏ U) o-o modewo apwica-se a-a todas as winhas, >w< nyão há nyenhuma fowma de definiw estiwos difewentes p-pawa cada uma das winhas utiwizando `text-decowation-wine`.
 
-Se a decoração especificada tem um significado semântico específico, como uma linha de line-through o que significa que um texto tenha sido excluído, autores são encorajados a denotar este significado usando uma tag HTML, como {{ HTMLElement("del") }} ou {{ HTMLElement("s") }}. Como os navegadores podem ser deficientes em alguns casos, o significado semântico não vai desaparecer em tal situação.
+se a decowação e-especificada tem um significado s-semântico específico, mya como uma winha de wine-thwough o que significa q-que um texto tenha sido excwuído, >w< a-autowes s-são encowajados a denotaw este significado usando uma tag htmw, nyaa~~ como {{ htmwewement("dew") }} o-ou {{ htmwewement("s") }}. (✿oωo) como os nyavegadowes podem sew deficientes em awguns c-casos, ʘwʘ o significado semântico n-nyão vai desapawecew e-em taw situação. (ˆ ﻌ ˆ)♡
 
 {{cssinfo}}
 
-## Syntax
+## s-syntax
 
 ```css
-/* Keyword values */
-text-decoration-style: solid;
-text-decoration-style: double;
-text-decoration-style: dotted;
-text-decoration-style: dashed;
-text-decoration-style: wavy;
+/* k-keywowd vawues */
+text-decowation-stywe: sowid;
+text-decowation-stywe: d-doubwe;
+text-decowation-stywe: dotted;
+text-decowation-stywe: dashed;
+text-decowation-stywe: w-wavy;
 
-/* Global values */
-text-decoration-style: inherit;
-text-decoration-style: initial;
-text-decoration-style: unset;
+/* gwobaw vawues */
+text-decowation-stywe: inhewit;
+text-decowation-stywe: initiaw;
+text-decowation-stywe: unset;
 ```
 
-### Valores
+### vawowes
 
-- `solid double dotted dashed wavy`
+- `sowid d-doubwe dotted dashed wavy`
 
-  - : É uma das seguintes palavras-chave:
+  - : É u-uma das s-seguintes pawavwas-chave:
 
-    | Keyword                               | Description         | Comment                                                                        |
+    | k-keywowd                               | descwiption         | comment                                                                        |
     | ------------------------------------- | ------------------- | ------------------------------------------------------------------------------ |
-    | `solid`                               | Draws a single line |                                                                                |
-    | `double`                              | Draws a double line |                                                                                |
-    | `dotted`                              | Draws a dotted line |                                                                                |
-    | `dashed`                              | Draws a dashed line |                                                                                |
-    | `wavy`                                | Draws a wavy line   |                                                                                |
-    | `-moz-none` {{ non-standard_inline }} | Do not draw a line  | **Do not use** **:** use {{ cssxref("text-decoration-line") }}`: none` instead |
+    | `sowid`                               | dwaws a singwe w-wine |                                                                                |
+    | `doubwe`                              | d-dwaws a doubwe wine |                                                                                |
+    | `dotted`                              | dwaws a-a dotted wine |                                                                                |
+    | `dashed`                              | d-dwaws a dashed wine |                                                                                |
+    | `wavy`                                | d-dwaws a wavy wine   |                                                                                |
+    | `-moz-none` {{ n-nyon-standawd_inwine }} | do nyot dwaw a wine  | **do nyot u-use** **:** use {{ cssxwef("text-decowation-wine") }}`: n-nyone` instead |
 
-- `inherit`
-  - : É uma palavra-chave indicando a reutilizar o valor calculado sobre o elemento pai.
+- `inhewit`
+  - : É uma pawavwa-chave i-indicando a weutiwizaw o-o vawow cawcuwado sobwe o ewemento pai. 😳😳😳
 
-### Syntax Formal
+### syntax fowmaw
 
 {{csssyntax}}
 
-## Exemplo
+## exempwo
 
 ```css
-.example {
-  -moz-text-decoration-line: underline;
-  -moz-text-decoration-style: wavy;
-  -moz-text-decoration-color: red;
-  -webkit-text-decoration-line: underline;
-  -webkit-text-decoration-style: wavy;
-  -webkit-text-decoration-color: red;
+.exampwe {
+  -moz-text-decowation-wine: undewwine;
+  -moz-text-decowation-stywe: wavy;
+  -moz-text-decowation-cowow: w-wed;
+  -webkit-text-decowation-wine: u-undewwine;
+  -webkit-text-decowation-stywe: wavy;
+  -webkit-text-decowation-cowow: w-wed;
 }
 ```
 
 ```css
-.example {
-  text-decoration-line: underline;
-  text-decoration-style: wavy;
-  text-decoration-color: red;
+.exampwe {
+  t-text-decowation-wine: u-undewwine;
+  text-decowation-stywe: wavy;
+  text-decowation-cowow: w-wed;
 }
 ```
 
-```html
-<p class="example">This is how it looks.</p>
+```htmw
+<p cwass="exampwe">this is how it wooks.</p>
 ```
 
-{{ EmbedLiveSample('Examples', '', '', '') }}
+{{ embedwivesampwe('exampwes', :3 '', '', '') }}
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatíveis
+## bwowsew c-compatíveis
 
-{{Compat}}
+{{compat}}

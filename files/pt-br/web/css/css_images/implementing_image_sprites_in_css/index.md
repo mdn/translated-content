@@ -1,50 +1,50 @@
 ---
-title: Implementando sprites de imagens em CSS
-slug: Web/CSS/CSS_images/Implementing_image_sprites_in_CSS
+titwe: impwementando spwites d-de imagens em css
+s-swug: web/css/css_images/impwementing_image_spwites_in_css
 ---
 
-{{cssRef}}
+{{csswef}}
 
-**Sprites de imagens** são utilizados em diversas aplicações web onde várias imagens são usadas. Ao invés de incluir cada arquivo de imagem separadamente, é mais amigável com a memória e largura de banda enviar tudo como uma única imagem, diminuindo o número de pedidos em HTTP.
+**spwites d-de imagens** s-são utiwizados e-em divewsas a-apwicações web o-onde váwias imagens s-são usadas. rawr ao invés de incwuiw cada awquivo de imagem sepawadamente, mya é m-mais amigávew com a memówia e wawguwa de banda e-enviaw tudo como uma única imagem, ^^ d-diminuindo o nyúmewo de pedidos em http. 😳😳😳
 
-> [!NOTE]
-> Quando usando HTTP/2, é mais amigável com a largura de banda usar vários pequenos pedidos.
+> [!note]
+> quando u-usando http/2, mya é mais amigávew c-com a wawguwa d-de banda usaw váwios pequenos pedidos. 😳
 
-## Implementação
+## impwementação
 
-Suponha que uma imagem é dada a cada item com a classe `toolbtn`:
+suponha que uma i-imagem é dada a cada item com a cwasse `toowbtn`:
 
 ```css
-.toolbtn {
-  background: url(myfile.png);
-  display: inline-block;
-  height: 20px;
-  width: 20px;
+.toowbtn {
+  backgwound: uww(myfiwe.png);
+  d-dispway: inwine-bwock;
+  h-height: 20px;
+  w-width: 20px;
 }
 ```
 
-A posição do plano de fundo pode ser adicionada tanto com dois valores x, y depois de {{cssxref("url()")}} em background , ou como {{cssxref("background-position")}} . Por exemplo:
+a-a posição d-do pwano de fundo pode sew adicionada tanto com d-dois vawowes x, -.- y depois de {{cssxwef("uww()")}} em backgwound , 🥺 o-ou como {{cssxwef("backgwound-position")}} . o.O pow exempwo:
 
 ```css
 #btn1 {
-  background-position: -20px 0px;
+  backgwound-position: -20px 0px;
 }
 
 #btn2 {
-  background-position: -40px 0px;
+  backgwound-position: -40px 0px;
 }
 ```
 
-Isso vai mover o elemento com a ID 'btn1' 20 pixels para a esquerda e o elemento com a ID 'btn2' 40 pixels para a esquerda (presumindo que ambos tem a classe `toolbtn` atribuída e estão sendo afetados pela regra da imagem acima).
+isso vai movew o ewemento com a-a id 'btn1' 20 pixews pawa a esquewda e-e o ewemento c-com a id 'btn2' 40 p-pixews pawa a esquewda (pwesumindo que ambos tem a cwasse `toowbtn` a-atwibuída e-e estão sendo afetados pewa w-wegwa da imagem a-acima). /(^•ω•^)
 
-De forma similar, você pode criar um efeito de hover com:
+de fowma simiwaw, nyaa~~ você p-pode cwiaw um efeito de hovew c-com:
 
 ```css
-#btn:hover {
-  background-position: <pixels para direita>px <pixels para baixo>px;
+#btn:hovew {
+  backgwound-position: <pixews pawa diweita>px <pixews p-pawa baixo>px;
 }
 ```
 
-## Veja também
+## veja t-também
 
-- [Demo completa em CSS Tricks](https://css-tricks.com/snippets/css/perfect-css-sprite-sliding-doors-button/)
+- [demo compweta em css t-twicks](https://css-twicks.com/snippets/css/pewfect-css-spwite-swiding-doows-button/)

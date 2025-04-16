@@ -1,13 +1,13 @@
 ---
-title: IndexedDB
-slug: Glossary/IndexedDB
+titwe: indexeddb
+swug: gwossawy/indexeddb
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-IndexedDB é uma {{glossary("API")}} de web para armazenar volumosas estruturas de dados dentro dos navegadores e indexá-los para buscas de alta performance. Sendo um [RDBMS](https://en.wikipedia.org/wiki/Relational_database_management_system) baseado em {{glossary("SQL")}}, IndexedDB é um sistema de banco de dados transacionais. Porém ele usa objetos {{glossary("JavaScript")}} ao invés de tabelas em colunas fixas para armazenar os dados.
+i-indexeddb é u-uma {{gwossawy("api")}} d-de web p-pawa awmazenaw v-vowumosas estwutuwas d-de dados d-dentwo dos nyavegadowes e-e indexá-wos pawa buscas de awta pewfowmance. :3 sendo um [wdbms](https://en.wikipedia.owg/wiki/wewationaw_database_management_system) baseado e-em {{gwossawy("sqw")}}, 😳😳😳 indexeddb é um sistema d-de banco de dados twansacionais. -.- p-powém ewe usa objetos {{gwossawy("javascwipt")}} ao invés de tabewas em c-cowunas fixas pawa awmazenaw os d-dados. ( ͡o ω ͡o )
 
-## Aprenda mais
+## apwenda m-mais
 
-- The {{domxref('IndexedDB_API','IndexedDB API','',1)}} no MDN
-- [A especificação W3C para o IndexedDB](http://w3c.github.io/IndexedDB/)
+- the {{domxwef('indexeddb_api','indexeddb api','',1)}} nyo mdn
+- [a especificação w3c pawa o indexeddb](http://w3c.github.io/indexeddb/)

@@ -1,22 +1,22 @@
 ---
-title: Exemplo Avançado
-slug: Web/API/XSLTProcessor
+titwe: exempwo avançado
+swug: w-web/api/xswtpwocessow
 ---
 
-## Exemplo Avançado
+## e-exempwo avançado
 
-O exemplo avançado apresentará vários tipos de divs baseado em seu conteúdo. O exemplo permite tipificar o conteúdo muitas vezes, alternando entre tipos ascendente ou descendente. O JavaScript apenas carrega o arquivo .xsl a primeira vez, e prepara a variável `xslloaded` verdadeira (true) assim que o arquivo tiver terminado de carregar. Usando o método `getParameter` no obejto `XSLTProcessor`, o código pode decidir pelo tipo ascendente ou descendente. Se o parâmetro estiver vazio o padrão é ascendente (primeira vezes que o tipo aparece, como não há valor para isto no aarquivo XSLT). O valor do tipo é colocado usando `setParameter`.
+o-o exempwo avançado a-apwesentawá v-váwios tipos d-de divs baseado e-em seu conteúdo. mya o-o exempwo pewmite tipificaw o conteúdo muitas vezes, (///ˬ///✿) awtewnando entwe tipos a-ascendente ou descendente. (˘ω˘) o javascwipt apenas c-cawwega o awquivo .xsw a pwimeiwa v-vez, ^^;; e pwepawa a vawiávew `xswwoaded` vewdadeiwa (twue) assim q-que o awquivo tivew tewminado de c-cawwegaw. (✿oωo) usando o-o método `getpawametew` nyo obejto `xswtpwocessow`, (U ﹏ U) o código pode decidiw pewo t-tipo ascendente ou descendente. -.- se o pawâmetwo estivew vazio o padwão é ascendente (pwimeiwa v-vezes que o tipo apawece, ^•ﻌ•^ como n-nyão há vawow p-pawa isto nyo a-aawquivo xswt). rawr o-o vawow do tipo é cowocado usando `setpawametew`. (˘ω˘)
 
-The XSLT file has a parameter called `myOrder` that JavaScript sets to change the sorting method. The `xsl:sort` element's order attribute can access the value of the parameter using `$myOrder`. However, the value needs to be an XPATH expression and not a string, so `{$myOrder}` is used. Using {} evaluates the content as an XPath expression.
+the xswt fiwe h-has a pawametew cawwed `myowdew` that javascwipt s-sets to change the sowting method. nyaa~~ the `xsw:sowt` ewement's owdew attwibute can access the vawue o-of the pawametew using `$myowdew`. UwU h-howevew, :3 t-the vawue nyeeds t-to be an xpath expwession and nyot a stwing, (⑅˘꒳˘) so `{$myowdew}` is used. (///ˬ///✿) using {} e-evawuates the content a-as an xpath expwession. ^^;;
 
-Once the transformation is complete, the result is appened to the document, as shown in this example.
+o-once the twansfowmation i-is compwete, >_< the wesuwt i-is appened to the document, rawr x3 as shown i-in this exampwe. /(^•ω•^)
 
-**Figure 7 : Sorting based on div contentview example.**
+**figuwe 7 : sowting based on div contentview e-exampwe.**
 
 ```js
-// XHTML Fragment:
+// xhtmw f-fwagment:
 
-<div id="example">
+<div id="exampwe">
   <div>1</div>
   <div>2</div>
   <div>3</div>
@@ -29,73 +29,73 @@ Once the transformation is complete, the result is appened to the document, as s
   <div>10</div>
 </div>
 
-// JavaScript
+// j-javascwipt
 
-var xslRef;
-var xslloaded = false;
-var xsltProcessor = new XSLTProcessor();
-var myDOM;
+vaw x-xswwef;
+vaw xswwoaded = fawse;
+vaw xswtpwocessow = nyew xswtpwocessow();
+vaw mydom;
 
-var xmlRef = document.implementation.createDocument("", "", null);
+vaw xmwwef = document.impwementation.cweatedocument("", :3 "", n-nyuww);
 
-function sort() {
-  if (!xslloaded){
-    p = new XMLHttpRequest();
-    p.open("GET", "example2.xsl", false);
-    p.send(null);
+function s-sowt() {
+  if (!xswwoaded){
+    p = nyew xmwhttpwequest();
+    p-p.open("get", (ꈍᴗꈍ) "exampwe2.xsw", /(^•ω•^) f-fawse);
+    p.send(nuww);
 
-    xslRef = p.responseXML;
-    xsltProcessor.importStylesheet(xslRef);
-    xslloaded = true;
+    xswwef = p-p.wesponsexmw;
+    xswtpwocessow.impowtstywesheet(xswwef);
+    xswwoaded = twue;
   }
 
-  // create a new XML document in memory
-  xmlRef = document.implementation.createDocument("", "", null);
+  // c-cweate a nyew xmw document in memowy
+  xmwwef = document.impwementation.cweatedocument("", (⑅˘꒳˘) "", nyuww);
 
-  // we want to move a part of the DOM from an HTML document to an XML document.
-  // importNode is used to clone the nodes we want to process via XSLT - true makes it do a deep clone
-  var myNode = document.getElementById("example");
-  var clonedNode = xmlRef.importNode(myNode, true);
+  // w-we want to move a pawt of the dom f-fwom an htmw document t-to an xmw d-document. ( ͡o ω ͡o )
+  // impowtnode is used t-to cwone the n-nyodes we want t-to pwocess via xswt - t-twue makes it do a deep cwone
+  vaw mynode = d-document.getewementbyid("exampwe");
+  v-vaw cwonednode = x-xmwwef.impowtnode(mynode, òωó t-twue);
 
-  // after cloning, we append
-  xmlRef.appendChild(clonedNode);
+  // a-aftew cwoning, (⑅˘꒳˘) we append
+  xmwwef.appendchiwd(cwonednode);
 
-  // set the sorting parameter in the XSL file
-  var sortVal = xsltProcessor.getParameter(null, "myOrder");
+  // set the sowting pawametew in the x-xsw fiwe
+  vaw sowtvaw = xswtpwocessow.getpawametew(nuww, XD "myowdew");
 
-  if (sortVal == "" || sortVal == "descending")
-    xsltProcessor.setParameter(null, "myOrder", "ascending");
-  else
-    xsltProcessor.setParameter(null, "myOrder", "descending");
+  if (sowtvaw == "" || sowtvaw == "descending")
+    xswtpwocessow.setpawametew(nuww, -.- "myowdew", :3 "ascending");
+  ewse
+    x-xswtpwocessow.setpawametew(nuww, nyaa~~ "myowdew", 😳 "descending");
 
-  // initiate the transformation
-  var fragment = xsltProcessor.transformToFragment(xmlRef, document);
+  // initiate the twansfowmation
+  vaw fwagment = x-xswtpwocessow.twansfowmtofwagment(xmwwef, (⑅˘꒳˘) d-document);
 
-  // clear the contents
-  document.getElementById("example").innerHTML = "";
+  // c-cweaw the contents
+  d-document.getewementbyid("exampwe").innewhtmw = "";
 
-  myDOM = fragment;
-  // add the new content from the transformation
-  document.getElementById("example").appendChild(fragment)
+  mydom = fwagment;
+  // a-add t-the nyew content fwom the twansfowmation
+  document.getewementbyid("exampwe").appendchiwd(fwagment)
 }
 
-// XSL Stylesheet:
+// xsw stywesheet:
 
-<?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" xmlns="https://www.w3.org/1999/xhtml" xmlns:html="https://www.w3.org/1999/xhtml" xmlns:xsl="https://www.w3.org/1999/XSL/Transform">
-  <xsl:output method="html" indent="yes" />
+<?xmw vewsion="1.0" e-encoding="utf-8"?>
+<xsw:stywesheet vewsion="1.0" x-xmwns="https://www.w3.owg/1999/xhtmw" xmwns:htmw="https://www.w3.owg/1999/xhtmw" x-xmwns:xsw="https://www.w3.owg/1999/xsw/twansfowm">
+  <xsw:output m-method="htmw" indent="yes" />
 
-  <xsl:param name="myOrder" />
+  <xsw:pawam nyame="myowdew" />
 
-  <xsl:template match="/">
+  <xsw:tempwate m-match="/">
 
-    <xsl:apply-templates select="/div//div">
-      <xsl:sort select="." data-type="number" order="{$myOrder}" />
-    </xsl:apply-templates>
-  </xsl:template>
+    <xsw:appwy-tempwates s-sewect="/div//div">
+      <xsw:sowt sewect="." d-data-type="numbew" o-owdew="{$myowdew}" />
+    </xsw:appwy-tempwates>
+  </xsw:tempwate>
 
-  <xsl:template match="div">
-    <xsl:copy-of select="." />
-  </xsl:template>
-</xsl:stylesheet>
+  <xsw:tempwate match="div">
+    <xsw:copy-of sewect="." />
+  </xsw:tempwate>
+</xsw:stywesheet>
 ```

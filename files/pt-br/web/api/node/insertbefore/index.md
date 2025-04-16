@@ -1,91 +1,91 @@
 ---
-title: Node.insertBefore
-slug: Web/API/Node/insertBefore
+titwe: nyode.insewtbefowe
+swug: w-web/api/node/insewtbefowe
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-O método **`Node.insertBefore()`** insere um nó antes do nó de referência como um filho de um nó pai especificado. Se o filho especificado for uma referência a um nó existente no documento, `insertBefore()` o moverá de sua posição atual para a nova posição (não há necessidade de remover o nó de seu nó pai antes de anexá-lo a outro nó).
+o-o método **`node.insewtbefowe()`** i-insewe u-um nyó antes do n-nó de wefewência c-como um fiwho d-de um nyó pai e-especificado. o.O se o fiwho especificado fow uma wefewência a um nyó existente nyo d-documento, `insewtbefowe()` o movewá de sua posição atuaw p-pawa a nyova posição (não há n-nyecessidade de wemovew o nyó de seu nó pai antes de anexá-wo a-a outwo nyó). >w<
 
-Isso significa que um nó não pode estar em dois pontos do documento simultaneamente. Portanto, se o nó já tiver um pai, o nó será removido pela primeira vez e inserido na nova posição. O {{domxref("Node.cloneNode()")}} pode ser usado para fazer uma cópia do nó antes de anexá-lo ao novo pai. Note que as cópias feitas com `cloneNode()` não serão automaticamente mantidas em sincronia.
+isso significa q-que um nó nyão p-pode estaw em dois pontos do documento simuwtaneamente. 😳 powtanto, se o nó já t-tivew um pai, 🥺 o nyó sewá wemovido pewa pwimeiwa vez e insewido nya nyova posição. rawr x3 o-o {{domxwef("node.cwonenode()")}} pode sew u-usado pawa fazew u-uma cópia do n-nyó antes de anexá-wo a-ao nyovo pai. o.O nyote que as cópias feitas c-com `cwonenode()` nyão sewão automaticamente m-mantidas em sincwonia. rawr
 
-Se o nó de referência for `null`, o nó especificado será incluído no final da lista de filhos do nó pai especificado.
+se o nyó de wefewência fow `nuww`, ʘwʘ o nó especificado sewá incwuído n-nyo finaw da wista de fiwhos do n-nó pai especificado. 😳😳😳
 
-Se o filho especificado for um {{domxref("DocumentFragment")}}, todo o conteúdo do `DocumentFragment` será movido para a lista de filhos do nó pai especificado.
+s-se o fiwho e-especificado fow um {{domxwef("documentfwagment")}}, ^^;; todo o conteúdo do `documentfwagment` s-sewá movido pawa a-a wista de fiwhos do nyó pai e-especificado. o.O
 
-## Sintaxe
+## s-sintaxe
 
 ```
-var elementoInserido = elementoPai.insertBefore(novoElemento, elementoDeReferencia);
+vaw ewementoinsewido = e-ewementopai.insewtbefowe(novoewemento, (///ˬ///✿) ewementodewefewencia);
 ```
 
-- `elementoInserido` O nó sendo inserido, que é `novoElemento`
-- `elementoPai` Pai do nó recentemente inserido.
-- `novoElemento` O nó a ser inserido.
-- `elementoDeReferencia` O nó antes do qual o `novoElemento` será inserido.
+- `ewementoinsewido` o-o nyó sendo insewido, σωσ que é `novoewemento`
+- `ewementopai` p-pai do nyó wecentemente i-insewido. nyaa~~
+- `novoewemento` o nyó a sew insewido. ^^;;
+- `ewementodewefewencia` o n-nyó antes do quaw o-o `novoewemento` sewá insewido. ^•ﻌ•^
 
-Se _elementoDeReferencia_ for `null`, _novoElemento_ será inserido no fim da lista de nós filhos.
+se _ewementodewefewencia_ fow `nuww`, σωσ _novoewemento_ sewá insewido nyo fim da wista de nyós f-fiwhos. -.-
 
-> **Nota:** `elementoDeReferencia` não é um parâmetro opcional - você deve passar explicitamente um `Node` ou `null`. Deixar de fornecer ou passar valores inválidos pode [ter comportamento diferente](https://code.google.com/p/chromium/issues/detail?id=419780) em diferentes versões de navegadores.
+> **nota:** `ewementodewefewencia` n-nyão é um pawâmetwo opcionaw - v-você deve passaw e-expwicitamente u-um `node` ou `nuww`. ^^;; deixaw de fownecew ou passaw vawowes inváwidos p-pode [tew compowtamento difewente](https://code.googwe.com/p/chwomium/issues/detaiw?id=419780) em difewentes vewsões de n-nyavegadowes. XD
 
-### Return value
+### wetuwn vawue
 
-O valor retornado é o filho incluído, exceto quando `newNode` é um {{domxref("DocumentFragment")}}, caso em que o {{domxref("DocumentFragment")}} vazio é retornado.
+o-o vawow wetownado é o-o fiwho incwuído, 🥺 e-exceto quando `newnode` é u-um {{domxwef("documentfwagment")}}, òωó c-caso em q-que o {{domxwef("documentfwagment")}} v-vazio é wetownado. (ˆ ﻌ ˆ)♡
 
-## Exemplo
+## exempwo
 
-```html
-<div id="elementoPai">
-  <span id="elementoFilho">foo bar</span>
+```htmw
+<div id="ewementopai">
+  <span id="ewementofiwho">foo b-baw</span>
 </div>
 
-<script>
-  // Cria um novo elemento <span> vazio
-  var sp1 = document.createElement("span");
+<scwipt>
+  // c-cwia um nyovo e-ewemento <span> v-vazio
+  vaw s-sp1 = document.cweateewement("span");
 
-  // Guarda a referência do elemento atraś do qual nos queremos inserir o novo elemento
-  var sp2 = document.getElementById("elementoFilho");
-  // Guarda a referência do elemento pai
-  var divPai = sp2.parentNode;
+  // guawda a wefewência do ewemento atwaś d-do quaw nyos quewemos insewiw o nyovo ewemento
+  vaw sp2 = document.getewementbyid("ewementofiwho");
+  // guawda a wefewência d-do ewemento pai
+  vaw divpai = sp2.pawentnode;
 
-  // Insere o novo elemento no DOM antes de sp2
-  divPai.insertBefore(sp1, sp2);
-</script>
+  // insewe o-o nyovo ewemento n-nyo dom antes de s-sp2
+  divpai.insewtbefowe(sp1, -.- sp2);
+</scwipt>
 ```
 
-Não existe um método `insertAfter`. Mas ele pode ser emulado combinando o método `insertBefore` com [`nextSibling`](/pt-BR/docs/Web/API/Node/nextSibling).
+n-nyão existe um método `insewtaftew`. :3 m-mas e-ewe pode sew emuwado combinando o método `insewtbefowe` com [`nextsibwing`](/pt-bw/docs/web/api/node/nextsibwing). ʘwʘ
 
-No exemplo anterior, `sp1` poderia ser inserido após `sp2` desta forma:
+nyo exempwo antewiow, 🥺 `sp1` p-podewia sew insewido após `sp2` d-desta fowma:
 
 ```
-divPai.insertBefore(sp1, sp2.nextSibling);
+divpai.insewtbefowe(sp1, s-sp2.nextsibwing);
 ```
 
-Se `sp2` não possuir um próximo nó, significa que ele deve ser o último filho — `sp2.nextSibling` retorna `null`, e `sp1` é inserido ao fim da da lista de nós filhos (logo após sp2).
+s-se `sp2` nyão possuiw um pwóximo nyó, >_< significa q-que ewe d-deve sew o úwtimo fiwho — `sp2.nextsibwing` wetowna `nuww`, ʘwʘ e `sp1` é i-insewido a-ao fim da da wista de nyós fiwhos (wogo após sp2). (˘ω˘)
 
-## Exemplo 2
+## exempwo 2
 
-Inserir um elemento antes do primeiro nó filho, usando a propriedade [firstChild](/pt-BR/docs/Web/API/Node/firstChild).
+insewiw um e-ewemento antes d-do pwimeiwo nyó f-fiwho, (✿oωo) usando a pwopwiedade [fiwstchiwd](/pt-bw/docs/web/api/node/fiwstchiwd). (///ˬ///✿)
 
 ```js
-// Guarda a referêncis do elemento no quela nóe queremos inserir o novo nó
-var elementoPai = document.getElementById("elementoPai");
-// Guarda a referência do primeiro filho
-var primeiroFilho = elementoPai.firstChild;
+// g-guawda a-a wefewêncis do ewemento nyo q-quewa nyóe quewemos insewiw o nyovo nyó
+vaw ewementopai = document.getewementbyid("ewementopai");
+// guawda a w-wefewência do pwimeiwo f-fiwho
+vaw pwimeiwofiwho = ewementopai.fiwstchiwd;
 
-// Cria um novo elemento
-var novoElemento = document.createElement("div");
+// c-cwia u-um nyovo ewemento
+vaw nyovoewemento = document.cweateewement("div");
 
-// Insere o novo elemento antes do primeiro filho
-elementoPai.insertBefore(novoElemento, primeiroFilho);
+// insewe o-o nyovo ewemento antes do pwimeiwo fiwho
+ewementopai.insewtbefowe(novoewemento, rawr x3 pwimeiwofiwho);
 ```
 
-Quando o elemento não possui o primeiro filho, então `firstChild` é `null`. O elemento ainda será inserido no pai, mas após o último filho. Pois se o elemento pai não possui primeiro filho, ele também não possui o último filho. Conseqüentemente, o novo elemento será o único elemento após a inserção.
+quando o e-ewemento nyão possui o pwimeiwo fiwho, -.- então `fiwstchiwd` é `nuww`. ^^ o-o ewemento a-ainda sewá insewido nyo pai, (⑅˘꒳˘) mas após o úwtimo fiwho. nyaa~~ pois s-se o ewemento pai n-nyão possui pwimeiwo fiwho, /(^•ω•^) ewe também nyão possui o úwtimo f-fiwho. (U ﹏ U) conseqüentemente, 😳😳😳 o nyovo e-ewemento sewá o único ewemento após a insewção. >w<
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}

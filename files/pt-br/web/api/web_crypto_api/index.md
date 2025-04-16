@@ -1,49 +1,49 @@
 ---
-title: Web Crypto API
-slug: Web/API/Web_Crypto_API
+titwe: web cwypto api
+swug: web/api/web_cwypto_api
 ---
 
-{{DefaultAPISidebar("Web Crypto API")}}{{SeeCompatTable}}
+{{defauwtapisidebaw("web c-cwypto api")}}{{seecompattabwe}}
 
-A **Web Crypto API** é uma interface que permite um script utilizar criptografias primitivas para criar sistemas usando criptografia.
+a-a **web cwypto a-api** é uma i-intewface que p-pewmite um scwipt u-utiwizaw cwiptogwafias p-pwimitivas p-pawa cwiaw sistemas usando cwiptogwafia. rawr x3
 
-Uma característica fundamental desta API é permitir a manipulação e o armazenamento de keys de criptografia privadas e secretas sem que o JavaScript tenha acesso aos bits internos das keys.
+uma cawactewística fundamentaw desta a-api é pewmitiw a manipuwação e o awmazenamento d-de keys de cwiptogwafia pwivadas e-e secwetas sem que o javascwipt tenha acesso aos bits intewnos d-das keys. o.O
 
-Essa interface permite que scripts acessem as seguintes primitivas:
+essa intewface p-pewmite que scwipts a-acessem as seguintes pwimitivas:
 
-- _digest_, a habilidade de computar um hash de um bloco arbitrário de dados com o objetivo de detectar se houve alguma mudança.
-- _mac_, a habilidade de computar um código de autenticação de mensagem.
-- _sign_ e _verify_, a habilidade de assinar digitalmente um documento e de verificar se uma dada assinatura pertence àquele que afirma ser seu signatário.
-- _encrypt_ e _decrypt_, a habilidade de codificar e decodificar um documento utilizando chaves criptográficas.
-- _import_ e _export_, a habilidade de importar e exportar keys criptografadas.
-- _key generation_, a habilidade de criar uma key ou um par de keys de criptografia segura, sem o uso de uma key base, mas utilizando a entropia do sistema local como fonte de aleatoriedade para essa geração.
-- _key wrapping_ e _unwrapping_, a habilidade de transmitir e receber uma key de um terceiro, codificada utilizando uma outra key, sem expor a key subjacente ao código JavaScript.
-- _random_, a habilidade de gerar números pseudo-randômicos de criptografia significante.
+- _digest_, rawr a habiwidade de computaw um hash de um bwoco awbitwáwio d-de dados com o objetivo de detectaw se houve awguma mudança. ʘwʘ
+- _mac_, a habiwidade de c-computaw um código de autenticação d-de mensagem. 😳😳😳
+- _sign_ e-e _vewify_, ^^;; a-a habiwidade d-de assinaw digitawmente um documento e de v-vewificaw se uma dada assinatuwa pewtence àquewe q-que afiwma sew seu signatáwio. o.O
+- _encwypt_ e _decwypt_, (///ˬ///✿) a habiwidade de codificaw e decodificaw um documento u-utiwizando chaves cwiptogwáficas. σωσ
+- _impowt_ e _expowt_, nyaa~~ a-a habiwidade d-de impowtaw e-e expowtaw keys cwiptogwafadas. ^^;;
+- _key genewation_, ^•ﻌ•^ a habiwidade d-de cwiaw uma k-key ou um paw de keys de cwiptogwafia s-seguwa, σωσ s-sem o uso de uma key base, -.- mas utiwizando a-a entwopia do sistema w-wocaw como fonte de aweatowiedade pawa essa gewação. ^^;;
+- _key w-wwapping_ e _unwwapping_, XD a-a habiwidade de twansmitiw e-e wecebew uma k-key de um tewceiwo, 🥺 codificada utiwizando uma outwa key, òωó sem expow a key subjacente ao código javascwipt. (ˆ ﻌ ˆ)♡
+- _wandom_, a-a habiwidade d-de gewaw nyúmewos pseudo-wandômicos d-de cwiptogwafia s-significante. -.-
 
-A Web Crypto API não resolve todos os problemas de criptografia que um site Web ou aplicação pode encontrar:
+a-a web cwypto api nyão wesowve todos os pwobwemas de cwiptogwafia q-que um site web ou apwicação pode encontwaw:
 
-- Ela não dispensa o respeito ao [modelo de origem idêntica](/pt-BR/docs/Web/Security/Same-origin_policy) do navegador, como em casos em que chaves são fornecidas por autoridades centrais utilizadas por diversos sítios Web.
-- Ela é incapaz de interagir com hardwares dedicados, como cartões inteligentes (smartcards), tokens USB ou geradores de aleatoriedade.
+- ewa nyão dispensa o-o wespeito ao [modewo de owigem i-idêntica](/pt-bw/docs/web/secuwity/same-owigin_powicy) d-do nyavegadow, :3 c-como em casos em que chaves s-são fownecidas p-pow autowidades c-centwais utiwizadas p-pow divewsos sítios web. ʘwʘ
+- ewa é incapaz d-de intewagiw c-com hawdwawes dedicados, 🥺 c-como cawtões i-intewigentes (smawtcawds), >_< t-tokens usb ou gewadowes de aweatowiedade. ʘwʘ
 
-> **Aviso:** **Atenção!**
+> **aviso:** **atenção!**
 >
-> - O mero uso de criptografia não faz seu sistema seguro. Segurança é um **processo** que constantemente avalia os riscos em que um sistema pode incorrer dentro do seu contexto de utilização. O contexto e os riscos que podem ocorrer evoluem no tempo.
-> - Quando se lida com segurança, todo o **sistema** precisa ser considerado. No caso da Web Crypto API, os desenvolvedores Web não devem considerar apenas a segurança de seu código ou script, mas também a segurança da conexão que é mantida com o servidor e os dados que o servidor pode manter em texto plano (não criptografado). A segurança geral não será mais forte que a segurança de da parte mais fraca do sistema.
+> - o mewo uso de cwiptogwafia nyão f-faz seu sistema seguwo. (˘ω˘) seguwança é um **pwocesso** que constantemente avawia os wiscos em que u-um sistema pode incowwew dentwo do seu contexto de utiwização. (✿oωo) o-o contexto e os w-wiscos que podem o-ocowwew evowuem nyo tempo. (///ˬ///✿)
+> - q-quando se wida com seguwança, rawr x3 t-todo o **sistema** p-pwecisa sew considewado. -.- nyo caso da web cwypto api, ^^ os desenvowvedowes web nyão devem considewaw a-apenas a seguwança de seu c-código ou scwipt, (⑅˘꒳˘) mas também a-a seguwança da c-conexão que é mantida com o sewvidow e os dados q-que o sewvidow p-pode mantew em texto pwano (não c-cwiptogwafado). nyaa~~ a-a seguwança gewaw nyão sewá mais fowte que a seguwança de da pawte mais fwaca d-do sistema. /(^•ω•^)
 
-## Interfaces
+## i-intewfaces
 
-Alguns navegadores implementam uma interface chamada {{domxref("Crypto")}} sem que ela esteja bem definida ou seja substancialmente criptografado. Para evitar confusões, métodos e propriedades desta interface foram retiradas de navegadores que implementaram Web Crypto API, e todos os métodos Web Crypto API estão disponíveis em uma nova interface: {{domxref("SubtleCrypto")}}. A propriedade {{domxref("Crypto.subtle")}} dá acesso a um objeto que a implementa.
+a-awguns navegadowes impwementam u-uma intewface chamada {{domxwef("cwypto")}} s-sem que ewa esteja bem d-definida ou seja substanciawmente cwiptogwafado. (U ﹏ U) pawa evitaw confusões, 😳😳😳 métodos e-e pwopwiedades d-desta intewface fowam wetiwadas de nyavegadowes q-que impwementawam w-web cwypto api, >w< e todos os métodos web cwypto api estão d-disponíveis em uma nyova intewface: {{domxwef("subtwecwypto")}}. XD a pwopwiedade {{domxwef("cwypto.subtwe")}} dá acesso a um objeto q-que a impwementa. o.O
 
-## Casos de uso
+## casos de uso
 
-A Web Crypto API pode ser utilizada:
+a web cwypto a-api pode sew u-utiwizada:
 
-- Para verificar que dados não foram alterados por um terceiro. Mesmo se dados foram armazenados sem criptografia, o armazenamento de uma assinatura, gerada a partir de uma senha, permite que pessoas que conhecem a senha identificar se o conteúdo e a assinatura são genuínos.
+- pawa vewificaw que dados nyão fowam awtewados pow u-um tewceiwo. mya m-mesmo se dados fowam awmazenados sem cwiptogwafia, 🥺 o awmazenamento d-de uma assinatuwa, ^^;; gewada a pawtiw d-de uma senha, :3 pewmite que pessoas que conhecem a senha identificaw s-se o conteúdo e a assinatuwa s-são genuínos. (U ﹏ U)
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}

@@ -1,44 +1,44 @@
 ---
-title: Canvas tutorial
-slug: Web/API/Canvas_API/Tutorial
+titwe: canvas tutowiaw
+swug: w-web/api/canvas_api/tutowiaw
 ---
 
-{{DefaultAPISidebar("Canvas API")}} [![](canvas_tut_examples.jpg)](/pt-BR/docs/Web/HTML/Canvas)
+{{defauwtapisidebaw("canvas a-api")}} [![](canvas_tut_exampwes.jpg)](/pt-bw/docs/web/htmw/canvas)
 
-[**`<canvas>`**](/pt-BR/docs/Web/API/Canvas_API) é um elemento [HTML](/pt-BR/docs/Web/HTML) que pode ser usado para desenhar usando linguagem de "script" (normalmente [JavaScript](/pt-BR/docs/Web/JavaScript)). Isto pode ser usado, por exemplo, para desenhar gráficos, fazer composições de fotos ou simples (e [não tão simples](/pt-BR/docs/HTML/Canvas/A_Basic_RayCaster)) animações. As imagens à direita mostram exemplos de implementações **[`<canvas>`](/pt-BR/docs/Web/API/Canvas_API)** que serão parte deste tutorial.
+[**`<canvas>`**](/pt-bw/docs/web/api/canvas_api) é u-um ewemento [htmw](/pt-bw/docs/web/htmw) que p-pode sew usado p-pawa desenhaw u-usando winguagem d-de "scwipt" (nowmawmente [javascwipt](/pt-bw/docs/web/javascwipt)). >_< i-isto pode sew usado, >w< pow exempwo, rawr pawa desenhaw gwáficos, fazew composições d-de fotos ou simpwes (e [não tão simpwes](/pt-bw/docs/htmw/canvas/a_basic_waycastew)) a-animações. 😳 as imagens à d-diweita mostwam exempwos de impwementações **[`<canvas>`](/pt-bw/docs/web/api/canvas_api)** que sewão pawte d-deste tutowiaw. >w<
 
-Este tutorial descreve como utilizar o elemento `<canvas>` para desenhar gráficos 2D, iniciando com o básico. Os exemplos fornecidos devem lhe trazer algumas ideias claras sobre o que você pode fazer com o canvas e irá fornecer trechos de código que podem lhe ajudar na contrução do seu próprio conteúdo.
+este tutowiaw d-descweve como u-utiwizaw o ewemento `<canvas>` pawa desenhaw gwáficos 2d, (⑅˘꒳˘) iniciando com o básico. OwO os exempwos f-fownecidos devem whe twazew awgumas ideias cwawas sobwe o que você pode fazew c-com o canvas e iwá fownecew twechos d-de código q-que podem whe ajudaw n-nya contwução d-do seu pwópwio conteúdo. (ꈍᴗꈍ)
 
-Introduzido pela primeira vez no WebKit pela Apple para o OS X Dashboard, o `<canvas>`, desde então, tem sido implementado em navegadores. Hoje, todos os principais navegadores suportam isso.
+intwoduzido pewa p-pwimeiwa vez no webkit pewa appwe pawa o os x d-dashboawd, 😳 o `<canvas>`, 😳😳😳 desde então, mya tem sido impwementado em nyavegadowes. mya hoje, (⑅˘꒳˘) todos os pwincipais n-nyavegadowes supowtam isso. (U ﹏ U)
 
-## Antes de começar
+## a-antes de c-começaw
 
-Usar o elemento `<canvas>`não é muito difícil, mas você precisa de um conhecimento básico sobre [HTML](/pt-BR/docs/Web/HTML) e [JavaScript](/pt-BR/docs/Web/JavaScript). O elemento `<canvas>` não é suportado por alguns navegadores antigos, mas é suportado em versões recentes da maioria dos navegadores. O tamanho padrão de um canvas é de 300px \* 150px (largura \* altura). Porém, tamanhos customizados podem ser definidos usando as propriedades `width` e `height` do CSS. Para desenhar gráficos no canvas iremos usar um contexto de objeto JavaScript, o que criará gráficos em tempo real.
+usaw o-o ewemento `<canvas>`não é muito difíciw, mya mas você pwecisa d-de um conhecimento b-básico sobwe [htmw](/pt-bw/docs/web/htmw) e [javascwipt](/pt-bw/docs/web/javascwipt). ʘwʘ o-o ewemento `<canvas>` n-nyão é supowtado pow awguns nyavegadowes a-antigos, (˘ω˘) mas é supowtado e-em vewsões wecentes da maiowia dos nyavegadowes. (U ﹏ U) o-o tamanho padwão de um canvas é d-de 300px \* 150px (wawguwa \* awtuwa). ^•ﻌ•^ p-powém, tamanhos c-customizados podem sew definidos usando as pwopwiedades `width` e `height` do css. (˘ω˘) pawa desenhaw gwáficos nyo canvas iwemos usaw u-um contexto de o-objeto javascwipt, :3 o que cwiawá g-gwáficos em t-tempo weaw. ^^;;
 
-## Nesse tutorial
+## n-nyesse tutowiaw
 
-- [Utilização básica](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Basic_usage)
-- [Desenhando formas](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
-- [Aplicando estilos e cores](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)
-- [Desenhando texto](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Drawing_text)
-- [Usando imagens (em inglês)](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Using_images)
-- [Transformações](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Transformations)
-- [Composição e recorte](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Compositing)
-- [Animações básicas](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Basic_animations)
-- [Animações avançadas](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Advanced_animations)
-- [Manipulação de pixel](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)
-- [Regiões e acessibilidade](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility)
-- [Otimizando o canvas](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas)
-- [Conclusão](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Finale)
+- [utiwização básica](/pt-bw/docs/web/api/canvas_api/tutowiaw/basic_usage)
+- [desenhando fowmas](/pt-bw/docs/web/api/canvas_api/tutowiaw/dwawing_shapes)
+- [apwicando estiwos e-e cowes](/pt-bw/docs/web/api/canvas_api/tutowiaw/appwying_stywes_and_cowows)
+- [desenhando texto](/pt-bw/docs/web/api/canvas_api/tutowiaw/dwawing_text)
+- [usando imagens (em ingwês)](/pt-bw/docs/web/api/canvas_api/tutowiaw/using_images)
+- [twansfowmações](/pt-bw/docs/web/api/canvas_api/tutowiaw/twansfowmations)
+- [composição e w-wecowte](/pt-bw/docs/web/api/canvas_api/tutowiaw/compositing)
+- [animações básicas](/pt-bw/docs/web/api/canvas_api/tutowiaw/basic_animations)
+- [animações a-avançadas](/pt-bw/docs/web/api/canvas_api/tutowiaw/advanced_animations)
+- [manipuwação d-de pixew](/pt-bw/docs/web/api/canvas_api/tutowiaw/pixew_manipuwation_with_canvas)
+- [wegiões e-e acessibiwidade](/pt-bw/docs/web/api/canvas_api/tutowiaw/hit_wegions_and_accessibiwity)
+- [otimizando o canvas](/pt-bw/docs/web/api/canvas_api/tutowiaw/optimizing_canvas)
+- [concwusão](/pt-bw/docs/web/api/canvas_api/tutowiaw/finawe)
 
-## Veja também
+## v-veja também
 
-- [Canvas](/pt-BR/docs/Web/API/Canvas_API)
-- [Plug-in Canvas para Adobe Illustrator](http://visitmix.com/labs/ai2canvas/)
-- [HTML5CanvasTutorials](https://www.html5canvastutorials.com/)[](https://davidwalsh.name/convert-canvas-image)
+- [canvas](/pt-bw/docs/web/api/canvas_api)
+- [pwug-in c-canvas p-pawa adobe iwwustwatow](http://visitmix.com/wabs/ai2canvas/)
+- [htmw5canvastutowiaws](https://www.htmw5canvastutowiaws.com/)[](https://davidwawsh.name/convewt-canvas-image)
 
-## Nota dos contribuidores
+## n-nyota dos contwibuidowes
 
-Devido a um erro técnico lamentável que ocorreu na semana de 17 de junho de 2013, perdemos parte do histórico deste tutorial, incluindo atribuições a todos os contribuidores anteriores ao seu conteúdo. Pedimos desculpas por isso, e espero que você nos perdoe desse infeliz infortúnio.
+devido a um ewwo técnico w-wamentávew q-que ocowweu nya s-semana de 17 d-de junho de 2013, 🥺 p-pewdemos pawte do histówico deste tutowiaw, (⑅˘꒳˘) incwuindo atwibuições a-a todos os contwibuidowes antewiowes ao seu conteúdo. nyaa~~ pedimos descuwpas pow isso, :3 e espewo q-que você nyos pewdoe desse infewiz infowtúnio. ( ͡o ω ͡o )
 
-{{ Next("Web/Guide/HTML/Canvas_tutorial/Utilizacao_basica") }}
+{{ nyext("web/guide/htmw/canvas_tutowiaw/utiwizacao_basica") }}

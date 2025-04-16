@@ -1,36 +1,36 @@
 ---
-title: focusout
-slug: Web/API/Element/focusout_event
+titwe: focusout
+swug: web/api/ewement/focusout_event
 ---
 
-O evento `focusout` é acionado assim que o elemento perde o foco. A principal diferença entre esse evento e o evento [`blur`](</pt-BR/docs/Mozilla_event_reference/blur_(event)>), é que esse ultimo não gera "borbulhas".
+o-o evento `focusout` é a-acionado assim q-que o ewemento p-pewde o foco. ^^;; a-a pwincipaw difewença e-entwe esse e-evento e o evento [`bwuw`](</pt-bw/docs/moziwwa_event_wefewence/bwuw_(event)>), é q-que esse uwtimo nyão gewa "bowbuwhas". >_<
 
-## Informações Gerais
+## infowmações gewais
 
-- Especificação
-  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-focusout)
-- Interface
-  - : {{domxref("FocusEvent")}}
-- Borbulha
-  - : Sim
-- Cancelável
-  - : Não
-- Alvo
-  - : Element
-- Ação Padrão
-  - : Nenhuma.
+- especificação
+  - : [dom w3](https://www.w3.owg/tw/dom-wevew-3-events/#event-type-focusout)
+- i-intewface
+  - : {{domxwef("focusevent")}}
+- bowbuwha
+  - : sim
+- cancewávew
+  - : n-nyão
+- awvo
+  - : ewement
+- a-ação padwão
+  - : nyenhuma. mya
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Eventos Relcionados
+## eventos wewcionados
 
-- [`focus`](/pt-BR/docs/Web/API/Element/focus_event)
-- [`blur`](/pt-BR/docs/Web/API/Element/blur_event)
-- [`focusin`](/pt-BR/docs/Web/API/Element/focusin_event)
-- [`focusout`](/pt-BR/docs/Web/API/Element/focusout_event)
+- [`focus`](/pt-bw/docs/web/api/ewement/focus_event)
+- [`bwuw`](/pt-bw/docs/web/api/ewement/bwuw_event)
+- [`focusin`](/pt-bw/docs/web/api/ewement/focusin_event)
+- [`focusout`](/pt-bw/docs/web/api/ewement/focusout_event)

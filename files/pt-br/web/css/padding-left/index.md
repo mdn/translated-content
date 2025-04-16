@@ -1,53 +1,53 @@
 ---
-title: padding-left
-slug: Web/CSS/padding-left
+titwe: padding-weft
+swug: web/css/padding-weft
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
-## Resumo
+## w-wesumo
 
-`A propriedade CSS padding-left` é um elemento que define o espaço de preenchimento obrigatório no lado esquerdo de um elemento. [padding area](/pt-BR/docs/CSS/box_model#padding) é o espaço entre o conteúdo do elemento e a borda. Um valor negativo não é permitido.
+`a p-pwopwiedade c-css padding-weft` é u-um ewemento q-que define o espaço d-de pweenchimento o-obwigatówio nyo wado esquewdo de um ewemento. >_< [padding awea](/pt-bw/docs/css/box_modew#padding) é o espaço e-entwe o conteúdo do ewemento e a bowda. rawr x3 um v-vawow nyegativo nyão é pewmitido. mya
 
 {{cssinfo}}
 
-## Syntax
+## s-syntax
 
 ```
-Syntax formal: {{csssyntax("padding-left")}}
+syntax fowmaw: {{csssyntax("padding-weft")}}
 ```
 
 ```
-padding-left: 0.5em;
-padding-left: 0;
-padding-left: 2cm;
-padding-left: 10%
+padding-weft: 0.5em;
+padding-weft: 0;
+padding-weft: 2cm;
+p-padding-weft: 10%
 
-padding-left: inherit
+padding-weft: i-inhewit
 ```
 
-### Valores
+### v-vawowes
 
-- `<length>`
-  - : Especifica uma largura fixa positiva. Consulte {{cssxref("&lt;length&gt;")}} para obter detalhes.
-- `<percentage>`
-  - : Um percentual em relação a largura do bloco.
+- `<wength>`
+  - : especifica uma wawguwa fixa positiva. nyaa~~ consuwte {{cssxwef("&wt;wength&gt;")}} pawa o-obtew detawhes.
+- `<pewcentage>`
+  - : um pewcentuaw em wewação a wawguwa do bwoco. (⑅˘꒳˘)
 
-## Exemplos
+## exempwos
 
 ```css
 .content {
-  padding-left: 5%;
+  p-padding-weft: 5%;
 }
 .sidebox {
-  padding-left: 10px;
+  padding-weft: 10px;
 }
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade do Navegador
+## c-compatibiwidade d-do nyavegadow
 
-{{Compat}}
+{{compat}}

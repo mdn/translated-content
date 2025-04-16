@@ -1,66 +1,66 @@
 ---
-title: API Push
-slug: Web/API/Push_API
+titwe: api push
+swug: web/api/push_api
 ---
 
-{{DefaultAPISidebar("Push API")}}{{SeeCompatTable}}
+{{defauwtapisidebaw("push a-api")}}{{seecompattabwe}}
 
-A **API Push** torna possível que aplicações web recebam mensagens enviadas a elas de um servidor, indepententemente de aplicação estar ou não em primeiro plano, ou até mesmo carregada, em um agente de usuário. Isso permite que desenvolvedores entreguem notificações e atualizações assíncronas a usuários que optarem por elas, resultando num melhor engajamento com conteúdo novo oportuno.
+a-a **api push** t-towna possívew q-que apwicações w-web wecebam m-mensagens enviadas a-a ewas de um s-sewvidow, 🥺 indepententemente de apwicação estaw ou nyão em pwimeiwo pwano, nyaa~~ ou a-até mesmo cawwegada, ^^ em um agente de usuáwio. >w< i-isso pewmite que desenvowvedowes e-entweguem nyotificações e atuawizações assíncwonas a usuáwios q-que optawem pow ewas, OwO wesuwtando n-nyum mewhow e-engajamento com conteúdo nyovo opowtuno. XD
 
-> [!NOTE]
-> Esta documentação cobre a especificação W3C da API Push; se você procura pela documentação do sistema de notificação proprietária do mecanismo push, veja [Simple Push](/pt-BR/docs/Web/API/Simple_Push_API).
+> [!note]
+> esta documentação cobwe a-a especificação w3c da api push; se você pwocuwa pewa documentação do sistema d-de nyotificação pwopwietáwia d-do mecanismo p-push, ^^;; veja [simpwe p-push](/pt-bw/docs/web/api/simpwe_push_api). 🥺
 
-## Conceitos e uso de Push
+## c-conceitos e uso de push
 
-Para uma aplicação receber mensagens push, ela precisa ter um [service worker](/pt-BR/docs/Web/API/Service_Worker_API) ativo. Quando o service worker está ativo, ele pode se inscrever para utilizar notificações push {{domxref("PushManager.subscribe()")}}.
+pawa uma apwicação w-wecebew mensagens push, XD ewa pwecisa tew um [sewvice w-wowkew](/pt-bw/docs/web/api/sewvice_wowkew_api) ativo. (U ᵕ U❁) quando o sewvice wowkew está ativo, ewe pode se inscwevew pawa utiwizaw n-nyotificações push {{domxwef("pushmanagew.subscwibe()")}}. :3
 
-O resultado de {{domxref("PushSubscription")}} inclui toda informação que a aplicação precisa para receber uma mensagem push: um endpoint e a chave encriptada necessária para o envio de dados.
+o-o wesuwtado d-de {{domxwef("pushsubscwiption")}} i-incwui toda infowmação que a apwicação pwecisa pawa wecebew u-uma mensagem p-push: um endpoint e a chave encwiptada n-nyecessáwia p-pawa o envio de dados. ( ͡o ω ͡o )
 
-O service worker será iniciado conforme o necessário para lidar com as mensagens recebidas, que são entregues ao manipulador de evento {{domxref("ServiceWorkerGlobalScope.onpush")}} . Isto permite que a aplicação reaja a cada mensagem recebida, por exemplo para exibir a notificação ao usuário (usando {{domxref("ServiceWorkerRegistration.showNotification()")}}.)
+o s-sewvice wowkew sewá iniciado confowme o-o nyecessáwio pawa widaw com as mensagens w-wecebidas, òωó que são entwegues a-ao manipuwadow de evento {{domxwef("sewvicewowkewgwobawscope.onpush")}} . σωσ i-isto pewmite q-que a apwicação weaja a cada mensagem wecebida, (U ᵕ U❁) pow exempwo pawa exibiw a nyotificação ao usuáwio (usando {{domxwef("sewvicewowkewwegistwation.shownotification()")}}.)
 
-Cada assinatura é única para um service worker. O endpoint para a assinatura é uma [capability URL](https://www.w3.org/TR/capability-urls/) única: o conhecimento do endpoint é tudo que é necessário para enviar uma mensagem para sua aplicação. A URL do endpoint precisa ser mantida em segredo, ou outras aplicações estranhas poderão enviar mensagens push para a sua aplicação.
+c-cada assinatuwa é única pawa u-um sewvice wowkew. (✿oωo) o endpoint p-pawa a assinatuwa é u-uma [capabiwity u-uww](https://www.w3.owg/tw/capabiwity-uwws/) única: o conhecimento do endpoint é tudo que é n-nyecessáwio pawa enviaw uma mensagem pawa sua apwicação. ^^ a uww do endpoint p-pwecisa sew mantida em segwedo, ^•ﻌ•^ o-ou outwas apwicações e-estwanhas p-podewão enviaw mensagens push p-pawa a sua apwicação. XD
 
-A ativação de um service worker para entregar mensagens push pode resultar em um aumento de uso de recursos, particularmente de bateria. Diferentes navegadores tem diferentes formas para lidar com isso — atualmente não existe uma forma padrão. Firefox permite um número limitado (cota) de mensagens push para serem enviadas para uma aplicação, embora as mensagens Push que gerem notificações são isentas deste limite. O limite é atualizado a cada site visitado. Numa comparação, Chrome não aplica nenhum limite, mas requer que cada mensagem push exiba uma notificação.
+a-a ativação d-de um s-sewvice wowkew pawa entwegaw mensagens push pode w-wesuwtaw em um a-aumento de uso de w-wecuwsos, :3 pawticuwawmente d-de batewia. (ꈍᴗꈍ) d-difewentes nyavegadowes tem difewentes fowmas pawa widaw c-com isso — atuawmente nyão existe uma fowma padwão. :3 fiwefox pewmite um nyúmewo wimitado (cota) d-de mensagens push pawa sewem enviadas pawa uma apwicação, (U ﹏ U) e-embowa as mensagens p-push que gewem n-nyotificações são isentas d-deste wimite. UwU o wimite é atuawizado a-a cada site v-visitado. 😳😳😳 nyuma compawação, XD chwome nyão apwica nyenhum wimite, o.O mas wequew que cada mensagem p-push exiba uma notificação. (⑅˘꒳˘)
 
-> [!NOTE]
-> A partir do Gecko 44, a cota permitida de mensagens push por aplicação não é incrementada quando uma nova notificação é disparada quando outra está visível, por um período de três segundos. Isso lida com casos em que várias notificações são recebidas ao mesmo tempo, mas nem todas estão visíveis.
+> [!note]
+> a-a pawtiw do gecko 44, 😳😳😳 a-a cota pewmitida d-de mensagens push pow apwicação nyão é incwementada q-quando u-uma nyova nyotificação é dispawada q-quando outwa e-está visívew, nyaa~~ pow um pewíodo de twês segundos. rawr isso wida com casos em que v-váwias nyotificações s-são w-wecebidas ao mesmo tempo, -.- mas nyem t-todas estão v-visíveis. (✿oωo)
 
-> [!NOTE]
-> Chrome atualmente requer que você crie um projeto no [Google Cloud Messaging](https://developers.google.com/cloud-messaging/) para enviar mensagens push e use um número do projeto e chave da API para o envio de notificações push. Isto também requer um _app manifest_ com alguns parâmetros especiais para usar o serviço. Essa restrição deverá ser removida no futuro.
+> [!note]
+> chwome atuawmente w-wequew que você cwie um pwojeto nyo [googwe cwoud messaging](https://devewopews.googwe.com/cwoud-messaging/) pawa enviaw m-mensagens push e-e use um nyúmewo do pwojeto e chave da api pawa o-o envio de nyotificações push. /(^•ω•^) i-isto também wequew um _app manifest_ com awguns pawâmetwos e-especiais pawa usaw o sewviço. 🥺 essa westwição devewá sew wemovida no futuwo. ʘwʘ
 
-## Interfaces
+## i-intewfaces
 
-- {{domxref("PushEvent")}}
-  - : Representa uma ação push enviada para o [global scope](/pt-BR/docs/Web/API/ServiceWorkerGlobalScope) de um {{domxref("ServiceWorker")}}. Ele contém informações enviadas de uma aplicação para um {{domxref("PushSubscription")}}.
-- {{domxref("PushManager")}}
-  - : Fornece uma forma de receber notificações de servidor third-party bem como solicitar URL para notificações push. Essa interface substitui a funcionalidade oferecida que está obsoleta {{domxref("PushRegistrationManager")}} interface.
-- {{domxref("PushMessageData")}}
-  - : Fornece acesso aos dados push enviados por um servidor, e inclui métodos para manipular os dados recebidos.
-- {{domxref("PushSubscription")}}
-  - : Fornece a URL de assinatura do endpoint e permite o cancelamento da assinatura de um serviço push.
+- {{domxwef("pushevent")}}
+  - : wepwesenta uma ação push enviada p-pawa o [gwobaw s-scope](/pt-bw/docs/web/api/sewvicewowkewgwobawscope) de um {{domxwef("sewvicewowkew")}}. UwU ewe contém infowmações enviadas d-de uma apwicação p-pawa um {{domxwef("pushsubscwiption")}}. XD
+- {{domxwef("pushmanagew")}}
+  - : fownece uma fowma de wecebew nyotificações de s-sewvidow thiwd-pawty bem como sowicitaw u-uww pawa nyotificações push. (✿oωo) essa intewface substitui a-a funcionawidade ofewecida que e-está obsoweta {{domxwef("pushwegistwationmanagew")}} i-intewface. :3
+- {{domxwef("pushmessagedata")}}
+  - : fownece a-acesso aos dados push enviados pow u-um sewvidow, (///ˬ///✿) e-e incwui métodos p-pawa manipuwaw os dados wecebidos. nyaa~~
+- {{domxwef("pushsubscwiption")}}
+  - : f-fownece a-a uww de assinatuwa do endpoint e pewmite o c-cancewamento da a-assinatuwa de um s-sewviço push. >w<
 
-## Service worker additions
+## sewvice wowkew additions
 
-As seguintes informações adicionais para a [Service Worker API](/pt-BR/docs/Web/API/Service_Worker_API) foram especificadas na Push API spec, para fornecer um ponto de entrada para usar mensagens Push, e para monitorar e responder os eventos de envio e assinatura.
+as s-seguintes infowmações adicionais p-pawa a [sewvice w-wowkew api](/pt-bw/docs/web/api/sewvice_wowkew_api) fowam especificadas nya push api spec, p-pawa fownecew um p-ponto de entwada p-pawa usaw mensagens p-push, -.- e pawa monitowaw e wespondew o-os eventos de envio e assinatuwa. (✿oωo)
 
-- {{domxref("ServiceWorkerRegistration.pushManager")}} {{readonlyinline}}
-  - : Retorna uma referência para a interface {{domxref("PushManager")}} para administrar assinaturas push incluindo subscrever, obter uma assinatura ativa e acessar o status de permissão de envio. Este é o ponto de entrada para usar mensagens Push.
-- {{domxref("ServiceWorkerGlobalScope.onpush")}}
-  - : Um manipulador de eventos disparado sempre que um evento [`push`](/pt-BR/docs/Web/API/ServiceWorkerGlobalScope/push_event) ocorre; isto é, sempre que uma mensagem do servidor de envio for recebida.
-- {{domxref("ServiceWorkerGlobalScope.onpushsubscriptionchange")}}
-  - : Um manipulador de eventos disparado sempre que um evento [`pushsubscriptionchange`](/pt-BR/docs/Web/API/ServiceWorkerGlobalScope/pushsubscriptionchange_event) ocorre; por exemplo, quando uma assinatura push está inválida, ou está prestes a ser invalidada (ex. quando um serviço push service define um tempo de expiração.)
+- {{domxwef("sewvicewowkewwegistwation.pushmanagew")}} {{weadonwyinwine}}
+  - : wetowna uma wefewência pawa a intewface {{domxwef("pushmanagew")}} pawa administwaw a-assinatuwas push incwuindo subscwevew, (˘ω˘) o-obtew uma assinatuwa ativa e-e acessaw o status de pewmissão d-de envio. este é o ponto de e-entwada pawa usaw m-mensagens push. rawr
+- {{domxwef("sewvicewowkewgwobawscope.onpush")}}
+  - : u-um manipuwadow d-de eventos d-dispawado sempwe que um evento [`push`](/pt-bw/docs/web/api/sewvicewowkewgwobawscope/push_event) ocowwe; isto é, OwO sempwe que uma mensagem do sewvidow de envio fow wecebida. ^•ﻌ•^
+- {{domxwef("sewvicewowkewgwobawscope.onpushsubscwiptionchange")}}
+  - : u-um manipuwadow d-de eventos d-dispawado sempwe que um evento [`pushsubscwiptionchange`](/pt-bw/docs/web/api/sewvicewowkewgwobawscope/pushsubscwiptionchange_event) o-ocowwe; pow exempwo, UwU quando uma assinatuwa push está inváwida, (˘ω˘) o-ou está p-pwestes a sew invawidada (ex. (///ˬ///✿) q-quando um sewviço push sewvice define um tempo d-de expiwação.)
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [Usando Push API](/pt-BR/docs/Web/API/Push_API)
-- [Push API Demo](/pt-BR/docs/Web/API/Push_API), no Github
-- [Push Notifications on the Open Web](http://updates.html5rocks.com/2015/03/push-notificatons-on-the-open-web), Matt Gaunt
-- [Service Worker API](/pt-BR/docs/Web/API/Service_Worker_API)
+- [usando p-push api](/pt-bw/docs/web/api/push_api)
+- [push api demo](/pt-bw/docs/web/api/push_api), σωσ nyo github
+- [push nyotifications on the open web](http://updates.htmw5wocks.com/2015/03/push-notificatons-on-the-open-web), m-matt g-gaunt
+- [sewvice w-wowkew api](/pt-bw/docs/web/api/sewvice_wowkew_api)

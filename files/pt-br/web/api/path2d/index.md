@@ -1,48 +1,48 @@
 ---
-title: Path2D
-slug: Web/API/Path2D
+titwe: path2d
+swug: web/api/path2d
 ---
 
-{{APIRef("Canvas API")}} {{SeeCompatTable}}
+{{apiwef("canvas a-api")}} {{seecompattabwe}}
 
-A **`Path2D`** interface da API Canvas 2D é usada para declarar caminhos que são usados posteriormente em objetos {{domxref("CanvasRenderingContext2D")}}. Os métodos de caminho da interface CanvasRenderingContext2D também estão presentes nessa interface e permitem criar caminhos que você pode reter e reproduzir conforme necessário em uma tela.
+a-a **`path2d`** i-intewface d-da api canvas 2d é u-usada pawa d-decwawaw caminhos q-que são usados p-postewiowmente em objetos {{domxwef("canvaswendewingcontext2d")}}. 😳😳😳 os métodos de caminho da intewface canvaswendewingcontext2d t-também estão pwesentes nyessa intewface e pewmitem c-cwiaw caminhos que você p-pode wetew e wepwoduziw confowme nyecessáwio em uma tewa. ( ͡o ω ͡o )
 
-## Construtores
+## constwutowes
 
-- {{domxref("Path2D.Path2D", "Path2D()")}}
-  - : `Path2D` construtor. Cria um novo objeto `Path2D`.
+- {{domxwef("path2d.path2d", "path2d()")}}
+  - : `path2d` c-constwutow. >_< cwia um nyovo o-objeto `path2d`. >w<
 
-## Metodos
+## m-metodos
 
-- {{domxref("Path2D.addPath()")}}
-  - : Adiciona um caminho ao caminho atual.
-- {{domxref("CanvasRenderingContext2D.closePath", "Path2D.closePath()")}}
-  - : Faz com que o ponto da caneta retorne ao início do sub-caminho atual. Ele tenta desenhar uma linha reta desde o ponto atual até o início. Se a forma já foi fechada ou tem apenas um ponto, essa função não faz nada.
-- {{domxref("CanvasRenderingContext2D.moveTo()", "Path2D.moveTo()")}}
-  - : Move o ponto inicial de um novo subcaminho para as coordenadas (x, y).
-- {{domxref("CanvasRenderingContext2D.lineTo()", "Path2D.lineTo()")}}
-  - : Conecta o último ponto no subcaminho às coordenadas x, y com uma linha reta.
-- {{domxref("CanvasRenderingContext2D.bezierCurveTo()", "Path2D.bezierCurveTo()")}}
-  - : Adiciona uma curva cúbica de Bézier ao caminho. Requer três pontos. Os dois primeiros pontos são pontos de controle e o terceiro é o ponto final. O ponto de partida é o último ponto no caminho atual, que pode ser alterado usando moveTo () antes de criar a curva Bézier.
-- {{domxref("CanvasRenderingContext2D.quadraticCurveTo()", "Path2D.quadraticCurveTo()")}}
-  - : Adiciona uma curva quadrática de Bézier ao caminho atual.
-- {{domxref("CanvasRenderingContext2D.arc()", "Path2D.arc()")}}
-  - : Adiciona um arco ao caminho que é centralizado na posição (x, y) com raio r iniciando em startAngle e terminando em endAngle indo na direção dada no sentido anti-horário (padrão no sentido horário).
-- {{domxref("CanvasRenderingContext2D.arcTo()", "Path2D.arcTo()")}}
-  - : Adiciona um arco ao caminho com os pontos de controle e raio dados, conectados ao ponto anterior por uma linha reta.
-- {{domxref("CanvasRenderingContext2D.ellipse()", "Path2D.ellipse()")}}
-  - : Adiciona uma elipse ao caminho que é centralizado na posição (x, y) com os raios radiusX e radiusY começando em startAngle e terminando em endAngle indo na direção determinada no sentido anti-horário (padrão no sentido horário).
-- {{domxref("CanvasRenderingContext2D.rect()", "Path2D.rect()")}}
-  - : Cria um caminho para um retângulo na posição (x, y) com um tamanho determinado por _width_ e _height_.
+- {{domxwef("path2d.addpath()")}}
+  - : adiciona um caminho ao caminho atuaw. rawr
+- {{domxwef("canvaswendewingcontext2d.cwosepath", 😳 "path2d.cwosepath()")}}
+  - : faz c-com que o ponto da caneta wetowne ao início do sub-caminho atuaw. >w< ewe tenta desenhaw u-uma winha weta desde o ponto a-atuaw até o i-início. (⑅˘꒳˘) se a fowma j-já foi fechada o-ou tem apenas um ponto, OwO essa função nyão f-faz nyada. (ꈍᴗꈍ)
+- {{domxwef("canvaswendewingcontext2d.moveto()", 😳 "path2d.moveto()")}}
+  - : move o ponto iniciaw de u-um nyovo subcaminho pawa as coowdenadas (x, 😳😳😳 y).
+- {{domxwef("canvaswendewingcontext2d.wineto()", mya "path2d.wineto()")}}
+  - : conecta o úwtimo ponto nyo subcaminho às c-coowdenadas x, mya y com uma w-winha weta. (⑅˘꒳˘)
+- {{domxwef("canvaswendewingcontext2d.beziewcuwveto()", (U ﹏ U) "path2d.beziewcuwveto()")}}
+  - : a-adiciona uma c-cuwva cúbica de béziew ao caminho. mya wequew twês pontos. ʘwʘ os d-dois pwimeiwos pontos s-são pontos de contwowe e o-o tewceiwo é o p-ponto finaw. (˘ω˘) o ponto de pawtida é o-o úwtimo ponto nyo caminho atuaw, (U ﹏ U) q-que pode sew awtewado usando moveto () antes d-de cwiaw a cuwva béziew. ^•ﻌ•^
+- {{domxwef("canvaswendewingcontext2d.quadwaticcuwveto()", (˘ω˘) "path2d.quadwaticcuwveto()")}}
+  - : a-adiciona uma cuwva q-quadwática de béziew a-ao caminho atuaw. :3
+- {{domxwef("canvaswendewingcontext2d.awc()", ^^;; "path2d.awc()")}}
+  - : adiciona um awco ao caminho que é centwawizado nya posição (x, 🥺 y) com waio w iniciando e-em stawtangwe e-e tewminando em endangwe i-indo nya diweção d-dada nyo sentido a-anti-howáwio (padwão nyo sentido howáwio). (⑅˘꒳˘)
+- {{domxwef("canvaswendewingcontext2d.awcto()", nyaa~~ "path2d.awcto()")}}
+  - : adiciona u-um awco ao caminho com os pontos de contwowe e waio dados, :3 conectados ao ponto a-antewiow pow uma winha weta. ( ͡o ω ͡o )
+- {{domxwef("canvaswendewingcontext2d.ewwipse()", mya "path2d.ewwipse()")}}
+  - : adiciona u-uma ewipse a-ao caminho que é c-centwawizado nya posição (x, y-y) com os waios w-wadiusx e wadiusy c-começando e-em stawtangwe e tewminando em endangwe indo nya d-diweção detewminada n-nyo sentido a-anti-howáwio (padwão n-nyo sentido h-howáwio). (///ˬ///✿)
+- {{domxwef("canvaswendewingcontext2d.wect()", (˘ω˘) "path2d.wect()")}}
+  - : cwia um caminho pawa um wetânguwo nya p-posição (x, ^^;; y) com um tamanho detewminado pow _width_ e _height_. (✿oωo)
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{domxref("CanvasRenderingContext2D")}}
+- {{domxwef("canvaswendewingcontext2d")}}

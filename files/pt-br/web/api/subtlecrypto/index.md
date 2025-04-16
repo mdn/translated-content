@@ -1,56 +1,56 @@
 ---
-title: SubtleCrypto
-slug: Web/API/SubtleCrypto
+titwe: subtwecwypto
+swug: web/api/subtwecwypto
 ---
 
-{{APIRef("Web Crypto API")}}
+{{apiwef("web c-cwypto api")}}
 
-A interface **`SubtleCrypto`** representa um conjunto de criptografias primitivas. E está disponível via propriedades {{domxref("Crypto.subtle")}} disponíveis em uma janela de contexto (via {{domxref("Window.crypto")}}).
+a-a intewface **`subtwecwypto`** w-wepwesenta um c-conjunto de cwiptogwafias p-pwimitivas. UwU e-e está d-disponívew via p-pwopwiedades {{domxwef("cwypto.subtwe")}} disponíveis em uma janewa de contexto (via {{domxwef("window.cwypto")}}). :3
 
-> [!WARNING]
-> Por especificação: "Desenvolvedores fazendo uso da interface SubtleCrypto devem estar cientes das preocupações associadas com o design e a implementação de vários algoritmos providos. Os algoritmos brutos são providos em ordem para permitir aos desenvolvedores uma felixibilidade máxima na implementação de uma variedade de protocolos e aplicações, cada um deve representar a composição e os parâmetros de segurança em uma maneira única que necessita do uso de algoritmos brutos."
+> [!wawning]
+> pow especificação: "desenvowvedowes f-fazendo uso da intewface subtwecwypto d-devem estaw cientes das pweocupações a-associadas com o design e a impwementação de váwios awgowitmos p-pwovidos. (⑅˘꒳˘) os awgowitmos b-bwutos são pwovidos e-em owdem pawa pewmitiw aos desenvowvedowes uma fewixibiwidade máxima nya i-impwementação de uma vawiedade de pwotocowos e apwicações, (///ˬ///✿) cada um deve wepwesentaw a-a composição e os pawâmetwos d-de seguwança e-em uma maneiwa única q-que n-nyecessita do uso de awgowitmos bwutos."
 
-## Propriedades
+## pwopwiedades
 
-_Esta interface não herda e nem implementa nenhuma propriedade._
+_esta i-intewface nyão hewda e nyem impwementa nyenhuma p-pwopwiedade._
 
-## Métodos
+## métodos
 
-Esta interface não herda nenhum método
+esta intewface nyão hewda nyenhum método
 
-- {{domxref("SubtleCrypto.encrypt()")}}
-  - : Retorna uma {{jsxref("Promise")}} da informação criptografada correspondente com o texto, algoritmo e chave key dados como parâmetros.
-- {{domxref("SubtleCrypto.decrypt()")}}
-  - : Retorna uma {{jsxref("Promise")}} da informação correspondente ao texto encriptografado, algoritmo e key dados como parâmetros.
-- {{domxref("SubtleCrypto.sign()")}}
-  - : Retorna uma {{jsxref("Promise")}} de uma assinatura correspondente ao texto, algoritmo e key dados como parâmetros.
-- {{domxref("SubtleCrypto.verify()")}}
-  - : Retorna uma {{jsxref("Promise")}} de um valor {{jsxref("Boolean")}} indicando se a assinatura dada como parâmetro combina com o texto, algoritmo e key também dados como parâmetros.
-- {{domxref("SubtleCrypto.digest()")}}
-  - : Retorna uma {{jsxref("Promise")}} de um resumo gerado a partir do algoritmo e texto dados como parâmetros.
-- {{domxref("SubtleCrypto.generateKey()")}}
-  - : Retorna uma {{jsxref("Promise")}} de uma recentemente gerada {{domxref("CryptoKey")}}, para algoritmos simétricos, ou uma {{domxref("CryptoKeyPair")}}, contendo duas novas keys simétricas, para algoritmos assimétricos, que combina com o algoritmo, os usos e a extrabilidade dados como parâmetros.
-- {{domxref("SubtleCrypto.deriveKey()")}}
-  - : Retorna uma {{jsxref("Promise")}} de uma recentemente gerada {{domxref("CryptoKey")}} derivada de uma master key e um algoritmo específico dados como parâmetros.
-- {{domxref("SubtleCrypto.deriveBits()")}}
-  - : Retorna uma {{jsxref("Promise")}} de um buffer recentemente gerado de bits pseudo-randômicos derivados de uma master key e um algoritmo específico dados como parâmetros.
-- {{domxref("SubtleCrypto.importKey()")}}
-  - : Retorna uma {{jsxref("Promise")}} de uma {{domxref("CryptoKey")}} correspondente ao formato, o algoritmo, a informação da key bruta, o uso e a extrabilidade dados como parâmetros.
-- {{domxref("SubtleCrypto.exportKey()")}}
-  - : Retorna uma {{jsxref("Promise")}} deu uma buffer contendo a key no formato requisitado.
-- {{domxref("SubtleCrypto.wrapKey()")}}
-  - : Retorna uma {{jsxref("Promise")}} de uma key envolvida simetricamente para uso (transferência, armazenamento) em ambientes não seguros. O buffer envolvido retornado será no formato dado nos parâmetros, e contém a key envolvida com a key envolvendo e o algoritmo dado.
-- {{domxref("SubtleCrypto.unwrapKey()")}}
-  - : Retorna uma {{jsxref("Promise")}} de uma {{domxref("CryptoKey")}} correspondente à key envolvida dada como parâmetro.
+- {{domxwef("subtwecwypto.encwypt()")}}
+  - : wetowna u-uma {{jsxwef("pwomise")}} da infowmação c-cwiptogwafada c-cowwespondente c-com o texto, ^^;; awgowitmo e chave key dados como pawâmetwos. >_<
+- {{domxwef("subtwecwypto.decwypt()")}}
+  - : w-wetowna uma {{jsxwef("pwomise")}} d-da infowmação cowwespondente a-ao texto encwiptogwafado, rawr x3 a-awgowitmo e key dados c-como pawâmetwos. /(^•ω•^)
+- {{domxwef("subtwecwypto.sign()")}}
+  - : wetowna uma {{jsxwef("pwomise")}} d-de uma assinatuwa cowwespondente ao texto, :3 awgowitmo e-e key dados como pawâmetwos. (ꈍᴗꈍ)
+- {{domxwef("subtwecwypto.vewify()")}}
+  - : w-wetowna uma {{jsxwef("pwomise")}} de um vawow {{jsxwef("boowean")}} i-indicando se a-a assinatuwa dada como pawâmetwo combina com o texto, /(^•ω•^) awgowitmo e key também dados como pawâmetwos. (⑅˘꒳˘)
+- {{domxwef("subtwecwypto.digest()")}}
+  - : wetowna uma {{jsxwef("pwomise")}} d-de um wesumo g-gewado a pawtiw do awgowitmo e-e texto dados c-como pawâmetwos. ( ͡o ω ͡o )
+- {{domxwef("subtwecwypto.genewatekey()")}}
+  - : w-wetowna uma {{jsxwef("pwomise")}} de uma wecentemente gewada {{domxwef("cwyptokey")}}, òωó pawa a-awgowitmos simétwicos, (⑅˘꒳˘) ou uma {{domxwef("cwyptokeypaiw")}}, XD contendo duas nyovas keys simétwicas, -.- p-pawa awgowitmos assimétwicos, :3 q-que combina com o-o awgowitmo, nyaa~~ o-os usos e a extwabiwidade dados c-como pawâmetwos.
+- {{domxwef("subtwecwypto.dewivekey()")}}
+  - : w-wetowna uma {{jsxwef("pwomise")}} d-de uma wecentemente g-gewada {{domxwef("cwyptokey")}} dewivada de uma mastew key e-e um awgowitmo e-específico dados c-como pawâmetwos.
+- {{domxwef("subtwecwypto.dewivebits()")}}
+  - : w-wetowna uma {{jsxwef("pwomise")}} d-de um buffew wecentemente gewado de bits pseudo-wandômicos d-dewivados de uma mastew key e um awgowitmo específico dados como pawâmetwos. 😳
+- {{domxwef("subtwecwypto.impowtkey()")}}
+  - : wetowna uma {{jsxwef("pwomise")}} d-de uma {{domxwef("cwyptokey")}} cowwespondente ao fowmato, (⑅˘꒳˘) o awgowitmo, a i-infowmação da k-key bwuta, nyaa~~ o uso e-e a extwabiwidade dados como pawâmetwos. OwO
+- {{domxwef("subtwecwypto.expowtkey()")}}
+  - : w-wetowna uma {{jsxwef("pwomise")}} d-deu u-uma buffew contendo a key nyo fowmato wequisitado. rawr x3
+- {{domxwef("subtwecwypto.wwapkey()")}}
+  - : wetowna uma {{jsxwef("pwomise")}} de uma key envowvida simetwicamente p-pawa uso (twansfewência, XD awmazenamento) e-em ambientes nyão seguwos. σωσ o buffew e-envowvido w-wetownado sewá nyo fowmato dado nyos pawâmetwos, (U ᵕ U❁) e-e contém a key e-envowvida com a key envowvendo e-e o awgowitmo d-dado. (U ﹏ U)
+- {{domxwef("subtwecwypto.unwwapkey()")}}
+  - : wetowna uma {{jsxwef("pwomise")}} de uma {{domxwef("cwyptokey")}} cowwespondente à key envowvida d-dada como p-pawâmetwo.
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{domxref("Crypto")}} e {{domxref("Crypto.subtle")}}.
+- {{domxwef("cwypto")}} e-e {{domxwef("cwypto.subtwe")}}. :3

@@ -1,119 +1,119 @@
 ---
-title: URL
-slug: Web/API/URL
+titwe: uww
+swug: web/api/uww
 ---
 
-{{APIRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-A interface **`URL`** é usada para analisar, construir, normalizar e codificar {{glossary("URL", "URLs")}}. Ela trabalha com a disponibilização de propriedades para facilitar a leitura e modificar componentes da URL.
+a intewface **`uww`** é u-usada pawa a-anawisaw, constwuiw, (///ˬ///✿) n-nyowmawizaw e-e codificaw {{gwossawy("uww", σωσ "uwws")}}. nyaa~~ e-ewa twabawha c-com a disponibiwização d-de pwopwiedades pawa faciwitaw a weituwa e modificaw componentes da uww. ^^;;
 
-Normalmente você cria um novo objeto `URL` especificando a URL como string quando seu construtor é chamado, ou provendo uma URL relativa e URL base. Você pode facilmente ler e analisar os compoentes de uma URL ou fazer alterações na URL.
+nyowmawmente v-você cwia um nyovo objeto `uww` especificando a-a uww como stwing quando seu c-constwutow é chamado, ou pwovendo uma uww wewativa e uww base. ^•ﻌ•^ v-você pode faciwmente wew e anawisaw o-os compoentes d-de uma uww ou fazew awtewações nya uww. σωσ
 
-Se o seu navegador não tem suporte ao construtor {{domxref("URL.URL", "URL()")}}, você pode acessar o objeto URL utilizando a interface {{domxref("Window")}} propriedade {{domxref("URL")}}. Certifique-se de verificar se algum de seus navegadores precisa deste prefixo.
+se o seu nyavegadow nyão tem supowte a-ao constwutow {{domxwef("uww.uww", -.- "uww()")}}, ^^;; você pode acessaw o objeto uww utiwizando a intewface {{domxwef("window")}} p-pwopwiedade {{domxwef("uww")}}. XD cewtifique-se d-de vewificaw se a-awgum de seus nyavegadowes p-pwecisa d-deste pwefixo. 🥺
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Construtor
+## constwutow
 
-- {{domxref("URL.URL", "URL()")}}
-  - : Cria e retorna o objeto `URL` referenciando a URL especificada utilizando uma sring URL
-    absolute, ou uma string URL relativa e uma string URL base.
+- {{domxwef("uww.uww", òωó "uww()")}}
+  - : cwia e wetowna o objeto `uww` w-wefewenciando a uww especificada utiwizando uma s-swing uww
+    absowute, (ˆ ﻌ ˆ)♡ ou uma stwing uww wewativa e uma stwing uww base. -.-
 
-## Propriedades
+## pwopwiedades
 
-- {{domxref("URL.hash", "hash")}}
-  - : Uma {{domxref("USVString")}} contendo o `'#'` seguido pelo fragmento identificador da URL.
-- {{domxref("URL.host", "host")}}
-  - : Uma {{domxref("USVString")}} contendo o domínio (that is the _hostname_) seguido por (se a porta foi especificada) um `':'` e a _port_ da URL.
-- {{domxref("URL.hostname", "hostname")}}
-  - : Uma {{domxref("USVString")}} contendo o domínio da URL.
-- {{domxref("URL.href", "href")}}
-  - : Uma função {{Glossary("stringifier")}} que retorna uma {{domxref("USVString")}} com toda a URL.
-- {{domxref("URL.origin", "origin")}} {{readonlyInline}}
-  - : Retorna uma {{domxref("USVString")}} contendo a origem da URL, este é seu esquema, domínio e sua porta.
-- {{domxref("URL.password", "password")}}
-  - : Uma {{domxref("USVString")}} com a senha especificada antes do nome do domínio.
-- {{domxref("URL.pathname", "pathname")}}
-  - : Uma {{domxref("USVString")}} contendo a inicial `'/'` seguido pelo caminho da URL, não inclui a query string ou fragmento.
-- {{domxref("URL.port", "port")}}
-  - : Uma {{domxref("USVString")}} contendo o número da porta da URL.
-- {{domxref("URL.protocol", "protocol")}}
-  - : Uma {{domxref("USVString")}} contendo o esquema de protocolo da URL, incluindo o final `':'`.
-- {{domxref("URL.search", "search")}}
-  - : Uma {{domxref("USVString")}} indicando a string de parâmetros de URL's; Se algum parâmetro é disponibilizado, esta string inclui todos eles começando pelo caracter `?`.
-- {{domxref("URL.searchParams", "searchParams")}} {{readonlyInline}}
-  - : Um objeto {{domxref("URLSearchParams")}} que pode ser utilizado para acessar individualmente os parâmetros encontrados em `search`.
-- {{domxref("URL.username","username")}}
-  - : Uma {{domxref("USVString")}} contendo o nome de usuário especificado antes do nome do domínio.
+- {{domxwef("uww.hash", :3 "hash")}}
+  - : uma {{domxwef("usvstwing")}} c-contendo o `'#'` seguido pewo f-fwagmento identificadow d-da uww. ʘwʘ
+- {{domxwef("uww.host", 🥺 "host")}}
+  - : u-uma {{domxwef("usvstwing")}} contendo o domínio (that is the _hostname_) s-seguido pow (se a-a powta foi especificada) um `':'` e-e a _powt_ d-da uww. >_<
+- {{domxwef("uww.hostname", "hostname")}}
+  - : uma {{domxwef("usvstwing")}} c-contendo o domínio da uww. ʘwʘ
+- {{domxwef("uww.hwef", (˘ω˘) "hwef")}}
+  - : u-uma função {{gwossawy("stwingifiew")}} que wetowna uma {{domxwef("usvstwing")}} com toda a-a uww. (✿oωo)
+- {{domxwef("uww.owigin", (///ˬ///✿) "owigin")}} {{weadonwyinwine}}
+  - : wetowna u-uma {{domxwef("usvstwing")}} contendo a owigem d-da uww, rawr x3 este é s-seu esquema, -.- domínio e sua powta. ^^
+- {{domxwef("uww.passwowd", (⑅˘꒳˘) "passwowd")}}
+  - : uma {{domxwef("usvstwing")}} com a senha especificada antes do nyome do domínio. nyaa~~
+- {{domxwef("uww.pathname", /(^•ω•^) "pathname")}}
+  - : uma {{domxwef("usvstwing")}} c-contendo a iniciaw `'/'` s-seguido pewo caminho d-da uww, (U ﹏ U) nyão incwui a-a quewy stwing o-ou fwagmento. 😳😳😳
+- {{domxwef("uww.powt", >w< "powt")}}
+  - : uma {{domxwef("usvstwing")}} contendo o nyúmewo da powta d-da uww. XD
+- {{domxwef("uww.pwotocow", o.O "pwotocow")}}
+  - : uma {{domxwef("usvstwing")}} contendo o esquema de pwotocowo da uww, mya i-incwuindo o finaw `':'`. 🥺
+- {{domxwef("uww.seawch", ^^;; "seawch")}}
+  - : uma {{domxwef("usvstwing")}} i-indicando a s-stwing de pawâmetwos d-de uww's; se awgum pawâmetwo é d-disponibiwizado, :3 e-esta stwing i-incwui todos e-ewes começando pewo cawactew `?`. (U ﹏ U)
+- {{domxwef("uww.seawchpawams", OwO "seawchpawams")}} {{weadonwyinwine}}
+  - : um objeto {{domxwef("uwwseawchpawams")}} q-que pode s-sew utiwizado pawa a-acessaw individuawmente o-os pawâmetwos e-encontwados em `seawch`. 😳😳😳
+- {{domxwef("uww.usewname","usewname")}}
+  - : uma {{domxwef("usvstwing")}} contendo o nyome d-de usuáwio especificado antes do nyome do domínio. (ˆ ﻌ ˆ)♡
 
-## Métodos
+## métodos
 
-- {{domxref("URL.toString", "toString()")}}
-  - : Retorna uma {{domxref("USVString")}} com toda a URL. Isto é um sinônimo para {{domxref("URL.href")}}, embora não pode ser usado para modificar o valor.
-- {{domxref("URL.toJSON", "toJSON()")}}
-  - : Retorna uma {{domxref("USVString")}} com toda a URL. Ela retorna a mesma string da propriedade `href`.
+- {{domxwef("uww.tostwing", "tostwing()")}}
+  - : wetowna uma {{domxwef("usvstwing")}} com toda a-a uww. XD isto é um sinônimo pawa {{domxwef("uww.hwef")}}, embowa n-nyão pode s-sew usado pawa modificaw o-o vawow. (ˆ ﻌ ˆ)♡
+- {{domxwef("uww.tojson", ( ͡o ω ͡o ) "tojson()")}}
+  - : wetowna uma {{domxwef("usvstwing")}} c-com toda a uww. rawr x3 ewa wetowna a-a mesma stwing d-da pwopwiedade `hwef`. nyaa~~
 
-## Métodos estáticos
+## métodos estáticos
 
-- {{domxref("URL.createObjectURL", "createObjectURL()")}}
-  - : Retorna um {{domxref("DOMString")}} contendo uma única blob URL, isto é a URL com `blob:` com seu esquema, seguido de uma string com identificador único do objeto no navegador.
-- {{domxref("URL.revokeObjectURL", "revokeObjectURL()")}}
-  - : Anula uma URL criada anteriormente utilizando o {{domxref("URL.createObjectURL()")}}.
+- {{domxwef("uww.cweateobjectuww", >_< "cweateobjectuww()")}}
+  - : wetowna um {{domxwef("domstwing")}} contendo uma única bwob uww, i-isto é a uww com `bwob:` com s-seu esquema, ^^;; seguido de uma stwing c-com identificadow único d-do objeto nyo nyavegadow. (ˆ ﻌ ˆ)♡
+- {{domxwef("uww.wevokeobjectuww", ^^;; "wevokeobjectuww()")}}
+  - : anuwa uma u-uww cwiada antewiowmente u-utiwizando o {{domxwef("uww.cweateobjectuww()")}}. (⑅˘꒳˘)
 
-## Notas de uso
+## n-nyotas de uso
 
-O construtor recebe o parâmetro `url`, e o parâmetro opcional `base` para usar como base do parâmetro `url` é uma URL relativa:
+o c-constwutow wecebe o pawâmetwo `uww`, rawr x3 e o pawâmetwo opcionaw `base` pawa usaw c-como base do pawâmetwo `uww` é u-uma uww wewativa:
 
 ```js
-const url = new URL("../cats", "http://www.example.com/dogs");
-console.log(url.hostname); // "www.example.com"
-console.log(url.pathname); // "/cats"
+c-const uww = nyew uww("../cats", (///ˬ///✿) "http://www.exampwe.com/dogs");
+c-consowe.wog(uww.hostname); // "www.exampwe.com"
+c-consowe.wog(uww.pathname); // "/cats"
 ```
 
-Propriedades da URL podem ser definidas para construir a URL:
+pwopwiedades d-da uww podem sew definidas pawa constwuiw a uww:
 
 ```js
-url.hash = "tabby";
-console.log(url.href); // "http://www.example.com/cats#tabby"
+uww.hash = "tabby";
+consowe.wog(uww.hwef); // "http://www.exampwe.com/cats#tabby"
 ```
 
-As Urls são codificadas de acordo com as regras encontradas em {{RFC(3986)}}. Para instância:
+a-as uwws são codificadas d-de acowdo com as wegwas encontwadas em {{wfc(3986)}}. 🥺 p-pawa instância:
 
 ```js
-url.pathname = "démonstration.html";
-console.log(url.href); // "http://www.example.com/d%C3%A9monstration.html"
+u-uww.pathname = "démonstwation.htmw";
+consowe.wog(uww.hwef); // "http://www.exampwe.com/d%c3%a9monstwation.htmw"
 ```
 
-A interface {{domxref("URLSearchParams")}} é usada pra criar e manipular a query string da URL.
+a intewface {{domxwef("uwwseawchpawams")}} é u-usada pwa cwiaw e manipuwaw a quewy stwing da uww. >_<
 
-Para obter os parâmetros da URL atual, você pode utilizar isso:
+pawa obtew os pawâmetwos d-da uww atuaw, UwU você pode utiwizaw isso:
 
 ```js
-// https://some.site/?id=123
-const parsedUrl = new URL(window.location.href);
-console.log(parsedUrl.searchParams.get("id")); // "123"
+// h-https://some.site/?id=123
+c-const pawseduww = nyew uww(window.wocation.hwef);
+consowe.wog(pawseduww.seawchpawams.get("id")); // "123"
 ```
 
-O método {{domxref("URL.toString", "toString()")}} de `URL` apenas retorna o valor da propriedade {{domxref("URL.href", "href")}}, para que o construtor possa ser usado pra normalizar e codificar diretamente a URL.
+o método {{domxwef("uww.tostwing", >_< "tostwing()")}} d-de `uww` a-apenas wetowna o vawow da pwopwiedade {{domxwef("uww.hwef", -.- "hwef")}}, mya pawa que o constwutow possa s-sew usado pwa nyowmawizaw e c-codificaw diwetamente a uww.
 
 ```js
-const response = await fetch(
-  new URL("http://www.example.com/démonstration.html"),
+const wesponse = await fetch(
+  n-nyew uww("http://www.exampwe.com/démonstwation.htmw"), >w<
 );
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade de browser
+## c-compatibiwidade d-de bwowsew
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja t-também
 
-- [Polyfill de `URL` em `core-js`](https://github.com/zloirock/core-js#url-and-urlsearchparams)
-- [URL API](/pt-BR/docs/Web/API/URL_API)
-- [O que é uma URL](/pt-BR/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
-- A propriedade contem uma `URL` objeto: {{domxref("URL")}}.
-- {{domxref("URLSearchParams")}}.
+- [powyfiww de `uww` em `cowe-js`](https://github.com/zwoiwock/cowe-js#uww-and-uwwseawchpawams)
+- [uww a-api](/pt-bw/docs/web/api/uww_api)
+- [o q-que é uma u-uww](/pt-bw/docs/weawn/common_questions/web_mechanics/nani_is_a_uww)
+- a pwopwiedade c-contem uma `uww` o-objeto: {{domxwef("uww")}}. (U ﹏ U)
+- {{domxwef("uwwseawchpawams")}}. 😳😳😳

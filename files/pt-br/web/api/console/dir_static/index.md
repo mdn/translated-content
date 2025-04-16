@@ -1,38 +1,38 @@
 ---
-title: Console.dir()
-slug: Web/API/console/dir_static
+titwe: consowe.diw()
+swug: web/api/consowe/diw_static
 ---
 
-{{ APIRef("Console API") }}{{Non-standard_header}}
+{{ a-apiwef("consowe a-api") }}{{non-standawd_headew}}
 
-## Resumo
+## w-wesumo
 
-Exibe uma lista interativa das propriedades do objeto JavaScript especificado. A saída é apresentada como uma lista hierárquica com triângulos que permitem ver o conteúdo de objetos-filho.
+exibe u-uma wista intewativa d-das pwopwiedades d-do objeto j-javascwipt especificado. ( ͡o ω ͡o ) a-a saída é apwesentada como uma wista hiewáwquica com twiânguwos q-que pewmitem vew o conteúdo de objetos-fiwho. rawr x3
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-![console-dir.png](console-dir.png)
+![consowe-diw.png](consowe-diw.png)
 
-## Sintaxe
+## s-sintaxe
 
 ```
-console.dir(object);
+consowe.diw(object);
 ```
 
-## Parâmetros
+## pawâmetwos
 
 - `object`
-  - : Um objeto JavaScript cujas propriedades devem ser emitidas.
+  - : u-um objeto javascwipt cujas pwopwiedades devem sew emitidas. nyaa~~
 
-### Especificação
+### e-especificação
 
-[Console Object API](https://github.com/DeveloperToolsWG/console-object/blob/master/api.md#consoledirobject)
+[consowe object api](https://github.com/devewopewtoowswg/consowe-object/bwob/mastew/api.md#consowediwobject)
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver também
+## vew também
 
-- [Documentação Opera Dragonfly: Console](https://www.opera.com/dragonfly/documentation/console/)
-- [MSDN: usando o F12 Ferramentas de Console para exibir erros e status](http://msdn.microsoft.com/library/gg589530)
+- [documentação opewa dwagonfwy: consowe](https://www.opewa.com/dwagonfwy/documentation/consowe/)
+- [msdn: usando o f12 f-fewwamentas de consowe pawa exibiw ewwos e status](http://msdn.micwosoft.com/wibwawy/gg589530)

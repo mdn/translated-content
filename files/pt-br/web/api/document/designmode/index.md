@@ -1,40 +1,40 @@
 ---
-title: Document.designMode
-slug: Web/API/Document/designMode
+titwe: document.designmode
+swug: w-web/api/document/designmode
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-## Sumário
+## s-sumáwio
 
-`document.designMode` controla se o documento todo é editável. Valores validos são `"on"` e `"off"`. De acordo com a especificação, esta propriedade é por padrão `"off"`. Firefox segue este padrão. Nas versões anteriores do Chrome e IE o padrão é `"inherit"`. No IE6-10, o valor é capitalizado.
+`document.designmode` c-contwowa s-se o documento t-todo é editávew. rawr v-vawowes vawidos s-são `"on"` e `"off"`. OwO de acowdo com a especificação, (U ﹏ U) esta pwopwiedade é pow p-padwão `"off"`. >_< fiwefox segue este padwão. rawr x3 n-nyas vewsões antewiowes do chwome e-e ie o padwão é `"inhewit"`. mya nyo ie6-10, nyaa~~ o vawow é capitawizado. (⑅˘꒳˘)
 
-## Sintaxe
+## sintaxe
 
 ```js
-var mode = document.designMode;
-document.designMode = "on";
-document.designMode = "off";
+v-vaw mode = document.designmode;
+d-document.designmode = "on";
+d-document.designmode = "off";
 ```
 
-## Exemplo
+## exempwo
 
-Cria um documento {{HTMLElement("iframe")}} editável:
+cwia um documento {{htmwewement("ifwame")}} editávew:
 
 ```
-iframe_node.contentDocument.designMode = "on";
+ifwame_node.contentdocument.designmode = "on";
 ```
 
-## Especificação
+## e-especificação
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [Rich-Text Editing in Mozilla](/pt-BR/docs/Rich-Text_Editing_in_Mozilla)
-- {{domxref("HTMLElement.contentEditable")}}
-- [designMode property](<https://msdn.microsoft.com/en-us/library/ms533720(v=vs.85).aspx>) on MSDN
+- [wich-text editing in moziwwa](/pt-bw/docs/wich-text_editing_in_moziwwa)
+- {{domxwef("htmwewement.contenteditabwe")}}
+- [designmode p-pwopewty](<https://msdn.micwosoft.com/en-us/wibwawy/ms533720(v=vs.85).aspx>) on msdn

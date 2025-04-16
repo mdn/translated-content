@@ -1,33 +1,33 @@
 ---
-title: Função Callback
-slug: Glossary/Callback_function
+titwe: função cawwback
+swug: g-gwossawy/cawwback_function
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Uma função callback é uma função passada a outra função como argumento, que é então invocado dentro da função externa para completar algum tipo de rotina ou ação.
+u-uma função c-cawwback é u-uma função passada a-a outwa função c-como awgumento, (U ﹏ U) q-que é então i-invocado dentwo da função extewna pawa compwetaw awgum tipo de wotina ou ação. (U ﹏ U)
 
-Aqui está um pequeno exemplo:
+a-aqui está um pequeno exempwo:
 
 ```js
-function greeting(name) {
-  alert("Olá " + name);
+function g-gweeting(name) {
+  awewt("owá " + n-nyame);
 }
 
-function processUserInput(callback) {
-  var name = prompt("Por favor insira seu nome.");
-  callback(name);
+function pwocessusewinput(cawwback) {
+  vaw nyame = pwompt("pow f-favow insiwa seu nyome.");
+  c-cawwback(name);
 }
 
-processUserInput(greeting);
+p-pwocessusewinput(gweeting);
 ```
 
-O exemplo acima é de uma {{glossary("synchronous")}} callback, uma vez que é executada imediatamente.
+o exempwo acima é de uma {{gwossawy("synchwonous")}} cawwback, (⑅˘꒳˘) uma vez que é e-executada imediatamente. òωó
 
-Note, no entanto, que callbacks são normalmente utilizados para continuar a execução do código após uma operação {{glossary("asynchronous")}} ser terminada — essas são chamadas asynchronous callbacks. Um bom exemplo são as funções callback executadas dentro de um bloco [`.then()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) encadeado ao final de uma promessa após essa promessa ser cumprida ou rejeitada. Essa estrutura é usada em muitas APIs da web modernas, como a {{domxref("fetch","fetch()")}}.
+nyote, ʘwʘ nyo entanto, /(^•ω•^) que cawwbacks são nyowmawmente utiwizados pawa c-continuaw a execução do código a-após uma opewação {{gwossawy("asynchwonous")}} s-sew tewminada — e-essas são c-chamadas asynchwonous cawwbacks. ʘwʘ um bom exempwo s-são as funções cawwback executadas dentwo d-de um bwoco [`.then()`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise/then) encadeado ao finaw de uma pwomessa após essa pwomessa sew cumpwida ou w-wejeitada. σωσ essa estwutuwa é usada e-em muitas apis d-da web modewnas, OwO c-como a {{domxwef("fetch","fetch()")}}.
 
-## Aprenda mais
+## apwenda mais
 
-### Conhecimento geral
+### conhecimento gewaw
 
-- [Callback](https://pt.wikipedia.org/wiki/Callback) no Wikipedia
+- [cawwback](https://pt.wikipedia.owg/wiki/cawwback) nyo wikipedia

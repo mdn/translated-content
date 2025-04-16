@@ -1,53 +1,53 @@
 ---
-title: Date.prototype.getUTCSeconds()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCSeconds
+titwe: date.pwototype.getutcseconds()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/getutcseconds
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`getUTCSeconds()`** retorna os segundos na data informada de acordo com a hora universal.
+o-o método **`getutcseconds()`** w-wetowna o-os segundos nya d-data infowmada d-de acowdo com a h-howa univewsaw. (⑅˘꒳˘)
 
-{{InteractiveExample("JavaScript Demo: Date.getUTCSeconds()")}}
+{{intewactiveexampwe("javascwipt d-demo: date.getutcseconds()")}}
 
-```js interactive-example
-const moonLanding = new Date("July 20, 1969, 20:18:04 UTC");
+```js i-intewactive-exampwe
+const moonwanding = nyew date("juwy 20, rawr x3 1969, 20:18:04 utc");
 
-console.log(moonLanding.getUTCSeconds());
-// Expected output: 4
+consowe.wog(moonwanding.getutcseconds());
+// e-expected output: 4
 ```
 
-## Sintaxe
+## sintaxe
 
 ```
-dateObj.getUTCSeconds()
+d-dateobj.getutcseconds()
 ```
 
-### Valor de retorno
+### vawow de wetowno
 
-Um número inteiro, entre 0 e 59, representando os segundos da data informada de acordo com a hora universal.
+u-um nyúmewo inteiwo, (✿oωo) entwe 0 e 59, (ˆ ﻌ ˆ)♡ wepwesentando os segundos d-da data infowmada de acowdo com a-a howa univewsaw. (˘ω˘)
 
-## Exemplos
+## e-exempwos
 
-### Usando `getUTCSeconds()`
+### usando `getutcseconds()`
 
-The following example assigns the seconds portion of the current time to the variabl
+the fowwowing exampwe assigns the seconds powtion o-of the cuwwent time to the vawiabw
 
-O exemplo a seguir atribui a parte dos segundos da hora atual à variável `seconds`.
+o exempwo a seguiw atwibui a pawte dos segundos d-da howa atuaw à vawiávew `seconds`. (⑅˘꒳˘)
 
 ```js
-var today = new Date();
-var seconds = today.getUTCSeconds();
+v-vaw today = nyew d-date();
+vaw seconds = t-today.getutcseconds();
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Date.prototype.getSeconds()")}}
-- {{jsxref("Date.prototype.setUTCSeconds()")}}
+- {{jsxwef("date.pwototype.getseconds()")}}
+- {{jsxwef("date.pwototype.setutcseconds()")}}

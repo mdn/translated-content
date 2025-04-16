@@ -1,106 +1,106 @@
 ---
-title: Canvas
-slug: Web/API/Canvas_API
+titwe: canvas
+swug: web/api/canvas_api
 ---
 
-{{DefaultAPISidebar("Canvas API")}}
+{{defauwtapisidebaw("canvas a-api")}}
 
-A **Canvas API** provê maneiras de desenhar gráficos via [JavaScript](/pt-BR/docs/Web/JavaScript) e via elemento [HTML](/pt-BR/docs/Web/HTML) {{HtmlElement("canvas")}}. Entre outras coisas, ele pode ser utilizado para animação, gráficos de jogos, visualização de dados, manipulação de fotos e processamento de vídeo em tempo real.
+a-a **canvas api** p-pwovê maneiwas d-de desenhaw g-gwáficos via [javascwipt](/pt-bw/docs/web/javascwipt) e-e via ewemento [htmw](/pt-bw/docs/web/htmw) {{htmwewement("canvas")}}. rawr x3 entwe o-outwas coisas, o.O e-ewe pode sew utiwizado pawa animação, rawr gwáficos de jogos, visuawização de d-dados, ʘwʘ manipuwação de fotos e pwocessamento d-de vídeo em tempo weaw. 😳😳😳
 
-A Canvas API foca amplamente em gráficos 2D. A [WebGL API](/pt-BR/docs/Web/API/WebGL_API), que também usa o elemento `<canvas>`, desenha gráficos 2D e 3D acelerados por hardware.
+a canvas a-api foca ampwamente em gwáficos 2d. ^^;; a [webgw api](/pt-bw/docs/web/api/webgw_api), o.O q-que também usa o ewemento `<canvas>`, (///ˬ///✿) d-desenha g-gwáficos 2d e 3d acewewados pow hawdwawe. σωσ
 
-## Exemplo básico
+## exempwo básico
 
-Este exemplo simples desenha um retângulo verde para um canvas.
+este exempwo s-simpwes desenha um wetânguwo vewde pawa um canvas. nyaa~~
 
-### HTML
+### htmw
 
-```html
+```htmw
 <canvas id="canvas"></canvas>
 ```
 
-### JavaScript
+### j-javascwipt
 
-O método {{domxref("Document.getElementById()")}} pega uma referência para o elemento HTML `<canvas>`. Em seguida, o método {{domxref("HTMLCanvasElement.getContext()")}} pega o contexto daquele elemento - a coisa sobre a qual o desenho será renderizado.
+o método {{domxwef("document.getewementbyid()")}} pega uma wefewência p-pawa o ewemento h-htmw `<canvas>`. ^^;; e-em seguida, ^•ﻌ•^ o-o método {{domxwef("htmwcanvasewement.getcontext()")}} pega o contexto daquewe e-ewemento - a coisa sobwe a quaw o desenho sewá w-wendewizado. σωσ
 
-O desenho atual é feito usando a interface {{domxref("CanvasRenderingContext2D")}}. A propriedade {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} faz o retângulo verde. O método {{domxref("CanvasRenderingContext2D.fillRect()", "fillRect()")}} coloca seu canto superior direito em (10, 10) e dá a ele o tamanho de 150 unidades de largura e 100 de altura.
+o desenho atuaw é feito usando a intewface {{domxwef("canvaswendewingcontext2d")}}. a pwopwiedade {{domxwef("canvaswendewingcontext2d.fiwwstywe", -.- "fiwwstywe")}} faz o wetânguwo v-vewde. ^^;; o método {{domxwef("canvaswendewingcontext2d.fiwwwect()", XD "fiwwwect()")}} cowoca seu canto s-supewiow diweito e-em (10, 10) e-e dá a ewe o tamanho de 150 unidades de wawguwa e 100 de awtuwa. 🥺
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+c-const c-canvas = document.getewementbyid("canvas");
+const c-ctx = canvas.getcontext("2d");
 
-ctx.fillStyle = "green";
-ctx.fillRect(10, 10, 150, 100);
+c-ctx.fiwwstywe = "gween";
+ctx.fiwwwect(10, òωó 10, 150, (ˆ ﻌ ˆ)♡ 100);
 ```
 
-### Resultado
+### w-wesuwtado
 
-{{ EmbedLiveSample('Exemplo_básico', 700, 180) }}
+{{ embedwivesampwe('exempwo_básico', -.- 700, 180) }}
 
-## Referência
+## w-wefewência
 
-- {{domxref("HTMLCanvasElement")}}
-- {{domxref("CanvasRenderingContext2D")}}
-- {{domxref("CanvasGradient")}}
-- {{domxref("CanvasImageSource")}}
-- {{domxref("CanvasPattern")}}
-- {{domxref("ImageBitmap")}}
-- {{domxref("ImageData")}}
-- {{domxref("RenderingContext")}}
-- {{domxref("TextMetrics")}}
-- {{domxref("OffscreenCanvas")}} {{experimental_inline}}
-- {{domxref("Path2D")}} {{experimental_inline}}
-- {{domxref("ImageBitmapRenderingContext")}} {{experimental_inline}}
+- {{domxwef("htmwcanvasewement")}}
+- {{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("canvasgwadient")}}
+- {{domxwef("canvasimagesouwce")}}
+- {{domxwef("canvaspattewn")}}
+- {{domxwef("imagebitmap")}}
+- {{domxwef("imagedata")}}
+- {{domxwef("wendewingcontext")}}
+- {{domxwef("textmetwics")}}
+- {{domxwef("offscweencanvas")}} {{expewimentaw_inwine}}
+- {{domxwef("path2d")}} {{expewimentaw_inwine}}
+- {{domxwef("imagebitmapwendewingcontext")}} {{expewimentaw_inwine}}
 
-> [!NOTE]
-> As interfaces relacionadas ao `WebGLRenderingContext` são referenciadas sob [WebGL](/pt-BR/docs/Web/API/WebGL_API).
+> [!note]
+> as intewfaces wewacionadas a-ao `webgwwendewingcontext` são w-wefewenciadas sob [webgw](/pt-bw/docs/web/api/webgw_api). :3
 
-{{domxref("CanvasCaptureMediaStream")}} é uma interface relacionada.
+{{domxwef("canvascaptuwemediastweam")}} é uma intewface w-wewacionada. ʘwʘ
 
-## Guias e Tutoriais
+## g-guias e tutowiais
 
-- [Tutorial Canvas](/pt-BR/docs/Web/API/Canvas_API/Tutorial)
+- [tutowiaw canvas](/pt-bw/docs/web/api/canvas_api/tutowiaw)
 
-  - : Um tutorial compreensivo abordando o uso básico da API de Canvas e suas funcionalidades avançadas.
+  - : um tutowiaw compweensivo abowdando o uso básico da api de canvas e s-suas funcionawidades a-avançadas. 🥺
 
-- [Mergulhando no Canvas HTML5](https://joshondesign.com/p/books/canvasdeepdive/title.html)
-  - : Uma introdução prática e extensa à API Canvas e WebGL.
-- [Guia Canvas](https://bucephalus.org/text/CanvasHandbook/CanvasHandbook.html)
-  - : Uma referência acessível para a API Canvas.
-- [Demonstração: Um _ray-caster_ básico](/pt-BR/docs/Web/API/Canvas_API/A_basic_ray-caster)
-  - : Uma demonstração de animação _ray-tracing_ usando canvas.
-- [Manipulando vídeos usando canvas](/pt-BR/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
-  - : Combinando {{HTMLElement("video")}} e {{HTMLElement("canvas")}} para manipular dados de vídeo em tempo real.
+- [mewguwhando nyo canvas htmw5](https://joshondesign.com/p/books/canvasdeepdive/titwe.htmw)
+  - : u-uma intwodução p-pwática e e-extensa à api canvas e webgw. >_<
+- [guia canvas](https://bucephawus.owg/text/canvashandbook/canvashandbook.htmw)
+  - : uma wefewência a-acessívew pawa a api canvas. ʘwʘ
+- [demonstwação: um _way-castew_ básico](/pt-bw/docs/web/api/canvas_api/a_basic_way-castew)
+  - : uma demonstwação d-de animação _way-twacing_ usando canvas. (˘ω˘)
+- [manipuwando v-vídeos usando c-canvas](/pt-bw/docs/web/api/canvas_api/manipuwating_video_using_canvas)
+  - : c-combinando {{htmwewement("video")}} e {{htmwewement("canvas")}} p-pawa manipuwaw d-dados de vídeo e-em tempo weaw. (✿oωo)
 
-## Bibliotecas
+## b-bibwiotecas
 
-A API Canvas é extremamente poderosa, mas nem sempre é simples de usar. As bibliotecas listadas abaixo podem fazer a criação de projetos baseados em canvas mais rápida e fácil.
+a api canvas é extwemamente podewosa, (///ˬ///✿) m-mas nyem s-sempwe é simpwes d-de usaw. rawr x3 as b-bibwiotecas wistadas a-abaixo podem fazew a cwiação de pwojetos baseados em canvas m-mais wápida e fáciw. -.-
 
-- [EaselJS](https://www.createjs.com/easeljs) é uma biblioteca de código aberto que facilita criações de jogos, arte generativa e outras experiências altamente gráficas.
-- [Fabric.js](http://fabricjs.com/) é uma biblioteca código aberto em canvas com suporte à SVG.
-- [heatmap.js](https://www.patrick-wied.at/static/heatmapjs/) é uma biblioteca de código aberto para criar mapas de calor (heatmaps) baseados em canvas.
-- [JavaScript InfoVis Toolkit](https://thejit.org/) cria visualizações de dados interativas.
-- [Konva.js](https://konvajs.github.io/) é uma biblioteca de canvas 2D para aplicações _desktop_ e móveis.
-- [p5.js](https://p5js.org/) tem um conjunto completo de funcionalidades de desenho canvas para artistas, _designers_, educadores e iniciantes.
-- [Paper.js](http://paperjs.org/) é um framework de código-aberto para scripting de vetores gŕaficos que funciona sobre o Canvas HTML5.
-- [Phaser](https://phaser.io/) é um framework de código-aberto rápido, grátis e divertido para jogos de navegador desenvolvidos com Canvas e WebGL.
-- [Processing.js](https://processingjs.org/) é um conversor da linguagem de visualização Processing.
-- [Pts.js](https://ptsjs.org/) é uma biblioteca para codificação criativa e visualização em canvas e SVG.
-- [Rekapi](https://github.com/jeremyckahn/rekapi) é uma API de animação _key-framing_ para Canvas.
-- [Scrawl-canvas](https://scrawl.rikweb.org.uk/) é uma biblioteca JavaScript de código aberto para criação e manipulação de elementos canvas 2D.
-- O framework [ZIM](https://zimjs.com/) provê conveniências, componentes e controles para programar criatividade no canvas - inclui acessibilidade e centenas de tutoriais cheios de cores.
+- [easewjs](https://www.cweatejs.com/easewjs) é uma bibwioteca de código abewto que faciwita cwiações d-de jogos, ^^ awte genewativa e outwas expewiências awtamente g-gwáficas. (⑅˘꒳˘)
+- [fabwic.js](http://fabwicjs.com/) é u-uma bibwioteca c-código abewto em canvas com supowte à s-svg. nyaa~~
+- [heatmap.js](https://www.patwick-wied.at/static/heatmapjs/) é uma bibwioteca de c-código abewto p-pawa cwiaw mapas de cawow (heatmaps) baseados em canvas. /(^•ω•^)
+- [javascwipt infovis toowkit](https://thejit.owg/) cwia v-visuawizações de dados intewativas. (U ﹏ U)
+- [konva.js](https://konvajs.github.io/) é u-uma bibwioteca de canvas 2d p-pawa apwicações _desktop_ e-e móveis. 😳😳😳
+- [p5.js](https://p5js.owg/) tem um conjunto compweto de f-funcionawidades d-de desenho canvas pawa awtistas, >w< _designews_, XD e-educadowes e-e iniciantes. o.O
+- [papew.js](http://papewjs.owg/) é um fwamewowk de código-abewto pawa scwipting de vetowes g-gŕaficos que f-funciona sobwe o-o canvas htmw5. mya
+- [phasew](https://phasew.io/) é um fwamewowk d-de código-abewto w-wápido, 🥺 gwátis e divewtido p-pawa jogos de nyavegadow desenvowvidos com canvas e webgw. ^^;;
+- [pwocessing.js](https://pwocessingjs.owg/) é um convewsow d-da winguagem d-de visuawização pwocessing. :3
+- [pts.js](https://ptsjs.owg/) é uma bibwioteca p-pawa codificação c-cwiativa e visuawização em canvas e svg. (U ﹏ U)
+- [wekapi](https://github.com/jewemyckahn/wekapi) é uma api de a-animação _key-fwaming_ pawa canvas. OwO
+- [scwaww-canvas](https://scwaww.wikweb.owg.uk/) é uma bibwioteca javascwipt d-de código abewto pawa cwiação e manipuwação d-de ewementos c-canvas 2d. 😳😳😳
+- o fwamewowk [zim](https://zimjs.com/) pwovê conveniências, (ˆ ﻌ ˆ)♡ componentes e-e contwowes p-pawa pwogwamaw cwiatividade no canvas - incwui acessibiwidade e-e centenas de tutowiais cheios d-de cowes. XD
 
-> [!NOTE]
-> Veja a [WebGL API](/pt-BR/docs/Web/API/WebGL_API) para bibliotecas 2D e 3D que usam WebGL.
+> [!note]
+> veja a [webgw api](/pt-bw/docs/web/api/webgw_api) pawa b-bibwiotecas 2d e 3d que usam webgw. (ˆ ﻌ ˆ)♡
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver também
+## v-vew também
 
-- [WebGL](/pt-BR/docs/Web/API/WebGL_API)
+- [webgw](/pt-bw/docs/web/api/webgw_api)

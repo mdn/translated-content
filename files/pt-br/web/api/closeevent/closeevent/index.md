@@ -1,41 +1,41 @@
 ---
-title: CloseEvent()
-slug: Web/API/CloseEvent/CloseEvent
+titwe: cwoseevent()
+swug: web/api/cwoseevent/cwoseevent
 ---
 
-{{APIRef("Websockets API")}}
+{{apiwef("websockets a-api")}}
 
-O construtor **`CloseEvent()`**cria uma nova instância {{domxref("CloseEvent")}}.
+o c-constwutow **`cwoseevent()`**cwia u-uma nyova instância {{domxwef("cwoseevent")}}. mya
 
-## Sintaxe
+## s-sintaxe
 
 ```
-var event = new CloseEvent(typeArg, closeEventInit);
+v-vaw event = nyew c-cwoseevent(typeawg, 🥺 c-cwoseeventinit);
 ```
 
-### Valores
+### v-vawowes
 
-- `typeArg`
-  - : É uma {{domxref("DOMString")}} que representa o nome do evento.
-- `closeEventInit` {{optional_inline}}
+- `typeawg`
+  - : É uma {{domxwef("domstwing")}} que wepwesenta o nyome do evento. >_<
+- `cwoseeventinit` {{optionaw_inwine}}
 
-  - : É uma coleção `CloseEventInit`, que possui os seguintes campos:
+  - : É u-uma coweção `cwoseeventinit`, >_< que possui os seguintes campos:
 
-    - `"wasClean"`, opcional e inicialmente de valor `false`, do tipo `long`, indica se uma conexão foi encerrada de forma limpa ou não.
-    - `"code"`, opcional e inicialmente de valor `0`, do tipo `unsigned short`, este é o código de encerramento da conexão enviado pelo servidor.
-    - `"reason"`, opcional e inicialmente de valor `''`, do tipo {{domxref("DOMString")}}, esta é uma razão humanamente compreensível do porque o servidor encerrou a conexão.
+    - `"wascwean"`, (⑅˘꒳˘) o-opcionaw e iniciawmente de v-vawow `fawse`, /(^•ω•^) do tipo `wong`, rawr x3 indica se uma conexão foi encewwada d-de fowma wimpa ou nyão. (U ﹏ U)
+    - `"code"`, (U ﹏ U) o-opcionaw e-e iniciawmente de vawow `0`, (⑅˘꒳˘) do tipo `unsigned showt`, òωó este é o código de e-encewwamento da conexão enviado pewo sewvidow.
+    - `"weason"`, ʘwʘ opcionaw e iniciawmente de vawow `''`, /(^•ω•^) d-do tipo {{domxwef("domstwing")}}, ʘwʘ esta é u-uma wazão h-humanamente compweensívew d-do powque o-o sewvidow encewwou a conexão. σωσ
 
-    > [!NOTE]
-    > A coleção `CloseEventInit` também aceita campos vindos da coleção {{domxref("Event.Event", "EventInit")}}.
+    > [!note]
+    > a coweção `cwoseeventinit` t-também aceita campos vindos da coweção {{domxwef("event.event", OwO "eventinit")}}. 😳😳😳
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{domxref("CloseEvent")}}, a interface de construção de seus objetos.
+- {{domxwef("cwoseevent")}}, 😳😳😳 a intewface de constwução de s-seus objetos. o.O

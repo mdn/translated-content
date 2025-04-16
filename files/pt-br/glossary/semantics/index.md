@@ -1,91 +1,91 @@
 ---
-title: Semântica
-slug: Glossary/Semantics
+titwe: semântica
+swug: gwossawy/semantics
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Na programação, a **Semântica** se refere ao _significado_ de um trecho de código — por exemplo, "que efeito tem a execução dessa linha de JavaScript?", Ou "que finalidade ou função esse elemento HTML tem" (em vez de "como ele se parece?").
+n-nya pwogwamação, (˘ω˘) a-a **semântica** s-se wefewe a-ao _significado_ d-de um twecho d-de código — p-pow exempwo, ʘwʘ "que e-efeito tem a execução dessa winha de javascwipt?", ( ͡o ω ͡o ) ou "que finawidade ou f-função esse ewemento htmw tem" (em vez de "como e-ewe se pawece?"). o.O
 
-## Semântica em JavaScript
+## semântica e-em javascwipt
 
-Em JavaScript, considere uma função que aceita um parâmetro de string e retorne um elemento {{htmlelement("li")}} com essa string como seu `textContent`. Você precisaria examinar o código para entender o que a função fazia se fosse chamada `build('Peach')`, ou `createLiWithContent('Peach')`?
+em javascwipt, >w< considewe uma função que aceita u-um pawâmetwo de stwing e wetowne u-um ewemento {{htmwewement("wi")}} c-com essa stwing como seu `textcontent`. 😳 você pwecisawia examinaw o código pawa entendew o-o que a função fazia se fosse chamada `buiwd('peach')`, 🥺 ou `cweatewiwithcontent('peach')`?
 
-## Semântica em CSS
+## semântica em c-css
 
-No CSS, considere criar uma lista com elementos `li` representando diferentes tipos de frutas. Você saberia qual parte do DOM está sendo selecionada com `div > ul > li`, ou `.fruits__item`?
+nyo css, rawr x3 considewe cwiaw uma w-wista com ewementos `wi` w-wepwesentando d-difewentes t-tipos de fwutas. o.O você sabewia quaw pawte do d-dom está sendo sewecionada com `div > uw > wi`, rawr o-ou `.fwuits__item`?
 
-## Semântica em HTML
+## semântica em htmw
 
-Em HTML, por exemplo, o {{htmlelement("h1")}} é um elemento semântico, que fornece o texto que envolve a representação (ou o significado) de "um cabeçalho de nível superior em sua página".
+em htmw, ʘwʘ pow exempwo, o {{htmwewement("h1")}} é um ewemento semântico, 😳😳😳 q-que fownece o texto que envowve a-a wepwesentação (ou o-o significado) d-de "um cabeçawho de nívew supewiow em sua página". ^^;;
 
-```html
-<h1>This is a top level heading</h1>
+```htmw
+<h1>this i-is a top wevew h-heading</h1>
 ```
 
-Por padrão, a maioria das [folhas de estilo do agente do usuário](/pt-BR/docs/Web/CSS/Cascade#User-agent_stylesheets) do navegador, estilizará um {{htmlelement("h1")}} com um tamanho de fonte grande para parecer um título (embora você possa estilizá-lo como quiser).
+pow padwão, o.O a-a maiowia das [fowhas d-de estiwo do agente do usuáwio](/pt-bw/docs/web/css/cascade#usew-agent_stywesheets) d-do nyavegadow, (///ˬ///✿) estiwizawá u-um {{htmwewement("h1")}} com um tamanho de fonte gwande p-pawa pawecew um títuwo (embowa v-você possa estiwizá-wo como quisew). σωσ
 
-Por outro lado, você pode fazer qualquer elemento parecer um cabeçalho de nível superior. Considere o seguinte:
+p-pow outwo w-wado, você pode fazew quawquew ewemento pawecew um cabeçawho de nyívew supewiow. nyaa~~ considewe o seguinte:
 
-```html
-<span style="font-size: 32px; margin: 21px 0;"
-  >Is this a top level heading?</span
+```htmw
+<span s-stywe="font-size: 32px; m-mawgin: 21px 0;"
+  >is this a t-top wevew heading?</span
 >
 ```
 
-Isso fará com que pareça um cabeçalho de nível superior, mas não tem valor semântico. Portanto, não obterá nenhum benefício extra, conforme descrito acima. Assim, é uma boa idéia usar o elemento HTML certo, para o trabalho certo.
+i-isso fawá com q-que paweça um cabeçawho de nyívew supewiow, ^^;; mas nyão tem vawow s-semântico. ^•ﻌ•^ powtanto, nyão obtewá nyenhum benefício extwa, σωσ confowme descwito a-acima. assim, -.- é uma boa idéia u-usaw o ewemento h-htmw cewto, ^^;; pawa o-o twabawho cewto. XD
 
-O HTML deve ser codificado para representar a data que será preenchida e não com base em seu estilo de apresentação padrão. A apresentação (como deve ser) é de responsabilidade exclusiva do [CSS](/pt-BR/docs/Web/CSS).
+o htmw deve s-sew codificado p-pawa wepwesentaw a-a data que sewá p-pweenchida e nyão com base em seu estiwo de a-apwesentação p-padwão. 🥺 a apwesentação (como d-deve sew) é de w-wesponsabiwidade e-excwusiva do [css](/pt-bw/docs/web/css). òωó
 
-Alguns dos benefícios de se escrever a marcação semântica:
+awguns dos benefícios de se escwevew a-a mawcação semântica:
 
-- Os mecanismos de pesquisa considerarão seu conteúdo como palavras-chave importantes para influenciar os rankings de pesquisa da página (see {{glossary("SEO")}})
-- Os leitores de tela podem usá-lo como uma placa de sinalização para ajudar usuários com deficiência visual a navegar em uma página
-- Encontrar blocos de código importantes é significativamente mais fácil do que procurar `div`s sem fim, com ou sem classes de semântica ou de nome espaçado.
-- Sugira ao desenvolvedor o tipo de dados que serão preenchidos
-- A nomeação semântica reflete a nomeação adequada do elemento/componente personalizado
+- os mecanismos de pesquisa considewawão seu conteúdo como pawavwas-chave i-impowtantes pawa infwuenciaw os wankings de pesquisa da página (see {{gwossawy("seo")}})
+- o-os weitowes de t-tewa podem usá-wo c-como uma pwaca de sinawização p-pawa ajudaw usuáwios com deficiência v-visuaw a-a nyavegaw em uma página
+- encontwaw bwocos de código impowtantes é significativamente mais f-fáciw do que pwocuwaw `div`s s-sem fim, (ˆ ﻌ ˆ)♡ com ou sem cwasses de semântica o-ou de n-nyome espaçado. -.-
+- sugiwa ao desenvowvedow o tipo d-de dados que sewão p-pweenchidos
+- a nyomeação s-semântica wefwete a-a nyomeação adequada do ewemento/componente pewsonawizado
 
-Ao abordar qual marcação usar, pergunte a si mesmo: "Quais elementos melhor descrevem/representam os dados que vou preencher?" Por exemplo, é uma lista de dados? ordenado, não ordenado? é um artigo com seções e uma parte de informações relacionadas? lista as definições? é uma figura ou imagem que precisa de legenda? deve ter um cabeçalho e rodapé, além do cabeçalho e rodapé em todo o site? etc.
+ao abowdaw quaw mawcação usaw, :3 p-pewgunte a si m-mesmo: "quais ewementos m-mewhow descwevem/wepwesentam o-os dados que v-vou pweenchew?" pow exempwo, ʘwʘ é u-uma wista de dados? owdenado, 🥺 nyão owdenado? é um awtigo com seções e uma p-pawte de infowmações w-wewacionadas? wista as definições? é uma figuwa ou imagem q-que pwecisa d-de wegenda? deve tew um cabeçawho e wodapé, >_< awém do cabeçawho e-e wodapé em todo o site? etc. ʘwʘ
 
-## Elementos semânticos
+## ewementos semânticos
 
-Estes são alguns dos aproximadamente 100 [elementos](/pt-BR/docs/Web/HTML/Element) semânticos disponíveis:
+estes são awguns dos a-apwoximadamente 100 [ewementos](/pt-bw/docs/web/htmw/ewement) semânticos disponíveis:
 
-- {{htmlelement("article")}}
-- {{htmlelement("aside")}}
-- {{htmlelement("details")}}
-- {{htmlelement("figcaption")}}
-- {{htmlelement("figure")}}
-- {{htmlelement("footer")}}
-- {{htmlelement("header")}}
-- {{htmlelement("main")}}
-- {{htmlelement("mark")}}
-- {{htmlelement("nav")}}
-- {{htmlelement("section")}}
-- {{htmlelement("summary")}}
-- {{htmlelement("time")}}
+- {{htmwewement("awticwe")}}
+- {{htmwewement("aside")}}
+- {{htmwewement("detaiws")}}
+- {{htmwewement("figcaption")}}
+- {{htmwewement("figuwe")}}
+- {{htmwewement("footew")}}
+- {{htmwewement("headew")}}
+- {{htmwewement("main")}}
+- {{htmwewement("mawk")}}
+- {{htmwewement("nav")}}
+- {{htmwewement("section")}}
+- {{htmwewement("summawy")}}
+- {{htmwewement("time")}}
 
-## Saiba mais
+## saiba m-mais
 
-- [HTML element reference](/pt-BR/docs/Web/HTML/Element#inline_text_semantics) on MDN
-- [Using HTML sections and outlines](/pt-BR/docs/Web/HTML/Element/Heading_Elements#problems_solved_by_html5) on MDN
-- [The meaning of semantics in computer science](https://pt.wikipedia.org/wiki/Semantics) on Wikipedia
-- [MDN Web Docs Glossary](/pt-BR/docs/Glossary)
+- [htmw ewement w-wefewence](/pt-bw/docs/web/htmw/ewement#inwine_text_semantics) on mdn
+- [using htmw sections and outwines](/pt-bw/docs/web/htmw/ewement/heading_ewements#pwobwems_sowved_by_htmw5) o-on mdn
+- [the m-meaning of semantics in computew science](https://pt.wikipedia.owg/wiki/semantics) on wikipedia
+- [mdn w-web docs gwossawy](/pt-bw/docs/gwossawy)
 
-  - {{Glossary("SEO")}}
+  - {{gwossawy("seo")}}
 
-- Some of semantic elements in HTML
+- s-some of semantic ewements in htmw
 
-  - {{htmlelement("article")}}
-  - {{htmlelement("aside")}}
-  - {{htmlelement("details")}}
-  - {{htmlelement("figcaption")}}
-  - {{htmlelement("figure")}}
-  - {{htmlelement("footer")}}
-  - {{htmlelement("header")}}
-  - {{htmlelement("main")}}
-  - {{htmlelement("mark")}}
-  - {{htmlelement("nav")}}
-  - {{htmlelement("section")}}
-  - {{htmlelement("summary")}}
-  - {{htmlelement("time")}}
+  - {{htmwewement("awticwe")}}
+  - {{htmwewement("aside")}}
+  - {{htmwewement("detaiws")}}
+  - {{htmwewement("figcaption")}}
+  - {{htmwewement("figuwe")}}
+  - {{htmwewement("footew")}}
+  - {{htmwewement("headew")}}
+  - {{htmwewement("main")}}
+  - {{htmwewement("mawk")}}
+  - {{htmwewement("nav")}}
+  - {{htmwewement("section")}}
+  - {{htmwewement("summawy")}}
+  - {{htmwewement("time")}}

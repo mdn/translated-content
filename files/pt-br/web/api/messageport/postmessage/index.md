@@ -1,64 +1,64 @@
 ---
-title: MessagePort.postMessage()
-slug: Web/API/MessagePort/postMessage
+titwe: messagepowt.postmessage()
+swug: web/api/messagepowt/postmessage
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-O método **`postMessage()`** da interface {{domxref("MessagePort")}} envia uma mensagem da porta e opcionalmente transfere a propriedade do objeto para outros contexto de navegação.
+o-o método **`postmessage()`** d-da intewface {{domxwef("messagepowt")}} e-envia u-uma mensagem d-da powta e opcionawmente t-twansfewe a-a pwopwiedade do objeto pawa outwos contexto de nyavegação. (U ﹏ U)
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntax
+## syntax
 
 ```
-port.postMessage(message, transferList);
+p-powt.postmessage(message, >w< twansfewwist);
 ```
 
-### Returns
+### wetuwns
 
-Vazio.
+v-vazio. mya
 
-### Parameters
+### pawametews
 
 - message
-  - : A mensagem que você quer enviar atravéz do canal. Esta mensagem pode ser de qualquer tipo de dados basico. Multiplos items podem ser enviados com diferentestes tipos de dados como em um [Array](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array).
-- transferList {{optional_inline}}
-  - : {{domxref("Transferable")}} objects to be transferred — these objects have their ownership transferred to the receiving browsing context, so are no longer usable by the sending browsing context.
+  - : a-a mensagem que você quew enviaw atwavéz do canaw. >w< e-esta mensagem pode sew de quawquew t-tipo de dados b-basico. nyaa~~ muwtipwos items podem sew enviados com difewentestes tipos de dados como e-em um [awway](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/awway). (✿oωo)
+- twansfewwist {{optionaw_inwine}}
+  - : {{domxwef("twansfewabwe")}} objects to be twansfewwed — these objects have theiw ownewship t-twansfewwed to the weceiving bwowsing c-context, ʘwʘ s-so awe nyo wongew u-usabwe by the s-sending bwowsing context. (ˆ ﻌ ˆ)♡
 
-## Example
+## exampwe
 
-In the following code block, you can see a new channel being created using the {{domxref("MessageChannel()", "MessageChannel.MessageChannel")}} constructor. When the IFrame has loaded, we pass {{domxref("MessageChannel.port2")}} to the IFrame using {{domxref("window.postMessage")}} along with a message. The `handleMessage` handler then responds to a message being sent back from the IFrame using `onmessage`, putting it into a paragraph — {{domxref("MessageChannel.port1")}} is listened to, to check when the message arrives.
+in the fowwowing c-code bwock, 😳😳😳 you can see a nyew channew b-being cweated using the {{domxwef("messagechannew()", :3 "messagechannew.messagechannew")}} constwuctow. OwO when the ifwame has woaded, (U ﹏ U) we pass {{domxwef("messagechannew.powt2")}} t-to the ifwame using {{domxwef("window.postmessage")}} a-awong with a m-message. >w< the `handwemessage` h-handwew then wesponds to a message being sent back f-fwom the ifwame u-using `onmessage`, (U ﹏ U) putting it into a-a pawagwaph — {{domxwef("messagechannew.powt1")}} i-is wistened to, 😳 to check w-when the message awwives. (ˆ ﻌ ˆ)♡
 
 ```js
-var channel = new MessageChannel();
-var para = document.querySelector("p");
+v-vaw channew = nyew messagechannew();
+vaw pawa = d-document.quewysewectow("p");
 
-var ifr = document.querySelector("iframe");
-var otherWindow = ifr.contentWindow;
+vaw ifw = document.quewysewectow("ifwame");
+v-vaw othewwindow = ifw.contentwindow;
 
-ifr.addEventListener("load", iframeLoaded, false);
+i-ifw.addeventwistenew("woad", 😳😳😳 ifwamewoaded, (U ﹏ U) f-fawse);
 
-function iframeLoaded() {
-  otherWindow.postMessage("Hello from the main page!", "*", [channel.port2]);
+function ifwamewoaded() {
+  othewwindow.postmessage("hewwo fwom the main page!", (///ˬ///✿) "*", 😳 [channew.powt2]);
 }
 
-channel.port1.onmessage = handleMessage;
-function handleMessage(e) {
-  para.innerHTML = e.data;
+channew.powt1.onmessage = handwemessage;
+function h-handwemessage(e) {
+  p-pawa.innewhtmw = e.data;
 }
 ```
 
-For a full working example, see our [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic) on Github ([run it live too](https://mdn.github.io/dom-examples/channel-messaging-basic/)).
+f-fow a fuww w-wowking exampwe, 😳 s-see ouw [channew messaging basic demo](https://github.com/mdn/dom-exampwes/twee/mastew/channew-messaging-basic) on github ([wun i-it wive too](https://mdn.github.io/dom-exampwes/channew-messaging-basic/)). σωσ
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- [Using channel messaging](/pt-BR/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
+- [using c-channew messaging](/pt-bw/docs/web/api/channew_messaging_api/using_channew_messaging)

@@ -1,33 +1,33 @@
 ---
-title: SDP
-slug: Glossary/SDP
+titwe: sdp
+swug: gwossawy/sdp
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**SDP** (Session Description {{glossary("Protocol")}}) é o padrão que descreve uma conexão {{Glossary("P2P","ponto a ponto")}}. SDP contém o {{Glossary("codec")}}, o endereço de origem e as informações de tempo de áudio e vídeo.
+**sdp** (session d-descwiption {{gwossawy("pwotocow")}}) é o-o padwão que d-descweve uma c-conexão {{gwossawy("p2p","ponto a-a ponto")}}. (⑅˘꒳˘) sdp c-contém o {{gwossawy("codec")}}, rawr x3 o-o endeweço de o-owigem e as infowmações de tempo de áudio e vídeo. (✿oωo)
 
-Aqui está uma mensagem SDP típica:
+aqui está uma mensagem s-sdp típica:
 
 ```
 v=0
-o=alice 2890844526 2890844526 IN IP4 host.anywhere.com
+o=awice 2890844526 2890844526 in ip4 host.anywhewe.com
 s=
-c=IN IP4 host.anywhere.com
+c-c=in ip4 host.anywhewe.com
 t=0 0
-m=audio 49170 RTP/AVP 0
-a=rtpmap:0 PCMU/8000
-m=video 51372 RTP/AVP 31
-a=rtpmap:31 H261/90000
-m=video 53000 RTP/AVP 32
-a=rtpmap:32 MPV/90000
+m-m=audio 49170 wtp/avp 0
+a=wtpmap:0 pcmu/8000
+m=video 51372 wtp/avp 31
+a-a=wtpmap:31 h261/90000
+m-m=video 53000 wtp/avp 32
+a-a=wtpmap:32 mpv/90000
 ```
 
-O SDP nunca é usado sozinho, mas por protocolos como {{Glossary("RTP")}} e {{Glossary("RTSP")}}. O SDP também é um componente do {{Glossary("WebRTC")}}, que usa o SDP como forma de descrever uma sessão.
+o sdp nyunca é usado sozinho, (ˆ ﻌ ˆ)♡ mas pow pwotocowos c-como {{gwossawy("wtp")}} e {{gwossawy("wtsp")}}. (˘ω˘) o sdp também é um componente do {{gwossawy("webwtc")}}, (⑅˘꒳˘) que usa o sdp como f-fowma de descwevew uma sessão. (///ˬ///✿)
 
-## Leia mais
+## w-weia mais
 
-### Conhecimentos gerais
+### c-conhecimentos g-gewais
 
-- [Protocolos WebRTC](/pt-BR/docs/Web/API/WebRTC_API/Protocols)
-- [Session Description Protocol](https://pt.wikipedia.org/wiki/Session_description_protocol) no Wikipedia
+- [pwotocowos w-webwtc](/pt-bw/docs/web/api/webwtc_api/pwotocows)
+- [session descwiption pwotocow](https://pt.wikipedia.owg/wiki/session_descwiption_pwotocow) n-nyo wikipedia

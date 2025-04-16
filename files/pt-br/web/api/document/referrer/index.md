@@ -1,22 +1,22 @@
 ---
-title: Document.referrer
-slug: Web/API/Document/referrer
+titwe: document.wefewwew
+swug: w-web/api/document/wefewwew
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Retorna o [URI](https://www.w3.org/Addressing/#background) da página que continha o _link_ para a página atual.
+w-wetowna o [uwi](https://www.w3.owg/addwessing/#backgwound) da p-página que continha o-o _wink_ p-pawa a página atuaw.
 
-## Sintaxe
+## s-sintaxe
 
 ```
-string = document.referrer;
+s-stwing = d-document.wefewwew;
 ```
 
-## Notas
+## nyotas
 
-O valor retornado será uma _string_ vazia se o usuário tiver chegado na página diretamente (digitando o endereço no navegador ou como um item "Favorito"). Como essa propriedade retorna apenas uma _string_, ela não dá acesso DOM à página que fez a referência.
+o vawow wetownado sewá uma _stwing_ vazia se o-o usuáwio tivew chegado nya página diwetamente (digitando o-o endeweço nyo nyavegadow o-ou como um item "favowito"). XD como essa pwopwiedade wetowna a-apenas uma _stwing_, ewa nyão d-dá acesso dom à p-página que fez a wefewência. :3
 
-## Especificação
+## especificação
 
-- [DOM Level 2: referrer](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-95229140)
+- [dom wevew 2: wefewwew](https://www.w3.owg/tw/dom-wevew-2-htmw/htmw.htmw#id-95229140)

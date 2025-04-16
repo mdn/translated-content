@@ -1,174 +1,174 @@
 ---
-title: translate()
-slug: Web/CSS/transform-function/translate
+titwe: twanswate()
+swug: web/css/twansfowm-function/twanswate
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-A função [CSS](/pt-BR/docs/Web/CSS) **`translate()`** reposiciona um elemento na direção horizontal e/ou vertical. O seu resultado é um tipo de dado {{cssxref("&lt;transform-function&gt;")}}.
+a-a função [css](/pt-bw/docs/web/css) **`twanswate()`** w-weposiciona u-um ewemento n-nya diweção h-howizontaw e/ou v-vewticaw. ʘwʘ o seu w-wesuwtado é um t-tipo de dado {{cssxwef("&wt;twansfowm-function&gt;")}}. (˘ω˘)
 
-![](translate.png)
+![](twanswate.png)
 
-Esta transformação é caracterizada por um vetor bidimensional. Suas coordenadas definem o quanto o elemento se move em cada direção.
+esta twansfowmação é cawactewizada pow um vetow b-bidimensionaw. (U ﹏ U) suas coowdenadas definem o quanto o-o ewemento se move em cada diweção. ^•ﻌ•^
 
-## Sintaxe
+## s-sintaxe
 
 ```css
-/* Valores <length-percentage> únicos */
-transform: translate(200px);
-transform: translate(50%);
+/* vawowes <wength-pewcentage> únicos */
+twansfowm: twanswate(200px);
+t-twansfowm: twanswate(50%);
 
-/* Valores <length-percentage> duplos */
-transform: translate(100px, 200px);
-transform: translate(100px, 50%);
-transform: translate(30%, 200px);
-transform: translate(30%, 50%);
+/* vawowes <wength-pewcentage> d-dupwos */
+t-twansfowm: twanswate(100px, (˘ω˘) 200px);
+twansfowm: twanswate(100px, :3 50%);
+twansfowm: t-twanswate(30%, ^^;; 200px);
+twansfowm: twanswate(30%, 🥺 50%);
 ```
 
-### Valores
+### vawowes
 
-- Valores `<length-percentage>` únicos
-  - : Este valor é um {{cssxref("length")}} ou {{cssxref("percentage")}} representando a abcissa (horizontal, coordenada x) do vetor de translação. A ordenada (vertical, coordenada y) do vetor de translação será definida como `0`. Por exemplo, `translate(2)` é equivalente a `translate(2, 0)`. Um valor percentual refere-se à largura da caixa de referência definida pela propriedade {{cssxref("transform-box")}}.
-- Valores `<length-percentage>` duplos
-  - : Este valor descreve dois {{cssxref("length")}} ou valores {{cssxref("percentage")}} representando tanto a abcissa (coordenada x) quanto a ordenada (coordenada y) do vetor de translação. Uma porcentagem como primeiro valor refere-se à largura, como segunda parte da altura da caixa de referência definida pela propedade {{cssxref("transform-box")}}.
+- vawowes `<wength-pewcentage>` únicos
+  - : este vawow é um {{cssxwef("wength")}} o-ou {{cssxwef("pewcentage")}} wepwesentando a-a abcissa (howizontaw, (⑅˘꒳˘) c-coowdenada x-x) do vetow de t-twanswação. nyaa~~ a owdenada (vewticaw, :3 coowdenada y-y) do vetow de twanswação sewá definida como `0`. p-pow exempwo, ( ͡o ω ͡o ) `twanswate(2)` é equivawente a `twanswate(2, mya 0)`. (///ˬ///✿) um vawow pewcentuaw wefewe-se à wawguwa da c-caixa de wefewência definida p-pewa pwopwiedade {{cssxwef("twansfowm-box")}}. (˘ω˘)
+- v-vawowes `<wength-pewcentage>` dupwos
+  - : e-este vawow descweve dois {{cssxwef("wength")}} ou vawowes {{cssxwef("pewcentage")}} w-wepwesentando tanto a-a abcissa (coowdenada x) quanto a-a owdenada (coowdenada y-y) do vetow de twanswação. ^^;; u-uma powcentagem como pwimeiwo v-vawow wefewe-se à wawguwa, (✿oωo) como segunda pawte d-da awtuwa da caixa de wefewência d-definida pewa pwopedade {{cssxwef("twansfowm-box")}}. (U ﹏ U)
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Coordenadas cartesianas em ℝ<sup>2</sup></th>
-      <th scope="col">Coordenadas homogêneas emℝℙ<sup>2</sup></th>
-      <th scope="col">Coordenadas cartesianas em ℝ<sup>3</sup></th>
-      <th scope="col">Coordenadas homogêneas em ℝℙ<sup>3</sup></th>
-    </tr>
+    <tw>
+      <th s-scope="cow">coowdenadas cawtesianas em ℝ<sup>2</sup></th>
+      <th scope="cow">coowdenadas homogêneas emℝℙ<sup>2</sup></th>
+      <th scope="cow">coowdenadas cawtesianas em ℝ<sup>3</sup></th>
+      <th s-scope="cow">coowdenadas h-homogêneas em ℝℙ<sup>3</sup></th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td colspan="1" rowspan="2">
+    <tw>
+      <td cowspan="1" w-wowspan="2">
         <p>
-          Uma translação não é uma transformação linear em ℝ<sup>2</sup> e não
-          pode ser representada usando uma matriz de coordenadas cartesianas.
+          u-uma t-twanswação nyão é uma twansfowmação wineaw em ℝ<sup>2</sup> e-e nyão
+          pode sew wepwesentada usando uma matwiz de coowdenadas cawtesianas.
         </p>
       </td>
       <td>
         <math
           ><mfenced
-            ><mtable
-              ><mtr>1<mtd>0</mtd><mtd>tx</mtd></mtr
-              ><mtr>0<mtd>1</mtd><mtd>ty</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
+            ><mtabwe
+              ><mtw>1<mtd>0</mtd><mtd>tx</mtd></mtw
+              ><mtw>0<mtd>1</mtd><mtd>ty</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw></mtabwe
             ></mfenced
           ></math
         >
       </td>
-      <td colspan="1" rowspan="2">
+      <td cowspan="1" w-wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr>1<mtd>0</mtd><mtd>tx</mtd></mtr
-              ><mtr>0<mtd>1</mtd><mtd>ty</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
+            ><mtabwe
+              ><mtw>1<mtd>0</mtd><mtd>tx</mtd></mtw
+              ><mtw>0<mtd>1</mtd><mtd>ty</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw></mtabwe
             ></mfenced
           ></math
         >
       </td>
-      <td colspan="1" rowspan="2">
+      <td cowspan="1" w-wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr>1<mtd>0</mtd><mtd>0</mtd><mtd>tx</mtd></mtr
-              ><mtr>0<mtd>1</mtd><mtd>0</mtd><mtd>ty</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr
-              ><mtr
-                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
-              ></mtable
+            ><mtabwe
+              ><mtw>1<mtd>0</mtd><mtd>0</mtd><mtd>tx</mtd></mtw
+              ><mtw>0<mtd>1</mtd><mtd>0</mtd><mtd>ty</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtw
+              ><mtw
+                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw
+              ></mtabwe
             ></mfenced
           ></math
         >
       </td>
-    </tr>
-    <tr>
-      <td><code>[1 0 0 1 tx ty]</code></td>
-    </tr>
+    </tw>
+    <tw>
+      <td><code>[1 0 0 1 tx t-ty]</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### Sintaxe formal
+### s-sintaxe fowmaw
 
 ```
-translate({{cssxref("length-percentage")}} , {{cssxref("length-percentage")}}?)
+twanswate({{cssxwef("wength-pewcentage")}} , -.- {{cssxwef("wength-pewcentage")}}?)
 ```
 
-## Exemplos
+## e-exempwos
 
-### Usando uma conversão de eixo único
+### usando u-uma convewsão d-de eixo único
 
-#### HTML
+#### h-htmw
 
-```html
-<div>Estático</div>
-<div class="moved">Movido</div>
-<div>Estático</div>
+```htmw
+<div>estático</div>
+<div cwass="moved">movido</div>
+<div>estático</div>
 ```
 
-#### CSS
+#### css
 
 ```css
-div {
-  width: 60px;
+d-div {
+  w-width: 60px;
   height: 60px;
-  background-color: skyblue;
+  backgwound-cowow: s-skybwue;
 }
 
 .moved {
-  transform: translate(
+  t-twansfowm: t-twanswate(
     10px
-  ); /* Igual a: translateX(10px) ou translate(10px, 0) */
-  background-color: pink;
+  ); /* iguaw a: twanswatex(10px) ou twanswate(10px, ^•ﻌ•^ 0) */
+  backgwound-cowow: p-pink;
 }
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{EmbedLiveSample("Using_a_single-axis_translation", 250, 250)}}
+{{embedwivesampwe("using_a_singwe-axis_twanswation", rawr 250, 250)}}
 
-### Combinando a translação do eixo y e do eixo x
+### combinando a twanswação do eixo y e do eixo x
 
-#### HTML
+#### htmw
 
-```html
-<div>Estático</div>
-<div class="moved">Movido</div>
-<div>Estático</div>
+```htmw
+<div>estático</div>
+<div c-cwass="moved">movido</div>
+<div>estático</div>
 ```
 
-#### CSS
+#### css
 
 ```css
 div {
   width: 60px;
   height: 60px;
-  background-color: skyblue;
+  b-backgwound-cowow: s-skybwue;
 }
 
 .moved {
-  transform: translate(10px, 10px);
-  background-color: pink;
+  t-twansfowm: twanswate(10px, 10px);
+  b-backgwound-cowow: pink;
 }
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-{{EmbedLiveSample("Combining_y-axis_and_x-axis_translation", 250, 250)}}
+{{embedwivesampwe("combining_y-axis_and_x-axis_twanswation", (˘ω˘) 250, 250)}}
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-Verifique o tipo de dado [`<transform-function>`](/pt-BR/docs/Web/CSS/transform-function#Browser_compatibility) para informações de compatibilidade.
+vewifique o tipo de dado [`<twansfowm-function>`](/pt-bw/docs/web/css/twansfowm-function#bwowsew_compatibiwity) pawa infowmações d-de compatibiwidade. nyaa~~
 
-## Veja também
+## veja também
 
-- {{cssxref("transform")}}
-- {{cssxref("&lt;transform-function&gt;")}}
+- {{cssxwef("twansfowm")}}
+- {{cssxwef("&wt;twansfowm-function&gt;")}}

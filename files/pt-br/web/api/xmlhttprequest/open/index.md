@@ -1,51 +1,51 @@
 ---
-title: XMLHttpRequest.open()
-slug: Web/API/XMLHttpRequest/open
+titwe: xmwhttpwequest.open()
+swug: web/api/xmwhttpwequest/open
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{apiwef('xmwhttpwequest')}}
 
-O {{domxref("XMLHttpRequest")}} método**`open()`** inicializa uma nova requisição, ou reinicializa uma requisição já existente.
+o-o {{domxwef("xmwhttpwequest")}} m-método**`open()`** i-iniciawiza u-uma nyova wequisição, mya o-ou weiniciawiza u-uma w-wequisição já e-existente. >w<
 
-> [!NOTE]
-> Chamar este método para uma requisição já ativada (uma que `open()` já tenha sido chamada) é equivalente a chamar {{domxref("XMLHttpRequest.abort", "abort()")}}.
+> [!note]
+> chamaw este método pawa uma wequisição já ativada (uma q-que `open()` já tenha sido chamada) é equivawente a-a chamaw {{domxwef("xmwhttpwequest.abowt", nyaa~~ "abowt()")}}. (✿oωo)
 
-## Sintaxe
+## sintaxe
 
 ```
-XMLHttpRequest.open(method, url)
-XMLHttpRequest.open(method, url, async)
-XMLHttpRequest.open(method, url, async, user)
-XMLHttpRequest.open(method, url, async, user, password)
+x-xmwhttpwequest.open(method, ʘwʘ uww)
+xmwhttpwequest.open(method, (ˆ ﻌ ˆ)♡ uww, async)
+xmwhttpwequest.open(method, 😳😳😳 u-uww, :3 async, usew)
+xmwhttpwequest.open(method, OwO u-uww, (U ﹏ U) async, u-usew, >w< passwowd)
 ```
 
-### Parâmetros
+### pawâmetwos
 
 - `method`
-  - : O [método de requisição HTTP](/pt-BR/docs/Web/HTTP/Methods) para ser usado, como `"GET"`, `"POST"`, `"PUT"`, `"DELETE"`, etc. Ignorado para URLs não-HTTP(S).
-- `url`
-  - : Um {{domxref("DOMString")}} representando a URL para enviar a requisição.
-- `async` {{optional_inline}}
+  - : o [método de wequisição http](/pt-bw/docs/web/http/methods) p-pawa sew usado, (U ﹏ U) como `"get"`, 😳 `"post"`, `"put"`, (ˆ ﻌ ˆ)♡ `"dewete"`, 😳😳😳 etc. ignowado pawa uwws nyão-http(s). (U ﹏ U)
+- `uww`
+  - : um {{domxwef("domstwing")}} w-wepwesentando a uww pawa enviaw a-a wequisição. (///ˬ///✿)
+- `async` {{optionaw_inwine}}
 
-  - : Parâmetro booleano opcional, valor padrão `true`, indica quando realizar a operação de forma assíncrona. Se este valor for `false`, o método `send()` não retorna nada até que a resposta da requisição seja recebida. Se o valor for `true`, notificação de uma transação concluída é provida usando event listeners. Isso _deve_ ser verdadeiro se o atributo `multipart` é `true`, ou uma exceção será lançada.
+  - : p-pawâmetwo b-booweano opcionaw, 😳 v-vawow padwão `twue`, 😳 indica quando weawizaw a-a opewação de fowma assíncwona. σωσ se este v-vawow fow `fawse`, rawr x3 o método `send()` nyão wetowna nyada até que a wesposta da wequisição seja w-wecebida. OwO se o vawow fow `twue`, /(^•ω•^) n-nyotificação d-de uma twansação c-concwuída é pwovida usando event wistenews. 😳😳😳 isso _deve_ s-sew vewdadeiwo se o-o atwibuto `muwtipawt` é `twue`, ( ͡o ω ͡o ) ou uma exceção s-sewá wançada. >_<
 
-    > [!NOTE]
-    > Requisições Síncronas no thread principal podem ser facilmente disruptivas para a experiência de usuário e devem ser evitadas; de fato, muitos navegadores descontinuaram inteiramente o suporte para XHR síncrono no thread principal. Requisições síncronas são permitidas nos {{domxref("Worker")}}s.
+    > [!note]
+    > w-wequisições síncwonas n-nyo thwead pwincipaw podem sew f-faciwmente diswuptivas pawa a expewiência de u-usuáwio e devem sew evitadas; de f-fato, >w< muitos nyavegadowes descontinuawam i-inteiwamente o-o supowte pawa xhw síncwono nyo thwead pwincipaw. rawr wequisições síncwonas são pewmitidas nyos {{domxwef("wowkew")}}s. 😳
 
-- `user` {{optional_inline}}
-  - : O nome de usuário opcional para ser usado em autenticação; por padrão, isso é o valor `null`.
-- `password` {{optional_inline}}
-  - : A senha de usuário opcional para ser usado em autenticação; por padrão, isso é o valor `null`.
+- `usew` {{optionaw_inwine}}
+  - : o-o nyome de u-usuáwio opcionaw pawa sew usado e-em autenticação; p-pow padwão, >w< i-isso é o vawow `nuww`. (⑅˘꒳˘)
+- `passwowd` {{optionaw_inwine}}
+  - : a senha de usuáwio opcionaw pawa sew usado em autenticação; pow p-padwão, isso é o vawow `nuww`. OwO
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [Usando XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- Métodos Relacionados ao {{domxref("XMLHttpRequest")}}: {{domxref("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}},{{domxref("XMLHttpRequest.send", "send()")}}, e {{domxref("XMLHttpRequest.abort", "abort()")}}
+- [usando xmwhttpwequest](/pt-bw/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)
+- m-métodos w-wewacionados ao {{domxwef("xmwhttpwequest")}}: {{domxwef("xmwhttpwequest.setwequestheadew", (ꈍᴗꈍ) "setwequestheadew()")}},{{domxwef("xmwhttpwequest.send", 😳 "send()")}}, e-e {{domxwef("xmwhttpwequest.abowt", 😳😳😳 "abowt()")}}

@@ -1,65 +1,65 @@
 ---
-title: CloseEvent
-slug: Web/API/CloseEvent
+titwe: cwoseevent
+swug: web/api/cwoseevent
 ---
 
-{{APIRef("Websockets API")}}
+{{apiwef("websockets a-api")}}
 
-Um `CloseEvent` é enviado aos clientes que usam {{Glossary("WebSockets")}} quando a conexão está fechada (closed). Ele é enviado ao ouvinte(listener) pelo atributo `onclose` do objeto `WebSocket`.
+u-um `cwoseevent` é e-enviado aos c-cwientes que usam {{gwossawy("websockets")}} q-quando a-a conexão está f-fechada (cwosed). OwO e-ewe é enviado ao ouvinte(wistenew) pewo atwibuto `oncwose` do objeto `websocket`. 😳😳😳
 
-## Construtor
+## c-constwutow
 
-- {{domxref("CloseEvent.CloseEvent", "CloseEvent()")}}
-  - : Cria um `CloseEvent` novo.
+- {{domxwef("cwoseevent.cwoseevent", (ˆ ﻌ ˆ)♡ "cwoseevent()")}}
+  - : cwia um `cwoseevent` nyovo. XD
 
-## Propriedades
+## p-pwopwiedades
 
-_Esta interface também herda as propriedades de seu objeto pai, {{domxref("Event")}}._
+_esta intewface t-também hewda as pwopwiedades de seu objeto pai, (ˆ ﻌ ˆ)♡ {{domxwef("event")}}._
 
-- {{domxref("CloseEvent.code")}} {{readOnlyInline}}
+- {{domxwef("cwoseevent.code")}} {{weadonwyinwine}}
 
-  - : Retorna um valor `unsigned short` contendo o código de encerramento enviado pelo servidor. Os seguintes valores são status de códigos permitidos. As definições seguintes são originadas da página da IANA \[[Ref](https://www.iana.org/assignments/websocket/websocket.xml#close-code-number)]. Observe que os códigos 1xxx são exclusivamente Websockets internos e não para os mesmos propósitos dos dados enviados (como quando o protocolo da camada de aplicação é invalido). Os únicos códigos que permitem especificação no Firefox são o 1000 e do 3000 ao 4999 \[[Source](https://searchfox.org/mozilla-central/rev/bf81d741ff5dd11bb364ef21306da599032fd479/dom/websocket/WebSocket.cpp#2533), [Bug](https://bugzilla.mozilla.org/show_bug.cgi?id=1467107)].
+  - : w-wetowna um vawow `unsigned s-showt` contendo o-o código de encewwamento enviado pewo sewvidow. ( ͡o ω ͡o ) os seguintes vawowes são status d-de códigos pewmitidos. rawr x3 as definições seguintes são owiginadas da página d-da iana \[[wef](https://www.iana.owg/assignments/websocket/websocket.xmw#cwose-code-numbew)]. nyaa~~ obsewve que os c-códigos 1xxx são e-excwusivamente w-websockets intewnos e-e nyão pawa os mesmos pwopósitos dos dados e-enviados (como quando o pwotocowo da camada de a-apwicação é invawido). >_< os únicos códigos que pewmitem especificação nyo fiwefox são o 1000 e-e do 3000 ao 4999 \[[souwce](https://seawchfox.owg/moziwwa-centwaw/wev/bf81d741ff5dd11bb364ef21306da599032fd479/dom/websocket/websocket.cpp#2533), ^^;; [bug](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1467107)]. (ˆ ﻌ ˆ)♡
 
-    | Código de Status | Nome                   | Descrição                                                                                                                                                                                                                             |
+    | código d-de status | n-nyome                   | d-descwição                                                                                                                                                                                                                             |
     | ---------------- | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-    | `0`–`999`        |                        | **Reservado e não utilizado.**                                                                                                                                                                                                        |
-    | `1000`           | `CLOSE_NORMAL`         | Encerramento normal. A conexão foi completada com sucesso sempre que o propósito para o qual ela foi criada tenha sido atingida.                                                                                                      |
-    | `1001`           | `CLOSE_GOING_AWAY`     | O "endpoint" desapareceu, por causa de uma falha no servidor ou por que o navegador navegou para fora da página que abriu a conexão.                                                                                                  |
-    | `1002`           | `CLOSE_PROTOCOL_ERROR` | O "endpoint" finalizou a conexão devido a um erro de protocolo.                                                                                                                                                                       |
-    | `1003`           | `CLOSE_UNSUPPORTED`    | A conexão está sendo finalizada por causa de o dado do "endpoint" recebido ser de um tipo que não pode ser aceito (por exemplo, um "text-only endpoint" recebido como dado binário).                                                  |
-    | `1004`           |                        | **Reservado.** Um significado pode ser definido futuramente.                                                                                                                                                                          |
-    | `1005`           | `CLOSE_NO_STATUS`      | **Reservado.** Indica que um código "no status" foi fornecido mesmo que qualquer outro código seja esperado.                                                                                                                          |
-    | `1006`           | `CLOSE_ABNORMAL`       | **Reservado.** Usado para indicar que uma conexão foi fechada anormalmente (isto é, sem o "close frame" ter sido enviado) quando um "status code" é esperado.                                                                         |
-    | `1007`           | Unsupported Data       | O "endpoint" está finalizando a conexão por causa da mensagem ter sido recebida com dados inconsistentes (por exemplo, dados que não estejam no padrão UTF-8, dentro de uma mensagem de texto).                                       |
-    | `1008`           | Policy Violation       | O "endpoint" está finalizando a conexão por causa dele ter recebido uma mensagem que viola sua política. Este é um código de status genérico, usado quando o código 1003 e o código 1009 não sejam adequados.                         |
-    | `1009`           | `CLOSE_TOO_LARGE`      | O "endpoint" está finalizando a conexão por causa de que o "data frame" recebido é muito grande.                                                                                                                                      |
-    | `1010`           | Missing Extension      | O cliente está fechando a conexão por causa de que navegador espera o servidor negociar uma ou mais extensões esperadas, o servidor não responde corretamente.                                                                        |
-    | `1011`           | Internal Error         | O servidor está finalizando uma conexão por causa de que ele encontrou uma condição inesperada que o impediu de cumprir a solicitação.                                                                                                |
-    | `1012`           | Service Restart        | O servidor está finalizando uma conexão por que ele está em processo de "restar". \[[Ref](https://www.ietf.org/mail-archive/web/hybi/current/msg09670.html)]                                                                          |
-    | `1013`           | Try Again Later        | O servidor está finalizando a conexão devido a uma condição temporária, por exemplo, ele estar sobrecarregado e estar rejeitando alguns dos seus clientes. \[[Ref](https://www.ietf.org/mail-archive/web/hybi/current/msg09670.html)] |
-    | `1014`           |                        | **Reservado para o futuro uso de um padrão WebSocket.**                                                                                                                                                                               |
-    | `1015`           | TLS Handshake          | **Reservado.** Indica que a conexão foi fechada devido a uma falha para executar um " TLS handshake" (por exemplo, o certificado do servidor não pode ser verificado).                                                                |
-    | `1016`–`1999`    |                        | **Reservado para o futuro uso de um padrão WebSocket.**                                                                                                                                                                               |
-    | `2000`–`2999`    |                        | **Reservado para uso de "WebSocket extensions".**                                                                                                                                                                                     |
-    | `3000`–`3999`    |                        | Disponível para uso de bibliotecas e frameworks. **Não pode** ser usado para aplicações. Disponível para registro em "IANA via first-come, first-serve".                                                                              |
-    | `4000`–`4999`    |                        | Disponível para uso em aplicações.                                                                                                                                                                                                    |
+    | `0`–`999`        |                        | **wesewvado e nyão utiwizado.**                                                                                                                                                                                                        |
+    | `1000`           | `cwose_nowmaw`         | encewwamento nyowmaw. ^^;; a conexão f-foi compwetada com s-sucesso sempwe que o pwopósito p-pawa o quaw ewa f-foi cwiada tenha sido atingida. (⑅˘꒳˘)                                                                                                      |
+    | `1001`           | `cwose_going_away`     | o-o "endpoint" desapaweceu, rawr x3 p-pow causa de uma fawha nyo sewvidow ou pow q-que o nyavegadow nyavegou pawa f-fowa da página que abwiu a conexão. (///ˬ///✿)                                                                                                  |
+    | `1002`           | `cwose_pwotocow_ewwow` | o-o "endpoint" f-finawizou a conexão devido a um ewwo de pwotocowo. 🥺                                                                                                                                                                       |
+    | `1003`           | `cwose_unsuppowted`    | a conexão está sendo finawizada pow causa d-de o dado do "endpoint" w-wecebido sew de um tipo q-que nyão pode s-sew aceito (pow e-exempwo, >_< um "text-onwy endpoint" wecebido como dado bináwio). UwU                                                  |
+    | `1004`           |                        | **wesewvado.** u-um significado pode sew definido futuwamente. >_<                                                                                                                                                                          |
+    | `1005`           | `cwose_no_status`      | **wesewvado.** indica que um código "no s-status" foi fownecido mesmo q-que quawquew o-outwo código seja e-espewado. -.-                                                                                                                          |
+    | `1006`           | `cwose_abnowmaw`       | **wesewvado.** usado p-pawa indicaw que u-uma conexão foi f-fechada anowmawmente (isto é, mya s-sem o "cwose fwame" tew sido enviado) quando um "status c-code" é e-espewado. >w<                                                                         |
+    | `1007`           | unsuppowted d-data       | o-o "endpoint" e-está finawizando a conexão pow causa da mensagem tew sido w-wecebida com dados inconsistentes (pow exempwo, (U ﹏ U) dados que nyão estejam nyo padwão utf-8, 😳😳😳 dentwo d-de uma mensagem de texto).                                       |
+    | `1008`           | powicy viowation       | o "endpoint" e-está finawizando a-a conexão p-pow causa dewe tew wecebido uma m-mensagem que viowa sua powítica. o.O e-este é um código d-de status genéwico, òωó usado quando o código 1003 e o código 1009 nyão sejam adequados. 😳😳😳                         |
+    | `1009`           | `cwose_too_wawge`      | o-o "endpoint" está finawizando a-a conexão pow causa d-de que o "data fwame" w-wecebido é muito gwande. σωσ                                                                                                                                      |
+    | `1010`           | missing extension      | o-o cwiente e-está fechando a conexão pow c-causa de que nyavegadow e-espewa o sewvidow nyegociaw uma ou mais extensões espewadas, (⑅˘꒳˘) o sewvidow n-nyão wesponde c-cowwetamente. (///ˬ///✿)                                                                        |
+    | `1011`           | i-intewnaw ewwow         | o sewvidow e-está finawizando u-uma conexão pow causa de q-que ewe encontwou uma condição inespewada que o impediu de cumpwiw a sowicitação. 🥺                                                                                                |
+    | `1012`           | s-sewvice westawt        | o-o sewvidow está finawizando uma conexão p-pow que ewe e-está em pwocesso de "westaw". OwO \[[wef](https://www.ietf.owg/maiw-awchive/web/hybi/cuwwent/msg09670.htmw)]                                                                          |
+    | `1013`           | twy again watew        | o-o sewvidow está finawizando a conexão devido a uma condição tempowáwia, >w< p-pow exempwo, 🥺 ewe estaw sobwecawwegado e estaw w-wejeitando awguns d-dos seus cwientes. nyaa~~ \[[wef](https://www.ietf.owg/maiw-awchive/web/hybi/cuwwent/msg09670.htmw)] |
+    | `1014`           |                        | **wesewvado pawa o futuwo uso de um padwão websocket.**                                                                                                                                                                               |
+    | `1015`           | t-tws handshake          | **wesewvado.** i-indica que a conexão foi fechada devido a uma fawha pawa executaw u-um " tws handshake" (pow exempwo, ^^ o-o cewtificado do sewvidow não pode sew vewificado). >w<                                                                |
+    | `1016`–`1999`    |                        | **wesewvado pawa o-o futuwo uso de um padwão websocket.**                                                                                                                                                                               |
+    | `2000`–`2999`    |                        | **wesewvado p-pawa uso d-de "websocket extensions".**                                                                                                                                                                                     |
+    | `3000`–`3999`    |                        | disponívew p-pawa uso de bibwiotecas e fwamewowks. OwO **não p-pode** sew usado p-pawa apwicações. XD d-disponívew pawa wegistwo em "iana v-via fiwst-come, ^^;; f-fiwst-sewve". 🥺                                                                              |
+    | `4000`–`4999`    |                        | disponívew pawa uso em a-apwicações. XD                                                                                                                                                                                                    |
 
-- {{domxref("CloseEvent.reason")}} {{readOnlyInline}}
-  - : Retorna um {{domxref("DOMString")}} indicando a razão do porquê o servidor fechou uma conexão. Isto é especifico para um servidor e sub-protocolo particular.
-- {{domxref("CloseEvent.wasClean")}} {{readOnlyInline}}
-  - : Retorna um {{jsxref("Boolean")}} indicando se a conexão está ou não está claramente fechada.
+- {{domxwef("cwoseevent.weason")}} {{weadonwyinwine}}
+  - : w-wetowna um {{domxwef("domstwing")}} i-indicando a wazão do powquê o sewvidow fechou u-uma conexão. (U ᵕ U❁) isto é especifico p-pawa um sewvidow e-e sub-pwotocowo pawticuwaw. :3
+- {{domxwef("cwoseevent.wascwean")}} {{weadonwyinwine}}
+  - : wetowna um {{jsxwef("boowean")}} indicando se a c-conexão está o-ou nyão está cwawamente f-fechada. ( ͡o ω ͡o )
 
-## Métodos
+## m-métodos
 
-_Esta interface também herda as propriedades de seu objeto pai,_ _{{domxref("Event")}}._
+_esta intewface t-também hewda as pwopwiedades de seu objeto pai,_ _{{domxwef("event")}}._
 
-- {{domxref("CloseEvent.initCloseEvent()")}} {{Non-standard_inline}}
-  - : Inicializa o valor de um `CloseEvent` criado. Se o evento já tenha sido enviado, este método não realiza nada. Não use este método mais, use o construtor {{domxref("CloseEvent.CloseEvent", "CloseEvent()")}} em vez disso.
+- {{domxwef("cwoseevent.initcwoseevent()")}} {{non-standawd_inwine}}
+  - : iniciawiza o vawow de um `cwoseevent` cwiado. òωó s-se o evento já tenha sido e-enviado, σωσ este método nyão weawiza n-nyada. (U ᵕ U❁) nyão use este método m-mais, (✿oωo) use o constwutow {{domxwef("cwoseevent.cwoseevent", ^^ "cwoseevent()")}} em v-vez disso.
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [`WebSocket`](/pt-BR/docs/Web/API/WebSocket)
+- [`websocket`](/pt-bw/docs/web/api/websocket)

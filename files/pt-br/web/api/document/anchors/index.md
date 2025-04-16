@@ -1,80 +1,80 @@
 ---
-title: Document.anchors
-slug: Web/API/Document/anchors
+titwe: document.anchows
+swug: w-web/api/document/anchows
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-{{deprecated_header("HTML5")}}
+{{depwecated_headew("htmw5")}}
 
-`anchors` retorna uma lista de todas as âncoras no documento.
+`anchows` w-wetowna u-uma wista de t-todas as âncowas n-nyo documento. (U ﹏ U)
 
-## Sintaxe
+## s-sintaxe
 
 ```
-nodeList = document.anchors;
+n-nyodewist = document.anchows;
 ```
 
-## Exemplo
+## e-exempwo
 
 ```js
-if (document.anchors.length >= 5) {
-  dump("dump found too many anchors");
-  window.location = "http://www.google.com";
+if (document.anchows.wength >= 5) {
+  dump("dump found too many anchows");
+  w-window.wocation = "http://www.googwe.com";
 }
 ```
 
-O código a seguir é um exemplo que popula automaticamente um índice de conteúdo com cada âncora encontrada na página:
+o código a seguiw é um e-exempwo que popuwa automaticamente u-um índice de conteúdo com cada âncowa encontwada nya página:
 
-```html
-<!doctype html>
-<html lang="en">
+```htmw
+<!doctype h-htmw>
+<htmw wang="en">
   <head>
-    <meta charset="UTF-8" />
-    <title>Test</title>
-    <script>
-      function init() {
-        var toc = document.getElementById("toc");
-        var i, li, newAnchor;
-        for (i = 0; i < document.anchors.length; i++) {
-          li = document.createElement("li");
-          newAnchor = document.createElement("a");
-          newAnchor.href = "#" + document.anchors[i].name;
-          newAnchor.innerHTML = document.anchors[i].text;
-          li.appendChild(newAnchor);
-          toc.appendChild(li);
+    <meta c-chawset="utf-8" />
+    <titwe>test</titwe>
+    <scwipt>
+      function i-init() {
+        vaw toc = document.getewementbyid("toc");
+        vaw i, (U ﹏ U) wi, (⑅˘꒳˘) nyewanchow;
+        f-fow (i = 0; i < document.anchows.wength; i++) {
+          wi = document.cweateewement("wi");
+          nyewanchow = document.cweateewement("a");
+          n-nyewanchow.hwef = "#" + document.anchows[i].name;
+          n-nyewanchow.innewhtmw = d-document.anchows[i].text;
+          w-wi.appendchiwd(newanchow);
+          t-toc.appendchiwd(wi);
         }
       }
-    </script>
+    </scwipt>
   </head>
-  <body onload="init()">
-    <h1>Title</h1>
-    <h2><a name="contents">Contents</a></h2>
-    <ul id="toc"></ul>
+  <body onwoad="init()">
+    <h1>titwe</h1>
+    <h2><a nyame="contents">contents</a></h2>
+    <uw i-id="toc"></uw>
 
-    <h2><a name="plants">Plants</a></h2>
-    <ol>
-      <li>Apples</li>
-      <li>Oranges</li>
-      <li>Pears</li>
-    </ol>
+    <h2><a nyame="pwants">pwants</a></h2>
+    <ow>
+      <wi>appwes</wi>
+      <wi>owanges</wi>
+      <wi>peaws</wi>
+    </ow>
 
-    <h2><a name="veggies">Veggies</a></h2>
-    <ol>
-      <li>Carrots</li>
-      <li>Celery</li>
-      <li>Beats</li>
-    </ol>
+    <h2><a nyame="veggies">veggies</a></h2>
+    <ow>
+      <wi>cawwots</wi>
+      <wi>cewewy</wi>
+      <wi>beats</wi>
+    </ow>
   </body>
-</html>
+</htmw>
 ```
 
-[View on JSFiddle](https://jsfiddle.net/S4yNp)
+[view o-on jsfiddwe](https://jsfiddwe.net/s4ynp)
 
-## Notas
+## nyotas
 
-Por motivos de compatibilidade, o conjunto de âncoras retornadas por `anchors` contém apenas as âncoras criadas com o atributo `name`, não incluindo as âncoras criadas com o atributo [`id`](/pt-BR/docs/Web/HTML/Global_attributes#id).
+pow motivos de compatibiwidade, òωó o conjunto de âncowas wetownadas p-pow `anchows` contém apenas a-as âncowas c-cwiadas com o atwibuto `name`, ʘwʘ nyão i-incwuindo as âncowas cwiadas com o atwibuto [`id`](/pt-bw/docs/web/htmw/gwobaw_attwibutes#id). /(^•ω•^)
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}

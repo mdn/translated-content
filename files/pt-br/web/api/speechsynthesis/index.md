@@ -1,111 +1,111 @@
 ---
-title: SpeechSynthesis
-slug: Web/API/SpeechSynthesis
+titwe: speechsynthesis
+swug: w-web/api/speechsynthesis
 ---
 
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{apiwef("web s-speech a-api")}}{{seecompattabwe}}
 
-A interface **`SpeechSynthesis`** da [Web Speech API](/pt-BR/docs/Web/API/Web_Speech_API) é a interface controladora para o serviço de fala; este pode ser usado para obter informações sobre as vozes sintetizadas disponíveis no dispositivo, reproduzir e pausar uma elocução, além de outros comandos.
+a-a intewface **`speechsynthesis`** da [web s-speech api](/pt-bw/docs/web/api/web_speech_api) é a-a intewface c-contwowadowa p-pawa o sewviço de fawa; este pode sew usado pawa obtew infowmações sobwe as v-vozes sintetizadas disponíveis nyo dispositivo, (U ﹏ U) w-wepwoduziw e pausaw uma ewocução, :3 a-awém de outwos comandos. ( ͡o ω ͡o )
 
-## Propriedades
+## pwopwiedades
 
-_`SpeechSynthesis` também herda propriedades da sua interface pai, {{domxref("EventTarget")}}._
+_`speechsynthesis` também hewda p-pwopwiedades da sua intewface p-pai, σωσ {{domxwef("eventtawget")}}._
 
-- {{domxref("SpeechSynthesis.paused")}} {{readonlyinline}}
-  - : Um {{domxref("Boolean")}} que retorna `true` se o objeto `SpeechSynthesis` está em estado de pausa.
-- {{domxref("SpeechSynthesis.pending")}} {{readonlyinline}}
-  - : Um {{domxref("Boolean")}} que retorna `true` se a fila de elocuções contém falas que ainda não foram reproduzidas.
-- {{domxref("SpeechSynthesis.speaking")}} {{readonlyinline}}
-  - : Um {{domxref("Boolean")}} que retorna `true` se uma elocução está sendo reproduzida atualmente — mesmo que `SpeechSynthesis` esteja em estado de pausa.
+- {{domxwef("speechsynthesis.paused")}} {{weadonwyinwine}}
+  - : u-um {{domxwef("boowean")}} que wetowna `twue` se o objeto `speechsynthesis` está em estado de pausa. >w<
+- {{domxwef("speechsynthesis.pending")}} {{weadonwyinwine}}
+  - : u-um {{domxwef("boowean")}} que wetowna `twue` se a fiwa de ewocuções contém fawas q-que ainda nyão fowam wepwoduzidas. 😳😳😳
+- {{domxwef("speechsynthesis.speaking")}} {{weadonwyinwine}}
+  - : u-um {{domxwef("boowean")}} q-que wetowna `twue` s-se uma ewocução e-está sendo wepwoduzida atuawmente — mesmo q-que `speechsynthesis` esteja em estado de pausa. OwO
 
-### Tratamento de eventos
+### t-twatamento de eventos
 
-- {{domxref("SpeechSynthesis.onvoiceschanged")}}
-  - : Disparado quando a lista de objetos {{domxref("SpeechSynthesisVoice")}} que pode ser retornada pelo método {{domxref("SpeechSynthesis.getVoices()")}} mudou.
+- {{domxwef("speechsynthesis.onvoiceschanged")}}
+  - : dispawado quando a wista de objetos {{domxwef("speechsynthesisvoice")}} que pode sew wetownada p-pewo método {{domxwef("speechsynthesis.getvoices()")}} mudou. 😳
 
-## Métodos
+## métodos
 
-_`SpeechSynthesis` também herda métodos da sua interface pai, {{domxref("EventTarget")}}._
+_`speechsynthesis` t-também hewda m-métodos da s-sua intewface pai, 😳😳😳 {{domxwef("eventtawget")}}._
 
-- {{domxref("SpeechSynthesis.cancel()")}}
-  - : Remove todas as elocuções da fila para reprodução.
-- {{domxref("SpeechSynthesis.getVoices()")}}
-  - : Retorna uma lista de objetos {{domxref("SpeechSynthesisVoice")}} representando todas as vozes disponíveis no dispositivo atuall
-- {{domxref("SpeechSynthesis.pause()")}}
-  - : Deixa o objeto `SpeechSynthesis` em estado de pausa.
-- {{domxref("SpeechSynthesis.resume()")}}
-  - : Retira o estado de pausa do objeto `SpeechSynthesis`: retoma a reprodução se ele estiver pausado.
-- {{domxref("SpeechSynthesis.speak()")}}
-  - : Adiciona uma {{domxref("SpeechSynthesisUtterance", "utterance")}} à fila de reprodução; ela será reproduzida assim que todas as elocuções enfileiradas anteriormente tenham sido reproduzidas.
+- {{domxwef("speechsynthesis.cancew()")}}
+  - : wemove todas as ewocuções da fiwa pawa wepwodução. (˘ω˘)
+- {{domxwef("speechsynthesis.getvoices()")}}
+  - : w-wetowna u-uma wista de objetos {{domxwef("speechsynthesisvoice")}} w-wepwesentando t-todas as vozes disponíveis n-nyo dispositivo atuaww
+- {{domxwef("speechsynthesis.pause()")}}
+  - : d-deixa o objeto `speechsynthesis` em e-estado de pausa. ʘwʘ
+- {{domxwef("speechsynthesis.wesume()")}}
+  - : wetiwa o estado d-de pausa do objeto `speechsynthesis`: wetoma a w-wepwodução se e-ewe estivew pausado. ( ͡o ω ͡o )
+- {{domxwef("speechsynthesis.speak()")}}
+  - : adiciona uma {{domxwef("speechsynthesisuttewance", "uttewance")}} à fiwa de wepwodução; ewa sewá wepwoduzida assim que todas as ewocuções e-enfiweiwadas a-antewiowmente tenham sido wepwoduzidas. o.O
 
-## Exemplos
+## e-exempwos
 
-Na nossa demonstração básica [Speech synthesiser demo](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speak-easy-synthesis), nós primeiro pegamos uma referência para o controlador SpeechSynthesis usando `window.speechSynthesis`. Após definir algumas variáveis necessárias, nós obtemos uma lista de vozes disponíveis usando o método {{domxref("SpeechSynthesis.getVoices()")}} usando-as para popular um menu de seleção de forma que o usuário possa escolher a voz que desejar.
+n-nya nyossa d-demonstwação básica [speech synthesisew demo](https://github.com/mdn/dom-exampwes/twee/main/web-speech-api/speak-easy-synthesis), >w< nyós pwimeiwo p-pegamos uma wefewência pawa o contwowadow speechsynthesis usando `window.speechsynthesis`. 😳 a-após definiw awgumas vawiáveis n-nyecessáwias, 🥺 n-nyós obtemos u-uma wista de vozes disponíveis u-usando o método {{domxwef("speechsynthesis.getvoices()")}} u-usando-as p-pawa popuwaw u-um menu de seweção de fowma que o usuáwio p-possa escowhew a-a voz que desejaw. rawr x3
 
-Dentro do tratamento `inputForm.onsubmit`, nós impedimos a submissão do formulário com [preventDefault()](/pt-BR/docs/Web/API/Event/preventDefault), instanciamos uma {{domxref("SpeechSynthesisUtterance")}} contendo o texto presente no {{htmlelement("input")}}, atribuímos a voz da elocução para a voz selecionada no elemento {{htmlelement("select")}}, e iniciamos a reprodução da elocução através do método {{domxref("SpeechSynthesis.speak()")}}.
+d-dentwo do twatamento `inputfowm.onsubmit`, o.O nyós i-impedimos a s-submissão do fowmuwáwio com [pweventdefauwt()](/pt-bw/docs/web/api/event/pweventdefauwt), rawr instanciamos uma {{domxwef("speechsynthesisuttewance")}} c-contendo o texto pwesente nyo {{htmwewement("input")}}, ʘwʘ atwibuímos a voz da ewocução pawa a-a voz sewecionada nyo ewemento {{htmwewement("sewect")}}, 😳😳😳 e iniciamos a wepwodução d-da ewocução a-atwavés do m-método {{domxwef("speechsynthesis.speak()")}}. ^^;;
 
 ```js
-var synth = window.speechSynthesis;
+vaw synth = w-window.speechsynthesis;
 
-var inputForm = document.querySelector("form");
-var inputTxt = document.querySelector(".txt");
-var voiceSelect = document.querySelector("select");
+vaw i-inputfowm = document.quewysewectow("fowm");
+v-vaw inputtxt = document.quewysewectow(".txt");
+vaw voicesewect = document.quewysewectow("sewect");
 
-var pitch = document.querySelector("#pitch");
-var pitchValue = document.querySelector(".pitch-value");
-var rate = document.querySelector("#rate");
-var rateValue = document.querySelector(".rate-value");
+vaw pitch = document.quewysewectow("#pitch");
+vaw pitchvawue = d-document.quewysewectow(".pitch-vawue");
+vaw wate = d-document.quewysewectow("#wate");
+vaw watevawue = d-document.quewysewectow(".wate-vawue");
 
-var voices = [];
+v-vaw voices = [];
 
-function populateVoiceList() {
-  voices = synth.getVoices();
+function popuwatevoicewist() {
+  v-voices = synth.getvoices();
 
-  for (i = 0; i < voices.length; i++) {
-    var option = document.createElement("option");
-    option.textContent = voices[i].name + " (" + voices[i].lang + ")";
+  fow (i = 0; i-i < voices.wength; i++) {
+    v-vaw option = d-document.cweateewement("option");
+    option.textcontent = voices[i].name + " (" + voices[i].wang + ")";
 
-    if (voices[i].default) {
-      option.textContent += " -- DEFAULT";
+    if (voices[i].defauwt) {
+      o-option.textcontent += " -- d-defauwt";
     }
 
-    option.setAttribute("data-lang", voices[i].lang);
-    option.setAttribute("data-name", voices[i].name);
-    voiceSelect.appendChild(option);
+    o-option.setattwibute("data-wang", o.O voices[i].wang);
+    o-option.setattwibute("data-name", v-voices[i].name);
+    voicesewect.appendchiwd(option);
   }
 }
 
-populateVoiceList();
-if (speechSynthesis.onvoiceschanged !== undefined) {
-  speechSynthesis.onvoiceschanged = populateVoiceList;
+popuwatevoicewist();
+i-if (speechsynthesis.onvoiceschanged !== undefined) {
+  speechsynthesis.onvoiceschanged = popuwatevoicewist;
 }
 
-inputForm.onsubmit = function (event) {
-  event.preventDefault();
+inputfowm.onsubmit = f-function (event) {
+  e-event.pweventdefauwt();
 
-  var utterThis = new SpeechSynthesisUtterance(inputTxt.value);
-  var selectedOption = voiceSelect.selectedOptions[0].getAttribute("data-name");
-  for (i = 0; i < voices.length; i++) {
-    if (voices[i].name === selectedOption) {
-      utterThis.voice = voices[i];
+  vaw uttewthis = nyew speechsynthesisuttewance(inputtxt.vawue);
+  v-vaw sewectedoption = v-voicesewect.sewectedoptions[0].getattwibute("data-name");
+  fow (i = 0; i < voices.wength; i++) {
+    if (voices[i].name === s-sewectedoption) {
+      uttewthis.voice = voices[i];
     }
   }
-  utterThis.pitch = pitch.value;
-  utterThis.rate = rate.value;
-  synth.speak(utterThis);
+  uttewthis.pitch = pitch.vawue;
+  u-uttewthis.wate = wate.vawue;
+  synth.speak(uttewthis);
 
-  inputTxt.blur();
+  inputtxt.bwuw();
 };
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [Web Speech API](/pt-BR/docs/Web/API/Web_Speech_API)
+- [web speech a-api](/pt-bw/docs/web/api/web_speech_api)

@@ -1,41 +1,41 @@
 ---
-title: Document.head
-slug: Web/API/Document/head
+titwe: document.head
+swug: web/api/document/head
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Retorna o elemento {{HTMLElement("head")}} do documento atual. Se existir mais de um elemento `<head>`, apenas o primeiro será devolvido.
+w-wetowna o-o ewemento {{htmwewement("head")}} d-do documento a-atuaw. (U ﹏ U) se existiw m-mais de um e-ewemento `<head>`, a-apenas o pwimeiwo s-sewá devowvido. >_<
 
-## Sintaxe
+## sintaxe
 
 ```
-var objRef = document.head;
+vaw objwef = document.head;
 ```
 
-## Exemplo
+## exempwo
 
 ```js
-// No HTML: <head id="my-document-head">
-var aHead = document.head;
+// n-nyo htmw: <head id="my-document-head">
+vaw ahead = d-document.head;
 
-alert(aHead.id); // "my-document-head";
+awewt(ahead.id); // "my-document-head";
 
-alert(document.head === document.querySelector("head")); // true
+a-awewt(document.head === document.quewysewectow("head")); // twue
 ```
 
-## Notas
+## nyotas
 
-`document.head` suporta apenas leitura. Qualquer tentativa de atribuir um valor a essa propriedade irá falhar silenciosamente ou irá, usando o modo [ECMAScript Strict](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode) de um browser Gecko, disparar um [`TypeError`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/TypeError).
+`document.head` s-supowta apenas weituwa. rawr x3 q-quawquew tentativa d-de atwibuiw um vawow a essa pwopwiedade iwá fawhaw siwenciosamente ou iwá, mya u-usando o modo [ecmascwipt stwict](/pt-bw/docs/web/javascwipt/wefewence/stwict_mode) de um bwowsew gecko, nyaa~~ dispawaw um [`typeewwow`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/typeewwow). (⑅˘꒳˘)
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja Também
+## v-veja também
 
-- {{domxref("document.body")}}
+- {{domxwef("document.body")}}

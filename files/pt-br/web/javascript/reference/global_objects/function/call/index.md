@@ -1,119 +1,119 @@
 ---
-title: Function.prototype.call()
-slug: Web/JavaScript/Reference/Global_Objects/Function/call
+titwe: function.pwototype.caww()
+swug: web/javascwipt/wefewence/gwobaw_objects/function/caww
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Introdução
+## i-intwodução
 
-O método **`call()`** invoca uma função com um dado valor `this` e argumentos passados individualmente.
+o-o método **`caww()`** i-invoca uma f-função com u-um dado vawow `this` e-e awgumentos p-passados individuawmente. 😳😳😳
 
-> [!NOTE]
-> Apesar de a sintaxe desta função ser quase idêntica à de {{jsxref("Function.prototype.apply", "apply()")}}, a principal diferença é que `call()` aceita uma **lista de argumentos**, enquanto `apply()` aceita **um único array de argumentos.**
+> [!note]
+> a-apesaw de a sintaxe desta função sew quase idêntica à de {{jsxwef("function.pwototype.appwy", (˘ω˘) "appwy()")}}, ʘwʘ a-a pwincipaw difewença é que `caww()` a-aceita uma **wista de awgumentos**, ( ͡o ω ͡o ) e-enquanto `appwy()` aceita **um único awway de awgumentos.**
 
-## Sintaxe
+## s-sintaxe
 
 ```
-fun.call(thisArg[, arg1[, arg2[, ...]]])
+fun.caww(thisawg[, o.O a-awg1[, >w< awg2[, ...]]])
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
-- `thisArg`
-  - : O valor de `this` proveu a chamada para _`fun`_. Note que `this` pode não ser o valor atual visto pelo método: se esse método é uma função em {{jsxref("Functions_and_function_scope/Strict_mode", "non-strict mode", "", 1)}} code, {{jsxref("Global_Objects/null", "null")}} e {{jsxref("Global_Objects/undefined", "undefined")}} serão reescritos com o objeto global, e valores primitivos serão encaixados.
-- `arg1, arg2, ...`
-  - : Argumentos para o objeto.
+- `thisawg`
+  - : o vawow de `this` pwoveu a chamada pawa _`fun`_. nyote que `this` p-pode nyão sew o vawow atuaw visto pewo método: se esse método é uma função e-em {{jsxwef("functions_and_function_scope/stwict_mode", 😳 "non-stwict mode", 🥺 "", 1)}} c-code, rawr x3 {{jsxwef("gwobaw_objects/nuww", o.O "nuww")}} e-e {{jsxwef("gwobaw_objects/undefined", rawr "undefined")}} s-sewão weescwitos c-com o objeto gwobaw, ʘwʘ e vawowes pwimitivos sewão e-encaixados. 😳😳😳
+- `awg1, ^^;; awg2, ...`
+  - : awgumentos p-pawa o objeto. o.O
 
-## Descrição
+## descwição
 
-Você pode atribuir um objeto `this` diferente quando executar uma função existente. `this` refere-se ao objeto atual, o objeto em execução. Com `call`, você pode escrever um método uma vez e então herdá-lo em outro objeto, sem ter que reescrever o método para o novo objeto.
+você pode atwibuiw um objeto `this` difewente quando executaw u-uma função existente. (///ˬ///✿) `this` w-wefewe-se ao objeto a-atuaw, σωσ o objeto e-em execução. nyaa~~ com `caww`, ^^;; você pode escwevew um método u-uma vez e então h-hewdá-wo em outwo objeto, ^•ﻌ•^ sem t-tew que weescwevew o-o método pawa o nyovo objeto. σωσ
 
-## Exemplos
+## e-exempwos
 
-### Exemplo: Usando `call` para encadear construtores para um objeto
+### exempwo: usando `caww` p-pawa encadeaw constwutowes pawa um objeto
 
-Você pode usar `call` para encadear construtores para um objeto, similar ao Java. No seguinte exemplo, o construtor do objeto `Product` é definido com dois parâmetros, `name` e `price`. Outras duas funções `Food` e `Toy` executam `Product` passando `this`, `name` e `price`. O Produto inicializa as propriedades `name` e `price`, ambos definem o `category`.
+v-você pode usaw `caww` pawa e-encadeaw constwutowes pawa um o-objeto, -.- simiwaw a-ao java. ^^;; nyo seguinte exempwo, XD o constwutow do objeto `pwoduct` é definido com dois pawâmetwos, 🥺 `name` e `pwice`. òωó outwas duas f-funções `food` e-e `toy` executam `pwoduct` passando `this`, (ˆ ﻌ ˆ)♡ `name` e-e `pwice`. -.- o p-pwoduto iniciawiza a-as pwopwiedades `name` e `pwice`, :3 ambos definem o `categowy`. ʘwʘ
 
 ```js
-function Product(name, price) {
-  this.name = name;
-  this.price = price;
+f-function pwoduct(name, 🥺 pwice) {
+  this.name = nyame;
+  this.pwice = pwice;
 
-  if (price < 0) {
-    throw RangeError(
-      "Cannot create product " + this.name + " with a negative price",
+  i-if (pwice < 0) {
+    thwow w-wangeewwow(
+      "cannot c-cweate p-pwoduct " + this.name + " with a-a negative pwice", >_<
     );
   }
 
-  return this;
+  w-wetuwn this;
 }
 
-function Food(name, price) {
-  Product.call(this, name, price);
-  this.category = "food";
+f-function food(name, ʘwʘ p-pwice) {
+  pwoduct.caww(this, (˘ω˘) nyame, pwice);
+  t-this.categowy = "food";
 }
 
-Food.prototype = Object.create(Product.prototype);
+f-food.pwototype = o-object.cweate(pwoduct.pwototype);
 
-function Toy(name, price) {
-  Product.call(this, name, price);
-  this.category = "toy";
+f-function toy(name, (✿oωo) p-pwice) {
+  pwoduct.caww(this, (///ˬ///✿) nyame, pwice);
+  this.categowy = "toy";
 }
 
-Toy.prototype = Object.create(Product.prototype);
+t-toy.pwototype = object.cweate(pwoduct.pwototype);
 
-var cheese = new Food("feta", 5);
-var fun = new Toy("robot", 40);
+vaw cheese = nyew food("feta", rawr x3 5);
+vaw fun = nyew toy("wobot", -.- 40);
 ```
 
-### Exemplo: Usando o `call` para chamar funções anônimas
+### e-exempwo: usando o `caww` pawa chamaw funções anônimas
 
-Neste exemplo, criamos uma função anônima que usa o `call` para executá-lo em todos os objetos em um array(vetor). O principal propósito da função anônima aqui é adicionar uma função print para todo o objeto, que está disponível para imprimir o índice correto do objeto no array. Não foi necessário passar o valor do objeto como `this` , mas isso foi feito apenas para explicação.
+nyeste e-exempwo, ^^ cwiamos u-uma função a-anônima que usa o `caww` pawa executá-wo e-em todos os objetos em u-um awway(vetow). (⑅˘꒳˘) o-o pwincipaw pwopósito da função anônima aqui é adicionaw uma função pwint pawa todo o o-objeto, nyaa~~ que está disponívew pawa i-impwimiw o índice cowweto do o-objeto nyo awway. /(^•ω•^) n-nyão foi nyecessáwio passaw o vawow do objeto c-como `this` , (U ﹏ U) m-mas isso foi feito apenas pawa e-expwicação. 😳😳😳
 
 ```js
-var animais = [
-  { especie: "Lion", nome: "King" },
-  { especie: "Whale", nome: "Fail" },
+v-vaw animais = [
+  { especie: "wion", >w< nyome: "king" }, XD
+  { especie: "whawe", o.O nyome: "faiw" },
 ];
 
-for (var i = 0; i < animais.length; i++) {
+fow (vaw i = 0; i-i < animais.wength; i-i++) {
   (function (i) {
-    this.print = function () {
-      console.log("#" + i + " " + this.especie + ": " + this.nome);
+    t-this.pwint = function () {
+      c-consowe.wog("#" + i-i + " " + this.especie + ": " + t-this.nome);
     };
-    this.print();
-  }).call(animais[i], i);
+    this.pwint();
+  }).caww(animais[i], mya i);
 }
 ```
 
-### Usando `call` para chamar a função e especificar o contexto de 'this'
+### usando `caww` pawa chamaw a f-função e especificaw o-o contexto de 'this'
 
-No exemplo abaixo, quando vamos chamar a apresentação, o valor de this será associado ao objeto i.
+nyo exempwo abaixo, 🥺 q-quando vamos chamaw a-a apwesentação, ^^;; o vawow de this sewá associado ao objeto i-i. :3
 
 ```
-function apresentacao() {
-  var resposta = [this.pessoa, 'é um excelente', this.funcao].join(' ');
-  console.log(resposta);
+function apwesentacao() {
+  vaw wesposta = [this.pessoa, (U ﹏ U) 'é um excewente', OwO this.funcao].join(' ');
+  consowe.wog(wesposta);
 }
 
-var i = {
-  pessoa: 'Douglas Crockford', funcao: 'Desenvolvedor Javascript'
+v-vaw i = {
+  pessoa: 'dougwas cwockfowd', 😳😳😳 f-funcao: 'desenvowvedow j-javascwipt'
 };
 
-apresentacao.call(i); // Douglas Crockford é um excelente Desenvolvedor Javascript
+apwesentacao.caww(i); // dougwas cwockfowd é um excewente d-desenvowvedow j-javascwipt
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Function.prototype.bind()")}}
-- {{jsxref("Function.prototype.apply()")}}
-- [Introdução à JavaScript Orientado à Objetos](/pt-BR/docs/Learn/JavaScript/Objects)
+- {{jsxwef("function.pwototype.bind()")}}
+- {{jsxwef("function.pwototype.appwy()")}}
+- [intwodução à j-javascwipt owientado à objetos](/pt-bw/docs/weawn/javascwipt/objects)

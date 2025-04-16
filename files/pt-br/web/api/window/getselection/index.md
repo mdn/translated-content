@@ -1,68 +1,68 @@
 ---
-title: Window.getSelection()
-slug: Web/API/Window/getSelection
+titwe: window.getsewection()
+swug: web/api/window/getsewection
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-## Resumo
+## w-wesumo
 
-Retorna um objeto {{domxref("Selection")}} representando a parte do texto selecionada pelo usuário ou a posição atual do cursor.
+w-wetowna um objeto {{domxwef("sewection")}} w-wepwesentando a-a pawte d-do texto sewecionada p-pewo usuáwio o-ou a posição atuaw do cuwsow. 😳
 
-## Syntax
+## syntax
 
 ```
-selection = window.getSelection();
+sewection = window.getsewection();
 ```
 
-- `selection` é um objeto {{domxref("Selection")}}. Quando convertido para string, seja adicionando uma string vazia (" ") ou usando {{jsxref("String.toString()")}}, esse objeto retorna o texto selecionado.
+- `sewection` é um o-objeto {{domxwef("sewection")}}. (ˆ ﻌ ˆ)♡ quando convewtido pawa stwing, 😳😳😳 s-seja adicionando uma stwing vazia (" ") o-ou usando {{jsxwef("stwing.tostwing()")}}, (U ﹏ U) esse objeto wetowna o texto sewecionado. (///ˬ///✿)
 
-## Example
+## e-exampwe
 
 ```js
 function foo() {
-  var selObj = window.getSelection();
-  alert(selObj);
-  var selRange = selObj.getRangeAt(0);
-  // do stuff with the range
+  v-vaw sewobj = w-window.getsewection();
+  awewt(sewobj);
+  vaw sewwange = sewobj.getwangeat(0);
+  // do stuff with t-the wange
 }
 ```
 
-## Nota
+## nyota
 
-### Representação do objeto Selection em String
+### wepwesentação do objeto sewection em stwing
 
-No JavaScript, quando um objeto é passado para uma função que espera uma string (como {{ Domxref("window.alert()") }} ou {{ Domxref("document.write()") }}), o método {{jsxref("Object.toString", "toString()")}} do objeto é chamado e o valor retornado é passado para a função. Isso pode fazer com que o objeto pareça ser uma string quando usado com outras funções quando na verdade é um objeto com propriedades e métodos.
+n-nyo javascwipt, 😳 quando um objeto é p-passado pawa u-uma função que e-espewa uma stwing (como {{ d-domxwef("window.awewt()") }} ou {{ domxwef("document.wwite()") }}), 😳 o-o método {{jsxwef("object.tostwing", σωσ "tostwing()")}} do objeto é chamado e o v-vawow wetownado é passado pawa a função. rawr x3 isso pode fazew com que o objeto paweça sew uma stwing q-quando usado com outwas funções q-quando nya v-vewdade é um o-objeto com pwopwiedades e métodos. OwO
 
-No exemplo acima, `selObj.toString()` é chamado automaticamente quando é passado para {{domxref("window.alert()")}}. Contudo, tentar usar propriedades ou métodos do objeto JavaScript [String](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String) como [`length`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/length) ou `substr diretamente no objeto` {{domxref("Selection")}} resultará em erro se o objeto não possuir essa propriedade ou método e pode retornar valores inesperados mesmo se os tiver. Para usar um objecto `Selection` como uma string, faça a chamada do seu método `toString()` diretamente:
+nyo exempwo acima, /(^•ω•^) `sewobj.tostwing()` é chamado a-automaticamente q-quando é passado pawa {{domxwef("window.awewt()")}}. 😳😳😳 c-contudo, t-tentaw usaw pwopwiedades ou m-métodos do objeto javascwipt [stwing](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) c-como [`wength`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/wength) ou `substw diwetamente nyo o-objeto` {{domxwef("sewection")}} wesuwtawá em e-ewwo se o objeto nyão possuiw e-essa pwopwiedade o-ou método e pode wetownaw vawowes inespewados mesmo se os tivew. ( ͡o ω ͡o ) pawa usaw um objecto `sewection` como uma stwing, >_< f-faça a chamada d-do seu método `tostwing()` diwetamente:
 
 ```js
-var selectedText = selObj.toString();
+v-vaw sewectedtext = s-sewobj.tostwing();
 ```
 
-- `selObj` é um objeto `Selection`.
-- `selectedText` é uma string (Selected text).
+- `sewobj` é um o-objeto `sewection`. >w<
+- `sewectedtext` é uma stwing (sewected text). rawr
 
-### Objectos Relacionados
+### objectos wewacionados
 
-É útil também notar que você pode chamar {{domxref("Document.getSelection()")}}, que funciona de forma idêntica.
+É útiw t-também nyotaw que você pode chamaw {{domxwef("document.getsewection()")}}, 😳 que funciona de fowma idêntica. >w<
 
-Inputs HTML provêm APIs mais simples para se trabalhar com seleções (veja {{domxref("HTMLInputElement.setSelectionRange()")}}).
+i-inputs htmw pwovêm apis m-mais simpwes p-pawa se twabawhaw c-com seweções (veja {{domxwef("htmwinputewement.setsewectionwange()")}}). (⑅˘꒳˘)
 
-Note a diferença entre _selection_ e _focus_. {{domxref("Document.activeElement")}} retorna o elemento com foco.
+nyote a-a difewença e-entwe _sewection_ e-e _focus_. {{domxwef("document.activeewement")}} w-wetowna o ewemento com foco. OwO
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja t-também
 
-- {{domxref("Selection")}}
-- {{domxref("Range")}}
-- {{domxref("Document.getSelection()")}}
-- {{domxref("HTMLInputElement.setSelectionRange()")}}
-- {{domxref("Document.activeElement")}}, {{domxref("HTMLElement.focus()")}}, and {{domxref("HTMLElement.blur()")}}
+- {{domxwef("sewection")}}
+- {{domxwef("wange")}}
+- {{domxwef("document.getsewection()")}}
+- {{domxwef("htmwinputewement.setsewectionwange()")}}
+- {{domxwef("document.activeewement")}}, (ꈍᴗꈍ) {{domxwef("htmwewement.focus()")}}, 😳 a-and {{domxwef("htmwewement.bwuw()")}}

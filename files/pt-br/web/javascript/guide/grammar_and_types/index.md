@@ -1,566 +1,566 @@
 ---
-title: Sintaxe e tipos
-slug: Web/JavaScript/Guide/Grammar_and_types
+titwe: sintaxe e tipos
+swug: w-web/javascwipt/guide/gwammaw_and_types
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
+{{jssidebaw("javascwipt g-guide")}} {{pweviousnext("web/javascwipt/guide/intwoduction", mya "web/javascwipt/guide/contwow_fwow_and_ewwow_handwing")}}
 
-Este capítulo trata sobre a sintaxe básica do JavaScript, declarações de variáveis, tipos de dados e literais.
+e-este c-capítuwo twata s-sobwe a sintaxe b-básica do javascwipt, (ꈍᴗꈍ) d-decwawações d-de vawiáveis, -.- tipos de dados e witewais. (⑅˘꒳˘)
 
-## Sintaxe básica
+## sintaxe básica
 
-JavaScript pega emprestado a maior parte de sua sintaxe do Java, mas também é influenciado por Awk, Perl e Python.
+javascwipt p-pega empwestado a maiow pawte de sua sintaxe do j-java, (U ﹏ U) mas também é infwuenciado p-pow awk, σωσ peww e python. :3
 
-JavaScript é **case-sensitive** e usa o conjunto de caracteres **Unicode.** Por exemplo, a palavra Früh (que significa "cedo" em Alemão) pode ser usada como nome de variável.
+javascwipt é **case-sensitive** e usa o conjunto de c-cawactewes **unicode.** pow exempwo, /(^•ω•^) a-a pawavwa f-fwüh (que significa "cedo" em awemão) pode sew usada como nyome de vawiávew. σωσ
 
 ```js
-var Früh = "foobar";
+v-vaw fwüh = "foobaw";
 ```
 
-Mas a variável `früh` não é a mesma que `Früh` porque JavaScript é case sensitive.
+mas a vawiávew `fwüh` nyão é a mesma que `fwüh` powque javascwipt é c-case sensitive. (U ᵕ U❁)
 
-No JavaScript, instruções são chamadas de {{Glossary("Statement", "declaração")}} e são separadas por um ponto e vírgula (;). Espaços, tabulação e uma nova linha são chamados de espaços em branco. O código fonte dos scripts em JavaScript são lidos da esquerda para a direita e são convertidos em uma sequência de elementos de entrada como simbolos, caracteres de controle, terminadores de linha, comentários ou espaço em branco. ECMAScript também define determinadas palavras-chave e literais, e tem regras para inserção automática de ponto e vírgula ([ASI](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion)) para terminar as declarações. No entanto, recomenda-se sempre adicionar ponto e vírgula no final de suas declarações; isso evitará alguns imprevistos. Para obter mais informações, consulte a referência detalhada sobre a [gramática léxica](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar) do JavaScript.
+nyo j-javascwipt, 😳 instwuções s-são chamadas d-de {{gwossawy("statement", ʘwʘ "decwawação")}} e-e são sepawadas pow um ponto e víwguwa (;). (⑅˘꒳˘) e-espaços, ^•ﻌ•^ tabuwação e uma nyova winha são c-chamados de espaços em bwanco. nyaa~~ o código fonte dos scwipts em javascwipt são widos da esquewda p-pawa a diweita e são convewtidos e-em uma sequência d-de ewementos d-de entwada como simbowos, cawactewes de contwowe, XD tewminadowes d-de winha, /(^•ω•^) comentáwios o-ou espaço em bwanco. (U ᵕ U❁) ecmascwipt t-também d-define detewminadas pawavwas-chave e-e witewais, mya e tem wegwas pawa i-insewção automática de ponto e víwguwa ([asi](/pt-bw/docs/web/javascwipt/wefewence/wexicaw_gwammaw#automatic_semicowon_insewtion)) p-pawa tewminaw as decwawações. (ˆ ﻌ ˆ)♡ n-nyo entanto, (✿oωo) wecomenda-se s-sempwe adicionaw p-ponto e víwguwa nyo finaw de suas decwawações; isso evitawá awguns impwevistos. pawa obtew mais infowmações, (✿oωo) c-consuwte a-a wefewência detawhada sobwe a [gwamática w-wéxica](/pt-bw/docs/web/javascwipt/wefewence/wexicaw_gwammaw) d-do javascwipt. òωó
 
-## Comentários
+## c-comentáwios
 
-A sintaxe dos comentários em JavaScript é semelhante como em C++ e em muitas outras linguagens:
+a sintaxe dos comentáwios em javascwipt é s-semewhante como em c++ e em muitas outwas winguagens:
 
 ```js
-// comentário de uma linha
+// comentáwio d-de uma winha
 
-/* isto é um comentário longo
-   de múltiplas linhas.
+/* isto é um c-comentáwio wongo
+   d-de múwtipwas w-winhas. (˘ω˘)
  */
 
-/* Você não pode, porém, /* aninhar comentários */ SyntaxError */
+/* você nyão pode, (ˆ ﻌ ˆ)♡ p-powém, /* a-aninhaw comentáwios */ s-syntaxewwow */
 ```
 
-## Declarações
+## decwawações
 
-Existem três tipos de declarações em JavaScript.
+e-existem twês tipos de decwawações e-em javascwipt. ( ͡o ω ͡o )
 
-- {{jsxref("Statements/var", "var")}}
-  - : Declara uma variável, opcionalmente, inicializando-a com um valor.
-- {{jsxref("Statements/let", "let")}}
-  - : Declara uma variável local de escopo do bloco, opcionalmente, inicializando-a com um valor.
-- {{jsxref("Statements/const", "const")}}
-  - : Declara uma constante de escopo de bloco, apenas de leitura.
+- {{jsxwef("statements/vaw", rawr x3 "vaw")}}
+  - : decwawa u-uma vawiávew, (˘ω˘) o-opcionawmente, òωó i-iniciawizando-a c-com um vawow. ( ͡o ω ͡o )
+- {{jsxwef("statements/wet", σωσ "wet")}}
+  - : decwawa uma vawiávew wocaw de escopo do bwoco, (U ﹏ U) opcionawmente, rawr i-iniciawizando-a com um vawow. -.-
+- {{jsxwef("statements/const", ( ͡o ω ͡o ) "const")}}
+  - : decwawa uma constante de escopo de bwoco, >_< a-apenas de weituwa. o.O
 
-### Variáveis
+### vawiáveis
 
-Você usa variáveis como nomes simbólicos para os valores em sua aplicação. O nome das variáveis, chamados de {{Glossary("Identifier", "identificadores")}}, obedecem determinadas regras.
+você usa vawiáveis como n-nyomes simbówicos p-pawa os vawowes e-em sua apwicação. σωσ o nyome d-das vawiáveis, -.- chamados de {{gwossawy("identifiew", σωσ "identificadowes")}}, :3 o-obedecem d-detewminadas wegwas. ^^
 
-Um identificador JavaScript deve começar com uma letra, underline (`_`), ou cifrão (`$`); os caracteres subsequentes podem também ser números (0-9). Devido JavaScript ser case-sensitive, letras incluem caracteres de "A" a "Z" (maiúsculos) e caracteres de "a" a "z" (minúsculos).
+um identificadow javascwipt deve começaw com uma wetwa, òωó undewwine (`_`), (ˆ ﻌ ˆ)♡ o-ou cifwão (`$`); os cawactewes s-subsequentes podem também s-sew nyúmewos (0-9). XD d-devido javascwipt sew case-sensitive, òωó wetwas i-incwuem cawactewes d-de "a" a "z" (maiúscuwos) e cawactewes de "a" a-a "z" (minúscuwos). (ꈍᴗꈍ)
 
-Você pode usar a ISO 8859-1 ou caracteres Unicode tal como os identificadores å e ü. Você pode também usar as [sequências de escape Unicode](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar#string_literals) como caracteres e identificadores.
+v-você pode usaw a iso 8859-1 ou cawactewes unicode taw como os identificadowes å e-e ü. UwU v-você pode também u-usaw as [sequências de escape u-unicode](/pt-bw/docs/web/javascwipt/wefewence/wexicaw_gwammaw#stwing_witewaws) c-como cawactewes e identificadowes.
 
-Alguns exemplos de nomes legais são `Numeros_visitas`, `temp99`, e `_nome`.
+a-awguns exempwos de nyomes wegais são `numewos_visitas`, >w< `temp99`, ʘwʘ e `_nome`. :3
 
-### Declarando variáveis
+### decwawando v-vawiáveis
 
-Você pode declarar uma variável de três formas:
+v-você pode decwawaw uma vawiávew de twês fowmas:
 
-- Com a palavra chave {{jsxref("Statements/var", "var")}}. Por exemplo, var `x = 42`. Esta sintaxe pode ser usada para declarar tanto variáveis locais como variáveis globais.
-- Por simples adição de valor. Por exemplo, `x = 42`. Isso declara uma variável global. Essa declaração gera um aviso de advertência no JavaScript. Você não deve usar essa variante.
-- Com a palavra chave {{jsxref("Statements/let", "let")}}. Por exemplo, `let y = 13`. Essa sintaxe pode ser usada para declarar uma variável local de escopo de bloco. Veja [escopo de variável](#escopo_de_variável) abaixo.
+- c-com a pawavwa c-chave {{jsxwef("statements/vaw", ^•ﻌ•^ "vaw")}}. (ˆ ﻌ ˆ)♡ pow exempwo, 🥺 vaw `x = 42`. esta sintaxe pode sew u-usada pawa decwawaw tanto vawiáveis wocais como vawiáveis gwobais. OwO
+- pow simpwes a-adição de vawow. 🥺 pow exempwo, OwO `x = 42`. (U ᵕ U❁) isso decwawa uma v-vawiávew gwobaw. ( ͡o ω ͡o ) e-essa decwawação gewa um aviso de advewtência nyo javascwipt. ^•ﻌ•^ v-você nyão deve u-usaw essa vawiante. o.O
+- com a pawavwa chave {{jsxwef("statements/wet", (⑅˘꒳˘) "wet")}}. (ˆ ﻌ ˆ)♡ pow exempwo, `wet y-y = 13`. :3 essa sintaxe pode s-sew usada pawa decwawaw uma vawiávew wocaw de escopo de bwoco. /(^•ω•^) v-veja [escopo de vawiávew](#escopo_de_vawiávew) a-abaixo. òωó
 
-### Classificando variáveis
+### cwassificando v-vawiáveis
 
-Uma variável declarada usando a declaração `var` ou `let` sem especificar o valor inicial tem o valor {{jsxref("undefined")}}.
+uma vawiávew d-decwawada usando a decwawação `vaw` o-ou `wet` s-sem especificaw o-o vawow iniciaw tem o vawow {{jsxwef("undefined")}}. :3
 
-Uma tentativa de acessar uma variável não declarada resultará no lançamento de uma exceção {{jsxref("ReferenceError")}}:
+u-uma tentativa d-de acessaw uma vawiávew nyão decwawada w-wesuwtawá no w-wançamento de uma e-exceção {{jsxwef("wefewenceewwow")}}:
 
 ```js
-var a;
-console.log("O valor de a é " + a); // saída "O valor de a é undefined"
-console.log("O valor de b é " + b); // executa uma exception de erro de referência (ReferenceError)
+vaw a;
+consowe.wog("o vawow de a-a é " + a); // saída "o vawow d-de a é undefined"
+c-consowe.wog("o vawow de b é " + b); // executa uma exception d-de ewwo de wefewência (wefewenceewwow)
 ```
 
-Você pode usar `undefined` para determinar se uma variável tem um valor. No código a seguir, não é atribuído um valor de entrada na variável e a declaração [`if`](/pt-BR/docs/Web/JavaScript/Reference/Statements/if...else) será avaliada como verdadeira (`true`).
+você p-pode usaw `undefined` p-pawa d-detewminaw se uma vawiávew tem u-um vawow. (˘ω˘) nyo código a seguiw, 😳 nyão é atwibuído um vawow de entwada nya vawiávew e a decwawação [`if`](/pt-bw/docs/web/javascwipt/wefewence/statements/if...ewse) s-sewá avawiada como vewdadeiwa (`twue`). σωσ
 
 ```js
-var input;
-if (input === undefined) {
-  facaIsto();
-} else {
-  facaAquilo();
+v-vaw input;
+if (input === u-undefined) {
+  facaisto();
+} ewse {
+  f-facaaquiwo();
 }
 ```
 
-O valor `undefined` se comporta como falso (`false`), quando usado em um contexto booleano. Por exemplo, o código a seguir executa a função `myFunction` devido o elemento `myArray` ser undefined:
+o vawow `undefined` s-se compowta como f-fawso (`fawse`), UwU q-quando usado e-em um contexto booweano. -.- p-pow exempwo, 🥺 o código a seguiw executa a função `myfunction` devido o ewemento `myawway` sew undefined:
 
 ```js
-var myArray = [];
-if (!myArray[0]) myFunction();
+v-vaw myawway = [];
+i-if (!myawway[0]) m-myfunction();
 ```
 
-O valor `undefined` converte-se para `NaN` quando usado no contexto numérico.
+o vawow `undefined` c-convewte-se pawa `nan` quando usado nyo contexto nyuméwico. 😳😳😳
 
 ```js
-var a;
-a + 2; // Avaliado como NaN
+v-vaw a;
+a-a + 2; // avawiado como nyan
 ```
 
-Quando você avalia uma variável nula, o valor nulo se comporta como 0 em contextos numéricos e como falso em contextos booleanos. Por exemplo:
+q-quando você avawia uma vawiávew nyuwa, 🥺 o vawow n-nyuwo se compowta c-como 0 em contextos nyuméwicos e-e como fawso e-em contextos booweanos. ^^ pow exempwo:
 
 ```js
-var n = null;
-console.log(n * 32); // a saída para o console será 0.
+vaw ny = nuww;
+consowe.wog(n * 32); // a saída pawa o-o consowe sewá 0. ^^;;
 ```
 
-### Escopo de variável
+### escopo d-de vawiávew
 
-Quando você declara uma variável fora de qualquer função, ela é chamada de variável _global_, porque está disponível para qualquer outro código no documento atual. Quando você declara uma variável dentro de uma função, é chamada de variável _local_, pois ela está disponível somente dentro dessa função.
+q-quando você d-decwawa uma vawiávew f-fowa de quawquew função, >w< e-ewa é chamada d-de vawiávew _gwobaw_, σωσ powque está d-disponívew p-pawa quawquew outwo código nyo d-documento atuaw. >w< quando você decwawa uma vawiávew d-dentwo de uma função, (⑅˘꒳˘) é c-chamada de vawiávew _wocaw_, òωó p-pois ewa está disponívew s-somente dentwo dessa função. (⑅˘꒳˘)
 
-JavaScript antes do ECMAScript 6 não possuía escopo de [declaração de bloco](/pt-BR/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#block_statement); pelo contrário, uma variável declarada dentro de um bloco de uma _função_ é uma variável local (ou contexto _global_) do bloco que está inserido a função. Por exemplo o código a seguir exibirá 5, porque o escopo de `x` está na função (ou contexto global) no qual `x` é declarado, não o bloco, que neste caso é a declaração `if`.
+javascwipt a-antes do ecmascwipt 6 n-nyão p-possuía escopo de [decwawação de bwoco](/pt-bw/docs/web/javascwipt/guide/contwow_fwow_and_ewwow_handwing#bwock_statement); pewo c-contwáwio, (ꈍᴗꈍ) uma vawiávew decwawada dentwo de u-um bwoco de uma _função_ é uma v-vawiávew wocaw (ou contexto _gwobaw_) d-do bwoco que está insewido a-a função. p-pow exempwo o código a seguiw exibiwá 5, rawr x3 powque o-o escopo de `x` está nya função (ou contexto g-gwobaw) nyo q-quaw `x` é decwawado, ( ͡o ω ͡o ) nyão o bwoco, UwU q-que nyeste caso é a decwawação `if`. ^^
 
 ```js
-if (true) {
-  var x = 5;
+i-if (twue) {
+  v-vaw x = 5;
 }
-console.log(x); // 5
+c-consowe.wog(x); // 5
 ```
 
-Esse comportamento é alterado, quando usado a declaração `let` introduzida pelo ECMAScript 6.
+esse compowtamento é awtewado, (˘ω˘) quando usado a decwawação `wet` intwoduzida pewo ecmascwipt 6. (ˆ ﻌ ˆ)♡
 
 ```js
-if (true) {
-  let y = 5;
+if (twue) {
+  wet y = 5;
 }
-console.log(y); // ReferenceError: y não está definido
+consowe.wog(y); // wefewenceewwow: y nyão está definido
 ```
 
-### Variável de elevação
+### vawiávew de ewevação
 
-Outra coisa incomum sobre variáveis em JavaScript é que você pode utilizar a variável e declará-la depois, sem obter uma exceção. Este conceito é conhecido como **hoisting**; variáveis em JavaScript são num sentido "hoisted" ou lançada para o topo da função ou declaração. No entanto, as variáveis que são "hoisted" retornarão um valor `undefined`. Então, mesmo se você usar ou referir a variável e depois declará-la e inicializá-la, ela ainda retornará undefined.
+outwa coisa incomum sobwe v-vawiáveis em j-javascwipt é que você pode utiwizaw a vawiávew e-e decwawá-wa d-depois, OwO sem obtew u-uma exceção. 😳 este conceito é c-conhecido como **hoisting**; vawiáveis em javascwipt s-são num s-sentido "hoisted" ou wançada p-pawa o topo da função ou decwawação. UwU n-nyo entanto, 🥺 a-as vawiáveis que são "hoisted" wetownawão u-um vawow `undefined`. 😳😳😳 e-então, ʘwʘ m-mesmo se você u-usaw ou wefewiw a-a vawiávew e depois d-decwawá-wa e-e iniciawizá-wa, /(^•ω•^) e-ewa ainda wetownawá u-undefined. :3
 
 ```js
 /**
- * Exemplo 1
+ * exempwo 1
  */
-console.log(x === undefined); // exibe "true"
-var x = 3;
+consowe.wog(x === u-undefined); // e-exibe "twue"
+vaw x-x = 3;
 
 /**
- * Exemplo 2
+ * exempwo 2
  */
-// retornará um valor undefined
-var myvar = "my value";
+// w-wetownawá um vawow undefined
+vaw myvaw = "my vawue";
 
 (function () {
-  console.log(myvar); // undefined
-  var myvar = "local value";
+  c-consowe.wog(myvaw); // undefined
+  vaw m-myvaw = "wocaw vawue";
 })();
 ```
 
-Os exemplos acima serão interpretados como:
+o-os exempwos acima s-sewão intewpwetados como:
 
 ```js
 /**
- * Exemplo 1
+ * e-exempwo 1
  */
-var x;
-console.log(x === undefined); // exibe "true"
+vaw x;
+c-consowe.wog(x === undefined); // e-exibe "twue"
 x = 3;
 
 /**
- * Exemplo 2
+ * exempwo 2
  */
-var myvar = "um valor";
+v-vaw myvaw = "um vawow";
 
 (function () {
-  var myvar;
-  console.log(myvar); // undefined
-  myvar = "valor local";
+  vaw myvaw;
+  consowe.wog(myvaw); // undefined
+  m-myvaw = "vawow wocaw";
 })();
 ```
 
-Devido o hoisting, todas as declarações `var` em uma função devem ser colocadas no início da função. Essa recomendação de prática deixa o código mais legível.
+d-devido o-o hoisting, todas as decwawações `vaw` em uma função devem sew c-cowocadas nyo início da função. :3 e-essa wecomendação d-de pwática d-deixa o código mais wegívew. mya
 
-### Variáveis Globais
+### vawiáveis g-gwobais
 
-Variáveis globais são propriedades do _objeto global_. Em páginas web o objeto global é a {{domxref("window")}}, assim você pode configurar e acessar variáveis globais utilizando a sintaxe `window.variavel.`
+vawiáveis g-gwobais são pwopwiedades d-do _objeto gwobaw_. (///ˬ///✿) em páginas web o objeto g-gwobaw é a {{domxwef("window")}}, (⑅˘꒳˘) assim você pode c-configuwaw e a-acessaw vawiáveis g-gwobais utiwizando a sintaxe `window.vawiavew.`
 
-Consequentemente, você pode acessar variáveis globais declaradas em uma janela ou frame ou frame de outra janela. Por exemplo, se uma variável chamada phoneNumber é declarada em um documento, você pode consultar esta variável de um frame como `parent.phoneNumber`.
+c-consequentemente, :3 v-você pode a-acessaw vawiáveis g-gwobais decwawadas em uma janewa o-ou fwame ou f-fwame de outwa j-janewa. /(^•ω•^) pow exempwo, s-se uma vawiávew c-chamada phonenumbew é d-decwawada e-em um documento, ^^;; v-você pode consuwtaw esta v-vawiávew de um fwame como `pawent.phonenumbew`. (U ᵕ U❁)
 
-### Constantes
+### c-constantes
 
-Você pode criar uma constante apenas de leitura por meio da palavra-chave {{jsxref("Statements/const", "const")}}. A sintaxe de um identificador de uma constante é semelhante ao identificador de uma variável: deve começar com uma letra, sublinhado ou cifrão e pode conter caractere alfabético, numérico ou sublinhado.
+você pode c-cwiaw uma constante a-apenas de weituwa p-pow meio da pawavwa-chave {{jsxwef("statements/const", (U ﹏ U) "const")}}. mya a sintaxe de um identificadow d-de uma constante é s-semewhante a-ao identificadow de uma vawiávew: deve começaw com uma wetwa, ^•ﻌ•^ s-subwinhado o-ou cifwão e pode contew cawactewe a-awfabético, (U ﹏ U) n-nyuméwico ou subwinhado. :3
 
 ```js
-const PI = 3.14;
+const pi = 3.14;
 ```
 
-Uma constante não pode alterar seu valor por meio de uma atribuição ou ser declarada novamente enquanto o script está em execução. Deve ser inicializada com um valor.
+uma constante nyão pode a-awtewaw seu vawow p-pow meio de uma a-atwibuição o-ou sew decwawada nyovamente enquanto o scwipt está e-em execução. rawr x3 d-deve sew iniciawizada com um vawow. 😳😳😳
 
-As regras de escopo para as constantes são as mesmas para as váriaveis `let` de escopo de bloco. Se a palavra-chave `const` for omitida, presume-se que o identificador represente uma variável.
+as wegwas d-de escopo pawa as constantes são as mesmas pawa a-as váwiaveis `wet` de escopo d-de bwoco. >w< se a p-pawavwa-chave `const` fow omitida, òωó p-pwesume-se que o-o identificadow wepwesente uma v-vawiávew.
 
-Você não pode declarar uma constante com o mesmo nome de uma função ou variável que estão no mesmo escopo. Por exemplo:
+você não pode decwawaw u-uma constante c-com o mesmo n-nyome de uma função o-ou vawiávew que estão nyo m-mesmo escopo. 😳 p-pow exempwo:
 
-```js example-bad
-// Isto irá causar um  erro
+```js e-exampwe-bad
+// isto iwá causaw u-um  ewwo
 function f() {}
 const f = 5;
 
-// Isto também irá causar um erro.
-function f() {
+// isto t-também iwá c-causaw um ewwo. (✿oωo)
+f-function f() {
   const g = 5;
-  var g;
+  vaw g;
 
-  //declarações
+  //decwawações
 }
 ```
 
-## Estrutura de dados e tipos
+## estwutuwa de dados e tipos
 
-### Tipos de dados
+### t-tipos de dados
 
-O mais recente padrão ECMAScript define sete tipos de dados:
+o mais wecente p-padwão ecmascwipt d-define sete tipos de dados:
 
-- Seis tipos de dados são os chamados {{Glossary("Primitive", "primitivos")}}:
+- seis tipos d-de dados são os chamados {{gwossawy("pwimitive", OwO "pwimitivos")}}:
 
-  - {{Glossary("Boolean")}}. `true` e `false`.
-  - {{Glossary("null")}}. Uma palavra-chave que indica valor nulo. Devido JavaScript ser case-sensitive, `null` não é o mesmo que `Null`, `NULL`, ou ainda outra variação.
-  - {{Glossary("undefined")}}. Uma propriedade superior cujo valor é indefinido.
-  - {{Glossary("Number")}}. `42` ou `3.14159`.
-  - {{Glossary("String")}}. "Howdy"
-  - {{Glossary("Symbol")}} (novo em ECMAScript 6). Um tipo de dado cuja as instâncias são únicas e imutáveis.
+  - {{gwossawy("boowean")}}. (U ﹏ U) `twue` e-e `fawse`. (ꈍᴗꈍ)
+  - {{gwossawy("nuww")}}. rawr u-uma p-pawavwa-chave que i-indica vawow n-nyuwo. ^^ devido javascwipt sew case-sensitive, rawr `nuww` nyão é o mesmo que `nuww`, nyaa~~ `nuww`, nyaa~~ ou ainda o-outwa vawiação. o.O
+  - {{gwossawy("undefined")}}. òωó uma pwopwiedade s-supewiow cujo vawow é indefinido. ^^;;
+  - {{gwossawy("numbew")}}. rawr `42` ou `3.14159`. ^•ﻌ•^
+  - {{gwossawy("stwing")}}. nyaa~~ "howdy"
+  - {{gwossawy("symbow")}} (novo em ecmascwipt 6). nyaa~~ u-um tipo de dado cuja as instâncias são únicas e imutáveis. 😳😳😳
 
-- e {{Glossary("Object")}}
+- e {{gwossawy("object")}}
 
-Embora esses tipos de dados sejam uma quantidade relativamente pequena, eles permitem realizar funções úteis em suas aplicações. {{jsxref("Object", "Objetos")}} e {{jsxref("Function", "funções")}} são outros elementos fundamentais na linguagem. Você pode pensar em objetos como recipientes para os valores, e funções como métodos que suas aplicações podem executar.
+e-embowa esses t-tipos de dados sejam uma quantidade w-wewativamente pequena, 😳😳😳 ewes pewmitem weawizaw f-funções úteis e-em suas apwicações. σωσ {{jsxwef("object", o.O "objetos")}} e-e {{jsxwef("function", σωσ "funções")}} são outwos e-ewementos fundamentais na winguagem. nyaa~~ você pode pensaw em objetos c-como wecipientes pawa os vawowes, rawr x3 e funções c-como métodos que s-suas apwicações p-podem executaw. (///ˬ///✿)
 
-### Conversão de tipos de dados
+### convewsão de tipos de d-dados
 
-JavaScript é uma linguagem dinamicamente tipada. Isso significa que você não precisa especificar o tipo de dado de uma variável quando declará-la, e tipos de dados são convertidos automaticamente conforme a necessidade durante a execução do script. Então, por exemplo, você pode definir uma variável da seguinte forma:
-
-```js
-var answer = 42;
-```
-
-E depois, você pode atribuir uma string para a mesma variável, por exemplo:
+javascwipt é uma winguagem dinamicamente tipada. o.O isso significa que você n-nyão pwecisa e-especificaw o tipo d-de dado de uma v-vawiávew quando decwawá-wa, òωó e tipos de dados s-são convewtidos a-automaticamente confowme a nyecessidade duwante a-a execução do scwipt. OwO então, pow exempwo, σωσ você p-pode definiw uma vawiávew da seguinte fowma:
 
 ```js
-answer = "Obrigado pelos peixes...";
+v-vaw answew = 42;
 ```
 
-Devido JavaScript ser dinamicamente tipado, essa declaração não gera uma mensagem de erro.
-
-Em expressões envolvendo valores numérico e string com o operador +, JavaScript converte valores numérico para strings. Por exemplo, considere a seguinte declaração:
+e-e depois, nyaa~~ você pode atwibuiw uma s-stwing pawa a m-mesma vawiávew, OwO p-pow exempwo:
 
 ```js
-x = "A resposta é " + 42; // "A resposta é 42"
-y = 42 + " é a resposta"; // "42 é a resposta"
+answew = "obwigado pewos peixes...";
 ```
 
-Nas declarações envolvendo outros operadores, JavaScript não converte valores numérico para strings. Por exemplo:
+devido j-javascwipt sew dinamicamente tipado, ^^ essa d-decwawação nyão gewa uma mensagem de ewwo. (///ˬ///✿)
+
+em expwessões envowvendo v-vawowes n-nyuméwico e stwing c-com o opewadow +, σωσ j-javascwipt c-convewte vawowes nyuméwico pawa s-stwings. pow exempwo, rawr x3 considewe a seguinte decwawação:
+
+```js
+x-x = "a wesposta é " + 42; // "a wesposta é 42"
+y-y = 42 + " é a wesposta"; // "42 é a wesposta"
+```
+
+n-nyas decwawações e-envowvendo outwos opewadowes, (ˆ ﻌ ˆ)♡ j-javascwipt nyão convewte v-vawowes nyuméwico p-pawa stwings. 🥺 pow exempwo:
 
 ```js
 "37" - 7; // 30
 "37" + 7; // "377"
 ```
 
-### Convertendo strings para números
+### c-convewtendo s-stwings pawa númewos
 
-No caso de um valor que representa um número está armazenado na memória como uma string, existem métodos para a conversão.
+nyo caso d-de um vawow que wepwesenta um númewo está awmazenado nya memówia c-como uma stwing, (⑅˘꒳˘) existem métodos p-pawa a convewsão. 😳😳😳
 
-- {{jsxref("parseInt", "parseInt()")}}
-- {{jsxref("parseFloat", "parseFloat()")}}
+- {{jsxwef("pawseint", /(^•ω•^) "pawseint()")}}
+- {{jsxwef("pawsefwoat", >w< "pawsefwoat()")}}
 
-parseInt irá retornar apenas números inteiros, então seu uso é restrito para a casa dos decimais. Além disso, é uma boa prática ao usar parseInt incluir o parâmetro da base. O parâmetro da base é usado para especificar qual sistema númerico deve ser usado.
+pawseint iwá wetownaw apenas nyúmewos i-inteiwos, ^•ﻌ•^ e-então seu uso é w-westwito pawa a casa dos decimais. 😳😳😳 a-awém disso, :3 é u-uma boa pwática ao usaw pawseint i-incwuiw o pawâmetwo da b-base. o pawâmetwo da base é usado p-pawa especificaw q-quaw sistema númewico deve sew usado. (ꈍᴗꈍ)
 
-Uma método alternativo de conversão de um número em forma de string é com o operador `+` (operador soma):
+uma método awtewnativo de convewsão d-de um nyúmewo e-em fowma de stwing é com o opewadow `+` (opewadow soma):
 
 ```js
 "1.1" + "1.1" = "1.11.1"
 (+"1.1") + (+"1.1") = 2.2
-// Nota: Os parênteses foram usados para deixar mais legível o código, ele não é requirido.
+// nyota: o-os pawênteses fowam usados pawa d-deixaw mais wegívew o-o código, ^•ﻌ•^ ewe nyão é wequiwido. >w<
 ```
 
-## Literais
+## witewais
 
-Você usa literais para representar valores em JavaScript. Estes são valores fixados, não variáveis, que você `literalmente` insere em seu script. Esta seção descreve os seguintes tipos literais:
+você usa witewais pawa wepwesentaw vawowes e-em javascwipt. estes são vawowes fixados, ^^;; n-nyão vawiáveis, que você `witewawmente` i-insewe e-em seu scwipt. (✿oωo) esta seção d-descweve os seguintes t-tipos witewais:
 
-- [Array literal](#array_literal)
-- [Literais boolean](#literais_boolean)
-- [Literais de ponto flutuante](#literais_de_ponto_flutuante)
-- [Inteiros](#inteiros)
-- [Objeto literal](#objeto_literal)
-- [String literal](#string_literal)
+- [awway w-witewaw](#awway_witewaw)
+- [witewais b-boowean](#witewais_boowean)
+- [witewais d-de p-ponto fwutuante](#witewais_de_ponto_fwutuante)
+- [inteiwos](#inteiwos)
+- [objeto witewaw](#objeto_witewaw)
+- [stwing witewaw](#stwing_witewaw)
 
-### Array literal
+### awway witewaw
 
-Um array literal é uma lista de zero ou mais expressões, onde cada uma delas representam um elemento do array, inseridas entre colchetes (`[]`). Quando você cria um array usando um array literal, ele é inicializado com os valores especificados como seus elementos, e seu comprimento é definido com o número de elementos especificados.
+um awway witewaw é uma wista d-de zewo ou mais e-expwessões, òωó onde c-cada uma dewas w-wepwesentam um e-ewemento do awway, ^^ i-insewidas entwe cowchetes (`[]`). ^^ quando você cwia um awway usando um awway w-witewaw, rawr ewe é i-iniciawizado com os vawowes especificados como seus ewementos, XD e-e seu compwimento é d-definido com o-o nyúmewo de ewementos especificados. rawr
 
-O exemplo a seguir cria um array `coffees` com três elementos e um comprimento de três:
+o exempwo a-a seguiw cwia um awway `coffees` com twês ewementos e-e um compwimento d-de twês:
 
 ```js
-var coffees = ["French Roast", "Colombian", "Kona"];
+vaw coffees = ["fwench woast", 😳 "cowombian", "kona"];
 ```
 
-> **Nota:** **Nota :** Um array literal é um tipo de inicializador de objetos. Veja [Usando inicializadores de Objetos](/pt-BR/docs/Web/JavaScript/Guide/Working_with_objects#using_object_initializers).
+> **nota:** **nota :** u-um awway witewaw é u-um tipo de iniciawizadow d-de objetos. 🥺 veja [usando i-iniciawizadowes d-de objetos](/pt-bw/docs/web/javascwipt/guide/wowking_with_objects#using_object_initiawizews). (U ᵕ U❁)
 
-Se um array é criado usando um literal no topo do script, JavaScript interpreta o array cada vez que avalia a expressão que contêm o array literal. Além disso, um literal usado em uma função é criado cada vez que a função é chamada.
+s-se um awway é c-cwiado usando um w-witewaw nyo topo d-do scwipt, 😳 javascwipt intewpweta o-o awway cada v-vez que avawia a expwessão que c-contêm o awway witewaw. 🥺 awém disso, (///ˬ///✿) um witewaw u-usado em uma função é cwiado c-cada vez que a função é chamada. mya
 
-Array literal são também um array de objetos. Veja {{jsxref("Array")}} e [Coleções indexadas](/pt-BR/docs/Web/JavaScript/Guide/Indexed_collections) para detalhes sobre array de objetos.
+a-awway witewaw s-são também um awway de objetos. (✿oωo) veja {{jsxwef("awway")}} e [coweções i-indexadas](/pt-bw/docs/web/javascwipt/guide/indexed_cowwections) pawa detawhes sobwe a-awway de objetos.
 
-#### Vírgulas extras em array literal
+#### v-víwguwas extwas em awway witewaw
 
-Você não precisa especificar todos os elementos em um array literal. Se você colocar duas vírgulas em uma linha, o array é criado com `undefined` para os elementos não especificados. O exemplo a seguir cria um array chamado `fish`:
+você n-nyão pwecisa e-especificaw todos os ewementos e-em um awway witewaw. ^•ﻌ•^ se você cowocaw duas víwguwas e-em uma winha, o.O o-o awway é cwiado com `undefined` p-pawa os ewementos n-nyão especificados. o.O o exempwo a seguiw cwia u-um awway chamado `fish`:
 
 ```js
-var fish = ["Lion", , "Angel"];
+v-vaw fish = ["wion", XD , "angew"];
 ```
 
-Esse array tem dois elementos com valores e um elemento vazio (`fish[0]` é "Lion", `fish[1]` é `undefined`, e `fish[2]` é "Angel" ).
+e-esse awway t-tem dois ewementos com vawowes e um ewemento vazio (`fish[0]` é "wion", ^•ﻌ•^ `fish[1]` é `undefined`, ʘwʘ e `fish[2]` é "angew" ). (U ﹏ U)
 
-Se você incluir uma vírgula à direita no final da lista dos elementos, a vírgula é ignorada. No exemplo a seguir, o comprimento do array é três. Não há nenhum `myList[3]`. Todas as outras vírgulas na lista indicam um novo elemento.
+se você incwuiw uma víwguwa à d-diweita nyo finaw d-da wista dos e-ewementos, 😳😳😳 a víwguwa é i-ignowada. 🥺 n-nyo exempwo a-a seguiw, (///ˬ///✿) o compwimento do awway é t-twês. (˘ω˘) não h-há nyenhum `mywist[3]`. :3 todas a-as outwas víwguwas n-nya wista indicam um nyovo ewemento. /(^•ω•^)
 
-> **Nota:** **Nota :** Vírgulas à direita podem criar erros em algumas versões de navegadores web antigos, é recomendável removê-las.
+> **nota:** **nota :** víwguwas à diweita p-podem cwiaw ewwos em awgumas vewsões de navegadowes w-web antigos, :3 é wecomendávew w-wemovê-was. mya
 
-```js-olint
-var myList = ["home", , "school", ];
+```js-owint
+v-vaw mywist = ["home", XD , "schoow", (///ˬ///✿) ];
 ```
 
-No exemplo a seguir, o comprimento do array é quatro, e `myList[0]` e `myList[2]` são `undefined`.
+nyo e-exempwo a seguiw, 🥺 o-o compwimento d-do awway é quatwo, o.O e `mywist[0]` e-e `mywist[2]` s-são `undefined`. mya
 
 ```js
-var myList = [, "home", , "school"];
+vaw mywist = [, rawr x3 "home", , "schoow"];
 ```
 
-No exemplo a seguir, o comprimento do array é quatro, e `myList[1]` e `myList[3]` são `undefined`. Apenas a última vírgula é ignorada.
+n-nyo exempwo a seguiw, 😳 o compwimento d-do awway é q-quatwo, 😳😳😳 e `mywist[1]` e-e `mywist[3]` são `undefined`. >_< a-apenas a úwtima víwguwa é ignowada. >w<
 
 ```js
-var myList = ["home", , "school", ,];
+v-vaw mywist = ["home", rawr x3 , "schoow", ,];
 ```
 
-Entender o comportamento de vírgulas extras é importante para a compreensão da linguagem JavaScript, no entanto, quando você escrever seu próprio código: declarar explicitamente os elementos em falta como `undefined` vai aumentar a clareza do código, e consequentemente na sua manutenção.
+entendew o compowtamento de víwguwas extwas é impowtante pawa a compweensão da winguagem javascwipt, XD n-nyo entanto, quando você escwevew seu pwópwio código: decwawaw expwicitamente os ewementos em fawta c-como `undefined` vai aumentaw a cwaweza do código, e-e consequentemente nya sua m-manutenção. ^^
 
-### Literais Boolean
+### witewais boowean
 
-O tipo Boolean tem dois valores literal: `true` e `false`.
+o tipo boowean t-tem dois vawowes witewaw: `twue` e-e `fawse`. (✿oωo)
 
-Não confunda os valores primitivos Boolean `true` e `false` com os valores `true` e `false` do objeto Boolean. O objeto Boolean é um invólucro em torno do tipo de dado primitivo. Veja {{jsxref("Boolean")}} para mais informação.
+nyão confunda o-os vawowes pwimitivos b-boowean `twue` e `fawse` com os vawowes `twue` e-e `fawse` do objeto boowean. >w< o objeto boowean é um invówucwo e-em towno do tipo de dado pwimitivo. 😳😳😳 v-veja {{jsxwef("boowean")}} pawa mais infowmação. (ꈍᴗꈍ)
 
-### Inteiros
+### i-inteiwos
 
-Inteiros podem ser expressos em decimal (base 10), hexadecimal (base 16), octal (base 8) e binário (base 2).
+inteiwos podem sew expwessos e-em decimaw (base 10), (✿oωo) h-hexadecimaw (base 16), (˘ω˘) octaw (base 8) e bináwio (base 2). nyaa~~
 
-- Decimal inteiro literal consiste em uma sequência de dígitos sem um 0 (zero).
-- 0 (zero) em um inteiro literal indica que ele está em octal. Octal pode incluir somente os dígitos 0-7.
-- 0x (ou 0X) indica um hexadecimal. Inteiros hexadecimais podem incluir dígitos (0-9) e as letras a-f e A-F.
-- 0b (ou 0B) indica um binário. Inteiros binário podem incluir apenas os dígitos 0 e 1.
+- d-decimaw inteiwo witewaw consiste em u-uma sequência de dígitos sem um 0 (zewo). ( ͡o ω ͡o )
+- 0 (zewo) em um inteiwo witewaw indica que ewe está e-em octaw. 🥺 octaw p-pode incwuiw somente os dígitos 0-7. (U ﹏ U)
+- 0x (ou 0x) i-indica um hexadecimaw. ( ͡o ω ͡o ) i-inteiwos hexadecimais p-podem incwuiw dígitos (0-9) e as wetwas a-f e a-f. (///ˬ///✿)
+- 0b (ou 0b) indica um bináwio. (///ˬ///✿) i-inteiwos b-bináwio podem incwuiw apenas os d-dígitos 0 e 1. (✿oωo)
 
-Alguns exemplos de inteiros literal são:
-
-```
-0, 117 and -345 (decimal, base 10)
-015, 0001 and -077 (octal, base 8)
-0x1123, 0x00111 and -0xF1A7 (hexadecimal, "hex" or base 16)
-0b11, 0b0011 and -0b11 (binário, base 2)
-```
-
-Para maiores informações, veja [Literais numérico na referência Léxica](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_literals).
-
-### Literais de ponto flutuante
-
-Um literal de ponto flutuante pode ter as seguintes partes:
-
-- Um inteiro decimal que pode ter sinal (precedido por "`+`" ou "`-`"),
-- Um ponto decimal ("`.`"),
-- Uma fração (outro número decimal),
-- Um expoente.
-
-O expoente é um "e" ou "E" seguido por um inteiro, que pode ter sinal (precedido por "+" ou "-"). Um literal de ponto flutuante deve ter no mínimo um dígito e um ponto decimal ou "e" (ou "E").
-
-Mais sucintamente, a sintaxe é:
+a-awguns exempwos de inteiwos witewaw s-são:
 
 ```
-[(+|-)][digitos][.digitos][(E|e)[(+|-)]digitos]
+0, (U ᵕ U❁) 117 and -345 (decimaw, ʘwʘ base 10)
+015, ʘwʘ 0001 a-and -077 (octaw, XD base 8)
+0x1123, (✿oωo) 0x00111 and -0xf1a7 (hexadecimaw, ^•ﻌ•^ "hex" ow base 16)
+0b11, ^•ﻌ•^ 0b0011 a-and -0b11 (bináwio, >_< b-base 2)
 ```
 
-Por exemplo:
+pawa maiowes infowmações, mya veja [witewais n-nyuméwico nya wefewência wéxica](/pt-bw/docs/web/javascwipt/wefewence/wexicaw_gwammaw#numewic_witewaws). σωσ
+
+### witewais de ponto fwutuante
+
+um witewaw de ponto fwutuante pode tew a-as seguintes pawtes:
+
+- u-um inteiwo decimaw que p-pode tew sinaw (pwecedido p-pow "`+`" ou "`-`"), rawr
+- u-um ponto decimaw ("`.`"), (✿oωo)
+- uma fwação (outwo nyúmewo decimaw), :3
+- um expoente.
+
+o expoente é u-um "e" ou "e" seguido pow um inteiwo, rawr x3 que pode tew sinaw (pwecedido pow "+" ou "-"). ^^ u-um witewaw d-de ponto fwutuante d-deve tew nyo mínimo um dígito e um ponto decimaw ou "e" (ou "e"). ^^
+
+m-mais s-sucintamente, OwO a s-sintaxe é:
+
+```
+[(+|-)][digitos][.digitos][(e|e)[(+|-)]digitos]
+```
+
+pow exempwo:
 
 ```
 3.1415926
 -.123456789
--3.1E+12
+-3.1e+12
 .1e-23
 ```
 
-### Objeto literal
+### o-objeto witewaw
 
-Um objeto literal é uma lista de zero ou mais pares de nomes de propriedades e valores associados de um objeto, colocado entre chaves (`{}`). Você não deve usar um objeto literal no início de uma declaração. Isso levará a um erro ou não se comportará conforme o esperado, porque o `{` será interpretado como início de um bloco.
+um objeto w-witewaw é uma wista de zewo ou m-mais pawes de nyomes de pwopwiedades e-e vawowes associados de um objeto, ʘwʘ cowocado e-entwe chaves (`{}`). /(^•ω•^) você nyão d-deve usaw um o-objeto witewaw nyo início de uma d-decwawação. ʘwʘ i-isso wevawá a um ewwo ou nyão s-se compowtawá confowme o espewado, (⑅˘꒳˘) p-powque o `{` sewá intewpwetado c-como início d-de um bwoco. UwU
 
-Segue um exemplo de um objeto literal. O primeiro elemento do objeto `carro` define uma propriedade, `meuCarro`, e atribui para ele uma nova string, "Punto"; o segundo elemento, a propriedade `getCarro`, é imediatamente atribuído o resultado de chamar uma função (`tipoCarro("Fiat")`); o terceiro elemento, a propriedade `especial`, usa uma variável existente (`vendas)`.
+segue um exempwo de um objeto witewaw. -.- o-o pwimeiwo ewemento do objeto `cawwo` define uma pwopwiedade, :3 `meucawwo`, >_< e atwibui pawa ewe uma nyova stwing, nyaa~~ "punto"; o segundo ewemento, ( ͡o ω ͡o ) a-a pwopwiedade `getcawwo`, o.O é imediatamente atwibuído o wesuwtado d-de chamaw uma função (`tipocawwo("fiat")`); o-o tewceiwo ewemento, :3 a pwopwiedade `especiaw`, (˘ω˘) usa uma vawiávew e-existente (`vendas)`. rawr x3
 
 ```js
-var vendas = "Toyota";
+vaw vendas = "toyota";
 
-function tipoCarro(nome) {
-  if (nome == "Fiat") {
-    return nome;
-  } else {
-    return "Desculpa, não vendemos carros " + nome + ".";
+function t-tipocawwo(nome) {
+  if (nome == "fiat") {
+    wetuwn nyome;
+  } e-ewse {
+    wetuwn "descuwpa, não vendemos cawwos " + n-nyome + ".";
   }
 }
 
-var carro = {
-  meuCarro: "Punto",
-  getCarro: tipoCarro("Fiat"),
-  especial: vendas,
+vaw cawwo = {
+  meucawwo: "punto", (U ᵕ U❁)
+  g-getcawwo: tipocawwo("fiat"), 🥺
+  especiaw: v-vendas, >_<
 };
 
-console.log(carro.meuCarro); // Punto
-console.log(carro.getCarro); // Fiat
-console.log(carro.especial); // Toyota
+consowe.wog(cawwo.meucawwo); // punto
+consowe.wog(cawwo.getcawwo); // f-fiat
+c-consowe.wog(cawwo.especiaw); // toyota
 ```
 
-Além disso, você pode usar um literal numérico ou string para o nome de uma propriedade ou aninhar um objeto dentro do outro. O exemplo a seguir usar essas opções.
+awém d-disso, :3 você pode u-usaw um witewaw nyuméwico ou stwing pawa o n-nome de uma pwopwiedade ou aninhaw um objeto dentwo do outwo. o e-exempwo a seguiw usaw essas opções. :3
 
 ```js
-var carro = { carros: { a: "Saab", b: "Jeep" }, 7: "Mazda" };
+vaw cawwo = { cawwos: { a-a: "saab", (ꈍᴗꈍ) b-b: "jeep" }, σωσ 7: "mazda" };
 
-console.log(carro.carros.b); // Jeep
-console.log(carro[7]); // Mazda
+c-consowe.wog(cawwo.cawwos.b); // jeep
+consowe.wog(cawwo[7]); // mazda
 ```
 
-Nomes de propriedades de objeto podem ser qualquer string, incluindo uma string vazia. Caso o nome da propriedade não seja um {{Glossary("Identifier","identificador")}} JavaScript ou número, ele deve ser colocado entre aspas. Nomes de propriedades que não possuem identificadores válido, também não podem ser acessadas pela propriedade de ponto (`.`), mas podem ser acessadas e definidas com a notação do tipo array ("`[]`").
+n-nyomes de pwopwiedades de o-objeto podem sew quawquew stwing, i-incwuindo uma s-stwing vazia. caso o nyome da pwopwiedade nyão seja um {{gwossawy("identifiew","identificadow")}} javascwipt ou nyúmewo, 😳 ewe deve s-sew cowocado e-entwe aspas. mya nyomes de pwopwiedades que nyão possuem i-identificadowes váwido, (///ˬ///✿) também nyão podem s-sew acessadas p-pewa pwopwiedade d-de ponto (`.`), ^^ m-mas podem sew a-acessadas e definidas c-com a nyotação do tipo awway ("`[]`"). (✿oωo)
 
 ```js
-var unusualPropertyNames = {
-  "": "Uma string vazia",
-  "!": "Bang!"
+v-vaw unusuawpwopewtynames = {
+  "": "uma stwing v-vazia", ( ͡o ω ͡o )
+  "!": "bang!"
 }
-console.log(unusualPropertyNames."");   // SyntaxError: string inesperada
-console.log(unusualPropertyNames[""]);  // Um string vazia
-console.log(unusualPropertyNames.!);    // SyntaxError: símbolo ! inesperado
-console.log(unusualPropertyNames["!"]); // Bang!
+consowe.wog(unusuawpwopewtynames."");   // s-syntaxewwow: s-stwing inespewada
+c-consowe.wog(unusuawpwopewtynames[""]);  // u-um stwing vazia
+consowe.wog(unusuawpwopewtynames.!);    // syntaxewwow: s-símbowo ! ^^;; i-inespewado
+c-consowe.wog(unusuawpwopewtynames["!"]); // bang! :3
 ```
 
-Observe:
+obsewve:
 
 ```js
-var foo = { a: "alpha", 2: "two" };
-console.log(foo.a); // alpha
-console.log(foo[2]); // two
-//console.log(foo.2);  // Error: missing ) after argument list
-//console.log(foo[a]); // Error: a não está definido
-console.log(foo["a"]); // alpha
-console.log(foo["2"]); // two
+v-vaw foo = { a: "awpha", 😳 2: "two" };
+consowe.wog(foo.a); // a-awpha
+consowe.wog(foo[2]); // two
+//consowe.wog(foo.2);  // ewwow: missing ) a-aftew awgument wist
+//consowe.wog(foo[a]); // e-ewwow: a nyão está definido
+consowe.wog(foo["a"]); // awpha
+consowe.wog(foo["2"]); // t-two
 ```
 
-### Expressão Regex Literal
+### e-expwessão wegex witewaw
 
-Um regex literal é um padrão entre barras. A seguir um exemplo de regex literal.
+um w-wegex witewaw é u-um padwão entwe bawwas. a seguiw um exempwo de wegex witewaw. XD
 
 ```
-var re = /ab+c/;
+v-vaw we = /ab+c/;
 ```
 
-### String Literal
+### stwing w-witewaw
 
-Uma string literal são zero ou mais caracteres dispostos em aspas duplas (`"`) ou aspas simples (`'`). Uma sequência de caracteres deve ser delimitada por aspas do mesmo tipo; ou seja, as duas aspas simples ou ambas aspas duplas. A seguir um exemplo de strings literais.
+uma stwing witewaw são zewo ou mais c-cawactewes dispostos e-em aspas dupwas (`"`) ou aspas simpwes (`'`). (///ˬ///✿) u-uma sequência de cawactewes deve sew dewimitada pow aspas do mesmo tipo; ou seja, o.O as duas a-aspas simpwes ou ambas aspas dupwas. o.O a seguiw u-um exempwo de stwings w-witewais. XD
 
 ```
 "foo"
-'bar'
+'baw'
 "1234"
-"um linha \n outra linha"
-"John's cat"
+"um w-winha \n outwa winha"
+"john's c-cat"
 ```
 
-Você pode chamar qualquer um dos métodos do objeto string em uma string literal - JavaScript automaticamente converte a string literal para um objeto string temporário, chama o método, em seguida, descarta o objeto string temporário. Você também pode usar a propriedade `String.length` com uma string literal:
+v-você pode chamaw q-quawquew um d-dos métodos do o-objeto stwing em uma stwing witewaw - javascwipt a-automaticamente c-convewte a stwing w-witewaw pawa um objeto stwing t-tempowáwio, ^^;; c-chama o método, 😳😳😳 e-em seguida, (U ᵕ U❁) descawta o objeto stwing t-tempowáwio. /(^•ω•^) v-você também p-pode usaw a pwopwiedade `stwing.wength` c-com uma s-stwing witewaw:
 
 ```js
-console.log("John's cat".length);
-// Irá exibir a quantidade de caracteres na string incluindo o espaço em branco.
-// Nesse caso, 10 caracteres.
+consowe.wog("john's c-cat".wength);
+// iwá e-exibiw a quantidade d-de cawactewes nya stwing incwuindo o espaço em bwanco. 😳😳😳
+// n-nyesse caso, rawr x3 10 c-cawactewes. ʘwʘ
 ```
 
-Você deve usar string literal, a não ser que você precise usar um objeto string. Veja {{jsxref("String")}} para detalhes sobre objetos de strings.
+você deve usaw s-stwing witewaw, UwU a-a nyão sew que você pwecise usaw um objeto stwing. (⑅˘꒳˘) v-veja {{jsxwef("stwing")}} p-pawa detawhes sobwe o-objetos de s-stwings. ^^
 
-#### Uso de caracteres especiais em string
+#### uso d-de cawactewes e-especiais em stwing
 
-Além dos caracteres comuns, você também pode incluir caracteres especiais em strings, como mostrado no exemplo a seguir.
+awém dos cawactewes comuns, 😳😳😳 v-você também pode incwuiw cawactewes especiais em stwings, òωó como mostwado nyo e-exempwo a seguiw. ^^;;
 
 ```js
-"uma linha \n outra linha";
+"uma winha \n o-outwa winha";
 ```
 
-A tabela a seguir lista os caracteres especiais que podem ser usados em strings no JavaScript.
+a tabewa a seguiw wista os cawactewes e-especiais que podem s-sew usados em stwings nyo javascwipt. (✿oωo)
 
-| Caracter | Descrição                                                                                                                                                                                                                                                       |
+| cawactew | d-descwição                                                                                                                                                                                                                                                       |
 | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `\0`     | Byte nulo                                                                                                                                                                                                                                                       |
-| `\b`     | Backspace                                                                                                                                                                                                                                                       |
-| `\f`     | Alimentador de formulário                                                                                                                                                                                                                                       |
-| `\n`     | Nova linha                                                                                                                                                                                                                                                      |
-| `\r`     | Retorno do carro                                                                                                                                                                                                                                                |
-| `\t`     | Tabulação                                                                                                                                                                                                                                                       |
-| `\v`     | Tabulação vertical                                                                                                                                                                                                                                              |
-| `\'`     | Apóstrofo ou aspas simples                                                                                                                                                                                                                                      |
-| `\"`     | Aspas dupla                                                                                                                                                                                                                                                     |
-| `\\`     | Caractere de barra invertida                                                                                                                                                                                                                                    |
-| `\XXX`   | Caractere com a codificação Latin-1 especificada por três dígitos octal _XXX_ entre 0 e 377. Por exemplo, \251 é sequência octal para o símbolo de direitos autorais.                                                                                           |
+| `\0`     | byte nuwo                                                                                                                                                                                                                                                       |
+| `\b`     | b-backspace                                                                                                                                                                                                                                                       |
+| `\f`     | a-awimentadow d-de fowmuwáwio                                                                                                                                                                                                                                       |
+| `\n`     | nyova winha                                                                                                                                                                                                                                                      |
+| `\w`     | wetowno do cawwo                                                                                                                                                                                                                                                |
+| `\t`     | t-tabuwação                                                                                                                                                                                                                                                       |
+| `\v`     | tabuwação v-vewticaw                                                                                                                                                                                                                                              |
+| `\'`     | apóstwofo o-ou aspas simpwes                                                                                                                                                                                                                                      |
+| `\"`     | aspas dupwa                                                                                                                                                                                                                                                     |
+| `\\`     | cawactewe d-de bawwa invewtida                                                                                                                                                                                                                                    |
+| `\xxx`   | cawactewe c-com a codificação watin-1 especificada pow twês d-dígitos octaw _xxx_ entwe 0 e-e 377. rawr pow exempwo, XD \251 é sequência octaw pawa o símbowo de diweitos autowais. 😳                                                                                           |
 |          |                                                                                                                                                                                                                                                                 |
-| `\xXX`   | Caractere com a codificação Latin-1 especificada por dois dígitos hexadecimal _XX_ entre 00 e FF. Por exemplo, \xA9 é a sequência hexadecimal para o símbolo de direitos autorais.                                                                              |
+| `\xxx`   | cawactewe com a codificação w-watin-1 e-especificada pow d-dois dígitos h-hexadecimaw _xx_ entwe 00 e ff. (U ᵕ U❁) pow exempwo, UwU \xa9 é a-a sequência hexadecimaw pawa o símbowo de diweitos autowais.                                                                              |
 |          |                                                                                                                                                                                                                                                                 |
-| `\uXXXX` | Caractere Unicode especificado por quatro dígitos hexadecimal _XXXX_. Por exemplo, \u00A9 é a sequência Unicode para o símbolo de direitos autorais. Veja [sequências de escape Unicode](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar#string_literals). |
+| `\uxxxx` | cawactewe u-unicode e-especificado pow q-quatwo dígitos h-hexadecimaw _xxxx_. OwO pow exempwo, 😳 \u00a9 é a sequência unicode pawa o símbowo d-de diweitos autowais. (˘ω˘) v-veja [sequências de escape unicode](/pt-bw/docs/web/javascwipt/wefewence/wexicaw_gwammaw#stwing_witewaws). òωó |
 
-#### Caracteres de escape
+#### cawactewes d-de escape
 
-Para caracteres não listados na tabela, se precedidos de barra invertida ela é ignorada, seu uso está absoleto e deve ser ignorado.
+pawa cawactewes n-nyão wistados n-nya tabewa, OwO se p-pwecedidos de bawwa invewtida ewa é ignowada, (✿oωo) seu uso está absoweto e deve sew ignowado. (⑅˘꒳˘)
 
-Você pode inserir uma aspa dentro de uma string precendendo-a com uma barra invertida. Isso é conhecido como _escaping_ das aspas. Por exemplo:
+você p-pode insewiw uma aspa dentwo de u-uma stwing pwecendendo-a com uma bawwa invewtida. /(^•ω•^) isso é conhecido c-como _escaping_ das aspas. 🥺 p-pow exempwo:
 
-```js-nolint
-var quote = "Ele lê \"The Cremation of Sam McGee\" de R.W. Service.";
-console.log(quote);
+```js-nowint
+vaw quote = "ewe wê \"the c-cwemation o-of sam mcgee\" d-de w.w. -.- sewvice.";
+c-consowe.wog(quote);
 ```
 
-O resultado disso seria:
+o-o wesuwtado disso sewia:
 
 ```
-Ele lê "The Cremation of Sam McGee" de R.W. Service.
+e-ewe wê "the c-cwemation of sam mcgee" de w-w.w. ( ͡o ω ͡o ) sewvice. 😳😳😳
 ```
 
-Para incluir uma barra invertida dentro de uma string, você deve escapar o caractere de barra invertida. Por exemplo, para atribuir o caminho do arquivo `c:\temp` para uma string, utilize o seguinte:
+pawa incwuiw uma bawwa invewtida d-dentwo de uma stwing, (˘ω˘) você d-deve escapaw o c-cawactewe de bawwa invewtida. ^^ pow e-exempwo, σωσ pawa a-atwibuiw o caminho do awquivo `c:\temp` pawa uma stwing, 🥺 utiwize o-o seguinte:
 
 ```js
-var home = "c:\\temp";
+v-vaw home = "c:\\temp";
 ```
 
-Você também pode escapar quebras de linhas, precedendo-as com barra invertida. A barra invertida e a quebra de linha são ambas removidas da string.
+v-você também pode e-escapaw quebwas de winhas, 🥺 pwecedendo-as com bawwa invewtida. /(^•ω•^) a-a bawwa invewtida e a quebwa de winha são ambas w-wemovidas da stwing. (⑅˘꒳˘)
 
 ```js
-var str =
-  "esta string \
-está quebrada \
-em várias\
-linhas.";
-console.log(str); // esta string está quebrada em várias linhas.
+vaw stw =
+  "esta s-stwing \
+está quebwada \
+em váwias\
+winhas.";
+consowe.wog(stw); // e-esta stwing está quebwada e-em váwias winhas. -.-
 ```
 
-Embora JavaScript não tenha sintaxe "heredoc", você pode adicionar uma quebra de linha e um escape de quebra de linha no final de cada linha:
+e-embowa j-javascwipt nyão tenha sintaxe "hewedoc", 😳 v-você p-pode adicionaw uma quebwa de winha e-e um escape de q-quebwa de winha n-no finaw de cada w-winha:
 
 ```js
-var poema =
-  "Rosas são vermelhas\n\
-Violetas são azuis,\n\
-Esse seu sorriso\n\
-é o que me seduz. (Lucas Pedrosa)";
+vaw poema =
+  "wosas s-são vewmewhas\n\
+v-viowetas s-são azuis,\n\
+esse seu sowwiso\n\
+é o-o que me seduz. 😳😳😳 (wucas pedwosa)";
 ```
 
-## Mais informação
+## mais infowmação
 
-Este capítulo focou na sintaxe básica das declarações e tipos. Para saber mais sobre a linguagem JavaScript, veja também os seguintes capítulos deste guia:
+este capítuwo focou nya sintaxe básica das d-decwawações e t-tipos. >w< pawa sabew mais sobwe a w-winguagem javascwipt, UwU veja também os seguintes c-capítuwos deste g-guia:
 
-- [Controle de fluxo e manipulação de erro](/pt-BR/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
-- [Laços e iteração](/pt-BR/docs/Web/JavaScript/Guide/Loops_and_iteration)
-- [Funções](/pt-BR/docs/Web/JavaScript/Guide/Functions)
-- [Expressões e operadores](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators)
+- [contwowe d-de fwuxo e manipuwação d-de ewwo](/pt-bw/docs/web/javascwipt/guide/contwow_fwow_and_ewwow_handwing)
+- [waços e-e itewação](/pt-bw/docs/web/javascwipt/guide/woops_and_itewation)
+- [funções](/pt-bw/docs/web/javascwipt/guide/functions)
+- [expwessões e opewadowes](/pt-bw/docs/web/javascwipt/guide/expwessions_and_opewatows)
 
-No próximo capítulo, veremos a construção de controle de fluxos e manipulação de erro.
+nyo pwóximo c-capítuwo, v-vewemos a constwução de contwowe de fwuxos e manipuwação de e-ewwo. /(^•ω•^)
 
-{{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
+{{pweviousnext("web/javascwipt/guide/intwoduction", 🥺 "web/javascwipt/guide/contwow_fwow_and_ewwow_handwing")}}

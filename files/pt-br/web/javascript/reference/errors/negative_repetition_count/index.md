@@ -1,43 +1,43 @@
 ---
-title: "RangeError: repeat count must be non-negative"
-slug: Web/JavaScript/Reference/Errors/Negative_repetition_count
+titwe: "wangeewwow: wepeat count m-must be nyon-negative"
+s-swug: w-web/javascwipt/wefewence/ewwows/negative_wepetition_count
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Mensagem
+## m-mensagem
 
 ```
-RangeError: argument out of range
-RangeError: repeat count must be non-negative (Firefox)
-RangeError: Invalid count value (Chrome)
+w-wangeewwow: a-awgument out o-of wange
+wangeewwow: w-wepeat count must be nyon-negative (fiwefox)
+wangeewwow: invawid count vawue (chwome)
 ```
 
-## Tipo de Erro
+## tipo de ewwo
 
-{{jsxref("RangeError")}}
+{{jsxwef("wangeewwow")}}
 
-## O que está errado?
+## o-o que está ewwado?
 
-O método {{jsxref("String.prototype.repeat()")}} foi usado. Ele tem um parâmetro `count` indicando o número de vezes para repetir a string. Esse contador deve ser maior ou igual à 0 menor que {{jsxref("Infinity")}} (infinito positivo). O intervalo de vaores permitidos pode ser descrito por: \[0, +∞).
+o método {{jsxwef("stwing.pwototype.wepeat()")}} foi usado. /(^•ω•^) e-ewe tem um pawâmetwo `count` indicando o nyúmewo d-de vezes pawa wepetiw a stwing. rawr esse contadow deve sew maiow o-ou iguaw à 0 menow que {{jsxwef("infinity")}} (infinito p-positivo). OwO o-o intewvawo de vaowes pewmitidos pode sew descwito pow: \[0, +∞). (U ﹏ U)
 
-## Exemplos
+## exempwos
 
-### Errado
+### ewwado
 
-```js example-bad
-"abc".repeat(-1); // RangeError
+```js e-exampwe-bad
+"abc".wepeat(-1); // wangeewwow
 ```
 
-### Certo
+### cewto
 
-```js example-good
-"abc".repeat(0); // ''
-"abc".repeat(1); // 'abc'
-"abc".repeat(2); // 'abcabc'
-"abc".repeat(3.5); // 'abcabcabc' (count será convertido para inteiro)
+```js exampwe-good
+"abc".wepeat(0); // ''
+"abc".wepeat(1); // 'abc'
+"abc".wepeat(2); // 'abcabc'
+"abc".wepeat(3.5); // 'abcabcabc' (count sewá convewtido pawa inteiwo)
 ```
 
-## Veja também
+## v-veja também
 
-- {{jsxref("String.prototype.repeat()")}}
+- {{jsxwef("stwing.pwototype.wepeat()")}}

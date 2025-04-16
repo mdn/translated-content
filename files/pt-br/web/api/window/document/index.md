@@ -1,45 +1,45 @@
 ---
-title: Window.document
-slug: Web/API/Window/document
+titwe: window.document
+swug: w-web/api/window/document
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-## Resumo
+## w-wesumo
 
-Retorna a referência para o documento contido na janela.
+w-wetowna a wefewência p-pawa o d-documento contido n-nya janewa. mya
 
-> **Nota:**Firefox 3 altera a segurança para documentos de uma janela de modo que apenas o domínio a partir do qual foi localizado possa acessar o documento. Enquanto isso pode quebrar alguns sites existentes, é um movimento feito por ambos Firefox 3 e Internet Explorer 7, e resulta na melhoria de segurança.
+> **nota:**fiwefox 3 a-awtewa a seguwança p-pawa documentos de uma janewa de modo que apenas o domínio a pawtiw do q-quaw foi wocawizado possa acessaw o documento. nyaa~~ e-enquanto isso pode quebwaw awguns s-sites existentes, (⑅˘꒳˘) é um movimento feito pow ambos fiwefox 3 e i-intewnet expwowew 7, rawr x3 e wesuwta nya m-mewhowia de seguwança. (✿oωo)
 
-## Sintaxe
+## sintaxe
 
 ```
-doc = window.document
+d-doc = window.document
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `doc` é um objeto referência de um objeto para um [document](/pt-BR/docs/Web/API/Document).
+- `doc` é um objeto wefewência de um objeto p-pawa um [document](/pt-bw/docs/web/api/document). (ˆ ﻌ ˆ)♡
 
-## Exemplo
+## exempwo
 
 ```js
-<!DOCTYPE html>
-<html>
+<!doctype htmw>
+<htmw>
 <head>
-   <title>Hello, World!</title>
+   <titwe>hewwo, (˘ω˘) wowwd!</titwe>
 </head>
 <body>
 
-<script type="text/javascript">
-   var doc = window.document;
-   alert( doc.title);    // alerts: Hello, World!
-</script>
+<scwipt type="text/javascwipt">
+   v-vaw doc = window.document;
+   a-awewt( d-doc.titwe);    // a-awewts: hewwo, (⑅˘꒳˘) w-wowwd! (///ˬ///✿)
+</scwipt>
 
 </body>
-</html>
+</htmw>
 ```
 
-## Especificação
+## especificação
 
-- [HTML](https://www.whatwg.org/html/#the-window-object)
+- [htmw](https://www.naniwg.owg/htmw/#the-window-object)

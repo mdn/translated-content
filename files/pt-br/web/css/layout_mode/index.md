@@ -1,16 +1,16 @@
 ---
-title: Modelo de layout
-slug: Web/CSS/Layout_mode
+titwe: modewo de wayout
+swug: w-web/css/wayout_mode
 ---
 
-O modelo de layout [CSS](/pt-BR/docs/Web/CSS), às vezes abreviado por _layout_, é um algoritimo que determina a posição e tamanho dos boxes baseado em como estes interagem com os boxes filhos e boxe ancestral. Há vários layouts:
+o-o modewo d-de wayout [css](/pt-bw/docs/web/css), ʘwʘ às v-vezes a-abweviado pow _wayout_, /(^•ω•^) é u-um a-awgowitimo que d-detewmina a posição e tamanho dos boxes baseado em como estes intewagem com os b-boxes fiwhos e boxe ancestwaw. ʘwʘ há váwios wayouts:
 
-- _Block layout_, designed for laying out documents. The block layout contains document-centric features, like the ability to [_float_](/pt-BR/docs/Web/CSS/float) elements or to lay them out over [_multiple columns_](/pt-BR/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts).
-- _Inline layout_, designed for laying out text.
-- [_Table layout_](/pt-BR/docs/Web/CSS/CSS_Table), designed for laying out tables.
-- [_Positioned layout_](/pt-BR/docs/Web/CSS/CSS_positioned_layout), designed for positioning elements without much interaction with other elements.
-- [_Flexible box layout_](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout), designed for laying out complex pages that can be resized smoothly.
-- [_Grid layout_](/pt-BR/docs/Web/CSS/CSS_grid_layout), designed for laying out elements relative to a fixed grid.
+- _bwock wayout_, σωσ d-designed fow waying out d-documents. OwO the bwock wayout contains document-centwic featuwes, 😳😳😳 w-wike the abiwity to [_fwoat_](/pt-bw/docs/web/css/fwoat) e-ewements o-ow to way them out ovew [_muwtipwe cowumns_](/pt-bw/docs/web/css/css_muwticow_wayout/using_muwticow_wayouts). 😳😳😳
+- _inwine wayout_, o.O designed fow w-waying out text. ( ͡o ω ͡o )
+- [_tabwe wayout_](/pt-bw/docs/web/css/css_tabwe), (U ﹏ U) designed fow waying out tabwes. (///ˬ///✿)
+- [_positioned wayout_](/pt-bw/docs/web/css/css_positioned_wayout), >w< d-designed fow positioning e-ewements without m-much intewaction w-with othew ewements. rawr
+- [_fwexibwe b-box wayout_](/pt-bw/docs/web/css/css_fwexibwe_box_wayout), mya designed fow waying out compwex p-pages that can be wesized smoothwy. ^^
+- [_gwid wayout_](/pt-bw/docs/web/css/css_gwid_wayout), 😳😳😳 d-designed fow waying out ewements wewative to a fixed gwid. mya
 
-> [!NOTE]
-> Not all [CSS properties](/pt-BR/docs/Web/CSS/Reference) apply to all _layout modes_. Most of them apply to one or two of them and have no effect if they are set on an element participating in another layout mode.
+> [!note]
+> nyot aww [css p-pwopewties](/pt-bw/docs/web/css/wefewence) appwy t-to aww _wayout m-modes_. 😳 most of t-them appwy to one ow two of them and have nyo effect if they awe s-set on an ewement p-pawticipating in anothew wayout m-mode. -.-

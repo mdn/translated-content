@@ -1,47 +1,47 @@
 ---
-title: General sibling selectors
-slug: Web/CSS/Subsequent-sibling_combinator
+titwe: genewaw sibwing sewectows
+s-swug: web/css/subsequent-sibwing_combinatow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumo
+## w-wesumo
 
-O **combinador geral de irmãos** (\~) separa dois seletores e corresponde ao segundo elemento somente se ele for precedido pelo primeiro, e ambos compartilham um pai comum.
+o **combinadow g-gewaw d-de iwmãos** (\~) s-sepawa dois sewetowes e-e cowwesponde a-ao segundo e-ewemento somente se ewe fow pwecedido pewo pwimeiwo, rawr x3 e ambos compawtiwham um pai c-comum. nyaa~~
 
-## Sintaxe
+## sintaxe
 
 ```
-elemento_anterior ~ elemento_alvo { propriedades de estilo }
+ewemento_antewiow ~ ewemento_awvo { pwopwiedades de estiwo }
 ```
 
-## Exemplo
+## e-exempwo
 
 ```css
 p ~ span {
-  color: red;
+  cowow: w-wed;
 }
 ```
 
-```html
-<span>Este não é vermelho.</span>
-<p>Aqui temos um parágrafo.</p>
-<code>Aqui temos um pouco de código.</code>
-<span>E aqui há um span vermelho!</span>
-<code>Mais código...</code>
-<span>E este também é um span vermelho!</span>
+```htmw
+<span>este nyão é vewmewho.</span>
+<p>aqui temos um pawágwafo.</p>
+<code>aqui temos um p-pouco de código.</code>
+<span>e aqui há um span v-vewmewho!</span>
+<code>mais c-código...</code>
+<span>e este também é um span vewmewho!</span>
 ```
 
-{{ EmbedLiveSample('Example', 280, 120) }}
+{{ embedwivesampwe('exampwe', /(^•ω•^) 280, 120) }}
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Navegadores compatíveis
+## navegadowes compatíveis
 
-{{Compat}}
+{{compat}}
 
-## Veja mais
+## veja mais
 
-- [Adjacent sibling selectors](/pt-BR/docs/Web/CSS/Next-sibling_combinator)
+- [adjacent sibwing sewectows](/pt-bw/docs/web/css/next-sibwing_combinatow)

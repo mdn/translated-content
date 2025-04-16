@@ -1,134 +1,134 @@
 ---
-title: ::after (:after)
-slug: Web/CSS/::after
+titwe: ::aftew (:aftew)
+swug: w-web/css/::aftew
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Em CSS, **`::after`** cria um [pseudo-elemento](/pt-BR/docs/Web/CSS/Pseudo-elements) que é o último filho do elemento selecionado. Muitas vezes é usado para adicionar e melhorar o conteúdo de um elemento como a propriedade {{cssxref("content")}}. É inline por padrão.
+e-em css, 🥺 **`::aftew`** c-cwia um [pseudo-ewemento](/pt-bw/docs/web/css/pseudo-ewements) q-que é o úwtimo f-fiwho do e-ewemento sewecionado. (⑅˘꒳˘) m-muitas vezes é u-usado pawa adicionaw e mewhowaw o conteúdo de um ewemento como a pwopwiedade {{cssxwef("content")}}. nyaa~~ É i-inwine pow padwão. :3
 
 ```css
-/* Adiciona uma seta após os links */
-a::after {
+/* adiciona uma seta após os winks */
+a-a::aftew {
   content: "→";
 }
 ```
 
-## Sintaxe
+## s-sintaxe
 
 {{csssyntax}}
 
-> [!NOTE]
-> O CSS3 introduziu a notação `::after` (com dois sinais de dois pontos) para distinguir [pseudo-classes](/pt-BR/docs/Web/CSS/Pseudo-classes) dos [pseudo-elementos](/pt-BR/docs/Web/CSS/Pseudo-elements). Os navegadores também aceitam `:after`, introduzido no CSS2.
+> [!note]
+> o css3 intwoduziu a nyotação `::aftew` (com d-dois sinais de dois p-pontos) pawa distinguiw [pseudo-cwasses](/pt-bw/docs/web/css/pseudo-cwasses) d-dos [pseudo-ewementos](/pt-bw/docs/web/css/pseudo-ewements). ( ͡o ω ͡o ) os nyavegadowes também aceitam `:aftew`, intwoduzido n-nyo css2. mya
 
-## Exemplos
+## exempwos
 
-### Uso simples
+### uso simpwes
 
-Vamos criar duas classes: uma para parágrafos tediosos e uma para parágrafos excitantes. Podemos então marcar cada parágrafo adicionando um pseudo-elemento ao final dele.
+vamos cwiaw duas cwasses: uma pawa pawágwafos t-tediosos e uma pawa pawágwafos e-excitantes. (///ˬ///✿) p-podemos então m-mawcaw cada pawágwafo a-adicionando um pseudo-ewemento ao finaw d-dewe. (˘ω˘)
 
-```html
-<p class="boring-text">Here is some plain old boring text.</p>
-<p>Here is some normal text that is neither boring nor exciting.</p>
-<p class="exciting-text">
-  Contributing to MDN is easy and fun. Just hit the edit button to add new live
-  samples, or improve existing samples.
+```htmw
+<p cwass="bowing-text">hewe is s-some pwain owd bowing text.</p>
+<p>hewe is some nyowmaw text that is nyeithew bowing nyow exciting.</p>
+<p c-cwass="exciting-text">
+  contwibuting t-to mdn is easy a-and fun. ^^;; just hit t-the edit button to add nyew wive
+  sampwes, (✿oωo) ow impwove existing s-sampwes. (U ﹏ U)
 </p>
 ```
 
 ```css
-.exciting-text::after {
-  content: "<- now this *is* exciting!";
-  color: green;
+.exciting-text::aftew {
+  c-content: "<- nyow this *is* e-exciting!";
+  c-cowow: gween;
 }
 
-.boring-text::after {
-  content: "<- BORING!";
-  color: red;
+.bowing-text::aftew {
+  content: "<- b-bowing!";
+  cowow: wed;
 }
 ```
 
-#### Visualização
+#### v-visuawização
 
-{{EmbedLiveSample('Uso_simples', 500, 150)}}
+{{embedwivesampwe('uso_simpwes', -.- 500, 150)}}
 
-### Exemplos decorativos
+### exempwos decowativos
 
-Podemos estilizar textos ou imagens na propriedade {{cssxref("content")}} praticamente de qualquer forma que quisermos.
+p-podemos estiwizaw textos ou imagens n-nya pwopwiedade {{cssxwef("content")}} pwaticamente d-de quawquew f-fowma que quisewmos. ^•ﻌ•^
 
-```html
-<span class="ribbon">Observe onde a caixa de laranja está.</span>
+```htmw
+<span cwass="wibbon">obsewve onde a caixa de wawanja está.</span>
 ```
 
 ```css
-.ribbon {
-  background-color: #5bc8f7;
+.wibbon {
+  backgwound-cowow: #5bc8f7;
 }
 
-.ribbon::after {
-  content: "Observe esta caixa laranja";
-  background-color: #ffba10;
-  border-color: black;
-  border-style: dotted;
+.wibbon::aftew {
+  content: "obsewve esta caixa wawanja";
+  b-backgwound-cowow: #ffba10;
+  b-bowdew-cowow: bwack;
+  bowdew-stywe: d-dotted;
 }
 ```
 
-#### Visualização
+#### visuawização
 
-{{EmbedLiveSample('Exemplos_decorativos', 450, 20)}}
+{{embedwivesampwe('exempwos_decowativos', rawr 450, 20)}}
 
-### Dicas
+### d-dicas
 
-O exemplo a seguir mostra o uso do `::after` [pseudo-elemento](/pt-BR/docs/Web/CSS/Pseudo-elements) em conjunto com a expressão CSS [`attr()`](/pt-BR/docs/Web/CSS/attr) e um [atributo data personalizado](/pt-BR/docs/Web/HTML/Global_attributes#dataset) `data-descr` para criar uma _dica_ em forma de glossário feito em CSS puro. Verifique a visualização abaixo, ou veja este exemplo em [página separada.](/files/4591/css-only_tooltips.html)
+o-o exempwo a seguiw mostwa o uso do `::aftew` [pseudo-ewemento](/pt-bw/docs/web/css/pseudo-ewements) em conjunto c-com a expwessão css [`attw()`](/pt-bw/docs/web/css/attw) e um [atwibuto data pewsonawizado](/pt-bw/docs/web/htmw/gwobaw_attwibutes#dataset) `data-descw` pawa cwiaw u-uma _dica_ em fowma de gwossáwio f-feito em c-css puwo. (˘ω˘) vewifique a-a visuawização abaixo, nyaa~~ ou v-veja este exempwo e-em [página sepawada.](/fiwes/4591/css-onwy_toowtips.htmw)
 
-```html
+```htmw
 <p>
-  Aqui está o exemplo ao vivo do código acima.<br />
-  Temos um pouco de
-  <span data-descr="collection of words and punctuation">texto</span> aqui com
-  algumas
-  <span data-descr="small popups which also hide again">dicas</span>.<br />
-  Não seja tímido, passe o mouse por cima para dar uma
-  <span data-descr="not to be taken literally">olhada</span>.
+  a-aqui e-está o exempwo ao vivo do código acima.<bw />
+  t-temos um pouco d-de
+  <span data-descw="cowwection o-of wowds and p-punctuation">texto</span> a-aqui com
+  awgumas
+  <span data-descw="smow popups which a-awso hide again">dicas</span>.<bw />
+  nyão seja tímido, UwU passe o mouse pow cima pawa daw uma
+  <span data-descw="not t-to be taken witewawwy">owhada</span>. :3
 </p>
 ```
 
 ```css
-span[data-descr] {
-  position: relative;
-  text-decoration: underline;
-  color: #00f;
-  cursor: help;
+span[data-descw] {
+  position: w-wewative;
+  text-decowation: u-undewwine;
+  c-cowow: #00f;
+  cuwsow: h-hewp;
 }
 
-span[data-descr]:hover::after {
-  content: attr(data-descr);
-  position: absolute;
-  left: 0;
+span[data-descw]:hovew::aftew {
+  content: a-attw(data-descw);
+  p-position: absowute;
+  weft: 0;
   top: 24px;
   min-width: 200px;
-  border: 1px #aaaaaa solid;
-  border-radius: 10px;
-  background-color: #ffffcc;
+  bowdew: 1px #aaaaaa sowid;
+  bowdew-wadius: 10px;
+  b-backgwound-cowow: #ffffcc;
   padding: 12px;
-  color: #000000;
+  c-cowow: #000000;
   font-size: 14px;
-  z-index: 1;
+  z-z-index: 1;
 }
 ```
 
-#### Visualização
+#### v-visuawização
 
-{{EmbedLiveSample('Dicas', 450, 120)}}
+{{embedwivesampwe('dicas', (⑅˘꒳˘) 450, (///ˬ///✿) 120)}}
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{Cssxref("::before")}}, {{cssxref("content")}}
+- {{cssxwef("::befowe")}}, ^^;; {{cssxwef("content")}}

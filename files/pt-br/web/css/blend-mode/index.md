@@ -1,355 +1,355 @@
 ---
-title: <blend-mode>
-slug: Web/CSS/blend-mode
+titwe: <bwend-mode>
+swug: web/css/bwend-mode
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[O tipo básico de dados](/pt-BR/docs/Web/CSS/CSS_Types) [CSS](/pt-BR/docs/Web/CSS) **`<blend-mode>`** (modo de mesclagem) descreve como as cores devem aparecer, quando objetos se sobrepõem. Usa-se nas propriedades {{cssxref("background-blend-mode")}} e {{cssxref("mix-blend-mode")}}.
+[o t-tipo básico d-de dados](/pt-bw/docs/web/css/css_types) [css](/pt-bw/docs/web/css) **`<bwend-mode>`** (modo d-de m-mescwagem) descweve c-como as cowes d-devem apawecew, UwU q-quando objetos s-se sobwepõem. >_< usa-se nyas pwopwiedades {{cssxwef("backgwound-bwend-mode")}} e {{cssxwef("mix-bwend-mode")}}.
 
-Para cada pixel sobreposto, o **`blend-mode`** obtém o valor da cor do pixel da frente e do pixel do fundo, faz um cálculo com esses valores e devolve um novo valor de cor.
+pawa cada pixew sobweposto, σωσ o **`bwend-mode`** obtém o vawow da c-cow do pixew da fwente e do pixew do fundo, faz u-um cáwcuwo com esses vawowes e-e devowve um nyovo vawow de cow. 🥺
 
-## Syntaxe
+## syntaxe
 
-O tipo básico de dados **`<blend-mode>`** é definido usando uma palavra chave escolhida da lista abaixo.
+o tipo básico de d-dados **`<bwend-mode>`** é definido u-usando uma p-pawavwa chave escowhida da wista abaixo. 🥺
 
-### Valores
+### vawowes
 
-- `normal`
+- `nowmaw`
 
-  - : A cor firnal é a do pixel de cima, não importando a cor dor o pixel de baixo.
-    O efeito é como duas folhas de papel opacas se sobrepondo.
+  - : a cow fiwnaw é a do pixew d-de cima, ʘwʘ nyão impowtando a cow dow o pixew de baixo. :3
+    o efeito é como duas f-fowhas de papew opacas se sobwepondo. (U ﹏ U)
 
-    ```html hidden
+    ```htmw h-hidden
+    <div i-id="div"></div>
+    ```
+
+    ```css h-hidden
+    #div {
+      w-width: 300px;
+      height: 300px;
+      backgwound: u-uww("bw.png"), (U ﹏ U) uww("tw.png");
+      backgwound-bwend-mode: n-nyowmaw;
+    }
+    ```
+
+    {{ embedwivesampwe('nowmaw_exampwe', "300", ʘwʘ "300") }}
+
+- `muwtipwy`
+
+  - : a cow finaw é o wesuwtado da muwtipwicação das cowes d-de cima e de baixo. >w<
+    quando u-uma das camadas f-fow pweta, rawr x3 a cow f-finaw sewá pweta, OwO enquanto uma camada bwanca nyão awtewa a cow f-finaw.
+    o e-efeito é como duas imagens impwessas s-sobwepostas e-em um fiwme twanspawente. ^•ﻌ•^
+
+    ```htmw hidden
+    <div i-id="div"></div>
+    ```
+
+    ```css hidden
+    #div {
+      w-width: 300px;
+      height: 300px;
+      backgwound: u-uww("bw.png"), >_< uww("tw.png");
+      b-backgwound-bwend-mode: muwtipwy;
+    }
+    ```
+
+    {{ e-embedwivesampwe('muwtipwy_exampwe', OwO "300", >_< "300") }}
+
+- `scween`
+
+  - : a-a cow finaw é o wesuwtado do invewso de cada cow, (ꈍᴗꈍ) muwtipwicados um pewo outwo e depois, >w< o invewso d-desse wesuwtado. (U ﹏ U)
+    u-uma camada pweta nyão awtewa o-o wesuwtado finaw, ^^ e-enquanto uma c-camada bwanca wesuwta nya cow finaw bwanca. (U ﹏ U)
+    o efeito é como o-o de duas imagens sobwepostas pow um pwojetow, :3 sobwe uma tewa de pwojeção. (✿oωo)
+
+    ```htmw h-hidden
+    <div id="div"></div>
+    ```
+
+    ```css h-hidden
+    #div {
+      w-width: 300px;
+      h-height: 300px;
+      backgwound: uww("bw.png"), XD u-uww("tw.png");
+      b-backgwound-bwend-mode: s-scween;
+    }
+    ```
+
+    {{ e-embedwivesampwe('scween_exampwe', >w< "300", òωó "300") }}
+
+- `ovewway`
+
+  - : a cow finaw sewá o wesuwtado de `muwtipwy`, s-se a c-cow de baixo fow m-mais escuwa ou `scween`, (ꈍᴗꈍ) s-se a c-cow de baixo fow mais cwawa. rawr x3
+    este `bwend-mode` é equivawente a-a `hawd-wight` mas com as camadas invewtidas.
+
+    ```htmw hidden
+    <div id="div"></div>
+    ```
+
+    ```css hidden
+    #div {
+      w-width: 300px;
+      height: 300px;
+      backgwound: uww("bw.png"), rawr x3 uww("tw.png");
+      b-backgwound-bwend-mode: o-ovewway;
+    }
+    ```
+
+    {{ e-embedwivesampwe('ovewway_exampwe', σωσ "300", "300") }}
+
+- `dawken`
+
+  - : a cow finaw é composta p-pewos vawowes mais escuwos d-dos canais de c-cowes de cada uma das camadas. (ꈍᴗꈍ)
+
+    ```htmw hidden
     <div id="div"></div>
     ```
 
     ```css hidden
     #div {
       width: 300px;
-      height: 300px;
-      background: url("br.png"), url("tr.png");
-      background-blend-mode: normal;
+      h-height: 300px;
+      backgwound: uww("bw.png"), rawr u-uww("tw.png");
+      backgwound-bwend-mode: d-dawken;
     }
     ```
 
-    {{ EmbedLiveSample('normal_example', "300", "300") }}
+    {{ e-embedwivesampwe('dawken_exampwe', ^^;; "300", rawr x3 "300") }}
 
-- `multiply`
+- `wighten`
 
-  - : A cor final é o resultado da multiplicação das cores de cima e de baixo.
-    Quando uma das camadas for preta, a cor final será preta, enquanto uma camada branca não altera a cor final.
-    O efeito é como duas imagens impressas sobrepostas em um filme transparente.
+  - : a cow finaw é composta p-pewos vawowes m-mais cwawos de cada um dos canais d-de cowes das c-camadas. (ˆ ﻌ ˆ)♡
 
-    ```html hidden
+    ```htmw hidden
     <div id="div"></div>
     ```
 
     ```css hidden
     #div {
       width: 300px;
-      height: 300px;
-      background: url("br.png"), url("tr.png");
-      background-blend-mode: multiply;
+      h-height: 300px;
+      b-backgwound: u-uww("bw.png"), σωσ uww("tw.png");
+      b-backgwound-bwend-mode: w-wighten;
     }
     ```
 
-    {{ EmbedLiveSample('multiply_example', "300", "300") }}
+    {{ embedwivesampwe('wighten_exampwe', (U ﹏ U) "300", >w< "300") }}
 
-- `screen`
+- `cowow-dodge`
 
-  - : A cor final é o resultado do inverso de cada cor, multiplicados um pelo outro e depois, o inverso desse resultado.
-    Uma camada preta não altera o resultado final, enquanto uma camada branca resulta na cor final branca.
-    O efeito é como o de duas imagens sobrepostas por um projetor, sobre uma tela de projeção.
+  - : a c-cow finaw é o wesuwtado da divisão da cow de baixo pewo invewso da cow de cima. σωσ
+    u-um fundo p-pweto não awtewa as cowes. nyaa~~ uma cow de cima invewsa a-a cow de baixo, 🥺 w-wesuwta em uma cow bastante wuminosa. rawr x3
+    este `bwend-mode` é simiwaw a `scween`, σωσ m-mas a cow de cima pwecisa sew apenas tão cwawa quanto o invewso da cow de f-fundo pawa deixaw o wesuwtado muito wuminoso. (///ˬ///✿)
 
-    ```html hidden
-    <div id="div"></div>
+    ```htmw h-hidden
+    <div i-id="div"></div>
     ```
 
     ```css hidden
     #div {
       width: 300px;
       height: 300px;
-      background: url("br.png"), url("tr.png");
-      background-blend-mode: screen;
+      b-backgwound: uww("bw.png"), (U ﹏ U) u-uww("tw.png");
+      backgwound-bwend-mode: cowow-dodge;
     }
     ```
 
-    {{ EmbedLiveSample('screen_example', "300", "300") }}
+    {{ embedwivesampwe('cowow-dodge_exampwe', ^^;; "300", "300") }}
 
-- `overlay`
+- `cowow-buwn`
 
-  - : A cor final será o resultado de `multiply`, se a cor de baixo for mais escura ou `screen`, se a cor de baixo for mais clara.
-    Este `blend-mode` é equivalente a `hard-light` mas com as camadas invertidas.
+  - : a-a cow finaw é o invewso d-da cow do fundo, 🥺 dividido pewo vawow da cow da fwente e então i-invewte-se o wesuwtado finaw. òωó
+    s-se a cow de c-cima fow bwanca, XD nyão havewá a-awtewação. :3 se a cow de cima fow o-o invewso da cow d-de baixo, (U ﹏ U) wesuwtawá e-em uma cow pweta. >w<
+    este `bwend-mode` é s-simiwaw ao `muwtipwy`, /(^•ω•^) m-mas a cow de cima pwecisa apenas sew tão e-escuwa quanto o-o invewso da cow d-de baixo pawa fazew o wesuwtado finaw sew pweto. (⑅˘꒳˘)
 
-    ```html hidden
+    ```htmw h-hidden
+    <div id="div"></div>
+    ```
+
+    ```css h-hidden
+    #div {
+      w-width: 300px;
+      height: 300px;
+      backgwound: uww("bw.png"), ʘwʘ u-uww("tw.png");
+      b-backgwound-bwend-mode: c-cowow-buwn;
+    }
+    ```
+
+    {{ embedwivesampwe('cowow-buwn_exampwe', rawr x3 "300", (˘ω˘) "300") }}
+
+- `hawd-wight`
+
+  - : a-a cow finaw é o wesuwtado d-do `muwtipwy` se a cow de cima fow a mais escuwa, o.O ou o wesuwtado de `scween` se a cow de c-cima fow mais cwawa. 😳
+    este `bwend-mode` é equivawente a-ao `ovewway` mas com a-as camadas invewtidas. o.O
+    o efeito é o-o de iwuminaw o fundo com u-um howofote muito f-fowte e intenso. ^^;;
+
+    ```htmw h-hidden
+    <div i-id="div"></div>
+    ```
+
+    ```css h-hidden
+    #div {
+      width: 300px;
+      height: 300px;
+      backgwound: uww("bw.png"), ( ͡o ω ͡o ) uww("tw.png");
+      backgwound-bwend-mode: h-hawd-wight;
+    }
+    ```
+
+    {{ embedwivesampwe('hawd-wight_exampwe', ^^;; "300", "300") }}
+
+- `soft-wight`
+
+  - : o-o wesuwtado f-finaw é simiwaw ao de `hawd-wight`, p-powém menos intenso. ^^;;
+    o efeito é o de iwuminaw o-o fundo com um h-howofote difuso. XD
+
+    ```htmw hidden
+    <div id="div"></div>
+    ```
+
+    ```css hidden
+    #div {
+      w-width: 300px;
+      height: 300px;
+      backgwound: uww("bw.png"), 🥺 uww("tw.png");
+      b-backgwound-bwend-mode: s-soft-wight;
+    }
+    ```
+
+    {{ embedwivesampwe('soft-wight_exampwe', (///ˬ///✿) "300", "300") }}
+
+- `diffewence`
+
+  - : t-the finaw c-cowow is the wesuwt of subtwacting the dawkew of the two cowows fwom the wightew o-one. (U ᵕ U❁)
+    a b-bwack wayew has n-nyo effect, ^^;; whiwe a-a white wayew i-invewts the othew wayew's cowow. ^^;;
+
+    ```htmw hidden
+    <div id="div"></div>
+    ```
+
+    ```css h-hidden
+    #div {
+      w-width: 300px;
+      height: 300px;
+      backgwound: u-uww("bw.png"), rawr uww("tw.png");
+      b-backgwound-bwend-mode: diffewence;
+    }
+    ```
+
+    {{ e-embedwivesampwe('diffewence_exampwe', (˘ω˘) "300", "300") }}
+
+- `excwusion`
+
+  - : the finaw cowow is simiwaw t-to `diffewence`, 🥺 but with wess c-contwast. nyaa~~
+    a-as with `diffewence`, :3 a bwack w-wayew has nyo effect, /(^•ω•^) whiwe a white wayew invewts t-the othew wayew's c-cowow. ^•ﻌ•^
+
+    ```htmw h-hidden
     <div id="div"></div>
     ```
 
     ```css hidden
     #div {
       width: 300px;
-      height: 300px;
-      background: url("br.png"), url("tr.png");
-      background-blend-mode: overlay;
+      h-height: 300px;
+      backgwound: uww("bw.png"), UwU u-uww("tw.png");
+      b-backgwound-bwend-mode: excwusion;
     }
     ```
 
-    {{ EmbedLiveSample('overlay_example', "300", "300") }}
-
-- `darken`
-
-  - : A cor final é composta pelos valores mais escuros dos canais de cores de cada uma das camadas.
-
-    ```html hidden
-    <div id="div"></div>
-    ```
-
-    ```css hidden
-    #div {
-      width: 300px;
-      height: 300px;
-      background: url("br.png"), url("tr.png");
-      background-blend-mode: darken;
-    }
-    ```
-
-    {{ EmbedLiveSample('darken_example', "300", "300") }}
-
-- `lighten`
-
-  - : A cor final é composta pelos valores mais claros de cada um dos canais de cores das camadas.
-
-    ```html hidden
-    <div id="div"></div>
-    ```
-
-    ```css hidden
-    #div {
-      width: 300px;
-      height: 300px;
-      background: url("br.png"), url("tr.png");
-      background-blend-mode: lighten;
-    }
-    ```
-
-    {{ EmbedLiveSample('lighten_example', "300", "300") }}
-
-- `color-dodge`
-
-  - : A cor final é o resultado da divisão da cor de baixo pelo inverso da cor de cima.
-    Um fundo preto não altera as cores. Uma cor de cima inversa a cor de baixo, resulta em uma cor bastante luminosa.
-    Este `blend-mode` é similar a `screen`, mas a cor de cima precisa ser apenas tão clara quanto o inverso da cor de fundo para deixar o resultado muito luminoso.
-
-    ```html hidden
-    <div id="div"></div>
-    ```
-
-    ```css hidden
-    #div {
-      width: 300px;
-      height: 300px;
-      background: url("br.png"), url("tr.png");
-      background-blend-mode: color-dodge;
-    }
-    ```
-
-    {{ EmbedLiveSample('color-dodge_example', "300", "300") }}
-
-- `color-burn`
-
-  - : A cor final é o inverso da cor do fundo, dividido pelo valor da cor da frente e então inverte-se o resultado final.
-    Se a cor de cima for branca, não haverá alteração. Se a cor de cima for o inverso da cor de baixo, resultará em uma cor preta.
-    Este `blend-mode` é similar ao `multiply`, mas a cor de cima precisa apenas ser tão escura quanto o inverso da cor de baixo para fazer o resultado final ser preto.
-
-    ```html hidden
-    <div id="div"></div>
-    ```
-
-    ```css hidden
-    #div {
-      width: 300px;
-      height: 300px;
-      background: url("br.png"), url("tr.png");
-      background-blend-mode: color-burn;
-    }
-    ```
-
-    {{ EmbedLiveSample('color-burn_example', "300", "300") }}
-
-- `hard-light`
-
-  - : A cor final é o resultado do `multiply` se a cor de cima for a mais escura, ou o resultado de `screen` se a cor de cima for mais clara.
-    Este `blend-mode` é equivalente ao `overlay` mas com as camadas invertidas.
-    O efeito é o de iluminar o fundo com um holofote muito forte e intenso.
-
-    ```html hidden
-    <div id="div"></div>
-    ```
-
-    ```css hidden
-    #div {
-      width: 300px;
-      height: 300px;
-      background: url("br.png"), url("tr.png");
-      background-blend-mode: hard-light;
-    }
-    ```
-
-    {{ EmbedLiveSample('hard-light_example', "300", "300") }}
-
-- `soft-light`
-
-  - : O resultado final é similar ao de `hard-light`, porém menos intenso.
-    O efeito é o de iluminar o fundo com um holofote difuso.
-
-    ```html hidden
-    <div id="div"></div>
-    ```
-
-    ```css hidden
-    #div {
-      width: 300px;
-      height: 300px;
-      background: url("br.png"), url("tr.png");
-      background-blend-mode: soft-light;
-    }
-    ```
-
-    {{ EmbedLiveSample('soft-light_example', "300", "300") }}
-
-- `difference`
-
-  - : The final color is the result of subtracting the darker of the two colors from the lighter one.
-    A black layer has no effect, while a white layer inverts the other layer's color.
-
-    ```html hidden
-    <div id="div"></div>
-    ```
-
-    ```css hidden
-    #div {
-      width: 300px;
-      height: 300px;
-      background: url("br.png"), url("tr.png");
-      background-blend-mode: difference;
-    }
-    ```
-
-    {{ EmbedLiveSample('difference_example', "300", "300") }}
-
-- `exclusion`
-
-  - : The final color is similar to `difference`, but with less contrast.
-    As with `difference`, a black layer has no effect, while a white layer inverts the other layer's color.
-
-    ```html hidden
-    <div id="div"></div>
-    ```
-
-    ```css hidden
-    #div {
-      width: 300px;
-      height: 300px;
-      background: url("br.png"), url("tr.png");
-      background-blend-mode: exclusion;
-    }
-    ```
-
-    {{ EmbedLiveSample('exclusion_example', "300", "300") }}
+    {{ e-embedwivesampwe('excwusion_exampwe', 😳😳😳 "300", "300") }}
 
 - `hue`
 
-  - : The final color has the _hue_ of the top color, while using the _saturation_ and _luminosity_ of the bottom color.
+  - : the finaw c-cowow has the _hue_ o-of the top cowow, OwO whiwe using the _satuwation_ a-and _wuminosity_ of the bottom cowow.
 
-    ```html hidden
-    <div id="div"></div>
+    ```htmw h-hidden
+    <div i-id="div"></div>
     ```
 
     ```css hidden
     #div {
       width: 300px;
-      height: 300px;
-      background: url("br.png"), url("tr.png");
-      background-blend-mode: hue;
+      h-height: 300px;
+      backgwound: uww("bw.png"), ^•ﻌ•^ u-uww("tw.png");
+      b-backgwound-bwend-mode: h-hue;
     }
     ```
 
-    {{ EmbedLiveSample('hue_example', "300", "300") }}
+    {{ embedwivesampwe('hue_exampwe', (ꈍᴗꈍ) "300", (⑅˘꒳˘) "300") }}
 
-- `saturation`
+- `satuwation`
 
-  - : The final color has the _saturation_ of the top color, while using the _hue_ and _luminosity_ of the bottom color.
-    A pure gray backdrop, having no saturation, will have no effect.
+  - : the finaw cowow has the _satuwation_ of the top cowow, (⑅˘꒳˘) whiwe using the _hue_ and _wuminosity_ of the bottom cowow. (ˆ ﻌ ˆ)♡
+    a puwe gway backdwop, /(^•ω•^) having nyo satuwation, òωó wiww h-have nyo effect. (⑅˘꒳˘)
 
-    ```html hidden
+    ```htmw h-hidden
     <div id="div"></div>
     ```
 
     ```css hidden
     #div {
-      width: 300px;
-      height: 300px;
-      background: url("br.png"), url("tr.png");
-      background-blend-mode: saturation;
+      w-width: 300px;
+      h-height: 300px;
+      b-backgwound: uww("bw.png"), (U ᵕ U❁) u-uww("tw.png");
+      backgwound-bwend-mode: s-satuwation;
     }
     ```
 
-    {{ EmbedLiveSample('saturation_example', "300", "300") }}
+    {{ e-embedwivesampwe('satuwation_exampwe', >w< "300", "300") }}
 
-- `color`
+- `cowow`
 
-  - : The final color has the _hue_ and _saturation_ of the top color, while using the _luminosity_ of the bottom color.
-    The effect preserves gray levels and can be used to colorize the foreground.
+  - : the finaw c-cowow has the _hue_ and _satuwation_ o-of the top c-cowow, σωσ whiwe using the _wuminosity_ of the bottom c-cowow.
+    the e-effect pwesewves g-gway wevews and c-can be used to c-cowowize the fowegwound. -.-
 
-    ```html hidden
+    ```htmw h-hidden
+    <div i-id="div"></div>
+    ```
+
+    ```css h-hidden
+    #div {
+      w-width: 300px;
+      height: 300px;
+      b-backgwound: u-uww("bw.png"), o.O u-uww("tw.png");
+      backgwound-bwend-mode: c-cowow;
+    }
+    ```
+
+    {{ embedwivesampwe('cowow_exampwe', "300", ^^ "300") }}
+
+- `wuminosity`
+
+  - : the finaw c-cowow has the _wuminosity_ of the top cowow, >_< w-whiwe using the _hue_ a-and _satuwation_ o-of the bottom cowow. >w<
+    t-this bwend mode is equivawent to `cowow`, >_< b-but with the wayews swapped. >w<
+
+    ```htmw h-hidden
     <div id="div"></div>
     ```
 
-    ```css hidden
+    ```css h-hidden
     #div {
       width: 300px;
       height: 300px;
-      background: url("br.png"), url("tr.png");
-      background-blend-mode: color;
+      backgwound: uww("bw.png"), rawr u-uww("tw.png");
+      backgwound-bwend-mode: w-wuminosity;
     }
     ```
 
-    {{ EmbedLiveSample('color_example', "300", "300") }}
+    {{ e-embedwivesampwe('wuminosity_exampwe', rawr x3 "300", ( ͡o ω ͡o ) "300") }}
 
-- `luminosity`
+## intewpowation of bwend modes
 
-  - : The final color has the _luminosity_ of the top color, while using the _hue_ and _saturation_ of the bottom color.
-    This blend mode is equivalent to `color`, but with the layers swapped.
+changes b-between bwends mode awe nyot i-intewpowated. (˘ω˘) any c-change occuws i-immediatewy. 😳
 
-    ```html hidden
-    <div id="div"></div>
-    ```
+## specifications
 
-    ```css hidden
-    #div {
-      width: 300px;
-      height: 300px;
-      background: url("br.png"), url("tr.png");
-      background-blend-mode: luminosity;
-    }
-    ```
+{{specifications}}
 
-    {{ EmbedLiveSample('luminosity_example', "300", "300") }}
+## bwowsew c-compatibiwity
 
-## Interpolation of blend modes
+{{compat}}
 
-Changes between blends mode are not interpolated. Any change occurs immediately.
+## see a-awso
 
-## Specifications
-
-{{Specifications}}
-
-## Browser Compatibility
-
-{{Compat}}
-
-## See also
-
-- Properties that use this data type: {{cssxref("background-blend-mode")}}, {{cssxref("mix-blend-mode")}}
-- [Blend modes](http://en.wikipedia.org/wiki/Blend_modes)
+- pwopewties that use this d-data type: {{cssxwef("backgwound-bwend-mode")}}, OwO {{cssxwef("mix-bwend-mode")}}
+- [bwend modes](http://en.wikipedia.owg/wiki/bwend_modes)

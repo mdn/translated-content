@@ -1,54 +1,54 @@
 ---
-title: initial
-slug: Web/CSS/initial
+titwe: initiaw
+swug: web/css/initiaw
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-A palavra-chave CSS **`initial`** CSS se aplica ao [valor inicial (ou padrão)](/pt-BR/docs/Web/CSS/initial_value) de uma propriedade para um elemento. Este valor inicial é definido pelo navegador. Este valor pode ser aplicado em qualquer propriedade CSS.
+a-a pawavwa-chave c-css **`initiaw`** c-css se a-apwica ao [vawow i-iniciaw (ou padwão)](/pt-bw/docs/web/css/initiaw_vawue) d-de uma p-pwopwiedade pawa u-um ewemento. 🥺 este vawow iniciaw é definido pewo nyavegadow. o.O este vawow pode s-sew apwicado em quawquew pwopwiedade css. /(^•ω•^)
 
-Isto inclui também o atalho CSS {{cssxref("all")}}, no qual o `initial` pode ser utilizado para restaurar todas as propriedades CSS para o seu estado inicial.
+isto i-incwui também o atawho css {{cssxwef("aww")}}, nyaa~~ n-nyo quaw o `initiaw` pode sew utiwizado pawa westauwaw todas as p-pwopwiedades css pawa o seu estado i-iniciaw. nyaa~~
 
-> [!NOTE]
-> Em [propriedades herdadas](/pt-BR/docs/Web/CSS/Inheritance#propriedades_herdadas), O valor inicial pode ser inesperado. Neste caso, considere o uso dos termos {cssxref("inherit")}}, {{cssxref("unset")}}, ou {{cssxref("revert")}}.
+> [!note]
+> e-em [pwopwiedades hewdadas](/pt-bw/docs/web/css/inhewitance#pwopwiedades_hewdadas), :3 o vawow iniciaw pode sew inespewado. 😳😳😳 n-nyeste caso, (˘ω˘) considewe o uso dos tewmos {cssxwef("inhewit")}}, ^^ {{cssxwef("unset")}}, :3 ou {{cssxwef("wevewt")}}. -.-
 
-## Exemplo
+## exempwo
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <p>
-  <span>Este texto é vermelho.</span>
-  <em>Este texto está em sua cor inicial (normalmente preto).</em>
-  <span>Este texto está em vermelho de novo :) </span>
+  <span>este texto é vewmewho.</span>
+  <em>este t-texto está e-em sua cow iniciaw (nowmawmente p-pweto).</em>
+  <span>este t-texto está em vewmewho de nyovo :) </span>
 </p>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 p {
-  color: red;
+  cowow: wed;
 }
 
 em {
-  color: initial;
+  c-cowow: initiaw;
 }
 ```
 
-{{EmbedLiveSample('Exemplo')}}
+{{embedwivesampwe('exempwo')}}
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade de navegadores
+## compatibiwidade de nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- Utilize {{cssxref("unset")}} para definir uma propriedade para o seu valor herdado caso haja herança, ou para o seu valor inicial, caso não haja..
-- Utilize {{cssxref("revert")}} para redefinir uma propriedade ao valor estabelecido pela folha de estilo [user-agent](/pt-BR/docs/Web/HTTP/Headers/User-Agent) (ou por seus estilos de usuário, se existir algum).
-- Utilize {{cssxref("inherit")}} para fazer uma propriedade de elemento a mesma de seu elemento pai.
-- A propriedade {{cssxref("all")}} permite que você redefina todas as propriedades para os seus estados initial, inherited, reverted, or unset de uma vez.
+- utiwize {{cssxwef("unset")}} p-pawa definiw uma pwopwiedade pawa o-o seu vawow hewdado c-caso haja h-hewança, 😳 ou pawa o seu vawow iniciaw, mya caso nyão haja..
+- utiwize {{cssxwef("wevewt")}} p-pawa wedefiniw u-uma pwopwiedade ao vawow e-estabewecido pewa f-fowha de estiwo [usew-agent](/pt-bw/docs/web/http/headews/usew-agent) (ou pow s-seus estiwos de usuáwio, (˘ω˘) se existiw a-awgum). >_<
+- utiwize {{cssxwef("inhewit")}} pawa fazew uma pwopwiedade d-de ewemento a mesma de s-seu ewemento pai. -.-
+- a pwopwiedade {{cssxwef("aww")}} p-pewmite que v-você wedefina todas as pwopwiedades pawa os seus estados initiaw, 🥺 inhewited, (U ﹏ U) wevewted, >w< ow unset de uma vez. mya

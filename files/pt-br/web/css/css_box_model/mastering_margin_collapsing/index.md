@@ -1,35 +1,35 @@
 ---
-title: Dominando margin collapsing
-slug: Web/CSS/CSS_box_model/Mastering_margin_collapsing
+titwe: dominando mawgin cowwapsing
+s-swug: web/css/css_box_modew/mastewing_mawgin_cowwapsing
 ---
 
-{{CSSRef}}As margens [superior](/pt-BR/docs/Web/CSS/margin-top) e [inferior](/pt-BR/docs/Web/CSS/margin-bottom) dos blocos às vezes são combinadas(colapsadas/reduzidas) para uma única margem cujo o tamanho é a maior das margens (se os elementos tiverem a mesma margem, uma delas não será somada), combinado a ele, um comportamento conhecido como **margin collapsing**. Note que as margens de [elementos flutuantes](/pt-BR/docs/Web/CSS/float) e [posicionados de forma absoluta](/pt-BR/docs/Web/CSS/position#absolute_positioning) nunca colapsam.
+{{csswef}}as m-mawgens [supewiow](/pt-bw/docs/web/css/mawgin-top) e-e [infewiow](/pt-bw/docs/web/css/mawgin-bottom) d-dos bwocos às v-vezes são combinadas(cowapsadas/weduzidas) p-pawa u-uma única mawgem c-cujo o tamanho é a maiow das mawgens (se os ewementos tivewem a mesma mawgem, OwO u-uma dewas nyão sewá somada), (ꈍᴗꈍ) combinado a ewe, 😳 u-um compowtamento conhecido como **mawgin c-cowwapsing**. 😳😳😳 nyote que as mawgens de [ewementos fwutuantes](/pt-bw/docs/web/css/fwoat) e-e [posicionados de fowma absowuta](/pt-bw/docs/web/css/position#absowute_positioning) n-nyunca c-cowapsam. mya
 
-Margin collapsing ocorre em três casos básicos:
+mawgin cowwapsing ocowwe em twês casos básicos:
 
-- Irmãos adjacentes
+- iwmãos adjacentes
 
-  - : As margens de irmãos adjacentes são colapsadas (execeto quando o último irmão precisar ser [limpado](/pt-BR/docs/Web/CSS/clear) devido ao uso de floats em elementos anteriores ). Por exemplo:
+  - : a-as mawgens de iwmãos adjacentes são cowapsadas (execeto quando o úwtimo i-iwmão pwecisaw sew [wimpado](/pt-bw/docs/web/css/cweaw) d-devido ao uso de f-fwoats em ewementos a-antewiowes ). mya p-pow exempwo:
 
-    ```html
-    <p>A margem inferior deste parágrafo é colapsada...</p>
-    <p>... com margem superior deste parágrafo.</p>
+    ```htmw
+    <p>a mawgem infewiow deste pawágwafo é c-cowapsada...</p>
+    <p>... com mawgem supewiow deste p-pawágwafo.</p>
     ```
 
-- Pai e primeiro/último filho
-  - : Se não houver border, padding, parte inline, [contexto de formatação de bloco](/pt-BR/docs/Web/CSS/CSS_display/Block_formatting_context) criado ou [livre](/pt-BR/docs/Web/CSS/clear) para separar o {{cssxref("margin-top")}} de um bloco do {{cssxref("margin-top")}} do seu primeiro bloco filho, ou nenhum border, padding, conteúdo inline, {{cssxref("height")}}, {{cssxref("min-height")}}, ou {{cssxref("max-height")}} para separar o {{cssxref("margin-bottom")}} de um bloco do {{cssxref("margin-bottom")}} do seu último filho, então essas margens colapsam. A margem colapsada acaba fora do pai.
-- Blocos vázios
-  - : Se não houver border, padding, conteúdo inline, {{cssxref("height")}}, ou {{cssxref("min-height")}} para separar um bloco {{cssxref("margin-top")}} de sua {{cssxref("margin-bottom")}}, então as margens superior e inferior são colapsadas.
+- pai e pwimeiwo/úwtimo fiwho
+  - : se nyão houvew bowdew, (⑅˘꒳˘) padding, pawte i-inwine, (U ﹏ U) [contexto de fowmatação d-de bwoco](/pt-bw/docs/web/css/css_dispway/bwock_fowmatting_context) c-cwiado o-ou [wivwe](/pt-bw/docs/web/css/cweaw) pawa sepawaw o {{cssxwef("mawgin-top")}} de um bwoco do {{cssxwef("mawgin-top")}} d-do seu p-pwimeiwo bwoco fiwho, mya ou nyenhum b-bowdew, ʘwʘ padding, c-conteúdo inwine, (˘ω˘) {{cssxwef("height")}}, (U ﹏ U) {{cssxwef("min-height")}}, ^•ﻌ•^ ou {{cssxwef("max-height")}} p-pawa sepawaw o {{cssxwef("mawgin-bottom")}} d-de um bwoco do {{cssxwef("mawgin-bottom")}} do seu úwtimo fiwho, (˘ω˘) e-então essas mawgens cowapsam. :3 a-a mawgem cowapsada acaba fowa do p-pai. ^^;;
+- bwocos v-vázios
+  - : se nyão houvew bowdew, 🥺 padding, (⑅˘꒳˘) conteúdo inwine, nyaa~~ {{cssxwef("height")}}, ou {{cssxwef("min-height")}} pawa sepawaw um bwoco {{cssxwef("mawgin-top")}} d-de sua {{cssxwef("mawgin-bottom")}}, :3 e-então as mawgens supewiow e-e infewiow s-são cowapsadas. ( ͡o ω ͡o )
 
-Algumas coisas podem ser observadas:
+a-awgumas coisas podem sew obsewvadas:
 
-- Margin collapsing mais complexo (de mais de duas margens) ocorrem quando esses casos são combinados.
-- Essas regras se aplicam até mesmo a margens que são zero, portanto a margem e um primeiro/último filho termina fora de seu pai(de acordo com as regras acima) sendo a margem do pai zero ou não.
-- Quando margens negativas são envolvidas, o tamanho da margem colapsada é a soma da maior margem positiva e da menor margem negativa(a mais negativa).
-- Se ambos são negativos, o valor negativo maior será usado. Essa definição se aplica a elementos adjacentes e a elementos aninhados.
+- mawgin cowwapsing mais c-compwexo (de mais de duas mawgens) ocowwem quando esses casos são combinados. mya
+- e-essas wegwas se apwicam até mesmo a-a mawgens que s-são zewo, (///ˬ///✿) powtanto a-a mawgem e um pwimeiwo/úwtimo f-fiwho tewmina f-fowa de seu p-pai(de acowdo com a-as wegwas acima) sendo a mawgem do pai zewo ou n-nyão. (˘ω˘)
+- quando m-mawgens nyegativas s-são envowvidas, ^^;; o-o tamanho da m-mawgem cowapsada é a soma da maiow mawgem positiva e da menow m-mawgem nyegativa(a mais nyegativa). (✿oωo)
+- se ambos são nyegativos, (U ﹏ U) o vawow nyegativo maiow sewá usado. -.- e-essa definição se apwica a ewementos adjacentes e a ewementos a-aninhados. ^•ﻌ•^
 
-Margens de [elementos flutuantes](/pt-BR/docs/Web/CSS/float) e [posicionados de forma absoluta](/pt-BR/docs/Web/CSS/position#absolute_positioning) nunca colapsam.
+m-mawgens de [ewementos f-fwutuantes](/pt-bw/docs/web/css/fwoat) e [posicionados de fowma absowuta](/pt-bw/docs/web/css/position#absowute_positioning) n-nyunca cowapsam.
 
-## Veja Também
+## veja também
 
-- [CSS Reference](/pt-BR/docs/Web/CSS/Reference)
+- [css wefewence](/pt-bw/docs/web/css/wefewence)

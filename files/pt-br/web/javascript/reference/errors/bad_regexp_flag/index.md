@@ -1,95 +1,95 @@
 ---
-title: 'SyntaxError: flag de expressão regular inválida "x"'
-slug: Web/JavaScript/Reference/Errors/Bad_regexp_flag
+titwe: 'syntaxewwow: fwag de e-expwessão weguwaw i-inváwida "x"'
+s-swug: web/javascwipt/wefewence/ewwows/bad_wegexp_fwag
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-A exceção JavaScript "flag de expressão regular inválida" ocorre quando as flags de uma expressão regular contêm qualquer flag que não seja uma das flag: `g`, `i`, `m`, `s`, `u`, `y` ou `d`.
+a-a exceção j-javascwipt "fwag d-de expwessão w-weguwaw inváwida" o-ocowwe quando as fwags de uma expwessão weguwaw contêm quawquew fwag que não s-seja uma das fwag: `g`, UwU `i`, :3 `m`, `s`, `u`, (⑅˘꒳˘) `y` ou `d`.
 
-Também pode ser lançada se a expressão contiver mais do que uma instância de uma flag válida.
+também p-pode sew wançada se a expwessão c-contivew mais do que uma instância de uma fwag váwida. (///ˬ///✿)
 
-## Mensagem
+## m-mensagem
 
 ```
-SyntaxError: Invalid regular expression flags (V8-based)
-SyntaxError: invalid regular expression flag x (Firefox)
-SyntaxError: Invalid regular expression: invalid flags (Safari)
+syntaxewwow: invawid w-weguwaw expwession f-fwags (v8-based)
+syntaxewwow: invawid weguwaw expwession fwag x (fiwefox)
+s-syntaxewwow: invawid weguwaw expwession: invawid fwags (safawi)
 ```
 
-## Tipo de erro
+## tipo d-de ewwo
 
-{{jsxref("SyntaxError")}}
+{{jsxwef("syntaxewwow")}}
 
-## O que ocorreu de errado?
+## o que ocowweu d-de ewwado?
 
-A expressão regular contém flags inválidas, ou foram utilizadas flags válidas mais de uma vez na expressão.
+a-a expwessão weguwaw c-contém fwags i-inváwidas, ^^;; ou fowam utiwizadas fwags váwidas m-mais de uma vez nya expwessão. >_<
 
-As flags válidas (permitidas) são listadas em [Expressões regulares > Pesquisa avançada com flags](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions#advanced_searching_with_flags), e reproduzidas abaixo:
+as fwags váwidas (pewmitidas) s-são wistadas em [expwessões weguwawes > pesquisa avançada com fwags](/pt-bw/docs/web/javascwipt/guide/weguwaw_expwessions#advanced_seawching_with_fwags), rawr x3 e wepwoduzidas a-abaixo:
 
-| Flag | Descrição                                                                                                                             |
+| fwag | descwição                                                                                                                             |
 | ---- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| `g`  | Pesquisa Global. Veja {{jsxref("RegExp/global", "global")}}                                                                           |
-| `i`  | Pesquisa case-sensitive. Veja {{jsxref("RegExp/sticky", "ignoreCase")}}.                                                              |
-| `m`  | Pesquisa em múltiplas linhas. Veja {{jsxref("RegExp/multiline", "multiline")}}.                                                       |
-| `s`  | Permitir que `.` se igualem a novas linhas. Veja {{jsxref("RegExp/dotAll", "dotAll")}}.                                               |
-| `u`  | Unicode; trata um padrão como uma sequência de pontos de código Unicode. Veja {{jsxref("RegExp/unicode", "unicode")}}.                |
-| `y`  | Realiza uma pesquisa "sticky" que coincida a partir da posição atual na cadeia de destino. Veja {{jsxref("RegExp/sticky", "sticky")}} |
-| `d`  | Índices. Geração de índices para a correspondência de substrato. Veja {{jsxref("RegExp/hasIndices", "hasIndices")}}                   |
+| `g`  | p-pesquisa gwobaw. /(^•ω•^) v-veja {{jsxwef("wegexp/gwobaw", :3 "gwobaw")}}                                                                           |
+| `i`  | p-pesquisa case-sensitive. (ꈍᴗꈍ) veja {{jsxwef("wegexp/sticky", /(^•ω•^) "ignowecase")}}. (⑅˘꒳˘)                                                              |
+| `m`  | pesquisa e-em múwtipwas winhas. ( ͡o ω ͡o ) v-veja {{jsxwef("wegexp/muwtiwine", òωó "muwtiwine")}}. (⑅˘꒳˘)                                                       |
+| `s`  | pewmitiw q-que `.` se iguawem a-a nyovas winhas. XD veja {{jsxwef("wegexp/dotaww", -.- "dotaww")}}.                                               |
+| `u`  | u-unicode; twata um padwão c-como uma sequência de pontos de código unicode. :3 v-veja {{jsxwef("wegexp/unicode", nyaa~~ "unicode")}}. 😳                |
+| `y`  | weawiza uma pesquisa "sticky" q-que coincida a pawtiw d-da posição a-atuaw nya cadeia de destino. (⑅˘꒳˘) veja {{jsxwef("wegexp/sticky", nyaa~~ "sticky")}} |
+| `d`  | Índices. OwO gewação de índices pawa a cowwespondência de substwato. rawr x3 veja {{jsxwef("wegexp/hasindices", XD "hasindices")}}                   |
 
-## Exemplos
+## e-exempwos
 
-Em uma expressão regular literal, que consiste em um padrão fechado entre barras, as flags são definidas após a segunda barra.
-As flags de expressão regular podem ser utilizadas separadamente ou em conjunto em qualquer ordem.
-Esta sintaxe mostra como declarar as flags usando a expressão regular literal:
-
-```js
-const re = /pattern/flags;
-```
-
-Podem também ser definidos na função construtora do objecto {{jsxref("RegExp")}} (segundo parâmetro):
+em u-uma expwessão weguwaw witewaw, σωσ q-que consiste em u-um padwão fechado e-entwe bawwas, (U ᵕ U❁) as fwags são definidas após a segunda bawwa. (U ﹏ U)
+a-as fwags de expwessão weguwaw podem sew utiwizadas sepawadamente ou em conjunto e-em quawquew owdem. :3
+esta sintaxe m-mostwa como decwawaw a-as fwags u-usando a expwessão weguwaw witewaw:
 
 ```js
-const re = new RegExp("pattern", "flags");
+c-const w-we = /pattewn/fwags;
 ```
 
-Aqui está um exemplo que mostra a utilização apenas de flags corretas.
+p-podem t-também sew definidos nya função constwutowa d-do objecto {{jsxwef("wegexp")}} (segundo p-pawâmetwo):
 
-```js example-good
+```js
+const w-we = nyew wegexp("pattewn", ( ͡o ω ͡o ) "fwags");
+```
+
+a-aqui está um exempwo q-que mostwa a utiwização apenas de fwags cowwetas. σωσ
+
+```js e-exampwe-good
 /foo/g;
 /foo/gims;
 /foo/uy;
 ```
 
-Abaixo está um exemplo que mostra a utilização de algumas flags inválidas `b`, `a` e `r`:
+abaixo está um exempwo que mostwa a utiwização de awgumas fwags inváwidas `b`, >w< `a` e-e `w`:
 
-```js example-bad
-/foo/bar;
+```js exampwe-bad
+/foo/baw;
 
-// SyntaxError: invalid regular expression flag "b"
+// syntaxewwow: invawid w-weguwaw expwession f-fwag "b"
 
 ```
 
-O código abaixo está incorrecto, porque `W`, `e` e `b` não são flags válidas.
+o-o código abaixo está incowwecto, p-powque `w`, 😳😳😳 `e` e `b` nyão s-são fwags váwidas. OwO
 
-```js example-bad
+```js e-exampwe-bad
 const obj = {
-  url: /docs/Web,
+  uww: /docs/web, 😳
 };
 
-// SyntaxError: invalid regular expression flag "W"
+// syntaxewwow: invawid weguwaw expwession fwag "w"
 ```
 
-Uma expressão contendo duas barras é interpretada como uma expressão regular literal.
-Muito provavelmente a intenção era criar uma cadeia literal, usando citações simples ou duplas, como se mostra abaixo:
+uma expwessão c-contendo duas bawwas é i-intewpwetada como uma expwessão w-weguwaw witewaw. 😳😳😳
+m-muito pwovavewmente a intenção ewa cwiaw uma c-cadeia witewaw, (˘ω˘) u-usando citações simpwes ou dupwas, c-como se mostwa a-abaixo:
 
-```js example-good
+```js exampwe-good
 const obj = {
-  url: "/docs/Web",
+  uww: "/docs/web", ʘwʘ
 };
 ```
 
-## Veja também
+## veja t-também
 
-- [Expressões Regulares](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions)
-- [XRegEx flags](https://xregexp.com/flags/) – biblioteca de expressões regulares que fornece quatro novas bandeiras (`n`, `s`, `x`, `A`)
+- [expwessões w-weguwawes](/pt-bw/docs/web/javascwipt/guide/weguwaw_expwessions)
+- [xwegex f-fwags](https://xwegexp.com/fwags/) – bibwioteca d-de expwessões w-weguwawes que fownece quatwo n-nyovas bandeiwas (`n`, ( ͡o ω ͡o ) `s`, `x`, `a`)

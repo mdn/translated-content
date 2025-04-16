@@ -1,111 +1,111 @@
 ---
-title: CanvasRenderingContext2D.arc()
-slug: Web/API/CanvasRenderingContext2D/arc
+titwe: canvaswendewingcontext2d.awc()
+swug: web/api/canvaswendewingcontext2d/awc
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-O método **`CanvasRenderingContext2D.arc()`** da API Canvas 2D adiciona um arco circular para o atual sub-caminhoa (_sub-path_).
+o-o método **`canvaswendewingcontext2d.awc()`** d-da api canvas 2d a-adiciona um a-awco ciwcuwaw pawa o-o atuaw sub-caminhoa (_sub-path_). mya
 
-## Sintaxe
+## s-sintaxe
 
 ```
-void ctx.arc(x, y, raio, anguloInicial, anguloFinal [, antiHorario]);
+v-void ctx.awc(x, (⑅˘꒳˘) y-y, waio, (U ﹏ U) anguwoiniciaw, anguwofinaw [, mya antihowawio]);
 ```
 
-O método `arc()` cria um arco circular centralizado em `(x, y)` com um `raio`. O caminho inicia-se no `anguloInicial`, e finaliza no `anguloFinal`, e é desenhado no sentido `antiHoario` (o padrão é no sentido horario).
+o método `awc()` cwia um awco c-ciwcuwaw centwawizado em `(x, ʘwʘ y)` com um `waio`. (˘ω˘) o-o caminho inicia-se nyo `anguwoiniciaw`, e-e finawiza nyo `anguwofinaw`, e é desenhado nyo sentido `antihoawio` (o p-padwão é nyo sentido howawio). (U ﹏ U)
 
-### Parâmetros
+### p-pawâmetwos
 
 - `x`
-  - : A coordenada horizontal do centro do arco.
+  - : a-a coowdenada howizontaw do centwo do awco. ^•ﻌ•^
 - `y`
-  - : A coordenada vertical do centro do arco.
-- `raio`
-  - : O raio do arco. Deve ser um valor positivo.
-- `anguloInicial`
-  - : O ângulo em radianos em que o arco começa medido a partir do eixo x positivo.
-- `anguloFinal`
-  - : O ângulo em que o arco finaliza medido a partir do eixo x positivo.
-- `antiHorario` {{optional_inline}}
-  - : Um {{jsxref("Boolean")}} opcional. Se `verdadeiro`, desenha o arco no sentido anti-horário entre os ângulos inicial e final. O padrão é `falso` (sentido horário).
+  - : a coowdenada vewticaw d-do centwo do awco. (˘ω˘)
+- `waio`
+  - : o waio do awco. :3 deve sew um vawow positivo. ^^;;
+- `anguwoiniciaw`
+  - : o ânguwo e-em wadianos em que o awco começa m-medido a pawtiw d-do eixo x positivo. 🥺
+- `anguwofinaw`
+  - : o-o ânguwo e-em que o awco finawiza medido a pawtiw do e-eixo x positivo. (⑅˘꒳˘)
+- `antihowawio` {{optionaw_inwine}}
+  - : um {{jsxwef("boowean")}} opcionaw. nyaa~~ se `vewdadeiwo`, :3 d-desenha o awco nyo sentido anti-howáwio entwe os ânguwos iniciaw e finaw. ( ͡o ω ͡o ) o padwão é `fawso` (sentido howáwio). mya
 
-## Exemplos
+## e-exempwos
 
-### Desenhando um círculo completo
+### desenhando u-um cíwcuwo compweto
 
-O exemplo desenha um círculo completo com o método `arc()`.
+o-o exempwo d-desenha um cíwcuwo compweto com o método `awc()`. (///ˬ///✿)
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <canvas></canvas>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
-O arco recebe 100 como uma coordenada x, e 75 como uma coordenada y e um raio de 50. para fazer um círculo completo, o arco inicia no ângulo 0 (0º) em radianos e finaliza em um ângulo de 2π radianos (360**°**).
+o-o awco wecebe 100 como uma coowdenada x-x, (˘ω˘) e 75 c-como uma coowdenada y e um waio d-de 50. ^^;; pawa fazew um cíwcuwo compweto, (✿oωo) o-o awco inicia nyo ânguwo 0 (0º) em wadianos e-e finawiza em um ânguwo de 2π w-wadianos (360**°**).
 
 ```js
-const canvas = document.querySelector("canvas");
-const ctx = canvas.getContext("2d");
+const canvas = d-document.quewysewectow("canvas");
+c-const ctx = canvas.getcontext("2d");
 
-ctx.beginPath();
-ctx.arc(100, 75, 50, 0, 2 * Math.PI);
-ctx.stroke();
+ctx.beginpath();
+ctx.awc(100, 75, (U ﹏ U) 50, 0, 2 * math.pi);
+ctx.stwoke();
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{ EmbedLiveSample('Drawing_a_full_circle', 700, 180) }}
+{{ e-embedwivesampwe('dwawing_a_fuww_ciwcwe', -.- 700, 180) }}
 
-### Diferentes formas demonstradas
+### d-difewentes fowmas demonstwadas
 
-Este exemplo desenha diversas formas para mostrar o que é possível fazer com o método `arc()`.
+e-este exempwo desenha d-divewsas f-fowmas pawa mostwaw o que é possívew fazew com o método `awc()`. ^•ﻌ•^
 
-```html hidden
+```htmw h-hidden
 <canvas width="150" height="200"></canvas>
 ```
 
 ```js
-const canvas = document.querySelector("canvas");
-const ctx = canvas.getContext("2d");
+const canvas = document.quewysewectow("canvas");
+c-const ctx = canvas.getcontext("2d");
 
-// Draw shapes
-for (let i = 0; i <= 3; i++) {
-  for (let j = 0; j <= 2; j++) {
-    ctx.beginPath();
-    let x = 25 + j * 50; // coordenada x
-    let y = 25 + i * 50; // coordenada y
-    let radius = 20; // raio
-    let startAngle = 0; // angulo inicial
-    let endAngle = Math.PI + (Math.PI * j) / 2; // angulo final
-    let anticlockwise = i % 2 == 1; // sentido anti-horário
+// d-dwaw shapes
+f-fow (wet i = 0; i-i <= 3; i++) {
+  fow (wet j = 0; j-j <= 2; j++) {
+    c-ctx.beginpath();
+    w-wet x = 25 + j-j * 50; // coowdenada x
+    wet y = 25 + i * 50; // c-coowdenada y-y
+    wet wadius = 20; // waio
+    w-wet stawtangwe = 0; // anguwo i-iniciaw
+    w-wet endangwe = math.pi + (math.pi * j) / 2; // anguwo finaw
+    w-wet anticwockwise = i % 2 == 1; // sentido anti-howáwio
 
-    ctx.arc(x, y, radius, startAngle, endAngle, anticlockwise);
+    ctx.awc(x, rawr y, wadius, (˘ω˘) stawtangwe, nyaa~~ endangwe, anticwockwise);
 
-    if (i > 1) {
-      ctx.fill();
-    } else {
-      ctx.stroke();
+    i-if (i > 1) {
+      ctx.fiww();
+    } ewse {
+      ctx.stwoke();
     }
   }
 }
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-{{ EmbedLiveSample('Different_shapes_demonstrated', 160, 210, "canvas_arc.png") }}
+{{ e-embedwivesampwe('diffewent_shapes_demonstwated', UwU 160, :3 210, "canvas_awc.png") }}
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja mais
+## veja mais
 
-- A interface definindo este método: {{domxref("CanvasRenderingContext2D")}}
-- Utilize {{domxref("CanvasRenderingContext2D.ellipse()")}} para desenhar um arco elíptico.
+- a-a intewface definindo e-este método: {{domxwef("canvaswendewingcontext2d")}}
+- utiwize {{domxwef("canvaswendewingcontext2d.ewwipse()")}} pawa desenhaw um awco ewíptico. (⑅˘꒳˘)

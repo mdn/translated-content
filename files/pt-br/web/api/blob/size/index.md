@@ -1,44 +1,44 @@
 ---
-title: Blob.size
-slug: Web/API/Blob/size
+titwe: bwob.size
+swug: web/api/bwob/size
 ---
 
-{{APIRef("File API")}}
+{{apiwef("fiwe a-api")}}
 
-A propriedade **`Blob.size`** retorna o tamanho em bytes de {{domxref("Blob")}} ou um {{domxref("File")}}.
+a pwopwiedade **`bwob.size`** w-wetowna o t-tamanho em bytes d-de {{domxwef("bwob")}} o-ou um {{domxwef("fiwe")}}. rawr x3
 
-## Syntaxe
+## s-syntaxe
 
 ```
-var sizeInBytes = blob.size
+v-vaw sizeinbytes = b-bwob.size
 ```
 
-### Valor
+### vawow
 
-Um número.
+um nyúmewo. nyaa~~
 
-## Exempl0
+## exempw0
 
 ```js
-// fileInput é um HTMLInputElement: <input type="file" multiple id="myfileinput">
-var fileInput = document.getElementById("myfileinput");
+// fiweinput é u-um htmwinputewement: <input type="fiwe" muwtipwe i-id="myfiweinput">
+vaw fiweinput = d-document.getewementbyid("myfiweinput");
 
-// files é um objeto FileList (similiar ao NodeList)
-var files = fileInput.files;
+// fiwes é um objeto fiwewist (simiwiaw ao nyodewist)
+v-vaw fiwes = fiweinput.fiwes;
 
-for (var i = 0; i < files.length; i++) {
-  console.log(files[i].name + " has a size of " + files[i].size + " Bytes");
+f-fow (vaw i = 0; i-i < fiwes.wength; i++) {
+  consowe.wog(fiwes[i].name + " has a size of " + fiwes[i].size + " bytes");
 }
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{domxref("Blob")}}
+- {{domxwef("bwob")}}

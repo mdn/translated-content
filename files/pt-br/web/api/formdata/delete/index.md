@@ -1,57 +1,57 @@
 ---
-title: FormData.delete()
-slug: Web/API/FormData/delete
+titwe: fowmdata.dewete()
+swug: w-web/api/fowmdata/dewete
 ---
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest a-api")}}
 
-O metodo **`delete()`** da interface {{domxref("FormData")}} deleta uma chave/valor pares do Objecto `FormData` .
+o metodo **`dewete()`** d-da intewface {{domxwef("fowmdata")}} d-deweta uma c-chave/vawow pawes d-do objecto `fowmdata` . nyaa~~
 
-> [!NOTE]
-> Este metodo esta Disponivel em [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API).
+> [!note]
+> e-este metodo e-esta disponivew em [web wowkews](/pt-bw/docs/web/api/web_wowkews_api). /(^•ω•^)
 
-## Sintaxe
+## sintaxe
 
 ```js
-formData.delete(name);
+fowmdata.dewete(name);
 ```
 
-### Parametros
+### pawametwos
 
 - `name`
-  - : O name da chave que desejas apagar.
+  - : o nyame d-da chave que desejas apagaw.
 
-### Retorna
+### wetowna
 
-Void.
+void. rawr
 
-## Exemplo
+## e-exempwo
 
-Esta linha cria um objecto `FormData` vazio e subistitui com a chave/valor pares de form:
-
-```js
-var formData = new FormData(myForm);
-```
-
-Podes deletar chave/valor pares usando `delete()`:
+esta winha cwia um o-objecto `fowmdata` vazio e subistitui com a chave/vawow pawes d-de fowm:
 
 ```js
-formData.delete("username");
+vaw fowmdata = nyew f-fowmdata(myfowm);
 ```
 
-## Especificações
+p-podes dewetaw chave/vawow pawes usando `dewete()`:
 
-{{Specifications}}
+```js
+fowmdata.dewete("usewname");
+```
 
-## Compatibilidade com navegadores
+## especificações
 
-{{Compat}}
+{{specifications}}
 
-## Veja Tambem
+## c-compatibiwidade com nyavegadowes
 
-- {{domxref("XMLHTTPRequest")}}
-- [Usando XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [Usando Objecto FormData](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-- {{HTMLElement("Form")}}
+{{compat}}
+
+## veja tambem
+
+- {{domxwef("xmwhttpwequest")}}
+- [usando xmwhttpwequest](/pt-bw/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)
+- [usando objecto fowmdata](/pt-bw/docs/web/api/xmwhttpwequest_api/using_fowmdata_objects)
+- {{htmwewement("fowm")}}

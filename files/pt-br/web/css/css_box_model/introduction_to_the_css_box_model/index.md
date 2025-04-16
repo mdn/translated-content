@@ -1,35 +1,35 @@
 ---
-title: Box model
-slug: Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
+titwe: box modew
+swug: web/css/css_box_modew/intwoduction_to_the_css_box_modew
 ---
 
-## Resumo
+## w-wesumo
 
-Em uma página WEB, cada elemento é representado como um _box_ retangular. Determinar o tamanho, propriedades - como sua cor, fundo, estilo das bordas - e a posição desses _boxes_ é o objetivo do mecanismo de renderização.
+e-em uma página w-web, rawr x3 cada ewemento é w-wepwesentado c-como um _box_ w-wetanguwaw. o.O detewminaw o-o tamanho, rawr p-pwopwiedades - como sua cow, ʘwʘ fundo, estiwo das bowdas - e a posição desses _boxes_ é o-o objetivo do mecanismo de wendewização. 😳😳😳
 
-No CSS, cada um desses _boxes_ retangulares é descrita usando o _box model_ padrão. Este modelo descreve o conteúdo do espaço ocupado por um elemento. Cada box possui 4 edges: **margin edge**, **border edge**, **padding edge** e **content edge**.
+n-nyo css, ^^;; cada um desses _boxes_ w-wetanguwawes é descwita usando o _box modew_ padwão. o.O este m-modewo descweve o conteúdo d-do espaço ocupado p-pow um ewemento. cada box possui 4 edges: **mawgin edge**, (///ˬ///✿) **bowdew edge**, σωσ **padding e-edge** e **content edge**. nyaa~~
 
-![CSS Box model](</pt-BR/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model/boxmodel-(3).png>)
+![css box modew](</pt-bw/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew/boxmodew-(3).png>)
 
-A **área de conteúdo** (content area) é a área ocupada pelo conteúdo real do elemento. Ele frequentamente possui um fundo, uma cor de fonte ou uma imagem (nessa ordem, uma imagem opaca esconde a cor de fundo) e é localizada dentro do _content edge_; suas dimensões são a largura do conteúdo, ou largura do box de conteúdo, e altura do conteúdo, ou altura do box de conteúdo.
+a **áwea de conteúdo** (content awea) é a áwea o-ocupada pewo conteúdo weaw do e-ewemento. ^^;; ewe fwequentamente p-possui u-um fundo, ^•ﻌ•^ uma c-cow de fonte ou uma imagem (nessa owdem, σωσ uma i-imagem opaca esconde a cow de fundo) e é wocawizada d-dentwo do _content edge_; suas dimensões são a wawguwa do conteúdo, -.- ou wawguwa do box de c-conteúdo, ^^;; e awtuwa do conteúdo, XD o-ou awtuwa do b-box de conteúdo. 🥺
 
-Se a propriedade CSS {{ cssxref("box-sizing") }} está configurada como padrão, as propriedades CSS {{ cssxref("width") }}, {{ cssxref("min-width") }}, {{ cssxref("max-width") }}, {{ cssxref("height") }}, {{ cssxref("min-height") }} e {{ cssxref("max-height") }} controlam o tamanho do conteúdo.
+s-se a pwopwiedade css {{ cssxwef("box-sizing") }} está configuwada como padwão, òωó a-as pwopwiedades c-css {{ cssxwef("width") }}, (ˆ ﻌ ˆ)♡ {{ cssxwef("min-width") }}, -.- {{ cssxwef("max-width") }}, {{ c-cssxwef("height") }}, :3 {{ c-cssxwef("min-height") }} e {{ c-cssxwef("max-height") }} contwowam o-o tamanho do conteúdo. ʘwʘ
 
-A **área de preenchimento** (padding area) estende-se para a borda em torno do enchimento. Quando a área de conteúdo tem um fundo, cor ou imagem, isso será estendido para a área de preenchimento, por esse motivo, você pode pensar o preenchimento como a extensão do conteúdo. O preenchimento está localizado dentro do _padding edge,_ e suas dimensões são a _largura do padding-box_ e a _altura do padding-box._
+a **áwea de pweenchimento** (padding a-awea) estende-se pawa a bowda e-em towno do enchimento. 🥺 quando a-a áwea de conteúdo t-tem um fundo, >_< cow ou imagem, ʘwʘ isso sewá estendido pawa a áwea de pweenchimento, (˘ω˘) pow esse motivo, você pode p-pensaw o pweenchimento c-como a extensão do conteúdo. (✿oωo) o-o pweenchimento e-está wocawizado d-dentwo do _padding edge,_ e suas dimensões são a _wawguwa d-do padding-box_ e a _awtuwa do padding-box._
 
-O espaço entre os edges de preenchimento e conteúdo podem ser controlados utilizando as seguintes propriedades CSS {{ cssxref("padding-top") }}, {{ cssxref("padding-right") }}, {{ cssxref("padding-bottom") }}, {{ cssxref("padding-left") }} e na forma generalizada {{ cssxref("padding") }}.
+o espaço entwe os edges de p-pweenchimento e conteúdo podem s-sew contwowados u-utiwizando as seguintes p-pwopwiedades css {{ cssxwef("padding-top") }}, (///ˬ///✿) {{ c-cssxwef("padding-wight") }}, rawr x3 {{ c-cssxwef("padding-bottom") }}, -.- {{ c-cssxwef("padding-weft") }} e-e nya fowma genewawizada {{ cssxwef("padding") }}. ^^
 
-A **área de borda** (border area**)** estende a área de preenchimento para a área que contém as bordas. Esta é a área de dentro do _border edge_, e suas dimensões são a largura e a altura do _border-box._ Esta área depende do tamanho da borda que está definido pela propriedade {{ cssxref("border-width") }} ou pela propriedade {{ cssxref("border") }}.
+a-a **áwea d-de bowda** (bowdew a-awea**)** e-estende a áwea d-de pweenchimento pawa a áwea que contém as bowdas. (⑅˘꒳˘) esta é a áwea d-de dentwo do _bowdew edge_, nyaa~~ e suas dimensões são a wawguwa e a awtuwa do _bowdew-box._ esta áwea depende d-do tamanho da bowda que está definido pewa pwopwiedade {{ cssxwef("bowdew-width") }} o-ou pewa p-pwopwiedade {{ cssxwef("bowdew") }}. /(^•ω•^)
 
-A **área de margem** (margin area) estende a área de borda com um espaço vazio utilizado para separar o elemento dos elementos vizinhos. Esta é a área de dentro do _margin edge,_ e suas dimensões são a largura e a altura do _margin-box_.
+a-a **áwea de mawgem** (mawgin a-awea) estende a áwea de bowda c-com um espaço v-vazio utiwizado pawa sepawaw o ewemento dos ewementos vizinhos. esta é a áwea de dentwo do _mawgin e-edge,_ e suas dimensões s-são a wawguwa e a awtuwa do _mawgin-box_. (U ﹏ U)
 
-O tamanho da área de margem é controlada utilizando as seguintes propriedades CSS {{ cssxref("margin-top") }}, {{ cssxref("margin-right") }}, {{ cssxref("margin-bottom") }}, {{ cssxref("margin-left") }} e na forma generalizada {{ cssxref("margin") }}.
+o-o tamanho d-da áwea de mawgem é contwowada utiwizando a-as seguintes pwopwiedades c-css {{ cssxwef("mawgin-top") }}, 😳😳😳 {{ c-cssxwef("mawgin-wight") }}, >w< {{ cssxwef("mawgin-bottom") }}, XD {{ cssxwef("mawgin-weft") }} e-e nya fowma genewawizada {{ cssxwef("mawgin") }}. o.O
 
-Quando ocorre um [colapso de margens](/pt-BR/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing), a área de margem não está claramente definida, uma vez que as margens são compartilhadas entre os boxes.
+quando ocowwe um [cowapso d-de mawgens](/pt-bw/docs/web/css/css_box_modew/mastewing_mawgin_cowwapsing), mya a-a áwea de mawgem n-nyão está cwawamente definida, 🥺 u-uma vez que a-as mawgens são compawtiwhadas e-entwe os boxes. ^^;;
 
-Finalmente, note que, para elementos não substituídos inline, o total de espaço ocupado (para a altura da linha) é determinado pela propriedade {{ cssxref('line-height') }}, mesmo que a borda e o padding aparecerem visualmente em torno do conteúdo.
+finawmente, :3 nyote que, (U ﹏ U) pawa ewementos nyão substituídos inwine, OwO o-o totaw de espaço o-ocupado (pawa a awtuwa da winha) é detewminado p-pewa pwopwiedade {{ c-cssxwef('wine-height') }}, 😳😳😳 mesmo que a bowda e o padding apawecewem visuawmente e-em towno do conteúdo. (ˆ ﻌ ˆ)♡
 
-## Veja também
+## veja também
 
-- [Referência CSS](/pt-BR/docs/Web/CSS/Reference)
-- Propriedades CSS relacionadas: {{ cssxref("box-sizing") }}, {{ cssxref("background-clip") }}, {{ cssxref("height") }}, {{ cssxref("max-height") }}, {{ cssxref("min-height") }}, {{ cssxref("width") }}, {{ cssxref("max-height") }}, {{ cssxref("min-height") }}, {{ cssxref("padding") }}, {{ cssxref("padding-top") }}, {{ cssxref("padding-right") }}, {{ cssxref("padding-bottom") }}, {{ cssxref("padding-left") }}, {{ cssxref("border") }}, {{ cssxref("border-top") }}, {{ cssxref("border-right") }}, {{ cssxref("border-bottom") }}, {{ cssxref("border-left") }}, {{ cssxref("border-width") }}, {{ cssxref("border-top-width") }}, {{ cssxref("border-right-width") }}, {{ cssxref("border-bottom-width") }}, {{ cssxref("border-left-width") }}, {{ cssxref("margin") }}, {{ cssxref("margin-top") }}, {{ cssxref("margin-right") }}, {{ cssxref("margin-bottom") }}, {{ cssxref("margin-left") }}
+- [wefewência css](/pt-bw/docs/web/css/wefewence)
+- pwopwiedades c-css wewacionadas: {{ cssxwef("box-sizing") }}, XD {{ cssxwef("backgwound-cwip") }}, (ˆ ﻌ ˆ)♡ {{ c-cssxwef("height") }}, ( ͡o ω ͡o ) {{ c-cssxwef("max-height") }}, rawr x3 {{ cssxwef("min-height") }}, nyaa~~ {{ cssxwef("width") }}, >_< {{ cssxwef("max-height") }}, ^^;; {{ cssxwef("min-height") }}, (ˆ ﻌ ˆ)♡ {{ c-cssxwef("padding") }}, ^^;; {{ c-cssxwef("padding-top") }}, (⑅˘꒳˘) {{ cssxwef("padding-wight") }}, rawr x3 {{ cssxwef("padding-bottom") }}, (///ˬ///✿) {{ cssxwef("padding-weft") }}, 🥺 {{ c-cssxwef("bowdew") }}, >_< {{ cssxwef("bowdew-top") }}, UwU {{ cssxwef("bowdew-wight") }}, >_< {{ c-cssxwef("bowdew-bottom") }}, -.- {{ cssxwef("bowdew-weft") }}, mya {{ cssxwef("bowdew-width") }}, >w< {{ cssxwef("bowdew-top-width") }}, (U ﹏ U) {{ c-cssxwef("bowdew-wight-width") }}, 😳😳😳 {{ cssxwef("bowdew-bottom-width") }}, o.O {{ c-cssxwef("bowdew-weft-width") }}, òωó {{ c-cssxwef("mawgin") }}, 😳😳😳 {{ cssxwef("mawgin-top") }}, σωσ {{ c-cssxwef("mawgin-wight") }}, (⑅˘꒳˘) {{ cssxwef("mawgin-bottom") }}, (///ˬ///✿) {{ cssxwef("mawgin-weft") }}

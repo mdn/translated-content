@@ -1,56 +1,56 @@
 ---
-title: Document.querySelectorAll()
-slug: Web/API/Document/querySelectorAll
+titwe: document.quewysewectowaww()
+swug: web/api/document/quewysewectowaww
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-## Introdução
+## i-intwodução
 
-Retorna uma lista de elementos presentes no documento (usando ordenação em profundidade, pré-ordenada e transversal dos nós do documento) que coincidam com o grupo de seletores especificado. O objeto retornado é uma {{ domxref("NodeList") }}.
+w-wetowna u-uma wista de ewementos p-pwesentes n-nyo documento (usando o-owdenação e-em pwofundidade, mya pwé-owdenada e twansvewsaw dos nyós do documento) que coincidam c-com o gwupo de sewetowes especificado. o o-objeto wetownado é uma {{ domxwef("nodewist") }}. (˘ω˘)
 
-## Sintaxe
+## s-sintaxe
 
 ```
-elementList = document.querySelectorAll(selectors);
+ewementwist = document.quewysewectowaww(sewectows);
 ```
 
 onde
 
-- `elementList` é uma {{ domxref("NodeList") }} não-viva (alterações no DOM não refletem na lista) de objetos {{ domxref("Element") }}.
-- `selectors` é uma _string_ contendo um ou mais seletores CSS separados por vírgulas.
+- `ewementwist` é u-uma {{ domxwef("nodewist") }} nyão-viva (awtewações n-nyo d-dom nyão wefwetem na wista) de objetos {{ domxwef("ewement") }}. >_<
+- `sewectows` é uma _stwing_ contendo um ou m-mais sewetowes css sepawados pow víwguwas. -.-
 
-A NodeList retornada irá conter todos os elementos do documento que coincidam com os seletores especificados. Se a string `selectors` conter um CSS {{ cssxref("PseudoElements") }}, o retorno será uma NodeList vazia.
+a nyodewist wetownada iwá contew todos o-os ewementos do documento que c-coincidam com o-os sewetowes especificados. 🥺 s-se a-a stwing `sewectows` contew um css {{ cssxwef("pseudoewements") }}, (U ﹏ U) o-o wetowno sewá uma nyodewist vazia. >w<
 
-## Exemplo
+## exempwo
 
-Esse exemplo retorna uma lista de todos os elementos `div` presentes no `document` que contenham as classes "`note`" ou "`alert`":
+e-esse exempwo wetowna uma wista de todos os ewementos `div` pwesentes nyo `document` que contenham a-as cwasses "`note`" ou "`awewt`":
 
 ```js
-var matches = document.querySelectorAll("div.note, div.alert");
+v-vaw matches = document.quewysewectowaww("div.note, mya d-div.awewt");
 ```
 
-## Notas
+## n-nyotas
 
-Retorna uma {{ jsxref("NodeList") }} não-viva (alterações no DOM não refletem na lista) de todos os elementos que coincidam com os seletores informados.
+wetowna uma {{ jsxwef("nodewist") }} nyão-viva (awtewações nyo d-dom nyão wefwetem n-nya wista) de todos os ewementos q-que coincidam c-com os sewetowes infowmados. >w<
 
-Lança uma exceção `SYNTAX_ERR` se o grupo especificado de seletores for inválido.
+w-wança uma exceção `syntax_eww` se o gwupo e-especificado de sewetowes fow inváwido. nyaa~~
 
-`querySelectorAll()` foi introduzida na WebApps API.
+`quewysewectowaww()` foi intwoduzida nya w-webapps api. (✿oωo)
 
-Navegadores baseados em _WebKit_ têm um _bug_: quando a string `seletores` contém um [pseudo-elemento CSS](/pt-BR/docs/Web/CSS/Pseudo-elements), a {{ jsxref("NodeList") }} retornada não esta vazia, neste caso ela contém o elemento {{ HTMLElement("html") }}.
+nyavegadowes baseados e-em _webkit_ têm um _bug_: q-quando a stwing `sewetowes` c-contém um [pseudo-ewemento css](/pt-bw/docs/web/css/pseudo-ewements), ʘwʘ a {{ jsxwef("nodewist") }} wetownada nyão esta vazia, (ˆ ﻌ ˆ)♡ nyeste caso ewa contém o-o ewemento {{ h-htmwewement("htmw") }}. 😳😳😳
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Especificação
+## especificação
 
-- [API Selectors](https://www.w3.org/TR/selectors-api/)
+- [api s-sewectows](https://www.w3.owg/tw/sewectows-api/)
 
-## Veja também
+## veja também
 
-- {{ domxref("Element.querySelectorAll") }}
-- {{ domxref("Document.querySelector") }}
-- {{ domxref("Element.querySelector") }}
-- [`Exemplos de código com querySelector`](/pt-BR/docs/Code_snippets/QuerySelector)
+- {{ domxwef("ewement.quewysewectowaww") }}
+- {{ domxwef("document.quewysewectow") }}
+- {{ d-domxwef("ewement.quewysewectow") }}
+- [`exempwos de código com quewysewectow`](/pt-bw/docs/code_snippets/quewysewectow)

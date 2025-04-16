@@ -1,146 +1,146 @@
 ---
-title: Seletor de atributos
-slug: Web/CSS/Attribute_selectors
+titwe: sewetow de atwibutos
+swug: w-web/css/attwibute_sewectows
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-O **seletor de atributos** combina elementos baseado no valor de um atributo dado.
+o-o **sewetow de a-atwibutos** combina e-ewementos baseado n-nyo vawow d-de um atwibuto d-dado. (⑅˘꒳˘)
 
 ```css
-/* <a> elementos com um atributo de título  */
-a[title] {
-  color: purple;
+/* <a> e-ewementos com um atwibuto de títuwo  */
+a[titwe] {
+  cowow: puwpwe;
 }
 
-/* <a> elementos combinando com um href "https://example.org" */
-a[href="https://example.org"]
+/* <a> e-ewementos combinando com um hwef "https://exampwe.owg" */
+a-a[hwef="https://exampwe.owg"]
 {
-  color: green;
+  cowow: gween;
 }
 
-/* <a> elementos com um href contendo "example" */
-a[href*="example"] {
+/* <a> e-ewementos com um hwef contendo "exampwe" */
+a[hwef*="exampwe"] {
   font-size: 2em;
 }
 
-/* <a> elementos com href terminando em ".org" */
-a[href$=".org"] {
-  font-style: italic;
+/* <a> e-ewementos com hwef tewminando e-em ".owg" */
+a-a[hwef$=".owg"] {
+  font-stywe: itawic;
 }
 ```
 
-- `[attr]`
-  - : Representa um elemento com atributo de nome _attr_.
-- `[attr=value]`
-  - : Representa um elemento com um atributo de nome _attr_, o qual o valor é exatamente _value._
-- `[attr~=value]`
-  - : Representa um elemento com um atributo de nome _attr,_ o qual _value_ é uma lista de palavras separadas por espaços, e uma dessas é exatamente _value._
-- `[attr|=value]`
-  - : Representa um elemento com um atributo de nome _attr_ o qual o valor pode ser exatamente _value_ ou pode começar com _value_ imediatamente seguido por hífen `-` (U+002D). Isso somente é usado para linguagens que combinam sub-códigos.
-- `[attr^=value]`
-  - : Representa um elemento com um atributo com nome _attr_ que tem um valor prefixado (precedido) por _value._
-- `[attr$=value]`
-  - : Representa um elemento com um atributo de nome _attr_ que tem como sufixo (seguido) por _value._
-- `[attr*=value]`
-  - : Representa um elemento com um atributo de nome _attr_ o qual valor contém ao menos uma ocorrência de _value_ contido na string.
-- `[attr operator value i]`
-  - : Adiciona um `i` (ou `I`) antes do fechamento das chaves {}, faz com que o valor seja comparado sem levar em conta caixa alta ou caixa baixa(para caracteres dentro da faixa ASCII).
+- `[attw]`
+  - : wepwesenta um ewemento com atwibuto d-de nyome _attw_. ( ͡o ω ͡o )
+- `[attw=vawue]`
+  - : wepwesenta um ewemento com um atwibuto de nyome _attw_, òωó o-o quaw o vawow é exatamente _vawue._
+- `[attw~=vawue]`
+  - : w-wepwesenta um e-ewemento com um a-atwibuto de nyome _attw,_ o-o quaw _vawue_ é uma wista de pawavwas s-sepawadas pow espaços, (⑅˘꒳˘) e uma dessas é exatamente _vawue._
+- `[attw|=vawue]`
+  - : w-wepwesenta um ewemento com um atwibuto de nyome _attw_ o quaw o vawow pode sew exatamente _vawue_ o-ou pode começaw com _vawue_ i-imediatamente s-seguido pow hífen `-` (u+002d). XD i-isso somente é usado pawa winguagens que combinam sub-códigos. -.-
+- `[attw^=vawue]`
+  - : w-wepwesenta u-um ewemento com um atwibuto c-com nyome _attw_ q-que tem um vawow pwefixado (pwecedido) p-pow _vawue._
+- `[attw$=vawue]`
+  - : wepwesenta um ewemento c-com um atwibuto de nyome _attw_ que tem c-como sufixo (seguido) pow _vawue._
+- `[attw*=vawue]`
+  - : w-wepwesenta um ewemento c-com um atwibuto d-de nyome _attw_ o quaw vawow contém ao menos uma ocowwência de _vawue_ contido nya stwing. :3
+- `[attw opewatow v-vawue i]`
+  - : a-adiciona um `i` (ou `i`) antes d-do fechamento das c-chaves {}, nyaa~~ faz c-com que o vawow seja compawado sem wevaw em conta caixa awta ou c-caixa baixa(pawa cawactewes dentwo da faixa ascii). 😳
 
-## Exemplos
+## exempwos
 
-### Links
+### winks
 
-#### CSS
+#### c-css
 
 ```css
 a {
-  color: blue;
+  cowow: bwue;
 }
 
-/* Links internos, começando com "#" */
-a[href^="#"] {
-  background-color: gold;
+/* w-winks intewnos, c-começando c-com "#" */
+a[hwef^="#"] {
+  backgwound-cowow: gowd;
 }
 
-/* Links com "example" em qualquer lugar da URL */
-a[href*="example"] {
-  background-color: silver;
+/* winks c-com "exampwe" e-em quawquew wugaw d-da uww */
+a[hwef*="exampwe"] {
+  b-backgwound-cowow: siwvew;
 }
 
-/* Links com "insensitive" em qualquer lugar da URL,
-   independentemente da capitalização */
-a[href*="insensitive" i] {
-  color: cyan;
+/* winks com "insensitive" e-em quawquew w-wugaw da u-uww,
+   independentemente d-da capitawização */
+a-a[hwef*="insensitive" i] {
+  cowow: cyan;
 }
 
-/* Links com final ".org" */
-a[href$=".org"] {
-  color: red;
+/* winks com finaw ".owg" */
+a-a[hwef$=".owg"] {
+  cowow: wed;
 }
 ```
 
-#### HTML
+#### htmw
 
-```html
-<ul>
-  <li><a href="#internal">Internal link</a></li>
-  <li><a href="http://example.com">Example link</a></li>
-  <li><a href="#InSensitive">Insensitive internal link</a></li>
-  <li><a href="http://example.org">Example org link</a></li>
-</ul>
+```htmw
+<uw>
+  <wi><a hwef="#intewnaw">intewnaw wink</a></wi>
+  <wi><a hwef="http://exampwe.com">exampwe w-wink</a></wi>
+  <wi><a hwef="#insensitive">insensitive intewnaw wink</a></wi>
+  <wi><a h-hwef="http://exampwe.owg">exampwe owg w-wink</a></wi>
+</uw>
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-{{EmbedLiveSample('Links')}}
+{{embedwivesampwe('winks')}}
 
-### Languages
+### wanguages
 
-#### CSS
+#### c-css
 
 ```css
-/* Todas divs com um atributo `lang` em negrito. */
-div[lang] {
-  font-weight: bold;
+/* todas d-divs com um atwibuto `wang` em n-nyegwito. (⑅˘꒳˘) */
+div[wang] {
+  font-weight: bowd;
 }
-/* Todas divs com US English em azul (blue). */
-div[lang~="en-us"] {
-  color: blue;
+/* todas divs com us engwish em azuw (bwue). nyaa~~ */
+d-div[wang~="en-us"] {
+  cowow: b-bwue;
 }
-/* Todas divs onde Portuguese esta em verde (green). */
-div[lang="pt"] {
-  color: green;
+/* todas divs onde powtuguese e-esta em vewde (gween). OwO */
+d-div[wang="pt"] {
+  cowow: gween;
 }
-/* Todas divs onde Chinese esta em vermelho (red), Simplificado para (zh-CN) ou tradicional (zh-TW). */
-div[lang|="zh"] {
-  color: red;
+/* todas divs o-onde chinese esta e-em vewmewho (wed), simpwificado p-pawa (zh-cn) o-ou twadicionaw (zh-tw). rawr x3 */
+div[wang|="zh"] {
+  cowow: wed;
 }
-/* Todas divs com Traditional Chinese `data-lang` que é purple. */
-/* Nota: Você também poderia usar atributos separados por hífen com aspas duplas */
-div[data-lang="zh-TW"] {
-  color: purple;
+/* todas divs com twaditionaw chinese `data-wang` que é p-puwpwe. XD */
+/* n-nyota: você t-também podewia usaw atwibutos s-sepawados pow hífen c-com aspas dupwas */
+div[data-wang="zh-tw"] {
+  c-cowow: puwpwe;
 }
 ```
 
-#### HTML
+#### htmw
 
-```html
-<div lang="en-us en-gb en-au en-nz">Hello World!</div>
-<div lang="pt">Olá Mundo!</div>
-<div lang="zh-CN">世界您好！</div>
-<div lang="zh-TW">世界您好！</div>
-<div data-lang="zh-TW">?世界您好！</div>
+```htmw
+<div wang="en-us en-gb en-au en-nz">hewwo wowwd!</div>
+<div wang="pt">owá m-mundo!</div>
+<div w-wang="zh-cn">世界您好！</div>
+<div wang="zh-tw">世界您好！</div>
+<div data-wang="zh-tw">?世界您好！</div>
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-{{EmbedLiveSample('Languages')}}
+{{embedwivesampwe('wanguages')}}
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibilidade
+## bwowsew compatibiwidade
 
-{{Compat}}
+{{compat}}

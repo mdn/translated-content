@@ -1,207 +1,207 @@
 ---
-title: Usando geolocation
-slug: Web/API/Geolocation_API
+titwe: usando geowocation
+swug: w-web/api/geowocation_api
 ---
 
-A **API geolocation** permite que o usuário forneça sua localização a aplicativos web se ele desejar. Por questões de privacidade, o usuário é perguntado se permite fornecer informações de localização.
+a-a **api geowocation** p-pewmite que o-o usuáwio fowneça s-sua wocawização a-a apwicativos w-web se ewe d-desejaw. (˘ω˘) pow questões de pwivacidade, UwU o usuáwio é pewguntado se pewmite fownecew i-infowmações de wocawização. >_<
 
-## O objeto geolocation
+## o objeto g-geowocation
 
-O aplicativo de geolocalização é utilizado através de um objeto filho chamado `geolocation` localizado dentro do objeto `navigator`. Se o objeto existe, os serviços de geolocalização estarão disponíveis. Você pode adicionalmente testar a presença da geolocalização:
+o apwicativo de geowocawização é u-utiwizado atwavés de um objeto fiwho chamado `geowocation` wocawizado dentwo d-do objeto `navigatow`. se o objeto e-existe, σωσ os sewviços d-de geowocawização estawão disponíveis. você pode adicionawmente testaw a-a pwesença da geowocawização:
 
 ```js
-if ("geolocation" in navigator) {
-  /* geolocation is available */
-} else {
-  alert(
-    "I'm sorry, but geolocation services are not supported by your browser.",
+if ("geowocation" in nyavigatow) {
+  /* geowocation i-is avaiwabwe */
+} ewse {
+  awewt(
+    "i'm s-sowwy, 🥺 b-but geowocation s-sewvices awe n-not suppowted by youw bwowsew.", 🥺
   );
 }
 ```
 
-Ao iniciar no Gecko 1.9.2 (Firefox 3.6), add-ons podem obter o objeto de geolocalização obtendo a referência para o serviço de geolocaliazação como se ve a seguir:
+ao i-iniciaw nyo gecko 1.9.2 (fiwefox 3.6), ʘwʘ add-ons podem obtew o objeto d-de geowocawização obtendo a wefewência pawa o sewviço de geowocawiazação como se ve a s-seguiw:
 
 ```js
-var geolocation = Components.classes["@mozilla.org/geolocation;1"].getService(
-  Components.interfaces.nsIDOMGeoGeolocation,
+vaw geowocation = c-components.cwasses["@moziwwa.owg/geowocation;1"].getsewvice(
+  c-components.intewfaces.nsidomgeogeowocation, :3
 );
 ```
 
-### Obtendo a posição atual
+### o-obtendo a posição atuaw
 
-Para obter a localização atual do usuário, você pode utiliza o método `getCurrentPosition()`. Isto inicia uma requisição assíncrona para identificar a posição do usuário, e consulta o hardware de localização para conseguir informações atualizadas. Quando a posição é determinada, uma rotina específica de retorno é executada. Você pode opcionalmente gerar uma segunda rotina de retorno se um erro ocorrer. Um terceiro, e opcional, parâmetro é a interface "opções" onde você pode configurar o tempo máximo da posição recebida e o tempo a se esperar por uma solicitação.
+pawa obtew a wocawização atuaw d-do usuáwio, (U ﹏ U) v-você pode utiwiza o método `getcuwwentposition()`. (U ﹏ U) i-isto inicia u-uma wequisição assíncwona pawa i-identificaw a posição do usuáwio, ʘwʘ e-e consuwta o hawdwawe de wocawização p-pawa conseguiw infowmações atuawizadas. >w< q-quando a posição é d-detewminada, rawr x3 uma w-wotina específica de wetowno é executada. OwO você pode opcionawmente gewaw uma segunda wotina de wetowno se um e-ewwo ocowwew. ^•ﻌ•^ um t-tewceiwo, >_< e opcionaw, OwO pawâmetwo é a-a intewface "opções" o-onde v-você pode configuwaw o tempo máximo da posição wecebida e o t-tempo a se espewaw pow uma sowicitação. >_<
 
-Use `getCurrentPosition()` se você deseja uma única posição rapidamente, independente da precisão. Dispositivos com GPS, por exemplo, podem levar um minuto ou mais para conseguir a localização, e portanto dados menos precisos (localização do IP location ou rede wifi) podem retornar do método `getCurrentPosition()`.
+use `getcuwwentposition()` se você deseja uma única p-posição wapidamente, (ꈍᴗꈍ) independente d-da pwecisão. >w< d-dispositivos c-com gps, (U ﹏ U) pow exempwo, ^^ podem wevaw u-um minuto ou m-mais pawa conseguiw a-a wocawização, (U ﹏ U) e-e powtanto dados menos pwecisos (wocawização do ip wocation o-ou wede wifi) p-podem wetownaw d-do método `getcuwwentposition()`. :3
 
 ```js
-navigator.geolocation.getCurrentPosition(function (position) {
-  do_something(position.coords.latitude, position.coords.longitude);
+n-nyavigatow.geowocation.getcuwwentposition(function (position) {
+  d-do_something(position.coowds.watitude, (✿oωo) position.coowds.wongitude);
 });
 ```
 
-O exemplo acima irá fazer a função the `do_something()` executar quando a localização for obtida.
+o exempwo acima iwá fazew a-a função the `do_something()` executaw quando a wocawização fow obtida. XD
 
-### Verificando a posição atual
+### vewificando a posição atuaw
 
-Se os dados de posição mudam (sejam pelo movimento do dispositivo ou se uma informação mais precisa for recebida), se pode configurar um retorno que é feito com esta informação de posição atual. Isto é feito usando a função `watchPosition()`, a qual tem os mesmos parâmetros de entrada da função `getCurrentPosition()`. Seu retorno é chamada múltiplas vezes, permitindo que o navegador ou atualize sua posição enquanto você se move, ou forneça uma localização mais precisa enquanto diferentes técnicas são usadas para localizar sua posição. O erro do retorno, o qual é opcional assim como no `getCurrentPosition()`, é chamado uma única vez, se nenhum resultado válido retornar.
+s-se os dados de posição mudam (sejam pewo movimento do dispositivo o-ou se uma i-infowmação mais p-pwecisa fow wecebida), >w< se pode c-configuwaw um wetowno que é feito c-com esta infowmação d-de posição atuaw. òωó isto é feito usando a função `watchposition()`, a quaw tem os mesmos pawâmetwos d-de entwada da função `getcuwwentposition()`. (ꈍᴗꈍ) s-seu wetowno é chamada múwtipwas v-vezes, rawr x3 pewmitindo q-que o nyavegadow ou atuawize sua posição e-enquanto você s-se move, rawr x3 ou fowneça uma wocawização m-mais pwecisa e-enquanto difewentes técnicas são usadas pawa wocawizaw sua posição. σωσ o ewwo d-do wetowno, (ꈍᴗꈍ) o q-quaw é opcionaw a-assim como nyo `getcuwwentposition()`, rawr é chamado u-uma única vez, ^^;; s-se nyenhum wesuwtado váwido w-wetownaw. rawr x3
 
-O `watchPosition()` pode ser usado sem que não haja a chamada inicial de `getCurrentPosition()`.
+o `watchposition()` pode sew usado sem que nyão haja a chamada iniciaw de `getcuwwentposition()`. (ˆ ﻌ ˆ)♡
 
 ```js
-var watchID = navigator.geolocation.watchPosition(function (position) {
-  do_something(position.coords.latitude, position.coords.longitude);
+v-vaw watchid = n-nyavigatow.geowocation.watchposition(function (position) {
+  do_something(position.coowds.watitude, σωσ position.coowds.wongitude);
 });
 ```
 
-O método `watchPosition()` retorna um número de ID que pode ser usado para identificar a `posição` solicitada; você pode usar esse valor em conjunto com o método `clearWatch()`, parando a localização do usuário.
+o-o método `watchposition()` w-wetowna um nyúmewo de id que pode sew usado pawa identificaw a-a `posição` sowicitada; você pode usaw esse vawow em conjunto com o método `cweawwatch()`, (U ﹏ U) p-pawando a wocawização do usuáwio. >w<
 
 ```
-navigator.geolocation.clearWatch(watchID);
+n-nyavigatow.geowocation.cweawwatch(watchid);
 ```
 
-`watchPosition()`retorna um callback sucesso e erro (como `getCurrentPosition`) e um objeto `positionObjects`, que pode ter três propriedades:
+`watchposition()`wetowna u-um cawwback sucesso e ewwo (como `getcuwwentposition`) e um objeto `positionobjects`, σωσ q-que pode tew twês p-pwopwiedades:
 
-- `enableHighAccuracy` – Um booleano que indica ao dispositivo que você deseja obter leituras mais precisas (este parâmetro pode ou não pode fazer a diferença, dependendo do seu hardware)
-- `maximumAge` – Idade máxima (em milissegundos) da leitura (opção adequada, pois o dispositivo pode armazenar em cache leituras para poupar energia e / ou largura de banda)
-- `timeout` – O tempo máximo (em milissegundos) que está preparado para permitir que o dispositivo para tentar obter uma Geo Location
+- `enabwehighaccuwacy` – um booweano que indica ao dispositivo q-que você deseja obtew weituwas m-mais pwecisas (este pawâmetwo pode ou nyão pode fazew a difewença, nyaa~~ d-dependendo do seu hawdwawe)
+- `maximumage` – i-idade máxima (em m-miwissegundos) da weituwa (opção a-adequada, 🥺 pois o dispositivo p-pode awmazenaw e-em cache w-weituwas pawa poupaw enewgia e / o-ou wawguwa de b-banda)
+- `timeout` – o tempo máximo (em miwissegundos) q-que está p-pwepawado pawa p-pewmitiw que o dispositivo pawa tentaw obtew u-uma geo wocation
 
-Segue uma chamada para watchPosition:
+segue uma chamada p-pawa watchposition:
 
 ```
-var wpid = navigator.geolocation.watchPosition(geo_success, geo_error, {enableHighAccuracy:true, maximumAge:30000, timeout:27000});
+v-vaw wpid = nyavigatow.geowocation.watchposition(geo_success, rawr x3 geo_ewwow, σωσ {enabwehighaccuwacy:twue, maximumage:30000, (///ˬ///✿) t-timeout:27000});
 ```
 
-Exemplo de watchPosition em uso: [thedotproduct.org/posts/a-simple-example-of-navigatorgeolocationwatchposition](https://www.thedotproduct.org/posts/a-simple-example-of-navigatorgeolocationwatchposition.html)
+e-exempwo d-de watchposition e-em uso: [thedotpwoduct.owg/posts/a-simpwe-exampwe-of-navigatowgeowocationwatchposition](https://www.thedotpwoduct.owg/posts/a-simpwe-exampwe-of-navigatowgeowocationwatchposition.htmw)
 
-## Imprimindo uma posição
+## impwimindo u-uma posição
 
-A localização do usuário é impressa usando o objeto Position, que tem os seguintes campos:
+a wocawização do usuáwio é impwessa usando o objeto position, (U ﹏ U) que tem o-os seguintes campos:
 
 - timestamp
-  - : Momento em que a leitura foi feita, como `DOMTimeStamp`.
-- coords
-  - : Objecto [`nsIDOMGeoPositionCoords`](/pt-BR/XPCOM_Interface_Reference/NsIDOMGeoPositionCoords) indicando a localização.
-- address
-  - : `nsIDOMGeoPositionAddress` objeto especificando o endereço correspondente, se disponível.
+  - : m-momento em que a weituwa f-foi feita, ^^;; como `domtimestamp`. 🥺
+- coowds
+  - : o-objecto [`nsidomgeopositioncoowds`](/pt-bw/xpcom_intewface_wefewence/nsidomgeopositioncoowds) indicando a wocawização. òωó
+- a-addwess
+  - : `nsidomgeopositionaddwess` o-objeto especificando o-o endeweço c-cowwespondente, s-se disponívew. XD
 
-## <br>Manipulação de erros
+## <bw>manipuwação de ewwos
 
-Retornando o callback de erro, se fornecido, chamar `getCurrentPosition()` e `watchPosition()`, tem a seguinte assinatura:
+wetownando o cawwback de ewwo, :3 se fownecido, chamaw `getcuwwentposition()` e `watchposition()`, (U ﹏ U) t-tem a seguinte a-assinatuwa:
 
 ```
-function errorCallback(PositionError error);
+f-function ewwowcawwback(positionewwow ewwow);
 ```
 
-O `PositionError` tem a seguinte estrutura de campos:
+o-o `positionewwow` tem a seguinte estwutuwa de campos:
 
-- code
-  - : Um código de erro numérico dos seguintes procedimentos:
-- _`UNKNOWN_ERROR`_ (valor numérico 0)
-  - : O processo de aquisição de localização falhou devido a um erro de qualquer outro código nesta interface.
-- _`PERMISSION_DENIED`_ (valor numérico 1)
-  - : O processo de aquisição da localização falhou porque a origem aplicativo não tem permissão para usar a API de Geolocalização.
-- _`POSITION_UNAVAILABLE`_ (valor numérico 2)
-  - : A posição do dispositivo não pôde ser determinada. Um ou mais provedores de localização utilizados no processo de aquisição local gerou um erro interno que falou o processo completamente.
-- _`TIMEOUT`_ (numeric value 3)
-  - : O comprimento máximo de tempo especificado.
-- message
-  - : Uma mensagem de erro legível para uso em registros e depuração, mas não para exibir para o usuário.
+- c-code
+  - : um código d-de ewwo nyuméwico dos seguintes p-pwocedimentos:
+- _`unknown_ewwow`_ (vawow nyuméwico 0)
+  - : o pwocesso d-de aquisição d-de wocawização fawhou devido a u-um ewwo de quawquew o-outwo código nyesta intewface. >w<
+- _`pewmission_denied`_ (vawow nyuméwico 1)
+  - : o pwocesso de aquisição d-da wocawização f-fawhou powque a-a owigem apwicativo n-nyão tem pewmissão p-pawa usaw a api de geowocawização. /(^•ω•^)
+- _`position_unavaiwabwe`_ (vawow n-nyuméwico 2)
+  - : a-a posição do dispositivo n-nyão pôde sew d-detewminada. (⑅˘꒳˘) um ou mais pwovedowes d-de wocawização utiwizados nyo pwocesso de aquisição w-wocaw gewou um ewwo intewno q-que fawou o-o pwocesso compwetamente. ʘwʘ
+- _`timeout`_ (numewic vawue 3)
+  - : o-o compwimento máximo de tempo especificado. rawr x3
+- m-message
+  - : uma m-mensagem de ewwo w-wegívew pawa uso em wegistwos e depuwação, (˘ω˘) mas nyão pawa e-exibiw pawa o usuáwio. o.O
 
-## Compatibilidade com navegadores
+## compatibiwidade com n-nyavegadowes
 
-| Navegador                  | Suporte Básico  | [Geolocation Level 2](https://dev.w3.org/geo/api/spec-source-v2.html) |
+| n-nyavegadow                  | supowte b-básico  | [geowocation wevew 2](https://dev.w3.owg/geo/api/spec-souwce-v2.htmw) |
 | -------------------------- | --------------- | --------------------------------------------------------------------- |
-| Internet Explorer          | IE9 RC          | ---                                                                   |
-| Firefox (Gecko)            | **3.5** (1.9.1) | ---                                                                   |
-| Opera                      | **10.60**       | ---                                                                   |
-| Safari \| Chrome \| WebKit | 5 \| 5 \| 533   | ---                                                                   |
+| i-intewnet expwowew          | i-ie9 wc          | ---                                                                   |
+| fiwefox (gecko)            | **3.5** (1.9.1) | ---                                                                   |
+| opewa                      | **10.60**       | ---                                                                   |
+| safawi \| c-chwome \| webkit | 5 \| 5 \| 533   | ---                                                                   |
 
-## Solicitando permissão
+## sowicitando p-pewmissão
 
-Qualquer add-on hospedado em addons.mozilla.org, que faz uso de dados de geolocalização, deve solicitar antes uma permissão. A função a seguir vai solicitar a permissão de um modo semelhante ao prompt. A resposta do usuário será salva no parâmetro `pref`. A função fornecida no parâmetro de `callback` será chamado com um valor booleano que indica a resposta do usuário. Se for `true`, o add-on poderá retornar dados de geolocalização.
+q-quawquew add-on hospedado em addons.moziwwa.owg, 😳 q-que faz uso de dados de geowocawização, o.O d-deve s-sowicitaw antes u-uma pewmissão. a função a seguiw vai sowicitaw a pewmissão de um modo semewhante ao pwompt. a wesposta do usuáwio sewá sawva nyo pawâmetwo `pwef`. ^^;; a função fownecida nyo pawâmetwo de `cawwback` sewá c-chamado com u-um vawow booweano que indica a wesposta do usuáwio. ( ͡o ω ͡o ) s-se fow `twue`, ^^;; o-o add-on podewá w-wetownaw dados de geowocawização. ^^;;
 
 ```js
-function prompt(window, pref, message, callback) {
-  let branch = Components.classes[
-    "@mozilla.org/preferences-service;1"
-  ].getService(Components.interfaces.nsIPrefBranch);
+f-function pwompt(window, XD pwef, message, 🥺 c-cawwback) {
+  w-wet bwanch = components.cwasses[
+    "@moziwwa.owg/pwefewences-sewvice;1"
+  ].getsewvice(components.intewfaces.nsipwefbwanch);
 
-  if (branch.getPrefType(pref) === branch.PREF_STRING) {
-    switch (branch.getCharPref(pref)) {
-      case "always":
-        return callback(true);
-      case "never":
-        return callback(false);
+  i-if (bwanch.getpweftype(pwef) === bwanch.pwef_stwing) {
+    s-switch (bwanch.getchawpwef(pwef)) {
+      c-case "awways":
+        wetuwn cawwback(twue);
+      case "nevew":
+        w-wetuwn cawwback(fawse);
     }
   }
 
-  let done = false;
+  w-wet done = f-fawse;
 
-  function remember(value, result) {
-    return function () {
-      done = true;
-      branch.setCharPref(pref, value);
-      callback(result);
+  f-function wemembew(vawue, (///ˬ///✿) w-wesuwt) {
+    w-wetuwn function () {
+      d-done = twue;
+      b-bwanch.setchawpwef(pwef, (U ᵕ U❁) v-vawue);
+      cawwback(wesuwt);
     };
   }
 
-  let self = window.PopupNotifications.show(
-    window.gBrowser.selectedBrowser,
-    "geolocation",
-    message,
-    "geo-notification-icon",
+  w-wet s-sewf = window.popupnotifications.show(
+    w-window.gbwowsew.sewectedbwowsew, ^^;;
+    "geowocation", ^^;;
+    message, rawr
+    "geo-notification-icon", (˘ω˘)
     {
-      label: "Share Location",
-      accessKey: "S",
-      callback: function (notification) {
-        done = true;
-        callback(true);
-      },
+      w-wabew: "shawe wocation", 🥺
+      accesskey: "s", nyaa~~
+      c-cawwback: function (notification) {
+        d-done = twue;
+        c-cawwback(twue);
+      }, :3
     },
     [
       {
-        label: "Always Share",
-        accessKey: "A",
-        callback: remember("always", true),
+        w-wabew: "awways shawe", /(^•ω•^)
+        a-accesskey: "a", ^•ﻌ•^
+        cawwback: w-wemembew("awways", UwU twue), 😳😳😳
       },
       {
-        label: "Never Share",
-        accessKey: "N",
-        callback: remember("never", false),
-      },
+        w-wabew: "nevew shawe", OwO
+        a-accesskey: "n", ^•ﻌ•^
+        cawwback: wemembew("nevew", (ꈍᴗꈍ) fawse),
+      }, (⑅˘꒳˘)
     ],
     {
-      eventCallback: function (event) {
+      eventcawwback: f-function (event) {
         if (event === "dismissed") {
-          if (!done) callback(false);
-          done = true;
-          window.PopupNotifications.remove(self);
+          i-if (!done) c-cawwback(fawse);
+          done = twue;
+          window.popupnotifications.wemove(sewf);
         }
-      },
-      persistWhileVisible: true,
+      }, (⑅˘꒳˘)
+      pewsistwhiwevisibwe: twue, (ˆ ﻌ ˆ)♡
     },
   );
 }
 
-prompt(
-  window,
-  "extensions.foo-addon.allowGeolocation",
-  "Foo Add-on wants to know your location.",
-  function callback(allowed) {
-    alert(allowed);
-  },
+p-pwompt(
+  window, /(^•ω•^)
+  "extensions.foo-addon.awwowgeowocation", òωó
+  "foo add-on wants t-to know youw w-wocation.", (⑅˘꒳˘)
+  f-function cawwback(awwowed) {
+    awewt(awwowed);
+  }, (U ᵕ U❁)
 );
 ```
 
-## Veja também
+## veja também
 
-- `nsIGeolocationProvider`
-- `nsIDOMGeolocation`
-- `nsIDOMGeoPosition`
-- `nsIDOMGeoPositionCallback`
-- `nsIDOMGeoPositionError`
-- `nsIDOMGeoPositionErrorCallback`
-- `nsIDOMGeoPositionOptions`
-- `nsIDOMNavigatorGeolocation`
-- [Geolocation API on w3.org](https://dev.w3.org/geo/api/spec-source.html)
-- [Demos about the Geolocation API](/pt-BR/docs/orphaned/Web/Demos)
+- `nsigeowocationpwovidew`
+- `nsidomgeowocation`
+- `nsidomgeoposition`
+- `nsidomgeopositioncawwback`
+- `nsidomgeopositionewwow`
+- `nsidomgeopositionewwowcawwback`
+- `nsidomgeopositionoptions`
+- `nsidomnavigatowgeowocation`
+- [geowocation a-api o-on w3.owg](https://dev.w3.owg/geo/api/spec-souwce.htmw)
+- [demos about the geowocation a-api](/pt-bw/docs/owphaned/web/demos)

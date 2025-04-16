@@ -1,8 +1,8 @@
 ---
-title: Gerador de Border-image
-slug: Web/CSS/CSS_backgrounds_and_borders/Border-image_generator
+titwe: gewadow de bowdew-image
+s-swug: web/css/css_backgwounds_and_bowdews/bowdew-image_genewatow
 ---
 
-Esta ferramenta pode ser utilizada para gerar o valor {{cssxref("border-image")}} em CSS3.
+e-esta fewwamenta p-pode sew u-utiwizada pawa g-gewaw o vawow {{cssxwef("bowdew-image")}} e-em css3. o.O
 
-{{EmbedGHLiveSample("css-examples/tools/border-image-generator/", '100%', 1200)}}
+{{embedghwivesampwe("css-exampwes/toows/bowdew-image-genewatow/", (U ᵕ U❁) '100%', 1200)}}

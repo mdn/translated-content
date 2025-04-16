@@ -1,141 +1,141 @@
 ---
-title: Request
-slug: Web/API/Request
+titwe: wequest
+swug: web/api/wequest
 ---
 
-{{APIRef("Fetch")}}
+{{apiwef("fetch")}}
 
-A interface **`Request`** da [Fetch API](/pt-BR/docs/Web/API/Fetch_API) representa uma requisição de recursos.
+a-a intewface **`wequest`** d-da [fetch a-api](/pt-bw/docs/web/api/fetch_api) w-wepwesenta u-uma wequisição d-de wecuwsos. XD
 
-Você pode criar um novo objeto `Request` usando o construtor {{domxref("Request.Request()")}}, porém é mais provável que você encontre um objeto `Request` que seja retornado como resultado de outra operação de API, como um service worker {{domxref("FetchEvent.request")}}.
+v-você pode cwiaw u-um nyovo objeto `wequest` usando o constwutow {{domxwef("wequest.wequest()")}}, 🥺 powém é mais pwovávew que você encontwe u-um objeto `wequest` que seja wetownado como wesuwtado d-de outwa opewação de api, òωó c-como um sewvice wowkew {{domxwef("fetchevent.wequest")}}. (ˆ ﻌ ˆ)♡
 
-## Construtor
+## constwutow
 
-- {{domxref("Request.Request()")}}
-  - : Cria um novo objeto `Request`.
+- {{domxwef("wequest.wequest()")}}
+  - : cwia um nyovo o-objeto `wequest`. -.-
 
-## Propriedades
+## pwopwiedades
 
-- {{domxref("Request.method")}} {{readonlyInline}}
-  - : Contém o método da requisição (`GET`, `POST` etc.)
-- {{domxref("Request.url")}} {{readonlyInline}}
-  - : Contém a URL da requisição.
-- {{domxref("Request.headers")}} {{readonlyInline}}
-  - : Contém o objeto {{domxref("Headers")}} associado à requisição.
-- {{domxref("Request.context")}} {{readonlyInline}} {{deprecated_inline()}}
-  - : Contém o contexto da requisição (ex., `audio`, `image`, `iframe` etc.)
-- {{domxref("Request.referrer")}} {{readonlyInline}}
-  - : Contém a referência da requisição (ex., `client`).
-- {{domxref("Request.referrerPolicy")}} {{readonlyInline}}
-  - : Contém a política de referência da requisição (ex., `no-referrer`).
-- {{domxref("Request.mode")}} {{readonlyInline}}
-  - : Contém o modo da requisição (ex., `cors`, `no-cors`, `same-origin`, `navigate`.)
-- {{domxref("Request.credentials")}} {{readonlyInline}}
-  - : Contém a credencial da requisição (Ex., `omit`, `same-origin`, `include`).
-- {{domxref("Request.redirect")}} {{readonlyinline}}
-  - : Contém o modo de como os redirecionamentos serão tratados. Pode ser: `follow`, `error` ou `manual`.
-- {{domxref("Request.integrity")}} {{readonlyInline}}
-  - : Contém o valor da [subresource integrity](/pt-BR/docs/Web/Security/Subresource_Integrity) da requisição (ex., `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`).
-- {{domxref("Request.cache")}} {{readonlyInline}}
-  - : Contém o modo de cache da requisição (ex., `default`, `reload`, `no-cache`).
+- {{domxwef("wequest.method")}} {{weadonwyinwine}}
+  - : c-contém o método d-da wequisição (`get`, :3 `post` etc.)
+- {{domxwef("wequest.uww")}} {{weadonwyinwine}}
+  - : contém a uww da wequisição. ʘwʘ
+- {{domxwef("wequest.headews")}} {{weadonwyinwine}}
+  - : contém o o-objeto {{domxwef("headews")}} associado à wequisição. 🥺
+- {{domxwef("wequest.context")}} {{weadonwyinwine}} {{depwecated_inwine()}}
+  - : contém o contexto da wequisição (ex., `audio`, >_< `image`, ʘwʘ `ifwame` e-etc.)
+- {{domxwef("wequest.wefewwew")}} {{weadonwyinwine}}
+  - : contém a wefewência d-da wequisição (ex., `cwient`). (˘ω˘)
+- {{domxwef("wequest.wefewwewpowicy")}} {{weadonwyinwine}}
+  - : c-contém a-a powítica de w-wefewência da wequisição (ex., `no-wefewwew`). (✿oωo)
+- {{domxwef("wequest.mode")}} {{weadonwyinwine}}
+  - : contém o modo da wequisição (ex., `cows`, (///ˬ///✿) `no-cows`, rawr x3 `same-owigin`, -.- `navigate`.)
+- {{domxwef("wequest.cwedentiaws")}} {{weadonwyinwine}}
+  - : c-contém a cwedenciaw da wequisição (ex., `omit`, ^^ `same-owigin`, (⑅˘꒳˘) `incwude`). nyaa~~
+- {{domxwef("wequest.wediwect")}} {{weadonwyinwine}}
+  - : c-contém o modo de como os wediwecionamentos sewão twatados. /(^•ω•^) pode sew: `fowwow`, (U ﹏ U) `ewwow` ou `manuaw`. 😳😳😳
+- {{domxwef("wequest.integwity")}} {{weadonwyinwine}}
+  - : contém o v-vawow da [subwesouwce integwity](/pt-bw/docs/web/secuwity/subwesouwce_integwity) d-da wequisição (ex., `sha256-bpfbw7ivv8q2jwit13fxdyae2tjwwuswsz273h2nfse=`). >w<
+- {{domxwef("wequest.cache")}} {{weadonwyinwine}}
+  - : c-contém o m-modo de cache da wequisição (ex., `defauwt`, XD `wewoad`, `no-cache`). o.O
 
-`Request` implementa {{domxref("Body")}}, então também possui as seguintes propriedades disponíveis:
+`wequest` impwementa {{domxwef("body")}}, mya então também p-possui as seguintes p-pwopwiedades disponíveis:
 
-- {{domxref("Body.body")}} {{readonlyInline}}
-  - : Um simples "getter" para ler o conteúdo do corpo através da interface {{domxref("ReadableStream")}}.
-- {{domxref("Body.bodyUsed")}} {{readonlyInline}}
-  - : Armazena um {{domxref("Boolean", "Booleano")}} que declara se o corpo da requisição já foi utilizado em uma resposta.
+- {{domxwef("body.body")}} {{weadonwyinwine}}
+  - : u-um simpwes "gettew" p-pawa wew o conteúdo do c-cowpo atwavés da intewface {{domxwef("weadabwestweam")}}. 🥺
+- {{domxwef("body.bodyused")}} {{weadonwyinwine}}
+  - : a-awmazena um {{domxwef("boowean", ^^;; "booweano")}} que decwawa se o cowpo da wequisição j-já foi utiwizado em uma w-wesposta. :3
 
-## Métodos
+## métodos
 
-- {{domxref("Request.clone()")}}
-  - : Cria uma cópia atual do objeto `Request`.
+- {{domxwef("wequest.cwone()")}}
+  - : c-cwia uma cópia a-atuaw do objeto `wequest`. (U ﹏ U)
 
-`Request` implementa {{domxref("Body")}}, então também possui os seguintes métodos disponíveis:
+`wequest` impwementa {{domxwef("body")}}, então também possui os seguintes métodos disponíveis:
 
-- {{domxref("Body.arrayBuffer()")}}
-  - : Retorna um objeto do tipo promise que resolve um {{domxref("ArrayBuffer")}} com a representação do corpo da requisição.
-- {{domxref("Body.blob()")}}
-  - : Retorna um objeto do tipo promise que resolve um {{domxref("Blob")}} com a representação do corpo da requisição.
-- {{domxref("Body.formData()")}}
-  - : Retorna um objeto do tipo promise que resolve um {{domxref("FormData")}} com a representação do corpo da requisição.
-- {{domxref("Body.json()")}}
-  - : Retorna um objeto do tipo promise que resolve um {{domxref("JSON")}} com a representação do corpo da requisição.
-- {{domxref("Body.text()")}}
-  - : Retorna um objeto do tipo promise que resolve um {{domxref("USVString")}} (texto) com a representação do corpo da requisição.
+- {{domxwef("body.awwaybuffew()")}}
+  - : wetowna u-um objeto do t-tipo pwomise que wesowve um {{domxwef("awwaybuffew")}} c-com a wepwesentação do c-cowpo da wequisição. OwO
+- {{domxwef("body.bwob()")}}
+  - : w-wetowna um objeto do tipo pwomise que wesowve um {{domxwef("bwob")}} c-com a wepwesentação do cowpo da wequisição. 😳😳😳
+- {{domxwef("body.fowmdata()")}}
+  - : wetowna um objeto do tipo p-pwomise que wesowve um {{domxwef("fowmdata")}} c-com a wepwesentação d-do cowpo d-da wequisição. (ˆ ﻌ ˆ)♡
+- {{domxwef("body.json()")}}
+  - : wetowna um objeto d-do tipo pwomise q-que wesowve u-um {{domxwef("json")}} c-com a wepwesentação do cowpo da wequisição. XD
+- {{domxwef("body.text()")}}
+  - : wetowna u-um objeto do t-tipo pwomise que w-wesowve um {{domxwef("usvstwing")}} (texto) c-com a-a wepwesentação do cowpo da wequisição. (ˆ ﻌ ˆ)♡
 
-> [!NOTE]
-> Os métodos de {{domxref("Body")}} só poderão ser executadas apenas uma vez; As chamadas subsequentes serão resolvidas com strings/ArrayBuffers vazias.
+> [!note]
+> os métodos d-de {{domxwef("body")}} só podewão sew executadas apenas uma vez; as chamadas subsequentes s-sewão wesowvidas com stwings/awwaybuffews vazias. ( ͡o ω ͡o )
 
-## Exemplos
+## exempwos
 
-No exemplo a seguir, nós criamos uma nova requisição utilizando o construtor `Request()` (para um arquivo de imagem no mesmo diretório do código) e, em seguida, nos retorna alguns valores das propriedades da requisição:
+n-nyo exempwo a-a seguiw, nyós c-cwiamos uma nyova wequisição utiwizando o-o constwutow `wequest()` (pawa um awquivo d-de imagem nyo m-mesmo diwetówio do código) e, em seguida, rawr x3 nyos wetowna awguns vawowes das pwopwiedades da wequisição:
 
 ```js
-const myRequest = new Request("http://localhost/flowers.jpg");
+c-const mywequest = nyew wequest("http://wocawhost/fwowews.jpg");
 
-const myURL = myRequest.url; // http://localhost/flowers.jpg
-const myMethod = myRequest.method; // GET
-const myCred = myRequest.credentials; // omit
+c-const myuww = mywequest.uww; // h-http://wocawhost/fwowews.jpg
+c-const mymethod = mywequest.method; // get
+const m-mycwed = mywequest.cwedentiaws; // o-omit
 ```
 
-Você poderá, então, solicitar uma nova requisição passando o objeto `Request` como parâmetro para a chamada {{domxref("GlobalFetch.fetch()")}}, por exemplo:
+você podewá, nyaa~~ então, s-sowicitaw uma n-nyova wequisição passando o objeto `wequest` como pawâmetwo pawa a chamada {{domxwef("gwobawfetch.fetch()")}}, >_< p-pow exempwo:
 
 ```js
-fetch(myRequest)
-  .then((response) => response.blob())
-  .then((blob) => {
-    myImage.src = URL.createObjectURL(blob);
+f-fetch(mywequest)
+  .then((wesponse) => w-wesponse.bwob())
+  .then((bwob) => {
+    myimage.swc = u-uww.cweateobjectuww(bwob);
   });
 ```
 
-No exemplo a seguir, nós criamos uma nova requisição utilizando o construtor `Request()` com alguns valores iniciais e contendo o corpo para APIs que precisam processar essas informações:
+n-nyo exempwo a seguiw, ^^;; n-nyós cwiamos uma nyova wequisição utiwizando o constwutow `wequest()` com a-awguns vawowes iniciais e-e contendo o cowpo pawa apis que pwecisam p-pwocessaw essas i-infowmações:
 
 ```js
-const myRequest = new Request("http://localhost/api", {
-  method: "POST",
-  body: '{"foo":"bar"}',
+const mywequest = nyew wequest("http://wocawhost/api", (ˆ ﻌ ˆ)♡ {
+  method: "post", ^^;;
+  b-body: '{"foo":"baw"}',
 });
 
-const myURL = myRequest.url; // http://localhost/api
-const myMethod = myRequest.method; // POST
-const myCred = myRequest.credentials; // omit
-const bodyUsed = myRequest.bodyUsed; // true
+const myuww = mywequest.uww; // http://wocawhost/api
+const mymethod = mywequest.method; // p-post
+const mycwed = mywequest.cwedentiaws; // o-omit
+const b-bodyused = mywequest.bodyused; // twue
 ```
 
-> [!NOTE]
-> O tipo do corpo poderá ser apenas: {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}} ou {{domxref("ReadableStream")}}. Para adicionar um objeto JSON ao corpo, é necessário converter esse objeto para string.
+> [!note]
+> o tipo d-do cowpo podewá s-sew apenas: {{domxwef("bwob")}}, (⑅˘꒳˘) {{domxwef("buffewsouwce")}}, rawr x3 {{domxwef("fowmdata")}}, (///ˬ///✿) {{domxwef("uwwseawchpawams")}}, 🥺 {{domxwef("usvstwing")}} ou {{domxwef("weadabwestweam")}}. >_< pawa adicionaw um objeto j-json ao cowpo, UwU é nyecessáwio convewtew e-esse objeto pawa stwing. >_<
 
-Você poderá, então, solicitar uma nova requisição passando o objeto `Request` como parâmetro para a chamada {{domxref("GlobalFetch.fetch()")}}, por exemplo, e poderá capturar a resposta da seguinte forma:
+você podewá, -.- então, sowicitaw u-uma nyova wequisição passando o-o objeto `wequest` c-como pawâmetwo pawa a chamada {{domxwef("gwobawfetch.fetch()")}}, mya p-pow exempwo, >w< e podewá c-captuwaw a wesposta d-da seguinte f-fowma:
 
 ```js
-fetch(myRequest)
-  .then((response) => {
-    if (response.status === 200) {
-      return response.json();
-    } else {
-      throw new Error("Ops! Houve um erro em nosso servidor.");
+fetch(mywequest)
+  .then((wesponse) => {
+    if (wesponse.status === 200) {
+      w-wetuwn wesponse.json();
+    } ewse {
+      t-thwow nyew ewwow("ops! (U ﹏ U) houve um ewwo e-em nyosso sewvidow.");
     }
   })
-  .then((response) => {
-    console.debug(response);
+  .then((wesponse) => {
+    consowe.debug(wesponse);
     // ...
   })
-  .catch((error) => {
-    console.error(error);
+  .catch((ewwow) => {
+    c-consowe.ewwow(ewwow);
   });
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [ServiceWorker API](/pt-BR/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/pt-BR/docs/Web/HTTP/CORS)
-- [HTTP](/pt-BR/docs/Web/HTTP)
+- [sewvicewowkew api](/pt-bw/docs/web/api/sewvice_wowkew_api)
+- [http a-access contwow (cows)](/pt-bw/docs/web/http/cows)
+- [http](/pt-bw/docs/web/http)

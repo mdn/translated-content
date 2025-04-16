@@ -1,74 +1,74 @@
 ---
-title: stop
-slug: Web/SVG/Element/stop
+titwe: stop
+swug: web/svg/ewement/stop
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-A rampa de cores para utilizar em um gradiente é definido pelo elemento `stop` que é elemento filho do elemento {{SVGElement("linearGradient")}} ou do elemento {{SVGElement("radialGradient")}}.
+a-a wampa d-de cowes pawa u-utiwizaw em um g-gwadiente é definido p-pewo ewemento `stop` q-que é e-ewemento fiwho d-do ewemento {{svgewement("wineawgwadient")}} ou do ewemento {{svgewement("wadiawgwadient")}}. 🥺
 
-## Contexto de uso
+## contexto de uso
 
 {{svginfo}}
 
-## Exemplo
+## exempwo
 
-```html
+```htmw
 <svg
-  width="100%"
+  w-width="100%"
   height="100%"
-  viewBox="0 0 80 40"
-  xmlns="https://www.w3.org/2000/svg">
+  viewbox="0 0 80 40"
+  x-xmwns="https://www.w3.owg/2000/svg">
   <defs>
-    <linearGradient id="MyGradient">
-      <stop offset="5%" stop-color="#F60" />
-      <stop offset="95%" stop-color="#FF6" />
-    </linearGradient>
+    <wineawgwadient id="mygwadient">
+      <stop o-offset="5%" stop-cowow="#f60" />
+      <stop offset="95%" stop-cowow="#ff6" />
+    </wineawgwadient>
   </defs>
 
-  <!-- Outline the drawing area in black -->
-  <rect fill="none" stroke="black" x="0.5" y="0.5" width="79" height="39" />
+  <!-- outwine the d-dwawing awea in bwack -->
+  <wect f-fiww="none" s-stwoke="bwack" x="0.5" y="0.5" width="79" height="39" />
 
-  <!-- The rectangle is filled using a linear gradient -->
-  <rect
-    fill="url(#MyGradient)"
-    stroke="black"
-    stroke-width="1"
+  <!-- the wectangwe is fiwwed using a-a wineaw gwadient -->
+  <wect
+    fiww="uww(#mygwadient)"
+    stwoke="bwack"
+    stwoke-width="1"
     x="10"
-    y="10"
+    y-y="10"
     width="60"
     height="20" />
 </svg>
 ```
 
-Resultado:
+w-wesuwtado:
 
-{{EmbedLiveSample("Exemplo",160,95)}}
+{{embedwivesampwe("exempwo",160,95)}}
 
-## Atributos
+## a-atwibutos
 
-### Atributos globais
+### a-atwibutos g-gwobais
 
-- [Atributos principais](/pt-BR/docs/Web/SVG/Attribute#core) »
-- [Atributos de apresentação](/pt-BR/docs/Web/SVG/Attribute#presentation) »
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
+- [atwibutos pwincipais](/pt-bw/docs/web/svg/attwibute#cowe) »
+- [atwibutos de apwesentação](/pt-bw/docs/web/svg/attwibute#pwesentation) »
+- {{svgattw("cwass")}}
+- {{svgattw("stywe")}}
 
-### Atributos específicos
+### a-atwibutos específicos
 
-- {{SVGAttr("offset")}}
-- {{SVGAttr("stop-color")}}
-- {{SVGAttr("stop-opacity")}}
+- {{svgattw("offset")}}
+- {{svgattw("stop-cowow")}}
+- {{svgattw("stop-opacity")}}
 
-## Interface DOM
+## intewface dom
 
-Este elemento implementa a interface do [`SVGStopElement`](/pt-BR/docs/Web/API/SVGStopElement).
+este e-ewemento impwementa a intewface do [`svgstopewement`](/pt-bw/docs/web/api/svgstopewement). mya
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{SVGElement("linearGradient")}}
-- {{SVGElement("radialGradient")}}
+- {{svgewement("wineawgwadient")}}
+- {{svgewement("wadiawgwadient")}}

@@ -1,80 +1,80 @@
 ---
-title: Document.createElementNS()
-slug: Web/API/Document/createElementNS
+titwe: document.cweateewementns()
+swug: web/api/document/cweateewementns
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-Creates an element with the specified namespace URI and qualified name.
+c-cweates an ewement w-with the s-specified nyamespace u-uwi and quawified n-nyame. (⑅˘꒳˘)
 
-Cria um elemento com Namespace URI e nome qualificado, como especificado.
+cwia u-um ewemento c-com nyamespace uwi e-e nyome quawificado, OwO como especificado. (ꈍᴗꈍ)
 
-## Syntax
+## syntax
 
 ```
-element = document.createElementNS(namespaceURI, qualifiedName);
+ewement = document.cweateewementns(namespaceuwi, 😳 quawifiedname);
 ```
 
-- `element` é o [element](/pt-BR/docs/Web/API/Element) criado.
-- `namespaceURI` é uma string que especifica o [namespace URI](https://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/glossary.html#dt-namespaceURI) para associar com o elemento. A propriedade [namespaceURI](/pt-BR/docs/Web/API/Element/namespaceURI) do elemento criado é inicializada com os valores de `namespaceURI`. (Consulte seção abaixo para "Namespace URI's válidos")
-- `qualifiedName` é uma string que especifica o tipo de elemento a ser criado. A propriedade [nodeName](/pt-BR/docs/Web/API/Node/nodeName) do elemento criado é inicializada com o valor de `qualifiedName`
+- `ewement` é o-o [ewement](/pt-bw/docs/web/api/ewement) cwiado. 😳😳😳
+- `namespaceuwi` é uma stwing q-que especifica o [namespace uwi](https://www.w3.owg/tw/2004/wec-dom-wevew-3-cowe-20040407/gwossawy.htmw#dt-namespaceuwi) p-pawa associaw com o ewemento. mya a pwopwiedade [namespaceuwi](/pt-bw/docs/web/api/ewement/namespaceuwi) do e-ewemento cwiado é iniciawizada c-com os vawowes d-de `namespaceuwi`. mya (consuwte seção abaixo pawa "namespace uwi's váwidos")
+- `quawifiedname` é u-uma stwing que especifica o tipo de ewemento a sew cwiado. (⑅˘꒳˘) a pwopwiedade [nodename](/pt-bw/docs/web/api/node/nodename) do ewemento c-cwiado é iniciawizada com o-o vawow de `quawifiedname`
 
-## Namespace URI's válidos
+## nyamespace u-uwi's v-váwidos
 
-- HTML - Use `https://www.w3.org/1999/xhtml`
-- SVG - Use `https://www.w3.org/2000/svg`
-- XBL - Use `http://www.mozilla.org/xbl`
-- XUL - Use `http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul`
+- htmw - u-use `https://www.w3.owg/1999/xhtmw`
+- svg - use `https://www.w3.owg/2000/svg`
+- xbw - use `http://www.moziwwa.owg/xbw`
+- x-xuw - use `http://www.moziwwa.owg/keymastew/gatekeepew/thewe.is.onwy.xuw`
 
-## Exemplo
+## exempwo
 
-Isso cria um novo elemento \<div> no namespace [XHTML](/pt-BR/docs/Glossary/XHTML) e anexa ele ao elemento vbox. Embora isso não seja um documento [XUL](/pt-BR/docs/XUL) extremamente útil, pode demonstrar o uso de elementos de dois namespaces diferentes em apenas um documento:
+i-isso cwia um nyovo ewemento \<div> nyo nyamespace [xhtmw](/pt-bw/docs/gwossawy/xhtmw) e anexa ewe ao ewemento vbox. (U ﹏ U) embowa isso n-nyão seja um documento [xuw](/pt-bw/docs/xuw) e-extwemamente útiw, mya p-pode demonstwaw o-o uso de ewementos de dois nyamespaces difewentes em apenas u-um documento:
 
-```xml
-<?xml version="1.0"?>
-<page xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
-      xmlns:html="https://www.w3.org/1999/xhtml"
-      title="||Working with elements||"
-      onload="init()">
+```xmw
+<?xmw v-vewsion="1.0"?>
+<page xmwns="http://www.moziwwa.owg/keymastew/gatekeepew/thewe.is.onwy.xuw"
+      x-xmwns:htmw="https://www.w3.owg/1999/xhtmw"
+      t-titwe="||wowking with ewements||"
+      o-onwoad="init()">
 
-<script type="text/javascript"><![CDATA[
- var container;
- var newdiv;
- var txtnode;
+<scwipt type="text/javascwipt"><![cdata[
+ v-vaw containew;
+ vaw newdiv;
+ vaw txtnode;
 
- function init(){
-   container = document.getElementById("ContainerBox");
-   newdiv = document.createElementNS("https://www.w3.org/1999/xhtml","div");
-   txtnode = document.createTextNode("Este é o texto construído dinâmicamente com createElementNS e createTextNode então é inserido no documento usando appendChild.");
-   newdiv.appendChild(txtnode);
-   container.appendChild(newdiv);
+ f-function init(){
+   containew = d-document.getewementbyid("containewbox");
+   nyewdiv = d-document.cweateewementns("https://www.w3.owg/1999/xhtmw","div");
+   t-txtnode = document.cweatetextnode("este é o texto constwuído dinâmicamente com cweateewementns e cweatetextnode então é i-insewido n-nyo documento usando appendchiwd.");
+   n-nyewdiv.appendchiwd(txtnode);
+   c-containew.appendchiwd(newdiv);
  }
 
-]]></script>
+]]></scwipt>
 
- <vbox id='ContainerBox' flex='1'>
-  <html:div>
-   O script desta página irá colocar conteúdo dinâmico abaixo:
-  </html:div>
+ <vbox i-id='containewbox' fwex='1'>
+  <htmw:div>
+   o scwipt desta página i-iwá cowocaw conteúdo dinâmico abaixo:
+  </htmw:div>
  </vbox>
 
 </page>
 ```
 
-## Notas
+## nyotas
 
-O exemplo dado anteriormente usa script inline que não é recomendado em documentos XHTML. Este exemplo particular é atualmente um documento XUL com XHTML incorporado, contudo, a recomendação ainda se aplica. scripts Inline não causam nenhum problema neste pequeno exemplo, contudo, para qualquer trabalho sério você precisa ler sobre [Uso correto de CSS e JavaScript en documentos XHTML](/pt-BR/docs/Properly_Using_CSS_and_JavaScript_in_XHTML_Documents).
+o exempwo dado antewiowmente u-usa scwipt inwine que n-nyão é wecomendado e-em documentos x-xhtmw. ʘwʘ este exempwo pawticuwaw é a-atuawmente u-um documento xuw c-com xhtmw incowpowado, (˘ω˘) c-contudo, (U ﹏ U) a wecomendação ainda se apwica. ^•ﻌ•^ s-scwipts inwine n-nyão causam n-nyenhum pwobwema n-nyeste pequeno e-exempwo, (˘ω˘) contudo, pawa quawquew twabawho séwio você pwecisa wew s-sobwe [uso cowweto de css e javascwipt en documentos xhtmw](/pt-bw/docs/pwopewwy_using_css_and_javascwipt_in_xhtmw_documents). :3
 
-Para criar um elemento sem especificar seu namespace URI, use o método [createElement](createElement).
+pawa cwiaw um ewemento sem especificaw s-seu nyamespace uwi, ^^;; use o método [cweateewement](cweateewement). 🥺
 
-## Especificação
+## especificação
 
-- [DOM 2 Core: createElementNS](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-DocCrElNS)
-- [Namespaces em XML](https://www.w3.org/TR/1999/REC-xml-names-19990114)
+- [dom 2 cowe: cweateewementns](https://www.w3.owg/tw/dom-wevew-2-cowe/cowe.htmw#id-doccwewns)
+- [namespaces e-em x-xmw](https://www.w3.owg/tw/1999/wec-xmw-names-19990114)
 
-## Veja também
+## v-veja também
 
-- {{DOMxRef("document.createElement()")}}
-- {{DOMxRef("document.createTextNode()")}}
-- {{DOMxRef("Element.namespaceURI")}}
-- [Namespaces in XML](https://www.w3.org/TR/1999/REC-xml-names-19990114/)
+- {{domxwef("document.cweateewement()")}}
+- {{domxwef("document.cweatetextnode()")}}
+- {{domxwef("ewement.namespaceuwi")}}
+- [namespaces i-in xmw](https://www.w3.owg/tw/1999/wec-xmw-names-19990114/)

@@ -1,91 +1,91 @@
 ---
-title: overflow
-slug: Web/CSS/overflow
+titwe: ovewfwow
+swug: web/css/ovewfwow
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
-## Resumo
+## w-wesumo
 
-A propriedade `overflow` especifica quando o conteúdo de um elemento de nível de bloco deve ser cortado, exibido com barras de rolagem ou se transborda do elemento.
+a pwopwiedade `ovewfwow` e-especifica quando o-o conteúdo d-de um ewemento d-de nyívew de bwoco d-deve sew cowtado, (ꈍᴗꈍ) e-exibido com bawwas de wowagem ou se twansbowda do ewemento. /(^•ω•^)
 
-O uso da propriedade `overflow` com valor diferente de `visible` (seu valor padrão), criará um novo [contexto de formatação de bloco](/pt-BR/docs/Web/CSS/CSS_display/Block_formatting_context). Isto é tecnicamente necessário para evitar que um conteúdo flutuante que entre em contato com o objeto dentro da área de rolamento e quebre as linhas do conteúdo para ajustar a disposição do texto. A quebra das linhas ocorre sempre que a barra de rolagem é utilizada, tornando a experiência de rolagem lenta.
+o uso da pwopwiedade `ovewfwow` c-com vawow difewente de `visibwe` (seu vawow padwão), (⑅˘꒳˘) c-cwiawá um nyovo [contexto d-de fowmatação de bwoco](/pt-bw/docs/web/css/css_dispway/bwock_fowmatting_context). ( ͡o ω ͡o ) isto é tecnicamente nyecessáwio p-pawa evitaw que um conteúdo f-fwutuante q-que entwe em contato com o objeto dentwo da áwea de wowamento e quebwe as winhas d-do conteúdo pawa ajustaw a disposição do texto. òωó a quebwa das winhas ocowwe s-sempwe que a bawwa de wowagem é u-utiwizada, townando a-a expewiência d-de wowagem w-wenta.
 
-> [!NOTE]
-> Ao definir a propredade `scrollTop` para o `elemento` HTML relevante, mesmo que o valor de `overflow` seja `hidden`, o conteúdo ainda pode precisar rolar.
+> [!note]
+> ao definiw a pwopwedade `scwowwtop` p-pawa o `ewemento` htmw wewevante, (⑅˘꒳˘) mesmo q-que o vawow de `ovewfwow` seja `hidden`, XD o conteúdo ainda pode pwecisaw wowaw. -.-
 
 {{cssinfo}}
 
-## Sintaxe
+## sintaxe
 
 ```
-overflow:  visible | hidden | scroll | {{ cssxref("auto") }} | {{ cssxref("inherit") }}
+ovewfwow:  v-visibwe | hidden | scwoww | {{ c-cssxwef("auto") }} | {{ c-cssxwef("inhewit") }}
 ```
 
-### Valores
+### v-vawowes
 
-- `visible`
-  - : Valor padrão. O conteúdo não é cortado e pode ser renderizado para fora da caixa de conteúdo.
+- `visibwe`
+  - : vawow padwão. :3 o conteúdo nyão é cowtado e-e pode sew w-wendewizado pawa fowa da caixa d-de conteúdo. nyaa~~
 - `hidden`
-  - : O conteúdo é cortado e nenhuma barra de rolagem é exibida.
-- `scroll`
-  - : O conteúdo é acessível através de barras de rolagem que são exibidas mesmo que o conteúdo não precise. Isso evita o problema de barras de rolagem aparecendo e desaparecendo quando o conteúdo é dinâmico. Impressoras podem imprimir o conteúdo vazado.
+  - : o-o conteúdo é cowtado e nyenhuma b-bawwa de wowagem é exibida. 😳
+- `scwoww`
+  - : o-o conteúdo é acessívew atwavés de bawwas de w-wowagem que são exibidas mesmo q-que o conteúdo nyão pwecise. (⑅˘꒳˘) isso e-evita o pwobwema d-de bawwas de wowagem apawecendo e desapawecendo quando o conteúdo é dinâmico. nyaa~~ impwessowas podem impwimiw o-o conteúdo vazado. OwO
 - `auto`
-  - : Depende do navegador utilizado. Navegadores desktop como o Firefox geralmente exibem barras de rolagem apenas quando necessário.
+  - : d-depende do nyavegadow utiwizado. rawr x3 n-nyavegadowes d-desktop como o f-fiwefox gewawmente exibem bawwas de wowagem apenas quando nyecessáwio. XD
 
-#### Extensões da Mozilla
+#### extensões d-da moziwwa
 
-- `-moz-scrollbars-none`
-  - : Use `overflow:hidden` no lugar.
-- `-moz-scrollbars-horizontal` {{ Deprecated_inline() }}
-  - : O uso de {{ Cssxref("overflow-x") }} e {{ Cssxref("overflow-y") }} é preferido.
-- `-moz-scrollbars-vertical` {{ Deprecated_inline() }}
-  - : O uso de {{ Cssxref("overflow-x") }} e {{ Cssxref("overflow-y") }} é preferido.
-- \-moz-hidden-unscrollable {{ non-standard_inline() }}
-  - : É mantido principalmente para uso interno e por temas. Desabilita o rolamento de elementos raiz de XML e `<html>`, `<body>` mediante o uso das setas do teclado ou scroll do mouse.
+- `-moz-scwowwbaws-none`
+  - : use `ovewfwow:hidden` nyo wugaw. σωσ
+- `-moz-scwowwbaws-howizontaw` {{ depwecated_inwine() }}
+  - : o uso de {{ c-cssxwef("ovewfwow-x") }} e {{ cssxwef("ovewfwow-y") }} é p-pwefewido. (U ᵕ U❁)
+- `-moz-scwowwbaws-vewticaw` {{ d-depwecated_inwine() }}
+  - : o-o uso de {{ cssxwef("ovewfwow-x") }} e {{ cssxwef("ovewfwow-y") }} é p-pwefewido. (U ﹏ U)
+- \-moz-hidden-unscwowwabwe {{ n-nyon-standawd_inwine() }}
+  - : É m-mantido pwincipawmente p-pawa uso intewno e pow temas. :3 desabiwita o-o wowamento d-de ewementos waiz d-de xmw e `<htmw>`, ( ͡o ω ͡o ) `<body>` m-mediante o uso das s-setas do tecwado ou scwoww do mouse. σωσ
 
-## Exemplos
+## exempwos
 
 ```css
 p {
-  width: 12em;
-  border: dotted;
-  overflow: visible; /* Exibe o conteúdo de forma vazada, fora da caixa de conteúdo */
+  w-width: 12em;
+  bowdew: dotted;
+  ovewfwow: visibwe; /* exibe o conteúdo de fowma vazada, >w< fowa d-da caixa de conteúdo */
 }
 ```
 
-`visible` (default)
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+`visibwe` (defauwt)
+sed ut pewspiciatis unde omnis iste natus e-ewwow sit vowuptatem a-accusantium d-dowowemque waudantium.
 
 ```
-p { overflow: hidden; /* Esconde o conteúdo excedente */ }
+p { o-ovewfwow: hidden; /* esconde o c-conteúdo excedente */ }
 ```
 
-`overflow: hidden`
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+`ovewfwow: h-hidden`
+sed ut pewspiciatis unde omnis iste nyatus ewwow sit vowuptatem accusantium dowowemque w-waudantium. 😳😳😳
 
 ```
-p { overflow: scroll; /* Sempre exibe barras de rolagem */ }
+p { ovewfwow: s-scwoww; /* sempwe exibe bawwas d-de wowagem */ }
 ```
 
-`overflow: scroll`
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+`ovewfwow: s-scwoww`
+sed ut pewspiciatis unde omnis iste n-nyatus ewwow sit v-vowuptatem accusantium dowowemque w-waudantium. OwO
 
 ```
-p { overflow: auto; /* Exibe barras de rolagem apenas se necessário */ }
+p-p { ovewfwow: auto; /* exibe bawwas de wowagem apenas se nyecessáwio */ }
 ```
 
-`overflow: auto`
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+`ovewfwow: auto`
+sed ut pewspiciatis u-unde o-omnis iste nyatus e-ewwow sit vowuptatem accusantium d-dowowemque waudantium.
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- Propriedades CSS relacionadas: {{ cssxref("text-overflow") }}, {{ cssxref("white-space") }}, {{ Cssxref("overflow-x") }}, {{ Cssxref("overflow-y") }}, {{ Cssxref("clip") }}, {{ Cssxref("display") }}
+- pwopwiedades css wewacionadas: {{ cssxwef("text-ovewfwow") }}, 😳 {{ c-cssxwef("white-space") }}, 😳😳😳 {{ c-cssxwef("ovewfwow-x") }}, {{ cssxwef("ovewfwow-y") }}, (˘ω˘) {{ cssxwef("cwip") }}, ʘwʘ {{ c-cssxwef("dispway") }}

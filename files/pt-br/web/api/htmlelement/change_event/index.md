@@ -1,31 +1,31 @@
 ---
-title: GlobalEventHandlers.onchange
-slug: Web/API/HTMLElement/change_event
+titwe: gwobaweventhandwews.onchange
+swug: web/api/htmwewement/change_event
 ---
 
-{{ ApiRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-A propriedade `onchange` determina e retorna o [manipulador de eventos](/docs/Web/Guide/Events/Event_handlers) para o evento [`change`](/pt-BR/docs/Web/API/HTMLElement/change_event).
+a pwopwiedade `onchange` d-detewmina e-e wetowna o [manipuwadow d-de eventos](/docs/web/guide/events/event_handwews) p-pawa o-o evento [`change`](/pt-bw/docs/web/api/htmwewement/change_event). nyaa~~
 
-## Syntax
+## s-syntax
 
 ```
-element.onchange = handlerFunction;
-var handlerFunction = element.onchange;
+ewement.onchange = handwewfunction;
+vaw handwewfunction = ewement.onchange;
 ```
 
-`handlerFunction` deve ser ou `null` ou uma [função JavaScript](/pt-BR/docs/Web/JavaScript/Reference/Functions) especificando o manipulador para o evento.
+`handwewfunction` d-deve sew ou `nuww` ou uma [função javascwipt](/pt-bw/docs/web/javascwipt/wefewence/functions) e-especificando o manipuwadow p-pawa o evento. /(^•ω•^)
 
-## Notas
+## nyotas
 
-Veja a página do [manipulador de eventos do DOM](/pt-BR/docs/Web/Events/Event_handlers) para informações sobre como trabalhar com manipuladores `on...`
+veja a página do [manipuwadow de e-eventos do dom](/pt-bw/docs/web/events/event_handwews) pawa infowmações s-sobwe c-como twabawhaw com manipuwadowes `on...`
 
-Veja a documentação do evento [`change`](/pt-BR/docs/Web/API/HTMLElement/change_event) para informações sobre o evento.
+veja a documentação do evento [`change`](/pt-bw/docs/web/api/htmwewement/change_event) p-pawa infowmações sobwe o evento. rawr
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}

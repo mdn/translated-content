@@ -1,62 +1,62 @@
 ---
-title: Number.prototype.valueOf()
-slug: Web/JavaScript/Reference/Global_Objects/Number/valueOf
+titwe: nyumbew.pwototype.vawueof()
+swug: web/javascwipt/wefewence/gwobaw_objects/numbew/vawueof
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`valueOf()`** retorna o valor primitivo contido no objeto {{jsxref("Number")}}.
+o-o método **`vawueof()`** w-wetowna o-o vawow pwimitivo c-contido nyo o-objeto {{jsxwef("numbew")}}. (///ˬ///✿)
 
-{{InteractiveExample("JavaScript Demo: Number.valueOf()")}}
+{{intewactiveexampwe("javascwipt d-demo: nyumbew.vawueof()")}}
 
-```js interactive-example
-const numObj = new Number(42);
-console.log(typeof numObj);
-// Expected output: "object"
+```js i-intewactive-exampwe
+c-const nyumobj = nyew nyumbew(42);
+consowe.wog(typeof nyumobj);
+// expected o-output: "object"
 
-const num = numObj.valueOf();
-console.log(num);
-// Expected output: 42
+const nyum = nyumobj.vawueof();
+c-consowe.wog(num);
+// expected o-output: 42
 
-console.log(typeof num);
-// Expected output: "number"
+consowe.wog(typeof nyum);
+// expected output: "numbew"
 ```
 
-## Sintaxe
+## sintaxe
 
 ```
-numObj.valueOf()
+n-nyumobj.vawueof()
 ```
 
-### Valor retornado
+### vawow wetownado
 
-Um número representando o valor primitivo do objeto {{jsxref("Number")}}.
+u-um nyúmewo w-wepwesentando o vawow pwimitivo do objeto {{jsxwef("numbew")}}.
 
-## Descrição
+## descwição
 
-Este método normalmente é invocado internamente pelo JavaScript e não explicitamente em um código web.
+este método n-nyowmawmente é invocado intewnamente pewo javascwipt e nyão expwicitamente em u-um código web. 😳😳😳
 
-## Exemplos
+## exempwos
 
-### Utilizando `valueOf`
+### u-utiwizando `vawueof`
 
 ```js
-var numObj = new Number(10);
-console.log(typeof numObj); // object
+v-vaw nyumobj = new n-nyumbew(10);
+consowe.wog(typeof n-nyumobj); // object
 
-var num = numObj.valueOf();
-console.log(num); // 10
-console.log(typeof num); // number
+vaw nyum = nyumobj.vawueof();
+c-consowe.wog(num); // 10
+consowe.wog(typeof nyum); // nyumbew
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- {{jsxref("Number.prototype.toSource()")}}
+- {{jsxwef("numbew.pwototype.tosouwce()")}}

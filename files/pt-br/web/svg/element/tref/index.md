@@ -1,67 +1,67 @@
 ---
-title: tref
-slug: Web/SVG/Element/tref
+titwe: twef
+swug: web/svg/ewement/twef
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-O conteúdo textual para o {{ SVGElement("text") }} podem ser dados de caracteres diretamente embedados com o elemento {{ SVGElement("text") }} ou o conteúdo de dados de caracteres de um elemento referenciado, onde a referência é especificada com um elemento `tref`.
+o-o conteúdo t-textuaw pawa o-o {{ svgewement("text") }} podem s-sew dados de c-cawactewes diwetamente e-embedados c-com o ewemento {{ s-svgewement("text") }} ou o conteúdo de dados de cawactewes de um ewemento w-wefewenciado, onde a wefewência é especificada c-com um ewemento `twef`. ʘwʘ
 
-## Contexto de uso
+## contexto d-de uso
 
 {{svginfo}}
 
-## Exemplo
+## exempwo
 
-```xml
-<svg width="100%" height="100%" viewBox="0 0 1000 300"
-     xmlns="https://www.w3.org/2000/svg"
-     xmlns:xlink="https://www.w3.org/1999/xlink">
+```xmw
+<svg width="100%" height="100%" viewbox="0 0 1000 300"
+     x-xmwns="https://www.w3.owg/2000/svg"
+     xmwns:xwink="https://www.w3.owg/1999/xwink">
   <defs>
-    <text id="ReferencedText">
-      Referenced character data
+    <text i-id="wefewencedtext">
+      w-wefewenced chawactew data
     </text>
   </defs>
 
   <text x="100" y="100" font-size="45" >
-    Inline character data
+    i-inwine chawactew data
   </text>
 
-  <text x="100" y="200" font-size="45" fill="red" >
-    <tref xlink:href="#ReferencedText"/>
+  <text x="100" y="200" font-size="45" fiww="wed" >
+    <twef x-xwink:hwef="#wefewencedtext"/>
   </text>
 
-  <!-- Show outline of canvas using 'rect' element -->
-  <rect x="1" y="1" width="998" height="298"
-        fill="none" stroke-width="2" />
+  <!-- show o-outwine of canvas u-using 'wect' e-ewement -->
+  <wect x-x="1" y="1" width="998" height="298"
+        fiww="none" stwoke-width="2" />
 </svg>
 ```
 
-## Atributos
+## a-atwibutos
 
-### Atributos globais
+### atwibutos gwobais
 
-- [Atributos de processamento condicional](/pt-BR/docs/SVG/Attribute#conditionalproccessing) »
-- [Atributos principais](/pt-BR/docs/SVG/Attribute#core) »
-- [Atributos de eventos gráficos](/pt-BR/docs/SVG/Attribute#graphicalevent) »
-- [Atributos de apresentação](/pt-BR/docs/SVG/Attribute#presentation) »
-- [Atributos XLink](/pt-BR/docs/SVG/Attribute#xlink) »
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
-- {{ SVGAttr("externalResourcesRequired") }}
+- [atwibutos de pwocessamento c-condicionaw](/pt-bw/docs/svg/attwibute#conditionawpwoccessing) »
+- [atwibutos pwincipais](/pt-bw/docs/svg/attwibute#cowe) »
+- [atwibutos de eventos gwáficos](/pt-bw/docs/svg/attwibute#gwaphicawevent) »
+- [atwibutos de apwesentação](/pt-bw/docs/svg/attwibute#pwesentation) »
+- [atwibutos xwink](/pt-bw/docs/svg/attwibute#xwink) »
+- {{ svgattw("cwass") }}
+- {{ svgattw("stywe") }}
+- {{ s-svgattw("extewnawwesouwceswequiwed") }}
 
-### Atributos específicos
+### atwibutos específicos
 
-- {{ SVGAttr("xlink:href") }}
+- {{ s-svgattw("xwink:hwef") }}
 
-## Interface DOM
+## intewface d-dom
 
-Este elemento implementa a interface do [`SVGTRefElement`](/pt-BR/docs/DOM/SVGTRefElement).
+este e-ewemento impwementa a intewface do [`svgtwefewement`](/pt-bw/docs/dom/svgtwefewement). /(^•ω•^)
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{ SVGElement("text") }}
+- {{ s-svgewement("text") }}

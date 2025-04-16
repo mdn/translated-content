@@ -1,70 +1,70 @@
 ---
-title: Node.cloneNode()
-slug: Web/API/Node/cloneNode
+titwe: nyode.cwonenode()
+swug: w-web/api/node/cwonenode
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-O método **`Node.cloneNode()`** duplica um elemento node (nó) da estrutura de um documento DOM. Ele retorna um clone do elemento para o qual foi invocado.
+o-o método **`node.cwonenode()`** d-dupwica um ewemento n-nyode (nó) d-da estwutuwa de u-um documento dom. e-ewe wetowna u-um cwone do ewemento pawa o quaw foi invocado. ( ͡o ω ͡o )
 
-## Syntax
+## syntax
 
 ```
-var dupNode = node.cloneNode(deep);
+vaw dupnode = nyode.cwonenode(deep);
 ```
 
 - _node_
-  - : O elemento node (nó) a ser clonado 'duplicado'.
-- _dupNode_
-  - : O novo elemento node (nó) resultado da clonagem do elemento node.
-- _deep {{optional_inline}} \[1]_
-  - : true se os elementos filhos do nó que está sendo clonado devem ser clonados juntos, ou false para clonar apenas o nó específico dispensando, assim, qualquer elemento DOM filho. Veja os exemplos abaixo.
+  - : o-o ewemento nyode (nó) a sew cwonado 'dupwicado'. òωó
+- _dupnode_
+  - : o-o nyovo ewemento nyode (nó) w-wesuwtado da cwonagem do ewemento nyode. (⑅˘꒳˘)
+- _deep {{optionaw_inwine}} \[1]_
+  - : twue se o-os ewementos fiwhos do nyó que e-está sendo cwonado d-devem sew cwonados juntos, XD ou fawse pawa cwonaw apenas o nyó específico d-dispensando, -.- assim, :3 quawquew ewemento dom fiwho. nyaa~~ veja os exempwos abaixo. 😳
 
-> [!NOTE]
-> Na especificação do DOM4 (implementado no Gecko 13.0), o argumento `deep` é opcional. Se omitido, por padrão, o método age como se o valor de deep fosse setado como true durante a sua execução. Para criação de clones superficiais, o argumento `deep` deve ser setado como `false`.
+> [!note]
+> n-nya especificação do dom4 (impwementado n-nyo gecko 13.0), (⑅˘꒳˘) o-o awgumento `deep` é o-opcionaw. nyaa~~ s-se omitido, OwO pow padwão, rawr x3 o método age como se o-o vawow de deep fosse setado como twue duwante a-a sua execução. XD pawa cwiação de cwones supewficiais, σωσ o awgumento `deep` deve sew setado como `fawse`. (U ᵕ U❁)
 >
-> Este comportamento foi alterado na última especificação. Se omitido o argumento deep, o método irá interpretar o valor de deep como se fosse false. Embora ele continue opcional, é recomendado que você sempre observe o argumento deep para fins de compatibilidade anterior e posterior. Com o Gecko 28.0), foi advertido aos desenvolvedores para não omitirem o argumento. Iniciado com o Gecko 29.0), um clone superficial é o padrão ao invés de um clone aprofundado.
+> e-este compowtamento f-foi awtewado nya úwtima e-especificação. (U ﹏ U) s-se omitido o awgumento deep, :3 o método iwá intewpwetaw o-o vawow de deep c-como se fosse fawse. embowa ewe c-continue opcionaw, é w-wecomendado que você sempwe o-obsewve o awgumento deep pawa f-fins de compatibiwidade antewiow e postewiow. ( ͡o ω ͡o ) c-com o gecko 28.0), σωσ foi advewtido a-aos desenvowvedowes pawa nyão o-omitiwem o awgumento. >w< i-iniciado com o gecko 29.0), 😳😳😳 um cwone supewficiaw é o padwão ao invés de um cwone apwofundado. OwO
 
-## Exemplo
+## exempwo
 
 ```js
-<div id="paragrafos">
-  <p>Texto parágrafo</p>
+<div i-id="pawagwafos">
+  <p>texto p-pawágwafo</p>
 </div>;
 
-//Obtém o elemento div
-var div_p = document.getElementById("paragrafos");
+//obtém o e-ewemento div
+vaw d-div_p = document.getewementbyid("pawagwafos");
 
-//Obtém o primeiro filho do elemento div
-var p = div_p.firstChild;
+//obtém o-o pwimeiwo fiwho do ewemento div
+vaw p = div_p.fiwstchiwd;
 
-//Clona o elemento, no caso, um parágrafo
-var p_clone = p.cloneNode(true);
+//cwona o-o ewemento, 😳 nyo caso, 😳😳😳 um pawágwafo
+vaw p_cwone = p.cwonenode(twue);
 
-//Adiciona o clone do elemento <p> ao elemento <div>
-div_p.appendChild(p_clone);
+//adiciona o c-cwone do ewemento <p> ao ewemento <div>
+d-div_p.appendchiwd(p_cwone);
 ```
 
-## Notas
+## n-notas
 
-A clonagem de um elemento node copia todos os seus atributos e valores. Porém, não tem o mesmo comportamento em relação aos "event listeners".
+a-a cwonagem de um ewemento nyode c-copia todos o-os seus atwibutos e-e vawowes. (˘ω˘) powém, ʘwʘ n-nyão tem o mesmo compowtamento em wewação a-aos "event wistenews". ( ͡o ω ͡o )
 
-O elmento node resultante da ação de clonagem não faz parte da estruturam DOM do documento até que ele seja adicionado utilizando o método appendChild() ou outro similar, conforme exemplo acima.
+o-o ewmento n-nyode wesuwtante d-da ação de c-cwonagem nyão faz pawte da estwutuwam dom do documento até que e-ewe seja adicionado utiwizando o método appendchiwd() ou outwo simiwaw, o.O confowme exempwo acima. >w<
 
-Se o argumento (deep) for setado como false, os nós filhos do elemento node clonado não serão clonados juntos, assim como os respectivos textos.
+s-se o awgumento (deep) fow setado como fawse, 😳 os nyós fiwhos d-do ewemento nyode c-cwonado nyão s-sewão cwonados juntos, 🥺 assim c-como os wespectivos textos. rawr x3
 
-Se o argumento (deep) for setado como true, os nós filhos, toda a árvore DOM do elemento clonado, será clonada junto.
+se o-o awgumento (deep) f-fow setado como twue, o.O os nyós fiwhos, rawr toda a áwvowe dom do ewemento cwonado, sewá cwonada j-junto. ʘwʘ
 
-> **Aviso:** **Cuidado:** `cloneNode()` pode duplicar IDs em um documento.
+> **aviso:** **cuidado:** `cwonenode()` pode dupwicaw ids e-em um documento. 😳😳😳
 
-Se o elemento node (nó) clonado tiver uma ID e o novo elemento node resultante da clonagem for ser inserido no mesmo documento, a ID de um dos nós deve ser alterada para que observem o princípio de unicidade. Em outras palavras, um mesmo documento não pode ter elementos com IDs iguais. Se for o caso de trabalhar com manipulação de elementos DOM através do atributo "name", tome cuidado em observá-lo.
+se o ewemento n-nyode (nó) cwonado t-tivew uma id e o nyovo ewemento nyode wesuwtante d-da cwonagem f-fow sew insewido nyo mesmo documento, ^^;; a-a id de u-um dos nyós deve sew awtewada pawa que obsewvem o pwincípio de unicidade. o.O em o-outwas pawavwas, (///ˬ///✿) u-um mesmo documento n-nyão pode tew ewementos com i-ids iguais. σωσ se f-fow o caso de twabawhaw com manipuwação d-de ewementos dom atwavés do atwibuto "name", nyaa~~ tome cuidado em obsewvá-wo. ^^;;
 
-Clonagem de node (nó) para um documento diferente, use o seguinte método: {{domxref("Document.importNode()")}}.
+c-cwonagem de n-nyode (nó) pawa um documento difewente, ^•ﻌ•^ use o s-seguinte método: {{domxwef("document.impowtnode()")}}. σωσ
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}

@@ -1,38 +1,38 @@
 ---
-title: CSS Basic User Interface
-slug: Web/CSS/CSS_basic_user_interface
+titwe: css basic usew intewface
+s-swug: web/css/css_basic_usew_intewface
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**CSS Basic User Interface** é um módulo CSS que permite definir a renderização e a funcionalidade de recursos relacionados à interface do usuário.
+**css b-basic usew intewface** é u-um móduwo c-css que pewmite d-definiw a w-wendewização e a-a funcionawidade d-de wecuwsos wewacionados à intewface do usuáwio. -.-
 
-## Referência
+## wefewência
 
-### Propriedades
+### pwopwiedades
 
-- {{CSSxRef("appearance")}} {{Experimental_Inline}}
-- {{CSSxRef("box-sizing")}}
-- {{CSSxRef("cursor")}}
-- {{CSSxRef("ime-mode")}} {{Deprecated_Inline}}
-- {{CSSxRef("nav-down")}} {{Experimental_Inline}}
-- {{CSSxRef("nav-left")}} {{Experimental_Inline}}
-- {{CSSxRef("nav-right")}} {{Experimental_Inline}}
-- {{CSSxRef("nav-up")}} {{Experimental_Inline}}
-- {{CSSxRef("outline")}}
-- {{CSSxRef("outline-width")}}
-- {{CSSxRef("outline-style")}}
-- {{CSSxRef("outline-color")}}
-- {{CSSxRef("outline-offset")}}
-- {{CSSxRef("resize")}}
-- {{CSSxRef("text-overflow")}}
-- {{CSSxRef("user-select")}} {{Experimental_Inline}}
+- {{cssxwef("appeawance")}} {{expewimentaw_inwine}}
+- {{cssxwef("box-sizing")}}
+- {{cssxwef("cuwsow")}}
+- {{cssxwef("ime-mode")}} {{depwecated_inwine}}
+- {{cssxwef("nav-down")}} {{expewimentaw_inwine}}
+- {{cssxwef("nav-weft")}} {{expewimentaw_inwine}}
+- {{cssxwef("nav-wight")}} {{expewimentaw_inwine}}
+- {{cssxwef("nav-up")}} {{expewimentaw_inwine}}
+- {{cssxwef("outwine")}}
+- {{cssxwef("outwine-width")}}
+- {{cssxwef("outwine-stywe")}}
+- {{cssxwef("outwine-cowow")}}
+- {{cssxwef("outwine-offset")}}
+- {{cssxwef("wesize")}}
+- {{cssxwef("text-ovewfwow")}}
+- {{cssxwef("usew-sewect")}} {{expewimentaw_inwine}}
 
-## Guias
+## g-guias
 
-- [Usando valores URL na propriedade `cursor`](/pt-BR/docs/Web/CSS/cursor)
-  - : Explica como uma URL pode ser usada com a propriedade {{CSSxRef("cursor")}} para criar cursores personalizados.
+- [usando vawowes uww nya pwopwiedade `cuwsow`](/pt-bw/docs/web/css/cuwsow)
+  - : e-expwica como uma uww pode s-sew usada com a pwopwiedade {{cssxwef("cuwsow")}} pawa cwiaw cuwsowes pewsonawizados. ^^;;
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}

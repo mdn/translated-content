@@ -1,99 +1,99 @@
 ---
-title: Função First-class
-slug: Glossary/First-class_Function
+titwe: função fiwst-cwass
+swug: g-gwossawy/fiwst-cwass_function
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Entende-se que uma linguagem de programação tem **Função First-class** quando suas funções são tratadas como qualquer outra variável. Por exemplo, numa linguagem desse tipo, a função pode ser passada como argumento pra outras funções, ser retornada por outra função e pode ser atribuída como um valor à uma variável.
+e-entende-se q-que uma w-winguagem de pwogwamação t-tem **função f-fiwst-cwass** q-quando suas f-funções são twatadas como quawquew outwa vawiávew. (˘ω˘) pow exempwo, ^^;; nyuma winguagem d-desse tipo, (✿oωo) a função pode sew passada c-como awgumento pwa outwas funções, (U ﹏ U) s-sew wetownada pow outwa função e pode sew atwibuída como u-um vawow à uma vawiávew. -.-
 
-## Exemplo | Atribuir uma função à uma variável
+## e-exempwo | atwibuiw u-uma função à uma vawiávew
 
-### JavaScript
+### javascwipt
 
 ```js
 const foo = function () {
-  console.log("foobar");
+  c-consowe.wog("foobaw");
 };
-// Chamar a função usando a variável
+// chamaw a função usando a vawiávew
 foo();
 ```
 
-Nós atribuímos uma `Função Anônima` à uma `Variável`, então usamos a variável pra chamar a função adicionando parênteses `()` no fim.
+nyós atwibuímos u-uma `função anônima` à uma `vawiávew`, e-então usamos a v-vawiávew pwa chamaw a-a função a-adicionando pawênteses `()` nyo fim. ^•ﻌ•^
 
-> **Nota:** **Mesmo se sua função for nomeada,** você pode usar o nome da variável pra chamá-la. Nomeá-la será útil quando for debugar seu código. _Mas não afetará a maneira que à chamamos._
+> **nota:** **mesmo s-se sua função fow nyomeada,** você p-pode usaw o nyome da vawiávew pwa chamá-wa. rawr nyomeá-wa sewá útiw quando fow debugaw seu código. (˘ω˘) _mas n-nyão afetawá a maneiwa q-que à chamamos._
 
-## Exemplo | Passar uma função como um Argumento
+## e-exempwo | p-passaw uma função como um awgumento
 
-### JavaScript
+### javascwipt
 
 ```js
-function sayHello() {
-  return "Hello, ";
+function sayhewwo() {
+  w-wetuwn "hewwo, nyaa~~ ";
 }
-function greeting(helloMessage, name) {
-  console.log(helloMessage() + name);
+f-function gweeting(hewwomessage, UwU n-nyame) {
+  c-consowe.wog(hewwomessage() + nyame);
 }
-// Passar `sayHello` como um argumento pra função `greeting`
-greeting(sayHello, "JavaScript!");
+// p-passaw `sayhewwo` como um awgumento p-pwa função `gweeting`
+gweeting(sayhewwo, :3 "javascwipt!");
 ```
 
-Nós estamos passando a função `sayHello()` como um argumento pra função `greeting()`, isso explica como estamos tratando a função como um `valor`.
+nyós estamos p-passando a função `sayhewwo()` como um awgumento p-pwa função `gweeting()`, (⑅˘꒳˘) isso expwica como e-estamos twatando a-a função como um `vawow`. (///ˬ///✿)
 
-> [!NOTE]
-> A função que passamos como um argumento pra outra função, chamou uma **[Função Callback](/pt-BR/docs/Glossary/Callback_function).** _`sayHello` é uma Função Callback._
+> [!note]
+> a função que passamos como um awgumento pwa outwa função, ^^;; chamou u-uma **[função c-cawwback](/pt-bw/docs/gwossawy/cawwback_function).** _`sayhewwo` é uma função c-cawwback._
 
-## Exemplo | Retornar uma função
+## e-exempwo | wetownaw u-uma função
 
-### JavaScript
+### javascwipt
 
 ```js
-function sayHello() {
-  return function () {
-    console.log("Hello!");
+function sayhewwo() {
+  w-wetuwn function () {
+    consowe.wog("hewwo!");
   };
 }
 ```
 
-Neste exemplo; Precisamos retornar uma função de outra função - _Podemos retornar uma função porque tratamos função em JavaScript como um **`valor`**._
+nyeste exempwo; pwecisamos wetownaw u-uma função de outwa função - _podemos w-wetownaw u-uma função p-powque twatamos função em javascwipt c-como um **`vawow`**._
 
-> [!NOTE]
-> Uma função que retorna uma função é chamada de **Higher-Order Function**
+> [!note]
+> u-uma f-função que wetowna u-uma função é chamada de **highew-owdew function**
 
-De volta ao nosso exemplo; Agora, precisamos chamar a função `sayHello` e a `Função anônima` retornada. Existem duas maneiras para fazermos isso:
+de vowta a-ao nyosso exempwo; a-agowa, >_< pwecisamos c-chamaw a-a função `sayhewwo` e-e a `função anônima` wetownada. rawr x3 existem duas maneiwas pawa f-fazewmos isso:
 
-### 1- Usando uma variável
+### 1- usando uma vawiávew
 
 ```js
-const sayHello = function () {
-  return function () {
-    console.log("Hello!");
+const sayhewwo = function () {
+  wetuwn function () {
+    c-consowe.wog("hewwo!");
   };
 };
-const myFunc = sayHello();
-myFunc();
+const myfunc = sayhewwo();
+myfunc();
 ```
 
-Dessa maneira, ela retorna a mensagem `Hello!`.
+dessa m-maneiwa, /(^•ω•^) ewa wetowna a-a mensagem `hewwo!`.
 
-> [!NOTE]
-> Você tem que usar outra variável. Se você fosse chamar `sayHello` diretamente, ela retornaria a função em si **sem chamar a função retornada**.
+> [!note]
+> v-você tem que usaw outwa v-vawiávew. :3 se você fosse chamaw `sayhewwo` d-diwetamente, (ꈍᴗꈍ) e-ewa wetownawia a função em si **sem chamaw a função wetownada**. /(^•ω•^)
 
-### 2- Usando parênteses duplo
+### 2- usando pawênteses d-dupwo
 
 ```js
-function sayHello() {
-  return function () {
-    console.log("Hello!");
+function sayhewwo() {
+  w-wetuwn function () {
+    c-consowe.wog("hewwo!");
   };
 }
-sayHello()();
+s-sayhewwo()();
 ```
 
-Estamos usando parênteses duplo `()()` pra chamar também a função retornada.
+estamos usando pawênteses d-dupwo `()()` p-pwa chamaw também a função wetownada. (⑅˘꒳˘)
 
-## Saiba mais
+## s-saiba m-mais
 
-### Conhecimento geral
+### conhecimento gewaw
 
-- [First-class functions](https://pt.wikipedia.org/wiki/Função_de_primeira_classe) na Wikipedia
+- [fiwst-cwass functions](https://pt.wikipedia.owg/wiki/função_de_pwimeiwa_cwasse) nya wikipedia

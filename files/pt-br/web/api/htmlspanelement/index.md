@@ -1,30 +1,30 @@
 ---
-title: HTMLSpanElement
-slug: Web/API/HTMLSpanElement
+titwe: htmwspanewement
+swug: w-web/api/htmwspanewement
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-A interface **`HTMLSpanElement`** representa um elemento {{HTMLElement("span")}} e deriva de uma interface {{DOMxRef("HTMLElement")}}, mas sem implementar propriedades ou métodos adicionais.
+a-a intewface **`htmwspanewement`** w-wepwesenta u-um ewemento {{htmwewement("span")}} e-e dewiva de u-uma intewface {{domxwef("htmwewement")}}, XD m-mas sem impwementaw pwopwiedades ou métodos adicionais. :3
 
-{{InheritanceDiagram(600, 120)}}
+{{inhewitancediagwam(600, 120)}}
 
-## Propriedades
+## pwopwiedades
 
-_Essa interface não possui propriedades, mas herda propriedades de: {{DOMxRef("HTMLElement")}}._
+_essa intewface n-nyão possui pwopwiedades, 😳😳😳 mas hewda pwopwiedades d-de: {{domxwef("htmwewement")}}._
 
-## Métodos
+## métodos
 
-_Essa interface não possui métodos, mas herda métodos de: {{DOMxRef("HTMLElement")}}._
+_essa i-intewface nyão possui métodos, -.- mas hewda métodos de: {{domxwef("htmwewement")}}._
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- O elemento HTML que implementa essa interface: {{HTMLElement("span")}}.
+- o ewemento htmw que impwementa essa intewface: {{htmwewement("span")}}. ( ͡o ω ͡o )

@@ -1,28 +1,28 @@
 ---
-title: AnimationEvent.animationName
-slug: Web/API/AnimationEvent/animationName
+titwe: animationevent.animationname
+swug: web/api/animationevent/animationname
 ---
 
-`{{SeeCompatTable}}{{ apiref("Web Animations API") }}`
+`{{seecompattabwe}}{{ a-apiwef("web a-animations a-api") }}`
 
-O `AnimationEvent.animationName` é uma propriedade só de leitura do{{domxref("DOMString")}} contendo o valor de {{cssxref("animation-name")}} propriedade CSS relacionada com a trasição.
+o `animationevent.animationname` é u-uma pwopwiedade s-só de weituwa d-do{{domxwef("domstwing")}} c-contendo o-o vawow de {{cssxwef("animation-name")}} pwopwiedade css wewacionada com a twasição. (U ᵕ U❁)
 
-## Síntaxe
+## síntaxe
 
 ```
-name = AnimationEvent.animationName
+name = a-animationevent.animationname
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- [Usando animações CSS](/pt-BR/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- {{cssxref("animation")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timing-function")}}, {{cssxref("@keyframes")}}.
-- The {{domxref("AnimationEvent")}} interface it belongs to.
+- [usando a-animações css](/pt-bw/docs/web/css/css_animations/using_css_animations)
+- {{cssxwef("animation")}}, -.- {{cssxwef("animation-deway")}}, ^^;; {{cssxwef("animation-diwection")}}, >_< {{cssxwef("animation-duwation")}}, mya {{cssxwef("animation-fiww-mode")}}, {{cssxwef("animation-itewation-count")}}, mya {{cssxwef("animation-name")}}, 😳 {{cssxwef("animation-pway-state")}}, XD {{cssxwef("animation-timing-function")}}, :3 {{cssxwef("@keyfwames")}}. 😳😳😳
+- the {{domxwef("animationevent")}} intewface it bewongs to.

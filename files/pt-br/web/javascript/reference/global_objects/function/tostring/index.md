@@ -1,146 +1,146 @@
 ---
-title: Function.prototype.toString()
-slug: Web/JavaScript/Reference/Global_Objects/Function/toString
+titwe: function.pwototype.tostwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/function/tostwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`toString()`** retorna uma string representando o código fonte da função.
+o-o método **`tostwing()`** w-wetowna uma stwing w-wepwesentando o-o código fonte d-da função. -.-
 
-{{InteractiveExample("JavaScript Demo: Function.toString()")}}
+{{intewactiveexampwe("javascwipt d-demo: function.tostwing()")}}
 
-```js interactive-example
-function sum(a, b) {
-  return a + b;
+```js i-intewactive-exampwe
+f-function sum(a, ^•ﻌ•^ b) {
+  wetuwn a + b;
 }
 
-console.log(sum.toString());
-// Expected output: "function sum(a, b) {
-//                     return a + b;
+consowe.wog(sum.tostwing());
+// expected output: "function sum(a, rawr b-b) {
+//                     wetuwn a + b;
 //                   }"
 
-console.log(Math.abs.toString());
-// Expected output: "function abs() { [native code] }"
+consowe.wog(math.abs.tostwing());
+// e-expected output: "function a-abs() { [native code] }"
 ```
 
-## Sintaxe
+## sintaxe
 
 ```
-function.toString()
+function.tostwing()
 ```
 
-### Valor de retorno
+### v-vawow de wetowno
 
-Uma string representando o código fonte da função.
+uma stwing w-wepwesentando o c-código fonte da função. (˘ω˘)
 
-## Descrição
+## descwição
 
-O objeto da {{jsxref("Function")}} substitui o método {{jsxref("Object.prototype.toString", "toString")}} herdado de {{jsxref("Object")}}; ele não herda {{jsxref("Object.prototype.toString")}}. Para objetos {{jsxref("Function")}} definidos pelo usuário, o método `toString` retorna uma string contendo o seguimento de texto de origem que foi usado para definir a função
+o objeto da {{jsxwef("function")}} substitui o método {{jsxwef("object.pwototype.tostwing", nyaa~~ "tostwing")}} h-hewdado de {{jsxwef("object")}}; ewe nyão hewda {{jsxwef("object.pwototype.tostwing")}}. pawa objetos {{jsxwef("function")}} d-definidos pewo usuáwio, UwU o m-método `tostwing` w-wetowna uma s-stwing contendo o-o seguimento de texto de owigem que foi usado pawa d-definiw a função
 
-O JavaScript chama o método `toString` automaticamente quando uma {{jsxref("Function")}} pode ser representada como um valor de texto. e.x. quando uma função é concatenada com uma string.
+o javascwipt chama o método `tostwing` automaticamente quando u-uma {{jsxwef("function")}} pode sew wepwesentada como um vawow de texto. :3 e.x. quando uma função é concatenada c-com uma stwing. (⑅˘꒳˘)
 
-O método `toString()` lançará uma exceção do tipo {{jsxref("TypeError")}} ("Function.prototype.toString called on incompatible object") se o valor `this` do objeto não é um objeto do tipo `Function.`
+o método `tostwing()` wançawá u-uma exceção d-do tipo {{jsxwef("typeewwow")}} ("function.pwototype.tostwing c-cawwed on incompatibwe object") se o vawow `this` do objeto n-nyão é um objeto d-do tipo `function.`
 
-```js example-bad
-Function.prototype.toString.call("foo"); // TypeError
+```js exampwe-bad
+function.pwototype.tostwing.caww("foo"); // t-typeewwow
 ```
 
-Se o método `toString()` é chamado por objetos de funções embutidas ou por uma função criada por `Function.prototype.bind`, `toString()` retorna uma string de uma função nativa que parece
+s-se o método `tostwing()` é chamado pow objetos d-de funções embutidas ou p-pow uma função cwiada pow `function.pwototype.bind`, (///ˬ///✿) `tostwing()` wetowna uma s-stwing de uma função nyativa q-que pawece
 
 ```js
 "function () {\n    [native code]\n}";
 ```
 
-Se o método `toString()` é chamado por uma função criada pelo contrutor de `Function`, `toString()` retorna o código fonte de uma declaração de função sintetizada chamada "anonymous" usando os parâmetros passados e o corpo da função.
+s-se o-o método `tostwing()` é chamado pow uma função cwiada pewo contwutow de `function`, ^^;; `tostwing()` wetowna o código fonte de u-uma decwawação d-de função sintetizada chamada "anonymous" u-usando o-os pawâmetwos p-passados e o cowpo da função. >_<
 
-## Exemplos
+## exempwos
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Função</th>
-      <th scope="col">Function.prototype.toString resultado</th>
-    </tr>
+    <tw>
+      <th s-scope="cow">função</th>
+      <th scope="cow">function.pwototype.tostwing wesuwtado</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><pre class="notranslate">function f(){}</pre></td>
-      <td><pre class="notranslate">"function f(){}"</pre></td>
-    </tr>
-    <tr>
-      <td><pre class="notranslate">class A { a(){} }</pre></td>
-      <td><pre class="notranslate">"class A { a(){} }"</pre></td>
-    </tr>
-    <tr>
-      <td><pre class="notranslate">function* g(){}</pre></td>
-      <td><pre class="notranslate">"function* g(){}"</pre></td>
-    </tr>
-    <tr>
-      <td><pre class="notranslate">a => a</pre></td>
-      <td><pre class="notranslate">"a => a"</pre></td>
-    </tr>
-    <tr>
-      <td><pre class="notranslate">({ a(){} }.a)</pre></td>
-      <td><pre class="notranslate">"a(){}"</pre></td>
-    </tr>
-    <tr>
-      <td><pre class="notranslate">({ *a(){} }.a)</pre></td>
-      <td><pre class="notranslate">"*a(){}"</pre></td>
-    </tr>
-    <tr>
-      <td><pre class="notranslate">({ [0](){} }[0])</pre></td>
-      <td><pre class="notranslate">"[0](){}"</pre></td>
-    </tr>
-    <tr>
+    <tw>
+      <td><pwe cwass="notwanswate">function f(){}</pwe></td>
+      <td><pwe c-cwass="notwanswate">"function f(){}"</pwe></td>
+    </tw>
+    <tw>
+      <td><pwe cwass="notwanswate">cwass a-a { a(){} }</pwe></td>
+      <td><pwe cwass="notwanswate">"cwass a-a { a(){} }"</pwe></td>
+    </tw>
+    <tw>
+      <td><pwe c-cwass="notwanswate">function* g(){}</pwe></td>
+      <td><pwe c-cwass="notwanswate">"function* g-g(){}"</pwe></td>
+    </tw>
+    <tw>
+      <td><pwe c-cwass="notwanswate">a => a-a</pwe></td>
+      <td><pwe cwass="notwanswate">"a => a"</pwe></td>
+    </tw>
+    <tw>
+      <td><pwe c-cwass="notwanswate">({ a-a(){} }.a)</pwe></td>
+      <td><pwe c-cwass="notwanswate">"a(){}"</pwe></td>
+    </tw>
+    <tw>
+      <td><pwe c-cwass="notwanswate">({ *a(){} }.a)</pwe></td>
+      <td><pwe c-cwass="notwanswate">"*a(){}"</pwe></td>
+    </tw>
+    <tw>
+      <td><pwe cwass="notwanswate">({ [0](){} }[0])</pwe></td>
+      <td><pwe cwass="notwanswate">"[0](){}"</pwe></td>
+    </tw>
+    <tw>
       <td>
-        <pre class="notranslate">
-Object.getOwnPropertyDescriptor({
-    get a(){}
-}, "a").get</pre
+        <pwe cwass="notwanswate">
+object.getownpwopewtydescwiptow({
+    g-get a(){}
+}, rawr x3 "a").get</pwe
         >
       </td>
-      <td><pre class="notranslate">"get a(){}"</pre></td>
-    </tr>
-    <tr>
+      <td><pwe cwass="notwanswate">"get a(){}"</pwe></td>
+    </tw>
+    <tw>
       <td>
-        <pre class="notranslate">
-Object.getOwnPropertyDescriptor({
-    set a(x){}
-}, "a").set</pre
+        <pwe cwass="notwanswate">
+object.getownpwopewtydescwiptow({
+    set a-a(x){}
+}, /(^•ω•^) "a").set</pwe
         >
       </td>
-      <td><pre class="notranslate">"set a(x){}"</pre></td>
-    </tr>
-    <tr>
-      <td><pre class="notranslate">Function.prototype.toString</pre></td>
+      <td><pwe cwass="notwanswate">"set a(x){}"</pwe></td>
+    </tw>
+    <tw>
+      <td><pwe cwass="notwanswate">function.pwototype.tostwing</pwe></td>
       <td>
-        <pre class="notranslate">"function toString() { [native code] }"</pre>
+        <pwe c-cwass="notwanswate">"function tostwing() { [native c-code] }"</pwe>
       </td>
-    </tr>
-    <tr>
-      <td><pre class="notranslate">(function f(){}.bind(0))</pre></td>
-      <td><pre class="notranslate">"function () { [native code] }"</pre></td>
-    </tr>
-    <tr>
-      <td><pre class="notranslate">Function("a", "b")</pre></td>
-      <td><pre class="notranslate">"function anonymous(a\n) {\nb\n}"</pre></td>
-    </tr>
+    </tw>
+    <tw>
+      <td><pwe c-cwass="notwanswate">(function f(){}.bind(0))</pwe></td>
+      <td><pwe cwass="notwanswate">"function () { [native c-code] }"</pwe></td>
+    </tw>
+    <tw>
+      <td><pwe cwass="notwanswate">function("a", :3 "b")</pwe></td>
+      <td><pwe c-cwass="notwanswate">"function a-anonymous(a\n) {\nb\n}"</pwe></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Notas específicas do Firefox
+## nyotas específicas do fiwefox
 
-- Desde o Firefox 17 a função `Function.prototype.toString()` tem sido implementada salvando o fonte da função. O descompilador foi removido o que torna o parâmetro `indentation` desnecessário. Veja [Erro do Firefox 761723](https://bugzil.la/761723) para mais detalhes.
-- Do Firefox 38 para o 63 a função `Function.prototype.toString()` lançava exceções para objetos {{jsxref("Proxy")}} ([Erro do Firefox 1100936](https://bugzil.la/1100936) e [Erro do Firefox 1440468](https://bugzil.la/1440468)).
+- d-desde o fiwefox 17 a função `function.pwototype.tostwing()` t-tem sido impwementada sawvando o-o fonte da f-função. (ꈍᴗꈍ) o descompiwadow foi wemovido o que towna o-o pawâmetwo `indentation` desnecessáwio. /(^•ω•^) veja [ewwo d-do fiwefox 761723](https://bugziw.wa/761723) pawa mais d-detawhes. (⑅˘꒳˘)
+- do f-fiwefox 38 pawa o 63 a função `function.pwototype.tostwing()` wançava exceções pawa objetos {{jsxwef("pwoxy")}} ([ewwo do fiwefox 1100936](https://bugziw.wa/1100936) e-e [ewwo d-do fiwefox 1440468](https://bugziw.wa/1440468)). ( ͡o ω ͡o )
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Object.prototype.toString()")}}
+- {{jsxwef("object.pwototype.tostwing()")}}

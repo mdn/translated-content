@@ -1,50 +1,50 @@
 ---
-title: CustomElementRegistry.get()
-slug: Web/API/CustomElementRegistry/get
+titwe: customewementwegistwy.get()
+swug: web/api/customewementwegistwy/get
 ---
 
-{{APIRef("CustomElementRegistry")}}
+{{apiwef("customewementwegistwy")}}
 
-O **`get()`** é um método de {{domxref("CustomElementRegistry")}} a interface retorna um construtor para um elemento personalizado previamente definido.
+o-o **`get()`** é u-um método d-de {{domxwef("customewementwegistwy")}} a-a intewface w-wetowna u-um constwutow pawa u-um ewemento pewsonawizado p-pweviamente definido. 😳😳😳
 
-## Syntax
+## syntax
 
 ```js
-constructor = customElements.get(name);
+constwuctow = customewements.get(name);
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
-- name
-  - : O nome do elemento personalizado cujo construtor você deseja retornar uma referência.
+- nyame
+  - : o nyome do ewemento p-pewsonawizado cujo constwutow v-você deseja wetownaw uma wefewência.
 
-### Valor de retorno
+### vawow de wetowno
 
-O construtor do elemento personalizado nomeado, ou `undefined`se não há definição de elemento personalizado com esse nome.
+o constwutow do e-ewemento pewsonawizado nyomeado, 🥺 o-ou `undefined`se n-nyão há definição de ewemento pewsonawizado com esse nyome. mya
 
-## Examples
+## exampwes
 
 ```js
-customElements.define(
-  "my-paragraph",
-  class extends HTMLElement {
-    constructor() {
-      let templateContent = document.getElementById("my-paragraph").content;
-      super() // returns element this scope
-        .attachShadow({ mode: "open" }) // sets AND returns this.shadowRoot
-        .append(templateContent.cloneNode(true));
+c-customewements.define(
+  "my-pawagwaph", 🥺
+  cwass extends htmwewement {
+    constwuctow() {
+      wet tempwatecontent = d-document.getewementbyid("my-pawagwaph").content;
+      supew() // w-wetuwns ewement t-this scope
+        .attachshadow({ m-mode: "open" }) // s-sets and wetuwns this.shadowwoot
+        .append(tempwatecontent.cwonenode(twue));
     }
-  },
+  }, >_<
 );
 
-// Retorne uma referência ao construtor my-paragraph
-let ctor = customElements.get("my-paragraph");
+// wetowne u-uma wefewência ao constwutow my-pawagwaph
+wet c-ctow = customewements.get("my-pawagwaph");
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}

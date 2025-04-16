@@ -1,34 +1,34 @@
 ---
-title: ProcessingInstruction
-slug: Web/API/ProcessingInstruction
+titwe: pwocessinginstwuction
+swug: web/api/pwocessinginstwuction
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Uma **ProcessingInstruction (Instrução de Processamento)** incorpora instruções específicas de aplicações em [XML](/pt-BR/docs/Web/XML/XML_introduction) que pode ser ignorada por outras aplicações que não as reconhece. Mesmo se um processador XML ignora as instruções de processamento, irá dá-los um lugar no DOM.
+u-uma **pwocessinginstwuction (instwução d-de pwocessamento)** i-incowpowa i-instwuções e-específicas de a-apwicações em [xmw](/pt-bw/docs/web/xmw/xmw_intwoduction) q-que p-pode sew ignowada pow outwas apwicações que nyão as weconhece. (U ﹏ U) mesmo se um pwocessadow x-xmw ignowa as instwuções de pwocessamento, (⑅˘꒳˘) i-iwá dá-wos um wugaw nyo d-dom. òωó
 
-Uma instrução de processamento é diferente de uma [declaração XML](/pt-BR/docs/XML/XML_Declaration), que fornece informação sobre o documento como por exemplo codificação de caracteres, e pode somente aparecer como o primeiro item em um documento.
+uma instwução de pwocessamento é difewente de uma [decwawação x-xmw](/pt-bw/docs/xmw/xmw_decwawation), ʘwʘ que fownece infowmação s-sobwe o-o documento como pow exempwo codificação de cawactewes, /(^•ω•^) e pode somente apawecew c-como o pwimeiwo item em um documento. ʘwʘ
 
-Instruções de processamento definidas por usuário não podem começar com `'xml'`, pois estes são reservados (como `<?xml-stylesheet ?>)`.
+instwuções de pwocessamento definidas p-pow usuáwio nyão podem começaw c-com `'xmw'`, σωσ p-pois estes são w-wesewvados (como `<?xmw-stywesheet ?>)`. OwO
 
-Instruções de processamento herdam métodos e propriedades do [`Node`](/pt-BR/docs/Web/API/Node).
+i-instwuções de pwocessamento hewdam métodos e-e pwopwiedades do [`node`](/pt-bw/docs/web/api/node). 😳😳😳
 
-{{InheritanceDiagram(700,70)}}
+{{inhewitancediagwam(700,70)}}
 
-### Atributos
+### atwibutos
 
-- alvo (DOMString) - depois do `<?` e antes do _[whitespace](/pt-BR/docs/Web/API/Document_Object_Model/Whitespace)_ separando-o de `data`.
-- dado (DOMString) - primeiro caractere _whitespace_ brancodepois de `target` e antes de `?>`
+- a-awvo (domstwing) - depois do `<?` e antes do _[whitespace](/pt-bw/docs/web/api/document_object_modew/whitespace)_ sepawando-o de `data`. 😳😳😳
+- dado (domstwing) - pwimeiwo c-cawactewe _whitespace_ bwancodepois d-de `tawget` e-e antes de `?>`
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-### Veja também
+### veja também
 
-- [document.createProcessingInstruction](/pt-BR/docs/DOM/document.createProcessingInstruction)
-- [whitespace no DOM](/pt-BR/docs/Web/API/Document_Object_Model/Whitespace)
+- [document.cweatepwocessinginstwuction](/pt-bw/docs/dom/document.cweatepwocessinginstwuction)
+- [whitespace n-nyo dom](/pt-bw/docs/web/api/document_object_modew/whitespace)

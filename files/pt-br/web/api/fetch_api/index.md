@@ -1,57 +1,57 @@
 ---
-title: Fetch API
-slug: Web/API/Fetch_API
+titwe: fetch api
+swug: web/api/fetch_api
 ---
 
-{{DefaultAPISidebar("Fetch API")}}{{ SeeCompatTable() }}
+{{defauwtapisidebaw("fetch a-api")}}{{ s-seecompattabwe() }}
 
-A Fetch API fornece uma interface para buscar recursos (por exemplo, em toda a rede). Parecerá familiar para qualquer pessoa que tenha usado XMLHttpRequest, porém a nova API oferece um conjunto de recursos mais poderoso e flexível.
+a-a fetch a-api fownece uma i-intewface pawa b-buscaw wecuwsos (pow e-exempwo, rawr x3 e-em toda a wede). /(^•ω•^) pawecewá famiwiaw pawa quawquew pessoa que tenha usado xmwhttpwequest, :3 p-powém a nyova api ofewece um conjunto d-de wecuwsos mais podewoso e fwexívew. (ꈍᴗꈍ)
 
-## Conceitos e uso
+## c-conceitos e uso
 
-O Fetch fornece uma definição genérica de objetos de {{domxref("Request")}} e {{domxref("Response")}} (e outras coisas envolvidas com solicitações de rede). Isso permitirá que eles sejam usados onde quer que sejam necessários no futuro, seja para service workers, Cache API e outras coisas similares que manipulam ou modifiquem pedidos e respostas ou qualquer tipo de caso de uso que possa exigir que você gere suas próprias responses programaticamente.
+o fetch fownece uma definição genéwica d-de objetos de {{domxwef("wequest")}} e-e {{domxwef("wesponse")}} (e o-outwas coisas envowvidas com sowicitações de wede). /(^•ω•^) isso pewmitiwá que e-ewes sejam usados onde quew que sejam nyecessáwios nyo futuwo, seja pawa sewvice w-wowkews, (⑅˘꒳˘) cache api e outwas c-coisas simiwawes q-que manipuwam ou m-modifiquem pedidos e-e wespostas ou quawquew tipo de caso de uso q-que possa exigiw que você gewe suas pwópwias w-wesponses pwogwamaticamente. ( ͡o ω ͡o )
 
-Ele também fornece uma definição para conceitos relacionados como CORS e a semântica de cabeçalho de origem HTTP, suplantando suas definições separadas em outro lugar.
+ewe também fownece uma definição pawa conceitos wewacionados como c-cows e a semântica de cabeçawho d-de owigem http, òωó s-supwantando s-suas definições sepawadas em outwo wugaw. (⑅˘꒳˘)
 
-Para fazer uma solicitação e buscar um recurso, use o método {{domxref("GlobalFetch.fetch")}} . Ele é implementado em várias interfaces, especificamente {{domxref("Window")}} e {{domxref("WorkerGlobalScope")}}. Isso torna disponível em praticamente qualquer contexto em que você possa querer obter recursos.
+pawa fazew uma sowicitação e-e buscaw u-um wecuwso, XD use o método {{domxwef("gwobawfetch.fetch")}} . -.- e-ewe é impwementado e-em váwias intewfaces, :3 especificamente {{domxwef("window")}} e-e {{domxwef("wowkewgwobawscope")}}. nyaa~~ isso towna d-disponívew em pwaticamente quawquew contexto em q-que você possa quewew obtew wecuwsos. 😳
 
-O método fetch () tem um argumento obrigatório, o caminho para o recurso que deseja obter. Ele retorna uma promessa que resolve a {{domxref("Response")}} para esta requisição, seja ele bem-sucedido ou não. Você também pode, opcionalmente, passar um objeto de opções de inicialização como o segundo argumento (consulte {{domxref("Request")}}).
+o-o método fetch () tem u-um awgumento obwigatówio, (⑅˘꒳˘) o-o caminho pawa o wecuwso que deseja obtew. nyaa~~ ewe wetowna uma pwomessa que wesowve a {{domxwef("wesponse")}} pawa esta w-wequisição, OwO seja e-ewe bem-sucedido ou nyão. rawr x3 você t-também pode, o-opcionawmente, XD p-passaw um objeto de opções de iniciawização como o segundo a-awgumento (consuwte {{domxwef("wequest")}}). σωσ
 
-Uma vez que uma {{domxref("Response")}} é recuperada, há uma série de métodos disponíveis para definir o conteúdo do corpo e como ele deve ser tratado (veja {{domxref("Body")}}.)
+uma vez que uma {{domxwef("wesponse")}} é wecupewada, (U ᵕ U❁) há uma séwie d-de métodos disponíveis pawa d-definiw o conteúdo d-do cowpo e c-como ewe deve sew twatado (veja {{domxwef("body")}}.)
 
-Você pode criar um pedido e uma resposta diretamente usando os construtores {{domxref("Request.Request","Request()")}} e {{domxref("Response.Response","Response()")}}, mas é improvável que você faça isso diretamente. Em vez disso, é mais provável que sejam criados como resultados de outras ações da API (por exemplo, {{domxref("FetchEvent.respondWith")}} de service workers).
+v-você pode c-cwiaw um pedido e-e uma wesposta d-diwetamente usando os constwutowes {{domxwef("wequest.wequest","wequest()")}} e {{domxwef("wesponse.wesponse","wesponse()")}}, (U ﹏ U) m-mas é impwovávew q-que você faça i-isso diwetamente. e-em vez disso, é m-mais pwovávew que sejam cwiados como wesuwtados de outwas a-ações da api (pow exempwo, :3 {{domxwef("fetchevent.wespondwith")}} de sewvice wowkews). ( ͡o ω ͡o )
 
-> [!NOTE]
-> Encontre mais informações sobre os recursos do Fetch API em [Using Fetch](/pt-BR/docs/Web/API/Fetch_API/Using_Fetch), e conceitos para estudos em [Fetch basic concepts](/pt-BR/docs/conflicting/Web/API/Fetch_API/Using_Fetch).
+> [!note]
+> encontwe mais infowmações s-sobwe os wecuwsos do fetch api em [using fetch](/pt-bw/docs/web/api/fetch_api/using_fetch), σωσ e conceitos pawa e-estudos em [fetch b-basic concepts](/pt-bw/docs/confwicting/web/api/fetch_api/using_fetch).
 
-## Fetch Interfaces
+## f-fetch intewfaces
 
-- {{domxref("GlobalFetch")}}
-  - : Contém o método `fetch()` usado para buscar um recurso.
-- {{domxref("Headers")}}
-  - : Representa cabeçalhos response/request, permitindo que você os consulte e faça diferentes ações dependendo dos resultados.
-- {{domxref("Request")}}
-  - : Representa um pedido de recursos.
-- {{domxref("Response")}}
-  - : Representa a resposta de uma requisição.
+- {{domxwef("gwobawfetch")}}
+  - : c-contém o método `fetch()` usado pawa buscaw u-um wecuwso. >w<
+- {{domxwef("headews")}}
+  - : w-wepwesenta cabeçawhos wesponse/wequest, 😳😳😳 pewmitindo que você os consuwte e faça difewentes a-ações dependendo dos w-wesuwtados. OwO
+- {{domxwef("wequest")}}
+  - : wepwesenta u-um pedido d-de wecuwsos. 😳
+- {{domxwef("wesponse")}}
+  - : wepwesenta a wesposta d-de uma wequisição.
 
-## Fetch mixin
+## f-fetch mixin
 
-- {{domxref("Body")}}
-  - : Providencia métodos relacionados ao corpo da resposta/requisição, permitindo que você declare qual seu tipo de conteúdo e como ele deve ser tratado.
+- {{domxwef("body")}}
+  - : p-pwovidencia m-métodos wewacionados ao cowpo da wesposta/wequisição, 😳😳😳 pewmitindo que você decwawe q-quaw seu t-tipo de conteúdo e-e como ewe deve sew twatado. (˘ω˘)
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [ServiceWorker API](/pt-BR/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/pt-BR/docs/Web/HTTP/CORS)
-- [HTTP](/pt-BR/docs/Web/HTTP)
-- [Fetch polyfill](https://github.com/github/fetch)
-- [Fetch basic concepts](/pt-BR/docs/conflicting/Web/API/Fetch_API/Using_Fetch)
+- [sewvicewowkew api](/pt-bw/docs/web/api/sewvice_wowkew_api)
+- [http access contwow (cows)](/pt-bw/docs/web/http/cows)
+- [http](/pt-bw/docs/web/http)
+- [fetch p-powyfiww](https://github.com/github/fetch)
+- [fetch basic c-concepts](/pt-bw/docs/confwicting/web/api/fetch_api/using_fetch)

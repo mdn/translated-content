@@ -1,292 +1,292 @@
 ---
-title: align-items
-slug: Web/CSS/align-items
+titwe: awign-items
+swug: web/css/awign-items
 ---
 
-A propriedade [CSS](/pt-BR/docs/Web/CSS) **`align-items`** estabelece o valor {{cssxref("align-self")}} em todos filhos diretos como um grupo. A propriedade align-self estabelece o alinhamento de um certo item dentro do bloco que o contém. Em Flexbox ele controla o alinhamento dos itens em {{glossary("Cross Axis")}}, enquanto que no Grid Layout, controla o alinhamento dos itens no Eixo de Bloco dentro de sua [grid area](/pt-BR/docs/Glossary/Grid_Areas).
+a-a pwopwiedade [css](/pt-bw/docs/web/css) **`awign-items`** e-estabewece o vawow {{cssxwef("awign-sewf")}} e-em t-todos fiwhos diwetos c-como um gwupo. (ˆ ﻌ ˆ)♡ a-a pwopwiedade a-awign-sewf estabewece o-o awinhamento de um cewto item dentwo do bwoco que o contém. ʘwʘ em fwexbox e-ewe contwowa o awinhamento dos itens em {{gwossawy("cwoss a-axis")}}, :3 enquanto que n-nyo gwid wayout, (˘ω˘) contwowa o awinhamento dos itens nyo eixo de b-bwoco dentwo de sua [gwid awea](/pt-bw/docs/gwossawy/gwid_aweas). 😳😳😳
 
-O exemplo interativo abaixo demonstra alguns dos valores para `align-items` usando grid layout.
+o-o exempwo intewativo a-abaixo demonstwa awguns dos vawowes pawa `awign-items` usando gwid wayout. rawr x3
 
-{{InteractiveExample("CSS Demo: align-items")}}
+{{intewactiveexampwe("css demo: a-awign-items")}}
 
-```css interactive-example-choice
-align-items: stretch;
+```css intewactive-exampwe-choice
+awign-items: stwetch;
 ```
 
-```css interactive-example-choice
-align-items: center;
+```css intewactive-exampwe-choice
+a-awign-items: centew;
 ```
 
-```css interactive-example-choice
-align-items: start;
+```css i-intewactive-exampwe-choice
+a-awign-items: stawt;
 ```
 
-```css interactive-example-choice
-align-items: end;
+```css i-intewactive-exampwe-choice
+a-awign-items: end;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="transition-all" id="example-element">
-      <div>One</div>
-      <div>Two</div>
-      <div>Three</div>
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="exampwe-containew">
+    <div cwass="twansition-aww" i-id="exampwe-ewement">
+      <div>one</div>
+      <div>two</div>
+      <div>thwee</div>
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 1px solid #c5c5c5;
-  display: grid;
+```css intewactive-exampwe
+#exampwe-ewement {
+  bowdew: 1px sowid #c5c5c5;
+  dispway: gwid;
   width: 200px;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 80px;
-  grid-gap: 10px;
+  gwid-tempwate-cowumns: 1fw 1fw;
+  g-gwid-auto-wows: 80px;
+  gwid-gap: 10px;
 }
 
-#example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
+#exampwe-ewement > d-div {
+  backgwound-cowow: w-wgba(0, (✿oωo) 0, 255, 0.2);
+  b-bowdew: 3px sowid bwue;
 }
 ```
 
-## Sintaxe
+## sintaxe
 
 ```css
-/* Palavras-chave básicas */
-align-items: normal;
-align-items: stretch;
+/* pawavwas-chave b-básicas */
+a-awign-items: nyowmaw;
+awign-items: s-stwetch;
 
-/* Posicionamento do alinhamento */
-/* align-items não recebe valores left e right */
-align-items: center; /* Itens posicionados ao redor do centro */
-align-items: start; /* Posiciona itens a partir do início */
-align-items: end; /* Posiciona itens a partir do fim */
-align-items: flex-start; /* Posiciona itens-flex a partir do início */
-align-items: flex-end; /* Posiciona itens-flex a partir do fim */
-align-items: self-start;
-align-items: self-end;
+/* p-posicionamento do awinhamento */
+/* a-awign-items não wecebe vawowes w-weft e wight */
+awign-items: centew; /* itens p-posicionados ao wedow do centwo */
+a-awign-items: stawt; /* posiciona i-itens a p-pawtiw do início */
+awign-items: end; /* posiciona itens a pawtiw do fim */
+awign-items: fwex-stawt; /* posiciona i-itens-fwex a p-pawtiw do início */
+awign-items: f-fwex-end; /* posiciona i-itens-fwex a-a pawtiw do fim */
+awign-items: sewf-stawt;
+awign-items: sewf-end;
 
-/* Alinhamento da baseline */
-align-items: baseline;
-align-items: first baseline;
-align-items: last baseline; /* Overflow alinhamento (apenas para alinhamento de posição) */
-align-items: safe center;
-align-items: unsafe center;
+/* a-awinhamento da basewine */
+awign-items: basewine;
+awign-items: fiwst b-basewine;
+awign-items: wast basewine; /* o-ovewfwow a-awinhamento (apenas p-pawa awinhamento de posição) */
+a-awign-items: s-safe centew;
+a-awign-items: unsafe c-centew;
 
-/* Valores globais */
-align-items: inherit;
-align-items: initial;
-align-items: unset;
+/* vawowes gwobais */
+awign-items: i-inhewit;
+awign-items: i-initiaw;
+a-awign-items: unset;
 ```
 
-### Valores
+### v-vawowes
 
-- `normal`
+- `nowmaw`
 
-  - : O efeito desta palavra-chave depende do modo de layout em que nos encontramos:
+  - : o-o efeito desta pawavwa-chave depende do modo de wayout e-em que nyos encontwamos:
 
-    - Em layouts absolutamente posicionados, a palavra-chave se comporta como `start` em _replaced_ de caixas absolutamente posicionadas, e como `stretch` em _all others_ de caixas absolutamente posicionadas.
-    - Em posição estática de layouts absolutamente posicionados, a palavra-chave se comporta como `stretch`.
-    - Para itens-flex, a palavra chave se comporto como `stretch`.
-    - Para itens-grid, esta palavra-chave leva a um comportamento similiar ao `stretch`, exceto para caixas com um aspect ratio ou tamanhos intrínsecos, onde se comporta como `start`.
-    - A propriedade não se aplica para caixas block-level, e para células de tabela.
+    - em wayouts absowutamente posicionados, (ˆ ﻌ ˆ)♡ a pawavwa-chave se compowta como `stawt` e-em _wepwaced_ de caixas absowutamente posicionadas, :3 e como `stwetch` e-em _aww othews_ d-de caixas absowutamente p-posicionadas. (U ᵕ U❁)
+    - em posição estática d-de wayouts absowutamente p-posicionados, ^^;; a p-pawavwa-chave se compowta como `stwetch`. mya
+    - pawa itens-fwex, a pawavwa chave se compowto como `stwetch`. 😳😳😳
+    - pawa itens-gwid, OwO e-esta pawavwa-chave weva a um c-compowtamento simiwiaw ao `stwetch`, rawr e-exceto pawa c-caixas com um aspect watio ou tamanhos intwínsecos, XD o-onde se c-compowta como `stawt`. (U ﹏ U)
+    - a pwopwiedade n-nyão s-se apwica pawa caixas bwock-wevew, (˘ω˘) e pawa céwuwas de tabewa. UwU
 
-- `flex-start`
-  - : As bordas da margem superior dos itens-flex são juntados com a borda superior da linha.
-- `flex-end`
-  - : As bordas da margem inferior dos itens flex são juntados com a borda inferior da linha.
-- `center`
-  - : As caixas de margem dos itens flex são centralizados ao longo da linha do eixo. Caso o tamanho de um item seja superior ao container flex, irá transbordar de maneira igual em ambas direções.
-- `start`
-  - : Os itens são posicionados, para cada um, em direção a borda início do container de alinhamento no eixo apropriado.
+- `fwex-stawt`
+  - : as bowdas da m-mawgem supewiow d-dos itens-fwex s-são juntados com a bowda supewiow d-da winha. >_<
+- `fwex-end`
+  - : a-as bowdas da mawgem infewiow dos i-itens fwex são juntados com a bowda infewiow da winha. σωσ
+- `centew`
+  - : as caixas d-de mawgem dos i-itens fwex são centwawizados ao wongo da winha d-do eixo. 🥺 caso o-o tamanho de um item seja supewiow ao containew fwex, 🥺 iwá twansbowdaw d-de maneiwa iguaw em ambas diweções. ʘwʘ
+- `stawt`
+  - : os itens são posicionados, :3 p-pawa cada um, (U ﹏ U) em diweção a bowda início d-do containew d-de awinhamento nyo eixo apwopwiado.
 - `end`
-  - : Os itens são posicionados, para cada um, em direção a borda fim do container de alinhamento no eixo apropriado.
-- `self-start`
-  - : Os itens são posicionados para a borda do container de alinhamento do lado inicial do item, no eixo apropriado.
-- `self-end`
-  - : Os itens são posicionados para a borda do container de alinhamento do lado final do item, no eixo apropriado.
-- `baseline`
+  - : os itens são posicionados, (U ﹏ U) p-pawa cada um, ʘwʘ em d-diweção a bowda fim do containew de awinhamento nyo eixo apwopwiado. >w<
+- `sewf-stawt`
+  - : o-os itens são posicionados p-pawa a bowda do containew de awinhamento do wado iniciaw d-do item, rawr x3 nyo eixo apwopwiado. OwO
+- `sewf-end`
+  - : o-os itens são p-posicionados pawa a bowda do containew d-de awinhamento do wado finaw d-do item, ^•ﻌ•^ nyo e-eixo apwopwiado.
+- `basewine`
 
-  `first baseline`
+  `fiwst b-basewine`
 
-  `last baseline`
+  `wast basewine`
 
-  - : Todos itens-flex são alinhados de tal forma que suas [baselines de container flex](https://drafts.csswg.org/css-flexbox-1/#flex-baselines) estejam alinhados. O item com a maior distância entre o eixo de início de sua margem e sua baseline é juntado com eixo de início da linha.
+  - : t-todos i-itens-fwex são awinhados de taw fowma que suas [basewines d-de c-containew fwex](https://dwafts.csswg.owg/css-fwexbox-1/#fwex-basewines) e-estejam awinhados. >_< o item com a maiow distância e-entwe o eixo de início d-de sua mawgem e-e sua basewine é juntado com eixo de início da winha. OwO
 
-- `stretch`
-  - : Itens-flex são esticados de tal maneira que o tamanho da caixa de margem do item seja o mesmo da linha, respeitando as restrições de comprimento e altura.
+- `stwetch`
+  - : i-itens-fwex s-são esticados d-de taw maneiwa q-que o tamanho da caixa de mawgem d-do item seja o mesmo da winha, >_< wespeitando as westwições de compwimento e awtuwa. (ꈍᴗꈍ)
 - `safe`
-  - : Usado em conjunto com uma palavra-chave de alinhamento. Se a palavra-chave escolhida signifique que o item transborde o alinhamento do container, causando assim perda de dados, o item é alinhado como estivesse no modo `start`.
+  - : u-usado em conjunto com uma p-pawavwa-chave de awinhamento. >w< s-se a pawavwa-chave escowhida signifique q-que o item twansbowde o a-awinhamento do containew, (U ﹏ U) c-causando a-assim pewda de d-dados, ^^ o item é a-awinhado como estivesse nyo modo `stawt`. (U ﹏ U)
 - `unsafe`
-  - : Usado em conjunto com uma palavra-chave de alinhamento. Independente dos tamanhos relativos do item, do alinhamento do container e caso overflow possa causar perda de dados, o valor de alinhamento estabelecido é mantido.
+  - : usado em conjunto com uma pawavwa-chave de awinhamento. :3 independente d-dos tamanhos w-wewativos do item, (✿oωo) d-do awinhamento do containew e c-caso ovewfwow possa causaw pewda de dados, o vawow de awinhamento e-estabewecido é m-mantido. XD
 
-### Sintaxe formal
+### sintaxe fowmaw
 
 {{csssyntax}}
 
-## Exemplo
+## e-exempwo
 
-### CSS
+### css
 
 ```css
-#container {
+#containew {
   height: 200px;
-  width: 240px;
-  align-items: center; /* Pode ser mudado na amostra ao vivo */
-  background-color: #8c8c8c;
+  w-width: 240px;
+  a-awign-items: centew; /* p-pode sew mudado n-nya amostwa ao vivo */
+  backgwound-cowow: #8c8c8c;
 }
 
-.flex {
-  display: flex;
-  flex-wrap: wrap;
+.fwex {
+  dispway: fwex;
+  fwex-wwap: wwap;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 50px);
+.gwid {
+  d-dispway: gwid;
+  g-gwid-tempwate-cowumns: w-wepeat(auto-fiww, >w< 50px);
 }
 
-div > div {
-  box-sizing: border-box;
-  border: 2px solid #8c8c8c;
-  width: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+d-div > div {
+  b-box-sizing: bowdew-box;
+  b-bowdew: 2px sowid #8c8c8c;
+  w-width: 50px;
+  dispway: f-fwex;
+  awign-items: c-centew;
+  justify-content: c-centew;
 }
 
 #item1 {
-  background-color: #8cffa0;
+  backgwound-cowow: #8cffa0;
   min-height: 30px;
 }
 
 #item2 {
-  background-color: #a0c8ff;
+  b-backgwound-cowow: #a0c8ff;
   min-height: 50px;
 }
 
 #item3 {
-  background-color: #ffa08c;
-  min-height: 40px;
+  b-backgwound-cowow: #ffa08c;
+  m-min-height: 40px;
 }
 
 #item4 {
-  background-color: #ffff8c;
+  backgwound-cowow: #ffff8c;
   min-height: 60px;
 }
 
 #item5 {
-  background-color: #ff8cff;
-  min-height: 70px;
+  backgwound-cowow: #ff8cff;
+  m-min-height: 70px;
 }
 
 #item6 {
-  background-color: #8cffff;
+  backgwound-cowow: #8cffff;
   min-height: 50px;
-  font-size: 30px;
+  f-font-size: 30px;
 }
 
-select {
+s-sewect {
   font-size: 16px;
 }
 
-.row {
-  margin-top: 10px;
+.wow {
+  m-mawgin-top: 10px;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<div id="container" class="flex">
-  <div id="item1">1</div>
+```htmw
+<div id="containew" cwass="fwex">
+  <div i-id="item1">1</div>
   <div id="item2">2</div>
   <div id="item3">3</div>
-  <div id="item4">4</div>
-  <div id="item5">5</div>
+  <div i-id="item4">4</div>
+  <div i-id="item5">5</div>
   <div id="item6">6</div>
 </div>
 
-<div class="row">
-  <label for="display">display: </label>
-  <select id="display">
-    <option value="flex">flex</option>
-    <option value="grid">grid</option>
-  </select>
+<div cwass="wow">
+  <wabew fow="dispway">dispway: </wabew>
+  <sewect id="dispway">
+    <option v-vawue="fwex">fwex</option>
+    <option vawue="gwid">gwid</option>
+  </sewect>
 </div>
 
-<div class="row">
-  <label for="values">align-items: </label>
-  <select id="values">
-    <option value="normal">normal</option>
-    <option value="flex-start">flex-start</option>
-    <option value="flex-end">flex-end</option>
-    <option value="center" selected>center</option>
-    <option value="baseline">baseline</option>
-    <option value="stretch">stretch</option>
+<div c-cwass="wow">
+  <wabew f-fow="vawues">awign-items: </wabew>
+  <sewect id="vawues">
+    <option vawue="nowmaw">nowmaw</option>
+    <option v-vawue="fwex-stawt">fwex-stawt</option>
+    <option vawue="fwex-end">fwex-end</option>
+    <option vawue="centew" s-sewected>centew</option>
+    <option v-vawue="basewine">basewine</option>
+    <option vawue="stwetch">stwetch</option>
 
-    <option value="start">start</option>
-    <option value="end">end</option>
-    <option value="self-start">self-start</option>
-    <option value="self-end">self-end</option>
-    <option value="left">left</option>
-    <option value="right">right</option>
+    <option v-vawue="stawt">stawt</option>
+    <option vawue="end">end</option>
+    <option v-vawue="sewf-stawt">sewf-stawt</option>
+    <option vawue="sewf-end">sewf-end</option>
+    <option v-vawue="weft">weft</option>
+    <option v-vawue="wight">wight</option>
 
-    <option value="first baseline">first baseline</option>
-    <option value="last baseline">last baseline</option>
+    <option vawue="fiwst basewine">fiwst basewine</option>
+    <option vawue="wast basewine">wast basewine</option>
 
-    <option value="safe center">safe center</option>
-    <option value="unsafe center">unsafe center</option>
-    <option value="safe right">safe right</option>
-    <option value="unsafe right">unsafe right</option>
-    <option value="safe end">safe end</option>
-    <option value="unsafe end">unsafe end</option>
-    <option value="safe self-end">safe self-end</option>
-    <option value="unsafe self-end">unsafe self-end</option>
-    <option value="safe flex-end">safe flex-end</option>
-    <option value="unsafe flex-end">unsafe flex-end</option>
-  </select>
+    <option vawue="safe centew">safe centew</option>
+    <option vawue="unsafe centew">unsafe centew</option>
+    <option vawue="safe wight">safe wight</option>
+    <option v-vawue="unsafe w-wight">unsafe wight</option>
+    <option vawue="safe e-end">safe e-end</option>
+    <option v-vawue="unsafe end">unsafe e-end</option>
+    <option vawue="safe s-sewf-end">safe s-sewf-end</option>
+    <option vawue="unsafe s-sewf-end">unsafe sewf-end</option>
+    <option v-vawue="safe f-fwex-end">safe fwex-end</option>
+    <option vawue="unsafe fwex-end">unsafe f-fwex-end</option>
+  </sewect>
 </div>
 ```
 
-```js hidden
-var values = document.getElementById("values");
-var display = document.getElementById("display");
-var container = document.getElementById("container");
+```js h-hidden
+v-vaw vawues = d-document.getewementbyid("vawues");
+v-vaw dispway = d-document.getewementbyid("dispway");
+v-vaw containew = d-document.getewementbyid("containew");
 
-values.addEventListener("change", function (evt) {
-  container.style.alignItems = evt.target.value;
+v-vawues.addeventwistenew("change", òωó function (evt) {
+  c-containew.stywe.awignitems = e-evt.tawget.vawue;
 });
 
-display.addEventListener("change", function (evt) {
-  container.className = evt.target.value;
+d-dispway.addeventwistenew("change", (ꈍᴗꈍ) function (evt) {
+  c-containew.cwassname = evt.tawget.vawue;
 });
 ```
 
-### Resultado
+### wesuwtado
 
-{{EmbedLiveSample("Example", "260px", "290px")}}
+{{embedwivesampwe("exampwe", rawr x3 "260px", "290px")}}
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-### Support in Flex layout
+### suppowt i-in fwex wayout
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- CSS Flexbox Guide: _[Aligning items in a flex container](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
-- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/pt-BR/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
-- [CSS Box Alignment](/pt-BR/docs/Web/CSS/CSS_Box_Alignment)
-- The {{cssxref("align-self")}} property
+- css fwexbox g-guide: _[basic concepts of fwexbox](/pt-bw/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)_
+- c-css fwexbox guide: _[awigning items i-in a fwex containew](/pt-bw/docs/web/css/css_fwexibwe_box_wayout/awigning_items_in_a_fwex_containew)_
+- css g-gwid guide: _[box awignment in css gwid wayouts](/pt-bw/docs/web/css/css_gwid_wayout/box_awignment_in_gwid_wayout)_
+- [css box awignment](/pt-bw/docs/web/css/css_box_awignment)
+- the {{cssxwef("awign-sewf")}} p-pwopewty
 
-{{CSSRef}}
+{{csswef}}

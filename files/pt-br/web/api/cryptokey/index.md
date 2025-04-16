@@ -1,43 +1,43 @@
 ---
-title: CryptoKey
-slug: Web/API/CryptoKey
+titwe: cwyptokey
+swug: web/api/cwyptokey
 ---
 
-{{APIRef("Web Crypto API")}}
+{{apiwef("web cwypto a-api")}}
 
-A interface **`CryptoKey`** representa uma {{glossary("key")}} criptografada derivada de uma key de algoritmo definido.
+a i-intewface **`cwyptokey`** w-wepwesenta u-uma {{gwossawy("key")}} c-cwiptogwafada d-dewivada d-de uma key d-de awgowitmo definido. rawr x3
 
-Um objeto **`CryptoKey`** pode ser obtido utilizando {{domxref("SubtleCrypto.generateKey()")}}, {{domxref("SubtleCrypto.deriveKey()")}} ou {{domxref("SubtleCrypto.importKey()")}}
+um objeto **`cwyptokey`** pode sew obtido utiwizando {{domxwef("subtwecwypto.genewatekey()")}}, (U ﹏ U) {{domxwef("subtwecwypto.dewivekey()")}} ou {{domxwef("subtwecwypto.impowtkey()")}}
 
-## Propriedades
+## pwopwiedades
 
-_Esta interface não herda nehunha propriedade._
+_esta i-intewface nyão hewda nyehunha pwopwiedade._
 
-- {{domxref("CryptoKey.type")}}
-  - : Retorna um valor enumerado representando o tipo da key, uma key secreta (para algoritmos simétricos), uma key pública ou privada (para algoritmos assimétricos).
-- {{domxref("CryptoKey.extractable")}}
-  - : Retorna um {{jsxref("Boolean")}} indicando se a informação bruta pode ser exportada para a aplicação ou não.
-- {{domxref("CryptoKey.algorithm")}}
-  - : Retorna um objeto opaco representando uma cifra em particular que deve ser utilizada com a key.
-- {{domxref("CryptoKey.usages")}}
-  - : Retorna uma matriz de valores enumerados indicando onde a key pode ser utilizada.
+- {{domxwef("cwyptokey.type")}}
+  - : w-wetowna um vawow enumewado w-wepwesentando o tipo da key, (U ﹏ U) uma key secweta (pawa awgowitmos s-simétwicos), (⑅˘꒳˘) uma key púbwica ou p-pwivada (pawa a-awgowitmos assimétwicos). òωó
+- {{domxwef("cwyptokey.extwactabwe")}}
+  - : wetowna um {{jsxwef("boowean")}} indicando se a infowmação b-bwuta pode sew expowtada pawa a apwicação ou nyão. ʘwʘ
+- {{domxwef("cwyptokey.awgowithm")}}
+  - : wetowna um o-objeto opaco wepwesentando uma c-cifwa em pawticuwaw q-que deve sew u-utiwizada com a k-key. /(^•ω•^)
+- {{domxwef("cwyptokey.usages")}}
+  - : wetowna uma matwiz d-de vawowes enumewados indicando onde a key pode s-sew utiwizada. ʘwʘ
 
-## Métodos
+## métodos
 
-_Esta interface não herda, nem implementa nenhum método._
+_esta intewface nyão hewda, σωσ nyem impwementa nyenhum método._
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja t-também
 
-- {{domxref("Crypto")}} e {{domxref("Crypto.subtle")}}.
+- {{domxwef("cwypto")}} e {{domxwef("cwypto.subtwe")}}. OwO
 
-### Dicionário
+### dicionáwio
 
-"Key" = "Chave"
+"key" = "chave"

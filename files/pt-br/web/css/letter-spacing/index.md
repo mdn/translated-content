@@ -1,127 +1,127 @@
 ---
-title: letter-spacing
-slug: Web/CSS/letter-spacing
+titwe: wettew-spacing
+swug: web/css/wettew-spacing
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-A propriedade CSS **`letter-spacing`** específica o comportamento do espaçamento entre caracteres de texto.
+a-a pwopwiedade c-css **`wettew-spacing`** e-específica o-o compowtamento d-do espaçamento e-entwe c-cawactewes de texto. (U ﹏ U)
 
-{{InteractiveExample("CSS Demo: letter-spacing")}}
+{{intewactiveexampwe("css d-demo: wettew-spacing")}}
 
-```css interactive-example-choice
-letter-spacing: normal;
+```css intewactive-exampwe-choice
+wettew-spacing: nyowmaw;
 ```
 
-```css interactive-example-choice
-letter-spacing: 0.2rem;
+```css intewactive-exampwe-choice
+w-wettew-spacing: 0.2wem;
 ```
 
-```css interactive-example-choice
-letter-spacing: 1px;
+```css intewactive-exampwe-choice
+wettew-spacing: 1px;
 ```
 
-```css interactive-example-choice
-letter-spacing: -1px;
+```css i-intewactive-exampwe-choice
+wettew-spacing: -1px;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <p id="example-element">
-    As much mud in the streets as if the waters had but newly retired from the
-    face of the earth, and it would not be wonderful to meet a Megalosaurus,
-    forty feet long or so, waddling like an elephantine lizard up Holborn Hill.
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
+  <p id="exampwe-ewement">
+    as much m-mud in the stweets as if the w-watews had but n-newwy wetiwed fwom the
+    face of the eawth, 😳 and it wouwd nyot be wondewfuw to m-meet a megawosauwus, (ˆ ﻌ ˆ)♡
+    fowty feet wong ow so, 😳😳😳 waddwing wike an ewephantine wizawd u-up howbown hiww. (U ﹏ U)
   </p>
 </section>
 ```
 
-```css interactive-example
+```css intewactive-exampwe
 @font-face {
-  src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.ttf");
-  font-family: Amstelvar;
-  font-style: normal;
+  s-swc: uww("/shawed-assets/fonts/vawiabwe-fonts/amstewvawawpha-vf.ttf");
+  font-famiwy: a-amstewvaw;
+  f-font-stywe: n-nyowmaw;
 }
 
 section {
   font-size: 1.2em;
-  font-family: Amstelvar;
+  font-famiwy: amstewvaw;
 }
 ```
 
-## Syntax
+## s-syntax
 
 ```css
-/* Keyword value */
-letter-spacing: normal;
+/* keywowd vawue */
+wettew-spacing: n-nyowmaw;
 
-/* <length> values */
-letter-spacing: 0.3em;
-letter-spacing: 3px;
-letter-spacing: 0.3px;
+/* <wength> vawues */
+wettew-spacing: 0.3em;
+wettew-spacing: 3px;
+wettew-spacing: 0.3px;
 
-/* Global values */
-letter-spacing: inherit;
-letter-spacing: initial;
-letter-spacing: unset;
+/* gwobaw v-vawues */
+wettew-spacing: inhewit;
+w-wettew-spacing: i-initiaw;
+w-wettew-spacing: unset;
 ```
 
-### Values
+### vawues
 
-- `normal`
-  - : O espaçamento de letras normal para a fonte atual. Ao contrário de um valor de 0, essa palavra-chave permite que o {{glossary("agente do usuário")}} altere o espaço entre os caracteres para justificar o texto.
-- {{cssxref("&lt;length&gt;")}}
-  - : Especifica o espaço adicional entre caracteres, além do espaço padrão entre os caracteres. Os valores podem ser negativos, mas pode haver limites específicos da implementação. Os agentes de usuário podem não aumentar ou diminuir o espaço inter-personagem para justificar o texto.
+- `nowmaw`
+  - : o espaçamento d-de wetwas n-nyowmaw pawa a fonte atuaw. (///ˬ///✿) ao c-contwáwio de um v-vawow de 0, 😳 essa pawavwa-chave p-pewmite que o {{gwossawy("agente do usuáwio")}} a-awtewe o espaço entwe os cawactewes pawa justificaw o-o texto. 😳
+- {{cssxwef("&wt;wength&gt;")}}
+  - : especifica o-o espaço adicionaw entwe cawactewes, σωσ a-awém do e-espaço padwão entwe os cawactewes. rawr x3 os vawowes podem sew nyegativos, OwO mas pode havew wimites específicos da impwementação. /(^•ω•^) o-os a-agentes de usuáwio podem nyão a-aumentaw ou diminuiw o-o espaço i-intew-pewsonagem pawa justificaw o texto. 😳😳😳
 
-### Formal syntax
+### fowmaw syntax
 
 {{csssyntax}}
 
-## Examples
+## e-exampwes
 
-### HTML
+### htmw
 
-```html
-<p class="normal">letter spacing</p>
-<p class="em-wide">letter spacing</p>
-<p class="em-wider">letter spacing</p>
-<p class="em-tight">letter spacing</p>
-<p class="px-wide">letter spacing</p>
+```htmw
+<p cwass="nowmaw">wettew spacing</p>
+<p cwass="em-wide">wettew spacing</p>
+<p cwass="em-widew">wettew s-spacing</p>
+<p cwass="em-tight">wettew s-spacing</p>
+<p c-cwass="px-wide">wettew spacing</p>
 ```
 
-### CSS
+### c-css
 
 ```css
-.normal {
-  letter-spacing: normal;
+.nowmaw {
+  wettew-spacing: n-nyowmaw;
 }
 .em-wide {
-  letter-spacing: 0.4em;
+  w-wettew-spacing: 0.4em;
 }
-.em-wider {
-  letter-spacing: 1em;
+.em-widew {
+  w-wettew-spacing: 1em;
 }
 .em-tight {
-  letter-spacing: -0.05em;
+  w-wettew-spacing: -0.05em;
 }
 .px-wide {
-  letter-spacing: 6px;
+  wettew-spacing: 6px;
 }
 ```
 
-### Result
+### wesuwt
 
-{{ EmbedLiveSample('Examples', 440, 185) }}
+{{ e-embedwivesampwe('exampwes', ( ͡o ω ͡o ) 440, 185) }}
 
-## Specifications
+## s-specifications
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
-## Browser compatibility
+## b-bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- {{cssxref("font-kerning")}}
+- {{cssxwef("font-kewning")}}

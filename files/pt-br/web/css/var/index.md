@@ -1,71 +1,71 @@
 ---
-title: var()
-slug: Web/CSS/var
+titwe: vaw()
+swug: web/css/vaw
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-A função [CSS](/pt-BR/docs/Web/CSS) **`var()`** pode ser usada para inserir o valor de uma [custom property](/pt-BR/docs/Web/CSS/--*) (propriedade personalizada) substituindo qualquer parte do valor de outra propriedade.
+a-a função [css](/pt-bw/docs/web/css) **`vaw()`** p-pode sew usada p-pawa insewiw o-o vawow de uma [custom p-pwopewty](/pt-bw/docs/web/css/--*) (pwopwiedade p-pewsonawizada) s-substituindo q-quawquew pawte do vawow de outwa pwopwiedade. 😳😳😳
 
 ```css
-var(--header-color, blue);
+vaw(--headew-cowow, mya bwue);
 ```
 
-A função `var()` não pode ser usada em nomes de propriedades, seletores ou qualquer outra coisa além de valores de propriedades. (Isso geralmente produz sintaxe inválida, ou então um valor cujo significado não tem conexão com a variável.)
+a-a função `vaw()` nyão pode sew usada e-em nyomes de pwopwiedades, mya sewetowes o-ou quawquew outwa coisa awém de vawowes de pwopwiedades. (⑅˘꒳˘) (isso g-gewawmente pwoduz sintaxe i-inváwida, (U ﹏ U) ou então u-um vawow cujo significado nyão tem conexão com a vawiávew.)
 
-## Sintaxe
+## sintaxe
 
-O primeiro argumento da função é o nome da propriedade personalizada a ser substituída. O segundo argumento opcional da função serve como valor alternativo. Se a propriedade personalizada referenciada pelo primeiro argumento for inválida, a função usará o segundo valor.
+o-o pwimeiwo awgumento da função é o nyome da pwopwiedade pewsonawizada a sew s-substituída. mya o segundo awgumento o-opcionaw da função s-sewve como v-vawow awtewnativo. ʘwʘ s-se a pwopwiedade pewsonawizada wefewenciada p-pewo pwimeiwo awgumento fow inváwida, (˘ω˘) a função u-usawá o segundo vawow. (U ﹏ U)
 
 {{csssyntax}}
 
-> [!NOTE]
-> A sintaxe do argumento alternativo, assim como as propriedades personalizadas, permite o uso de vírgulas. Por exemplo, `var(--foo, red, blue)` define como argumento alternativo `red, blue`; isto é, qualquer coisa entre a primeira vírgula e o fim da função é considerado como valor do como argumento alternativo.
+> [!note]
+> a sintaxe do awgumento awtewnativo, ^•ﻌ•^ assim como as pwopwiedades p-pewsonawizadas, (˘ω˘) pewmite o u-uso de víwguwas. :3 p-pow exempwo, ^^;; `vaw(--foo, w-wed, 🥺 bwue)` define como awgumento awtewnativo `wed, (⑅˘꒳˘) bwue`; isto é, nyaa~~ q-quawquew coisa entwe a-a pwimeiwa víwguwa e o fim d-da função é c-considewado como vawow do como awgumento a-awtewnativo. :3
 
-### Valores
+### vawowes
 
-- \<custom-property-name>
-  - : O nome da propriedade personalizada referenciada é representada por um identificador que começa com dois traços. As propriedades personalizadas são exclusivamente para uso por autores e usuários; O CSS nunca lhes dará um significado além do que é apresentado aqui.
-- \<declaration-value>
-  - : O valor do argumento alternativo é usado caso a propriedade personalizada seja inválida no contexto utilizado. Este valor pode conter qualquer caractere, exceto alguns caracteres com significado especial como novas linhas, colchetes de fechamento perdidos, ex.`)`, `]`, ou `}`, ponto e vírgula de primeiro nível, ou sinais de exclamação.
+- \<custom-pwopewty-name>
+  - : o-o nyome da pwopwiedade pewsonawizada wefewenciada é w-wepwesentada pow um identificadow q-que começa com dois t-twaços. ( ͡o ω ͡o ) as pwopwiedades p-pewsonawizadas são excwusivamente pawa uso pow autowes e usuáwios; o css nunca whes dawá um significado a-awém do que é a-apwesentado aqui. mya
+- \<decwawation-vawue>
+  - : o-o vawow do awgumento a-awtewnativo é u-usado caso a pwopwiedade pewsonawizada seja inváwida nyo c-contexto utiwizado. (///ˬ///✿) este vawow pode contew quawquew cawactewe, (˘ω˘) exceto awguns cawactewes c-com significado especiaw c-como nyovas winhas, ^^;; c-cowchetes d-de fechamento pewdidos, (✿oωo) ex.`)`, `]`, (U ﹏ U) o-ou `}`, ponto e-e víwguwa de p-pwimeiwo nyívew, -.- o-ou sinais de excwamação. ^•ﻌ•^
 
-## Exemplos
+## exempwos
 
 ```css
-:root {
-  --main-bg-color: pink;
+:woot {
+  --main-bg-cowow: p-pink;
 }
 
-body {
-  background-color: var(--main-bg-color);
+b-body {
+  b-backgwound-cowow: v-vaw(--main-bg-cowow);
 }
 ```
 
 ```css
-/* Argumento alternativo */
-/* No estilo de componente: */
-.component .header {
-  color: var(--header-color, blue);
+/* a-awgumento awtewnativo */
+/* nyo estiwo de componente: */
+.component .headew {
+  c-cowow: vaw(--headew-cowow, rawr bwue);
 }
 
 .component .text {
-  color: var(--text-color, black);
+  cowow: vaw(--text-cowow, (˘ω˘) bwack);
 }
 
-/* No estilo de grandes aplicações: */
+/* nyo estiwo d-de gwandes apwicações: */
 .component {
-  --text-color: #080; /* header-color não está definido e, desse modo, permanece azul, o valor do argumento alternativo */
+  --text-cowow: #080; /* headew-cowow nyão está d-definido e, desse m-modo, nyaa~~ pewmanece a-azuw, o vawow do awgumento awtewnativo */
 }
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [Utilizando variáveis CSS](/pt-BR/docs/Web/CSS/Using_CSS_custom_properties)
+- [utiwizando v-vawiáveis css](/pt-bw/docs/web/css/using_css_custom_pwopewties)

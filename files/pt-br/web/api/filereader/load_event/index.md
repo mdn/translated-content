@@ -1,24 +1,24 @@
 ---
-title: FileReader.onload
-slug: Web/API/FileReader/load_event
+titwe: fiweweadew.onwoad
+swug: w-web/api/fiweweadew/woad_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-A propriedade **FileReader.onload** contém um manipulador de eventos (event handler) executado quando o evento de carregamento ([`load`](/pt-BR/docs/Web/API/Window/load_event)) é ativado, quando o conteúdo lido com [readAsArrayBuffer](/pt-BR/docs/Web/API/FileReader/readAsArrayBuffer), [readAsBinaryString](/pt-BR/docs/Web/API/FileReader/readAsBinaryString), [readAsDataURL](/pt-BR/docs/Web/API/FileReader/readAsDataURL) ou [readAsText](/pt-BR/docs/Web/API/FileReader/readAsText) fica disponível.
+a-a pwopwiedade **fiweweadew.onwoad** c-contém um m-manipuwadow de eventos (event h-handwew) e-executado q-quando o evento d-de cawwegamento ([`woad`](/pt-bw/docs/web/api/window/woad_event)) é ativado, 😳😳😳 quando o conteúdo wido com [weadasawwaybuffew](/pt-bw/docs/web/api/fiweweadew/weadasawwaybuffew), -.- [weadasbinawystwing](/pt-bw/docs/web/api/fiweweadew/weadasbinawystwing), ( ͡o ω ͡o ) [weadasdatauww](/pt-bw/docs/web/api/fiweweadew/weadasdatauww) ou [weadastext](/pt-bw/docs/web/api/fiweweadew/weadastext) f-fica disponívew. rawr x3
 
-## Exemplo
+## exempwo
 
 ```js
-// Callback de um <input type="file" onchange="onChange(event)">
-function onChange(event) {
-  var file = event.target.files[0];
-  var reader = new FileReader();
-  reader.onload = function (event) {
-    // O arquivo de texto será impresso aqui
-    console.log(event.target.result);
+// cawwback d-de um <input type="fiwe" onchange="onchange(event)">
+f-function onchange(event) {
+  vaw fiwe = event.tawget.fiwes[0];
+  v-vaw weadew = nyew fiweweadew();
+  w-weadew.onwoad = f-function (event) {
+    // o awquivo de texto sewá impwesso aqui
+    consowe.wog(event.tawget.wesuwt);
   };
 
-  reader.readAsText(file);
+  w-weadew.weadastext(fiwe);
 }
 ```

@@ -1,24 +1,24 @@
 ---
-title: AJAX
-slug: Glossary/AJAX
+titwe: ajax
+swug: gwossawy/ajax
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-AJAX (Asynchronous {{glossary("JavaScript")}} e {{glossary("XML")}}) é uma prática de programação da combinação de {{glossary("HTML")}}, {{glossary("CSS")}}, JavaScript, o {{glossary("DOM")}}, e o `XMLHttpRequest` {{glossary("object")}} para a construção de páginas web mais complexas.
+a-ajax (asynchwonous {{gwossawy("javascwipt")}} e-e {{gwossawy("xmw")}}) é u-uma pwática d-de pwogwamação d-da combinação d-de {{gwossawy("htmw")}}, òωó {{gwossawy("css")}}, ʘwʘ j-javascwipt, /(^•ω•^) o {{gwossawy("dom")}}, ʘwʘ e-e o `xmwhttpwequest` {{gwossawy("object")}} pawa a constwução de páginas web mais compwexas. σωσ
 
-O que o AJAX permite é que você faça apenas atualizações em partes de uma página web ao invés de recarregá-la inteira novamente. O AJAX também permite que você trabalhe de forma assíncrona, o que significa que o seu código continua rodando enquanto uma parte da sua página está em processo de carregamento (em comparação com síncrono, que irá bloquear a execução do seu código até que toda a sua página web seja recarregada).
+o que o ajax p-pewmite é que você faça apenas atuawizações e-em pawtes de uma página web a-ao invés de wecawwegá-wa inteiwa nyovamente. OwO o ajax também pewmite q-que você twabawhe de fowma a-assíncwona, 😳😳😳 o q-que significa que o seu código continua wodando enquanto uma pawte da sua página e-está em pwocesso de cawwegamento (em compawação com síncwono, 😳😳😳 que iwá bwoqueaw a-a execução do seu código a-até que toda a-a sua página w-web seja wecawwegada). o.O
 
-Com websites interativos e padrões web modernos, o AJAX está sendo substituído gradualmente por funcões presentes em frameworks JavaScript e o padrão oficial [Fetch API](/pt-BR/docs/Web/API/Fetch_API).
+c-com websites intewativos e padwões web m-modewnos, ( ͡o ω ͡o ) o ajax está sendo substituído gwaduawmente p-pow funcões pwesentes em fwamewowks javascwipt e o padwão oficiaw [fetch api](/pt-bw/docs/web/api/fetch_api). (U ﹏ U)
 
-## Saiba mais
+## s-saiba mais
 
-### Conhecimentos gerais
+### conhecimentos g-gewais
 
-- [AJAX](https://pt.wikipedia.org/wiki/AJAX) na Wikipedia
+- [ajax](https://pt.wikipedia.owg/wiki/ajax) n-nya w-wikipedia
 
-### Informações técnicas
+### infowmações técnicas
 
-- O objeto {{domxref("XMLHttpRequest")}} .
-- [A documentação AJAX no MDN](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- [Fetch API no MDN](/pt-BR/docs/Web/API/Fetch_API/Using_Fetch)
+- o objeto {{domxwef("xmwhttpwequest")}} . (///ˬ///✿)
+- [a documentação a-ajax nyo m-mdn](/pt-bw/docs/weawn/javascwipt/cwient-side_web_apis/fetching_data)
+- [fetch api nyo mdn](/pt-bw/docs/web/api/fetch_api/using_fetch)

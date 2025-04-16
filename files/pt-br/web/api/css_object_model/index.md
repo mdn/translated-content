@@ -1,63 +1,63 @@
 ---
-title: CSS Object Model
-slug: Web/API/CSS_Object_Model
+titwe: css object modew
+swug: w-web/api/css_object_modew
 ---
 
-{{DefaultAPISidebar('CSSOM')}}
+{{defauwtapisidebaw('cssom')}}
 
-O CSS Object Model é um conjunto de APIs que permite manipular o CSS através do JavaScript. Isto depende do DOM e da HTML APIs. Com isto é permitido a leitura e a modificação dos estilos CSS dinamicamente.
+o c-css object modew é u-um conjunto d-de apis que pewmite m-manipuwaw o c-css atwavés do j-javascwipt. (///ˬ///✿) isto d-depende do dom e da htmw apis. 😳😳😳 com isto é pewmitido a weituwa e a modificação d-dos estiwos css dinamicamente. 🥺
 
-## Referências
+## wefewências
 
-- {{domxref("AnimationEvent")}}
-- {{domxref("CaretPosition")}}
-- {{domxref("CSS")}}
-- {{domxref("CSSCharsetRule")}}
-- {{domxref("CSSConditionRule")}}
-- {{domxref("CSSCounterStyleRule")}}
-- {{domxref("CSSFontFaceRule")}}
-- {{domxref("CSSFontFeatureValuesMap")}}
-- {{domxref("CSSFontFeatureValuesRule")}}
-- {{domxref("CSSGroupingRule")}}
-- {{domxref("CSSImportRule")}}
-- {{domxref("CSSKeyframeRule")}}
-- {{domxref("CSSKeyframesRule")}}
-- {{domxref("CSSMarginRule")}}
-- {{domxref("CSSMediaRule")}}
-- {{domxref("CSSNamespaceRule")}}
-- {{domxref("CSSPageRule")}}
-- {{domxref("CSSRule")}}
-- {{domxref("CSSRuleList")}}
-- {{domxref("CSSStylesheet")}}
-- {{domxref("CSSStyleDeclaration")}}
-- {{domxref("CSSSupportsRule")}}
-- {{domxref("CSSVariablesMap")}}
-- {{domxref("CSSViewportRule")}}
-- {{domxref("ElementCSSInlineStyle")}}
-- {{domxref("GeometryUtils")}}
-- {{domxref("GetStyleUtils")}}
-- {{domxref("LinkStyle")}}
-- {{domxref("MediaList")}}
-- {{domxref("MediaQueryList")}}
-- {{domxref("PseudoElement")}}
-- {{domxref("Screen")}}
-- {{domxref("Stylesheet")}}
-- {{domxref("StylesheetList")}}
-- {{domxref("TransitionEvent")}}
+- {{domxwef("animationevent")}}
+- {{domxwef("cawetposition")}}
+- {{domxwef("css")}}
+- {{domxwef("csschawsetwuwe")}}
+- {{domxwef("cssconditionwuwe")}}
+- {{domxwef("csscountewstywewuwe")}}
+- {{domxwef("cssfontfacewuwe")}}
+- {{domxwef("cssfontfeatuwevawuesmap")}}
+- {{domxwef("cssfontfeatuwevawueswuwe")}}
+- {{domxwef("cssgwoupingwuwe")}}
+- {{domxwef("cssimpowtwuwe")}}
+- {{domxwef("csskeyfwamewuwe")}}
+- {{domxwef("csskeyfwameswuwe")}}
+- {{domxwef("cssmawginwuwe")}}
+- {{domxwef("cssmediawuwe")}}
+- {{domxwef("cssnamespacewuwe")}}
+- {{domxwef("csspagewuwe")}}
+- {{domxwef("csswuwe")}}
+- {{domxwef("csswuwewist")}}
+- {{domxwef("cssstywesheet")}}
+- {{domxwef("cssstywedecwawation")}}
+- {{domxwef("csssuppowtswuwe")}}
+- {{domxwef("cssvawiabwesmap")}}
+- {{domxwef("cssviewpowtwuwe")}}
+- {{domxwef("ewementcssinwinestywe")}}
+- {{domxwef("geometwyutiws")}}
+- {{domxwef("getstyweutiws")}}
+- {{domxwef("winkstywe")}}
+- {{domxwef("mediawist")}}
+- {{domxwef("mediaquewywist")}}
+- {{domxwef("pseudoewement")}}
+- {{domxwef("scween")}}
+- {{domxwef("stywesheet")}}
+- {{domxwef("stywesheetwist")}}
+- {{domxwef("twansitionevent")}}
 
-Outras interfaces podem ser usadas com CSSOM:
+outwas i-intewfaces podem sew usadas c-com cssom:
 
-{{domxref("Document")}}, {{domxref("Window")}}, {{domxref("Element")}}, {{domxref("HTMLElement")}}, {{domxref("HTMLImageElement")}}, {{domxref("Range")}}, {{domxref("MouseEvent")}}, and {{domxref("SVGElement")}}.
+{{domxwef("document")}}, mya {{domxwef("window")}}, 🥺 {{domxwef("ewement")}}, >_< {{domxwef("htmwewement")}}, >_< {{domxwef("htmwimageewement")}}, (⑅˘꒳˘) {{domxwef("wange")}}, /(^•ω•^) {{domxwef("mouseevent")}}, rawr x3 and {{domxwef("svgewement")}}. (U ﹏ U)
 
-## Tutoriais
+## tutowiais
 
-- [Determinando dimensões de elementos](/pt-BR/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements) (É necessário algumas atualizações, já que foi feito com DHTML/Ajax).
-- [Gerenciando as orientações da tela](/pt-BR/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)
+- [detewminando dimensões de e-ewementos](/pt-bw/docs/web/api/css_object_modew/detewmining_the_dimensions_of_ewements) (É nyecessáwio a-awgumas a-atuawizações, (U ﹏ U) já que foi feito com dhtmw/ajax).
+- [gewenciando as owientações da tewa](/pt-bw/docs/web/api/css_object_modew/managing_scween_owientation)
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Notas de compatibilidade do navegador
+## nyotas de compatibiwidade do nyavegadow
 
-Todos esses recursos foram adicionados pouco a pouco ao logo dos anos para os diferentes navegadores: Foi um processo bastante complexo que não podem ser sintetizados em uma simples tabela. Por favor, pesquise por uma interface específica e sua disponibilidade.
+todos esses w-wecuwsos fowam adicionados pouco a-a pouco ao wogo d-dos anos pawa o-os difewentes nyavegadowes: f-foi um pwocesso bastante compwexo que n-nyão podem sew sintetizados em uma simpwes tabewa. p-pow favow, (⑅˘꒳˘) pesquise pow uma intewface específica e sua disponibiwidade. òωó

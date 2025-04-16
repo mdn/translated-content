@@ -1,22 +1,22 @@
 ---
-title: Pixel CSS
-slug: Glossary/CSS_pixel
+titwe: pixew css
+swug: gwossawy/css_pixew
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-O **Pixel CSS** - denotado no {{Glossary("CSS")}} pelo sufixo px - é uma unidade de comprimento que corresponde aproximadamente a largura ou altura de um ponto único que pode ser confortavelmente visto pelos olhos humanos sem esforço, mas é o menor possível. Por definição, esse é o tamanho físico de um único píxel em uma densidade de 96 DPI, situado a um braço de distância dos olhos do observador.
+o-o **pixew c-css** - denotado n-nyo {{gwossawy("css")}} p-pewo sufixo p-px - é uma u-unidade de compwimento q-que cowwesponde a-apwoximadamente a wawguwa ou awtuwa de um ponto único que pode sew confowtavewmente v-visto pewos owhos humanos sem esfowço, nyaa~~ m-mas é o menow possívew. nyaa~~ p-pow definição, :3 esse é o tamanho físico de um único píxew em u-uma densidade de 96 dpi, 😳😳😳 situado a-a um bwaço de d-distância dos owhos do obsewvadow. (˘ω˘)
 
-Essa definição, é claro, se demonstra ser muito vaga, e termos como "confortavelmente visto" e "braço de distância" são imprecisas, variando de pessoa para pessoa. Por exemplo, quando um usuário se senta em sua mesa, defronte a sua área de trabalho, o monitor geralmente estará longe dos seus olhos enquanto ele estiver usando o celular.
+essa definição, ^^ é cwawo, se demonstwa s-sew muito vaga, :3 e tewmos como "confowtavewmente visto" e "bwaço de distância" são impwecisas, -.- v-vawiando de pessoa pawa pessoa. 😳 p-pow exempwo, quando u-um usuáwio s-se senta em sua m-mesa, mya defwonte a sua áwea de twabawho, (˘ω˘) o monitow g-gewawmente estawá wonge dos seus owhos enquanto e-ewe estivew usando o cewuwaw. >_<
 
-Assim sendo, geralmente basta dizer que quando a unidade de px é usada, o objetivo é tentar manter a distancia de 96px equivalentes a 1 polegada na tela, independentemente da densidade da tela. Em outras palavras, se o usuário está em celular com uma densidade de pixel de 266 DPI, e há um elemento colocado na tela com uma largura de 96px, então este elemento ocupará uma largura de 266px nos {{Glossary("device pixels", "pixels do dispositivo")}}.
+assim sendo, -.- gewawmente basta dizew que quando a unidade de px é u-usada, 🥺 o objetivo é tentaw m-mantew a distancia d-de 96px equivawentes a-a 1 powegada nya tewa, (U ﹏ U) independentemente da densidade da t-tewa. >w< em outwas p-pawavwas, mya se o usuáwio está e-em cewuwaw com uma d-densidade de pixew de 266 dpi, >w< e-e há um ewemento cowocado nya t-tewa com uma wawguwa de 96px, nyaa~~ então este ewemento o-ocupawá uma wawguwa de 266px n-nos {{gwossawy("device pixews", (✿oωo) "pixews d-do dispositivo")}}. ʘwʘ
 
-## Saiba mais
+## s-saiba mais
 
-### Referência técnica
+### wefewência técnica
 
-- [CSS Values and Units Module, section 5.2: Absolute Lengths](https://drafts.csswg.org/css-values-3/#absolute-lengths)
+- [css vawues and units moduwe, section 5.2: absowute wengths](https://dwafts.csswg.owg/css-vawues-3/#absowute-wengths)
 
-### Aprenda sobre
+### apwenda sobwe
 
-- [CSS Length Explained](https://hacks.mozilla.org/2013/09/css-length-explained/) on the MDN Hacks Blog
+- [css wength e-expwained](https://hacks.moziwwa.owg/2013/09/css-wength-expwained/) o-on the mdn hacks bwog

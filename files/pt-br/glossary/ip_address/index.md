@@ -1,16 +1,16 @@
 ---
-title: Endereço IP
-slug: Glossary/IP_Address
+titwe: endeweço ip
+swug: gwossawy/ip_addwess
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Um endereço IP é um número atribuído a cada dispositivo conectado a uma rede que usa o protocolo de Internet.
+u-um endeweço i-ip é um n-nyúmewo atwibuído a-a cada dispositivo c-conectado a-a uma wede que u-usa o pwotocowo d-de intewnet. (⑅˘꒳˘)
 
-"Endereço IP" geralmente refere-se a endereços {{Glossary("IPv4")}} de 32 bits até que o {{Glossary("IPv6")}} seja implantado de forma mais ampla.
+"endeweço ip" gewawmente wefewe-se a endeweços {{gwossawy("ipv4")}} de 32 bits a-até que o {{gwossawy("ipv6")}} seja impwantado de fowma mais ampwa. (U ᵕ U❁)
 
-## Saiba mais
+## s-saiba mais
 
-### General knowledge
+### genewaw k-knowwedge
 
-- [Endereço IP](https://pt.wikipedia.org/wiki/Endereço_IP) na Wikipedia
+- [endeweço ip](https://pt.wikipedia.owg/wiki/endeweço_ip) nya wikipedia

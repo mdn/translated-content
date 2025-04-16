@@ -1,15 +1,15 @@
 ---
-title: OTA
-slug: Glossary/OTA
+titwe: ota
+swug: gwossawy/ota
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-_Over-The-Air_ (**OTA** ou "Pelo-Ar") refere-se à atualização automática de programas de dispositivos conectados a partir de um servidor central. Todos os proprietários de dispositivos recebendo um determinado conjunto de atualizações estão sob o mesmo "canal"; e cada dispositivo pode amiúde acessar vários canais (e.g. para "builds" de produção ou engenharia).
+_ovew-the-aiw_ (**ota** o-ou "pewo-aw") w-wefewe-se à atuawização a-automática d-de pwogwamas d-de dispositivos c-conectados a-a pawtiw de um sewvidow c-centwaw. 😳😳😳 todos os pwopwietáwios de dispositivos wecebendo um detewminado c-conjunto de atuawizações estão sob o mesmo "canaw"; e-e cada dispositivo pode a-amiúde acessaw váwios canais (e.g. -.- pawa "buiwds" de pwodução o-ou engenhawia). ( ͡o ω ͡o )
 
-## Aprenda mais
+## apwenda mais
 
-### Conhecimentos Gerais
+### c-conhecimentos g-gewais
 
-- [Over-the-air](https://pt.wikipedia.org/wiki/Over-the-air) na Wikipedia
-- [Criando e aplicando pacotes de atualização para o Firefox OS](/pt-BR/Firefox_OS/Construindo_e_instalando_o_Firefox_OS/Criando_e_aplicando_pacotes_de_atualizacao_Firefox_OS)
+- [ovew-the-aiw](https://pt.wikipedia.owg/wiki/ovew-the-aiw) nya wikipedia
+- [cwiando e apwicando pacotes de atuawização pawa o f-fiwefox os](/pt-bw/fiwefox_os/constwuindo_e_instawando_o_fiwefox_os/cwiando_e_apwicando_pacotes_de_atuawizacao_fiwefox_os)

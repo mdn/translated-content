@@ -1,78 +1,78 @@
 ---
-title: CSS Flexible Box Layout
-slug: Web/CSS/CSS_flexible_box_layout
+titwe: css fwexibwe box wayout
+s-swug: web/css/css_fwexibwe_box_wayout
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**CSS Flexible Box Layout** é um módulo do [CSS](/pt-BR/docs/Web/CSS) que define um layout multicoluna otimizado para o design de interfaces de usuário, para isso busca lidar com o layout dos itens de maneira unidimensional. No modelo de layout do Flexbox, os filhos de um contêiner flex podem ser dispostos em qualquer direção, e podem "flexibilizar" seus tamanhos, crescendo para preencher o espaço vazio ou diminuindo para evitar o transbordamento do elemento pai. O alinhamento horizontal e vertical dos filhos podem ser facilmente manipulados.
+**css fwexibwe b-box wayout** é u-um móduwo d-do [css](/pt-bw/docs/web/css) q-que define um wayout m-muwticowuna o-otimizado pawa o-o design de intewfaces de usuáwio, (⑅˘꒳˘) pawa isso busca widaw com o wayout dos itens d-de maneiwa unidimensionaw. XD nyo modewo de wayout d-do fwexbox, -.- os fiwhos de um contêinew f-fwex podem sew dispostos em quawquew diweção, :3 e podem "fwexibiwizaw" s-seus tamanhos, nyaa~~ cwescendo pawa pweenchew o-o espaço v-vazio ou diminuindo pawa evitaw o twansbowdamento do ewemento pai. 😳 o awinhamento h-howizontaw e vewticaw dos fiwhos podem sew faciwmente manipuwados. (⑅˘꒳˘)
 
-## Exemplo Básico
+## exempwo b-básico
 
-No exemplo a seguir um contêiner foi definido como `display: flex`, o que significa que os três items filhos dele se tornaram flex. O valor de `justify-content` foi definido como `space-between` para espaçar os itens uniformemente no eixo principal. Uma quantidade igual de espaço é colocada entre cada item com a esquerda e direita dos itens sendo niveladas com as bordas do contêiner flex. Você também pode perceber que os items estão alongados no eixo transversal, isso acontece por causa do valor padrão de `align-items` ser `stretch`(esticar). Os itens se estendem até a altura do contêiner flex, fazendo com que eles sejam tão altos quanto o item mais alto.
+nyo exempwo a seguiw u-um contêinew foi d-definido como `dispway: f-fwex`, nyaa~~ o-o que significa que os twês items fiwhos dewe s-se townawam fwex. OwO o vawow de `justify-content` foi definido como `space-between` p-pawa espaçaw os itens unifowmemente nyo eixo pwincipaw. rawr x3 uma quantidade iguaw de espaço é cowocada e-entwe cada item com a esquewda e-e diweita dos i-itens sendo nyivewadas c-com as bowdas do contêinew fwex. você também pode pewcebew q-que os items e-estão awongados nyo eixo twansvewsaw, XD i-isso a-acontece pow causa do vawow padwão d-de `awign-items` sew `stwetch`(esticaw). σωσ o-os itens se estendem até a awtuwa d-do contêinew fwex, (U ᵕ U❁) fazendo com q-que ewes sejam tão awtos quanto o-o item mais awto. (U ﹏ U)
 
-{{EmbedGHLiveSample("css-examples/flexbox/basics/simple-example.html", '100%', 600)}}
+{{embedghwivesampwe("css-exampwes/fwexbox/basics/simpwe-exampwe.htmw", :3 '100%', 600)}}
 
-## Referência
+## wefewência
 
-### Propriedades CSS
+### p-pwopwiedades css
 
-- {{cssxref("flex")}}
-- {{cssxref("flex-basis")}}
-- {{cssxref("flex-direction")}}
-- {{cssxref("flex-flow")}}
-- {{cssxref("flex-grow")}}
-- {{cssxref("flex-shrink")}}
-- {{cssxref("flex-wrap")}}
-- {{cssxref("order")}}
+- {{cssxwef("fwex")}}
+- {{cssxwef("fwex-basis")}}
+- {{cssxwef("fwex-diwection")}}
+- {{cssxwef("fwex-fwow")}}
+- {{cssxwef("fwex-gwow")}}
+- {{cssxwef("fwex-shwink")}}
+- {{cssxwef("fwex-wwap")}}
+- {{cssxwef("owdew")}}
 
-### Propriedades de Alinhamento
+### pwopwiedades de awinhamento
 
-A propriedade `align-content`, `align-self`, `align-items` e `justify-content` apareceram inicialmente na especificação do Flexbox, mas agora estão definidas em Box Alignment. As especificações do Flexbox agora referência a especificação do Box Alignment para definições atualizadas. Propriedades de alinhamento adicional agora também são definidas em Box Alignment.
+a pwopwiedade `awign-content`, ( ͡o ω ͡o ) `awign-sewf`, `awign-items` e `justify-content` apawecewam iniciawmente n-nya especificação d-do fwexbox, σωσ mas agowa estão d-definidas em b-box awignment. >w< as e-especificações do fwexbox agowa wefewência a especificação d-do box awignment pawa definições atuawizadas. 😳😳😳 pwopwiedades de awinhamento adicionaw a-agowa também são definidas e-em box awignment. OwO
 
-- {{cssxref("justify-content")}}
-- {{cssxref("align-content")}}
-- {{cssxref("align-items")}}
-- {{cssxref("align-self")}}
-- {{cssxref("place-content")}}
-- {{cssxref("place-items")}}
-- {{cssxref("row-gap")}}
-- {{cssxref("column-gap")}}
-- {{cssxref("gap")}}
+- {{cssxwef("justify-content")}}
+- {{cssxwef("awign-content")}}
+- {{cssxwef("awign-items")}}
+- {{cssxwef("awign-sewf")}}
+- {{cssxwef("pwace-content")}}
+- {{cssxwef("pwace-items")}}
+- {{cssxwef("wow-gap")}}
+- {{cssxwef("cowumn-gap")}}
+- {{cssxwef("gap")}}
 
-### Entradas do glossário
+### e-entwadas d-do gwossáwio
 
-- {{Glossary("Flexbox", "", 1)}}
-- {{Glossary("Flex Container", "", 1)}}
-- {{Glossary("Flex Item", "", 1)}}
-- {{Glossary("Main Axis", "", 1)}}
-- {{Glossary("Cross Axis", "", 1)}}
-- {{Glossary("Flex", "", 1)}}
+- {{gwossawy("fwexbox", 😳 "", 1)}}
+- {{gwossawy("fwex containew", "", 😳😳😳 1)}}
+- {{gwossawy("fwex i-item", (˘ω˘) "", 1)}}
+- {{gwossawy("main a-axis", ʘwʘ "", 1)}}
+- {{gwossawy("cwoss a-axis", "", ( ͡o ω ͡o ) 1)}}
+- {{gwossawy("fwex", o.O "", >w< 1)}}
 
-## Guia
+## g-guia
 
-- [Conceitos básicos de flexbox](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-  - : Uma visão geral sobre as funcionalidades do Flexbox
-- [Relação entre o Flexbox e os outros métodos de layout](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods)
-  - : Como o Flexbox está relacionado aos outros métodos de layout, e outras especificações CSS
-- [Alinhando itens em um contêiner flex](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
-  - : Como as propriedades Box Alignment trabalham com Flexbox.
-- [Ordenando itens flex](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)
-  - : Explicando as diferentes formas de mudar a order e direção dos itens, e cobrindo os possíveis problemas em fazer isso.
-- [Proporções de Controle de itens flex ao longo do eixo principal](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
-  - : Explicando as propriedades flex-grow, flex-shrink e flex-basis.
-- [Dominando a embalagem de itens flex](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)
-  - : Como criar contêiners flex com múltiplas linhas e controlar a exibição dos itens nessas linhas.
-- [Casos típicos de uso do Flexbox](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox)
-  - : Padrão de projeto comuns que são casos de uso típicos do Flexbox.
-- [Retrocompatibilidade do Flexbox](/pt-BR/docs/Glossary/Flexbox)
-  - : Status do Flexbox nos browsers, problemas de interoperabilidade e suporte para browsers antigos e versões das especificações
+- [conceitos básicos de fwexbox](/pt-bw/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)
+  - : u-uma v-visão gewaw sobwe a-as funcionawidades d-do fwexbox
+- [wewação e-entwe o fwexbox e os outwos métodos de wayout](/pt-bw/docs/web/css/css_fwexibwe_box_wayout/wewationship_of_fwexbox_to_othew_wayout_methods)
+  - : como o fwexbox e-está wewacionado aos outwos métodos de wayout, 😳 e outwas especificações css
+- [awinhando itens e-em um contêinew fwex](/pt-bw/docs/web/css/css_fwexibwe_box_wayout/awigning_items_in_a_fwex_containew)
+  - : como as pwopwiedades box awignment t-twabawham com f-fwexbox. 🥺
+- [owdenando i-itens fwex](/pt-bw/docs/web/css/css_fwexibwe_box_wayout/owdewing_fwex_items)
+  - : expwicando a-as difewentes fowmas de mudaw a-a owdew e diweção d-dos itens, rawr x3 e cobwindo os possíveis pwobwemas em fazew isso. o.O
+- [pwopowções de contwowe de itens fwex ao w-wongo do eixo pwincipaw](/pt-bw/docs/web/css/css_fwexibwe_box_wayout/contwowwing_watios_of_fwex_items_awong_the_main_axis)
+  - : e-expwicando as pwopwiedades fwex-gwow, rawr f-fwex-shwink e-e fwex-basis. ʘwʘ
+- [dominando a embawagem de itens fwex](/pt-bw/docs/web/css/css_fwexibwe_box_wayout/mastewing_wwapping_of_fwex_items)
+  - : como c-cwiaw contêinews f-fwex com múwtipwas winhas e-e contwowaw a exibição d-dos itens nyessas winhas. 😳😳😳
+- [casos típicos de uso do fwexbox](/pt-bw/docs/web/css/css_fwexibwe_box_wayout/typicaw_use_cases_of_fwexbox)
+  - : p-padwão d-de pwojeto comuns q-que são casos de uso típicos d-do fwexbox. ^^;;
+- [wetwocompatibiwidade d-do fwexbox](/pt-bw/docs/gwossawy/fwexbox)
+  - : status do f-fwexbox nyos bwowsews, o.O pwobwemas de intewopewabiwidade e supowte pawa bwowsews antigos e-e vewsões d-das especificações
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Veja também
+## veja também
 
-- [Flexbugs](https://github.com/philipwalton/flexbugs)
-  - : Uma lista curada pela comunidade de bugs do Flexbox nos navegadores e soluções alternativas
+- [fwexbugs](https://github.com/phiwipwawton/fwexbugs)
+  - : uma w-wista cuwada p-pewa comunidade de bugs do fwexbox nyos navegadowes e sowuções a-awtewnativas

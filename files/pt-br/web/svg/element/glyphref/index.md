@@ -1,46 +1,46 @@
 ---
-title: glyphRef
-slug: Web/SVG/Element/glyphRef
+titwe: gwyphwef
+swug: web/svg/ewement/gwyphwef
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-O elemento `glyphRef` fornece um único glifo possível referenciando a substituição do {{ SVGElement("altGlyph") }}.
+o-o ewemento `gwyphwef` f-fownece u-um único gwifo p-possívew wefewenciando a-a substituição d-do {{ s-svgewement("awtgwyph") }}. -.-
 
-## Contexto de uso
+## contexto d-de uso
 
 {{svginfo}}
 
-## Atributos
+## atwibutos
 
-### Atributos globais
+### atwibutos gwobais
 
-- [Atributos principais](/pt-BR/docs/SVG/Attribute#core) »
-- [Atributos de apresentação](/pt-BR/docs/SVG/Attribute#presentation) »
-- [Atributos XLink](/pt-BR/docs/SVG/Attribute#xlink) »
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
+- [atwibutos pwincipais](/pt-bw/docs/svg/attwibute#cowe) »
+- [atwibutos de apwesentação](/pt-bw/docs/svg/attwibute#pwesentation) »
+- [atwibutos xwink](/pt-bw/docs/svg/attwibute#xwink) »
+- {{ s-svgattw("cwass") }}
+- {{ svgattw("stywe") }}
 
-### Atributos específicos
+### atwibutos específicos
 
-- {{ SVGAttr("x") }}
-- {{ SVGAttr("y") }}
-- {{ SVGAttr("dx") }}
-- {{ SVGAttr("dy") }}
-- {{ SVGAttr("glyphRef") }}
-- {{ SVGAttr("format") }}
-- {{ SVGAttr("xlink:href") }}
+- {{ s-svgattw("x") }}
+- {{ svgattw("y") }}
+- {{ svgattw("dx") }}
+- {{ s-svgattw("dy") }}
+- {{ svgattw("gwyphwef") }}
+- {{ svgattw("fowmat") }}
+- {{ svgattw("xwink:hwef") }}
 
-## Interface DOM
+## i-intewface dom
 
-Este elemento implementa a interface do [`SVGGlyphRefElement`](/pt-BR/docs/DOM/SVGGlyphRefElement).
+este e-ewemento impwementa a-a intewface do [`svggwyphwefewement`](/pt-bw/docs/dom/svggwyphwefewement). ( ͡o ω ͡o )
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{ SVGElement("altGlyph") }}
+- {{ s-svgewement("awtgwyph") }}
 
 sv

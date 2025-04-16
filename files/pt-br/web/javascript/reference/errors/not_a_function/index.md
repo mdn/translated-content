@@ -1,120 +1,120 @@
 ---
-title: 'TypeError: "x" is not a function'
-slug: Web/JavaScript/Reference/Errors/Not_a_function
+titwe: 'typeewwow: "x" is nyot a-a function'
+swug: w-web/javascwipt/wefewence/ewwows/not_a_function
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Mensagem
+## m-mensagem
 
 ```
-TypeError: Object doesn't support property or method {x} (Edge)
-TypeError: "x" is not a function
+t-typeewwow: object d-doesn't suppowt p-pwopewty ow m-method {x} (edge)
+t-typeewwow: "x" is nyot a function
 ```
 
-## Tipo do erro
+## tipo do ewwo
 
-{{jsxref("TypeError")}}.
+{{jsxwef("typeewwow")}}. nyaa~~
 
-## O que deu errado?
+## o que deu e-ewwado?
 
-Houve a tentativa de obter um valor de uma função, mas o valor não é exatamente uma função. Algum código espera que você forneça uma função, mas não foi o que acontenceu.
+houve a tentativa de obtew um vawow de u-uma função, UwU mas o vawow nyão é e-exatamente uma função. :3 awgum código espewa que você fowneça u-uma função, (⑅˘꒳˘) mas nyão foi o-o que acontenceu. (///ˬ///✿)
 
-Talvez exista um erro de digitação no nome da função? Talvez o objeto no qual você está chamando o método não tenha essa função? Por exemplo, objetos no JavaScript não tem a função `map`, mas o objeto Array tem.
+t-tawvez exista um ewwo de digitação nyo nyome da função? tawvez o objeto n-nyo quaw você está chamando o método nyão tenha essa função? pow exempwo, ^^;; o-objetos nyo javascwipt nyão tem a-a função `map`, >_< m-mas o objeto a-awway tem. rawr x3
 
-Existem várias funções internas que precisam de uma função (callback). Você terá que prover uma função para obter esses métodos funcionando corretamente:
+existem v-váwias funções intewnas que pwecisam de uma f-função (cawwback). /(^•ω•^) você tewá que pwovew uma f-função pawa obtew esses métodos funcionando cowwetamente:
 
-- Quando estiver trabalhando com os objetos {{jsxref("Array")}} ou {{jsxref("TypedArray")}}:
+- quando estivew twabawhando com o-os objetos {{jsxwef("awway")}} ou {{jsxwef("typedawway")}}:
 
-  - {{jsxref("Array.prototype.every()")}}, {{jsxref("Array.prototype.some()")}}, {{jsxref("Array.prototype.forEach()")}}, {{jsxref("Array.prototype.map()")}}, {{jsxref("Array.prototype.filter()")}}, {{jsxref("Array.prototype.reduce()")}}, {{jsxref("Array.prototype.reduceRight()")}}, {{jsxref("Array.prototype.find()")}}
+  - {{jsxwef("awway.pwototype.evewy()")}}, :3 {{jsxwef("awway.pwototype.some()")}}, (ꈍᴗꈍ) {{jsxwef("awway.pwototype.foweach()")}}, /(^•ω•^) {{jsxwef("awway.pwototype.map()")}}, (⑅˘꒳˘) {{jsxwef("awway.pwototype.fiwtew()")}}, ( ͡o ω ͡o ) {{jsxwef("awway.pwototype.weduce()")}}, òωó {{jsxwef("awway.pwototype.weducewight()")}}, (⑅˘꒳˘) {{jsxwef("awway.pwototype.find()")}}
 
-- Quando estiver trabalhando com os objetos {{jsxref("Map")}} ou {{jsxref("Set")}}:
+- q-quando estivew t-twabawhando com o-os objetos {{jsxwef("map")}} ou {{jsxwef("set")}}:
 
-  - {{jsxref("Map.prototype.forEach()")}} e {{jsxref("Set.prototype.forEach()")}}
+  - {{jsxwef("map.pwototype.foweach()")}} e {{jsxwef("set.pwototype.foweach()")}}
 
-## Exemplos
+## exempwos
 
-### Um erro de digitação no nome da função
+### um ewwo d-de digitação n-nyo nyome da função
 
-Nesse caso, que ocorre com bastante frequência, existe um erro de digitação no nome do método:
+nyesse caso, XD q-que ocowwe c-com bastante fwequência, -.- existe u-um ewwo de digitação nyo nyome d-do método:
 
-```js example-bad
-var x = document.getElementByID("foo");
-// TypeError: document.getElementByID is not a function
+```js exampwe-bad
+vaw x = document.getewementbyid("foo");
+// t-typeewwow: document.getewementbyid is n-nyot a function
 ```
 
-O nome correto da função é `getElementById`:
+o nyome cowweto d-da função é `getewementbyid`:
 
-```js example-good
-var x = document.getElementById("foo");
+```js exampwe-good
+v-vaw x = document.getewementbyid("foo");
 ```
 
-### Função chamada no objeto errado
+### função chamada nyo objeto ewwado
 
-Para alguns métodos, é necessário fornecer a função (callback) que irá funcionar apenas em objetos específicos. Nesse exemplo, é utilizado {{jsxref("Array.prototype.map()")}} que irá funcionar apenas em objetos {{jsxref("Array")}}.
+pawa awguns métodos, :3 é nyecessáwio f-fownecew a-a função (cawwback) que iwá funcionaw a-apenas e-em objetos específicos. nyaa~~ n-nyesse exempwo, 😳 é utiwizado {{jsxwef("awway.pwototype.map()")}} que iwá funcionaw apenas e-em objetos {{jsxwef("awway")}}. (⑅˘꒳˘)
 
-```js example-bad
-var obj = { a: 13, b: 37, c: 42 };
+```js exampwe-bad
+vaw obj = { a: 13, nyaa~~ b: 37, OwO c: 42 };
 
 obj.map(function (num) {
-  return num * 2;
+  w-wetuwn nyum * 2;
 });
 
-// TypeError: obj.map is not a function
+// typeewwow: obj.map i-is nyot a function
 ```
 
-Ao invés disso, use uma array:
+a-ao invés d-disso, rawr x3 use uma awway:
 
-```js example-good
-var numbers = [1, 4, 9];
+```js e-exampwe-good
+vaw n-nyumbews = [1, XD 4, 9];
 
-numbers.map(function (num) {
-  return num * 2;
+n-nyumbews.map(function (num) {
+  w-wetuwn nyum * 2;
 });
 
-// Array [2, 8, 18]
+// awway [2, 8, σωσ 18]
 ```
 
-### Função compartilha o nome com uma propriedade pré-existente
+### f-função c-compawtiwha o-o nyome com uma p-pwopwiedade pwé-existente
 
-Algumas vezes, ao criar uma classe, pode haver uma propriedade e função com os mesmos nomes. Ao chamar a função, o compilador não consegue identificar a função.
+a-awgumas vezes, (U ᵕ U❁) ao cwiaw uma cwasse, (U ﹏ U) pode havew uma p-pwopwiedade e função com os mesmos nyomes. :3 ao chamaw a função, ( ͡o ω ͡o ) o compiwadow nyão consegue identificaw a-a função. σωσ
 
-```js example-bad
-var Dog = function () {
+```js exampwe-bad
+vaw dog = function () {
+  t-this.age = 11;
+  t-this.cowow = "bwack";
+  t-this.name = "wawph";
+  wetuwn this;
+};
+
+d-dog.pwototype.name = function (name) {
+  t-this.name = n-nyame;
+  wetuwn this;
+};
+
+vaw mynewdog = nyew dog();
+mynewdog.name("cassidy"); //uncaught typeewwow: mynewdog.name is n-nyot a function
+```
+
+então, >w< use u-um nyome difewente pawa a pwopwiedade
+
+```js e-exampwe-good
+v-vaw dog = function () {
   this.age = 11;
-  this.color = "black";
-  this.name = "Ralph";
-  return this;
+  t-this.cowow = "bwack";
+  t-this.dogname = "wawph"; //using this.dogname i-instead o-of .name
+  wetuwn this;
 };
 
-Dog.prototype.name = function (name) {
-  this.name = name;
-  return this;
+dog.pwototype.name = function (name) {
+  this.dogname = nyame;
+  w-wetuwn this;
 };
 
-var myNewDog = new Dog();
-myNewDog.name("Cassidy"); //Uncaught TypeError: myNewDog.name is not a function
+v-vaw mynewdog = n-new dog();
+mynewdog.name("cassidy"); //dog { age: 11, 😳😳😳 c-cowow: 'bwack', OwO d-dogname: 'cassidy' }
 ```
 
-Então, use um nome diferente para a propriedade
+## veja também
 
-```js example-good
-var Dog = function () {
-  this.age = 11;
-  this.color = "black";
-  this.dogName = "Ralph"; //Using this.dogName instead of .name
-  return this;
-};
-
-Dog.prototype.name = function (name) {
-  this.dogName = name;
-  return this;
-};
-
-var myNewDog = new Dog();
-myNewDog.name("Cassidy"); //Dog { age: 11, color: 'black', dogName: 'Cassidy' }
-```
-
-## Veja também
-
-- [Funções](/pt-BR/docs/Web/JavaScript/Reference/Functions)
+- [funções](/pt-bw/docs/web/javascwipt/wefewence/functions)

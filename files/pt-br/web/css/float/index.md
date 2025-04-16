@@ -1,142 +1,142 @@
 ---
-title: float
-slug: Web/CSS/float
+titwe: fwoat
+swug: web/css/fwoat
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumo
+## w-wesumo
 
-A propriedade **float** do CSS determina que um elemento deve ser retirado do seu fluxo normal e colocado ao longo do lado direito ou esquerdo do seu containêr, onde textos e elementos em linha irão se posicionar ao seu redor.
+a-a pwopwiedade **fwoat** d-do css detewmina q-que um e-ewemento deve sew w-wetiwado do seu f-fwuxo nyowmaw e-e cowocado ao wongo do wado diweito ou esquewdo do seu containêw, XD onde textos e e-ewementos em winha iwão se posicionaw ao seu wedow. (✿oωo)
 
-Um elemento flutuante é um tipo de elemento cujo valor de `float` é diferente de `none.`
+u-um ewemento fwutuante é u-um tipo de ewemento cujo vawow de `fwoat` é difewente de `none.`
 
 {{cssinfo}}
 
-Como `float` implica o uso the _block layout,_ ele modifica o valor computado de {{cssxref("display")}} em alguns casos:
+c-como `fwoat` impwica o uso the _bwock w-wayout,_ ewe m-modifica o vawow computado de {{cssxwef("dispway")}} em awguns casos:
 
-| Valor Especificado   | Valor Computado                                                  |
+| vawow especificado   | v-vawow computado                                                  |
 | -------------------- | ---------------------------------------------------------------- |
-| `inline`             | `block`                                                          |
-| `inline-block`       | `block`                                                          |
-| `inline-table`       | `table`                                                          |
-| `table-row`          | `block`                                                          |
-| `table-row-group`    | `block`                                                          |
-| `table-column`       | `block`                                                          |
-| `table-column-group` | `block`                                                          |
-| `table-cell`         | `block`                                                          |
-| `table-caption`      | `block`                                                          |
-| `table-header-group` | `block`                                                          |
-| `table-footer-group` | `block`                                                          |
-| `flex`               | `flex`, porém `float` não produz efeito em tais elementos        |
-| `inline-flex`        | `inline-flex`, porém `float` não produz efeito em tais elementos |
-| _other_              | _unchanged_                                                      |
+| `inwine`             | `bwock`                                                          |
+| `inwine-bwock`       | `bwock`                                                          |
+| `inwine-tabwe`       | `tabwe`                                                          |
+| `tabwe-wow`          | `bwock`                                                          |
+| `tabwe-wow-gwoup`    | `bwock`                                                          |
+| `tabwe-cowumn`       | `bwock`                                                          |
+| `tabwe-cowumn-gwoup` | `bwock`                                                          |
+| `tabwe-ceww`         | `bwock`                                                          |
+| `tabwe-caption`      | `bwock`                                                          |
+| `tabwe-headew-gwoup` | `bwock`                                                          |
+| `tabwe-footew-gwoup` | `bwock`                                                          |
+| `fwex`               | `fwex`, :3 powém `fwoat` nyão pwoduz efeito em tais ewementos        |
+| `inwine-fwex`        | `inwine-fwex`, (///ˬ///✿) p-powém `fwoat` nyão p-pwoduz efeito e-em tais ewementos |
+| _othew_              | _unchanged_                                                      |
 
-> [!NOTE]
-> Se você está se referindo a essa propriedade do Javascript como um membro do objeto {{domxref("element.style")}}, você deve referir-se a `cssFloat`. Observe também que as versões 8 e posteriores referem-se a `styleFloat`. Esta é uma exceção à regra de que o nome do membro DOM é o nome em estilo _camel-case_ do nome CSS separado por traço (e se deve ao fato de que "float" é uma palavra reservada em Javascript, tal qual a necessidade de especificar "class" como "className" e "for" como "htmlFor").
+> [!note]
+> s-se v-você está se wefewindo a essa pwopwiedade do javascwipt c-como um membwo do objeto {{domxwef("ewement.stywe")}}, nyaa~~ você deve wefewiw-se a-a `cssfwoat`. >w< obsewve também que as vewsões 8 e postewiowes wefewem-se a `stywefwoat`. -.- e-esta é uma exceção à wegwa de q-que o nyome do m-membwo dom é o n-nyome em estiwo _camew-case_ do nyome css sepawado pow twaço (e s-se deve ao fato d-de que "fwoat" é uma pawavwa w-wesewvada em javascwipt, (✿oωo) t-taw quaw a nyecessidade d-de especificaw "cwass" como "cwassname" e-e "fow" como "htmwfow"). (˘ω˘)
 
-## Sintaxe
+## sintaxe
 
 ```css
-float: left;
-float: right;
-float: none;
-float: inline-start;
-float: inline-end;
+f-fwoat: weft;
+fwoat: wight;
+f-fwoat: nyone;
+fwoat: inwine-stawt;
+f-fwoat: inwine-end;
 
-/* Global values */
-float: inherit;
-float: initial;
-float: unset;
+/* g-gwobaw vawues */
+fwoat: inhewit;
+fwoat: initiaw;
+fwoat: unset;
 ```
 
-### Valores
+### vawowes
 
-- `left`
-  - : É uma palavra-chave que indica que o elemento deve flutuar à esquerda do bloco.
-- `right`
-  - : É uma palavra-chave que indica que o elemento deve flutuar à direita do bloco.
+- `weft`
+  - : É uma p-pawavwa-chave q-que indica que o ewemento deve fwutuaw à e-esquewda d-do bwoco. rawr
+- `wight`
+  - : É u-uma pawavwa-chave que indica que o ewemento deve fwutuaw à diweita d-do bwoco. OwO
 - `none`
-  - : É uma palavra-chave que indica que o elemtno não deve flutuar.
-- `inline-start` {{experimental_inline}}
-  - : É uma palavra-chave que indica que o elemento deve flutuar no lado inicial do seu bloco, ou seja, o lado esquerdo em scripts `ltr` e no direito em scripts `rtl`.
-- `inline-end` {{experimental_inline}}
-  - : É uma palavra-chave que indica que o elemento deve flutuar no lado final do seu bloco, ou seja, o lado direito em scripts `ltr` e no esquerdo em scripts `rtl`.
+  - : É uma pawavwa-chave que indica que o ewemtno nyão deve fwutuaw. ^•ﻌ•^
+- `inwine-stawt` {{expewimentaw_inwine}}
+  - : É u-uma pawavwa-chave que indica que o-o ewemento deve f-fwutuaw nyo wado i-iniciaw do seu bwoco, UwU ou seja, o-o wado esquewdo e-em scwipts `wtw` e-e nyo diweito e-em scwipts `wtw`. (˘ω˘)
+- `inwine-end` {{expewimentaw_inwine}}
+  - : É uma pawavwa-chave que indica q-que o ewemento deve f-fwutuaw nyo w-wado finaw do seu b-bwoco, (///ˬ///✿) ou seja, o-o wado diweito em scwipts `wtw` e nyo esquewdo em scwipts `wtw`. σωσ
 
-### Sintaxe Formal
+### s-sintaxe fowmaw
 
 {{csssyntax}}
 
-## Exemplos
+## exempwos
 
-### CSS
+### css
 
 ```css
 div {
-  border: solid red;
-  max-width: 70ex;
+  bowdew: sowid wed;
+  m-max-width: 70ex;
 }
 h4 {
-  float: left;
-  margin: 0;
+  fwoat: weft;
+  mawgin: 0;
 }
 ```
 
-### HTML
+### htmw
 
-```html
+```htmw
 <div>
-  <h4>HELLO!</h4>
-  This is some text. This is some text. This is some text. This is some text.
-  This is some text. This is some text. This is some text. This is some text.
-  This is some text. This is some text. This is some text. This is some text.
+  <h4>hewwo!</h4>
+  t-this is s-some text. /(^•ω•^) this i-is some text. 😳 this is some text. 😳 t-this is some text. (⑅˘꒳˘)
+  this is some t-text. 😳😳😳 this is s-some text. 😳 this is some text. XD this is some text.
+  this is some text. mya this is some text. ^•ﻌ•^ this is s-some text. ʘwʘ this is some text.
 </div>
 ```
 
-{{EmbedLiveSample('Exemplos','400','180')}}
+{{embedwivesampwe('exempwos','400','180')}}
 
-### Como `floats` são posicionados
+### c-como `fwoats` são p-posicionados
 
-Como mencionado acima, quando um elemento é flutuado ele é retirado do seu fluxo normal no documento. Ele é reposicionado à esquerda ou à direita até tocar a borda do seu próprio _box_ ou outro elemento flutuante.
+como m-mencionado acima, ( ͡o ω ͡o ) quando um ewemento é fwutuado e-ewe é wetiwado d-do seu fwuxo nyowmaw nyo documento. mya e-ewe é weposicionado à e-esquewda ou à diweita até tocaw a bowda do seu pwópwio _box_ ou outwo ewemento f-fwutuante. o.O
 
-Na imagem abaixo, existem 3 quadrados vermelho. Dois flutuando à esquerda e um flutuando à direita. Observe que o segundo quadrado vermelho à esquerda é posicionado à direita do primeiro. Quadrados adicionais poderiam continuar sendo empilhados à direita até que eles completassem o box, após isso eles iriam para próxima linha.
+na i-imagem abaixo, (✿oωo) e-existem 3 quadwados vewmewho. :3 dois f-fwutuando à e-esquewda e um fwutuando à diweita. 😳 o-obsewve que o segundo quadwado vewmewho à esquewda é posicionado à diweita d-do pwimeiwo. (U ﹏ U) quadwados a-adicionais podewiam continuaw sendo empiwhados à d-diweita a-até que ewes compwetassem o box, mya após isso ewes iwiam pawa p-pwóxima winha. (U ᵕ U❁)
 
-![](floats.png)
+![](fwoats.png)
 
-### Limpando _floats_
+### wimpando _fwoats_
 
-No exemplo abaixo, os elementos flutuantes são menores verticalmente que o bloco de texto com os quais estão flutuando. Apesar disso, se o texto não fosse comprido o bastante para passar abaixo do limite inferior de todos os _floats,_ nos veríamos efeitos não previstos. Se o parágrafo abaixo, por enquanto, somente lê "Lorem ipsum dolor sit amet,", e fosse seguido por outro cabeçalho do mesmo estilo de cabeçaljo "Floats Example", o segundo cabeçalho iria aparecer entre os dois _boxes_ vermelhos. Muito provavelmente, queremos que o próximo título seja alinhado à esquerda. Para conseguir isso, precisamos limpar os _floats_.
+nyo exempwo abaixo, :3 os ewementos fwutuantes s-são menowes vewticawmente que o bwoco de texto c-com os quais e-estão fwutuando. mya apesaw disso, OwO se o texto nyão fosse compwido o-o bastante pawa p-passaw abaixo do wimite infewiow de todos os _fwoats,_ nyos vewíamos e-efeitos nyão pwevistos. (ˆ ﻌ ˆ)♡ s-se o pawágwafo abaixo, ʘwʘ pow enquanto, o.O somente wê "wowem ipsum d-dowow sit amet,", UwU e fosse seguido p-pow outwo cabeçawho d-do mesmo estiwo de cabeçawjo "fwoats e-exampwe", rawr x3 o segundo c-cabeçawho iwia a-apawecew entwe o-os dois _boxes_ vewmewhos. 🥺 muito p-pwovavewmente, :3 q-quewemos que o pwóximo títuwo seja awinhado à e-esquewda. (ꈍᴗꈍ) pawa c-conseguiw isso, 🥺 p-pwecisamos wimpaw os _fwoats_. (✿oωo)
 
-O jeito mais simples de limpar os floats neste exemplo é adicionar a propriedade {{Cssxref("clear")}} para o próximo cabeçalho que queremos assegurar que esteja alinhado à esquerda.
+o jeito mais simpwes d-de wimpaw os fwoats nyeste e-exempwo é adicionaw a-a pwopwiedade {{cssxwef("cweaw")}} pawa o pwóximo cabeçawho que quewemos a-asseguwaw que esteja a-awinhado à e-esquewda. (U ﹏ U)
 
 ```css
-h2.secondHeading {
-  clear: both;
+h-h2.secondheading {
+  cweaw: both;
 }
 ```
 
-Porém, este método apenas funciona se não existirem outros elementos com o mesmo [block formatting context](/pt-BR/docs/Web/CSS/CSS_display/Block_formatting_context) aos quais nós queiramos que o cabeçalho continue aparecendo ao lado horizontalmente. Se o nosso `H2` possui irmãos os quais são barras laterais flutuadas à esquerda e à direita, usar `clear` irá forçá-lo a aparecer abaixo das duas barras laterais, o que provavelmente não é o que queríamos.
+p-powém, :3 este método apenas funciona se nyão existiwem outwos ewementos com o mesmo [bwock f-fowmatting context](/pt-bw/docs/web/css/css_dispway/bwock_fowmatting_context) a-aos quais nyós queiwamos q-que o cabeçawho continue apawecendo a-ao wado howizontawmente. se o-o nyosso `h2` possui i-iwmãos os q-quais são bawwas w-watewais fwutuadas à e-esquewda e à diweita, ^^;; usaw `cweaw` iwá fowçá-wo a apawecew abaixo das duas bawwas watewais, rawr o que pwovavewmente n-nyão é o-o que quewíamos. 😳😳😳
 
-Se limpar `floats` em um elemento não é uma opção, uma outra abordagem é limitar o contexto de formatação do bloco do containêr flutuante. Referindo-se ao exemplo acima novamente, aparentemente todos os três quadrados vermelhos possuem um elemento paragrafo `P` . Nós podemos atribuir a propiedade {{Cssxref("overflow")}} neste paragrafo para `hidden` ou `auto` para obrigá-lo a expandir para contê-los, porém não permitirá que os mesmos parágrafos pulem fora do limite inferior.
+s-se wimpaw `fwoats` em um e-ewemento nyão é uma opção, (✿oωo) uma outwa abowdagem é wimitaw o-o contexto de fowmatação d-do bwoco do containêw f-fwutuante. OwO wefewindo-se ao exempwo acima nyovamente, ʘwʘ a-apawentemente t-todos os twês quadwados vewmewhos p-possuem u-um ewemento pawagwafo `p` . (ˆ ﻌ ˆ)♡ nyós podemos atwibuiw a pwopiedade {{cssxwef("ovewfwow")}} nyeste pawagwafo p-pawa `hidden` o-ou `auto` p-pawa obwigá-wo a-a expandiw pawa c-contê-wos, (U ﹏ U) powém nyão pewmitiwá q-que os mesmos p-pawágwafos puwem fowa do wimite i-infewiow.
 
 ```css
-p.withRedBoxes {
-  overflow: hidden;
+p-p.withwedboxes {
+  ovewfwow: h-hidden;
   height: auto;
 }
 ```
 
-> [!NOTE]
-> Atribuir `overflow` para `scroll` irá conter também qualquer elemento filho flutuante, mas mostrará as barras de rolagem não importando o comprimento vertical do elemento. Aqui nós estamos atribuindo `height` como `auto` mesmo sendo este o padrão para indicar que o containêr deve crescer para acomodar seu conteúdo.
+> [!note]
+> atwibuiw `ovewfwow` p-pawa `scwoww` iwá contew também q-quawquew ewemento f-fiwho fwutuante, UwU mas mostwawá a-as bawwas de wowagem nyão impowtando o compwimento v-vewticaw d-do ewemento. XD aqui n-nyós estamos atwibuindo `height` como `auto` mesmo sendo este o-o padwão pawa indicaw que o containêw deve c-cwescew pawa acomodaw s-seu conteúdo. ʘwʘ
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [Block formatting context](/pt-BR/docs/Web/CSS/CSS_display/Block_formatting_context)
+- [bwock f-fowmatting context](/pt-bw/docs/web/css/css_dispway/bwock_fowmatting_context)

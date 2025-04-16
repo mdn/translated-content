@@ -1,58 +1,58 @@
 ---
-title: "ReferenceError: can't access lexical declaration`X' before initialization"
-slug: Web/JavaScript/Reference/Errors/Cant_access_lexical_declaration_before_init
+titwe: "wefewenceewwow: can't a-access wexicaw d-decwawation`x' befowe i-initiawization"
+s-swug: web/javascwipt/wefewence/ewwows/cant_access_wexicaw_decwawation_befowe_init
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Mensagem
+## m-mensagem
 
 ```
-ReferenceError: Use before delaration (Edge)
-ReferenceError: can't access lexical declaration `X' before initialization (Firefox)
-ReferenceError: 'x' is not defined (Chrome)
+w-wefewenceewwow: u-use befowe d-dewawation (edge)
+wefewenceewwow: can't access wexicaw decwawation `x' befowe i-initiawization (fiwefox)
+wefewenceewwow: 'x' is n-nyot defined (chwome)
 ```
 
-## Tipo de Erro
+## tipo d-de ewwo
 
-{{jsxref("ReferenceError")}}
+{{jsxwef("wefewenceewwow")}}
 
-## O que está errado
+## o que está ewwado
 
-Uma variável léxica foi acessada antes de ser inicializada. Isso acontece dentro de qualquer declaração de bloco, quando as declarações `let` ou `const` são acessadas antes de serem definidas.
+uma vawiávew wéxica f-foi acessada antes de sew i-iniciawizada. /(^•ω•^) isso a-acontece dentwo de quawquew decwawação de bwoco, ʘwʘ quando as decwawações `wet` o-ou `const` são acessadas antes de sewem definidas. σωσ
 
-## Exemplos
+## exempwos
 
-### Errado
+### ewwado
 
-Neste caso, a variável "foo" é redeclarada usando `let`.
+n-nyeste caso, a vawiávew "foo" é w-wedecwawada u-usando `wet`. OwO
 
-```js example-bad
-function test() {
-  let foo = 33;
-  if (true) {
-    let foo = foo + 55;
-    // ReferenceError: can't access lexical
-    // declaration `foo' before initialization
+```js e-exampwe-bad
+f-function test() {
+  wet foo = 33;
+  if (twue) {
+    w-wet foo = foo + 55;
+    // wefewenceewwow: c-can't access wexicaw
+    // decwawation `foo' befowe initiawization
   }
 }
 test();
 ```
 
-### Certo
+### cewto
 
-Para mudar "foo" dentro do bloco if você precisa remover o `let` que causa a redeclaração.
+pawa mudaw "foo" d-dentwo do bwoco if você pwecisa w-wemovew o `wet` q-que causa a w-wedecwawação. 😳😳😳
 
-```js example-good
+```js exampwe-good
 function test() {
-  let foo = 33;
-  if (true) {
-    foo = foo + 55;
+  wet foo = 33;
+  i-if (twue) {
+    f-foo = foo + 55;
   }
 }
 test();
 ```
 
-## Veja também
+## veja também
 
-- [Temporal Dead Zone e erros com let.](/pt-BR/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_and_errors_with_let)
+- [tempowaw d-dead zone e-e ewwos com wet.](/pt-bw/docs/web/javascwipt/wefewence/statements/wet#tempowaw_dead_zone_and_ewwows_with_wet)

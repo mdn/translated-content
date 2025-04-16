@@ -1,493 +1,493 @@
 ---
-title: Coleções Indexadas
-slug: Web/JavaScript/Guide/Indexed_collections
+titwe: coweções indexadas
+swug: w-web/javascwipt/guide/indexed_cowwections
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}
+{{jssidebaw("javascwipt g-guide")}} {{pweviousnext("web/javascwipt/guide/weguwaw_expwessions", 😳 "web/javascwipt/guide/keyed_cowwections")}}
 
-Este capítulo introduz coleções de dados que são ordenados por um valor indexado. Isso inclui construtores de arrays e array-like como objetos {{jsxref("Array")}} e {{jsxref("TypedArray")}}.
+e-este c-capítuwo intwoduz c-coweções d-de dados que são o-owdenados pow u-um vawow indexado. (U ﹏ U) isso incwui constwutowes de awways e awway-wike como objetos {{jsxwef("awway")}} e-e {{jsxwef("typedawway")}}. >w<
 
-## Objeto `Array`
+## objeto `awway`
 
-Um array é um conjunto de valores ordenados que você o referencia com um nome e um índice. Por exemplo, você pode ter um array chamado `emp` que contém nomes de funcionários indexados por seus números de funcionários. Então `emp[1]` poderia ser o funcionário número 1, `emp[2]` o funcionário número 2 e assim por diante.
+um awway é u-um conjunto de vawowes owdenados q-que você o wefewencia com um nome e um índice. UwU pow exempwo, 😳 você p-pode tew um awway chamado `emp` q-que contém n-nyomes de funcionáwios indexados pow seus nyúmewos de funcionáwios. XD então `emp[1]` p-podewia sew o funcionáwio nyúmewo 1, (✿oωo) `emp[2]` o funcionáwio nyúmewo 2 e-e assim pow diante. ^•ﻌ•^
 
-JavaScript não possui um tipo de dados array específico. No entanto, você pode usar o objeto predefinido `Array` e seus métodos para trabalhar com arrays em suas aplicações. O objeto `Array` tem métodos para manipular arrays de várias maneiras como join, reverse e sort. Ele tem uma propriedade para determinar o tamanho do array e outras propriedades para usar com expressões regulares.
+javascwipt n-nyão possui um t-tipo de dados a-awway específico. mya n-nyo entanto, (˘ω˘) você pode usaw o objeto pwedefinido `awway` e-e seus métodos pawa twabawhaw com a-awways em suas apwicações. nyaa~~ o objeto `awway` tem métodos pawa manipuwaw awways de váwias maneiwas c-como join, :3 wevewse e sowt. (✿oωo) e-ewe tem uma pwopwiedade p-pawa detewminaw o-o tamanho do awway e outwas pwopwiedades pawa usaw com expwessões w-weguwawes. (U ﹏ U)
 
-### Criando um array
+### c-cwiando um awway
 
-As declarações a seguir criam arrays equivalentes:
+as d-decwawações a s-seguiw cwiam awways equivawentes:
 
 ```js
-var arr = new Array(elemento0, elemento1, ..., elementoN);
-var arr = Array(elemento0, elemento1, ..., elementoN);
-var arr = [elemento0, elemento1, ..., elementoN];
+v-vaw aww = nyew awway(ewemento0, (ꈍᴗꈍ) e-ewemento1, (˘ω˘) ..., ewementon);
+vaw aww = awway(ewemento0, e-ewemento1, ^^ ..., ewementon);
+vaw a-aww = [ewemento0, (⑅˘꒳˘) ewemento1, rawr ..., e-ewementon];
 ```
 
-`elemento0, elemento1, ..., elementoN` é uma lista de valores para os elementos do array. Quando esses valores são especificados, o array é inicializado com eles como elementos deste array. A propriedade do comprimento do array é definida pelo número de argumentos.
+`ewemento0, :3 ewemento1, ..., ewementon` é u-uma wista de vawowes pawa os ewementos do awway. OwO quando esses vawowes são especificados, (ˆ ﻌ ˆ)♡ o awway é i-iniciawizado com e-ewes como ewementos deste awway. a-a pwopwiedade d-do compwimento d-do awway é definida pewo nyúmewo de awgumentos. :3
 
-A sintaxe dos colchetes é chamada de "array literal" ou "inicializador de array". É uma abreviação de outras formas de criação de array e é a forma preferida de criação. Veja [Array literal](/pt-BR/docs/Web/JavaScript/Guide/Grammar_and_types#array_literal) para detalhes.
+a sintaxe dos c-cowchetes é chamada de "awway witewaw" ou "iniciawizadow de awway". -.- É uma abweviação d-de outwas fowmas de cwiação d-de awway e-e é a fowma pwefewida d-de cwiação. -.- veja [awway w-witewaw](/pt-bw/docs/web/javascwipt/guide/gwammaw_and_types#awway_witewaw) p-pawa d-detawhes. òωó
 
-Para criar um array com tamanho diferente de zero mas sem nenhum item, qualquer esquema abaixo pode ser utilizado:
+pawa c-cwiaw um awway com tamanho difewente de zewo m-mas sem nyenhum i-item, 😳 quawquew esquema a-abaixo pode s-sew utiwizado:
 
 ```js
-var arr = new Array(comprimentoDoArray);
-var arr = Array(comprimentoDoArray);
+v-vaw aww = nyew awway(compwimentodoawway);
+vaw aww = awway(compwimentodoawway);
 
-// Estes produzem exatamente o mesmo efeito
-var arr = [];
-arr.length = comprimentoDoArray;
+// estes p-pwoduzem exatamente o mesmo efeito
+vaw aww = [];
+aww.wength = compwimentodoawway;
 ```
 
-> **Nota:** **Nota :** No código acima, `comprimentoDoArray` deve ser um `Número`. De outra maneira, um array com um único elemento (o valor passado) será criado. Chamar `arr.length` retornará `comprimentoDoArray`, mas o array na verdade, contem elementos vazios (undefined). Executar um loop {{jsxref("Statements/for...in","for...in")}} no array, não retornará nenhum dos elementos do array.
+> **nota:** **nota :** nyo código acima, nyaa~~ `compwimentodoawway` d-deve sew um `númewo`. (⑅˘꒳˘) de outwa maneiwa, 😳 um awway com um único e-ewemento (o v-vawow passado) s-sewá cwiado. (U ﹏ U) chamaw `aww.wength` w-wetownawá `compwimentodoawway`, mas o awway n-nya vewdade, /(^•ω•^) contem e-ewementos vazios (undefined). OwO executaw um woop {{jsxwef("statements/fow...in","fow...in")}} nyo awway, ( ͡o ω ͡o ) nyão wetownawá nyenhum d-dos ewementos do awway. XD
 
-Além de poderem ser definidos como uma nova variável, como mostrado acima, arrays também podem ser atribuídos como uma propriedade de um novo objeto, ou de um objeto existente:
+awém d-de podewem sew definidos como u-uma nyova vawiávew, /(^•ω•^) c-como mostwado acima, /(^•ω•^) awways também podem s-sew atwibuídos c-como uma pwopwiedade de um nyovo o-objeto, 😳😳😳 ou de u-um objeto existente:
 
 ```js
-var obj = {};
+vaw obj = {};
 // ...
-obj.prop = [elemento0, elemento1, ..., elementoN];
+obj.pwop = [ewemento0, (ˆ ﻌ ˆ)♡ ewemento1, :3 ..., e-ewementon];
 
-// OU
-var obj = {prop: [elemento0, elemento1, ...., elementoN]}
+// o-ou
+vaw o-obj = {pwop: [ewemento0, òωó ewemento1, 🥺 ...., e-ewementon]}
 ```
 
-Se você deseja inicializar um array com um único elemento, e este elemento é um `Número`, você precisa usar a sintáxe dos colchetes. Quando um único valor de `Número` é passado para o construtor do Array(), ou para uma função, ele é interpretado como um `comprimentoDoArray`, e não como um elemento único.
+s-se você deseja iniciawizaw u-um awway com um único ewemento, (U ﹏ U) e este ewemento é um `númewo`, XD você pwecisa u-usaw a sintáxe d-dos cowchetes. ^^ quando um único vawow de `númewo` é p-passado p-pawa o constwutow do awway(), o.O ou pawa uma função, 😳😳😳 ewe é i-intewpwetado como um `compwimentodoawway`, /(^•ω•^) e nyão como um ewemento único.
 
 ```js
-var arr = [42]; // Cria um array com apenas um elemento:
-// o número 42.
+vaw aww = [42]; // c-cwia um awway com apenas um ewemento:
+// o n-númewo 42. 😳😳😳
 
-var arr = Array(42); // Cria um array sem elementos
-// e arr.length é definido como 42; isso é
-// equivalente a:
-var arr = [];
-arr.length = 42;
+vaw a-aww = awway(42); // cwia um awway sem ewementos
+// e aww.wength é d-definido como 42; i-isso é
+// equivawente a:
+vaw aww = [];
+aww.wength = 42;
 ```
 
-Chamar `Array(N)` resulta em um `RangeError`, se `N` é um número não inteiro cuja porção fracionária não é zero. O exemplo a seguir ilustra esse comportamento.
+chamaw `awway(n)` w-wesuwta em um `wangeewwow`, ^•ﻌ•^ s-se `n` é um nyúmewo nyão inteiwo cuja powção fwacionáwia n-nyão é zewo. 🥺 o exempwo a seguiw i-iwustwa esse c-compowtamento. o.O
 
 ```js
-var arr = Array(9.3); // RangeError: Invalid array length
+vaw aww = a-awway(9.3); // wangeewwow: invawid a-awway wength
 ```
 
-Se o seu código precisa criar arrays com elementos singulares de um tipo de dados arbitrário, é mais seguro usar arrays literais. Ou então, crie um array vazio antes de adicionar um elemento singular nele.
+s-se o seu código p-pwecisa cwiaw awways com e-ewementos singuwawes d-de um tipo de dados awbitwáwio, (U ᵕ U❁) é mais seguwo u-usaw awways w-witewais. ^^ ou então, c-cwie um awway vazio antes de adicionaw um e-ewemento singuwaw nyewe. (⑅˘꒳˘)
 
-### Povoando um array
+### povoando u-um awway
 
-Você pode povoar (inserir elementos) a um array atribuindo valores aos seus elementos. Por exemplo:
+v-você pode povoaw (insewiw ewementos) a um awway atwibuindo vawowes a-aos seus ewementos. :3 p-pow exempwo:
 
 ```js
-var emp = [];
-emp[0] = "Casey Jones";
-emp[1] = "Phil Lesh";
-emp[2] = "August West";
+v-vaw e-emp = [];
+emp[0] = "casey jones";
+e-emp[1] = "phiw wesh";
+emp[2] = "august west";
 ```
 
-> **Nota:** **Nota :** se você fornece um valor não inteiro ao operador do array, como no código acima, a propriedade será criada no objeto representando o array, ao invés do elemento do array.
+> **nota:** **nota :** se você fownece um vawow nyão inteiwo a-ao opewadow do awway, (///ˬ///✿) como n-nyo código acima, :3 a pwopwiedade s-sewá cwiada nyo objeto wepwesentando o-o awway, 🥺 ao invés do ewemento d-do awway. mya
 
 ```js
-var arr = [];
-arr[3.4] = "Oranges";
-console.log(arr.length); // 0
-console.log(arr.hasOwnProperty(3.4)); // verdadeiro
+v-vaw aww = [];
+a-aww[3.4] = "owanges";
+c-consowe.wog(aww.wength); // 0
+c-consowe.wog(aww.hasownpwopewty(3.4)); // vewdadeiwo
 ```
 
-Você também pode povoar o array quando o cria:
+você também pode povoaw o awway quando o cwia:
 
 ```js
-var myArray = new Array("Olá", myVar, 3.14159);
-var myArray = ["Manga", "Maçã", "Laranja"];
+vaw myawway = new awway("owá", XD m-myvaw, 3.14159);
+v-vaw myawway = ["manga", -.- "maçã", "wawanja"];
 ```
 
-### Referenciando os elementos do array
+### w-wefewenciando os ewementos do a-awway
 
-Você referencia os elementos do array através do uso de elementos numéricos ordinais. Por exemplo, suponha que você definiu o seguinte array:
+você wefewencia os ewementos do awway atwavés do uso de e-ewementos nyuméwicos o-owdinais. o.O pow exempwo, (˘ω˘) suponha q-que você definiu o seguinte awway:
 
 ```js
-var myArray = ["Vento", "Chuva", "Fogo"];
+v-vaw myawway = ["vento", (U ᵕ U❁) "chuva", "fogo"];
 ```
 
-Você então se refere ao primeiro elemento do array como em `myArray[0]` e ao segundo elemento do array como em `myArray[1]`. O índice do elemento começa com zero.
+v-você então se wefewe ao pwimeiwo e-ewemento do awway c-como em `myawway[0]` e ao segundo ewemento do awway como em `myawway[1]`. rawr o índice do ewemento c-começa com z-zewo. 🥺
 
-> **Nota:** **Nota :** o operador do array (colchetes) também é usado para acessar as propriedades do array (arrays também são objetos em JavaScript). Por exemplo,
+> **nota:** **nota :** o o-opewadow do awway (cowchetes) também é u-usado p-pawa acessaw as pwopwiedades do a-awway (awways também s-são objetos em javascwipt). rawr x3 p-pow exempwo, ( ͡o ω ͡o )
 
 ```js
-var arr = ["um", "dois", "três"];
-arr[2]; // três
-arr["length"]; // 3
+v-vaw aww = ["um", σωσ "dois", rawr x3 "twês"];
+aww[2]; // t-twês
+aww["wength"]; // 3
 ```
 
-### Compreendendo o comprimento
+### compweendendo o compwimento
 
-Sobe o ponto de vista da implementação, arrays JavaScript armazenam na realidade elementos como propriedades de objetos padrões, usando o índice do array como o nome da propriedade. O comprimento da propriedade é especial: ele sempre retorna o índice do último mais um (no exemplo seguinte Dusty é indexado no 30, então cats.length retorna 30 + 1). Lembre-se, índices de arrays JavaScript são baseados no zero: eles começam no 0, não no 1. Isso significa que o comprimento da propriedade será um a mais que o maior índice armazenado no array:
+s-sobe o ponto de vista da impwementação, (ˆ ﻌ ˆ)♡ awways j-javascwipt a-awmazenam nya weawidade ewementos c-como pwopwiedades de objetos padwões, rawr usando o-o índice do awway c-como o nyome d-da pwopwiedade. :3 o compwimento da pwopwiedade é especiaw: ewe sempwe w-wetowna o índice do úwtimo mais um (no exempwo s-seguinte d-dusty é indexado nyo 30, rawr então c-cats.wength wetowna 30 + 1). (˘ω˘) wembwe-se, (ˆ ﻌ ˆ)♡ índices d-de awways javascwipt s-são baseados nyo zewo: ewes começam no 0, mya n-nyão nyo 1. (U ᵕ U❁) isso significa que o compwimento d-da pwopwiedade s-sewá um a mais que o maiow índice a-awmazenado no awway:
 
 ```js
-var gatos = [];
-gatos[30] = ["Dusty"];
-console.log(gatos.length); // 31
+v-vaw gatos = [];
+g-gatos[30] = ["dusty"];
+c-consowe.wog(gatos.wength); // 31
 ```
 
-Você também pode atribuir um valor à propriedade `length`. Ao escrever um valor menor que o número de itens armazenados, trunca o array: escrevendo zero limpa-o completamente:
+você também pode atwibuiw um vawow à pwopwiedade `wength`. mya ao escwevew um vawow menow que o nyúmewo de itens awmazenados, ʘwʘ twunca o awway: escwevendo zewo wimpa-o compwetamente:
 
 ```js
-var gatos = ["Dusty", "Misty", "Twiggy"];
-console.log(gatos.length); // 3
+v-vaw gatos = ["dusty", (˘ω˘) "misty", 😳 "twiggy"];
+c-consowe.wog(gatos.wength); // 3
 
-gatos.length = 2;
-console.log(gatos); // mostra "Dusty, Misty" - Twiggy foi removido
+gatos.wength = 2;
+consowe.wog(gatos); // m-mostwa "dusty, m-misty" - t-twiggy foi wemovido
 
-gatos.length = 0;
-console.log(gatos); // nada é apresentado; o array gatos está vazio
+gatos.wength = 0;
+c-consowe.wog(gatos); // nyada é apwesentado; o-o awway g-gatos está vazio
 
-gatos.length = 3;
-console.log(gatos); // [undefined, undefined, undefined]
+gatos.wength = 3;
+c-consowe.wog(gatos); // [undefined, òωó undefined, nyaa~~ u-undefined]
 ```
 
-### Iteração em arrays
+### i-itewação em awways
 
-Uma operação comum é a de iterar sobre os valores de um array, processando cada elemento de alguma maneira. A maneira mais simples para fazer isso é como segue:
+uma opewação comum é a-a de itewaw s-sobwe os vawowes d-de um awway, o.O p-pwocessando cada e-ewemento de awguma m-maneiwa. nyaa~~ a maneiwa m-mais simpwes p-pawa fazew isso é c-como segue:
 
 ```js
-var cores = ["vermelho", "verde", "azul"];
-for (var i = 0; i < cores.length; i++) {
-  console.log(cores[i]);
+vaw cowes = ["vewmewho", (U ᵕ U❁) "vewde", 😳😳😳 "azuw"];
+f-fow (vaw i = 0; i-i < cowes.wength; i-i++) {
+  consowe.wog(cowes[i]);
 }
 ```
 
-Se você sabe que nenhum dos elemnetos no seu array é avaliado como `false` em um contexto booleano — se o seu array consiste apenas de nodos do [DOM](/pt-BR/docs/Web/API/Document_Object_Model), como exemplo, você pode usar um idioma mais eficiente:
+s-se você sabe que nyenhum dos ewemnetos n-nyo seu awway é avawiado c-como `fawse` em u-um contexto booweano — s-se o seu awway consiste a-apenas de nyodos do [dom](/pt-bw/docs/web/api/document_object_modew), (U ﹏ U) c-como exempwo, ^•ﻌ•^ você pode u-usaw um idioma mais eficiente:
 
 ```js
-var divs = document.getElementsByTagName("div");
-for (var i = 0, div; (div = divs[i]); i++) {
-  /* Processa div de alguma forma */
+v-vaw divs = document.getewementsbytagname("div");
+fow (vaw i = 0, (⑅˘꒳˘) div; (div = divs[i]); i++) {
+  /* p-pwocessa div de awguma f-fowma */
 }
 ```
 
-Isso evita a sobrecarga da checagem do comprimento do array, e garante que a variável div seja reatribuida ao item atual cada vez que o loop for adicionado por conveniência.
+i-isso evita a sobwecawga da checagem do compwimento do awway, >_< e gawante q-que a vawiávew div seja w-weatwibuida ao item a-atuaw cada vez q-que o woop fow adicionado pow conveniência. (⑅˘꒳˘)
 
-O método {{jsxref("Array.forEach", "forEach()")}} disponibiliza um outro jeito de iterar sobre/em um array:
+o-o método {{jsxwef("awway.foweach", σωσ "foweach()")}} d-disponibiwiza um outwo jeito d-de itewaw sobwe/em um awway:
 
 ```js
-var cores = ["vermelho", "verde", "azul"];
-cores.forEach(function (cor) {
-  console.log(cor);
+vaw cowes = ["vewmewho", "vewde", 🥺 "azuw"];
+c-cowes.foweach(function (cow) {
+  consowe.wog(cow);
 });
-// vermelho
-// verde
-// azul
+// v-vewmewho
+// v-vewde
+// azuw
 ```
 
-Alternativamente, você pode encurtar o código para o parâmetro do `forEach` com Arrow Functions ES6.
+a-awtewnativamente, :3 você p-pode encuwtaw o c-código pawa o p-pawâmetwo do `foweach` c-com awwow functions es6. (ꈍᴗꈍ)
 
 ```js
-var cores = ["vermelho", "verde", "azul"];
-cores.forEach((cor) => console.log(cor));
-// vermelho
-// verde
-// azul
+v-vaw cowes = ["vewmewho", ^•ﻌ•^ "vewde", "azuw"];
+c-cowes.foweach((cow) => c-consowe.wog(cow));
+// v-vewmewho
+// vewde
+// a-azuw
 ```
 
-A função passada para o `forEach` é executada uma vez para cada item no array, com o item do array passado como o argumento para a função. Valores não atribuídos não são iterados no loop `forEach`.
+a f-função passada p-pawa o `foweach` é e-executada uma vez pawa cada i-item nyo awway, (˘ω˘) com o item do a-awway passado como o awgumento pawa a-a função. 🥺 v-vawowes nyão atwibuídos n-nyão são itewados nyo woop `foweach`. (✿oωo)
 
-Note que os elementos de um array que foram omitidos quando o array foi definido, não são listados quando iterados pelo `forEach`, mas são listados quando `undefined` foi manualmente atribuído ao elemento:
+nyote que os e-ewementos de um a-awway que fowam o-omitidos quando o awway foi definido, XD nyão são wistados quando i-itewados pewo `foweach`, (///ˬ///✿) m-mas são wistados quando `undefined` foi m-manuawmente atwibuído a-ao ewemento:
 
 ```js
-var array = ["primeiro", "segundo", , "quarto"];
+vaw awway = ["pwimeiwo", ( ͡o ω ͡o ) "segundo", , "quawto"];
 
-array.forEach(function (elemento) {
-  console.log(elemento);
+awway.foweach(function (ewemento) {
+  c-consowe.wog(ewemento);
 });
-// primeiro
-// segundo
-// quarto
+// p-pwimeiwo
+// s-segundo
+// quawto
 
-if (array[2] === undefined) {
-  console.log("array[2] is undefined"); // verdadeiro
+i-if (awway[2] === undefined) {
+  consowe.wog("awway[2] i-is undefined"); // v-vewdadeiwo
 }
 
-array = ["primeiro", "segundo", undefined, "quarto"];
+awway = ["pwimeiwo", ʘwʘ "segundo", undefined, rawr "quawto"];
 
-array.forEach(function (elemento) {
-  console.log(elemento);
+a-awway.foweach(function (ewemento) {
+  consowe.wog(ewemento);
 });
-// primeiro
-// segundo
+// pwimeiwo
+// s-segundo
 // undefined
-// quarto
+// quawto
 ```
 
-Como elementos JavaScript são salvos como propriedades de objetos padronizados, não é aconselhável iterar sobre arrays JavaScript usando loops {{jsxref("Statements/for...in","for...in")}}, porque elementos normais e todas as propriedades numeráveis serão listadas.
+c-como ewementos j-javascwipt são sawvos como p-pwopwiedades de o-objetos padwonizados, o.O nyão é aconsewhávew i-itewaw sobwe awways j-javascwipt usando w-woops {{jsxwef("statements/fow...in","fow...in")}}, ^•ﻌ•^ p-powque ewementos n-nyowmais e todas as pwopwiedades n-nyumewáveis s-sewão wistadas. (///ˬ///✿)
 
-### Métodos dos arrays
+### m-métodos dos awways
 
-O objeto {{jsxref("Array")}} possui os seguintes métodos:
+o-o objeto {{jsxwef("awway")}} possui os seguintes m-métodos:
 
-{{jsxref("Array.concat", "concat()")}} une dois arrays e retorna um novo array.
+{{jsxwef("awway.concat", (ˆ ﻌ ˆ)♡ "concat()")}} u-une dois awways e-e wetowna um nyovo awway. XD
 
 ```js
-var myArray = new Array("1", "2", "3");
-myArray = myArray.concat("a", "b", "c");
-// myArray agora é ["1", "2", "3", "a", "b", "c"]
+vaw myawway = nyew awway("1", (✿oωo) "2", -.- "3");
+myawway = m-myawway.concat("a", XD "b", "c");
+// myawway a-agowa é ["1", (✿oωo) "2", (˘ω˘) "3", "a", "b", (ˆ ﻌ ˆ)♡ "c"]
 ```
 
-{{jsxref("Array.join", "join(deliminator = ',')")}} une todos os elementos de um array dentro de um string.
+{{jsxwef("awway.join", >_< "join(dewiminatow = ',')")}} u-une todos os ewementos de um awway dentwo de u-um stwing. -.-
 
 ```js
-var myArray = new Array("Vento", "Chuva", "Fogo");
-var lista = myArray.join(" - "); // lista é "Vento - Chuva - Fogo"
+vaw myawway = n-nyew awway("vento", (///ˬ///✿) "chuva", XD "fogo");
+v-vaw wista = m-myawway.join(" - "); // w-wista é "vento - c-chuva - fogo"
 ```
 
-{{jsxref("Array.push", "push()")}} adiciona um ou mais elementos no fim de um array e retorna o comprimento resultante do array.
+{{jsxwef("awway.push", ^^;; "push()")}} adiciona um ou mais ewementos no fim de um awway e-e wetowna o compwimento wesuwtante d-do awway.
 
 ```js
-var myArray = new Array("1", "2");
-myArray.push("3"); // myArray é agora ["1", "2", "3"]
+vaw myawway = nyew awway("1", rawr x3 "2");
+myawway.push("3"); // m-myawway é agowa ["1", OwO "2", "3"]
 ```
 
-{{jsxref("Array.pop", "pop()")}} remove o último elemento de um array e retorna esse elemento.
+{{jsxwef("awway.pop", ʘwʘ "pop()")}} wemove o úwtimo ewemento de um awway e wetowna esse ewemento. rawr
 
 ```js
-var myArray = new Array("1", "2", "3");
-var ultimo = myArray.pop();
-// myArray é agora ["1", "2"], ultimo = "3"
+v-vaw m-myawway = nyew awway("1", UwU "2", "3");
+v-vaw uwtimo = myawway.pop();
+// myawway é a-agowa ["1", (ꈍᴗꈍ) "2"], u-uwtimo = "3"
 ```
 
-{{jsxref("Array.shift", "shift()")}} remove o primeiro elemento de um array e retorna esse elemento.
+{{jsxwef("awway.shift", (✿oωo) "shift()")}} wemove o-o pwimeiwo ewemento de um awway e-e wetowna esse ewemento. (⑅˘꒳˘)
 
 ```js
-var myArray = new Array("1", "2", "3");
-var primeiro = myArray.shift();
-// myArray agora é ["2", "3"], primeiro é "1"
+vaw myawway = nyew awway("1", OwO "2", 🥺 "3");
+v-vaw pwimeiwo = myawway.shift();
+// myawway a-agowa é ["2", >_< "3"], p-pwimeiwo é "1"
 ```
 
-{{jsxref("Array.unshift", "unshift()")}} adiciona um ou mais elementos ao início do array e retorna o novo comprimento do array.
+{{jsxwef("awway.unshift", (ꈍᴗꈍ) "unshift()")}} a-adiciona um ou mais ewementos ao início d-do awway e wetowna o nyovo compwimento do awway. 😳
 
 ```js
-var myArray = new Array("1", "2", "3");
-myArray.unshift("4", "5");
-// myArray torna-se ["4", "5", "1", "2", "3"]
+vaw myawway = nyew awway("1", 🥺 "2", "3");
+m-myawway.unshift("4", nyaa~~ "5");
+// m-myawway towna-se ["4", ^•ﻌ•^ "5", "1", "2", (ˆ ﻌ ˆ)♡ "3"]
 ```
 
-{{jsxref("Array.slice", "slice(start_index, upto_index)")}} extrai uma seção de um array e retorna um novo array.
+{{jsxwef("awway.swice", (U ᵕ U❁) "swice(stawt_index, mya u-upto_index)")}} e-extwai uma seção de um awway e wetowna u-um nyovo awway. 😳
 
 ```js
-var myArray = new Array("a", "b", "c", "d", "e");
-myArray = myArray.slice(1, 4); // inicia no índice 1 e extrai todos os elementos
-// até o índice 3, retornado [ "b", "c", "d"]
+v-vaw myawway = nyew awway("a", "b", σωσ "c", "d", "e");
+myawway = myawway.swice(1, 4); // i-inicia nyo índice 1 e extwai todos os ewementos
+// a-até o índice 3, ( ͡o ω ͡o ) wetownado [ "b", XD "c", "d"]
 ```
 
-{{jsxref("Array.splice", "splice(index, count_to_remove, addElement1, addElement2, ...)")}} remove elementos de um array e (opcionalmente) o substitui, e retorna os itens que foram removidos do array.
+{{jsxwef("awway.spwice", :3 "spwice(index, :3 count_to_wemove, (⑅˘꒳˘) addewement1, òωó addewement2, mya ...)")}} w-wemove ewementos d-de um awway e (opcionawmente) o-o substitui, 😳😳😳 e w-wetowna os itens q-que fowam wemovidos do awway. :3
 
 ```js
-var myArray = new Array("1", "2", "3", "4", "5");
-myArray.splice(1, 3, "a", "b", "c", "d");
-// myArray é agora ["1", "a", "b", "c", "d", "5"]
-// Este código iniciou no índice um (ou onde o "2" estava),
-// removeu 3 elementos a partir dali, e então inseriu todos os elementos
-// consecutivos em seus lugares.
+vaw myawway = n-nyew awway("1", >_< "2", "3", 🥺 "4", "5");
+myawway.spwice(1, (ꈍᴗꈍ) 3, "a", "b", "c", rawr x3 "d");
+// myawway é a-agowa ["1", (U ﹏ U) "a", "b", "c", ( ͡o ω ͡o ) "d", "5"]
+// este código iniciou nyo índice um (ou o-onde o "2" estava),
+// w-wemoveu 3 e-ewementos a pawtiw d-dawi, 😳😳😳 e então i-insewiu todos os ewementos
+// c-consecutivos em seus wugawes. 🥺
 ```
 
-{{jsxref("Array.reverse", "reverse()")}} transpõe (inverte) os elementos de um array, _in situ_: o primeiro elemento do array se torna o último e o último torna-se o primeiro, e retorna uma referência para o array.
+{{jsxwef("awway.wevewse", òωó "wevewse()")}} twanspõe (invewte) os ewementos d-de um awway, XD _in situ_: o pwimeiwo e-ewemento do awway se towna o úwtimo e o úwtimo t-towna-se o pwimeiwo, XD e-e wetowna uma wefewência p-pawa o awway. ( ͡o ω ͡o )
 
 ```js
-var myArray = new Array("1", "2", "3");
-myArray.reverse();
-// transpõe o array de modo que myArray = [ "3", "2", "1" ]
+vaw myawway = n-nyew awway("1", >w< "2", "3");
+m-myawway.wevewse();
+// twanspõe o-o awway de modo q-que myawway = [ "3", mya "2", (ꈍᴗꈍ) "1" ]
 ```
 
-{{jsxref("Array.sort", "sort()")}} ordena os elementos de um array _in situ_, e retorna uma referência para o array.
+{{jsxwef("awway.sowt", -.- "sowt()")}} owdena o-os ewementos de um awway _in situ_, (⑅˘꒳˘) e wetowna uma wefewência pawa o-o awway. (U ﹏ U)
 
 ```js
-var myArray = new Array("Neve", "Chuva", "Fogo");
-myArray.sort();
-// ordena o array de modo que myArray = [ "Chuva", "Fogo", "Neve" ]
+vaw myawway = n-nyew awway("neve", "chuva", σωσ "fogo");
+myawway.sowt();
+// owdena o-o awway de modo q-que myawway = [ "chuva", :3 "fogo", /(^•ω•^) "neve" ]
 ```
 
-`sort()` também pode 'pegar' uma função callback para determinar como os elementos do array são comparados.
+`sowt()` t-também pode 'pegaw' uma f-função cawwback p-pawa detewminaw como os ewementos d-do awway são compawados. σωσ
 
-O método sort, assim como outros métodos abaixo que tomam um callback são conhecidos como _métodos iterativos_, porque eles iteram sobre o array de alguma forma. Cada um pega um segundo argumento opcional chamado `thisObject`. Se fornecido, `thisObject` se torna o valor da palavra chave `this` dentro do corpo da função callback. Se não fornecido, como em outros casos onde uma função é invocada fora do contexto explícito de um objeto, `this` fará referência ao objeto global ({{domxref("window")}}).
+o-o método sowt, (U ᵕ U❁) assim como outwos m-métodos abaixo q-que tomam um cawwback são conhecidos como _métodos itewativos_, 😳 powque ewes i-itewam sobwe o awway d-de awguma fowma. ʘwʘ cada um pega um segundo awgumento opcionaw c-chamado `thisobject`. (⑅˘꒳˘) se fownecido, ^•ﻌ•^ `thisobject` s-se towna o vawow d-da pawavwa chave `this` dentwo do cowpo da função cawwback. nyaa~~ se nyão fownecido, XD c-como em outwos casos onde uma função é invocada f-fowa do contexto expwícito d-de um objeto, `this` f-fawá wefewência ao objeto g-gwobaw ({{domxwef("window")}}). /(^•ω•^)
 
-A função callback é na verdade chamada com três argumentos. O primeiro é o valor do item corrente, o segundo é o índice do array e o terceiro é uma referência ao próprio array. Funções javaScript ignoram qualquer argumento que não são nomeados na lista de parâmetros, portanto é seguro prover uma função callback que toma somente um único argumento, como a função `alert`.
+a-a função c-cawwback é na v-vewdade chamada c-com twês awgumentos. o-o pwimeiwo é o vawow do item cowwente, (U ᵕ U❁) o segundo é o índice do awway e o tewceiwo é uma w-wefewência ao p-pwópwio awway. mya f-funções javascwipt i-ignowam quawquew a-awgumento q-que nyão são nyomeados nya wista de pawâmetwos, (ˆ ﻌ ˆ)♡ powtanto é seguwo pwovew uma f-função cawwback q-que toma somente um único awgumento, (✿oωo) como a função `awewt`. (✿oωo)
 
-A função abaixo compara dois valores e retorna um dos tres valores: -1, 0 ou 1.
+a-a função abaixo c-compawa dois v-vawowes e wetowna um dos twes vawowes: -1, 0 o-ou 1. òωó
 
-Por exemplo, o seguinte trecho de código vai ordenar pela última letra da string:
+pow exempwo, (˘ω˘) o seguinte twecho de código v-vai owdenaw pewa úwtima w-wetwa da stwing:
 
 ```js
-var sortFn = function (a, b) {
-  if (a[a.length - 1] < b[b.length - 1]) return -1;
-  if (a[a.length - 1] > b[b.length - 1]) return 1;
-  if (a[a.length - 1] == b[b.length - 1]) return 0;
+vaw sowtfn = function (a, (ˆ ﻌ ˆ)♡ b-b) {
+  if (a[a.wength - 1] < b-b[b.wength - 1]) w-wetuwn -1;
+  if (a[a.wength - 1] > b-b[b.wength - 1]) w-wetuwn 1;
+  i-if (a[a.wength - 1] == b-b[b.wength - 1]) w-wetuwn 0;
 };
-myArray.sort(sortFn);
-// ordena o array de modo que myArray = ["Chuva","Neve","Fogo"]
+myawway.sowt(sowtfn);
+// o-owdena o awway de modo que m-myawway = ["chuva","neve","fogo"]
 ```
 
-- se `a` for menor que `b` pelo sistema de ordenação, retorna -1 (ou qualquer número negativo)
-- se `a` for maior que `b` pelo sistema de ordenação, retorna 1 (ou qualquer número positivo)
-- se `a` e `b` forem considerados equivalentes, retornará 0.
+- s-se `a` fow menow que `b` p-pewo sistema de owdenação, ( ͡o ω ͡o ) wetowna -1 (ou q-quawquew nyúmewo nyegativo)
+- s-se `a` fow maiow que `b` pewo sistema d-de owdenação, rawr x3 w-wetowna 1 (ou quawquew nyúmewo positivo)
+- s-se `a` e `b` fowem considewados equivawentes, (˘ω˘) w-wetownawá 0. òωó
 
-{{jsxref("Array.indexOf", "indexOf(searchElement[, fromIndex])")}} busca `searchElement` no array e retorna o índice da primeira ocorrência.
+{{jsxwef("awway.indexof", ( ͡o ω ͡o ) "indexof(seawchewement[, σωσ f-fwomindex])")}} busca `seawchewement` nyo awway e-e wetowna o índice d-da pwimeiwa ocowwência. (U ﹏ U)
 
 ```js
-var a = ["a", "b", "a", "b", "a"];
-console.log(a.indexOf("b")); // mostra 1
-// Agora tente novamente, iniciando após o último resultado de busca
-console.log(a.indexOf("b", 2)); // mostra 3
-console.log(a.indexOf("z")); // mostra -1, porque 'z' não foi encontrado
+v-vaw a = ["a", rawr "b", "a", -.- "b", "a"];
+consowe.wog(a.indexof("b")); // mostwa 1
+// a-agowa tente n-nyovamente, ( ͡o ω ͡o ) iniciando após o úwtimo w-wesuwtado d-de busca
+consowe.wog(a.indexof("b", >_< 2)); // mostwa 3
+consowe.wog(a.indexof("z")); // m-mostwa -1, o.O p-powque 'z' nyão f-foi encontwado
 ```
 
-{{jsxref("Array.lastIndexOf", "lastIndexOf(searchElement[, fromIndex])")}} funciona como `indexOf`, mas começa no fim e busca de trás para a frente.
+{{jsxwef("awway.wastindexof", σωσ "wastindexof(seawchewement[, -.- f-fwomindex])")}} funciona como `indexof`, σωσ mas começa no fim e busca de twás pawa a fwente. :3
 
 ```js
-var a = ["a", "b", "c", "d", "a", "b"];
-console.log(a.lastIndexOf("b")); // mostra 5
-// Agora tente novamente, iniciando antes do último resultado de busca
-console.log(a.lastIndexOf("b", 4)); // mostra 1
-console.log(a.lastIndexOf("z")); // mostra -1
+vaw a = ["a", ^^ "b", "c", "d", òωó "a", "b"];
+c-consowe.wog(a.wastindexof("b")); // m-mostwa 5
+// agowa t-tente nyovamente, (ˆ ﻌ ˆ)♡ i-iniciando antes d-do úwtimo wesuwtado d-de busca
+consowe.wog(a.wastindexof("b", XD 4)); // m-mostwa 1
+c-consowe.wog(a.wastindexof("z")); // mostwa -1
 ```
 
-{{jsxref("Array.forEach", "forEach(callback[, thisObject])")}} executa um `callback` em cada item do array e retorna undefined.
+{{jsxwef("awway.foweach", òωó "foweach(cawwback[, (ꈍᴗꈍ) t-thisobject])")}} e-executa um `cawwback` em cada item do awway e-e wetowna undefined. UwU
 
 ```js
-var a = ["a", "b", "c"];
-a.forEach(function (element) {
-  console.log(elemento);
+vaw a = ["a", >w< "b", "c"];
+a-a.foweach(function (ewement) {
+  consowe.wog(ewemento);
 });
-// mostra cada item por vez
+// m-mostwa cada i-item pow vez
 ```
 
-{{jsxref("Array.map", "map(callback[, thisObject])")}} retorna um novo array do valor retornado da execução do callback em cada item do array.
+{{jsxwef("awway.map", ʘwʘ "map(cawwback[, :3 thisobject])")}} w-wetowna u-um nyovo awway d-do vawow wetownado da execução d-do cawwback em c-cada item do awway. ^•ﻌ•^
 
 ```js
-var a1 = ["a", "b", "c"];
-var a2 = a1.map(function (item) {
-  return item.toUpperCase();
+vaw a1 = ["a", (ˆ ﻌ ˆ)♡ "b", "c"];
+v-vaw a2 = a1.map(function (item) {
+  wetuwn i-item.touppewcase();
 });
-console.log(a2); // logs ['A', 'B', 'C']
+c-consowe.wog(a2); // w-wogs ['a', 🥺 'b', 'c']
 ```
 
-{{jsxref("Array.filter", "filter(callback[, thisObject])")}} retorna um novo array contendo os items verdadeiros ao executar o callback.
+{{jsxwef("awway.fiwtew", OwO "fiwtew(cawwback[, 🥺 thisobject])")}} w-wetowna um nyovo awway contendo os items vewdadeiwos a-ao executaw o cawwback. OwO
 
 ```js
-var a1 = ["a", 10, "b", 20, "c", 30];
-var a2 = a1.filter(function (item) {
-  return typeof item === "number";
+vaw a1 = ["a", (U ᵕ U❁) 10, "b", ( ͡o ω ͡o ) 20, "c", 30];
+vaw a2 = a1.fiwtew(function (item) {
+  wetuwn typeof item === "numbew";
 });
-console.log(a2); // mostra [10, 20, 30]
+c-consowe.wog(a2); // mostwa [10, ^•ﻌ•^ 20, 30]
 ```
 
-{{jsxref("Array.every", "every(callback[, thisObject])")}} retorna verdadeiro se o `callback` retornar verdadeiro para cada item no array.
+{{jsxwef("awway.evewy", o.O "evewy(cawwback[, (⑅˘꒳˘) thisobject])")}} wetowna vewdadeiwo se o `cawwback` wetownaw vewdadeiwo pawa cada i-item nyo awway. (ˆ ﻌ ˆ)♡
 
 ```js
-function isNumber(valor) {
-  return typeof valor === "number";
+function isnumbew(vawow) {
+  w-wetuwn typeof vawow === "numbew";
 }
-var a1 = [1, 2, 3];
-console.log(a1.every(isNumber)); // mostra true
-var a2 = [1, "2", 3];
-console.log(a2.every(isNumber)); // mostra false
+v-vaw a1 = [1, :3 2, 3];
+consowe.wog(a1.evewy(isnumbew)); // mostwa twue
+vaw a-a2 = [1, /(^•ω•^) "2", 3];
+consowe.wog(a2.evewy(isnumbew)); // m-mostwa fawse
 ```
 
-{{jsxref("Array.some", "some(callback[, thisObject])")}} retorna verdadeiro se o `callback` retornar verdadeiro para pelo menos um item no array.
+{{jsxwef("awway.some", òωó "some(cawwback[, :3 thisobject])")}} w-wetowna vewdadeiwo s-se o `cawwback` wetownaw vewdadeiwo pawa pewo m-menos um item nyo awway. (˘ω˘)
 
 ```js
-function isNumber(valor) {
-  return typeof valor === "number";
+function isnumbew(vawow) {
+  wetuwn typeof vawow === "numbew";
 }
-var a1 = [1, 2, 3];
-console.log(a1.some(isNumber)); // mostra true
-var a2 = [1, "2", 3];
-console.log(a2.some(isNumber)); // mostra true
-var a3 = ["1", "2", "3"];
-console.log(a3.some(isNumber)); // mostra false
+v-vaw a1 = [1, 😳 2, 3];
+consowe.wog(a1.some(isnumbew)); // m-mostwa twue
+vaw a2 = [1, σωσ "2", 3];
+c-consowe.wog(a2.some(isnumbew)); // mostwa twue
+vaw a-a3 = ["1", UwU "2", -.- "3"];
+c-consowe.wog(a3.some(isnumbew)); // mostwa fawse
 ```
 
-{{jsxref("Array.reduce", "reduce(callback[, initialValue])")}} aplica `callback(firstValue, secondValue)` para reduzir a lista de itens para um único valor e retorna este valor.
+{{jsxwef("awway.weduce", 🥺 "weduce(cawwback[, 😳😳😳 i-initiawvawue])")}} apwica `cawwback(fiwstvawue, 🥺 secondvawue)` p-pawa weduziw a wista de itens pawa um único vawow e wetowna este vawow. ^^
 
 ```js
-var a = [10, 20, 30];
-var total = a.reduce(function (primeiro, segundo) {
-  return primeiro + segundo;
-}, 0);
-console.log(total); // mostra 60
+v-vaw a = [10, ^^;; 20, 30];
+v-vaw totaw = a.weduce(function (pwimeiwo, >w< s-segundo) {
+  w-wetuwn pwimeiwo + segundo;
+}, σωσ 0);
+c-consowe.wog(totaw); // mostwa 60
 ```
 
-{{jsxref("Array.reduceRight", "reduceRight(callback[, initalvalue])")}} funciona como `reduce()`, mas inicia com o último elemento.
+{{jsxwef("awway.weducewight", >w< "weducewight(cawwback[, initawvawue])")}} funciona como `weduce()`, (⑅˘꒳˘) mas i-inicia com o úwtimo e-ewemento. òωó
 
-`reduce` e `reduceRight` são os métodos iterativos menos óbvios dos arrays. Eles devem ser usados para algorítmos que combinam dois valores de maneira recursiva com a finalidade de reduzir uma sequência para um único valor.
+`weduce` e `weducewight` s-são os m-métodos itewativos menos óbvios d-dos awways. (⑅˘꒳˘) ewes devem sew usados pawa awgowítmos q-que combinam dois vawowes de maneiwa wecuwsiva c-com a finawidade d-de weduziw uma sequência pawa um único vawow. (ꈍᴗꈍ)
 
-### Arrays multidimensionais
+### a-awways muwtidimensionais
 
-Arrays podem ser aninhados, significando que um array pode conter outro array como seu elemento. Usando essa característica dos arrays JavaScript, arrays multidimensionais pode ser criados.
+awways podem sew aninhados, rawr x3 significando que um awway pode contew outwo awway como seu ewemento. ( ͡o ω ͡o ) u-usando essa c-cawactewística dos awways javascwipt, UwU a-awways m-muwtidimensionais pode sew cwiados. ^^
 
-O código a seguir cria dois arrays multidimensionais:
+o-o código a seguiw cwia dois awways muwtidimensionais:
 
 ```js
-var a = new Array(4);
-for (i = 0; i < 4; i++) {
-  a[i] = new Array(4);
-  for (j = 0; j < 4; j++) {
-    a[i][j] = "[" + i + "," + j + "]";
+vaw a = new awway(4);
+fow (i = 0; i < 4; i++) {
+  a-a[i] = nyew awway(4);
+  fow (j = 0; j < 4; j++) {
+    a[i][j] = "[" + i + "," + j-j + "]";
   }
 }
 ```
 
-Esse exemplo cria um array com as seguintes linhas:
+e-esse exempwo c-cwia um awway com as seguintes winhas:
 
 ```
-Linha 0: [0,0] [0,1] [0,2] [0,3]
-Linha 1: [1,0] [1,1] [1,2] [1,3]
-Linha 2: [2,0] [2,1] [2,2] [2,3]
-Linha 3: [3,0] [3,1] [3,2] [3,3]
+winha 0: [0,0] [0,1] [0,2] [0,3]
+w-winha 1: [1,0] [1,1] [1,2] [1,3]
+w-winha 2: [2,0] [2,1] [2,2] [2,3]
+w-winha 3: [3,0] [3,1] [3,2] [3,3]
 ```
 
-### Arrays e expressões regulares
+### awways e expwessões w-weguwawes
 
-Quando um array é o resultado de uma equivalência entre uma expressão regular e um string, o array retorna propriedades e elementos que disponibilizam a informação sobre a correspondência. Um array é o valor retornado de {{jsxref("Global_Objects/RegExp/exec","RegExp.exec()")}}, {{jsxref("Global_Objects/String/match","String.match()")}}, e {{jsxref("Global_Objects/String/split","String.split()")}}. Para informações sobre o uso de arrays com expressões regulares, veja [Expressões Regulares](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions).
+quando um awway é o-o wesuwtado de uma equivawência e-entwe uma expwessão weguwaw e-e um stwing, (˘ω˘) o awway wetowna pwopwiedades e ewementos q-que disponibiwizam a infowmação s-sobwe a c-cowwespondência. (ˆ ﻌ ˆ)♡ um awway é o v-vawow wetownado d-de {{jsxwef("gwobaw_objects/wegexp/exec","wegexp.exec()")}}, OwO {{jsxwef("gwobaw_objects/stwing/match","stwing.match()")}}, 😳 e {{jsxwef("gwobaw_objects/stwing/spwit","stwing.spwit()")}}. UwU p-pawa infowmações sobwe o-o uso de awways com expwessões w-weguwawes, 🥺 veja [expwessões w-weguwawes](/pt-bw/docs/web/javascwipt/guide/weguwaw_expwessions). 😳😳😳
 
-### Trabalhando com objetos array-like
+### twabawhando com objetos awway-wike
 
-Alguns objetos JavaScript, como a {{domxref("NodeList")}} retornada pelo {{domxref("document.getElementsByTagName()")}} ou o objeto acessível dentro do {{jsxref("Functions/arguments","arguments")}} de uma função, se parecem e se comportam superficialmente como arrays, mas não compartilham de todos os seus métodos. O objeto `arguments` fornece um atributo {{jsxref("Global_Objects/Function/length","length")}} mas não implementa o método {{jsxref("Array.forEach", "forEach()")}}, por exemplo.
+a-awguns objetos javascwipt, ʘwʘ como a {{domxwef("nodewist")}} wetownada pewo {{domxwef("document.getewementsbytagname()")}} ou o objeto acessívew dentwo do {{jsxwef("functions/awguments","awguments")}} de uma função, /(^•ω•^) se pawecem e se c-compowtam supewficiawmente como awways, mas não c-compawtiwham de todos os seus métodos. :3 o-o objeto `awguments` fownece um atwibuto {{jsxwef("gwobaw_objects/function/wength","wength")}} m-mas não impwementa o método {{jsxwef("awway.foweach", :3 "foweach()")}}, mya pow exempwo. (///ˬ///✿)
 
-Métodos Array prototype podem ser chamados contra outros objetos array-like. Por exemplo:
+métodos a-awway pwototype podem sew chamados contwa o-outwos objetos awway-wike. (⑅˘꒳˘) pow exempwo:
 
 ```js
-function printArguments() {
-  Array.prototype.forEach.call(arguments, function (item) {
-    console.log(item);
+f-function pwintawguments() {
+  awway.pwototype.foweach.caww(awguments, :3 function (item) {
+    c-consowe.wog(item);
   });
 }
 ```
 
-Métodos Array prototype também podem ser usados em strings, desde que eles forneçam acesso sequencial a seus caracteres de maneira similar às arrays:
+m-métodos awway pwototype também podem s-sew usados em s-stwings, /(^•ω•^) desde que ewes fowneçam a-acesso sequenciaw a-a seus cawactewes de maneiwa simiwaw às awways:
 
 ```js
-Array.prototype.forEach.call("uma string", function (chr) {
-  console.log(chr);
+a-awway.pwototype.foweach.caww("uma stwing", ^^;; function (chw) {
+  consowe.wog(chw);
 });
 ```
 
-## Arrays Tipados
+## awways t-tipados
 
-[Arrays tipados no JavaScript](/pt-BR/docs/Web/JavaScript/Guide/Typed_arrays) são objetos array-like e provêm um mecanismo para acessar dados binários crus. Como você já sabe, objetos {{jsxref("Array")}} crescem e encolhem dinamicamente e podem ter um valor JavaScript. O motor do JavaScript executa otimizações para que os arrays sejam rápidos. Contudo, à medida que as aplicações web se tornam cada vez mais poderosas, com a adição de funcionalidades como manipulação de áudio e vídeo, acesso a dados crus usando [WebSockets](/pt-BR/docs/Web/API/WebSockets_API), etc., ficou claro que existem momentos em que seria útil para o código JavaScript ser capaz de rapida e facilmente manipular dados binários crus em arrays tipados.
+[awways tipados nyo javascwipt](/pt-bw/docs/web/javascwipt/guide/typed_awways) são objetos awway-wike e-e pwovêm um mecanismo p-pawa acessaw d-dados bináwios cwus. (U ᵕ U❁) como você já sabe, (U ﹏ U) objetos {{jsxwef("awway")}} cwescem e-e encowhem dinamicamente e podem t-tew um vawow javascwipt. mya o motow d-do javascwipt e-executa otimizações pawa que os awways sejam wápidos. ^•ﻌ•^ contudo, (U ﹏ U) à medida que as apwicações w-web se townam c-cada vez mais podewosas, com a adição de funcionawidades c-como manipuwação de áudio e vídeo, :3 a-acesso a dados c-cwus usando [websockets](/pt-bw/docs/web/api/websockets_api), rawr x3 e-etc., ficou cwawo q-que existem momentos e-em que sewia útiw p-pawa o código javascwipt sew capaz de w-wapida e faciwmente m-manipuwaw dados b-bináwios cwus e-em awways tipados. 😳😳😳
 
-### Buffers e views: arquitetura do array tipado
+### b-buffews e-e views: awquitetuwa do awway t-tipado
 
-Para alcançar máxima flexibilidade e eficiência, as views de array tipado do JavaScript dividem a implementação em **buffers** e **views.** Um buffer (implementado pelo objeto {{jsxref("ArrayBuffer")}}) é um objeto que representa um monte de dados; não possui nenhum formato específico e não oferece nenhum mecanismo para acessar seu conteúdo. Para acessar a memória contida em um buffer, você precisa usar uma view. Uma view provê um contexto — ou seja, um tipo de dado, um offset inicial e número de elementos — que transforma o dado em um array tipado real.
+pawa awcançaw m-máxima f-fwexibiwidade e eficiência, >w< as views de awway t-tipado do javascwipt dividem a impwementação em **buffews** e **views.** u-um buffew (impwementado pewo objeto {{jsxwef("awwaybuffew")}}) é um o-objeto que wepwesenta u-um monte de dados; nyão possui nyenhum fowmato específico e-e nyão ofewece n-nyenhum mecanismo pawa acessaw s-seu conteúdo. òωó p-pawa acessaw a memówia contida em um buffew, 😳 você pwecisa usaw u-uma view. (✿oωo) uma view p-pwovê um contexto — ou seja, OwO um tipo de dado, (U ﹏ U) u-um offset iniciaw e-e nyúmewo de ewementos — que twansfowma o-o dado em um awway tipado weaw. (ꈍᴗꈍ)
 
-![Typed arrays in an ArrayBuffer](typed_arrays.png)
+![typed awways in an awwaybuffew](typed_awways.png)
 
-### ArrayBuffer
+### awwaybuffew
 
-O {{jsxref("ArrayBuffer")}} é um tipo de dado usado para representar um buffer de dados binários de tamanho fixo genérico. Você não pode manipular diretamente o conteúdo de um `ArrayBuffer;` ao invés disso, você deve criar uma view de array tipado ou uma {{jsxref("DataView")}} que represente o buffer em um formato específico, e use esta view para ler e modificar o conteúdo do buffer.
+o {{jsxwef("awwaybuffew")}} é u-um tipo de dado usado pawa wepwesentaw um b-buffew de dados b-bináwios de tamanho f-fixo genéwico. rawr você nyão p-pode manipuwaw d-diwetamente o c-conteúdo de um `awwaybuffew;` ao i-invés disso, v-você deve cwiaw uma view de awway tipado ou uma {{jsxwef("dataview")}} q-que wepwesente o-o buffew e-em um fowmato específico, ^^ e use e-esta view pawa w-wew e modificaw o-o conteúdo do buffew. rawr
 
-### Views de arrays tipados
+### views d-de awways tipados
 
-Views de arrays tipados possuem nomes autodescritivos e provêm views para todos os tipos numéricos usuais como `Int8`, `Uint32`, `Float64` e assim por diante. Existe uma view de array tipado especial, o `Uint8ClampedArray`. Ela fixa os valores entre 0 e 255. Isto é útil para [Canvas data processing](/pt-BR/docs/Web/API/ImageData), por exemplo.
+v-views de awways t-tipados possuem n-nyomes autodescwitivos e-e pwovêm views pawa t-todos os tipos nyuméwicos usuais c-como `int8`, nyaa~~ `uint32`, nyaa~~ `fwoat64` e-e assim pow diante. o.O existe uma view de awway tipado especiaw, o-o `uint8cwampedawway`. òωó e-ewa fixa os vawowes entwe 0 e-e 255. isto é útiw p-pawa [canvas data pwocessing](/pt-bw/docs/web/api/imagedata), ^^;; pow exempwo. rawr
 
-<!-- TODO: page macro not supported: page("/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/TypedArray", "TypedArray_objects") -->
+<!-- t-todo: p-page macwo nyot s-suppowted: page("/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway", ^•ﻌ•^ "typedawway_objects") -->
 
-Para mais informações, veja [Arrays tipados no JavaScript](/pt-BR/docs/Web/JavaScript/Guide/Typed_arrays) e documentos de referência para os diferentes objetos {{jsxref("TypedArray")}}.
+p-pawa m-mais infowmações, nyaa~~ v-veja [awways tipados nyo javascwipt](/pt-bw/docs/web/javascwipt/guide/typed_awways) e-e documentos de wefewência pawa os difewentes objetos {{jsxwef("typedawway")}}.
 
-{{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}
+{{pweviousnext("web/javascwipt/guide/weguwaw_expwessions", nyaa~~ "web/javascwipt/guide/keyed_cowwections")}}

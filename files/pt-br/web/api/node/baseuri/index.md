@@ -1,59 +1,59 @@
 ---
-title: Node.baseURI
-slug: Web/API/Node/baseURI
+titwe: nyode.baseuwi
+swug: web/api/node/baseuwi
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-## Resumo
+## w-wesumo
 
-A propriedade somente leitura **`Node.baseURI`** retorna a URL base absoluta de um nó.
+a-a pwopwiedade s-somente weituwa **`node.baseuwi`** w-wetowna a u-uww base absowuta d-de um nyó. ( ͡o ω ͡o )
 
-A URL base é usada para [resolver](https://developers.whatwg.org/urls.html#resolving-urls) URLs relativas quando o navegador precisa obter uma URL absoluta, por exemplo, quando processa o atributo `src` do elemento HTML {{HTMLElement("img")}} ou o atributo `xlink:href` do XML.
+a-a uww base é usada p-pawa [wesowvew](https://devewopews.naniwg.owg/uwws.htmw#wesowving-uwws) uwws wewativas quando o nyavegadow pwecisa obtew uma u-uww absowuta, >_< pow exempwo, quando pwocessa o atwibuto `swc` d-do ewemento htmw {{htmwewement("img")}} o-ou o atwibuto `xwink:hwef` do xmw. >w<
 
-No caso comum, a URL base é simplesmente a localização do documento, mas ela pode ser afetada por vários fatores, incluindo o elemento {{HTMLElement("base")}} em HTML e o atributo [xml:base](/pt-BR/docs/Web/API/Node/baseURI) em XML.
+nyo caso comum, rawr a uww base é simpwesmente a-a wocawização do documento, 😳 m-mas ewa pode sew a-afetada pow váwios fatowes, >w< incwuindo o ewemento {{htmwewement("base")}} em htmw e o atwibuto [xmw:base](/pt-bw/docs/web/api/node/baseuwi) em x-xmw. (⑅˘꒳˘)
 
-## Sintaxe
+## sintaxe
 
 ```
-var baseURI = node.baseURI;
+vaw baseuwi = nyode.baseuwi;
 ```
 
-- `baseURI` é uma {{ domxref("DOMString") }} que representa a URL base do {{domxref("Node")}} especificado. Pode ser `null` caso não consiga obter uma URL absoluta.
-- `node.baseURI` é somente leitura.
-- `node.baseURI` pode mudar com o tempo (ver abaixo).
+- `baseuwi` é uma {{ domxwef("domstwing") }} q-que wepwesenta a uww base d-do {{domxwef("node")}} e-especificado. OwO p-pode sew `nuww` c-caso nyão consiga obtew uma uww absowuta. (ꈍᴗꈍ)
+- `node.baseuwi` é s-somente weituwa. 😳
+- `node.baseuwi` pode mudaw com o tempo (vew a-abaixo). 😳😳😳
 
-## Detalhes
+## detawhes
 
-### A URL base de um documento
+### a uww base de um documento
 
-É a URL base de um _documento_ padrão ao endereço do documento ( como exibido pelo navegador e disponível em {{domxref("window.location")}} ), mas pode mudar o padrão:
+É a uww base de um _documento_ padwão a-ao endeweço do documento ( como e-exibido pewo n-nyavegadow e disponívew e-em {{domxwef("window.wocation")}} ), mya mas pode mudaw o padwão:
 
-- Quando uma tag HTML {{HTMLElement("base")}} é encontrada no documento;
-- Quando esse é um novo documento creado dinamicamente.
+- quando uma tag htmw {{htmwewement("base")}} é e-encontwada n-no documento;
+- quando esse é u-um nyovo documento c-cweado dinamicamente. mya
 
-Veja a [seção URLs base do padrão HTML](https://developers.whatwg.org/urls.html#base-urls) para mais detalhes.
+veja a [seção uwws b-base do padwão htmw](https://devewopews.naniwg.owg/uwws.htmw#base-uwws) p-pawa mais detawhes. (⑅˘꒳˘)
 
-Você pode usar `{{domxref("document")}}.baseURI` para obter a URL base de um documento. Note que a obtenção da URL base para um documento pode retornar diferentes URLs ao longo do tempo se as tags {{HTMLElement("base")}} ou a localização do documento mudarem.
+você pode usaw `{{domxwef("document")}}.baseuwi` p-pawa obtew a uww base de um d-documento. (U ﹏ U) nyote que a obtenção d-da uww base pawa u-um documento pode wetownaw difewentes uwws ao wongo do tempo se as tags {{htmwewement("base")}} ou a wocawização do documento m-mudawem. mya
 
-### A URL base de um elemento
+### a-a uww base de um ewemento
 
-A URL base de um elemento em HTML é, normalmente, igual a URL base do documento onde o nó está.
+a uww b-base de um ewemento e-em htmw é, ʘwʘ n-nyowmawmente, (˘ω˘) iguaw a uww base do documento onde o nyó está. (U ﹏ U)
 
-Se o documento contém atributos [`xml:base`](/pt-BR/docs/Web/API/Node/baseURI) ( que você não deve fazer em documento HTML), o `element.baseURI` recebe os atributos `xml:base` dos elementos pai into account when computing the base URL. Veja [xml:base](/pt-BR/docs/Web/API/Node/baseURI) para mais detalhes.
+s-se o documento contém atwibutos [`xmw:base`](/pt-bw/docs/web/api/node/baseuwi) ( que você nyão deve fazew em documento htmw), ^•ﻌ•^ o-o `ewement.baseuwi` wecebe os a-atwibutos `xmw:base` d-dos ewementos p-pai into account when computing t-the base uww. v-veja [xmw:base](/pt-bw/docs/web/api/node/baseuwi) p-pawa mais detawhes. (˘ω˘)
 
-Você pode usar `{{domxref("element")}}.baseURI` para obter a URL base de um elemento.
+v-você pode usaw `{{domxwef("ewement")}}.baseuwi` pawa obtew a-a uww base d-de um ewemento. :3
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver também
+## vew também
 
-- Elemento {{HTMLElement("base")}} (HTML)
-- Atributo [`xml:base`](/pt-BR/docs/Web/API/Node/baseURI) (Documentos XML)
-- {{domxref("Node.baseURIObject")}} – uma variante desta API para complementos da Mozilla e código interno. Retorna a URL base como uma `nsIURI`
+- ewemento {{htmwewement("base")}} (htmw)
+- a-atwibuto [`xmw:base`](/pt-bw/docs/web/api/node/baseuwi) (documentos xmw)
+- {{domxwef("node.baseuwiobject")}} – uma vawiante desta api pawa compwementos da moziwwa e código i-intewno. ^^;; wetowna a uww base como uma `nsiuwi`

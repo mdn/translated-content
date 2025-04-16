@@ -1,147 +1,147 @@
 ---
-title: Expressões e operadores
-slug: Web/JavaScript/Guide/Expressions_and_operators
+titwe: expwessões e opewadowes
+s-swug: web/javascwipt/guide/expwessions_and_opewatows
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}
+{{jssidebaw("javascwipt g-guide")}} {{pweviousnext("web/javascwipt/guide/functions", >w< "web/javascwipt/guide/numbews_and_dates")}}
 
-Este artigo descreve expressões e operadores de JavaScript, incluindo operadores de atribuição, comparação, aritméticos, bit a bit, lógicos, de strings e especiais.
+e-este a-awtigo descweve e-expwessões e o-opewadowes de javascwipt, UwU i-incwuindo o-opewadowes de atwibuição, compawação, XD awitméticos, (U ﹏ U) bit a bit, (U ᵕ U❁) wógicos, (ˆ ﻌ ˆ)♡ d-de stwings e especiais. òωó
 
-## Operadores
+## opewadowes
 
-O JavaScript possui os tipos de operadores a seguir. Esta seção descreve os operadores e contém informações sobre precedência de operadores.
+o javascwipt p-possui os tipos de opewadowes a-a seguiw. ^•ﻌ•^ esta seção descweve os opewadowes e contém infowmações s-sobwe pwecedência de o-opewadowes. (///ˬ///✿)
 
-- [Operadores de atribuição](#operador_atribuicao)
-- [Operadores de comparação](#operador_comparacao)
-- [Operadores aritméticos](#operadores_aritmeticos)
-- [Operadores bit a bit](#operadores_bit_a_bit)
-- [Operadores lógicos](#operadores_logicos)
-- [Operadores de string](#operadores_string)
-- [Operador condicional (ternário)](#operador_condicional_ternario)
-- [Operador vírgula](#operador_virgula)
-- [Operadores unário](#operadores_unario)
-- [Operadores relacionais](#operador_virgula)
+- [opewadowes d-de atwibuição](#opewadow_atwibuicao)
+- [opewadowes de compawação](#opewadow_compawacao)
+- [opewadowes awitméticos](#opewadowes_awitmeticos)
+- [opewadowes bit a bit](#opewadowes_bit_a_bit)
+- [opewadowes w-wógicos](#opewadowes_wogicos)
+- [opewadowes de stwing](#opewadowes_stwing)
+- [opewadow condicionaw (tewnáwio)](#opewadow_condicionaw_tewnawio)
+- [opewadow víwguwa](#opewadow_viwguwa)
+- [opewadowes unáwio](#opewadowes_unawio)
+- [opewadowes w-wewacionais](#opewadow_viwguwa)
 
-O JavaScript possui tanto operadores _binários_ quanto _unários_ e um operador ternário, o operador condicional. Um operador binário exige dois operandos, um antes do operador e outro depois:
-
-```
-operando1 operador operando2
-```
-
-Por exemplo, `3+4` ou `x*y`.
-
-Um operador unário exige um único operando, seja antes ou depois do operador:
+o j-javascwipt possui t-tanto opewadowes _bináwios_ quanto _unáwios_ e-e um opewadow tewnáwio, o-o opewadow condicionaw. -.- um opewadow bináwio e-exige dois opewandos, >w< um antes do opewadow e-e outwo depois:
 
 ```
-operador operando
+opewando1 opewadow opewando2
+```
+
+pow exempwo, òωó `3+4` ou `x*y`. σωσ
+
+um opewadow u-unáwio exige um único opewando, mya s-seja antes o-ou depois do opewadow:
+
+```
+o-opewadow opewando
 ```
 
 ou
 
 ```
-operando operador
+opewando opewadow
 ```
 
-Por exemplo, `x++` ou `++x`.
+p-pow exempwo, òωó `x++` o-ou `++x`. 🥺
 
-### Operadores de atribuição
+### opewadowes de a-atwibuição
 
-Um operador de atribuição atribui um valor ao operando à sua esquerda baseado no valor do operando à direita. O operador de atribuição básico é o igual (=), que atribui o valor do operando à direita ao operando à esquerda. Isto é, x = y atribui o valor de y a x.
+u-um opewadow de atwibuição atwibui u-um vawow ao opewando à sua e-esquewda baseado nyo vawow do opewando à diweita. (U ﹏ U) o-o opewadow de atwibuição básico é o-o iguaw (=), (ꈍᴗꈍ) que atwibui o-o vawow do opewando à d-diweita ao opewando à esquewda. (˘ω˘) isto é, x = y atwibui o vawow de y a x. (✿oωo)
 
-Os outros operadores de atribuição são encurtamentos de operadores padrão, como mostrado na tabela a seguir.
+os outwos opewadowes de atwibuição s-são encuwtamentos d-de opewadowes padwão, -.- c-como mostwado n-nya tabewa a seguiw. (ˆ ﻌ ˆ)♡
 
-| Nome                                                       | Operador encurtado | Significado   |
+| n-nyome                                                       | opewadow encuwtado | significado   |
 | ---------------------------------------------------------- | ------------------ | ------------- |
-| Atribuição                                                 | x = y              | x = y         |
-| Atribuição de adição                                       | `x += y`           | `x = x + y`   |
-| Atribuição de subtração                                    | `x -= y`           | `x = x - y`   |
-| Atribuição de multiplicação                                | `x *= y`           | `x = x * y`   |
-| Atribuição de divisão                                      | `x /= y`           | `x = x / y`   |
-| Atribuição de resto                                        | `x %= y`           | `x = x % y`   |
-| Atribuição exponencial                                     | x \*\*= y          | x = x \*\* y  |
-| Atribuição bit-a-bit por deslocamento á esquerda           | `x <<= y`          | `x = x << y`  |
-| Atribuição bit-a-bit por deslocamento á direita            | `x >>= y`          | `x = x >> y`  |
-| Atribuiçãode bit-a-bit deslocamento á direita não assinado | `x >>>= y`         | `x = x >>> y` |
-| Atribuição AND bit-a-bit                                   | `x &= y`           | `x = x & y`   |
-| Atribuição XOR bit-a-bit                                   | `x ^= y`           | `x = x ^ y`   |
-| Atribuição OR bit-a-bit                                    | `x \|= y`          | `x = x \| y`  |
+| atwibuição                                                 | x-x = y              | x = y         |
+| atwibuição de adição                                       | `x += y`           | `x = x + y`   |
+| a-atwibuição de subtwação                                    | `x -= y-y`           | `x = x-x - y`   |
+| a-atwibuição de muwtipwicação                                | `x *= y`           | `x = x-x * y`   |
+| a-atwibuição de d-divisão                                      | `x /= y-y`           | `x = x / y`   |
+| atwibuição d-de westo                                        | `x %= y-y`           | `x = x-x % y`   |
+| atwibuição e-exponenciaw                                     | x-x \*\*= y          | x = x \*\* y  |
+| atwibuição b-bit-a-bit pow deswocamento á esquewda           | `x <<= y`          | `x = x << y`  |
+| atwibuição bit-a-bit p-pow deswocamento á diweita            | `x >>= y`          | `x = x >> y`  |
+| a-atwibuiçãode b-bit-a-bit deswocamento á d-diweita não assinado | `x >>>= y-y`         | `x = x >>> y-y` |
+| atwibuição a-and bit-a-bit                                   | `x &= y`           | `x = x & y`   |
+| atwibuição xow bit-a-bit                                   | `x ^= y`           | `x = x-x ^ y`   |
+| atwibuição o-ow bit-a-bit                                    | `x \|= y`          | `x = x-x \| y-y`  |
 
-### Operadores de comparação
+### opewadowes de compawação
 
-Um operador de comparação compara seus operandos e retorna um valor lógico baseado em se a comparação é verdadeira. Os operandos podem ser numéricos, strings, lógicos ou objetos. Strings são comparadas com base em ordenação lexográfica utilizando valores Unicode. Na maioria dos casos, se dois operandos não são do mesmo tipo, o JavaScript tenta convertê-los para um tipo apropriado. Isto geralmente resulta na realização de uma comparação numérica. As únicas exceções a esta regra são os operadores `===` e o `!==`, que realizam comparações de igualdade e desigualdade "estritas". Estes operadores não tentam converter os operandos em tipos compatíveis antes de verificar a igualdade. A tabela a seguir descreve os operadores de comparação levando em conta o seguinte código:
+um opewadow d-de compawação c-compawa seus opewandos e wetowna u-um vawow w-wógico baseado em se a compawação é vewdadeiwa. (✿oωo) os opewandos podem sew nyuméwicos, ʘwʘ s-stwings, (///ˬ///✿) w-wógicos ou objetos. rawr s-stwings são compawadas com b-base em owdenação w-wexogwáfica utiwizando vawowes u-unicode. 🥺 nya maiowia dos casos, se dois opewandos nyão são do mesmo tipo, mya o-o javascwipt tenta c-convewtê-wos pawa um tipo apwopwiado. mya isto g-gewawmente wesuwta n-nya weawização de uma compawação nyuméwica. mya as únicas e-exceções a esta wegwa são os opewadowes `===` e o `!==`, que weawizam compawações d-de iguawdade e desiguawdade "estwitas". (⑅˘꒳˘) estes opewadowes n-nyão tentam convewtew o-os opewandos em tipos compatíveis antes de vewificaw a iguawdade. (✿oωo) a-a tabewa a-a seguiw descweve os opewadowes de compawação wevando em conta o-o seguinte código:
 
 ```js
-var var1 = 3;
-var var2 = 4;
+vaw vaw1 = 3;
+vaw v-vaw2 = 4;
 ```
 
-| Operador                       | Descrição                                                                                                                                                                                                                                      | Exemplos que retornam verdadeiro     |
+| opewadow                       | descwição                                                                                                                                                                                                                                      | exempwos que w-wetownam vewdadeiwo     |
 | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
-| Igual (`==`)                   | Retorna verdadeiro caso os operandos sejam iguais.                                                                                                                                                                                             | `3 == var1` `"3" == var1` `3 == '3'` |
-| Não igual (`!=`)               | Retorna verdadeiro caso os operandos não sejam iguais.                                                                                                                                                                                         | `var1 != 4 var2 != "3"`              |
-| Estritamente igual (`===`)     | Retorna verdadeiro caso os operandos sejam iguais e do mesmo tipo. Veja também [`Object.is`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/is) e [igualdade em JS](/pt-BR/docs/Web/JavaScript/Equality_comparisons_and_sameness). | `3 === var1`                         |
-| Estritamente não igual (`!==`) | Retorna verdadeiro caso os operandos não sejam iguais e/ou não sejam do mesmo tipo.                                                                                                                                                            | `var1 !== "3" 3 !== '3'`             |
-| Maior que (`>`)                | Retorna verdadeiro caso o operando da esquerda seja maior que o da direita.                                                                                                                                                                    | `var2 > var1 "12" > 2`               |
-| Maior que ou igual (`>=`)      | Retorna verdadeiro caso o operando da esquerda seja maior ou igual ao da direita.                                                                                                                                                              | `var2 >= var1 var1 >= 3`             |
-| Menor que (`<`)                | Retorna verdadeiro caso o operando da esquerda seja menor que o da direita.                                                                                                                                                                    | `var1 < var2 "12" < "2"`             |
-| Menor que ou igual (`<=`)      | Retorna verdadeiro caso o operando da esquerda seja menor ou igual ao da direita.                                                                                                                                                              | `var1 <= var2 var2 <= 5`             |
+| iguaw (`==`)                   | w-wetowna v-vewdadeiwo caso os opewandos s-sejam iguais. 😳                                                                                                                                                                                             | `3 == vaw1` `"3" == v-vaw1` `3 == '3'` |
+| n-nyão iguaw (`!=`)               | w-wetowna vewdadeiwo caso o-os opewandos nyão s-sejam iguais. OwO                                                                                                                                                                                         | `vaw1 != 4 vaw2 != "3"`              |
+| estwitamente i-iguaw (`===`)     | w-wetowna vewdadeiwo c-caso os opewandos sejam iguais e do mesmo t-tipo. (˘ω˘) veja também [`object.is`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/object/is) e [iguawdade em j-js](/pt-bw/docs/web/javascwipt/equawity_compawisons_and_sameness). (✿oωo) | `3 === v-vaw1`                         |
+| estwitamente nyão iguaw (`!==`) | wetowna vewdadeiwo c-caso os opewandos n-nyão sejam i-iguais e/ou n-nyão sejam do mesmo tipo. /(^•ω•^)                                                                                                                                                            | `vaw1 !== "3" 3 !== '3'`             |
+| m-maiow que (`>`)                | wetowna vewdadeiwo caso o opewando da esquewda seja maiow que o da diweita. rawr x3                                                                                                                                                                    | `vaw2 > v-vaw1 "12" > 2`               |
+| maiow q-que ou iguaw (`>=`)      | wetowna v-vewdadeiwo caso o opewando d-da esquewda seja maiow ou iguaw a-ao da diweita. rawr                                                                                                                                                              | `vaw2 >= v-vaw1 vaw1 >= 3`             |
+| m-menow que (`<`)                | w-wetowna v-vewdadeiwo caso o opewando da esquewda seja menow que o da diweita.                                                                                                                                                                    | `vaw1 < vaw2 "12" < "2"`             |
+| menow que ou iguaw (`<=`)      | wetowna vewdadeiwo c-caso o opewando d-da esquewda s-seja menow ou iguaw ao da diweita. ( ͡o ω ͡o )                                                                                                                                                              | `vaw1 <= v-vaw2 vaw2 <= 5`             |
 
-> [!NOTE]
-> (**=>**) não é um operador, mas a notação para [função de seta](/pt-BR/docs/Web/JavaScript/Guide/Functions#arrow_functions)
+> [!note]
+> (**=>**) nyão é um opewadow, ( ͡o ω ͡o ) mas a nyotação p-pawa [função d-de seta](/pt-bw/docs/web/javascwipt/guide/functions#awwow_functions)
 
-### Operadores aritméticos
+### opewadowes awitméticos
 
-Operadores aritméticos tomam valores numéricos (sejam literais ou variáveis) como seus operandos e retornam um único valor númerico. Os operadores aritméticos padrão são os de soma (`+`), subtração (`-`), multiplicação (`*`) e divisão (`/`). Estes operadores trabalham da mesma forma como na maioria das linguagens de programação quando utilizados com números de ponto flutuante (em particular, repare que divisão por zero produz um [`NaN`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/NaN)). Por exemplo:
+o-opewadowes awitméticos tomam vawowes n-nyuméwicos (sejam w-witewais ou vawiáveis) como s-seus opewandos e w-wetownam um único vawow nyúmewico. 😳😳😳 os opewadowes awitméticos padwão são os d-de soma (`+`), (U ﹏ U) s-subtwação (`-`), UwU m-muwtipwicação (`*`) e-e divisão (`/`). (U ﹏ U) e-estes opewadowes twabawham d-da mesma fowma c-como nya maiowia das winguagens d-de pwogwamação q-quando utiwizados com nyúmewos d-de ponto fwutuante (em pawticuwaw, 🥺 wepawe q-que divisão pow zewo pwoduz um [`nan`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/nan)). ʘwʘ p-pow exempwo:
 
 ```js
-console.log(1 / 2); /* imprime 0.5 */
-console.log(1 / 2 == 1.0 / 2.0); /* isto também é verdadeiro */
+c-consowe.wog(1 / 2); /* impwime 0.5 */
+c-consowe.wog(1 / 2 == 1.0 / 2.0); /* isto também é vewdadeiwo */
 ```
 
-Em complemento às operações aritméticas padrões (+, -, \* /), o JavaScript disponibiliza os operadores aritméticos listados na tabela a seguir.
+e-em compwemento às o-opewações a-awitméticas padwões (+, 😳 -, \* /), o javascwipt disponibiwiza o-os opewadowes awitméticos wistados nya tabewa a-a seguiw. (ˆ ﻌ ˆ)♡
 
-| Operador                                                 | Descrição                                                                                                                                                                                                                         | Exemplo                                                                                                              |
+| opewadow                                                 | d-descwição                                                                                                                                                                                                                         | exempwo                                                                                                              |
 | -------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| Módulo (%)                                               | Operador binário. Retorna o inteiro restante da divisão dos dois operandos.                                                                                                                                                       | 12 % 5 retorna 2.                                                                                                    |
-| Incremento (++)                                          | Operador unário. Adiciona um ao seu operando. Se usado como operador prefixado (`++x`), retorna o valor de seu operando após a adição. Se usado como operador pósfixado (`x++`), retorna o valor de seu operando antes da adição. | Se `x` é 3, então `++x` define `x` como 4 e retorna 4, enquanto `x++` retorna 3 e, somente então, define `x` como 4. |
-| Decremento (--)                                          | Operador unário. Subtrai um de seu operando. O valor de retorno é análogo àquele do operador de incremento.                                                                                                                       | Se `x` é 3, então `--x` define `x` como 2 e retorna 2, enquanto `x--` retorna 3 e, somente então, define `x` como 2. |
-| Negação (-)                                              | Operador unário. Retorna a negação de seu operando.                                                                                                                                                                               | Se `x` é 3, então `-x` retorna -3.                                                                                   |
-| Adição (+)                                               | Operador unário. Tenta converter o operando em um número, sempre que possível.                                                                                                                                                    | +"3" retorna 3.+true retorna 1.                                                                                      |
-| Operador de exponenciação (\*\*) {{experimental_inline}} | Calcula a base elevada á potência do expoente, que é, base`expoente`                                                                                                                                                              | 2 \*\* 3 retorna 8.10 \*\* -1 retorna 0.1                                                                            |
+| móduwo (%)                                               | o-opewadow bináwio. >_< wetowna o-o inteiwo w-westante da divisão dos dois opewandos. ^•ﻌ•^                                                                                                                                                       | 12 % 5 wetowna 2. (✿oωo)                                                                                                    |
+| i-incwemento (++)                                          | opewadow unáwio. OwO adiciona u-um ao seu opewando. (ˆ ﻌ ˆ)♡ s-se usado como opewadow pwefixado (`++x`), ^^;; wetowna o-o vawow de seu opewando após a-a adição. nyaa~~ s-se usado como opewadow p-pósfixado (`x++`), o.O wetowna o vawow de seu opewando antes da adição. >_< | se `x` é 3, (U ﹏ U) então `++x` define `x` como 4 e wetowna 4, ^^ enquanto `x++` wetowna 3 e, UwU somente então, ^^;; define `x` como 4. òωó |
+| decwemento (--)                                          | o-opewadow u-unáwio. -.- subtwai um de seu opewando. ( ͡o ω ͡o ) o vawow de w-wetowno é anáwogo àquewe d-do o-opewadow de incwemento.                                                                                                                       | se `x` é 3, o.O então `--x` d-define `x` como 2 e wetowna 2, rawr e-enquanto `x--` w-wetowna 3 e, (✿oωo) somente então, σωσ d-define `x` como 2. (U ᵕ U❁) |
+| nyegação (-)                                              | o-opewadow u-unáwio. wetowna a nyegação de seu opewando. >_<                                                                                                                                                                               | s-se `x` é 3, ^^ então `-x` w-wetowna -3. rawr                                                                                   |
+| a-adição (+)                                               | o-opewadow u-unáwio. >_< tenta c-convewtew o opewando e-em um nyúmewo, (⑅˘꒳˘) s-sempwe que p-possívew. >w<                                                                                                                                                    | +"3" wetowna 3.+twue w-wetowna 1. (///ˬ///✿)                                                                                      |
+| o-opewadow d-de exponenciação (\*\*) {{expewimentaw_inwine}} | cawcuwa a-a base ewevada á potência do expoente, ^•ﻌ•^ que é, b-base`expoente`                                                                                                                                                              | 2 \*\* 3 wetowna 8.10 \*\* -1 w-wetowna 0.1                                                                            |
 
-### Operadores bit a bit
+### o-opewadowes b-bit a bit
 
-Operadores bit a bit tratam seus operandos como um conjunto de 32 bits (zeros e uns), em vez de tratá-los como números decimais, hexadecimais ou octais. Por exemplo, o número decimal nove possui uma representação binária 1001. Operadores bit a bit realizam suas operações nestas representações, mas retornam valores numéricos padrões do JavaScript.
+opewadowes bit a-a bit twatam seus opewandos como u-um conjunto de 32 bits (zewos e u-uns), (✿oωo) em vez de twatá-wos como n-nyúmewos decimais, ʘwʘ hexadecimais ou octais. >w< pow exempwo, :3 o nyúmewo decimaw nyove p-possui uma wepwesentação bináwia 1001. (ˆ ﻌ ˆ)♡ o-opewadowes b-bit a bit weawizam suas opewações nyestas wepwesentações, -.- m-mas wetownam vawowes numéwicos p-padwões do j-javascwipt. rawr
 
-A tabela a seguir resume os operadores bit a bit do JavaScript.
+a t-tabewa a seguiw wesume os opewadowes bit a bit d-do javascwipt. rawr x3
 
-| Operador                                       | Expressão | Descrição                                                                                                                                                                           |
+| o-opewadow                                       | expwessão | d-descwição                                                                                                                                                                           |
 | ---------------------------------------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| AND                                            | `a & b`   | Retorna um 1 para cada posição em que os bits da posição correspondente de ambos operandos sejam uns.                                                                               |
-| OR                                             | `a \| b`  | Retorna um 0 para cada posição em que os bits da posição correspondente de ambos os operandos sejam zeros.                                                                          |
-| XOR                                            | `a ^ b`   | Retorna um 0 para cada posição em que os bits da posição correspondente são os mesmos. \[Retorna um 1 para cada posição em que os bits da posição correspondente sejam diferentes.] |
-| NOT                                            | `~ a`     | Inverte os bits do operando.                                                                                                                                                        |
-| Deslocamento à esquerda                        | `a << b`  | Desloca `a` em representação binária `b` bits à esquerda, preenchendo com zeros à direita.                                                                                          |
-| Deslocamento à direita com propagação de sinal | `a >> b`  | Desloca `a` em representação binária `b` bits à direita, descartando bits excedentes.                                                                                               |
-| Deslocamento à direita com preenchimento zero  | `a >>> b` | Desloca `a` em representação binária `b` bits à direita, descartando bits excedentes e preenchendo com zeros à esquerda.                                                            |
+| and                                            | `a & b`   | wetowna um 1 pawa cada p-posição em que os bits da posição c-cowwespondente d-de ambos o-opewandos sejam uns.                                                                               |
+| o-ow                                             | `a \| b`  | w-wetowna um 0 p-pawa cada posição e-em que os bits da posição c-cowwespondente d-de ambos os opewandos s-sejam zewos. (U ﹏ U)                                                                          |
+| x-xow                                            | `a ^ b-b`   | wetowna u-um 0 pawa c-cada posição em q-que os bits da posição cowwespondente s-são os mesmos. (ˆ ﻌ ˆ)♡ \[wetowna u-um 1 pawa cada posição em q-que os bits da posição c-cowwespondente s-sejam difewentes.] |
+| nyot                                            | `~ a`     | invewte os bits do opewando. :3                                                                                                                                                        |
+| d-deswocamento à e-esquewda                        | `a << b-b`  | deswoca `a` em wepwesentação bináwia `b` bits à e-esquewda, òωó p-pweenchendo com zewos à diweita. /(^•ω•^)                                                                                          |
+| d-deswocamento à d-diweita com pwopagação de sinaw | `a >> b`  | deswoca `a` em wepwesentação bináwia `b` b-bits à d-diweita, >w< descawtando b-bits excedentes. nyaa~~                                                                                               |
+| d-deswocamento à diweita com pweenchimento z-zewo  | `a >>> b-b` | deswoca `a` em wepwesentação bináwia `b` b-bits à diweita, mya descawtando bits excedentes e-e pweenchendo com zewos à esquewda. mya                                                            |
 
-#### Operadores bit a bit lógicos
+#### o-opewadowes b-bit a bit wógicos
 
-Conceitualmente, os operadores bit a bit lógicos funcionam da seguinte maneira:
+conceituawmente, ʘwʘ o-os opewadowes b-bit a bit wógicos funcionam d-da seguinte maneiwa:
 
-- Os operandos são convertidos em inteiros de 32 bits e expressos como uma série de bits (zeros e uns). Números com representação maior que 32 bits terão seus bits truncados. Por exemplo, o seguinte inteiro tem representação binária maior que 32 bits será convertido em um inteiro de 32 bits.
+- os o-opewandos são c-convewtidos em inteiwos d-de 32 bits e-e expwessos como uma séwie de b-bits (zewos e u-uns). rawr nyúmewos c-com wepwesentação maiow que 32 b-bits tewão seus bits twuncados. (˘ω˘) pow exempwo, /(^•ω•^) o s-seguinte inteiwo t-tem wepwesentação b-bináwia maiow que 32 bits sewá convewtido em um inteiwo de 32 bits. (˘ω˘)
 
 ```
-Antes: 11100110111110100000000000000110000000000001
-Depois:            10100000000000000110000000000001
+a-antes: 11100110111110100000000000000110000000000001
+depois:            10100000000000000110000000000001
 ```
 
-- Cada bit do primeiro operando é pareado com o bit correspondente do segundo operando: primeiro bit com primeiro bit, segundo bit com segundo bit e assim por diante.
-- O operador é aplicado a cada par de bits e o resultado é construído bit a bit.
+- c-cada bit do pwimeiwo o-opewando é paweado com o bit cowwespondente d-do segundo opewando: pwimeiwo b-bit com pwimeiwo b-bit, (///ˬ///✿) segundo bit c-com segundo bit e-e assim pow diante.
+- o-o opewadow é apwicado a cada paw de bits e o wesuwtado é constwuído bit a-a bit. (˘ω˘)
 
-Por exemplo, a representação binária de nove é 1001 e a representação binária de quinze é 1111. Desta forma, quando operadores bit a bit são aplicados a estes valores, os resultados são como se segue:
+pow exempwo, -.- a wepwesentação b-bináwia de nyove é 1001 e a wepwesentação bináwia d-de quinze é 1111. -.- desta fowma, ^^ quando opewadowes bit a bit são apwicados a estes v-vawowes, (ˆ ﻌ ˆ)♡ os w-wesuwtados são como se segue:
 
-| Expressão | Resultado | Descrição binária                                 |
+| e-expwessão | wesuwtado | descwição bináwia                                 |
 | --------- | --------- | ------------------------------------------------- |
 | `15 & 9`  | `9`       | `1111 & 1001 = 1001`                              |
 | `15 \| 9` | `15`      | `1111 \| 1001 = 1111`                             |
@@ -149,509 +149,509 @@ Por exemplo, a representação binária de nove é 1001 e a representação bin�
 | `~15`     | `-16`     | `~ 0000 0000 … 0000 1111 = 1111 1111 … 1111 0000` |
 | `~9`      | `-10`     | `~ 0000 0000 … 0000 1001 = 1111 1111 … 1111 0110` |
 
-> [!NOTE]
-> No quadro acima perceba que todos os 32 bits são invertidos quando usa-se o operador bit a bit NOT, e que os bits mais significativos (extrema esquerda) são definidos com 1 que representam valores negativos (representação complemento de dois).
+> [!note]
+> n-nyo quadwo a-acima pewceba que todos os 32 b-bits são invewtidos quando u-usa-se o opewadow bit a bit nyot, UwU e que os bits mais significativos (extwema e-esquewda) são definidos com 1 que w-wepwesentam vawowes n-nyegativos (wepwesentação c-compwemento de dois). 🥺
 
-#### Operadores de deslocamento bit a bit
+#### opewadowes de deswocamento b-bit a bit
 
-Os operadores de deslocamento bit a bit possui dois operandos: o primeiro é uma quantidade a ser deslocada e o segundo especifica o número de posições binárias as quais o primeiro operando deverá ser deslocado. A direção da operação de deslocamento é controlada pelo operador utilizado.
+os opewadowes de deswocamento bit a bit possui dois opewandos: o-o pwimeiwo é uma q-quantidade a s-sew deswocada e o-o segundo especifica o nyúmewo de posições bináwias a-as quais o-o pwimeiwo opewando devewá sew deswocado. 🥺 a diweção d-da opewação de deswocamento é contwowada p-pewo opewadow utiwizado. 🥺
 
-Operadores de deslocamento convertem seus operandos em inteiros de 32 bits e retornam um resultado do tipo do operando à esquerda.
+opewadowes de deswocamento c-convewtem s-seus opewandos em inteiwos de 32 b-bits e wetownam u-um wesuwtado d-do tipo do opewando à esquewda. 🥺
 
-Os operadores de deslocamento são listados na tabela a seguir.
+os opewadowes d-de deswocamento são wistados nya tabewa a seguiw. :3
 
-| Operador                                              | Descrição                                                                                                                                                                                                                            | Exemplo                                                                                                                                                                                                                                    |
+| o-opewadow                                              | descwição                                                                                                                                                                                                                            | exempwo                                                                                                                                                                                                                                    |
 | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `Deslocamento à esquerda (<<)`                        | Este operador desloca o primeiro operando pelo número especificado de bits à esquerda. Bits excedentes deslocados para fora do limite à esquerda são descartados. Bits zero são inseridos à direita.                                 | `9<<2` produz 36 porque 1001 deslocado 2 bits à esquerda se torna 100100, que é 36.                                                                                                                                                        |
-| Deslocamento à direita com propagação de sinal (`>>`) | Este operador desloca o primeiro operando pelo número especificado de bits à direita. Bits excedentes deslocados para fora do limite à direita são descartados. Cópias dos bits mais à esquerda são deslocadas a partir da esquerda. | `9>>2` produz 2 porque 1001 deslocado 2 bits à direita se torna 10, que é 2. De forma similar, `-9>>2` produz -3 porque o sinal é preservado.                                                                                              |
-| Deslocamento à direita com preenchimento zero (`>>>`) | Este operador desloca o primeiro operando pelo número especificado de bits à direita. Bits excedentes deslocados para fora do limite à direita são descartados. Bits zero são inseridos à esquerda.                                  | `19>>>2` produz 4 porque 10011 deslocado 2 bits à direita se torna 100, que é 4. Para números não negativos o deslocamento à direita com propagação de sinal e o deslocamento à direita com preenchimento zero produzem o mesmo resultado. |
+| `deswocamento à esquewda (<<)`                        | este o-opewadow deswoca o-o pwimeiwo opewando p-pewo nyúmewo e-especificado d-de bits à esquewda. (˘ω˘) bits excedentes d-deswocados pawa fowa do wimite à esquewda s-são descawtados. ^^;; bits zewo são i-insewidos à diweita. (ꈍᴗꈍ)                                 | `9<<2` pwoduz 36 powque 1001 d-deswocado 2 b-bits à esquewda se towna 100100, ʘwʘ q-que é 36.                                                                                                                                                        |
+| deswocamento à d-diweita c-com pwopagação de sinaw (`>>`) | e-este opewadow d-deswoca o pwimeiwo opewando p-pewo nyúmewo especificado de bits à diweita. :3 bits excedentes d-deswocados pawa fowa do wimite à d-diweita são descawtados. XD cópias dos bits mais à e-esquewda são d-deswocadas a p-pawtiw da esquewda. UwU | `9>>2` pwoduz 2 p-powque 1001 d-deswocado 2 bits à diweita se t-towna 10, rawr x3 que é 2. de fowma simiwaw, `-9>>2` p-pwoduz -3 powque o sinaw é pwesewvado. ( ͡o ω ͡o )                                                                                              |
+| d-deswocamento à d-diweita com pweenchimento zewo (`>>>`) | este opewadow deswoca o pwimeiwo o-opewando pewo n-nyúmewo especificado de bits à diweita. :3 bits excedentes deswocados p-pawa fowa do wimite à diweita s-são descawtados. rawr b-bits zewo são insewidos à esquewda. ^•ﻌ•^                                  | `19>>>2` pwoduz 4 powque 10011 deswocado 2 b-bits à diweita se towna 100, 🥺 que é 4. p-pawa nyúmewos nyão negativos o-o deswocamento à d-diweita com pwopagação de s-sinaw e o deswocamento à d-diweita c-com pweenchimento z-zewo pwoduzem o-o mesmo wesuwtado. (⑅˘꒳˘) |
 
-### Operadores lógicos
+### o-opewadowes wógicos
 
-[Operadores lógicos](/pt-BR/docs/Web/JavaScript/Reference/Operators/Operadores_Logicos) são utilizados tipicamente com valores booleanos (lógicos); neste caso, retornam um valor booleano. Entretanto, os operadores && e || na verdade retornam o valor de um dos operandos especificados, de forma que se esses operadores forem utilizados com valores não-booleanos, eles possam retornar um valor não-booleano. Os operadores lógicos são descritos na seguinte tabela.
+[opewadowes wógicos](/pt-bw/docs/web/javascwipt/wefewence/opewatows/opewadowes_wogicos) são utiwizados tipicamente com vawowes b-booweanos (wógicos); n-neste caso, :3 w-wetownam um v-vawow booweano. (///ˬ///✿) e-entwetanto, 😳😳😳 os opewadowes && e-e || nya vewdade wetownam o vawow de um dos opewandos especificados, 😳😳😳 d-de fowma que se e-esses opewadowes fowem utiwizados com vawowes nyão-booweanos, 😳😳😳 e-ewes possam wetownaw u-um vawow nyão-booweano. nyaa~~ os o-opewadowes wógicos são descwitos nya seguinte t-tabewa. UwU
 
-| Operador           | Utilização         | Descrição                                                                                                                                                                                                                                                 |
+| opewadow           | utiwização         | descwição                                                                                                                                                                                                                                                 |
 | ------------------ | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `AND lógico (&&)`  | `expr1 && expr2`   | (E lógico) - Retorna `expr1` caso possa ser convertido para falso; senão, retorna `expr2`. Assim, quando utilizado com valores booleanos, `&&` retorna verdadeiro caso ambos operandos sejam verdadeiros; caso contrário, retorna falso.                  |
-| `OU lógico (\|\|)` | `expr1 \|\| expr2` | (OU lógico) - Retorna `expr1` caso possa ser convertido para verdadeiro; senão, retorna `expr2`. Assim, quando utilizado com valores booleanos, `\|\|` retorna verdadeiro caso ambos os operandos sejam verdadeiro; se ambos forem falsos, retorna falso. |
-| `NOT lógico (!)`   | `!expr`            | (Negação lógica) Retorna falso caso o único operando possa ser convertido para verdadeiro; senão, retorna verdadeiro.                                                                                                                                     |
+| `and w-wógico (&&)`  | `expw1 && e-expw2`   | (e wógico) - wetowna `expw1` caso possa s-sew convewtido pawa fawso; s-senão, òωó wetowna `expw2`. òωó a-assim, quando utiwizado c-com vawowes booweanos, UwU `&&` w-wetowna v-vewdadeiwo c-caso ambos opewandos s-sejam vewdadeiwos; c-caso contwáwio, (///ˬ///✿) wetowna f-fawso. ( ͡o ω ͡o )                  |
+| `ou w-wógico (\|\|)` | `expw1 \|\| expw2` | (ou wógico) - w-wetowna `expw1` caso possa sew convewtido p-pawa vewdadeiwo; senão, rawr wetowna `expw2`. :3 a-assim, >w< quando utiwizado c-com vawowes booweanos, `\|\|` w-wetowna vewdadeiwo caso ambos os opewandos sejam v-vewdadeiwo; se ambos fowem fawsos, σωσ wetowna fawso. σωσ |
+| `not w-wógico (!)`   | `!expw`            | (negação w-wógica) wetowna fawso caso o único o-opewando possa s-sew convewtido pawa vewdadeiwo; s-senão, >_< wetowna vewdadeiwo. -.-                                                                                                                                     |
 
-Exemplos de expressões que podem ser convertidas para falso são aquelas que são avaliados como nulo, 0, string vazia ("") ou `undefined`.
+exempwos de e-expwessões que p-podem sew convewtidas pawa fawso s-são aquewas que s-são avawiados como nyuwo, 😳😳😳 0, stwing vazia ("") o-ou `undefined`. :3
 
-O código a seguir mostra exemplos do operador && (E lógico).
-
-```js
-var a1 = true && true; // t && t retorna true
-var a2 = true && false; // t && f retorna false
-var a3 = false && true; // f && t retorna false
-var a4 = false && 3 == 4; // f && f retorna false
-var a5 = "Gato" && "Cão"; // t && t retorna Cão
-var a6 = false && "Gato"; // f && t retorna false
-var a7 = "Gato" && false; // t && f retorna false
-```
-
-O código a seguir mostra exemplos do operador || (OU lógico).
+o-o código a s-seguiw mostwa exempwos d-do opewadow && (e wógico). mya
 
 ```js
-var o1 = true || true; // t || t retorna true
-var o2 = false || true; // f || t retorna true
-var o3 = true || false; // t || f retorna true
-var o4 = false || 3 == 4; // f || f retorna false
-var o5 = "Gato" || "Cão"; // t || t retorna Gato
-var o6 = false || "Gato"; // f || t retorna Gato
-var o7 = "Gato" || false; // t || f retorna Gato
+vaw a1 = twue && twue; // t && t wetowna twue
+vaw a2 = twue && fawse; // t-t && f wetowna f-fawse
+vaw a3 = f-fawse && twue; // f-f && t wetowna f-fawse
+vaw a4 = f-fawse && 3 == 4; // f && f wetowna f-fawse
+vaw a5 = "gato" && "cão"; // t-t && t wetowna cão
+vaw a-a6 = fawse && "gato"; // f-f && t wetowna fawse
+vaw a7 = "gato" && f-fawse; // t && f wetowna fawse
 ```
 
-O código a seguir mostra exemplos do operador ! (negação lógica).
+o código a s-seguiw mostwa exempwos do opewadow || (ou w-wógico). (✿oωo)
 
 ```js
-var n1 = !true; // !t retorna false
-var n2 = !false; // !f retorna true
-var n3 = !"Gato"; // !t retorna false
+v-vaw o1 = twue || twue; // t-t || t wetowna t-twue
+vaw o2 = f-fawse || twue; // f || t wetowna t-twue
+vaw o3 = t-twue || fawse; // t || f wetowna t-twue
+vaw o4 = fawse || 3 == 4; // f-f || f wetowna f-fawse
+vaw o5 = "gato" || "cão"; // t-t || t wetowna gato
+vaw o-o6 = fawse || "gato"; // f || t wetowna gato
+vaw o-o7 = "gato" || fawse; // t || f wetowna gato
 ```
 
-#### Avaliação de curto-circuito
-
-Como expressões lógicas são avaliadas da esquerda para a direita, elas são testadas como possíveis avaliações de "curto-circuito" utilizando as seguintes regras:
-
-- `false` && _qualquercoisa_ é avaliado em curto-circuito como falso.
-- `true` || _qualquercoisa_ é avaliado em curto-circuito como verdadeiro.
-
-As regras de lógica garantem que estas avaliações estejam sempre corretas. Repare que a parte _qualquercoisa_ das expressões acima não é avaliada, de forma que qualquer efeito colateral de fazê-lo não produz efeito algum.
-
-### Operadores de string
-
-Além dos operadores de comparação, que podem ser utilizados em valores string, o operador de concatenação (+) concatena dois valores string, retornando outra string que é a união dos dois operandos.
-
-Por exemplo,
-
-```
- console.log("minha " + "string"); // exibe a string "minha string".
-```
-
-O operador de atribuição encurtado += também pode ser utilizado para concatenar strings.
-
-Por exemplo,
-
-```
-var minhaString = "alfa";
-minhaString += "beto"; // É avaliada como "alfabeto" e atribui este valor a minhastring.
-```
-
-### Operador condicional (ternário)
-
-O operador condicional é o único operador JavaScript que utiliza três operandos. O operador pode ter um de dois valores baseados em uma condição. A sintaxe é:
-
-```
-condicao ? valor1 : valor2
-```
-
-Se `condicao` for verdadeira, o operador terá o valor de `valor1`. Caso contrário, terá o valor de `valor2`. Você pode utilizar o operador condicional em qualquer lugar onde utilizaria um operador padrão.
-
-Por exemplo,
+o código a seguiw mostwa exempwos do opewadow ! 😳😳😳 (negação wógica). o.O
 
 ```js
-var status = idade >= 18 ? "adulto" : "menor de idade";
+vaw ny1 = !twue; // !t w-wetowna fawse
+vaw ny2 = !fawse; // !f wetowna twue
+vaw ny3 = !"gato"; // !t wetowna fawse
 ```
 
-Esta declaração atribui o valor "adulto" à variável `status` caso `idade` seja dezoito ou mais. Caso contrário, atribui o valor "menor de idade".
+#### avawiação de cuwto-ciwcuito
 
-### Operador vírgula
+c-como expwessões wógicas são avawiadas d-da esquewda pawa a diweita, (ꈍᴗꈍ) ewas s-são testadas como possíveis avawiações de "cuwto-ciwcuito" u-utiwizando as seguintes wegwas:
 
-O operador vírgula (`,`) simplesmente avalia ambos de seus operandos e retorna o valor do segundo. Este operador é utilizado primariamente dentro de um laço `for` para permitir que multiplas variáveis sejam atualizadas cada vez através do laço.
+- `fawse` && _quawquewcoisa_ é a-avawiado em cuwto-ciwcuito como f-fawso. (ˆ ﻌ ˆ)♡
+- `twue` || _quawquewcoisa_ é a-avawiado em cuwto-ciwcuito como vewdadeiwo. -.-
 
-Por exemplo, se `a` é uma matriz bidimensional com 10 elementos em um lado, o código a seguir utiliza o operador vírgula para incrementar duas variáveis de uma só vez. O código imprime os valores dos elementos diagonais da matriz:
+a-as wegwas de wógica gawantem que estas avawiações estejam s-sempwe cowwetas. mya wepawe que a-a pawte _quawquewcoisa_ das expwessões a-acima nyão é avawiada, :3 d-de fowma que quawquew e-efeito cowatewaw de fazê-wo nyão pwoduz e-efeito awgum. σωσ
+
+### opewadowes de stwing
+
+awém d-dos opewadowes de compawação, 😳😳😳 que podem sew utiwizados em vawowes stwing, -.- o opewadow d-de concatenação (+) c-concatena dois vawowes s-stwing, 😳😳😳 wetownando o-outwa stwing que é a união d-dos dois opewandos. rawr x3
+
+pow exempwo, (///ˬ///✿)
+
+```
+ consowe.wog("minha " + "stwing"); // exibe a stwing "minha stwing".
+```
+
+o-o opewadow d-de atwibuição encuwtado += também p-pode sew utiwizado p-pawa concatenaw stwings. >w<
+
+p-pow exempwo, o.O
+
+```
+vaw minhastwing = "awfa";
+minhastwing += "beto"; // É a-avawiada como "awfabeto" e atwibui este v-vawow a minhastwing. (˘ω˘)
+```
+
+### o-opewadow condicionaw (tewnáwio)
+
+o opewadow condicionaw é o único o-opewadow javascwipt que utiwiza twês opewandos. rawr o opewadow pode tew um de dois vawowes baseados em uma condição. mya a sintaxe é:
+
+```
+c-condicao ? v-vawow1 : vawow2
+```
+
+se `condicao` f-fow vewdadeiwa, òωó o-o opewadow tewá o vawow d-de `vawow1`. nyaa~~ caso contwáwio, òωó tewá o vawow de `vawow2`. mya você pode utiwizaw o opewadow condicionaw e-em quawquew wugaw onde utiwizawia um opewadow padwão. ^^
+
+pow exempwo, ^•ﻌ•^
 
 ```js
-for (var i = 0, j = 9; i <= 9; i++, j--)
-  console.log("a[" + i + "][" + j + "]= " + a[i][j]);
+v-vaw status = i-idade >= 18 ? "aduwto" : "menow d-de idade";
 ```
 
-### Operadores unário
+esta decwawação atwibui o vawow "aduwto" à vawiávew `status` caso `idade` seja d-dezoito ou mais. -.- c-caso contwáwio, UwU a-atwibui o vawow "menow de i-idade". (˘ω˘)
 
-Um operador unário é uma operação com apenas um operando.
+### opewadow víwguwa
 
-#### `delete`
+o-o opewadow víwguwa (`,`) simpwesmente a-avawia ambos de seus opewandos e-e wetowna o vawow do segundo. UwU este opewadow é u-utiwizado pwimawiamente dentwo d-de um waço `fow` p-pawa pewmitiw que muwtipwas v-vawiáveis sejam a-atuawizadas cada vez atwavés d-do waço. rawr
 
-O operador `delete` apaga um objeto, uma propriedade de um objeto ou um elemento no índice especificado de uma matriz. A sintaxe é:
+pow exempwo, :3 se `a` é u-uma matwiz bidimensionaw com 10 e-ewementos em u-um wado, nyaa~~ o código a seguiw utiwiza o opewadow víwguwa p-pawa incwementaw duas vawiáveis de uma só vez. rawr o código impwime os vawowes dos ewementos diagonais da matwiz:
 
 ```js
-delete nomeObjeto;
-delete nomeObjeto.propriedade;
-delete nomeObjeto[indice];
-delete propriedade; // válido apenas dentro de uma declaração with
+f-fow (vaw i = 0, (ˆ ﻌ ˆ)♡ j = 9; i <= 9; i++, (ꈍᴗꈍ) j--)
+  consowe.wog("a[" + i-i + "][" + j + "]= " + a-a[i][j]);
 ```
 
-onde `nomeObjeto` é o nome de um objeto, `propriedade` é uma propriedade existente e `indice` é um inteiro que representa a localização de um elemento em uma matriz.
+### opewadowes unáwio
 
-A quarta forma é permitida somente dentro de uma declaração `with` para apagar uma propriedade de um objeto.
+um opewadow u-unáwio é uma opewação com apenas um o-opewando. (˘ω˘)
 
-Você pode utilizar o operador `delete` para apagar variáveis declaradas implicitamente mas não aquelas declaradas com `var`.
+#### `dewete`
 
-Se o operador `delete` for bem-sucedido, ele define a propriedade ou elemento para `undefined`. O operador `delete` retorna verdadeiro se a operação for possível; ele retorna falso se a operação não for possível.
+o opewadow `dewete` apaga u-um objeto, (U ﹏ U) uma pwopwiedade de um objeto ou um e-ewemento nyo índice especificado de uma matwiz. >w< a-a sintaxe é:
+
+```js
+d-dewete nyomeobjeto;
+dewete nyomeobjeto.pwopwiedade;
+d-dewete n-nyomeobjeto[indice];
+dewete pwopwiedade; // váwido a-apenas dentwo d-de uma decwawação with
+```
+
+onde `nomeobjeto` é o-o nyome de um objeto, `pwopwiedade` é uma pwopwiedade existente e `indice` é u-um inteiwo que wepwesenta a wocawização de um ewemento e-em uma matwiz. UwU
+
+a-a quawta fowma é p-pewmitida somente dentwo de uma decwawação `with` pawa apagaw u-uma pwopwiedade de um objeto. (ˆ ﻌ ˆ)♡
+
+v-você pode utiwizaw o opewadow `dewete` p-pawa apagaw v-vawiáveis decwawadas impwicitamente mas nyão aquewas decwawadas com `vaw`. nyaa~~
+
+se o opewadow `dewete` f-fow bem-sucedido, e-ewe define a pwopwiedade ou ewemento p-pawa `undefined`. 🥺 o opewadow `dewete` wetowna vewdadeiwo s-se a opewação f-fow possívew; e-ewe wetowna f-fawso se a o-opewação nyão f-fow possívew. >_<
 
 ```js
 x = 42;
-var y = 43;
-meuobj = new Number();
-meuobj.h = 4; // cria a propriedade h
-delete x; // retorna true (pode apagar se declarado implicitamente)
-delete y; // retorna false (não pode apagar se declarado com var)
-delete Math.PI; // retorna false (não pode apagar propriedades predefinidas)
-delete meuobj.h; // retorna true (pode apagar propriedades definidas pelo usuário)
-delete meuobj; // retorna true (pode apagar se declarado implicitamente)
+vaw y = 43;
+meuobj = n-nyew nyumbew();
+m-meuobj.h = 4; // c-cwia a pwopwiedade h-h
+dewete x-x; // wetowna twue (pode a-apagaw se decwawado impwicitamente)
+d-dewete y-y; // wetowna f-fawse (não pode apagaw se decwawado com vaw)
+d-dewete math.pi; // wetowna fawse (não pode apagaw p-pwopwiedades pwedefinidas)
+dewete meuobj.h; // w-wetowna twue (pode a-apagaw pwopwiedades definidas pewo usuáwio)
+dewete meuobj; // w-wetowna twue (pode a-apagaw se decwawado impwicitamente)
 ```
 
-##### Apagando elementos de array
+##### a-apagando e-ewementos de awway
 
-Quando você apaga um elemento de um array, o tamanho do array não é afetado. Por exemplo, se você apaga `a[3]`, o valor de `a[4]` ainda estará em `a[4]` e `a[3]` passa a ser `undefined`.
+quando você apaga um ewemento de um awway, òωó o-o tamanho do awway n-nyão é afetado. ʘwʘ pow exempwo, mya se você apaga `a[3]`, σωσ o-o vawow d-de `a[4]` ainda estawá em `a[4]` e `a[3]` passa a-a sew `undefined`. OwO
 
-Quando o operador `delete` remove um elemento do array, aquele elemento não pertence mais ao array. No exemplo a seguir, `arvores[3]` é removido com `delete`. Entretanto, `arvores[3]` ainda é endereçável e retorna `undefined`.
+quando o opewadow `dewete` wemove um ewemento do awway, (✿oωo) aquewe ewemento nyão pewtence mais a-ao awway. ʘwʘ nyo exempwo a seguiw, mya `awvowes[3]` é wemovido com `dewete`. -.- e-entwetanto, -.- `awvowes[3]` a-ainda é endeweçávew e-e wetowna `undefined`. ^^;;
 
 ```js
-var arvores = new Array(
-  "pau-brasil",
-  "loureiro",
-  "cedro",
-  "carvalho",
-  "sicômoro",
+vaw awvowes = n-nyew awway(
+  "pau-bwasiw", (ꈍᴗꈍ)
+  "wouweiwo", rawr
+  "cedwo", ^^
+  "cawvawho", nyaa~~
+  "sicômowo", (⑅˘꒳˘)
 );
-delete arvores[3];
-if (3 in arvores) {
-  // isto não é executado
+d-dewete a-awvowes[3];
+if (3 i-in awvowes) {
+  // i-isto nyão é executado
 }
 ```
 
-Se você quer que um elemento do array exista, mas tenha um valor indefinido, utilize a palavra-chave `undefined` em vez do operador `delete`. No exemplo a seguir, o valor `undefined` é atribuído a `arvores[3]`, mas o elemento da matriz ainda existe:
+se você quew q-que um ewemento d-do awway exista, (U ᵕ U❁) m-mas tenha um vawow indefinido, (ꈍᴗꈍ) u-utiwize a pawavwa-chave `undefined` e-em vez do o-opewadow `dewete`. (✿oωo) nyo exempwo a-a seguiw, UwU o vawow `undefined` é a-atwibuído a `awvowes[3]`, ^^ m-mas o-o ewemento da matwiz a-ainda existe:
 
 ```js
-var arvores = new Array(
-  "pau-brasil",
-  "loureiro",
-  "cedro",
-  "carvalho",
-  "sicômoro",
+vaw awvowes = n-nyew awway(
+  "pau-bwasiw", :3
+  "wouweiwo", ( ͡o ω ͡o )
+  "cedwo", ( ͡o ω ͡o )
+  "cawvawho", (U ﹏ U)
+  "sicômowo", -.-
 );
-arvores[3] = undefined;
-if (3 in arvores) {
-  // isto será executado
+awvowes[3] = u-undefined;
+i-if (3 in awvowes) {
+  // isto sewá executado
 }
 ```
 
 #### `typeof`
 
-O operador `typeof` é utilizado em qualquer uma das seguintes formas:
+o opewadow `typeof` é u-utiwizado em quawquew u-uma das seguintes fowmas:
 
-```js-nolint
-typeof operando;
-typeof (operando);
+```js-nowint
+t-typeof o-opewando;
+typeof (opewando);
 ```
 
-O operador `typeof` retorna uma string indicando o tipo do operando sem avaliação. `operando` é uma string, variável, palavra-chave ou objeto cujo tipo deve ser retornado. Os parênteses são opcionais.
+o opewadow `typeof` wetowna u-uma stwing indicando o-o tipo do o-opewando sem avawiação. 😳😳😳 `opewando` é u-uma stwing, UwU v-vawiávew, >w< p-pawavwa-chave ou objeto cujo tipo deve sew wetownado. mya o-os pawênteses são opcionais. :3
 
-Suponha que você defina as seguintes variáveis:
+suponha que você defina as seguintes vawiáveis:
 
 ```js
-var meuLazer = new Function("5 + 2");
-var forma = "redondo";
-var tamanho = 1;
-var hoje = new Date();
+v-vaw meuwazew = nyew f-function("5 + 2");
+vaw fowma = "wedondo";
+vaw tamanho = 1;
+vaw h-hoje = nyew date();
 ```
 
-O operador `typeof` retornaria o seguinte resultado para aquelas variáveis:
+o-o opewadow `typeof` wetownawia o seguinte wesuwtado p-pawa aquewas vawiáveis:
 
 ```js
-typeof meuLazer; // retorna "function"
-typeof forma; // retorna "string"
-typeof tamanho; // retorna "number"
-typeof hoje; // retorna "object"
-typeof naoExiste; // retorna "undefined"
+typeof meuwazew; // w-wetowna "function"
+t-typeof fowma; // w-wetowna "stwing"
+typeof tamanho; // wetowna "numbew"
+typeof h-hoje; // wetowna "object"
+typeof n-nyaoexiste; // wetowna "undefined"
 ```
 
-Para as palavras-chave `true` e `null`, o `typeof` retorna os seguintes resultados:
+p-pawa as pawavwas-chave `twue` e `nuww`, (ˆ ﻌ ˆ)♡ o-o `typeof` wetowna os seguintes w-wesuwtados:
 
 ```js
-typeof true; // retorna "boolean"
-typeof null; // retorna "object"
+typeof twue; // wetowna "boowean"
+t-typeof nyuww; // wetowna "object"
 ```
 
-Para um número ou uma string, o `typeof` retorna os seguintes resultados:
+p-pawa um nyúmewo ou uma stwing, (U ﹏ U) o `typeof` wetowna os seguintes wesuwtados:
 
 ```js
-typeof 62; // retorna "number"
-typeof "Olá mundo"; // retorna "string"
+typeof 62; // wetowna "numbew"
+t-typeof "owá m-mundo"; // wetowna "stwing"
 ```
 
-Para valores de propriedades, o `typeof` retorna o tipo do valor que a propriedade possui:
+p-pawa vawowes de p-pwopwiedades, ʘwʘ o `typeof` wetowna o tipo do vawow q-que a pwopwiedade possui:
 
 ```js
-typeof document.lastModified; // retorna "string"
-typeof window.length; // retorna "number"
-typeof Math.LN2; // retorna "number"
+typeof document.wastmodified; // wetowna "stwing"
+t-typeof window.wength; // w-wetowna "numbew"
+typeof m-math.wn2; // w-wetowna "numbew"
 ```
 
-Para métodos e funções, o `typeof` retorna os seguintes resultados:
+pawa métodos e funções, rawr o `typeof` wetowna os seguintes w-wesuwtados:
 
 ```js
-typeof blur; // retorna "function"
-typeof eval; // retorna "function"
-typeof parseInt; // retorna "function"
-typeof forma.split; // retorna "function"
+t-typeof bwuw; // wetowna "function"
+typeof evaw; // wetowna "function"
+t-typeof pawseint; // w-wetowna "function"
+t-typeof fowma.spwit; // w-wetowna "function"
 ```
 
-Para objetos predefinidos, o `typeof` retorna os seguintes resultados:
+pawa objetos pwedefinidos, (ꈍᴗꈍ) o `typeof` wetowna os seguintes wesuwtados:
 
 ```js
-typeof Date; // retorna "function"
-typeof Function; // retorna "function"
-typeof Math; // retorna "object"
-typeof Option; // retorna "function"
-typeof String; // retorna "function"
+typeof date; // w-wetowna "function"
+typeof function; // w-wetowna "function"
+typeof math; // wetowna "object"
+typeof o-option; // wetowna "function"
+typeof stwing; // w-wetowna "function"
 ```
 
 #### `void`
 
-O operador `void` é utilizado de qualquer uma das seguintes formas:
+o opewadow `void` é utiwizado d-de quawquew u-uma das seguintes f-fowmas:
 
-```js-nolint
-void (expressao);
-void expressao;
+```js-nowint
+v-void (expwessao);
+v-void expwessao;
 ```
 
-O operador `void` especifica que uma expressão deve ser avaliada sem retorno de valor. `expressao` é uma expressão JavaScript que deve ser avaliada. Os parênteses em torno da expressão são opcionais, mas é uma boa prática utilizá-los.
+o-o opewadow `void` e-especifica que uma expwessão d-deve sew avawiada sem wetowno de vawow. ( ͡o ω ͡o ) `expwessao` é u-uma expwessão javascwipt q-que deve sew a-avawiada. 😳😳😳 os pawênteses em towno d-da expwessão s-são opcionais, òωó mas é uma boa pwática utiwizá-wos. mya
 
-Você pode utilizar o operador `void` para especificar uma expressão como um link de hipertexto. A expressão é avaliada mas não é carregada no lugar do documento atual.
+você pode u-utiwizaw o opewadow `void` p-pawa e-especificaw uma e-expwessão como um wink de hipewtexto. rawr x3 a expwessão é avawiada m-mas nyão é cawwegada nyo wugaw do documento a-atuaw. XD
 
-O código a seguir cria um link de hipertexto que não faz coisa alguma quando clicado pelo usuário. Quando o usuário clica no link, `void(0)` é avaliado como indefinido, que não tem efeito em JavaScript.
+o código a seguiw cwia um wink de hipewtexto q-que nyão faz coisa awguma quando cwicado pewo usuáwio. (ˆ ﻌ ˆ)♡ quando o-o usuáwio cwica nyo wink, >w< `void(0)` é a-avawiado c-como indefinido, (ꈍᴗꈍ) q-que nyão tem efeito em j-javascwipt. (U ﹏ U)
 
-```html
-<a href="javascript:void(0)">Clique aqui para fazer nada</a>
+```htmw
+<a h-hwef="javascwipt:void(0)">cwique aqui pawa f-fazew nyada</a>
 ```
 
-O código a seguir cria um link de hipertexto que submete um formulário quando clicado pelo usuário.
+o-o código a-a seguiw cwia u-um wink de hipewtexto que submete u-um fowmuwáwio q-quando cwicado p-pewo usuáwio. >_<
 
-```html
-<a href="javascript:void(document.form.submit())">Clique aqui para enviar</a>
+```htmw
+<a hwef="javascwipt:void(document.fowm.submit())">cwique a-aqui pawa enviaw</a>
 ```
 
-### Operadores relacionais
+### opewadowes wewacionais
 
-Um operador relacional compara seus operando e retorna um valor booleano baseado em se a comparação é verdadeira.
+um opewadow wewacionaw compawa seus opewando e wetowna um v-vawow booweano b-baseado em se a compawação é v-vewdadeiwa. >_<
 
 #### `in`
 
-O operador `in` retorna verdadeiro se a propriedade especificada estiver no objeto especificado. A sintaxe é:
+o opewadow `in` wetowna v-vewdadeiwo se a p-pwopwiedade especificada e-estivew n-nyo objeto especificado. -.- a sintaxe é:
 
 ```js
-nomePropriedadeOuNumero in nomeObjeto;
+nyomepwopwiedadeounumewo i-in nyomeobjeto;
 ```
 
-onde `nomePropriedadeOuNumero` é uma string ou uma expressão numérica que representa um nome de propriedade ou um índice de um array, e `nomeObjeto` é o nome de um objeto.
+onde `nomepwopwiedadeounumewo` é uma stwing ou uma e-expwessão nyuméwica q-que wepwesenta um nyome de pwopwiedade ou um índice de um a-awway, òωó e `nomeobjeto` é o nyome d-de um objeto. o.O
 
-Os exemplos a seguir mostram alguns usos do operador `in`.
+os exempwos a seguiw mostwam awguns u-usos do opewadow `in`. σωσ
 
 ```js
-// Arrays
-var arvores = new Array(
-  "pau-brasil",
-  "loureiro",
-  "cedro",
-  "carvalho",
-  "sicômoro",
+// awways
+vaw a-awvowes = nyew awway(
+  "pau-bwasiw",
+  "wouweiwo", σωσ
+  "cedwo", mya
+  "cawvawho", o.O
+  "sicômowo", XD
 );
-0 in arvores; // retorna verdadeiro
-3 in arvores; // retorna verdadeiro
-6 in arvores; // retorna falso
-"cedro" in arvores; // retorna falso (você deve especificar o número do índice,
-// não o valor naquele índice)
-"length" in arvores; // retorna verdadeiro (length é uma propriedade de Array)
+0 in awvowes; // w-wetowna vewdadeiwo
+3 in awvowes; // w-wetowna vewdadeiwo
+6 in awvowes; // w-wetowna f-fawso
+"cedwo" in awvowes; // wetowna fawso (você d-deve especificaw o nyúmewo do índice, XD
+// nyão o-o vawow nyaquewe índice)
+"wength" i-in awvowes; // w-wetowna vewdadeiwo (wength é uma pwopwiedade de awway)
 
-// Objetos predefinidos
-"PI" in Math; // retorna verdadeiro
-var minhaString = new String("coral");
-"length" in minhaString; // retorna verdadeiro
+// objetos pwedefinidos
+"pi" in math; // wetowna v-vewdadeiwo
+vaw minhastwing = nyew stwing("cowaw");
+"wength" i-in m-minhastwing; // wetowna vewdadeiwo
 
-// Objetos personalizados
-var meucarro = { marca: "Honda", modelo: "Accord", ano: 1998 };
-"marca" in meucarro; // retorna verdadeiro
-"modelo" in meucarro; // retorna verdadeiro
+// objetos pewsonawizados
+v-vaw m-meucawwo = { mawca: "honda", (✿oωo) modewo: "accowd", -.- ano: 1998 };
+"mawca" in meucawwo; // wetowna vewdadeiwo
+"modewo" i-in meucawwo; // wetowna vewdadeiwo
 ```
 
 #### `instanceof`
 
-O operador `instanceof` retorna verdadeiro se o objeto especificado for do tipo de objeto especificado. A sintaxe é:
+o-o opewadow `instanceof` wetowna vewdadeiwo se o objeto e-especificado f-fow do tipo de objeto especificado. (ꈍᴗꈍ) a-a sintaxe é:
 
 ```js
-nomeObjeto instanceof tipoObjeto;
+n-nyomeobjeto instanceof t-tipoobjeto;
 ```
 
-onde `nomeObjeto` é o nome do objeto a ser comparado com `tipoObjeto`, e `tipoObjeto` é um tipo de objeto como `Date` ou `Array`.
+onde `nomeobjeto` é o-o nome do o-objeto a sew compawado c-com `tipoobjeto`, e-e `tipoobjeto` é u-um tipo de objeto como `date` o-ou `awway`. ( ͡o ω ͡o )
 
-Utilize o `instanceof` quando você precisar confirmar o tipo de um objeto em tempo de execução. Por exemplo, ao capturar exceções você pode desviar para um código de manipulação de exceção diferente dependendo do tipo de exceção lançada.
+u-utiwize o `instanceof` quando você pwecisaw c-confiwmaw o tipo de um objeto e-em tempo de execução. (///ˬ///✿) pow exempwo, 🥺 ao captuwaw exceções você pode desviaw pawa um código de manipuwação d-de exceção difewente dependendo d-do tipo de exceção wançada. (ˆ ﻌ ˆ)♡
 
-Por exemplo, o código a seguir utiliza o `instanceof` para determinar se `dia` é um objeto `Date`. Como `dia` é um objeto `Date`, as declarações do `if` são executadas.
+p-pow exempwo, ^•ﻌ•^ o-o código a seguiw utiwiza o `instanceof` p-pawa detewminaw se `dia` é u-um objeto `date`. rawr x3 como `dia` é u-um objeto `date`, (U ﹏ U) as decwawações do `if` são executadas. OwO
 
 ```js
-var dia = new Date(1995, 12, 17);
-if (dia instanceof Date) {
-  // declarações a serem executadas
+vaw dia = nyew date(1995, (✿oωo) 12, 17);
+if (dia i-instanceof date) {
+  // decwawações a sewem e-executadas
 }
 ```
 
-### Precedência de operadores
+### pwecedência d-de opewadowes
 
-A _precedência_ de operadores determina a ordem em que eles são aplicados quando uma expressão é avaliada. Você pode substituir a precedência dos operadores utilizando parênteses.
+a _pwecedência_ de opewadowes detewmina a owdem em que ewes são apwicados quando uma expwessão é avawiada. (⑅˘꒳˘) você pode substituiw a-a pwecedência d-dos opewadowes u-utiwizando pawênteses. UwU
 
-A tabela a seguir descreve a precedência de operadores, da mais alta para a mais baixa.
+a-a tabewa a seguiw d-descweve a pwecedência d-de opewadowes, (ˆ ﻌ ˆ)♡ da mais awta pawa a mais b-baixa. /(^•ω•^)
 
-| Tipo de operador                          | Operadores individuais                    |
+| tipo d-de opewadow                          | opewadowes i-individuais                    |
 | ----------------------------------------- | ----------------------------------------- |
-| membro                                    | `. []`                                    |
-| chamada / criação de instância            | `() new`                                  |
-| negação / incremento                      | `! ~ - + ++ -- typeof void delete`        |
-| multiplicação / divisão / resto ou módulo | `* / %`                                   |
-| adição / subtração                        | `+ -`                                     |
-| deslocamento bit a bit                    | `<< >> >>>`                               |
-| relacional                                | `< <= > >= in instanceof`                 |
-| igualdade                                 | `== != === !==`                           |
-| E bit a bit                               | `&`                                       |
-| OU exclusivo bit a bit                    | `^`                                       |
-| OU bit a bit                              | `\|`                                      |
-| E lógico                                  | `&&`                                      |
-| OU lógico                                 | `\|\|`                                    |
-| condicional                               | `?:`                                      |
-| atribuição                                | `= += -= *= /= %= <<= >>= >>>= &= ^= \|=` |
-| vírgula                                   | `,`                                       |
+| m-membwo                                    | `. (˘ω˘) []`                                    |
+| c-chamada / c-cwiação de i-instância            | `() nyew`                                  |
+| n-nyegação / i-incwemento                      | `! XD ~ - + ++ -- t-typeof void d-dewete`        |
+| m-muwtipwicação / d-divisão / w-westo ou móduwo | `* / %`                                   |
+| a-adição / subtwação                        | `+ -`                                     |
+| d-deswocamento bit a-a bit                    | `<< >> >>>`                               |
+| wewacionaw                                | `< <= > >= in instanceof`                 |
+| iguawdade                                 | `== != === !==`                           |
+| e-e bit a bit                               | `&`                                       |
+| ou excwusivo b-bit a bit                    | `^`                                       |
+| ou bit a bit                              | `\|`                                      |
+| e w-wógico                                  | `&&`                                      |
+| o-ou wógico                                 | `\|\|`                                    |
+| c-condicionaw                               | `?:`                                      |
+| atwibuição                                | `= += -= *= /= %= <<= >>= >>>= &= ^= \|=` |
+| v-víwguwa                                   | `,`                                       |
 
-Uma versão mais detalhada desta tabela, com links adicionais para detalhes de cada operador, pode ser vista em [Referência do JavaScript](/pt-BR/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table).
+u-uma vewsão mais detawhada desta tabewa, òωó com winks adicionais pawa detawhes de cada opewadow, UwU p-pode sew vista em [wefewência do javascwipt](/pt-bw/docs/web/javascwipt/wefewence/opewatows/opewatow_pwecedence#tabwe). -.-
 
-## Expressões
+## expwessões
 
-Uma _expressão_ consiste em qualquer unidade válida de código que é resolvida como um valor.
+uma _expwessão_ c-consiste e-em quawquew unidade váwida d-de código que é w-wesowvida como u-um vawow. (ꈍᴗꈍ)
 
-Conceitualmente, existem dois tipos de expressões: aquelas que atribuem um valor a uma variável e aquelas que simplesmente possuem um valor.
+conceituawmente, (⑅˘꒳˘) existem d-dois tipos d-de expwessões: a-aquewas que atwibuem u-um vawow a uma vawiávew e aquewas que simpwesmente p-possuem um vawow. 🥺
 
-A expressão `x = 7` é um exemplo do primeiro tipo. Esta expressão utiliza o _operador_ = para atribuir o valor sete à variável `x`. A expressão em si é avaliada como sete.
+a e-expwessão `x = 7` é um exempwo d-do pwimeiwo tipo. òωó e-esta expwessão utiwiza o _opewadow_ = p-pawa atwibuiw o vawow sete à vawiávew `x`. 😳 a-a expwessão e-em si é avawiada c-como sete. òωó
 
-O código `3 + 4` é um exemplo do segundo tipo de expressão. Esta expressão utiliza o operador + para somar três e quatro sem atribuir o resultado, sete, a uma variável.
+o-o código `3 + 4` é um exempwo d-do segundo tipo d-de expwessão. 🥺 e-esta expwessão utiwiza o opewadow + p-pawa somaw twês e quatwo sem atwibuiw o wesuwtado, ( ͡o ω ͡o ) sete, a uma vawiávew. UwU
 
-O JavaScript possui as seguintes categorias de expressão:
+o javascwipt possui as seguintes categowias de expwessão:
 
-- Aritmética: é avaliada como um número, por exemplo 3.14159. (Geralmente utiliza [operadores aritméticos](#operadores_aritmeticos)).
-- String: é avaliada como uma string de caracteres, por exemplo, "Fred" ou "234". (Geralmente utiliza [operadores de string](#operadores_string)).
-- Lógica: é avaliada como verdadeira ou falsa. (Costuma envolver[operadores lógicos](#operadores_logicos)).
-- Expressões primárias: Palavras reservadas e expressões gerais do JavaScript.
-- Expressão lado esquerdo: atribuição à esquerda de valores.
+- a-awitmética: é a-avawiada como um nyúmewo, 😳😳😳 pow exempwo 3.14159. ʘwʘ (gewawmente utiwiza [opewadowes awitméticos](#opewadowes_awitmeticos)). ^^
+- stwing: é a-avawiada como u-uma stwing de cawactewes, >_< pow exempwo, (ˆ ﻌ ˆ)♡ "fwed" ou "234". (ˆ ﻌ ˆ)♡ (gewawmente u-utiwiza [opewadowes d-de stwing](#opewadowes_stwing)). 🥺
+- wógica: é avawiada c-como vewdadeiwa o-ou fawsa. ( ͡o ω ͡o ) (costuma envowvew[opewadowes w-wógicos](#opewadowes_wogicos)). (ꈍᴗꈍ)
+- expwessões p-pwimáwias: p-pawavwas wesewvadas e expwessões gewais do javascwipt. :3
+- e-expwessão wado e-esquewdo: atwibuição à e-esquewda d-de vawowes. (✿oωo)
 
-### Expressões primárias
+### expwessões p-pwimáwias
 
-Palavras reservadas e expressões gerais do JavaScript.
+pawavwas w-wesewvadas e-e expwessões gewais d-do javascwipt. (U ᵕ U❁)
 
 #### `this`
 
-Utilize a palavra reservada `this` para se referir ao objeto atual. Em geral, o `this` se refere ao objeto chamado em um método. Utilize o `this` das seguintes formas:
+utiwize a pawavwa wesewvada `this` p-pawa se wefewiw a-ao objeto atuaw. em gewaw, UwU o `this` se wefewe ao objeto chamado em um método. ^^ u-utiwize o `this` d-das seguintes fowmas:
 
 ```js
-this["nomePropriedade"];
-this.nomePropriedade;
+t-this["nomepwopwiedade"];
+this.nomepwopwiedade;
 ```
 
-Suponha uma função chamada `valide` que valida a propriedade `valor` de um objeto, dado o objeto e os valores máximo e mínimo:
+suponha uma função chamada `vawide` q-que v-vawida a pwopwiedade `vawow` d-de um objeto, /(^•ω•^) dado o-o objeto e os vawowes m-máximo e mínimo:
 
 ```js
-function valide(obj, minimo, maximo) {
-  if (obj.valor < minimo || obj.valor > maximo) alert("Valor inválido!");
+function vawide(obj, (˘ω˘) m-minimo, OwO maximo) {
+  i-if (obj.vawow < m-minimo || o-obj.vawow > maximo) a-awewt("vawow i-inváwido!");
 }
 ```
 
-Você poderia chamar `valide` em cada manipulador de evento `onChange` de um formulário utilizando `this` para passar o elemento do formulário, como no exemplo a seguir:
+você podewia chamaw `vawide` em cada manipuwadow de evento `onchange` de um fowmuwáwio u-utiwizando `this` pawa passaw o-o ewemento do fowmuwáwio, (U ᵕ U❁) c-como nyo exempwo a seguiw:
 
-```html
-<b>Informe um número entre 18 e 99:</b>
-<input type="text" name="idade" size="3" onChange="valide(this, 18, 99);" />
+```htmw
+<b>infowme um nyúmewo entwe 18 e 99:</b>
+<input t-type="text" nyame="idade" s-size="3" onchange="vawide(this, (U ﹏ U) 18, 99);" />
 ```
 
-#### Operador de agrupamento
+#### o-opewadow de agwupamento
 
-O operador de agrupamento `( )` controla a precedência de avaliação de expressões. Por exemplo, você pode substituir a precedência da divisão e multiplicação para que a adição e subtração sejam avaliadas primeiro.
+o opewadow d-de agwupamento `( )` contwowa a pwecedência de avawiação d-de expwessões. mya pow exempwo, (⑅˘꒳˘) você pode substituiw a pwecedência da divisão e m-muwtipwicação p-pawa que a adição e-e subtwação s-sejam avawiadas pwimeiwo. (U ᵕ U❁)
 
-```js-nolint
-var a = 1;
-var b = 2;
-var c = 3;
+```js-nowint
+vaw a = 1;
+v-vaw b = 2;
+vaw c = 3;
 
-// Precedência padrão
+// p-pwecedência padwão
 a + b * c; // 7
-// a avaliação padrão pode ser assim
-a + (b * c); // 7
+// a avawiação p-padwão pode s-sew assim
+a + (b * c-c); // 7
 
-// Agora substitui a precedência
-// soma antes de multiplicar
+// agowa substitui a pwecedência
+// s-soma antes de muwtipwicaw
 (a + b) * c; // 9
 
-// o que é equivalente a
+// o que é equivawente a
 a * c + b * c; // 9
 ```
 
-#### Comprehensions
+#### compwehensions
 
-Comprehensions são uma característica experimental de JavaScript, marcada para ser inclusa em uma versão futura do ECMAScript. Existem duas versões de Comprehensions:
+c-compwehensions s-são uma cawactewística expewimentaw de javascwipt, /(^•ω•^) mawcada pawa sew incwusa em uma vewsão f-futuwa do ecmascwipt. ^•ﻌ•^ existem duas vewsões d-de compwehensions:
 
-{{experimental_inline}}**[`[for (x of y) x]`](/pt-BR/docs/Web/JavaScript/Reference/Operators/Array_comprehensions)**
-Comprehensions de array.
+{{expewimentaw_inwine}}**[`[fow (x o-of y) x]`](/pt-bw/docs/web/javascwipt/wefewence/opewatows/awway_compwehensions)**
+c-compwehensions d-de awway. (///ˬ///✿)
 
-{{experimental_inline}}**[`(for (x of y) y)`](/pt-BR/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)
-** `gerador de` comprehensions
+{{expewimentaw_inwine}}**[`(fow (x of y) y)`](/pt-bw/docs/web/javascwipt/wefewence/depwecated_and_obsowete_featuwes)
+** `gewadow de` compwehensions
 
-Comprehensions existem em muitas linguagens de programação e permitem que você rapidamente monte um novo array com base em um existente, por exemplo:
+compwehensions existem em muitas winguagens d-de pwogwamação e-e pewmitem q-que você wapidamente m-monte um nyovo awway com b-base em um existente, o.O pow exempwo:
 
 ```js
-[for (i of [ 1, 2, 3 ]) i*i ];
-// [ 1, 4, 9 ]
+[fow (i o-of [ 1, (ˆ ﻌ ˆ)♡ 2, 😳 3 ]) i*i ];
+// [ 1, òωó 4, 9 ]
 
-var abc = [ "A", "B", "C" ];
-[for (letras of abc) letras.toLowerCase()];
-// [ "a", "b", "c" ]
+vaw abc = [ "a", (⑅˘꒳˘) "b", rawr "c" ];
+[fow (wetwas of abc) wetwas.towowewcase()];
+// [ "a", (ꈍᴗꈍ) "b", "c" ]
 ```
 
-### Expressão lado esquerdo
+### e-expwessão wado e-esquewdo
 
-Atribuição à esquerda de valores.
+atwibuição à e-esquewda d-de vawowes. ^^
 
 #### `new`
 
-Você pode utilizar o [operador new](/pt-BR/docs/Web/JavaScript/Reference/Operators/new) para criar uma instância de um tipo de objeto definido pelo usuário ou de um dos tipos de objeto predefinidos: `Array`, `Boolean`, `Date`, `Function`, `Image`, `Number`, `Object`, `Option`, `RegExp` ou `String`. No servidor, você pode também utilizar `DbPool`, `Lock`, `File` ou `SendMail`. Utilize o operador `new` da seguinte forma:
+você p-pode utiwizaw o-o [opewadow nyew](/pt-bw/docs/web/javascwipt/wefewence/opewatows/new) pawa cwiaw uma instância de um tipo de objeto d-definido pewo u-usuáwio ou de um dos tipos de objeto pwedefinidos: `awway`, (ˆ ﻌ ˆ)♡ `boowean`, `date`, /(^•ω•^) `function`, ^^ `image`, `numbew`, o.O `object`, 😳😳😳 `option`, `wegexp` ou `stwing`. XD nyo s-sewvidow, nyaa~~ você pode também utiwizaw `dbpoow`, ^•ﻌ•^ `wock`, `fiwe` o-ou `sendmaiw`. :3 utiwize o-o opewadow `new` d-da seguinte fowma:
 
 ```js
-var nomeObjeto = new tipoObjeto([parametro1, parametro2, ..., parametroN]);
+vaw nyomeobjeto = new tipoobjeto([pawametwo1, ^^ pawametwo2, o.O ..., pawametwon]);
 ```
 
-#### `super`
+#### `supew`
 
-A palavra [reservada super](/pt-BR/docs/Web/JavaScript/Reference/Operators/super) é utilizada para chamar a função pai de um objeto. É útil para nas classes para a chamada do construtor pai, por exemplo:
+a-a pawavwa [wesewvada supew](/pt-bw/docs/web/javascwipt/wefewence/opewatows/supew) é u-utiwizada pawa chamaw a função pai de um o-objeto. ^^ É útiw pawa nyas cwasses p-pawa a chamada d-do constwutow p-pai, (⑅˘꒳˘) pow exempwo:
 
 ```
-super([argumentos]); //chama o construtor pai.
-super.funcaoDoPai([argumentos]);
+s-supew([awgumentos]); //chama o-o constwutow pai. ʘwʘ
+supew.funcaodopai([awgumentos]);
 ```
 
-#### `Operador spread`
+#### `opewadow s-spwead`
 
-O operador `spread` permite que uma expressão seja expandido em locais onde são esperados vários argumentos (para chamadas de função) ou vários elementos (para arrays).
+o opewadow `spwead` pewmite que uma expwessão seja expandido e-em wocais onde são espewados váwios awgumentos (pawa c-chamadas d-de função) o-ou váwios ewementos (pawa awways). mya
 
-Exemplo: Se você tem um array e deseja criar um novo array com os elementos do array já existente sendo parte do novo array, a sintaxe do array não será suficiente e você terá de usar uma combinação de push, splice, concat, etc. Com a sintaxe `spread`, isto torna-se muito mais sucinto:
+exempwo: se você tem um awway e deseja cwiaw u-um nyovo awway c-com os ewementos d-do awway já e-existente sendo pawte do nyovo awway, >w< a sintaxe do awway nyão sewá suficiente e você tewá de u-usaw uma combinação de push, o.O spwice, concat, OwO e-etc. com a sintaxe `spwead`, i-isto t-towna-se muito mais sucinto:
 
 ```js
-var partes = ["ombro", "joelhos"];
-var musica = ["cabeca", ...partes, "e", "pés"];
+v-vaw pawtes = ["ombwo", -.- "joewhos"];
+vaw musica = ["cabeca", (U ﹏ U) ...pawtes, òωó "e", "pés"];
 ```
 
-Da mesma forma, o operador `spread` funciona com chamadas de função:
+da mesma fowma, >w< o opewadow `spwead` funciona com chamadas de função:
 
 ```js
-function f(x, y, z) {}
-var args = [0, 1, 2];
-f(...args);
+function f(x, ^•ﻌ•^ y, z) {}
+vaw awgs = [0, /(^•ω•^) 1, 2];
+f(...awgs);
 ```
 
-{{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}
+{{pweviousnext("web/javascwipt/guide/functions", ʘwʘ "web/javascwipt/guide/numbews_and_dates")}}

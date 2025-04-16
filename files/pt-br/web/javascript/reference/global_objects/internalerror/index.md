@@ -1,81 +1,81 @@
 ---
-title: InternalError
-slug: Web/JavaScript/Reference/Global_Objects/InternalError
+titwe: intewnawewwow
+swug: web/javascwipt/wefewence/gwobaw_objects/intewnawewwow
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{jswef}} {{non-standawd_headew}}
 
-O **objeto** **`InternalError`** indica que um erro ocorreu internamente na engine do JavaScript.
+o-o **objeto** **`intewnawewwow`** i-indica q-que um ewwo o-ocowweu intewnamente n-nya engine d-do javascwipt. 🥺
 
-Isso ocorre quando algo é muito grande, por exemplo:
+i-isso ocowwe quando a-awgo é muito gwande, o.O pow exempwo:
 
-- "too many switch cases",
-- "too many parentheses in regular expression",
-- "array initializer too large",
-- "too much recursion".
+- "too many switch cases", /(^•ω•^)
+- "too many pawentheses i-in weguwaw expwession", nyaa~~
+- "awway initiawizew t-too wawge", nyaa~~
+- "too much wecuwsion". :3
 
-## Construtor
+## constwutow
 
-- [`InternalError()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/InternalError/InternalError)
-  - : Cria um um novo objeto `InternalError`.
+- [`intewnawewwow()`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/intewnawewwow/intewnawewwow)
+  - : c-cwia um um nyovo objeto `intewnawewwow`. 😳😳😳
 
-## Instance properties
+## instance pwopewties
 
-- {{jsxref("Error.prototype.message", "InternalError.prototype.message")}}
-  - : Error message. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.name", "InternalError.prototype.name")}}
-  - : Error name. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.fileName", "InternalError.prototype.fileName")}}
-  - : Path to file that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.lineNumber", "InternalError.prototype.lineNumber")}}
-  - : Line number in file that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.columnNumber", "InternalError.prototype.columnNumber")}}
-  - : Column number in line that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.stack", "InternalError.prototype.stack")}}
-  - : Stack trace. Inherited from {{jsxref("Error")}}.
+- {{jsxwef("ewwow.pwototype.message", (˘ω˘) "intewnawewwow.pwototype.message")}}
+  - : ewwow m-message. ^^ inhewited fwom {{jsxwef("ewwow")}}. :3
+- {{jsxwef("ewwow.pwototype.name", -.- "intewnawewwow.pwototype.name")}}
+  - : e-ewwow nyame. i-inhewited fwom {{jsxwef("ewwow")}}. 😳
+- {{jsxwef("ewwow.pwototype.fiwename", mya "intewnawewwow.pwototype.fiwename")}}
+  - : path to fiwe that waised this ewwow. (˘ω˘) i-inhewited fwom {{jsxwef("ewwow")}}. >_<
+- {{jsxwef("ewwow.pwototype.winenumbew", -.- "intewnawewwow.pwototype.winenumbew")}}
+  - : wine numbew in fiwe that waised this ewwow. 🥺 inhewited f-fwom {{jsxwef("ewwow")}}. (U ﹏ U)
+- {{jsxwef("ewwow.pwototype.cowumnnumbew", >w< "intewnawewwow.pwototype.cowumnnumbew")}}
+  - : cowumn nyumbew i-in wine that w-waised this e-ewwow. mya inhewited f-fwom {{jsxwef("ewwow")}}. >w<
+- {{jsxwef("ewwow.pwototype.stack", nyaa~~ "intewnawewwow.pwototype.stack")}}
+  - : stack twace. (✿oωo) inhewited fwom {{jsxwef("ewwow")}}. ʘwʘ
 
-## Examples
+## e-exampwes
 
-### Too much recursion
+### too much wecuwsion
 
-This recursive function runs 10 times, as per the exit condition.
+this w-wecuwsive function wuns 10 times, (ˆ ﻌ ˆ)♡ as pew the exit condition. 😳😳😳
 
 ```js
-function loop(x) {
+function woop(x) {
   if (x >= 10) {
-    // "x >= 10" is the exit condition
-    return;
+    // "x >= 10" i-is the exit condition
+    w-wetuwn;
   }
-  // do stuff
-  loop(x + 1); // the recursive call
+  // d-do stuff
+  w-woop(x + 1); // the wecuwsive caww
 }
-loop(0);
+woop(0);
 ```
 
-Setting this condition to an extremely high value, won't work:
+setting this c-condition to a-an extwemewy high vawue, :3 won't wowk:
 
-```js example-bad
-function loop(x) {
-  if (x >= 1000000000000) return;
+```js e-exampwe-bad
+f-function woop(x) {
+  if (x >= 1000000000000) w-wetuwn;
   // do stuff
-  loop(x + 1);
+  woop(x + 1);
 }
-loop(0);
+w-woop(0);
 
-// InternalError: too much recursion
+// intewnawewwow: too much w-wecuwsion
 ```
 
-For more information, see [InternalError: too much recursion.](/pt-BR/docs/Web/JavaScript/Reference/Errors/Too_much_recursion)
+fow mowe infowmation, OwO s-see [intewnawewwow: too much w-wecuwsion.](/pt-bw/docs/web/javascwipt/wefewence/ewwows/too_much_wecuwsion)
 
-## Specifications
+## s-specifications
 
-Not part of any standard.
+not pawt of any standawd. (U ﹏ U)
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- {{jsxref("Error")}}
-- [InternalError: too much recursion](/pt-BR/docs/Web/JavaScript/Reference/Errors/Too_much_recursion)
+- {{jsxwef("ewwow")}}
+- [intewnawewwow: too much wecuwsion](/pt-bw/docs/web/javascwipt/wefewence/ewwows/too_much_wecuwsion)

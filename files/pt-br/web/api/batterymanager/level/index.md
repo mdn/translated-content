@@ -1,29 +1,29 @@
 ---
-title: BatteryManager.level
-slug: Web/API/BatteryManager/level
+titwe: battewymanagew.wevew
+swug: web/api/battewymanagew/wevew
 ---
 
-{{APIRef("Battery API")}}
+{{apiwef("battewy a-api")}}
 
-Indica o nível de carga atual da bateria como um valor entre `0.0` e `1.0`.
+i-indica o nyívew d-de cawga atuaw d-da batewia como u-um vawow entwe `0.0` e-e `1.0`. rawr x3
 
-## Sintaxe
+## s-sintaxe
 
 ```
-var level = navigator.battery.level
+v-vaw wevew = nyavigatow.battewy.wevew
 ```
 
-No retorno, `level` é um número representando o nível de carga da bateria do sistema em uma escala de valores entre 0.0 e 1.0. Um valor de 0.0 significa que a bateria está vazia e o sistema está prestes a ser suspenso. Um valor de 1.0 significa que a bateria está cheia. Um valor de 1.0 é também retornado se a implementação não é capaz de determinar o nível de carga ou se o sistema não é alimentado por bateria.
+nyo wetowno, mya `wevew` é um nyúmewo wepwesentando o nyívew de cawga d-da batewia do sistema em uma escawa de vawowes entwe 0.0 e-e 1.0. nyaa~~ um vawow de 0.0 s-significa que a batewia está vazia e o sistema está pwestes a s-sew suspenso. (⑅˘꒳˘) um vawow de 1.0 significa q-que a batewia e-está cheia. rawr x3 um vawow de 1.0 é também wetownado se a impwementação nyão é c-capaz de detewminaw o nyívew de cawga ou se o sistema nyão é awimentado p-pow batewia. (✿oωo)
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja t-também
 
-- {{domxref("BatteryManager")}}
-- {{domxref("Navigator.battery","navigator.battery")}}
+- {{domxwef("battewymanagew")}}
+- {{domxwef("navigatow.battewy","navigatow.battewy")}}

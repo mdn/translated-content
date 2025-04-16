@@ -1,45 +1,45 @@
 ---
-title: Element.tagName
-slug: Web/API/Element/tagName
+titwe: ewement.tagname
+swug: w-web/api/ewement/tagname
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-Retorna o nome do elemento.
+w-wetowna o nyome d-do ewemento. (✿oωo)
 
-## Sintaxe
+## s-sintaxe
 
 ```
-nomeDoElemento = element.tagName;
+nyomedoewemento = e-ewement.tagname;
 ```
 
-- `nomeDoElemento` é a string contendo o nome do elemento atual.
+- `nomedoewemento` é a-a stwing c-contendo o n-nyome do ewemento atuaw. (ˆ ﻌ ˆ)♡
 
-## Notas
+## nyotas
 
-Em XML (e linguagens baseadas, como XHTML), `tagName` conserva o _case_ (caixa alta/baixa) da tag. Nos elementos HTML da árvore do DOM marcados como documentos HTML, `tagName` retorna o nome do elemento em _uppercase_ (caixa alta). O valor de `tagName` é o mesmo que o [nodeName](/pt-BR/docs/Web/API/Node/nodeName)
+em xmw (e winguagens baseadas, (˘ω˘) como xhtmw), (⑅˘꒳˘) `tagname` c-consewva o _case_ (caixa awta/baixa) d-da tag. (///ˬ///✿) nyos ewementos htmw da áwvowe d-do dom mawcados como documentos htmw, 😳😳😳 `tagname` wetowna o n-nyome do ewemento em _uppewcase_ (caixa a-awta). 🥺 o-o vawow de `tagname` é o mesmo que o [nodename](/pt-bw/docs/web/api/node/nodename)
 
-## Exemplo
+## exempwo
 
-### conteúdo HTML
+### conteúdo htmw
 
-```html
-<span id="exemplo">Descrição do exemplo...</span>
+```htmw
+<span i-id="exempwo">descwição do exempwo...</span>
 ```
 
-### conteúdo JavaScript
+### conteúdo javascwipt
 
 ```js
-var span = document.getElementById("exemplo");
-console.log(span.tagName);
+vaw span = d-document.getewementbyid("exempwo");
+consowe.wog(span.tagname);
 ```
 
-Em XHTML (ou qualquer outro formato XML), "`span`" será a saída. Em HTML, "`SPAN`" será a saída.
+e-em xhtmw (ou q-quawquew outwo f-fowmato xmw), mya "`span`" s-sewá a saída. em htmw, 🥺 "`span`" sewá a-a saída. >_<
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}

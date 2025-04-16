@@ -1,106 +1,106 @@
 ---
-title: scroll-behavior
-slug: Web/CSS/scroll-behavior
+titwe: scwoww-behaviow
+swug: w-web/css/scwoww-behaviow
 ---
 
-{{ CSSRef }}
+{{ c-csswef }}
 
-A propriedade css **`scroll-behavior`** especifica o comportamento de rolagem para uma caixa de scrolling, quando a rolagem acontece devido às APIs do CSSOM. Qualquer outro scroll, aqueles que são executados pelo usuário, não são afetados por esta propriedade. Quando esta propriedade é especificada no elemento raiz, ela se aplica à viewport.
+a pwopwiedade c-css **`scwoww-behaviow`** e-especifica o c-compowtamento de w-wowagem pawa uma c-caixa de scwowwing, 😳 q-quando a wowagem acontece devido às apis do cssom. σωσ quawquew outwo scwoww, rawr x3 a-aquewes que são executados pewo usuáwio, OwO nyão s-são afetados pow esta pwopwiedade. /(^•ω•^) q-quando esta pwopwiedade é especificada nyo ewemento waiz, 😳😳😳 e-ewa se apwica à viewpowt. ( ͡o ω ͡o )
 
-User agents podem ignorar essa propriedade.
+usew a-agents podem ignowaw e-essa pwopwiedade. >_<
 
 ```css
-/* Valores das palavras-chave */
-scroll-behavior: auto;
-scroll-behavior: smooth;
+/* vawowes das pawavwas-chave */
+scwoww-behaviow: auto;
+scwoww-behaviow: s-smooth;
 
-/* Valores globais */
-scroll-behavior: inherit;
-scroll-behavior: initial;
-scroll-behavior: unset;
+/* vawowes gwobais */
+scwoww-behaviow: inhewit;
+scwoww-behaviow: i-initiaw;
+scwoww-behaviow: unset;
 ```
 
-Note que qualquer outro scroll, tem essa tal performace para o usuario, essa propriedade não é afetada. Quando esta propriedade é especificada na raiz do elemento então aplicamos na instancia do viewport.
+n-nyote q-que quawquew outwo s-scwoww, >w< tem essa t-taw pewfowmace pawa o usuawio, rawr essa pwopwiedade n-nyão é afetada. quando esta pwopwiedade é e-especificada nya waiz do ewemento então apwicamos na instancia do viewpowt. 😳
 
-Os usuarios que agem com está propriedade pode ignora-lá.
+os usuawios que agem c-com está pwopwiedade pode ignowa-wá. >w<
 
 {{cssinfo}}
 
-## Sintaxe
+## s-sintaxe
 
-O `scroll-behavior` é uma propriedade específica, com um valor de uma palavra-chave listada abaixo.
+o-o `scwoww-behaviow` é u-uma pwopwiedade específica, (⑅˘꒳˘) com um vawow de uma pawavwa-chave w-wistada a-abaixo. OwO
 
-### Valores
+### vawowes
 
 - `auto`
-  - : A caixa de rolagem rola instantaneamente.
+  - : a-a caixa d-de wowagem wowa instantaneamente. (ꈍᴗꈍ)
 - `smooth`
-  - : A caixa de scroll rola de forma suave usando uma função de temporização definida pelo usuário em um período de tempo. Os agentes do usuário devem seguir as convenções da plataforma, se houver.
+  - : a-a caixa de scwoww wowa de fowma s-suave usando uma função de tempowização definida p-pewo usuáwio em um pewíodo d-de tempo. 😳 os agentes do usuáwio d-devem seguiw a-as convenções da pwatafowma, 😳😳😳 se houvew. mya
 
-### Sintaxe formal
+### sintaxe fowmaw
 
 {{csssyntax}}
 
-## Exemplo
+## exempwo
 
-### HTML
+### htmw
 
-```html
+```htmw
 <nav>
-  <a href="#page-1">1</a>
-  <a href="#page-2">2</a>
-  <a href="#page-3">3</a>
+  <a hwef="#page-1">1</a>
+  <a h-hwef="#page-2">2</a>
+  <a h-hwef="#page-3">3</a>
 </nav>
-<scroll-container>
-  <scroll-page id="page-1">1</scroll-page>
-  <scroll-page id="page-2">2</scroll-page>
-  <scroll-page id="page-3">3</scroll-page>
-</scroll-container>
+<scwoww-containew>
+  <scwoww-page id="page-1">1</scwoww-page>
+  <scwoww-page i-id="page-2">2</scwoww-page>
+  <scwoww-page i-id="page-3">3</scwoww-page>
+</scwoww-containew>
 ```
 
-### CSS
+### c-css
 
 ```css
 a {
-  display: inline-block;
+  dispway: inwine-bwock;
   width: 50px;
-  text-decoration: none;
+  t-text-decowation: nyone;
 }
-nav,
-scroll-container {
-  display: block;
-  margin: 0 auto;
-  text-align: center;
+nyav, mya
+scwoww-containew {
+  dispway: bwock;
+  mawgin: 0 a-auto;
+  text-awign: centew;
 }
-nav {
+n-nyav {
   width: 339px;
-  padding: 5px;
-  border: 1px solid black;
+  p-padding: 5px;
+  b-bowdew: 1px sowid bwack;
 }
-scroll-container {
-  display: block;
+s-scwoww-containew {
+  d-dispway: b-bwock;
   width: 350px;
   height: 200px;
-  overflow-y: scroll;
-  scroll-behavior: smooth;
+  o-ovewfwow-y: scwoww;
+  scwoww-behaviow: smooth;
 }
-scroll-page {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+s-scwoww-page {
+  d-dispway: fwex;
+  a-awign-items: centew;
+  j-justify-content: c-centew;
   height: 100%;
   font-size: 5em;
 }
 ```
 
-### Saída
+### saída
 
-{{ EmbedLiveSample('Example', "100%", 250) }}
+{{ embedwivesampwe('exampwe', (⑅˘꒳˘) "100%", 250) }}
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegador
+## compatibiwidade com nyavegadow
 
-{{Compat}}
+{{compat}}

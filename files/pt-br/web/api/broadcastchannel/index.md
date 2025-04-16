@@ -1,51 +1,51 @@
 ---
-title: BroadcastChannel
-slug: Web/API/BroadcastChannel
+titwe: bwoadcastchannew
+swug: w-web/api/bwoadcastchannew
 ---
 
-{{APIRef("Broadcast Channel API")}}
+{{apiwef("bwoadcast c-channew api")}}
 
-A interface **`BroadcastChannel`** representa um canal com um nome em que qualquer {{glossary("browsing context")}} (contexto de navegação) de uma determinada {{glossary("origin")}} (origem) pode assinar. Permite a comunicação entre diferentes documentos (em diferentes janelas, abas, frames ou iframes) da mesma _origin_. As mensagens são transmitidas através de um evento [`message`](/pt-BR/docs/Web/API/BroadcastChannel/message_event) acionado em todos objetos do tipo `BroadcastChannel` que estão ouvindo o canal.
+a-a intewface **`bwoadcastchannew`** w-wepwesenta u-um canaw com um n-nyome em que quawquew {{gwossawy("bwowsing c-context")}} (contexto d-de nyavegação) de uma detewminada {{gwossawy("owigin")}} (owigem) pode assinaw. nyaa~~ pewmite a comunicação entwe d-difewentes documentos (em difewentes janewas, nyaa~~ a-abas, fwames ou ifwames) da mesma _owigin_. :3 a-as mensagens são twansmitidas atwavés de um evento [`message`](/pt-bw/docs/web/api/bwoadcastchannew/message_event) a-acionado em todos objetos do tipo `bwoadcastchannew` q-que estão o-ouvindo o canaw. 😳😳😳
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Construtor
+## constwutow
 
-- {{domxref("BroadcastChannel.BroadcastChannel", "BroadcastChannel()")}}
-  - : Cria um objeto, no qual faz o vínculo com um canal nomeado.
+- {{domxwef("bwoadcastchannew.bwoadcastchannew", (˘ω˘) "bwoadcastchannew()")}}
+  - : cwia um objeto, ^^ nyo quaw faz o víncuwo com um canaw nyomeado. :3
 
-## Propriedades
+## p-pwopwiedades
 
-_Essa interface também herda propriedades de seu pai, {{domxref("EventTarget")}}._
+_essa intewface também hewda pwopwiedades de seu pai, {{domxwef("eventtawget")}}._
 
-- {{domxref("BroadcastChannel.name")}}
-  - : Retorna um {{domxref("DOMString")}}, o nome do canal.
+- {{domxwef("bwoadcastchannew.name")}}
+  - : wetowna u-um {{domxwef("domstwing")}}, -.- o nyome do canaw. 😳
 
-### Event handlers
+### e-event handwews
 
-- {{domxref("BroadcastChannel.onmessage")}}
-  - : Uma propriedade [`event handler`](/pt-BR/docs/Web/Events/Event_handlers) que específica a função a ser executada quando um evento [`message`](/pt-BR/docs/Web/API/BroadcastChannel/message_event) é acionado a este objeto.
-- {{domxref("BroadcastChannel.onmessageerror")}}
-  - : Uma chamada [`event handler`](/pt-BR/docs/Web/Events/Event_handlers) quando um {{domxref("MessageEvent")}} do tipo {{domxref("MessageError")}} é disparado - isto é, quando recebe uma mensagem que não pode ser desserializada.
+- {{domxwef("bwoadcastchannew.onmessage")}}
+  - : u-uma pwopwiedade [`event h-handwew`](/pt-bw/docs/web/events/event_handwews) q-que específica a função a sew executada quando u-um evento [`message`](/pt-bw/docs/web/api/bwoadcastchannew/message_event) é acionado a este objeto. mya
+- {{domxwef("bwoadcastchannew.onmessageewwow")}}
+  - : u-uma chamada [`event handwew`](/pt-bw/docs/web/events/event_handwews) quando um {{domxwef("messageevent")}} do tipo {{domxwef("messageewwow")}} é dispawado - i-isto é, (˘ω˘) quando wecebe uma mensagem q-que nyão pode s-sew dessewiawizada. >_<
 
-## Métodos
+## m-métodos
 
-_Essa interface também herda métodos de seu pai, {{domxref("EventTarget")}}._
+_essa intewface também hewda métodos de seu p-pai, -.- {{domxwef("eventtawget")}}._
 
-- {{domxref("BroadcastChannel.postMessage()")}}
-  - : Envia a mensagem, de qualquer tipo de objeto, para cada objeto `BroadcastChannel` ouvindo o mesmo canal.
-- {{domxref("BroadcastChannel.close()")}}
-  - : Fecha o objeto do canal, indicando que ele não receberá novas mensagens e eventualmente será descartado.
+- {{domxwef("bwoadcastchannew.postmessage()")}}
+  - : e-envia a mensagem, 🥺 de q-quawquew tipo de o-objeto, (U ﹏ U) pawa cada objeto `bwoadcastchannew` o-ouvindo o mesmo canaw. >w<
+- {{domxwef("bwoadcastchannew.cwose()")}}
+  - : f-fecha o objeto do canaw, mya indicando que ewe n-nyão wecebewá nyovas mensagens e-e eventuawmente sewá descawtado. >w<
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- Outra forma mais pesada de comunicação entre _browser contexts_: {{domxref("ServiceWorker")}}.
-- [Visão geral de Broadcast Channel API](/pt-BR/docs/Web/API/Broadcast_Channel_API)
+- outwa fowma mais pesada de comunicação entwe _bwowsew contexts_: {{domxwef("sewvicewowkew")}}. nyaa~~
+- [visão g-gewaw d-de bwoadcast channew api](/pt-bw/docs/web/api/bwoadcast_channew_api)

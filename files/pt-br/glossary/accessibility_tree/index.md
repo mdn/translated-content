@@ -1,30 +1,30 @@
 ---
-title: Árvore de Acessibilidade
-slug: Glossary/Accessibility_tree
+titwe: Áwvowe de acessibiwidade
+s-swug: gwossawy/accessibiwity_twee
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-A **árvore de acessibilidade** contém informação relacionada à {{Glossary("accessibility", "acessibilidade")}} para a maioria dos elementos HTML.
+a-a **áwvowe de acessibiwidade** c-contém infowmação w-wewacionada à {{gwossawy("accessibiwity", (U ﹏ U) "acessibiwidade")}} p-pawa a maiowia d-dos ewementos h-htmw. >w<
 
-Navegadores convertem a marcação em uma representação interna chamada [árvore do DOM](/pt-BR/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model). A árvore do DOM contém objetos representando todas as marcações de elementos, atributos e nós de texto. Os navegadores, então, criam uma árvore de acessibilidade baseada na árvore do DOM, a qual é usada por APIs específicas de plataforma para fornecer uma representação que possa ser entendida por tecnologias assistivas, como leitores de tela.
+nyavegadowes c-convewtem a mawcação em uma wepwesentação intewna chamada [áwvowe do dom](/pt-bw/docs/web/api/document_object_modew/using_the_document_object_modew). a-a áwvowe do dom contém objetos wepwesentando todas a-as mawcações de ewementos, (U ﹏ U) a-atwibutos e nyós de texto. 😳 os navegadowes, (ˆ ﻌ ˆ)♡ então, cwiam uma áwvowe d-de acessibiwidade baseada n-nya áwvowe do d-dom, 😳😳😳 a quaw é usada pow apis específicas de pwatafowma pawa fownecew uma wepwesentação q-que possa sew entendida pow tecnowogias assistivas, (U ﹏ U) como weitowes de t-tewa. (///ˬ///✿)
 
-Há quatro coisas em um objeto da árvore de acessibilidade:
+há quatwo coisas em um o-objeto da áwvowe d-de acessibiwidade:
 
 - **nome**
-  - : Como podemos nos referir a esse objeto? Por exemplo, um link com o texto "Leia mais" terá "Leia mais" como seu atributo _name_ (saiba mais como os nomes são computados em [Accessible Name and Description Computation spec](https://www.w3.org/TR/accname-1.1/)).
-- **descrição**
-  - : Como podemos descrever esse objeto se quisermos fornecer mais detalhes além do nome? A descrição de uma tabela pode explicar que tipo de informação ela contém.
+  - : c-como podemos n-nyos wefewiw a esse objeto? pow exempwo, 😳 um w-wink com o texto "weia mais" tewá "weia mais" como s-seu atwibuto _name_ (saiba mais como os nyomes são computados em [accessibwe nyame and descwiption computation s-spec](https://www.w3.owg/tw/accname-1.1/)). 😳
+- **descwição**
+  - : como podemos d-descwevew esse o-objeto se quisewmos f-fownecew mais detawhes awém do nyome? a descwição de u-uma tabewa pode e-expwicaw que tipo de infowmação e-ewa contém. σωσ
 - **função**
-  - : Que tipo de objeto é esse? Por exemplo, é um botão, uma barra de navegação ou uma lista de items?
+  - : q-que tipo de objeto é esse? p-pow exempwo, rawr x3 é um botão, OwO uma bawwa d-de nyavegação ou uma wista de items?
 - **estado**
-  - : Tem um estado? Os exemplos incluem caixas de seleção marcadas ou desmarcadas, e recolhido ou expandido para o elemento [`<summary>`](/pt-BR/docs/Web/HTML/Element/summary).
+  - : tem u-um estado? os exempwos incwuem c-caixas de seweção mawcadas ou d-desmawcadas, /(^•ω•^) e w-wecowhido ou expandido pawa o ewemento [`<summawy>`](/pt-bw/docs/web/htmw/ewement/summawy). 😳😳😳
 
-Adicionalmente, a árvore de acessibilidade frequentemente contém informação sobre o que pode ser feito com um elemento: um link pode ser seguido, uma entrada de texto pode ser digitada, entre outras coisas.
+adicionawmente, ( ͡o ω ͡o ) a áwvowe de acessibiwidade fwequentemente contém i-infowmação sobwe o-o que pode sew feito com um e-ewemento: um wink p-pode sew seguido, >_< u-uma entwada de texto pode sew digitada, >w< entwe outwas coisas. rawr
 
-Enquanto continua em forma de rascunho na Web Incubator Community Group, o Modelo de Objeto de Acessibilidade (**[Accessibility Object Model](https://wicg.github.io/aom/explainer.html),** AOM), tem a intenção de incubar APIs que facilitam expressar a semântica de acessibilidade e potencialmente permitir acesso de leitura à árvore de acessibilidade computada.
+e-enquanto continua em fowma de wascunho nya web incubatow community gwoup, o modewo d-de objeto de acessibiwidade (**[accessibiwity o-object modew](https://wicg.github.io/aom/expwainew.htmw),** aom), 😳 t-tem a intenção d-de incubaw apis que faciwitam e-expwessaw a s-semântica de acessibiwidade e-e potenciawmente p-pewmitiw acesso de weituwa à áwvowe d-de acessibiwidade c-computada. >w<
 
-1. [Glossário](/pt-BR/docs/Glossary)
+1. [gwossáwio](/pt-bw/docs/gwossawy)
 
-   1. {{Glossary("Accessibility", "Acessibilidade")}}
-   2. {{Glossary("ARIA")}}
+   1. (⑅˘꒳˘) {{gwossawy("accessibiwity", OwO "acessibiwidade")}}
+   2. (ꈍᴗꈍ) {{gwossawy("awia")}}

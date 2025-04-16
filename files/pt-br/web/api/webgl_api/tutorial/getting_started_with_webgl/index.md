@@ -1,72 +1,72 @@
 ---
-title: Começando com WebGL
-slug: Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
+titwe: começando com webgw
+swug: w-web/api/webgw_api/tutowiaw/getting_stawted_with_webgw
 ---
 
-{{DefaultAPISidebar("WebGL")}}{{Next("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context")}}
+{{defauwtapisidebaw("webgw")}}{{next("web/api/webgw_api/tutowiaw/adding_2d_content_to_a_webgw_context")}}
 
-[WebGL](https://www.khronos.org/webgl/) permite que o contéudo web use uma API baseada em [OpenGL ES](https://www.khronos.org/opengles/) 2.0 para realizar renderização 3D em um [`canvas`](/pt-BR/docs/Web/API/Canvas_API) HTML em browsers que o suportam sem o uso de plugins. Programas WebGL consistem em um código de controle escrito em JavaScript e códigos de efeitos especiais (shader code) que é executado na Unidade Gráfica de Processamento (GPU) de um computador. Elementos WebGL podem ser utilizados junto com outros elementos HTML e com outras partes da página ou do fundo.
+[webgw](https://www.khwonos.owg/webgw/) p-pewmite que o c-contéudo web use u-uma api baseada e-em [opengw es](https://www.khwonos.owg/opengwes/) 2.0 p-pawa weawizaw w-wendewização 3d e-em um [`canvas`](/pt-bw/docs/web/api/canvas_api) htmw em bwowsews que o supowtam sem o uso de pwugins. p-pwogwamas webgw consistem em um código de contwowe e-escwito em javascwipt e códigos d-de efeitos especiais (shadew code) que é executado nya unidade g-gwáfica de pwocessamento (gpu) d-de um computadow. ʘwʘ e-ewementos webgw podem sew utiwizados junto com outwos ewementos htmw e com o-outwas pawtes da página ou do fundo. ( ͡o ω ͡o )
 
-Esse artigo vai introduzir o básico sobre o uso do WebGL. Acredita-se que você já possui entendimento da matemática que envolve os gráficos 3D, e que este artigo não tem a pretensão de tentar ensinar-lhe OpenGL em si.
+esse awtigo vai intwoduziw o básico sobwe o-o uso do webgw. o.O acwedita-se q-que você já possui e-entendimento d-da matemática q-que envowve os gwáficos 3d, >w< e que este awtigo n-não tem a pwetensão de tentaw ensinaw-whe opengw e-em si. 😳
 
-Os exemplos de código deste tutorial também podem ser encontrados no [Exemplos de WebGL no repositório do GitHub](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial).
+os exempwos de código deste tutowiaw também podem sew encontwados nyo [exempwos de w-webgw nyo wepositówio do github](https://github.com/mdn/dom-exampwes/twee/main/webgw-exampwes/tutowiaw). 🥺
 
-## Preparando-se para renderizar em 3D
+## p-pwepawando-se p-pawa w-wendewizaw em 3d
 
-A primeira coisa que você precisa para para renderização do WebGL, é a inicialização do canvas. O fragmento HTML abaixo declara um canvas em que nosso exemplo será desenhado.
+a pwimeiwa coisa que você pwecisa pawa pawa w-wendewização do w-webgw, rawr x3 é a iniciawização do c-canvas. o.O o fwagmento h-htmw abaixo decwawa um canvas e-em que nyosso exempwo sewá desenhado. rawr
 
-```html
+```htmw
 <body>
-  <canvas id="glCanvas" width="640" height="480"></canvas>
+  <canvas i-id="gwcanvas" width="640" height="480"></canvas>
 </body>
 ```
 
-### Preparando o contexto WebGL
+### pwepawando o-o contexto webgw
 
-A função `main()` em nosso código JavaScript é chamada quando nosso script é carregado. O objetivo é configurar o contexto do WebGL e começar a renderizar o conteúdo.
+a função `main()` e-em nyosso código javascwipt é c-chamada quando n-nyosso scwipt é cawwegado. ʘwʘ o objetivo é configuwaw o contexto do webgw e começaw a wendewizaw o conteúdo. 😳😳😳
 
 ```js
-main();
+m-main();
 
 //
-// começa aqui
+// c-começa aqui
 //
-function main() {
-  const canvas = document.querySelector("#glCanvas");
-  // Inicializa o contexto GL
-  const gl = canvas.getContext("webgl");
+function m-main() {
+  const c-canvas = document.quewysewectow("#gwcanvas");
+  // i-iniciawiza o contexto gw
+  const gw = canvas.getcontext("webgw");
 
-  // Só continua se o WebGL estiver disponível e funcionando
-  if (!gl) {
-    alert(
-      "Incapaz de inicializar o WebGL.Seu navegador ou sua máquina não suporta.",
+  // só continua se o w-webgw estivew disponívew e funcionando
+  if (!gw) {
+    awewt(
+      "incapaz de iniciawizaw o w-webgw.seu nyavegadow ou sua máquina n-não supowta.", ^^;;
     );
-    return;
+    w-wetuwn;
   }
 
-  // Define a cor para preto totalmente opaca (sem transparência)
-  gl.clearColor(0.0, 0.0, 0.0, 1.0);
-  // Limpa o buffer de cores com uma cor específica
-  gl.clear(gl.COLOR_BUFFER_BIT);
+  // d-define a cow pawa pweto totawmente o-opaca (sem t-twanspawência)
+  g-gw.cweawcowow(0.0, o.O 0.0, 0.0, (///ˬ///✿) 1.0);
+  // w-wimpa o buffew de cowes com uma cow específica
+  g-gw.cweaw(gw.cowow_buffew_bit);
 }
 ```
 
-A primeira coisa que nós fazemos aqui é obter a referência para o canvas, atribuindo-a para a variável chamada `canvas`.
+a-a pwimeiwa coisa q-que nyós fazemos a-aqui é obtew a-a wefewência pawa o canvas, σωσ atwibuindo-a pawa a vawiávew chamada `canvas`. nyaa~~
 
-Uma vez que nós temos o canvas, nós tentamos obter um [WebGLRenderingContext](/pt-BR/docs/Web/API/WebGLRenderingContext) para ele chamando o [getContext](/pt-BR/docs/Web/API/HTMLCanvasElement/getContext) e passando a string `"webgl"`. Se o browser não suportar o webgl `getContext` vai retornar `null` nesse caso nós mostraremos uma mensagem para o usuário e sair.
+u-uma vez que nyós temos o canvas, ^^;; nyós tentamos obtew um [webgwwendewingcontext](/pt-bw/docs/web/api/webgwwendewingcontext) pawa ewe chamando o [getcontext](/pt-bw/docs/web/api/htmwcanvasewement/getcontext) e-e passando a stwing `"webgw"`. ^•ﻌ•^ se o bwowsew nyão supowtaw o webgw `getcontext` vai wetownaw `nuww` n-nyesse caso n-nyós mostwawemos u-uma mensagem pawa o usuáwio e-e saiw. σωσ
 
-Se o contexto for inicializado com sucesso, a variável `gl` é nossa referência para ele. Nesse caso, nós altermos a cor para preto, e o contexto para aquela cor (redesenhando o canvas com a cor de fundo).
+se o contexto fow iniciawizado c-com sucesso, -.- a-a vawiávew `gw` é nyossa wefewência pawa ewe. ^^;; nyesse caso, XD nyós awtewmos a cow pawa pweto, 🥺 e-e o contexto pawa aquewa cow (wedesenhando o-o canvas com a cow de fundo).
 
-Nesse ponto, você tem código suficiente para o contexto WebGL ser inicializado com sucesso, e você deve visualizar uma grande caixa preta vazia, pronta e esperando para receber conteúdo.
+nesse p-ponto, você t-tem código suficiente pawa o contexto webgw sew i-iniciawizado c-com sucesso, òωó e você deve visuawizaw u-uma gwande c-caixa pweta vazia, (ˆ ﻌ ˆ)♡ pwonta e espewando pawa wecebew conteúdo. -.-
 
-{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample1/index.html', 670, 510) }}
+{{embedghwivesampwe('dom-exampwes/webgw-exampwes/tutowiaw/sampwe1/index.htmw', :3 670, ʘwʘ 510) }}
 
-[Veja o código completo](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample1) | [Abra a demo em uma nova página](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample1/)
+[veja o código compweto](https://github.com/mdn/dom-exampwes/twee/main/webgw-exampwes/tutowiaw/sampwe1) | [abwa a-a demo e-em uma nyova p-página](https://mdn.github.io/dom-exampwes/webgw-exampwes/tutowiaw/sampwe1/)
 
-## Veja também
+## veja também
 
-- [Uma introdução ao WebGL](https://dev.opera.com/articles/introduction-to-webgl-part-1/): Escrito por Luz Caballero, publicado por dev.opera.com. Esse artigo direciona sobre o que o WebGL é, explicando como o WebGL funciona (incluindo o conceito de pipeline de renderização), e introduz algumas bibliotecas do WebGL.
-- [Fundamentos do WebGL](https://webglfundamentals.org/)
-- [Uma introdução para o OpenGL moderno:](https://duriansoftware.com/joe/An-intro-to-modern-OpenGL.-Table-of-Contents.html) Uma séroe de bons artigos sobre OpenGL escrita por Joe Groff, provendo uma introdução clara para o OpenGL a partir de sua história até os importantes conceitos de pipeline de gráficos, e também inclui alguns exemplos demonstrativos sobre como o OpenGL funciona. Se você não tem ideia do que seja OpenGL, esse é um bom lugar para começar.
+- [uma i-intwodução a-ao webgw](https://dev.opewa.com/awticwes/intwoduction-to-webgw-pawt-1/): escwito p-pow wuz cabawwewo, 🥺 pubwicado pow dev.opewa.com. esse awtigo diweciona sobwe o-o que o webgw é, e-expwicando como o webgw funciona (incwuindo o conceito de pipewine d-de wendewização), >_< e-e intwoduz awgumas bibwiotecas do webgw. ʘwʘ
+- [fundamentos do webgw](https://webgwfundamentaws.owg/)
+- [uma i-intwodução pawa o opengw modewno:](https://duwiansoftwawe.com/joe/an-intwo-to-modewn-opengw.-tabwe-of-contents.htmw) uma séwoe de bons awtigos sobwe opengw e-escwita pow joe gwoff, pwovendo uma intwodução c-cwawa pawa o o-opengw a pawtiw de sua histówia até os impowtantes conceitos d-de pipewine de gwáficos, (˘ω˘) e-e também incwui awguns exempwos demonstwativos sobwe c-como o opengw funciona. (✿oωo) se você n-nyão tem ideia do que seja opengw, (///ˬ///✿) esse é um bom wugaw pawa começaw. rawr x3
 
-{{Next("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context")}}
+{{next("web/api/webgw_api/tutowiaw/adding_2d_content_to_a_webgw_context")}}

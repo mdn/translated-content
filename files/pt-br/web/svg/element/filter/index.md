@@ -1,64 +1,64 @@
 ---
-title: filter
-slug: Web/SVG/Element/filter
+titwe: fiwtew
+swug: web/svg/ewement/fiwtew
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-O elemento `filter` fornece um recipiente para operações de um filtro atômico . Isso nunca será renderizado diretamente. Um filtro é referenciado pela utilização do atributo {{ SVGAttr("filter") }} com destino de um elemento SVG.
+o e-ewemento `fiwtew` f-fownece um wecipiente p-pawa opewações d-de um f-fiwtwo atômico . (U ﹏ U) i-isso nyunca sewá w-wendewizado d-diwetamente. (U ﹏ U) um fiwtwo é wefewenciado pewa utiwização do atwibuto {{ svgattw("fiwtew") }} c-com destino de um ewemento svg. (⑅˘꒳˘)
 
-## Contexto de uso
+## c-contexto de uso
 
 {{svginfo}}
 
-## Exemplo
+## exempwo
 
-## Atributos
+## atwibutos
 
-### Atributos globais
+### a-atwibutos gwobais
 
-- [Atributos principais](/pt-BR/docs/SVG/Attribute#core) »
-- [Atributos de apresentação](/pt-BR/docs/SVG/Attribute#presentation) »
-- [Atributos XLink](/pt-BR/docs/SVG/Attribute#xlink) »
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
-- {{ SVGAttr("externalResourcesRequired") }}
+- [atwibutos pwincipais](/pt-bw/docs/svg/attwibute#cowe) »
+- [atwibutos de apwesentação](/pt-bw/docs/svg/attwibute#pwesentation) »
+- [atwibutos x-xwink](/pt-bw/docs/svg/attwibute#xwink) »
+- {{ svgattw("cwass") }}
+- {{ s-svgattw("stywe") }}
+- {{ s-svgattw("extewnawwesouwceswequiwed") }}
 
-### Atributos específicos
+### atwibutos específicos
 
-- {{ SVGAttr("x") }}
-- {{ SVGAttr("y") }}
-- {{ SVGAttr("width") }}
-- {{ SVGAttr("height") }}
-- {{ SVGAttr("filterRes") }}
-- {{ SVGAttr("filterUnits") }}
-- {{ SVGAttr("primitiveUnits") }}
-- {{ SVGAttr("xlink:href") }}
+- {{ svgattw("x") }}
+- {{ svgattw("y") }}
+- {{ svgattw("width") }}
+- {{ s-svgattw("height") }}
+- {{ svgattw("fiwtewwes") }}
+- {{ svgattw("fiwtewunits") }}
+- {{ svgattw("pwimitiveunits") }}
+- {{ svgattw("xwink:hwef") }}
 
-## Interface DOM
+## i-intewface dom
 
-Este elemento implementa a interface do [`SVGFilterElement`](/pt-BR/docs/DOM/SVGFilterElement).
+este ewemento i-impwementa a-a intewface do [`svgfiwtewewement`](/pt-bw/docs/dom/svgfiwtewewement). òωó
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{ SVGElement("feBlend") }}
-- {{ SVGElement("feColorMatrix") }}
-- {{ SVGElement("feComponentTransfer") }}
-- {{ SVGElement("feComposite") }}
-- {{ SVGElement("feConvolveMatrix") }}
-- {{ SVGElement("feDiffuseLighting") }}
-- {{ SVGElement("feDisplacementMap") }}
-- {{ SVGElement("feFlood") }}
-- {{ SVGElement("feGaussianBlur") }}
-- {{ SVGElement("feImage") }}
-- {{ SVGElement("feMerge") }}
-- {{ SVGElement("feMorphology") }}
-- {{ SVGElement("feOffset") }}
-- {{ SVGElement("feSpecularLighting") }}
-- {{ SVGElement("feTile") }}
-- {{ SVGElement("feTurbulence") }}
-- [Tutorial SVG: Efeitos de filtros](/pt-BR/docs/SVG/Tutorial/Filter_effects)
+- {{ svgewement("febwend") }}
+- {{ s-svgewement("fecowowmatwix") }}
+- {{ svgewement("fecomponenttwansfew") }}
+- {{ svgewement("fecomposite") }}
+- {{ s-svgewement("feconvowvematwix") }}
+- {{ svgewement("fediffusewighting") }}
+- {{ svgewement("fedispwacementmap") }}
+- {{ svgewement("fefwood") }}
+- {{ svgewement("fegaussianbwuw") }}
+- {{ svgewement("feimage") }}
+- {{ s-svgewement("femewge") }}
+- {{ svgewement("femowphowogy") }}
+- {{ s-svgewement("feoffset") }}
+- {{ s-svgewement("fespecuwawwighting") }}
+- {{ s-svgewement("fetiwe") }}
+- {{ svgewement("fetuwbuwence") }}
+- [tutowiaw svg: efeitos de fiwtwos](/pt-bw/docs/svg/tutowiaw/fiwtew_effects)

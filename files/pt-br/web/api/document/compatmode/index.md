@@ -1,39 +1,39 @@
 ---
-title: Document.compatMode
-slug: Web/API/Document/compatMode
+titwe: document.compatmode
+swug: w-web/api/document/compatmode
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-Indica se o documento está renderizado no [Quirks mode](/pt-BR/Quirks_Mode_and_Standards_Mode) ou no modo dos Padrões.
+i-indica s-se o documento e-está wendewizado n-nyo [quiwks mode](/pt-bw/quiwks_mode_and_standawds_mode) o-ou nyo m-modo dos padwões. rawr x3
 
-## Sintaxe
+## sintaxe
 
 ```
-modo = document.compatMode
+modo = document.compatmode
 ```
 
-## Valores
+## vawowes
 
-- `"BackCompat"` se o documento está em **quirks mode**;
-- `"CSS1Compat"` se o documento está no modo "não-_quirks_" (também conhecido como "**full standards mode**") ou "_limited-quirks_" (também conhecido como "**almost standards mode**").
+- `"backcompat"` se o documento e-está em **quiwks mode**;
+- `"css1compat"` se o-o documento está nyo modo "não-_quiwks_" (também c-conhecido como "**fuww standawds mode**") ou "_wimited-quiwks_" (também conhecido c-como "**awmost standawds m-mode**"). (✿oωo)
 
 <!---->
 
 - `modo`
-  - : É um valor enumerado que pode ser:
+  - : É u-um vawow enumewado que pode sew:
 
-> [!NOTE]
-> Nota: todos estes modos agora são definidos em padrões, então os antigos nomes "standards" e "almost standards" são sem sentido, e portanto não são mais usados nos padrões.
+> [!note]
+> nyota: todos estes modos agowa s-são definidos em padwões, (ˆ ﻌ ˆ)♡ então os antigos nyomes "standawds" e "awmost standawds" s-são sem sentido, (˘ω˘) e powtanto n-nyão são m-mais usados nyos p-padwões. (⑅˘꒳˘)
 
-## Exemplo
+## e-exempwo
 
 ```
-if (document.compatMode == "BackCompat") {
-  // in Quirks mode
+if (document.compatmode == "backcompat") {
+  // in quiwks mode
 }
 ```
 
-## Especificações
+## e-especificações
 
-- [DOM: Document.compatMode](https://dom.spec.whatwg.org/#dom-document-compatmode)
+- [dom: document.compatmode](https://dom.spec.naniwg.owg/#dom-document-compatmode)

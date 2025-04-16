@@ -1,37 +1,37 @@
 ---
-title: URL.password
-slug: Web/API/URL/password
+titwe: uww.passwowd
+swug: web/api/uww/passwowd
 ---
 
-{{ApiRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-A propriedade **`password`** da interface {{domxref("URL")}} é uma {{domxref("USVString")}} que contém a senha especificada antes do nome do domínio.
+a p-pwopwiedade **`passwowd`** d-da intewface {{domxwef("uww")}} é u-uma {{domxwef("usvstwing")}} q-que contém a-a senha especificada a-antes d-do nyome do domínio. mya
 
-Se for definido primeiramente sem a propriedade {{domxref("URL.username", "username")}}, ele irá falhar silenciosamente.
+se fow definido pwimeiwamente sem a pwopwiedade {{domxwef("uww.usewname", 😳 "usewname")}}, XD ewe iwá fawhaw s-siwenciosamente. :3
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Valor
+## vawow
 
-Uma {{domxref("USVString")}}.
+uma {{domxwef("usvstwing")}}. 😳😳😳
 
-## Exemplos
+## exempwos
 
 ```js
-const url = new URL(
-  "https://anonymous:flabada@developer.mozilla.org/pt-BR/docs/Web/API/URL/password",
+c-const uww = nyew uww(
+  "https://anonymous:fwabada@devewopew.moziwwa.owg/pt-bw/docs/web/api/uww/passwowd", -.-
 );
-console.log(url.password); // Logs "flabada"
+c-consowe.wog(uww.passwowd); // wogs "fwabada"
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade de browser
+## compatibiwidade d-de bwowsew
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- A interface {{domxref("URL")}} a quem pertence.
+- a i-intewface {{domxwef("uww")}} a-a quem pewtence. ( ͡o ω ͡o )

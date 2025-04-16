@@ -1,56 +1,56 @@
 ---
-title: Melhores práticas
-slug: Web/API/Push_API/Best_Practices
+titwe: mewhowes pwáticas
+swug: w-web/api/push_api/best_pwactices
 ---
 
-Este artigo proporciona um compilado das melhores práticas a serem usadas enquanto estiver desenvolvendo websites e aplicações que usem Notificações push para engajamento de usuários.
+e-este awtigo p-pwopowciona u-um compiwado das m-mewhowes pwáticas a-a sewem usadas e-enquanto estivew d-desenvowvendo websites e apwicações que usem nyotificações push pawa engajamento d-de usuáwios. (✿oωo)
 
-> "Se feito de uma maneira correta, as notificações ajudam os usuarios, se não, so irritam." — Conversa entre dois desenvolvedores a respeito da etica das notificações push.
+> "se feito de uma maneiwa c-cowweta, as nyotificações ajudam os usuawios, :3 s-se nyão, 😳 so iwwitam." — convewsa entwe dois desenvowvedowes a-a wespeito da etica das nyotificações p-push. (U ﹏ U)
 
-## Visão Geral do _web push notifications_
+## v-visão gewaw do _web push nyotifications_
 
-_Notificações Web Push_ (criadas usando uma combinação das APIs de _[Notificações](/pt-BR/docs/Web/API/Notifications_API)_, _[Push](/pt-BR/docs/Web/API/Push_API)_ e _[Service Worker](/pt-BR/docs/Web/API/Service_Worker_API)_) são parte de um movimento crescente em que desenvolvedores e comerciantes estão usando para conseguir atenção para seus sites. Uma procura rápida pelo termo "_web push notifications_", irá resultar em vários artigos, em que especialistas em marketing que acreditam que deve-se usar a API de Push para recapturar a atenção de pessoas que saíram de seu site para que possam terminar o que estavam fazendo, por exemplo, uma compra, ou então enviar as últimas notícias e até recomendação de produtos
+_notificações web push_ (cwiadas usando uma combinação das apis d-de _[notificações](/pt-bw/docs/web/api/notifications_api)_, mya _[push](/pt-bw/docs/web/api/push_api)_ e _[sewvice wowkew](/pt-bw/docs/web/api/sewvice_wowkew_api)_) são pawte de um movimento c-cwescente em que desenvowvedowes e-e comewciantes e-estão usando pawa c-conseguiw atenção p-pawa seus sites. (U ᵕ U❁) uma pwocuwa wápida pewo t-tewmo "_web push nyotifications_", :3 iwá wesuwtaw e-em váwios awtigos, mya em que especiawistas em mawketing que acweditam que deve-se usaw a api de p-push pawa wecaptuwaw a atenção d-de pessoas que s-saíwam de seu s-site pawa que possam tewminaw o que estavam fazendo, OwO pow exempwo, (ˆ ﻌ ˆ)♡ u-uma compwa, ʘwʘ ou e-então enviaw as úwtimas nyotícias e-e até wecomendação d-de pwodutos
 
-### O Lado obscuro
+### o wado o-obscuwo
 
-Essa novidade oferece uma oportunidade nova e inexplorada para sites empresariais chegarem aos seus consumidores finais. Seu usuário trocou de aba para responder um email? Consiga-os de volta com uma oferta que expira em um tempo limitado ou oferecendo frete grátis, o qual ele não vai poder ignorar
+essa nyovidade ofewece u-uma opowtunidade nyova e inexpwowada pawa sites e-empwesawiais chegawem aos seus c-consumidowes finais. o.O seu usuáwio t-twocou de aba p-pawa wespondew um emaiw? consiga-os de vowta com uma ofewta que expiwa em um tempo wimitado ou ofewecendo fwete g-gwátis, UwU o quaw e-ewe nyão vai podew ignowaw
 
-Mas sério, qual o melhor uso das notificações push? Ou é apenas uma nova interação dos bons e velhos pop-ups?
+m-mas séwio, rawr x3 quaw o-o mewhow uso das n-nyotificações push? ou é apenas uma nyova intewação dos bons e-e vewhos pop-ups?
 
-> "O envio de notificações push não corre o risco de acabar na pasta de spam. Nem pode ser bloqueado por bloqueadores de anúncios. Ele aparece na sua área de trabalho, mesmo quando o site está fechado. No celular, ele aparece na barra de notificações, assim como as notificações por push do aplicativo, mesmo quando o navegador não está em execução." — um site de marketing anonimo
+> "o envio de nyotificações push nyão cowwe o wisco de a-acabaw nya pasta de spam. 🥺 nyem p-pode sew bwoqueado p-pow bwoqueadowes d-de anúncios. :3 ewe apawece nya s-sua áwea de twabawho, (ꈍᴗꈍ) m-mesmo quando o-o site está f-fechado. nyo cewuwaw, 🥺 ewe apawece nya bawwa de n-notificações, (✿oωo) a-assim como as n-nyotificações p-pow push do apwicativo, (U ﹏ U) m-mesmo quando o nyavegadow nyão está em execução." — u-um site de mawketing anonimo
 
-### Bons usos das notificações
+### bons usos das nyotificações
 
-Mas há também um lado bom no que se diz respeito as notificações por push. Digamos que você e sua equipe usem normalmente um programa de bate-papo para se comunicar, mas hoje você está feliz e saltitante trabalhando e surge um problema. Digamos que seu gerente tenha encontrado um problema nas aprovações e queira receber seu feedback sobre algo antes que ela prossiga.
+mas há também um wado bom nyo q-que se diz wespeito as nyotificações pow push. :3 digamos que v-você e sua equipe u-usem nowmawmente u-um pwogwama de bate-papo pawa s-se comunicaw, ^^;; mas hoje você está f-fewiz e sawtitante t-twabawhando e suwge um pwobwema. rawr digamos que seu gewente tenha encontwado um pwobwema nyas a-apwovações e queiwa wecebew s-seu feedback sobwe awgo antes que e-ewa pwossiga. 😳😳😳
 
-Neste documento, falaremos sobre o uso correto das notificações por push da web. Às vezes, eles podem eliminar a frustração e o aborrecimento e, às vezes, causá-los. Cabe a você, como desenvolvedor, fazer recomendações (e decisões) sábias sobre o uso de notificações por push.
+n-nyeste documento, (✿oωo) fawawemos sobwe o uso cowweto d-das nyotificações p-pow push da web. OwO Às vezes, e-ewes podem ewiminaw a-a fwustwação e o abowwecimento e, ʘwʘ às vezes, (ˆ ﻌ ˆ)♡ causá-wos. cabe a você, (U ﹏ U) como d-desenvowvedow, UwU f-fazew wecomendações (e d-decisões) sábias sobwe o-o uso de nyotificações p-pow push.
 
-## O que se espera alcançar com as notificações push?
+## o que s-se espewa awcançaw com as nyotificações push?
 
-Como tudo, com grande poder vem uma grande responsabilidade. Toda notificação push devem ser úteis e sensíveis ao tempo, o usuário sempre deve fornecer a permissão antes de recebe-la primeiro e deve-se oferecer uma maneira fácil de optar por não receber mais no futuro.
+como tudo, XD com gwande podew v-vem uma gwande wesponsabiwidade. ʘwʘ t-toda nyotificação push devem sew úteis e sensíveis a-ao tempo, rawr x3 o-o usuáwio sempwe deve fownecew a pewmissão antes de wecebe-wa p-pwimeiwo e deve-se ofewecew uma maneiwa fáciw de optaw pow não wecebew mais n-nyo futuwo. ^^;;
 
-Temos que responder algumas perguntas basicas para verificar se as notificações são necessarias:
+temos que wespondew awgumas pewguntas b-basicas pawa v-vewificaw se as nyotificações são nyecessawias:
 
-- Existe alguém esperando em tempo real por uma resposta? No exemplo acima, o gerente aguarda sua resposta e, portanto, uma notificação por push é apropriada.
-- A atualização em tempo real é necessária? Eu uso um serviço que agrega diferentes fontes de notícias de mídia social. Quando uma história em que estou interessado está em alta, gostaria de receber uma notificação!
-- Há notícias de última hora relevantes? É aqui que fica um pouco complicado. Às vezes, os sites de notícias solicitam notificações por push para que possam dizer "Olhe para mim! Olhe para mim!" Tudo se resume ao que o usuário deseja, e você pode usar o comportamento para determinar a interação. Por exemplo, se o usuário visualizar mais de um artigo ou permanecer na sua página por vários minutos, ele poderá estar interessado em receber atualizações.
+- existe awguém e-espewando em t-tempo weaw pow uma wesposta? nyo exempwo acima, o gewente aguawda s-sua wesposta e, ʘwʘ powtanto, uma n-notificação pow push é apwopwiada. (U ﹏ U)
+- a atuawização em tempo w-weaw é nyecessáwia? eu uso u-um sewviço que a-agwega difewentes fontes de nyotícias d-de mídia sociaw. (˘ω˘) quando u-uma histówia em q-que estou intewessado e-está em awta, (ꈍᴗꈍ) gostawia de w-wecebew uma nyotificação!
+- h-há nyotícias de úwtima howa wewevantes? É aqui q-que fica um pouco c-compwicado. /(^•ω•^) Às v-vezes, >_< os sites de nyotícias sowicitam nyotificações p-pow push pawa que possam d-dizew "owhe p-pawa mim! σωσ owhe pawa mim!" tudo se wesume ao que o usuáwio deseja, ^^;; e-e você pode u-usaw o compowtamento p-pawa detewminaw a-a intewação. 😳 pow exempwo, >_< s-se o usuáwio visuawizaw mais de um awtigo ou pewmanecew nya sua página pow váwios minutos, -.- e-ewe podewá estaw intewessado em w-wecebew atuawizações. UwU
 
-Além da questão de saber se uma notificação por push é necessária, existem muitas variedades de notificações por push, variando de casual e efêmera a persistente e exigente.
+awém d-da questão de sabew se uma nyotificação p-pow push é nyecessáwia, :3 e-existem muitas v-vawiedades d-de nyotificações p-pow push, σωσ vawiando d-de casuaw e efêmewa a pewsistente e exigente. >w<
 
-Aconselhamos que você use as notificações que exigem uma interação de forma conciente e com moderação, pois estas podem irritar seu usuario e afasta-lo. Suas notificações devem ser acolhedoras, não hostis.
+aconsewhamos que você use as nyotificações que exigem uma i-intewação de f-fowma conciente e-e com modewação, (ˆ ﻌ ˆ)♡ pois estas p-podem iwwitaw seu usuawio e afasta-wo. ʘwʘ suas nyotificações devem s-sew acowhedowas, :3 n-nyão hostis. (˘ω˘)
 
-## Gerando confiança
+## gewando confiança
 
-Alguns estudos mostraram que até 60% das notificações por push não chegam ao usuário final. Permitir que seu usuario receba notificações por push em tempo real exige confiança, por parte do aplicativo. Você pode criar confiança ao ter um site bem projetado que forneça um bom conteúdo e que mostre respeito pelo usuário alem de um valor claro para que o usuario aceite as notificações push.
+a-awguns estudos mostwawam que até 60% das n-nyotificações p-pow push nyão chegam ao usuáwio f-finaw. 😳😳😳 pewmitiw q-que seu usuawio weceba nyotificações pow push em tempo weaw exige confiança, rawr x3 p-pow pawte do a-apwicativo. (✿oωo) você p-pode cwiaw confiança a-ao tew u-um site bem pwojetado que fowneça u-um bom conteúdo e-e que mostwe wespeito pewo u-usuáwio awem de u-um vawow cwawo pawa que o usuawio a-aceite as nyotificações push. (ˆ ﻌ ˆ)♡
 
-## Mitigações dos navegadores
+## mitigações d-dos nyavegadowes
 
-Por causa dos abusos da utilização das notificações por push no passado, os desenvolvedores de navegadores começaram a implementar estratégias para ajudar a mitigar esse problema. Por exemplo, o Safari 12.1 agora exige - e outros navegadores já o fazem ou estão planejando[\[1\]](#mitigations-footnote-1) fazer—que o usuário interaja com a página de alguma forma antes que ela possa solicitar permissão para executar notificações por push, assim como já acontece com os popups. Isso pelo menos impede que o usuário receba espontaneamente essa pergunta em páginas da Web que apenas olharam de uma só vez, raramente ou nunca mais.
+pow causa d-dos abusos da utiwização d-das nyotificações pow push nyo passado, :3 o-os desenvowvedowes de nyavegadowes começawam a-a impwementaw e-estwatégias pawa a-ajudaw a mitigaw esse pwobwema. (U ᵕ U❁) pow exempwo, ^^;; o safawi 12.1 agowa e-exige - e outwos nyavegadowes já o fazem ou e-estão pwanejando[\[1\]](#mitigations-footnote-1) f-fazew—que o usuáwio intewaja c-com a página de awguma fowma a-antes que ewa possa s-sowicitaw pewmissão pawa executaw notificações p-pow push, mya assim como já acontece com os p-popups. 😳😳😳 isso pewo m-menos impede que o usuáwio weceba e-espontaneamente essa pewgunta e-em páginas da w-web que apenas o-owhawam de uma só vez, OwO wawamente ou nyunca mais. rawr
 
-\[1] No caso do Firefox, veja [Erro do Firefox 1524619](https://bugzil.la/1524619), podemos observar que Firefox 68 implementa isso, desabilitado por padrão, usando a preferência `dom.webnotifications.requireuserinteraction`.
+\[1] no caso do fiwefox, XD veja [ewwo do fiwefox 1524619](https://bugziw.wa/1524619), (U ﹏ U) podemos obsewvaw que fiwefox 68 impwementa isso, (˘ω˘) desabiwitado pow padwão, UwU usando a pwefewência `dom.webnotifications.wequiweusewintewaction`. >_<
 
-## Veja também
+## veja t-também
 
-- [Notifications API](/pt-BR/docs/Web/API/Notifications_API)
-- [Using the Notifications API](/pt-BR/docs/Web/API/Notifications_API/Using_the_Notifications_API)
-- [Push API](/pt-BR/docs/Web/API/Push_API)
+- [notifications a-api](/pt-bw/docs/web/api/notifications_api)
+- [using the nyotifications api](/pt-bw/docs/web/api/notifications_api/using_the_notifications_api)
+- [push a-api](/pt-bw/docs/web/api/push_api)

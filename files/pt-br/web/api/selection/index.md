@@ -1,155 +1,155 @@
 ---
-title: Seleção
-slug: Web/API/Selection
+titwe: seweção
+swug: web/api/sewection
 ---
 
-{{ ApiRef("DOM") }}{{SeeCompatTable}}
+{{ a-apiwef("dom") }}{{seecompattabwe}}
 
-Um objeto **`Selection`** representa um intervalo do texto selecionado pelo usuário ou a posição atual do cursor. Para obter o objeto Selection para inspecionar ou modificar, use {{DOMxRef("Window.getSelection()")}}.
+u-um objeto **`sewection`** w-wepwesenta um i-intewvawo do texto s-sewecionado pewo u-usuáwio ou a-a posição atuaw d-do cuwsow. rawr pawa obtew o objeto sewection pawa inspecionaw ou modificaw, ^^;; use {{domxwef("window.getsewection()")}}. rawr x3
 
-O usuário pode fazer a seleção da esquerda para a direita (na orientação do documento) ou da direita para a esquerta (orientação inversa do documento). O atributo **anchor (âncora)** é onde o usuário iniciou a seleção e o atributo **focus (foco)** é onde o usuário terminou a seleção. Se você fizer a seleção utilizando um mouse no desktop, o _anchor_ é definido onde você pressionou o botão do mouse e o _focus_ é definido onde você soltou o botão do mouse. _Anchor_ e _focus_ não devem ser confundidos com a posição inicial e final da seleção, pois o _anchor_ pode ser definido antes do _focus_ ou vice versa, dependendo da direção em que você fez sua seleção.
+o-o usuáwio pode fazew a seweção da esquewda p-pawa a diweita (na owientação d-do documento) ou da diweita pawa a esquewta (owientação invewsa d-do documento). (ˆ ﻌ ˆ)♡ o atwibuto **anchow (âncowa)** é o-onde o usuáwio i-iniciou a seweção e o atwibuto **focus (foco)** é onde o usuáwio tewminou a seweção. σωσ s-se você fizew a seweção utiwizando um mouse nyo desktop, (U ﹏ U) o _anchow_ é definido o-onde você pwessionou o botão d-do mouse e o _focus_ é d-definido o-onde você s-sowtou o botão do mouse. >w< _anchow_ e _focus_ nyão d-devem sew confundidos com a posição iniciaw e-e finaw da seweção, σωσ pois o _anchow_ pode sew definido antes do _focus_ ou vice vewsa, nyaa~~ dependendo d-da diweção em que você fez s-sua seweção. 🥺
 
-## Propriedades
+## p-pwopwiedades
 
-- {{DOMxRef("Selection.anchorNode")}}{{ReadOnlyInline}}
-  - : Retorna o {{DOMxRef("Node")}} onde a seleção começou.
-- {{DOMxRef("Selection.anchorOffset")}}{{ReadOnlyInline}}
-  - : Retorna um número representando o deslocamento do anchor dentro do elemento Se o elemento for do tipo text node, o número retornado será o número de caracteres no elemento que precedem o anchor (clique inicial da seleção). Se o elemento for do tipo element (qualquer tag html que não seja text node), o número retornado será o número de nós filhos do elemento que precedem o anchor.
-- {{DOMxRef("Selection.focusNode")}}{{ReadOnlyInline}}
-  - : Retorna o {{DOMxRef("Node")}} onde a seleção termina.
-- {{DOMxRef("Selection.focusOffset")}}{{ReadOnlyInline}}
-  - : Retorna um número representando o deslocamento do focus dentro do elemento Se o elemento for do tipo text node, o número retornado será o número de caracteres no elemento que precedem o focus (posição onde o mouse foi solto). Se o elemento for do tipo element (qualquer tag html que não seja text node), o número retornado será o número de nós filhos do elemento que precedem o focus.
-- {{DOMxRef("Selection.isCollapsed")}}{{ReadOnlyInline}}
-  - : Retorna um valor booleano indicando se o início e o final da seleção são a mesma posição, ou seja, começou e terminou no mesmo lugar.
-- {{DOMxRef("Selection.rangeCount")}}{{ReadOnlyInline}}
-  - : Retorna no número de intervalos da seleção.
-- {{DOMxRef("Selection.type")}}{{ReadOnlyInline}}
-  - : Retorna um {{DOMxRef("DOMString")}} descrevento o tipo da seleção atual.
+- {{domxwef("sewection.anchownode")}}{{weadonwyinwine}}
+  - : w-wetowna o {{domxwef("node")}} onde a seweção começou. rawr x3
+- {{domxwef("sewection.anchowoffset")}}{{weadonwyinwine}}
+  - : wetowna u-um nyúmewo wepwesentando o-o deswocamento do anchow d-dentwo do ewemento s-se o ewemento fow do tipo t-text nyode, σωσ o nyúmewo wetownado s-sewá o nyúmewo de cawactewes nyo ewemento que p-pwecedem o anchow (cwique iniciaw d-da seweção). (///ˬ///✿) se o ewemento f-fow do tipo ewement (quawquew t-tag htmw que nyão seja text nyode), (U ﹏ U) o nyúmewo wetownado sewá o nyúmewo de nyós fiwhos do ewemento que pwecedem o-o anchow. ^^;;
+- {{domxwef("sewection.focusnode")}}{{weadonwyinwine}}
+  - : w-wetowna o {{domxwef("node")}} o-onde a s-seweção tewmina. 🥺
+- {{domxwef("sewection.focusoffset")}}{{weadonwyinwine}}
+  - : w-wetowna um nyúmewo wepwesentando o deswocamento do focus dentwo d-do ewemento se o ewemento fow do tipo text nyode, òωó o nyúmewo wetownado sewá o-o nyúmewo de cawactewes nyo ewemento q-que pwecedem o-o focus (posição o-onde o mouse foi sowto). XD se o-o ewemento fow d-do tipo ewement (quawquew t-tag htmw q-que nyão seja text nyode), :3 o númewo wetownado s-sewá o nyúmewo d-de nyós fiwhos d-do ewemento q-que pwecedem o f-focus. (U ﹏ U)
+- {{domxwef("sewection.iscowwapsed")}}{{weadonwyinwine}}
+  - : wetowna um vawow booweano indicando se o início e-e o finaw da seweção são a mesma posição, >w< ou seja, começou e tewminou nyo mesmo wugaw. /(^•ω•^)
+- {{domxwef("sewection.wangecount")}}{{weadonwyinwine}}
+  - : w-wetowna nyo nyúmewo de intewvawos da seweção. (⑅˘꒳˘)
+- {{domxwef("sewection.type")}}{{weadonwyinwine}}
+  - : wetowna u-um {{domxwef("domstwing")}} descwevento o-o tipo d-da seweção atuaw. ʘwʘ
 
-## Métodos
+## métodos
 
-- {{DOMxRef("Selection.addRange()")}}
-  - : Um objeto {{DOMxRef("Range")}} que será adicionado na seleção.
-- {{DOMxRef("Selection.collapse()")}}
-  - : Colapsa a seleção atual em um único ponto.
-- {{DOMxRef("Selection.collapseToEnd()")}}
-  - : Colapsa a seleção para o final do último intervalo na seleção.
-- {{DOMxRef("Selection.collapseToStart()")}}
-  - : Colapsa a seleção para o início do primeiro intervalo na seleção.
-- {{DOMxRef("Selection.containsNode()")}}
-  - : Indica se um certo nó é parte da seleção.
-- {{DOMxRef("Selection.deleteFromDocument()")}}
-  - : Apaga o conteúdo da seleção do documento.
-- {{DOMxRef("Selection.empty()")}}
-  - : Remove todos os intervalos da seleção. Este é um apelido para `removeAllRanges()` — Veja {{DOMxRef("Selection.removeAllRanges()")}} para mais detalhes.
-- {{DOMxRef("Selection.extend()")}}
-  - : Move o focus (final da seleção) para um ponto específico.
-- {{DOMxRef("Selection.getRangeAt()")}}
-  - : Retorna um objeto {{DOMxRef("Range")}} represetando um dos intervalos atualmente selecionados.
-- {{DOMxRef("Selection.modify()")}}{{Non-standard_Inline}}
-  - : Altera a seleção atual.
-- {{DOMxRef("Selection.removeRange()")}}
-  - : Remove um intervalo da seleção.
-- {{DOMxRef("Selection.removeAllRanges()")}}
-  - : Remove todos os intervalos da seleção.
-- {{DOMxRef("Selection.selectAllChildren()")}}
-  - : Adiciona todos os filhos do nó especificado para a seleção.
-- {{DOMxRef("Selection.setBaseAndExtent()")}}
-  - : Define que a seleção será um intervalo incluindo todos ou partes dos dois nós DOM especificados, e qualquer conteúdo entre esses nós.
-- {{DOMxRef("Selection.setPosition()")}}
-  - : Colapsa a seleção atual para um único ponto. Este é um apelido para `collapse()` — Veja {{DOMxRef("Selection.collapse()")}} para mais detalhes.
-- {{DOMxRef("Selection.toString()")}}
-  - : Retorna uma string atualmente representada pelo objeto selection, i.e. o texto atualmente selecionado.
+- {{domxwef("sewection.addwange()")}}
+  - : u-um objeto {{domxwef("wange")}} que sewá adicionado n-nya seweção. rawr x3
+- {{domxwef("sewection.cowwapse()")}}
+  - : cowapsa a-a seweção atuaw em um único ponto. (˘ω˘)
+- {{domxwef("sewection.cowwapsetoend()")}}
+  - : cowapsa a seweção pawa o finaw do úwtimo i-intewvawo nya seweção. o.O
+- {{domxwef("sewection.cowwapsetostawt()")}}
+  - : c-cowapsa a seweção pawa o i-início do pwimeiwo i-intewvawo nya seweção. 😳
+- {{domxwef("sewection.containsnode()")}}
+  - : indica s-se um cewto n-nyó é pawte da seweção. o.O
+- {{domxwef("sewection.dewetefwomdocument()")}}
+  - : a-apaga o conteúdo d-da seweção do documento. ^^;;
+- {{domxwef("sewection.empty()")}}
+  - : wemove todos os intewvawos da seweção. e-este é um apewido p-pawa `wemoveawwwanges()` — v-veja {{domxwef("sewection.wemoveawwwanges()")}} pawa mais detawhes. ( ͡o ω ͡o )
+- {{domxwef("sewection.extend()")}}
+  - : m-move o focus (finaw d-da seweção) pawa um ponto e-específico. ^^;;
+- {{domxwef("sewection.getwangeat()")}}
+  - : wetowna um objeto {{domxwef("wange")}} wepwesetando um dos intewvawos a-atuawmente sewecionados. ^^;;
+- {{domxwef("sewection.modify()")}}{{non-standawd_inwine}}
+  - : a-awtewa a seweção atuaw. XD
+- {{domxwef("sewection.wemovewange()")}}
+  - : wemove um intewvawo d-da seweção. 🥺
+- {{domxwef("sewection.wemoveawwwanges()")}}
+  - : w-wemove todos os intewvawos da seweção. (///ˬ///✿)
+- {{domxwef("sewection.sewectawwchiwdwen()")}}
+  - : adiciona t-todos os fiwhos do nyó especificado pawa a seweção. (U ᵕ U❁)
+- {{domxwef("sewection.setbaseandextent()")}}
+  - : define que a seweção s-sewá um intewvawo incwuindo todos ou pawtes dos d-dois nyós dom e-especificados, ^^;; e quawquew conteúdo entwe esses nyós. ^^;;
+- {{domxwef("sewection.setposition()")}}
+  - : c-cowapsa a-a seweção atuaw pawa um único ponto. rawr este é um apewido pawa `cowwapse()` — v-veja {{domxwef("sewection.cowwapse()")}} pawa mais d-detawhes.
+- {{domxwef("sewection.tostwing()")}}
+  - : wetowna uma stwing atuawmente wepwesentada p-pewo objeto sewection, i.e. (˘ω˘) o-o texto atuawmente s-sewecionado. 🥺
 
-## Notas
+## nyotas
 
-### Representação da seleção em formato de String
+### w-wepwesentação da seweção em f-fowmato de stwing
 
-Chamando a função {{DOMxRef("Selection.toString()")}} retorna o texto selecionado, e.g.:
-
-```js
-var selObj = window.getSelection();
-window.alert(selObj);
-```
-
-Perceba que usando um objeto selection como argumento de `window.alert` executará o metodo `toString` automaticamente.
-
-### Multiplos intervalos em uma seleção
-
-Um objeto selection representa os {{DOMxRef("range","intervalos")}} que o usuário selecionou.
-Normalmente é apenas um intervalo, acessado da seguinte forma:
+c-chamando a função {{domxwef("sewection.tostwing()")}} w-wetowna o texto sewecionado, nyaa~~ e-e.g.:
 
 ```js
-var selObj = window.getSelection();
-var range = selObj.getRangeAt(0);
+v-vaw sewobj = window.getsewection();
+window.awewt(sewobj);
 ```
 
-- `selObj` é um objeto selection
-- `range` é um objeto {{DOMxRef("Range")}}
+p-pewceba que u-usando um objeto s-sewection como awgumento de `window.awewt` executawá o-o metodo `tostwing` automaticamente. :3
 
-Como consta nas [Especificações da API de seleção](https://www.w3.org/TR/selection-api/#h_note_15), a API foi inicialmente criada pela Netscape e usados multiplos intervalos, por instância, para permitir ao usuário selecionar uma coluna de uma {{HTMLElement("table")}}. Outros navegadores como Gecko não implementaram multiplos intervalos, e a especificação exige que a seleção sempre tenha um único intervalo.
+### m-muwtipwos intewvawos e-em uma seweção
 
-### Seleção e foco de input
+um objeto sewection wepwesenta os {{domxwef("wange","intewvawos")}} q-que o-o usuáwio sewecionou. /(^•ω•^)
+n-nyowmawmente é a-apenas um intewvawo, ^•ﻌ•^ acessado d-da seguinte fowma:
 
-Seleção e foco de input (indicado por {{DOMxRef("Document.activeElement")}}) tem uma relação complexa, que depende do navegador. Para um código compatível com vários navegadores, o melhor é manter os códigos separados.
+```js
+vaw sewobj = window.getsewection();
+vaw wange = sewobj.getwangeat(0);
+```
 
-O Safari e o Chrome (ao contrário do Firefox) historicamente foca no elemento contendo a seleção quando a seleção é modificada programaticamente, mas isto pode mudar no futuro (veja [W3C bug 14383](https://www.w3.org/Bugs/Public/show_bug.cgi?id=14383) e [WebKit bug 38696](https://webkit.org/b/38696)).
+- `sewobj` é um objeto s-sewection
+- `wange` é um objeto {{domxwef("wange")}}
 
-### Comportamento da API de Seleção em termos de edição e alterações de foco do host
+c-como consta nyas [especificações d-da api de seweção](https://www.w3.owg/tw/sewection-api/#h_note_15), UwU a-a api foi iniciawmente cwiada p-pewa nyetscape e-e usados muwtipwos i-intewvawos, 😳😳😳 pow i-instância, OwO pawa p-pewmitiw ao usuáwio sewecionaw uma cowuna de uma {{htmwewement("tabwe")}}. ^•ﻌ•^ outwos nyavegadowes como gecko nyão impwementawam m-muwtipwos intewvawos, (ꈍᴗꈍ) e-e a especificação e-exige que a seweção s-sempwe tenha um único intewvawo. (⑅˘꒳˘)
 
-A API de Seleção tem um comportamento comum (i.e. compartilhado entre navegadores) que define como o comportamento do foco muda para **elemento editável**, após alguns desses métodos serem executados.
+### seweção e foco de input
 
-Os comportamentos são que um elemento editado recebe o foco se anteriormente a seleção estiver fora dele, então um método da API de seleção é executado e causa uma nova seleção que será feita em um único intervalo dentro do elemento sendo editado. O foco então é movido para o final do elemento.
+s-seweção e f-foco de input (indicado pow {{domxwef("document.activeewement")}}) t-tem uma wewação compwexa, (⑅˘꒳˘) que depende do nyavegadow. (ˆ ﻌ ˆ)♡ p-pawa u-um código compatívew com váwios n-nyavegadowes, /(^•ω•^) o-o mewhow é mantew os códigos sepawados. òωó
 
-> [!NOTE]
-> Os métodos da API de seleção, move o foco apenas para o elemento sendo editado, não para outro elemento que pode receber o foco (e.g. {{HTMLElement("a")}}).
+o safawi e o chwome (ao contwáwio do f-fiwefox) histowicamente f-foca nyo e-ewemento contendo a-a seweção q-quando a seweção é modificada p-pwogwamaticamente, (⑅˘꒳˘) m-mas isto pode mudaw nyo futuwo (veja [w3c bug 14383](https://www.w3.owg/bugs/pubwic/show_bug.cgi?id=14383) e-e [webkit bug 38696](https://webkit.owg/b/38696)). (U ᵕ U❁)
 
-O comportamento acima é aplicado para as seleções feitas usando os seguintes métodos:
+### c-compowtamento da api de s-seweção em tewmos de edição e awtewações de f-foco do host
 
-- {{DOMxRef("Selection.collapse()")}}
-- {{DOMxRef("Selection.collapseToStart()")}}
-- {{DOMxRef("Selection.collapseToEnd()")}}
-- {{DOMxRef("Selection.extend()")}}
-- {{DOMxRef("Selection.selectAllChildren()")}}
-- {{DOMxRef("Selection.addRange()")}}
-- {{DOMxRef("Selection.setBaseAndExtent()")}}
+a api de seweção t-tem um compowtamento c-comum (i.e. compawtiwhado e-entwe navegadowes) que define como o compowtamento d-do foco muda p-pawa **ewemento e-editávew**, >w< após awguns desses métodos sewem executados. σωσ
 
-e quando o intervalo é modificado usando os seguintes métodos:
+os c-compowtamentos são que um ewemento editado wecebe o-o foco se antewiowmente a-a seweção estivew f-fowa dewe, -.- então um método da a-api de seweção é e-executado e causa uma nyova seweção que sewá f-feita em um único intewvawo dentwo do ewemento s-sendo editado. o.O o-o foco então é movido pawa o-o finaw do ewemento. ^^
 
-- {{DOMxRef("Range.setStart()")}}
-- {{DOMxRef("Range.setEnd()")}}
-- {{DOMxRef("Range.setStartBefore()")}}
-- {{DOMxRef("Range.setStartAfter()")}}
-- {{DOMxRef("Range.setEndBefore()")}}
-- {{DOMxRef("Range.setEndAfter()")}}
-- {{DOMxRef("Range.collapse()")}}
-- {{DOMxRef("Range.selectNode()")}}
-- {{DOMxRef("Range.selectNodeContents()")}}
+> [!note]
+> os métodos da a-api de seweção, >_< m-move o foco a-apenas pawa o ewemento sendo editado, >w< nyão pawa outwo ewemento que pode wecebew o foco (e.g. >_< {{htmwewement("a")}}). >w<
 
-### Glossário
+o compowtamento acima é apwicado pawa as seweções feitas usando os seguintes métodos:
 
-Outras palavras chaves usadas nesta seção.
+- {{domxwef("sewection.cowwapse()")}}
+- {{domxwef("sewection.cowwapsetostawt()")}}
+- {{domxwef("sewection.cowwapsetoend()")}}
+- {{domxwef("sewection.extend()")}}
+- {{domxwef("sewection.sewectawwchiwdwen()")}}
+- {{domxwef("sewection.addwange()")}}
+- {{domxwef("sewection.setbaseandextent()")}}
 
-- anchor
-  - : O anchor de uma seleção é o ponto inicial da seleção. Quando a seleção é feita com um mouse, é onde o botão do mouse é inicialmente pressionado. Quando o usuário altera a seleção usando o mouse ou teclado, o anchor não move.
-- Elemento editável
-  - : Um elemento editável — i.e. um elemento HTML com o atributo [`contenteditable`](/pt-BR/docs/Web/HTML/Global_attributes#contenteditable) definido, ou o HTML filho de um documento estiver com o {{DOMxRef("Document.designMode", "designMode")}} habilitado.
-- foco de uma seleção
-  - : O foco da seleção é o ponto final da seleção. Quando feita a seleção com um mouse, o focus é onde o botão do mouse foi solto. Quando o usuário muda a seleção usando o mouse ou teclado, o focus é o final da seleção que move. **Nota:** Não é o mesmo que o elemento selecionado do documento, como retornado em {{DOMxRef("document.activeElement")}}.
-- intervalo
-  - : Um intervalo é uma parte contínua do documento. Um intervalo pode conter nós inteiros ou partes de nós, como uma parte de um text node. Um usuário normalmente irá selecionar um único intervalo por vez, mas é possível que o usuário selecione multiplos intervalos (e.g. usando a tecla Control). Um intervalo pode ser obtido de uma seleção como um objeto {{DOMxRef("range")}}. Um objeto de intervalo pode ser criado no DOM e programaticamente adicionada ou removida de uma seleção.
+e quando o-o intewvawo é modificado u-usando os seguintes métodos:
 
-## Especificações
+- {{domxwef("wange.setstawt()")}}
+- {{domxwef("wange.setend()")}}
+- {{domxwef("wange.setstawtbefowe()")}}
+- {{domxwef("wange.setstawtaftew()")}}
+- {{domxwef("wange.setendbefowe()")}}
+- {{domxwef("wange.setendaftew()")}}
+- {{domxwef("wange.cowwapse()")}}
+- {{domxwef("wange.sewectnode()")}}
+- {{domxwef("wange.sewectnodecontents()")}}
 
-{{Specifications}}
+### gwossáwio
 
-## Compatibilidade com navegadores
+o-outwas pawavwas c-chaves usadas n-nyesta seção. rawr
 
-{{Compat}}
+- anchow
+  - : o-o anchow de uma seweção é o-o ponto iniciaw d-da seweção. rawr x3 quando a seweção é f-feita com um mouse, ( ͡o ω ͡o ) é onde o-o botão do mouse é i-iniciawmente pwessionado. (˘ω˘) quando o usuáwio a-awtewa a seweção u-usando o m-mouse ou tecwado, 😳 o-o anchow não m-move. OwO
+- ewemento e-editávew
+  - : u-um ewemento editávew — i-i.e. (˘ω˘) u-um ewemento htmw com o atwibuto [`contenteditabwe`](/pt-bw/docs/web/htmw/gwobaw_attwibutes#contenteditabwe) d-definido, òωó o-ou o htmw f-fiwho de um documento estivew com o-o {{domxwef("document.designmode", ( ͡o ω ͡o ) "designmode")}} habiwitado. UwU
+- foco de uma seweção
+  - : o f-foco da seweção é o ponto finaw d-da seweção. /(^•ω•^) q-quando feita a s-seweção com um mouse, (ꈍᴗꈍ) o focus é o-onde o botão do mouse foi sowto. 😳 q-quando o usuáwio muda a seweção u-usando o mouse ou tecwado, o-o focus é o finaw da seweção que move. mya **nota:** nyão é o mesmo que o ewemento s-sewecionado do documento, mya c-como wetownado e-em {{domxwef("document.activeewement")}}. /(^•ω•^)
+- intewvawo
+  - : um intewvawo é uma p-pawte contínua do documento. ^^;; um i-intewvawo pode c-contew nyós inteiwos o-ou pawtes de nyós, 🥺 como uma pawte de um t-text nyode. ^^ um usuáwio n-nyowmawmente iwá sewecionaw u-um único intewvawo pow vez, ^•ﻌ•^ mas é possívew q-que o usuáwio sewecione muwtipwos i-intewvawos (e.g. /(^•ω•^) u-usando a t-tecwa contwow). ^^ um intewvawo pode s-sew obtido de u-uma seweção como u-um objeto {{domxwef("wange")}}. 🥺 u-um objeto de intewvawo pode sew c-cwiado nyo dom e-e pwogwamaticamente a-adicionada o-ou wemovida de u-uma seweção. (U ᵕ U❁)
 
-## Veja também
+## e-especificações
 
-- {{DOMxRef("Window.getSelection")}}, {{DOMxRef("Document.getSelection")}}, {{DOMxRef("Range")}}
-- Selection-related events: [`selectionchange`](/pt-BR/docs/Web/API/HTMLInputElement/selectionchange_event) and [`selectstart`](/pt-BR/docs/Web/API/Node/selectstart_event)
-- HTML inputs provide simpler helper APIs for working with selection (see {{DOMxRef("HTMLInputElement.setSelectionRange()")}})
-- {{DOMxRef("Document.activeElement")}}, {{DOMxRef("HTMLElement.focus()")}}, and {{DOMxRef("HTMLElement.blur()")}}
+{{specifications}}
+
+## c-compatibiwidade c-com nyavegadowes
+
+{{compat}}
+
+## v-veja também
+
+- {{domxwef("window.getsewection")}}, 😳😳😳 {{domxwef("document.getsewection")}}, nyaa~~ {{domxwef("wange")}}
+- s-sewection-wewated events: [`sewectionchange`](/pt-bw/docs/web/api/htmwinputewement/sewectionchange_event) a-and [`sewectstawt`](/pt-bw/docs/web/api/node/sewectstawt_event)
+- h-htmw inputs p-pwovide simpwew hewpew apis fow wowking with sewection (see {{domxwef("htmwinputewement.setsewectionwange()")}})
+- {{domxwef("document.activeewement")}}, (˘ω˘) {{domxwef("htmwewement.focus()")}}, a-and {{domxwef("htmwewement.bwuw()")}}

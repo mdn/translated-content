@@ -1,37 +1,37 @@
 ---
-title: EventSource.onerror
-slug: Web/API/EventSource/error_event
+titwe: eventsouwce.onewwow
+swug: w-web/api/eventsouwce/ewwow_event
 ---
 
-{{APIRef('WebSockets API')}}
+{{apiwef('websockets a-api')}}
 
-A propriedade **`onerror`** da interface {{domxref("EventSource")}} é um [`event handler`](/pt-BR/docs/Web/Events/Event_handlers) chamado quando um erro ocorre e um evento [`error`](/pt-BR/docs/Web/API/HTMLElement/error_event) é despachado para o objeto `EventSource`.
+a-a pwopwiedade **`onewwow`** d-da intewface {{domxwef("eventsouwce")}} é u-um [`event h-handwew`](/pt-bw/docs/web/events/event_handwews) c-chamado q-quando um ewwo ocowwe e um evento [`ewwow`](/pt-bw/docs/web/api/htmwewement/ewwow_event) é despachado pawa o objeto `eventsouwce`. 😳😳😳
 
-## Sintaxe
+## s-sintaxe
 
 ```
-eventSource.onerror = function
+eventsouwce.onewwow = function
 ```
 
-## Exemplos
+## e-exempwos
 
 ```js
-evtSource.onerror = function () {
-  console.log("EventSource failed.");
+evtsouwce.onewwow = f-function () {
+  consowe.wog("eventsouwce faiwed.");
 };
 ```
 
-> [!NOTE]
-> Você pode encontrar um exemplo completo no GitHub — veja [Simple SSE demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
+> [!note]
+> você p-pode encontwaw um exempwo compweto n-nyo github — v-veja [simpwe sse demo using php.](https://github.com/mdn/dom-exampwes/twee/mastew/sewvew-sent-events)
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{domxref("EventSource")}}
+- {{domxwef("eventsouwce")}}

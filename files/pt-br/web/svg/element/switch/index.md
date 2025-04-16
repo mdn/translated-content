@@ -1,41 +1,41 @@
 ---
-title: switch
-slug: Web/SVG/Element/switch
+titwe: switch
+swug: web/svg/ewement/switch
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-O elemento `switch` avalia os atributos {{SVGAttr("requiredFeatures")}}, {{SVGAttr("requiredExtensions")}} e o {{SVGAttr("systemLanguage")}} diretamente nos seus elementos filhos em ordem e, em seguida, processa e renderiza o primeiro filho que possua este atributo definido como verdadeiro. Todos os outros serão ignorados e, portanto, não renderizados. Se o elemento filho é um elemento recipiente como o {{SVGElement("g")}}, então toda a subárvore será ou processada/renderizada ou ignorada/não renderizada.
+o e-ewemento `switch` a-avawia os atwibutos {{svgattw("wequiwedfeatuwes")}}, σωσ {{svgattw("wequiwedextensions")}} e-e o {{svgattw("systemwanguage")}} d-diwetamente n-nyos seus e-ewementos fiwhos e-em owdem e, OwO em s-seguida, 😳😳😳 pwocessa e wendewiza o pwimeiwo fiwho que possua este atwibuto definido c-como vewdadeiwo. 😳😳😳 todos os outwos sewão ignowados e-e, o.O powtanto, ( ͡o ω ͡o ) nyão wendewizados. (U ﹏ U) s-se o ewemento fiwho é um ewemento wecipiente como o {{svgewement("g")}}, (///ˬ///✿) e-então toda a subáwvowe sewá ou p-pwocessada/wendewizada o-ou ignowada/não wendewizada. >w<
 
-Observe que os valores das propriedades `display` e `visibility` não possuem efeitos sob o processamento do elemento `switch`. Em particular, definindo `display` como `none` em um filho de um elemento `switch` não possuirá efeito sob o teste de verdadeiro/falso associado com o processamento de um elemento `switch`.
+obsewve que os vawowes das pwopwiedades `dispway` e-e `visibiwity` nyão possuem efeitos sob o pwocessamento do ewemento `switch`. rawr e-em pawticuwaw, mya definindo `dispway` c-como `none` e-em um fiwho d-de um ewemento `switch` n-nyão possuiwá efeito sob o teste de v-vewdadeiwo/fawso associado com o pwocessamento d-de um ewemento `switch`. ^^
 
-## Contexto de uso
+## contexto de uso
 
 {{svginfo}}
 
-## Exemplo
+## exempwo
 
-## Atributos
+## atwibutos
 
-### Atributos globais
+### atwibutos gwobais
 
-- [Atributos de processamento condicional](/pt-BR/docs/Web/SVG/Attribute#conditionalproccessing) »
-- [Atributos principais](/pt-BR/docs/Web/SVG/Attribute#core) »
-- [Atributos de eventos gráficos](/pt-BR/docs/Web/SVG/Attribute#graphicalevent) »
-- [Atributos de apresentação](/pt-BR/docs/Web/SVG/Attribute#presentation) »
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
-- {{SVGAttr("externalResourcesRequired")}}
-- {{SVGAttr("transform")}}
+- [atwibutos d-de pwocessamento condicionaw](/pt-bw/docs/web/svg/attwibute#conditionawpwoccessing) »
+- [atwibutos p-pwincipais](/pt-bw/docs/web/svg/attwibute#cowe) »
+- [atwibutos d-de e-eventos gwáficos](/pt-bw/docs/web/svg/attwibute#gwaphicawevent) »
+- [atwibutos de apwesentação](/pt-bw/docs/web/svg/attwibute#pwesentation) »
+- {{svgattw("cwass")}}
+- {{svgattw("stywe")}}
+- {{svgattw("extewnawwesouwceswequiwed")}}
+- {{svgattw("twansfowm")}}
 
-### Atributos específicos
+### atwibutos específicos
 
-- {{SVGAttr("allowReorder")}}
+- {{svgattw("awwowweowdew")}}
 
-## Interface DOM
+## i-intewface d-dom
 
-Este elemento implementa a interface do [`SVGSwitchElement`](/pt-BR/docs/Web/DOM/SVGSwitchElement).
+este ewemento impwementa a i-intewface do [`svgswitchewement`](/pt-bw/docs/web/dom/svgswitchewement). 😳😳😳
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com n-nyavegadowes
 
-{{Compat}}
+{{compat}}

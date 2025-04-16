@@ -1,42 +1,42 @@
 ---
-title: XMLHttpRequest.timeout
-slug: Web/API/XMLHttpRequest/timeout
+titwe: xmwhttpwequest.timeout
+swug: web/api/xmwhttpwequest/timeout
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{apiwef('xmwhttpwequest')}}
 
-A propriedade **`XMLHttpRequest.timeout`** é um `unsigned long` que representa o número de milisegundos que uma requisição deve esperar até ser automaticamente terminada. O valor padrão para essa propriedade é 0, o que significa que o navegador deverá esperar uma resposta indefinidamente. A propriedade Timeout não deveria ser usada para requisições XMLHttpRequests síncronas em um {{Glossary('document environment')}} ou uma exceção do tipo `InvalidAccessError` será lançada. Quando um timeout ocorre, o evento [timeout](/pt-BR/docs/Web/API/XMLHttpRequest/timeout_event) é disparado.
+a-a pwopwiedade **`xmwhttpwequest.timeout`** é u-um `unsigned w-wong` que wepwesenta o-o nyúmewo d-de miwisegundos q-que uma wequisição d-deve espewaw a-até sew automaticamente tewminada. (///ˬ///✿) o vawow padwão pawa essa pwopwiedade é 0, >w< o que significa q-que o nyavegadow devewá espewaw uma wesposta i-indefinidamente. rawr a pwopwiedade t-timeout nyão devewia sew usada pawa wequisições xmwhttpwequests s-síncwonas em um {{gwossawy('document e-enviwonment')}} o-ou uma exceção do tipo `invawidaccessewwow` sewá wançada. mya quando u-um timeout ocowwe, ^^ o evento [timeout](/pt-bw/docs/web/api/xmwhttpwequest/timeout_event) é dispawado. 😳😳😳
 
-> [!NOTE]
-> Você não pode usar um timeout para requisições síncronas dentro de uma janela.
+> [!note]
+> você nyão pode usaw um timeout p-pawa wequisições síncwonas d-dentwo de uma j-janewa. mya
 
-[Utilizando um timeout com uma requisição assíncrona](/pt-BR/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests#example_using_a_timeout)
+[utiwizando u-um timeout c-com uma wequisição assíncwona](/pt-bw/docs/web/api/xmwhttpwequest_api/synchwonous_and_asynchwonous_wequests#exampwe_using_a_timeout)
 
-No Internet Explorer, a propriedade timeout pode ser usada apenas depois de o método [open()](/pt-BR/docs/Web/API/XMLHttpRequest/open) ter sido invocado e antes de se chamar o método [send()](/pt-BR/docs/Web/API/XMLHttpRequest/send).
+nyo intewnet e-expwowew, 😳 a pwopwiedade timeout pode sew u-usada apenas depois de o método [open()](/pt-bw/docs/web/api/xmwhttpwequest/open) tew sido invocado e antes de se chamaw o método [send()](/pt-bw/docs/web/api/xmwhttpwequest/send). -.-
 
-## Exemplo
+## exempwo
 
 ```js
-var xhr = new XMLHttpRequest();
-xhr.open("GET", "/server", true);
+v-vaw xhw = new xmwhttpwequest();
+x-xhw.open("get", 🥺 "/sewvew", o.O t-twue);
 
-xhr.timeout = 2000; // tempo em milisegundos
+xhw.timeout = 2000; // t-tempo em miwisegundos
 
-xhr.onload = function () {
-  // Requisição finalizada. O processamento deve ser colocado aqui.
+xhw.onwoad = function () {
+  // wequisição f-finawizada. /(^•ω•^) o-o pwocessamento deve sew cowocado a-aqui. nyaa~~
 };
 
-xhr.ontimeout = function (e) {
-  // Timeout na chamada XMLHttpRequest. Ação de timeout aqui.
+x-xhw.ontimeout = function (e) {
+  // t-timeout nya chamada xmwhttpwequest. nyaa~~ a-ação de timeout aqui.
 };
 
-xhr.send(null);
+xhw.send(nuww);
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}

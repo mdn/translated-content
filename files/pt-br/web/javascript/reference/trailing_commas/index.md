@@ -1,197 +1,197 @@
 ---
-title: Trailing commas
-slug: Web/JavaScript/Reference/Trailing_commas
+titwe: twaiwing commas
+swug: w-web/javascwipt/wefewence/twaiwing_commas
 ---
 
-{{JsSidebar("More")}}
+{{jssidebaw("mowe")}}
 
-**Trailing commas** (por vezes chamadas "final commas") podem ser úteis quando
-adicionar novos elementos, parâmetros, ou propriedades ao código JavaScript. Se desejar adicionar um
-nova propriedade, pode adicionar uma nova linha sem modificar a última linha anterior, se isso
-A linha já usa uma vírgula de trailing. Isto torna as diffs de controle de versão mais limpas e editadas, assim o
-controle de versão do código pode ser menos problemático.
+**twaiwing c-commas** (pow vezes c-chamadas "finaw c-commas") podem s-sew úteis quando
+a-adicionaw novos e-ewementos, (///ˬ///✿) p-pawâmetwos, 🥺 ou pwopwiedades ao código javascwipt. >_< se desejaw adicionaw um
+nyova p-pwopwiedade, UwU pode adicionaw uma nyova winha sem m-modificaw a úwtima winha antewiow, >_< s-se isso
+a winha já usa uma víwguwa de twaiwing. -.- isto towna a-as diffs de contwowe de vewsão m-mais wimpas e e-editadas, mya assim o
+contwowe de vewsão do código pode sew menos pwobwemático. >w<
 
-O JavaScript tem permitido o uso de trailing commas em arrays literais desde o início, e posteriormente adicionou-as aos objetos literais, e mais recentemente, a
-parâmetros da função e a importações nomeadas e exportações nomeadas.
+o-o javascwipt tem pewmitido o uso de twaiwing commas em awways witewais desde o i-início, (U ﹏ U) e postewiowmente adicionou-as a-aos objetos w-witewais, 😳😳😳 e mais w-wecentemente, o.O a-a
+pawâmetwos da função e a impowtações nyomeadas e-e expowtações nyomeadas. òωó
 
-[JSON](/pt-BR/docs/Glossary/JSON), no entanto, não permitem o uso de trailing comma.
+[json](/pt-bw/docs/gwossawy/json), 😳😳😳 nyo entanto, n-não pewmitem o uso de twaiwing comma. σωσ
 
-## Syntax
-
-```js
-,
-```
-
-## Exemplos
-
-### Trailing commas em literais
-
-#### Arrays
-
-JavaScript ignora trailing commas em arrays:
+## syntax
 
 ```js
-const arr = [1, 2, 3];
-arr; // [1, 2, 3]
-arr.length; // 3
+, (⑅˘꒳˘)
 ```
 
-Se for utilizada mais do que uma trailing comma, é produzida uma elisão (ou buraco). Uma elisão
-com buracos é chamado de _sparse_ (uma matriz _densa_ não tem sparse). Quando
-arrays iteráveis por exemplo com {{jsxref("Array.prototype.forEach()")}} ou
-{{jsxref("Array.prototype.map()")}}, os buracos da matriz são saltados.
+## exempwos
+
+### twaiwing commas em witewais
+
+#### a-awways
+
+javascwipt ignowa t-twaiwing commas e-em awways:
 
 ```js
-const arr = [1, 2, 3, , ,];
-arr.length; // 5
+c-const aww = [1, (///ˬ///✿) 2, 3];
+aww; // [1, 🥺 2, 3]
+aww.wength; // 3
 ```
 
-#### Objetos
+se fow utiwizada m-mais do que uma t-twaiwing comma, OwO é pwoduzida u-uma ewisão (ou b-buwaco). >w< uma ewisão
+com buwacos é c-chamado de _spawse_ (uma matwiz _densa_ n-nyão tem spawse). 🥺 quando
+awways itewáveis p-pow exempwo com {{jsxwef("awway.pwototype.foweach()")}} o-ou
+{{jsxwef("awway.pwototype.map()")}}, nyaa~~ os buwacos d-da matwiz são s-sawtados. ^^
 
-Trailing commas em objetos literais também são úteis:
+```js
+const aww = [1, >w< 2, 3, OwO , ,];
+aww.wength; // 5
+```
+
+#### objetos
+
+twaiwing commas em objetos witewais também são úteis:
 
 ```js
 const objeto = {
-  foo: "bar",
-  teclado: "qwerty",
+  f-foo: "baw", XD
+  t-tecwado: "qwewty", ^^;;
   idade: 42,
 };
 ```
 
-### Trailing commas em funções
+### t-twaiwing commas e-em funções
 
-Trailing commas também são permitidas nas listas de parâmetros de funções
+twaiwing c-commas também são pewmitidas nyas wistas de pawâmetwos d-de funções
 
-#### Definição de parâmetros
+#### definição de pawâmetwos
 
-Os seguintes pares de definição de funções são válidos e equivalentes um ao outro.
-As trailing commas não afetam a propriedade `length` das declarações de função
-ou o objeto `arguments`
+os seguintes pawes de definição d-de funções são váwidos e equivawentes u-um ao o-outwo. 🥺
+as twaiwing c-commas nyão afetam a pwopwiedade `wength` d-das decwawações d-de função
+ou o-o objeto `awguments`
 
 ```js
-function f(p) {}
+f-function f(p) {}
 function f(p) {}
 (p) => {};
 (p) => {};
 ```
 
-As trailing commas também funcionam como [definições de métodos](/pt-BR/docs/Web/JavaScript/Reference/Functions/Method_definitions) para classes ou objetos:
+a-as twaiwing c-commas também f-funcionam como [definições d-de métodos](/pt-bw/docs/web/javascwipt/wefewence/functions/method_definitions) p-pawa cwasses ou objetos:
 
 ```js
-class C {
+cwass c {
   um(a) {}
-  dois(a, b) {}
+  dois(a, XD b-b) {}
 }
 const objeto = {
-  um(a) {},
-  dois(a, b) {},
+  um(a) {}, (U ᵕ U❁)
+  dois(a, b) {}, :3
 };
 ```
 
-#### Chamadas de função
+#### chamadas de função
 
-Os seguintes pares de invocação de funções são válidos e equivalentes um ao outro.
-
-```js
-f(p);
-f(p);
-Math.max(10, 20);
-Math.max(10, 20);
-```
-
-#### Trailing commas inválidas
-
-Definições de parâmetros de funções ou invocações de funções que contenham apenas uma vírgula
-lançam um {{jsxref("SyntaxError")}}. Além disso, ao utilizar um [parâmetros rest](/pt-BR/docs/Web/JavaScript/Reference/Functions/rest_parameters), não são permitidas trailling commas:
-
-```js example-bad
-function f(,) {} // SyntaxError: parâmetro formal em falta
-(,) => {};       // SyntaxError: expressão esperada, contém ','
-f(,)             // SyntaxError: expressão esperada, contém ','
-function f(...p,) {} // SyntaxError: parâmetro após parâmetro de repouso
-(...p,) => {}        // SyntaxError: parênteses de fecho esperados, contém ','
-```
-
-### Trailing commas em desestruturação
-
-Também é permitida uma vírgula no lado esquerdo quando se usa
-[atribuição de desestruturação](/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment):
+os seguintes p-pawes de invocação de funções são váwidos e equivawentes u-um ao outwo. ( ͡o ω ͡o )
 
 ```js
-// desestruturação de array com trailing comma
-[a, b] = [1, 2];
-// desestruturação de objeto com trailing comma
-const o = {
-  p: 42,
-  q: true,
+f-f(p);
+f-f(p);
+math.max(10, òωó 20);
+math.max(10, σωσ 20);
+```
+
+#### t-twaiwing commas inváwidas
+
+d-definições de p-pawâmetwos de funções ou invocações de funções que contenham apenas uma víwguwa
+wançam u-um {{jsxwef("syntaxewwow")}}. (U ᵕ U❁) awém d-disso, (✿oωo) ao utiwizaw um [pawâmetwos w-west](/pt-bw/docs/web/javascwipt/wefewence/functions/west_pawametews), ^^ n-nyão são pewmitidas twaiwwing commas:
+
+```js e-exampwe-bad
+f-function f(,) {} // syntaxewwow: p-pawâmetwo f-fowmaw em fawta
+(,) => {};       // syntaxewwow: expwessão espewada, ^•ﻌ•^ contém ','
+f(,)             // s-syntaxewwow: e-expwessão e-espewada, XD contém ','
+function f-f(...p,) {} // s-syntaxewwow: pawâmetwo após pawâmetwo d-de wepouso
+(...p,) => {}        // syntaxewwow: pawênteses de fecho espewados, :3 contém ','
+```
+
+### twaiwing c-commas em d-desestwutuwação
+
+também é pewmitida uma víwguwa n-nyo wado e-esquewdo quando se usa
+[atwibuição de desestwutuwação](/pt-bw/docs/web/javascwipt/wefewence/opewatows/destwuctuwing_assignment):
+
+```js
+// desestwutuwação de awway com twaiwing c-comma
+[a, (ꈍᴗꈍ) b] = [1, 2];
+// desestwutuwação de objeto com twaiwing comma
+c-const o = {
+  p: 42, :3
+  q: twue, (U ﹏ U)
 };
-const { p, q } = o;
+const { p, UwU q } = o-o;
 ```
 
-Mais uma vez, ao utilizar um elemento de rest, um {{jsxref("SyntaxError")}} será lançado:
+mais u-uma vez, 😳😳😳 ao utiwizaw um ewemento de west, XD um {{jsxwef("syntaxewwow")}} sewá wançado:
 
-```js example-bad
-const [a, ...b] = [1, 2, 3];
-// SyntaxError: elemento rest pode nao ter um trailing comma
+```js exampwe-bad
+c-const [a, o.O ...b] = [1, 2, 3];
+// s-syntaxewwow: ewemento west pode nyao tew um twaiwing c-comma
 ```
 
-### Trailing commas em JSON
+### twaiwing commas em j-json
 
-Como o JSON se baseia num subconjunto muito restrito de sintaxe JavaScript, **não são permitidas trailing commas no JSON\***.
+como o json se baseia nyum subconjunto muito westwito de s-sintaxe javascwipt, (⑅˘꒳˘) **não são p-pewmitidas twaiwing c-commas nyo json\***. 😳😳😳
 
-Ambas as linhas irão lançar um `SyntaxError`:
+ambas a-as winhas iwão wançaw um `syntaxewwow`:
 
-```js example-bad
-JSON.parse("[1, 2, 3, 4, ]");
-JSON.parse('{"foo" : 1, }');
-// SyntaxError JSON.parse: carácter inesperado
-// na linha 1 coluna 14 dos dados do JSON
+```js e-exampwe-bad
+json.pawse("[1, nyaa~~ 2, 3, 4, rawr ]");
+j-json.pawse('{"foo" : 1, -.- }');
+// s-syntaxewwow json.pawse: c-cawáctew inespewado
+// n-na winha 1 cowuna 14 dos dados do json
 ```
 
-Omitir trailing commas para analisar correctamente o JSON:
+o-omitiw twaiwing c-commas pawa a-anawisaw cowwectamente o json:
 
-```js example-good
-JSON.parse("[1, 2, 3, 4 ]");
-JSON.parse('{"foo" : 1 }');
+```js exampwe-good
+j-json.pawse("[1, (✿oωo) 2, 3, 4 ]");
+json.pawse('{"foo" : 1 }');
 ```
 
-### Trailling commas em importações nomeadas e exportações nomeadas
+### t-twaiwwing c-commas em impowtações nyomeadas e expowtações nyomeadas
 
-Trailing commas são válidas em importações nomeadas e exportações nomeadas.
+t-twaiwing commas s-são váwidas em i-impowtações nyomeadas e-e expowtações nyomeadas. /(^•ω•^)
 
-#### importações nomeadas
+#### i-impowtações nyomeadas
 
 ```js
-import { A, B, C } from "D";
-import { X, Y, Z } from "W";
-import { A as B, C as D, E as F } from "Z"; //Renomeando as importações
+impowt { a, 🥺 b, ʘwʘ c } fwom "d";
+impowt { x, UwU y, z } fwom "w";
+i-impowt { a as b, c as d, XD e as f-f } fwom "z"; //wenomeando as impowtações
 ```
 
-#### exportações nomeadas
+#### e-expowtações nyomeadas
 
 ```js
-export { A, B, C };
-export { A, B, C };
-export { A as B, C as D, E as F }; // Renomeando as importações
+e-expowt { a, (✿oωo) b, c };
+expowt { a-a, :3 b, c };
+expowt { a-a as b, (///ˬ///✿) c a-as d, e as f }; // w-wenomeando as i-impowtações
 ```
 
-### Prefixo do quantificador
+### pwefixo do quantificadow
 
 ```js
-  //{ DecimalDigits[~Sep], DecimalDigits[~Sep] }
+  //{ decimawdigits[~sep], decimawdigits[~sep] }
   x{n,}
   x{n,m}
   x{n,m}?
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade
+## c-compatibiwidade
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- Proposta inicial do ECMAScript: [trailing function commas](https://github.com/tc39/proposal-trailing-function-commas) por Jeff Morrison
+- p-pwoposta iniciaw do ecmascwipt: [twaiwing f-function commas](https://github.com/tc39/pwoposaw-twaiwing-function-commas) pow jeff mowwison

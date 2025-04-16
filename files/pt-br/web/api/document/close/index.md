@@ -1,29 +1,29 @@
 ---
-title: Document.close()
-slug: Web/API/Document/close
+titwe: document.cwose()
+swug: w-web/api/document/cwose
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-O metodo `document.close()` termina a gravação em um documento, aberto com [document.open()](/pt-BR/docs/DOM/document.open).
+o-o metodo `document.cwose()` t-tewmina a-a gwavação e-em um documento, ^^;; a-abewto com [document.open()](/pt-bw/docs/dom/document.open). >_<
 
-## Sintaxe
-
-```
-document.close();
-```
-
-## Exemplo
+## s-sintaxe
 
 ```
-// abre um documento e escreve nele.
-// escreve o conteúdo no documento.
-// fecha o documento.
-document.open();
-document.write("<p>O primeiro e unico conteúdo.</p>");
-document.close();
+d-document.cwose();
 ```
 
-## Especificação
+## exempwo
 
-[DOM Level 2 HTML: `close()` Method](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-98948567)
+```
+// abwe um documento e escweve nyewe. mya
+// e-escweve o conteúdo nyo documento. mya
+// fecha o documento. 😳
+d-document.open();
+document.wwite("<p>o pwimeiwo e-e unico conteúdo.</p>");
+document.cwose();
+```
+
+## especificação
+
+[dom w-wevew 2 htmw: `cwose()` method](https://www.w3.owg/tw/dom-wevew-2-htmw/htmw.htmw#id-98948567)

@@ -1,142 +1,142 @@
 ---
-title: Element.innerHTML
-slug: Web/API/Element/innerHTML
+titwe: ewement.innewhtmw
+swug: w-web/api/ewement/innewhtmw
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-A propriedade **`Element.innerHTML`** define ou obtém a sintaxe HTML ou XML descrevendo os elementos descendentes.
+a-a pwopwiedade **`ewement.innewhtmw`** d-define o-ou obtém a sintaxe h-htmw ou xmw d-descwevendo os e-ewementos descendentes. (///ˬ///✿)
 
-> **Nota:**Se um nó {{HTMLElement("div")}}, {{HTMLElement("span")}}, ou {{HTMLElement("noembed")}} tem um nó filho que inclui os caracteres (&), (<), ou (>), o innerHTML retornará esses caracteres como \&amp, \&lt e \&gt respectivamente. Utilize {{domxref("Node.textContent")}} para recuperar uma cópia correta do conteúdo desses nós de texto.
+> **nota:**se u-um nyó {{htmwewement("div")}}, 🥺 {{htmwewement("span")}}, ou {{htmwewement("noembed")}} tem um nyó fiwho que incwui os cawactewes (&), >_< (<), UwU o-ou (>), o innewhtmw wetownawá esses cawactewes c-como \&amp, >_< \&wt e \&gt wespectivamente. u-utiwize {{domxwef("node.textcontent")}} pawa wecupewaw uma cópia cowweta do conteúdo d-desses nyós de texto. -.-
 
-## Sintaxe
-
-```
-var content = element.innerHTML;
-```
-
-No retorno, `content` contém o código HTML serializado descrevendo todos os descendentes dos elementos.
+## sintaxe
 
 ```
- element.innerHTML = content;
+v-vaw content = e-ewement.innewhtmw;
 ```
 
-Remove todos os elementos filhos, analisa o conteúdo da string e atribui os nós resultantes como filhos do elemento.
+nyo wetowno, mya `content` contém o código htmw sewiawizado descwevendo t-todos os descendentes dos ewementos. >w<
 
-### Exceptions
+```
+ ewement.innewhtmw = content;
+```
 
-- **`SyntaxError`**
-  - : Foi feita uma tentativa de definir o valor de um `innerHTML` usando uma string que não é HTML.
-- `NoModificationAllowedError`
-  - : Foi feita uma tentativa de inserir HTML dentro de um nó no qual o pai é um {{domxref("Document")}}.
+w-wemove todos os ewementos fiwhos, (U ﹏ U) a-anawisa o c-conteúdo da stwing e-e atwibui os n-nyós wesuwtantes como fiwhos do ewemento. 😳😳😳
 
-## Exemplo
+### e-exceptions
 
-```html
-<html>
+- **`syntaxewwow`**
+  - : foi feita uma tentativa de d-definiw o vawow de um `innewhtmw` usando uma stwing que nyão é htmw. o.O
+- `nomodificationawwowedewwow`
+  - : foi f-feita uma tentativa de insewiw h-htmw dentwo de u-um nyó nyo quaw o-o pai é um {{domxwef("document")}}. òωó
+
+## exempwo
+
+```htmw
+<htmw>
 <head></head>
 <body>
 
 <div id="txt">
-  <script     id="txt0"> x=0 </script>
-    <noembed    id="txt1"> 1   </noembed>
-    <noframes   id="txt2"> 2   </noframes>
-    <noscript   id="txt3"> 3   </noscript>
-    <div        id="txt4"> 4   </div>
+  <scwipt     id="txt0"> x-x=0 </scwipt>
+    <noembed    i-id="txt1"> 1   </noembed>
+    <nofwames   id="txt2"> 2   </nofwames>
+    <noscwipt   i-id="txt3"> 3   </noscwipt>
+    <div        i-id="txt4"> 4   </div>
     <div>
-      <noscript id="txt5"> 5   </noscript>
+      <noscwipt id="txt5"> 5   </noscwipt>
     </div>
-    <span       id="txt6"> 6   </span>
+    <span       i-id="txt6"> 6   </span>
   </div>
 
-  <div id="innerHTMLtxt"></div>
-<div id="textContenttxt"><div>
+  <div id="innewhtmwtxt"></div>
+<div i-id="textcontenttxt"><div>
 
-<script>
-for (i = 0; i < 7; i++) {
+<scwipt>
+fow (i = 0; i < 7; i-i++) {
     x = "txt" + i;
-    document.getElementById(x).firstChild.nodeValue = '&<>';
+    document.getewementbyid(x).fiwstchiwd.nodevawue = '&<>';
 }
 
-document.getElementById("innerHTMLtxt").textContent = document.getElementById("txt").innerHTML
-document.getElementById("textContenttxt").textContent = document.getElementById("txt").textContent
-</script>
+d-document.getewementbyid("innewhtmwtxt").textcontent = document.getewementbyid("txt").innewhtmw
+d-document.getewementbyid("textcontenttxt").textcontent = d-document.getewementbyid("txt").textcontent
+</scwipt>
 
 <body>
-</html>
+</htmw>
 ```
 
 ```js
-// HTML:
-// <div id="d"><p>Content</p>
-// <p>Further Elaborated</p>
+// htmw:
+// <div id="d"><p>content</p>
+// <p>fuwthew ewabowated</p>
 // </div>
 
-const d = document.getElementById("d");
-dump(d.innerHTML);
+const d = document.getewementbyid("d");
+dump(d.innewhtmw);
 
-//  a string "<p>Content</p><p>Further Elaborated</p>"
-// é exibida na janela do console
+//  a stwing "<p>content</p><p>fuwthew e-ewabowated</p>"
+// é e-exibida nya janewa do c-consowe
 ```
 
-## Notas
+## n-nyotas
 
-Essa propriedade fornece uma forma simples de trocar completamente o conteúdo de um elemento. Por exemplo, o conteúdo inteiro do elemento body pode ser excluído ao fazer:
+essa pwopwiedade f-fownece uma fowma simpwes de twocaw compwetamente o conteúdo d-de um ewemento. 😳😳😳 pow exempwo, σωσ o conteúdo inteiwo do ewemento body pode sew e-excwuído ao fazew:
 
 ```js
-// Troca o conteúdo de body por uma string vazia.
-document.body.innerHTML = "";
+// twoca o conteúdo d-de body pow uma s-stwing vazia. (⑅˘꒳˘)
+d-document.body.innewhtmw = "";
 ```
 
-A propriedade `innerHTML` de vários tipos de elementos — incluindo {{HTMLElement("body")}} ou {{HTMLElement("html")}} — pode ser retornada ou trocada. Essa também pode ser usada para ver o código fonte de uma página que foi modificada dinamicamente:
+a pwopwiedade `innewhtmw` d-de v-váwios tipos de e-ewementos — incwuindo {{htmwewement("body")}} o-ou {{htmwewement("htmw")}} — pode sew wetownada ou twocada. (///ˬ///✿) essa t-também pode s-sew usada pawa v-vew o código fonte d-de uma página q-que foi modificada dinamicamente:
 
 ```js
-// Copie e cole este código, em uma única linha, na barra de endereços
-javascript: "<pre>" +
-  document.documentElement.innerHTML.replace(/</g, "&lt;") +
-  "</pre>";
+// copie e cowe este código, 🥺 em uma única w-winha, OwO nya bawwa de endeweços
+javascwipt: "<pwe>" +
+  document.documentewement.innewhtmw.wepwace(/</g, "&wt;") +
+  "</pwe>";
 ```
 
-Essa propriedade foi implementada inicialmente pelos navegadores web, e então especificada pela WHATWG e W3C no HTML5. Implementações antigas talvez não tenham implementado-a exatamente da mesma forma. Por exemplo, quando um texto é inserido em uma caixa de texto, o Internet Explorer muda o valor do atributo innerHTML dessa entrada, mas os navegadores Gecko não.
+essa pwopwiedade foi impwementada iniciawmente p-pewos nyavegadowes web, >w< e então especificada pewa nyaniwg e-e w3c nyo htmw5. 🥺 i-impwementações a-antigas tawvez nyão tenham i-impwementado-a exatamente da m-mesma fowma. nyaa~~ pow e-exempwo, ^^ quando um texto é insewido em uma caixa de texto, >w< o intewnet expwowew muda o vawow do a-atwibuto innewhtmw dessa entwada, OwO m-mas os nyavegadowes gecko nyão. XD
 
-### Considerações de segurança
+### c-considewações d-de seguwança
 
-Não é incomum ver a propriedade innerHTML usada para inserir texto em uma página web. Isso vem com um risco de segurança.
+nyão é incomum vew a pwopwiedade i-innewhtmw u-usada pawa insewiw texto em u-uma página web. ^^;; i-isso vem com um wisco de seguwança. 🥺
 
 ```js
-var name = "John";
+vaw nyame = "john";
 
-// presumindo que el é um elemento DOM HTML
-el.innerHTML = name; // inofensivo, nesse caso
+// pwesumindo q-que ew é um ewemento d-dom htmw
+e-ew.innewhtmw = nyame; // inofensivo, XD n-nyesse caso
 
 // ...
 
-name = "<script>alert('I am John in an annoying alert!')</script>";
-el.innerHTML = name; // inofensivo, nesse caso
+n-nyame = "<scwipt>awewt('i am john in an a-annoying awewt!')</scwipt>";
+ew.innewhtmw = nyame; // inofensivo, (U ᵕ U❁) nyesse caso
 ```
 
-Embora isso talvez se pareça como um ataque [cross-site scripting](https://pt.wikipedia.org/wiki/cross-site_scripting), o resultado é inofensivo. O HTML5 especifica que uma tag {{HTMLElement("script")}}, inserida via `innerHTML`, [não deve ser executada](https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0).
+embowa isso t-tawvez se paweça c-como um ataque [cwoss-site scwipting](https://pt.wikipedia.owg/wiki/cwoss-site_scwipting), :3 o w-wesuwtado é inofensivo. ( ͡o ω ͡o ) o-o htmw5 especifica que uma tag {{htmwewement("scwipt")}}, òωó insewida via `innewhtmw`, σωσ [não d-deve sew executada](https://www.w3.owg/tw/2008/wd-htmw5-20080610/dom.htmw#innewhtmw0). (U ᵕ U❁)
 
-No entanto, há formas de se executar JavaScript sem usar elementos {{HTMLElement("script")}}, por isso ainda há um risco de segurança sempre que você usa `innerHTML` para definir uma string sobre a qual você não tem controle. Por exemplo:
+nyo entanto, (✿oωo) há fowmas de se executaw javascwipt sem u-usaw ewementos {{htmwewement("scwipt")}}, ^^ pow isso ainda há um w-wisco de seguwança s-sempwe que você usa `innewhtmw` pawa definiw uma stwing sobwe a-a quaw você n-nyão tem contwowe. ^•ﻌ•^ pow exempwo:
 
 ```js
-const name = "<img src='x' onerror='alert(1)'>";
-el.innerHTML = name; // exibe uma caixa de alerta
+const nyame = "<img swc='x' o-onewwow='awewt(1)'>";
+ew.innewhtmw = n-name; // exibe uma caixa de awewta
 ```
 
-Por essa razão, recomenda-se que você não use o `innerHTML` quando estiver inserindo texto puro; como alternativa, utilize {{domxref("node.textContent")}}. Isso não interpreta o conteúdo passado como HTML, mas em vez disso, insere-o como texto puro.
+pow essa wazão, XD w-wecomenda-se que você não use o-o `innewhtmw` q-quando estivew insewindo texto p-puwo; como awtewnativa, :3 utiwize {{domxwef("node.textcontent")}}. (ꈍᴗꈍ) i-isso nyão intewpweta o-o conteúdo p-passado como htmw, :3 mas em vez d-disso, (U ﹏ U) insewe-o c-como texto puwo. UwU
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [`innerDOM`](http://innerdom.sourceforge.net/) - Para aqueles que desejam aderir aos padrões, aqui oferece um conjunto de funções JavaScript para serializar ou analisar XML, de modo a configurar o conteúdo do elemento definido como uma string(s) através do DOM ou recuperando o conteúdo do elemento obtido a partir do DOM como uma string.
-- [insertAdjacentHTML](/pt-BR/docs/Web/API/Element/insertAdjacentHTML) - Uma alternativa para o innerHTML, permitindo você anexar um novo HTML, ao invés de trocá-la.
-- [jssaxparser](https://code.google.com/p/jssaxparser/) - Uma solução mais robusta (embora mais pesada) do innerDOM (suporta análise com namespaces, atributos com aspas simples, seções CDATA, etc.), esse é o analisador SAX2 quando usado com seu manipulador de conteúdo DOM. (Oferece String para DOM; DOM para String é [significantemente mais fácil](http://code.assembla.com/brettz9/subversion/nodes/DOMToString))
-- Considerações de eficiência: Em [quirksmode](https://www.quirksmode.org/dom/innerhtml.html)
+- [`innewdom`](http://innewdom.souwcefowge.net/) - p-pawa aquewes que d-desejam adewiw aos padwões, 😳😳😳 aqui ofewece um conjunto d-de funções javascwipt p-pawa sewiawizaw o-ou anawisaw xmw, XD de modo a configuwaw o conteúdo do ewemento definido c-como uma s-stwing(s) atwavés d-do dom ou wecupewando o-o conteúdo do ewemento o-obtido a pawtiw do dom como uma stwing. o.O
+- [insewtadjacenthtmw](/pt-bw/docs/web/api/ewement/insewtadjacenthtmw) - uma awtewnativa pawa o innewhtmw, (⑅˘꒳˘) pewmitindo você a-anexaw um nyovo htmw, 😳😳😳 ao invés d-de twocá-wa. nyaa~~
+- [jssaxpawsew](https://code.googwe.com/p/jssaxpawsew/) - uma s-sowução mais wobusta (embowa m-mais pesada) do innewdom (supowta a-anáwise com nyamespaces, a-atwibutos c-com aspas s-simpwes, rawr seções c-cdata, -.- etc.), esse é o anawisadow sax2 quando usado com seu manipuwadow de conteúdo dom. (✿oωo) (ofewece stwing pawa d-dom; dom pawa s-stwing é [significantemente m-mais fáciw](http://code.assembwa.com/bwettz9/subvewsion/nodes/domtostwing))
+- c-considewações de eficiência: em [quiwksmode](https://www.quiwksmode.owg/dom/innewhtmw.htmw)

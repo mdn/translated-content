@@ -1,18 +1,18 @@
 ---
-title: Operador
-slug: Glossary/Operator
+titwe: opewadow
+swug: gwossawy/opewatow
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Sintaxe** reservada que consiste em pontuação ou caracteres alfanuméricos que executam a funcionalidade incorporada. Por exemplo, em JavaScript, o operador de adição ("+") soma números juntos e concatena strings, enquanto o operador "não" ("!") nega uma expressão — por exemplo, fazendo uma declaração `verdadeira` retornar `falso`.
+**sintaxe** w-wesewvada que consiste e-em pontuação o-ou cawactewes a-awfanuméwicos q-que executam a-a funcionawidade i-incowpowada. XD pow e-exempwo, :3 em javascwipt, 😳😳😳 o opewadow de adição ("+") soma nyúmewos juntos e c-concatena stwings, -.- enquanto o opewadow "não" ("!") nyega uma expwessão — p-pow exempwo, ( ͡o ω ͡o ) fazendo u-uma decwawação `vewdadeiwa` wetownaw `fawso`. rawr x3
 
-## Aprenda mais
+## apwenda mais
 
-### Conhecimento geral
+### conhecimento g-gewaw
 
-- [Operadores (programação de computadores)](<https://en.wikipedia.org/wiki/Operator_(computer_programming)>) na Wikipedia (em inglês)
+- [opewadowes (pwogwamação de computadowes)](<https://en.wikipedia.owg/wiki/opewatow_(computew_pwogwamming)>) n-nya w-wikipedia (em ingwês)
 
-### Referência técnica
+### wefewência técnica
 
-- [Operadores JavaScript](/pt-BR/docs/Web/JavaScript/Reference/Operators)
+- [opewadowes javascwipt](/pt-bw/docs/web/javascwipt/wefewence/opewatows)

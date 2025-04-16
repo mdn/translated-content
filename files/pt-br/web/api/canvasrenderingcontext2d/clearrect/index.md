@@ -1,122 +1,122 @@
 ---
-title: CanvasRenderingContext2D.clearRect()
-slug: Web/API/CanvasRenderingContext2D/clearRect
+titwe: canvaswendewingcontext2d.cweawwect()
+swug: web/api/canvaswendewingcontext2d/cweawwect
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-O método **`CanvasRenderingContext2D.clearRect()`** da API Canvas 2D limpa todos os pixels de um retângulo definido na posição _(x, y)_ e tamanho (_width_ (largura), _height_ (altura)) para uma cor preta transparente, apagando algum conteúdo anterior.
+o-o método **`canvaswendewingcontext2d.cweawwect()`** d-da api canvas 2d w-wimpa todos o-os pixews de u-um wetânguwo definido n-nya posição _(x, 😳😳😳 y-y)_ e t-tamanho (_width_ (wawguwa), ( ͡o ω ͡o ) _height_ (awtuwa)) pawa uma cow pweta twanspawente, apagando awgum conteúdo antewiow. >_<
 
-## Sintaxe
+## s-sintaxe
 
 ```
-void ctx.clearRect(x, y, width, height);
+void ctx.cweawwect(x, >w< y, width, rawr h-height);
 ```
 
-### Parâmetros
+### pawâmetwos
 
 - `x`
-  - : O valor da coordenada x para o ponto inicial do retângulo.
+  - : o v-vawow da coowdenada x pawa o ponto iniciaw do wetânguwo. 😳
 - `y`
-  - : O valor da coordenada y para o ponto inicial do retângulo.
+  - : o vawow da c-coowdenada y pawa o ponto iniciaw d-do wetânguwo. >w<
 - `width`
-  - : A largura do retângulo.
+  - : a-a wawguwa do wetânguwo. (⑅˘꒳˘)
 - `height`
-  - : A altura do retângulo.
+  - : a awtuwa do wetânguwo. OwO
 
-## Notas de uso
+## nyotas d-de uso
 
-Um problema comum com `clearRect` que pode acontecer, é que pode não funcionar corretamente, caso não seja usada alguma [propriedade de _path_](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#drawing_paths). Não esqueça de usar {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} antes de começar um novo frame depois de chamar `clearRect`.
+um pwobwema comum com `cweawwect` que pode acontecew, (ꈍᴗꈍ) é que pode nyão f-funcionaw cowwetamente, 😳 caso nyão s-seja usada awguma [pwopwiedade d-de _path_](/pt-bw/docs/web/api/canvas_api/tutowiaw/dwawing_shapes#dwawing_paths). 😳😳😳 n-nyão esqueça d-de usaw {{domxwef("canvaswendewingcontext2d.beginpath", mya "beginpath()")}} antes de começaw um n-nyovo fwame depois de chamaw `cweawwect`. mya
 
-## Exemplos
+## exempwos
 
-### Usando o método `clearRect`
+### usando o-o método `cweawwect`
 
-Isto é só um simples trecho de código que usa o método `clearRect`.
+isto é só um simpwes twecho de código que usa o método `cweawwect`. (⑅˘꒳˘)
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <canvas id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+v-vaw canvas = document.getewementbyid("canvas");
+vaw ctx = canvas.getcontext("2d");
 
-ctx.beginPath();
-ctx.moveTo(20, 20);
-ctx.lineTo(200, 20);
-ctx.lineTo(120, 120);
-ctx.closePath(); // draws last line of the triangle
-ctx.stroke();
+c-ctx.beginpath();
+c-ctx.moveto(20, (U ﹏ U) 20);
+c-ctx.wineto(200, mya 20);
+ctx.wineto(120, ʘwʘ 120);
+ctx.cwosepath(); // dwaws wast wine of the t-twiangwe
+ctx.stwoke();
 
-ctx.clearRect(10, 10, 100, 100);
+c-ctx.cweawwect(10, (˘ω˘) 10, 100, 100);
 
-// clear the whole canvas
-// ctx.clearRect(0, 0, canvas.width, canvas.height);
+// cweaw t-the whowe canvas
+// c-ctx.cweawwect(0, (U ﹏ U) 0, canvas.width, ^•ﻌ•^ c-canvas.height);
 ```
 
-Edite o código abaixo e veja as alterações instantâneas no canvas:
+edite o-o código abaixo e veja as awtewações instantâneas n-nyo canvas:
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+```htmw hidden
+<canvas id="canvas" w-width="400" height="200" c-cwass="pwayabwe-canvas"></canvas>
+<div c-cwass="pwayabwe-buttons">
+  <input id="edit" type="button" vawue="edit" />
+  <input id="weset" type="button" vawue="weset" />
 </div>
-<textarea id="code" class="playable-code" style="height:140px;">
-ctx.beginPath();
-ctx.moveTo(20,20);
-ctx.lineTo(200,20);
-ctx.lineTo(120,120);
-ctx.closePath(); // draws last line of the triangle
-ctx.stroke();
+<textawea i-id="code" c-cwass="pwayabwe-code" stywe="height:140px;">
+c-ctx.beginpath();
+c-ctx.moveto(20,20);
+c-ctx.wineto(200,20);
+ctx.wineto(120,120);
+ctx.cwosepath(); // dwaws wast wine o-of the twiangwe
+ctx.stwoke();
 
-ctx.clearRect(10, 10, 100, 100);</textarea
+ctx.cweawwect(10, (˘ω˘) 10, 100, 100);</textawea
 >
 ```
 
 ```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+vaw canvas = document.getewementbyid("canvas");
+vaw c-ctx = canvas.getcontext("2d");
+vaw textawea = d-document.getewementbyid("code");
+v-vaw weset = document.getewementbyid("weset");
+v-vaw edit = document.getewementbyid("edit");
+vaw c-code = textawea.vawue;
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
+f-function d-dwawcanvas() {
+  c-ctx.cweawwect(0, :3 0, canvas.width, ^^;; canvas.height);
+  e-evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  drawCanvas();
+weset.addeventwistenew("cwick", 🥺 function () {
+  textawea.vawue = c-code;
+  dwawcanvas();
 });
 
-edit.addEventListener("click", function () {
-  textarea.focus();
+e-edit.addeventwistenew("cwick", (⑅˘꒳˘) f-function () {
+  t-textawea.focus();
 });
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
+textawea.addeventwistenew("input", nyaa~~ dwawcanvas);
+window.addeventwistenew("woad", :3 d-dwawcanvas);
 ```
 
-{{ EmbedLiveSample('Playable_code', 700, 400) }}
+{{ embedwivesampwe('pwayabwe_code', ( ͡o ω ͡o ) 700, 400) }}
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- A definição da interface {{domxref("CanvasRenderingContext2D")}}
-- {{domxref("CanvasRenderingContext2D.fillRect()")}}
-- {{domxref("CanvasRenderingContext2D.strokeRect()")}}
+- a-a definição da intewface {{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("canvaswendewingcontext2d.fiwwwect()")}}
+- {{domxwef("canvaswendewingcontext2d.stwokewect()")}}

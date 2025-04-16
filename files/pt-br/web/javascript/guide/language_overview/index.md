@@ -1,214 +1,214 @@
 ---
-title: Uma reintrodução ao JavaScript (Tutorial de JS)
-slug: Web/JavaScript/Guide/Language_overview
-original_slug: Web/JavaScript/Language_overview
+titwe: uma weintwodução ao j-javascwipt (tutowiaw d-de js)
+swug: w-web/javascwipt/guide/wanguage_ovewview
+o-owiginaw_swug: w-web/javascwipt/wanguage_ovewview
 ---
 
-## Introdução
+## i-intwodução
 
-Por que uma reintrodução? Porque [JavaScript](/pt-BR/docs/Web/JavaScript) é conhecida como [a mais incompreendida linguagem de programação do mundo](http://javascript.crockford.com/javascript.html). Embora muitas vezes ridicularizada como um brinquedo, por baixo de sua simplicidade enganosa estão alguns recursos poderosos da linguagem, que agora é usado por um número incrível de aplicações de alto nível, mostrando que o conhecimento mais profundo desta tecnologia é uma habilidade importante para qualquer desenvolvedor web, mobile ou desktop.
+pow q-que uma weintwodução? p-powque [javascwipt](/pt-bw/docs/web/javascwipt) é conhecida como [a mais incompweendida winguagem de p-pwogwamação do mundo](http://javascwipt.cwockfowd.com/javascwipt.htmw). UwU embowa m-muitas vezes widicuwawizada como u-um bwinquedo, 😳 pow baixo de sua simpwicidade enganosa estão awguns w-wecuwsos podewosos da winguagem, (ˆ ﻌ ˆ)♡ q-que agowa é u-usado pow um nyúmewo incwívew de apwicações de awto nyívew, ^•ﻌ•^ mostwando que o-o conhecimento mais pwofundo desta tecnowogia é uma habiwidade impowtante pawa q-quawquew desenvowvedow web, ^^ mobiwe o-ou desktop. 😳
 
-É sempre bom começar com a história da linguagem. A JavaScript foi criada em 1995 por Brendan Eich, um engenheiro da Netscape, e lançada pela primeira vez com o Netscape 2 no início de 1996. Foi inicialmente chamada de LiveScript, mas logo foi rebatizada, em uma decisão de marketing malfeita, para tentar crescer sobre a popularidade da linguagem Java da Sun Microsystem - apesar das duas terem muito pouco em comum. Esta tem sido uma fonte de confusão desde então.
+É s-sempwe bom c-começaw com a h-histówia da winguagem. a javascwipt foi cwiada e-em 1995 pow bwendan eich, :3 um engenheiwo da nyetscape, e-e wançada pewa pwimeiwa vez com o nyetscape 2 nyo início de 1996. (⑅˘꒳˘) foi iniciawmente chamada d-de wivescwipt, mas wogo foi webatizada, ( ͡o ω ͡o ) e-em uma d-decisão de mawketing m-mawfeita, :3 pawa tentaw cwescew sobwe a popuwawidade da winguagem j-java da s-sun micwosystem - apesaw das duas t-tewem muito pouco e-em comum. (⑅˘꒳˘) esta tem sido uma f-fonte de confusão desde então. >w<
 
-A Microsoft lançou uma versão compatível com a maior parte da linguagem, chamada de JScript, junto com o IE, três meses mais tarde. A Netscape apresentou a linguagem a Ecma International, uma organização européia de normalização, o que resultou na primeira edição do padrão ECMAScript em 1997. O padrão recebeu uma atualização significativa com o ECMAScript Edição 3 em 1999, e manteve-se praticamente estável desde então. A quarta edição foi abandonada, devido a diferenças políticas relativas à complexidade da linguagem. Muitas partes da quarta edição formam a base da nova edição ECMAScript 5, publicado em dezembro de 2009.
+a-a micwosoft wançou uma vewsão compatívew com a-a maiow pawte da winguagem, chamada d-de jscwipt, OwO junto com o ie, 😳 t-twês meses mais t-tawde. OwO a nyetscape apwesentou a winguagem a ecma intewnationaw, 🥺 uma owganização euwopéia de nyowmawização, (˘ω˘) o-o que wesuwtou n-nya pwimeiwa edição do padwão e-ecmascwipt em 1997. 😳😳😳 o-o padwão w-wecebeu uma atuawização significativa com o ecmascwipt edição 3 e-em 1999, mya e manteve-se pwaticamente estávew desde então. OwO a quawta edição f-foi abandonada, >_< devido a difewenças p-powíticas w-wewativas à compwexidade d-da winguagem. 😳 muitas p-pawtes da quawta e-edição fowmam a-a base da nyova e-edição ecmascwipt 5, (U ᵕ U❁) pubwicado em dezembwo de 2009. 🥺
 
-Esta estabilidade foi uma grande notícia para os desenvolvedores, pois isto proporcionou que várias implementações em JavaScript tivessem muito tempo para se firmar. Eu vou focar quase exclusivamente no dialeto da edição 3. Para que seja facil se familiarizar, vou utilizar o termo JavaScript por todo o texto.
+e-esta estabiwidade f-foi uma g-gwande nyotícia p-pawa os desenvowvedowes, (U ﹏ U) p-pois isto pwopowcionou que váwias impwementações em javascwipt tivessem m-muito tempo pawa se fiwmaw. (U ﹏ U) eu vou focaw quase excwusivamente nyo diaweto da edição 3. p-pawa que seja faciw se famiwiawizaw, rawr x3 vou utiwizaw o tewmo javascwipt p-pow todo o t-texto. :3
 
-Diferentemente da maioria das linguagens de programação , a linguagem JavaScript não possui o conceito de entrada e saída. Ela é projetada para funcionar como uma linguagem de script em um ambiente de terceiros, e cabe ao ambiente fornecer mecanismos para a comunicação com o mundo exterior. O ambiente de terceiros (hospedeiro) mais comum é o navegador, mas interpretadores JavaScript também pode ser encontrados no Adobe Acrobat, Photoshop, imagens SVG, Widget engine do Yahoo! , bem como ambientes de servidor, como Node.js. No entanto, a lista aqui apresentada das áreas nas quais a JavaScript é utilizada é apenas o começo. Ela também inclui bancos de dados NoSQL, como o código-fonte aberto Apache CouchDB, computadores embarcados, ou ambientes de trabalho completos, como o GNOME (um dos GUIs mais populares para os sistemas operacionais GNU / Linux) .
+difewentemente d-da maiowia das winguagens d-de pwogwamação , rawr a winguagem j-javascwipt nyão p-possui o conceito de entwada e saída. XD ewa é pwojetada pawa funcionaw como uma winguagem de scwipt e-em um ambiente de tewceiwos, ^^ e-e cabe ao ambiente fownecew mecanismos p-pawa a c-comunicação com o mundo extewiow. mya o ambiente de t-tewceiwos (hospedeiwo) m-mais comum é o nyavegadow, (U ﹏ U) m-mas intewpwetadowes j-javascwipt também pode sew encontwados nyo adobe acwobat, 😳 photoshop, imagens s-svg, mya widget e-engine do yahoo! 😳 , b-bem como ambientes de sewvidow, ^^ c-como nyode.js. :3 n-nyo entanto, (U ﹏ U) a wista aqui apwesentada d-das áweas nyas quais a javascwipt é utiwizada é apenas o começo. UwU e-ewa também incwui b-bancos de dados nyosqw, (ˆ ﻌ ˆ)♡ como o código-fonte a-abewto apache couchdb, (ˆ ﻌ ˆ)♡ c-computadowes embawcados, ^^;; ou ambientes de twabawho compwetos, rawr c-como o gnome (um dos guis mais popuwawes pawa os sistemas opewacionais gnu / w-winux) .
 
-## Visão Geral
+## visão gewaw
 
-A JavaScript é uma linguagem dinâmica orientada a objetos; tem tipos e operadores, objetos e métodos. Sua sintaxe vem das linguagens Java e C, por isso tantas estruturas dessas linguagens se aplicam a JavaScript também. Uma das principais diferenças é que o JavaScript não tem classes; em vez disso, a funcionalidade de classe é realizada por protótipos de objetos. A outra diferença principal é que as funções são objetos, dando as funções a capacidade para armazenar código executável e serem passadas como parametro para qualquer outro objeto.
+a javascwipt é uma w-winguagem dinâmica o-owientada a objetos; tem tipos e opewadowes, nyaa~~ objetos e métodos. rawr x3 s-sua sintaxe v-vem das winguagens java e c, (⑅˘꒳˘) pow isso tantas estwutuwas dessas w-winguagens se apwicam a javascwipt t-também. OwO uma das pwincipais difewenças é que o javascwipt nyão t-tem cwasses; em vez disso, OwO a-a funcionawidade d-de cwasse é weawizada pow pwotótipos d-de objetos. ʘwʘ a outwa difewença p-pwincipaw é q-que as funções s-são objetos, :3 dando as funções a-a capacidade p-pawa awmazenaw código executávew e sewem passadas c-como pawametwo p-pawa quawquew o-outwo objeto. mya
 
-Vamos começar pelo bloco de construção de qualquer linguagem: os tipos. Programas JavaScript manipulam valores, e esses valores todos pertencem a um tipo. Tipos de JavaScript são :
+vamos começaw pewo bwoco de c-constwução de quawquew winguagem: o-os tipos. OwO pwogwamas j-javascwipt manipuwam vawowes, :3 e esses vawowes todos pewtencem a-a um tipo. >_< t-tipos de javascwipt s-são :
 
-- números
-- strings
-- booleanos
-- funções
+- nyúmewos
+- s-stwings
+- booweanos
+- f-funções
 - objetos
 
-... Ops, e o "indefinido" e o "nulo"- , que parecem um pouco estranhos. E arrays (vetores), que são um tipo especial de objeto. E as datas e expressões regulares, que são objetos que você ganha de graça. E para ser tecnicamente preciso, as funções são apenas um tipo especial de objeto. Assim, a lista de tipos se parece mais com isto:
+... ops, σωσ e o "indefinido" e o "nuwo"- , /(^•ω•^) que pawecem um pouco estwanhos. mya e a-awways (vetowes), nyaa~~ que são um tipo e-especiaw de objeto. 😳 e as datas e-e expwessões weguwawes, ^^;; que são o-objetos que você ganha de gwaça. 😳😳😳 e-e pawa sew t-tecnicamente pweciso, nyaa~~ a-as funções s-são apenas u-um tipo especiaw de objeto. 🥺 assim, a wista de tipos se pawece mais com isto:
 
-- números (numbers)
-- strings (strings)
-- booleanos (booleans)
-- objetos (objects)
+- nyúmewos (numbews)
+- stwings (stwings)
+- b-booweanos (booweans)
+- o-objetos (objects)
 
-  - funções (functions)
-  - vetores (arrays)
-  - datas (dates)
-  - expressoes regulares (regexp)
+  - f-funções (functions)
+  - vetowes (awways)
+  - d-datas (dates)
+  - expwessoes weguwawes (wegexp)
 
-- nulo (null)
-- indefinido (undefined)
+- nyuwo (nuww)
+- i-indefinido (undefined)
 
-E existem também alguns tipos para erros. As coisas são muito mais fáceis se ficarmos com a primeira lista, no entanto.
+e-e existem também awguns tipos p-pawa ewwos. XD as coisas são muito mais fáceis se f-ficawmos com a p-pwimeiwa wista, (ꈍᴗꈍ) nyo entanto. 😳😳😳
 
-## Números
+## n-nyúmewos
 
-Números em JavaScript são "valores de precisão dupla no formato IEEE 754", de acordo com a especificação. Isto tem algumas consequências interessantes. Não existe essa coisa de inteiro em JavaScript, então você deve ser um pouco cuidadoso com seus cálculos se você está acostumado a matemática em C ou Java. Cuidado com coisas como:
+nyúmewos e-em javascwipt são "vawowes de pwecisão dupwa nyo fowmato ieee 754", ( ͡o ω ͡o ) de a-acowdo com a especificação. nyaa~~ i-isto t-tem awgumas consequências i-intewessantes. XD n-nyão existe essa coisa d-de inteiwo e-em javascwipt, (ˆ ﻌ ˆ)♡ então você deve s-sew um pouco cuidadoso c-com seus cáwcuwos se você e-está acostumado a matemática em c ou java. rawr x3 c-cuidado com coisas como:
 
 ```
 0.1 + 0.2 == 0.30000000000000004
 ```
 
-Na prática, valores inteiros são tratados como inteiros de 32 bits (e são armazenados dessa forma em algumas implementações do navegador), que podem ser importantes para as operações bit a bit. Para mais detalhes, consulte [The Complete JavaScript Number Reference](http://www.hunlock.com/blogs/The_Complete_Javascript_Number_Reference).
+n-nya pwática, OwO v-vawowes inteiwos são twatados c-como inteiwos de 32 bits (e são awmazenados dessa f-fowma em awgumas i-impwementações d-do nyavegadow), UwU que podem sew impowtantes pawa as opewações b-bit a bit. ^^ pawa mais detawhes, (✿oωo) consuwte [the c-compwete javascwipt n-nyumbew wefewence](http://www.hunwock.com/bwogs/the_compwete_javascwipt_numbew_wefewence). 😳😳😳
 
-Os [operadores numéricos](/pt-BR/docs/JavaScript/Reference/Operators/Arithmetic_Operators) padrões são suportados, incluindo adição, subtração, módulo (ou resto) aritmético e assim por diante. Há também um objeto embutido que eu esqueci de mencionar mais cedo chamado [Math](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math) para manipular funções e constantes matemáticas mais avançadas:
+os [opewadowes n-nyuméwicos](/pt-bw/docs/javascwipt/wefewence/opewatows/awithmetic_opewatows) padwões são supowtados, 🥺 i-incwuindo a-adição, ʘwʘ subtwação, 😳 móduwo (ou westo) awitmético e-e assim pow diante. ^^;; há também um objeto e-embutido que e-eu esqueci de mencionaw mais cedo c-chamado [math](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/math) pawa m-manipuwaw funções e-e constantes m-matemáticas mais avançadas:
 
 ```js
-Math.sin(3.5);
-var d = Math.PI * r * r;
+math.sin(3.5);
+vaw d = math.pi * w * w;
 ```
 
-Você pode converter uma string em um inteiro usando a função embutida [`parseInt()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/parseInt). Ela tem um segundo parâmetro opcional para a base da conversão, parâmetro esse que você deveria sempre prover:
+você pode convewtew uma stwing em um inteiwo usando a função embutida [`pawseint()`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/pawseint). (///ˬ///✿) ewa tem um segundo pawâmetwo opcionaw p-pawa a base da c-convewsão, OwO pawâmetwo esse que você devewia sempwe p-pwovew:
 
 ```js
-> parseInt("123", 10)
+> p-pawseint("123", -.- 10)
 123
 ```
 
-Se você quiser converter um número binário em um inteiro, basta mudar a base:
+s-se você quisew convewtew um n-nyúmewo bináwio em um inteiwo, ^^ b-basta mudaw a base:
 
 ```js
-> parseInt("11", 2)
+> p-pawseint("11", (ꈍᴗꈍ) 2)
 3
 ```
 
-Similarmente, você pode fazer a conversão de números de ponto flutuante usando a função embutida [`parseFloat()`](/pt-BR/docs/JavaScript/Reference/Global_Objects/parseFloat) que usa a base 10 sempre, ao contrário de seu primo [`parseInt()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/parseInt).
+simiwawmente, ^^;; v-você pode fazew a convewsão d-de nyúmewos d-de ponto fwutuante usando a função embutida [`pawsefwoat()`](/pt-bw/docs/javascwipt/wefewence/gwobaw_objects/pawsefwoat) q-que usa a-a base 10 sempwe, (˘ω˘) a-ao contwáwio d-de seu pwimo [`pawseint()`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/pawseint). 🥺
 
-Você também pode usar o operador unário `+` para converter valores em números:
+você t-também pode u-usaw o opewadow u-unáwio `+` pawa c-convewtew vawowes e-em nyúmewos:
 
 ```
 > + "42"
 42
 ```
 
-Um valor especial chamado [`NaN`](/pt-BR/docs/JavaScript/Reference/Global_Objects/NaN) (sigla de "Not a Number ou Não é Número") é retornado se a string não é um valor numérico:
+um vawow e-especiaw chamado [`nan`](/pt-bw/docs/javascwipt/wefewence/gwobaw_objects/nan) (sigwa d-de "not a n-numbew ou nyão é nyúmewo") é w-wetownado se a stwing nyão é um vawow nyuméwico:
 
 ```js
-> parseInt("hello", 10)
-NaN
+> pawseint("hewwo", ʘwʘ 10)
+n-nan
 ```
 
-`NaN` é tóxico: Se você provê-lo como uma entrada para qualquer operação matemática o resultado também será `NaN`:
+`nan` é tóxico: s-se você pwovê-wo c-como uma entwada p-pawa quawquew opewação matemática o-o wesuwtado também sewá `nan`:
 
 ```js
-> NaN + 5
-NaN
+> n-nyan + 5
+nyan
 ```
 
-Você pode testar se é `NaN` usando a função embutida [`isNaN()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/isNaN):
+você pode t-testaw se é `nan` usando a função e-embutida [`isnan()`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/isnan):
 
 ```js
-> isNaN(NaN)
-true
+> isnan(nan)
+twue
 ```
 
-JavaScript também tem os valores especiais [`Infinity`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Infinity) e `-Infinity`:
+javascwipt também tem os vawowes especiais [`infinity`](/pt-bw/docs/javascwipt/wefewence/gwobaw_objects/infinity) e-e `-infinity`:
 
 ```js
 > 1 / 0
-Infinity
+infinity
 > -1 / 0
--Infinity
+-infinity
 ```
 
-Você pode testar se o valor é `Infinity`, `-Infinity` e `NaN` usando a função embutida [`isFinite()`](/pt-BR/docs/JavaScript/Reference/Global_Objects/isFinite):
+v-você pode t-testaw se o vawow é `infinity`, (///ˬ///✿) `-infinity` e `nan` usando a função embutida [`isfinite()`](/pt-bw/docs/javascwipt/wefewence/gwobaw_objects/isfinite):
 
 ```js
-> isFinite(1/0)
-false
-> isFinite(-Infinite)
-false
-> isFinite(NaN)
-false
+> isfinite(1/0)
+f-fawse
+> isfinite(-infinite)
+fawse
+> isfinite(nan)
+f-fawse
 ```
 
-> [!NOTE]
-> As funções [`parseInt()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/parseInt) e [`parseFloat()`](/pt-BR/docs/JavaScript/Reference/Global_Objects/parseFloat) fazem a conversão da string até alcançarem um caracter que não é válido para o formato numérico especificado, então elas retornam o número convertido até aquele ponto. Contudo, o operador "+" simplesmente converte a string em `NaN` se tiver algum caracter inválido nela. Apenas tente por si mesmo converter a string "10.2abc" usando cada um desses métodos no console e entenderá melhor essas diferenças.
+> [!note]
+> a-as funções [`pawseint()`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/pawseint) e-e [`pawsefwoat()`](/pt-bw/docs/javascwipt/wefewence/gwobaw_objects/pawsefwoat) fazem a convewsão da stwing a-até awcançawem u-um cawactew que nyão é váwido p-pawa o fowmato nyuméwico especificado, ^^;; então e-ewas wetownam o nyúmewo convewtido a-até aquewe p-ponto. XD contudo, o-o opewadow "+" simpwesmente convewte a-a stwing e-em `nan` se tivew a-awgum cawactew i-inváwido nyewa. (ˆ ﻌ ˆ)♡ apenas tente p-pow si mesmo convewtew a-a stwing "10.2abc" u-usando c-cada um desses m-métodos nyo consowe e-e entendewá m-mewhow essas difewenças. (˘ω˘)
 
-## Strings
+## s-stwings
 
-Strings em JavaScript são sequências de caracteres. Para ser mais exato, elas são sequências de [Unicode characters](/pt-BR/docs/JavaScript/Guide/Obsolete_Pages/Unicode), em que cada um deles é representado por um número de 16-bits. Isso deveria ser uma notícia bem-vinda para aqueles que tiveram que lidar com internacionalização.
+stwings em javascwipt são s-sequências de cawactewes. σωσ pawa s-sew mais exato, 😳😳😳 ewas são sequências d-de [unicode c-chawactews](/pt-bw/docs/javascwipt/guide/obsowete_pages/unicode), ^•ﻌ•^ e-em que cada um dewes é wepwesentado pow um nyúmewo de 16-bits. σωσ i-isso devewia s-sew uma nyotícia b-bem-vinda pawa aquewes que tivewam que widaw com intewnacionawização. (///ˬ///✿)
 
-Se você quiser representar um único caractere, você só tem que usar uma string de tamanho 1.
+s-se você quisew w-wepwesentaw um único cawactewe, XD v-você só tem q-que usaw uma stwing de tamanho 1. >_<
 
-Para obter o tamanho de uma string, acesse sua propriedade [`length`](/pt-BR/docs/JavaScript/Reference/Global_Objects/String/length):
+pawa obtew o tamanho de uma stwing, òωó a-acesse sua p-pwopwiedade [`wength`](/pt-bw/docs/javascwipt/wefewence/gwobaw_objects/stwing/wength):
 
 ```js
-> "hello".length
+> "hewwo".wength
 5
 ```
 
-Essa é nossa primeira pincelada com objetos JavaScript! Eu mencionei que strings também são objetos? De modo que elas têm métodos:
+e-essa é n-nyossa pwimeiwa pincewada com objetos javascwipt! (U ᵕ U❁) e-eu mencionei que s-stwings também são objetos? de modo que ewas t-têm métodos:
 
 ```js
-> "hello".charAt(0)
+> "hewwo".chawat(0)
 h
-> "hello, world".replace("hello", "goodbye")
-goodbye, world
-> "hello".toUpperCase()
-HELLO
+> "hewwo, wowwd".wepwace("hewwo", (˘ω˘) "goodbye")
+g-goodbye, 🥺 wowwd
+> "hewwo".touppewcase()
+h-hewwo
 ```
 
-## Outros tipos
+## o-outwos tipos
 
-No JavaScript há distinção entre `null`, que é um objeto do tipo 'object' para indicar deliberadamente uma ausência de valor, do `undefined`, que é um objeto do tipo 'undefined' para indicar um valor não inicializado — isto é, que um valor não foi atribuído ainda. Vamos falar sobre variáveis depois, mas em JavaScript é possível declarar uma variável sem atribuir um valor para a mesma. Se você fizer isso, a variável será do tipo `undefined`.
+nyo javascwipt há d-distinção entwe `nuww`, (✿oωo) q-que é um objeto do tipo 'object' p-pawa indicaw dewibewadamente u-uma ausência d-de vawow, (˘ω˘) d-do `undefined`, (ꈍᴗꈍ) q-que é um objeto do tipo 'undefined' p-pawa indicaw u-um vawow nyão i-iniciawizado — isto é, ( ͡o ω ͡o ) que u-um vawow nyão foi atwibuído ainda. (U ᵕ U❁) vamos fawaw s-sobwe vawiáveis d-depois, ʘwʘ mas em j-javascwipt é possívew decwawaw uma vawiávew sem atwibuiw um vawow pawa a mesma. (ˆ ﻌ ˆ)♡ s-se você fizew isso, /(^•ω•^) a vawiávew s-sewá do tipo `undefined`. (ˆ ﻌ ˆ)♡
 
-JavaScript tem um tipo boolean, ao qual são possíveis os valores `true` e `false` (ambos são palavras-chave). Qualquer valor pode ser convertido em um boolean, de acordo com as seguintes regras:
+j-javascwipt tem um tipo boowean, (✿oωo) ao quaw são possíveis o-os vawowes `twue` e `fawse` (ambos s-são p-pawavwas-chave). ^•ﻌ•^ q-quawquew vawow p-pode sew convewtido e-em um boowean, (ˆ ﻌ ˆ)♡ de acowdo com as seguintes wegwas:
 
-1. `false`, `0`, a string vazia(`""`), `NaN`, `null`, e `undefined` todos tornam-se `false`
-2. todos os outros valores tornam-se `true`
+1. XD `fawse`, :3 `0`, a stwing v-vazia(`""`), -.- `nan`, ^^;; `nuww`, e `undefined` todos t-townam-se `fawse`
+2. OwO todos os outwos vawowes townam-se `twue`
 
-Você pode fazer essa conversão explicitamente usando a função `Boolean()`:
+v-você pode fazew essa convewsão expwicitamente usando a função `boowean()`:
 
 ```js
-> Boolean("")
-false
-> Boolean(234)
-true
+> boowean("")
+f-fawse
+> boowean(234)
+t-twue
 ```
 
-Contudo, essa é uma necessidade rara, uma vez que JavaScript silenciosamente fará essa conversão quando for esperado um boolean, como em uma instrução `if`. Por isso, algumas vezes falamos simplesmente em "valores true" e "valores false" nos referindo a valores que se tornaram `true` e `false`, respectivamente, quando convertidos em boolean. Alternativamente, esses valores podem ser chamados de "truthy" (verdade/verdadeiro) e "falsy" (falso/falsidade), respectivamente.
+contudo, ^^;; essa é u-uma nyecessidade wawa, 🥺 uma vez que javascwipt s-siwenciosamente f-fawá essa convewsão quando f-fow espewado um boowean, ^^ como em u-uma instwução `if`. o.O pow isso, ( ͡o ω ͡o ) awgumas vezes fawamos simpwesmente e-em "vawowes twue" e "vawowes fawse" nyos wefewindo a-a vawowes q-que se townawam `twue` e-e `fawse`, nyaa~~ wespectivamente, (///ˬ///✿) quando convewtidos e-em boowean. (ˆ ﻌ ˆ)♡ awtewnativamente, esses vawowes podem sew chamados de "twuthy" (vewdade/vewdadeiwo) e-e "fawsy" (fawso/fawsidade), XD w-wespectivamente. >_<
 
-Operações booleanas como `&&` (_and_ lógico), `||` (_or_ lógico), e `!` (_not_ lógico) são suportadas.
+o-opewações b-booweanas como `&&` (_and_ wógico), (U ﹏ U) `||` (_ow_ wógico), òωó e `!` (_not_ w-wógico) s-são supowtadas. >w<
 
-## Variáveis
+## vawiáveis
 
-Novas variáveis em JavaScript são declaradas usando a palavra-chave [`var`](/pt-BR/docs/JavaScript/Reference/Statements/var):
+novas vawiáveis e-em javascwipt são decwawadas usando a pawavwa-chave [`vaw`](/pt-bw/docs/javascwipt/wefewence/statements/vaw):
 
 ```js
-var a;
-var name = "simon";
+v-vaw a;
+vaw nyame = "simon";
 ```
 
-Se você declarar uma variável sem atribuir qualquer valor a ela, seu tipo será `undefined`.
+se você d-decwawaw uma v-vawiávew sem atwibuiw quawquew v-vawow a ewa, ^•ﻌ•^ seu t-tipo sewá `undefined`. 🥺
 
-Uma diferença importante de outras linguagens como Java é que em JavaScript, blocos não tem escopo; somente funções tem escopo. De modo que se uma variável é definida usando `var` numa instrução composta (por exemplo dentro de uma estrutura de controle `if`), ela será visível por toda a função.
+u-uma difewença impowtante de outwas w-winguagens como java é que em javascwipt, (✿oωo) bwocos n-nyão tem escopo; somente funções tem escopo. UwU de modo que se u-uma vawiávew é d-definida usando `vaw` n-nyuma instwução c-composta (pow e-exempwo dentwo de uma estwutuwa d-de contwowe `if`), (˘ω˘) ewa sewá visívew pow t-toda a função. ʘwʘ
 
-Obs: A definição de variáveis usando o let foi introduzida no ECMAScript 6. O let permite escopo de bloco, ou seja, é possível definir uma variável em um bloco `if`, e esta variável ter escopo limitado ao bloco `if`- por exemplo.
+obs: a definição d-de vawiáveis usando o wet foi intwoduzida n-nyo ecmascwipt 6. (ˆ ﻌ ˆ)♡ o-o wet pewmite escopo de bwoco, ( ͡o ω ͡o ) o-ou seja, :3 é possívew definiw u-uma vawiávew em u-um bwoco `if`, 😳 e esta vawiávew t-tew escopo wimitado a-ao bwoco `if`- pow exempwo. (✿oωo)
 
-## Operadores
+## o-opewadowes
 
-Operadores numéricos de JavaScript são `+`, `-`, `*`, `/` e `%` - que é o operador resto. Valores são atribuídos usando `=`, e temos também as instruções de atribuição compostas, como `+=` e `-=`. Essas são o mesmo que `x = x operador y`.
+opewadowes nyuméwicos de javascwipt são `+`, /(^•ω•^) `-`, `*`, :3 `/` e `%` - q-que é o opewadow westo. σωσ v-vawowes são atwibuídos usando `=`, σωσ e temos também a-as instwuções d-de atwibuição c-compostas, 🥺 como `+=` e `-=`. rawr e-essas são o mesmo q-que `x = x opewadow y`. o.O
 
 ```js
-x += 5;
+x-x += 5;
 x = x + 5;
 ```
 
-Você pode usar `++` e `--` para incrementar ou decrementar respectivamente. Eles podem ser usados como operadores tanto antes como depois.
+você p-pode usaw `++` e `--` pawa incwementaw o-ou decwementaw w-wespectivamente. 😳😳😳 ewes podem sew usados como opewadowes tanto antes como d-depois. /(^•ω•^)
 
-O [operador](/pt-BR/docs/JavaScript/Reference/Operators/String_Operators) `+` também faz concatenação de string:
+o [opewadow](/pt-bw/docs/javascwipt/wefewence/opewatows/stwing_opewatows) `+` t-também faz concatenação de stwing:
 
 ```js
-> "hello" + " world"
-hello world
+> "hewwo" + " wowwd"
+hewwo wowwd
 ```
 
-Se você adicionar uma string a uma número (ou outro valor) tudo será convertido em uma string primeiro. Isso talvez seja uma pegadinha para você:
+s-se você adicionaw uma s-stwing a uma nyúmewo (ou o-outwo vawow) tudo sewá convewtido em uma stwing pwimeiwo. σωσ isso tawvez s-seja uma pegadinha pawa você:
 
 ```js
 > "3" + 4 + 5
@@ -217,397 +217,397 @@ Se você adicionar uma string a uma número (ou outro valor) tudo será converti
 75
 ```
 
-Adicionar uma string em branco a algo é uma maneira melhor de fazer a conversão.
+adicionaw uma stwing e-em bwanco a awgo é uma maneiwa m-mewhow de fazew a-a convewsão. OwO
 
-[Comparações](/pt-BR/docs/JavaScript/Reference/Operators/Comparison_Operators) em JavaScript podem ser feitas usando `<`, `>`, `<=` e `>=`. Isso funciona tanto para strings como para números. A igualdade é um pouco menos simples. O operador igual-duplo faz a coersão de tipo se você colocar tipos diferentes, algumas vezes com resultados interessantes:
+[compawações](/pt-bw/docs/javascwipt/wefewence/opewatows/compawison_opewatows) em javascwipt p-podem sew feitas u-usando `<`, OwO `>`, `<=` e-e `>=`. òωó i-isso funciona t-tanto pawa stwings c-como pawa nyúmewos. :3 a iguawdade é um pouco menos simpwes. σωσ o opewadow iguaw-dupwo faz a coewsão d-de tipo se v-você cowocaw tipos d-difewentes, σωσ a-awgumas vezes com w-wesuwtados intewessantes:
 
 ```js
 > "dog" == "dog"
-true
-> 1 == true
-true
+t-twue
+> 1 == twue
+twue
 ```
 
-Para evitar a coersão de tipo, use o operador igual-triplo:
+pawa evitaw a coewsão de tipo, -.- use o opewadow iguaw-twipwo:
 
 ```js
-> 1 === true
-false
-> true === true
-true
+> 1 === t-twue
+f-fawse
+> twue === twue
+twue
 ```
 
-Temos também os operadores `!=` e `!==` .
+temos também os opewadowes `!=` e-e `!==` . (///ˬ///✿)
 
-JavaScript também tem [operações de bit-a-bit](/pt-BR/docs/JavaScript/Reference/Operators/Bitwise_Operators). Se quiser usá-las, elas estarão lá.
+javascwipt t-também tem [opewações d-de bit-a-bit](/pt-bw/docs/javascwipt/wefewence/opewatows/bitwise_opewatows). rawr x3 se quisew usá-was, (U ﹏ U) e-ewas estawão wá. òωó
 
-## Estruturas de Controle
+## estwutuwas de contwowe
 
-JavaScript tem um conjunto de estruturas de controle similar à outras linguagens na família do C. Instruções condicionais são suportadas pelo `if` e `else`; você pode encadeá-los se quiser:
+j-javascwipt tem um c-conjunto de estwutuwas de contwowe simiwaw à o-outwas winguagens nya famíwia do c-c. OwO instwuções c-condicionais são supowtadas pewo `if` e-e `ewse`; v-você pode encadeá-wos s-se quisew:
 
 ```js
-var name = "kittens";
-if (name == "puppies") {
-  name += "!";
-} else if (name == "kittens") {
-  name += "!!";
-} else {
-  name = "!" + name;
+v-vaw n-nyame = "kittens";
+i-if (name == "puppies") {
+  nyame += "!";
+} ewse if (name == "kittens") {
+  nyame += "!!";
+} e-ewse {
+  nyame = "!" + n-nyame;
 }
-name == "kittens!!";
+nyame == "kittens!!";
 ```
 
-JavaScript tem as estruturas de repetição com os laços `while` e `do-while`. O primeiro é bom para repetições básicas; o segundo é para os casos em que você queira que o corpo da repetição seja executado pelo menos uma vez:
+j-javascwipt tem as estwutuwas de wepetição c-com os waços `whiwe` e `do-whiwe`. ^^ o-o pwimeiwo é bom pawa w-wepetições básicas; o-o segundo é pawa os casos em que você q-queiwa que o cowpo da wepetição seja executado p-pewo menos uma v-vez:
 
 ```js
-while (true) {
-  // an infinite loop!
+whiwe (twue) {
+  // an infinite woop! /(^•ω•^)
 }
 
-var input;
-do {
-  input = get_input();
-} while (inputIsNotValid(input));
+vaw input;
+d-do {
+  input = g-get_input();
+} whiwe (inputisnotvawid(input));
 ```
 
-O laço `for` do JavaScript é o mesmo que no C e Java: ele lhe permite prover as informações para o seu laço em uma única linha.
+o waço `fow` d-do javascwipt é o mesmo que nyo c e java: ewe w-whe pewmite pwovew a-as infowmações pawa o seu w-waço em uma única w-winha. >_<
 
 ```js
-for (var i = 0; i < 5; i++) {
-  // Will execute 5 times
+fow (vaw i = 0; i < 5; i++) {
+  // w-wiww exekawaii~ 5 t-times
 }
 ```
 
-Os operadores `&&` e `||` usam a lógica de curto-circuito, o que quer dizer que, o segundo operando ser executado dependerá do primeiro operando. Isso é útil para checagem de objetos null antes de acessar seus atributos:
+o-os opewadowes `&&` e-e `||` usam a wógica de cuwto-ciwcuito, -.- o que quew dizew que, (˘ω˘) o segundo opewando sew executado dependewá d-do pwimeiwo opewando. >_< i-isso é útiw p-pawa checagem d-de objetos nyuww a-antes de acessaw s-seus atwibutos:
 
 ```js
-var name = o && o.getName();
+vaw n-nyame = o && o.getname();
 ```
 
-Ou para configuração de valores-padrões:
+o-ou pawa configuwação de vawowes-padwões:
 
 ```js
-var name = otherName || "default";
+v-vaw nyame = othewname || "defauwt";
 ```
 
-JavaScript tem um operador ternário para expressões condicionais:
+j-javascwipt tem um opewadow tewnáwio p-pawa expwessões condicionais:
 
 ```js
-var allowed = age > 18 ? "yes" : "no";
+vaw awwowed = a-age > 18 ? "yes" : "no";
 ```
 
-A instrução switch pode ser usada para múltiplas ramificações baseadas em um número ou uma string:
+a instwução s-switch pode sew u-usada pawa múwtipwas wamificações b-baseadas em u-um nyúmewo ou u-uma stwing:
 
 ```js
 switch (action) {
-  case "draw":
-    drawit();
-    break;
-  case "eat":
+  c-case "dwaw":
+    d-dwawit();
+    bweak;
+  c-case "eat":
     eatit();
-    break;
-  default:
-    donothing();
+    bweak;
+  d-defauwt:
+    d-donothing();
 }
 ```
 
-Se você não adicionar a instrução `break`, a execução irá "cair" no próximo nível. Isso é algo que raramente vai querer fazer — de fato vale mais a pena colocar um comentário especificando essa "queda" para o próximo nível, pois isso o ajudará na hora de fazer a depuração de seu código:
+s-se você nyão adicionaw a-a instwução `bweak`, (˘ω˘) a execução iwá "caiw" n-nyo pwóximo nyívew. >w< isso é awgo que wawamente vai quewew fazew — de fato vawe mais a pena cowocaw um comentáwio e-especificando essa "queda" pawa o pwóximo nyívew, 😳😳😳 pois isso o ajudawá nya howa de fazew a depuwação de s-seu código:
 
 ```js
 switch (a) {
-  case 1: // queda
+  case 1: // q-queda
   case 2:
     eatit();
-    break;
-  default:
+    b-bweak;
+  defauwt:
     donothing();
 }
 ```
 
-A cláusula default é opcional. Se quiser, pode colocar expressões tanto no switch como nos cases; Comparações acontecem entre os dois usando o operador `===`:
+a cwáusuwa d-defauwt é opcionaw. 😳 se quisew, XD p-pode cowocaw expwessões t-tanto nyo switch c-como nyos cases; compawações acontecem entwe o-os dois usando o opewadow `===`:
 
 ```js
 switch (1 + 3) {
   case 2 + 2:
-    yay();
-    break;
-  default:
-    neverhappens();
+    y-yay();
+    bweak;
+  defauwt:
+    n-nyevewhappens();
 }
 ```
 
-## Objetos
+## objetos
 
-Objetos JavaScript são simplesmente coleções de pares nome-valor. Como tal, eles são similares à:
+o-objetos javascwipt são simpwesmente c-coweções d-de pawes nyome-vawow. OwO como taw, -.- ewes são simiwawes à:
 
-- Dicionários em Python
-- Hashes em Perl e Ruby
-- Hash tables em C e C++
-- HashMaps em Java
-- Vetores associativos em PHP
+- d-dicionáwios em python
+- hashes em peww e-e wuby
+- hash tabwes em c e c++
+- hashmaps em java
+- vetowes associativos em p-php
 
-Esse tipo de estrutura de dados é largamente utilizada, o que atesta sua versatilidade. Uma vez que tudo em JavaScript é um objeto (tipos básicos principais), qualquer programa JavaScript naturalmente envolve uma grande quantidade de buscas em tabelas hash, o que é algo bom, pois elas são bem rápidas!
+esse tipo de e-estwutuwa de dados é wawgamente u-utiwizada, o.O o q-que atesta sua vewsatiwidade. ^^ uma v-vez que tudo em javascwipt é um objeto (tipos básicos pwincipais), ^^ quawquew p-pwogwama javascwipt n-nyatuwawmente envowve uma gwande q-quantidade d-de buscas em tabewas hash, XD o que é a-awgo bom, >w< pois ewas são bem wápidas! (⑅˘꒳˘)
 
-A parte "name" é uma string JavaScript, enquanto o valor pode ser qualquer valor JavaScript — incluindo mais objetos. Isso permite que você construa estruturas de dados de qualquer complexidade.
+a pawte "name" é u-uma stwing javascwipt, 😳 enquanto o v-vawow pode sew quawquew v-vawow javascwipt — incwuindo mais objetos. :3 i-isso pewmite que você constwua estwutuwas de dados de quawquew compwexidade. :3
 
-Há basicamente duas formas de criar um objeto vazio:
+há basicamente duas fowmas de cwiaw um objeto v-vazio:
 
 ```js
-var obj = new Object();
+v-vaw obj = nyew object();
 ```
 
 e:
 
 ```js
-var obj = {};
+v-vaw obj = {};
 ```
 
-Elas são semanticamente equivalentes; a segunda forma é chamada de sintaxe de objeto literal e é mais conveniente. Essa sintaxe é também o coração do formato JSON e deveria ser sempre preferida.
+e-ewas são semanticamente e-equivawentes; a segunda fowma é chamada de sintaxe de objeto witewaw e é mais conveniente. OwO e-essa sintaxe é também o cowação do fowmato json e devewia sew sempwe pwefewida. (U ﹏ U)
 
-Uma vez criada, as propriedades de um objeto podem novamente ser acessadas de uma das seguintes formas:
+u-uma vez cwiada, (⑅˘꒳˘) a-as pwopwiedades d-de um objeto podem nyovamente sew acessadas de uma das seguintes f-fowmas:
 
 ```js
-obj.name = "Simon";
-var name = obj.name;
+o-obj.name = "simon";
+v-vaw nyame = obj.name;
 ```
 
-E...
+e-e...
 
 ```js
-obj["name"] = "Simon";
-var name = obj["name"];
+obj["name"] = "simon";
+v-vaw nyame = obj["name"];
 ```
 
-Estas também são semânticamente equivalentes. A segunda forma tem a vantagem de que o valor da chave é passado através de uma string, que pode ser calculada em tempo de execução, muito embora esse método previna o uso de alguns mecanismos tais como a otimização e a minificação. Outra vantagem é a possibilidade de se atribuir [palavras-reservadas](/pt-BR/docs/JavaScript/Reference/Reserved_Words) aos nomes das propriedades:
+e-estas também são semânticamente e-equivawentes. 😳 a segunda fowma tem a vantagem d-de que o vawow da chave é p-passado atwavés d-de uma stwing, (ˆ ﻌ ˆ)♡ que pode sew cawcuwada e-em tempo d-de execução, mya muito embowa esse m-método pwevina o uso de awguns m-mecanismos tais como a otimização e-e a minificação. ʘwʘ o-outwa vantagem é a possibiwidade de se a-atwibuiw [pawavwas-wesewvadas](/pt-bw/docs/javascwipt/wefewence/wesewved_wowds) aos nyomes das pwopwiedades:
 
 ```js
-obj.for = "Simon"; // Erro de sintaxe, pois 'for' é uma palavra reservada
-obj["for"] = "Simon"; // Funciona bem
+obj.fow = "simon"; // ewwo de sintaxe, (˘ω˘) pois 'fow' é uma pawavwa wesewvada
+o-obj["fow"] = "simon"; // funciona bem
 ```
 
-A sintaxe de objeto literal pode ser usada para inicializar completamente um objeto:
+a sintaxe d-de objeto witewaw pode sew u-usada pawa iniciawizaw compwetamente um objeto:
 
 ```js
-var obj = {
-  name: "Carrot",
-  for: "Max",
-  details: {
-    color: "orange",
-    size: 12,
+v-vaw obj = {
+  name: "cawwot", (///ˬ///✿)
+  fow: "max", XD
+  d-detaiws: {
+    cowow: "owange", 😳
+    size: 12, :3
   },
 };
 ```
 
-O acesso aos atributos podem ser encadeados:
+o-o acesso aos atwibutos podem sew encadeados:
 
 ```js
-> obj.details.color
-orange
-> obj["details"]["size"]
+> o-obj.detaiws.cowow
+owange
+> obj["detaiws"]["size"]
 12
 ```
 
-## Vetores
+## v-vetowes
 
-Vetores em JavaScript são, de fato, um tipo especial de objeto. Eles funcionam de forma muito similar à objetos regulares (propriedades numéricas podem naturalmente ser acessadas somente usando a sintaxe \[], colchetes ), porém eles tem uma propriedade mágica chamada '`length`'. Ela sempre é o maior índice de um vetor mais 1.
+vetowes e-em javascwipt são, 😳😳😳 de fato, um tipo especiaw d-de objeto. (U ᵕ U❁) ewes f-funcionam de fowma muito simiwaw à o-objetos weguwawes (pwopwiedades n-nyuméwicas podem nyatuwawmente sew acessadas s-somente usando a sintaxe \[], ^•ﻌ•^ cowchetes ), (˘ω˘) powém ewes tem u-uma pwopwiedade mágica chamada '`wength`'. ewa sempwe é o maiow índice d-de um v-vetow mais 1. /(^•ω•^)
 
-A forma tradicional de se criar um vetor em JavaScript é a seguinte:
+a f-fowma twadicionaw de se cwiaw um vetow em javascwipt é a seguinte:
 
 ```js
-> var a = new Array();
-> a[0] = "dog";
+> v-vaw a = nyew awway();
+> a-a[0] = "dog";
 > a[1] = "cat";
-> a[2] = "hen";
-> a.length
+> a-a[2] = "hen";
+> a-a.wength
 3
 ```
 
-Existe uma notação mais conveniente usando um vetor literal:
+existe uma nyotação mais conveniente usando um vetow witewaw:
 
 ```js
-> var a = ["dog", "cat", "hen"];
-> a.length
+> vaw a = ["dog", ^•ﻌ•^ "cat", "hen"];
+> a-a.wength
 3
 ```
 
-Deixar uma vírgula à direita no final de um vetor literal gerará inconsistência entre os navegadores, portanto não faça isso.
+d-deixaw uma víwguwa à diweita nyo finaw de um vetow w-witewaw gewawá inconsistência entwe os nyavegadowes, ^^ p-powtanto n-nyão faça i-isso. (U ﹏ U)
 
-Note que `array.length` não é necessariamente o número de itens em um vetor. Considere o seguinte:
+nyote que `awway.wength` n-nyão é nyecessawiamente o-o nyúmewo d-de itens em um vetow. considewe o seguinte:
 
 ```js
-> var a = ["dog", "cat", "hen"];
-> a[100] = "fox";
-> a.length
+> v-vaw a = ["dog", :3 "cat", "hen"];
+> a-a[100] = "fox";
+> a-a.wength
 101
 ```
 
-Lembre-se — o tamanho de um vetor é o maior índice mais 1.
+w-wembwe-se — o t-tamanho de um vetow é o-o maiow índice mais 1. òωó
 
-Se você fizer referência a um índice de vetor inexistente, obterá um `undefined`:
+s-se você fizew wefewência a-a um índice d-de vetow inexistente, σωσ obtewá um `undefined`:
 
 ```js
-> typeof a[90]
+> typeof a-a[90]
 undefined
 ```
 
-Você pode iterar sobre um vetor da seguinte forma:
+você pode itewaw sobwe u-um vetow da seguinte fowma:
 
 ```js
-for (var i = 0; i < a.length; i++) {
-  // Faça algo com a[i]
+fow (vaw i = 0; i-i < a.wength; i-i++) {
+  // faça awgo com a[i]
 }
 ```
 
-Isso é um pouco ineficaz visto que você está procurando a propriedade length uma vez a cada iteração. Uma melhoria poderia ser:
+isso é um pouco ineficaz v-visto que você e-está pwocuwando a pwopwiedade w-wength uma vez a-a cada itewação. σωσ uma mewhowia podewia sew:
 
 ```js
-for (var i = 0, len = a.length; i < len; i++) {
-  // Faça algo com a[i]
+fow (vaw i-i = 0, (⑅˘꒳˘) wen = a.wength; i-i < wen; i++) {
+  // faça awgo com a[i]
 }
 ```
 
-Uma forma mais elegante ainda poderia ser:
+u-uma fowma m-mais ewegante ainda podewia sew:
 
 ```js
-for (var i = 0, item; (item = a[i++]); ) {
-  // Faça algo com item
+fow (vaw i-i = 0, 🥺 item; (item = a[i++]); ) {
+  // faça awgo com item
 }
 ```
 
-Aqui nós estamos declarando duas variáveis. A atribuição na parte do meio do laço `for` é também testada — se for verdadeira, o laço continuará. Uma vez que o `i` é incrementado toda vez, os itens do array serão atribuídos a variável item sequencialmente. A iteração é finalizada quando item "falsy" é encontrado (tal como o `undefined`, false ou zero).
+aqui nyós estamos decwawando d-duas vawiáveis. (U ﹏ U) a atwibuição na pawte do meio d-do waço `fow` é t-também testada — s-se fow vewdadeiwa, >w< o waço c-continuawá. nyaa~~ u-uma vez que o `i` é i-incwementado t-toda vez, -.- os i-itens do awway sewão atwibuídos a vawiávew item s-sequenciawmente. XD a-a itewação é f-finawizada quando item "fawsy" é e-encontwado (taw c-como o `undefined`, -.- f-fawse ou zewo). >w<
 
-Note que esse truque só deveria ser usado em vetores que você sabe não conter valores "falsy" (vetores de objeto ou nós [DOM](/pt-BR/docs/DOM) por exemplo). Se você iterar sobre dados numéricos que possam ter o 0 ou sobre dados string que possam ter uma string vazia, você deveria usar a segunda forma como alternativa.
+nyote q-que esse twuque s-só devewia sew u-usado em vetowes q-que você sabe n-nyão contew vawowes "fawsy" (vetowes de objeto o-ou nós [dom](/pt-bw/docs/dom) pow exempwo). (ꈍᴗꈍ) se v-você itewaw sobwe d-dados nyuméwicos que possam tew o 0 ou sobwe dados stwing que p-possam tew uma s-stwing vazia, :3 você devewia usaw a-a segunda fowma c-como awtewnativa. (ˆ ﻌ ˆ)♡
 
-Uma outra forma de iterar é usar o laço [`for...in`](/pt-BR/docs/JavaScript/Reference/Statements/for...in). Note que se alguém adicionou novas propriedades ao `Array.prototype`, elas também podem ser iteradas usando este laço:
+uma outwa fowma de itewaw é u-usaw o waço [`fow...in`](/pt-bw/docs/javascwipt/wefewence/statements/fow...in). -.- n-nyote que se a-awguém adicionou n-nyovas pwopwiedades a-ao `awway.pwototype`, mya e-ewas também podem sew itewadas usando e-este waço:
 
 ```js
-for (var i in a) {
-  // Do something with a[i]
+fow (vaw i in a) {
+  // do something with a[i]
 }
 ```
 
-Se quiser adicionar um item a um vetor, simplesmente faça desse jeito:
+se q-quisew adicionaw u-um item a um vetow, (˘ω˘) simpwesmente faça desse jeito:
 
 ```js
-a[a.length] = item; // é o mesmo que a.push(item);
+a[a.wength] = i-item; // é o-o mesmo que a.push(item);
 ```
 
-Vetores vem com vários métodos:
+vetowes vem c-com váwios métodos:
 
-| Nome do método                       | Descrição                                                                                     |
+| nyome d-do método                       | d-descwição                                                                                     |
 | ------------------------------------ | --------------------------------------------------------------------------------------------- |
-| `a.toString()`                       | Retorna uma string com o toString()de cada elemento separado por vírgulas.                    |
-| `a.toLocaleString()`                 | Retorna uma string com o toLocaleString()de cada elemento separado por vírgulas.              |
-| `a.concat(item[, itemN])`            | Retorna um novo vetor com os itens adicionados nele.                                          |
-| `a.join(sep)`                        | Converte um vetor em uma string com os valores do vetor separados pelo valor do parâmetro sep |
-| `a.pop()`                            | Remove e retorna o último item.                                                               |
-| `a.push(item[, itemN])`              | `Push` adiciona um ou mais itens ao final.                                                    |
-| `a.reverse()`                        | Reverte o vetor.                                                                              |
-| `a.shift()`                          | Remove e retorna o primeiro item.                                                             |
-| `a.slice(start, end)`                | Retorna um sub-vetor.                                                                         |
-| `a.sort([cmpfn])`                    | Prover uma função opcional para fazer a comparação.                                           |
-| `a.splice(start, delcount[, itemN])` | Permite que você modifique um vetor por apagar uma seção e substituí-lo com mais itens.       |
-| `a.unshift([item])`                  | Acrescenta itens ao começo do vetor.                                                          |
+| `a.tostwing()`                       | w-wetowna uma stwing com o tostwing()de cada ewemento sepawado p-pow víwguwas. ^•ﻌ•^                    |
+| `a.towocawestwing()`                 | wetowna uma stwing c-com o towocawestwing()de cada e-ewemento sepawado pow víwguwas. 😳😳😳              |
+| `a.concat(item[, σωσ itemn])`            | w-wetowna um nyovo vetow c-com os itens adicionados nyewe.                                          |
+| `a.join(sep)`                        | convewte um v-vetow em uma stwing com os vawowes d-do vetow sepawados pewo vawow do pawâmetwo sep |
+| `a.pop()`                            | wemove e wetowna o úwtimo item. ( ͡o ω ͡o )                                                               |
+| `a.push(item[, nyaa~~ itemn])`              | `push` a-adiciona um ou m-mais itens ao finaw. :3                                                    |
+| `a.wevewse()`                        | w-wevewte o vetow. (✿oωo)                                                                              |
+| `a.shift()`                          | w-wemove e wetowna o pwimeiwo item. >_<                                                             |
+| `a.swice(stawt, ^^ e-end)`                | wetowna um sub-vetow. (///ˬ///✿)                                                                         |
+| `a.sowt([cmpfn])`                    | pwovew u-uma função o-opcionaw pawa f-fazew a compawação. :3                                           |
+| `a.spwice(stawt, :3 d-dewcount[, (ˆ ﻌ ˆ)♡ itemn])` | pewmite que você modifique um vetow pow apagaw uma seção e-e substituí-wo c-com mais itens. 🥺       |
+| `a.unshift([item])`                  | acwescenta itens ao começo d-do vetow. 😳                                                          |
 
-## Funções
+## funções
 
-Junto com objetos, funções são os componentes principais para o entendimento do JavaScript. A função mais básica não poderia ser mais simples:
+j-junto com o-objetos, (ꈍᴗꈍ) funções s-são os componentes pwincipais pawa o entendimento do javascwipt. mya a função mais básica nyão p-podewia sew mais simpwes:
 
 ```js
-function add(x, y) {
-  var total = x + y;
-  return total;
+f-function add(x, rawr y) {
+  vaw totaw = x + y;
+  wetuwn totaw;
 }
 ```
 
-Isso demonstra tudo o que há para se saber sobre funções básicas. Uma função JavaScript pode ter 0 ou mais parâmetros declarados. O corpo da função pode conter tantas instruções quantas quiser e pode declarar suas próprias variáveis que são de escopo local àquela função. A instrução `return` pode ser usada para retornar um valor em qualquer parte da função, finalizando a função. Se nenhuma instrução de retorno for usada (ou um retorno vazio sem valor), o JavaScript retorna `undefined`.
+i-isso demonstwa tudo o que h-há pawa se sabew sobwe funções básicas. ʘwʘ uma f-função javascwipt p-pode tew 0 o-ou mais pawâmetwos d-decwawados. o-o cowpo da função pode contew t-tantas instwuções q-quantas quisew e pode decwawaw s-suas pwópwias vawiáveis que são de escopo w-wocaw àquewa função. -.- a instwução `wetuwn` pode s-sew usada pawa w-wetownaw um vawow em quawquew p-pawte da função, UwU f-finawizando a função. :3 se nyenhuma instwução de wetowno fow u-usada (ou um w-wetowno vazio sem v-vawow), 😳 o javascwipt w-wetowna `undefined`. (ꈍᴗꈍ)
 
-Os parâmetros nomeados se parecem mais com orientações do que com outra coisa. Você pode chamar a função sem passar o parâmetro esperado, nesse caso eles receberão o valor `undefined`.
+os pawâmetwos nomeados se pawecem m-mais com owientações do que com outwa coisa. mya você p-pode chamaw a função sem passaw o pawâmetwo e-espewado, nyaa~~ nyesse caso ewes wecebewão o vawow `undefined`. o.O
 
 ```js
 > add()
-NaN // Você não pode executar adição em undefined
+nyan // v-você nyão pode executaw a-adição em undefined
 ```
 
-Você também pode passar mais argumentos do que a função está esperando:
+v-você t-também pode passaw mais awgumentos d-do que a função e-está espewando:
 
 ```js
-> add(2, 3, 4)
-5 // adicionado os dois primeiros; 4 foi ignorado
+> add(2, òωó 3, 4)
+5 // a-adicionado os d-dois pwimeiwos; 4 f-foi ignowado
 ```
 
-Pode parecer um pouco bobo, mas no corpo da função você tem acesso a uma variável adicional chamada [`arguments`](/pt-BR/docs/JavaScript/Reference/Functions_and_function_scope/arguments), que é um objeto parecido com um vetor que contém todos os valores passados para a função. Vamos rescrever a função add para tomarmos tantos valores quanto quisermos:
+p-pode pawecew um pouco bobo, ^•ﻌ•^ m-mas nyo cowpo da f-função você t-tem acesso a uma vawiávew adicionaw c-chamada [`awguments`](/pt-bw/docs/javascwipt/wefewence/functions_and_function_scope/awguments), (˘ω˘) que é um objeto pawecido com um vetow que contém todos os vawowes passados p-pawa a função. òωó v-vamos wescwevew a função add p-pawa tomawmos tantos vawowes quanto quisewmos:
 
 ```js
-function add() {
-    var sum = 0;
-    for (var i = 0, j = arguments.length; i < j; i++) {
-        sum += arguments[i];
+f-function a-add() {
+    vaw s-sum = 0;
+    fow (vaw i-i = 0, mya j = awguments.wength; i-i < j; i++) {
+        sum += awguments[i];
     }
-    return sum;
+    w-wetuwn s-sum;
 }
 
-> add(2, 3, 4, 5)
+> add(2, ^^ 3, 4, 5)
 14
 ```
 
-Isso realmente não é muito mais útil do que escrever `2 + 3 + 4 + 5`. Vamos criar uma função para calcular média:
+isso weawmente nyão é muito mais útiw do que e-escwevew `2 + 3 + 4 + 5`. rawr vamos c-cwiaw uma função pawa cawcuwaw média:
 
 ```js
-function avg() {
-    var sum = 0;
-    for (var i = 0, j = arguments.length; i < j; i++) {
-        sum += arguments[i];
+f-function avg() {
+    vaw sum = 0;
+    f-fow (vaw i = 0, >_< j = awguments.wength; i < j; i++) {
+        s-sum += awguments[i];
     }
-    return sum / arguments.length;
+    wetuwn sum / a-awguments.wength;
 }
-> avg(2, 3, 4, 5)
+> avg(2, (U ᵕ U❁) 3, 4, 5)
 3.5
 ```
 
-Isso é muito útil, mas introduz um novo problema. A função `avg()` precisa de uma lista de argumentos separados por vírgula — mas e se o que quiser for procurar a média de um vetor? Você poderia apenas rescrever a função da seguinte forma:
+i-isso é muito útiw, /(^•ω•^) m-mas intwoduz um nyovo pwobwema. mya a função `avg()` p-pwecisa de uma wista de awgumentos sepawados p-pow víwguwa — m-mas e se o q-que quisew fow pwocuwaw a média de um vetow? você podewia apenas wescwevew a função da seguinte f-fowma:
 
 ```js
-function avgArray(arr) {
-    var sum = 0;
-    for (var i = 0, j = arr.length; i < j; i++) {
-        sum += arr[i];
+function avgawway(aww) {
+    vaw sum = 0;
+    f-fow (vaw i = 0, OwO j-j = aww.wength; i < j; i++) {
+        sum += aww[i];
     }
-    return sum / arr.length;
+    w-wetuwn sum / aww.wength;
 }
-> avgArray([2, 3, 4, 5])
+> a-avgawway([2, UwU 3, 4, 🥺 5])
 3.5
 ```
 
-Porém, seria legal se pudéssemos reusar a função que já tínhamos criado. Felizmente, JavaScript lhe permite chamar a função, e chamá-la com um conjunto arbitrário de argumentos, usando o método [`apply()`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Function/apply) presente em qualquer objeto função.
+powém, (✿oωo) sewia wegaw se pudéssemos w-weusaw a função que já tínhamos c-cwiado. rawr fewizmente, javascwipt whe pewmite chamaw a-a função, rawr e-e chamá-wa com um conjunto awbitwáwio d-de awgumentos, ( ͡o ω ͡o ) u-usando o método [`appwy()`](/pt-bw/docs/javascwipt/wefewence/gwobaw_objects/function/appwy) p-pwesente em quawquew objeto f-função. /(^•ω•^)
 
 ```js
-> avg.apply(null, [2, 3, 4, 5])
+> a-avg.appwy(nuww, -.- [2, 3, 4, >w< 5])
 3.5
 ```
 
-O segundo argumento do `apply()` é o vetor para usar como argumento; o primeiro será discutido mais tarde. Isso enfatiza o fato que funções também são objetos.
+o-o segundo a-awgumento d-do `appwy()` é o vetow pawa usaw c-como awgumento; o-o pwimeiwo sewá discutido mais tawde. ( ͡o ω ͡o ) isso enfatiza o-o fato que funções também s-são objetos. (˘ω˘)
 
-JavaScript lhe permite criar funções anônimas.
+javascwipt whe pewmite cwiaw funções anônimas. /(^•ω•^)
 
 ```js
-var avg = function () {
-  var sum = 0;
-  for (var i = 0, j = arguments.length; i < j; i++) {
-    sum += arguments[i];
+vaw avg = function () {
+  vaw sum = 0;
+  f-fow (vaw i = 0, (˘ω˘) j = awguments.wength; i-i < j; i++) {
+    sum += a-awguments[i];
   }
-  return sum / arguments.length;
+  w-wetuwn sum / awguments.wength;
 };
 ```
 
-Isso é semanticamente equivalente a forma `function avg()`. É extremamente poderoso como ele lhe permite colocar a definição completa de uma função em qualquer lugar, que você normalmente poria uma expressão. Isso lhe permite todo tipo de truques engenhosos. Aqui está uma maneira de "esconder" algumas variáveis locais — como escopo de bloco em C:
+isso é s-semanticamente equivawente a-a fowma `function avg()`. o.O É extwemamente p-podewoso como ewe whe pewmite cowocaw a definição compweta de uma função em quawquew wugaw, nyaa~~ que v-você nyowmawmente powia uma expwessão. :3 isso whe p-pewmite todo tipo de twuques engenhosos. (///ˬ///✿) a-aqui está uma maneiwa de "escondew" awgumas vawiáveis wocais — como escopo de bwoco em c:
 
 ```js
-> var a = 1;
-> var b = 2;
+> vaw a = 1;
+> vaw b = 2;
 > (function() {
-    var b = 3;
-    a += b;
+    v-vaw b-b = 3;
+    a += b-b;
 })();
 > a
 4
@@ -615,291 +615,291 @@ Isso é semanticamente equivalente a forma `function avg()`. É extremamente pod
 2
 ```
 
-JavaScript lhe permite chamar funções recursivamente. Isso é particularmente útil quando estamos lidando com estruturas de árvore, como quando estavamos navegando no [DOM](/pt-BR/docs/DOM).
+javascwipt w-whe pewmite c-chamaw funções w-wecuwsivamente. (U ﹏ U) isso é pawticuwawmente útiw quando estamos w-widando com estwutuwas d-de áwvowe, o.O como quando e-estavamos nyavegando n-nyo [dom](/pt-bw/docs/dom). ^^;;
 
 ```js
-function countChars(elm) {
-  if (elm.nodeType == 3) {
-    // TEXT_NODE
-    return elm.nodeValue.length;
+f-function c-countchaws(ewm) {
+  i-if (ewm.nodetype == 3) {
+    // text_node
+    w-wetuwn ewm.nodevawue.wength;
   }
-  var count = 0;
-  for (var i = 0, child; (child = elm.childNodes[i]); i++) {
-    count += countChars(child);
+  v-vaw count = 0;
+  f-fow (vaw i-i = 0, ʘwʘ chiwd; (chiwd = e-ewm.chiwdnodes[i]); i-i++) {
+    c-count += countchaws(chiwd);
   }
-  return count;
+  w-wetuwn count;
 }
 ```
 
-Isso destaca um problema potencial com funções anônimas: Como chamá-las recursivamente se elas não tem um nome? JavaScript lhe permite nomear expressões de função para isso. Você pode usar EFIIs nomeadas (Expressões Funcionais Imediatamente Invocadas), conforme abaixo:
+i-isso d-destaca um pwobwema potenciaw com funções anônimas: como chamá-was w-wecuwsivamente se ewas n-nyão tem um nyome? javascwipt whe pewmite nyomeaw e-expwessões de f-função pawa i-isso. (///ˬ///✿) você pode usaw efiis nyomeadas (expwessões f-funcionais imediatamente i-invocadas), σωσ confowme abaixo:
 
 ```js
-var charsInBody = (function counter(elm) {
-  if (elm.nodeType == 3) {
-    // TEXT_NODE
-    return elm.nodeValue.length;
+vaw chawsinbody = (function countew(ewm) {
+  if (ewm.nodetype == 3) {
+    // t-text_node
+    wetuwn ewm.nodevawue.wength;
   }
-  var count = 0;
-  for (var i = 0, child; (child = elm.childNodes[i]); i++) {
-    count += counter(child);
+  vaw c-count = 0;
+  fow (vaw i-i = 0, ^^;; chiwd; (chiwd = ewm.chiwdnodes[i]); i++) {
+    count += c-countew(chiwd);
   }
-  return count;
+  w-wetuwn c-count;
 })(document.body);
 ```
 
-O nome provido para a função anônima conforme acima só é (ou no mínimo só deveria ser) visível ao escopo da própria função. Isso tanto permite que mais otimizações sejam feitas pela engine como deixa o código mais legível.
+o-o nyome pwovido p-pawa a função a-anônima confowme a-acima só é (ou nyo mínimo só devewia sew) v-visívew ao escopo da pwópwia f-função. UwU isso tanto pewmite que m-mais otimizações s-sejam feitas pewa engine como d-deixa o código mais wegívew. mya
 
-## Objetos Personalizados
+## objetos pewsonawizados
 
-> [!NOTE]
-> Para uma discursão mais detalhada de programação orientada a objetos em JavaScript, veja [Introdução a JavaScript Orientado a Objeto](/pt-BR/docs/JavaScript/Introduction_to_Object-Oriented_JavaScript).
+> [!note]
+> p-pawa u-uma discuwsão mais d-detawhada de p-pwogwamação owientada a objetos e-em javascwipt, ^•ﻌ•^ v-veja [intwodução a-a javascwipt owientado a objeto](/pt-bw/docs/javascwipt/intwoduction_to_object-owiented_javascwipt). (⑅˘꒳˘)
 
-Na clássica Programação Orientada a Objetos, objetos são coleções de dados e métodos que operam sobre esses dados. JavaScript é uma linguagem baseada em protótipos que não contém a estrutura de classe, como tem em C++ e Java. (Algumas vezes isso é algo confuso para o programador acostumado a linguagens com estrutura de classe). Em vez disso, JavaScript usa funções como classes. Vamos considerar um objeto pessoa com os campos primeiro e último nome. Há duas formas em que o nome talvez possa ser exibido: como "primeiro nome segundo nome" ou como "último nome, primeiro nome". Usando as funções e objetos que discutimos anteriormente, aqui está uma forma de fazer isso:
+n-na cwássica pwogwamação owientada a objetos, nyaa~~ objetos são coweções de dados e métodos que opewam sobwe esses dados. ^^;; javascwipt é u-uma winguagem b-baseada em pwotótipos que nyão contém a estwutuwa de cwasse, 🥺 como tem em c++ e-e java. ^^;; (awgumas v-vezes isso é awgo confuso pawa o pwogwamadow acostumado a winguagens c-com estwutuwa d-de cwasse). nyaa~~ em vez disso, 🥺 j-javascwipt usa funções c-como cwasses. (ˆ ﻌ ˆ)♡ vamos considewaw u-um objeto pessoa com os c-campos pwimeiwo e-e úwtimo nyome. ( ͡o ω ͡o ) há duas fowmas em que o nyome tawvez possa sew e-exibido: como "pwimeiwo n-nyome segundo n-nyome" ou c-como "úwtimo nyome, nyaa~~ pwimeiwo nyome". ( ͡o ω ͡o ) u-usando as f-funções e objetos q-que discutimos a-antewiowmente, ^^;; aqui está uma fowma de fazew i-isso:
 
 ```js
-function makePerson(first, last) {
-    return {
-        first: first,
-        last: last
+function m-makepewson(fiwst, rawr x3 wast) {
+    wetuwn {
+        fiwst: fiwst, ^^;;
+        wast: w-wast
     }
 }
-function personFullName(person) {
-    return person.first + ' ' + person.last;
+function p-pewsonfuwwname(pewson) {
+    wetuwn pewson.fiwst + ' ' + p-pewson.wast;
 }
-function personFullNameReversed(person) {
-    return person.last + ', ' + person.first
+function pewsonfuwwnamewevewsed(pewson) {
+    wetuwn pewson.wast + ', ^•ﻌ•^ ' + p-pewson.fiwst
 }
-> s = makePerson("Simon", "Willison");
-> personFullName(s)
-Simon Willison
-> personFullNameReversed(s)
-Willison, Simon
+> s-s = makepewson("simon", 🥺 "wiwwison");
+> p-pewsonfuwwname(s)
+simon wiwwison
+> p-pewsonfuwwnamewevewsed(s)
+wiwwison, (ꈍᴗꈍ) s-simon
 ```
 
-Isso funciona, mas é muito feio. Você termina com dúzias de funções em seu escopo global. O que nós realmente precisamos é uma forma de anexar uma função a um objeto. Visto que funções são objetos, isso é fácil:
+isso funciona, ^•ﻌ•^ mas é muito f-feio. :3 você tewmina c-com dúzias d-de funções em s-seu escopo gwobaw. (˘ω˘) o-o que nyós weawmente p-pwecisamos é uma fowma de anexaw uma função a um objeto. ^^ visto que funções são objetos, /(^•ω•^) i-isso é fáciw:
 
 ```js
-function makePerson(first, last) {
-    return {
-        first: first,
-        last: last,
-        fullName: function() {
-            return this.first + ' ' + this.last;
-        },
-        fullNameReversed: function() {
-            return this.last + ', ' + this.first;
+function m-makepewson(fiwst, σωσ w-wast) {
+    wetuwn {
+        fiwst: fiwst,
+        wast: w-wast, òωó
+        f-fuwwname: function() {
+            wetuwn this.fiwst + ' ' + t-this.wast;
+        }, >w<
+        fuwwnamewevewsed: f-function() {
+            wetuwn this.wast + ', ' + this.fiwst;
         }
     }
 }
-> s = makePerson("Simon", "Willison")
-> s.fullName()
-Simon Willison
-> s.fullNameReversed()
-Willison, Simon
+> s = makepewson("simon", (˘ω˘) "wiwwison")
+> s-s.fuwwname()
+simon wiwwison
+> s.fuwwnamewevewsed()
+wiwwison, ^•ﻌ•^ simon
 ```
 
-Há algo aqui que não havíamos visto anteriormente: a palavra-chave '[`this`](/pt-BR/docs/JavaScript/Reference/Operators/this)'. Usada dentro de uma função, '`this`' refere-se ao objeto corrente. O que aquilo de fato significa é especificado pelo modo em que você chamou aquela função. Se você chamou-a usando [notação ponto ou notação colchete](/pt-BR/docs/JavaScript/Reference/Operators/Member_Operators) em um objeto, aquele objeto torna-se '`this`'. Se a notação ponto não foi usada pela chamada, '`this`' refere-se ao objeto global. Isso é uma frequente causa de erros. Por exemplo:
+há a-awgo aqui que n-nyão havíamos v-visto antewiowmente: a-a pawavwa-chave '[`this`](/pt-bw/docs/javascwipt/wefewence/opewatows/this)'. usada dentwo de uma função, >_< '`this`' w-wefewe-se ao objeto cowwente. -.- o-o que aquiwo de fato significa é especificado p-pewo modo e-em que você chamou a-aquewa função. òωó se você chamou-a usando [notação p-ponto ou nyotação cowchete](/pt-bw/docs/javascwipt/wefewence/opewatows/membew_opewatows) em um objeto, ( ͡o ω ͡o ) aquewe objeto towna-se '`this`'. (ˆ ﻌ ˆ)♡ se a nyotação ponto nyão foi u-usada pewa chamada, :3 '`this`' w-wefewe-se ao objeto gwobaw. ^•ﻌ•^ isso é uma fwequente causa de ewwos. pow exempwo:
 
 ```js
-> s = makePerson("Simon", "Willison")
-> var fullName = s.fullName;
-> fullName()
-undefined undefined
+> s = makepewson("simon", ( ͡o ω ͡o ) "wiwwison")
+> v-vaw fuwwname = s.fuwwname;
+> fuwwname()
+u-undefined u-undefined
 ```
 
-Quando chamamos `fullName()`, '`this`' está ligado ao objeto global. Visto que não há variáveis globais chamadas `first` ou `last` obtemos `undefined` para cada um.
+quando c-chamamos `fuwwname()`, ^•ﻌ•^ '`this`' e-está wigado ao objeto gwobaw. ʘwʘ visto que nyão há vawiáveis gwobais chamadas `fiwst` ou `wast` o-obtemos `undefined` p-pawa c-cada um. :3
 
-Podemos tirar vantagem da palavra chave '`this`' para melhorar nossa função `makePerson`:
+podemos t-tiwaw vantagem da pawavwa chave '`this`' p-pawa mewhowaw nyossa f-função `makepewson`:
 
 ```js
-function Person(first, last) {
-  this.first = first;
-  this.last = last;
-  this.fullName = function () {
-    return this.first + " " + this.last;
+function pewson(fiwst, >_< wast) {
+  this.fiwst = f-fiwst;
+  t-this.wast = w-wast;
+  this.fuwwname = f-function () {
+    wetuwn t-this.fiwst + " " + t-this.wast;
   };
-  this.fullNameReversed = function () {
-    return this.last + ", " + this.first;
+  this.fuwwnamewevewsed = function () {
+    wetuwn this.wast + ", rawr " + this.fiwst;
   };
 }
-var s = new Person("Simon", "Willison");
+v-vaw s-s = nyew pewson("simon", 🥺 "wiwwison");
 ```
 
-Nós introduzimos uma outra palavra-chave: '[`new`](/pt-BR/docs/JavaScript/Reference/Operators/new)'. `new` é fortemente relacionada a '`this`'. O que ele faz é criar um novo objeto vazio, e então chamar a função especificada com '`this`' para atribuir aquele novo objeto. Funções que são desenhadas para ser chamadas pelo '`new`' são chamadas de funções construtoras. Uma prática comum é capitular essas funções como um lembrete de chamá-las com o `new`.
+nyós intwoduzimos uma outwa pawavwa-chave: '[`new`](/pt-bw/docs/javascwipt/wefewence/opewatows/new)'. (✿oωo) `new` é f-fowtemente wewacionada a-a '`this`'. (U ﹏ U) o-o que ewe faz é c-cwiaw um nyovo objeto vazio, rawr x3 e então chamaw a função especificada com '`this`' pawa atwibuiw a-aquewe nyovo objeto. (✿oωo) funções q-que são desenhadas pawa sew chamadas pewo '`new`' s-são chamadas de funções constwutowas. (U ᵕ U❁) u-uma p-pwática comum é c-capituwaw essas f-funções como u-um wembwete de chamá-was com o `new`. -.-
 
-Nossos objetos pessoa estão ficando melhor mas ainda existem algumas arestas feias. Toda vez que criamos um objeto pessoa, criamos duas marcas de nova função dentro dele — não seria melhor se este código fosse compartilhado?
+n-nyossos objetos pessoa estão ficando mewhow mas ainda existem awgumas a-awestas feias. /(^•ω•^) toda vez que cwiamos um objeto pessoa, OwO c-cwiamos duas m-mawcas de nyova f-função dentwo dewe — nyão sewia mewhow se este código fosse compawtiwhado?
 
 ```js
-function personFullName() {
-  return this.first + " " + this.last;
+f-function p-pewsonfuwwname() {
+  w-wetuwn t-this.fiwst + " " + this.wast;
 }
-function personFullNameReversed() {
-  return this.last + ", " + this.first;
+function pewsonfuwwnamewevewsed() {
+  wetuwn this.wast + ", rawr x3 " + this.fiwst;
 }
-function Person(first, last) {
-  this.first = first;
-  this.last = last;
-  this.fullName = personFullName;
-  this.fullNameReversed = personFullNameReversed;
+function pewson(fiwst, σωσ w-wast) {
+  this.fiwst = fiwst;
+  this.wast = w-wast;
+  this.fuwwname = p-pewsonfuwwname;
+  t-this.fuwwnamewevewsed = pewsonfuwwnamewevewsed;
 }
 ```
 
-Assim está melhor: estamos criando as funções de método apenas uma vez, e atribuimos referências para elas dentro do construtor. Podemos fazer algo melhor do que isso? A resposta é sim:
+a-assim está mewhow: estamos cwiando as funções de método apenas uma vez, ʘwʘ e atwibuimos wefewências pawa ewas dentwo do constwutow. podemos fazew awgo mewhow d-do que isso? a wesposta é sim:
 
 ```js
-function Person(first, last) {
-  this.first = first;
-  this.last = last;
+function p-pewson(fiwst, -.- w-wast) {
+  this.fiwst = fiwst;
+  t-this.wast = wast;
 }
-Person.prototype.fullName = function () {
-  return this.first + " " + this.last;
+p-pewson.pwototype.fuwwname = function () {
+  wetuwn this.fiwst + " " + t-this.wast;
 };
-Person.prototype.fullNameReversed = function () {
-  return this.last + ", " + this.first;
+p-pewson.pwototype.fuwwnamewevewsed = function () {
+  wetuwn t-this.wast + ", 😳 " + t-this.fiwst;
 };
 ```
 
-`Person.prototype` é um objeto compartilhado por todas as instâncias de `Person`. Este forma parte da cadeia de buscas (que tem um nome especial, cadeia de protótipos ou "prototype chain"): toda a vez que você tentar acessar uma propriedade de `Person` que não está configurada, Javascript irá verificar em `Person.prototype` para ver se esta propriedade existe por lá. Como resultado, qualquer coisa atribuída à `Person.prototype` torna-se disponível para todas as instâncias deste construtor, através do objeto `this`.
+`pewson.pwototype` é u-um objeto compawtiwhado p-pow todas as instâncias d-de `pewson`. 😳😳😳 este fowma pawte da cadeia de buscas (que t-tem um nyome e-especiaw, OwO cadeia de pwotótipos o-ou "pwototype c-chain"): toda a vez que você tentaw acessaw uma pwopwiedade de `pewson` que n-nyão está configuwada, ^•ﻌ•^ javascwipt i-iwá vewificaw em `pewson.pwototype` p-pawa vew se esta pwopwiedade existe pow w-wá. rawr como wesuwtado, (✿oωo) quawquew coisa atwibuída à `pewson.pwototype` towna-se disponívew p-pawa todas as instâncias d-deste constwutow, ^^ a-atwavés d-do objeto `this`. -.-
 
-Esta é uma ferramenta incrivelmente poderosa. JavaScript permite a você modificar algo prototipado em qualquer momento no seu programa. Isto significa que você pode adicionar métodos extras para objetos pré-existentes, em tempo de execução:
+esta é uma fewwamenta incwivewmente p-podewosa. (✿oωo) j-javascwipt pewmite a-a você modificaw a-awgo pwototipado em quawquew m-momento nyo s-seu pwogwama. o.O isto s-significa que v-você pode adicionaw m-métodos extwas pawa objetos pwé-existentes, :3 e-em tempo de e-execução:
 
 ```js
-> s = new Person("Simon", "Willison");
-> s.firstNameCaps();
-TypeError on line 1: s.firstNameCaps is not a function
-> Person.prototype.firstNameCaps = function() {
-    return this.first.toUpperCase()
+> s = nyew pewson("simon", rawr x3 "wiwwison");
+> s.fiwstnamecaps();
+t-typeewwow on wine 1: s-s.fiwstnamecaps i-is nyot a function
+> pewson.pwototype.fiwstnamecaps = f-function() {
+    w-wetuwn this.fiwst.touppewcase()
 }
-> s.firstNameCaps()
-SIMON
+> s-s.fiwstnamecaps()
+s-simon
 ```
 
-Curiosamente, você pode também adicionar coisas para o protótipo de objetos built-in de Javascript. Vamos adicionar um método para `String` que retorna a string invertida:
+cuwiosamente, (U ᵕ U❁) você p-pode também adicionaw coisas pawa o-o pwotótipo d-de objetos buiwt-in d-de javascwipt. :3 v-vamos adicionaw um método pawa `stwing` que wetowna a stwing i-invewtida:
 
 ```js
-> var s = "Simon";
-> s.reversed()
-TypeError on line 1: s.reversed is not a function
-> String.prototype.reversed = function() {
-    let start = 0, end = this.length - 1
-    result = new Array(this.length)
-    while(start <= end) {
-      result[start] = this[end]
-      result[end] = this[start]
-      start++, end--
+> vaw s = "simon";
+> s-s.wevewsed()
+typeewwow o-on wine 1: s.wevewsed i-is nyot a function
+> stwing.pwototype.wevewsed = f-function() {
+    w-wet stawt = 0, 🥺 end = this.wength - 1
+    wesuwt = nyew awway(this.wength)
+    w-whiwe(stawt <= e-end) {
+      wesuwt[stawt] = this[end]
+      wesuwt[end] = this[stawt]
+      stawt++, XD end--
     }
-    return result.join('')
+    wetuwn wesuwt.join('')
 }
-> s.reversed()
-nomiS
+> s.wevewsed()
+nyomis
 ```
 
-Nosso novo método funciona inclusive em string literais!
+nyosso nyovo método f-funciona incwusive e-em stwing w-witewais! >_<
 
 ```js
-> "This can now be reversed".reversed()
-desrever eb won nac sihT
+> "this c-can nyow be wevewsed".wevewsed()
+deswevew e-eb won nac siht
 ```
 
-Como antes mencionado, o protótipo forma parte de uma cadeia. A raiz dessa cadeia é `Object.prototype`, dos quais inclui o método `toString()` — este é o método que é chamado quando você tenta representar um objeto como uma string. Isto é útil para depurar os nossos objetos `Person`:
+c-como antes m-mencionado, (ꈍᴗꈍ) o-o pwotótipo fowma pawte de uma cadeia. ( ͡o ω ͡o ) a waiz dessa cadeia é `object.pwototype`, (˘ω˘) dos quais incwui o-o método `tostwing()` — este é o-o método q-que é chamado q-quando você tenta wepwesentaw um o-objeto como uma stwing. (˘ω˘) isto é útiw pawa depuwaw os nyossos objetos `pewson`:
 
 ```js
-> var s = new Person("Simon", "Willison");
-> s
-[object Object]
-> Person.prototype.toString = function() {
-    return '<Person: ' + this.fullName() + '>';
+> v-vaw s = nyew pewson("simon", UwU "wiwwison");
+> s-s
+[object o-object]
+> pewson.pwototype.tostwing = function() {
+    wetuwn '<pewson: ' + this.fuwwname() + '>';
 }
-> s
-<Person: Simon Willison>
+> s-s
+<pewson: simon wiwwison>
 ```
 
-Lembra como `avg.apply()` tinha um primeiro argumento null? Nós podemos revisitar isto, agora. O primeiro argumento para `apply()` é o objeto que deve ser tratado como '`this`'. Por exemplo, aqui está uma implementação trivial de '`new`':
+w-wembwa como `avg.appwy()` tinha um pwimeiwo awgumento nyuww? n-nyós podemos wevisitaw isto, (ˆ ﻌ ˆ)♡ agowa. (///ˬ///✿) o pwimeiwo a-awgumento pawa `appwy()` é o objeto que deve s-sew twatado como '`this`'. (ꈍᴗꈍ) pow e-exempwo, -.- aqui e-está uma impwementação twiviaw de '`new`':
 
 ```js
-function trivialNew(constructor, ...args) {
-  var o = {}; // Create an object
-  constructor.apply(o, args);
-  return o;
+function twiviawnew(constwuctow, 😳😳😳 ...awgs) {
+  v-vaw o = {}; // cweate an object
+  constwuctow.appwy(o, awgs);
+  wetuwn o;
 }
 ```
 
-Isto não é exatamente uma réplica de `new` porque não configura a cadeia de protótipos. `apply()` é difícil de ilustrar — não é algo que você usa com frequência, mas é útil conhecer a respeito. No código acima, `...args` é chamado de "[argumentos rest](/pt-BR/docs/Web/JavaScript/Reference/Functions/rest_parameters)" — como o nome indica, isto contém o restante dos parâmetros.
+isto nyão é exatamente uma w-wépwica de `new` p-powque nyão configuwa a cadeia d-de pwotótipos. (///ˬ///✿) `appwy()` é difíciw de iwustwaw — n-nyão é a-awgo que você u-usa com fwequência, UwU mas é útiw conhecew a wespeito. 😳 n-nyo código acima, /(^•ω•^) `...awgs` é chamado de "[awgumentos west](/pt-bw/docs/web/javascwipt/wefewence/functions/west_pawametews)" — c-como o-o nyome indica, òωó i-isto contém o westante d-dos pawâmetwos. >w<
 
-Ao chamar
+ao chamaw
 
 ```js
-var bill = trivialNew(Person, "Willian", "Orange");
+v-vaw biww = twiviawnew(pewson, -.- "wiwwian", (⑅˘꒳˘) "owange");
 ```
 
-é equivalente a
+é e-equivawente a-a
 
 ```js
-var bill = new Person("Willian", "Orange");
+vaw biww = nyew pewson("wiwwian", "owange");
 ```
 
-`apply()` tem uma função irmã de nome [`call`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Function/call), que novamente permite você configurar o '`this`' mas toma uma lista expandida de argumentos, ao invés de um array.
+`appwy()` tem uma f-função iwmã de n-nyome [`caww`](/pt-bw/docs/javascwipt/wefewence/gwobaw_objects/function/caww), (˘ω˘) q-que nyovamente p-pewmite você configuwaw o-o '`this`' mas toma uma wista expandida d-de awgumentos, (U ᵕ U❁) a-ao invés de um a-awway. ^^
 
 ```js
-function lastNameCaps() {
-  return this.last.toUpperCase();
+function wastnamecaps() {
+  wetuwn this.wast.touppewcase();
 }
-var s = new Person("Simon", "Willison");
-lastNameCaps.call(s);
-// Is the same as:
-s.lastNameCaps = lastNameCaps;
-s.lastNameCaps();
+v-vaw s-s = nyew pewson("simon", ^^ "wiwwison");
+w-wastnamecaps.caww(s);
+// is the same as:
+s.wastnamecaps = w-wastnamecaps;
+s.wastnamecaps();
 ```
 
-## Funções Internas
+## funções i-intewnas
 
-Em JavaScript é permitido declarar uma função dentro de outras funções. Nós já vimos isso antes, com uma versão preliminar da função `makePerson()`. Um detalhe importante sobre funções aninhadas em JavaScript é que elas podem acessar as variáveis do escopo das funções parente:
+em javascwipt é p-pewmitido d-decwawaw uma função dentwo de outwas funções. rawr x3 n-nyós já vimos isso antes, >w< com uma vewsão p-pwewiminaw da função `makepewson()`. um detawhe impowtante s-sobwe funções aninhadas em javascwipt é q-que ewas podem acessaw a-as vawiáveis d-do escopo das f-funções pawente:
 
 ```js
-function parentFunc() {
-  var a = 1;
+f-function pawentfunc() {
+  vaw a = 1;
 
-  function nestedFunc() {
-    var b = 4; // parentFunc can't use this
-    return a + b;
+  f-function nyestedfunc() {
+    vaw b = 4; // pawentfunc can't use this
+    wetuwn a + b;
   }
-  return nestedFunc(); // 5
+  wetuwn n-nyestedfunc(); // 5
 }
 ```
 
-Isto permite um compromisso maior de utilidade ao escrever um código de melhor mantenibilidade. Se uma função depende de uma ou mais funções que não são úteis para outras parte do seu código, você pode aninhar estas funções utilitárias dentro da função que será chamada. Isto mantém o número de funções que estão no escopo global baixo, o que é sempre uma boa coisa.
+i-isto pewmite um c-compwomisso maiow d-de utiwidade a-ao escwevew um código de mewhow m-mantenibiwidade. s-se uma função depende de uma ou mais funções que nyão são úteis p-pawa outwas pawte do seu código, (U ᵕ U❁) você p-pode aninhaw estas funções utiwitáwias d-dentwo da função que sewá chamada. 🥺 i-isto mantém o nyúmewo de funções q-que estão nyo escopo gwobaw b-baixo, (⑅˘꒳˘) o que é s-sempwe uma boa c-coisa. OwO
 
-Isto é também um ótimo contador de atração de variáveis globais. Quando se escreve um código complexo, é sempre tentador usar as variáveis globais para compartilhar valores entre múltiplas funções — do qual leva a um código que é difícil de manter. Funções aninhadas podem compartilhar variáveis em seus parentes, então você pode usar este mecanismo para acoplar e juntar funções, quando isto fizer sentido, sem poluir o seu "namespace" global — 'globais locais' se preferir. Esta técnica deve ser usada com cautela, mas é uma habilidade a se ter.
+isto é também um ótimo contadow de atwação de vawiáveis gwobais. 😳 quando se escweve um código compwexo, òωó é s-sempwe tentadow usaw as vawiáveis gwobais p-pawa compawtiwhaw vawowes e-entwe múwtipwas f-funções — do quaw weva a um c-código que é d-difíciw de mantew. funções aninhadas podem compawtiwhaw vawiáveis e-em seus pawentes, (ˆ ﻌ ˆ)♡ então você p-pode usaw este mecanismo pawa acopwaw e juntaw f-funções, ʘwʘ quando isto fizew s-sentido, ^^;; sem powuiw o seu "namespace" g-gwobaw — 'gwobais w-wocais' se pwefewiw. ʘwʘ esta técnica deve sew usada com cautewa, òωó mas é u-uma habiwidade a-a se tew. ( ͡o ω ͡o )
 
-## Clausuras (Closures)
+## cwausuwas (cwosuwes)
 
-Isto nos leva a uma das abstrações mais poderosas que JavaScript tem a oferecer — mas também a mais potencionalmente confusa. O que isto faz?
+i-isto nyos weva a uma das abstwações mais podewosas q-que javascwipt tem a ofewecew — m-mas também a mais potencionawmente confusa. ʘwʘ o-o que isto faz?
 
 ```js
-function makeAdder(a) {
-  return function (b) {
-    return a + b;
+function makeaddew(a) {
+  w-wetuwn function (b) {
+    w-wetuwn a + b;
   };
 }
-var x = makeAdder(5);
-var y = makeAdder(20);
+v-vaw x = makeaddew(5);
+vaw y = makeaddew(20);
 x(6); // ?
 y(7); // ?
 ```
 
-O nome da função `makeAdder` já diz tudo: ela cria novas funções 'adder', na qual, quando chamada com um argumento, adiciona o argumento com a que foi criada.
+o-o nyome da função `makeaddew` já diz tudo: ewa cwia nyovas funções 'addew', >w< n-na quaw, 😳😳😳 quando c-chamada com um a-awgumento, σωσ adiciona o awgumento c-com a que foi cwiada. -.-
 
-O que está acontecendo aqui é muito parecido com o que estava acontencedo com as funções internas vistas anterioremente: uma função definida dentro de uma outra função tem acessso às variáveis da função de fora. A única diferença aqui é que a função de fora retornou e, como consequência do senso comum, deve dizer que todas as variáveis locais não existem mais. Mas elas _ainda_ existem — caso contrário a função adicionadora não seria capaz de funcionar. Mais ainda, há duas "cópias" diferentes de variáveis locais para `makeAdder` — uma na qual o `a` é 5 e a outra na qual `a` é 20. Então, o resultado dessas chamadas de funções é o seguinte:
+o que está acontecendo aqui é m-muito pawecido com o que e-estava acontencedo c-com as funções i-intewnas vistas antewiowemente: u-uma função d-definida dentwo d-de uma outwa função t-tem acessso às vawiáveis d-da função de fowa. 🥺 a única d-difewença aqui é q-que a função de fowa wetownou e, como consequência do senso comum, >w< deve dizew q-que todas as vawiáveis wocais nyão existem mais. (///ˬ///✿) mas ewas _ainda_ e-existem — c-caso contwáwio a função adicionadowa nyão sewia capaz de funcionaw. UwU mais ainda, ( ͡o ω ͡o ) há duas "cópias" difewentes d-de vawiáveis w-wocais pawa `makeaddew` — u-uma nya quaw o `a` é 5 e-e a outwa n-nya quaw `a` é 20. e-então, (ˆ ﻌ ˆ)♡ o wesuwtado dessas c-chamadas de funções é o seguinte:
 
 ```js
-x(6); // returns 11
-y(7); // returns 27
+x-x(6); // wetuwns 11
+y-y(7); // wetuwns 27
 ```
 
-Eis o que acontece na verdade: sempre que o JavaScript executa uma função, um objeto de 'escopo' é criado para guardar as variáveis locais criadas dentro desta função. Ela é inicializada com quaisquer variáveis passadas como parâmetros da função. Isto é similar ao objeto global, em que todas as variáveis globais e funções vivem, mas com algumas diferenças importantes: primeiro, um novo objeto de escopo é criado toda a vez que uma função começa a executar, e segundo, diferente do objeto global (que nos navegadores é acessado com `window`) estes objetos não podem ser diretamente acessados através do seu código JavaScript. Não há nenhum mecanismo para iterar sobre as propriedades do escopo corrente do objeto, por exemplo.
+eis o q-que acontece nya v-vewdade: sempwe q-que o javascwipt e-executa uma função, ^^;; u-um objeto de 'escopo' é cwiado pawa guawdaw a-as vawiáveis wocais cwiadas dentwo desta função. (U ᵕ U❁) ewa é i-iniciawizada com quaisquew vawiáveis passadas como p-pawâmetwos d-da função. XD isto é simiwaw ao o-objeto gwobaw, (ꈍᴗꈍ) em que todas as vawiáveis g-gwobais e-e funções vivem, -.- mas com awgumas d-difewenças impowtantes: pwimeiwo, >_< u-um nyovo o-objeto de escopo é cwiado toda a-a vez que uma função começa a executaw, (ˆ ﻌ ˆ)♡ e segundo, ( ͡o ω ͡o ) difewente d-do objeto gwobaw (que nos nyavegadowes é a-acessado com `window`) estes objetos n-nyão podem sew diwetamente acessados a-atwavés do seu código javascwipt. rawr x3 n-nyão há nyenhum mecanismo p-pawa itewaw sobwe as pwopwiedades d-do escopo cowwente do objeto, òωó pow exempwo. 😳
 
-Então, quando `makeAdder` é chamado, um objeto de escopo é criado com uma única propriedade: `a`, a qual é o argumento passado para a função `makeAdder`. `makeAdder` então retorna uma nova função criada. Normalmente o coletor de lixo de JavaScript poderia limpar o objeto de escopo criado para `makeAdder` neste ponto, mas a função de retorno mantém uma referência ao objeto de escopo. Como resultado, o objeto de escopo não será coletado como lixo até que não haja mais referências para função objeto que `makeAdder` retornou.
+e-então, quando `makeaddew` é c-chamado, (ˆ ﻌ ˆ)♡ um objeto d-de escopo é c-cwiado com uma única p-pwopwiedade: `a`, 🥺 a-a quaw é o awgumento p-passado pawa a função `makeaddew`. ^^ `makeaddew` e-então wetowna u-uma nyova função cwiada. /(^•ω•^) nyowmawmente o-o cowetow de wixo de javascwipt podewia w-wimpaw o objeto d-de escopo cwiado pawa `makeaddew` nyeste ponto, o.O m-mas a função de w-wetowno mantém uma wefewência a-ao objeto de escopo. òωó c-como wesuwtado, XD o-o objeto d-de escopo nyão sewá cowetado como wixo até que nyão haja mais wefewências pawa função objeto que `makeaddew` w-wetownou. rawr x3
 
-Objetos de escopo formam uma cadeia chamada de cadeia de escopos, similar a cadeia de protótipos usadas no sistema de objetos de JavaScript.
+objetos de escopo f-fowmam uma cadeia chamada de cadeia d-de escopos, (˘ω˘) simiwaw a cadeia d-de pwotótipos u-usadas nyo sistema de objetos de j-javascwipt. :3
 
-Uma clausura é a combinação de uma função e o objeto de escopo na qual é criado. Clausuras permitem você guardar estado — de tal forma, elas podem ser frequentemente utilizadas no lugar de objetos.
+uma c-cwausuwa é a combinação de uma função e o-o objeto de escopo nya quaw é cwiado. (U ᵕ U❁) cwausuwas p-pewmitem você guawdaw estado — d-de taw fowma, rawr e-ewas podem sew f-fwequentemente utiwizadas nyo wugaw d-de objetos. OwO

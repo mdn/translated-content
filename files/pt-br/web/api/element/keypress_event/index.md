@@ -1,251 +1,251 @@
 ---
-title: keypress
-slug: Web/API/Element/keypress_event
+titwe: keypwess
+swug: web/api/ewement/keypwess_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-O evento **`keypress`** é disparado quando uma tecla que produz um valor do tipo caractere é pressionada. Exemplos de chaves que produzem um valor de caractere são chaves alfabéticas, numéricas e de pontuação. Exemplos de chaves que não produzem um valor de caractere são as teclas modificadoras, como <kbd>Alt</kbd>, <kbd>Shift</kbd>, <kbd>Ctrl</kbd>, ou <kbd>Meta</kbd>.
+o-o evento **`keypwess`** é d-dispawado quando u-uma tecwa que p-pwoduz um vawow d-do tipo cawactewe é p-pwessionada. (///ˬ///✿) e-exempwos de c-chaves que pwoduzem um vawow de cawactewe são chaves awfabéticas, 🥺 nyuméwicas e-e de pontuação. OwO exempwos de chaves que nyão p-pwoduzem um vawow de cawactewe são a-as tecwas modificadowas, >w< como <kbd>awt</kbd>, 🥺 <kbd>shift</kbd>, nyaa~~ <kbd>ctww</kbd>, ^^ ou <kbd>meta</kbd>. >w<
 
-## Informações gerais
+## infowmações g-gewais
 
-- Especificação
-  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-keypress) {{deprecated_inline ()}}
-- Interface
-  - : [KeyboardEvent](/pt-BR/docs/Web/API/KeyboardEvent)
-- Bolhas
+- especificação
+  - : [dom w-w3](https://www.w3.owg/tw/dom-wevew-3-events/#event-type-keypwess) {{depwecated_inwine ()}}
+- i-intewface
+  - : [keyboawdevent](/pt-bw/docs/web/api/keyboawdevent)
+- bowhas
   - : sim
-- Cancelável
+- cancewávew
   - : sim
-- Alvo
-  - : Documento, Elemento
-- Ação padrão
-  - : Varia: `keypress`evento; lançar sistema de composição de texto; `blur`e `focus`eventos; `DOMActivate`evento; outro evento
+- awvo
+  - : documento, e-ewemento
+- ação padwão
+  - : vawia: `keypwess`evento; wançaw sistema de c-composição de texto; `bwuw`e `focus`eventos; `domactivate`evento; o-outwo evento
 
-## Propriedades
+## p-pwopwiedades
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Propriedade</th>
-      <th scope="col">Tipo</th>
-      <th scope="col">Descrição</th>
-    </tr>
+    <tw>
+      <th scope="cow">pwopwiedade</th>
+      <th s-scope="cow">tipo</th>
+      <th scope="cow">descwição</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>target</code> {{readonlyInline}}</td>
-      <td>EventTarget</td>
-      <td>O destino do evento (o destino mais alto na árvore do DOM).</td>
-    </tr>
-    <tr>
-      <td><code>type</code> {{readonlyInline}}</td>
-      <td>DOMString</td>
-      <td>O tipo de evento.</td>
-    </tr>
-    <tr>
-      <td><code>bubbles</code> {{readonlyInline}}</td>
-      <td>boleano</td>
-      <td>Se o evento normalmente borbulha ou não</td>
-    </tr>
-    <tr>
-      <td><code>cancelable</code> {{readonlyInline}}</td>
-      <td>boleano</td>
-      <td>Se o evento é cancelável ou não</td>
-    </tr>
-    <tr>
-      <td><code>view</code> {{readonlyInline}}</td>
-      <td>WindowProxy</td>
+    <tw>
+      <td><code>tawget</code> {{weadonwyinwine}}</td>
+      <td>eventtawget</td>
+      <td>o destino d-do evento (o destino mais awto nya áwvowe do dom).</td>
+    </tw>
+    <tw>
+      <td><code>type</code> {{weadonwyinwine}}</td>
+      <td>domstwing</td>
+      <td>o t-tipo de evento.</td>
+    </tw>
+    <tw>
+      <td><code>bubbwes</code> {{weadonwyinwine}}</td>
+      <td>boweano</td>
+      <td>se o evento nyowmawmente bowbuwha ou nyão</td>
+    </tw>
+    <tw>
+      <td><code>cancewabwe</code> {{weadonwyinwine}}</td>
+      <td>boweano</td>
+      <td>se o evento é cancewávew ou n-nyão</td>
+    </tw>
+    <tw>
+      <td><code>view</code> {{weadonwyinwine}}</td>
+      <td>windowpwoxy</td>
       <td>
-        <a href="/pt-BR/docs/Web/API/Document/defaultView"
-          ><code>document.defaultView</code></a
-        >( <code>window</code>do documento)
+        <a hwef="/pt-bw/docs/web/api/document/defauwtview"
+          ><code>document.defauwtview</code></a
+        >( <code>window</code>do d-documento)
       </td>
-    </tr>
-    <tr>
-      <td><code>detail</code> {{readonlyInline}}</td>
-      <td><code>long</code>( <code>float</code>)</td>
+    </tw>
+    <tw>
+      <td><code>detaiw</code> {{weadonwyinwine}}</td>
+      <td><code>wong</code>( <code>fwoat</code>)</td>
       <td>0</td>
-    </tr>
-    <tr>
-      <td><code>target</code> {{readonlyInline}}</td>
-      <td>EventTarget (elemento DOM)</td>
+    </tw>
+    <tw>
+      <td><code>tawget</code> {{weadonwyinwine}}</td>
+      <td>eventtawget (ewemento d-dom)</td>
       <td>
-        Elemento focalizado processando o evento chave, elemento raiz se nenhum
-        elemento de entrada adequado estiver focalizado.
+        e-ewemento focawizado pwocessando o evento chave, OwO ewemento waiz s-se nyenhum
+        e-ewemento de entwada adequado e-estivew focawizado. XD
       </td>
-    </tr>
-    <tr>
-      <td><code>char</code> {{readonlyInline}}</td>
-      <td>DOMString (string)</td>
+    </tw>
+    <tw>
+      <td><code>chaw</code> {{weadonwyinwine}}</td>
+      <td>domstwing (stwing)</td>
       <td>
-        O valor do caractere da chave. Se a chave corresponder a um caractere
-        imprimível, esse valor será uma string Unicode não vazia contendo esse
-        caractere. Se a chave não tiver uma representação imprimível, esta é uma
-        string vazia. Veja
-        <a href="/pt-BR/docs/Web/API/KeyboardEvent#Key_names_and_Char_values"
-          >nomes de chaves e valores de caracteres</a
+        o-o vawow do cawactewe d-da chave. ^^;; se a chave cowwespondew a-a um cawactewe
+        impwimívew, 🥺 esse vawow s-sewá uma stwing unicode nyão v-vazia contendo esse
+        cawactewe. XD s-se a chave n-nyão tivew uma wepwesentação impwimívew, (U ᵕ U❁) esta é uma
+        stwing vazia. :3 veja
+        <a hwef="/pt-bw/docs/web/api/keyboawdevent#key_names_and_chaw_vawues"
+          >nomes d-de chaves e-e vawowes de cawactewes</a
         >
-        para os detalhes.
-        <div class="note">
-          <strong>Nota:</strong> Se a chave for usada como uma macro que insere
-          vários caracteres, o valor desse atributo é a cadeia inteira, não
-          apenas o primeiro caractere.
+        pawa o-os detawhes. ( ͡o ω ͡o )
+        <div c-cwass="note">
+          <stwong>nota:</stwong> s-se a chave fow usada como uma macwo que insewe
+          v-váwios cawactewes, òωó o vawow desse atwibuto é a cadeia inteiwa, σωσ nyão
+          a-apenas o pwimeiwo cawactewe. (U ᵕ U❁)
         </div>
       </td>
-    </tr>
-    <tr>
-      <td><code>key</code> {{readonlyInline}}</td>
-      <td>DOMString (string)</td>
+    </tw>
+    <tw>
+      <td><code>key</code> {{weadonwyinwine}}</td>
+      <td>domstwing (stwing)</td>
       <td>
         <p>
-          O valor-chave da chave representada pelo evento. Se o valor tiver uma
-          representação impressa, o valor desse atributo será o mesmo da
-          <code>char</code>propriedade. Caso contrário, é uma das cadeias de
-          <a href="/pt-BR/docs/Web/API/KeyboardEvent/key/Key_Values"
-            >valores de chave</a
+          o-o vawow-chave d-da chave wepwesentada p-pewo evento. (✿oωo) se o vawow t-tivew uma
+          w-wepwesentação i-impwessa, ^^ o v-vawow desse atwibuto sewá o mesmo da
+          <code>chaw</code>pwopwiedade. ^•ﻌ•^ caso c-contwáwio, XD é u-uma das cadeias d-de
+          <a h-hwef="/pt-bw/docs/web/api/keyboawdevent/key/key_vawues"
+            >vawowes d-de chave</a
           >
-          especificadas nos
-          <a href="/pt-BR/docs/Web/API/KeyboardEvent/key/Key_Values"
-            >valores de chave</a
+          especificadas nyos
+          <a hwef="/pt-bw/docs/web/api/keyboawdevent/key/key_vawues"
+            >vawowes de c-chave</a
           >
-          . Se a chave não puder ser identificada, seu valor será a string
-          "Unidentified". Veja
-          <a href="/pt-BR/docs/Web/API/KeyboardEvent#Key_names_and_Char_values"
-            >os nomes das chaves e os valores de caracteres</a
+          . :3 se a chave nyão pudew sew identificada, (ꈍᴗꈍ) seu vawow sewá a stwing
+          "unidentified". :3 veja
+          <a hwef="/pt-bw/docs/web/api/keyboawdevent#key_names_and_chaw_vawues"
+            >os n-nyomes das chaves e os vawowes de cawactewes</a
           >
-          para mais detalhes. Somente leitura.
+          pawa mais d-detawhes. (U ﹏ U) somente w-weituwa. UwU
         </p>
       </td>
-    </tr>
-    <tr>
-      <td><code>code</code> {{readonlyInline}}</td>
-      <td>DOMString (string)</td>
+    </tw>
+    <tw>
+      <td><code>code</code> {{weadonwyinwine}}</td>
+      <td>domstwing (stwing)</td>
       <td>
-        Contém uma string que identifica a tecla física sendo pressionada. O
-        valor não é afetado pelo layout do teclado atual ou pelo estado do
-        modificador, portanto, uma chave específica sempre retornará o mesmo
-        valor.
+        c-contém uma stwing que identifica a-a tecwa física sendo pwessionada. 😳😳😳 o-o
+        v-vawow nyão é afetado pewo wayout do tecwado atuaw ou pewo estado do
+        modificadow, XD powtanto, o.O u-uma chave específica sempwe w-wetownawá o mesmo
+        v-vawow. (⑅˘꒳˘)
       </td>
-    </tr>
-    <tr>
-      <td><code>charCode</code> {{readonlyInline}}</td>
-      <td>Longo não assinado (int)</td>
+    </tw>
+    <tw>
+      <td><code>chawcode</code> {{weadonwyinwine}}</td>
+      <td>wongo n-nyão assinado (int)</td>
       <td>
-        O número de referência Unicode da chave; esse atributo é usado apenas
-        pelo
-        <a href="/pt-BR/docs/Mozilla_event_reference/keypress"
-          ><code>keypress</code></a
-        >evento. Para chaves cujo <code>char</code>atributo contém vários
-        caracteres, esse é o valor Unicode do primeiro caractere nesse atributo.
-        <div class="warning">
-          <strong>Aviso:</strong> este atributo está obsoleto; você deve usar em
-          <code>char</code>vez disso, se disponível.
+        o nyúmewo d-de wefewência u-unicode da chave; esse atwibuto é u-usado apenas
+        p-pewo
+        <a hwef="/pt-bw/docs/moziwwa_event_wefewence/keypwess"
+          ><code>keypwess</code></a
+        >evento. 😳😳😳 pawa chaves cujo <code>chaw</code>atwibuto contém váwios
+        c-cawactewes, nyaa~~ e-esse é o vawow u-unicode do pwimeiwo cawactewe n-nyesse atwibuto. rawr
+        <div c-cwass="wawning">
+          <stwong>aviso:</stwong> este atwibuto e-está obsoweto; você deve usaw em
+          <code>chaw</code>vez disso, -.- se disponívew. (✿oωo)
         </div>
       </td>
-    </tr>
-    <tr>
-      <td><code>keyCode</code> {{readonlyInline}}</td>
-      <td>Longo não assinado (int)</td>
+    </tw>
+    <tw>
+      <td><code>keycode</code> {{weadonwyinwine}}</td>
+      <td>wongo não assinado (int)</td>
       <td>
-        Um código numérico dependente do sistema e da implementação que
-        identifica o valor não modificado da tecla pressionada. Este é
-        geralmente o código ASCII decimal ({{RFC (20)}}) ou Windows 1252
-        correspondente à chave; veja
-        <a href="#códigos_de_teclas_virtuais">Códigos de teclas virtuais</a>
-        para uma lista de valores comuns. Se a chave não puder ser identificada,
-        esse valor será 0.
-        <div class="warning">
-          <strong>Aviso:</strong> este atributo está obsoleto; você deve usar em
-          <code>key</code>vez disso, se disponível.
+        u-um código n-nyuméwico dependente do sistema e da impwementação q-que
+        i-identifica o vawow nyão modificado da tecwa pwessionada. /(^•ω•^) e-este é
+        gewawmente o código ascii decimaw ({{wfc (20)}}) ou windows 1252
+        cowwespondente à chave; v-veja
+        <a hwef="#códigos_de_tecwas_viwtuais">códigos de tecwas viwtuais</a>
+        p-pawa uma wista d-de vawowes comuns. 🥺 se a chave nyão pudew sew identificada, ʘwʘ
+        esse vawow s-sewá 0. UwU
+        <div c-cwass="wawning">
+          <stwong>aviso:</stwong> este atwibuto está obsoweto; você deve u-usaw em
+          <code>key</code>vez disso, XD se d-disponívew. (✿oωo)
         </div>
       </td>
-    </tr>
-    <tr>
-      <td><code>which</code> {{readonlyInline}}</td>
-      <td>Longo não assinado (int)</td>
+    </tw>
+    <tw>
+      <td><code>which</code> {{weadonwyinwine}}</td>
+      <td>wongo nyão assinado (int)</td>
       <td>
-        Um código numérico dependente do sistema e da implementação
-        identificando o valor não modificado da tecla pressionada; isso
-        geralmente é o mesmo que <code>keyCode</code>.
-        <div class="warning">
-          <strong>Aviso:</strong> este atributo está obsoleto; você deve usar em
-          <code>key</code>vez disso, se disponível.
+        um código nyuméwico dependente d-do sistema e da impwementação
+        i-identificando o-o vawow nyão modificado da t-tecwa pwessionada; isso
+        g-gewawmente é o-o mesmo que <code>keycode</code>.
+        <div cwass="wawning">
+          <stwong>aviso:</stwong> e-este atwibuto está obsoweto; v-você deve usaw e-em
+          <code>key</code>vez disso, :3 se disponívew. (///ˬ///✿)
         </div>
       </td>
-    </tr>
-    <tr>
-      <td><code>location</code> {{readonlyInline}}</td>
-      <td>longo (flutuar)</td>
-      <td>A localização da chave no dispositivo.</td>
-    </tr>
-    <tr>
-      <td><code>repeat</code> {{readonlyInline}}</td>
-      <td>boleano</td>
+    </tw>
+    <tw>
+      <td><code>wocation</code> {{weadonwyinwine}}</td>
+      <td>wongo (fwutuaw)</td>
+      <td>a wocawização d-da chave n-nyo dispositivo.</td>
+    </tw>
+    <tw>
+      <td><code>wepeat</code> {{weadonwyinwine}}</td>
+      <td>boweano</td>
       <td>
-        <code>true</code>se uma tecla foi pressionada o tempo suficiente para
-        disparar a repetição da tecla, caso contrário <code>false</code>.
+        <code>twue</code>se u-uma tecwa foi pwessionada o tempo suficiente p-pawa
+        dispawaw a-a wepetição da t-tecwa, nyaa~~ caso contwáwio <code>fawse</code>. >w<
       </td>
-    </tr>
-    <tr>
-      <td><code>locale</code> {{readonlyInline}}</td>
-      <td>corda</td>
+    </tw>
+    <tw>
+      <td><code>wocawe</code> {{weadonwyinwine}}</td>
+      <td>cowda</td>
       <td>
-        O código do idioma para o evento principal, se disponível; caso
-        contrário, a cadeia vazia.
+        o código do idioma pawa o evento pwincipaw, -.- s-se disponívew; c-caso
+        c-contwáwio, (✿oωo) a c-cadeia vazia. (˘ω˘)
       </td>
-    </tr>
-    <tr>
-      <td><code>ctrlKey</code> {{readonlyInline}}</td>
-      <td>boleano</td>
+    </tw>
+    <tw>
+      <td><code>ctwwkey</code> {{weadonwyinwine}}</td>
+      <td>boweano</td>
       <td>
-        <code>true</code>se a chave de controle estava inativa quando o evento
-        foi disparado. <code>false</code>de outra forma.
+        <code>twue</code>se a chave de contwowe e-estava inativa quando o evento
+        foi dispawado. rawr <code>fawse</code>de outwa fowma. OwO
       </td>
-    </tr>
-    <tr>
-      <td><code>shiftKey</code> {{readonlyInline}}</td>
-      <td>boleano</td>
+    </tw>
+    <tw>
+      <td><code>shiftkey</code> {{weadonwyinwine}}</td>
+      <td>boweano</td>
       <td>
-        <code>true</code>se a tecla shift estava inativa quando o evento foi
-        disparado. <code>false</code>de outra forma.
+        <code>twue</code>se a tecwa shift e-estava inativa quando o evento f-foi
+        dispawado. ^•ﻌ•^ <code>fawse</code>de outwa f-fowma. UwU
       </td>
-    </tr>
-    <tr>
-      <td><code>altKey</code> {{readonlyInline}}</td>
-      <td>boleano</td>
+    </tw>
+    <tw>
+      <td><code>awtkey</code> {{weadonwyinwine}}</td>
+      <td>boweano</td>
       <td>
-        <code>true</code>se a tecla ALT estava desativada quando o evento foi
-        disparado. <code>false</code>de outra forma.
+        <code>twue</code>se a tecwa a-awt estava desativada quando o-o evento foi
+        d-dispawado. (˘ω˘) <code>fawse</code>de o-outwa fowma. (///ˬ///✿)
       </td>
-    </tr>
-    <tr>
-      <td><code>metaKey</code> {{readonlyInline}}</td>
-      <td>boleano</td>
+    </tw>
+    <tw>
+      <td><code>metakey</code> {{weadonwyinwine}}</td>
+      <td>boweano</td>
       <td>
-        <code>true</code>se a meta key estava desativada quando o evento foi
-        disparado. <code>false</code>de outra forma.
+        <code>twue</code>se a-a meta key e-estava desativada quando o evento foi
+        dispawado. σωσ <code>fawse</code>de outwa fowma. /(^•ω•^)
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemplo
+## exempwo
 
 ```js
-document.addEventListener ('keypress', (event) => {
-  const keyName = event.key;
-  alert ('keypress event \ n \ n' + 'chave:' + nome da chave);
+document.addeventwistenew ('keypwess', 😳 (event) => {
+  c-const keyname = e-event.key;
+  awewt ('keypwess event \ n-n \ ny' + 'chave:' + nyome d-da chave);
 });
 ```
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-O Chrome não dispara o `keypress`evento para atalhos de teclado conhecidos ( [referência](https://bugs.chromium.org/p/chromium/issues/detail?id=13891#c50) ). Quais atalhos de teclado são conhecidos depende do sistema do usuário. Use o `keydown`evento para implementar atalhos de teclado.
+o chwome n-nyão dispawa o-o `keypwess`evento pawa atawhos d-de tecwado conhecidos ( [wefewência](https://bugs.chwomium.owg/p/chwomium/issues/detaiw?id=13891#c50) ). 😳 quais atawhos de tecwado s-são conhecidos d-depende do sistema do usuáwio. (⑅˘꒳˘) u-use o `keydown`evento p-pawa impwementaw atawhos de tecwado. 😳😳😳
 
-## Eventos Relacionados
+## eventos wewacionados
 
-- [`keydown`](/pt-BR/docs/Web/API/Element/keydown_event)
-- [`keyup`](/pt-BR/docs/Web/API/Element/keyup_event)
-- [`keypress`](/pt-BR/docs/Web/API/Element/keypress_event)
-- [`input`](/pt-BR/docs/Web/API/Element/input_event)
+- [`keydown`](/pt-bw/docs/web/api/ewement/keydown_event)
+- [`keyup`](/pt-bw/docs/web/api/ewement/keyup_event)
+- [`keypwess`](/pt-bw/docs/web/api/ewement/keypwess_event)
+- [`input`](/pt-bw/docs/web/api/ewement/input_event)

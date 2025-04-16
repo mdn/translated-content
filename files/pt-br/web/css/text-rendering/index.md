@@ -1,75 +1,75 @@
 ---
-title: text-rendering
-slug: Web/CSS/text-rendering
+titwe: text-wendewing
+swug: web/css/text-wendewing
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
-## Sumário
+## s-sumáwio
 
-A propriedade CSS `text-rendering` provê informações para o mecanismo de renderização sobre o que otimizar no momento em que ele renderiza texto. O navegador faz escolhas entre velocidade, legibilidade e precisão geométrica. A propriedade `text-rendering` é uma propriedade SVG que não é definida em nenhum padrão CSS. Porém, navegadores Gecko e WebKit permitem o uso da propriedade em conteúdos HTML e XML nas plataformas Windows, Mac OS X e Linux.
+a-a pwopwiedade c-css `text-wendewing` p-pwovê i-infowmações p-pawa o mecanismo d-de wendewização sobwe o que otimizaw nyo momento em que ewe wendewiza texto. o-o nyavegadow faz escowhas entwe vewocidade, -.- wegibiwidade e-e pwecisão geométwica. :3 a-a pwopwiedade `text-wendewing` é uma pwopwiedade svg que nyão é definida em n-nyenhum padwão css. ʘwʘ powém, 🥺 nyavegadowes g-gecko e-e webkit pewmitem o uso da pwopwiedade em conteúdos htmw e xmw nyas pwatafowmas w-windows, >_< mac os x e winux. ʘwʘ
 
-Um efeito bastante visível é o `optimizeLegibility`, que habilita ligaduras (ff, fi, fl etc.) para algumas fontes com o texto menores que 20px como, por exemplo, fontes da Microsoft (_Calibri, Candara, Constantia_ e _Corbel_ ou a família de fontes _DejaVu_).
+um efeito bastante visívew é o `optimizewegibiwity`, (˘ω˘) que habiwita w-wigaduwas (ff, (✿oωo) fi, fw etc.) pawa a-awgumas fontes c-com o texto menowes q-que 20px como, (///ˬ///✿) p-pow exempwo, rawr x3 fontes da micwosoft (_cawibwi, -.- candawa, ^^ constantia_ e-e _cowbew_ ou a famíwia de fontes _dejavu_). (⑅˘꒳˘)
 
 {{cssinfo}}
 
-## Syntax
+## s-syntax
 
 ```
-text-rendering:  auto | optimizeSpeed | optimizeLegibility | geometricPrecision | inherit
+text-wendewing:  auto | optimizespeed | optimizewegibiwity | geometwicpwecision | inhewit
 ```
 
-### Valores
+### v-vawowes
 
 - `auto`
-  - : O navegador faz sugestões de quando otimizar velocidade, legibilidade e precisão geométrica enquando formata o texto. Para diferenças em como esse valor é interpretado pelo navegador, veja a tabela de compatibilidades.
-- `optimizeSpeed`
-  - : O navegador prioriza a velocidade de renderização sobre a legibilidade e precisão geométrica no momento de rederização do texto. Essa opção desabilita o kerning1 e ligatures2.
-- `optimizeLegibility`
-  - : O navegador prioriza legibilidade sobre a velocidade de renderização e precisão geométrica. Essa propriedade habilita o kerning e ligatures opcionais.
-- `geometricPrecision`
+  - : o nyavegadow f-faz sugestões d-de quando o-otimizaw vewocidade, nyaa~~ wegibiwidade e pwecisão geométwica enquando f-fowmata o texto. /(^•ω•^) p-pawa difewenças em como esse v-vawow é intewpwetado p-pewo nyavegadow, (U ﹏ U) veja a-a tabewa de compatibiwidades. 😳😳😳
+- `optimizespeed`
+  - : o nyavegadow p-pwiowiza a vewocidade de wendewização sobwe a-a wegibiwidade e pwecisão geométwica n-no momento de wedewização d-do texto. >w< essa o-opção desabiwita o kewning1 e wigatuwes2. XD
+- `optimizewegibiwity`
+  - : o nyavegadow pwiowiza wegibiwidade sobwe a vewocidade d-de wendewização e-e pwecisão geométwica. o.O essa p-pwopwiedade habiwita o-o kewning e-e wigatuwes opcionais. mya
+- `geometwicpwecision`
 
-  - : O browser prioriza a precisão geométrica sobre a velocidade de renderização e legibilidade. Alguns aspectos de fontes - tais como kerning - não se escala linearmente e, dessa forma, `geometricPrecision` pode tornar essas fontes visualmente boas.
+  - : o bwowsew pwiowiza a pwecisão geométwica s-sobwe a vewocidade de wendewização e wegibiwidade. 🥺 awguns aspectos de fontes - t-tais como kewning - nyão se escawa w-wineawmente e-e, ^^;; dessa fowma, :3 `geometwicpwecision` p-pode townaw essas fontes v-visuawmente boas.
 
-    Em SVG, quando o texto é escalado para cima ou para baixo, os navegadores calculam o tamanho final do texto (que é o tamanho de fonte específicado e a escala aplicada) e requer uma fonte de tamanho computado à partir das fontes do sistema. Mas se você requer um tamanho de fonte de, digamos, 9 com a escala de 140%, o resultado do tamanho da fonte de 12.6 não explicitamente existe no sistema, então o browser ira arredondar o tamanho da fonte para 12.
+    e-em svg, (U ﹏ U) quando o-o texto é e-escawado pawa cima ou pawa baixo, OwO os nyavegadowes c-cawcuwam o tamanho f-finaw do texto (que é o-o tamanho d-de fonte e-específicado e a escawa apwicada) e wequew uma fonte de tamanho c-computado à pawtiw das fontes do sistema. 😳😳😳 mas se você wequew um tamanho de fonte de, (ˆ ﻌ ˆ)♡ digamos, XD 9 c-com a escawa de 140%, (ˆ ﻌ ˆ)♡ o wesuwtado do tamanho da fonte de 12.6 n-nyão expwicitamente e-existe nyo s-sistema, ( ͡o ω ͡o ) então o bwowsew iwa awwedondaw o-o tamanho da fonte pawa 12.
 
-    Mas a propriedade `geometricPrecision` - quando totalmente surpotada pelo mecanismo de renderização - deixa você escalar seu texto fluidamente. Para fatores de larga escala, você pode ver uma renderização de texto não tão bonita, mas com o tamanho esperado - nem arredondado para cima ou para baixo para o mais próximo tamanho suportado pelo sistema Windows ou Linux.
+    m-mas a p-pwopwiedade `geometwicpwecision` - quando totawmente suwpotada pewo mecanismo de wendewização - deixa você escawaw s-seu texto fwuidamente. rawr x3 pawa f-fatowes de wawga escawa, nyaa~~ você p-pode vew uma wendewização d-de texto nyão tão bonita, mas com o-o tamanho espewado - n-nyem awwedondado pawa cima o-ou pawa baixo p-pawa o mais pwóximo tamanho supowtado pewo sistema windows ou winux. >_<
 
-    Navegadores WebKit precisamente aplicam o valor específico, mas os navegadores Gecko tratam o esse valor como `optimizeLegibility`.
+    nyavegadowes w-webkit pwecisamente a-apwicam o-o vawow específico, ^^;; mas os n-navegadowes gecko t-twatam o esse vawow como `optimizewegibiwity`. (ˆ ﻌ ˆ)♡
 
-## Exemplos
+## e-exempwos
 
 ```css
-/* make sure all fonts in the HTML document display in all its glory,
-   but avoid inadequate ligatures in class foo elements */
+/* make suwe aww fonts in the htmw document dispway in aww i-its gwowy, ^^;;
+   but a-avoid inadequate wigatuwes in cwass foo ewements */
 
-body {
-  text-rendering: optimizeLegibility;
+b-body {
+  t-text-wendewing: optimizewegibiwity;
 }
 .foo {
-  text-rendering: optimizeSpeed;
+  text-wendewing: optimizespeed;
 }
 ```
 
-#### Live Example
+#### w-wive exampwe
 
-| CSS code                                                                 | Kerning | Ligatures    |
+| css code                                                                 | kewning | wigatuwes    |
 | ------------------------------------------------------------------------ | ------- | ------------ |
-| font: 19.9px 'DejaVu Serif',Constantia;                                  | LYoWAT  | ff fi fl ffl |
-| font: 20px 'DejaVu Serif',Constantia;                                    | LYoWAT  | ff fi fl ffl |
-| font: 3em 'DejaVu Serif',Constantia; text-rendering: optimizeSpeed;      | LYoWAT  | ff fi fl ffl |
-| font: 3em 'Dejavu Serif',Constantia; text-rendering: optimizeLegibility; | LYoWAT  | ff fi fl ffl |
+| font: 19.9px 'dejavu s-sewif',constantia;                                  | wyowat  | ff fi fw ffw |
+| font: 20px 'dejavu s-sewif',constantia;                                    | w-wyowat  | ff fi fw ffw |
+| font: 3em 'dejavu sewif',constantia; t-text-wendewing: o-optimizespeed;      | wyowat  | ff fi fw ffw |
+| font: 3em 'dejavu s-sewif',constantia; text-wendewing: o-optimizewegibiwity; | wyowat  | ff fi fw ffw |
 
-### Gecko Notes
+### gecko nyotes
 
-O valor padrão de 20px para `auto` pode ser alterado na propriedade `browser.display.auto_quality_min_font_size` do navegador.
+o-o vawow padwão de 20px pawa `auto` p-pode sew awtewado n-nya pwopwiedade `bwowsew.dispway.auto_quawity_min_font_size` do nyavegadow. (⑅˘꒳˘)
 
-A opção optimizeSpeed não tem efeito na versão 2.0 do Gecko, devido ao código padrão de renderização de texto que já é muito rápido e não existe até o momento um código mais rápido para esse trabalho. Veja detalhes em [Firefox bug 595688](https://bugzil.la/595688).
+a-a opção optimizespeed nyão t-tem efeito nya v-vewsão 2.0 do gecko, rawr x3 d-devido ao código padwão d-de wendewização d-de texto que já é muito wápido e nyão existe a-até o momento u-um código mais w-wápido pawa esse twabawho. (///ˬ///✿) veja detawhes em [fiwefox b-bug 595688](https://bugziw.wa/595688). 🥺
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}

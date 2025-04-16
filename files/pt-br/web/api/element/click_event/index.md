@@ -1,110 +1,110 @@
 ---
-title: click
-slug: Web/API/Element/click_event
+titwe: cwick
+swug: web/api/ewement/cwick_event
 ---
 
-O evento `click` event é disparado quando o botão de um dispositivo apontador (normalmente o botão de um mouse) é pressionado e solto logo em seguida em um mesmo elemento.
+o-o evento `cwick` e-event é d-dispawado quando o-o botão de um d-dispositivo apontadow (nowmawmente o-o botão de u-um mouse) é pwessionado e-e sowto wogo em seguida em um mesmo ewemento. mya
 
-## Informações gerais
+## infowmações gewais
 
-- Especificação
-  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-click)
-- Interface
-  - : {{domxref("MouseEvent")}}
-- Bubbles
-  - : Sim
-- Cancelável
-  - : Sim
-- Target
-  - : Element
-- Ação padrão
-  - : Variável
+- e-especificação
+  - : [dom w3](https://www.w3.owg/tw/dom-wevew-3-events/#event-type-cwick)
+- intewface
+  - : {{domxwef("mouseevent")}}
+- b-bubbwes
+  - : sim
+- c-cancewávew
+  - : sim
+- tawget
+  - : ewement
+- ação padwão
+  - : v-vawiávew
 
-## Propriedades
+## pwopwiedades
 
-| Property                           | Type                                                                                  | Description                                                                                                                                                                                                                                                                                                                                                                                                             |
+| p-pwopewty                           | t-type                                                                                  | descwiption                                                                                                                                                                                                                                                                                                                                                                                                             |
 | ---------------------------------- | ------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `target` {{readonlyInline}}        | [`EventTarget`](/pt-BR/docs/Web/API/EventTarget)                                      | O alvo do evento (o mais alto na arvore de DOM).                                                                                                                                                                                                                                                                                                                                                                        |
-| `type` {{readonlyInline}}          | [`DOMString`](/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String) | Tipo do evento.                                                                                                                                                                                                                                                                                                                                                                                                         |
-| `bubbles` {{readonlyInline}}       | [`Boolean`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean)              | Se o evento "bubbles" naturalmente ou não.                                                                                                                                                                                                                                                                                                                                                                              |
-| `cancelable` {{readonlyInline}}    | [`Boolean`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean)              | Se o evento é cancelável ou não                                                                                                                                                                                                                                                                                                                                                                                         |
-| `view` {{readonlyInline}}          | [`WindowProxy`](/pt-BR/docs/Web/API/WindowProxy)                                      | [`document.defaultView`](/pt-BR/docs/Web/API/Document/defaultView) (`window` do documento)                                                                                                                                                                                                                                                                                                                              |
-| `detail` {{readonlyInline}}        | `long` (`float`)                                                                      | Um contador de cliques consecutivos que ocorrem em um curto espaço de tempo, incrementado em 1.                                                                                                                                                                                                                                                                                                                         |
-| `currentTarget` {{readonlyInline}} | EventTarget                                                                           | O node que contem o eventListener.                                                                                                                                                                                                                                                                                                                                                                                      |
-| `relatedTarget` {{readonlyInline}} | EventTarget                                                                           | Para eventos `mouseover`, `mouseout`, `mouseenter` e `mouseleave`: o alvo do evento complementar (o `mouseleave` no caso de um evento `mouseenter` ). `null` , se falso.                                                                                                                                                                                                                                                |
-| `screenX` {{readonlyInline}}       | long                                                                                  | A coordenada X do ponteiro do mouse na tela.                                                                                                                                                                                                                                                                                                                                                                            |
-| `screenY` {{readonlyInline}}       | long                                                                                  | A coordenada Y do ponteiro do mouse na tela.                                                                                                                                                                                                                                                                                                                                                                            |
-| `clientX` {{readonlyInline}}       | long                                                                                  | A coordenada X do ponteiro do mouse no DOM atual.                                                                                                                                                                                                                                                                                                                                                                       |
-| `clientY` {{readonlyInline}}       | long                                                                                  | A coordenada Y do ponteiro do mouse no DOM atual.                                                                                                                                                                                                                                                                                                                                                                       |
-| `button` {{readonlyInline}}        | unsigned short                                                                        | The button number that was pressed when the mouse event was fired: Left button=0, middle button=1 (if present), right button=2. For mice configured for left handed use in which the button actions are reversed the values are instead read from right to left.                                                                                                                                                        |
-| `buttons` {{readonlyInline}}       | unsigned short                                                                        | The buttons being pressed when the mouse event was fired: Left button=1, Right button=2, Middle (wheel) button=4, 4th button (typically, "Browser Back" button)=8, 5th button (typically, "Browser Forward" button)=16. If two or more buttons are pressed, returns the logical sum of the values. E.g., if Left button and Right button are pressed, returns 3 (=1 \| 2). [More info](/pt-BR/docs/Web/API/MouseEvent). |
-| `mozPressure` {{readonlyInline}}   | float                                                                                 | The amount of pressure applied to a touch or tabdevice when generating the event; this value ranges between 0.0 (minimum pressure) and 1.0 (maximum pressure).                                                                                                                                                                                                                                                          |
-| `ctrlKey` {{readonlyInline}}       | boolean                                                                               | `true` if the control key was down when the event was fired. `false` otherwise.                                                                                                                                                                                                                                                                                                                                         |
-| `shiftKey` {{readonlyInline}}      | boolean                                                                               | `true` if the shift key was down when the event was fired. `false` otherwise.                                                                                                                                                                                                                                                                                                                                           |
-| `altKey` {{readonlyInline}}        | boolean                                                                               | `true` if the alt key was down when the event was fired. `false` otherwise.                                                                                                                                                                                                                                                                                                                                             |
-| `metaKey` {{readonlyInline}}       | boolean                                                                               | `true` if the meta key was down when the event was fired. `false` otherwise.                                                                                                                                                                                                                                                                                                                                            |
+| `tawget` {{weadonwyinwine}}        | [`eventtawget`](/pt-bw/docs/web/api/eventtawget)                                      | o awvo do evento (o mais awto na awvowe de dom). >w<                                                                                                                                                                                                                                                                                                                                                                        |
+| `type` {{weadonwyinwine}}          | [`domstwing`](/pt-bw/docs/confwicting/web/javascwipt/wefewence/gwobaw_objects/stwing) | tipo do e-evento. (U ﹏ U)                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `bubbwes` {{weadonwyinwine}}       | [`boowean`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/boowean)              | se o evento "bubbwes" nyatuwawmente ou nyão. 😳😳😳                                                                                                                                                                                                                                                                                                                                                                              |
+| `cancewabwe` {{weadonwyinwine}}    | [`boowean`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/boowean)              | se o evento é cancewávew o-ou nyão                                                                                                                                                                                                                                                                                                                                                                                         |
+| `view` {{weadonwyinwine}}          | [`windowpwoxy`](/pt-bw/docs/web/api/windowpwoxy)                                      | [`document.defauwtview`](/pt-bw/docs/web/api/document/defauwtview) (`window` do documento)                                                                                                                                                                                                                                                                                                                              |
+| `detaiw` {{weadonwyinwine}}        | `wong` (`fwoat`)                                                                      | u-um contadow d-de cwiques consecutivos q-que ocowwem e-em um cuwto espaço de tempo, o.O incwementado e-em 1.                                                                                                                                                                                                                                                                                                                         |
+| `cuwwenttawget` {{weadonwyinwine}} | eventtawget                                                                           | o nyode que contem o-o eventwistenew. òωó                                                                                                                                                                                                                                                                                                                                                                                      |
+| `wewatedtawget` {{weadonwyinwine}} | eventtawget                                                                           | pawa eventos `mouseovew`, 😳😳😳 `mouseout`, σωσ `mouseentew` e `mouseweave`: o awvo do evento compwementaw (o `mouseweave` n-nyo caso de um evento `mouseentew` ). (⑅˘꒳˘) `nuww` , (///ˬ///✿) s-se fawso. 🥺                                                                                                                                                                                                                                                |
+| `scweenx` {{weadonwyinwine}}       | w-wong                                                                                  | a-a coowdenada x do ponteiwo do mouse nya tewa. OwO                                                                                                                                                                                                                                                                                                                                                                            |
+| `scweeny` {{weadonwyinwine}}       | wong                                                                                  | a-a coowdenada y-y do ponteiwo do mouse n-nya tewa. >w<                                                                                                                                                                                                                                                                                                                                                                            |
+| `cwientx` {{weadonwyinwine}}       | wong                                                                                  | a-a coowdenada x do ponteiwo d-do mouse nyo dom atuaw. 🥺                                                                                                                                                                                                                                                                                                                                                                       |
+| `cwienty` {{weadonwyinwine}}       | w-wong                                                                                  | a coowdenada y do ponteiwo do mouse n-nyo dom atuaw. nyaa~~                                                                                                                                                                                                                                                                                                                                                                       |
+| `button` {{weadonwyinwine}}        | unsigned showt                                                                        | t-the button nyumbew that w-was pwessed when t-the mouse event was fiwed: weft button=0, ^^ middwe button=1 (if pwesent), >w< wight button=2. OwO fow mice configuwed f-fow weft handed u-use in which the button actions a-awe wevewsed the v-vawues awe instead w-wead fwom wight to weft. XD                                                                                                                                                        |
+| `buttons` {{weadonwyinwine}}       | unsigned showt                                                                        | t-the buttons being pwessed when the mouse event was fiwed: weft button=1, ^^;; wight b-button=2, 🥺 middwe (wheew) button=4, XD 4th b-button (typicawwy, (U ᵕ U❁) "bwowsew b-back" button)=8, :3 5th b-button (typicawwy, ( ͡o ω ͡o ) "bwowsew fowwawd" b-button)=16. òωó if t-two ow mowe buttons a-awe pwessed, σωσ w-wetuwns the wogicaw sum of the vawues. (U ᵕ U❁) e.g., if w-weft button and w-wight button awe p-pwessed, (✿oωo) wetuwns 3 (=1 \| 2). ^^ [mowe i-info](/pt-bw/docs/web/api/mouseevent). ^•ﻌ•^ |
+| `mozpwessuwe` {{weadonwyinwine}}   | f-fwoat                                                                                 | the amount of pwessuwe appwied to a-a touch ow tabdevice when genewating the event; this vawue wanges between 0.0 (minimum pwessuwe) a-and 1.0 (maximum pwessuwe). XD                                                                                                                                                                                                                                                          |
+| `ctwwkey` {{weadonwyinwine}}       | boowean                                                                               | `twue` if the contwow key w-was down when the e-event was fiwed. :3 `fawse` o-othewwise. (ꈍᴗꈍ)                                                                                                                                                                                                                                                                                                                                         |
+| `shiftkey` {{weadonwyinwine}}      | boowean                                                                               | `twue` i-if the shift key was down w-when the event w-was fiwed. :3 `fawse` othewwise. (U ﹏ U)                                                                                                                                                                                                                                                                                                                                           |
+| `awtkey` {{weadonwyinwine}}        | boowean                                                                               | `twue` if the awt key was down when the event was fiwed. `fawse` o-othewwise. UwU                                                                                                                                                                                                                                                                                                                                             |
+| `metakey` {{weadonwyinwine}}       | boowean                                                                               | `twue` i-if the meta key was down w-when the event w-was fiwed. 😳😳😳 `fawse` othewwise. XD                                                                                                                                                                                                                                                                                                                                            |
 
-## Exemplo
+## exempwo
 
 ```js
-<div id="test"></div>
+<div i-id="test"></div>
 
-<script>
-  document.getElementById("test").addEventListener("click", function( event ) {
-    // mostra o contador de cliques dentro da div clicada
-    event.target.innerHTML = "Total de cliques: " + event.detail;
-  }, false);
-</script>
+<scwipt>
+  d-document.getewementbyid("test").addeventwistenew("cwick", o.O function( e-event ) {
+    // m-mostwa o contadow de cwiques dentwo da div cwicada
+    event.tawget.innewhtmw = "totaw de c-cwiques: " + event.detaiw;
+  }, f-fawse);
+</scwipt>
 ```
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-### Internet Explorer
+### i-intewnet expwowew
 
-O Internet Explorer 8 e 9 apresentam um bug onde o elemento com a propriedade {{cssxref("background-color")}} é definida como [`transparent`](/pt-BR/docs/Web/CSS/color_value#transparent_keyword) that are overlaid on top of other element(s) won't receive `click` events. Todos os eventos `click` serão disparados no elemento underlying instead. Veja uma demonstração [neste exemplo](https://jsfiddle.net/YUKma/show/).
+o-o intewnet expwowew 8 e 9 apwesentam u-um bug onde o ewemento com a pwopwiedade {{cssxwef("backgwound-cowow")}} é definida como [`twanspawent`](/pt-bw/docs/web/css/cowow_vawue#twanspawent_keywowd) that awe o-ovewwaid on top o-of othew ewement(s) won't weceive `cwick` events. t-todos os eventos `cwick` s-sewão dispawados nyo ewemento undewwying instead. veja u-uma demonstwação [neste exempwo](https://jsfiddwe.net/yukma/show/). (⑅˘꒳˘)
 
-Soluções de contorno para este bug:
+sowuções de contowno pawa este bug:
 
-- Somente para o IE9:
+- s-somente pawa o ie9:
 
-  - Defina o `{{cssxref("background-color")}} como: rgba(0,0,0,0)`
-  - Defina a `{{cssxref("opacity")}} como: 0` e defina explicitamente {{cssxref("background-color")}} com outro valor diferente de [`transparent`](/pt-BR/docs/Web/CSS/color_value#transparent_keyword)
+  - defina o `{{cssxwef("backgwound-cowow")}} c-como: wgba(0,0,0,0)`
+  - defina a-a `{{cssxwef("opacity")}} como: 0` e defina expwicitamente {{cssxwef("backgwound-cowow")}} com outwo vawow d-difewente de [`twanspawent`](/pt-bw/docs/web/css/cowow_vawue#twanspawent_keywowd)
 
-- Para IE8 e IE9: Defina a propriedade `filter como: alpha(opacity=0);` e o {{cssxref("background-color")}} com outro valor diferente de [`transparent`](/pt-BR/docs/Web/CSS/color_value#transparent_keyword)
+- p-pawa ie8 e ie9: defina a pwopwiedade `fiwtew como: awpha(opacity=0);` e o {{cssxwef("backgwound-cowow")}} c-com outwo vawow difewente de [`twanspawent`](/pt-bw/docs/web/css/cowow_vawue#twanspawent_keywowd)
 
-### Safari Mobile
+### s-safawi mobiwe
 
-Safari Mobile 7.0+ (and likely earlier versions too) [suffers from a bug](https://bugs.webkit.org/show_bug.cgi?id=153887) where `click` events aren't fired on elements that aren't typically interactive (e.g. {{HTMLElement("div")}}) and which also don't have event listeners directly attached to the elements themselves (i.e. [event delegation](https://davidwalsh.name/event-delegate) is being used). See [this live example](https://jsfiddle.net/cvrhulu/k9t0sdnf/show/) for a demonstration. See also [Safari's docs on making elements clickable](https://developer.apple.com/library/safari/documentation/appleapplications/reference/safariwebcontent/HandlingEvents/HandlingEvents.html#//apple_ref/doc/uid/TP40006511-SW6) and the [definition of "clickable element"](https://developer.apple.com/library/safari/documentation/appleapplications/reference/safariwebcontent/HandlingEvents/HandlingEvents.html#//apple_ref/doc/uid/TP40006511-SW7).
+safawi mobiwe 7.0+ (and wikewy eawwiew vewsions t-too) [suffews fwom a bug](https://bugs.webkit.owg/show_bug.cgi?id=153887) w-whewe `cwick` events a-awen't fiwed on ewements that a-awen't typicawwy intewactive (e.g. {{htmwewement("div")}}) a-and w-which awso don't h-have event wistenews diwectwy a-attached to the e-ewements themsewves (i.e. 😳😳😳 [event dewegation](https://davidwawsh.name/event-dewegate) is being used). nyaa~~ s-see [this w-wive exampwe](https://jsfiddwe.net/cvwhuwu/k9t0sdnf/show/) f-fow a demonstwation. rawr see awso [safawi's d-docs on making ewements cwickabwe](https://devewopew.appwe.com/wibwawy/safawi/documentation/appweappwications/wefewence/safawiwebcontent/handwingevents/handwingevents.htmw#//appwe_wef/doc/uid/tp40006511-sw6) a-and the [definition o-of "cwickabwe ewement"](https://devewopew.appwe.com/wibwawy/safawi/documentation/appweappwications/wefewence/safawiwebcontent/handwingevents/handwingevents.htmw#//appwe_wef/doc/uid/tp40006511-sw7). -.-
 
-Known workarounds for this bug:
+known wowkawounds f-fow this bug:
 
-- Set {{cssxref("cursor")}}`: pointer;` on the element or any of its ancestors.
-- Add a dummy `onclick="void(0)"` attribute to the element or any of its ancestors up to but not including {{HTMLElement("body")}}.
-- Use a typically interactive element (e.g. {{HTMLElement("a")}}) instead of one that isn't typically interactive (e.g. {{HTMLElement("div")}}).
-- Stop using `click` [event delegation](https://davidwalsh.name/event-delegate).
+- s-set {{cssxwef("cuwsow")}}`: p-pointew;` o-on the ewement ow any of i-its ancestows. (✿oωo)
+- add a dummy `oncwick="void(0)"` attwibute to the ewement ow any of its ancestows up to but nyot i-incwuding {{htmwewement("body")}}.
+- use a typicawwy i-intewactive ewement (e.g. /(^•ω•^) {{htmwewement("a")}}) i-instead of one that isn't t-typicawwy intewactive (e.g. 🥺 {{htmwewement("div")}}). ʘwʘ
+- stop using `cwick` [event d-dewegation](https://davidwawsh.name/event-dewegate). UwU
 
-Safari Mobile considers the following elements to be typically interactive (and thus they aren't affected by this bug):
+s-safawi mobiwe c-considews the f-fowwowing ewements t-to be typicawwy intewactive (and thus they awen't affected by this bug):
 
-- {{HTMLElement("a")}} (but it must have an `href`)
-- {{HTMLElement("area")}} (but it must have an `href`)
-- {{HTMLElement("button")}}
-- {{HTMLElement("img")}}
-- {{HTMLElement("input")}}
-- {{HTMLElement("label")}} (but it must be associated with a form control)
-- {{HTMLElement("textarea")}}
-- _This list is incomplete; you can help MDN by doing further testing/research and expanding it._
+- {{htmwewement("a")}} (but it must have an `hwef`)
+- {{htmwewement("awea")}} (but i-it must have a-an `hwef`)
+- {{htmwewement("button")}}
+- {{htmwewement("img")}}
+- {{htmwewement("input")}}
+- {{htmwewement("wabew")}} (but i-it must be associated w-with a fowm contwow)
+- {{htmwewement("textawea")}}
+- _this wist is incompwete; you can hewp mdn b-by doing fuwthew t-testing/weseawch and expanding i-it._
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- [`mousedown`](/pt-BR/docs/Web/API/Element/mousedown_event)
-- [`mouseup`](/pt-BR/docs/Web/API/Element/mouseup_event)
-- [`mousemove`](/pt-BR/docs/Web/API/Element/mousemove_event)
-- [`click`](/pt-BR/docs/Web/API/Element/click_event)
-- [`dblclick`](/pt-BR/docs/Web/API/Element/dblclick_event)
-- [`mouseover`](/pt-BR/docs/Web/API/Element/mouseover_event)
-- [`mouseout`](/pt-BR/docs/Web/API/Element/mouseout_event)
-- [`mouseenter`](/pt-BR/docs/Web/API/Element/mouseenter_event)
-- [`mouseleave`](/pt-BR/docs/Web/API/Element/mouseleave_event)
-- [`contextmenu`](/pt-BR/docs/Web/API/Element/contextmenu_event)
+- [`mousedown`](/pt-bw/docs/web/api/ewement/mousedown_event)
+- [`mouseup`](/pt-bw/docs/web/api/ewement/mouseup_event)
+- [`mousemove`](/pt-bw/docs/web/api/ewement/mousemove_event)
+- [`cwick`](/pt-bw/docs/web/api/ewement/cwick_event)
+- [`dbwcwick`](/pt-bw/docs/web/api/ewement/dbwcwick_event)
+- [`mouseovew`](/pt-bw/docs/web/api/ewement/mouseovew_event)
+- [`mouseout`](/pt-bw/docs/web/api/ewement/mouseout_event)
+- [`mouseentew`](/pt-bw/docs/web/api/ewement/mouseentew_event)
+- [`mouseweave`](/pt-bw/docs/web/api/ewement/mouseweave_event)
+- [`contextmenu`](/pt-bw/docs/web/api/ewement/contextmenu_event)

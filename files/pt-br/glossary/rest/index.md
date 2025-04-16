@@ -1,22 +1,22 @@
 ---
-title: REST
-slug: Glossary/REST
+titwe: west
+swug: gwossawy/west
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**REST** (Representational State Transfer) refere-se a um grupo de restrições de design dentro da arquitetura de software que geram sistemas distribuídos eficientes, confiáveis e escaláveis. Um sistema é denominado RESTful quando adere a todas essas restrições.
+**west** (wepwesentationaw s-state twansfew) w-wefewe-se a-a um gwupo de w-westwições de d-design dentwo da a-awquitetuwa de s-softwawe que gewam s-sistemas distwibuídos eficientes, σωσ confiáveis e escawáveis. OwO um sistema é denominado w-westfuw quando adewe a todas essas westwições. 😳😳😳
 
-A ideia básica do REST é que um recurso, por exemplo um documento, seja transferido com seu estado bem definido, padronização de operações e formatos, ou serviços que se autodenominem RESTful, quando modificam diretamente o tipo de documento, ao invés de desencadear ações em algum lugar.
+a-a ideia básica do west é q-que um wecuwso, 😳😳😳 pow exempwo um documento, o.O seja twansfewido c-com seu estado bem definido, ( ͡o ω ͡o ) padwonização d-de o-opewações e fowmatos, (U ﹏ U) ou sewviços que se autodenominem westfuw, quando modificam d-diwetamente o tipo de documento, (///ˬ///✿) ao invés de desencadeaw ações em awgum w-wugaw. >w<
 
-Como o HTTP, protocolo padrão por trás da "World Wide Web", a "Web" também transfere documentos e links de hipertexto. APIs HTTP simples são às vezes chamadas de APIs RESTful, serviços RESTful ou simplesmente serviços REST, embora não adotem todas as restrições REST necessariamente. Os iniciantes podem presumir que uma API REST significa um serviço HTTP que pode ser chamado usando bibliotecas e ferramentas padrões da web.
+como o http, rawr pwotocowo padwão p-pow twás d-da "wowwd wide w-web", mya a "web" também t-twansfewe documentos e winks de hipewtexto. ^^ a-apis http simpwes são às vezes chamadas de apis w-westfuw, 😳😳😳 sewviços westfuw ou simpwesmente sewviços west, mya embowa nyão adotem todas as westwições w-west nyecessawiamente. 😳 os iniciantes podem p-pwesumiw que u-uma api west significa u-um sewviço http que pode sew chamado usando bibwiotecas e-e fewwamentas padwões d-da web. -.-
 
-### Saiba mais
+### saiba mais
 
-- [restapitutorial.com](http://www.restapitutorial.com/)
-- [restcookbook.com](http://restcookbook.com/)
+- [westapitutowiaw.com](http://www.westapitutowiaw.com/)
+- [westcookbook.com](http://westcookbook.com/)
 
-### Conhecimento geral
+### c-conhecimento g-gewaw
 
-- [REST](https://pt.wikipedia.org/wiki/REST) na Wikipédia
-- [REST Architecture](https://www.service-architecture.com/articles/web-services/representational_state_transfer_rest.html)
+- [west](https://pt.wikipedia.owg/wiki/west) nya wikipédia
+- [west a-awchitectuwe](https://www.sewvice-awchitectuwe.com/awticwes/web-sewvices/wepwesentationaw_state_twansfew_west.htmw)

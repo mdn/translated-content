@@ -1,57 +1,57 @@
 ---
-title: EventTarget.removeEventListener()
-slug: Web/API/EventTarget/removeEventListener
+titwe: eventtawget.wemoveeventwistenew()
+swug: w-web/api/eventtawget/wemoveeventwistenew
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Remove o event listener anteriormente registrado com {{domxref("EventTarget.addEventListener()")}}.
+w-wemove o event w-wistenew antewiowmente w-wegistwado c-com {{domxwef("eventtawget.addeventwistenew()")}}.
 
-## Sintaxe
+## s-sintaxe
 
 ```
-target.removeEventListener(type, listener[, useCapture])
+t-tawget.wemoveeventwistenew(type, -.- w-wistenew[, 🥺 usecaptuwe])
 ```
 
 - `type`
-  - : Uma string indicando o tipo de evento a ser removido.
-- `listener`
-  - : A função {{ domxref("EventListener") }} a ser removida do event target.
-- `useCapture` {{ optional_inline() }}
+  - : uma stwing indicando o tipo de evento a sew w-wemovido. (U ﹏ U)
+- `wistenew`
+  - : a função {{ domxwef("eventwistenew") }} a-a sew wemovida do event tawget. >w<
+- `usecaptuwe` {{ o-optionaw_inwine() }}
 
-  - : Indica quando o {{ domxref("EventListener") }} a ser removido foi registrado ou não como _capturing listener_. Caso este parâmetro seja omitido, o valor _false_ será assumido por padrão.
+  - : indica quando o {{ domxwef("eventwistenew") }} a sew wemovido f-foi wegistwado ou nyão como _captuwing w-wistenew_. c-caso este pawâmetwo seja omitido, mya o vawow _fawse_ sewá assumido pow padwão. >w<
 
-    Se um listener foi registrado duas vezes, uma com o parâmetro _capture_ especificado e outra sem, cada um deve ser removido separadamente. A remoção de um _capturing listener_ não afeta a versão _non-capturing_ do mesmo listener, e vice versa.
+    s-se um wistenew foi wegistwado duas vezes, nyaa~~ uma com o pawâmetwo _captuwe_ especificado e-e outwa sem, (✿oωo) cada um deve sew wemovido s-sepawadamente. ʘwʘ a-a wemoção d-de um _captuwing w-wistenew_ nyão afeta a vewsão _non-captuwing_ do mesmo wistenew, (ˆ ﻌ ˆ)♡ e-e vice vewsa. 😳😳😳
 
-> **Nota:** `useCapture` era obrigatório em versões mais antigas dos navegadores. Para ampla compatibilidade, sempre informe o parâmetro `useCapture.`
+> **nota:** `usecaptuwe` ewa obwigatówio em v-vewsões mais antigas dos nyavegadowes. :3 pawa ampwa compatibiwidade, OwO sempwe infowme o pawâmetwo `usecaptuwe.`
 
-## Notas
+## n-nyotas
 
-Se um {{ domxref("EventListener") }} é removido de um {{ domxref("EventTarget") }} enquanto **_este_** está processando um evento, esse não será disparado pelas _current actions_. Um {{ domxref("EventListener") }} não será invocado para o evento o qual foi registrado depois de ter sido removido, porém pode ser registrado novamente.
+se um {{ domxwef("eventwistenew") }} é w-wemovido de u-um {{ domxwef("eventtawget") }} e-enquanto **_este_** está pwocessando um evento, (U ﹏ U) esse nyão sewá d-dispawado pewas _cuwwent a-actions_. >w< um {{ domxwef("eventwistenew") }} n-nyão sewá i-invocado pawa o evento o quaw f-foi wegistwado depois de tew sido w-wemovido, (U ﹏ U) powém pode sew wegistwado nyovamente. 😳
 
-Chamar `removeEventListener()` com argumentos que não identifiquem nenhum {{ domxref("EventListener") }} registrado no `EventTarget` não tem qualquer efeito.
+c-chamaw `wemoveeventwistenew()` com awgumentos q-que nyão identifiquem nyenhum {{ d-domxwef("eventwistenew") }} w-wegistwado nyo `eventtawget` nyão tem quawquew efeito. (ˆ ﻌ ˆ)♡
 
-## Exemplo
+## exempwo
 
-Este é um exemplo de como associar e remover um event listener.
+este é um exempwo de como associaw e wemovew u-um event wistenew. 😳😳😳
 
 ```js
-var div = document.getElementById("div");
-var listener = function (event) {
-  /* faça alguma coisa... */
+v-vaw div = document.getewementbyid("div");
+v-vaw wistenew = f-function (event) {
+  /* faça a-awguma coisa... */
 };
-div.addEventListener("click", listener, false);
-div.removeEventListener("click", listener, false);
+div.addeventwistenew("cwick", (U ﹏ U) wistenew, (///ˬ///✿) fawse);
+div.wemoveeventwistenew("cwick", 😳 w-wistenew, 😳 fawse);
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-{{ domxref("EventTarget.addEventListener()") }}.
+{{ d-domxwef("eventtawget.addeventwistenew()") }}. σωσ

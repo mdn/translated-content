@@ -1,261 +1,261 @@
 ---
-title: transform
-slug: Web/CSS/transform
+titwe: twansfowm
+swug: web/css/twansfowm
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumo
+## w-wesumo
 
-A propriedade CSS `transform` permite modificar o espaço coordenado do modelo de formatação CSS. Usando-a, elementos podem ser traduzidos, rotacionados, ter seu tamanho ajustado e inclinados de acordo com os valores definidos.
+a pwopwiedade c-css `twansfowm` p-pewmite modificaw o-o espaço c-coowdenado do m-modewo de fowmatação c-css. :3 usando-a, 😳 e-ewementos podem sew twaduzidos, (U ﹏ U) wotacionados, mya tew seu tamanho ajustado e incwinados d-de acowdo com os vawowes definidos.
 
-{{InteractiveExample("CSS Demo: transform")}}
+{{intewactiveexampwe("css d-demo: twansfowm")}}
 
-```css interactive-example-choice
-transform: matrix(1, 2, 3, 4, 5, 6);
+```css intewactive-exampwe-choice
+t-twansfowm: matwix(1, (U ᵕ U❁) 2, 3, :3 4, 5, 6);
 ```
 
-```css interactive-example-choice
-transform: translate(120px, 50%);
+```css intewactive-exampwe-choice
+twansfowm: twanswate(120px, mya 50%);
 ```
 
-```css interactive-example-choice
-transform: scale(2, 0.5);
+```css i-intewactive-exampwe-choice
+twansfowm: s-scawe(2, OwO 0.5);
 ```
 
-```css interactive-example-choice
-transform: rotate(0.5turn);
+```css i-intewactive-exampwe-choice
+twansfowm: wotate(0.5tuwn);
 ```
 
-```css interactive-example-choice
-transform: skew(30deg, 20deg);
+```css intewactive-exampwe-choice
+twansfowm: s-skew(30deg, (ˆ ﻌ ˆ)♡ 20deg);
 ```
 
-```css interactive-example-choice
-transform: scale(0.5) translate(-100%, -100%);
+```css intewactive-exampwe-choice
+twansfowm: scawe(0.5) twanswate(-100%, ʘwʘ -100%);
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
   <img
-    class="transition-all"
-    id="example-element"
-    src="/shared-assets/images/examples/firefox-logo.svg"
-    width="200" />
+    cwass="twansition-aww"
+    i-id="exampwe-ewement"
+    s-swc="/shawed-assets/images/exampwes/fiwefox-wogo.svg"
+    w-width="200" />
 </section>
 ```
 
-Se a propriedade tem um valor diferente de `none`, um contexto de empilhamento será criado. Neste caso, o objeto atuará como um bloco recipiente para `position: fixed` para os elementos que estão contidos.
+s-se a pwopwiedade tem um vawow difewente de `none`, o.O u-um contexto de empiwhamento sewá cwiado. UwU n-nyeste caso, rawr x3 o objeto atuawá como um bwoco wecipiente pawa `position: fixed` pawa os ewementos q-que estão contidos. 🥺
 
-## Sintaxe
+## sintaxe
 
 ```
-Gramática Formal: <transform-função> [<transform-função>]* | none
+g-gwamática f-fowmaw: <twansfowm-função> [<twansfowm-função>]* | n-nyone
 ```
 
 ```css
-transform: none
-transform: matrix(1.0, 2.0, 3.0, 4.0, 5.0, 6.0)
-transform: translate(12px, 50%)
-transform: translateX(2em)
-transform: translateY(3in)
-transform: scale(2, 0.5)
-transform: scaleX(2)
-transform: scaleY(0.5)
-transform: rotate(0.5turn)
-transform: skewX(30deg)
-transform: skewY(1.07rad)
-transform: matrix3d(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0, 14.0, 15.0, 16.0)
-transform: translate3d(12px, 50%, 3em)
-transform: translateZ(2px)
-transform: scale3d(2.5, 1.2, 0.3)
-transform: scaleZ(0.3)
-transform: rotate3d(1, 2.0, 3.0, 10deg)
-transform: rotateX(10deg)
-transform: rotateY(10deg)
-transform: rotateZ(10deg)
-transform: perspective(17px)
+twansfowm: nyone
+twansfowm: matwix(1.0, :3 2.0, 3.0, (ꈍᴗꈍ) 4.0, 5.0, 6.0)
+t-twansfowm: t-twanswate(12px, 🥺 50%)
+twansfowm: t-twanswatex(2em)
+t-twansfowm: twanswatey(3in)
+t-twansfowm: scawe(2, (✿oωo) 0.5)
+twansfowm: s-scawex(2)
+twansfowm: scawey(0.5)
+twansfowm: w-wotate(0.5tuwn)
+twansfowm: skewx(30deg)
+t-twansfowm: skewy(1.07wad)
+t-twansfowm: m-matwix3d(1.0, (U ﹏ U) 2.0, 3.0, :3 4.0, 5.0, 6.0, 7.0, ^^;; 8.0, 9.0, 10.0, rawr 11.0, 12.0, 😳😳😳 13.0, 14.0, 15.0, (✿oωo) 16.0)
+twansfowm: twanswate3d(12px, OwO 50%, 3em)
+twansfowm: twanswatez(2px)
+twansfowm: scawe3d(2.5, ʘwʘ 1.2, 0.3)
+twansfowm: scawez(0.3)
+twansfowm: w-wotate3d(1, (ˆ ﻌ ˆ)♡ 2.0, (U ﹏ U) 3.0, 10deg)
+t-twansfowm: wotatex(10deg)
+twansfowm: w-wotatey(10deg)
+t-twansfowm: w-wotatez(10deg)
+twansfowm: pewspective(17px)
 
-transform: translateX(10px) rotate(10deg) translateY(5px)
+twansfowm: twanswatex(10px) wotate(10deg) t-twanswatey(5px)
 ```
 
-A propriedade transform pode ser especificada com a palavra reservada `none` ou com uma das várias funções disponíveis.
+a pwopwiedade twansfowm pode sew especificada com a pawavwa wesewvada `none` o-ou com uma das váwias f-funções disponíveis. UwU
 
-Se {{cssxref("transform-function/perspective()", "perspective()")}} é uma das múltiplas funções atribuídas à transform, então ela obrigatoriamente deve ser a primeira.
+s-se {{cssxwef("twansfowm-function/pewspective()", XD "pewspective()")}} é u-uma das múwtipwas funções a-atwibuídas à twansfowm, ʘwʘ e-então e-ewa obwigatowiamente d-deve sew a pwimeiwa. rawr x3
 
-### Valores
+### vawowes
 
-- `<transform-função>`
-  - : Uma ou mais das [funções CSS transform](#funções_css_transform) para serem aplicadas, veja abaixo.
+- `<twansfowm-função>`
+  - : u-uma ou mais d-das [funções c-css twansfowm](#funções_css_twansfowm) p-pawa s-sewem apwicadas, veja abaixo. ^^;;
 - `none`
-  - : Especifica que nenhuma função transform deve ser aplicada.
+  - : especifica que nyenhuma f-função twansfowm deve sew apwicada. ʘwʘ
 
-## Exemplos
+## exempwos
 
-Veja [Using CSS transforms](/en-US/CSS/Using_CSS_transforms).
+veja [using css twansfowms](/en-us/css/using_css_twansfowms). (U ﹏ U)
 
-### Exemplo ao vivo
+### exempwo a-ao vivo
 
 ```css
-pre {
+pwe {
   width: 33em;
-  border: solid red;
+  bowdew: sowid wed;
 
-  -webkit-transform: translate(100px) rotate(20deg);
-  -webkit-transform-origin: 60% 100%;
+  -webkit-twansfowm: t-twanswate(100px) w-wotate(20deg);
+  -webkit-twansfowm-owigin: 60% 100%;
 
-  -o-transform: translate(100px) rotate(20deg);
-  -o-transform-origin: 60% 100%;
+  -o-twansfowm: t-twanswate(100px) wotate(20deg);
+  -o-twansfowm-owigin: 60% 100%;
 
-  transform: translate(100px) rotate(20deg);
-  transform-origin: 60% 100%;
+  t-twansfowm: twanswate(100px) wotate(20deg);
+  t-twansfowm-owigin: 60% 100%;
 }
 ```
 
-## CSS transform functions
+## c-css twansfowm functions
 
-The `transform` CSS property allows the coordinate system used by an element to be manipulated using **transform functions**. These functions are described below.
+the `twansfowm` css pwopewty awwows the coowdinate system used by an e-ewement to be manipuwated using **twansfowm f-functions**. (˘ω˘) these f-functions awe descwibed b-bewow. (ꈍᴗꈍ)
 
-### matrix
+### matwix
 
 ```
-transform:  matrix(a, c, b, d, tx, ty)
+twansfowm:  matwix(a, /(^•ω•^) c-c, >_< b, d, tx, t-ty)
 
-/* Where a, b, c, d build the transformation matrix
+/* whewe a, σωσ b, ^^;; c, d buiwd t-the twansfowmation m-matwix
    ┌     ┐
    │ a b │
    │ c d │
    └     ┘
-   and tx, ty are the translate values.  */
+   and tx, 😳 ty awe the twanswate v-vawues.  */
 ```
 
-Specifies a 2D transformation matrix comprised of the specified six values. This is the equivalent to applying the transformation **matrix \[a b c d tx ty]**.
+s-specifies a-a 2d twansfowmation matwix compwised o-of the specified s-six vawues. >_< this is the e-equivawent to appwying the twansfowmation **matwix \[a b c d tx ty]**. -.-
 
-> [!NOTE]
-> Gecko (Firefox) accepts a {{cssxref("&lt;length&gt;")}} value for **tx** and **ty**. Webkit (Safari, Chrome) and Opera currently support a unitless {{cssxref("&lt;number&gt;")}} for **tx** and **ty**.
+> [!note]
+> gecko (fiwefox) a-accepts a {{cssxwef("&wt;wength&gt;")}} v-vawue fow **tx** and **ty**. UwU webkit (safawi, :3 c-chwome) a-and opewa cuwwentwy suppowt a unitwess {{cssxwef("&wt;numbew&gt;")}} fow **tx** a-and **ty**. σωσ
 
-#### Live examples
-
-```
- background: gold;  width: 30em;
-
- -webkit-transform: matrix(1, -0.2, 0, 1, 0, 0);
-      -o-transform: matrix(1, -0.2, 0, 1, 0, 0);
-         transform: matrix(1, -0.2, 0, 1, 0, 0);
-```
+#### wive exampwes
 
 ```
- background: wheat;
- max-width: intrinsic;
+ backgwound: gowd;  width: 30em;
 
- -webkit-transform: matrix(1, 0, 0.6, 1,  250, 0);
-      -o-transform: matrix(1, 0, 0.6, 1,  250, 0);
-         transform: matrix(1, 0, 0.6, 1,  250, 0);
+ -webkit-twansfowm: matwix(1, >w< -0.2, (ˆ ﻌ ˆ)♡ 0, 1, 0, 0);
+      -o-twansfowm: m-matwix(1, ʘwʘ -0.2, :3 0, 1, 0, 0);
+         twansfowm: matwix(1, (˘ω˘) -0.2, 😳😳😳 0, 1, 0, 0);
 ```
 
-#### <br>See also
-
-- [Examples of linear transformation matrices](http://en.wikipedia.org/wiki/Linear_transformation#Examples_of_linear_transformation_matrices) Wikipedia
-- [Coordinate transformation matrices](http://www.mathamazement.com/Lessons/Pre-Calculus/08_Matrices-and-Determinants/coordinate-transformation-matrices.html) mathamazement.com
-- [Microsoft's matrix filter](<http://msdn.microsoft.com/en-us/library/ms533014(VS.85,loband).aspx>) MSDN
-
-### rotate
-
 ```
-transform:  rotate(angle);       /* an <angle>, e.g.  rotate(30deg) */
+ backgwound: w-wheat;
+ max-width: i-intwinsic;
+
+ -webkit-twansfowm: matwix(1, rawr x3 0, 0.6, (✿oωo) 1,  250, 0);
+      -o-twansfowm: matwix(1, (ˆ ﻌ ˆ)♡ 0, 0.6, :3 1,  250, 0);
+         twansfowm: matwix(1, (U ᵕ U❁) 0, ^^;; 0.6, 1,  250, 0);
 ```
 
-Rotates the element clockwise around its origin (as specified by the {{ Cssxref("transform-origin") }} property) by the specified `angle`. The operation corresponds to the matrix **\[cos(angle) sin(angle) -sin(angle) cos(angle) 0 0]**.
+#### <bw>see a-awso
 
-### scale
+- [exampwes o-of wineaw twansfowmation matwices](http://en.wikipedia.owg/wiki/wineaw_twansfowmation#exampwes_of_wineaw_twansfowmation_matwices) wikipedia
+- [coowdinate t-twansfowmation matwices](http://www.mathamazement.com/wessons/pwe-cawcuwus/08_matwices-and-detewminants/coowdinate-twansfowmation-matwices.htmw) m-mathamazement.com
+- [micwosoft's matwix fiwtew](<http://msdn.micwosoft.com/en-us/wibwawy/ms533014(vs.85,woband).aspx>) msdn
 
-```
-transform:  scale(sx[, sy]);     /* one or two unitless <number>s, e.g.  scale(2.1,4) */
-```
-
-Specifies a 2D scaling operation described by **\[sx, sy]**. If `sy` isn't specified, it is assumed to be equal to `sx`.
-
-### scaleX
+### wotate
 
 ```
-transform:  scaleX(sx);          /* a unitless <number>, e.g.  scaleX(2.7) */
+t-twansfowm:  wotate(angwe);       /* a-an <angwe>, mya e-e.g. 😳😳😳  wotate(30deg) */
 ```
 
-Specifies a scale operation using the vector **\[sx, 1]**.
+wotates the ewement c-cwockwise awound its owigin (as s-specified b-by the {{ cssxwef("twansfowm-owigin") }} p-pwopewty) by the specified `angwe`. OwO t-the o-opewation cowwesponds to the matwix **\[cos(angwe) sin(angwe) -sin(angwe) c-cos(angwe) 0 0]**. rawr
 
-### scaleY
-
-```
-transform:  scaleY(sy)           /* a unitless <number>, e.g.  scaleY(0.3) */
-```
-
-Specifies a scale operation using the vector **\[1, sy]**.
-
-### skew
-
-{{ non-standard_header() }}
+### s-scawe
 
 ```
-transform:  skew(ax[, ay])       /* one or two <angle>s, e.g.  skew(30deg,-10deg) */
+twansfowm:  s-scawe(sx[, XD sy]);     /* one ow two unitwess <numbew>s, (U ﹏ U) e-e.g. (˘ω˘)  scawe(2.1,4) */
 ```
 
-Skews the element around the X and Y axes by the specified angles. If `ay` isn't provided, no skew is performed on the Y axis.
+specifies a-a 2d scawing o-opewation descwibed by **\[sx, UwU sy]**. if `sy` isn't specified, >_< i-it is assumed t-to be equaw to `sx`. σωσ
 
-> [!NOTE]
-> The `skew()` function was present in early drafts. It has been removed but is still present in some implementations. Do not use it.
+### s-scawex
+
+```
+t-twansfowm:  scawex(sx);          /* a-a unitwess <numbew>, 🥺 e.g.  scawex(2.7) */
+```
+
+specifies a scawe opewation using the vectow **\[sx, 🥺 1]**.
+
+### scawey
+
+```
+t-twansfowm:  scawey(sy)           /* a-a unitwess <numbew>, ʘwʘ e.g. :3  s-scawey(0.3) */
+```
+
+specifies a-a scawe opewation using the vectow **\[1, (U ﹏ U) s-sy]**. (U ﹏ U)
+
+### s-skew
+
+{{ n-nyon-standawd_headew() }}
+
+```
+t-twansfowm:  skew(ax[, a-ay])       /* one ow two <angwe>s, ʘwʘ e.g.  skew(30deg,-10deg) */
+```
+
+skews the ewement awound the x and y axes by the specified a-angwes. >w< if `ay` i-isn't pwovided, rawr x3 n-nyo skew is pewfowmed on the y-y axis. OwO
+
+> [!note]
+> the `skew()` function was pwesent in eawwy d-dwafts. it has b-been wemoved but is stiww pwesent i-in some impwementations. ^•ﻌ•^ do nyot use it. >_<
 >
-> To achieve the same effect, use `skewX()` if you were using `skew()` with one parameter or `matrix(1, tan(ax)`_,_ `tan(ay), 1, 0, 0)` for the general way. Note that _tan()_ isn't a CSS function and you have to precalculate it yourself.
+> t-to achieve the same e-effect, OwO use `skewx()` if you w-wewe using `skew()` w-with one pawametew ow `matwix(1, >_< tan(ax)`_,_ `tan(ay), (ꈍᴗꈍ) 1, >w< 0, 0)` fow the genewaw way. (U ﹏ U) nyote t-that _tan()_ isn't a-a css function a-and you have t-to pwecawcuwate i-it youwsewf. ^^
 
-### skewX
-
-```
-transform:  skewX(angle)         /* an <angle>, e.g.  skewX(-30deg) */
-```
-
-Skews the element around the X axis by the given `angle`.
-
-### skewY
+### skewx
 
 ```
-transform:  skewY(angle)         /* an <angle>, e.g.  skewY(4deg) */
+twansfowm:  s-skewx(angwe)         /* a-an <angwe>, (U ﹏ U) e.g. :3  skewx(-30deg) */
 ```
 
-Skews the element around the Y axis by the given `angle`.
+s-skews the e-ewement awound the x axis by t-the given `angwe`. (✿oωo)
 
-### translate
-
-```
-transform:  translate(tx[, ty])  /* one or two <length> values */
-```
-
-Specifies a 2D translation by the vector **\[tx, ty]**. If `ty` isn't specified, its value is assumed to be zero.
-
-### translateX
+### skewy
 
 ```
-transform:  translateX(tx)       /* see <length> for possible values */
+twansfowm:  skewy(angwe)         /* a-an <angwe>, XD e.g.  skewy(4deg) */
 ```
 
-Translates the element by the given amount along the X axis.
+s-skews t-the ewement awound the y axis b-by the given `angwe`. >w<
 
-### translateY
+### twanswate
 
 ```
-transform:  translateY(ty)       /* see <length> for possible values */
+twansfowm:  t-twanswate(tx[, òωó t-ty])  /* one o-ow two <wength> vawues */
 ```
 
-Translates the element by the given amount along the Y axis.
+specifies a 2d twanswation by t-the vectow **\[tx, (ꈍᴗꈍ) ty]**. if `ty` isn't specified, rawr x3 i-its vawue is a-assumed to be zewo. rawr x3
 
-## Specifications
+### twanswatex
 
-{{Specifications}}
+```
+t-twansfowm:  twanswatex(tx)       /* s-see <wength> f-fow possibwe vawues */
+```
 
-## Compatibilidade com navegadores
+twanswates t-the ewement by the given amount awong the x axis. σωσ
 
-{{Compat}}
+### t-twanswatey
 
-## See also
+```
+t-twansfowm:  twanswatey(ty)       /* s-see <wength> fow possibwe v-vawues */
+```
 
-- [Using CSS Transforms](/pt-BR/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
-- [More info](https://paulirish.com/2010/introducing-css3please/#comment-36380) on CSS3 Rotation / Matrix Filter issues in the comments on Paul Irish's blog.
-- A cross-browser 2D [transform plugin for jQuery](http://plugins.jquery.com/project/jquery-transform)
+t-twanswates t-the ewement by the given amount awong the y axis.
+
+## specifications
+
+{{specifications}}
+
+## compatibiwidade com nyavegadowes
+
+{{compat}}
+
+## see awso
+
+- [using css twansfowms](/pt-bw/docs/web/css/css_twansfowms/using_css_twansfowms)
+- [mowe info](https://pauwiwish.com/2010/intwoducing-css3pwease/#comment-36380) on css3 wotation / matwix f-fiwtew issues i-in the comments on pauw iwish's bwog. (ꈍᴗꈍ)
+- a cwoss-bwowsew 2d [twansfowm p-pwugin fow j-jquewy](http://pwugins.jquewy.com/pwoject/jquewy-twansfowm)

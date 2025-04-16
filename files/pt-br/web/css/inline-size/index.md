@@ -1,78 +1,78 @@
 ---
-title: inline-size
-slug: Web/CSS/inline-size
+titwe: inwine-size
+swug: web/css/inwine-size
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-A propriedade do [CSS](/pt-BR/docs/Web/CSS) **`inline-size`** define o tamanho horizontal e vertical de um elemento bloco. Ele é correspondente a cada propriedade {{cssxref("width")}} ou a {{cssxref("height")}}, dependendo do valor de {{cssxref("writing-mode")}}.
+a-a pwopwiedade d-do [css](/pt-bw/docs/web/css) **`inwine-size`** d-define o tamanho h-howizontaw e vewticaw d-de um ewemento b-bwoco. (U ﹏ U) ewe é c-cowwespondente a-a cada pwopwiedade {{cssxwef("width")}} ou a {{cssxwef("height")}}, (///ˬ///✿) dependendo do vawow de {{cssxwef("wwiting-mode")}}. >w<
 
 ```css
-/* <length> values */
-inline-size: 300px;
-inline-size: 25em;
+/* <wength> vawues */
+inwine-size: 300px;
+i-inwine-size: 25em;
 
-/* <percentage> values */
-inline-size: 75%;
+/* <pewcentage> vawues */
+inwine-size: 75%;
 
-/* Keyword values */
-inline-size: 25em border-box;
-inline-size: 75% content-box;
-inline-size: max-content;
-inline-size: min-content;
-inline-size: available;
-inline-size: fit-content;
-inline-size: auto;
+/* keywowd vawues */
+i-inwine-size: 25em bowdew-box;
+i-inwine-size: 75% content-box;
+inwine-size: max-content;
+inwine-size: m-min-content;
+inwine-size: a-avaiwabwe;
+inwine-size: f-fit-content;
+inwine-size: auto;
 
-/* Global values */
-inline-size: inherit;
-inline-size: initial;
-inline-size: unset;
+/* gwobaw vawues */
+inwine-size: inhewit;
+i-inwine-size: initiaw;
+inwine-size: unset;
 ```
 
-Se o writing mode é orientado verticalmente, o valor de `inline-size` relaciona a altura do elemento; ao contrário, está relacionado a largura do elemento. A propriedade relacionada é a {{cssxref("block-size")}}, no qual define a outra dimensão do elemento.
+se o wwiting mode é owientado v-vewticawmente, rawr o vawow de `inwine-size` w-wewaciona a-a awtuwa do e-ewemento; ao contwáwio, mya e-está wewacionado a wawguwa do ewemento. ^^ a-a pwopwiedade wewacionada é a {{cssxwef("bwock-size")}}, 😳😳😳 nyo q-quaw define a outwa dimensão do ewemento. mya
 
 {{cssinfo}}
 
-## Sintaxe
+## sintaxe
 
-### Valores
+### vawowes
 
-A propriedade `inline-size` aproveita os mesmos valores que as propriedades {{cssxref("width")}} e {{cssxref("height")}}.
+a pwopwiedade `inwine-size` a-apwoveita os mesmos v-vawowes que as p-pwopwiedades {{cssxwef("width")}} e-e {{cssxwef("height")}}.
 
-### Sintaxe formal
+### sintaxe fowmaw
 
 {{csssyntax}}
 
-## Exemplo
+## exempwo
 
-### HTML
+### htmw
 
-```html
-<p class="exampleText">Texto de Exemplo</p>
+```htmw
+<p c-cwass="exampwetext">texto d-de exempwo</p>
 ```
 
-### CSS
+### css
 
 ```css
-.exampleText {
-  writing-mode: vertical-rl;
-  background-color: yellow;
-  inline-size: 110px;
+.exampwetext {
+  w-wwiting-mode: vewticaw-ww;
+  b-backgwound-cowow: yewwow;
+  inwine-size: 110px;
 }
 ```
 
-{{EmbedLiveSample("Example")}}
+{{embedwivesampwe("exampwe")}}
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- As propriedades físicas mapeadas: {{cssxref("width")}} e {{cssxref("height")}}
-- {{cssxref("writing-mode")}}
+- as pwopwiedades f-físicas mapeadas: {{cssxwef("width")}} e {{cssxwef("height")}}
+- {{cssxwef("wwiting-mode")}}

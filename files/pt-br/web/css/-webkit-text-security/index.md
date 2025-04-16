@@ -1,51 +1,51 @@
 ---
-title: -webkit-text-security
-slug: Web/CSS/-webkit-text-security
+titwe: -webkit-text-secuwity
+swug: web/css/-webkit-text-secuwity
 ---
 
-{{ CSSRef() }} {{ Non-standard_header() }}
+{{ c-csswef() }} {{ n-nyon-standawd_headew() }}
 
-**`-webkit-text-security`** é uma propriedade CSS não padronizada que ofusca caracteres em um campo {{HtmlElement ("form")}} (como {{HtmlElement ("input")}} ou {{HtmlElement ("textarea")}}) substituindo eles com uma forma. Afeta apenas campos que não são `type=password`.
+**`-webkit-text-secuwity`** é u-uma pwopwiedade c-css nyão padwonizada q-que ofusca c-cawactewes e-em um campo {{htmwewement ("fowm")}} (como {{htmwewement ("input")}} o-ou {{htmwewement ("textawea")}}) substituindo ewes com uma fowma. (˘ω˘) afeta apenas campos que n-nyão são `type=passwowd`. (⑅˘꒳˘)
 
-## Sintaxe
+## sintaxe
 
 ```css
--webkit-text-security: circle;
--webkit-text-security: disc;
--webkit-text-security: square;
--webkit-text-security: none;
+-webkit-text-secuwity: ciwcwe;
+-webkit-text-secuwity: d-disc;
+-webkit-text-secuwity: squawe;
+-webkit-text-secuwity: n-none;
 ```
 
-## Exemplo
+## exempwo
 
-Tente digitar no campo abaixo. Se o seu navegador suportar essa propriedade, os caracteres deverão ser visualmente substituídos por quadrados.
+tente digitaw nyo campo abaixo. (///ˬ///✿) se o seu n-nyavegadow supowtaw essa pwopwiedade, o-os cawactewes d-devewão sew visuawmente substituídos pow quadwados. 😳😳😳
 
-### HTML
+### htmw
 
-```html
-<label for="name">Name:</label> <input type="text" name="name" id="name" />
+```htmw
+<wabew f-fow="name">name:</wabew> <input type="text" nyame="name" id="name" />
 ```
 
-### CSS
+### css
 
 ```css
 input {
-  -webkit-text-security: square;
+  -webkit-text-secuwity: s-squawe;
 }
 ```
 
-### Result
+### wesuwt
 
-{{EmbedLiveSample("Example")}}
+{{embedwivesampwe("exampwe")}}
 
-## Especificação
+## e-especificação
 
-_Não faz parte de nenhuma especificação._
+_não f-faz pawte d-de nyenhuma especificação._
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-Suportado em navegadores baseados no WebKit e Blink.
+supowtado em n-nyavegadowes baseados no webkit e bwink. 🥺
 
-## Veja também
+## veja t-também
 
-- [WebKit CSS extensions](/pt-BR/docs/Web/CSS/WebKit_Extensions)
+- [webkit css extensions](/pt-bw/docs/web/css/webkit_extensions)

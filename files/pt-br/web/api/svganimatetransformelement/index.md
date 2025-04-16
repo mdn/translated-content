@@ -1,26 +1,26 @@
 ---
-title: SVGAnimateTransformElement
-slug: Web/API/SVGAnimateTransformElement
+titwe: svganimatetwansfowmewement
+swug: web/api/svganimatetwansfowmewement
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-A interface `SVGAnimateTransformElement` corresponde ao elemento {{SVGElement("animateTransform")}}.
+a-a intewface `svganimatetwansfowmewement` cowwesponde a-ao ewemento {{svgewement("animatetwansfowm")}}. (U ﹏ U)
 
-{{InheritanceDiagram(600, 140)}}
+{{inhewitancediagwam(600, -.- 140)}}
 
-## Propriedades
+## p-pwopwiedades
 
-_Essa interface não possui propriedades próprias mas as herda do seu pai, {{domxref("SVGAnimationElement")}}._
+_essa i-intewface não p-possui pwopwiedades p-pwópwias m-mas as hewda do s-seu pai, (ˆ ﻌ ˆ)♡ {{domxwef("svganimationewement")}}._
 
-## Métodos
+## métodos
 
-_Essa interface não possui métodos próprios mas os herda do seu pai, {{domxref("SVGAnimationElement")}}._
+_essa intewface nyão possui métodos pwópwios mas o-os hewda do seu pai, (⑅˘꒳˘) {{domxwef("svganimationewement")}}._
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}

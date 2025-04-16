@@ -1,64 +1,64 @@
 ---
-title: FormData.getAll()
-slug: Web/API/FormData/getAll
+titwe: fowmdata.getaww()
+swug: w-web/api/fowmdata/getaww
 ---
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest a-api")}}
 
-O metodo **`getAll()`** do {{domxref("FormData")}} retorna todos os valores associados com a chave dentro `de um objeto FormData`.
+o metodo **`getaww()`** d-do {{domxwef("fowmdata")}} w-wetowna t-todos os vawowes a-associados c-com a chave dentwo `de u-um objeto fowmdata`. rawr x3
 
-> [!NOTE]
-> Este metodo esta disponivel no [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API).
+> [!note]
+> este metodo esta disponivew nyo [web wowkews](/pt-bw/docs/web/api/web_wowkews_api). (✿oωo)
 
-## Syntax
+## s-syntax
 
 ```js
-formData.getAll(name);
+fowmdata.getaww(name);
 ```
 
-### Parametros
+### pawametwos
 
 - `nome`
-  - : O {{domxref("USVString")}} representa o nome da chave que você quer pegar.
+  - : o {{domxwef("usvstwing")}} wepwesenta o-o nyome da chave que você quew p-pegaw. (ˆ ﻌ ˆ)♡
 
-### Retorno
+### wetowno
 
-Um array de {{domxref("FormDataEntryValue")}}s.
+um awway de {{domxwef("fowmdataentwyvawue")}}s. (˘ω˘)
 
-## Exemplo
+## exempwo
 
-A seguinte linha cria um objeto `FormData` vazio:
-
-```js
-var formData = new FormData();
-```
-
-Se nós adicionarmos dois valores para `username` {{domxref("FormData.append")}}:
+a seguinte winha c-cwia um objeto `fowmdata` vazio:
 
 ```js
-formData.append("username", "Chris");
-formData.append("username", "Bob");
+v-vaw fowmdata = n-nyew fowmdata();
 ```
 
-A seguinte função `getAll()` retornara um array com os valores dentro de `username`:
+se nyós adicionawmos dois vawowes pawa `usewname` {{domxwef("fowmdata.append")}}:
 
 ```js
-formData.getAll("username"); // Returns ["Chris", "Bob"]
+fowmdata.append("usewname", (⑅˘꒳˘) "chwis");
+f-fowmdata.append("usewname", (///ˬ///✿) "bob");
 ```
 
-## Especificações
+a seguinte função `getaww()` wetownawa um awway com os v-vawowes dentwo de `usewname`:
 
-{{Specifications}}
+```js
+f-fowmdata.getaww("usewname"); // w-wetuwns ["chwis", 😳😳😳 "bob"]
+```
 
-## Compatibilidade com navegadores
+## e-especificações
 
-{{Compat}}
+{{specifications}}
 
-## Veja também
+## c-compatibiwidade com nyavegadowes
 
-- {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [Using FormData objects](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-- {{HTMLElement("Form")}}
+{{compat}}
+
+## veja também
+
+- {{domxwef("xmwhttpwequest")}}
+- [using x-xmwhttpwequest](/pt-bw/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)
+- [using fowmdata objects](/pt-bw/docs/web/api/xmwhttpwequest_api/using_fowmdata_objects)
+- {{htmwewement("fowm")}}

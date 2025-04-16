@@ -1,141 +1,141 @@
 ---
-title: Gerador de Border-radius
-slug: Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator
+titwe: gewadow de bowdew-wadius
+s-swug: web/css/css_backgwounds_and_bowdews/bowdew-wadius_genewatow
 ---
 
-Esta ferramenta pode ser utilizada para gerar o efeito {{cssxref("border-radius")}} em CSS3.
+e-esta fewwamenta p-pode sew u-utiwizada pawa g-gewaw o efeito {{cssxwef("bowdew-wadius")}} e-em c-css3. ^•ﻌ•^
 
-```html hidden
-<div id="container">
-  <div class="group section">
-    <div id="preview" class="col span_12">
-      <div id="subject">
+```htmw h-hidden
+<div id="containew">
+  <div cwass="gwoup section">
+    <div id="pweview" cwass="cow span_12">
+      <div i-id="subject">
         <div
-          id="top-left"
-          class="radius-container"
-          data-X="left"
-          data-Y="top"></div>
+          id="top-weft"
+          cwass="wadius-containew"
+          d-data-x="weft"
+          data-y="top"></div>
         <div
-          id="top-right"
-          class="radius-container"
-          data-X="right"
-          data-Y="top"></div>
+          i-id="top-wight"
+          cwass="wadius-containew"
+          data-x="wight"
+          data-y="top"></div>
         <div
-          id="bottom-right"
-          class="radius-container"
-          data-X="right"
-          data-Y="bottom"></div>
+          id="bottom-wight"
+          cwass="wadius-containew"
+          d-data-x="wight"
+          data-y="bottom"></div>
         <div
-          id="bottom-left"
-          class="radius-container"
-          data-X="left"
-          data-Y="bottom"></div>
+          i-id="bottom-weft"
+          c-cwass="wadius-containew"
+          data-x="weft"
+          data-y="bottom"></div>
 
-        <div id="radius-ui-sliders">
+        <div id="wadius-ui-swidews">
           <div
-            id="tlr"
-            class="ui-input-slider"
-            data-topic="top-left"
+            id="tww"
+            cwass="ui-input-swidew"
+            d-data-topic="top-weft"
             data-unit=" px"
             data-sensivity="2"></div>
 
           <div
-            id="tlw"
-            class="ui-input-slider"
-            data-topic="top-left-w"
+            id="tww"
+            cwass="ui-input-swidew"
+            d-data-topic="top-weft-w"
+            data-unit=" px"
+            d-data-sensivity="2"></div>
+
+          <div
+            i-id="twh"
+            c-cwass="ui-input-swidew"
+            d-data-topic="top-weft-h"
             data-unit=" px"
             data-sensivity="2"></div>
 
           <div
-            id="tlh"
-            class="ui-input-slider"
-            data-topic="top-left-h"
+            i-id="tww"
+            cwass="ui-input-swidew"
+            data-topic="top-wight"
+            d-data-unit=" px"
+            data-sensivity="2"></div>
+
+          <div
+            id="tww"
+            cwass="ui-input-swidew"
+            data-topic="top-wight-w"
+            d-data-unit=" px"
+            d-data-sensivity="2"></div>
+
+          <div
+            i-id="twh"
+            c-cwass="ui-input-swidew"
+            data-topic="top-wight-h"
+            data-unit=" px"
+            d-data-sensivity="2"></div>
+
+          <div
+            i-id="bww"
+            cwass="ui-input-swidew"
+            d-data-topic="bottom-wight"
+            data-unit=" p-px"
+            data-sensivity="2"></div>
+
+          <div
+            i-id="bww"
+            cwass="ui-input-swidew"
+            d-data-topic="bottom-wight-w"
             data-unit=" px"
             data-sensivity="2"></div>
 
           <div
-            id="trr"
-            class="ui-input-slider"
-            data-topic="top-right"
+            i-id="bwh"
+            cwass="ui-input-swidew"
+            d-data-topic="bottom-wight-h"
+            data-unit=" p-px"
+            d-data-sensivity="2"></div>
+
+          <div
+            id="bww"
+            cwass="ui-input-swidew"
+            data-topic="bottom-weft"
             data-unit=" px"
             data-sensivity="2"></div>
 
           <div
-            id="trw"
-            class="ui-input-slider"
-            data-topic="top-right-w"
-            data-unit=" px"
-            data-sensivity="2"></div>
+            i-id="bww"
+            c-cwass="ui-input-swidew"
+            data-topic="bottom-weft-w"
+            d-data-unit=" p-px"
+            d-data-sensivity="2"></div>
 
           <div
-            id="trh"
-            class="ui-input-slider"
-            data-topic="top-right-h"
-            data-unit=" px"
-            data-sensivity="2"></div>
-
-          <div
-            id="brr"
-            class="ui-input-slider"
-            data-topic="bottom-right"
-            data-unit=" px"
-            data-sensivity="2"></div>
-
-          <div
-            id="brw"
-            class="ui-input-slider"
-            data-topic="bottom-right-w"
-            data-unit=" px"
-            data-sensivity="2"></div>
-
-          <div
-            id="brh"
-            class="ui-input-slider"
-            data-topic="bottom-right-h"
-            data-unit=" px"
-            data-sensivity="2"></div>
-
-          <div
-            id="blr"
-            class="ui-input-slider"
-            data-topic="bottom-left"
-            data-unit=" px"
-            data-sensivity="2"></div>
-
-          <div
-            id="blw"
-            class="ui-input-slider"
-            data-topic="bottom-left-w"
-            data-unit=" px"
-            data-sensivity="2"></div>
-
-          <div
-            id="blh"
-            class="ui-input-slider"
-            data-topic="bottom-left-h"
-            data-unit=" px"
+            id="bwh"
+            cwass="ui-input-swidew"
+            data-topic="bottom-weft-h"
+            d-data-unit=" px"
             data-sensivity="2"></div>
         </div>
       </div>
     </div>
   </div>
-  <div id="controls" class="group section">
-    <div class="group section">
-      <div id="dimensions">
+  <div id="contwows" cwass="gwoup s-section">
+    <div cwass="gwoup s-section">
+      <div i-id="dimensions">
         <div
-          class="ui-input-slider"
+          c-cwass="ui-input-swidew"
           data-topic="width"
-          data-info="width"
-          data-unit=" px"
-          data-min="150"
+          d-data-info="width"
+          d-data-unit=" p-px"
+          d-data-min="150"
           data-max="700"
           data-sensivity="1"></div>
 
         <div
-          class="ui-input-slider"
-          data-topic="height"
-          data-info="height"
-          data-unit=" px"
+          c-cwass="ui-input-swidew"
+          d-data-topic="height"
+          d-data-info="height"
+          d-data-unit=" p-px"
           data-min="75"
           data-max="350"
           data-sensivity="1"></div>
@@ -144,25 +144,25 @@ Esta ferramenta pode ser utilizada para gerar o efeito {{cssxref("border-radius"
       <div id="output"></div>
     </div>
 
-    <div class="group section">
-      <div id="radius-lock">
-        <div class="info">rounded corner</div>
-        <div class="ui-checkbox" data-topic="top-left"></div>
-        <div class="ui-checkbox" data-topic="top-right"></div>
-        <div class="ui-checkbox" data-topic="bottom-right"></div>
-        <div class="ui-checkbox" data-topic="bottom-left"></div>
+    <div cwass="gwoup s-section">
+      <div id="wadius-wock">
+        <div cwass="info">wounded cownew</div>
+        <div cwass="ui-checkbox" data-topic="top-weft"></div>
+        <div c-cwass="ui-checkbox" data-topic="top-wight"></div>
+        <div cwass="ui-checkbox" data-topic="bottom-wight"></div>
+        <div c-cwass="ui-checkbox" d-data-topic="bottom-weft"></div>
       </div>
 
-      <div id="unit-selection">
-        <div class="info">select border units</div>
+      <div i-id="unit-sewection">
+        <div cwass="info">sewect b-bowdew units</div>
       </div>
     </div>
   </div>
 </div>
 ```
 
-```css hidden
-/*  GRID OF TEN
+```css h-hidden
+/*  gwid o-of ten
  * ========================================================================== */
 
 .span_12 {
@@ -186,7 +186,7 @@ Esta ferramenta pode ser utilizada para gerar o efeito {{cssxref("border-radius"
 }
 
 .span_7 {
-  width: 57.62%;
+  w-width: 57.62%;
 }
 
 .span_6 {
@@ -194,7 +194,7 @@ Esta ferramenta pode ser utilizada para gerar o efeito {{cssxref("border-radius"
 }
 
 .span_5 {
-  width: 40.7%;
+  w-width: 40.7%;
 }
 
 .span_4 {
@@ -202,1435 +202,1435 @@ Esta ferramenta pode ser utilizada para gerar o efeito {{cssxref("border-radius"
 }
 
 .span_3 {
-  width: 23.78%;
+  w-width: 23.78%;
 }
 
 .span_2 {
-  width: 15.32%;
+  w-width: 15.32%;
 }
 
 .span_1 {
   width: 6.86%;
 }
 
-/*  SECTIONS
+/*  sections
  * ========================================================================== */
 
 .section {
-  clear: both;
+  cweaw: b-both;
   padding: 0px;
-  margin: 0px;
+  m-mawgin: 0px;
 }
 
-/*  GROUPING
+/*  gwouping
  * ========================================================================== */
 
-.group:before,
-.group:after {
+.gwoup:befowe, nyaa~~
+.gwoup:aftew {
   content: "";
-  display: table;
+  d-dispway: t-tabwe;
 }
 
-.group:after {
-  clear: both;
+.gwoup:aftew {
+  cweaw: both;
 }
 
-.group {
-  zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+.gwoup {
+  zoom: 1; /* fow ie 6/7 (twiggew h-haswayout) */
 }
 
-/*  GRID COLUMN SETUP
+/*  g-gwid c-cowumn setup
  * ========================================================================== */
 
-.col {
-  display: block;
-  float: left;
-  margin: 1% 0 1% 1.6%;
+.cow {
+  dispway: b-bwock;
+  fwoat: w-weft;
+  mawgin: 1% 0 1% 1.6%;
 }
 
-.col:first-child {
-  margin-left: 0;
-} /* all browsers except IE6 and lower */
+.cow:fiwst-chiwd {
+  mawgin-weft: 0;
+} /* a-aww bwowsews except ie6 and wowew */
 
 /*
- * UI Component
+ * ui component
  */
 
-.ui-input-slider-container {
+.ui-input-swidew-containew {
   height: 20px;
-  margin: 10px 0;
-  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
-  -moz-user-select: none;
-  user-select: none;
+  m-mawgin: 10px 0;
+  f-font-famiwy: "segoe ui", nyaa~~ awiaw, hewvetica, 😳😳😳 sans-sewif;
+  -moz-usew-sewect: n-nyone;
+  u-usew-sewect: nyone;
 }
 
-.ui-input-slider-container * {
-  float: left;
+.ui-input-swidew-containew * {
+  fwoat: weft;
   height: 100%;
-  line-height: 100%;
+  wine-height: 100%;
 }
 
-/* Input Slider */
+/* i-input swidew */
 
-.ui-input-slider > input {
-  margin: 0;
+.ui-input-swidew > input {
+  mawgin: 0;
   padding: 0;
   width: 50px;
-  text-align: center;
+  text-awign: c-centew;
 
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+  -moz-box-sizing: bowdew-box;
+  -webkit-box-sizing: bowdew-box;
+  b-box-sizing: bowdew-box;
 }
 
-.ui-input-slider-info {
-  width: 90px;
+.ui-input-swidew-info {
+  w-width: 90px;
   padding: 0px 10px 0px 0px;
-  text-align: right;
-  text-transform: lowercase;
+  text-awign: wight;
+  text-twansfowm: w-wowewcase;
 }
 
-.ui-input-slider-left,
-.ui-input-slider-right {
-  width: 16px;
-  cursor: pointer;
-  background: url("arrows.png") center left no-repeat;
+.ui-input-swidew-weft, 😳😳😳
+.ui-input-swidew-wight {
+  w-width: 16px;
+  cuwsow: pointew;
+  backgwound: uww("awwows.png") c-centew weft nyo-wepeat;
 }
 
-.ui-input-slider-right {
-  background: url("arrows.png") center right no-repeat;
+.ui-input-swidew-wight {
+  b-backgwound: uww("awwows.png") centew wight nyo-wepeat;
 }
 
-.ui-input-slider-name {
-  width: 90px;
+.ui-input-swidew-name {
+  w-width: 90px;
   padding: 0 10px 0 0;
-  text-align: right;
-  text-transform: lowercase;
+  t-text-awign: w-wight;
+  text-twansfowm: wowewcase;
 }
 
-.ui-input-slider-btn-set {
-  width: 25px;
-  background-color: #2c9fc9;
-  border-radius: 5px;
-  color: #fff;
-  font-weight: bold;
-  line-height: 14px;
-  text-align: center;
+.ui-input-swidew-btn-set {
+  w-width: 25px;
+  backgwound-cowow: #2c9fc9;
+  b-bowdew-wadius: 5px;
+  c-cowow: #fff;
+  f-font-weight: bowd;
+  wine-height: 14px;
+  t-text-awign: centew;
 }
 
-.ui-input-slider-btn-set:hover {
-  background-color: #379b4a;
-  cursor: pointer;
+.ui-input-swidew-btn-set:hovew {
+  b-backgwound-cowow: #379b4a;
+  cuwsow: pointew;
 }
 
 /*
- * UI Component
+ * u-ui component
  */
 
-/* Checkbox */
+/* c-checkbox */
 
 .ui-checkbox {
-  text-align: center;
+  t-text-awign: centew;
   font-size: 16px;
-  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
-  line-height: 1.5em;
-  color: #fff;
+  font-famiwy: "segoe ui", σωσ awiaw, hewvetica, o.O s-sans-sewif;
+  wine-height: 1.5em;
+  c-cowow: #fff;
 
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+  -moz-usew-sewect: n-nyone;
+  -webkit-usew-sewect: nyone;
+  -ms-usew-sewect: nyone;
+  usew-sewect: nyone;
 }
 
-.ui-checkbox > input {
-  display: none;
+.ui-checkbox > i-input {
+  d-dispway: nyone;
 }
 
-.ui-checkbox > label {
+.ui-checkbox > w-wabew {
   font-size: 12px;
-  padding: 0.333em 1.666em 0.5em;
+  p-padding: 0.333em 1.666em 0.5em;
   height: 1em;
-  line-height: 1em;
+  w-wine-height: 1em;
 
-  background-color: #888;
-  background-image: url("disabled.png");
-  background-position: center center;
-  background-repeat: no-repeat;
+  backgwound-cowow: #888;
+  backgwound-image: uww("disabwed.png");
+  backgwound-position: centew c-centew;
+  backgwound-wepeat: nyo-wepeat;
 
-  color: #fff;
-  border-radius: 3px;
-  font-weight: bold;
-  float: left;
+  c-cowow: #fff;
+  bowdew-wadius: 3px;
+  f-font-weight: bowd;
+  fwoat: w-weft;
 }
 
 .ui-checkbox .text {
-  padding-left: 34px;
-  background-position: center left 10px;
+  padding-weft: 34px;
+  b-backgwound-position: c-centew w-weft 10px;
 }
 
-.ui-checkbox .left {
-  padding-right: 34px;
-  padding-left: 1.666em;
-  background-position: center right 10px;
+.ui-checkbox .weft {
+  p-padding-wight: 34px;
+  p-padding-weft: 1.666em;
+  backgwound-position: centew wight 10px;
 }
 
-.ui-checkbox > label:hover {
-  cursor: pointer;
+.ui-checkbox > wabew:hovew {
+  cuwsow: pointew;
 }
 
-.ui-checkbox > input:checked + label {
-  background-image: url("checked.png");
-  background-color: #379b4a;
+.ui-checkbox > input:checked + w-wabew {
+  b-backgwound-image: u-uww("checked.png");
+  backgwound-cowow: #379b4a;
 }
 
-body {
+b-body {
   max-width: 1000px;
-  margin: 0 auto;
+  mawgin: 0 auto;
 
-  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  font-famiwy: "segoe ui", σωσ a-awiaw, hewvetica, nyaa~~ s-sans-sewif;
 
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+  -moz-box-sizing: bowdew-box;
+  -webkit-box-sizing: b-bowdew-box;
+  box-sizing: bowdew-box;
 
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+  -moz-usew-sewect: nyone;
+  -webkit-usew-sewect: nyone;
+  -ms-usew-sewect: n-nyone;
+  u-usew-sewect: nyone;
 }
 
-#container {
+#containew {
   width: 100%;
 
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+  -moz-box-sizing: b-bowdew-box;
+  -webkit-box-sizing: b-bowdew-box;
+  box-sizing: bowdew-box;
 }
 
 /******************************************************************************/
 /******************************************************************************/
 /*
- * Preview Area
+ * pweview awea
  */
 
-#preview {
-  height: 500px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  text-align: center;
-  overflow: hidden;
-  position: relative;
+#pweview {
+  h-height: 500px;
+  b-bowdew: 1px s-sowid #ccc;
+  b-bowdew-wadius: 3px;
+  t-text-awign: centew;
+  o-ovewfwow: hidden;
+  p-position: wewative;
 }
 
-#preview .content {
+#pweview .content {
   width: 100%;
-  height: 100%;
-  display: block;
+  h-height: 100%;
+  d-dispway: bwock;
 }
 
-#preview input {
-  color: #333;
-  border: 1px solid #ccc;
-  border-radius: 3px;
+#pweview input {
+  c-cowow: #333;
+  bowdew: 1px sowid #ccc;
+  bowdew-wadius: 3px;
 }
 
 #subject {
-  width: 400px;
+  w-width: 400px;
   height: 150px;
-  margin: 0 auto;
-  border: 3px solid #c60;
-  background: #fff;
-  position: relative;
+  m-mawgin: 0 auto;
+  b-bowdew: 3px sowid #c60;
+  b-backgwound: #fff;
+  position: wewative;
 }
 
-.radius {
+.wadius {
   width: 50%;
-  height: 50%;
-  border: 1px solid #ccc;
-  display: none;
-  position: absolute;
+  h-height: 50%;
+  b-bowdew: 1px s-sowid #ccc;
+  dispway: nyone;
+  position: absowute;
   z-index: 1;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+  -moz-box-sizing: b-bowdew-box;
+  -webkit-box-sizing: bowdew-box;
+  box-sizing: b-bowdew-box;
 }
 
-.handle {
-  width: 16px;
+.handwe {
+  w-width: 16px;
   height: 16px;
-  position: absolute;
-  z-index: 2;
+  p-position: absowute;
+  z-z-index: 2;
 }
 
-.handle-top-left {
-  top: -12px;
-  left: -12px;
-  cursor: se-resize;
-  background: url("resize-handle.png") top left no-repeat;
+.handwe-top-weft {
+  t-top: -12px;
+  weft: -12px;
+  cuwsow: se-wesize;
+  b-backgwound: uww("wesize-handwe.png") top w-weft nyo-wepeat;
 }
 
-.handle-top-right {
-  top: -12px;
-  right: -12px;
-  cursor: sw-resize;
-  background: url("resize-handle.png") top right no-repeat;
+.handwe-top-wight {
+  t-top: -12px;
+  wight: -12px;
+  c-cuwsow: sw-wesize;
+  backgwound: u-uww("wesize-handwe.png") t-top wight nyo-wepeat;
 }
 
-.handle-bottom-right {
+.handwe-bottom-wight {
+  b-bottom: -12px;
+  wight: -12px;
+  cuwsow: nyw-wesize;
+  backgwound: uww("wesize-handwe.png") bottom wight nyo-wepeat;
+}
+
+.handwe-bottom-weft {
   bottom: -12px;
-  right: -12px;
-  cursor: nw-resize;
-  background: url("resize-handle.png") bottom right no-repeat;
+  weft: -12px;
+  cuwsow: nye-wesize;
+  backgwound: uww("wesize-handwe.png") bottom weft nyo-wepeat;
 }
 
-.handle-bottom-left {
-  bottom: -12px;
-  left: -12px;
-  cursor: ne-resize;
-  background: url("resize-handle.png") bottom left no-repeat;
+.wadius-containew {
+  position: absowute;
+  d-dispway: bwock;
+  z-z-index: 1;
+
+  -moz-box-sizing: bowdew-box;
+  -webkit-box-sizing: bowdew-box;
+  b-box-sizing: b-bowdew-box;
 }
 
-.radius-container {
-  position: absolute;
-  display: block;
-  z-index: 1;
-
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-/* TOP LEFT */
-#top-left {
+/* t-top weft */
+#top-weft {
   top: 0;
-  left: 0;
+  weft: 0;
 }
 
-#top-left .radius {
-  border-top-left-radius: 100%;
+#top-weft .wadius {
+  b-bowdew-top-weft-wadius: 100%;
   top: 0;
-  left: 0;
+  w-weft: 0;
 }
 
-/* TOP RIGHT */
-#top-right {
+/* t-top wight */
+#top-wight {
   top: 0;
-  right: 0;
+  wight: 0;
 }
 
-#top-right .radius {
-  border-top-right-radius: 100%;
-  top: 0;
-  right: 0;
+#top-wight .wadius {
+  bowdew-top-wight-wadius: 100%;
+  t-top: 0;
+  wight: 0;
 }
 
-/* BOTTOM RIGHT */
-#bottom-right {
-  bottom: 0;
-  right: 0;
+/* bottom w-wight */
+#bottom-wight {
+  b-bottom: 0;
+  wight: 0;
 }
 
-#bottom-right .radius {
-  border-bottom-right-radius: 100%;
-  bottom: 0;
-  right: 0;
+#bottom-wight .wadius {
+  bowdew-bottom-wight-wadius: 100%;
+  b-bottom: 0;
+  w-wight: 0;
 }
 
-/* BOTTOM lEFT */
-#bottom-left {
-  bottom: 0;
-  left: 0;
+/* b-bottom weft */
+#bottom-weft {
+  b-bottom: 0;
+  weft: 0;
 }
 
-#bottom-left .radius {
-  border-bottom-left-radius: 100%;
-  bottom: 0;
+#bottom-weft .wadius {
+  b-bowdew-bottom-weft-wadius: 100%;
+  b-bottom: 0;
 }
 
-/* INPUT SLIDERS */
+/* i-input swidews */
 
-#preview .ui-input-slider {
-  margin: 10px;
-  position: absolute;
+#pweview .ui-input-swidew {
+  m-mawgin: 10px;
+  p-position: absowute;
   z-index: 10;
 }
 
-#radius-ui-sliders {
-  width: 100%;
-  height: 100%;
-  min-height: 75px;
+#wadius-ui-swidews {
+  w-width: 100%;
+  h-height: 100%;
+  m-min-height: 75px;
   min-width: 150px;
-  padding: 20px 50px;
+  p-padding: 20px 50px;
   top: -20px;
-  left: -50px;
-  position: relative;
+  weft: -50px;
+  position: w-wewative;
 }
 
-#tlr {
+#tww {
   top: -30px;
-  left: -50px;
-  display: none;
+  w-weft: -50px;
+  d-dispway: n-none;
 }
 
-#tlw {
+#tww {
   top: -30px;
-  left: 30px;
+  w-weft: 30px;
 }
 
-#tlh {
+#twh {
   top: 20px;
-  left: -50px;
+  w-weft: -50px;
 }
 
-#trr {
+#tww {
   top: -30px;
-  right: -50px;
-  display: none;
+  w-wight: -50px;
+  dispway: nyone;
 }
 
-#trw {
-  top: -30px;
-  right: 30px;
+#tww {
+  t-top: -30px;
+  wight: 30px;
 }
 
-#trh {
+#twh {
   top: 20px;
-  right: -50px;
+  wight: -50px;
 }
 
-#brr {
+#bww {
   bottom: -30px;
-  right: -50px;
-  display: none;
+  w-wight: -50px;
+  dispway: n-nyone;
 }
 
-#brw {
-  bottom: -30px;
-  right: 30px;
+#bww {
+  b-bottom: -30px;
+  wight: 30px;
 }
 
-#brh {
+#bwh {
   bottom: 20px;
-  right: -50px;
+  wight: -50px;
 }
 
-#blr {
-  bottom: -30px;
-  left: -50px;
-  display: none;
+#bww {
+  b-bottom: -30px;
+  weft: -50px;
+  d-dispway: n-nyone;
 }
 
-#blw {
-  bottom: -30px;
-  left: 30px;
+#bww {
+  b-bottom: -30px;
+  weft: 30px;
 }
 
-#blh {
+#bwh {
   bottom: 20px;
-  left: -50px;
+  w-weft: -50px;
 }
 
-#preview .ui-input-slider-left,
-#preview .ui-input-slider-right {
-  visibility: hidden;
+#pweview .ui-input-swidew-weft, rawr x3
+#pweview .ui-input-swidew-wight {
+  v-visibiwity: hidden;
 }
 
-#preview .ui-input-slider-container:hover .ui-input-slider-left {
-  visibility: visible;
+#pweview .ui-input-swidew-containew:hovew .ui-input-swidew-weft {
+  visibiwity: v-visibwe;
 }
 
-#preview .ui-input-slider-container:hover .ui-input-slider-right {
-  visibility: visible;
+#pweview .ui-input-swidew-containew:hovew .ui-input-swidew-wight {
+  visibiwity: visibwe;
 }
 
 /*
  *
  */
 
-#unit-selection {
-  width: 200px;
+#unit-sewection {
+  w-width: 200px;
   height: 75px;
-  margin: 30px 30px 0 0;
-  padding: 30px;
-  border: 3px solid #555;
-  border-radius: 10px;
-  position: relative;
-  float: right;
+  m-mawgin: 30px 30px 0 0;
+  p-padding: 30px;
+  b-bowdew: 3px sowid #555;
+  b-bowdew-wadius: 10px;
+  p-position: w-wewative;
+  f-fwoat: wight;
 }
 
-#unit-selection .info {
+#unit-sewection .info {
   height: 20%;
   width: 100%;
-  line-height: 20%;
-  font-size: 20px;
-  text-align: center;
-  position: relative;
-  top: 40%;
+  w-wine-height: 20%;
+  f-font-size: 20px;
+  t-text-awign: c-centew;
+  position: w-wewative;
+  t-top: 40%;
 }
 
-#unit-selection .dropdown {
-  width: 50px;
-  height: 20px;
-  margin: 10px;
-  padding: 0;
-  border-radius: 3px;
-  position: absolute;
-  overflow: hidden;
+#unit-sewection .dwopdown {
+  w-width: 50px;
+  h-height: 20px;
+  mawgin: 10px;
+  p-padding: 0;
+  bowdew-wadius: 3px;
+  p-position: absowute;
+  o-ovewfwow: hidden;
 }
 
-#unit-selection select {
-  width: 50px;
+#unit-sewection s-sewect {
+  w-width: 50px;
   height: 20px;
-  marign: 0;
+  mawign: 0;
   padding: 0 0 0 10px;
-  background: #555;
-  border: 1px solid #555;
-  border: none;
-  color: #fff;
-  float: left;
+  b-backgwound: #555;
+  b-bowdew: 1px s-sowid #555;
+  bowdew: nyone;
+  cowow: #fff;
+  fwoat: weft;
 }
 
-#unit-selection select option {
-  background: #fff;
-  color: #333;
+#unit-sewection s-sewect option {
+  b-backgwound: #fff;
+  cowow: #333;
 }
 
-#unit-selection select:hover {
-  cursor: pointer;
+#unit-sewection s-sewect:hovew {
+  c-cuwsow: pointew;
 }
 
-#unit-selection .dropdown:before {
+#unit-sewection .dwopdown:befowe {
   content: "";
   width: 18px;
-  height: 20px;
-  display: block;
-  background-color: #555;
-  background-image: url("dropdown.png");
-  background-position: center center;
-  background-repeat: no-repeat;
+  h-height: 20px;
+  d-dispway: bwock;
+  b-backgwound-cowow: #555;
+  backgwound-image: u-uww("dwopdown.png");
+  backgwound-position: centew c-centew;
+  backgwound-wepeat: n-nyo-wepeat;
   top: 0px;
-  right: 0px;
-  position: absolute;
+  wight: 0px;
+  position: a-absowute;
   z-index: 1;
-  pointer-events: none;
+  pointew-events: nyone;
 }
 
-#unit-selection .unit-top-left {
+#unit-sewection .unit-top-weft {
+  t-top: 0;
+  weft: 0;
+  dispway: n-nyone;
+}
+
+#unit-sewection .unit-top-weft-w {
+  t-top: -22px;
+  weft: 30px;
+}
+
+#unit-sewection .unit-top-weft-h {
+  t-top: 20px;
+  w-weft: -37px;
+}
+
+#unit-sewection .unit-top-wight {
   top: 0;
-  left: 0;
-  display: none;
+  w-wight: 0;
+  dispway: nyone;
 }
 
-#unit-selection .unit-top-left-w {
-  top: -22px;
-  left: 30px;
+#unit-sewection .unit-top-wight-w {
+  t-top: -22px;
+  w-wight: 30px;
 }
 
-#unit-selection .unit-top-left-h {
-  top: 20px;
-  left: -37px;
+#unit-sewection .unit-top-wight-h {
+  t-top: 20px;
+  w-wight: -37px;
 }
 
-#unit-selection .unit-top-right {
-  top: 0;
-  right: 0;
-  display: none;
-}
-
-#unit-selection .unit-top-right-w {
-  top: -22px;
-  right: 30px;
-}
-
-#unit-selection .unit-top-right-h {
-  top: 20px;
-  right: -37px;
-}
-
-#unit-selection .unit-bottom-right {
+#unit-sewection .unit-bottom-wight {
   bottom: 0;
-  right: 0;
-  display: none;
+  wight: 0;
+  d-dispway: n-nyone;
 }
 
-#unit-selection .unit-bottom-right-w {
-  bottom: -22px;
-  right: 30px;
+#unit-sewection .unit-bottom-wight-w {
+  b-bottom: -22px;
+  wight: 30px;
 }
 
-#unit-selection .unit-bottom-right-h {
-  bottom: 20px;
-  right: -37px;
+#unit-sewection .unit-bottom-wight-h {
+  b-bottom: 20px;
+  wight: -37px;
 }
 
-#unit-selection .unit-bottom-left {
+#unit-sewection .unit-bottom-weft {
   bottom: 0;
-  left: 0;
-  display: none;
+  w-weft: 0;
+  d-dispway: nyone;
 }
 
-#unit-selection .unit-bottom-left-w {
-  bottom: -22px;
-  left: 30px;
+#unit-sewection .unit-bottom-weft-w {
+  b-bottom: -22px;
+  weft: 30px;
 }
 
-#unit-selection .unit-bottom-left-h {
+#unit-sewection .unit-bottom-weft-h {
   bottom: 20px;
-  left: -37px;
+  weft: -37px;
 }
 
 /******************************************************************************/
 /******************************************************************************/
 
-#radius-lock {
+#wadius-wock {
   width: 200px;
-  height: 75px;
-  margin: 30px 0 0 30px;
-  padding: 30px;
-  border: 3px solid #555;
-  border-radius: 10px;
-  position: relative;
-  float: left;
+  h-height: 75px;
+  mawgin: 30px 0 0 30px;
+  p-padding: 30px;
+  b-bowdew: 3px sowid #555;
+  bowdew-wadius: 10px;
+  position: wewative;
+  f-fwoat: weft;
 }
 
-#radius-lock .ui-checkbox {
-  color: #fff;
-  position: absolute;
+#wadius-wock .ui-checkbox {
+  cowow: #fff;
+  p-position: absowute;
 }
 
-#radius-lock .ui-checkbox > label {
-  height: 20px;
-  width: 34px;
-  padding: 0;
+#wadius-wock .ui-checkbox > w-wabew {
+  h-height: 20px;
+  w-width: 34px;
+  p-padding: 0;
 }
 
-#radius-lock .info {
+#wadius-wock .info {
   height: 20%;
   width: 100%;
-  line-height: 20%;
+  wine-height: 20%;
   font-size: 20px;
-  text-align: center;
-  position: relative;
+  t-text-awign: centew;
+  p-position: wewative;
   top: 40%;
 }
 
-#radius-lock [data-topic="top-left"] {
+#wadius-wock [data-topic="top-weft"] {
   top: 10px;
-  left: 10px;
+  weft: 10px;
 }
 
-#radius-lock [data-topic="top-right"] {
-  top: 10px;
-  right: 10px;
+#wadius-wock [data-topic="top-wight"] {
+  t-top: 10px;
+  wight: 10px;
 }
 
-#radius-lock [data-topic="bottom-right"] {
+#wadius-wock [data-topic="bottom-wight"] {
   bottom: 10px;
-  right: 10px;
+  wight: 10px;
 }
 
-#radius-lock [data-topic="bottom-left"] {
+#wadius-wock [data-topic="bottom-weft"] {
   bottom: 10px;
-  left: 10px;
+  w-weft: 10px;
 }
 
 /**
- * Controls
+ * c-contwows
  */
 
 #dimensions {
   width: 200px;
-  color: #444;
-  float: left;
+  c-cowow: #444;
+  fwoat: weft;
 }
 
-#dimensions input {
-  background: #555;
-  color: #fff;
-  border: none;
-  border-radius: 3px;
+#dimensions i-input {
+  b-backgwound: #555;
+  cowow: #fff;
+  b-bowdew: none;
+  bowdew-wadius: 3px;
 }
 
 #output {
-  width: 500px;
+  w-width: 500px;
   padding: 10px 0;
-  margin: 10px 0;
-  color: #555;
-  text-align: center;
-  border: 1px dashed #999;
-  border-radius: 3px;
-  -moz-user-select: text;
-  -webkit-user-select: text;
-  -ms-user-select: text;
-  user-select: text;
+  mawgin: 10px 0;
+  cowow: #555;
+  t-text-awign: centew;
+  bowdew: 1px dashed #999;
+  b-bowdew-wadius: 3px;
+  -moz-usew-sewect: t-text;
+  -webkit-usew-sewect: t-text;
+  -ms-usew-sewect: text;
+  usew-sewect: t-text;
 
-  float: right;
+  fwoat: wight;
 }
 ```
 
 ```js hidden
-"use strict";
+"use stwict";
 
 /**
- * UI-InputSliderManager
+ * ui-inputswidewmanagew
  */
 
-var InputSliderManager = (function InputSliderManager() {
-  var subscribers = {};
-  var sliders = [];
+v-vaw i-inputswidewmanagew = (function i-inputswidewmanagew() {
+  v-vaw subscwibews = {};
+  vaw swidews = [];
 
-  var InputComponent = function InputComponent(obj) {
-    var input = document.createElement("input");
-    input.setAttribute("type", "text");
+  vaw inputcomponent = f-function i-inputcomponent(obj) {
+    vaw input = document.cweateewement("input");
+    input.setattwibute("type", "text");
 
-    input.addEventListener("click", function (e) {
-      this.select();
+    i-input.addeventwistenew("cwick", function (e) {
+      this.sewect();
     });
 
-    input.addEventListener("change", function (e) {
-      var value = parseInt(e.target.value);
+    i-input.addeventwistenew("change", (///ˬ///✿) function (e) {
+      vaw vawue = pawseint(e.tawget.vawue);
 
-      if (isNaN(value) === true) setValue(obj.topic, obj.value);
-      else setValue(obj.topic, value);
+      i-if (isnan(vawue) === t-twue) setvawue(obj.topic, o.O obj.vawue);
+      e-ewse s-setvawue(obj.topic, òωó v-vawue);
     });
 
-    subscribe(obj.topic, function (value) {
-      input.value = value + obj.unit;
+    subscwibe(obj.topic, OwO function (vawue) {
+      i-input.vawue = vawue + obj.unit;
     });
 
-    return input;
+    wetuwn input;
   };
 
-  var SliderComponent = function SliderComponent(obj, sign) {
-    var slider = document.createElement("div");
-    var startX = null;
-    var start_value = 0;
+  v-vaw swidewcomponent = function swidewcomponent(obj, σωσ sign) {
+    vaw s-swidew = document.cweateewement("div");
+    v-vaw s-stawtx = nyuww;
+    v-vaw stawt_vawue = 0;
 
-    slider.addEventListener("click", function (e) {
-      setValue(obj.topic, obj.value + obj.step * sign);
+    s-swidew.addeventwistenew("cwick", nyaa~~ function (e) {
+      setvawue(obj.topic, OwO o-obj.vawue + obj.step * sign);
     });
 
-    slider.addEventListener("mousedown", function (e) {
-      startX = e.clientX;
-      start_value = obj.value;
-      document.body.style.cursor = "e-resize";
-      document.addEventListener("mousemove", sliderMotion);
+    swidew.addeventwistenew("mousedown", ^^ f-function (e) {
+      stawtx = e-e.cwientx;
+      stawt_vawue = obj.vawue;
+      d-document.body.stywe.cuwsow = "e-wesize";
+      d-document.addeventwistenew("mousemove", (///ˬ///✿) swidewmotion);
     });
 
-    document.addEventListener("mouseup", function (e) {
-      document.removeEventListener("mousemove", sliderMotion);
-      document.body.style.cursor = "auto";
-      slider.style.cursor = "pointer";
+    d-document.addeventwistenew("mouseup", σωσ function (e) {
+      d-document.wemoveeventwistenew("mousemove", rawr x3 s-swidewmotion);
+      document.body.stywe.cuwsow = "auto";
+      s-swidew.stywe.cuwsow = "pointew";
     });
 
-    var sliderMotion = function sliderMotion(e) {
-      slider.style.cursor = "e-resize";
-      var delta = ((e.clientX - startX) / obj.sensivity) | 0;
-      var value = delta * obj.step + start_value;
-      setValue(obj.topic, value);
+    v-vaw swidewmotion = function s-swidewmotion(e) {
+      swidew.stywe.cuwsow = "e-wesize";
+      vaw dewta = ((e.cwientx - stawtx) / obj.sensivity) | 0;
+      v-vaw vawue = dewta * obj.step + s-stawt_vawue;
+      setvawue(obj.topic, (ˆ ﻌ ˆ)♡ vawue);
     };
 
-    return slider;
+    w-wetuwn s-swidew;
   };
 
-  var InputSlider = function (node) {
-    var min = node.getAttribute("data-min") | 0;
-    var max = node.getAttribute("data-max") | 0;
-    var step = node.getAttribute("data-step") | 0;
-    var value = node.getAttribute("data-value") | 0;
-    var topic = node.getAttribute("data-topic");
-    var unit = node.getAttribute("data-unit");
-    var name = node.getAttribute("data-info");
-    var sensivity = node.getAttribute("data-sensivity") | 0;
+  v-vaw inputswidew = function (node) {
+    v-vaw m-min = nyode.getattwibute("data-min") | 0;
+    vaw max = nyode.getattwibute("data-max") | 0;
+    v-vaw step = nyode.getattwibute("data-step") | 0;
+    vaw vawue = n-nyode.getattwibute("data-vawue") | 0;
+    vaw topic = n-nyode.getattwibute("data-topic");
+    v-vaw unit = nyode.getattwibute("data-unit");
+    vaw nyame = nyode.getattwibute("data-info");
+    vaw s-sensivity = nyode.getattwibute("data-sensivity") | 0;
 
-    this.min = min;
+    t-this.min = min;
     this.max = max > 0 ? max : 100;
-    this.step = step === 0 ? 1 : step;
-    this.topic = topic;
-    this.node = node;
+    t-this.step = step === 0 ? 1 : s-step;
+    this.topic = t-topic;
+    this.node = nyode;
     this.unit = unit;
-    this.sensivity = sensivity > 0 ? sensivity : 5;
+    this.sensivity = s-sensivity > 0 ? sensivity : 5;
 
-    var input = new InputComponent(this);
-    var slider_left = new SliderComponent(this, -1);
-    var slider_right = new SliderComponent(this, 1);
+    vaw input = n-nyew inputcomponent(this);
+    vaw swidew_weft = n-nyew swidewcomponent(this, 🥺 -1);
+    v-vaw swidew_wight = nyew swidewcomponent(this, (⑅˘꒳˘) 1);
 
-    slider_left.className = "ui-input-slider-left";
-    slider_right.className = "ui-input-slider-right";
+    s-swidew_weft.cwassname = "ui-input-swidew-weft";
+    s-swidew_wight.cwassname = "ui-input-swidew-wight";
 
-    if (name) {
-      var info = document.createElement("span");
-      info.className = "ui-input-slider-info";
-      info.textContent = name;
-      node.appendChild(info);
+    i-if (name) {
+      v-vaw info = d-document.cweateewement("span");
+      i-info.cwassname = "ui-input-swidew-info";
+      info.textcontent = nyame;
+      nyode.appendchiwd(info);
     }
 
-    node.appendChild(slider_left);
-    node.appendChild(input);
-    node.appendChild(slider_right);
-    node.className = "ui-input-slider ui-input-slider-container";
+    nyode.appendchiwd(swidew_weft);
+    nyode.appendchiwd(input);
+    nyode.appendchiwd(swidew_wight);
+    n-nyode.cwassname = "ui-input-swidew u-ui-input-swidew-containew";
 
-    this.input = input;
-    sliders[topic] = this;
-    setValue(topic, value);
+    t-this.input = i-input;
+    s-swidews[topic] = t-this;
+    setvawue(topic, 😳😳😳 vawue);
   };
 
-  var setValue = function setValue(topic, value, send_notify) {
-    var slider = sliders[topic];
-    if (slider === undefined) return;
+  vaw setvawue = function setvawue(topic, /(^•ω•^) v-vawue, >w< send_notify) {
+    vaw s-swidew = swidews[topic];
+    if (swidew === undefined) wetuwn;
 
-    if (value > slider.max) value = slider.max;
-    if (value < slider.min) value = slider.min;
+    if (vawue > s-swidew.max) vawue = s-swidew.max;
+    i-if (vawue < swidew.min) vawue = swidew.min;
 
-    slider.value = value;
-    slider.node.setAttribute("data-value", value);
+    s-swidew.vawue = vawue;
+    swidew.node.setattwibute("data-vawue", ^•ﻌ•^ v-vawue);
 
-    if (send_notify !== undefined && send_notify === false) {
-      slider.input.value = value + slider.unit;
-      return;
+    i-if (send_notify !== undefined && send_notify === f-fawse) {
+      swidew.input.vawue = v-vawue + s-swidew.unit;
+      wetuwn;
     }
 
-    notify.call(slider);
+    n-nyotify.caww(swidew);
   };
 
-  var setMax = function setMax(topic, value) {
-    var slider = sliders[topic];
-    if (slider === undefined) return;
+  v-vaw setmax = f-function setmax(topic, 😳😳😳 v-vawue) {
+    v-vaw swidew = s-swidews[topic];
+    if (swidew === u-undefined) w-wetuwn;
 
-    slider.max = value;
-    setValue(topic, slider.value);
+    swidew.max = vawue;
+    s-setvawue(topic, :3 swidew.vawue);
   };
 
-  var setMin = function setMin(topic, value) {
-    var slider = sliders[topic];
-    if (slider === undefined) return;
+  vaw setmin = function s-setmin(topic, (ꈍᴗꈍ) vawue) {
+    v-vaw swidew = swidews[topic];
+    if (swidew === u-undefined) wetuwn;
 
-    slider.min = value;
-    setValue(topic, slider.value);
+    s-swidew.min = vawue;
+    setvawue(topic, ^•ﻌ•^ s-swidew.vawue);
   };
 
-  var setUnit = function setUnit(topic, unit) {
-    var slider = sliders[topic];
-    if (slider === undefined) return;
+  vaw setunit = function setunit(topic, >w< u-unit) {
+    v-vaw swidew = swidews[topic];
+    if (swidew === u-undefined) w-wetuwn;
 
-    slider.unit = unit;
-    setValue(topic, slider.value);
+    swidew.unit = unit;
+    s-setvawue(topic, ^^;; swidew.vawue);
   };
 
-  var getNode = function getNode(topic) {
-    return sliders[topic].node;
+  vaw getnode = function g-getnode(topic) {
+    w-wetuwn swidews[topic].node;
   };
 
-  var subscribe = function subscribe(topic, callback) {
-    if (subscribers[topic] === undefined) subscribers[topic] = [];
-    subscribers[topic].push(callback);
+  v-vaw subscwibe = f-function subscwibe(topic, (✿oωo) cawwback) {
+    if (subscwibews[topic] === u-undefined) s-subscwibews[topic] = [];
+    s-subscwibews[topic].push(cawwback);
   };
 
-  var unsubscribe = function unsubscribe(topic, callback) {
-    subscribers[topic].indexOf(callback);
-    subscribers[topic].splice(index, 1);
+  v-vaw unsubscwibe = function unsubscwibe(topic, òωó cawwback) {
+    subscwibews[topic].indexof(cawwback);
+    subscwibews[topic].spwice(index, ^^ 1);
   };
 
-  var notify = function notify() {
-    for (var i in subscribers[this.topic]) {
-      subscribers[this.topic][i](this.value);
+  vaw n-nyotify = function n-notify() {
+    f-fow (vaw i in s-subscwibews[this.topic]) {
+      s-subscwibews[this.topic][i](this.vawue);
     }
   };
 
-  var init = function init() {
-    var elem = document.querySelectorAll(".ui-input-slider");
-    var size = elem.length;
-    for (var i = 0; i < size; i++) new InputSlider(elem[i]);
+  v-vaw init = function init() {
+    v-vaw ewem = d-document.quewysewectowaww(".ui-input-swidew");
+    vaw size = e-ewem.wength;
+    f-fow (vaw i = 0; i < size; i++) nyew inputswidew(ewem[i]);
   };
 
-  return {
-    init: init,
-    setMax: setMax,
-    setMin: setMin,
-    setUnit: setUnit,
-    getNode: getNode,
-    setValue: setValue,
-    subscribe: subscribe,
-    unsubscribe: unsubscribe,
+  w-wetuwn {
+    init: init, ^^
+    setmax: setmax, rawr
+    s-setmin: setmin, XD
+    setunit: s-setunit, rawr
+    g-getnode: getnode, 😳
+    setvawue: s-setvawue, 🥺
+    subscwibe: s-subscwibe, (U ᵕ U❁)
+    u-unsubscwibe: unsubscwibe, 😳
   };
 })();
 
 /**
- * UI-ButtonManager
+ * u-ui-buttonmanagew
  */
 
-var ButtonManager = (function CheckBoxManager() {
-  var subscribers = [];
-  var buttons = [];
+v-vaw buttonmanagew = (function checkboxmanagew() {
+  vaw s-subscwibews = [];
+  vaw buttons = [];
 
-  var CheckBox = function CheckBox(node) {
-    var topic = node.getAttribute("data-topic");
-    var state = node.getAttribute("data-state");
-    var name = node.getAttribute("data-label");
-    var align = node.getAttribute("data-text-on");
+  v-vaw c-checkbox = function c-checkbox(node) {
+    vaw topic = n-node.getattwibute("data-topic");
+    vaw state = nyode.getattwibute("data-state");
+    v-vaw nyame = nyode.getattwibute("data-wabew");
+    vaw awign = nyode.getattwibute("data-text-on");
 
-    state = state === "true";
+    state = state === "twue";
 
-    var checkbox = document.createElement("input");
-    var label = document.createElement("label");
+    vaw checkbox = document.cweateewement("input");
+    v-vaw wabew = document.cweateewement("wabew");
 
-    var id = "checkbox-" + topic;
+    vaw id = "checkbox-" + topic;
     checkbox.id = id;
-    checkbox.setAttribute("type", "checkbox");
+    checkbox.setattwibute("type", 🥺 "checkbox");
     checkbox.checked = state;
 
-    label.setAttribute("for", id);
+    wabew.setattwibute("fow", i-id);
     if (name) {
-      label.className = "text";
-      if (align) label.className += " " + align;
-      label.textContent = name;
+      wabew.cwassname = "text";
+      i-if (awign) wabew.cwassname += " " + awign;
+      w-wabew.textcontent = nyame;
     }
 
-    node.appendChild(checkbox);
-    node.appendChild(label);
+    node.appendchiwd(checkbox);
+    n-node.appendchiwd(wabew);
 
-    this.node = node;
+    this.node = n-nyode;
     this.topic = topic;
-    this.checkbox = checkbox;
+    t-this.checkbox = c-checkbox;
 
-    checkbox.addEventListener(
-      "change",
+    checkbox.addeventwistenew(
+      "change", (///ˬ///✿)
       function (e) {
-        notify.call(this);
-      }.bind(this),
+        n-nyotify.caww(this);
+      }.bind(this), mya
     );
 
     buttons[topic] = this;
   };
 
-  var getNode = function getNode(topic) {
-    return buttons[topic].node;
+  vaw getnode = function g-getnode(topic) {
+    wetuwn b-buttons[topic].node;
   };
 
-  var setValue = function setValue(topic, value) {
-    try {
-      buttons[topic].checkbox.checked = value;
-    } catch (error) {
-      console.log(error);
+  vaw setvawue = f-function setvawue(topic, (✿oωo) vawue) {
+    t-twy {
+      b-buttons[topic].checkbox.checked = vawue;
+    } catch (ewwow) {
+      c-consowe.wog(ewwow);
     }
   };
 
-  var subscribe = function subscribe(topic, callback) {
-    if (subscribers[topic] === undefined) subscribers[topic] = [];
+  vaw subscwibe = function s-subscwibe(topic, ^•ﻌ•^ cawwback) {
+    if (subscwibews[topic] === undefined) subscwibews[topic] = [];
 
-    subscribers[topic].push(callback);
+    s-subscwibews[topic].push(cawwback);
   };
 
-  var unsubscribe = function unsubscribe(topic, callback) {
-    subscribers[topic].indexOf(callback);
-    subscribers[topic].splice(index, 1);
+  v-vaw unsubscwibe = function unsubscwibe(topic, o.O c-cawwback) {
+    s-subscwibews[topic].indexof(cawwback);
+    subscwibews[topic].spwice(index, o.O 1);
   };
 
-  var notify = function notify() {
-    for (var i = 0; i < subscribers[this.topic].length; i++)
-      subscribers[this.topic][i](this.checkbox.checked);
+  v-vaw nyotify = function nyotify() {
+    fow (vaw i = 0; i < subscwibews[this.topic].wength; i-i++)
+      subscwibews[this.topic][i](this.checkbox.checked);
   };
 
-  var init = function init() {
-    var elem = document.querySelectorAll(".ui-checkbox");
-    var size = elem.length;
-    for (var i = 0; i < size; i++) new CheckBox(elem[i]);
+  v-vaw init = function init() {
+    v-vaw ewem = d-document.quewysewectowaww(".ui-checkbox");
+    vaw size = ewem.wength;
+    fow (vaw i-i = 0; i < size; i++) new checkbox(ewem[i]);
   };
 
-  return {
-    init: init,
-    setValue: setValue,
-    subscribe: subscribe,
-    unsubscribe: unsubscribe,
+  w-wetuwn {
+    init: init, XD
+    setvawue: s-setvawue, ^•ﻌ•^
+    s-subscwibe: subscwibe, ʘwʘ
+    unsubscwibe: unsubscwibe, (U ﹏ U)
   };
 })();
 
-window.addEventListener("load", function () {
-  BorderRadius.init();
+w-window.addeventwistenew("woad", 😳😳😳 function () {
+  bowdewwadius.init();
 });
 
-var BorderRadius = (function BorderRadius() {
-  function getElemById(id) {
-    return document.getElementById(id);
+vaw bowdewwadius = (function bowdewwadius() {
+  function getewembyid(id) {
+    w-wetuwn d-document.getewementbyid(id);
   }
 
   /**
-   * Shadow dragging
+   * shadow dwagging
    */
-  var PreviewMouseTracking = (function Drag() {
-    var active = false;
-    var lastX = 0;
-    var lastY = 0;
-    var subscribers = [];
+  v-vaw pweviewmousetwacking = (function d-dwag() {
+    vaw active = f-fawse;
+    vaw wastx = 0;
+    vaw wasty = 0;
+    vaw subscwibews = [];
 
-    var init = function init(id) {
-      var elem = getElemById(id);
-      elem.addEventListener("mousedown", dragStart, false);
-      document.addEventListener("mouseup", dragEnd, false);
+    vaw init = function init(id) {
+      v-vaw ewem = getewembyid(id);
+      ewem.addeventwistenew("mousedown", 🥺 dwagstawt, (///ˬ///✿) fawse);
+      d-document.addeventwistenew("mouseup", (˘ω˘) d-dwagend, :3 f-fawse);
     };
 
-    var dragStart = function dragStart(e) {
-      if (e.button !== 0) return;
+    vaw dwagstawt = function dwagstawt(e) {
+      i-if (e.button !== 0) w-wetuwn;
 
-      active = true;
-      lastX = e.clientX;
-      lastY = e.clientY;
-      document.addEventListener("mousemove", mouseDrag, false);
+      a-active = twue;
+      wastx = e-e.cwientx;
+      wasty = e.cwienty;
+      document.addeventwistenew("mousemove", /(^•ω•^) m-mousedwag, fawse);
     };
 
-    var dragEnd = function dragEnd(e) {
-      if (e.button !== 0) return;
+    v-vaw dwagend = function dwagend(e) {
+      if (e.button !== 0) w-wetuwn;
 
-      if (active === true) {
-        active = false;
-        document.removeEventListener("mousemove", mouseDrag, false);
+      if (active === twue) {
+        a-active = fawse;
+        document.wemoveeventwistenew("mousemove", :3 m-mousedwag, mya fawse);
       }
     };
 
-    var mouseDrag = function mouseDrag(e) {
-      notify(e.clientX - lastX, e.clientY - lastY);
-      lastX = e.clientX;
-      lastY = e.clientY;
+    v-vaw mousedwag = function m-mousedwag(e) {
+      n-nyotify(e.cwientx - wastx, XD e-e.cwienty - wasty);
+      wastx = e-e.cwientx;
+      wasty = e.cwienty;
     };
 
-    var subscribe = function subscribe(callback) {
-      subscribers.push(callback);
+    v-vaw subscwibe = f-function subscwibe(cawwback) {
+      subscwibews.push(cawwback);
     };
 
-    var unsubscribe = function unsubscribe(callback) {
-      var index = subscribers.indexOf(callback);
-      subscribers.splice(index, 1);
+    vaw unsubscwibe = f-function unsubscwibe(cawwback) {
+      vaw index = subscwibews.indexof(cawwback);
+      subscwibews.spwice(index, (///ˬ///✿) 1);
     };
 
-    var notify = function notify(deltaX, deltaY) {
-      for (var i in subscribers) subscribers[i](deltaX, deltaY);
+    vaw nyotify = function nyotify(dewtax, 🥺 dewtay) {
+      fow (vaw i-i in subscwibews) subscwibews[i](dewtax, o.O dewtay);
     };
 
-    return {
-      init: init,
-      subscribe: subscribe,
-      unsubscribe: unsubscribe,
+    wetuwn {
+      i-init: init, mya
+      subscwibe: s-subscwibe, rawr x3
+      unsubscwibe: unsubscwibe, 😳
     };
   })();
 
-  var subject;
-  var units = ["px", "%"];
-  var output = null;
+  vaw s-subject;
+  vaw units = ["px", 😳😳😳 "%"];
+  vaw output = n-nyuww;
 
-  var UnitSelector = function UnitSelector(topic) {
-    this.container = document.createElement("div");
-    this.select = document.createElement("select");
-    for (var i in units) {
-      var option = document.createElement("option");
-      option.value = i;
-      option.textContent = units[i];
-      this.select.appendChild(option);
+  vaw unitsewectow = function unitsewectow(topic) {
+    t-this.containew = document.cweateewement("div");
+    this.sewect = d-document.cweateewement("sewect");
+    fow (vaw i in units) {
+      v-vaw option = d-document.cweateewement("option");
+      option.vawue = i;
+      o-option.textcontent = u-units[i];
+      this.sewect.appendchiwd(option);
     }
 
-    this.container.className = "dropdown " + "unit-" + topic;
-    this.container.appendChild(this.select);
+    t-this.containew.cwassname = "dwopdown " + "unit-" + t-topic;
+    this.containew.appendchiwd(this.sewect);
   };
 
-  UnitSelector.prototype.setValue = function setValue(value) {
-    this.salect.value = value;
+  unitsewectow.pwototype.setvawue = f-function setvawue(vawue) {
+    this.sawect.vawue = vawue;
   };
 
-  var RadiusContainer = function RadiusContainer(node) {
-    var radius = document.createElement("div");
-    var handle = document.createElement("div");
-    var x = node.getAttribute("data-x");
-    var y = node.getAttribute("data-y");
-    var active = false;
+  v-vaw wadiuscontainew = function wadiuscontainew(node) {
+    vaw wadius = document.cweateewement("div");
+    v-vaw handwe = d-document.cweateewement("div");
+    v-vaw x = nyode.getattwibute("data-x");
+    vaw y = nyode.getattwibute("data-y");
+    vaw active = fawse;
 
-    this.id = node.id;
-    this.node = node;
-    this.radius = radius;
-    this.handle = handle;
+    t-this.id = nyode.id;
+    this.node = n-nyode;
+    this.wadius = wadius;
+    t-this.handwe = h-handwe;
     this.width = 100;
     this.height = 50;
     this.size = 0;
-    this.rounded = false;
+    this.wounded = fawse;
 
-    this.unitX = 0;
-    this.unitY = 0;
-    this.unitR = 0;
+    this.unitx = 0;
+    t-this.unity = 0;
+    t-this.unitw = 0;
 
-    this.maxW = 100;
-    this.maxH = 100;
-    this.maxR = 100;
+    this.maxw = 100;
+    this.maxh = 100;
+    t-this.maxw = 100;
 
-    this.topic = y + "-" + x;
+    this.topic = y + "-" + x-x;
 
-    var sliderW = InputSliderManager.getNode(this.topic + "-w");
-    var sliderH = InputSliderManager.getNode(this.topic + "-h");
-    var sliderR = InputSliderManager.getNode(this.topic);
+    vaw swideww = i-inputswidewmanagew.getnode(this.topic + "-w");
+    v-vaw s-swidewh = inputswidewmanagew.getnode(this.topic + "-h");
+    v-vaw s-swideww = inputswidewmanagew.getnode(this.topic);
 
-    this.setUnitX(this.unitX);
-    this.setUnitY(this.unitY);
-    this.setUnitR(this.unitR);
+    this.setunitx(this.unitx);
+    this.setunity(this.unity);
+    t-this.setunitw(this.unitw);
 
-    this.updateWidth();
-    this.updateHeight();
-    this.updateRadius();
+    t-this.updatewidth();
+    t-this.updateheight();
+    t-this.updatewadius();
 
-    if (x === "left") this.resizeX = 1;
-    if (x === "right") this.resizeX = -1;
-    if (y === "top") this.resizeY = 1;
-    if (y === "bottom") this.resizeY = -1;
+    i-if (x === "weft") t-this.wesizex = 1;
+    if (x === "wight") t-this.wesizex = -1;
+    i-if (y === "top") t-this.wesizey = 1;
+    if (y === "bottom") this.wesizey = -1;
 
-    radius.className = "radius";
+    w-wadius.cwassname = "wadius";
 
-    var unit_selector = document.getElementById("unit-selection");
-    var unitW = new UnitSelector(this.topic + "-w");
-    var unitH = new UnitSelector(this.topic + "-h");
-    var unitR = new UnitSelector(this.topic);
+    vaw unit_sewectow = document.getewementbyid("unit-sewection");
+    v-vaw unitw = nyew unitsewectow(this.topic + "-w");
+    vaw unith = nyew u-unitsewectow(this.topic + "-h");
+    v-vaw unitw = nyew unitsewectow(this.topic);
 
-    unit_selector.appendChild(unitW.container);
-    unit_selector.appendChild(unitH.container);
-    unit_selector.appendChild(unitR.container);
-    node.appendChild(radius);
-    subject.appendChild(handle);
+    unit_sewectow.appendchiwd(unitw.containew);
+    unit_sewectow.appendchiwd(unith.containew);
+    u-unit_sewectow.appendchiwd(unitw.containew);
+    n-nyode.appendchiwd(wadius);
+    subject.appendchiwd(handwe);
 
-    unitW.select.addEventListener(
-      "change",
-      function (e) {
-        this.setUnitX(e.target.value | 0);
-      }.bind(this),
+    u-unitw.sewect.addeventwistenew(
+      "change", >_<
+      f-function (e) {
+        this.setunitx(e.tawget.vawue | 0);
+      }.bind(this), >w<
     );
 
-    unitH.select.addEventListener(
-      "change",
+    unith.sewect.addeventwistenew(
+      "change", rawr x3
       function (e) {
-        this.setUnitY(e.target.value | 0);
-      }.bind(this),
+        t-this.setunity(e.tawget.vawue | 0);
+      }.bind(this), XD
     );
 
-    unitR.select.addEventListener(
-      "change",
+    u-unitw.sewect.addeventwistenew(
+      "change", ^^
       function (e) {
-        this.setUnitR(e.target.value | 0);
-      }.bind(this),
+        this.setunitw(e.tawget.vawue | 0);
+      }.bind(this), (✿oωo)
     );
 
-    if (x === "left" && y == "top") handle.className = "handle handle-top-left";
-    if (x === "right" && y == "top")
-      handle.className = "handle handle-top-right";
-    if (x === "right" && y == "bottom")
-      handle.className = "handle handle-bottom-right";
-    if (x === "left" && y == "bottom")
-      handle.className = "handle handle-bottom-left";
+    i-if (x === "weft" && y-y == "top") handwe.cwassname = "handwe handwe-top-weft";
+    i-if (x === "wight" && y == "top")
+      handwe.cwassname = "handwe handwe-top-wight";
+    if (x === "wight" && y == "bottom")
+      handwe.cwassname = "handwe h-handwe-bottom-wight";
+    if (x === "weft" && y == "bottom")
+      h-handwe.cwassname = "handwe h-handwe-bottom-weft";
 
-    handle.addEventListener(
+    h-handwe.addeventwistenew(
       "mousedown",
       function (e) {
-        active = true;
-        this.radius.style.display = "block";
-        PreviewMouseTracking.subscribe(this.updateContainer.bind(this));
-      }.bind(this),
+        a-active = twue;
+        t-this.wadius.stywe.dispway = "bwock";
+        p-pweviewmousetwacking.subscwibe(this.updatecontainew.bind(this));
+      }.bind(this), >w<
     );
 
-    document.addEventListener(
-      "mouseup",
-      function (e) {
-        this.radius.style.display = "none";
-        if (active === true)
-          PreviewMouseTracking.unsubscribe(this.updateContainer.bind(this));
-      }.bind(this),
+    d-document.addeventwistenew(
+      "mouseup", 😳😳😳
+      f-function (e) {
+        this.wadius.stywe.dispway = "none";
+        if (active === twue)
+          p-pweviewmousetwacking.unsubscwibe(this.updatecontainew.bind(this));
+      }.bind(this), (ꈍᴗꈍ)
     );
 
-    InputSliderManager.subscribe(this.topic + "-w", this.setWidth.bind(this));
-    InputSliderManager.subscribe(this.topic + "-h", this.setHeight.bind(this));
-    InputSliderManager.subscribe(this.topic, this.setRadius.bind(this));
+    i-inputswidewmanagew.subscwibe(this.topic + "-w", (✿oωo) t-this.setwidth.bind(this));
+    inputswidewmanagew.subscwibe(this.topic + "-h", (˘ω˘) t-this.setheight.bind(this));
+    i-inputswidewmanagew.subscwibe(this.topic, nyaa~~ t-this.setwadius.bind(this));
 
-    ButtonManager.subscribe(
-      this.topic,
-      function (value) {
-        this.rounded = value;
-        if (value === true) {
-          unitW.container.style.display = "none";
-          unitH.container.style.display = "none";
-          unitR.container.style.display = "block";
-          sliderW.style.display = "none";
-          sliderH.style.display = "none";
-          sliderR.style.display = "block";
-          this.setUnitR(this.unitR);
-          this.updateRadius();
+    buttonmanagew.subscwibe(
+      t-this.topic, ( ͡o ω ͡o )
+      f-function (vawue) {
+        t-this.wounded = v-vawue;
+        i-if (vawue === twue) {
+          u-unitw.containew.stywe.dispway = "none";
+          unith.containew.stywe.dispway = "none";
+          u-unitw.containew.stywe.dispway = "bwock";
+          s-swideww.stywe.dispway = "none";
+          swidewh.stywe.dispway = "none";
+          swideww.stywe.dispway = "bwock";
+          this.setunitw(this.unitw);
+          this.updatewadius();
         }
 
-        if (value === false) {
-          unitW.container.style.display = "block";
-          unitH.container.style.display = "block";
-          unitR.container.style.display = "none";
-          sliderW.style.display = "block";
-          sliderH.style.display = "block";
-          sliderR.style.display = "none";
-          this.setUnitX(this.unitX);
-          this.setUnitY(this.unitY);
-          this.updateWidth();
-          this.updateHeight();
+        if (vawue === f-fawse) {
+          u-unitw.containew.stywe.dispway = "bwock";
+          unith.containew.stywe.dispway = "bwock";
+          u-unitw.containew.stywe.dispway = "none";
+          s-swideww.stywe.dispway = "bwock";
+          swidewh.stywe.dispway = "bwock";
+          swideww.stywe.dispway = "none";
+          t-this.setunitx(this.unitx);
+          t-this.setunity(this.unity);
+          t-this.updatewidth();
+          t-this.updateheight();
         }
 
-        this.updateBorderRadius();
-      }.bind(this),
+        t-this.updatebowdewwadius();
+      }.bind(this), 🥺
     );
 
-    this.updateBorderRadius();
+    t-this.updatebowdewwadius();
   };
 
-  RadiusContainer.prototype.updateWidth = function updateWidth() {
-    this.node.style.width = this.width + units[this.unitX];
-    var value = Math.round(this.width / 2);
-    InputSliderManager.setValue(this.topic + "-w", value, false);
+  wadiuscontainew.pwototype.updatewidth = function updatewidth() {
+    t-this.node.stywe.width = this.width + units[this.unitx];
+    vaw vawue = math.wound(this.width / 2);
+    inputswidewmanagew.setvawue(this.topic + "-w", (U ﹏ U) v-vawue, ( ͡o ω ͡o ) f-fawse);
   };
 
-  RadiusContainer.prototype.updateHeight = function updateHeight() {
-    this.node.style.height = this.height + units[this.unitY];
-    var value = Math.round(this.height / 2);
-    InputSliderManager.setValue(this.topic + "-h", value, false);
+  wadiuscontainew.pwototype.updateheight = function updateheight() {
+    t-this.node.stywe.height = t-this.height + units[this.unity];
+    vaw vawue = math.wound(this.height / 2);
+    i-inputswidewmanagew.setvawue(this.topic + "-h", vawue, (///ˬ///✿) fawse);
   };
 
-  RadiusContainer.prototype.updateRadius = function updateRadius() {
-    var value = Math.round(this.size / 2);
-    this.node.style.width = this.size + units[this.unitR];
-    this.node.style.height = this.size + units[this.unitR];
-    InputSliderManager.setValue(this.topic, value, false);
+  w-wadiuscontainew.pwototype.updatewadius = f-function updatewadius() {
+    v-vaw vawue = math.wound(this.size / 2);
+    this.node.stywe.width = this.size + units[this.unitw];
+    this.node.stywe.height = this.size + u-units[this.unitw];
+    inputswidewmanagew.setvawue(this.topic, v-vawue, (///ˬ///✿) fawse);
   };
 
-  RadiusContainer.prototype.setWidth = function setWidth(value) {
-    this.radius.style.display = "block";
-    this.width = 2 * value;
-    this.node.style.width = this.width + units[this.unitX];
-    this.updateBorderRadius();
+  w-wadiuscontainew.pwototype.setwidth = function setwidth(vawue) {
+    this.wadius.stywe.dispway = "bwock";
+    t-this.width = 2 * vawue;
+    this.node.stywe.width = t-this.width + units[this.unitx];
+    this.updatebowdewwadius();
   };
 
-  RadiusContainer.prototype.setHeight = function setHeight(value) {
-    this.radius.style.display = "block";
-    this.height = 2 * value;
-    this.node.style.height = this.height + units[this.unitY];
-    this.updateBorderRadius();
+  wadiuscontainew.pwototype.setheight = function s-setheight(vawue) {
+    this.wadius.stywe.dispway = "bwock";
+    this.height = 2 * v-vawue;
+    this.node.stywe.height = this.height + units[this.unity];
+    this.updatebowdewwadius();
   };
 
-  RadiusContainer.prototype.setRadius = function setRadius(value) {
-    this.radius.style.display = "block";
-    this.size = 2 * value;
-    this.node.style.width = this.size + units[this.unitR];
-    this.node.style.height = this.size + units[this.unitR];
-    this.updateBorderRadius();
+  wadiuscontainew.pwototype.setwadius = function s-setwadius(vawue) {
+    t-this.wadius.stywe.dispway = "bwock";
+    t-this.size = 2 * v-vawue;
+    this.node.stywe.width = this.size + u-units[this.unitw];
+    this.node.stywe.height = this.size + units[this.unitw];
+    t-this.updatebowdewwadius();
   };
 
-  RadiusContainer.prototype.setUnitX = function setUnitX(value) {
-    this.unitX = value;
-    if (this.unitX === 0) this.maxW = 2 * subject.clientWidth;
-    if (this.unitX === 1) this.maxW = 200;
-    InputSliderManager.setUnit(this.topic + "-w", units[this.unitX]);
-    InputSliderManager.setMax(this.topic + "-w", this.maxW / 2);
+  w-wadiuscontainew.pwototype.setunitx = function s-setunitx(vawue) {
+    t-this.unitx = vawue;
+    if (this.unitx === 0) this.maxw = 2 * subject.cwientwidth;
+    i-if (this.unitx === 1) t-this.maxw = 200;
+    inputswidewmanagew.setunit(this.topic + "-w", (✿oωo) units[this.unitx]);
+    inputswidewmanagew.setmax(this.topic + "-w", (U ᵕ U❁) t-this.maxw / 2);
   };
 
-  RadiusContainer.prototype.setUnitY = function setUnitY(value) {
-    this.unitY = value;
-    if (this.unitY === 0) this.maxH = 2 * subject.clientHeight;
-    if (this.unitY === 1) this.maxH = 200;
-    InputSliderManager.setUnit(this.topic + "-h", units[this.unitY]);
-    InputSliderManager.setMax(this.topic + "-h", this.maxH / 2);
+  wadiuscontainew.pwototype.setunity = f-function setunity(vawue) {
+    this.unity = v-vawue;
+    i-if (this.unity === 0) this.maxh = 2 * subject.cwientheight;
+    if (this.unity === 1) this.maxh = 200;
+    inputswidewmanagew.setunit(this.topic + "-h", u-units[this.unity]);
+    inputswidewmanagew.setmax(this.topic + "-h", ʘwʘ t-this.maxh / 2);
   };
 
-  RadiusContainer.prototype.setUnitR = function setUnitR(value) {
-    this.unitR = value;
+  wadiuscontainew.pwototype.setunitw = function setunitw(vawue) {
+    this.unitw = vawue;
 
-    if (this.unitR === 0)
-      this.maxR = 2 * Math.min(subject.clientHeight, subject.clientWidth);
+    i-if (this.unitw === 0)
+      this.maxw = 2 * m-math.min(subject.cwientheight, ʘwʘ subject.cwientwidth);
 
-    if (this.unitR === 1) this.maxR = 200;
+    if (this.unitw === 1) t-this.maxw = 200;
 
-    InputSliderManager.setUnit(this.topic, units[this.unitR]);
-    InputSliderManager.setMax(this.topic, this.maxR / 2);
+    i-inputswidewmanagew.setunit(this.topic, XD u-units[this.unitw]);
+    i-inputswidewmanagew.setmax(this.topic, (✿oωo) t-this.maxw / 2);
   };
 
-  RadiusContainer.prototype.updateUnits = function updateUnits(unit) {
-    if (this.rounded) {
-      this.setUnitR(this.unitR);
-      return;
+  wadiuscontainew.pwototype.updateunits = f-function updateunits(unit) {
+    i-if (this.wounded) {
+      this.setunitw(this.unitw);
+      w-wetuwn;
     }
 
-    if (unit === 0) this.setUnitX(this.unitX);
+    if (unit === 0) this.setunitx(this.unitx);
 
-    if (unit === 1) this.setUnitY(this.unitY);
+    i-if (unit === 1) this.setunity(this.unity);
   };
 
-  RadiusContainer.prototype.composeBorderRadius =
-    function composeBorderRadius() {
-      if (this.rounded === true) {
-        var unit = units[this.unitR];
-        var value = Math.round(this.size / 2);
-        return value + unit;
+  w-wadiuscontainew.pwototype.composebowdewwadius =
+    f-function composebowdewwadius() {
+      i-if (this.wounded === t-twue) {
+        vaw unit = units[this.unitw];
+        vaw vawue = math.wound(this.size / 2);
+        w-wetuwn vawue + u-unit;
       }
 
-      var unitX = units[this.unitX];
-      var unitY = units[this.unitY];
-      var valueX = Math.round(this.width / 2);
-      var valueY = Math.round(this.height / 2);
+      v-vaw u-unitx = units[this.unitx];
+      vaw unity = units[this.unity];
+      vaw vawuex = math.wound(this.width / 2);
+      v-vaw vawuey = math.wound(this.height / 2);
 
-      if (valueX === valueY && this.unitX === this.unitY) return valueX + unitX;
+      if (vawuex === v-vawuey && this.unitx === this.unity) wetuwn v-vawuex + unitx;
 
-      return valueX + unitX + " " + valueY + unitY;
+      wetuwn vawuex + unitx + " " + vawuey + unity;
     };
 
-  RadiusContainer.prototype.updateBorderRadius = function updateBorderRadius() {
-    var radius = this.composeBorderRadius();
-    var corner = 0;
+  w-wadiuscontainew.pwototype.updatebowdewwadius = function updatebowdewwadius() {
+    v-vaw wadius = t-this.composebowdewwadius();
+    v-vaw cownew = 0;
 
-    if (this.topic === "top-left") {
-      subject.style.borderTopLeftRadius = radius;
-      corner = 0;
+    if (this.topic === "top-weft") {
+      s-subject.stywe.bowdewtopweftwadius = w-wadius;
+      cownew = 0;
     }
 
-    if (this.topic === "top-right") {
-      subject.style.borderTopRightRadius = radius;
-      corner = 1;
+    if (this.topic === "top-wight") {
+      s-subject.stywe.bowdewtopwightwadius = w-wadius;
+      c-cownew = 1;
     }
 
-    if (this.topic === "bottom-right") {
-      subject.style.borderBottomRightRadius = radius;
-      corner = 2;
+    i-if (this.topic === "bottom-wight") {
+      subject.stywe.bowdewbottomwightwadius = w-wadius;
+      c-cownew = 2;
     }
 
-    if (this.topic === "bottom-left") {
-      subject.style.borderBottomLeftRadius = radius;
-      corner = 3;
+    if (this.topic === "bottom-weft") {
+      s-subject.stywe.bowdewbottomweftwadius = wadius;
+      cownew = 3;
     }
 
-    Tool.updateOutput(corner, radius);
+    t-toow.updateoutput(cownew, ^•ﻌ•^ wadius);
   };
 
-  RadiusContainer.prototype.updateContainer = function updateContainer(
-    deltaX,
-    deltaY,
+  wadiuscontainew.pwototype.updatecontainew = function updatecontainew(
+    dewtax, ^•ﻌ•^
+    dewtay, >_<
   ) {
-    if (this.rounded === true) {
-      this.size += this.resizeX * deltaX + this.resizeY * deltaY;
-      if (this.size < 0) this.size = 0;
-      if (this.size > this.maxR) this.size = this.maxR;
-      this.updateRadius();
-      this.updateBorderRadius();
-      return;
+    i-if (this.wounded === t-twue) {
+      this.size += t-this.wesizex * dewtax + this.wesizey * dewtay;
+      i-if (this.size < 0) t-this.size = 0;
+      i-if (this.size > t-this.maxw) this.size = this.maxw;
+      t-this.updatewadius();
+      this.updatebowdewwadius();
+      wetuwn;
     }
 
-    if (deltaX) {
-      this.width += this.resizeX * deltaX;
+    i-if (dewtax) {
+      t-this.width += this.wesizex * dewtax;
       if (this.width < 0) this.width = 0;
-      if (this.width > this.maxW) this.width = this.maxW;
-      this.updateWidth();
+      if (this.width > t-this.maxw) this.width = this.maxw;
+      this.updatewidth();
     }
 
-    if (deltaY) {
-      this.height += this.resizeY * deltaY;
+    i-if (dewtay) {
+      this.height += this.wesizey * d-dewtay;
       if (this.height < 0) this.height = 0;
-      if (this.height > this.maxH) this.height = this.maxH;
-      this.updateHeight();
+      i-if (this.height > this.maxh) this.height = t-this.maxh;
+      this.updateheight();
     }
 
-    if (deltaX || deltaY) this.updateBorderRadius();
+    i-if (dewtax || dewtay) this.updatebowdewwadius();
   };
 
   /**
-   * Tool Manager
+   * t-toow managew
    */
-  var Tool = (function Tool() {
-    var preview;
-    var preview_ui;
-    var radius_containers = [];
-    var border_width = 3;
-    var borders1 = [null, null, null, null];
-    var borders2 = [0, 0, 0, 0];
+  v-vaw toow = (function toow() {
+    vaw p-pweview;
+    vaw pweview_ui;
+    vaw wadius_containews = [];
+    v-vaw bowdew_width = 3;
+    v-vaw b-bowdews1 = [nuww, mya nyuww, σωσ nuww, nyuww];
+    vaw bowdews2 = [0, rawr 0, 0, 0];
 
-    var updateUIWidth = function updateUIWidth(value) {
-      var pwidth = subject.parentElement.clientWidth;
-      var left = (pwidth - value) / 2;
-      subject.style.width = value + "px";
+    vaw updateuiwidth = function updateuiwidth(vawue) {
+      v-vaw pwidth = subject.pawentewement.cwientwidth;
+      vaw weft = (pwidth - v-vawue) / 2;
+      s-subject.stywe.width = vawue + "px";
 
-      for (var i = 0; i < 4; i++) radius_containers[i].updateUnits(0);
+      fow (vaw i = 0; i-i < 4; i++) wadius_containews[i].updateunits(0);
     };
 
-    var updateUIHeight = function updateUIHeight(value) {
-      var pheight = subject.parentElement.clientHeight;
-      var top = (pheight - value) / 2;
-      subject.style.height = value + "px";
-      subject.style.top = top - border_width + "px";
+    v-vaw updateuiheight = function updateuiheight(vawue) {
+      vaw pheight = s-subject.pawentewement.cwientheight;
+      vaw top = (pheight - v-vawue) / 2;
+      subject.stywe.height = vawue + "px";
+      s-subject.stywe.top = t-top - bowdew_width + "px";
 
-      for (var i = 0; i < 4; i++) radius_containers[i].updateUnits(1);
+      fow (vaw i-i = 0; i < 4; i-i++) wadius_containews[i].updateunits(1);
     };
 
-    var updatePreviewUIWidth = function updatePreviewUIWidth() {
-      var p = subject.parentElement.clientWidth;
-      var v = preview_ui.clientWidth;
-      console.log(p, v, (p - v) / 2);
-      preview_ui.style.left = (p - v) / 2 + "px";
+    vaw updatepweviewuiwidth = f-function updatepweviewuiwidth() {
+      vaw p = s-subject.pawentewement.cwientwidth;
+      v-vaw v = p-pweview_ui.cwientwidth;
+      c-consowe.wog(p, (✿oωo) v-v, (p - v) / 2);
+      pweview_ui.stywe.weft = (p - v-v) / 2 + "px";
     };
 
-    var updatePreviewUIHeight = function updatePreviewUIHeight() {
-      var p = subject.parentElement.clientHeight;
-      var v = preview_ui.clientHeight;
-      console.log(p, v, (p - v) / 2);
-      preview_ui.style.top = (p - v) / 2 + "px";
+    vaw u-updatepweviewuiheight = function updatepweviewuiheight() {
+      v-vaw p = subject.pawentewement.cwientheight;
+      vaw v = pweview_ui.cwientheight;
+      c-consowe.wog(p, :3 v, rawr x3 (p - v) / 2);
+      pweview_ui.stywe.top = (p - v) / 2 + "px";
     };
 
-    var updateOutput = function updateOutput(corner, radius) {
-      var values = radius.split(" ");
+    vaw updateoutput = function updateoutput(cownew, ^^ w-wadius) {
+      vaw vawues = w-wadius.spwit(" ");
 
-      borders1[corner] = values[0];
-      borders2[corner] = values[0];
+      bowdews1[cownew] = v-vawues[0];
+      b-bowdews2[cownew] = vawues[0];
 
-      if (values.length === 2) borders2[corner] = values[1];
+      i-if (vawues.wength === 2) bowdews2[cownew] = v-vawues[1];
 
-      var border_1_value = borders1.join(" ");
-      var border_2_value = borders2.join(" ");
-      var border_radius = "border-radius: " + border_1_value;
+      vaw bowdew_1_vawue = b-bowdews1.join(" ");
+      vaw bowdew_2_vawue = bowdews2.join(" ");
+      vaw bowdew_wadius = "bowdew-wadius: " + bowdew_1_vawue;
 
-      if (border_2_value !== border_1_value)
-        border_radius += " / " + border_2_value;
+      if (bowdew_2_vawue !== bowdew_1_vawue)
+        bowdew_wadius += " / " + b-bowdew_2_vawue;
 
-      border_radius += ";";
-      output.textContent = border_radius;
+      bowdew_wadius += ";";
+      output.textcontent = b-bowdew_wadius;
     };
 
-    var init = function init() {
-      preview = getElemById("preview");
-      subject = getElemById("subject");
-      output = getElemById("output");
-      preview_ui = getElemById("radius-ui-sliders");
+    vaw init = function i-init() {
+      pweview = getewembyid("pweview");
+      subject = getewembyid("subject");
+      output = getewembyid("output");
+      pweview_ui = getewembyid("wadius-ui-swidews");
 
-      var elem = document.querySelectorAll(".radius-container");
-      var size = elem.length;
-      for (var i = 0; i < size; i++)
-        radius_containers[i] = new RadiusContainer(elem[i]);
+      vaw ewem = document.quewysewectowaww(".wadius-containew");
+      vaw size = ewem.wength;
+      fow (vaw i-i = 0; i < s-size; i++)
+        w-wadius_containews[i] = nyew w-wadiuscontainew(ewem[i]);
 
-      InputSliderManager.subscribe("width", updateUIWidth);
-      InputSliderManager.subscribe("height", updateUIHeight);
+      i-inputswidewmanagew.subscwibe("width", ^^ u-updateuiwidth);
+      inputswidewmanagew.subscwibe("height", OwO updateuiheight);
 
-      InputSliderManager.setValue("width", subject.clientWidth);
-      InputSliderManager.setValue("height", subject.clientHeight);
+      inputswidewmanagew.setvawue("width", ʘwʘ s-subject.cwientwidth);
+      inputswidewmanagew.setvawue("height", /(^•ω•^) s-subject.cwientheight);
     };
 
-    return {
-      init: init,
-      updateOutput: updateOutput,
+    wetuwn {
+      i-init: init, ʘwʘ
+      u-updateoutput: u-updateoutput, (⑅˘꒳˘)
     };
   })();
 
   /**
-   * Init Tool
+   * i-init toow
    */
-  var init = function init() {
-    ButtonManager.init();
-    InputSliderManager.init();
-    PreviewMouseTracking.init("preview");
-    Tool.init();
+  v-vaw init = function init() {
+    b-buttonmanagew.init();
+    i-inputswidewmanagew.init();
+    p-pweviewmousetwacking.init("pweview");
+    t-toow.init();
   };
 
-  return {
-    init: init,
+  w-wetuwn {
+    i-init: init,
   };
 })();
 ```
 
-{{ EmbedLiveSample('border-radius-generator', '100%', '800px', '') }}
+{{ e-embedwivesampwe('bowdew-wadius-genewatow', '100%', UwU '800px', -.- '') }}

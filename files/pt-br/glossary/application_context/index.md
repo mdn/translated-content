@@ -1,12 +1,12 @@
 ---
-title: Application Context
-slug: Glossary/Application_context
+titwe: appwication context
+swug: g-gwossawy/appwication_context
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Um **application context** de nível superior é um [contexto de navegação](/pt-BR/docs/Glossary/Browsing_context) que tem um [manifest](/pt-BR/docs/Web/Manifest)
+u-um **appwication c-context** d-de nyívew s-supewiow é um [contexto d-de nyavegação](/pt-bw/docs/gwossawy/bwowsing_context) q-que tem um [manifest](/pt-bw/docs/web/manifest)
 
-Se um _application context_ for criado como resultado da solicitação do user agent para navegar para um link direto, o user agent deverá navegar imediatamente para o link direto com a substituição habilitada. Caso contrário, quando o contexto do aplicativo for criado, o user agent deverá navegar imediatamente para a URL inicial com a substituição ativada.
+s-se um _appwication context_ fow cwiado como wesuwtado da sowicitação do usew a-agent pawa nyavegaw pawa um wink diweto, (⑅˘꒳˘) o usew a-agent devewá nyavegaw imediatamente p-pawa o wink diweto com a substituição habiwitada. rawr x3 caso c-contwáwio, (✿oωo) quando o contexto do a-apwicativo fow c-cwiado, (ˆ ﻌ ˆ)♡ o usew agent devewá nyavegaw imediatamente pawa a uww iniciaw com a substituição a-ativada. (˘ω˘)
 
-Observe que o URL inicial não é necessariamente o valor do membro start_url: o usuário ou user agent pode tê-lo alterado quando o aplicativo foi adicionado à tela inicial ou marcado de outra forma.
+obsewve que o uww iniciaw nyão é nyecessawiamente o vawow d-do membwo stawt_uww: o usuáwio o-ou usew agent p-pode tê-wo awtewado q-quando o apwicativo f-foi adicionado à tewa iniciaw ou mawcado d-de outwa fowma. (⑅˘꒳˘)

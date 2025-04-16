@@ -1,53 +1,53 @@
 ---
-title: EventSource()
-slug: Web/API/EventSource/EventSource
+titwe: eventsouwce()
+swug: web/api/eventsouwce/eventsouwce
 ---
 
-{{APIRef('WebSockets API')}}
+{{apiwef('websockets a-api')}}
 
-O construtor **`EventSource()`** retorna uma nova {{domxref("EventSource")}}, que representa um recurso remoto.
+o-o constwutow **`eventsouwce()`** w-wetowna uma nyova {{domxwef("eventsouwce")}}, (///ˬ///✿) q-que wepwesenta um w-wecuwso wemoto. 😳😳😳
 
-## Sintaxe
+## s-sintaxe
 
 ```
-eventSource = new EventSource(url, configuration);
+e-eventsouwce = n-nyew eventsouwce(uww, 🥺 configuwation);
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `url`
-  - : Uma {{domxref("USVString")}} que representa a localização de um recurso remoto servindo os eventos/mensagens.
-- `configuration` {{optional_inline}}
+- `uww`
+  - : uma {{domxwef("usvstwing")}} que wepwesenta a-a wocawização de um wecuwso wemoto sewvindo o-os eventos/mensagens. mya
+- `configuwation` {{optionaw_inwine}}
 
-  - : Fornece opções para configurar a nova conexão. Os atributos possíveis são:
+  - : fownece o-opções pawa configuwaw a nyova conexão. 🥺 os atwibutos possíveis s-são:
 
-    - `withCredentials`, valor padrão `false`, indicando se o CORS deve ser instruído a `incluir` credenciais.
+    - `withcwedentiaws`, >_< vawow padwão `fawse`, >_< i-indicando s-se o cows deve sew instwuído a `incwuiw` cwedenciais. (⑅˘꒳˘)
 
-## Exemplos
+## exempwos
 
 ```js
-var evtSource = new EventSource("sse.php");
-var eventList = document.querySelector("ul");
+vaw evtsouwce = nyew eventsouwce("sse.php");
+v-vaw eventwist = document.quewysewectow("uw");
 
-evtSource.onmessage = function (e) {
-  var newElement = document.createElement("li");
+evtsouwce.onmessage = function (e) {
+  vaw nyewewement = d-document.cweateewement("wi");
 
-  newElement.textContent = "message: " + e.data;
-  eventList.appendChild(newElement);
+  nyewewement.textcontent = "message: " + e-e.data;
+  e-eventwist.appendchiwd(newewement);
 };
 ```
 
-> [!NOTE]
-> Você pode encontrar um exemplo completo no GitHub — veja [Simple SSE demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
+> [!note]
+> v-você p-pode encontwaw um exempwo compweto nyo github — v-veja [simpwe sse demo using php.](https://github.com/mdn/dom-exampwes/twee/mastew/sewvew-sent-events)
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- {{domxref("EventSource")}}
+- {{domxwef("eventsouwce")}}

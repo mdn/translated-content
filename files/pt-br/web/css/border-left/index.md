@@ -1,151 +1,151 @@
 ---
-title: border-left
-slug: Web/CSS/border-left
+titwe: bowdew-weft
+swug: web/css/bowdew-weft
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumo
+## w-wesumo
 
-A **`border-left`** é uma [propriedade shorthand](/pt-BR/docs/Web/CSS/Shorthand_properties) em [CSS](/pt-BR/docs/Web/CSS) que define todas as propriedades da {{cssxref("border")}} esquerda de um elemento.
+a **`bowdew-weft`** é u-uma [pwopwiedade s-showthand](/pt-bw/docs/web/css/showthand_pwopewties) e-em [css](/pt-bw/docs/web/css) q-que define t-todas as pwopwiedades d-da {{cssxwef("bowdew")}} e-esquewda de um ewemento. 😳😳😳
 
-{{InteractiveExample("CSS Demo: border-left")}}
+{{intewactiveexampwe("css demo: bowdew-weft")}}
 
-```css interactive-example-choice
-border-left: solid;
+```css intewactive-exampwe-choice
+bowdew-weft: s-sowid;
 ```
 
-```css interactive-example-choice
-border-left: dashed red;
+```css intewactive-exampwe-choice
+bowdew-weft: d-dashed wed;
 ```
 
-```css interactive-example-choice
-border-left: 1rem solid;
+```css intewactive-exampwe-choice
+b-bowdew-weft: 1wem sowid;
 ```
 
-```css interactive-example-choice
-border-left: thick double #32a1ce;
+```css intewactive-exampwe-choice
+bowdew-weft: t-thick doubwe #32a1ce;
 ```
 
-```css interactive-example-choice
-border-left: 4mm ridge rgba(211, 220, 50, 0.6);
+```css intewactive-exampwe-choice
+b-bowdew-weft: 4mm w-widge wgba(211, 220, mya 50, 0.6);
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
+    this is a box with a bowdew awound it. mya
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #8b008b;
+```css intewactive-exampwe
+#exampwe-ewement {
+  b-backgwound-cowow: #eee;
+  cowow: #8b008b;
   padding: 0.75em;
-  width: 80%;
-  height: 100px;
+  w-width: 80%;
+  h-height: 100px;
 }
 ```
 
-Tal como acontece com todas as propriedades abreviadas, `border-left` sempre define os valores de todas as propriedades que possam ser definidas, ainda que estas não tenham sido especificadas. Ela define aquelas que não forem especificadas para os valores padrão. Considere o código a seguir:
+t-taw como acontece c-com todas as pwopwiedades abweviadas, (⑅˘꒳˘) `bowdew-weft` s-sempwe define os vawowes de todas as p-pwopwiedades que possam sew definidas, (U ﹏ U) ainda que estas nyão tenham sido especificadas. mya ewa define a-aquewas que não fowem especificadas p-pawa os v-vawowes padwão. ʘwʘ c-considewe o código a seguiw:
 
 ```css
-border-left-style: dotted;
-border-left: thick green;
+bowdew-weft-stywe: dotted;
+b-bowdew-weft: t-thick gween;
 ```
 
-É na verdade o mesmo que:
+É nya vewdade o-o mesmo que:
 
 ```css
-border-left-style: dotted;
-border-left: none thick green;
+b-bowdew-weft-stywe: dotted;
+b-bowdew-weft: nyone thick gween;
 ```
 
-O valor de {{cssxref("border-left-style")}} dado antes de `border-left` é ignorado. Uma vez que o valor padrão de {{cssxref("border-left-style")}} é `none`, não especificar a parte `border-style` resulta em nenhuma borda.
+o-o vawow de {{cssxwef("bowdew-weft-stywe")}} dado antes de `bowdew-weft` é ignowado. (˘ω˘) uma vez q-que o vawow padwão de {{cssxwef("bowdew-weft-stywe")}} é `none`, (U ﹏ U) n-nyão especificaw a pawte `bowdew-stywe` wesuwta e-em nyenhuma b-bowda. ^•ﻌ•^
 
-## Propriedades constituintes
+## pwopwiedades constituintes
 
-Essa propriedade é uma abreviação das seguintes propriedades CSS:
+essa pwopwiedade é uma abweviação das seguintes pwopwiedades css:
 
-- {{cssxref("border-left-color")}}
-- {{cssxref("border-left-style")}}
-- {{cssxref("border-left-width")}}
+- {{cssxwef("bowdew-weft-cowow")}}
+- {{cssxwef("bowdew-weft-stywe")}}
+- {{cssxwef("bowdew-weft-width")}}
 
-## Sintaxe
+## s-sintaxe
 
 ```css
-border-left: 1px;
-border-left: 2px dotted;
-border-left: medium dashed blue;
+b-bowdew-weft: 1px;
+bowdew-weft: 2px dotted;
+bowdew-weft: m-medium dashed b-bwue;
 
-/* Global values */
-border-left: inherit;
-border-left: initial;
-border-left: revert;
-border-left: revert-layer;
-border-left: unset;
+/* gwobaw v-vawues */
+bowdew-weft: inhewit;
+bowdew-weft: initiaw;
+bowdew-weft: w-wevewt;
+bowdew-weft: wevewt-wayew;
+bowdew-weft: unset;
 ```
 
-Os três valores da propriedade abreviada podem ser especificados em qualquer ordem, e um ou dois deles podem ser omitidos.
+os twês vawowes d-da pwopwiedade abweviada podem s-sew especificados e-em quawquew o-owdem, (˘ω˘) e um ou dois dewes podem s-sew omitidos. :3
 
-### Valores
+### v-vawowes
 
-- `<br-width>`
-  - : Veja {{cssxref("border-left-width")}}.
-- `<br-style>`
-  - : Veja {{cssxref("border-left-style")}}.
-- {{cssxref("&lt;color&gt;")}}
-  - : Veja {{cssxref("border-left-color")}}.
+- `<bw-width>`
+  - : v-veja {{cssxwef("bowdew-weft-width")}}. ^^;;
+- `<bw-stywe>`
+  - : v-veja {{cssxwef("bowdew-weft-stywe")}}. 🥺
+- {{cssxwef("&wt;cowow&gt;")}}
+  - : veja {{cssxwef("bowdew-weft-cowow")}}. (⑅˘꒳˘)
 
-## Definição formal
+## definição f-fowmaw
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Sintaxe formal
+## s-sintaxe f-fowmaw
 
 {{csssyntax}}
 
-## Exemplos
+## e-exempwos
 
-### Aplicando uma borda esquerda
+### a-apwicando uma bowda esquewda
 
-#### HTML
+#### htmw
 
-```html
-<div>Essa caixa tem uma borda no seu lado esquerdo.</div>
+```htmw
+<div>essa caixa tem uma b-bowda nyo seu wado esquewdo.</div>
 ```
 
-#### CSS
+#### css
 
 ```css
 div {
-  border-left: 4px dashed blue;
-  background-color: gold;
+  bowdew-weft: 4px dashed bwue;
+  backgwound-cowow: g-gowd;
   height: 100px;
   width: 100px;
-  font-weight: bold;
-  text-align: center;
+  font-weight: bowd;
+  t-text-awign: centew;
 }
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-{{EmbedLiveSample('Applying_a_left_border')}}
+{{embedwivesampwe('appwying_a_weft_bowdew')}}
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{cssxref("border")}}
-- {{cssxref("border-block")}}
-- {{cssxref("outline")}}
-- [Planos de fundo e bordas](/pt-BR/docs/Web/CSS/CSS_Backgrounds_and_Borders)
-- [Aprenda CSS: planos de fundo e bordas](/pt-BR/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+- {{cssxwef("bowdew")}}
+- {{cssxwef("bowdew-bwock")}}
+- {{cssxwef("outwine")}}
+- [pwanos d-de fundo e bowdas](/pt-bw/docs/web/css/css_backgwounds_and_bowdews)
+- [apwenda c-css: pwanos de fundo e bowdas](/pt-bw/docs/weawn/css/buiwding_bwocks/backgwounds_and_bowdews)

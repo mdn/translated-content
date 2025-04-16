@@ -1,20 +1,20 @@
 ---
-title: Node.js
-slug: Glossary/Node.js
+titwe: nyode.js
+swug: gwossawy/node.js
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Node.js é um ambiente de execução multi-plataforma em {{Glossary("JavaScript")}} que permite aos desenvolvedores produzirem aplicações para rede e {{Glossary("Servidor","server-side")}} usando o JavaScript.
+n-nyode.js é u-um ambiente de execução m-muwti-pwatafowma e-em {{gwossawy("javascwipt")}} q-que pewmite a-aos desenvowvedowes p-pwoduziwem a-apwicações pawa wede e {{gwossawy("sewvidow","sewvew-side")}} usando o javascwipt. (ˆ ﻌ ˆ)♡
 
-## Aprenda mais
+## apwenda mais
 
-### Conhecimentos gerais
+### conhecimentos g-gewais
 
-- [Node.js](https://pt.wikipedia.org/wiki/Node.js) no Wikipédia
-- [Site do Node.js](https://nodejs.org/)
+- [node.js](https://pt.wikipedia.owg/wiki/node.js) nyo wikipédia
+- [site do node.js](https://nodejs.owg/)
 
-### Referência técnica
+### w-wefewência técnica
 
-- [Documentação da API](https://nodejs.org/api/)
-- [Tutoriais](https://nodejs.org/documentation/tutorials/)
+- [documentação d-da api](https://nodejs.owg/api/)
+- [tutowiais](https://nodejs.owg/documentation/tutowiaws/)

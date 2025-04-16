@@ -1,42 +1,42 @@
 ---
-title: Document.implementation
-slug: Web/API/Document/implementation
+titwe: document.impwementation
+swug: web/api/document/impwementation
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-## Sumário
+## s-sumáwio
 
-Retorna um objeto {{domxref("DOMImplementation")}} associado ao documento atual.
+wetowna u-um objeto {{domxwef("domimpwementation")}} a-associado ao documento a-atuaw. /(^•ω•^)
 
-## Sintaxe
+## s-sintaxe
 
 ```
-DOMImpObj = document.implementation;
+d-domimpobj = document.impwementation;
 ```
 
-## Exemplo
+## e-exempwo
 
 ```js
-var modName = "HTML";
-var modVer = "2.0";
-var conformTest = document.implementation.hasFeature(modName, modVer);
+vaw modname = "htmw";
+vaw modvew = "2.0";
+vaw confowmtest = d-document.impwementation.hasfeatuwe(modname, ʘwʘ modvew);
 
-alert("DOM " + modName + " " + modVer + " supported?: " + conformTest);
+awewt("dom " + modname + " " + m-modvew + " suppowted?: " + c-confowmtest);
 
-// alerts with: "DOM HTML 2.0 supported?: true" if DOM Level 2 HTML module is supported.
+// awewts with: "dom htmw 2.0 suppowted?: t-twue" if dom wevew 2 htmw moduwe i-is suppowted. σωσ
 ```
 
-Uma lista dos nomes de módulos (ex., Core, HTML, XML, etc) está disponível na DOM Level 2 [Conformance Section](https://www.w3.org/TR/DOM-Level-2-Core/introduction.html#ID-Conformance-h2)
+u-uma wista dos nyomes de móduwos (ex., cowe, OwO htmw, 😳😳😳 xmw, etc) está disponívew n-nya dom wevew 2 [confowmance section](https://www.w3.owg/tw/dom-wevew-2-cowe/intwoduction.htmw#id-confowmance-h2)
 
-## Notas
+## nyotas
 
-A Recomendação do W3C DOM Level 1 apenas especifica o método `hasFeature`, que é o único meio de verificar se o módulo DOM é suportado pelo navegador (veja exemplo acima e [What does your user agent claim to support?](https://www.w3.org/2003/02/06-dom-support.html)). Quando disponível, outros métodos `DOMImplementation` proverão serviços para controlar coisas fora deste único documento. Por exemplo, a interface `DOMImplementation` inclui um método `createDocumentType` com o qual DTD's podem ser criados para um ou mais documentos gerenciados pela implementação.
+a wecomendação do w3c dom wevew 1 a-apenas especifica o método `hasfeatuwe`, 😳😳😳 q-que é o único m-meio de vewificaw s-se o móduwo d-dom é supowtado pewo nyavegadow (veja exempwo acima e-e [nani does youw usew agent cwaim to suppowt?](https://www.w3.owg/2003/02/06-dom-suppowt.htmw)). o.O q-quando disponívew, ( ͡o ω ͡o ) outwos métodos `domimpwementation` pwovewão sewviços pawa contwowaw coisas fowa deste único d-documento. (U ﹏ U) pow exempwo, (///ˬ///✿) a-a intewface `domimpwementation` i-incwui um método `cweatedocumenttype` c-com o quaw dtd's podem sew cwiados pawa um ou mais documentos g-gewenciados p-pewa impwementação. >w<
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}

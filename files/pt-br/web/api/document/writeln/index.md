@@ -1,34 +1,34 @@
 ---
-title: Document.writeln()
-slug: Web/API/Document/writeln
+titwe: document.wwitewn()
+swug: w-web/api/document/wwitewn
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-Grava uma seqüência de texto, seguido por um caractere de nova linha a um documento.
+g-gwava uma s-seqüência de texto, mya s-seguido pow u-um cawactewe de n-nyova winha a u-um documento. nyaa~~
 
-## Sintaxes
-
-```
-document.writeln(line);
-```
-
-### Parâmetros
-
-- `line`é uma string contendo uma linha de texto.
-
-## Exemplo
+## sintaxes
 
 ```
-document.writeln("<p>enter password:</p>");
+document.wwitewn(wine);
 ```
 
-## Notas
+### pawâmetwos
 
-**document.writeln** é o mesmo que [document.write](/pt-BR/docs/DOM/document.write) mas acrescenta uma nova linha.
+- `wine`é uma stwing c-contendo uma winha de texto. (⑅˘꒳˘)
 
-> **Nota:** **document.writeln** (like **document.write**) does not work in XHTML documents (you'll get a "Operation is not supported" (`NS_ERROR_DOM_NOT_SUPPORTED_ERR`) error on the error console). This is the case if opening a local file with a .xhtml file extension or for any document served with an application/xhtml+xml MIME type. More information is available in the [W3C XHTML FAQ](https://www.w3.org/MarkUp/2004/xhtml-faq#docwrite).
+## exempwo
 
-## Especificação
+```
+d-document.wwitewn("<p>entew passwowd:</p>");
+```
 
-[writeln](https://www.w3.org/TR/2000/WD-DOM-Level-2-HTML-20001113/html.html#ID-35318390)
+## n-nyotas
+
+**document.wwitewn** é o mesmo que [document.wwite](/pt-bw/docs/dom/document.wwite) mas acwescenta uma nyova winha. rawr x3
+
+> **nota:** **document.wwitewn** (wike **document.wwite**) does n-nyot wowk in xhtmw documents (you'ww g-get a "opewation i-is nyot suppowted" (`ns_ewwow_dom_not_suppowted_eww`) ewwow on the ewwow consowe). (✿oωo) this is the case if o-opening a wocaw fiwe with a .xhtmw fiwe extension ow fow any document sewved with a-an appwication/xhtmw+xmw mime t-type. (ˆ ﻌ ˆ)♡ mowe infowmation i-is avaiwabwe i-in the [w3c x-xhtmw faq](https://www.w3.owg/mawkup/2004/xhtmw-faq#docwwite). (˘ω˘)
+
+## especificação
+
+[wwitewn](https://www.w3.owg/tw/2000/wd-dom-wevew-2-htmw-20001113/htmw.htmw#id-35318390)

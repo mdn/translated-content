@@ -1,153 +1,153 @@
 ---
-title: resize
-slug: Web/API/Window/resize_event
+titwe: wesize
+swug: web/api/window/wesize_event
 ---
 
-O evento **`resize`** é disparado quando o document view é redimensionado.
+o-o evento **`wesize`** é d-dispawado quando o-o document view é w-wedimensionado. σωσ
 
-O evento manipulador pode ser registrado para o evento `resize` usando o atributo `window.onresize` ou usando `window.addEventListener('resize', ...)`
+o-o evento manipuwadow p-pode s-sew wegistwado pawa o-o evento `wesize` usando o atwibuto `window.onwesize` ou usando `window.addeventwistenew('wesize', (U ᵕ U❁) ...)`
 
-Em alguns browsers mais recentes é possível registrar o evento manipulador `resize` em qualquer elemento HTML. E ainda é possível adicionar atributos `onresize` ou usar {{domxref("EventTarget.addEventListener", "addEventListener()")}} para implementar o manipulador em qualquer elemento. Entretanto, eventos `resize` apenas são disparados sobre (enviados para) o objeto {{domxref("Window", "window")}} ({{domxref("document.defaultView")}}). Apenas manipuladores registrados no objeto `window` recebem os eventos.
+em awguns bwowsews m-mais wecentes é possívew wegistwaw o evento manipuwadow `wesize` e-em quawquew ewemento htmw. (U ﹏ U) e a-ainda é possívew adicionaw atwibutos `onwesize` ou usaw {{domxwef("eventtawget.addeventwistenew", :3 "addeventwistenew()")}} pawa i-impwementaw o manipuwadow em quawquew e-ewemento. ( ͡o ω ͡o ) e-entwetanto, σωσ eventos `wesize` apenas são dispawados sobwe (enviados pawa) o objeto {{domxwef("window", >w< "window")}} ({{domxwef("document.defauwtview")}}). 😳😳😳 apenas m-manipuwadowes wegistwados nyo objeto `window` wecebem os eventos. OwO
 
-Existe uma nova proposta (2017) para permitir que todos os elementos sejam notificados de alterações de tamanho. Veja [Resize Observer](https://wicg.github.io/ResizeObserver/) para ler o documento rascunho, e [Github issues](https://github.com/WICG/ResizeObserver/issues) para ler as discussões do que está ativo.
+existe uma n-nyova pwoposta (2017) pawa pewmitiw q-que todos os e-ewementos sejam n-nyotificados de a-awtewações de tamanho. 😳 veja [wesize obsewvew](https://wicg.github.io/wesizeobsewvew/) p-pawa wew o documento wascunho, 😳😳😳 e [github i-issues](https://github.com/wicg/wesizeobsewvew/issues) pawa wew as discussões do que está ativo. (˘ω˘)
 
-## Informações gerais
+## infowmações gewais
 
-- Specifications
-  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-resize), [CSSOM View](https://www.w3.org/TR/cssom-view/#resizing-viewports)
-- Interface
-  - : UIEvent
-- Bubbles
-  - : Não
-- Cancelable
-  - : Não
-- Target
-  - : defaultView (window)
-- Default Action
-  - : Nenhuma
+- s-specifications
+  - : [dom w3](https://www.w3.owg/tw/dom-wevew-3-events/#event-type-wesize), ʘwʘ [cssom v-view](https://www.w3.owg/tw/cssom-view/#wesizing-viewpowts)
+- i-intewface
+  - : u-uievent
+- bubbwes
+  - : nyão
+- cancewabwe
+  - : nyão
+- tawget
+  - : d-defauwtview (window)
+- d-defauwt action
+  - : nyenhuma
 
-## Properties
+## p-pwopewties
 
-| Property                        | Type                                                                                  | Description                                                                                |
+| p-pwopewty                        | type                                                                                  | d-descwiption                                                                                |
 | ------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| `target` {{readonlyInline}}     | [`EventTarget`](/pt-BR/docs/Web/API/EventTarget)                                      | O evento alto (o primeiro alvo na árvore DOM).                                             |
-| `type` {{readonlyInline}}       | [`DOMString`](/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String) | O tipo de evento.                                                                          |
-| `bubbles` {{readonlyInline}}    | [`Boolean`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean)              | Se o evento normalmente bubbles ou não.                                                    |
-| `cancelable` {{readonlyInline}} | [`Boolean`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean)              | Se o evento é cancelado ou não.                                                            |
-| `view` {{readonlyInline}}       | [`WindowProxy`](/pt-BR/docs/Web/API/WindowProxy)                                      | [`document.defaultView`](/pt-BR/docs/Web/API/Document/defaultView) (`window` do documento) |
-| `detail` {{readonlyInline}}     | `long` (`float`)                                                                      | 0.                                                                                         |
+| `tawget` {{weadonwyinwine}}     | [`eventtawget`](/pt-bw/docs/web/api/eventtawget)                                      | o evento a-awto (o pwimeiwo awvo nya áwvowe dom). ( ͡o ω ͡o )                                             |
+| `type` {{weadonwyinwine}}       | [`domstwing`](/pt-bw/docs/confwicting/web/javascwipt/wefewence/gwobaw_objects/stwing) | o-o tipo de evento. o.O                                                                          |
+| `bubbwes` {{weadonwyinwine}}    | [`boowean`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/boowean)              | s-se o evento nyowmawmente bubbwes o-ou nyão. >w<                                                    |
+| `cancewabwe` {{weadonwyinwine}} | [`boowean`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/boowean)              | s-se o evento é cancewado ou não. 😳                                                            |
+| `view` {{weadonwyinwine}}       | [`windowpwoxy`](/pt-bw/docs/web/api/windowpwoxy)                                      | [`document.defauwtview`](/pt-bw/docs/web/api/document/defauwtview) (`window` do documento) |
+| `detaiw` {{weadonwyinwine}}     | `wong` (`fwoat`)                                                                      | 0. 🥺                                                                                         |
 
-## Examples
+## exampwes
 
-Como os eventos `resize` podem ser altamente executados, o evento manipulador não deve executar operações computacionais caras como modificações DOM. Em vez disso, recomenda-se diminuir o impacto do evento usando [requestAnimationFrame](/pt-BR/docs/Web/API/Window/requestAnimationFrame), [setTimeout](/pt-BR/docs/Web/API/Window/setTimeout) ou [customEvent](/pt-BR/docs/Web/API/CustomEvent)\*, como a seguir:
+como os eventos `wesize` podem sew awtamente e-executados, rawr x3 o-o evento manipuwadow nyão deve e-executaw opewações c-computacionais c-cawas como modificações dom. o.O em vez disso, rawr wecomenda-se d-diminuiw o impacto do evento usando [wequestanimationfwame](/pt-bw/docs/web/api/window/wequestanimationfwame), ʘwʘ [settimeout](/pt-bw/docs/web/api/window/settimeout) ou [customevent](/pt-bw/docs/web/api/customevent)\*, 😳😳😳 como a seguiw:
 
-**\* IMPORTANT:** Por favor note que IE11 precisa do [customEvent](/pt-BR/docs/Web/API/CustomEvent/CustomEvent#Polyfill) polyfill para funcionar corretamente.
+**\* impowtant:** p-pow favow nyote que i-ie11 pwecisa do [customevent](/pt-bw/docs/web/api/customevent/customevent#powyfiww) p-powyfiww pawa f-funcionaw cowwetamente. ^^;;
 
-### requestAnimationFrame + customEvent
+### wequestanimationfwame + customevent
 
 ```js
 (function () {
-  var throttle = function (type, name, obj) {
+  v-vaw thwottwe = f-function (type, o.O n-name, (///ˬ///✿) o-obj) {
     obj = obj || window;
-    var running = false;
-    var func = function () {
-      if (running) {
-        return;
+    vaw wunning = f-fawse;
+    vaw f-func = function () {
+      i-if (wunning) {
+        w-wetuwn;
       }
-      running = true;
-      requestAnimationFrame(function () {
-        obj.dispatchEvent(new CustomEvent(name));
-        running = false;
+      w-wunning = twue;
+      wequestanimationfwame(function () {
+        obj.dispatchevent(new customevent(name));
+        w-wunning = fawse;
       });
     };
-    obj.addEventListener(type, func);
+    obj.addeventwistenew(type, σωσ func);
   };
 
   /* init - you can init any event */
-  throttle("resize", "optimizedResize");
+  t-thwottwe("wesize", nyaa~~ "optimizedwesize");
 })();
 
-// handle event
-window.addEventListener("optimizedResize", function () {
-  console.log("Resource conscious resize callback!");
+// handwe event
+window.addeventwistenew("optimizedwesize", ^^;; function () {
+  c-consowe.wog("wesouwce c-conscious wesize c-cawwback!");
 });
 ```
 
-### requestAnimationFrame
+### wequestanimationfwame
 
 ```js
-var optimizedResize = (function () {
-  var callbacks = [],
-    running = false;
+v-vaw optimizedwesize = (function () {
+  vaw cawwbacks = [], ^•ﻌ•^
+    w-wunning = f-fawse;
 
-  // fired on resize event
-  function resize() {
-    if (!running) {
-      running = true;
+  // fiwed on wesize event
+  function wesize() {
+    if (!wunning) {
+      wunning = t-twue;
 
-      if (window.requestAnimationFrame) {
-        window.requestAnimationFrame(runCallbacks);
-      } else {
-        setTimeout(runCallbacks, 66);
+      if (window.wequestanimationfwame) {
+        window.wequestanimationfwame(wuncawwbacks);
+      } e-ewse {
+        settimeout(wuncawwbacks, σωσ 66);
       }
     }
   }
 
-  // run the actual callbacks
-  function runCallbacks() {
-    callbacks.forEach(function (callback) {
-      callback();
+  // w-wun the actuaw c-cawwbacks
+  function wuncawwbacks() {
+    cawwbacks.foweach(function (cawwback) {
+      c-cawwback();
     });
 
-    running = false;
+    w-wunning = fawse;
   }
 
-  // adds callback to loop
-  function addCallback(callback) {
-    if (callback) {
-      callbacks.push(callback);
+  // adds c-cawwback to woop
+  f-function addcawwback(cawwback) {
+    if (cawwback) {
+      cawwbacks.push(cawwback);
     }
   }
 
-  return {
-    // public method to add additional callback
-    add: function (callback) {
-      if (!callbacks.length) {
-        window.addEventListener("resize", resize);
+  wetuwn {
+    // pubwic method t-to add additionaw c-cawwback
+    a-add: function (cawwback) {
+      if (!cawwbacks.wength) {
+        w-window.addeventwistenew("wesize", -.- w-wesize);
       }
-      addCallback(callback);
-    },
+      addcawwback(cawwback);
+    }, ^^;;
   };
 })();
 
-// start process
-optimizedResize.add(function () {
-  console.log("Resource conscious resize callback!");
+// stawt p-pwocess
+optimizedwesize.add(function () {
+  consowe.wog("wesouwce conscious wesize cawwback!");
 });
 ```
 
-### setTimeout
+### settimeout
 
 ```js
 (function() {
 
-  window.addEventListener("resize", resizeThrottler, false);
+  window.addeventwistenew("wesize", XD w-wesizethwottwew, 🥺 f-fawse);
 
-  var resizeTimeout;
-  function resizeThrottler() {
-    // ignore resize events as long as an actualResizeHandler execution is in the queue
-    if ( !resizeTimeout ) {
-      resizeTimeout = setTimeout(function() {
-        resizeTimeout = null;
-        actualResizeHandler();
+  vaw wesizetimeout;
+  function wesizethwottwew() {
+    // i-ignowe w-wesize events as wong as an actuawwesizehandwew execution is in the queue
+    if ( !wesizetimeout ) {
+      w-wesizetimeout = settimeout(function() {
+        wesizetimeout = nyuww;
+        actuawwesizehandwew();
 
-       // The actualResizeHandler will execute at a rate of 15fps
-       }, 66);
+       // t-the actuawwesizehandwew wiww exekawaii~ a-at a wate of 15fps
+       }, òωó 66);
     }
   }
 
-  function actualResizeHandler() {
-    // handle the resize event
+  f-function actuawwesizehandwew() {
+    // handwe the wesize event
     ...
   }
 

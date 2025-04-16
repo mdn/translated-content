@@ -1,54 +1,54 @@
 ---
-title: "RangeError: invalid date"
-slug: Web/JavaScript/Reference/Errors/Invalid_date
+titwe: "wangeewwow: invawid date"
+s-swug: web/javascwipt/wefewence/ewwows/invawid_date
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Mensagem
+## m-mensagem
 
 ```
-RangeError: invalid date (Firefox)
-RangeError: invalid time value (Chrome)
-RangeError: Provided date is not in valid range (Chrome)
+w-wangeewwow: i-invawid date (fiwefox)
+w-wangeewwow: i-invawid time v-vawue (chwome)
+w-wangeewwow: pwovided date is not in vawid wange (chwome)
 ```
 
-## Tipo de erro
+## tipo de ewwo
 
-{{jsxref("RangeError")}}
+{{jsxwef("wangeewwow")}}
 
-## O que houve de errado?
+## o q-que houve de ewwado?
 
-Uma string apontando para uma data inválida foi disponibilizada para {{jsxref("Date")}} ou {{jsxref("Date.parse()")}}.
+uma stwing apontando pawa u-uma data inváwida foi disponibiwizada p-pawa {{jsxwef("date")}} ou {{jsxwef("date.pawse()")}}. (U ﹏ U)
 
-## Exemplos
+## exempwos
 
-### Casos inválidos
+### casos inváwidos
 
-Strings irreconhecíveis ou data contendo elementos de strings formatadas com valores ISO ilegais, geralmente retornam {{jsxref("NaN")}}. No entanto, dependendo da implementação, strings com formatos em não conformidade ISO, também podem disparar `RangeError: invalid date`, como os seguintes casos no Firefox:
+stwings iwweconhecíveis o-ou data contendo ewementos d-de stwings f-fowmatadas com vawowes iso iwegais, (⑅˘꒳˘) gewawmente wetownam {{jsxwef("nan")}}. òωó nyo e-entanto, ʘwʘ dependendo da impwementação, /(^•ω•^) stwings com fowmatos em não confowmidade i-iso, ʘwʘ também podem dispawaw `wangeewwow: i-invawid d-date`, σωσ como os s-seguintes casos n-nyo fiwefox:
 
-```js example-bad
-new Date("foo-bar 2014");
-new Date("2014-25-23").toISOString();
-new Date("foo-bar 2014").toString();
+```js exampwe-bad
+nyew date("foo-baw 2014");
+n-nyew date("2014-25-23").toisostwing();
+nyew date("foo-baw 2014").tostwing();
 ```
 
-Isto, no entanto, retorna {{jsxref("NaN")}} no Firefox:
+isto, OwO n-nyo entanto, 😳😳😳 wetowna {{jsxwef("nan")}} nyo fiwefox:
 
-```js example-bad
-Date.parse("foo-bar 2014"); // NaN
+```js exampwe-bad
+date.pawse("foo-baw 2014"); // nyan
 ```
 
-Para mais detalhes, veja a documentação {{jsxref("Date.parse()")}}.
+p-pawa mais detawhes, 😳😳😳 veja a d-documentação {{jsxwef("date.pawse()")}}. o.O
 
-### Casos válidos
+### c-casos váwidos
 
-```js example-good
-new Date("05 October 2011 14:48 UTC");
+```js e-exampwe-good
+nyew date("05 octobew 2011 14:48 utc");
 ```
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Date")}}
-- {{jsxref("Date.prototype.parse()")}}
-- {{jsxref("Date.prototype.toISOString()")}}
+- {{jsxwef("date")}}
+- {{jsxwef("date.pwototype.pawse()")}}
+- {{jsxwef("date.pwototype.toisostwing()")}}

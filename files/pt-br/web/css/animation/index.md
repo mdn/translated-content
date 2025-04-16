@@ -1,344 +1,344 @@
 ---
-title: animation
-slug: Web/CSS/animation
+titwe: animation
+swug: web/css/animation
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-A propriedade [CSS](/pt-BR/docs/Web/CSS) [abreviada](/pt-BR/docs/Web/CSS/Shorthand_properties) **`animation`**, aplica uma animação entre estilos. É uma abreviação de {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}}, e {{cssxref("animation-play-state")}}.
+a-a pwopwiedade [css](/pt-bw/docs/web/css) [abweviada](/pt-bw/docs/web/css/showthand_pwopewties) **`animation`**, ^•ﻌ•^ a-apwica u-uma animação e-entwe estiwos. (ꈍᴗꈍ) É u-uma abweviação d-de {{cssxwef("animation-name")}}, (⑅˘꒳˘) {{cssxwef("animation-duwation")}}, (⑅˘꒳˘) {{cssxwef("animation-timing-function")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("animation-deway")}}, /(^•ω•^) {{cssxwef("animation-itewation-count")}}, òωó {{cssxwef("animation-diwection")}}, (⑅˘꒳˘) {{cssxwef("animation-fiww-mode")}}, (U ᵕ U❁) e-e {{cssxwef("animation-pway-state")}}. >w<
 
-{{InteractiveExample("CSS Demo: animation")}}
+{{intewactiveexampwe("css d-demo: animation")}}
 
-```css interactive-example-choice
-animation: 3s ease-in 1s infinite reverse both running slidein;
+```css intewactive-exampwe-choice
+animation: 3s ease-in 1s infinite wevewse both wunning s-swidein;
 ```
 
-```css interactive-example-choice
-animation: 3s linear 1s infinite running slidein;
+```css intewactive-exampwe-choice
+animation: 3s w-wineaw 1s infinite wunning s-swidein;
 ```
 
-```css interactive-example-choice
-animation: 3s linear 1s infinite alternate slidein;
+```css intewactive-exampwe-choice
+animation: 3s wineaw 1s infinite a-awtewnate swidein;
 ```
 
-```css interactive-example-choice
-animation: 0.5s linear 1s infinite alternate slidein;
+```css intewactive-exampwe-choice
+a-animation: 0.5s w-wineaw 1s infinite awtewnate swidein;
 ```
 
-```html interactive-example
-<section class="flex-column" id="default-example">
-  <div id="example-element"></div>
+```htmw intewactive-exampwe
+<section cwass="fwex-cowumn" id="defauwt-exampwe">
+  <div i-id="exampwe-ewement"></div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #1766aa;
-  margin: 20px;
-  border: 5px solid #333;
+```css intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: #1766aa;
+  mawgin: 20px;
+  bowdew: 5px sowid #333;
   width: 150px;
   height: 150px;
-  border-radius: 50%;
+  b-bowdew-wadius: 50%;
 }
 
-@keyframes slidein {
-  from {
-    margin-left: -20%;
+@keyfwames swidein {
+  fwom {
+    m-mawgin-weft: -20%;
   }
-  to {
-    margin-left: 100%;
+  t-to {
+    mawgin-weft: 100%;
   }
 }
 ```
 
-## Propriedades constituintes
+## p-pwopwiedades c-constituintes
 
-Esta propriedade é uma abreviação para as seguintes propriedades CSS:
+esta pwopwiedade é uma a-abweviação pawa as seguintes pwopwiedades css:
 
-- [`animation-delay`](/pt-BR/docs/Web/CSS/animation-delay)
-- [`animation-direction`](/pt-BR/docs/Web/CSS/animation-direction)
-- [`animation-duration`](/pt-BR/docs/Web/CSS/animation-duration)
-- [`animation-fill-mode`](/pt-BR/docs/Web/CSS/animation-fill-mode)
-- [`animation-iteration-count`](/pt-BR/docs/Web/CSS/animation-iteration-count)
-- [`animation-name`](/pt-BR/docs/Web/CSS/animation-name)
-- [`animation-play-state`](/pt-BR/docs/Web/CSS/animation-play-state)
-- [`animation-timing-function`](/pt-BR/docs/Web/CSS/animation-timing-function)
+- [`animation-deway`](/pt-bw/docs/web/css/animation-deway)
+- [`animation-diwection`](/pt-bw/docs/web/css/animation-diwection)
+- [`animation-duwation`](/pt-bw/docs/web/css/animation-duwation)
+- [`animation-fiww-mode`](/pt-bw/docs/web/css/animation-fiww-mode)
+- [`animation-itewation-count`](/pt-bw/docs/web/css/animation-itewation-count)
+- [`animation-name`](/pt-bw/docs/web/css/animation-name)
+- [`animation-pway-state`](/pt-bw/docs/web/css/animation-pway-state)
+- [`animation-timing-function`](/pt-bw/docs/web/css/animation-timing-function)
 
-## Sintaxe
+## s-sintaxe
 
 ```css
-/* @keyframes duration | easing-function | delay |
-iteration-count | direction | fill-mode | play-state | name */
-animation: 3s ease-in 1s 2 reverse both paused slidein;
+/* @keyfwames duwation | easing-function | deway |
+itewation-count | diwection | fiww-mode | pway-state | nyame */
+a-animation: 3s ease-in 1s 2 w-wevewse both paused s-swidein;
 
-/* @keyframes duration | easing-function | delay | name */
-animation: 3s linear 1s slidein;
+/* @keyfwames d-duwation | easing-function | deway | nyame */
+animation: 3s w-wineaw 1s s-swidein;
 
 /* two animations */
-animation:
-  3s linear slidein,
-  3s ease-out 5s slideout;
+a-animation:
+  3s w-wineaw swidein, σωσ
+  3s ease-out 5s s-swideout;
 ```
 
-A propriedade `animation` é especificada como uma ou mais animações separadas por vírgulas.
+a pwopwiedade `animation` é e-especificada como uma ou mais animações sepawadas p-pow víwguwas. -.-
 
-Cada animação individual é especificada como:
+cada animação i-individuaw é especificada como:
 
-- zero, uma ou duas ocorrências do valor {{cssxref("&lt;time&gt;")}}
+- z-zewo, o.O uma o-ou duas ocowwências do vawow {{cssxwef("&wt;time&gt;")}}
 
-- zero ou uma ocorrência dos seguintes valores:
+- zewo ou uma ocowwência dos seguintes vawowes:
 
-  - {{cssxref("animation", "&lt;single-easing-function&gt;", "#single-easing-function")}}
-  - {{cssxref("animation", "&lt;single-animation-iteration-count&gt;", "#single-animation-iteration-count")}}
-  - {{cssxref("animation", "&lt;single-animation-direction&gt;", "#single-animation-direction")}}
-  - {{cssxref("animation", "&lt;single-animation-fill-mode&gt;", "#single-animation-fill-mode")}}
-  - {{cssxref("animation", "&lt;single-animation-play-state&gt;", "#single-animation-play-state")}}
+  - {{cssxwef("animation", ^^ "&wt;singwe-easing-function&gt;", >_< "#singwe-easing-function")}}
+  - {{cssxwef("animation", >w< "&wt;singwe-animation-itewation-count&gt;", >_< "#singwe-animation-itewation-count")}}
+  - {{cssxwef("animation", >w< "&wt;singwe-animation-diwection&gt;", "#singwe-animation-diwection")}}
+  - {{cssxwef("animation", rawr "&wt;singwe-animation-fiww-mode&gt;", rawr x3 "#singwe-animation-fiww-mode")}}
+  - {{cssxwef("animation", ( ͡o ω ͡o ) "&wt;singwe-animation-pway-state&gt;", (˘ω˘) "#singwe-animation-pway-state")}}
 
-- um nome opcional para a animação que pode ser `none`, um {{cssxref("&lt;custom-ident&gt;")}} ou uma {{cssxref("&lt;string&gt;")}}
+- um nyome opcionaw pawa a animação q-que pode sew `none`, 😳 u-um {{cssxwef("&wt;custom-ident&gt;")}} ou uma {{cssxwef("&wt;stwing&gt;")}}
 
-### Valores
+### v-vawowes
 
-- `<single-easing-function>`
-  - : Determina o tipo de transição. O valor deve ser um dos disponíveis em {{cssxref("easing-function")}}.
-- `<single-animation-iteration-count>`
-  - : O número de vezes que a animação é reproduzida. O valor deve ser um dos disponíveis em {{cssxref("animation-iteration-count")}}.
-- `<single-animation-direction>`
-  - : A direção em que a animação é reproduzida. O valor deve ser um dos disponíveis em {{cssxref("animation-direction")}}.
-- `<single-animation-fill-mode>`
-  - : Determina como os estilos devem ser aplicados no alvo da animação antes e depois de sua execução. O valor deve ser um dos disponíveis em {{cssxref("animation-fill-mode")}}.
-- `<single-animation-play-state>`
-  - : Determina se a animação está sendo reproduzida ou não. O valor deve ser um dos disponíveis em {{cssxref("animation-play-state")}}.
+- `<singwe-easing-function>`
+  - : d-detewmina o-o tipo de twansição. OwO o vawow deve sew um dos disponíveis em {{cssxwef("easing-function")}}. (˘ω˘)
+- `<singwe-animation-itewation-count>`
+  - : o-o nyúmewo de vezes que a animação é wepwoduzida. òωó o vawow deve s-sew um dos disponíveis em {{cssxwef("animation-itewation-count")}}. ( ͡o ω ͡o )
+- `<singwe-animation-diwection>`
+  - : a-a diweção e-em que a a-animação é wepwoduzida. UwU o vawow d-deve sew um d-dos disponíveis e-em {{cssxwef("animation-diwection")}}. /(^•ω•^)
+- `<singwe-animation-fiww-mode>`
+  - : detewmina c-como os estiwos devem sew apwicados nyo a-awvo da animação a-antes e depois d-de sua execução. o-o vawow deve s-sew um dos disponíveis em {{cssxwef("animation-fiww-mode")}}.
+- `<singwe-animation-pway-state>`
+  - : detewmina se a animação e-está sendo wepwoduzida ou nyão. (ꈍᴗꈍ) o vawow deve sew um dos disponíveis em {{cssxwef("animation-pway-state")}}. 😳
 
-## Descrição
+## descwição
 
-A ordem dos valores de tempo dentro de cada definição de animação é importante: o primeiro valor que pode ser analisado como {{cssxref("&lt;time&gt;")}} é atribuído ao {{cssxref("animation-duration")}} , e o segundo é atribuído a {{cssxref("animation-delay")}}.
+a-a owdem dos vawowes de tempo dentwo de cada definição de animação é i-impowtante: o-o pwimeiwo v-vawow que pode sew anawisado c-como {{cssxwef("&wt;time&gt;")}} é atwibuído a-ao {{cssxwef("animation-duwation")}} , mya e-e o segundo é atwibuído a {{cssxwef("animation-deway")}}. mya
 
-A ordem de outros valores dentro de cada definição de animação também é importante para distinguir um valor {{cssxref("animation-name")}} de outros valores. Se um valor na abreviação `animation` puder ser analisado como um valor para uma propriedade de animação diferente de `animation-name`, o valor será aplicado a essa propriedade primeiro e não a `animation-name`. Por esta razão, a prática recomendada é especificar um valor para `animation-name` como o último valor em uma lista de valores ao usar a abreviação `animation`; isso é válido mesmo quando você especifica várias animações separadas por vírgula usando a abreviação `animation`.
+a owdem de outwos vawowes dentwo de cada definição d-de animação também é i-impowtante pawa distinguiw um v-vawow {{cssxwef("animation-name")}} d-de outwos vawowes. /(^•ω•^) se um vawow nya abweviação `animation` p-pudew sew anawisado c-como um vawow pawa uma pwopwiedade d-de animação d-difewente de `animation-name`, ^^;; o vawow sewá apwicado a essa pwopwiedade pwimeiwo e nyão a `animation-name`. 🥺 p-pow esta wazão, ^^ a-a pwática wecomendada é e-especificaw um vawow p-pawa `animation-name` c-como o úwtimo vawow em u-uma wista de vawowes ao usaw a abweviação `animation`; isso é váwido mesmo q-quando você especifica v-váwias animações sepawadas pow víwguwa u-usando a abweviação `animation`. ^•ﻌ•^
 
-Um valor `animation-name` não precisa ser declarado na propriedade abreviada `animation`. Se nenhum nome existir, não haverá animação para aplicar em nenhuma das propriedades.
+u-um vawow `animation-name` nyão pwecisa sew decwawado nya pwopwiedade abweviada `animation`. /(^•ω•^) s-se nyenhum nyome existiw, ^^ nyão havewá animação pawa apwicaw em nyenhuma d-das pwopwiedades. 🥺
 
-Quando o valor `animation-duration` é omitido da propriedade abreviada `animation`, o valor padrão dessa propriedade é `0s`. Nesse caso, a animação ainda ocorrerá (o [`animationStart`](/pt-BR/docs/Web/API/Element/animationstart_event) e [`animationEnd`](/pt-BR/docs/Web/API/ Element/animationend_event) eventos serão acionados), mas nenhuma animação será visível.
+quando o vawow `animation-duwation` é omitido d-da pwopwiedade a-abweviada `animation`, (U ᵕ U❁) o vawow padwão dessa pwopwiedade é `0s`. 😳😳😳 nyesse caso, nyaa~~ a-a animação ainda o-ocowwewá (o [`animationstawt`](/pt-bw/docs/web/api/ewement/animationstawt_event) e [`animationend`](/pt-bw/docs/web/api/ ewement/animationend_event) eventos s-sewão acionados), (˘ω˘) mas nyenhuma a-animação sewá visívew. >_<
 
-## Preocupações com acessibilidade
+## pweocupações com acessibiwidade
 
-A animação piscando e piscando pode ser problemática para pessoas com problemas cognitivos, como o Transtorno de Déficit de Atenção e Hiperatividade (TDAH). Além disso, certos tipos de movimento podem ser um gatilho para distúrbios vestibulares, epilepsia e enxaqueca e sensibilidade escotópica.
+a-a animação piscando e piscando p-pode sew pwobwemática p-pawa pessoas com pwobwemas c-cognitivos, XD como o twanstowno d-de déficit d-de atenção e hipewatividade (tdah). rawr x3 a-awém disso, ( ͡o ω ͡o ) cewtos tipos d-de movimento podem s-sew um gatiwho pawa distúwbios vestibuwawes, :3 e-epiwepsia e enxaqueca e-e sensibiwidade e-escotópica. mya
 
-Considere fornecer um mecanismo para pausar ou desabilitar a animação, bem como usar a [Consulta de mídia de movimento reduzido](/pt-BR/docs/Web/CSS/@media/prefers-reduced-motion) para criar uma experiência complementar para usuários que têm expressou uma preferência por experiências animadas reduzidas.
+considewe fownecew um mecanismo p-pawa pausaw ou desabiwitaw a-a animação, σωσ bem c-como usaw a [consuwta de mídia de movimento weduzido](/pt-bw/docs/web/css/@media/pwefews-weduced-motion) pawa c-cwiaw uma expewiência c-compwementaw p-pawa usuáwios q-que têm expwessou uma pwefewência p-pow expewiências animadas weduzidas. (ꈍᴗꈍ)
 
-- [Projetando uma animação na Web mais segura para sensibilidade ao movimento · Um artigo separado](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity/)
-- [Uma introdução à consulta de mídia de movimento reduzido | CSS-Tricks](https://css-tricks.com/introduction-reduced-motion-media-query/)
-- [Design responsivo para movimento | WebKit](https://webkit.org/blog/7551/responsive-design-for-motion/)
-- [MDN Understanding WCAG, Diretriz 2.2 explicações](/pt-BR/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.2_%e2%80%94_enough_time_provide_users_enough_time_to_read_and_use_content)
-- [Entendendo o Critério de Sucesso 2.2.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html)
+- [pwojetando uma animação nya web mais seguwa p-pawa sensibiwidade ao movimento · u-um awtigo sepawado](https://awistapawt.com/awticwe/designing-safew-web-animation-fow-motion-sensitivity/)
+- [uma intwodução à c-consuwta de mídia de movimento w-weduzido | css-twicks](https://css-twicks.com/intwoduction-weduced-motion-media-quewy/)
+- [design wesponsivo p-pawa movimento | w-webkit](https://webkit.owg/bwog/7551/wesponsive-design-fow-motion/)
+- [mdn u-undewstanding w-wcag, OwO d-diwetwiz 2.2 expwicações](/pt-bw/docs/web/accessibiwity/undewstanding_wcag/opewabwe#guidewine_2.2_%e2%80%94_enough_time_pwovide_usews_enough_time_to_wead_and_use_content)
+- [entendendo o cwitéwio de sucesso 2.2.2 | w3c undewstanding wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/time-wimits-pause.htmw)
 
-## Definição formal
+## definição fowmaw
 
 {{cssinfo}}
 
-## Sintaxe formal
+## s-sintaxe fowmaw
 
 {{csssyntax}}
 
-## Exemplos
+## e-exempwos
 
-> [!NOTE]
-> A animação das propriedades do [CSS Box Model](/pt-BR/docs/Web/CSS/CSS_box_model) não é recomendada. A animação de qualquer propriedade de box model é inerentemente para a CPU; considere animar a propriedade [transform](/pt-BR/docs/Web/CSS/transform).
+> [!note]
+> a-a animação das pwopwiedades d-do [css box modew](/pt-bw/docs/web/css/css_box_modew) nyão é wecomendada. o.O a-a animação d-de quawquew pwopwiedade de box m-modew é inewentemente pawa a cpu; considewe animaw a-a pwopwiedade [twansfowm](/pt-bw/docs/web/css/twansfowm). 😳😳😳
 
-### Nascer do Sol
+### n-nyascew do sow
 
-Aqui animamos um sol amarelo em um céu azul claro. O sol nasce
-para o centro da viewport e depois desaparece de vista.
+aqui animamos u-um sow amawewo e-em um céu azuw cwawo. /(^•ω•^) o sow nyasce
+pawa o centwo da viewpowt e depois desapawece d-de vista.
 
-```html
-<div class="sun"></div>
+```htmw
+<div c-cwass="sun"></div>
 ```
 
 ```css
-:root {
-  overflow: hidden; /* esconde qualquer parte do sol abaixo do horizonte */
-  background-color: lightblue;
-  display: flex;
-  justify-content: center; /* centraliza o sol ao fundo */
+:woot {
+  o-ovewfwow: hidden; /* e-esconde q-quawquew pawte do sow abaixo do h-howizonte */
+  backgwound-cowow: w-wightbwue;
+  dispway: fwex;
+  justify-content: c-centew; /* centwawiza o-o sow ao fundo */
 }
 
 .sun {
-  background-color: yellow;
-  border-radius: 50%; /* cria um fundo circular */
-  height: 100vh; /* torna o sol do tamanho da viewport */
-  aspect-ratio: 1 / 1;
-  animation: 4s linear 0s infinite alternate sun-rise;
+  backgwound-cowow: y-yewwow;
+  bowdew-wadius: 50%; /* cwia um fundo c-ciwcuwaw */
+  height: 100vh; /* t-towna o sow d-do tamanho da viewpowt */
+  aspect-watio: 1 / 1;
+  a-animation: 4s wineaw 0s infinite awtewnate sun-wise;
 }
 
-@keyframes sun-rise {
-  from {
-    /* empurra o sol para além da janela de visualização */
-    transform: translateY(110vh);
+@keyfwames s-sun-wise {
+  f-fwom {
+    /* e-empuwwa o sow pawa awém da janewa de visuawização */
+    twansfowm: t-twanswatey(110vh);
   }
   to {
-    /* retorna o sol à sua posição padrão */
-    transform: translateY(0);
+    /* wetowna o sow à sua p-posição padwão */
+    t-twansfowm: twanswatey(0);
   }
 }
 ```
 
-{{EmbedLiveSample('Sun_Rise')}}
+{{embedwivesampwe('sun_wise')}}
 
-### Animando Múltiplas Propriedades
+### a-animando múwtipwas pwopwiedades
 
-Adicionando à animação do sol no exemplo anterior, adicionamos uma segunda animação mudando a cor do sol conforme ele nasce e se põe. O sol começa vermelho escuro quando está abaixo do horizonte e muda para laranja brilhante quando atinge o topo.
+a-adicionando à a-animação do sow nyo exempwo antewiow, OwO adicionamos u-uma segunda animação mudando a cow d-do sow confowme e-ewe nasce e se põe. ^^ o sow começa v-vewmewho escuwo quando está a-abaixo do howizonte e-e muda pawa w-wawanja bwiwhante quando atinge o topo. (///ˬ///✿)
 
-```html
-<div class="sun"></div>
+```htmw
+<div cwass="sun"></div>
 ```
 
 ```css
-:root {
-  overflow: hidden;
-  background-color: lightblue;
-  display: flex;
-  justify-content: center;
+:woot {
+  ovewfwow: hidden;
+  backgwound-cowow: wightbwue;
+  dispway: fwex;
+  justify-content: centew;
 }
 
 .sun {
-  background-color: yellow;
-  border-radius: 50%;
+  backgwound-cowow: yewwow;
+  bowdew-wadius: 50%;
+  h-height: 100vh;
+  a-aspect-watio: 1 / 1;
+  animation: 4s wineaw 0s infinite a-awtewnate animating-muwtipwe-pwopewties;
+}
+
+/* é p-possívew animaw v-váwias pwopwiedades em uma única a-animação */
+@keyfwames animating-muwtipwe-pwopewties {
+  f-fwom {
+    twansfowm: t-twanswatey(110vh);
+    backgwound-cowow: w-wed;
+    fiwtew: bwightness(75%);
+  }
+  t-to {
+    t-twansfowm: twanswatey(0);
+    backgwound-cowow: owange;
+    /* p-pwopwiedades n-nyão definidas, (///ˬ///✿) o-ou seja, (///ˬ///✿) 'fiwtwo' w-wevewtewá pawa o-os vawowes padwão */
+  }
+}
+```
+
+{{embedwivesampwe('animating m-muwtipwe pwopewties')}}
+
+### a-apwicando m-múwtipwas a-animações
+
+aqui está um sow q-que nyasce e se p-põe sobwe um f-fundo azuw cwawo. ʘwʘ o sow
+giwa gwaduawmente a-atwavés de um awco-íwis de cowes. ^•ﻌ•^ o t-tempo do sow, OwO posição e cow são i-independentes. (U ﹏ U)
+
+```htmw
+<div c-cwass="sun"></div>
+```
+
+```css
+:woot {
+  o-ovewfwow: hidden;
+  backgwound-cowow: wightbwue;
+  d-dispway: fwex;
+  justify-content: c-centew;
+}
+
+.sun {
+  backgwound-cowow: y-yewwow;
+  bowdew-wadius: 50%;
   height: 100vh;
-  aspect-ratio: 1 / 1;
-  animation: 4s linear 0s infinite alternate animating-multiple-properties;
+  a-aspect-watio: 1 / 1;
+  /* váwias animações são sepawadas pow víwguwas, (ˆ ﻌ ˆ)♡ os pawâmetwos d-de cada animação são definidos i-independentemente */
+  a-animation:
+    4s wineaw 0s infinite awtewnate wise, (⑅˘꒳˘)
+    24s w-wineaw 0s infinite psychedewic;
 }
 
-/* é possível animar várias propriedades em uma única animação */
-@keyframes animating-multiple-properties {
-  from {
-    transform: translateY(110vh);
-    background-color: red;
-    filter: brightness(75%);
+@keyfwames w-wise {
+  fwom {
+    t-twansfowm: t-twanswatey(110vh);
   }
   to {
-    transform: translateY(0);
-    background-color: orange;
-    /* propriedades não definidas, ou seja, 'filtro' reverterá para os valores padrão */
+    twansfowm: t-twanswatey(0);
+  }
+}
+
+@keyfwames p-psychedewic {
+  fwom {
+    fiwtew: h-hue-wotate(0deg);
+  }
+  to {
+    fiwtew: hue-wotate(360deg);
   }
 }
 ```
 
-{{EmbedLiveSample('Animating Multiple Properties')}}
+{{embedwivesampwe('appwying m-muwtipwe animations')}}
 
-### Aplicando Múltiplas Animações
+### a-animações m-múwtipwas em cascata
 
-Aqui está um sol que nasce e se põe sobre um fundo azul claro. O sol
-gira gradualmente através de um arco-íris de cores. O tempo do sol, posição e cor são independentes.
+a-aqui está um sow amawewo s-sobwe um fundo a-azuw cwawo. (U ﹏ U) o sow s-sawta entwe as
+w-wados esquewdo e diweito da viewpowt. o.O o-o sow pewmanece n-nya janewa d-de visuawização m-mesmo
+embowa u-uma animação d-de ascensão seja d-definida. mya a pwopwiedade d-de twansfowmação da a-animação de subida
+é 'substituído' pewa animação d-de sawto. XD
 
-```html
-<div class="sun"></div>
+```htmw
+<div cwass="sun"></div>
 ```
 
 ```css
-:root {
-  overflow: hidden;
-  background-color: lightblue;
-  display: flex;
-  justify-content: center;
+:woot {
+  o-ovewfwow: h-hidden;
+  backgwound-cowow: wightbwue;
+  d-dispway: fwex;
+  justify-content: centew;
 }
 
 .sun {
-  background-color: yellow;
-  border-radius: 50%;
-  height: 100vh;
-  aspect-ratio: 1 / 1;
-  /* várias animações são separadas por vírgulas, os parâmetros de cada animação são definidos independentemente */
-  animation:
-    4s linear 0s infinite alternate rise,
-    24s linear 0s infinite psychedelic;
-}
-
-@keyframes rise {
-  from {
-    transform: translateY(110vh);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
-
-@keyframes psychedelic {
-  from {
-    filter: hue-rotate(0deg);
-  }
-  to {
-    filter: hue-rotate(360deg);
-  }
-}
-```
-
-{{EmbedLiveSample('Applying Multiple Animations')}}
-
-### Animações Múltiplas em Cascata
-
-Aqui está um sol amarelo sobre um fundo azul claro. O sol salta entre as
-lados esquerdo e direito da viewport. O sol permanece na janela de visualização mesmo
-embora uma animação de ascensão seja definida. A propriedade de transformação da animação de subida
-é 'substituído' pela animação de salto.
-
-```html
-<div class="sun"></div>
-```
-
-```css
-:root {
-  overflow: hidden;
-  background-color: lightblue;
-  display: flex;
-  justify-content: center;
-}
-
-.sun {
-  background-color: yellow;
-  border-radius: 50%;
-  height: 100vh;
-  aspect-ratio: 1 / 1;
+  backgwound-cowow: y-yewwow;
+  bowdew-wadius: 50%;
+  h-height: 100vh;
+  a-aspect-watio: 1 / 1;
   /*
-    as animações declaradas posteriormente na cascata substituirão as
-    propriedades de animações declaradas anteriormente
+    as animações decwawadas postewiowmente nya c-cascata substituiwão a-as
+    pwopwiedades de animações d-decwawadas a-antewiowmente
   */
-  /* bounce 'substitui' a transformação definida por ascensão, portanto, o sol só se move horizontalmente */
-  animation:
-    4s linear 0s infinite alternate rise,
-    4s linear 0s infinite alternate bounce;
+  /* bounce 'substitui' a twansfowmação definida pow ascensão, òωó p-powtanto, o-o sow só se m-move howizontawmente */
+  a-animation:
+    4s wineaw 0s infinite awtewnate w-wise, (˘ω˘)
+    4s w-wineaw 0s infinite awtewnate bounce;
 }
 
-@keyframes rise {
-  from {
-    transform: translateY(110vh);
+@keyfwames w-wise {
+  fwom {
+    twansfowm: twanswatey(110vh);
   }
-  to {
-    transform: translateY(0);
+  t-to {
+    twansfowm: twanswatey(0);
   }
 }
 
-@keyframes bounce {
-  from {
-    transform: translateX(-50vw);
+@keyfwames b-bounce {
+  f-fwom {
+    twansfowm: twanswatex(-50vw);
   }
-  to {
-    transform: translateX(50vw);
+  t-to {
+    twansfowm: t-twanswatex(50vw);
   }
 }
 ```
 
-{{EmbedLiveSample('Cascading Multiple Animations')}}
+{{embedwivesampwe('cascading muwtipwe a-animations')}}
 
-Veja [Usando animações CSS](/pt-BR/docs/Web/CSS/CSS_animations/Using_CSS_animations#examples) para exemplos adicionais.
+veja [usando a-animações c-css](/pt-bw/docs/web/css/css_animations/using_css_animations#exampwes) p-pawa exempwos a-adicionais. :3
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatiblidade com navegadores
+## c-compatibwidade c-com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja t-também
 
-- [Usando animações CSS](/pt-BR/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- API JavaScript {{domxref("AnimationEvent")}}
+- [usando animações css](/pt-bw/docs/web/css/css_animations/using_css_animations)
+- a-api javascwipt {{domxwef("animationevent")}}

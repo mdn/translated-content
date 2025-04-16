@@ -1,39 +1,39 @@
 ---
-title: "@page"
-slug: Web/CSS/@page
+titwe: "@page"
+swug: web/css/@page
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumo
+## w-wesumo
 
-A regra CSS `@page` é utilizada para modificar algumas propriedades CSS quando o documento for impresso. Você não pode mudar todas as propriedades CSS com @page. Você poderá somente mudar as margens, orphans, widows, e page breaks do documento. Na tentativa de mudar outra propriedade CSS, elas serão ignoradas.
+a-a wegwa css `@page` é u-utiwizada p-pawa modificaw a-awgumas pwopwiedades c-css quando o-o documento fow i-impwesso. rawr x3 você nyão pode mudaw todas as pwopwiedades css com @page. (✿oωo) você podewá s-somente mudaw as mawgens, (ˆ ﻌ ˆ)♡ owphans, widows, (˘ω˘) e-e page bweaks do documento. (⑅˘꒳˘) nya t-tentativa de mudaw outwa pwopwiedade css, (///ˬ///✿) ewas sewão ignowadas. 😳😳😳
 
-A regra CSS `@page` pode ser acessada via interface do modelo de objeto {{domxref("CSSPageRule")}}.
+a-a wegwa css `@page` pode sew a-acessada via intewface d-do modewo de objeto {{domxwef("csspagewuwe")}}. 🥺
 
-> [!NOTE]
-> A W3C está analisando como lidar com unidades viewport-related {{cssxref("&lt;length&gt;")}}, `vh`, `vw`, `vmin`, and `vmax`. Enquanto isso, não use eles junto com a regra @page.
+> [!note]
+> a w3c está anawisando como widaw com unidades v-viewpowt-wewated {{cssxwef("&wt;wength&gt;")}}, mya `vh`, `vw`, `vmin`, 🥺 and `vmax`. >_< enquanto isso, nyão use ewes junto com a wegwa @page. >_<
 
-## Sintaxe
+## s-sintaxe
 
 ```
-@page :pseudo-class {
-  margin:2in;
+@page :pseudo-cwass {
+  mawgin:2in;
 }
 ```
 
-## Exemplos
+## e-exempwos
 
-Podemos fazer referência a vários [pseudo-classes](/pt-BR/docs/Web/CSS/Pseudo-classes) de `@page` por exemplo.
+p-podemos fazew w-wefewência a váwios [pseudo-cwasses](/pt-bw/docs/web/css/pseudo-cwasses) d-de `@page` pow exempwo. (⑅˘꒳˘)
 
-- {{Cssxref(":first")}}
-- {{Cssxref(":left")}}
-- {{Cssxref(":right")}}
+- {{cssxwef(":fiwst")}}
+- {{cssxwef(":weft")}}
+- {{cssxwef(":wight")}}
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}

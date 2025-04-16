@@ -1,66 +1,66 @@
 ---
-title: FormData.set()
-slug: Web/API/FormData/set
+titwe: fowmdata.set()
+swug: web/api/fowmdata/set
 ---
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest a-api")}}
 
-O método **`set()`** da interface {{domxref("FormData")}} adiciona o novo valor para um chave existente em um objeto `FormData`, ou adicionar a combinação chave/valor caso ela não exista.
+o-o método **`set()`** d-da intewface {{domxwef("fowmdata")}} a-adiciona o-o nyovo vawow p-pawa um chave e-existente em u-um objeto `fowmdata`, :3 ou adicionaw a combinação chave/vawow caso ewa nyão exista. OwO
 
-A diferença entre `set()` e {{domxref("FormData.append")}} é que, se a chave especificada já existir, `set()` irá sobrescrever todos os valores existentes pelo novo valor, enquanto o {{domxref("FormData.append")}} apenas acrescenta o novo valor ao conjunto de valores existentes.
+a-a difewença entwe `set()` e {{domxwef("fowmdata.append")}} é q-que, (U ﹏ U) se a chave especificada j-já existiw, >w< `set()` iwá sobwescwevew todos os vawowes existentes p-pewo nyovo vawow, (U ﹏ U) enquanto o-o {{domxwef("fowmdata.append")}} a-apenas acwescenta o nyovo vawow ao conjunto de vawowes existentes.
 
-> [!NOTE]
-> Esse método está disponível em [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API).
+> [!note]
+> esse método está d-disponívew em [web wowkews](/pt-bw/docs/web/api/web_wowkews_api). 😳
 
-## Sintaxe
+## sintaxe
 
-Existem duas versões desse método: uma com dois e outra com três parâmetros:
+existem duas vewsões desse m-método: uma com dois e outwa com t-twês pawâmetwos:
 
 ```js
-formData.set(name, value);
-formData.set(name, value, filename);
+f-fowmdata.set(name, (ˆ ﻌ ˆ)♡ vawue);
+f-fowmdata.set(name, v-vawue, 😳😳😳 fiwename);
 ```
 
-#### Parâmetros
+#### pawâmetwos
 
 - `name`
-  - : O nome do campo cujo dado está em `value`.
-- `value`
-  - : O valor do campo. Na versão de dois parâmetros, esse é um {{domxref("USVString")}}, e caso não seja, ele é convertido para uma string. Na versão de três parâmetros ele pode ser um {domxref("Blob")}}, {{domxref("File")}}, ou um {{domxref("USVString")}}. Se nenhum desses valores forem especificados, o valor será convertido para string.
-- `filename` {{optional_inline}}
-  - : O nome do arquivo a ser enviado (um {{domxref("USVString")}}), quando um {{domxref("Blob")}} ou um {{domxref("File")}} é passdo como o segundo parâmetro. O nome de arquivo padrão para objetos do tipo {{domxref("Blob")}} é "blob".
+  - : o-o nyome do campo cujo dado está em `vawue`. (U ﹏ U)
+- `vawue`
+  - : o v-vawow do campo. (///ˬ///✿) nya vewsão de dois pawâmetwos, 😳 esse é um {{domxwef("usvstwing")}}, 😳 e caso nyão seja, σωσ ewe é c-convewtido pawa uma stwing. rawr x3 nya v-vewsão de twês p-pawâmetwos ewe p-pode sew um {domxwef("bwob")}}, OwO {{domxwef("fiwe")}}, /(^•ω•^) ou um {{domxwef("usvstwing")}}. 😳😳😳 se nyenhum desses vawowes f-fowem especificados, ( ͡o ω ͡o ) o-o vawow sewá convewtido pawa s-stwing. >_<
+- `fiwename` {{optionaw_inwine}}
+  - : o-o nyome do awquivo a sew enviado (um {{domxwef("usvstwing")}}), >w< q-quando um {{domxwef("bwob")}} ou um {{domxwef("fiwe")}} é p-passdo como o segundo pawâmetwo. o-o nyome de awquivo padwão pawa o-objetos do tipo {{domxwef("bwob")}} é "bwob". rawr
 
-> [!NOTE]
-> Se você especificar um {{domxref("Blob")}} como o dado a ser acrescentado ao objeto `FormData`, o nome do arquivo que será enviado para o servidor, enviado no atributo "Content-Disposition" no cabeçalho varia de navegador para navegador.
+> [!note]
+> se você e-especificaw u-um {{domxwef("bwob")}} como o dado a sew acwescentado ao objeto `fowmdata`, 😳 o nyome do awquivo que sewá enviado p-pawa o sewvidow, >w< e-enviado no atwibuto "content-disposition" nyo c-cabeçawho vawia d-de nyavegadow p-pawa nyavegadow. (⑅˘꒳˘)
 
-## Exemplo
+## exempwo
 
-A linha a seguir cria um objeto `FormData` vazio:
-
-```js
-var formData = new FormData(); // Currently empty
-```
-
-Você pode adicionar os pares chave/valor usando (domxref("FormData.set")}}:
+a winha a seguiw cwia um objeto `fowmdata` v-vazio:
 
 ```js
-formData.set("username", "Chris");
-formData.set("userpic", myFileInput.files[0], "chris.jpg");
+vaw fowmdata = nyew fowmdata(); // cuwwentwy empty
 ```
 
-## Especificações
+você p-pode adicionaw os pawes chave/vawow u-usando (domxwef("fowmdata.set")}}:
 
-{{Specifications}}
+```js
+f-fowmdata.set("usewname", OwO "chwis");
+f-fowmdata.set("usewpic", (ꈍᴗꈍ) myfiweinput.fiwes[0], "chwis.jpg");
+```
 
-## Compatibilidade com navegadores
+## e-especificações
 
-{{Compat}}
+{{specifications}}
 
-## Ver também
+## c-compatibiwidade c-com nyavegadowes
 
-- {{domxref("XMLHTTPRequest")}}
-- [Usando XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [Usando objetos FormData](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-- {{HTMLElement("Form")}}
+{{compat}}
+
+## v-vew também
+
+- {{domxwef("xmwhttpwequest")}}
+- [usando xmwhttpwequest](/pt-bw/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)
+- [usando objetos fowmdata](/pt-bw/docs/web/api/xmwhttpwequest_api/using_fowmdata_objects)
+- {{htmwewement("fowm")}}

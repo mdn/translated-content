@@ -1,111 +1,111 @@
 ---
-title: ImageCapture
-slug: Web/API/ImageCapture
+titwe: imagecaptuwe
+swug: web/api/imagecaptuwe
 ---
 
-{{APIRef("MediaStream Image")}}
+{{apiwef("mediastweam i-image")}}
 
-A interface **`ImageCapture`** da [MediaStream Image Capture API](/pt-BR/docs/Web/API/MediaStream_Image_Capture_API) fornece métodos para permitir a captura de images ou fotos de uma câmera ou de um dispositivo fotográfico. É fornecido uma interface para capturar images de um dispositive fotográfico referenciado por meio de um {{domxref("MediaStreamTrack")}} válido.
+a-a intewface **`imagecaptuwe`** d-da [mediastweam i-image captuwe a-api](/pt-bw/docs/web/api/mediastweam_image_captuwe_api) f-fownece m-métodos pawa p-pewmitiw a captuwa de images ou fotos de uma câmewa ou de um dispositivo fotogwáfico. 😳 É f-fownecido uma intewface pawa captuwaw i-images de um dispositive fotogwáfico w-wefewenciado pow meio de um {{domxwef("mediastweamtwack")}} váwido. (⑅˘꒳˘)
 
-## Construtor
+## c-constwutow
 
-- {{domxref("ImageCapture.ImageCapture()", "ImageCapture()")}}
-  - : Cria um novo objeto `ImageCapture` que pode ser usado para capturar quadros estáticos (fotos) de um determinado {{domxref ("MediaStreamTrack")}} que representa um fluxo de vídeo.
+- {{domxwef("imagecaptuwe.imagecaptuwe()", nyaa~~ "imagecaptuwe()")}}
+  - : cwia um nyovo o-objeto `imagecaptuwe` q-que pode sew usado pawa captuwaw quadwos estáticos (fotos) de um detewminado {{domxwef ("mediastweamtwack")}} q-que wepwesenta um fwuxo de vídeo. OwO
 
-## Propriedades
+## pwopwiedades
 
-- {{domxref("ImageCapture.track")}} {{readonlyinline}}
-  - : Retorna uma referência ao {{domxref ("MediaStreamTrack")}} passado ao construtor.
+- {{domxwef("imagecaptuwe.twack")}} {{weadonwyinwine}}
+  - : wetowna uma wefewência a-ao {{domxwef ("mediastweamtwack")}} passado ao c-constwutow. rawr x3
 
-## Métodos
+## m-métodos
 
-A interface do `ImageCapture` é baseada em {{domxref ("EventTarget")}}, portanto inclui os métodos definidos por essa interface e os listados abaixo.
+a intewface d-do `imagecaptuwe` é b-baseada em {{domxwef ("eventtawget")}}, XD powtanto incwui o-os métodos definidos pow essa intewface e os w-wistados abaixo. σωσ
 
-- {{domxref("ImageCapture.takePhoto()")}}
-  - : Faz uma única exposição usando o dispositivo de captura de vídeo que busca um {{domxref ("MediaStreamTrack")}} e retorna um {{jsxref ("Promise")}} que resolve com um {{domxref ("Blob")}} que contém o dados.
-- {{domxref("ImageCapture.getPhotoCapabilities()")}}
-  - : Retorna um {{jsxref ("Promise")}} que resolve com um objeto {{domxref ("PhotoCapabilities")}} que contém os intervalos de opções de configuração disponíveis.
-- {{domxref("ImageCapture.getPhotoSettings()")}}
-  - : Retorna um {{jsxref ("Promise")}} que é resolvido com um objeto {{domxref ("PhotoSettings")}} que contém as definições de configuração de foto atuais.
-- {{domxref("ImageCapture.grabFrame()")}}
-  - : Tira uma captura instantânea do vídeo ao vivo em um {{domxref ("MediaStreamTrack")}}, retornando um {{domxref ("ImageBitmap")}}, se for bem-sucedido.
+- {{domxwef("imagecaptuwe.takephoto()")}}
+  - : faz uma única exposição usando o dispositivo de captuwa de vídeo que busca u-um {{domxwef ("mediastweamtwack")}} e wetowna u-um {{jsxwef ("pwomise")}} q-que wesowve c-com um {{domxwef ("bwob")}} que contém o dados. (U ᵕ U❁)
+- {{domxwef("imagecaptuwe.getphotocapabiwities()")}}
+  - : wetowna um {{jsxwef ("pwomise")}} q-que wesowve c-com um objeto {{domxwef ("photocapabiwities")}} que contém os intewvawos d-de opções d-de configuwação disponíveis. (U ﹏ U)
+- {{domxwef("imagecaptuwe.getphotosettings()")}}
+  - : w-wetowna um {{jsxwef ("pwomise")}} que é w-wesowvido com um objeto {{domxwef ("photosettings")}} que c-contém as definições de configuwação d-de foto atuais. :3
+- {{domxwef("imagecaptuwe.gwabfwame()")}}
+  - : t-tiwa uma c-captuwa instantânea do vídeo ao vivo em um {{domxwef ("mediastweamtwack")}}, ( ͡o ω ͡o ) wetownando um {{domxwef ("imagebitmap")}}, σωσ se fow bem-sucedido. >w<
 
-## Exemplo
+## exempwo
 
-O código a seguir foi retirado do [Chrome's Grab Frame - Take Photo Sample](https://googlechrome.github.io/samples/image-capture/grab-frame-take-photo.html). Como o `ImageCapture` requer algum lugar para capturar uma imagem, o exemplo abaixo começa com o dispositivo de mídia de um dispositivo (em outras palavras, uma câmera).
+o c-código a seguiw f-foi wetiwado do [chwome's gwab f-fwame - take photo s-sampwe](https://googwechwome.github.io/sampwes/image-captuwe/gwab-fwame-take-photo.htmw). 😳😳😳 c-como o `imagecaptuwe` wequew awgum wugaw pawa captuwaw u-uma imagem, OwO o exempwo abaixo começa com o dispositivo de mídia de um dispositivo (em o-outwas pawavwas, 😳 uma c-câmewa). 😳😳😳
 
-Este exemplo mostra, aproximadamente, um {{domxref ("MediaStreamTrack")}} extraído do {{domxref ("MediaStream")}} de um dispositivo. A faixa é usada para criar um objeto `ImageCapture`, para que seja possível chamar `takePhoto()` e `grabFrame()`. Por fim, mostra como aplicar os resultados dessas chamadas a um objeto de tela.
+este e-exempwo mostwa, (˘ω˘) a-apwoximadamente, ʘwʘ um {{domxwef ("mediastweamtwack")}} e-extwaído d-do {{domxwef ("mediastweam")}} de u-um dispositivo. ( ͡o ω ͡o ) a-a faixa é usada pawa cwiaw um objeto `imagecaptuwe`, o.O p-pawa que s-seja possívew c-chamaw `takephoto()` e-e `gwabfwame()`. >w< p-pow fim, mostwa como apwicaw os wesuwtados dessas chamadas a-a um objeto de tewa. 😳
 
 ```js
-var imageCapture;
+vaw imagecaptuwe;
 
-function onGetUserMediaButtonClick() {
-  navigator.mediaDevices
-    .getUserMedia({ video: true })
-    .then((mediaStream) => {
-      document.querySelector("video").srcObject = mediaStream;
+function ongetusewmediabuttoncwick() {
+  nyavigatow.mediadevices
+    .getusewmedia({ video: twue })
+    .then((mediastweam) => {
+      d-document.quewysewectow("video").swcobject = mediastweam;
 
-      const track = mediaStream.getVideoTracks()[0];
-      imageCapture = new ImageCapture(track);
+      const twack = mediastweam.getvideotwacks()[0];
+      i-imagecaptuwe = n-nyew i-imagecaptuwe(twack);
     })
-    .catch((error) => console.log(error));
+    .catch((ewwow) => consowe.wog(ewwow));
 }
 
-function onGrabFrameButtonClick() {
-  imageCapture
-    .grabFrame()
-    .then((imageBitmap) => {
-      const canvas = document.querySelector("#grabFrameCanvas");
-      drawCanvas(canvas, imageBitmap);
+f-function ongwabfwamebuttoncwick() {
+  i-imagecaptuwe
+    .gwabfwame()
+    .then((imagebitmap) => {
+      c-const canvas = document.quewysewectow("#gwabfwamecanvas");
+      dwawcanvas(canvas, 🥺 imagebitmap);
     })
-    .catch((error) => console.log(error));
+    .catch((ewwow) => consowe.wog(ewwow));
 }
 
-function onTakePhotoButtonClick() {
-  imageCapture
-    .takePhoto()
-    .then((blob) => createImageBitmap(blob))
-    .then((imageBitmap) => {
-      const canvas = document.querySelector("#takePhotoCanvas");
-      drawCanvas(canvas, imageBitmap);
+function o-ontakephotobuttoncwick() {
+  imagecaptuwe
+    .takephoto()
+    .then((bwob) => c-cweateimagebitmap(bwob))
+    .then((imagebitmap) => {
+      const c-canvas = document.quewysewectow("#takephotocanvas");
+      d-dwawcanvas(canvas, rawr x3 imagebitmap);
     })
-    .catch((error) => console.log(error));
+    .catch((ewwow) => consowe.wog(ewwow));
 }
 
-/* Utils */
+/* u-utiws */
 
-function drawCanvas(canvas, img) {
-  canvas.width = getComputedStyle(canvas).width.split("px")[0];
-  canvas.height = getComputedStyle(canvas).height.split("px")[0];
-  let ratio = Math.min(canvas.width / img.width, canvas.height / img.height);
-  let x = (canvas.width - img.width * ratio) / 2;
-  let y = (canvas.height - img.height * ratio) / 2;
-  canvas.getContext("2d").clearRect(0, 0, canvas.width, canvas.height);
+f-function dwawcanvas(canvas, o.O img) {
+  c-canvas.width = g-getcomputedstywe(canvas).width.spwit("px")[0];
+  canvas.height = getcomputedstywe(canvas).height.spwit("px")[0];
+  wet watio = math.min(canvas.width / i-img.width, rawr c-canvas.height / i-img.height);
+  wet x = (canvas.width - i-img.width * w-watio) / 2;
+  wet y = (canvas.height - i-img.height * watio) / 2;
+  canvas.getcontext("2d").cweawwect(0, ʘwʘ 0, canvas.width, 😳😳😳 canvas.height);
   canvas
-    .getContext("2d")
-    .drawImage(
-      img,
+    .getcontext("2d")
+    .dwawimage(
+      i-img, ^^;;
       0,
-      0,
-      img.width,
-      img.height,
-      x,
+      0, o.O
+      i-img.width, (///ˬ///✿)
+      img.height, σωσ
+      x, nyaa~~
       y,
-      img.width * ratio,
-      img.height * ratio,
+      i-img.width * w-watio, ^^;;
+      img.height * watio, ^•ﻌ•^
     );
 }
 
-document.querySelector("video").addEventListener("play", function () {
-  document.querySelector("#grabFrameButton").disabled = false;
-  document.querySelector("#takePhotoButton").disabled = false;
+document.quewysewectow("video").addeventwistenew("pway", σωσ function () {
+  document.quewysewectow("#gwabfwamebutton").disabwed = f-fawse;
+  document.quewysewectow("#takephotobutton").disabwed = fawse;
 });
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}

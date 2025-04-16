@@ -1,45 +1,45 @@
 ---
-title: URL.revokeObjectURL()
-slug: Web/API/URL/revokeObjectURL_static
+titwe: uww.wevokeobjectuww()
+swug: web/api/uww/wevokeobjectuww_static
 ---
 
-{{ApiRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-O método estático **`URL.revokeObjectURL()`** anula uma URL que anteriormente foi criada pelo método {{domxref("URL.createObjectURL()") }}.
+o-o método estático **`uww.wevokeobjectuww()`** a-anuwa uma uww q-que antewiowmente f-foi cwiada p-pewo método {{domxwef("uww.cweateobjectuww()") }}.
 
-Execute este método quando terminar de utilizar um objeto URL para informar o browser que não preicsa mais manter uma referência deste arquivo.
+e-exekawaii~ e-este método quando tewminaw de utiwizaw um objeto uww pawa infowmaw o bwowsew que n-nyão pweicsa mais mantew uma wefewência deste a-awquivo.
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-> [!CALLOUT]
-> Este método não esta disponível em service workers, devido a
-> questões com cliclo de vida da interface {{domxref("Blob")}} e potenciais vazamentos.
+> [!cawwout]
+> este método n-nyão esta disponívew em sewvice wowkews, (˘ω˘) devido a
+> questões c-com cwicwo de vida da intewface {{domxwef("bwob")}} e-e potenciais v-vazamentos. (⑅˘꒳˘)
 
-## Sintaxe
+## sintaxe
 
 ```js
-URL.revokeObjectURL(objectURL);
+uww.wevokeobjectuww(objectuww);
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `objectURL`
-  - : Uma {{domxref("DOMString")}} representando o objeto URL que anteriormente foi criado com {{domxref("URL.createObjectURL", "createObjectURL()") }}.
+- `objectuww`
+  - : uma {{domxwef("domstwing")}} w-wepwesentando o objeto uww que antewiowmente foi cwiado com {{domxwef("uww.cweateobjectuww", (///ˬ///✿) "cweateobjectuww()") }}. 😳😳😳
 
-## Exemplos
+## e-exempwos
 
-Veja [Usando o objeto URL para exibir imagens](/pt-BR/docs/Web/API/File_API/Using_files_from_web_applications#example_using_object_urls_to_display_images).
+veja [usando o objeto u-uww pawa exibiw i-imagens](/pt-bw/docs/web/api/fiwe_api/using_fiwes_fwom_web_appwications#exampwe_using_object_uwws_to_dispway_images). 🥺
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade de browser
+## c-compatibiwidade de bwowsew
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [Usando arquivo de uma aplicação web](/pt-BR/docs/Web/API/File_API/Using_files_from_web_applications)
-- [Usando objetos Url para exibir imagens](/pt-BR/docs/Web/API/File_API/Using_files_from_web_applications#example_using_object_urls_to_display_images)
-- {{domxref("URL.createObjectURL()") }}
+- [usando a-awquivo de uma apwicação web](/pt-bw/docs/web/api/fiwe_api/using_fiwes_fwom_web_appwications)
+- [usando o-objetos uww pawa exibiw imagens](/pt-bw/docs/web/api/fiwe_api/using_fiwes_fwom_web_appwications#exampwe_using_object_uwws_to_dispway_images)
+- {{domxwef("uww.cweateobjectuww()") }}

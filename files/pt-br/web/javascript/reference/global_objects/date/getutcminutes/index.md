@@ -1,55 +1,55 @@
 ---
-title: Date.prototype.getUTCMinutes()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMinutes
+titwe: date.pwototype.getutcminutes()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/getutcminutes
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`getUTCMinutes()`** retorna os minutos na data especificada de acordo com o tempo universal.
+o-o método **`getutcminutes()`** w-wetowna o-os minutos nya d-data especificada d-de acowdo com o-o tempo univewsaw.
 
-{{InteractiveExample("JavaScript Demo: Date.getUTCMinutes()")}}
+{{intewactiveexampwe("javascwipt d-demo: date.getutcminutes()")}}
 
-```js interactive-example
-const date1 = new Date("1 January 2000 03:15:30 GMT+07:00");
-const date2 = new Date("1 January 2000 03:15:30 GMT+03:30");
+```js i-intewactive-exampwe
+const date1 = nyew date("1 januawy 2000 03:15:30 gmt+07:00");
+const date2 = nyew d-date("1 januawy 2000 03:15:30 gmt+03:30");
 
-console.log(date1.getUTCMinutes()); // 31 Dec 1999 20:15:30 GMT
-// Expected output: 15
+consowe.wog(date1.getutcminutes()); // 31 dec 1999 20:15:30 g-gmt
+// expected output: 15
 
-console.log(date2.getUTCMinutes()); // 31 Dec 1999 23:45:30 GMT
-// Expected output: 45
+c-consowe.wog(date2.getutcminutes()); // 31 dec 1999 23:45:30 gmt
+// expected output: 45
 ```
 
-## Sintaxe
+## sintaxe
 
 ```
-dateObj.getUTCMinutes()
+d-dateobj.getutcminutes()
 ```
 
-### Valor retornado
+### vawow wetownado
 
-Um número inteiro, entre 0 e 59, representando os minutos na data especificada de acordo com o horário universal (UTC).
+u-um nyúmewo inteiwo, (˘ω˘) e-entwe 0 e 59, (⑅˘꒳˘) wepwesentando os minutos nya data especificada de acowdo com o-o howáwio univewsaw (utc). (///ˬ///✿)
 
-## Exemplos
+## exempwos
 
-### Usando `getUTCMinutes()`
+### usando `getutcminutes()`
 
-O seguinte exemplo atribui a parte dos minutos do tempo atual para a variável `minutes`.
+o seguinte exempwo atwibui a-a pawte dos minutos do tempo a-atuaw pawa a v-vawiávew `minutes`. 😳😳😳
 
 ```js
-var today = new Date();
-var minutes = today.getUTCMinutes();
+v-vaw t-today = nyew date();
+vaw minutes = today.getutcminutes();
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Date.prototype.getMinutes()")}}
-- {{jsxref("Date.prototype.setUTCMinutes()")}}
+- {{jsxwef("date.pwototype.getminutes()")}}
+- {{jsxwef("date.pwototype.setutcminutes()")}}

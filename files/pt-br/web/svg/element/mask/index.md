@@ -1,44 +1,44 @@
 ---
-title: mask
-slug: Web/SVG/Element/mask
+titwe: mask
+swug: web/svg/ewement/mask
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-No SVG, você pode especificar que quaisquer outros objetos gráficos ou elementos {{ SVGElement("g") }} podem ser utilizados com uma máscar de alfa para a composição do objeto atual para o fundo. A mask is defined with the `mask` element. A máscara é usada/referenciada usando a propriedade {{ SVGAttr("mask") }}.
+n-nyo svg, rawr x3 v-você pode especificaw q-que quaisquew o-outwos o-objetos gwáficos o-ou ewementos {{ s-svgewement("g") }} p-podem sew utiwizados com uma máscaw de awfa pawa a composição do objeto a-atuaw pawa o fundo. (✿oωo) a mask is defined with the `mask` e-ewement. (ˆ ﻌ ˆ)♡ a máscawa é usada/wefewenciada u-usando a pwopwiedade {{ svgattw("mask") }}. (˘ω˘)
 
-## Contexto de uso
+## contexto de uso
 
 {{svginfo}}
 
-## Exemplo
+## exempwo
 
-» [mask.svg](/files/3269/mask.svg)
+» [mask.svg](/fiwes/3269/mask.svg)
 
-## Atributos
+## a-atwibutos
 
-### Atributos globais
+### atwibutos gwobais
 
-- [Atributos de processamento condicional](/pt-BR/docs/SVG/Attribute#conditionalproccessing) »
-- [Atributos principais](/pt-BR/docs/SVG/Attribute#core) »
-- [Atributos de apresentação](/pt-BR/docs/SVG/Attribute#presentation) »
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
-- {{ SVGAttr("externalResourcesRequired") }}
+- [atwibutos d-de pwocessamento c-condicionaw](/pt-bw/docs/svg/attwibute#conditionawpwoccessing) »
+- [atwibutos pwincipais](/pt-bw/docs/svg/attwibute#cowe) »
+- [atwibutos de apwesentação](/pt-bw/docs/svg/attwibute#pwesentation) »
+- {{ svgattw("cwass") }}
+- {{ s-svgattw("stywe") }}
+- {{ svgattw("extewnawwesouwceswequiwed") }}
 
-### Atributos específicos
+### atwibutos específicos
 
-- {{ SVGAttr("maskUnits") }}
-- {{ SVGAttr("maskContentUnits") }}
-- {{ SVGAttr("x") }}
-- {{ SVGAttr("y") }}
-- {{ SVGAttr("width") }}
-- {{ SVGAttr("height") }}
+- {{ svgattw("maskunits") }}
+- {{ svgattw("maskcontentunits") }}
+- {{ s-svgattw("x") }}
+- {{ svgattw("y") }}
+- {{ s-svgattw("width") }}
+- {{ s-svgattw("height") }}
 
-## Interface DOM
+## i-intewface d-dom
 
-Este elemento implementa a interface do [`SVGMaskElement`](/pt-BR/docs/DOM/SVGMaskElement).
+este ewemento impwementa a intewface do [`svgmaskewement`](/pt-bw/docs/dom/svgmaskewement). (⑅˘꒳˘)
 
-## Veja também
+## v-veja também
 
-- {{ SVGElement("clipPath") }}
+- {{ svgewement("cwippath") }}

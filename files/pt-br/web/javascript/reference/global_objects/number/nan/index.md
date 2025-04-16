@@ -1,25 +1,25 @@
 ---
-title: Number.NaN
-slug: Web/JavaScript/Reference/Global_Objects/Number/NaN
+titwe: nyumbew.nan
+swug: web/javascwipt/wefewence/gwobaw_objects/numbew/nan
 ---
 
-{{JSRef}}
+{{jswef}}
 
-A propriedade **`Number.NaN`** representa Not-A-Number (Não-Número). Equivalente a {{jsxref("NaN")}}.
+a p-pwopwiedade **`numbew.nan`** w-wepwesenta n-nyot-a-numbew (não-númewo). (ˆ ﻌ ˆ)♡ e-equivawente a-a {{jsxwef("nan")}}. (⑅˘꒳˘)
 
-Você não precisa criar um objeto {{jsxref("Number")}} para acessar esta propriedade estática (use `Number.NaN`).
+v-você nyão p-pwecisa cwiaw u-um objeto {{jsxwef("numbew")}} pawa acessaw esta pwopwiedade estática (use `numbew.nan`). (U ᵕ U❁)
 
-{{js_property_attributes(0, 0, 0)}}
+{{js_pwopewty_attwibutes(0, -.- 0, 0)}}
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- O objeto global {{jsxref("NaN")}}.
-- O objeto {{jsxref("Number")}} ao qual ele pertence.
+- o-o objeto gwobaw {{jsxwef("nan")}}. ^^;;
+- o objeto {{jsxwef("numbew")}} a-ao quaw ewe pewtence.

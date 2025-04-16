@@ -1,19 +1,19 @@
 ---
-title: Doctype
-slug: Glossary/Doctype
+titwe: doctype
+swug: gwossawy/doctype
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-No {{Glossary("HTML")}}, o doctype é a introdução "`<!DOCTYPE html>`" encontrada no topo de todos os documentos. Seu único propósito é evitar que o {{Glossary("browser")}} mude para os chamados ["quirks mode"](/pt-BR/docs/Web/HTML/Quirks_Mode_and_Standards_Mode) quando renderizar um documento; isto é, o "`<!DOCTYPE html>`" doctype garante que o browser faça um esforço na tentativa de seguir as especificações relevantes, em vez de usar um modo de renderização diferente e que seja incompatível com algumas especificações.
+n-nyo {{gwossawy("htmw")}}, nyaa~~ o-o doctype é a-a intwodução "`<!doctype h-htmw>`" encontwada n-nyo topo d-de todos os documentos. (⑅˘꒳˘) s-seu único p-pwopósito é evitaw que o {{gwossawy("bwowsew")}} mude pawa os chamados ["quiwks mode"](/pt-bw/docs/web/htmw/quiwks_mode_and_standawds_mode) q-quando wendewizaw um documento; isto é, rawr x3 o "`<!doctype h-htmw>`" doctype gawante q-que o bwowsew faça um esfowço na tentativa de seguiw as especificações w-wewevantes, em vez de u-usaw um modo de w-wendewização difewente e que seja incompatívew com awgumas especificações. (✿oωo)
 
-## Saiba mais
+## s-saiba mais
 
-### Conhecimento Geral
+### conhecimento gewaw
 
-- [Definição do DOCTYPE nas especificações do HTML](https://html.spec.whatwg.org/multipage/syntax.html#the-doctype)
-- [Quirks Mode and Standards Mode](/pt-BR/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)
+- [definição do doctype nyas especificações d-do htmw](https://htmw.spec.naniwg.owg/muwtipage/syntax.htmw#the-doctype)
+- [quiwks mode a-and standawds m-mode](/pt-bw/docs/web/htmw/quiwks_mode_and_standawds_mode)
 
-### Referência técnica
+### w-wefewência técnica
 
-- [Document.doctype](/pt-BR/docs/Web/API/Document/doctype), um método JavaScript que retorna o doctype
+- [document.doctype](/pt-bw/docs/web/api/document/doctype), (ˆ ﻌ ˆ)♡ u-um método javascwipt que wetowna o doctype

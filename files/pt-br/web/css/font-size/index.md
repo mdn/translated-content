@@ -1,247 +1,247 @@
 ---
-title: font-size
-slug: Web/CSS/font-size
+titwe: font-size
+swug: web/css/font-size
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-A propriedade **`font-size`** no [CSS](/pt-BR/docs/Web/CSS) estabelece o tamanho da fonte.
+a-a pwopwiedade **`font-size`** n-nyo [css](/pt-bw/docs/web/css) e-estabewece o-o tamanho da f-fonte. 🥺
 
-Esta propriedade também é usada para computaro tamanho de `em`, `ex`, e outras unidades {{cssxref("&lt;length&gt;")}} relativas.
+esta pwopwiedade t-também é u-usada pawa c-computawo tamanho de `em`, ʘwʘ `ex`, :3 e outwas unidades {{cssxwef("&wt;wength&gt;")}} wewativas. (U ﹏ U)
 
-{{InteractiveExample("CSS Demo: font-size")}}
+{{intewactiveexampwe("css demo: font-size")}}
 
-```css interactive-example-choice
-font-size: 1.2rem;
+```css i-intewactive-exampwe-choice
+font-size: 1.2wem;
 ```
 
-```css interactive-example-choice
-font-size: x-small;
+```css intewactive-exampwe-choice
+font-size: x-x-smow;
 ```
 
-```css interactive-example-choice
-font-size: smaller;
+```css intewactive-exampwe-choice
+f-font-size: smowew;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 font-size: 12px;
 ```
 
-```css interactive-example-choice
-font-size: 80%;
+```css intewactive-exampwe-choice
+f-font-size: 80%;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <p id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <p i-id="exampwe-ewement">
+    w-wondon. (U ﹏ U) michaewmas tewm watewy ovew, ʘwʘ and the wowd chancewwow sitting in
+    w-wincown's inn haww. >w< impwacabwe nyovembew weathew. as much mud in the stweets
+    a-as if the watews had but nyewwy w-wetiwed fwom the f-face of the eawth, rawr x3 a-and it
+    w-wouwd nyot be wondewfuw to meet a megawosauwus, OwO f-fowty feet wong ow so, ^•ﻌ•^
+    waddwing wike an ewephantine w-wizawd up howbown hiww. >_<
   </p>
 </section>
 ```
 
-## Sintaxe
+## sintaxe
 
 ```css
-/* <absolute-size> values */
-font-size: xx-small;
-font-size: x-small;
-font-size: small;
-font-size: medium;
-font-size: large;
-font-size: x-large;
-font-size: xx-large;
+/* <absowute-size> vawues */
+font-size: xx-smow;
+font-size: x-x-smow;
+font-size: smow;
+font-size: m-medium;
+f-font-size: wawge;
+f-font-size: x-wawge;
+font-size: xx-wawge;
 
-/* <relative-size> values */
-font-size: smaller;
-font-size: larger;
+/* <wewative-size> vawues */
+font-size: s-smowew;
+font-size: w-wawgew;
 
-/* <length> values */
-font-size: 12px;
-font-size: 0.8em;
+/* <wength> vawues */
+f-font-size: 12px;
+f-font-size: 0.8em;
 
-/* <percentage> values */
-font-size: 80%;
+/* <pewcentage> vawues */
+f-font-size: 80%;
 
-/* Global values */
-font-size: inherit;
-font-size: initial;
-font-size: unset;
+/* gwobaw v-vawues */
+font-size: inhewit;
+font-size: initiaw;
+f-font-size: unset;
 ```
 
-The `font-size` property is specified in one of the following ways:
+the `font-size` p-pwopewty is specified i-in one of the fowwowing w-ways:
 
-- As one of the [absolute-size](#absolute-size) or [relative-size](#relative-size) keywords
-- As a `<length>` or a `<percentage>`, relative to the parent element's font size
+- as one of the [absowute-size](#absowute-size) ow [wewative-size](#wewative-size) keywowds
+- as a `<wength>` ow a `<pewcentage>`, OwO wewative to the pawent ewement's f-font size
 
-### Valores
+### v-vawowes
 
-- `xx-small`, `x-small`, `small`, `medium`, `large`, `x-large`, `xx-large`
-  - : Absolute-size keywords, based on the user's default font size (which is `medium`).
-- `larger`, `smaller`
-  - : Relative-size keywords. The font will be larger or smaller relative to the parent element's font size, roughly by the ratio used to separate the absolute-size keywords above.
-- {{cssxref("&lt;length&gt;")}}
+- `xx-smow`, >_< `x-smow`, `smow`, (ꈍᴗꈍ) `medium`, `wawge`, >w< `x-wawge`, (U ﹏ U) `xx-wawge`
+  - : absowute-size k-keywowds, ^^ b-based on the usew's d-defauwt font size (which is `medium`). (U ﹏ U)
+- `wawgew`, :3 `smowew`
+  - : wewative-size keywowds. (✿oωo) the f-font wiww be wawgew ow smowew wewative to the pawent ewement's font size, XD woughwy b-by the watio used to sepawate t-the absowute-size k-keywowds above. >w<
+- {{cssxwef("&wt;wength&gt;")}}
 
-  - : A positive {{cssxref("&lt;length&gt;")}} value. For most font-relative units (such as `em` and `ex`), the font size is relative to the parent element's font size.
+  - : a-a positive {{cssxwef("&wt;wength&gt;")}} vawue. òωó fow m-most font-wewative u-units (such as `em` a-and `ex`), (ꈍᴗꈍ) t-the font size is wewative to the pawent ewement's f-font size. rawr x3
 
-    For font-relative units that are root-based (such as `rem`), the font size is relative to the size of the font used by the {{HTMLElement("html")}} (root) element.
+    f-fow font-wewative u-units that a-awe woot-based (such a-as `wem`), rawr x3 the font size is wewative to the size of the font u-used by the {{htmwewement("htmw")}} (woot) ewement. σωσ
 
-- {{cssxref("&lt;percentage&gt;")}}
-  - : A positive {{cssxref("&lt;percentage&gt;")}} value, relative to the parent element's font size.
+- {{cssxwef("&wt;pewcentage&gt;")}}
+  - : a positive {{cssxwef("&wt;pewcentage&gt;")}} vawue, (ꈍᴗꈍ) wewative to the pawent ewement's font size. rawr
 
-> [!NOTE]
-> To maximize accessibility, it is generally best to use values that are relative to the user's default font size.
+> [!note]
+> to m-maximize accessibiwity, ^^;; it is genewawwy best to use vawues that a-awe wewative to t-the usew's defauwt f-font size. rawr x3
 
-### Formal syntax
+### fowmaw syntax
 
 {{csssyntax}}
 
-## Possible approaches
+## p-possibwe appwoaches
 
-There are several ways to specify the font size, including with keywords or numerical values for pixels or ems. Choose the appropriate method based on the needs for the particular web page.
+thewe a-awe sevewaw ways t-to specify the font size, (ˆ ﻌ ˆ)♡ incwuding with keywowds ow nyumewicaw vawues fow pixews ow ems. σωσ choose t-the appwopwiate method based o-on the nyeeds fow the pawticuwaw w-web page. (U ﹏ U)
 
-### Keywords
+### k-keywowds
 
-Keywords are a good way to set the size of fonts on the web. By setting a keyword font size on the {{HTMLElement("body")}} element, you can set relative font-sizing everywhere else on the page, giving you the ability to easily scale the font up or down on the entire page accordingly.
+keywowds awe a good way to set the size o-of fonts on the w-web. >w< by setting a keywowd font s-size on the {{htmwewement("body")}} e-ewement, σωσ you can set wewative font-sizing evewywhewe ewse on the page, nyaa~~ giving y-you the abiwity t-to easiwy scawe t-the font up ow down on the entiwe p-page accowdingwy. 🥺
 
-### Pixels
+### p-pixews
 
-Setting the font size in pixel values (`px`) is a good choice when you need pixel accuracy. A px value is static. This is an OS-independent and cross-browser way of literally telling the browsers to render the letters at exactly the number of pixels in height that you specified. The results may vary slightly across browsers, as they may use different algorithms to achieve a similar effect.
+setting the f-font size in pixew vawues (`px`) is a good choice when you nyeed pixew accuwacy. rawr x3 a-a px vawue is static. σωσ t-this is an os-independent and cwoss-bwowsew w-way of witewawwy t-tewwing the bwowsews to wendew the wettews at exactwy the nyumbew o-of pixews in height that you specified. (///ˬ///✿) the wesuwts may vawy swightwy acwoss b-bwowsews, (U ﹏ U) as they may use diffewent awgowithms t-to achieve a simiwaw e-effect. ^^;;
 
-Font sizing settings can also be used in combination. For example, if a parent element is set to `16px` and its child element is set to `larger`, the child element displays larger than the parent element in the page.
+font sizing settings can awso be used in combination. f-fow exampwe, 🥺 i-if a pawent ewement is set to `16px` and its chiwd ewement is s-set to `wawgew`, òωó the chiwd ewement d-dispways wawgew than the pawent ewement in the page. XD
 
-> [!NOTE]
-> Defining font sizes in `px` is _[not accessible](https://en.wikipedia.org/wiki/Web_accessibility)_, because the user cannot change the font size from the browser. For example, users with limited vision may wish to set the font size much larger than the size chosen by a web designer. Avoid using them for font sizes if you wish to create an inclusive design.
+> [!note]
+> d-defining font sizes in `px` i-is _[not accessibwe](https://en.wikipedia.owg/wiki/web_accessibiwity)_, b-because the usew cannot c-change the font size fwom the b-bwowsew. :3 fow exampwe, (U ﹏ U) u-usews with w-wimited vision may wish to set t-the font size much w-wawgew than the size chosen by a web designew. >w< a-avoid using them f-fow font sizes i-if you wish to cweate an incwusive design. /(^•ω•^)
 
-### Ems
+### e-ems
 
-Another way of setting the font size is with `em` values. The size of an `em` value is dynamic. When defining the `font-size` property, an em is equal to the size of the font that applies to the parent of the element in question. If you haven't set the font size anywhere on the page, then it is the browser default, which is often 16px. So, by default 1em = 16px, and 2em = 32px. If you set a `font-size` of 20px on the body element, then 1em = 20px and 2em = 40px. Note that the value 2 is essentially a multiplier of the current em size.
+anothew way of setting the f-font size is with `em` v-vawues. (⑅˘꒳˘) the size of an `em` vawue is dynamic. ʘwʘ when defining t-the `font-size` p-pwopewty, rawr x3 an e-em is equaw to t-the size of the font that appwies t-to the pawent of the ewement in question. (˘ω˘) if you haven't set the font size anywhewe on the page, o.O t-then it is the bwowsew defauwt, w-which is often 16px. 😳 so, by d-defauwt 1em = 16px, o.O and 2em = 32px. ^^;; i-if you set a `font-size` of 20px o-on the body e-ewement, then 1em = 20px a-and 2em = 40px. ( ͡o ω ͡o ) n-nyote t-that the vawue 2 is essentiawwy a muwtipwiew of the cuwwent em size. ^^;;
 
-In order to calculate the em equivalent for any pixel value required, you can use this formula:
+in owdew to cawcuwate the em equivawent fow a-any pixew vawue w-wequiwed, ^^;; you c-can use this fowmuwa:
 
-```plain
-em = desired element pixel value / parent element font-size in pixels
+```pwain
+em = desiwed ewement p-pixew vawue / pawent ewement font-size in pixews
 ```
 
-For example, suppose the font-size of the body of the page is set to 16px. If the font-size you want is 12px, then you should specify 0.75em (because 12/16 = 0.75). Similarly, if you want a font size of 10px, then specify 0.625em (10/16 = 0.625); for 22px, specify 1.375em (22/16).
+fow exampwe, XD s-suppose t-the font-size of the body of the p-page is set to 16px. if the font-size you want i-is 12px, 🥺 then you s-shouwd specify 0.75em (because 12/16 = 0.75). (///ˬ///✿) simiwawwy, (U ᵕ U❁) if you w-want a font size o-of 10px, ^^;; then specify 0.625em (10/16 = 0.625); fow 22px, ^^;; specify 1.375em (22/16). rawr
 
-The em is a very useful unit in CSS, since it automatically adapts its length relative to the font that the reader chooses to use.
+the em is a vewy usefuw unit i-in css, (˘ω˘) since i-it automaticawwy a-adapts its wength w-wewative to t-the font that the weadew chooses t-to use. 🥺
 
-One important fact to keep in mind: em values compound. Take the following HTML and CSS:
+one impowtant f-fact to keep in mind: em v-vawues compound. nyaa~~ t-take the fowwowing htmw and css:
 
 ```css
-html {
-  font-size: 62.5%; /* font-size 1em = 10px on default browser settings */
+h-htmw {
+  font-size: 62.5%; /* font-size 1em = 10px o-on defauwt bwowsew s-settings */
 }
 span {
-  font-size: 1.6em;
+  f-font-size: 1.6em;
 }
 ```
 
-```html
+```htmw
 <div>
-  <span>Outer <span>inner</span> outer</span>
+  <span>outew <span>innew</span> outew</span>
 </div>
 ```
 
-The result is:
+t-the wesuwt is:
 
-{{EmbedLiveSample("Ems", 400, 40)}}
+{{embedwivesampwe("ems", 400, :3 40)}}
 
-Assuming that the browser's default `font-size` is 16px, the words "outer" would be rendered at 16px, but the word "inner" would be rendered at 25.6px. This is because the inner {{HTMLElement("span")}}'s `font-size` is 1.6em which is relative to its parent's `font-size`, which is in turn relative to its parent's `font-size`. This is often called **compounding**.
+assuming t-that the b-bwowsew's defauwt `font-size` i-is 16px, /(^•ω•^) the wowds "outew" wouwd be wendewed at 16px, ^•ﻌ•^ b-but the wowd "innew" wouwd be wendewed at 25.6px. UwU t-this is because t-the innew {{htmwewement("span")}}'s `font-size` is 1.6em which i-is wewative to its pawent's `font-size`, 😳😳😳 w-which i-is in tuwn wewative to its pawent's `font-size`. OwO this is often c-cawwed **compounding**. ^•ﻌ•^
 
-### Rems
+### wems
 
-`rem` values were invented in order to sidestep the compounding problem. `rem` values are relative to the root `html` element, not the parent element. In other words, it lets you specify a font size in a relative fashion without being affected by the size of the parent, thereby eliminating compounding.
+`wem` vawues wewe invented i-in owdew to sidestep t-the compounding pwobwem. (ꈍᴗꈍ) `wem` v-vawues awe wewative to the w-woot `htmw` ewement, (⑅˘꒳˘) n-nyot the pawent e-ewement. (⑅˘꒳˘) in othew wowds, (ˆ ﻌ ˆ)♡ it wets you specify a font size in a wewative fashion without being affected by the size of the pawent, /(^•ω•^) theweby ewiminating compounding. òωó
 
-The CSS below is nearly identical to the previous example. The only exception is that the unit has been changed to `rem`.
+the css bewow is neawwy identicaw to the p-pwevious exampwe. (⑅˘꒳˘) t-the onwy exception is that the unit has been c-changed to `wem`. (U ᵕ U❁)
 
 ```css
-html {
-  font-size: 62.5%; /* font-size 1em = 10px on default browser settings */
+h-htmw {
+  f-font-size: 62.5%; /* font-size 1em = 10px o-on defauwt bwowsew s-settings */
 }
 span {
-  font-size: 1.6rem;
+  f-font-size: 1.6wem;
 }
 ```
 
-Then we apply this CSS to the same HTML, which looks like this:
+then we appwy this c-css to the same htmw, >w< which w-wooks wike this:
 
-```html
-<span>Outer <span>inner</span> outer</span>
+```htmw
+<span>outew <span>innew</span> o-outew</span>
 ```
 
-{{EmbedLiveSample("Rems", 400, 40)}}
+{{embedwivesampwe("wems", σωσ 400, 40)}}
 
-In this example, the words "outer inner outer" are all displayed at 16px (assuming that the browser's `font-size` has been left at the default value of 16px).
+in this exampwe, -.- the wowds "outew i-innew outew" a-awe aww dispwayed a-at 16px (assuming t-that the bwowsew's `font-size` h-has been weft a-at the defauwt v-vawue of 16px). o.O
 
-## Examples
+## e-exampwes
 
-### Example 1
+### e-exampwe 1
 
 ```css
-/* Sets paragraph text to be very large */
+/* sets pawagwaph t-text to be v-vewy wawge */
 p {
-  font-size: xx-large;
+  f-font-size: xx-wawge;
 }
 
-/* Sets <h1> text to be 2.5 times the size
-   of the text around it */
+/* s-sets <h1> text to be 2.5 times the size
+   of the t-text awound it */
 h1 {
   font-size: 250%;
 }
 
-/* Sets text enclosed within span tag to be 16px */
+/* s-sets text encwosed w-within span t-tag to be 16px */
 span {
   font-size: 16px;
 }
 ```
 
-### Example 2
+### e-exampwe 2
 
-#### CSS
+#### css
 
 ```css
-.small {
-  font-size: xx-small;
+.smow {
+  f-font-size: xx-smow;
 }
-.larger {
-  font-size: larger;
+.wawgew {
+  f-font-size: wawgew;
 }
 .point {
   font-size: 24pt;
 }
-.percent {
-  font-size: 200%;
+.pewcent {
+  f-font-size: 200%;
 }
 ```
 
-#### HTML
+#### htmw
 
-```html
-<h1 class="small">Small H1</h1>
-<h1 class="larger">Larger H1</h1>
-<h1 class="point">24 point H1</h1>
-<h1 class="percent">200% H1</h1>
+```htmw
+<h1 cwass="smow">smow h1</h1>
+<h1 cwass="wawgew">wawgew h1</h1>
+<h1 cwass="point">24 point h1</h1>
+<h1 c-cwass="pewcent">200% h1</h1>
 ```
 
-#### Result
+#### w-wesuwt
 
-{{EmbedLiveSample('Example_2','600','200')}}
+{{embedwivesampwe('exampwe_2','600','200')}}
 
-## Notes
+## n-nyotes
 
-`em` and `ex` units on the {{cssxref("font-size")}} property are relative to the parent element's font size (unlike all other properties, where they're relative to the font size on the element). This means `em` units and percentages do the same thing for {{cssxref("font-size")}}.
+`em` and `ex` units on the {{cssxwef("font-size")}} pwopewty a-awe wewative to the pawent e-ewement's font s-size (unwike aww o-othew pwopewties, whewe they'we wewative to the f-font size on the e-ewement). ^^ this means `em` units a-and pewcentages do the same thing fow {{cssxwef("font-size")}}. >_<
 
-## Specifications
+## s-specifications
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}

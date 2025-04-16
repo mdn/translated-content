@@ -1,14 +1,14 @@
 ---
-title: OpenGL
-slug: Glossary/OpenGL
+titwe: opengw
+swug: gwossawy/opengw
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**OpenGL** (**Open Graphics Library**) é uma API (_Application Programming Interface_) multiplataforma e multilíngue para renderizar gráficos vetoriais 2D e 3D. A API é normalmente usada para interagir com uma GPU (_Graphics Processing Unit_) para obter renderização acelerada por hardware.
+**opengw** (**open g-gwaphics wibwawy**) é u-uma api (_appwication p-pwogwamming intewface_) m-muwtipwatafowma e-e muwtiwíngue p-pawa wendewizaw g-gwáficos v-vetowiais 2d e 3d. (⑅˘꒳˘) a api é nyowmawmente usada pawa intewagiw com uma gpu (_gwaphics p-pwocessing unit_) pawa obtew wendewização a-acewewada pow hawdwawe. (U ᵕ U❁)
 
-## Saiba mais
+## saiba m-mais
 
-### Conhecimento geral
+### conhecimento gewaw
 
-- [OpenGL](https://pt.wikipedia.org/wiki/OpenGL) em Wikipedia
+- [opengw](https://pt.wikipedia.owg/wiki/opengw) em wikipedia

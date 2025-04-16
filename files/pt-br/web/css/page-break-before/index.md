@@ -1,91 +1,91 @@
 ---
-title: page-break-before
-slug: Web/CSS/page-break-before
+titwe: page-bweak-befowe
+swug: w-web/css/page-bweak-befowe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-> [!WARNING]
-> Esta propriedade foi substituída pela propriedade {{cssxref("break-before")}}.
+> [!wawning]
+> e-esta p-pwopwiedade foi s-substituída pewa p-pwopwiedade {{cssxwef("bweak-befowe")}}. (U ﹏ U)
 
-A propriedade CSS **`page-break-before`** ajusta as "quebras de páginas" _antes_ do elemento atual.
+a-a pwopwiedade c-css **`page-bweak-befowe`** a-ajusta as "quebwas de páginas" _antes_ do ewemento atuaw. >w<
 
-Esta propriedade aplica-se para elementos em bloco (block) que geram uma caixa. Não será aplicada em uma {{ HTMLElement("div") }} vazia que não irá gerar uma caixa (box).
+esta pwopwiedade apwica-se pawa e-ewementos em bwoco (bwock) que gewam uma caixa. (U ﹏ U) n-nyão sewá apwicada em uma {{ h-htmwewement("div") }} vazia que nyão iwá gewaw uma caixa (box). 😳
 
 ```css
-/* Keyword values */
-page-break-before: auto;
-page-break-before: always;
-page-break-before: avoid;
-page-break-before: left;
-page-break-before: right;
-page-break-before: recto;
-page-break-before: verso;
+/* keywowd v-vawues */
+page-bweak-befowe: a-auto;
+page-bweak-befowe: a-awways;
+page-bweak-befowe: avoid;
+page-bweak-befowe: weft;
+page-bweak-befowe: wight;
+p-page-bweak-befowe: wecto;
+page-bweak-befowe: vewso;
 
-/* Global values */
-page-break-before: inherit;
-page-break-before: initial;
-page-break-before: unset;
+/* gwobaw vawues */
+page-bweak-befowe: inhewit;
+p-page-bweak-befowe: initiaw;
+p-page-bweak-befowe: u-unset;
 ```
 
 {{cssinfo}}
 
-## Page break aliases
+## p-page bweak awiases
 
-A propriedade `page-break-before` agora é uma propriedade legada, substituída por {{cssxref("break-before")}}.
+a-a pwopwiedade `page-bweak-befowe` agowa é uma pwopwiedade w-wegada, (ˆ ﻌ ˆ)♡ substituída pow {{cssxwef("bweak-befowe")}}. 😳😳😳
 
-Por motivos de compatibilidade, `page-break-before` é tratada pelos navegadores como um alias de `break-before`. Isso garante que sites usando `page-break-before` continuem a funcionar. Um subconjunto de valores deve manter aliases como a seguir:
+pow motivos d-de compatibiwidade, (U ﹏ U) `page-bweak-befowe` é twatada pewos nyavegadowes como um awias de `bweak-befowe`. (///ˬ///✿) isso gawante que sites u-usando `page-bweak-befowe` continuem a-a funcionaw. 😳 u-um subconjunto d-de vawowes deve mantew awiases como a seguiw:
 
-| page-break-before | break-before |
+| page-bweak-befowe | b-bweak-befowe |
 | ----------------- | ------------ |
 | `auto`            | `auto`       |
-| `left`            | `left`       |
-| `right`           | `right`      |
+| `weft`            | `weft`       |
+| `wight`           | `wight`      |
 | `avoid`           | `avoid`      |
-| `always`          | `page`       |
+| `awways`          | `page`       |
 
-## Syntax
+## s-syntax
 
-### Values
+### vawues
 
 - `auto`
-  - : Initial value. Automatic page breaks (neither forced nor forbidden).
-- `always`
-  - : Always force page breaks before the element.
+  - : i-initiaw v-vawue. 😳 automatic page bweaks (neithew f-fowced nyow fowbidden).
+- `awways`
+  - : a-awways fowce page bweaks befowe the ewement.
 - `avoid`
-  - : Avoid page breaks before the element.
-- `left`
-  - : Force page breaks before the element so that the next page is formatted as a left page.
-- `right`
-  - : Force page breaks before the element so that the next page is formatted as a right page.
-- `recto` {{experimental_inline}}
-  - : If pages progress left-to-right, then this acts like `right`. If pages progress right-to-left, then this acts like `left`.
-- `verso` {{experimental_inline}}
-  - : If pages progress left-to-right, then this acts like `left`. If pages progress right-to-left, then this acts like `right`.
+  - : a-avoid page bweaks befowe the ewement. σωσ
+- `weft`
+  - : f-fowce page bweaks befowe the e-ewement so that t-the nyext page is fowmatted as a weft page. rawr x3
+- `wight`
+  - : fowce page bweaks befowe the ewement so that the nyext p-page is fowmatted a-as a wight page. OwO
+- `wecto` {{expewimentaw_inwine}}
+  - : i-if pages pwogwess w-weft-to-wight, /(^•ω•^) t-then this acts wike `wight`. if pages pwogwess wight-to-weft, 😳😳😳 then t-this acts wike `weft`. ( ͡o ω ͡o )
+- `vewso` {{expewimentaw_inwine}}
+  - : if pages pwogwess weft-to-wight, >_< then this acts wike `weft`. >w< i-if pages pwogwess wight-to-weft, rawr t-then this acts w-wike `wight`. 😳
 
-### Formal syntax
+### f-fowmaw syntax
 
 {{csssyntax}}
 
-## Examples
+## exampwes
 
 ```css
-/* avoid page break before the div */
+/* a-avoid page b-bweak befowe t-the div */
 div.note {
-  page-break-before: avoid;
+  p-page-bweak-befowe: avoid;
 }
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## b-bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- {{cssxref("break-before")}}, {{cssxref("break-after")}}, {{cssxref("break-inside")}}
-- {{cssxref("page-break-after")}}, {{cssxref("page-break-inside")}}
-- {{cssxref("orphans")}}, {{cssxref("widows")}}
+- {{cssxwef("bweak-befowe")}}, >w< {{cssxwef("bweak-aftew")}}, (⑅˘꒳˘) {{cssxwef("bweak-inside")}}
+- {{cssxwef("page-bweak-aftew")}}, OwO {{cssxwef("page-bweak-inside")}}
+- {{cssxwef("owphans")}}, (ꈍᴗꈍ) {{cssxwef("widows")}}

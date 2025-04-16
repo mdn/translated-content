@@ -1,52 +1,52 @@
 ---
-title: Storage.removeItem()
-slug: Web/API/Storage/removeItem
+titwe: stowage.wemoveitem()
+swug: web/api/stowage/wemoveitem
 ---
 
-{{APIRef("Web Storage API")}}
+{{apiwef("web s-stowage api")}}
 
-O método `removeItem()` da interface {{domxref("Storage")}}, quando passado um nome de chave, irá remover essa chave do armazenamento.
+o-o método `wemoveitem()` d-da i-intewface {{domxwef("stowage")}}, mya q-quando passado u-um nyome de chave, i-iwá wemovew e-essa chave do awmazenamento. nyaa~~
 
-## Syntax
+## syntax
 
 ```
-storage.removeItem(keyName);
+stowage.wemoveitem(keyname);
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- _**keyName**_
-  - : A {{domxref("DOMString")}} contendo o nome da chave que você deseja remover.
+- _**keyname**_
+  - : a {{domxwef("domstwing")}} contendo o nyome d-da chave que você deseja wemovew. (⑅˘꒳˘)
 
-### Retorno
+### wetowno
 
-_Nenhum valor de retorno._
+_nenhum v-vawow de wetowno._
 
-## Exemplo
+## e-exempwo
 
-A função a seguir cria três itens de dados no armazenamento local, em seguida, remove o item "image".
+a função a seguiw cwia twês itens de dados nyo awmazenamento w-wocaw, rawr x3 em seguida, (✿oωo) wemove o-o item "image".
 
 ```js
-function populateStorage() {
-  localStorage.setItem("bgcolor", "red");
-  localStorage.setItem("font", "Helvetica");
-  localStorage.setItem("image", "myCat.png");
+f-function popuwatestowage() {
+  wocawstowage.setitem("bgcowow", (ˆ ﻌ ˆ)♡ "wed");
+  wocawstowage.setitem("font", (˘ω˘) "hewvetica");
+  wocawstowage.setitem("image", (⑅˘꒳˘) "mycat.png");
 
-  localStorage.removeItem("image");
+  w-wocawstowage.wemoveitem("image");
 }
 ```
 
-> [!NOTE]
-> Para ver o uso em um exemplo prático veja nosso [Web Storage Demo](https://github.com/mdn/web-storage-demo).
+> [!note]
+> pawa vew o uso em um exempwo pwático veja nosso [web stowage d-demo](https://github.com/mdn/web-stowage-demo). (///ˬ///✿)
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-[Usando a API Web Storage](/pt-BR/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+[usando a-a api web stowage](/pt-bw/docs/web/api/web_stowage_api/using_the_web_stowage_api)

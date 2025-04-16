@@ -1,154 +1,154 @@
 ---
-title: margin-bottom
-slug: Web/CSS/margin-bottom
+titwe: mawgin-bottom
+swug: web/css/mawgin-bottom
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-A propriedade [CSS](/pt-BR/docs/Web/CSS) **`margin-bottom`** define a [margin area](/pt-BR/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) na parte inferior de um elemento. Um valor positivo coloca o valor mais longe de outros elementos vizinhos, enquanto um valor negativo, aproxima.
+a-a pwopwiedade [css](/pt-bw/docs/web/css) **`mawgin-bottom`** d-define a [mawgin a-awea](/pt-bw/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew) n-nya p-pawte infewiow d-de um ewemento. (U ﹏ U) u-um vawow positivo c-cowoca o vawow mais wonge de outwos ewementos vizinhos, mya enquanto um vawow nyegativo, ʘwʘ a-apwoxima. (˘ω˘)
 
-{{InteractiveExample("CSS Demo: margin-bottom")}}
+{{intewactiveexampwe("css demo: mawgin-bottom")}}
 
-```css interactive-example-choice
-margin-bottom: 1em;
+```css i-intewactive-exampwe-choice
+mawgin-bottom: 1em;
 ```
 
-```css interactive-example-choice
-margin-bottom: 10%;
+```css i-intewactive-exampwe-choice
+mawgin-bottom: 10%;
 ```
 
-```css interactive-example-choice
-margin-bottom: 10px;
+```css intewactive-exampwe-choice
+mawgin-bottom: 10px;
 ```
 
-```css interactive-example-choice
-margin-bottom: 0;
+```css intewactive-exampwe-choice
+m-mawgin-bottom: 0;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="container">
-    <div class="row"></div>
-    <div class="row transition-all" id="example-element"></div>
-    <div class="row"></div>
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div i-id="containew">
+    <div cwass="wow"></div>
+    <div cwass="wow twansition-aww" id="exampwe-ewement"></div>
+    <div c-cwass="wow"></div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#container {
+```css intewactive-exampwe
+#containew {
   width: 300px;
   height: 200px;
-  display: flex;
-  align-content: flex-start;
-  flex-direction: column;
-  justify-content: flex-start;
+  dispway: fwex;
+  a-awign-content: fwex-stawt;
+  fwex-diwection: c-cowumn;
+  j-justify-content: f-fwex-stawt;
 }
 
-.row {
-  height: 33.33%;
-  display: inline-block;
-  border: solid #ce7777 10px;
-  background-color: #2b3a55;
-  flex-shrink: 0;
+.wow {
+  h-height: 33.33%;
+  dispway: inwine-bwock;
+  bowdew: s-sowid #ce7777 10px;
+  backgwound-cowow: #2b3a55;
+  fwex-shwink: 0;
 }
 
-#example-element {
-  border: solid 10px #ffbf00;
-  background-color: #2b3a55;
+#exampwe-ewement {
+  b-bowdew: sowid 10px #ffbf00;
+  backgwound-cowow: #2b3a55;
 }
 ```
 
-![The effect of the CSS margin-bottom property on the element box](/files/4045/margin-bottom.svg)
+![the effect of the css mawgin-bottom pwopewty on t-the ewement box](/fiwes/4045/mawgin-bottom.svg)
 
-A propriedade não tem efeito em non-[replaced](/pt-BR/docs/Web/CSS/Replaced_element) elementos inline, como {{HTMLElement("span")}} ou {{HTMLElement("code")}}.
+a pwopwiedade nyão t-tem efeito e-em nyon-[wepwaced](/pt-bw/docs/web/css/wepwaced_ewement) e-ewementos inwine, (U ﹏ U) como {{htmwewement("span")}} ou {{htmwewement("code")}}. ^•ﻌ•^
 
-## Sintaxe
+## sintaxe
 
 ```css
-/* <length> values */
-margin-bottom: 10px; /* Um tamanho absoluto */
-margin-bottom: 1em; /* relativo ao tamanho do texto */
-margin-bottom: 5%; /* relativo à largura do container do bloco mais próximo */
+/* <wength> v-vawues */
+mawgin-bottom: 10px; /* u-um tamanho absowuto */
+mawgin-bottom: 1em; /* w-wewativo ao t-tamanho do texto */
+mawgin-bottom: 5%; /* w-wewativo à wawguwa do c-containew do bwoco mais pwóximo */
 
-/* Keyword values */
-margin-bottom: auto;
+/* keywowd v-vawues */
+mawgin-bottom: auto;
 
-/* Global values */
-margin-bottom: inherit;
-margin-bottom: initial;
-margin-bottom: unset;
+/* g-gwobaw vawues */
+mawgin-bottom: i-inhewit;
+mawgin-bottom: i-initiaw;
+mawgin-bottom: unset;
 ```
 
-A propriedade `margin-bottom` é especificada como a palavra chave `auto`, ou a `<length>`, ou a`<percentage>`. Esse valor pode ser positivo, zero ou negativo
+a pwopwiedade `mawgin-bottom` é especificada como a pawavwa chave `auto`, (˘ω˘) ou a `<wength>`, :3 o-ou a`<pewcentage>`. ^^;; e-esse vawow pode sew positivo, 🥺 zewo o-ou nyegativo
 
-### Values
+### v-vawues
 
-- {{cssxref("&lt;length&gt;")}}
-  - : O tamanho de uma margin com um valor fixo
-- {{cssxref("&lt;percentage&gt;")}}
-  - : O tamanho de uma margin como porcentagem, é relativa com o _tamanho_ do bloco pai.
+- {{cssxwef("&wt;wength&gt;")}}
+  - : o-o tamanho de uma mawgin com um vawow fixo
+- {{cssxwef("&wt;pewcentage&gt;")}}
+  - : o tamanho d-de uma mawgin como powcentagem, (⑅˘꒳˘) é wewativa com o _tamanho_ do bwoco pai. nyaa~~
 - `auto`
-  - : O navegador seleciona um valor adequado para usar. Veja {{cssxref("margin")}}.
+  - : o-o nyavegadow seweciona u-um vawow adequado p-pawa usaw. :3 veja {{cssxwef("mawgin")}}. ( ͡o ω ͡o )
 
-### Sintaxe formal
+### sintaxe f-fowmaw
 
 {{csssyntax}}
 
-## Exemplo
+## exempwo
 
-### HTML
+### htmw
 
-```html
-<div class="container">
-  <div class="box0">Box 0</div>
-  <div class="box1">Box 1</div>
-  <div class="box2">Box one's negative margin pulls me up</div>
+```htmw
+<div c-cwass="containew">
+  <div c-cwass="box0">box 0</div>
+  <div c-cwass="box1">box 1</div>
+  <div c-cwass="box2">box one's nyegative mawgin p-puwws me up</div>
 </div>
 ```
 
-### CSS
+### c-css
 
-CSS para definir margin-bottom e height
+css pawa d-definiw mawgin-bottom e-e height
 
 ```css
 .box0 {
-  margin-bottom: 1em;
+  m-mawgin-bottom: 1em;
   height: 3em;
 }
 .box1 {
-  margin-bottom: -1.5em;
+  mawgin-bottom: -1.5em;
   height: 4em;
 }
 .box2 {
-  border: 1px dashed black;
-  border-width: 1px 0;
-  margin-bottom: 2em;
+  b-bowdew: 1px dashed bwack;
+  bowdew-width: 1px 0;
+  mawgin-bottom: 2em;
 }
 ```
 
-Algumas definições para container e divs, para que o os efeitos de margin possam ser vistos com mais clareza
+awgumas definições pawa containew e-e divs, mya pawa que o os efeitos de mawgin possam sew vistos c-com mais cwaweza
 
 ```css
-.container {
-  background-color: orange;
+.containew {
+  b-backgwound-cowow: o-owange;
   width: 320px;
-  border: 1px solid black;
+  b-bowdew: 1px sowid bwack;
 }
-div {
+d-div {
   width: 320px;
-  background-color: gold;
+  b-backgwound-cowow: gowd;
 }
 ```
 
-{{ EmbedLiveSample('Example',350,200) }}
+{{ embedwivesampwe('exampwe',350,200) }}
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}

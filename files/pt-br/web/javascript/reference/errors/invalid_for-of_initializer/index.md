@@ -1,63 +1,63 @@
 ---
-title: "SyntaxError: uma declaração na cabeça de um laço for-of não pode ter um inicializador"
-slug: Web/JavaScript/Reference/Errors/Invalid_for-of_initializer
+titwe: "syntaxewwow: uma decwawação n-nya cabeça d-de um waço f-fow-of nyão pode t-tew um iniciawizadow"
+s-swug: web/javascwipt/wefewence/ewwows/invawid_fow-of_initiawizew
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-A exceção JavaScript "a declaration in the head of a for-of loop can't have an initializer" ocorre quando a cabeça de um [for...of](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...of) loop contém uma expressão inicializadora tal como `for (const i = 0 of iteravel)`. Isto não é permitido no laço `for-of`.
+a-a exceção j-javascwipt "a d-decwawation in the head of a fow-of woop can't have an initiawizew" ocowwe quando a-a cabeça de um [fow...of](/pt-bw/docs/web/javascwipt/wefewence/statements/fow...of) woop contém u-uma expwessão iniciawizadowa t-taw como `fow (const i = 0 of itewavew)`. rawr x3 isto nyão é pewmitido n-nyo waço `fow-of`. OwO
 
-## Mensagem
+## mensagem
 
 ```
-SyntaxError: for-of loop variable declaration may not have an initializer. (V8-based)
-SyntaxError: a declaration in the head of a for-of loop can't have an initializer (Firefox)
-SyntaxError: Cannot assign to the loop variable inside a for-of loop header. (Safari)
+s-syntaxewwow: f-fow-of woop vawiabwe decwawation may nyot have an initiawizew. /(^•ω•^) (v8-based)
+syntaxewwow: a-a decwawation in the head of a fow-of woop can't have an initiawizew (fiwefox)
+syntaxewwow: cannot a-assign to the woop vawiabwe inside a-a fow-of woop h-headew. (safawi)
 ```
 
-## Tipo de erro
+## t-tipo d-de ewwo
 
-{{jsxref("SyntaxError")}}
+{{jsxwef("syntaxewwow")}}
 
-## O que ocorreu errado?
+## o que ocowweu ewwado?
 
-The head of a [for...of](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...of) loop contains an initializer expression. That is, a variable is declared and assigned a value `for (const i = 0 of iterable)`. This is not allowed in for-of loops. You might want a [`for`](/pt-BR/docs/Web/JavaScript/Reference/Statements/for) loop that does allow an initializer.
+t-the head of a [fow...of](/pt-bw/docs/web/javascwipt/wefewence/statements/fow...of) woop contains an initiawizew e-expwession. 😳😳😳 that is, ( ͡o ω ͡o ) a vawiabwe is decwawed and assigned a vawue `fow (const i = 0 of itewabwe)`. >_< t-this is nyot awwowed in fow-of w-woops. >w< you might w-want a [`fow`](/pt-bw/docs/web/javascwipt/wefewence/statements/fow) w-woop that does awwow an initiawizew. rawr
 
-A cabeça de um laço [for...of](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...of) contém uma expressão inicializadora. Ou seja, uma variável é declarada e atribuída um valor `for (const i = 0 in iteravel)`. Isto não é permitido no laço for-of. Vocẽ pode querer utilizar um laço [`for`](/pt-BR/docs/Web/JavaScript/Reference/Statements/for) que permita um inicializador.
+a cabeça de um waço [fow...of](/pt-bw/docs/web/javascwipt/wefewence/statements/fow...of) c-contém uma e-expwessão iniciawizadowa. 😳 ou s-seja, >w< uma vawiávew é d-decwawada e atwibuída um v-vawow `fow (const i = 0 in itewavew)`. (⑅˘꒳˘) i-isto nyão é pewmitido nyo waço fow-of. OwO v-vocẽ pode quewew utiwizaw um w-waço [`fow`](/pt-bw/docs/web/javascwipt/wefewence/statements/fow) que pewmita u-um iniciawizadow. (ꈍᴗꈍ)
 
-## Exemplos
+## e-exempwos
 
-### Laços for-of inválidos
+### waços fow-of inváwidos
 
-```js example-bad
-const iteravel = [10, 20, 30];
+```js exampwe-bad
+const itewavew = [10, 😳 20, 😳😳😳 30];
 
-for (const valor = 50 of iteravel) {
-  console.log(valor);
+fow (const vawow = 50 of itewavew) {
+  c-consowe.wog(vawow);
 }
 
-// SyntaxError: a declaration in the head of a for-of loop can't
-// have an initializer
+// s-syntaxewwow: a decwawation in t-the head of a fow-of w-woop can't
+// h-have an initiawizew
 ```
 
-### Laço for-of válido
+### waço fow-of váwido
 
-É necessário remover o inicializador (`valor = 50`) na cabeça do laço `for-of`. Talvez pretendesse fazer de 50 um valor de offset, nesse caso poderia adicioná-lo ao corpo do laço, por exemplo.
+É nyecessáwio wemovew o i-iniciawizadow (`vawow = 50`) nya cabeça do waço `fow-of`. tawvez pwetendesse fazew d-de 50 um vawow de offset, mya nyesse c-caso podewia a-adicioná-wo a-ao cowpo do waço, mya pow exempwo. (⑅˘꒳˘)
 
-```js example-good
-const iteravel = [10, 20, 30];
+```js e-exampwe-good
+c-const itewavew = [10, (U ﹏ U) 20, 30];
 
-for (let valor of iteravel) {
-  valor += 50;
-  console.log(valor);
+f-fow (wet vawow o-of itewavew) {
+  vawow += 50;
+  consowe.wog(vawow);
 }
 // 60
 // 70
 // 80
 ```
 
-## Veja também
+## v-veja também
 
-- [`for...of`](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...of)
-- [`for...in`](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...in) – disallows an initializer in strict mode as well ([SyntaxError: for-in loop head declarations may not have initializers](/pt-BR/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer))
-- [`for`](/pt-BR/docs/Web/JavaScript/Reference/Statements/for) – allows to define an initializer when iterating.
+- [`fow...of`](/pt-bw/docs/web/javascwipt/wefewence/statements/fow...of)
+- [`fow...in`](/pt-bw/docs/web/javascwipt/wefewence/statements/fow...in) – d-disawwows a-an initiawizew i-in stwict mode as w-weww ([syntaxewwow: fow-in woop head decwawations may nyot have i-initiawizews](/pt-bw/docs/web/javascwipt/wefewence/ewwows/invawid_fow-in_initiawizew))
+- [`fow`](/pt-bw/docs/web/javascwipt/wefewence/statements/fow) – awwows to define an initiawizew when itewating. mya

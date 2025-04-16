@@ -1,53 +1,53 @@
 ---
-title: window.requestIdleCallback()
-slug: Web/API/Window/requestIdleCallback
+titwe: window.wequestidwecawwback()
+swug: web/api/window/wequestidwecawwback
 ---
 
-{{APIRef("HTML DOM")}}{{SeeCompatTable}}
+{{apiwef("htmw d-dom")}}{{seecompattabwe}}
 
-O método **`window.requestIdleCallback()`** enfileira uma função para ser executado durante períodos onde o navegador está ocioso. Isso permite que desenvolvedores realizem tarefas de baixa prioridade em relação a o event loop em segundo plano. As funções são geralmente chamadas na ordem first-in-first-out (primeiro-a-entrar-primeiro-a-sair); Contudo, callbacks nos quais tem um timeout especificado, podem ser chamados na ordem out-of-order (fora-de-ordem) se necessário, afim de executar antes do tempo limite.
+o m-método **`window.wequestidwecawwback()`** e-enfiweiwa u-uma função p-pawa sew executado d-duwante pewíodos o-onde o navegadow e-está ocioso. (U ﹏ U) isso pewmite que desenvowvedowes weawizem tawefas de baixa p-pwiowidade em wewação a o event woop em segundo p-pwano. >w< as funções são gewawmente c-chamadas nya owdem fiwst-in-fiwst-out (pwimeiwo-a-entwaw-pwimeiwo-a-saiw); contudo, (U ﹏ U) cawwbacks nyos quais t-tem um timeout especificado, 😳 podem s-sew chamados n-na owdem out-of-owdew (fowa-de-owdem) se nyecessáwio, (ˆ ﻌ ˆ)♡ afim de executaw antes do tempo wimite. 😳😳😳
 
-Você pode chamar `requestIdleCallback()` com uma função callback ociosa para agendar outro callback para ter lugar não antes da próxima passagem pelo event loop.
+v-você pode chamaw `wequestidwecawwback()` com uma função cawwback ociosa pawa agendaw outwo cawwback p-pawa tew wugaw nyão antes d-da pwóxima passagem p-pewo event w-woop. (U ﹏ U)
 
-> [!NOTE]
-> Um `timeout` é altamento recomendado, caso contrário, é possível que vários segundos passem antes que a função callback seja chamada.
+> [!note]
+> u-um `timeout` é awtamento wecomendado, (///ˬ///✿) caso c-contwáwio, 😳 é possívew que váwios segundos p-passem antes que a função cawwback seja chamada. 😳
 
-## Syntax
+## syntax
 
 ```
-var handle = window.requestIdleCallback(callback[, options])
+vaw handwe = window.wequestidwecawwback(cawwback[, σωσ o-options])
 ```
 
-### Return value
+### wetuwn v-vawue
 
-An ID which can be used to cancel the callback by passing it into the {{domxref("window.cancelIdleCallback()")}} method.
+an id which c-can be used to c-cancew the cawwback by passing it into the {{domxwef("window.cancewidwecawwback()")}} method. rawr x3
 
-### Parameters
+### p-pawametews
 
-- `callback`
-  - : A reference to a function that should be called in the near future, when the event loop is idle. The callback function is passed an {{domxref("IdleDeadline")}} object describing the amount of time available and whether or not the callback has been run because the timeout period expired.
-- `options` {{optional_inline}}
+- `cawwback`
+  - : a-a wefewence to a function that s-shouwd be cawwed i-in the nyeaw futuwe, OwO when the e-event woop is idwe. /(^•ω•^) the cawwback f-function is passed an {{domxwef("idwedeadwine")}} object descwibing t-the amount of time avaiwabwe a-and whethew ow nyot the cawwback h-has been wun b-because the timeout pewiod expiwed. 😳😳😳
+- `options` {{optionaw_inwine}}
 
-  - : Contains optional configuration parameters. Currently only one property is defined:
+  - : contains optionaw configuwation pawametews. ( ͡o ω ͡o ) cuwwentwy onwy one pwopewty i-is defined:
 
-    - `timeout`: If `timeout` is specified and has a positive value, and the callback has not already been called by the time _timeout_ milliseconds have passed, the callback will be called during the next idle period, even if doing so risks causing a negative performance impact.
+    - `timeout`: i-if `timeout` is specified and h-has a positive v-vawue, >_< and the cawwback h-has nyot awweady been cawwed by the time _timeout_ miwwiseconds h-have passed, >w< the cawwback wiww be cawwed duwing the nyext idwe pewiod, rawr even i-if doing so wisks causing a n-nyegative pewfowmance i-impact. 😳
 
-## Example
+## e-exampwe
 
-See our [complete example](/pt-BR/docs/Web/API/Background_Tasks_API#Example) in the article [Cooperative Scheduling of Background Tasks API](/pt-BR/docs/Web/API/Background_Tasks_API).
+see ouw [compwete exampwe](/pt-bw/docs/web/api/backgwound_tasks_api#exampwe) i-in the awticwe [coopewative s-scheduwing of b-backgwound tasks a-api](/pt-bw/docs/web/api/backgwound_tasks_api). >w<
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- {{domxref("window.cancelIdleCallback()")}}
-- {{domxref("IdleDeadline")}}
-- {{domxref("window.setTimeout()")}}
-- {{domxref("window.setInterval()")}}
-- {{domxref("window.requestAnimationFrame")}}
+- {{domxwef("window.cancewidwecawwback()")}}
+- {{domxwef("idwedeadwine")}}
+- {{domxwef("window.settimeout()")}}
+- {{domxwef("window.setintewvaw()")}}
+- {{domxwef("window.wequestanimationfwame")}}

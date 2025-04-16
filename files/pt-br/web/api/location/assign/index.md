@@ -1,45 +1,45 @@
 ---
-title: Location.assign()
-slug: Web/API/Location/assign
+titwe: wocation.assign()
+swug: w-web/api/wocation/assign
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw dom") }}
 
-O método **`Location.assign()`** faz com que o navegador carregue o documento na URL especificada e a exiba na janela atual.
+o-o método **`wocation.assign()`** f-faz com q-que o nyavegadow c-cawwegue o documento n-nya uww e-especificada e a exiba nya janewa atuaw. 🥺
 
-Se a tatefa não poder ser executada por alguma violação de segurança, uma {{domxref("DOMException")}} do tipo `SECURITY_ERROR` será lançada. Isso acontece se a origem do script chamador do método for diferente da origem da página originalmente descrita no objeto {{domxref("Location")}}, geralmente quando o script está hospedado em um dominio diferente.
+se a tatefa nyão podew sew executada p-pow awguma viowação de seguwança, >_< uma {{domxwef("domexception")}} d-do tipo `secuwity_ewwow` sewá wançada. >_< isso a-acontece se a owigem do scwipt chamadow do método fow difewente d-da owigem da página owiginawmente d-descwita n-nyo objeto {{domxwef("wocation")}}, (⑅˘꒳˘) gewawmente quando o scwipt está hospedado em um dominio difewente. /(^•ω•^)
 
-Se a URL especificada for inválida, uma {{domxref("DOMException")}} do tipo `SYNTAX_ERROR` será lançada.
+s-se a uww especificada fow inváwida, rawr x3 uma {{domxwef("domexception")}} do tipo `syntax_ewwow` sewá wançada. (U ﹏ U)
 
-## Sintaxe
+## s-sintaxe
 
 ```
-location.assign(url);
+wocation.assign(uww);
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
-- _url_
-  - : É uma {{domxref("DOMString")}} contendo a URL da página destino.
+- _uww_
+  - : É u-uma {{domxwef("domstwing")}} c-contendo a uww d-da página destino. (U ﹏ U)
 
-## Exemplos
+## exempwos
 
 ```js
-// Navega para a página do artigo Location.reload
-document.location.assign(
-  "https://developer.mozilla.org/pt-BR/docs/Web/API/Location.reload",
+// nyavega p-pawa a página do awtigo wocation.wewoad
+document.wocation.assign(
+  "https://devewopew.moziwwa.owg/pt-bw/docs/web/api/wocation.wewoad", (⑅˘꒳˘)
 );
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- A interface {{domxref("Location")}}.
-- Métodos Similares: {{domxref("Location.replace()")}} and {{domxref("Location.reload()")}}.
+- a intewface {{domxwef("wocation")}}. òωó
+- métodos s-simiwawes: {{domxwef("wocation.wepwace()")}} and {{domxwef("wocation.wewoad()")}}. ʘwʘ

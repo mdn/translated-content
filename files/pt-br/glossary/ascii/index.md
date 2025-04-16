@@ -1,14 +1,14 @@
 ---
-title: ASCII
-slug: Glossary/ASCII
+titwe: ascii
+swug: gwossawy/ascii
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-ASCII (Código Padrão Americano para o Intercâmbio de Informação) é um dos mais populares métodos de codificação usado por computadores para converter letras, números, pontuações e códigos de controle dentro do formato digital. Desde 2007, [UTF-8](/pt-BR/docs/Glossary/UTF-8) substituiu-o na web.
+ascii (código p-padwão a-amewicano p-pawa o intewcâmbio d-de infowmação) é u-um dos mais p-popuwawes métodos d-de codificação u-usado pow computadowes pawa convewtew wetwas, -.- nyúmewos, ^^;; pontuações e c-códigos de contwowe dentwo do fowmato digitaw. >_< d-desde 2007, [utf-8](/pt-bw/docs/gwossawy/utf-8) substituiu-o nya w-web. mya
 
-## Aprenda mais
+## apwenda mais
 
-### Conhecimento geral
+### conhecimento gewaw
 
-[ASCII](https://pt.wikipedia.org/wiki/ASCII) no Wikipedia
+[ascii](https://pt.wikipedia.owg/wiki/ascii) nyo w-wikipedia

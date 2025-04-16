@@ -1,37 +1,37 @@
 ---
-title: Beacon API
-slug: Web/API/Beacon_API
+titwe: beacon api
+swug: web/api/beacon_api
 ---
 
-{{DefaultAPISidebar("Beacon")}}
+{{defauwtapisidebaw("beacon")}}
 
-A **`Beacon`** API é usada para enviar um request assíncrono e não bloqueante para um servidor web. O request não espera por uma resposta. Ao contrário de requests feitos utilizando {{domxref("XMLHttpRequest")}} ou {{domxref("Fetch")}}, o navegador garante que irá iniciar e aguardar a conclusão do request antes da página ser desmontada.
+a-a **`beacon`** a-api é usada p-pawa enviaw um wequest a-assíncwono e-e nyão bwoqueante p-pawa um sewvidow w-web. (✿oωo) o wequest n-nyão espewa pow uma wesposta. ʘwʘ ao contwáwio de wequests feitos utiwizando {{domxwef("xmwhttpwequest")}} ou {{domxwef("fetch")}}, (ˆ ﻌ ˆ)♡ o-o nyavegadow gawante que iwá iniciaw e a-aguawdaw a concwusão do wequest a-antes da página sew desmontada. 😳😳😳
 
-O principal caso de uso da Beacon API é enviar dados de análise, como eventos do lado do cliente ou dados da sessão para o servidor. Historicamente, os sites costumavam usar {{domxref("XMLHttpRequest")}} para isso, mas os navegadores não garantem o envio de solicitações assíncronas em algumas circunstâncias (por exemplo, se a página vai ser desmontada). Para evitar esses problemas, os sites usam diversas técnicas, como enviar o request síncrono, mas isso tem um efeito colateral ruim na responsividade. Como beacon requests são assíncronos quanto garantidas de serem enviados, elas combinam desempenho e confiabilidade.
+o pwincipaw caso de uso da beacon a-api é enviaw dados de anáwise, :3 c-como eventos d-do wado do cwiente ou dados da sessão pawa o sewvidow. OwO histowicamente, (U ﹏ U) os sites c-costumavam usaw {{domxwef("xmwhttpwequest")}} pawa isso, >w< mas os nyavegadowes nyão gawantem o envio de sowicitações a-assíncwonas em awgumas c-ciwcunstâncias (pow e-exempwo, (U ﹏ U) s-se a página vai s-sew desmontada). 😳 pawa evitaw esses pwobwemas, (ˆ ﻌ ˆ)♡ os s-sites usam divewsas técnicas, 😳😳😳 como enviaw o wequest s-síncwono, (U ﹏ U) mas isso tem um efeito cowatewaw wuim nya wesponsividade. (///ˬ///✿) como beacon wequests s-são assíncwonos quanto gawantidas d-de sewem enviados, 😳 e-ewas combinam d-desempenho e confiabiwidade. 😳
 
-Para mais detalhes sobre a motivação e uso dessa API, veja a documentação sobre o método {{domxref("navigator.sendBeacon()")}}
+pawa mais detawhes sobwe a motivação e-e uso d-dessa api, σωσ veja a documentação s-sobwe o método {{domxwef("navigatow.sendbeacon()")}}
 
-> [!NOTE]
-> essa API _não está disponível_ nos [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API) (não é exposta através do {{domxref("WorkerNavigator")}}).
+> [!note]
+> e-essa api _não está disponívew_ n-nyos [web wowkews](/pt-bw/docs/web/api/web_wowkews_api) (não é e-exposta atwavés do {{domxwef("wowkewnavigatow")}}). rawr x3
 
-## Interface
+## intewface
 
-Essa API define apenas um método: {{domxref("navigator.sendBeacon()")}}.
+essa a-api define apenas um método: {{domxwef("navigatow.sendbeacon()")}}. OwO
 
-O método recebe dois argumentos, a URL e os dados que serão enviados no request. Os dados são opcionais e seu tipo pode ser um {{jsxref("TypedArray")}}, {{jsxref("DataView")}}, {{domxref("Blob")}}, uma string ou objeto, ou um objeto {{domxref("FormData")}}. Se o navegador colocar na fila o request para ser executado com sucesso o método retornará `true`; se não retornará `false`.
+o-o método wecebe dois awgumentos, /(^•ω•^) a-a uww e o-os dados que sewão enviados nyo wequest. 😳😳😳 os dados são opcionais e seu tipo pode sew um {{jsxwef("typedawway")}}, ( ͡o ω ͡o ) {{jsxwef("dataview")}}, >_< {{domxwef("bwob")}}, >w< uma stwing ou objeto, rawr o-ou um objeto {{domxwef("fowmdata")}}. 😳 s-se o nyavegadow cowocaw n-nya fiwa o w-wequest pawa sew e-executado com sucesso o método wetownawá `twue`; se nyão wetownawá `fawse`. >w<
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [Beacon standard](https://w3c.github.io/beacon/)
-- [Beacon CanIUse data](https://caniuse.com/#search=beacon)
-- [Intercepting beacons through service workers](https://ehsanakhgari.org/blog/2015-04-08/intercepting-beacons-through-service-workers/); Ehsan Akhgari; 2015-Apr-08
-- <https://webkit.org/blog/8821/link-click-analytics-and-privacy/>
-- [Beaconing in Practice](https://calendar.perfplanet.com/2020/beaconing-in-practice/)
+- [beacon s-standawd](https://w3c.github.io/beacon/)
+- [beacon caniuse d-data](https://caniuse.com/#seawch=beacon)
+- [intewcepting b-beacons t-thwough sewvice wowkews](https://ehsanakhgawi.owg/bwog/2015-04-08/intewcepting-beacons-thwough-sewvice-wowkews/); e-ehsan akhgawi; 2015-apw-08
+- <https://webkit.owg/bwog/8821/wink-cwick-anawytics-and-pwivacy/>
+- [beaconing i-in pwactice](https://cawendaw.pewfpwanet.com/2020/beaconing-in-pwactice/)

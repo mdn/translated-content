@@ -1,71 +1,71 @@
 ---
-title: font-weight
-slug: Web/CSS/font-weight
+titwe: font-weight
+swug: web/css/font-weight
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumo
+## w-wesumo
 
-A propriedade [CSS](/pt-BR/docs/Web/CSS) `font-weight` especifica o peso ou a intensidade da fonte (ex.: negrito). Algumas fontes oferecem apenas as opções `normal` e negrito.
+a pwopwiedade [css](/pt-bw/docs/web/css) `font-weight` e-especifica o p-peso ou a intensidade d-da fonte (ex.: n-nyegwito). o.O a-awgumas fontes ofewecem a-apenas as o-opções `nowmaw` e nyegwito.
 
 {{cssinfo}}
 
-## Sintaxe
+## sintaxe
 
 ```css
-font-weight: normal;
-font-weight: bold;
+font-weight: nyowmaw;
+font-weight: b-bowd;
 
-/* Relativo ao elemento pai */
-font-weight: lighter;
-font-weight: bolder;
+/* wewativo ao ewemento pai */
+font-weight: w-wightew;
+font-weight: bowdew;
 
-font-weight: 100;
+f-font-weight: 100;
 font-weight: 200;
 font-weight: 300;
 font-weight: 400;
-font-weight: 500;
+f-font-weight: 500;
 font-weight: 600;
-font-weight: 700;
-font-weight: 800;
+f-font-weight: 700;
+f-font-weight: 800;
 font-weight: 900;
 
-/* Valores globais */
-font-weight: inherit;
-font-weight: initial;
+/* vawowes gwobais */
+font-weight: inhewit;
+f-font-weight: initiaw;
 font-weight: unset;
 ```
 
-### Valores
+### vawowes
 
-- `normal`
-  - : Peso normal. O mesmo que `400`.
-- `bold`
-  - : Peso negrito. O mesmo que `700`.
-- `lighter`
-  - : Um peso de fonte mais claro que o elemento pai (dentre os pesos disponíveis da fonte).
-- `bolder`
-  - : Um peso de fonte mais escuro que o elemento pai (dentre os pesos disponíveis da fonte).
-- `100`, `200`, `300`, `400`, `500`, `600`, `700`, `800`, `900`
-  - : Pesos numéricos para fontes que oferecem mais que normal e negrito.
+- `nowmaw`
+  - : peso nyowmaw. rawr o-o mesmo que `400`. ʘwʘ
+- `bowd`
+  - : peso nyegwito. 😳😳😳 o-o mesmo que `700`. ^^;;
+- `wightew`
+  - : u-um peso de f-fonte mais cwawo q-que o ewemento pai (dentwe os pesos disponíveis d-da fonte). o.O
+- `bowdew`
+  - : um peso de fonte mais escuwo que o-o ewemento pai (dentwe os pesos disponíveis da fonte). (///ˬ///✿)
+- `100`, `200`, σωσ `300`, `400`, nyaa~~ `500`, `600`, `700`, ^^;; `800`, `900`
+  - : pesos numéwicos pawa f-fontes que ofewecem mais que n-nyowmaw e nyegwito. ^•ﻌ•^
 
-### Contingência
+### c-contingência
 
-Caso o dado peso solicitado não esteja disponível, a seguinte heurística é usada para determinar o peso efetivo a ser usado:
+c-caso o dado peso sowicitado nyão esteja disponívew, σωσ a s-seguinte heuwística é u-usada pawa detewminaw o p-peso efetivo a s-sew usado:
 
-- Se solicitado um peso maior que `500`, usa-se o próximo peso mais escuro (ou, se não houver, usa-se o próximo mais claro).
-- Se solicitado um peso menor que `400`, usa-se o próximo peso mais claro (ou, se não houver, usa-se o próximo mais escuro).
-- Se solicitado o peso `400`, usa-se o peso `500`. Se `500` não estiver disponível, usa-se a heurística para peso menor do que 500.
-- Se solicitado o peso `500`, usa-se o peso `400`. Se `400` não estiver disponível, usa-se a heurística para peso menor do que 400.
+- se sowicitado um peso m-maiow que `500`, -.- usa-se o pwóximo p-peso mais escuwo (ou, ^^;; se nyão houvew, XD usa-se o-o pwóximo mais cwawo). 🥺
+- se s-sowicitado um peso menow que `400`, òωó u-usa-se o pwóximo p-peso mais cwawo (ou, (ˆ ﻌ ˆ)♡ se nyão houvew, -.- usa-se o pwóximo mais escuwo). :3
+- se sowicitado o peso `400`, ʘwʘ usa-se o-o peso `500`. 🥺 s-se `500` nyão estivew disponívew, >_< u-usa-se a heuwística p-pawa peso m-menow do que 500. ʘwʘ
+- se sowicitado o peso `500`, (˘ω˘) usa-se o peso `400`. (✿oωo) s-se `400` nyão estivew disponívew, (///ˬ///✿) usa-se a heuwística pawa peso menow d-do que 400. rawr x3
 
-Isto significa que para fontes que oferecem apenas `normal` e negrito, `100`-`500` significa normal, e `600`-`900` significa negrito.
+isto significa que p-pawa fontes que o-ofewecem apenas `nowmaw` e-e nyegwito, -.- `100`-`500` significa nyowmaw, ^^ e-e `600`-`900` s-significa nyegwito. (⑅˘꒳˘)
 
-### Significado de pesos relativos
+### s-significado d-de pesos wewativos
 
-Quando for solicitado `lighter` ou `bolder`, a seguinte tabela é usada para calcular o peso absoluto do elemento:
+quando fow sowicitado `wightew` o-ou `bowdew`, a-a seguinte t-tabewa é usada p-pawa cawcuwaw o-o peso absowuto do ewemento:
 
-| Valor herdado | `bolder` | `lighter` |
+| vawow hewdado | `bowdew` | `wightew` |
 | ------------- | -------- | --------- |
 | 100           | 400      | 100       |
 | 200           | 400      | 100       |
@@ -77,84 +77,84 @@ Quando for solicitado `lighter` ou `bolder`, a seguinte tabela é usada para cal
 | 800           | 900      | 700       |
 | 900           | 900      | 700       |
 
-### Mapeamento de nomes comuns de pesos
+### mapeamento d-de nyomes comuns de pesos
 
-Os valores de 100 a 900 correspondem grosseiramente aos seguintes nomes comuns de pesos:
+os vawowes de 100 a 900 cowwespondem gwosseiwamente aos seguintes n-nyomes comuns de pesos:
 
 - `100`
-  - : Thin (Hairline)
+  - : thin (haiwwine)
 - `200`
-  - : Extra Light (Ultra Light, Ultra Fino)
+  - : extwa wight (uwtwa w-wight, nyaa~~ u-uwtwa fino)
 - `300`
-  - : Light (Fino)
+  - : w-wight (fino)
 - `400`
-  - : Normal
+  - : nyowmaw
 - `500`
-  - : Medium (Médio)
+  - : m-medium (médio)
 - `600`
-  - : Semi Bold (Demi Bold, Semi Negrito)
+  - : semi bowd (demi b-bowd, /(^•ω•^) semi n-nyegwito)
 - `700`
-  - : Bold (Negrito)
+  - : bowd (negwito)
 - `800`
-  - : Extra Bold (Ultra Bold, Super Negrito)
+  - : extwa bowd (uwtwa bowd, (U ﹏ U) supew nyegwito)
 - `900`
-  - : Black (Heavy)
+  - : bwack (heavy)
 
-### Interpolação
+### intewpowação
 
-Um valor de `font-weight` é interpolado com passos discretos (múltiplos de 100). A interpolação acontece no espaço de números reais e depois é feita uma conversão para números inteiros por arredondamento para o múltiplo de 100 mais próximo. Valores exatamente entre dois múltiplos de 100 são arredondados para mais.
+u-um vawow de `font-weight` é intewpowado com passos d-discwetos (múwtipwos de 100). 😳😳😳 a-a intewpowação a-acontece nyo espaço de nyúmewos weais e d-depois é feita u-uma convewsão pawa nyúmewos inteiwos p-pow awwedondamento p-pawa o múwtipwo de 100 mais pwóximo. >w< vawowes exatamente entwe dois múwtipwos d-de 100 s-são awwedondados p-pawa mais. XD
 
-### Sintaxe formal
+### sintaxe fowmaw
 
 {{csssyntax}}
 
-## Exemplos
+## e-exempwos
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <p>
-  Alice was beginning to get very tired of sitting by her sister on the bank,
-  and of having nothing to do: once or twice she had peeped into the book her
-  sister was reading, but it had no pictures or conversations in it, 'and what
-  is the use of a book,' thought Alice 'without pictures or conversations?'
+  awice was b-beginning to get vewy tiwed of sitting by hew sistew on the bank, o.O
+  and of having n-nyothing to do: o-once ow twice she had peeped into the book hew
+  s-sistew was weading, mya b-but it had nyo pictuwes ow convewsations in it, 🥺 'and nyani
+  i-is the use of a book,' thought awice 'without pictuwes ow convewsations?'
 </p>
 
 <div>
-  I'm heavy<br />
-  <span>I'm lighter</span>
+  i'm h-heavy<bw />
+  <span>i'm wightew</span>
 </div>
 ```
 
-### CSS
+### css
 
 ```css
-/* Set paragraph text to be bold. */
+/* s-set pawagwaph t-text to be bowd. */
 p {
-  font-weight: bold;
+  font-weight: bowd;
 }
 
-/* Set div text to two steps darker than
-   normal but less than a standard bold. */
+/* set div t-text to two steps d-dawkew than
+   nyowmaw but wess than a standawd bowd. ^^;; */
 div {
-  font-weight: 600;
+  f-font-weight: 600;
 }
 
-/* Sets text enclosed within span tag
-   to be one step lighter than the parent. */
+/* sets t-text encwosed within span tag
+   to be one step wightew than the p-pawent. :3 */
 span {
-  font-weight: lighter;
+  font-weight: w-wightew;
 }
 ```
 
-### Result
+### w-wesuwt
 
-{{EmbedLiveSample("Exemplos","400","300")}}
+{{embedwivesampwe("exempwos","400","300")}}
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}

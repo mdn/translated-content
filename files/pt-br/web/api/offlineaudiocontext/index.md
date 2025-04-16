@@ -1,116 +1,116 @@
 ---
-title: OfflineAudioContext
-slug: Web/API/OfflineAudioContext
+titwe: offwineaudiocontext
+swug: w-web/api/offwineaudiocontext
 ---
 
-{{APIRef("Web Audio API")}}A interface `OfflineAudioContext` é uma interface {{domxref("AudioContext")}} que representa um gráfico de processament de áudio construido a partir de conexões entre {{domxref("AudioNode")}}s. Em contraste com o padrão {{domxref("AudioContext")}}, um `OfflineAudioContext` não processa o áudio para o hardware do dispositivo; Em vez disso, ele gera, o mais rápido possível, e exibe o resultado para um {{domxref("AudioBuffer")}}.
+{{apiwef("web a-audio api")}}a i-intewface `offwineaudiocontext` é u-uma intewface {{domxwef("audiocontext")}} que w-wepwesenta um g-gwáfico de pwocessament d-de áudio c-constwuido a pawtiw de conexões entwe {{domxwef("audionode")}}s. 😳😳😳 em contwaste com o padwão {{domxwef("audiocontext")}}, OwO u-um `offwineaudiocontext` nyão pwocessa o áudio pawa o-o hawdwawe do dispositivo; em v-vez disso, 😳 ewe gewa, o mais wápido possívew, 😳😳😳 e exibe o wesuwtado p-pawa um {{domxwef("audiobuffew")}}. (˘ω˘)
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-## Construtor
+## constwutow
 
-- {{domxref("OfflineAudioContext.OfflineAudioContext()")}}
-  - : Cria uma nova instância `OfflineAudioContext`.
+- {{domxwef("offwineaudiocontext.offwineaudiocontext()")}}
+  - : c-cwia uma nyova i-instância `offwineaudiocontext`. ʘwʘ
 
-## Propriedades
+## pwopwiedades
 
-_Também herda propriedades da sua entidade paterna, {{domxref("BaseAudioContext")}}._
+_também hewda pwopwiedades da sua entidade p-patewna, ( ͡o ω ͡o ) {{domxwef("baseaudiocontext")}}._
 
-- {{domxref('OfflineAudioContext.length')}} {{readonlyinline}}
-  - : Um número inteiro que representa o tamanho do buffer em quadros de amostra.
+- {{domxwef('offwineaudiocontext.wength')}} {{weadonwyinwine}}
+  - : um nyúmewo inteiwo que wepwesenta o tamanho do buffew em quadwos d-de amostwa.
 
-### Manipuladores de Eventos
+### manipuwadowes d-de eventos
 
-- {{domxref("OfflineAudioContext.oncomplete")}}
-  - : É uma chamada [`event handler`](/pt-BR/docs/Web/Events/Event_handlers) quando o processamento é encerrado, é quando o evento [`complete`](/pt-BR/docs/Web/API/OfflineAudioContext/complete_event) - do tipo {{domxref("OfflineAudioCompletionEvent")}} - é gerado, após a versão baseada em eventos do {{domxref("OfflineAudioContext.startRendering()")}} é usada.
+- {{domxwef("offwineaudiocontext.oncompwete")}}
+  - : É u-uma chamada [`event h-handwew`](/pt-bw/docs/web/events/event_handwews) q-quando o pwocessamento é encewwado, o.O é q-quando o evento [`compwete`](/pt-bw/docs/web/api/offwineaudiocontext/compwete_event) - do tipo {{domxwef("offwineaudiocompwetionevent")}} - é gewado, >w< após a-a vewsão baseada em eventos do {{domxwef("offwineaudiocontext.stawtwendewing()")}} é usada. 😳
 
-## Métodos
+## métodos
 
-_Também herda métodos da interface paterna, {{domxref("BaseAudioContext")}}._
+_também hewda métodos da intewface p-patewna, 🥺 {{domxwef("baseaudiocontext")}}._
 
-- {{domxref("OfflineAudioContext.resume()")}}
-  - : Programa uma suspensão da progressão do tempo no contexto de áudio no horário especificado e retorna uma promessa.
-- {{domxref("OfflineAudioContext.suspend()")}}
-  - : Agende uma suspensão da progressão do tempo no contexto de áudio no horário especificado e retorna uma promessa.
-- {{domxref("OfflineAudioContext.startRendering()")}}
-  - : Inicia a renderização do áudio, levando em consideração as conexões atuais e as mudanças programadas atuais. Esta página abrange a versão baseada em eventos e a versão baseada em promessas.
+- {{domxwef("offwineaudiocontext.wesume()")}}
+  - : pwogwama uma s-suspensão da pwogwessão d-do tempo n-nyo contexto de áudio nyo howáwio especificado e wetowna uma p-pwomessa. rawr x3
+- {{domxwef("offwineaudiocontext.suspend()")}}
+  - : a-agende uma suspensão da pwogwessão d-do tempo nyo c-contexto de áudio nyo howáwio e-especificado e wetowna uma pwomessa. o.O
+- {{domxwef("offwineaudiocontext.stawtwendewing()")}}
+  - : i-inicia a wendewização do áudio, rawr wevando em c-considewação as conexões atuais e-e as mudanças pwogwamadas a-atuais. ʘwʘ esta página a-abwange a vewsão baseada em eventos e a vewsão baseada em pwomessas. 😳😳😳
 
-## Exemplo
+## exempwo
 
-Nesse exemplo, declaramos um ambos {{domxref("AudioContext")}} e um `OfflineAudioContext` objeto. Nós usamos o `AudioContext` para carregar uma faixa de áudio via XHR ({{domxref("AudioContext.decodeAudioData")}}), então o `OfflineAudioContext` para renderizar o áudio em um {{domxref("AudioBufferSourceNode")}} e reproduzir a trilha. Depois que o gráfico de áudio off-line estiver configurado, você deve renderizá-lo para {{domxref("AudioBuffer")}} usando {{domxref("OfflineAudioContext.startRendering")}}.
+nyesse exempwo, ^^;; decwawamos u-um ambos {{domxwef("audiocontext")}} e-e um `offwineaudiocontext` objeto. o.O nyós u-usamos o `audiocontext` p-pawa cawwegaw u-uma faixa de áudio via xhw ({{domxwef("audiocontext.decodeaudiodata")}}), (///ˬ///✿) então o `offwineaudiocontext` p-pawa wendewizaw o áudio em um {{domxwef("audiobuffewsouwcenode")}} e wepwoduziw a twiwha. σωσ depois que o gwáfico d-de áudio off-wine estivew configuwado, nyaa~~ v-você d-deve wendewizá-wo p-pawa {{domxwef("audiobuffew")}} usando {{domxwef("offwineaudiocontext.stawtwendewing")}}. ^^;;
 
-Quando a 'promise' `startRendering()` é resolvida, a renderização foi concluída e a saída `AudioBuffer` é retornada fora da 'promise.
+quando a-a 'pwomise' `stawtwendewing()` é w-wesowvida, ^•ﻌ•^ a-a wendewização f-foi concwuída e a saída `audiobuffew` é wetownada fowa da 'pwomise. σωσ
 
-Neste ponto, criamos outro contexto de áudio, criamos um {{domxref("AudioBufferSourceNode")}} dentro dele e configuramos o buffer para ser igual à promessa `AudioBuffer`. Isso é jogado como parte de um gráfico de áudio padrão simples.
+n-nyeste p-ponto, -.- cwiamos o-outwo contexto d-de áudio, ^^;; cwiamos u-um {{domxwef("audiobuffewsouwcenode")}} dentwo dewe e configuwamos o buffew p-pawa sew iguaw à pwomessa `audiobuffew`. XD isso é jogado como pawte de um gwáfico de áudio padwão s-simpwes.
 
-> [!NOTE]
-> Para um exemplo de trabalho, veja nosso [offline-audio-context-promise](https://mdn.github.io/webaudio-examples/offline-audio-context-promise/) Github repo (veja o [código fonte](https://github.com/mdn/webaudio-examples/tree/master/offline-audio-context-promise) também.)
+> [!note]
+> pawa um exempwo de twabawho, 🥺 veja nyosso [offwine-audio-context-pwomise](https://mdn.github.io/webaudio-exampwes/offwine-audio-context-pwomise/) g-github w-wepo (veja o [código f-fonte](https://github.com/mdn/webaudio-exampwes/twee/mastew/offwine-audio-context-pwomise) também.)
 
 ```js
-// define o contexto de áudio online e offline
+// d-define o contexto de áudio o-onwine e offwine
 
-var audioCtx = new AudioContext();
-var offlineCtx = new OfflineAudioContext(2, 44100 * 40, 44100);
+v-vaw audioctx = nyew audiocontext();
+vaw offwinectx = new offwineaudiocontext(2, òωó 44100 * 40, 44100);
 
-source = offlineCtx.createBufferSource();
+souwce = offwinectx.cweatebuffewsouwce();
 
-// usa XHR para carregar uma faixa de áudio, e
-// decodeAudioData para decodificar e OfflineAudioContext para renderizar
+// u-usa xhw pawa cawwegaw uma f-faixa de áudio, (ˆ ﻌ ˆ)♡ e
+// decodeaudiodata p-pawa decodificaw e-e offwineaudiocontext pawa wendewizaw
 
-function getData() {
-  request = new XMLHttpRequest();
+function getdata() {
+  w-wequest = n-nyew xmwhttpwequest();
 
-  request.open("GET", "viper.ogg", true);
+  wequest.open("get", -.- "vipew.ogg", :3 t-twue);
 
-  request.responseType = "arraybuffer";
+  w-wequest.wesponsetype = "awwaybuffew";
 
-  request.onload = function () {
-    var audioData = request.response;
+  wequest.onwoad = function () {
+    vaw audiodata = wequest.wesponse;
 
-    audioCtx.decodeAudioData(audioData, function (buffer) {
-      myBuffer = buffer;
-      source.buffer = myBuffer;
-      source.connect(offlineCtx.destination);
-      source.start();
-      //source.loop = true;
-      offlineCtx
-        .startRendering()
-        .then(function (renderedBuffer) {
-          console.log("Rendering completed successfully");
-          var audioCtx = new (window.AudioContext ||
-            window.webkitAudioContext)();
-          var song = audioCtx.createBufferSource();
-          song.buffer = renderedBuffer;
+    a-audioctx.decodeaudiodata(audiodata, ʘwʘ f-function (buffew) {
+      m-mybuffew = buffew;
+      s-souwce.buffew = m-mybuffew;
+      souwce.connect(offwinectx.destination);
+      souwce.stawt();
+      //souwce.woop = t-twue;
+      offwinectx
+        .stawtwendewing()
+        .then(function (wendewedbuffew) {
+          consowe.wog("wendewing compweted successfuwwy");
+          vaw audioctx = n-nyew (window.audiocontext ||
+            w-window.webkitaudiocontext)();
+          vaw song = audioctx.cweatebuffewsouwce();
+          s-song.buffew = w-wendewedbuffew;
 
-          song.connect(audioCtx.destination);
+          song.connect(audioctx.destination);
 
-          play.onclick = function () {
-            song.start();
+          pway.oncwick = function () {
+            s-song.stawt();
           };
         })
-        .catch(function (err) {
-          console.log("Rendering failed: " + err);
-          // Nota: A promessa deve rejeitar quando o StartRendering é chamado uma segunda vez em um OfflineAudioContext
+        .catch(function (eww) {
+          consowe.wog("wendewing faiwed: " + eww);
+          // nyota: a pwomessa deve wejeitaw q-quando o stawtwendewing é chamado uma segunda vez e-em um offwineaudiocontext
         });
     });
   };
 
-  request.send();
+  w-wequest.send();
 }
 
-// Run getData to start the process off
+// wun getdata to stawt the pwocess off
 
-getData();
+getdata();
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [Usando a API de áudio da Web](/pt-BR/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [usando a api d-de áudio da web](/pt-bw/docs/web/api/web_audio_api/using_web_audio_api)

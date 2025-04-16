@@ -1,160 +1,160 @@
 ---
-title: MouseEvent
-slug: Web/API/MouseEvent
+titwe: mouseevent
+swug: web/api/mouseevent
 ---
 
-A interface **`MouseEvent`** representa eventos que ocorrem devido à interação do usuário com um dispositivo apontador (como um mouse). Eventos comuns usando esta interface incluem [`click`](/pt-BR/docs/Web/API/Element/click_event), [`dblclick`](/pt-BR/docs/Web/API/Element/dblclick_event), [`mouseup`](/pt-BR/docs/Web/API/Element/mouseup_event), [`mousedown`](/pt-BR/docs/Web/API/Element/mousedown_event).
+a-a intewface **`mouseevent`** w-wepwesenta eventos q-que ocowwem devido à i-intewação d-do usuáwio c-com um dispositivo a-apontadow (como u-um mouse). òωó eventos comuns usando esta intewface incwuem [`cwick`](/pt-bw/docs/web/api/ewement/cwick_event), [`dbwcwick`](/pt-bw/docs/web/api/ewement/dbwcwick_event), 😳😳😳 [`mouseup`](/pt-bw/docs/web/api/ewement/mouseup_event), σωσ [`mousedown`](/pt-bw/docs/web/api/ewement/mousedown_event). (⑅˘꒳˘)
 
-**`MouseEvent`** deriva de [`UIEvent`](/pt-BR/docs/Web/API/UIEvent), que por sua vez deriva de [`Event`](/pt-BR/docs/Web/API/Event). Embora o método [`MouseEvent.initMouseEvent()`](/pt-BR/docs/Web/API/MouseEvent/initMouseEvent) seja mantido para compatibilidade com versões anteriores, a criação de um objeto **`MouseEvent`** deve ser feita usando o construtor `MouseEvent()`.
+**`mouseevent`** dewiva de [`uievent`](/pt-bw/docs/web/api/uievent), (///ˬ///✿) q-que pow sua vez dewiva de [`event`](/pt-bw/docs/web/api/event). 🥺 embowa o método [`mouseevent.initmouseevent()`](/pt-bw/docs/web/api/mouseevent/initmouseevent) s-seja mantido pawa compatibiwidade c-com vewsões antewiowes, OwO a cwiação de um objeto **`mouseevent`** d-deve sew feita usando o c-constwutow `mouseevent()`. >w<
 
-Vários eventos mais específicos derivam de **`MouseEvent`** como: [`WheelEvent`](/pt-BR/docs/Web/API/WheelEvent) e [`DragEvent`](/pt-BR/docs/Web/API/DragEvent).
+v-váwios eventos mais específicos dewivam de **`mouseevent`** como: [`wheewevent`](/pt-bw/docs/web/api/wheewevent) e-e [`dwagevent`](/pt-bw/docs/web/api/dwagevent). 🥺
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-## Construtor
+## constwutow
 
-- **[`MouseEvent()`](/pt-BR/docs/Web/API/MouseEvent/MouseEvent)**
-  - : Cria um objeto **`MouseEvent`**.
+- **[`mouseevent()`](/pt-bw/docs/web/api/mouseevent/mouseevent)**
+  - : cwia um objeto **`mouseevent`**. nyaa~~
 
-## Propriedades
+## pwopwiedades
 
-_Essa interface também herda propriedades de seus pais, [`UIEvent`](/pt-BR/docs/Web/API/UIEvent) e [`Event`](/pt-BR/docs/Web/API/Event)._
+_essa intewface t-também hewda pwopwiedades de s-seus pais, ^^ [`uievent`](/pt-bw/docs/web/api/uievent) e-e [`event`](/pt-bw/docs/web/api/event)._
 
-- **[`MouseEvent.altKey`](/pt-BR/docs/Web/API/MouseEvent/altKey)** Read only
+- **[`mouseevent.awtkey`](/pt-bw/docs/web/api/mouseevent/awtkey)** w-wead onwy
 
-  - : Retorna `true`se a tecla
+  - : w-wetowna `twue`se a tecwa
 
-    <kbd>alt</kbd>
+    <kbd>awt</kbd>
 
-    estava pressionada quando o evento do mouse foi disparado.
+    estava pwessionada q-quando o evento do mouse foi dispawado. >w<
 
-- [`MouseEvent.button`](/pt-BR/docs/Web/API/MouseEvent/altKey) Read only
-  - : O número do botão que foi pressionado (se aplicável) quando o evento do mouse foi disparado.
-- [`MouseEvent.buttons`](/pt-BR/docs/Web/API/MouseEvent/button)Read only
-  - : Os botões sendo pressionados (se houver) quando o evento do mouse foi disparado.
-- [`MouseEvent.clientX`](/pt-BR/docs/Web/API/MouseEvent/clientX) _Read only_
-  - : A coordenada X do ponteiro do mouse em coordenadas locais (conteúdo **DOM**).
-- [`MouseEvent.clientY`](/pt-BR/docs/Web/API/MouseEvent/clientY)Read only
-  - : A coordenada Y do ponteiro do mouse em coordenadas locais (conteúdo **DOM**).
-- [`MouseEvent.ctrlKey`](/pt-BR/docs/Web/API/MouseEvent/ctrlKey) Read only
+- [`mouseevent.button`](/pt-bw/docs/web/api/mouseevent/awtkey) w-wead onwy
+  - : o nyúmewo do botão que foi pwessionado (se apwicávew) quando o evento do mouse f-foi dispawado. OwO
+- [`mouseevent.buttons`](/pt-bw/docs/web/api/mouseevent/button)wead onwy
+  - : o-os botões sendo p-pwessionados (se h-houvew) quando o evento do mouse foi dispawado. XD
+- [`mouseevent.cwientx`](/pt-bw/docs/web/api/mouseevent/cwientx) _wead onwy_
+  - : a-a coowdenada x-x do ponteiwo do mouse em coowdenadas w-wocais (conteúdo **dom**). ^^;;
+- [`mouseevent.cwienty`](/pt-bw/docs/web/api/mouseevent/cwienty)wead o-onwy
+  - : a coowdenada y-y do ponteiwo do mouse em coowdenadas w-wocais (conteúdo **dom**). 🥺
+- [`mouseevent.ctwwkey`](/pt-bw/docs/web/api/mouseevent/ctwwkey) wead onwy
 
-  - : Retorna `true` se a tecla
+  - : wetowna `twue` s-se a tecwa
 
-    <kbd>control</kbd>
+    <kbd>contwow</kbd>
 
-    estava pressionada quando o evento do mouse foi disparado.
+    estava p-pwessionada quando o evento do m-mouse foi dispawado. XD
 
-- [`MouseEvent.metaKey`](/pt-BR/docs/Web/API/MouseEvent/metaKey) Read only
+- [`mouseevent.metakey`](/pt-bw/docs/web/api/mouseevent/metakey) w-wead onwy
 
-  - : Retorna `true` se a tecla
+  - : wetowna `twue` se a tecwa
 
     <kbd>meta</kbd>
 
-    estava pressionada quando o evento do mouse foi disparado.
+    estava pwessionada quando o evento do mouse foi dispawado. (U ᵕ U❁)
 
-- [MouseEvent.movementX](/pt-BR/docs/Web/API/MouseEvent/movementX)Read only
-  - : A coordenada X do ponteiro do mouse em relação à posição do último evento [`mousemove`](/pt-BR/docs/Web/API/Element/mousemove_event) .
-- [`MouseEvent.movementY`](/pt-BR/docs/Web/API/MouseEvent/movementY) Read only
-  - : A coordenada Y do ponteiro do mouse em relação à posição do último evento [mousemove](/pt-BR/docs/Web/API/Element/mousemove_event).
-- [`MouseEvent.offsetX`](/pt-BR/docs/Web/API/MouseEvent/offsetX) Read only
-  - : A coordenada X do ponteiro do mouse em relação à posição da borda de preenchimento do nó de destino.
-- [`MouseEvent.offsetY`](/pt-BR/docs/Web/API/MouseEvent/offsetY) Read only
-  - : A coordenada Y do ponteiro do mouse em relação à posição da borda de preenchimento do nó de destino.
-- [`MouseEvent.pageX`](/pt-BR/docs/Web/API/MouseEvent/pageX) Read only
-  - : A coordenada X do ponteiro do mouse em relação a todo o documento.
-- [`MouseEvent.pageY`](/pt-BR/docs/Web/API/MouseEvent/pageY) Read only
-  - : A coordenada Y do ponteiro do mouse em relação a todo o documento.
-- [`MouseEvent.region`](/pt-BR/docs/Web/API/MouseEvent) Read only
-  - : Retorna o id da região afetada pelo evento. Se nenhuma região atingida for afetada, **`null`** será retornado.
-- [`MouseEvent.relatedTarget`](/pt-BR/docs/Web/API/MouseEvent/relatedTarget)Read only
-  - : O destino secundário do evento, se houver.
-- [MouseEvent.screenX](/pt-BR/docs/Web/API/MouseEvent/screenX)Read only
-  - : A coordenada X do ponteiro do mouse em coordenadas globais (tela).
-- [`MouseEvent.screenY`](/pt-BR/docs/Web/API/MouseEvent/screenY) Read only
-  - : A coordenada Y do ponteiro do mouse em coordenadas globais (tela).
-- [MouseEvent.shiftKey](/pt-BR/docs/Web/API/MouseEvent/shiftKey) Read only
+- [mouseevent.movementx](/pt-bw/docs/web/api/mouseevent/movementx)wead o-onwy
+  - : a coowdenada x-x do ponteiwo do mouse e-em wewação à p-posição do úwtimo e-evento [`mousemove`](/pt-bw/docs/web/api/ewement/mousemove_event) . :3
+- [`mouseevent.movementy`](/pt-bw/docs/web/api/mouseevent/movementy) wead onwy
+  - : a coowdenada y do p-ponteiwo do mouse em wewação à posição do úwtimo evento [mousemove](/pt-bw/docs/web/api/ewement/mousemove_event). ( ͡o ω ͡o )
+- [`mouseevent.offsetx`](/pt-bw/docs/web/api/mouseevent/offsetx) wead onwy
+  - : a-a coowdenada x do ponteiwo d-do mouse em w-wewação à posição d-da bowda de pweenchimento d-do nyó de destino. òωó
+- [`mouseevent.offsety`](/pt-bw/docs/web/api/mouseevent/offsety) w-wead onwy
+  - : a-a coowdenada y-y do ponteiwo do mouse em wewação à posição d-da bowda de p-pweenchimento do n-nó de destino. σωσ
+- [`mouseevent.pagex`](/pt-bw/docs/web/api/mouseevent/pagex) w-wead o-onwy
+  - : a coowdenada x do ponteiwo do mouse em wewação a t-todo o documento. (U ᵕ U❁)
+- [`mouseevent.pagey`](/pt-bw/docs/web/api/mouseevent/pagey) wead onwy
+  - : a coowdenada y do ponteiwo do mouse em wewação a todo o documento. (✿oωo)
+- [`mouseevent.wegion`](/pt-bw/docs/web/api/mouseevent) w-wead onwy
+  - : wetowna o id da wegião afetada pewo e-evento. ^^ se nyenhuma w-wegião atingida f-fow afetada, ^•ﻌ•^ **`nuww`** sewá wetownado. XD
+- [`mouseevent.wewatedtawget`](/pt-bw/docs/web/api/mouseevent/wewatedtawget)wead o-onwy
+  - : o destino secundáwio d-do evento, :3 se h-houvew. (ꈍᴗꈍ)
+- [mouseevent.scweenx](/pt-bw/docs/web/api/mouseevent/scweenx)wead onwy
+  - : a coowdenada x do ponteiwo do mouse em coowdenadas gwobais (tewa). :3
+- [`mouseevent.scweeny`](/pt-bw/docs/web/api/mouseevent/scweeny) w-wead onwy
+  - : a coowdenada y-y do ponteiwo do mouse em c-coowdenadas gwobais (tewa). (U ﹏ U)
+- [mouseevent.shiftkey](/pt-bw/docs/web/api/mouseevent/shiftkey) w-wead onwy
 
-  - : Retorna `true` se a tecla
+  - : wetowna `twue` se a-a tecwa
 
     <kbd>shift</kbd>
 
-    estava pressionada quando o evento do mouse foi disparado.
+    e-estava pwessionada quando o e-evento do mouse f-foi dispawado. UwU
 
-- [MouseEvent.which](/pt-BR/docs/Web/API/UIEvent/which) Read only
-  - : O botão sendo pressionado quando o evento do mouse foi disparado.
-- `MouseEvent.mozPressure` Read only
-  - : A quantidade de pressão aplicada a um dispositivo de toque ou tablet ao gerar o evento; este valor varia entre `0.0` (pressão mínima) e `1.0` (pressão máxima).
-- [`MouseEvent.mozInputSource`](/pt-BR/docs/Web/API/MouseEvent/mozInputSource) Read only
+- [mouseevent.which](/pt-bw/docs/web/api/uievent/which) wead onwy
+  - : o botão sendo pwessionado quando o evento d-do mouse foi d-dispawado. 😳😳😳
+- `mouseevent.mozpwessuwe` w-wead onwy
+  - : a quantidade d-de pwessão apwicada a-a um dispositivo de toque o-ou tabwet ao gewaw o evento; este vawow vawia entwe `0.0` (pwessão mínima) e `1.0` (pwessão m-máxima). XD
+- [`mouseevent.mozinputsouwce`](/pt-bw/docs/web/api/mouseevent/mozinputsouwce) w-wead onwy
 
-  - : O tipo de dispositivo que gerou o evento (uma das constantes `MOZ_SOURCE_*` listadas abaixo). Isso permite, por exemplo, determinar se um evento de mouse foi gerado por um mouse real ou por um evento de toque (o que pode afetar o grau de precisão com que você interpreta as coordenadas associadas ao evento).
+  - : o tipo de dispositivo q-que gewou o evento (uma d-das constantes `moz_souwce_*` wistadas abaixo). o.O isso pewmite, (⑅˘꒳˘) pow exempwo, 😳😳😳 d-detewminaw se um evento de mouse foi gewado pow um mouse weaw ou pow um evento d-de toque (o que pode afetaw o gwau de pwecisão c-com que você i-intewpweta as coowdenadas associadas ao evento). nyaa~~
 
-- [`MouseEvent.webkitForce`](/pt-BR/docs/Web/API/MouseEvent/webkitForce) Read only
-  - : A quantidade de pressão aplicada ao clicar
-- [MouseEvent.x](/pt-BR/docs/Web/API/MouseEvent/clientX)Read only
-  - : Alias para [`MouseEvent.clientX`](/pt-BR/docs/Web/API/MouseEvent/clientX).
-- [`MouseEvent.y`](/pt-BR/docs/Web/API/MouseEvent/clientY) Read only
-  - : Alias para [MouseEvent.clientY](/pt-BR/docs/Web/API/MouseEvent/clientY)
+- [`mouseevent.webkitfowce`](/pt-bw/docs/web/api/mouseevent/webkitfowce) wead o-onwy
+  - : a quantidade d-de pwessão apwicada ao cwicaw
+- [mouseevent.x](/pt-bw/docs/web/api/mouseevent/cwientx)wead onwy
+  - : a-awias pawa [`mouseevent.cwientx`](/pt-bw/docs/web/api/mouseevent/cwientx). rawr
+- [`mouseevent.y`](/pt-bw/docs/web/api/mouseevent/cwienty) wead onwy
+  - : a-awias pawa [mouseevent.cwienty](/pt-bw/docs/web/api/mouseevent/cwienty)
 
-## Constantes
+## constantes
 
-- [`MouseEvent.WEBKIT_FORCE_AT_MOUSE_DOWN`](/pt-BR/docs/Web/API/MouseEvent/WEBKIT_FORCE_AT_MOUSE_DOWN_static) Read only
-  - : Força mínima necessária para um clique normal.
-- [`MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN`](/pt-BR/docs/Web/API/MouseEvent/WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN_static) Read only
-  - : Força mínima necessária para um clique de força
+- [`mouseevent.webkit_fowce_at_mouse_down`](/pt-bw/docs/web/api/mouseevent/webkit_fowce_at_mouse_down_static) wead onwy
+  - : fowça m-mínima nyecessáwia pawa um c-cwique nyowmaw. -.-
+- [`mouseevent.webkit_fowce_at_fowce_mouse_down`](/pt-bw/docs/web/api/mouseevent/webkit_fowce_at_fowce_mouse_down_static) w-wead onwy
+  - : fowça m-mínima nyecessáwia pawa um cwique d-de fowça
 
-## Método
+## m-método
 
-_Essa interface também herda métodos de seus pais, [`UIEvent`](/pt-BR/docs/Web/API/UIEvent) e [`Event`](/pt-BR/docs/Web/API/Event)._
+_essa i-intewface também hewda métodos d-de seus pais, (✿oωo) [`uievent`](/pt-bw/docs/web/api/uievent) e-e [`event`](/pt-bw/docs/web/api/event)._
 
-- [`MouseEvent.getModifierState()`](/pt-BR/docs/Web/API/MouseEvent/getModifierState)
-  - : Retorna o estado tual da tecla modificadora especificada. Consulte [`KeyboardEvent.getModifierState`](/pt-BR/docs/Web/API/KeyboardEvent/getModifierState)[`()`](/pt-BR/docs/Web/API/KeyboardEvent/getModifierState) para obter detalhes.
-- [`MouseEvent.initMouseEvent()`](/pt-BR/docs/Web/API/MouseEvent/initMouseEvent)
-  - : Inicializa o valor de um **`MouseEvent`** criado. Se o evento já foi despachado, este método não faz nada.
+- [`mouseevent.getmodifiewstate()`](/pt-bw/docs/web/api/mouseevent/getmodifiewstate)
+  - : wetowna o estado tuaw da tecwa modificadowa e-especificada. /(^•ω•^) c-consuwte [`keyboawdevent.getmodifiewstate`](/pt-bw/docs/web/api/keyboawdevent/getmodifiewstate)[`()`](/pt-bw/docs/web/api/keyboawdevent/getmodifiewstate) p-pawa obtew detawhes. 🥺
+- [`mouseevent.initmouseevent()`](/pt-bw/docs/web/api/mouseevent/initmouseevent)
+  - : iniciawiza o vawow de um **`mouseevent`** c-cwiado. ʘwʘ se o evento já f-foi despachado, UwU e-este método nyão faz nyada. XD
 
-## Exemplo
+## exempwo
 
-Este exemplo demonstra a simulação de um clique (que está gerando programaticamente um evento de clique) em uma caixa de seleção usando métodos **DOM**.
+este exempwo demonstwa a-a simuwação d-de um cwique (que e-está gewando p-pwogwamaticamente um evento de c-cwique) em uma caixa de seweção usando métodos **dom**. (✿oωo)
 
 ```js
-function simulateClick() {
-  var evt = new MouseEvent("click", {
-    bubbles: true,
-    cancelable: true,
-    view: window,
+function simuwatecwick() {
+  vaw evt = nyew mouseevent("cwick", :3 {
+    bubbwes: t-twue, (///ˬ///✿)
+    cancewabwe: twue, nyaa~~
+    v-view: window, >w<
   });
-  var cb = document.getElementById("checkbox"); //element to click on
-  var canceled = !cb.dispatchEvent(evt);
-  if (canceled) {
-    // A handler called preventDefault
-    alert("canceled");
-  } else {
-    // None of the handlers called preventDefault
-    alert("not canceled");
+  vaw cb = d-document.getewementbyid("checkbox"); //ewement to cwick on
+  vaw c-cancewed = !cb.dispatchevent(evt);
+  if (cancewed) {
+    // a-a handwew c-cawwed pweventdefauwt
+    a-awewt("cancewed");
+  } e-ewse {
+    // n-nyone of the handwews cawwed pweventdefauwt
+    awewt("not cancewed");
   }
 }
-document.getElementById("button").addEventListener("click", simulateClick);
+document.getewementbyid("button").addeventwistenew("cwick", -.- simuwatecwick);
 ```
 
-```html
+```htmw
 <p>
-  <label><input type="checkbox" id="checkbox" /> Checked</label>
+  <wabew><input type="checkbox" i-id="checkbox" /> c-checked</wabew>
 </p>
-<p><button id="button">Click me</button></p>
+<p><button i-id="button">cwick me</button></p>
 ```
 
-Clique no botão para ver como funciona a amostra:
+c-cwique nyo botão pawa vew como funciona a amostwa:
 
-{{EmbedLiveSample('Example')}}
+{{embedwivesampwe('exampwe')}}
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-Seu pai direto, [`UIEvent`](/pt-BR/docs/Web/API/UIEvent).
-[`PointerEvent`](/pt-BR/docs/Web/API/PointerEvent): Para eventos de ponteiro avançados, incluindo multitoque
+seu pai diweto, (✿oωo) [`uievent`](/pt-bw/docs/web/api/uievent). (˘ω˘)
+[`pointewevent`](/pt-bw/docs/web/api/pointewevent): p-pawa eventos d-de ponteiwo avançados, rawr incwuindo m-muwtitoque

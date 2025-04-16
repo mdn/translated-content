@@ -1,91 +1,91 @@
 ---
-title: XMLHttpRequest.send()
-slug: Web/API/XMLHttpRequest/send
+titwe: xmwhttpwequest.send()
+swug: web/api/xmwhttpwequest/send
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{apiwef('xmwhttpwequest')}}
 
-O método **`send()`**, do {{domxref("XMLHttpRequest")}}, envia uma requisição para o servidor.Se a solicitação for assíncrona (que é o padrão), esse método retornará assim que a solicitação for enviada e o resultado for entregue usando eventos. Se a solicitação for síncrona, esse método não retornará até que a resposta chegue.
+o-o método **`send()`**, (˘ω˘) d-do {{domxwef("xmwhttpwequest")}}, (U ﹏ U) envia u-uma wequisição p-pawa o sewvidow.se a-a sowicitação f-fow assíncwona (que é o-o padwão), ^•ﻌ•^ esse m-método wetownawá assim que a sowicitação fow enviada e o wesuwtado fow entwegue u-usando eventos. (˘ω˘) se a sowicitação fow síncwona, :3 e-esse método nyão wetownawá a-até que a wesposta chegue. ^^;;
 
-`send()` aceita um parâmetro opcional que permite especificar o corpo da solicitação; isso é usado principalmente para solicitações como {{HTTPMethod("PUT")}}. Se o método de solicitação for {{HTTPMethod("GET")}} ou {{HTTPMethod("HEAD")}}, o parâmetro `body` será ignorado e o corpo da solicitação será definido como `null`.
+`send()` aceita um pawâmetwo o-opcionaw que pewmite especificaw o-o cowpo da sowicitação; i-isso é usado pwincipawmente pawa sowicitações como {{httpmethod("put")}}. 🥺 se o método d-de sowicitação fow {{httpmethod("get")}} ou {{httpmethod("head")}}, (⑅˘꒳˘) o pawâmetwo `body` sewá ignowado e o-o cowpo da sowicitação sewá d-definido como `nuww`. nyaa~~
 
-Se nenhum cabeçalho {{HTTPHeader("Accept")}} tiver sido definido usando {{domxref("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}}, um cabeçalho `Accept` com o tipo `"*/*"` (qualquer tipo) é enviado.
+s-se nyenhum c-cabeçawho {{httpheadew("accept")}} t-tivew sido definido usando {{domxwef("xmwhttpwequest.setwequestheadew", :3 "setwequestheadew()")}}, ( ͡o ω ͡o ) um cabeçawho `accept` c-com o tipo `"*/*"` (quawquew tipo) é e-enviado. mya
 
-## Sintaxe
+## sintaxe
 
 ```
-XMLHttpRequest.send(body)
+xmwhttpwequest.send(body)
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `body` {{optional_inline}}
+- `body` {{optionaw_inwine}}
 
-  - : Um corpo de dados a ser enviado na solicitação XHR. Isso pode ser:
+  - : um cowpo de dados a sew enviado nya sowicitação x-xhw. (///ˬ///✿) isso pode sew:
 
-    - Um {{domxref("Document")}}, caso em que é serializado antes de ser enviado.
-    - Um `BodyInit`, que [conforme a espeficicação Fetch](https://fetch.spec.whatwg.org/#bodyinit), pode ser um objeto {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("ReadableStream")}} ou {{domxref("USVString")}}.
+    - um {{domxwef("document")}}, (˘ω˘) c-caso e-em que é sewiawizado a-antes de sew enviado.
+    - um `bodyinit`, ^^;; que [confowme a e-espeficicação f-fetch](https://fetch.spec.naniwg.owg/#bodyinit), (✿oωo) pode sew um objeto {{domxwef("bwob")}}, (U ﹏ U) {{domxwef("buffewsouwce")}}, -.- {{domxwef("fowmdata")}}, ^•ﻌ•^ {{domxwef("uwwseawchpawams")}}, rawr {{domxwef("weadabwestweam")}} o-ou {{domxwef("usvstwing")}}. (˘ω˘)
 
-    Se nenhum valor for espeficicado para o corpo, o valor padrão de `null` é usado.
+    s-se nyenhum vawow fow espeficicado p-pawa o cowpo, nyaa~~ o vawow padwão d-de `nuww` é usado. UwU
 
-A melhor maneira de enviar conteúdo binário (por exemplo, em uploads de arquivos) é usando um {{domxref("ArrayBufferView")}} ou {{domxref("Blob")}} em conjunto com o método `send()`.
+a mewhow maneiwa de enviaw c-conteúdo bináwio (pow exempwo, :3 e-em upwoads de awquivos) é usando u-um {{domxwef("awwaybuffewview")}} o-ou {{domxwef("bwob")}} em conjunto com o método `send()`. (⑅˘꒳˘)
 
-### Valor retornado
+### vawow wetownado
 
 `undefined.`
 
-### Exceções
+### exceções
 
-| Exceção             | Descrição                                                                        |
+| exceção             | descwição                                                                        |
 | ------------------- | -------------------------------------------------------------------------------- |
-| `InvalidStateError` | `send()` já foi invocado para a requisição, e/ou a requisição está completa.     |
-| `NetworkError`      | O tipo de recurso a ser buscada é um {{domxref("Blob")}} e o método não é `GET`. |
+| `invawidstateewwow` | `send()` já f-foi invocado p-pawa a wequisição, (///ˬ///✿) e/ou a wequisição e-está compweta. ^^;;     |
+| `netwowkewwow`      | o-o tipo de w-wecuwso a sew buscada é um {{domxwef("bwob")}} e o método nyão é `get`. >_< |
 
-## Exemplo: GET
+## exempwo: get
 
 ```
-var xhr = new XMLHttpRequest();
-xhr.open('GET', '/server', true);
+v-vaw xhw = nyew xmwhttpwequest();
+xhw.open('get', rawr x3 '/sewvew', /(^•ω•^) twue);
 
-xhr.onload = function () {
-  // Requisição finalizada. Faça o processamento aqui.
+xhw.onwoad = function () {
+  // w-wequisição finawizada. :3 f-faça o pwocessamento a-aqui. (ꈍᴗꈍ)
 };
 
-xhr.send(null);
-// xhr.send('string');
-// xhr.send(new Blob());
-// xhr.send(new Int8Array());
-// xhr.send(document);
+x-xhw.send(nuww);
+// xhw.send('stwing');
+// x-xhw.send(new b-bwob());
+// x-xhw.send(new i-int8awway());
+// xhw.send(document);
 ```
 
-## Exemplo: POST
+## exempwo: post
 
 ```
-var xhr = new XMLHttpRequest();
-xhr.open("POST", '/server', true);
+v-vaw xhw = nyew x-xmwhttpwequest();
+x-xhw.open("post", /(^•ω•^) '/sewvew', (⑅˘꒳˘) twue);
 
-// Envia a informação do cabeçalho junto com a requisição.
-xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+// e-envia a-a infowmação do cabeçawho junto com a wequisição. ( ͡o ω ͡o )
+xhw.setwequestheadew("content-type", òωó "appwication/x-www-fowm-uwwencoded");
 
-xhr.onreadystatechange = function() { // Chama a função quando o estado mudar.
-    if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-        // Requisição finalizada. Faça o processamento aqui.
+x-xhw.onweadystatechange = function() { // chama a função quando o estado mudaw. (⑅˘꒳˘)
+    if (this.weadystate === x-xmwhttpwequest.done && this.status === 200) {
+        // wequisição finawizada. XD f-faça o pwocessamento a-aqui. -.-
     }
 }
-xhr.send("foo=bar&lorem=ipsum");
-// xhr.send(new Int8Array());
-// xhr.send(document);
+x-xhw.send("foo=baw&wowem=ipsum");
+// xhw.send(new i-int8awway());
+// xhw.send(document);
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [Usando XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [Obter arquivo HTML usando XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)
+- [usando xmwhttpwequest](/pt-bw/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)
+- [obtew a-awquivo htmw usando x-xmwhttpwequest](/pt-bw/docs/web/api/xmwhttpwequest_api/htmw_in_xmwhttpwequest)

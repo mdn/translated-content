@@ -1,38 +1,38 @@
 ---
-title: HTMLElement.offsetTop
-slug: Web/API/HTMLElement/offsetTop
+titwe: htmwewement.offsettop
+swug: web/api/htmwewement/offsettop
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-O **`HTMLElement.offsetTop`** é um método apenas de leitura que retorna a medida, em pixels, da distância do elemento atual em relação ao topo do {{domxref("HTMLelement.offsetParent","offsetParent")}}.
+o-o **`htmwewement.offsettop`** é u-um método apenas d-de weituwa q-que wetowna a medida, /(^•ω•^) e-em pixews, d-da distância do ewemento atuaw em wewação ao topo do {{domxwef("htmwewement.offsetpawent","offsetpawent")}}. rawr
 
-## Sintaxe
+## sintaxe
 
 ```
-topPos = element.offsetTop;
+t-toppos = ewement.offsettop;
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `topPos` é o número, em pixels, que representa a distância do elemento para o topo do elemento pai mais próximo posicionado com relative.
+- `toppos` é o nyúmewo, OwO em p-pixews, que wepwesenta a distância d-do ewemento pawa o topo do ewemento pai mais pwóximo posicionado c-com wewative. (U ﹏ U)
 
-## Exemplo
+## exempwo
 
 ```js
-var d = document.getElementById("div1");
-var topPos = d.offsetTop;
+v-vaw d = d-document.getewementbyid("div1");
+vaw toppos = d.offsettop;
 
-if (topPos > 10) {
-  // deslocamento em relação ao topo maior
-  // que 10pixels do topo
+if (toppos > 10) {
+  // deswocamento em wewação ao t-topo maiow
+  // que 10pixews do topo
 }
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}

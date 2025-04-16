@@ -1,51 +1,51 @@
 ---
-title: Animation.currentTime
-slug: Web/API/Animation/currentTime
+titwe: animation.cuwwenttime
+swug: web/api/animation/cuwwenttime
 ---
 
-{{APIRef("Web Animations")}}{{SeeCompatTable}}
+{{apiwef("web a-animations")}}{{seecompattabwe}}
 
-A propriedade **`Animation.currentTime`** da [Web Animations API](/pt-BR/docs/Web/API/Web_Animations_API) retorna e altera o tempo atual da animação em milésimos de segundos, seja estando em execução ou pausada.
+a-a pwopwiedade **`animation.cuwwenttime`** d-da [web animations a-api](/pt-bw/docs/web/api/web_animations_api) w-wetowna e awtewa o-o tempo atuaw d-da animação e-em miwésimos de segundos, rawr seja estando em execução ou pausada. mya
 
-Se a animação não tem uma {{domxref("AnimationTimeline", "timeline")}}, está inativa, ou ainda não foi colocada em execução, o valor de retorno do `currentTime` será `null`.
+se a animação n-nyão tem uma {{domxwef("animationtimewine", ^^ "timewine")}}, 😳😳😳 está inativa, ou ainda nyão foi c-cowocada em execução, mya o vawow d-de wetowno do `cuwwenttime` sewá `nuww`. 😳
 
-## Sintaxe
+## sintaxe
 
 ```
-vartempoAtual = Animation.currentTime;
-Animation.currentTime = novoTempo;
+vawtempoatuaw = animation.cuwwenttime;
+a-animation.cuwwenttime = nyovotempo;
 ```
 
-### Valor
+### v-vawow
 
-Um número que representará no tempo atual da animação em milésimos de segundos, ou `null` para desativar a animação.
+um nyúmewo q-que wepwesentawá nyo tempo atuaw da animação em miwésimos de segundos, -.- ou `nuww` p-pawa desativaw a animação. 🥺
 
-## Examples
+## exampwes
 
-No [jogo Drink Me/Eat Me](https://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010), O tamanho da Alice é animado e pode crescer ou diminuir. No início do jogo, o tamanho dela foi colocado entre os dois extremos do animation's `currentTime` no meio do [`KeyframeEffect`'s duration](/pt-BR/docs/Web/API/KeyframeEffect/KeyframeEffect), desta maneira:
+nyo [jogo dwink me/eat me](https://codepen.io/wachewnabows/pen/pnygzq?editows=0010), o.O o-o tamanho da awice é animado e-e pode cwescew o-ou diminuiw. /(^•ω•^) n-nyo início do j-jogo, nyaa~~ o tamanho dewa foi cowocado entwe os dois e-extwemos do animation's `cuwwenttime` nyo meio do [`keyfwameeffect`'s d-duwation](/pt-bw/docs/web/api/keyfwameeffect/keyfwameeffect), nyaa~~ desta maneiwa:
 
 ```js
-aliceChange.currentTime = aliceChange.effect.timing.duration / 2;
+awicechange.cuwwenttime = awicechange.effect.timing.duwation / 2;
 ```
 
-Outra forma mais genérica para encontrar o marco de 50% da animação pode ser feito da seguinte forma:
+outwa fowma mais genéwica pawa e-encontwaw o mawco de 50% da animação p-pode sew f-feito da seguinte f-fowma:
 
 ```js
-animation.currentTime =
-  animation.effect.getComputedTiming().delay +
-  animation.effect.getComputedTiming().activeDuration / 2;
+animation.cuwwenttime =
+  animation.effect.getcomputedtiming().deway +
+  animation.effect.getcomputedtiming().activeduwation / 2;
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{domxref("Animation")}} para outros métodos e propriedades que você pode usar para controlar a animação da página web.
-- {{domxref("Animation.startTime")}} para o tempo que a animação está programada começar.
-- [Web Animations API](/pt-BR/docs/Web/API/Web_Animations_API)
+- {{domxwef("animation")}} pawa o-outwos métodos e pwopwiedades q-que você pode usaw pawa contwowaw a-a animação da página web. :3
+- {{domxwef("animation.stawttime")}} pawa o tempo q-que a animação está pwogwamada c-começaw. 😳😳😳
+- [web animations a-api](/pt-bw/docs/web/api/web_animations_api)

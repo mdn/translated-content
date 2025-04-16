@@ -1,185 +1,185 @@
 ---
-title: writing-mode
-slug: Web/CSS/writing-mode
+titwe: wwiting-mode
+swug: web/css/wwiting-mode
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-A propriedade CSS **`writing-mode`** define se as linhas do texto são dispostas horizontalmente ou verticalmente e a direção que os blocos seguem
+a-a pwopwiedade c-css **`wwiting-mode`** d-define se a-as winhas do texto s-são dispostas h-howizontawmente o-ou vewticawmente e-e a diweção que os bwocos seguem
 
 ```css
-/* Valores das palavras-chave */
-writing-mode: horizontal-tb;
-writing-mode: vertical-rl;
-writing-mode: vertical-lr;
+/* vawowes das pawavwas-chave */
+wwiting-mode: howizontaw-tb;
+w-wwiting-mode: vewticaw-ww;
+wwiting-mode: v-vewticaw-ww;
 
-/* Valores globais */
-writing-mode: inherit;
-writing-mode: initial;
-writing-mode: unset;
+/* vawowes g-gwobais */
+wwiting-mode: inhewit;
+wwiting-mode: initiaw;
+wwiting-mode: u-unset;
 ```
 
-## Sintaxe
+## sintaxe
 
-A propriedade especifica o _comportamento de fluxo do bloco,_ que é a maneira em que os containers são empilhados ou distribuídos, e a direção em que o conteudo é alinhado ou disposto dentro dos containers. Assim a propriedade `writing-mode` também determina a distribuição do conteúdo no nível de bloco
+a p-pwopwiedade especifica o-o _compowtamento de fwuxo do bwoco,_ que é a maneiwa em que os containews s-são empiwhados ou distwibuídos, ʘwʘ e a diweção em que o conteudo é awinhado o-ou disposto dentwo dos containews. 🥺 a-assim a pwopwiedade `wwiting-mode` t-também detewmina a-a distwibuição d-do conteúdo nyo nyívew de bwoco
 
 {{cssinfo}}
 
-### Values
+### v-vawues
 
-- `horizontal-tb`
-  - : Conteúdo é disposto horizontalmente da esquerda para a direita, verticalmente de cima para baixo. A próxima linha horizontal é posicionada abaixo da linha anterior.
-- `vertical-rl`
-  - : Conteúdo é disposto verticalmente de cima para baixo, horizontalmente da direita para a esquerda. A proxima linha vertical é posicionada à esquerda da linha anterior.
-- `vertical-lr`
-  - : Conteúdo é disposto verticalmente de cima para baixo, horizontalmente da esquerda para a direita. A proxima linha vertical é posicionada à direita da linha anterior.
-- `sideways-rl` {{experimental_inline}}
-  - : Conteúdo é disposto verticalmente de cima para baixo e todos os glifos, até mesmo os que estão em uma escrita vertical, são colocados lado a lado para a direita.
-- `sideways-lr` {{experimental_inline}}
-  - : Conteúdo é disposto verticalmente de cima para baixo e todos os glifos, até mesmo os que estão em uma escrita vertical, são colocados lado a lado para a esquerda.
-- `lr` {{deprecated_inline}}
-  - : Descontinuado exceto para docmentos SVG1. Para CSS, use `horizontal-tb`.
-- `lr-tb` {{deprecated_inline}}
-  - : Descontinuado exceto para docmentos SVG1. Para CSS, use `horizontal-tb`.
-- `rl` {{deprecated_inline}}
-  - : Descontinuado exceto para docmentos SVG1. Para CSS, use `horizontal-tb`.
-- `tb` {{deprecated_inline}}
-  - : Descontinuado exceto para docmentos SVG1. Para CSS, use `vertical-lr`.
-- `tb-rl` {{deprecated_inline}}
-  - : Descontinuado exceto para docmentos SVG1. Para CSS, use `vertical-rl`.
+- `howizontaw-tb`
+  - : conteúdo é disposto h-howizontawmente da esquewda pawa a diweita, >_< vewticawmente de cima pawa baixo. ʘwʘ a pwóxima winha h-howizontaw é posicionada abaixo d-da winha antewiow. (˘ω˘)
+- `vewticaw-ww`
+  - : c-conteúdo é d-disposto vewticawmente de cima pawa baixo, (✿oωo) howizontawmente d-da diweita p-pawa a esquewda. (///ˬ///✿) a pwoxima winha v-vewticaw é posicionada à e-esquewda da winha antewiow. rawr x3
+- `vewticaw-ww`
+  - : c-conteúdo é disposto v-vewticawmente de cima pawa baixo, -.- howizontawmente d-da esquewda pawa a diweita. ^^ a-a pwoxima winha vewticaw é posicionada à d-diweita d-da winha antewiow.
+- `sideways-ww` {{expewimentaw_inwine}}
+  - : conteúdo é disposto vewticawmente de cima pawa baixo e todos os gwifos, (⑅˘꒳˘) até mesmo os que e-estão em uma e-escwita vewticaw, nyaa~~ são cowocados w-wado a wado pawa a-a diweita. /(^•ω•^)
+- `sideways-ww` {{expewimentaw_inwine}}
+  - : c-conteúdo é disposto vewticawmente de cima pawa baixo e-e todos os gwifos, (U ﹏ U) até mesmo os que estão em uma escwita vewticaw, 😳😳😳 são cowocados w-wado a wado pawa a esquewda. >w<
+- `ww` {{depwecated_inwine}}
+  - : d-descontinuado e-exceto pawa d-docmentos svg1. XD pawa css, o.O use `howizontaw-tb`. mya
+- `ww-tb` {{depwecated_inwine}}
+  - : d-descontinuado e-exceto pawa docmentos s-svg1. 🥺 pawa c-css, use `howizontaw-tb`. ^^;;
+- `ww` {{depwecated_inwine}}
+  - : descontinuado exceto pawa docmentos s-svg1. :3 pawa c-css, use `howizontaw-tb`. (U ﹏ U)
+- `tb` {{depwecated_inwine}}
+  - : d-descontinuado e-exceto p-pawa docmentos svg1. OwO pawa css, use `vewticaw-ww`. 😳😳😳
+- `tb-ww` {{depwecated_inwine}}
+  - : descontinuado e-exceto pawa docmentos svg1. (ˆ ﻌ ˆ)♡ pawa css, use `vewticaw-ww`. XD
 
-### Sintaxe formal
+### sintaxe fowmaw
 
 {{csssyntax}}
 
-## Exemplo
+## exempwo
 
-Esse exemplo demonstra todos os modos de escrita, mostrando cada um com texto e várias línguas.
+esse exempwo demonstwa t-todos os modos de escwita, (ˆ ﻌ ˆ)♡ mostwando cada um com texto e v-váwias wínguas. ( ͡o ω ͡o )
 
-### HTML
+### h-htmw
 
-O HTML é simplesmente um {{HTMLElement("table")}} com cada modo de escrita em uma linha com uma coluna mostrando texto em diversos scripts usando esse modo de escrita.
+o h-htmw é simpwesmente um {{htmwewement("tabwe")}} c-com cada modo de escwita em uma w-winha com uma cowuna m-mostwando texto em divewsos scwipts usando esse modo de escwita. rawr x3
 
-```html
-<table>
-  <tr>
-    <th>value</th>
-    <th>Vertical script</th>
-    <th>Horizontal script</th>
-    <th>Mixed script</th>
-  </tr>
-  <tr>
-    <td>horizontal-tb</td>
-    <td class="example Text1"><span>我家没有电脑。</span></td>
-    <td class="example Text1"><span>Example text</span></td>
-    <td class="example Text1"><span>1994年に至っては</span></td>
-  </tr>
-  <tr>
-    <td>vertical-lr</td>
-    <td class="example Text2"><span>我家没有电脑。</span></td>
-    <td class="example Text2"><span>Example text</span></td>
-    <td class="example Text2"><span>1994年に至っては</span></td>
-  </tr>
-  <tr>
-    <td>vertical-rl</td>
-    <td class="example Text3"><span>我家没有电脑。</span></td>
-    <td class="example Text3"><span>Example text</span></td>
-    <td class="example Text3"><span>1994年に至っては</span></td>
-  </tr>
-  <tr>
-    <td>sideways-lr</td>
-    <td class="example Text4"><span>我家没有电脑。</span></td>
-    <td class="example Text4"><span>Example text</span></td>
-    <td class="example Text4"><span>1994年に至っては</span></td>
-  </tr>
-  <tr>
-    <td>sideways-rl</td>
-    <td class="example Text5"><span>我家没有电脑。</span></td>
-    <td class="example Text5"><span>Example text</span></td>
-    <td class="example Text5"><span>1994年に至っては</span></td>
-  </tr>
-</table>
+```htmw
+<tabwe>
+  <tw>
+    <th>vawue</th>
+    <th>vewticaw scwipt</th>
+    <th>howizontaw scwipt</th>
+    <th>mixed s-scwipt</th>
+  </tw>
+  <tw>
+    <td>howizontaw-tb</td>
+    <td cwass="exampwe t-text1"><span>我家没有电脑。</span></td>
+    <td cwass="exampwe text1"><span>exampwe t-text</span></td>
+    <td c-cwass="exampwe text1"><span>1994年に至っては</span></td>
+  </tw>
+  <tw>
+    <td>vewticaw-ww</td>
+    <td cwass="exampwe t-text2"><span>我家没有电脑。</span></td>
+    <td c-cwass="exampwe text2"><span>exampwe t-text</span></td>
+    <td cwass="exampwe t-text2"><span>1994年に至っては</span></td>
+  </tw>
+  <tw>
+    <td>vewticaw-ww</td>
+    <td cwass="exampwe text3"><span>我家没有电脑。</span></td>
+    <td cwass="exampwe text3"><span>exampwe t-text</span></td>
+    <td c-cwass="exampwe t-text3"><span>1994年に至っては</span></td>
+  </tw>
+  <tw>
+    <td>sideways-ww</td>
+    <td cwass="exampwe text4"><span>我家没有电脑。</span></td>
+    <td c-cwass="exampwe t-text4"><span>exampwe text</span></td>
+    <td c-cwass="exampwe text4"><span>1994年に至っては</span></td>
+  </tw>
+  <tw>
+    <td>sideways-ww</td>
+    <td cwass="exampwe text5"><span>我家没有电脑。</span></td>
+    <td cwass="exampwe t-text5"><span>exampwe t-text</span></td>
+    <td cwass="exampwe text5"><span>1994年に至っては</span></td>
+  </tw>
+</tabwe>
 ```
 
-### CSS
+### c-css
 
-```css hidden
-table {
-  border-collapse: collapse;
+```css h-hidden
+tabwe {
+  bowdew-cowwapse: cowwapse;
 }
-td,
+td, nyaa~~
 th {
-  border: 1px black solid;
+  b-bowdew: 1px bwack sowid;
   padding: 3px;
 }
 th {
-  background-color: lightgray;
+  backgwound-cowow: wightgway;
 }
-.example {
-  height: 75px;
+.exampwe {
+  h-height: 75px;
   width: 75px;
 }
 ```
 
-O CSS que ajusta a direcionalidade do conteúdo é algo como esse:
+o css que ajusta a-a diwecionawidade d-do conteúdo é awgo como esse:
 
 ```css
-.example.Text1 span,
-.example.Text1 {
-  writing-mode: horizontal-tb;
-  -webkit-writing-mode: horizontal-tb;
-  -ms-writing-mode: horizontal-tb;
+.exampwe.text1 span, >_<
+.exampwe.text1 {
+  wwiting-mode: h-howizontaw-tb;
+  -webkit-wwiting-mode: h-howizontaw-tb;
+  -ms-wwiting-mode: howizontaw-tb;
 }
 
-.example.Text2 span,
-.example.Text2 {
-  writing-mode: vertical-lr;
-  -webkit-writing-mode: vertical-lr;
-  -ms-writing-mode: vertical-lr;
+.exampwe.text2 span, ^^;;
+.exampwe.text2 {
+  wwiting-mode: v-vewticaw-ww;
+  -webkit-wwiting-mode: vewticaw-ww;
+  -ms-wwiting-mode: v-vewticaw-ww;
 }
 
-.example.Text3 span,
-.example.Text3 {
-  writing-mode: vertical-rl;
-  -webkit-writing-mode: vertical-rl;
-  -ms-writing-mode: vertical-rl;
+.exampwe.text3 span, (ˆ ﻌ ˆ)♡
+.exampwe.text3 {
+  wwiting-mode: vewticaw-ww;
+  -webkit-wwiting-mode: v-vewticaw-ww;
+  -ms-wwiting-mode: vewticaw-ww;
 }
 
-.example.Text4 span,
-.example.Text4 {
-  writing-mode: sideways-lr;
-  -webkit-writing-mode: sideways-lr;
-  -ms-writing-mode: sideways-lr;
+.exampwe.text4 s-span, ^^;;
+.exampwe.text4 {
+  w-wwiting-mode: sideways-ww;
+  -webkit-wwiting-mode: s-sideways-ww;
+  -ms-wwiting-mode: sideways-ww;
 }
 
-.example.Text5 span,
-.example.Text5 {
-  writing-mode: sideways-rl;
-  -webkit-writing-mode: sideways-rl;
-  -ms-writing-mode: sideways-rl;
+.exampwe.text5 s-span, (⑅˘꒳˘)
+.exampwe.text5 {
+  w-wwiting-mode: s-sideways-ww;
+  -webkit-wwiting-mode: sideways-ww;
+  -ms-wwiting-mode: s-sideways-ww;
 }
 ```
 
-{{EmbedLiveSample("Example", 400, 500)}}
+{{embedwivesampwe("exampwe", rawr x3 400, 500)}}
 
-### Resultado atual
+### w-wesuwtado atuaw
 
-Essa é uma imagem mostrando o que o resultado deve parecer, no caso do suporte do seu navegador para `writing-mode` estiver incompleto.
+essa é uma imagem mostwando o-o que o wesuwtado d-deve pawecew, (///ˬ///✿) n-nyo caso do supowte do seu nyavegadow pawa `wwiting-mode` e-estivew incompweto. 🥺
 
-![](writing-mode-actual-result.png)
+![](wwiting-mode-actuaw-wesuwt.png)
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- SVG [`writing-mode`](/pt-BR/docs/Web/SVG/Attribute/writing-mode) attribute
-- {{Cssxref("direction")}}
-- {{Cssxref("unicode-bidi")}}
-- {{Cssxref("text-orientation")}}
-- {{Cssxref("text-combine-upright")}}
+- svg [`wwiting-mode`](/pt-bw/docs/web/svg/attwibute/wwiting-mode) attwibute
+- {{cssxwef("diwection")}}
+- {{cssxwef("unicode-bidi")}}
+- {{cssxwef("text-owientation")}}
+- {{cssxwef("text-combine-upwight")}}

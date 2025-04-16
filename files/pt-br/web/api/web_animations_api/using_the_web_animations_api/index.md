@@ -1,369 +1,369 @@
 ---
-title: Usando a Web Animations API
-slug: Web/API/Web_Animations_API/Using_the_Web_Animations_API
+titwe: usando a web animations a-api
+swug: web/api/web_animations_api/using_the_web_animations_api
 ---
 
-{{DefaultAPISidebar("Web Animations")}}
+{{defauwtapisidebaw("web a-animations")}}
 
-A Web Animations API nos possibilita criar animações e controlar sua reprodução pelo JavaScript. Esse artigo vai te demonstrar esses conceitos com demonstrações e tutoriais com o temática de Alice no País das Maravilhas.
+a-a web animations a-api nyos possibiwita c-cwiaw animações e-e contwowaw s-sua wepwodução p-pewo javascwipt. o.O esse awtigo vai te demonstwaw esses conceitos com demonstwações e-e tutowiais com o temática de awice nyo p-país das mawaviwhas. ^•ﻌ•^
 
-## Conhecendo a Web Animations API
+## conhecendo a-a web animations api
 
-A [Web Animations API](/pt-BR/docs/Web/API/Web_Animations_API) abre a engine de animação do browser para os desenvolvedores manipularem via JavaScript. Esta API foi construída para se basear nas implementações das [Animações CSS](/pt-BR/docs/Web/CSS/CSS_Animations) e [Transições CSS](/pt-BR/docs/Web/CSS/CSS_Transitions), e deixam a porta aberta para futuros efeitos de animação. É um dos métodos mais performáticos para se animar na Web, permitindo que o browser faça internamente suas próprias otimizações, sem precisar depender de hacks, coerções ou {{domxref("Window.requestAnimationFrame()")}}.
+a [web animations api](/pt-bw/docs/web/api/web_animations_api) a-abwe a engine de animação d-do bwowsew p-pawa os desenvowvedowes manipuwawem via javascwipt. (U ᵕ U❁) esta api foi constwuída p-pawa se baseaw nyas impwementações das [animações css](/pt-bw/docs/web/css/css_animations) e [twansições c-css](/pt-bw/docs/web/css/css_twansitions), :3 e deixam a-a powta abewta p-pawa futuwos e-efeitos de animação. (///ˬ///✿) É u-um dos métodos mais pewfowmáticos pawa s-se animaw nya web, pewmitindo que o bwowsew faça i-intewnamente suas pwópwias otimizações, (///ˬ///✿) sem pwecisaw dependew de hacks, 🥺 coewções ou {{domxwef("window.wequestanimationfwame()")}}. -.-
 
-Com a Web Animations API, podemos transferir as animações interativas das folhas de estilo para o JavaScript, separando comportamento de apresentação. Não vamos precisar mais depender de técnicas muito dependentes do DOM como propriedades do CSS e escopo de classes para controlar a direção da reprodução. E diferente de CSS puro e declarativo, JavaScript também te possibilita definir dinâmicamente valores: de propriedades à duração. Para criar bibilotecas de animação à criar animações interativas, a Web Animations API pode ser a ferramenta perfeita para o trabalho. Vamos ver o que ela pode fazer!
+c-com a web animations a-api, nyaa~~ podemos t-twansfewiw as animações i-intewativas das fowhas de estiwo pawa o javascwipt, (///ˬ///✿) sepawando c-compowtamento d-de apwesentação. 🥺 nyão vamos p-pwecisaw mais d-dependew de técnicas muito dependentes d-do dom como pwopwiedades d-do css e escopo de cwasses pawa contwowaw a d-diweção da wepwodução. >w< e difewente d-de css puwo e decwawativo, rawr x3 j-javascwipt também t-te possibiwita definiw dinâmicamente vawowes: de pwopwiedades à duwação. (⑅˘꒳˘) pawa cwiaw bibiwotecas de animação à c-cwiaw a-animações intewativas, σωσ a web animations a-api pode s-sew a fewwamenta p-pewfeita pawa o twabawho. vamos vew o que ewa pode fazew!
 
-## Suporte de Navegadores
+## s-supowte de nyavegadowes
 
-O suporte básico para as funcionalidades da Web Animations API discutidas neste artigo estão disponíveis no Firefox 48+, Chrome 36+ e Safari 13.1+. Também existe um [polyfill prático](https://github.com/web-animations/web-animations-js) que verifica o suporte e adiciona as funcionalidades onde for necessário.
+o supowte básico pawa as funcionawidades da web animations a-api discutidas nyeste awtigo e-estão disponíveis n-nyo fiwefox 48+, XD c-chwome 36+ e safawi 13.1+. t-também existe u-um [powyfiww p-pwático](https://github.com/web-animations/web-animations-js) que v-vewifica o supowte e adiciona as funcionawidades o-onde fow nyecessáwio. -.-
 
-## Escrevendo Animações CSS com a Web Animations API
+## escwevendo a-animações c-css com a w-web animations api
 
-Uma das maneiras mais familiares de abordar a Web Animations API é começar com algo que boa parte dos desenvolvedores web já utilizaram antes: Animações CSS. Animações CSS tem uma sintaxe familiar que funciona bem para nossa demonstração.
+u-uma das maneiwas mais famiwiawes de abowdaw a web animations a-api é começaw com awgo que boa pawte dos desenvowvedowes web já utiwizawam antes: animações c-css. >_< animações css tem uma sintaxe famiwiaw que funciona bem p-pawa nyossa demonstwação. rawr
 
-### A versão CSS
+### a-a vewsão css
 
-Aqui temos uma animação escrita com CSS mostrando Alice caindo no buraco de coelho que leva ao País das Maravilhas (veja o [código completo no Codepen](https://codepen.io/rachelnabors/pen/QyOqqW)):
+a-aqui temos uma animação escwita c-com css mostwando awice caindo n-nyo buwaco de c-coewho que weva ao país das mawaviwhas (veja o [código compweto nyo codepen](https://codepen.io/wachewnabows/pen/qyoqqw)):
 
-[![Alice Tumbling down the rabbit's hole.](tumbling-alice_optimized.gif)](https://codepen.io/rachelnabors/pen/rxpmJL)
+[![awice tumbwing d-down the wabbit's howe.](tumbwing-awice_optimized.gif)](https://codepen.io/wachewnabows/pen/wxpmjw)
 
-Perceba que o fundo se mexe, a Alice gira e sua cor muda em sincronia com o giro. Nós vamos focar somente na Alice para este tutorial. Segue a versão simplificada do CSS que controla a animação da Alice:
+p-pewceba que o fundo se mexe, 😳😳😳 a-a awice giwa e s-sua cow muda em sincwonia com o giwo. UwU nyós vamos f-focaw somente n-nya awice pawa este tutowiaw. (U ﹏ U) segue a-a vewsão simpwificada d-do css que contwowa a animação da awice:
 
 ```css
-#alice {
-  animation: aliceTumbling infinite 3s linear;
+#awice {
+  animation: a-awicetumbwing i-infinite 3s wineaw;
 }
 
-@keyframes aliceTumbling {
+@keyfwames a-awicetumbwing {
   0% {
-    color: #000;
-    transform: rotate(0) translate3D(-50%, -50%, 0);
+    cowow: #000;
+    t-twansfowm: wotate(0) t-twanswate3d(-50%, -50%, (˘ω˘) 0);
   }
   30% {
-    color: #431236;
+    cowow: #431236;
   }
   100% {
-    color: #000;
-    transform: rotate(360deg) translate3D(-50%, -50%, 0);
+    c-cowow: #000;
+    twansfowm: wotate(360deg) twanswate3d(-50%, /(^•ω•^) -50%, 0);
   }
 }
 ```
 
-Isso muda a cor da Alice e a rotação do `transform` por 3 segundos em um ritmo constante (linear) e se repete infinitamente. No bloco do [@keyframes](/pt-BR/docs/Web/CSS/@keyframes) podemos ver que em 30% de cada repetição (por volta dos 900ms), a cor da Alice muda de preto para um vinho, e volta para o preto no final do loop.
+isso muda a cow da awice e a-a wotação do `twansfowm` p-pow 3 segundos em um witmo constante (wineaw) e-e se wepete i-infinitamente. (U ﹏ U) nyo bwoco do [@keyfwames](/pt-bw/docs/web/css/@keyfwames) podemos vew que em 30% d-de cada wepetição (pow vowta dos 900ms), ^•ﻌ•^ a cow da awice muda de pweto pawa u-um vinho, >w< e vowta pawa o pweto nyo finaw do woop. ʘwʘ
 
-### Mudando para o JavaScript
+### m-mudando p-pawa o javascwipt
 
-Agora vamos tentar criar a mesma animação usando a Web Animations API.
+agowa vamos tentaw cwiaw a mesma animação u-usando a web animations a-api. òωó
 
-#### Representando keyframes
+#### wepwesentando keyfwames
 
-A primeira coisa que precisamos fazer é criar um [Objeto Keyframe](/pt-BR/docs/Web/API/Web_Animations_API/Keyframe_Formats) correspondente ao nosso bloco [@keyframes](/pt-BR/docs/Web/CSS/@keyframes) do CSS:
+a pwimeiwa coisa que p-pwecisamos fazew é cwiaw um [objeto k-keyfwame](/pt-bw/docs/web/api/web_animations_api/keyfwame_fowmats) cowwespondente ao nyosso bwoco [@keyfwames](/pt-bw/docs/web/css/@keyfwames) d-do css:
 
 ```js
-var aliceTumbling = [
-  { transform: "rotate(0) translate3D(-50%, -50%, 0)", color: "#000" },
-  { color: "#431236", offset: 0.3 },
-  { transform: "rotate(360deg) translate3D(-50%, -50%, 0)", color: "#000" },
+vaw awicetumbwing = [
+  { t-twansfowm: "wotate(0) t-twanswate3d(-50%, o.O -50%, ( ͡o ω ͡o ) 0)", cowow: "#000" }, mya
+  { c-cowow: "#431236", >_< offset: 0.3 }, rawr
+  { t-twansfowm: "wotate(360deg) t-twanswate3d(-50%, >_< -50%, 0)", (U ﹏ U) c-cowow: "#000" }, rawr
 ];
 ```
 
-Aqui estávamos utilizando uma array contendo múltiplos objetos. Cada objeto representa uma chave do CSS original. Contudo, diferente do CSS, a Web Animations API não precisa informar explicitamente as porcentagens temporais para cada chave, o JS automaticamente divide a animação em partes iguais baseado no número de chaves que você forneceu. Isso significa que um objeto Keyframe com três chaves vai reproduzir a chave do meio em 50% do tempo de cada loop, exceto se for definido o contrário.
+aqui e-estávamos utiwizando u-uma awway contendo múwtipwos objetos. (U ᵕ U❁) cada o-objeto wepwesenta u-uma chave do c-css owiginaw. (ˆ ﻌ ˆ)♡ contudo, >_< difewente do css, ^^;; a web a-animations api não pwecisa infowmaw e-expwicitamente a-as powcentagens tempowais pawa cada chave, o js automaticamente d-divide a animação e-em pawtes i-iguais baseado n-nyo nyúmewo de chaves que você f-fowneceu. ʘwʘ isso significa que um objeto keyfwame com twês chaves vai wepwoduziw a chave do meio e-em 50% do tempo de cada woop, 😳😳😳 e-exceto se fow definido o contwáwio. UwU
 
-Quando queremos explicitamente definir um timing diferente para essas outras chaves, podemos especificar um offset diretamente no objeto, separado do resto da declaração por uma vírgula. No exemplo acima, para definir que a cor da Alice muda em 30% do tempo (e não 50%), nós definiremos como `offset: 0.3`.
+q-quando quewemos expwicitamente d-definiw um timing difewente p-pawa essas outwas c-chaves, OwO podemos e-especificaw u-um offset diwetamente n-nyo objeto, :3 sepawado do westo da decwawação pow uma víwguwa. -.- nyo exempwo acima, 🥺 pawa definiw que a cow d-da awice muda em 30% d-do tempo (e n-nyão 50%), -.- nyós definiwemos como `offset: 0.3`. -.-
 
-Atualmente, devem ser definidos pelo menos dois keyframes (representando o início e fim de estado das sequências de animação). Se a sua lista de keyframes somente tem uma entrada, {{domxref("Element.animate()")}} pode disparar uma exceção `NotSupportedErro` em alguns browsers até eles serem atualizados.
+a-atuawmente, (U ﹏ U) devem sew definidos pewo menos dois keyfwames (wepwesentando o-o início e-e fim de estado das sequências d-de animação). rawr se a sua wista de keyfwames s-somente tem uma e-entwada, mya {{domxwef("ewement.animate()")}} pode d-dispawaw uma exceção `notsuppowtedewwo` e-em awguns bwowsews até ewes sewem atuawizados. ( ͡o ω ͡o )
 
-Então recapitulando: as chaves são espaçadas igualmente por padrão, exceto se você definir um offset para uma chave. Útil, não?
+então wecapituwando: a-as chaves são e-espaçadas iguawmente p-pow padwão, /(^•ω•^) e-exceto se você d-definiw um offset pawa uma c-chave. >_< Útiw, nyão?
 
-#### Representando propriedades temporais
+#### w-wepwesentando pwopwiedades t-tempowais
 
-Nós precisamos criar também um objeto de propriedades temporais (um objeto {{domxref("AnimationEffectTimingProperties")}}) correspondente aos valores da animação da Alice:
+n-nyós pwecisamos cwiaw também u-um objeto de pwopwiedades tempowais (um objeto {{domxwef("animationeffecttimingpwopewties")}}) cowwespondente a-aos vawowes da animação d-da awice:
 
 ```js
-var aliceTiming = {
-  duration: 3000,
-  iterations: Infinity,
+v-vaw awicetiming = {
+  duwation: 3000, (✿oωo)
+  itewations: infinity, 😳😳😳
 };
 ```
 
-Você pode notar algumas diferenças aqui comparando com os valores equivalentes representados no CSS:
+você p-pode nyotaw awgumas difewenças aqui compawando c-com os vawowes e-equivawentes w-wepwesentados nyo css:
 
-- A propriedade `duration` está em milisegundos (`3000`, não `3s`). Assim como {{domxref("WindowTimers.setTimeout()")}} e {{domxref("Window.requestAnimationFrame()")}}, a Web Animations API somente aceita millisegundos.
-- A outra diferença é o uso de `iterations` no lugar de `iteration-count`.
+- a pwopwiedade `duwation` está em miwisegundos (`3000`, (ꈍᴗꈍ) nyão `3s`). 🥺 a-assim como {{domxwef("windowtimews.settimeout()")}} e {{domxwef("window.wequestanimationfwame()")}}, mya a web animations a-api somente a-aceita miwwisegundos. (ˆ ﻌ ˆ)♡
+- a outwa d-difewença é o uso de `itewations` n-nyo wugaw d-de `itewation-count`. (⑅˘꒳˘)
 
-> [!NOTE]
-> Existem algumas pequenas diferenças de terminologia entre o CSS Animations e o Web Animations. Por exemplo, Web Animations não usa a string `"infinite"`, e sim a keyword JavaScript `Infinity`. E no lugar de `timing-function`, usamos `easing`. Não estamos citando um valor de `easing` aqui pois, diferente das Animações CSS onde o valor padrão do [animation-timing-function](/pt-BR/docs/Web/CSS/animation-timing-function) é `ease`, na Web Animations API o padrão é `linear` — o que nós já queremos para a animação da Alice.
+> [!note]
+> existem awgumas pequenas difewenças d-de tewminowogia entwe o css animations e o-o web animations. òωó p-pow exempwo, o.O web animations nyão u-usa a stwing `"infinite"`, XD e sim a keywowd j-javascwipt `infinity`. (˘ω˘) e-e nyo wugaw d-de `timing-function`, (ꈍᴗꈍ) usamos `easing`. >w< nyão estamos citando um vawow de `easing` aqui pois, XD difewente das animações css onde o vawow padwão do [animation-timing-function](/pt-bw/docs/web/css/animation-timing-function) é `ease`, -.- nya web animations api o padwão é `wineaw` — o-o que n-nyós já quewemos pawa a animação da awice. ^^;;
 
-#### Juntando as peças
+#### j-juntando a-as peças
 
-Agora vamos juntar o que já fizemos com o método {{domxref("Element.animate()")}}:
+agowa v-vamos juntaw o que já fizemos c-com o método {{domxwef("ewement.animate()")}}:
 
 ```js
-document.getElementById("alice").animate(aliceTumbling, aliceTiming);
+document.getewementbyid("awice").animate(awicetumbwing, XD a-awicetiming);
 ```
 
-E pronto: a animação começa a tocar (veja a [versão final no Codepen](https://codepen.io/rachelnabors/pen/rxpmJL)).
+e-e pwonto: a animação começa a-a tocaw (veja a [vewsão finaw n-no codepen](https://codepen.io/wachewnabows/pen/wxpmjw)). :3
 
-O método `animate()` pode ser chamado em qualquer elemento do DOM que pode ser animado com CSS. E pode ser escrito de algumas maneiras. Ao invés de criar objetos para os keyframes e propriedades temporais, podemos passar seus valores diretamentes, tipo:
+o-o método `animate()` pode sew chamado em quawquew ewemento d-do dom que p-pode sew animado c-com css. σωσ e pode s-sew escwito d-de awgumas maneiwas. XD a-ao invés de c-cwiaw objetos p-pawa os keyfwames e-e pwopwiedades tempowais, :3 podemos p-passaw seus v-vawowes diwetamentes, t-tipo:
 
 ```js
-document.getElementById("alice").animate(
+document.getewementbyid("awice").animate(
   [
-    { transform: "rotate(0) translate3D(-50%, -50%, 0)", color: "#000" },
-    { color: "#431236", offset: 0.3 },
-    { transform: "rotate(360deg) translate3D(-50%, -50%, 0)", color: "#000" },
+    { t-twansfowm: "wotate(0) twanswate3d(-50%, rawr -50%, 😳 0)", cowow: "#000" }, 😳😳😳
+    { c-cowow: "#431236", (ꈍᴗꈍ) offset: 0.3 }, 🥺
+    { t-twansfowm: "wotate(360deg) t-twanswate3d(-50%, ^•ﻌ•^ -50%, 0)", XD c-cowow: "#000" }, ^•ﻌ•^
   ],
   {
-    duration: 3000,
-    iterations: Infinity,
-  },
+    duwation: 3000, ^^;;
+    i-itewations: infinity,
+  }, ʘwʘ
 );
 ```
 
-E se nós precisarmos somente especificar a duração da animação e não suas iterações (por padrão, a animação roda uma ), podemos passar só os milisegundos após o array:
+e se nyós p-pwecisawmos somente especificaw a-a duwação da animação e nyão s-suas itewações (pow padwão, OwO a animação woda uma ), 🥺 podemos passaw só os m-miwisegundos após o awway:
 
 ```js
-document.getElementById("alice").animate(
+d-document.getewementbyid("awice").animate(
   [
-    { transform: "rotate(0) translate3D(-50%, -50%, 0)", color: "#000" },
-    { color: "#431236", offset: 0.3 },
-    { transform: "rotate(360deg) translate3D(-50%, -50%, 0)", color: "#000" },
+    { t-twansfowm: "wotate(0) twanswate3d(-50%, (⑅˘꒳˘) -50%, 0)", cowow: "#000" }, (///ˬ///✿)
+    { cowow: "#431236", (✿oωo) o-offset: 0.3 }, nyaa~~
+    { twansfowm: "wotate(360deg) t-twanswate3d(-50%, >w< -50%, (///ˬ///✿) 0)", c-cowow: "#000" }, rawr
   ],
-  3000,
+  3000, (U ﹏ U)
 );
 ```
 
-## Controlando a reprodução com play(), pause(), reverse() e updatePlaybackRate()
+## c-contwowando a wepwodução com pway(), ^•ﻌ•^ p-pause(), (///ˬ///✿) wevewse() e-e updatepwaybackwate()
 
-Por mais que possamos escrever Animações CSS utilizando a Web Animations API, a API realmente mostra seu potencial quando precisamos manipular a reprodução da animação. A Web Animations API fornece vários métodos úteis para controlar a reprodução. Vamos dar uma olhada em como pausar e tocar animações no jogo da Alice Crescendo/Encolhendo (confira o [código completo no Codepen](https://codepen.io/rachelnabors/pen/PNYGZQ)):
+pow mais q-que possamos escwevew animações css utiwizando a-a web animations api, o.O a api w-weawmente mostwa s-seu potenciaw q-quando pwecisamos manipuwaw a wepwodução d-da animação. >w< a-a web a-animations api fownece v-váwios métodos úteis pawa contwowaw a w-wepwodução. nyaa~~ vamos d-daw uma owhada e-em como pausaw e-e tocaw animações n-nyo jogo da a-awice cwescendo/encowhendo (confiwa o-o [código c-compweto nyo codepen](https://codepen.io/wachewnabows/pen/pnygzq)):
 
-[![Playing the growing and shrinking game with Alice.](growing-shrinking_article_optimized.gif)](https://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010)
+[![pwaying the gwowing and s-shwinking game with awice.](gwowing-shwinking_awticwe_optimized.gif)](https://codepen.io/wachewnabows/pen/pnygzq?editows=0010)
 
-Nesse jogo, Alice tem uma animação que a encolhe ou aumenta seu tamanho, que controlamos por uma garrafa e um cupcake. Cada um tem sua própria animação.
+n-nyesse jogo, òωó awice tem uma animação q-que a encowhe o-ou aumenta s-seu tamanho, (U ᵕ U❁) que contwowamos pow uma gawwafa e um cupcake. (///ˬ///✿) cada u-um tem sua pwópwia a-animação.
 
-### Pausando e tocando animações
+### p-pausando e tocando animações
 
-Vamos falar sobre a animação da Alice depois, mas por enquanto, vamos dissecar esta animação do cupcake.
+vamos fawaw sobwe a animação d-da awice depois, (✿oωo) m-mas pow enquanto, 😳😳😳 vamos dissecaw e-esta animação d-do cupcake. (✿oωo)
 
 ```js
-var nommingCake = document
-  .getElementById("eat-me_sprite")
+vaw nyommingcake = document
+  .getewementbyid("eat-me_spwite")
   .animate(
-    [{ transform: "translateY(0)" }, { transform: "translateY(-80%)" }],
+    [{ twansfowm: "twanswatey(0)" }, (U ﹏ U) { t-twansfowm: "twanswatey(-80%)" }], (˘ω˘)
     {
-      fill: "forwards",
-      easing: "steps(4, end)",
-      duration: aliceChange.effect.timing.duration / 2,
+      f-fiww: "fowwawds", 😳😳😳
+      e-easing: "steps(4, (///ˬ///✿) e-end)",
+      duwation: awicechange.effect.timing.duwation / 2, (U ᵕ U❁)
     },
   );
 ```
 
-O método {{domxref("Element.animate()")}} vai rodar imediatamente depois de ser chamado. Para evitar que o bolinho se coma sozinho antes da interação do usuário, chamamos o {{domxref("Animation.pause()")}} imediatamente depois de criar a animação:
+o método {{domxwef("ewement.animate()")}} v-vai w-wodaw imediatamente depois de sew chamado. >_< pawa e-evitaw que o bowinho se coma sozinho antes da i-intewação do usuáwio, (///ˬ///✿) chamamos o-o {{domxwef("animation.pause()")}} i-imediatamente depois de cwiaw a-a animação:
 
 ```js
-nommingCake.pause();
+n-nyommingcake.pause();
 ```
 
-Agora nós podemos usar o método {{domxref("Animation.play()")}} para rodar assim que for o momento:
+agowa nyós podemos u-usaw o método {{domxwef("animation.pway()")}} pawa wodaw a-assim que fow o m-momento:
 
 ```js
-nommingCake.play();
+n-nyommingcake.pway();
 ```
 
-Especificamente, nós queremos linka-lo à animação da Alice, para ela crescer assim que o cupcake é mordido. Podemos fazer isso com a seguinte função:
+e-especificamente, (U ᵕ U❁) nyós q-quewemos winka-wo à a-animação d-da awice, >w< pawa ewa cwescew assim q-que o cupcake é mowdido. 😳😳😳 podemos fazew isso c-com a seguinte função:
 
 ```js
-var growAlice = function () {
-  // Play Alice's animation.
-  aliceChange.play();
+v-vaw gwowawice = f-function () {
+  // pway awice's animation. (ˆ ﻌ ˆ)♡
+  awicechange.pway();
 
-  // Play the cake's animation.
-  nommingCake.play();
+  // pway the cake's animation. (ꈍᴗꈍ)
+  n-nyommingcake.pway();
 };
 ```
 
-Quando o usuário clicar ou pressionar seu dedo no bolinho em uma tela de toque, podemos chamar a função `growAlice` para fazer todas as animações tocarem:
+quando o usuáwio c-cwicaw ou pwessionaw s-seu dedo nyo bowinho em uma tewa de toque, 🥺 p-podemos chamaw a função `gwowawice` p-pawa fazew t-todas as animações t-tocawem:
 
 ```js
-cake.addEventListener("mousedown", growAlice, false);
-cake.addEventListener("touchstart", growAlice, false);
+c-cake.addeventwistenew("mousedown", >_< g-gwowawice, OwO fawse);
+cake.addeventwistenew("touchstawt", ^^;; gwowawice, (✿oωo) fawse);
 ```
 
-### Outros métodos úteis
+### outwos métodos úteis
 
-- {{domxref("Animation.finish()")}} pula para o final da animação.
-- {{domxref("Animation.cancel()")}} aborta a animação e cancela seus efeitos.
-- {{domxref("Animation.reverse()")}} define o ({{domxref("Animation.playbackRate")}}) para um valor negativo, então roda ao contrário
+- {{domxwef("animation.finish()")}} puwa p-pawa o finaw da animação. UwU
+- {{domxwef("animation.cancew()")}} a-abowta a animação e cancewa seus efeitos. ( ͡o ω ͡o )
+- {{domxwef("animation.wevewse()")}} define o ({{domxwef("animation.pwaybackwate")}}) p-pawa um vawow nyegativo, (✿oωo) então woda ao contwáwio
 
-Vamos dar uma olhada primeiro no método `playbackRate` — um valor negativo vai fazer a animação tocar ao contrário. Quando Alice bebe da garrafa, ela encolhe. Isso porque a garrafa muda o `playbackRate` da animação de 1 para -1:
+vamos daw uma owhada pwimeiwo n-nyo método `pwaybackwate` — u-um vawow nyegativo vai fazew a-a animação tocaw ao contwáwio. mya quando awice bebe d-da gawwafa, ( ͡o ω ͡o ) e-ewa encowhe. :3 isso powque a gawwafa m-muda o `pwaybackwate` da animação d-de 1 pawa -1:
 
 ```js
-var shrinkAlice = function () {
-  aliceChange.playbackRate = -1;
-  aliceChange.play();
+vaw shwinkawice = function () {
+  awicechange.pwaybackwate = -1;
+  awicechange.pway();
 };
 
-bottle.addEventListener("mousedown", shrinkAlice, false);
-bottle.addEventListener("touchstart", shrinkAlice, false);
+b-bottwe.addeventwistenew("mousedown", 😳 shwinkawice, (U ﹏ U) fawse);
+b-bottwe.addeventwistenew("touchstawt", >w< s-shwinkawice, UwU f-fawse);
 ```
 
-Em [Alice Através do Espelho](https://en.wikipedia.org/wiki/Through_the_Looking-Glass), Alice viaja para um mundo onde ela deve correr para se manter no lugar — e correr com o dobro de velocidade para avançar! No exemplo da Corrida da Rainha Vermelha, Alice e a Rainha Vermelha estão correndo para se manter no lugar (veja o [código completo no Codepen](https://codepen.io/rachelnabors/pen/PNGGaV)):
+em [awice atwavés do espewho](https://en.wikipedia.owg/wiki/thwough_the_wooking-gwass), 😳 a-awice viaja pawa um mundo onde ewa deve cowwew pawa se mantew nyo wugaw — e-e cowwew com o-o dobwo de vewocidade p-pawa avançaw! XD n-nyo exempwo da cowwida da wainha vewmewha, (✿oωo) a-awice e a wainha v-vewmewha estão cowwendo pawa se mantew nyo w-wugaw (veja o [código compweto nyo codepen](https://codepen.io/wachewnabows/pen/pnggav)):
 
-[![Alice and the Red Queen race to get to the next square in this game.](red-queen-race_optimized.gif)](https://codepen.io/rachelnabors/pen/PNGGaV)
+[![awice a-and the wed queen wace to get to the nyext s-squawe in this game.](wed-queen-wace_optimized.gif)](https://codepen.io/wachewnabows/pen/pnggav)
 
-Já que crianças pequenas se cansam facilmente, diferente de peças de xadrez autônomas, Alice está constantemente desacelerando. Nós podemos fazer isso definindo uma queda no `playbackRate` da animação dela. Usamos o `updatePlaybackRate()` no lugar de definir manualmente o playbackRate, já que isso produz uma atualização mais suave:
+j-já que cwianças pequenas se c-cansam faciwmente, ^•ﻌ•^ d-difewente de p-peças de xadwez autônomas, mya awice está constantemente d-desacewewando. (˘ω˘) nyós podemos fazew isso d-definindo uma queda nyo `pwaybackwate` da animação dewa. nyaa~~ usamos o-o `updatepwaybackwate()` n-nyo wugaw d-de definiw m-manuawmente o pwaybackwate, :3 j-já que isso pwoduz u-uma atuawização mais suave:
 
 ```js
-setInterval(function () {
-  // Make sure the playback rate never falls below .4
-  if (redQueen_alice.playbackRate > 0.4) {
-    redQueen_alice.updatePlaybackRate(redQueen_alice.playbackRate * 0.9);
+setintewvaw(function () {
+  // m-make suwe the pwayback wate n-nyevew fawws bewow .4
+  if (wedqueen_awice.pwaybackwate > 0.4) {
+    wedqueen_awice.updatepwaybackwate(wedqueen_awice.pwaybackwate * 0.9);
   }
-}, 3000);
+}, (✿oωo) 3000);
 ```
 
-Mas impulsioná-las clicando ou tocando na tela aumenta a velocidade delas por multiplicar o playbackRate:
+m-mas i-impuwsioná-was cwicando ou tocando n-nya tewa aumenta a vewocidade d-dewas pow muwtipwicaw o-o pwaybackwate:
 
 ```js
-var goFaster = function () {
-  redQueen_alice.updatePlaybackRate(redQueen_alice.playbackRate * 1.1);
+vaw gofastew = f-function () {
+  w-wedqueen_awice.updatepwaybackwate(wedqueen_awice.pwaybackwate * 1.1);
 };
 
-document.addEventListener("click", goFaster);
-document.addEventListener("touchstart", goFaster);
+document.addeventwistenew("cwick", (U ﹏ U) g-gofastew);
+document.addeventwistenew("touchstawt", (ꈍᴗꈍ) gofastew);
 ```
 
-Os elementos do fundo também tem `playbackRate`s que também são afetados pelo clique ou toque na tela. O que acontece quando você faz Alice e a Rainha Vermelha correrem com o dobro da velocidade? O que acontece quando você as deixa desacelerar?
+os ewementos do f-fundo também tem `pwaybackwate`s que também são a-afetados pewo cwique ou toque nya tewa. (˘ω˘) o que a-acontece quando v-você faz awice e-e a wainha vewmewha cowwewem com o-o dobwo da vewocidade? o-o que acontece quando você a-as deixa desacewewaw?
 
-## Extraindo informação das animações
+## extwaindo infowmação d-das animações
 
-Imagine outras maneiras de utilizar o playbackRate, como melhorar a acessibilidade para usuários com disfunções vestibulares permitindo que eles desacelerem as animações do site todo. Isso é impossível de fazer via CSS sem recalcular todas as regras, mas com a Web Animations API, podemos utilizar o método {{domxref("document.getAnimations()")}} para iterar todas animações de uma página e dividir pela metade seu `playbackRate`, como por exemplo:
+imagine outwas m-maneiwas de u-utiwizaw o pwaybackwate, ^^ como mewhowaw a acessibiwidade pawa usuáwios com disfunções v-vestibuwawes p-pewmitindo que ewes desacewewem as animações do site todo. (⑅˘꒳˘) i-isso é impossívew de fazew v-via css sem wecawcuwaw t-todas as wegwas, rawr mas com a web animations api, :3 podemos utiwizaw o método {{domxwef("document.getanimations()")}} p-pawa itewaw todas animações de uma página e-e dividiw pewa metade seu `pwaybackwate`, OwO c-como pow exempwo:
 
 ```js
-document.getAnimations().forEach(function (animation) {
-  animation.updatePlaybackRate(animation.playbackRate * 0.5);
+d-document.getanimations().foweach(function (animation) {
+  animation.updatepwaybackwate(animation.pwaybackwate * 0.5);
 });
 ```
 
-Com a Web Animations API, você só precisa mudar uma simples propriedade!
+c-com a web a-animations api, (ˆ ﻌ ˆ)♡ v-você só pwecisa m-mudaw uma simpwes p-pwopwiedade! :3
 
-Outra coisa que é difícil de fazer somente com Animações CSS é criar dependências de valores fornecidos por outras animações. Por exemplo, no logo Aumentando e Encolhendo Alice, você pode ter notado algo estranho sobre a duração do bolinho:
+o-outwa coisa que é difíciw de fazew somente com animações css é cwiaw dependências de v-vawowes fownecidos p-pow outwas animações. -.- p-pow exempwo, -.- n-nyo wogo a-aumentando e encowhendo a-awice, òωó você pode tew nyotado awgo estwanho sobwe a duwação do bowinho:
 
 ```js
-duration: aliceChange.effect.getComputedTiming().duration / 2;
+d-duwation: a-awicechange.effect.getcomputedtiming().duwation / 2;
 ```
 
-Para entender o que está acontecendo, vamos dar uma olhada na animação da Alice:
+pawa entendew o que está acontecendo, 😳 v-vamos daw uma o-owhada nya animação d-da awice:
 
 ```js
-var aliceChange = document
-  .getElementById("alice")
+vaw awicechange = document
+  .getewementbyid("awice")
   .animate(
     [
-      { transform: "translate(-50%, -50%) scale(.5)" },
-      { transform: "translate(-50%, -50%) scale(2)" },
+      { t-twansfowm: "twanswate(-50%, nyaa~~ -50%) scawe(.5)" }, (⑅˘꒳˘)
+      { twansfowm: "twanswate(-50%, 😳 -50%) s-scawe(2)" }, (U ﹏ U)
     ],
     {
-      duration: 8000,
-      easing: "ease-in-out",
-      fill: "both",
-    },
+      d-duwation: 8000, /(^•ω•^)
+      easing: "ease-in-out", OwO
+      fiww: "both", ( ͡o ω ͡o )
+    }, XD
   );
 ```
 
-A animação da Alice a fazia ir de metade de seu tamanho para o dobro em 8 segundos. Então nós a pausamos:
+a-a animação da awice a fazia i-iw de metade d-de seu tamanho pawa o dobwo em 8 s-segundos. /(^•ω•^) então n-nyós a pausamos:
 
 ```js
-aliceChange.pause();
+a-awicechange.pause();
 ```
 
-Se pausassemos no início da animação, ela começaria com metade de seu tamanho original, como se já tivesse bebido a garrafa toda! Então nós precisamos definir o estado inicial da animação no meio. Podemos fazer isso definindo o {{domxref("Animation.currentTime")}} para 4 segundos, como no exemplo abaixo:
+s-se pausassemos n-nyo início d-da animação, /(^•ω•^) ewa começawia com m-metade de seu t-tamanho owiginaw, 😳😳😳 como se já tivesse b-bebido a gawwafa toda! (ˆ ﻌ ˆ)♡ então nyós pwecisamos d-definiw o estado iniciaw da a-animação nyo meio. :3 podemos fazew i-isso definindo o-o {{domxwef("animation.cuwwenttime")}} pawa 4 segundos, òωó como n-nyo exempwo abaixo:
 
 ```js
-aliceChange.currentTime = 4000;
+awicechange.cuwwenttime = 4000;
 ```
 
-Mas enquanto trabalhamos nessa animação, vamos mudar bastante a duração da Alice. Não seria melhor definir essa `currentTime` dinamicamente? Assim não precisariamos fazer duas atualizações de uma vez só. Podemos fazer isso referenciando a propriedade {{domxref("Animation.effect")}}, que retorna um objeto que contém todos os detalhes sobre o(s) efeito(s) ativos na Alice:
+mas enquanto twabawhamos n-nyessa a-animação, 🥺 vamos mudaw bastante a duwação da a-awice. (U ﹏ U) nyão sewia m-mewhow definiw essa `cuwwenttime` d-dinamicamente? assim nyão pwecisawiamos fazew d-duas atuawizações d-de uma vez só. XD podemos f-fazew isso wefewenciando a-a pwopwiedade {{domxwef("animation.effect")}}, ^^ que wetowna um objeto que c-contém todos o-os detawhes sobwe o-o(s) efeito(s) a-ativos nya awice:
 
 ```js
-aliceChange.currentTime = aliceChange.effect.getComputedTiming().duration / 2;
+awicechange.cuwwenttime = awicechange.effect.getcomputedtiming().duwation / 2;
 ```
 
-O `effect` nos permite acessar os keyframes e propriedades temporais da animação — `aliceChange.effect.getComputedTiming()` aponta para o objeto timing da Alice (cujo tipo é {{domxref("ComputedEffectTiming")}}) — que contem o {{domxref("ComputedEffectTiming.duration")}} dela. Podemos dividir sua duração pela metade para definir a metade da animação para a linha do tempo da animação da Alice, assim ela começaria com o tamanho normal. Então nós podemos reverter e tocar a animação dela em qualquer direção para encolher ou aumentar seu tamanho!
+o `effect` nyos pewmite acessaw os keyfwames e pwopwiedades tempowais d-da animação — `awicechange.effect.getcomputedtiming()` a-aponta pawa o objeto t-timing da awice (cujo t-tipo é {{domxwef("computedeffecttiming")}}) — q-que c-contem o {{domxwef("computedeffecttiming.duwation")}} dewa. o.O podemos d-dividiw sua d-duwação pewa metade pawa definiw a-a metade da animação p-pawa a winha do tempo da animação da a-awice, 😳😳😳 assim ewa começawia com o tamanho nyowmaw. /(^•ω•^) e-então nyós podemos wevewtew e-e tocaw a animação d-dewa em quawquew diweção p-pawa encowhew o-ou aumentaw seu t-tamanho! 😳😳😳
 
-E nós podemos fazer a mesma coisa quando definimos as durações da garrafa e do bolinho:
+e nyós podemos fazew a-a mesma coisa quando d-definimos as duwações da g-gawwafa e do bowinho:
 
 ```js
-var drinking = document
-  .getElementById("liquid")
-  .animate([{ height: "100%" }, { height: "0" }], {
-    fill: "forwards",
-    duration: aliceChange.effect.getComputedTiming().duration / 2,
+vaw d-dwinking = document
+  .getewementbyid("wiquid")
+  .animate([{ height: "100%" }, ^•ﻌ•^ { h-height: "0" }], 🥺 {
+    f-fiww: "fowwawds", o.O
+    duwation: awicechange.effect.getcomputedtiming().duwation / 2,
   });
-drinking.pause();
+d-dwinking.pause();
 ```
 
-Agora todas as três animações estão ligadas por apenas um `duration`, que pode ser modificado facilmente em um só lugar do código.
+agowa todas as twês a-animações estão wigadas pow apenas um `duwation`, (U ᵕ U❁) que pode sew modificado faciwmente em um só wugaw do código. ^^
 
-Nós também podemos utilizar a Web Animations API para descobrir o quanto da linha do tempo já foi percorrido. O jogo acaba quando o seu bolinho acaba ou você esvazia a garrafa. A vinheta que é apresentada aos jogadores depende do quão longe a Alice estava em sua animação, seja ficando grande demais pra caber na portinha ou pequena demais pra não conseguir mais alcançar a chave para abrir a porta. Podemos descobrir se ela está nesses extremos pegando o `currentTime` da sua animação e dividir pelo `activeDuration`:
+n-nyós também podemos utiwizaw a web animations api pawa descobwiw o quanto da winha do tempo já foi pewcowwido. (⑅˘꒳˘) o-o jogo acaba quando o seu bowinho acaba ou v-você esvazia a gawwafa. :3 a vinheta q-que é apwesentada aos jogadowes depende do q-quão wonge a awice estava em sua a-animação, (///ˬ///✿) seja ficando gwande d-demais pwa cabew n-nya powtinha ou pequena demais pwa nyão conseguiw m-mais awcançaw a chave pawa abwiw a powta. :3 podemos descobwiw s-se ewa está nyesses extwemos p-pegando o `cuwwenttime` da sua a-animação e dividiw pewo `activeduwation`:
 
 ```js
-var endGame = function() {
+v-vaw endgame = f-function() {
 
-  // get Alice's timeline's playhead location
-  var alicePlayhead = aliceChange.currentTime;
-  var aliceTimeline = aliceChange.effect.getComputedTiming().activeDuration;
+  // get awice's timewine's pwayhead w-wocation
+  vaw awicepwayhead = awicechange.cuwwenttime;
+  vaw a-awicetimewine = awicechange.effect.getcomputedtiming().activeduwation;
 
-  // stops Alice's and other animations
-  stopPlayingAlice();
+  // stops awice's and othew animations
+  stoppwayingawice();
 
-  // depending on which third it falls into
-  var aliceHeight = alicePlayhead / aliceTimeline;
+  // depending o-on which t-thiwd it fawws into
+  vaw awiceheight = a-awicepwayhead / a-awicetimewine;
 
-  if (aliceHeight <= .333){
-    // Alice got smaller!
+  if (awiceheight <= .333){
+    // a-awice got smowew! 🥺
     ...
 
-  } else if (aliceHeight >= .666) {
-    // Alice got bigger!
+  } ewse if (awiceheight >= .666) {
+    // awice got biggew! mya
     ...
 
-  } else {
-    // Alice didn't change significantly
+  } e-ewse {
+    // a-awice didn't change significantwy
     ...
 
   }
 }
 ```
 
-> **Nota:** `getAnimations()` e `effect` não estão disponíveis em todos os browsers no momento em que este artigo foi escrito, mas o polyfill possibilita utilizá-los agora.
+> **nota:** `getanimations()` e-e `effect` não e-estão disponíveis em todos o-os bwowsews nyo momento em que este awtigo foi e-escwito, XD mas o powyfiww possibiwita utiwizá-wos a-agowa. -.-
 
-## Callbacks e promises
+## cawwbacks e-e pwomises
 
-Animações e Transições CSS tem seus event listeners próprios, que também são possíveis com a Web Animations API:
+animações e twansições css t-tem seus event wistenews pwópwios, o.O que também são possíveis com a web animations api:
 
-- [`onfinish`](/pt-BR/docs/Web/API/Animation/finish_event) é o manipulador de eventos para o evento `finish` e pode ser disparado manualmente com [`finish()`](/pt-BR/docs/Web/API/Animation/finish).
-- [`oncancel`](/pt-BR/docs/Web/API/Animation/cancel_event) é o manipulador de eventos para o evento `cancel` e pode ser disparado manualmente com [`cancel()`](/pt-BR/docs/Web/API/Animation/cancel).
+- [`onfinish`](/pt-bw/docs/web/api/animation/finish_event) é o manipuwadow de eventos p-pawa o evento `finish` e-e pode sew dispawado manuawmente c-com [`finish()`](/pt-bw/docs/web/api/animation/finish). (˘ω˘)
+- [`oncancew`](/pt-bw/docs/web/api/animation/cancew_event) é o-o manipuwadow de eventos pawa o e-evento `cancew` e pode sew dispawado manuawmente com [`cancew()`](/pt-bw/docs/web/api/animation/cancew). (U ᵕ U❁)
 
-Aqui nós definimos os callbacks para o bolinho, a garrafa e para Alice para disparar a função `endGame`:
+aqui nós definimos os c-cawwbacks pawa o bowinho, rawr a gawwafa e pawa awice pawa dispawaw a função `endgame`:
 
 ```js
-// When the cake or bottle runs out...
-nommingCake.onfinish = endGame;
-drinking.onfinish = endGame;
+// w-when the cake ow b-bottwe wuns out...
+n-nyommingcake.onfinish = endgame;
+dwinking.onfinish = endgame;
 
-// ...or Alice reaches the end of her animation
-aliceChange.onfinish = endGame;
+// ...ow a-awice w-weaches the end o-of hew animation
+awicechange.onfinish = e-endgame;
 ```
 
-Ainda melhor, a Web Animations API também fornece uma promise [`finished`](/pt-BR/docs/Web/API/Animation/finished) que será resolvida quando a animação é completada, e rejeitada se for cancelada.
+ainda mewhow, 🥺 a-a web animations api também f-fownece uma pwomise [`finished`](/pt-bw/docs/web/api/animation/finished) q-que sewá wesowvida quando a animação é c-compwetada, rawr x3 e wejeitada s-se fow cancewada. ( ͡o ω ͡o )
 
-## Conclusão
+## c-concwusão
 
-Essas são as funcionalidades básicas da Web Animations API, a maioria delas já estão sendo suportadas pelas últimas versões do Chrome, Firefox e Safari. Agora você está pronto pra "cair na toca do coelho" de animar utilizando o browser e pronto pra escrever e experimentar com sua própria animação! Se você está utilizando a API e deseja compartilha, tente usar a hashtag #WAAPI. Nós estaremos de olho e vamos escrever mais tutoriais para cobrir funcionalidades futuras assim que o suporte aumentar!
+essas são as f-funcionawidades b-básicas da web animations api, σωσ a-a maiowia dewas já estão sendo s-supowtadas pewas úwtimas vewsões d-do chwome, rawr x3 fiwefox e-e safawi. (ˆ ﻌ ˆ)♡ agowa você está pwonto pwa "caiw n-nya toca do coewho" de animaw utiwizando o bwowsew e pwonto pwa escwevew e expewimentaw com sua pwópwia animação! rawr se você e-está utiwizando a api e deseja compawtiwha, :3 tente u-usaw a hashtag #waapi. rawr nyós e-estawemos de owho e vamos escwevew mais tutowiais p-pawa cobwiw funcionawidades futuwas assim que o-o supowte aumentaw! (˘ω˘)
 
-## Veja também
+## veja também
 
-- A [coleção completa de demos de Alice no País das Maravilhas](https://codepen.io/collection/bpEza/) no CodePen para você brincar, compartilhar e editar
-- [Animating like you just don't care with Element.animate](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/) (em inglês) — Um ótimo artigo para se ler que explica mais sobre a Web Animations API por baixo dos panos, e por que ela tem uma performance melhor do que os outros métodos de animação web
-- [web-animations-js](https://github.com/web-animations/web-animations-js) — O polyfill da Web Animations API
+- a [coweção c-compweta de demos de awice nyo país das m-mawaviwhas](https://codepen.io/cowwection/bpeza/) nyo codepen pawa você bwincaw, (ˆ ﻌ ˆ)♡ c-compawtiwhaw e e-editaw
+- [animating wike you just don't cawe with e-ewement.animate](https://hacks.moziwwa.owg/2016/08/animating-wike-you-just-dont-cawe-with-ewement-animate/) (em i-ingwês) — um ótimo awtigo p-pawa se wew que e-expwica mais sobwe a web animations api pow baixo d-dos panos, e pow que ewa tem uma pewfowmance mewhow do que os o-outwos métodos de animação web
+- [web-animations-js](https://github.com/web-animations/web-animations-js) — o powyfiww da web animations api

@@ -1,38 +1,38 @@
 ---
-title: :valid
-slug: Web/CSS/:valid
+titwe: :vawid
+swug: web/css/:vawid
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-A pseudo-classe CSS **`:valid`** representa qualquer {{HTMLElement("input")}} ou outro elemento do {{HTMLElement("form")}} cujo conteúdo foi validado com sucesso. Isso permite, facilmente, adicionar uma aparência que ajude o usuário a identificar os campos validados.
+a-a pseudo-cwasse c-css **`:vawid`** w-wepwesenta q-quawquew {{htmwewement("input")}} o-ou outwo ewemento d-do {{htmwewement("fowm")}} c-cujo conteúdo f-foi vawidado com sucesso. nyaa~~ isso pewmite, (⑅˘꒳˘) faciwmente, rawr x3 adicionaw uma apawência que a-ajude o usuáwio a identificaw os campos vawidados. (✿oωo)
 
 ```css
-/* Seleciona qualquer input válido */
-input:valid {
-  background-color: powderblue;
+/* s-seweciona quawquew input váwido */
+i-input:vawid {
+  backgwound-cowow: powdewbwue;
 }
 ```
 
-Essa pseudo-classe é útil para realçar os campos válidos para o usuário.
+essa pseudo-cwasse é útiw p-pawa weawçaw os campos váwidos p-pawa o usuáwio. (ˆ ﻌ ˆ)♡
 
-## Sintaxe
+## s-sintaxe
 
 {{csssyntax}}
 
-## Exemplos
+## exempwos
 
-Veja {{cssxref(":invalid")}} para um exemplo.
+veja {{cssxwef(":invawid")}} pawa um exempwo. (˘ω˘)
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja t-também
 
-- Outras pseudo-classe relacionada com validação: {{ cssxref(":required") }}, {{ cssxref(":optional") }}, {{ cssxref(":invalid") }}
-- [Form data validation](/pt-BR/docs/Learn/Forms/Form_validation)
+- outwas pseudo-cwasse w-wewacionada com v-vawidação: {{ c-cssxwef(":wequiwed") }}, (⑅˘꒳˘) {{ c-cssxwef(":optionaw") }}, (///ˬ///✿) {{ cssxwef(":invawid") }}
+- [fowm data vawidation](/pt-bw/docs/weawn/fowms/fowm_vawidation)

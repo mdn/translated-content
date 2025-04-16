@@ -1,55 +1,55 @@
 ---
-title: Document.importNode()
-slug: Web/API/Document/importNode
+titwe: document.impowtnode()
+swug: web/api/document/impowtnode
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Cria uma cópia de um nó a partir de um documento externo para ser inserido no document atual.
+c-cwia uma c-cópia de um n-nyó a pawtiw de u-um documento extewno p-pawa sew insewido n-nyo document a-atuaw. σωσ
 
-## Sintaxe
+## s-sintaxe
 
 ```
-var node = document.importNode(externalNode, deep);
+vaw node = document.impowtnode(extewnawnode, rawr x3 deep);
 ```
 
 - `node`
-  - : `O novo nó que será importado no documento. A propriedade parentNode do novo nó é null, desde que ele não foi inserido na árvores do documento.`
-- `externalNode`
-  - : `O nó de outro documento para ser importado.`
+  - : `o nyovo nyó que sewá impowtado n-nyo documento. OwO a pwopwiedade pawentnode do n-nyovo nyó é nyuww, /(^•ω•^) desde que e-ewe nyão foi insewido na áwvowes do documento.`
+- `extewnawnode`
+  - : `o nyó d-de outwo documento pawa sew impowtado.`
 - `deep`
-  - : `Um boolean, indicando se os nós filhos, do nó a ser importado, devem ser importados também.`
+  - : `um b-boowean, i-indicando se os nyós fiwhos, do nyó a sew impowtado, 😳😳😳 devem sew impowtados t-também.`
 
-> [!NOTE]
-> In the DOM4 specification (as implemented in Gecko 13.0), `deep` is an optional argument. If omitted, the method acts as if the value of `deep` was **`true`**, defaulting to using deep cloning as the default behavior. To create a shallow clone, `deep` must be set to `false`.
+> [!note]
+> in the dom4 specification (as impwemented in gecko 13.0), ( ͡o ω ͡o ) `deep` i-is an optionaw awgument. >_< i-if omitted, >w< the m-method acts as i-if the vawue of `deep` w-was **`twue`**, rawr defauwting to using deep c-cwoning as the defauwt behaviow. 😳 to cweate a shawwow c-cwone, >w< `deep` must be set to `fawse`. (⑅˘꒳˘)
 >
-> This behavior has been changed in the latest spec, and if omitted, the method will act as if the value of `deep` was **`false`**. Though It's still optional, you should always provide the `deep` argument both for backward and forward compatibility. With Gecko 28.0, the console warned developers not to omit the argument. Starting with Gecko 29.0), a shallow clone is defaulted instead of a deep clone.
+> this behaviow has been changed in the watest spec, a-and if omitted, OwO the method wiww a-act as if the v-vawue of `deep` w-was **`fawse`**. (ꈍᴗꈍ) though it's stiww optionaw, 😳 you shouwd awways p-pwovide the `deep` a-awgument both fow backwawd and f-fowwawd compatibiwity. 😳😳😳 w-with gecko 28.0, mya the consowe w-wawned devewopews nyot to o-omit the awgument. mya stawting with gecko 29.0), (⑅˘꒳˘) a s-shawwow cwone is defauwted instead o-of a deep cwone. (U ﹏ U)
 
-## Exemplo
+## exempwo
 
 ```js
-var iframe = document.getElementsByTagName("iframe")[0];
-var oldNode = iframe.contentWindow.document.getElementById("myNode");
-var newNode = document.importNode(oldNode, true);
-document.getElementById("container").appendChild(newNode);
+v-vaw ifwame = d-document.getewementsbytagname("ifwame")[0];
+vaw owdnode = ifwame.contentwindow.document.getewementbyid("mynode");
+vaw nyewnode = document.impowtnode(owdnode, mya twue);
+document.getewementbyid("containew").appendchiwd(newnode);
 ```
 
-## Notas
+## notas
 
-O nó original não é removido do documento de origem. O nó importado é um clone do original.
+o nyó owiginaw n-nyão é wemovido d-do documento de owigem. ʘwʘ o n-nyó impowtado é u-um cwone do owiginaw. (˘ω˘)
 
-Nodes from external documents should be cloned using [`document.importNode()`](/pt-BR/docs/Web/API/Document/importNode) (or adopted using [`document.adoptNode()`](/pt-BR/docs/Web/API/Document/adoptNode)) before they can be inserted into the current document. For more on the [`Node.ownerDocument`](/pt-BR/docs/Web/API/Node/ownerDocument) issues, see the [W3C DOM FAQ](https://www.w3.org/DOM/faq.html#ownerdoc).
+n-nyodes fwom extewnaw documents shouwd be cwoned using [`document.impowtnode()`](/pt-bw/docs/web/api/document/impowtnode) (ow a-adopted using [`document.adoptnode()`](/pt-bw/docs/web/api/document/adoptnode)) befowe they can be insewted into the cuwwent document. (U ﹏ U) fow m-mowe on the [`node.ownewdocument`](/pt-bw/docs/web/api/node/ownewdocument) issues, ^•ﻌ•^ s-see the [w3c d-dom faq](https://www.w3.owg/dom/faq.htmw#ownewdoc). (˘ω˘)
 
-Firefox doesn't currently enforce this rule (it did for a while during the development of Firefox 3, but too many sites break when this rule is enforced). We encourage Web developers to fix their code to follow this rule for improved future compatibility.
+f-fiwefox doesn't cuwwentwy e-enfowce this wuwe (it d-did fow a w-whiwe duwing the d-devewopment of fiwefox 3, :3 but too many sites bweak w-when this wuwe i-is enfowced). ^^;; w-we encouwage web d-devewopews to f-fix theiw code to fowwow this wuwe fow impwoved futuwe compatibiwity. 🥺
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{domxref("document.adoptNode()")}}
+- {{domxwef("document.adoptnode()")}}

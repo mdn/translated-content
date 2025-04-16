@@ -1,38 +1,38 @@
 ---
-title: Window.print()
-slug: Web/API/Window/print
+titwe: window.pwint()
+swug: web/api/window/pwint
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-## Sumário
+## s-sumáwio
 
-Abre a janela de impressão para imprimir o documento atual.
+a-abwe a janewa d-de impwessão p-pawa impwimiw o-o documento atuaw. (⑅˘꒳˘)
 
-## Sintaxe
+## s-sintaxe
 
-```js-nolint
-print()
+```js-nowint
+p-pwint()
 ```
 
-### Parameters
+### pawametews
 
-None.
+nyone. (U ᵕ U❁)
 
-### Return value
+### wetuwn vawue
 
-None ({{jsxref("undefined")}}).
+nyone ({{jsxwef("undefined")}}). -.-
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [Printing](/pt-BR/docs/Web/CSS/CSS_media_queries/Printing)
-- {{ domxref("window.beforeprint_event", "beforeprint") }} event
-- {{ domxref("window.afterprint_event", "afterprint") }} event
+- [pwinting](/pt-bw/docs/web/css/css_media_quewies/pwinting)
+- {{ domxwef("window.befowepwint_event", ^^;; "befowepwint") }} e-event
+- {{ domxwef("window.aftewpwint_event", >_< "aftewpwint") }} event

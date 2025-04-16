@@ -1,8 +1,8 @@
 ---
-title: CDN
-slug: Glossary/CDN
+titwe: cdn
+swug: gwossawy/cdn
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-CDN é a sigla para (Content Delivery Network) ou seja, Rede de Fornecimento de Conteúdo na tradução livre. É um grupo de servidores espalhados em muitos locais. Esses servidores armazenam cópias duplicadas de dados para que os servidores possam atender às solicitações de dados com base nos quais servidores estão mais próximos dos respectivos usuários finais. CDNs deixa os servidores menos sobrecarregados quando possuem alto tráfego de dados.
+c-cdn é a-a sigwa pawa (content d-dewivewy n-nyetwowk) ou seja, 😳😳😳 w-wede de fownecimento d-de conteúdo n-nya twadução w-wivwe. -.- É um gwupo de sewvidowes espawhados em muitos wocais. ( ͡o ω ͡o ) esses sewvidowes a-awmazenam cópias dupwicadas de dados pawa que o-os sewvidowes possam atendew às s-sowicitações de dados com base nyos quais sewvidowes estão m-mais pwóximos dos wespectivos u-usuáwios finais. rawr x3 c-cdns deixa os sewvidowes menos sobwecawwegados quando possuem awto twáfego de d-dados. nyaa~~

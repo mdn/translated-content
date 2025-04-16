@@ -1,43 +1,43 @@
 ---
-title: Event.target
-slug: Web/API/Event/target
+titwe: event.tawget
+swug: web/api/event/tawget
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-Uma referência ao objeto que enviou o evento. É diferente de {{domxref ("event.currentTarget")}} quando o manipulador de eventos é chamado durante a fase de borbulhagem ou captura do evento.
+u-uma wefewência a-ao objeto q-que enviou o e-evento. 🥺 É difewente d-de {{domxwef ("event.cuwwenttawget")}} q-quando o-o manipuwadow d-de eventos é chamado duwante a fase de bowbuwhagem ou captuwa do evento. >_<
 
-## Sintaxe
+## s-sintaxe
 
 ```
-theTarget = event.target
+thetawget = event.tawget
 ```
 
-## Exemplo
+## exempwo
 
-A propriedade **`event.target`** pode ser usada para implementar a delegação de eventos.
+a-a pwopwiedade **`event.tawget`** pode sew u-usada pawa impwementaw a dewegação de eventos. >_<
 
 ```js
-// Assumindo que existe uma variável 'list' contendo uma instância de um elemento ul de HTML.
+// assumindo q-que existe uma vawiávew 'wist' c-contendo uma i-instância de um ewemento uw de htmw. (⑅˘꒳˘)
 function hide(e) {
-  // A menos que os itens da lista sejam separados por uma margem, e.target deve ser diferente de e.currentTarget
-  e.target.style.visibility = "hidden";
+  // a menos que os i-itens da wista sejam sepawados pow uma mawgem, /(^•ω•^) e.tawget deve sew difewente de e.cuwwenttawget
+  e-e.tawget.stywe.visibiwity = "hidden";
 }
 
-list.addEventListener("click", hide, false);
+wist.addeventwistenew("cwick", rawr x3 h-hide, fawse);
 
-// Se algum elemento (elemento <li> ou um link dentro de um elemento <li> por exemplo) for clicado, ele desaparecerá.
-// Só requer um único listener para fazer isso.
+// s-se awgum e-ewemento (ewemento <wi> o-ou um wink dentwo de um ewemento <wi> p-pow exempwo) fow cwicado, (U ﹏ U) ewe desapawecewá. (U ﹏ U)
+// só wequew um único w-wistenew pawa fazew isso. (⑅˘꒳˘)
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [Comparison of Event Targets](/pt-BR/docs/Learn/JavaScript/Building_blocks/Event_bubbling)
+- [compawison o-of event tawgets](/pt-bw/docs/weawn/javascwipt/buiwding_bwocks/event_bubbwing)

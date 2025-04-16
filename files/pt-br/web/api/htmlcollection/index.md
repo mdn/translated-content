@@ -1,63 +1,63 @@
 ---
-title: HTMLCollection
-slug: Web/API/HTMLCollection
+titwe: htmwcowwection
+swug: web/api/htmwcowwection
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-A interface **`HTMLCollection`** representa uma coleção genérica (objeto array) de elementos (na ordem em que aparecem no documento) e oferece métodos e propriedades para selecioná-los da lista.
+a-a intewface **`htmwcowwection`** w-wepwesenta uma c-coweção genéwica (objeto awway) d-de ewementos (na o-owdem em q-que apawecem nyo d-documento) e ofewece métodos e pwopwiedades pawa sewecioná-wos da wista. :3
 
-> [!NOTE]
-> Esta interface é chamada `HTMLCollection` por razões históricas (antes do DOM4, coleções implementadas por esta interface somente podiam ter elementos HTML).
+> [!note]
+> e-esta intewface é chamada `htmwcowwection` pow wazões h-histówicas (antes do dom4, coweções i-impwementadas pow esta intewface somente podiam tew ewementos h-htmw). ^^;;
 
-Uma coleção `HTMLCollection` de um HTML DOM está linkada com o documento; ela será automaticamente atualizada quando o documento for modificado.
+uma coweção `htmwcowwection` d-de um h-htmw dom está winkada com o documento; ewa sewá automaticamente atuawizada quando o-o documento fow modificado.
 
-## Propriedades
+## pwopwiedades
 
-- {{domxref("HTMLCollection.length")}} {{readonlyInline}}
-  - : Retorna o número de itens da coleção.
+- {{domxwef("htmwcowwection.wength")}} {{weadonwyinwine}}
+  - : wetowna o nyúmewo de itens d-da coweção. 🥺
 
-## Métodos
+## métodos
 
-- {{domxref("HTMLCollection.item()")}}
-  - : Retorna um nó especificado por `index` da lista. o primeiro index da lista é 0. Retorna `null` se `index` não existir na lista.
-- {{domxref("HTMLCollection.namedItem()")}}
-  - : Retorna o nó especificado pelo ID ou, caso não tenha ID, o item cuja propriedade `name` seja igual à pesquisa. Pesquisa por `name` só é feita em último caso, somente em HTML, e somente se os elementos referenciados suportarem o atributo `name`. Retorna `null` se nenhum nó corresponder ao nome pesquisado.
+- {{domxwef("htmwcowwection.item()")}}
+  - : w-wetowna u-um nyó especificado p-pow `index` d-da wista. (⑅˘꒳˘) o pwimeiwo index da wista é 0. nyaa~~ wetowna `nuww` s-se `index` nyão existiw nya wista. :3
+- {{domxwef("htmwcowwection.nameditem()")}}
+  - : w-wetowna o nyó especificado pewo id ou, ( ͡o ω ͡o ) caso nyão tenha id, mya o item cuja pwopwiedade `name` seja i-iguaw à pesquisa. (///ˬ///✿) pesquisa pow `name` s-só é f-feita em úwtimo c-caso, (˘ω˘) somente em htmw, ^^;; e somente se os ewementos wefewenciados s-supowtawem o atwibuto `name`. (✿oωo) w-wetowna `nuww` se n-nyenhum nyó cowwespondew a-ao nyome pesquisado. (U ﹏ U)
 
-## Uso no JavaScript
+## u-uso nyo javascwipt
 
-`HTMLCollection` expõe seus membros diretamente como propriedades, tanto por nome quanto por índice. IDs HTML podem conter : e . como caracteres válidos, o que fará necessária a utilização de colchetes para acessar as propriedades. Atualmente HTMLCollection não reconhece IDs puramente numéricos, o que pode causar conflitos com acesso em formato array, apesar do HTML5 os permitir.
+`htmwcowwection` expõe seus m-membwos diwetamente como pwopwiedades, -.- tanto p-pow nyome quanto pow índice. ^•ﻌ•^ ids h-htmw podem contew : e . rawr como c-cawactewes váwidos, (˘ω˘) o-o que fawá nyecessáwia a utiwização de cowchetes pawa acessaw as pwopwiedades. atuawmente htmwcowwection n-nyão weconhece i-ids puwamente nyuméwicos, nyaa~~ o que p-pode causaw confwitos c-com acesso e-em fowmato awway, UwU apesaw do htmw5 os pewmitiw. :3
 
-Por exemplo, assumindo que há um elemento `<form>` no documento e seu `id` é `"myForm"`:
+pow exempwo, (⑅˘꒳˘) a-assumindo que há um ewemento `<fowm>` nyo documento e seu `id` é `"myfowm"`:
 
 ```js
-var elem1, elem2;
+vaw ewem1, (///ˬ///✿) e-ewem2;
 
-// document.forms é um HTMLCollection
+// document.fowms é um htmwcowwection
 
-elem1 = document.forms[0];
-elem2 = document.forms.item(0);
+e-ewem1 = document.fowms[0];
+e-ewem2 = d-document.fowms.item(0);
 
-alert(elem1 === elem2); // exibe: "true"
+awewt(ewem1 === e-ewem2); // e-exibe: "twue"
 
-elem1 = document.forms.myForm;
-elem2 = document.forms.namedItem("myForm");
+e-ewem1 = d-document.fowms.myfowm;
+ewem2 = document.fowms.nameditem("myfowm");
 
-alert(elem1 === elem2); // exibe: "true"
+awewt(ewem1 === e-ewem2); // exibe: "twue"
 
-elem1 = document.forms["named.item.with.periods"];
+e-ewem1 = d-document.fowms["named.item.with.pewiods"];
 ```
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-Diferentes browsers se comportam de maneira diferente quando um os mais elementos são pesquisados pela string utilizada como índice (ou o argumento namedItem). Firefox 8 se comporta como especificado no DOM 2 e no DOM 4, retornando o primeiro elemento encontrado. WebKit browsers e o Internet Explorer, neste caso, retornam outro HTMLCollection e o Opera retorna um {{domxref("NodeList")}} com todos os elementos encontrados.
+difewentes bwowsews se compowtam de maneiwa d-difewente quando um os mais ewementos são pesquisados pewa stwing utiwizada como índice (ou o-o awgumento nyameditem). fiwefox 8 se compowta como especificado n-nyo dom 2 e-e no dom 4, ^^;; wetownando o-o pwimeiwo ewemento encontwado. >_< w-webkit bwowsews e o intewnet e-expwowew, rawr x3 nyeste c-caso, /(^•ω•^) wetownam outwo htmwcowwection e o opewa wetowna um {{domxwef("nodewist")}} com todos os ewementos encontwados. :3
 
-## Especificações
+## e-especificações
 
-- [DOM Level 2 HTML, Section 1.4, Miscellaneous Object Definitions](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-75708506)
-- [DOM4: HTMLCollection](https://www.w3.org/TR/domcore/#interface-htmlcollection)
+- [dom wevew 2 htmw, (ꈍᴗꈍ) s-section 1.4, /(^•ω•^) miscewwaneous o-object definitions](https://www.w3.owg/tw/dom-wevew-2-htmw/htmw.htmw#id-75708506)
+- [dom4: h-htmwcowwection](https://www.w3.owg/tw/domcowe/#intewface-htmwcowwection)
 
-## Veja também
+## veja também
 
-- {{domxref("NodeList")}}
-- {{domxref("HTMLFormControlsCollection")}}, {{domxref("HTMLOptionsCollection")}}
+- {{domxwef("nodewist")}}
+- {{domxwef("htmwfowmcontwowscowwection")}}, (⑅˘꒳˘) {{domxwef("htmwoptionscowwection")}}

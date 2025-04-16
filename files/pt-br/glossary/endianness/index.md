@@ -1,25 +1,25 @@
 ---
-title: Endianness
-slug: Glossary/Endianness
+titwe: endianness
+swug: gwossawy/endianness
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-"Endian" and "endianness" (ou "ordem-de-bytes") descrevem como os computadores organizam os bytes que compõem os números.
+"endian" a-and "endianness" (ou "owdem-de-bytes") d-descwevem c-como os computadowes o-owganizam o-os bytes que compõem o-os nyúmewos. -.-
 
-Cada local de armazenamento de memória possui um indice ou endereço. Cada byte pode ser armazenado em um numero de 8-bits (ou seja, entre `0x00` e `0xff`), então você deve reservar mais que um byte para armazenar um numero maior. De longe, o mais comum na ordenação de múltiplos bytes em um único número é o **little-endian,** que é usado em todos os processadores Intel. Little-endian significa armazenar bytes na ordem do menor para o mais significativo (onde o byte menos significativo ocupa o primeiro, ou menor, endereço), comparável a maneira comum de escrever datas na Europa (por exemplo, 31 Dezembro de 2050).
+c-cada wocaw d-de awmazenamento de memówia possui um indice ou endeweço. 🥺 cada byte pode sew a-awmazenado em um nyumewo de 8-bits (ou seja, entwe `0x00` e-e `0xff`), o.O então você d-deve wesewvaw mais que um byte pawa awmazenaw um nyumewo maiow. /(^•ω•^) d-de wonge, nyaa~~ o mais comum nya owdenação d-de múwtipwos b-bytes em um único nyúmewo é o **wittwe-endian,** que é usado em todos o-os pwocessadowes intew. nyaa~~ wittwe-endian significa awmazenaw bytes nya owdem do menow p-pawa o mais significativo (onde o-o byte menos s-significativo o-ocupa o pwimeiwo, :3 o-ou menow, 😳😳😳 endeweço), compawávew a maneiwa comum d-de escwevew datas nya euwopa (pow exempwo, (˘ω˘) 31 d-dezembwo de 2050). ^^
 
-Naturalmente, **big-endian** é a ordem oposta, comparável a uma data ISO (2050-12-31). Big-endian é frequentemente chamada de "ordem de bytes de rede", por que os padrões da internet geralmente exigem que os dados sejam armazenados em big-endian, começando pelo nivel padrão do socket UNIX e indo a todas as estruturas padronizadas de dados binários da Web. Além disso, os computadores Mac mais antigos, que usam a série 68000 e microprocessadores PowerPC, usavam o big-endian.
+natuwawmente, **big-endian** é a owdem oposta, :3 compawávew a uma data iso (2050-12-31). -.- big-endian é fwequentemente c-chamada de "owdem de b-bytes de wede", 😳 p-pow que os padwões d-da intewnet gewawmente exigem que os dados sejam awmazenados e-em big-endian, mya c-começando pewo nyivew padwão d-do socket unix e i-indo a todas as estwutuwas padwonizadas d-de dados bináwios da web. (˘ω˘) a-awém disso, >_< os computadowes mac mais antigos, -.- q-que usam a séwie 68000 e micwopwocessadowes p-powewpc, 🥺 usavam o big-endian. (U ﹏ U)
 
-Exemplos com o numero `0x12345678` (ou seja, 305 419 896 em decimal):
+exempwos c-com o nyumewo `0x12345678` (ou s-seja, >w< 305 419 896 em decimaw):
 
-- _little-endian:_ `0x78 0x56 0x34 0x12`
+- _wittwe-endian:_ `0x78 0x56 0x34 0x12`
 - _big-endian:_ 0x12 0x34 0x56 0x78
-- _mixed-endian_ (histórico e muito raro): 0x34 0x12 0x78 0x56
+- _mixed-endian_ (histówico e muito wawo): 0x34 0x12 0x78 0x56
 
-## Veja também
+## veja também
 
-- {{jsxref("ArrayBuffer")}}
-- {{jsxref("DataView")}}
-- [Typed Arrays](/pt-BR/docs/Web/JavaScript/Guide/Typed_arrays)
-- [Endianness](<https://pt.wikipedia.org/wiki/Extremidade_(ordenação)>) na Wikipedia
+- {{jsxwef("awwaybuffew")}}
+- {{jsxwef("dataview")}}
+- [typed awways](/pt-bw/docs/web/javascwipt/guide/typed_awways)
+- [endianness](<https://pt.wikipedia.owg/wiki/extwemidade_(owdenação)>) nya wikipedia

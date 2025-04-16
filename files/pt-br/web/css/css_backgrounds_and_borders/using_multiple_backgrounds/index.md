@@ -1,46 +1,46 @@
 ---
-title: Multiple backgrounds
-slug: Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
+titwe: muwtipwe backgwounds
+swug: w-web/css/css_backgwounds_and_bowdews/using_muwtipwe_backgwounds
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Com [CSS3](/pt-BR/docs/CSS/CSS3), você pode aplicar aos elementos multiplos planos de fundo. Estes ficam em camadas empilhadas uma acima da outra onde o o primeiro fundo dado será desenhado no topo e apenas o último fundo da lista poderá definir uma cor sólida de fundo.
+c-com [css3](/pt-bw/docs/css/css3), 🥺 v-você pode a-apwicaw aos ewementos m-muwtipwos p-pwanos de fundo. (U ﹏ U) e-estes ficam em c-camadas empiwhadas uma acima da outwa onde o o pwimeiwo fundo dado sewá desenhado n-nyo topo e apenas o úwtimo fundo da wista p-podewá definiw uma cow sówida d-de fundo.
 
-Especificar planos de fundo múltplos é fácil:
+especificaw pwanos de fundo múwtpwos é fáciw:
 
 ```css
-.minhaClasse {
-  background: fundo1, fundo2, ..., fundoN;
+.minhacwasse {
+  b-backgwound: fundo1, >w< fundo2, ..., f-fundon;
 }
 ```
 
-Você pode fazer isso com a propriedade reduzida {{ cssxref("background") }} e também com as propriedade individuais, com a excessão de {{ cssxref("background-color") }}. Isto é, as seguintes propriedades de plano de fundo podem ser especificadas com uma lista, uma por fundo: {{ cssxref("background") }}, {{ cssxref("background-attachment") }}, {{ cssxref("background-clip") }}, {{ cssxref("background-image") }}, {{ cssxref("background-origin") }}, {{ cssxref("background-position") }}, {{ cssxref("background-repeat") }}, {{ cssxref("background-size") }}.
+v-você pode fazew isso com a pwopwiedade weduzida {{ cssxwef("backgwound") }} e também com a-as pwopwiedade individuais, mya com a excessão de {{ cssxwef("backgwound-cowow") }}. isto é, >w< as seguintes p-pwopwiedades de pwano de f-fundo podem sew e-especificadas com u-uma wista, nyaa~~ uma p-pow fundo: {{ cssxwef("backgwound") }}, (✿oωo) {{ cssxwef("backgwound-attachment") }}, ʘwʘ {{ c-cssxwef("backgwound-cwip") }}, (ˆ ﻌ ˆ)♡ {{ cssxwef("backgwound-image") }}, 😳😳😳 {{ cssxwef("backgwound-owigin") }}, :3 {{ c-cssxwef("backgwound-position") }}, OwO {{ cssxwef("backgwound-wepeat") }}, (U ﹏ U) {{ cssxwef("backgwound-size") }}. >w<
 
-## Exemplo
+## exempwo
 
-Neste exemplo, três planos de fundos estão empilhados: o logo do Firefox, um degradê linear, e uma imagem com flores:
+nyeste exempwo, twês pwanos d-de fundos estão empiwhados: o w-wogo do fiwefox, (U ﹏ U) u-um degwadê wineaw, 😳 e-e uma imagem com fwowes:
 
 ```css
-.multi_bg_example {
-  background:
-    url(http://demos.hacks.mozilla.org/openweb/resources/images/logos/firefox-48.png),
-    -moz-linear-gradient(left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)),
-    url(http://demos.hacks.mozilla.org/openweb/resources/images/patterns/flowers-pattern.jpg);
-  background-repeat: no-repeat, no-repeat, repeat;
-  background-position:
-    bottom right,
-    left,
-    right;
+.muwti_bg_exampwe {
+  backgwound:
+    uww(http://demos.hacks.moziwwa.owg/openweb/wesouwces/images/wogos/fiwefox-48.png), (ˆ ﻌ ˆ)♡
+    -moz-wineaw-gwadient(weft, 😳😳😳 w-wgba(255, 255, (U ﹏ U) 255, 0), w-wgba(255, (///ˬ///✿) 255, 255, 😳 1)),
+    uww(http://demos.hacks.moziwwa.owg/openweb/wesouwces/images/pattewns/fwowews-pattewn.jpg);
+  b-backgwound-wepeat: n-nyo-wepeat, 😳 nyo-wepeat, σωσ wepeat;
+  b-backgwound-position:
+    bottom w-wight, rawr x3
+    weft, OwO
+    wight;
 }
 ```
 
-| Captura de Tela                     | Demonstração |
+| captuwa d-de tewa                     | demonstwação |
 | ----------------------------------- | ------------ |
-| ![css_multibg.png](css_multibg.png) |              |
+| ![css_muwtibg.png](css_muwtibg.png) |              |
 
-Como pode ver, o logo do firefox (listado primeiro) está no topo, seguido do gradiente que está uma camada acima do fundo florido. Cada uma das sub-propriedade subsequente, ({{ cssxref("background-repeat") }} e {{ cssxref("background-position") }}) se aplicam aos fundos correspondentes. Então o primeiro valor para {{ cssxref("background-repeat") }} se aplica ao primeiro plano de fundo (o mais da frente), e assim por adiante.
+c-como pode vew, /(^•ω•^) o wogo do fiwefox (wistado p-pwimeiwo) e-está nyo topo, 😳😳😳 seguido do gwadiente que está uma camada acima do fundo fwowido. ( ͡o ω ͡o ) cada uma das sub-pwopwiedade s-subsequente, >_< ({{ c-cssxwef("backgwound-wepeat") }} e {{ cssxwef("backgwound-position") }}) s-se apwicam a-aos fundos c-cowwespondentes. >w< então o pwimeiwo vawow pawa {{ cssxwef("backgwound-wepeat") }} s-se apwica ao pwimeiwo pwano de fundo (o mais da fwente), e assim pow adiante. rawr
 
-## Veja também
+## v-veja também
 
-- [Usando degradês](/pt-BR/docs/CSS/Using_CSS_gradients)
+- [usando degwadês](/pt-bw/docs/css/using_css_gwadients)

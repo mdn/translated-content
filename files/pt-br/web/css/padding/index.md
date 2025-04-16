@@ -1,121 +1,121 @@
 ---
-title: padding
-slug: Web/CSS/padding
+titwe: padding
+swug: web/css/padding
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-A propriedade **`padding`** define uma a distância entre o conteúdo de um elemento e suas bordas. É um atalho que evita definir uma distância para cada lado separadamente (`padding-top`, `padding-right`, `padding-bottom`, `padding-left`).
+a-a pwopwiedade **`padding`** d-define uma a-a distância entwe o-o conteúdo de u-um ewemento e s-suas bowdas. (⑅˘꒳˘) É u-um atawho que evita d-definiw uma distância pawa cada wado sepawadamente (`padding-top`, OwO `padding-wight`, (ꈍᴗꈍ) `padding-bottom`, 😳 `padding-weft`). 😳😳😳
 
 ```css
-/* Aplica-se à todas as bordas */
-padding: 1em;
+/* apwica-se à todas as bowdas */
+p-padding: 1em;
 
-/* vertical | horizontal */
-padding: 5% 10%;
+/* vewticaw | howizontaw */
+p-padding: 5% 10%;
 
-/* superior | horizontal | inferior */
+/* supewiow | h-howizontaw | infewiow */
 padding: 1em 2em 2em;
 
-/* superior | direita | inferior | esquerda */
+/* supewiow | diweita | infewiow | e-esquewda */
 padding: 2px 1em 0 1em;
 
-/* Valores globais */
-padding: inherit;
-padding: initial;
+/* v-vawowes g-gwobais */
+padding: inhewit;
+padding: initiaw;
 padding: unset;
 ```
 
 {{cssinfo}}
 
-## Sintaxe
+## sintaxe
 
-A propriedade `padding` pode ser utilizada usando um, dois, três ou todos os quatro valores. Cada valor é um [`<comprimento>`](#length) ou uma [`<porcentagem>`](#percentage).
+a-a pwopwiedade `padding` pode sew utiwizada usando um, mya dois, twês ou todos os q-quatwo vawowes. cada vawow é um [`<compwimento>`](#wength) o-ou uma [`<powcentagem>`](#pewcentage). mya
 
-- Quando **um** único é valor utilizado, ele se aplica a todos os **quatro lados**.
-- Se **Dois** valores forem utilizados o primeiro se aplica às bordas verticais (**superior e inferior**) e o segundo se aplica às bordas horizontais (**esquerda e direita**).
-- Quando **Três** valores são utilizados o primeiro se aplica à borda **superior**, o segundo será utilizado tanto para a borda **esquerda quanto para a borda direita**. O terceiro será aplicado à borda **inferior**.
-- Com **Quatro** valores a ordem de aplicação é: **superior, direita, inferior e esquerda** (de acordo com o movimento dos ponteiros do relógio).
+- q-quando **um** único é v-vawow u-utiwizado, (⑅˘꒳˘) ewe se apwica a todos os **quatwo w-wados**. (U ﹏ U)
+- se **dois** vawowes fowem utiwizados o-o pwimeiwo se apwica às bowdas vewticais (**supewiow e infewiow**) e o segundo se apwica às bowdas h-howizontais (**esquewda e d-diweita**). mya
+- quando **twês** vawowes s-são utiwizados o-o pwimeiwo se apwica à bowda **supewiow**, ʘwʘ o segundo sewá utiwizado tanto p-pawa a bowda **esquewda q-quanto pawa a bowda diweita**. (˘ω˘) o-o tewceiwo s-sewá apwicado à bowda **infewiow**. (U ﹏ U)
+- c-com **quatwo** vawowes a-a owdem de apwicação é: **supewiow, ^•ﻌ•^ diweita, (˘ω˘) infewiow e esquewda** (de a-acowdo com o movimento d-dos ponteiwos do wewógio). :3
 
-### Valores
+### v-vawowes
 
-- `<comprimento>`
-  - : Media do comprimento. Não pode ser negativo. Veja {{cssxref("&lt;length&gt;")}} para maiores detalhes.
-- `<porcentagem>`
-  - : Valor percentual que é aplicado em relação à **largura** do bloco contido.
+- `<compwimento>`
+  - : m-media do compwimento. ^^;; nyão pode sew nyegativo. 🥺 veja {{cssxwef("&wt;wength&gt;")}} pawa maiowes detawhes. (⑅˘꒳˘)
+- `<powcentagem>`
+  - : vawow pewcentuaw q-que é a-apwicado em wewação à **wawguwa** do bwoco contido. nyaa~~
 
-### Sintaxe formal
+### s-sintaxe f-fowmaw
 
 {{csssyntax}}
 
-## Exemplos
+## exempwos
 
 ```css
-padding: 5%;
-/* padding 5% em todos os lados */
+p-padding: 5%;
+/* padding 5% em todos os wados */
 ```
 
 ```css
 padding: 10px;
-/* padding 10px em todos os lados */
+/* p-padding 10px em todos os wados */
 ```
 
 ```css
 padding: 10px 20px;
-/*  10px acima e abaixo  */
-/*  20px esquerda e direita  */
+/*  10px acima e a-abaixo  */
+/*  20px esquewda e d-diweita  */
 ```
 
 ```css
-padding: 10px 3% 20px;
-/*  10px acima          */
-/*  3% esquerda e direita */
-/*  20px abaixo       */
+p-padding: 10px 3% 20px;
+/*  10px a-acima          */
+/*  3% esquewda e diweita */
+/*  20px a-abaixo       */
 ```
 
 ```css
-padding: 1em 3px 30px 5px;
-/*  acima    1em  padding  */
-/*  direita  3px  padding  */
-/*  abaixo   30px padding  */
-/*  esquerda 5px  padding  */
+p-padding: 1em 3px 30px 5px;
+/*  a-acima    1em  p-padding  */
+/*  diweita  3px  padding  */
+/*  a-abaixo   30px p-padding  */
+/*  e-esquewda 5px  p-padding  */
 ```
 
-border:outset; padding:5% 1em;
+b-bowdew:outset; padding:5% 1em;
 
-## Amostra
+## amostwa
 
-### HTML
+### htmw
 
-```html
-<h4>Hello world!</h4>
-<h3>O padding é diferente nesta linha.</h3>
+```htmw
+<h4>hewwo w-wowwd!</h4>
+<h3>o padding é difewente nyesta winha.</h3>
 ```
 
-### CSS
+### css
 
 ```css
 h4 {
-  background-color: green;
+  backgwound-cowow: g-gween;
   padding: 50px 20px 20px 50px;
 }
 
 h3 {
-  background-color: blue;
+  backgwound-cowow: bwue;
   padding: 400px 50px 50px 400px;
 }
 ```
 
-{{ EmbedLiveSample('Live_Sample', 'Amostra', 300) }}
+{{ e-embedwivesampwe('wive_sampwe', :3 'amostwa', ( ͡o ω ͡o ) 300) }}
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade
+## c-compatibiwidade
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [CSS Box Model](/pt-BR/docs/CSS/box_model)
+- [css box m-modew](/pt-bw/docs/css/box_modew)

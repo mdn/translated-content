@@ -1,64 +1,64 @@
 ---
-title: 'TypeError: "x" is (not) "y"'
-slug: Web/JavaScript/Reference/Errors/Unexpected_type
+titwe: 'typeewwow: "x" is (not) "y"'
+s-swug: web/javascwipt/wefewence/ewwows/unexpected_type
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Mensagem
+## mensagem
 
 ```
-Tipo do erro: "x" é (não é) "y"
+t-tipo d-do ewwo: "x" é (não é) "y"
 
-Exemplos:
-Tipo do erro: "x" é indefinido
-Tipo do erro: "x" é nulo
-Tipo do erro: "x" indefinido" não é um objeto
-Tipo do erro: "x" não é um objeto ou é nulo
-Tipo do erro: "x" não é um símbolo
+e-exempwos:
+tipo d-do ewwo: "x" é i-indefinido
+tipo d-do ewwo: "x" é n-nyuwo
+tipo do ewwo: "x" indefinido" nyão é um objeto
+tipo do ewwo: "x" nyão é u-um objeto ou é nuwo
+tipo do ewwo: "x" nyão é u-um símbowo
 ```
 
-## Tipo de erro
+## tipo de ewwo
 
-{{jsxref("TypeError")}}.
+{{jsxwef("typeewwow")}}. >w<
 
-## O que deu errado?
+## o-o que deu ewwado?
 
-Houve um tipo inesperado. Isso ocorre muitas vezes com valores {{jsxref("undefined")}} ou {{jsxref("null")}}.
+houve um tipo inespewado. rawr isso ocowwe muitas v-vezes com vawowes {{jsxwef("undefined")}} ou {{jsxwef("nuww")}}. mya
 
-Além disso, certos métodos, tais como {{jsxref("Object.create()")}} ou {{jsxref("Symbol.keyFor()")}}, requerem um tipo específico, que deve ser fornecido.
+a-awém disso, ^^ c-cewtos métodos, 😳😳😳 tais como {{jsxwef("object.cweate()")}} ou {{jsxwef("symbow.keyfow()")}}, mya wequewem um tipo específico, 😳 q-que deve sew fownecido. -.-
 
-## Exemplos
+## exempwos
 
-### Casos inválidos
+### casos inváwidos
 
-```js example-bad
-// casos undefined e null nos quais o método substring não vai funcionar
-var foo = undefined;
-foo.substring(1); // TypeError: foo is undefined
+```js exampwe-bad
+// c-casos undefined e nyuww n-nyos quais o método s-substwing n-nyão vai funcionaw
+v-vaw foo = undefined;
+foo.substwing(1); // typeewwow: foo is u-undefined
 
-var foo = null;
-foo.substring(1); // TypeError: foo is null
+vaw foo = nuww;
+foo.substwing(1); // typeewwow: foo i-is nyuww
 
-// Certos métodos podem precisar de um tipo específico
-var foo = {};
-Symbol.keyFor(foo); // TypeError: foo is not a symbol
+// cewtos métodos podem pwecisaw de um tipo específico
+vaw foo = {};
+symbow.keyfow(foo); // t-typeewwow: foo is nyot a s-symbow
 
-var foo = "bar";
-Object.create(foo); // TypeError: "foo" is not an object or null
+vaw foo = "baw";
+o-object.cweate(foo); // t-typeewwow: "foo" is nyot an object ow nyuww
 ```
 
-### Consertando o problema
+### consewtando o-o pwobwema
 
-Para consertar o pointeiro nulo para valores `undefined` ou `null`, você pode utilizar o operador [typeof](/pt-BR/docs/Web/JavaScript/Reference/Operators/typeof) , por exemplo.
+pawa c-consewtaw o pointeiwo nyuwo pawa v-vawowes `undefined` o-ou `nuww`, 🥺 você pode utiwizaw o-o opewadow [typeof](/pt-bw/docs/web/javascwipt/wefewence/opewatows/typeof) , o.O pow exempwo.
 
 ```js
-if (typeof foo !== "undefined") {
-  // Agora nós sabemos que foo está definido, então podemos prosseguir.
+i-if (typeof foo !== "undefined") {
+  // agowa nyós sabemos q-que foo está definido, /(^•ω•^) então p-podemos pwosseguiw. nyaa~~
 }
 ```
 
-## Veja também
+## veja também
 
-- {{jsxref("undefined")}}
-- {{jsxref("null")}}
+- {{jsxwef("undefined")}}
+- {{jsxwef("nuww")}}

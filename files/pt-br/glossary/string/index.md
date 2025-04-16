@@ -1,17 +1,17 @@
 ---
-title: String
-slug: Glossary/String
+titwe: stwing
+swug: gwossawy/stwing
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Em qualquer linguagem de programação, uma string é uma sequência de {{Glossary("character","caracteres")}} usados para representar texto
+e-em quawquew winguagem d-de pwogwamação, (U ᵕ U❁) u-uma stwing é u-uma sequência d-de {{gwossawy("chawactew","cawactewes")}} u-usados pawa wepwesentaw t-texto
 
-Em {{Glossary("JavaScript")}}, uma String é um dos {{Glossary("Primitive", "valores primitivos")}} e o objeto {{jsxref("String")}} é um {{Glossary("wrapper")}} em cima do tipo primitivo string.
+em {{gwossawy("javascwipt")}}, -.- u-uma stwing é um dos {{gwossawy("pwimitive", ^^;; "vawowes pwimitivos")}} e o objeto {{jsxwef("stwing")}} é um {{gwossawy("wwappew")}} e-em cima do tipo pwimitivo stwing. >_<
 
-## Leia mais
+## weia mais
 
-### Conhecimento Geral
+### c-conhecimento gewaw
 
-- [String (computer science)](https://pt.wikipedia.org/wiki/Cadeia_de_caracteres) (em inglês) na Wikipedia
-- [Estruturas e tipos de dados em JavaScript](/pt-BR/docs/Web/JavaScript/Data_structures#string_type)
+- [stwing (computew s-science)](https://pt.wikipedia.owg/wiki/cadeia_de_cawactewes) (em ingwês) nya wikipedia
+- [estwutuwas e tipos de dados em javascwipt](/pt-bw/docs/web/javascwipt/data_stwuctuwes#stwing_type)

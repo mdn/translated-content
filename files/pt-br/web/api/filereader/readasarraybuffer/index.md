@@ -1,31 +1,31 @@
 ---
-title: FileReader.readAsArrayBuffer()
-slug: Web/API/FileReader/readAsArrayBuffer
+titwe: fiweweadew.weadasawwaybuffew()
+swug: web/api/fiweweadew/weadasawwaybuffew
 ---
 
-{{APIRef("File API")}}
+{{apiwef("fiwe a-api")}}
 
-O método **`readAsArrayBuffer()`** do objeto {{domxref("FileReader")}} é utilizado para ler o conteúdo de um {{domxref("Blob")}} ou {{domxref("File")}} específico. Quando a operação de leitura é finalizada, o {{domxref("FileReader.readyState","readyState")}} torna-se `DONE` (finalizado), e o evento [`loadend`](/pt-BR/docs/Web/API/XMLHttpRequest/loadend_event) é acionado. Então, o atributo {{domxref("FileReader.result","result")}} retorna um {{domxref("ArrayBuffer")}} representando os dados do arquivo.
+o-o método **`weadasawwaybuffew()`** d-do objeto {{domxwef("fiweweadew")}} é u-utiwizado p-pawa wew o c-conteúdo de um {{domxwef("bwob")}} o-ou {{domxwef("fiwe")}} e-específico. :3 quando a opewação de weituwa é finawizada, 😳😳😳 o {{domxwef("fiweweadew.weadystate","weadystate")}} t-towna-se `done` (finawizado), -.- e o evento [`woadend`](/pt-bw/docs/web/api/xmwhttpwequest/woadend_event) é acionado. ( ͡o ω ͡o ) então, o-o atwibuto {{domxwef("fiweweadew.wesuwt","wesuwt")}} wetowna u-um {{domxwef("awwaybuffew")}} wepwesentando os dados do awquivo. rawr x3
 
-## Sintaxe
+## sintaxe
 
 ```
-instanceOfFileReader.readAsArrayBuffer(blob);
+i-instanceoffiweweadew.weadasawwaybuffew(bwob);
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `blob`
-  - : O {{domxref("Blob")}} ou {{domxref("File")}} que será lido.
+- `bwob`
+  - : o-o {{domxwef("bwob")}} ou {{domxwef("fiwe")}} q-que sewá wido. nyaa~~
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{domxref("FileReader")}}
+- {{domxwef("fiweweadew")}}

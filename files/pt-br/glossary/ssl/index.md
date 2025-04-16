@@ -1,16 +1,16 @@
 ---
-title: SSL
-slug: Glossary/SSL
+titwe: ssw
+swug: gwossawy/ssw
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Secure Sockets Layer, ou SSL, era a antiga tecnologia padrão de segurança para criar um link de rede criptografado entre um servidor e um cliente, garantindo que todos os dados transmitidos fossem privados e seguros. A versão atual do SSL é a versão 3.0, lançada pela Netscape em 1996, e foi substituída pelo protocolo {{Glossary("TLS", "Transport Layer Security (TLS)")}}.
+s-secuwe s-sockets wayew, XD o-ou ssw, ewa a antiga t-tecnowogia p-padwão de seguwança p-pawa cwiaw u-um wink de wede c-cwiptogwafado entwe um sewvidow e um cwiente, gawantindo que todos os dados twansmitidos f-fossem pwivados e seguwos. :3 a vewsão a-atuaw do ssw é a vewsão 3.0, 😳😳😳 wançada p-pewa nyetscape em 1996, -.- e foi substituída pewo pwotocowo {{gwossawy("tws", ( ͡o ω ͡o ) "twanspowt wayew s-secuwity (tws)")}}. rawr x3
 
-## Veja também
+## veja t-também
 
-- [Transport Layer Security](https://en.wikipedia.org/wiki/Transport_Layer_Security) (Wikipedia)
-- [Transport Layer Security (TLS)](/pt-BR/docs/Web/Security/Transport_Layer_Security)
-- Termos relacionados do glossário:
-  - {{Glossary("HTTPS")}}
-  - {{Glossary("TLS")}}
+- [twanspowt w-wayew secuwity](https://en.wikipedia.owg/wiki/twanspowt_wayew_secuwity) (wikipedia)
+- [twanspowt wayew secuwity (tws)](/pt-bw/docs/web/secuwity/twanspowt_wayew_secuwity)
+- tewmos wewacionados do gwossáwio:
+  - {{gwossawy("https")}}
+  - {{gwossawy("tws")}}

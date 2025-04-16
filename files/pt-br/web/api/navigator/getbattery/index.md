@@ -1,36 +1,36 @@
 ---
-title: Navigator.battery
-slug: Web/API/Navigator/getBattery
+titwe: nyavigatow.battewy
+swug: w-web/api/navigatow/getbattewy
 ---
 
-{{ ApiRef("Battery API") }}
+{{ a-apiwef("battewy a-api") }}
 
-## Resumo
+## w-wesumo
 
-O objeto `battery` fornece informações sobre o nível de carga da bateria do sistema; você pode também escutar eventos enviados por ele que fornecem atualizações sobre o status atual da carga. Isso implementa a [Battery Status API](/pt-BR/docs/Web/API/Battery_Status_API); consulte essa documentação para mais detalhes, um guia de utilização da API e códigos de exemplo.
+o objeto `battewy` f-fownece infowmações s-sobwe o nyívew d-de cawga da b-batewia do sistema; você pode também escutaw eventos enviados pow ewe que fownecem a-atuawizações sobwe o status atuaw da cawga. (✿oωo) i-isso impwementa a [battewy s-status api](/pt-bw/docs/web/api/battewy_status_api); consuwte essa documentação pawa mais detawhes, (ˆ ﻌ ˆ)♡ u-um guia de utiwização da a-api e códigos d-de exempwo. (˘ω˘)
 
-## Sintaxe
+## sintaxe
 
 ```
-var battery = window.navigator.battery;
+vaw battewy = window.navigatow.battewy;
 ```
 
-## Valor
+## vawow
 
-`navigator.battery` é um objeto do tipo {{domxref("BatteryManager")}}.
+`navigatow.battewy` é um objeto d-do tipo {{domxwef("battewymanagew")}}. (⑅˘꒳˘)
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{domxref("BatteryManager")}}
-- the [Battery Status API](/pt-BR/docs/Web/API/Battery_Status_API) article
-- [Blog post - Using the Battery API](https://hacks.mozilla.org/2012/02/using-the-battery-api-part-of-webapi/)
-- [David Walsh on the JavaScript Battery Api](https://davidwalsh.name/battery-api)
-- [battery.js - a tiny cross-browser wrapper](https://github.com/pstadler/battery.js)
+- {{domxwef("battewymanagew")}}
+- t-the [battewy status api](/pt-bw/docs/web/api/battewy_status_api) a-awticwe
+- [bwog p-post - u-using the battewy a-api](https://hacks.moziwwa.owg/2012/02/using-the-battewy-api-pawt-of-webapi/)
+- [david wawsh on the javascwipt b-battewy api](https://davidwawsh.name/battewy-api)
+- [battewy.js - a tiny cwoss-bwowsew wwappew](https://github.com/pstadwew/battewy.js)

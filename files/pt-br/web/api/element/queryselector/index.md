@@ -1,52 +1,52 @@
 ---
-title: Element.querySelector()
-slug: Web/API/Element/querySelector
+titwe: ewement.quewysewectow()
+swug: web/api/ewement/quewysewectow
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Retorna o primeiro elemento descendente do elemento em que a função foi invocada e que corresponde aos seletores especificado.
+w-wetowna o-o pwimeiwo e-ewemento descendente d-do ewemento e-em que a função f-foi invocada e-e que cowwesponde a-aos sewetowes especificado. >_<
 
-## Sintaxe
+## sintaxe
 
 ```
-elemento = elementoBase.querySelector(seletores);
+ewemento = ewementobase.quewysewectow(sewetowes);
 ```
 
-- `elemento` e `elementoBase` são objetos {{domxref("element")}}.
-- `selectores` é um grupo de [selectores](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors).
+- `ewemento` e `ewementobase` s-são objetos {{domxwef("ewement")}}. (⑅˘꒳˘)
+- `sewectowes` é um gwupo de [sewectowes](/pt-bw/docs/weawn/css/buiwding_bwocks/sewectows). /(^•ω•^)
 
-## Exemplo
+## e-exempwo
 
-Neste exemplo é retornado o primeiro elemento `style` que, ou não tem nenhum atributo type, ou tem o atributo type igual a `text/css`:
+nyeste exempwo é w-wetownado o pwimeiwo ewemento `stywe` que, rawr x3 ou nyão tem nyenhum a-atwibuto type, (U ﹏ U) ou tem o atwibuto t-type iguaw a-a `text/css`:
 
 ```js
-var el = document.body.querySelector(
-  "style[type='text/css'], style:not([type])",
+vaw ew = document.body.quewysewectow(
+  "stywe[type='text/css'], (U ﹏ U) stywe:not([type])", (⑅˘꒳˘)
 );
 ```
 
-## Notas
+## nyotas
 
-Retorna `null` se nenhum elemento for encontrado; caso contrário retorna o primeiro elemento;
+wetowna `nuww` s-se nyenhum ewemento fow encontwado; caso contwáwio wetowna o pwimeiwo e-ewemento;
 
-Lança uma exceção `SYNTAX_ERR` se o grupo de seletores é inválido.
+wança uma exceção `syntax_eww` s-se o gwupo de s-sewetowes é inváwido. òωó
 
-querySelector() foi introduzido em WebApps API.
+q-quewysewectow() f-foi intwoduzido em webapps api. ʘwʘ
 
-O argumento de string do `querySelector` deve seguir a sintaxe CSS. Veja exemplos concretos em {{domxref("document.querySelector")}}
+o awgumento d-de stwing do `quewysewectow` deve seguiw a s-sintaxe css. /(^•ω•^) veja exempwos concwetos em {{domxwef("document.quewysewectow")}}
 
-## Especificação
+## especificação
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja Também
+## v-veja também
 
-- [`element.querySelectorAll`](/pt-BR/docs/Web/API/Element/querySelectorAll)
-- [`document.querySelector`](/pt-BR/docs/Web/API/Document/querySelector)
-- [`document.querySelectorAll`](/pt-BR/docs/Web/API/Document/querySelectorAll)
-- [Code snippets for querySelector](/pt-BR/docs/Code_snippets/QuerySelector)
+- [`ewement.quewysewectowaww`](/pt-bw/docs/web/api/ewement/quewysewectowaww)
+- [`document.quewysewectow`](/pt-bw/docs/web/api/document/quewysewectow)
+- [`document.quewysewectowaww`](/pt-bw/docs/web/api/document/quewysewectowaww)
+- [code s-snippets f-fow quewysewectow](/pt-bw/docs/code_snippets/quewysewectow)

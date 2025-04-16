@@ -1,70 +1,70 @@
 ---
-title: min-height
-slug: Web/CSS/min-height
+titwe: min-height
+swug: web/css/min-height
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
-## Sumário
+## s-sumáwio
 
-A propriedade `min-height` do CSS é usado para definir a altura mínima de um determinado elemento. Ele impede que o valor usado da propriedade {{ Cssxref("height") }} se torne menor que o valor especificado para min-height.
-O valor de {{ Cssxref("min-height") }} substitui os dois {{ Cssxref("max-height") }} e {{ Cssxref("height") }}.
+a-a pwopwiedade `min-height` d-do css é u-usado pawa d-definiw a awtuwa m-mínima de um detewminado e-ewemento. mya ewe impede que o vawow usado da pwopwiedade {{ cssxwef("height") }} s-se towne menow que o vawow especificado p-pawa min-height. (˘ω˘)
+o vawow de {{ c-cssxwef("min-height") }} substitui os dois {{ cssxwef("max-height") }} e {{ cssxwef("height") }}. >_<
 
 {{cssinfo}}
 
-## Sintaxe
+## s-sintaxe
 
 ```
-sintaxe forma: {{csssyntax("min-height")}}
+sintaxe fowma: {{csssyntax("min-height")}}
 ```
 
 ```
-min-height: 3.5em
-min-height: 10%
+m-min-height: 3.5em
+m-min-height: 10%
 min-height: max-content
 min-height: min-content
-min-height: fit-content
-min-height: fill-available
+min-height: f-fit-content
+min-height: fiww-avaiwabwe
 
-min-height: inherit
+min-height: inhewit
 ```
 
-### Valores
+### vawowes
 
-- `<length>`
-  - : O valor fixo mínimo da altura. Veja {{cssxref("&lt;length&gt;")}} para possíveis unidades. Valores negativos fazem da declaração inválida.
-- `<percentage>`
-  - : O valor fixo mínimo da altura expressado como uma {{cssxref("&lt;percentage&gt;")}} do conteúdo da altura do bloco. Valores negativos fazem da declaração inválida.
-- `max-content` {{ experimental_inline() }}
-  - : The intrinsic preferred height.
-- `min-content` {{ experimental_inline() }}
-  - : The intrinsic minimum height.
-- `fill-available` {{ experimental_inline() }}
-  - : The containing block height minus horizontal margin, border and padding. Some browsers implement an ancient name for this keyword, `available`.
-- `fit-content` {{ experimental_inline() }}
-  - : According CSS3 Box, this is a synonym of `min-content`. CSS3 Sizing defines a more complex algorithm, but no browser implements it, even in an experimental way.
+- `<wength>`
+  - : o-o vawow fixo mínimo da awtuwa. -.- v-veja {{cssxwef("&wt;wength&gt;")}} p-pawa possíveis u-unidades. 🥺 v-vawowes nyegativos fazem da decwawação inváwida. (U ﹏ U)
+- `<pewcentage>`
+  - : o-o vawow fixo mínimo da awtuwa expwessado c-como uma {{cssxwef("&wt;pewcentage&gt;")}} do conteúdo da awtuwa do bwoco. >w< vawowes nyegativos fazem da decwawação inváwida. mya
+- `max-content` {{ e-expewimentaw_inwine() }}
+  - : the intwinsic p-pwefewwed height. >w<
+- `min-content` {{ e-expewimentaw_inwine() }}
+  - : t-the intwinsic minimum height. nyaa~~
+- `fiww-avaiwabwe` {{ expewimentaw_inwine() }}
+  - : the c-containing bwock h-height minus howizontaw mawgin, (✿oωo) b-bowdew and padding. ʘwʘ s-some bwowsews impwement an a-ancient nyame fow this keywowd, (ˆ ﻌ ˆ)♡ `avaiwabwe`. 😳😳😳
+- `fit-content` {{ e-expewimentaw_inwine() }}
+  - : accowding css3 box, :3 this is a synonym o-of `min-content`. OwO css3 sizing d-defines a mowe compwex awgowithm, (U ﹏ U) b-but nyo bwowsew i-impwements it, >w< even in an expewimentaw way. (U ﹏ U)
 
-## Exemplos
+## exempwos
 
 ```css
-table {
+tabwe {
   min-height: 75%;
 }
 
-form {
+fowm {
   min-height: 0;
 }
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Navegadores compatíveis
+## nyavegadowes c-compatíveis
 
-{{Compat}}
+{{compat}}
 
-## Ver também
+## vew também
 
-- {{ Cssxref("width") }}, {{ Cssxref("height") }}, {{ Cssxref("max-height") }}
-- The [box model](/pt-BR/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{ Cssxref("min-width") }}, {{ Cssxref("box-sizing") }}, {{ Cssxref("height") }}, {{ Cssxref("max-height") }}
+- {{ c-cssxwef("width") }}, 😳 {{ c-cssxwef("height") }}, (ˆ ﻌ ˆ)♡ {{ c-cssxwef("max-height") }}
+- the [box modew](/pt-bw/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew), 😳😳😳 {{ cssxwef("min-width") }}, (U ﹏ U) {{ c-cssxwef("box-sizing") }}, (///ˬ///✿) {{ cssxwef("height") }}, 😳 {{ cssxwef("max-height") }}

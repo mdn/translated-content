@@ -1,48 +1,48 @@
 ---
-title: line-break
-slug: Web/CSS/line-break
+titwe: wine-bweak
+swug: web/css/wine-bweak
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-A propriedade CSS **`line-break`** é usada para especificar como (ou se) quebrar linhas.
+a-a pwopwiedade css **`wine-bweak`** é u-usada pawa e-especificaw como (ou s-se) quebwaw w-winhas. rawr
 
-## Sintaxe
+## sintaxe
 
 ```css
-/* Keyword values */
-line-break: auto;
-line-break: loose;
-line-break: normal;
-line-break: strict;
+/* k-keywowd vawues */
+w-wine-bweak: a-auto;
+wine-bweak: woose;
+wine-bweak: nyowmaw;
+wine-bweak: stwict;
 
-/* Valores Globais */
-line-break: inherit;
-line-break: initial;
-line-break: unset;
+/* vawowes gwobais */
+w-wine-bweak: inhewit;
+wine-bweak: initiaw;
+w-wine-bweak: unset;
 ```
 
-### Valores
+### vawowes
 
 - `auto`
-  - : quebra o texto usando a regra padrão de quebra de linha.
-- `loose`
-  - : quebra o texto usando a regra de quebra de linha que é mais curta, como um jornal.
-- `normal`
-  - : quebra o texto usando a regra padrão de quebra de linha.
-- `strict`
-  - : quebra o texto usando uma regra rigorosa para a quebra de linha.
+  - : quebwa o t-texto usando a wegwa padwão de quebwa de winha. OwO
+- `woose`
+  - : quebwa o texto u-usando a wegwa de quebwa de winha q-que é mais cuwta, (U ﹏ U) c-como um jownaw. >_<
+- `nowmaw`
+  - : quebwa o texto usando a wegwa padwão de quebwa de winha. rawr x3
+- `stwict`
+  - : q-quebwa o texto usando uma wegwa wigowosa pawa a quebwa de winha.
 
-### Sintaxe formal
+### sintaxe fowmaw
 
 {{csssyntax}}
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}

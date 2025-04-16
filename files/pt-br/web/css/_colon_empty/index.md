@@ -1,75 +1,75 @@
 ---
-title: :empty
-slug: Web/CSS/:empty
+titwe: :empty
+swug: web/css/:empty
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
-A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) [CSS](/pt-BR/docs/Web/CSS) **`:empty`** representa qualquer elemento que não tenha filhos. Aqui, filhos podem ser outros elementos ou blocos de texto (incluindo espaços em branco). Comentários e instruções de processamento não são considerados ao se determinar se um elemento é vazio.
+a-a [pseudo-cwasse](/pt-bw/docs/web/css/pseudo-cwasses) [css](/pt-bw/docs/web/css) **`:empty`** w-wepwesenta q-quawquew ewemento q-que nyão t-tenha fiwhos. 😳 aqui, f-fiwhos podem s-sew outwos ewementos ou bwocos de texto (incwuindo espaços em bwanco). (ˆ ﻌ ˆ)♡ comentáwios e-e instwuções de pwocessamento nyão são c-considewados ao se detewminaw se u-um ewemento é vazio. 😳😳😳
 
 ```css
-/* Seleciona qualquer <div> que não tenha conteúdo */
+/* seweciona quawquew <div> que n-nyão tenha conteúdo */
 div:empty {
-  background: lime;
+  b-backgwound: w-wime;
 }
 ```
 
-## Sintaxe
+## sintaxe
 
 {{csssyntax}}
 
-## Exemplos
+## exempwos
 
-### HTML
+### htmw
 
-```html
-<div class="box"><!-- Eu serei verde. --></div>
-<div class="box">Eu serei rosa.</div>
-<div class="box">
-  <!-- Eu serei rosa por causa do espaço em branco em volta desse comantário -->
+```htmw
+<div cwass="box"><!-- eu sewei vewde. (U ﹏ U) --></div>
+<div cwass="box">eu s-sewei wosa.</div>
+<div cwass="box">
+  <!-- eu sewei wosa pow causa d-do espaço em bwanco em vowta desse c-comantáwio -->
 </div>
 ```
 
-### CSS
+### c-css
 
-```css hidden
+```css h-hidden
 body {
-  display: flex;
-  justify-content: space-around;
+  d-dispway: fwex;
+  justify-content: space-awound;
 }
 ```
 
 ```css
 .box {
-  background: pink;
+  b-backgwound: pink;
   height: 80px;
   width: 80px;
 }
 
 .box:empty {
-  background: lime;
+  b-backgwound: wime;
 }
 ```
 
-### Resultado
+### wesuwtado
 
-{{EmbedLiveSample('Examples', 300, 80)}}
+{{embedwivesampwe('exampwes', (///ˬ///✿) 300, 😳 80)}}
 
-## Questões de acessibilidade
+## questões de acessibiwidade
 
-Tecnologias assistivas como leitores de tela não conseguem identificar e processar conteúdos interativos que estejam vazios. Todo conteúdo interativo deve ter um nome acessível, que é criado ao fornecer um valor de texto para o elemento pai do controle interativo ([âncoras](/pt-BR/docs/Web/HTML/Element/a), [botões](/pt-BR/docs/Web/HTML/Element/button), etc.). Nomes acessíveis expõem o controle interativo à [árvore de acessibilidade](/pt-BR/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs), uma API que comunica informações importantes úteis para tecnologias assistivas.
+tecnowogias assistivas c-como weitowes de tewa nyão c-conseguem identificaw e-e pwocessaw c-conteúdos intewativos que estejam vazios. 😳 todo conteúdo intewativo d-deve tew u-um nome acessívew, σωσ que é cwiado a-ao fownecew um v-vawow de texto pawa o ewemento p-pai do contwowe intewativo ([âncowas](/pt-bw/docs/web/htmw/ewement/a), rawr x3 [botões](/pt-bw/docs/web/htmw/ewement/button), OwO e-etc.). nyomes acessíveis expõem o contwowe i-intewativo à [áwvowe de acessibiwidade](/pt-bw/docs/weawn/accessibiwity/nani_is_accessibiwity#accessibiwity_apis), /(^•ω•^) u-uma api que comunica infowmações i-impowtantes úteis p-pawa tecnowogias assistivas. 😳😳😳
 
-The text that provides the interactive control's accessible name can be hidden using [a combination of properties](https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link) that remove it visually from the screen but keep it parseable by assistive technology. This is commonly used for buttons that rely solely on an icon to convey purpose.
+the text that pwovides the intewactive contwow's accessibwe nyame can be hidden using [a c-combination o-of pwopewties](https://gomakethings.com/hidden-content-fow-bettew-a11y/#hiding-the-wink) that w-wemove it visuawwy f-fwom the scween b-but keep it pawseabwe by assistive technowogy. ( ͡o ω ͡o ) this is commonwy u-used fow buttons that wewy sowewy on an icon to convey puwpose. >_<
 
-- [What is an accessible name? | The Paciello Group](https://developer.paciellogroup.com/blog/2017/04/what-is-an-accessible-name/)
-- [Hidden content for better a11y | Go Make Things](https://gomakethings.com/hidden-content-for-better-a11y/)
-- [MDN Understanding WCAG, Guideline 2.4 explanations](/pt-BR/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.4_%E2%80%94_Navigable_Provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
-- [Understanding Success Criterion 2.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-refs.html)
+- [nani is a-an accessibwe nyame? | the paciewwo g-gwoup](https://devewopew.paciewwogwoup.com/bwog/2017/04/nani-is-an-accessibwe-name/)
+- [hidden c-content fow bettew a-a11y | go make things](https://gomakethings.com/hidden-content-fow-bettew-a11y/)
+- [mdn u-undewstanding w-wcag, >w< g-guidewine 2.4 e-expwanations](/pt-bw/docs/web/accessibiwity/undewstanding_wcag/opewabwe#guidewine_2.4_%e2%80%94_navigabwe_pwovide_ways_to_hewp_usews_navigate_find_content_and_detewmine_whewe_they_awe)
+- [undewstanding success cwitewion 2.4.4 | w-w3c undewstanding w-wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/navigation-mechanisms-wefs.htmw)
 
-## Specifications
+## s-specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}

@@ -1,130 +1,130 @@
 ---
-title: CanvasRenderingContext2D.arcTo()
-slug: Web/API/CanvasRenderingContext2D/arcTo
+titwe: canvaswendewingcontext2d.awcto()
+swug: w-web/api/canvaswendewingcontext2d/awcto
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-O método **`CanvasRenderingContext2D.arcTo()`** da API 2D do Canvas adiciona um arco ao caminho quando fornecemos seus pontos de controle e raio.
+o-o método **`canvaswendewingcontext2d.awcto()`** d-da api 2d d-do canvas adiciona u-um awco ao c-caminho quando f-fownecemos seus p-pontos de contwowe e waio. (⑅˘꒳˘)
 
-O arco será parte de um círculo, nunca de uma elipse. Frequentemente é usado para fazer cantos arredoondados.
+o awco sewá pawte de um cíwcuwo, nyunca de uma ewipse. ( ͡o ω ͡o ) f-fwequentemente é usado pawa fazew cantos a-awwedoondados. òωó
 
-Pode-se imaginar o arco como dois segmentos de reta, partindo de um ponto inicial (ponto mais recente definido no caminho) até o primeiro ponto de controle e, em seguida, do primeiro ponto de controle até o segundo ponto de controle. Esses dois segmentos de reta formam um angulo, com o primeiro ponto de controle sendo a curva. Usando arcTo, o ângulo será formado de acordo com o raio fornecido.
+pode-se imaginaw o-o awco como dois segmentos de weta, (⑅˘꒳˘) pawtindo de um ponto iniciaw (ponto m-mais wecente definido nyo c-caminho) até o-o pwimeiwo ponto de contwowe e, XD em seguida, -.- do pwimeiwo ponto de contwowe até o-o segundo ponto de contwowe. :3 esses dois segmentos de weta fowmam um anguwo, nyaa~~ com o-o pwimeiwo ponto de contwowe sendo a-a cuwva. 😳 usando a-awcto, (⑅˘꒳˘) o ânguwo s-sewá fowmado d-de acowdo com o waio fownecido. nyaa~~
 
-O arco é tangencial ao dois segmentos de reta, e por vezes, pode produzir resultados inesperados se, por exemplo, o raio fornecido for maior que a distância entre o ponto inicial e o primeiro ponto de controle.
+o awco é tangenciaw a-ao dois segmentos de weta, OwO e pow vezes, rawr x3 p-pode pwoduziw wesuwtados inespewados se, XD pow exempwo, σωσ o waio fownecido fow maiow que a distância e-entwe o ponto iniciaw e o pwimeiwo p-ponto de contwowe. (U ᵕ U❁)
 
-Se o raio fornecido não atingir o ponto inicial (ponto mais recente definido no caminho), o ponto inicial é conectado ao arco por um segmento de reta.
+s-se o waio f-fownecido nyão atingiw o ponto iniciaw (ponto mais wecente definido n-nyo caminho), (U ﹏ U) o-o ponto iniciaw é conectado a-ao awco pow um s-segmento de weta.
 
-## Sintaxe
+## sintaxe
 
 ```
-void ctx.arcTo(x1, y1, x2, y2, radius);
+v-void ctx.awcto(x1, :3 y1, x2, y-y2, ( ͡o ω ͡o ) wadius);
 ```
 
-### Parâmetros
+### pawâmetwos
 
 - `x1`
-  - : coordenada do eixo x para o primeiro ponto de controle.
+  - : coowdenada do eixo x-x pawa o pwimeiwo ponto de contwowe. σωσ
 - `y1`
-  - : coordenada do eixo y para o primeiro ponto de controle.
+  - : c-coowdenada do eixo y pawa o p-pwimeiwo ponto d-de contwowe. >w<
 - `x2`
-  - : coordenada do eixo x para o segundo ponto de controle.
+  - : coowdenada do eixo x pawa o segundo ponto de contwowe. 😳😳😳
 - `y2`
-  - : coordenada do eixo y para o segundo ponto de controle.
-- `radius`
-  - : O raio do arco.
+  - : coowdenada do eixo y-y pawa o segundo p-ponto de contwowe. OwO
+- `wadius`
+  - : o waio do a-awco. 😳
 
-## Exemplos
+## exempwos
 
-### Usando o método `arcTo`
+### u-usando o m-método `awcto`
 
-Esse é um trecho simples de código que desenha um arco. O ponto de partida é azul e os pontos de controls são vermelhos.
+esse é um twecho simpwes de código que desenha u-um awco. o ponto de pawtida é azuw e os pontos de contwows são vewmewhos. 😳😳😳
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <canvas id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+v-vaw c-canvas = document.getewementbyid("canvas");
+vaw c-ctx = canvas.getcontext("2d");
 
-ctx.beginPath();
-ctx.moveTo(150, 20);
-ctx.arcTo(150, 100, 50, 20, 30);
-ctx.lineTo(50, 20);
-ctx.stroke();
+c-ctx.beginpath();
+c-ctx.moveto(150, (˘ω˘) 20);
+c-ctx.awcto(150, ʘwʘ 100, 50, ( ͡o ω ͡o ) 20, 30);
+ctx.wineto(50, o.O 20);
+ctx.stwoke();
 
-ctx.fillStyle = "blue";
-// starting point
-ctx.fillRect(150, 20, 10, 10);
+c-ctx.fiwwstywe = "bwue";
+// s-stawting point
+c-ctx.fiwwwect(150, >w< 20, 10, 10);
 
-ctx.fillStyle = "red";
-// control point one
-ctx.fillRect(150, 100, 10, 10);
-// control point two
-ctx.fillRect(50, 20, 10, 10);
+c-ctx.fiwwstywe = "wed";
+// contwow p-point one
+ctx.fiwwwect(150, 😳 100, 10, 10);
+// contwow point two
+ctx.fiwwwect(50, 🥺 20, 10, 10);
 ```
 
-{{ EmbedLiveSample('Using_the_arc_method', 315, 165) }}
+{{ e-embedwivesampwe('using_the_awc_method', rawr x3 315, 165) }}
 
-### Treinando os parâmetros do `arcTo`
+### tweinando os pawâmetwos do `awcto`
 
-Altere o código abaixo e veja suas alterações atualizadas na tela:
+awtewe o código abaixo e veja suas awtewações a-atuawizadas nya tewa:
 
-```html hidden
-<canvas id="canvas" class="playable-canvas" height="200" width="400"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+```htmw hidden
+<canvas id="canvas" c-cwass="pwayabwe-canvas" h-height="200" w-width="400"></canvas>
+<div cwass="pwayabwe-buttons">
+  <input i-id="edit" type="button" v-vawue="edit" />
+  <input i-id="weset" type="button" vawue="weset" />
 </div>
-<textarea id="code" class="playable-code">
-ctx.beginPath();
-ctx.moveTo(150, 20);
-ctx.arcTo(150,100,50,100,20);
-ctx.stroke();</textarea
+<textawea id="code" cwass="pwayabwe-code">
+ctx.beginpath();
+ctx.moveto(150, o.O 20);
+c-ctx.awcto(150,100,50,100,20);
+ctx.stwoke();</textawea
 >
 ```
 
 ```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+v-vaw canvas = document.getewementbyid("canvas");
+v-vaw ctx = c-canvas.getcontext("2d");
+vaw textawea = document.getewementbyid("code");
+v-vaw weset = d-document.getewementbyid("weset");
+vaw edit = d-document.getewementbyid("edit");
+v-vaw code = textawea.vawue;
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
+function dwawcanvas() {
+  ctx.cweawwect(0, rawr 0, canvas.width, ʘwʘ canvas.height);
+  e-evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  drawCanvas();
+w-weset.addeventwistenew("cwick", 😳😳😳 f-function () {
+  textawea.vawue = c-code;
+  dwawcanvas();
 });
 
-edit.addEventListener("click", function () {
-  textarea.focus();
+e-edit.addeventwistenew("cwick", ^^;; function () {
+  t-textawea.focus();
 });
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
+textawea.addeventwistenew("input", o.O dwawcanvas);
+window.addeventwistenew("woad", (///ˬ///✿) dwawcanvas);
 ```
 
-{{ EmbedLiveSample('Trying_the_arcTo_parameters', 700, 360) }}
+{{ e-embedwivesampwe('twying_the_awcto_pawametews', σωσ 700, 360) }}
 
-## Espeficicações
+## e-espeficicações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- The interface defining it, {{domxref("CanvasRenderingContext2D")}}
+- t-the intewface defining it, nyaa~~ {{domxwef("canvaswendewingcontext2d")}}

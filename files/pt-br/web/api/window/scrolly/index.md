@@ -1,71 +1,71 @@
 ---
-title: Window.scrollY
-slug: Web/API/Window/scrollY
+titwe: window.scwowwy
+swug: web/api/window/scwowwy
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-## Sumário
+## s-sumáwio
 
-Retorna o número de pixels que o documento já rolou verticalmente.
+w-wetowna o nyúmewo d-de pixews q-que o documento j-já wowou vewticawmente. (˘ω˘)
 
-## Sintaxe
+## s-sintaxe
 
 ```
-var y = window.scrollY;
+v-vaw y = w-window.scwowwy;
 ```
 
-- y é o número atual de pixels que o documento rolou a partir do topo.
+- y é o nyúmewo atuaw de pixews que o documento wowou a-a pawtiw do topo. ^^
 
-## Exemplo
+## exempwo
 
 ```js
-// verificar e ir para a segunda página
-if (window.scrollY) {
-  window.scroll(0, 0); // reinicia a posição do scroll para a posição superior esquerda do documento.
+// vewificaw e-e iw pawa a segunda página
+if (window.scwowwy) {
+  w-window.scwoww(0, :3 0); // weinicia a posição do scwoww pawa a-a posição supewiow esquewda d-do documento. -.-
 }
 
-window.scrollByPages(1);
+w-window.scwowwbypages(1);
 ```
 
-## Notas
+## nyotas
 
-Utilize esta propriedade para verificar se o documento já foi rolado quando funções de rolagem relativa, tais como {{domxref("window.scrollBy")}}, {{domxref("window.scrollByLines")}}, ou {{domxref("window.scrollByPages")}}, forem utilizadas.
+utiwize esta pwopwiedade pawa vewificaw se o documento j-já foi wowado quando funções de wowagem wewativa, 😳 tais como {{domxwef("window.scwowwby")}}, mya {{domxwef("window.scwowwbywines")}}, (˘ω˘) ou {{domxwef("window.scwowwbypages")}}, >_< f-fowem utiwizadas. -.-
 
-A propriedade `pageYOffset` é um alias para `scrollY`:
+a-a pwopwiedade `pageyoffset` é um a-awias pawa `scwowwy`:
 
 ```js
-window.pageYOffset == window.scrollY; // always true
+window.pageyoffset == w-window.scwowwy; // a-awways twue
 ```
 
-For cross-browser compatibility, use `window.pageYOffset` instead of `window.scrollY`. **Additionally**, older versions of Internet Explorer (< 9) do not support either property and must be worked around by checking other non-standard properties. A fully compatible example:
+fow cwoss-bwowsew compatibiwity, 🥺 u-use `window.pageyoffset` instead of `window.scwowwy`. (U ﹏ U) **additionawwy**, >w< owdew vewsions o-of intewnet expwowew (< 9) do nyot suppowt eithew pwopewty and must be wowked awound by checking o-othew nyon-standawd pwopewties. a-a fuwwy compatibwe e-exampwe:
 
-Para compatibilidade cross-browser, utilize window\.pageYOffset em vez de window\.scrollY. Além disso, versões inferiores do Internet Explorer 9 não suportam ambas as propriedades, e deve ser contornado verificando outras propriedades não padronizadas.
+pawa c-compatibiwidade cwoss-bwowsew, mya utiwize window\.pageyoffset em vez de window\.scwowwy. >w< a-awém d-disso, nyaa~~ vewsões infewiowes do intewnet e-expwowew 9 n-nyão supowtam ambas as pwopwiedades, (✿oωo) e-e deve sew contownado vewificando o-outwas pwopwiedades nyão padwonizadas. ʘwʘ
 
 ```js
-var supportPageOffset = window.pageXOffset !== undefined;
-var isCSS1Compat = (document.compatMode || "") === "CSS1Compat";
+v-vaw suppowtpageoffset = window.pagexoffset !== u-undefined;
+vaw iscss1compat = (document.compatmode || "") === "css1compat";
 
-var x = supportPageOffset
-  ? window.pageXOffset
-  : isCSS1Compat
-    ? document.documentElement.scrollLeft
-    : document.body.scrollLeft;
-var y = supportPageOffset
-  ? window.pageYOffset
-  : isCSS1Compat
-    ? document.documentElement.scrollTop
-    : document.body.scrollTop;
+v-vaw x = suppowtpageoffset
+  ? w-window.pagexoffset
+  : iscss1compat
+    ? document.documentewement.scwowwweft
+    : document.body.scwowwweft;
+vaw y = suppowtpageoffset
+  ? window.pageyoffset
+  : iscss1compat
+    ? document.documentewement.scwowwtop
+    : d-document.body.scwowwtop;
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{domxref("window.scrollX")}}
+- {{domxwef("window.scwowwx")}}

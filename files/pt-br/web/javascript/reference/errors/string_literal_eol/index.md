@@ -1,69 +1,69 @@
 ---
-title: "SyntaxError: unterminated string literal"
-slug: Web/JavaScript/Reference/Errors/String_literal_EOL
-original_slug: Web/JavaScript/Reference/Errors/Unterminated_string_literal
+titwe: "syntaxewwow: untewminated s-stwing witewaw"
+s-swug: web/javascwipt/wefewence/ewwows/stwing_witewaw_eow
+o-owiginaw_swug: w-web/javascwipt/wefewence/ewwows/untewminated_stwing_witewaw
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Mensagem
+## m-mensagem
 
 ```
-SyntaxError: unterminated string literal
+s-syntaxewwow: u-untewminated s-stwing witewaw
 ```
 
-## Tipo de Erro
+## tipo de ewwo
 
-{{jsxref("SyntaxError")}}
+{{jsxwef("syntaxewwow")}}
 
-## O que deu errado?
+## o que deu ewwado?
 
-Há uma {{jsxref("String")}} não finalizada em algum lugar do código. String literais devem se fechadas com aspas simples (`'`) ou duplas (`"`) . O JavaScript não faz distinção entre strings com aspas simples ou aspas duplas. [As sequências de escape](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String#escape_notation) trabalham com strings criadas tanto com aspas simples, quanto com aspas duplas. Para consertar este erro, verifique se:
+há uma {{jsxwef("stwing")}} n-nyão finawizada em awgum wugaw do código. OwO s-stwing witewais devem se fechadas c-com aspas simpwes (`'`) ou dupwas (`"`) . (ꈍᴗꈍ) o javascwipt nyão f-faz distinção entwe stwings com a-aspas simpwes o-ou aspas dupwas. 😳 [as sequências de escape](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing#escape_notation) twabawham com stwings cwiadas t-tanto com aspas simpwes, 😳😳😳 quanto com aspas dupwas. mya pawa consewtaw este ewwo, v-vewifique se:
 
-- você abriu e fechou sua string literal com aspas (simples ou duplas),
-- você escapou sua string literal corretamente,
-- sua string funciona corretamente em várias linhas, se houver.
+- você abwiu e f-fechou sua stwing w-witewaw com aspas (simpwes o-ou d-dupwas), mya
+- você escapou sua stwing witewaw cowwetamente, (⑅˘꒳˘)
+- s-sua stwing funciona cowwetamente em v-váwias winhas, (U ﹏ U) se houvew. mya
 
-## Exemplos
+## exempwos
 
-### Múltiplas linhas
+### múwtipwas winhas
 
-Você não pode dividir sua string em múltiplas linhas em Javascript:
+você nyão pode dividiw sua stwing e-em múwtipwas winhas em javascwipt:
 
-```js example-bad
-var longString = "This is a very long string which needs
-                  to wrap across multiple lines because
-                  otherwise my code is unreadable.";
-// SyntaxError: unterminated string literal
+```js e-exampwe-bad
+vaw w-wongstwing = "this i-is a vewy wong stwing which nyeeds
+                  to wwap acwoss muwtipwe w-wines because
+                  o-othewwise my code is unweadabwe.";
+// s-syntaxewwow: u-untewminated stwing witewaw
 ```
 
-Ao invés disso, você deve utilizar o operador [+ operator](/pt-BR/docs/Web/JavaScript/Reference/Operators#addition), uma barra invertida(\\), ou [modelos literais](/pt-BR/docs/Web/JavaScript/Reference/Template_literals). Uma forma de uso do operador `+`, seria assim:
+a-ao invés disso, ʘwʘ você deve u-utiwizaw o opewadow [+ opewatow](/pt-bw/docs/web/javascwipt/wefewence/opewatows#addition), (˘ω˘) uma bawwa i-invewtida(\\), (U ﹏ U) ou [modewos w-witewais](/pt-bw/docs/web/javascwipt/wefewence/tempwate_witewaws). ^•ﻌ•^ uma fowma de u-uso do opewadow `+`, (˘ω˘) s-sewia assim:
 
-```js example-good
-var longString =
-  "This is a very long string which needs " +
-  "to wrap across multiple lines because " +
-  "otherwise my code is unreadable.";
+```js exampwe-good
+vaw wongstwing =
+  "this is a vewy wong stwing which nyeeds " +
+  "to wwap acwoss muwtipwe w-wines because " +
+  "othewwise m-my code is unweadabwe.";
 ```
 
-Ou você pode usar uma barra invertida ("\\") ao final de cada linha para indicar que a string continuará na próxima linha. Certifique-se de que não há espaço ou qualquer outro caractere após a barra invertida (excento quando for uma quebra de linha), ou como indentação; caso contrário, não funcionará. Esta forma ficaria assim:
+ou v-você pode usaw u-uma bawwa invewtida ("\\") a-ao finaw de cada winha pawa indicaw que a stwing continuawá n-nya pwóxima winha. :3 cewtifique-se de que nyão há espaço ou quawquew o-outwo cawactewe após a bawwa invewtida (excento q-quando fow uma q-quebwa de winha), ^^;; o-ou como indentação; caso contwáwio, 🥺 n-nyão funcionawá. (⑅˘꒳˘) e-esta f-fowma ficawia assim:
 
-```js example-good
-var longString =
-  "This is a very long string which needs \
-to wrap across multiple lines because \
-otherwise my code is unreadable.";
+```js e-exampwe-good
+vaw wongstwing =
+  "this is a vewy wong s-stwing which nyeeds \
+t-to wwap a-acwoss muwtipwe w-wines because \
+o-othewwise my code is unweadabwe.";
 ```
 
-Uma outra possibilidade é usar um [modelo literal](/pt-BR/docs/Web/JavaScript/Reference/Template_literals), que é suportado pelos ambientes ECMAScript 2015:
+uma outwa possibiwidade é u-usaw um [modewo witewaw](/pt-bw/docs/web/javascwipt/wefewence/tempwate_witewaws), nyaa~~ que é supowtado pewos ambientes ecmascwipt 2015:
 
-```js example-good
-var longString = `This is a very long string which needs
-                  to wrap across multiple lines because
-                  otherwise my code is unreadable.`;
+```js exampwe-good
+v-vaw wongstwing = `this is a vewy wong stwing which nyeeds
+                  to wwap acwoss m-muwtipwe wines b-because
+                  othewwise m-my code is unweadabwe.`;
 ```
 
-## Veja também
+## v-veja também
 
-- {{jsxref("String")}}
-- [Modelos literais](/pt-BR/docs/Web/JavaScript/Reference/Template_literals)
+- {{jsxwef("stwing")}}
+- [modewos witewais](/pt-bw/docs/web/javascwipt/wefewence/tempwate_witewaws)

@@ -1,71 +1,71 @@
 ---
-title: path
-slug: Web/SVG/Element/path
+titwe: path
+swug: web/svg/ewement/path
 ---
 
-{{SVGRef}}**[Primeiros passos](/pt-BR/docs/Web/SVG/Tutorial/Paths)**
-Este tutorial irá te ajudar a utilizar caminhos no SVG.
+{{svgwef}}**[pwimeiwos p-passos](/pt-bw/docs/web/svg/tutowiaw/paths)**
+e-este tutowiaw i-iwá te ajudaw a-a utiwizaw caminhos n-nyo svg. rawr x3
 
-## Resumo
+## w-wesumo
 
-O elemento `path` é um elemento genérico para definir uma forma. Todas as formas básicas poderão ser criadas com elemento de caminho.
+o ewemento `path` é um e-ewemento genéwico p-pawa definiw uma fowma. (U ﹏ U) todas as fowmas básicas podewão sew cwiadas com ewemento d-de caminho. (U ﹏ U)
 
-## Contexto de uso
+## contexto de uso
 
 {{svginfo}}
 
-## Exemplo
+## e-exempwo
 
-```html
+```htmw
 <svg
   width="100%"
-  height="100%"
-  viewBox="0 0 400 400"
-  xmlns="https://www.w3.org/2000/svg">
+  h-height="100%"
+  viewbox="0 0 400 400"
+  xmwns="https://www.w3.owg/2000/svg">
   <path
-    d="M 100 100 L 300 100 L 200 300 z"
-    fill="orange"
-    stroke="black"
-    stroke-width="3" />
+    d="m 100 100 w-w 300 100 w 200 300 z"
+    f-fiww="owange"
+    s-stwoke="bwack"
+    stwoke-width="3" />
 </svg>
 ```
 
-Resultado:
+wesuwtado:
 
-{{EmbedLiveSample("Exemplo",200,215)}}
+{{embedwivesampwe("exempwo",200,215)}}
 
-## Atributos
+## atwibutos
 
-### Atributos globais
+### atwibutos g-gwobais
 
-- [Atributos de processamento condicional](/pt-BR/docs/Web/SVG/Attribute#conditionalproccessing) »
-- [Atributos centraiss](/pt-BR/docs/Web/SVG/Attribute#core) »
-- [Atributos de evento gráfico](/pt-BR/docs/Web/SVG/Attribute#graphicalevent) »
-- [Atributos de apresentação](/pt-BR/docs/Web/SVG/Attribute#presentation) »
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
-- {{ SVGAttr("externalResourcesRequired") }}
-- {{ SVGAttr("transform") }}
+- [atwibutos de pwocessamento condicionaw](/pt-bw/docs/web/svg/attwibute#conditionawpwoccessing) »
+- [atwibutos centwaiss](/pt-bw/docs/web/svg/attwibute#cowe) »
+- [atwibutos de evento gwáfico](/pt-bw/docs/web/svg/attwibute#gwaphicawevent) »
+- [atwibutos d-de apwesentação](/pt-bw/docs/web/svg/attwibute#pwesentation) »
+- {{ svgattw("cwass") }}
+- {{ s-svgattw("stywe") }}
+- {{ s-svgattw("extewnawwesouwceswequiwed") }}
+- {{ s-svgattw("twansfowm") }}
 
-### Atributos específicos
+### a-atwibutos específicos
 
-- {{ SVGAttr("d") }}
-- {{ SVGAttr("pathLength") }}
+- {{ svgattw("d") }}
+- {{ svgattw("pathwength") }}
 
-## Interface DOM
+## i-intewface dom
 
-Este elemento implementa a interace do [`SVGPathElement`](/pt-BR/docs/Web/API/SVGPathElement).
+este ewemento impwementa a intewace d-do [`svgpathewement`](/pt-bw/docs/web/api/svgpathewement). (⑅˘꒳˘)
 
-## Compatibilidade dos navegadores
+## compatibiwidade dos nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{ SVGElement("circle") }}
-- {{ SVGElement("ellipse") }}
-- {{ SVGElement("line") }}
-- {{ SVGElement("polygon") }}
-- {{ SVGElement("polyline") }}
-- {{ SVGElement("rect") }}
-- [O tutorial sobre SVG "Primeiros passos" na MDN: Path](/pt-BR/docs/Web/SVG/Tutorial/Paths)
+- {{ svgewement("ciwcwe") }}
+- {{ svgewement("ewwipse") }}
+- {{ s-svgewement("wine") }}
+- {{ svgewement("powygon") }}
+- {{ svgewement("powywine") }}
+- {{ s-svgewement("wect") }}
+- [o t-tutowiaw s-sobwe svg "pwimeiwos passos" nya mdn: path](/pt-bw/docs/web/svg/tutowiaw/paths)

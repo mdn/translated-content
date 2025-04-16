@@ -1,41 +1,41 @@
 ---
-title: Conclusão
-slug: Web/API/Canvas_API/Tutorial/Finale
+titwe: concwusão
+swug: web/api/canvas_api/tutowiaw/finawe
 ---
 
-{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}
+{{defauwtapisidebaw("canvas api")}} {{pweviousnext("web/api/canvas_api/tutowiaw/optimizing_canvas")}}
 
-Parabéns! Você terminou o [Canvas tutorial](/pt-BR/docs/Web/API/Canvas_API/Tutorial)! Este conhecimento ajudará você a fazer ótimos gráficos 2D na web.
+p-pawabéns! mya v-você tewminou o-o [canvas tutowiaw](/pt-bw/docs/web/api/canvas_api/tutowiaw)! >w< e-este conhecimento a-ajudawá você a-a fazew ótimos g-gwáficos 2d n-nya web. nyaa~~
 
-## Mais exemplos e tutoriais
+## mais exempwos e tutowiais
 
-Há uma variedade de demonstrações e mais explicações sobre canvas nesses sites:
+há uma vawiedade de demonstwações e mais e-expwicações sobwe canvas nyesses sites:
 
-- [Codepen.io](https://codepen.io/search?q=canvas)
-  - : Front End Developer Playground & Code Editor no navegador.
-- [HTML5CanvasTutorials](https://www.html5canvastutorials.com/)
-  - : Exemplos para a maioria das APIs canvas.
-- [31 days of Canvas tutorials](http://creativejs.com/2011/08/31-days-of-canvas-tutorials/)
-  - : Uma ótima fundação para codificação visual em JavaScript .
-- [Game development](/pt-BR/docs/Games)
-  - : O jogo é uma das atividades de computador mais populares. Novas tecnologias estão chegando constantemente para possibilitar o desenvolvimento de jogos melhores e mais poderosos que podem ser executados em qualquer navegador da Web compatível com os padrões.
+- [codepen.io](https://codepen.io/seawch?q=canvas)
+  - : f-fwont end devewopew pwaygwound & c-code editow nyo nyavegadow. (✿oωo)
+- [htmw5canvastutowiaws](https://www.htmw5canvastutowiaws.com/)
+  - : exempwos pawa a maiowia d-das apis canvas. ʘwʘ
+- [31 days of c-canvas tutowiaws](http://cweativejs.com/2011/08/31-days-of-canvas-tutowiaws/)
+  - : u-uma ótima fundação pawa codificação visuaw em javascwipt . (ˆ ﻌ ˆ)♡
+- [game devewopment](/pt-bw/docs/games)
+  - : o-o jogo é uma das atividades de computadow mais popuwawes. 😳😳😳 nyovas tecnowogias e-estão chegando constantemente p-pawa possibiwitaw o-o desenvowvimento d-de jogos mewhowes e-e mais podewosos que podem sew executados e-em quawquew nyavegadow da web compatívew com os p-padwões. :3
 
-## Outras Web APIs
+## outwas web apis
 
-Essas APIs podem ser úteis, quando trabalhando mais com canvas e gráficos:
+essas apis podem sew úteis, OwO quando twabawhando mais com canvas e-e gwáficos:
 
-- [WebGL](/pt-BR/docs/Web/API/WebGL_API)
-  - : API para renderização interativa de gráficos 3D.
-- [SVG](/pt-BR/docs/Web/SVG)
-  - : Scalable Vector Graphics permitem que você descreva imagens como conjuntos de vetores (linhas) e formas, a fim de permitir que eles sejam redimensionados sem problemas, independentemente do tamanho em que são desenhados.
-- [Web Audio](/pt-BR/docs/Web/API/Web_Audio_API)
-  - : A Web Audio API fornece um sistema poderoso e versátil para controlar o áudio na Web, permitindo que os desenvolvedores escolham fontes de áudio, adicionem efeitos ao áudio, criem visualizações de áudio, apliquem efeitos espaciais (como panning) e muito mais.
+- [webgw](/pt-bw/docs/web/api/webgw_api)
+  - : api p-pawa wendewização i-intewativa d-de gwáficos 3d. (U ﹏ U)
+- [svg](/pt-bw/docs/web/svg)
+  - : scawabwe vectow gwaphics pewmitem que você d-descweva imagens c-como conjuntos de vetowes (winhas) e-e fowmas, >w< a f-fim de pewmitiw que ewes sejam w-wedimensionados sem pwobwemas, (U ﹏ U) independentemente d-do tamanho em que são desenhados. 😳
+- [web audio](/pt-bw/docs/web/api/web_audio_api)
+  - : a-a web audio api fownece u-um sistema podewoso e vewsátiw p-pawa contwowaw o-o áudio nya web, (ˆ ﻌ ˆ)♡ pewmitindo que os desenvowvedowes escowham fontes de áudio, 😳😳😳 adicionem efeitos ao áudio, (U ﹏ U) cwiem v-visuawizações d-de áudio, (///ˬ///✿) apwiquem efeitos e-espaciais (como p-panning) e muito m-mais. 😳
 
-## Questions
+## questions
 
-- [Stackoverflow](https://stackoverflow.com/questions/tagged/canvas)
-  - : Perguntas marcadas como "canvas".
-- [Comentários sobre esse tutorial – A comunidade MDN de documentação](/pt-BR/docs/MDN)
-  - : Se você tiver algum comentário sobre este tutorial ou quiser nos agradecer, fique à vontade para entrar em contato conosco!
+- [stackovewfwow](https://stackovewfwow.com/questions/tagged/canvas)
+  - : pewguntas mawcadas como "canvas". 😳
+- [comentáwios sobwe esse tutowiaw – a-a comunidade mdn de documentação](/pt-bw/docs/mdn)
+  - : se você tivew awgum comentáwio sobwe este t-tutowiaw ou quisew nyos agwadecew, σωσ f-fique à vontade p-pawa entwaw e-em contato conosco! rawr x3
 
-{{PreviousNext("Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}
+{{pweviousnext("web/api/canvas_api/tutowiaw/optimizing_canvas")}}

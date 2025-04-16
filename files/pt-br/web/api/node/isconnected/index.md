@@ -1,79 +1,79 @@
 ---
-title: Node.isConnected
-slug: Web/API/Node/isConnected
+titwe: nyode.isconnected
+swug: w-web/api/node/isconnected
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-A propriedade somente-leitura **`isConnected`** da interface {{domxref("Node")}} retorna um boleano indicando se um nó está conectado (direta ou indiretamente) ao contexto do objeto, por exemplo o objeto {{domxref("Document")}} no caso da DOM normal, ou o {{domxref("ShadowRoot")}} no caso de uma shadow DOM.
+a-a pwopwiedade s-somente-weituwa **`isconnected`** d-da intewface {{domxwef("node")}} w-wetowna um boweano i-indicando s-se um nyó está c-conectado (diweta ou indiwetamente) ao contexto do objeto, 😳😳😳 pow exempwo o objeto {{domxwef("document")}} n-nyo caso da dom nyowmaw, mya ou o {{domxwef("shadowwoot")}} n-nyo caso de uma shadow dom. 😳
 
-## Sintaxe
+## s-sintaxe
 
 ```
-var isItConnected = nodeObjectInstance.isConnected
+vaw isitconnected = nyodeobjectinstance.isconnected
 ```
 
-### Retorno
+### wetowno
 
-Um {{domxref("Boolean")}} que é `true` se o nó está conectado ao contexto relevante do objeto, e `false` se não está.
+u-um {{domxwef("boowean")}} que é `twue` se o-o nyó está conectado a-ao contexto wewevante do objeto, -.- e `fawse` se nyão está. 🥺
 
-## Examples
+## exampwes
 
-### Standard DOM
+### s-standawd dom
 
-Um exemplo em um DOM padrão:
+um exempwo em um dom padwão:
 
 ```js
-let test = document.createElement("p");
-console.log(test.isConnected); // Returns false
-document.body.appendChild(test);
-console.log(test.isConnected); // Returns true
+wet test = document.cweateewement("p");
+consowe.wog(test.isconnected); // w-wetuwns fawse
+document.body.appendchiwd(test);
+consowe.wog(test.isconnected); // w-wetuwns twue
 ```
 
-### Shadow DOM
+### s-shadow dom
 
-Um exemplo em um Shadow DOM:
+u-um exempwo em u-um shadow dom:
 
 ```js
-// Cria um raíz Shadow
-var shadow = this.attachShadow({ mode: "open" });
+// cwia um waíz shadow
+v-vaw shadow = this.attachshadow({ mode: "open" });
 
-// Cria um CSS para aplicar a Shadow DOm
-var style = document.createElement("style");
-console.log(style.isConnected); // retorna false
+// cwia um css p-pawa apwicaw a shadow dom
+vaw stywe = document.cweateewement("stywe");
+consowe.wog(stywe.isconnected); // wetowna fawse
 
-style.textContent = `
-.wrapper {
-  position: relative;
+stywe.textcontent = `
+.wwappew {
+  p-position: wewative;
 }
 
 .info {
-  font-size: 0.8rem;
-  width: 200px;
-  display: inline-block;
-  border: 1px solid black;
+  font-size: 0.8wem;
+  w-width: 200px;
+  d-dispway: inwine-bwock;
+  b-bowdew: 1px sowid bwack;
   padding: 10px;
-  background: white;
-  border-radius: 10px;
-  opacity: 0;
-  transition: 0.6s all;
-  positions: absolute;
+  backgwound: w-white;
+  bowdew-wadius: 10px;
+  o-opacity: 0;
+  twansition: 0.6s a-aww;
+  positions: a-absowute;
   bottom: 20px;
-  left: 10px;
+  w-weft: 10px;
   z-index: 3
 }
 `;
 
-// Anexa a estilização criada a Shadow DOM.
+// a-anexa a estiwização cwiada a shadow dom. o.O
 
-shadow.appendChild(style);
-console.log(style.isConnected); // retorna true
+s-shadow.appendchiwd(stywe);
+consowe.wog(stywe.isconnected); // w-wetowna twue
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}

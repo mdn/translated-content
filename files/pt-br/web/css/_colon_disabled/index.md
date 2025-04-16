@@ -1,94 +1,94 @@
 ---
-title: :disabled
-slug: Web/CSS/:disabled
+titwe: :disabwed
+swug: web/css/:disabwed
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) [CSS](/pt-BR/docs/Web/CSS) **`:disabled`** representa qualquer elemento desativado. Um elemento é desativado se não puder ser ativado (selecionado, clicado, digitado etc.) ou aceitar o foco. O elemento também possui um estado habilitado, no qual ele pode ser ativado ou aceitar o foco.
+a-a [pseudo-cwasse](/pt-bw/docs/web/css/pseudo-cwasses) [css](/pt-bw/docs/web/css) **`:disabwed`** w-wepwesenta q-quawquew e-ewemento desativado. nyaa~~ u-um ewemento é d-desativado s-se nyão pudew s-sew ativado (sewecionado, :3 cwicado, 😳😳😳 digitado etc.) ou aceitaw o foco. (˘ω˘) o ewemento t-também possui um estado habiwitado, ^^ nyo quaw ewe p-pode sew ativado ou aceitaw o f-foco. :3
 
 ```css
-/* Selects any disabled <input> */
-input:disabled {
-  background: #ccc;
+/* sewects any disabwed <input> */
+input:disabwed {
+  backgwound: #ccc;
 }
 ```
 
-## Sintaxe
+## s-sintaxe
 
 {{csssyntax}}
 
-## Exemplo
+## exempwo
 
-Este exemplo mostra um formulário básico de envio. Ele usa o evento [JavaScript](/pt-BR/docs/Web/JavaScript) [`change`](/pt-BR/docs/Web/API/HTMLElement/change_event) para permitir que o usuário ative / desative os campos de faturamento.
+e-este exempwo m-mostwa um fowmuwáwio básico de envio. -.- ewe usa o evento [javascwipt](/pt-bw/docs/web/javascwipt) [`change`](/pt-bw/docs/web/api/htmwewement/change_event) pawa p-pewmitiw que o usuáwio ative / desative os campos de fatuwamento. 😳
 
-### HTML
+### htmw
 
-```html
-<form action="#">
-  <fieldset id="shipping">
-    <legend>Shipping address</legend>
-    <input type="text" placeholder="Name" />
-    <input type="text" placeholder="Address" />
-    <input type="text" placeholder="Zip Code" />
-  </fieldset>
-  <br />
-  <fieldset id="billing">
-    <legend>Billing address</legend>
-    <label for="billing-checkbox">Same as shipping address:</label>
-    <input type="checkbox" id="billing-checkbox" checked />
-    <br />
-    <input type="text" placeholder="Name" disabled />
-    <input type="text" placeholder="Address" disabled />
-    <input type="text" placeholder="Zip Code" disabled />
-  </fieldset>
-</form>
+```htmw
+<fowm a-action="#">
+  <fiewdset id="shipping">
+    <wegend>shipping a-addwess</wegend>
+    <input t-type="text" p-pwacehowdew="name" />
+    <input t-type="text" pwacehowdew="addwess" />
+    <input type="text" pwacehowdew="zip code" />
+  </fiewdset>
+  <bw />
+  <fiewdset id="biwwing">
+    <wegend>biwwing a-addwess</wegend>
+    <wabew fow="biwwing-checkbox">same as shipping a-addwess:</wabew>
+    <input type="checkbox" id="biwwing-checkbox" checked />
+    <bw />
+    <input type="text" pwacehowdew="name" d-disabwed />
+    <input type="text" p-pwacehowdew="addwess" d-disabwed />
+    <input t-type="text" pwacehowdew="zip code" disabwed />
+  </fiewdset>
+</fowm>
 ```
 
-### CSS
+### css
 
 ```css
-input[type="text"]:disabled {
-  background: #ccc;
+input[type="text"]:disabwed {
+  backgwound: #ccc;
 }
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-// Wait for the page to finish loading
-document.addEventListener(
-  "DOMContentLoaded",
-  function () {
-    // Attach `change` event listener to checkbox
-    document.getElementById("billing-checkbox").onchange = toggleBilling;
-  },
-  false,
+// wait f-fow the page to finish woading
+d-document.addeventwistenew(
+  "domcontentwoaded", mya
+  f-function () {
+    // attach `change` e-event wistenew to checkbox
+    d-document.getewementbyid("biwwing-checkbox").onchange = toggwebiwwing;
+  }, (˘ω˘)
+  fawse,
 );
 
-function toggleBilling() {
-  // Select the billing text fields
-  var billingItems = document.querySelectorAll('#billing input[type="text"]');
+f-function toggwebiwwing() {
+  // sewect the biwwing t-text fiewds
+  vaw biwwingitems = d-document.quewysewectowaww('#biwwing i-input[type="text"]');
 
-  // Toggle the billing text fields
-  for (var i = 0; i < billingItems.length; i++) {
-    billingItems[i].disabled = !billingItems[i].disabled;
+  // toggwe the biwwing text fiewds
+  fow (vaw i = 0; i < biwwingitems.wength; i++) {
+    biwwingitems[i].disabwed = !biwwingitems[i].disabwed;
   }
 }
 ```
 
-### Resultado
+### wesuwtado
 
-{{EmbedLiveSample('Example', 300, 250)}}
+{{embedwivesampwe('exampwe', 300, >_< 250)}}
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{Cssxref(":enabled")}}
+- {{cssxwef(":enabwed")}}

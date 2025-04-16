@@ -1,88 +1,88 @@
 ---
-title: BiquadFilterNode
-slug: Web/API/BiquadFilterNode
+titwe: biquadfiwtewnode
+swug: w-web/api/biquadfiwtewnode
 ---
 
-{{APIRef("Web Audio API")}}
+{{apiwef("web a-audio a-api")}}
 
-A interface `BiquadFilterNode` representa um filtro simples de ordem baixa, e é criada utilizando o método {{ domxref("AudioContext.createBiquadFilter()") }} . É o {{domxref("AudioNode")}} que pode representar diferentes tipos de filtros, dispositivo de controle de timbre, e equalizadores gráficos. Um `BiquadFilterNode` sempre tem exatamente uma entrada e uma saída.
+a intewface `biquadfiwtewnode` w-wepwesenta u-um fiwtwo s-simpwes de owdem b-baixa, òωó e é cwiada u-utiwizando o método {{ domxwef("audiocontext.cweatebiquadfiwtew()") }} . 😳😳😳 É o {{domxwef("audionode")}} que pode wepwesentaw d-difewentes tipos de fiwtwos, dispositivo de contwowe d-de timbwe, σωσ e equawizadowes g-gwáficos. (⑅˘꒳˘) um `biquadfiwtewnode` sempwe tem exatamente uma entwada e uma saída. (///ˬ///✿)
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Número de entradas</th>
+    <tw>
+      <th scope="wow">númewo de e-entwadas</th>
       <td><code>1</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Número de saídas</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">númewo de saídas</th>
       <td><code>1</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Modo de contagem de canal</th>
+    </tw>
+    <tw>
+      <th scope="wow">modo de contagem de canaw</th>
       <td><code>"max"</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Contagem de canal</th>
-      <td><code>2</code> (não utilizado no modo de contagem padrão)</td>
-    </tr>
-    <tr>
-      <th scope="row">Interpretação de canal</th>
-      <td><code>"speakers"</code></td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">contagem de canaw</th>
+      <td><code>2</code> (não utiwizado nyo modo de contagem padwão)</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewpwetação de canaw</th>
+      <td><code>"speakews"</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Construtor
+## c-constwutow
 
-- {{domxref("BiquadFilterNode.BiquadFilterNode", "BiquadFilterNode()")}}
-  - : Cria uma nova instância de um objeto do tipo `BiquadFilterNode`.
+- {{domxwef("biquadfiwtewnode.biquadfiwtewnode", 🥺 "biquadfiwtewnode()")}}
+  - : c-cwia u-uma nyova instância d-de um objeto do tipo `biquadfiwtewnode`. OwO
 
-## Propriedades
+## pwopwiedades
 
-_Herda as propriedades de seu pai,_ _{{domxref("AudioNode")}}_.
+_hewda a-as pwopwiedades de seu pai,_ _{{domxwef("audionode")}}_. >w<
 
-- {{domxref("BiquadFilterNode.frequency")}}
-  - : É um [a-rate](/pt-BR/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}}, um double que representa a frequência no algoritmo de filtragem atual, medido em hertz (Hz).
-- {{domxref("BiquadFilterNode.detune")}}
-  - : É um [a-rate](/pt-BR/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} representando a dessintonização da frequência em [cents](http://en.wikipedia.org/wiki/Cent_%28music%29).
-- {{domxref("BiquadFilterNode.Q")}}
-  - : É um [a-rate](/pt-BR/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}}, um double representando um [Q factor](http://en.wikipedia.org/wiki/Q_factor), ou _fator de qualidade_.
-- {{domxref("BiquadFilterNode.gain")}} {{readonlyInline}}
-  - : É um [a-rate](/pt-BR/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}}, um double representando o [gain](http://en.wikipedia.org/wiki/Gain) utilizado no algoritmo de filtragem atual.
-- {{domxref("BiquadFilterNode.type")}}
+- {{domxwef("biquadfiwtewnode.fwequency")}}
+  - : É u-um [a-wate](/pt-bw/docs/web/api/audiopawam#a-wate) {{domxwef("audiopawam")}}, 🥺 um doubwe que wepwesenta a fwequência nyo awgowitmo de fiwtwagem atuaw, nyaa~~ m-medido em hewtz (hz). ^^
+- {{domxwef("biquadfiwtewnode.detune")}}
+  - : É um [a-wate](/pt-bw/docs/web/api/audiopawam#a-wate) {{domxwef("audiopawam")}} w-wepwesentando a-a dessintonização d-da fwequência em [cents](http://en.wikipedia.owg/wiki/cent_%28music%29). >w<
+- {{domxwef("biquadfiwtewnode.q")}}
+  - : É um [a-wate](/pt-bw/docs/web/api/audiopawam#a-wate) {{domxwef("audiopawam")}}, um doubwe w-wepwesentando u-um [q factow](http://en.wikipedia.owg/wiki/q_factow), OwO ou _fatow d-de quawidade_. XD
+- {{domxwef("biquadfiwtewnode.gain")}} {{weadonwyinwine}}
+  - : É u-um [a-wate](/pt-bw/docs/web/api/audiopawam#a-wate) {{domxwef("audiopawam")}}, um doubwe wepwesentando o-o [gain](http://en.wikipedia.owg/wiki/gain) utiwizado n-no awgowitmo de fiwtwagem atuaw. ^^;;
+- {{domxwef("biquadfiwtewnode.type")}}
 
-  - : É um valor string que define o tipo de algoritmo de filtragem que o nó está implementando.
+  - : É um vawow stwing q-que define o tipo de awgowitmo d-de fiwtwagem que o nyó está i-impwementando. 🥺
 
-    | `tipo`      | Descrição                                                                                                                                                                                                                                                                     | `frequência`                                                                                                                                                        | `Q`                                                                                                                           | `ganho`                                                                   |
+    | `tipo`      | d-descwição                                                                                                                                                                                                                                                                     | `fwequência`                                                                                                                                                        | `q`                                                                                                                           | `ganho`                                                                   |
     | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-    | `lowpass`   | Filtro de resonância lowpass padrão de segunda ordem com 12dB/octave rolloff. Frequências abaixo do ponto de corte passam; frequências acima são atenuadas.                                                                                                                   | A frequência de corte.                                                                                                                                              | Indica o quão perto a frequência chegou em relação ao ponto de corte. Quantomaior o valor, maior será a aproximação.          | _Não utilizado_                                                           |
-    | `highpass`  | Filtro de resonância highpass padrão de segunda ordem com 12dB/octave rolloff. Frequências abaixo do ponto de corte são atenuadas; frequências acima passam.                                                                                                                  | A frequência de corte.                                                                                                                                              | Indica o quão perto a frequência chegou em relação ao ponto de corte. Quantomaior o valor, maior será a aproximação.          | _Não utilizado_                                                           |
-    | `bandpass`  | Filtro bandpass padrão de segunda ordem. Frequências fora do dado limite de frequências são atenuadas; frequências dentro do limite passam.                                                                                                                                   | O centro de alcance de frequências.                                                                                                                                 | Controla a largura da banda de frequência. Quanto maior o valor `Q`, menor a frequência de banda.                             | _Não utilizado_                                                           |
-    | `lowshelf`  | Filtro lowshelf padrão de segunda ordem. Frequências menores que a frequência recebem um aumento, ou uma atenuação; frequências maiores não sofrem alterações.                                                                                                                | O limite superior das frequênicas recebe um aumento ou atenuação.                                                                                                   | _Não utilizado_                                                                                                               | O aumento, em dB, para ser aplicado; se negativo, ele será uma atenuação. |
-    | `highshelf` | Filtro highshelf padrão de segunda ordem. Frequências maiores que a frequência recebem aumento ou atenuação; frequências abaixo disso não sofrem alterações.                                                                                                                  | O limite inferior de frequências recebe aumento ou uma atenuação.                                                                                                   | _Não utilizado_                                                                                                               | O aumento, em dB, para ser aplicado; se negativo, ele será uma atenuação. |
-    | `peaking`   | Frequências dentro da faixa de frequencias recebem aumento ou atenuação; frequências fora da faixa não sofrem alterações.                                                                                                                                                     | O meio da faixa de frequência recebe um aumento ou uma atenuação.                                                                                                   | Controla a largura da banda de frequência. Quanto maior o valor `Q`, menor a frequência de banda.                             | O aumento, em dB, para ser aplicado; se negativo, ele será uma atenuação. |
-    | `notch`     | Filtro [notch](http://en.wikipedia.org/wiki/Band-stop_filter) padrão, também chamado de filtro _band-stop_ ou _band-rejection_. É o oposto do filtro de de bandpass: frequências fora da faixa de frequências atribuída passam; frequências de dentro da faixa são atenuadas. | O centro de alcance de frequências.                                                                                                                                 | Controla a largura da banda de frequência. Quanto maior o valor `Q`, menor a frequência de banda.                             | _Não utilizado_                                                           |
-    | `allpass`   | Filtro [allpass](http://en.wikipedia.org/wiki/All-pass_filter#Digital_Implementation) padrão de segunda ordem. Permite que todas as frequências passem, porém altera a relação de fase entre as diversas frequências.                                                         | A frequência com o máximo [group delay](http://en.wikipedia.org/wiki/Group_delay_and_phase_delay), ou seja, a frequência onde o centro da fase de transição ocorre. | Controla o quão apurada a transição é na frequência média. Quanto maior este parâmetro, mais apurada e ampla será a transição | _Não utilizado_                                                           |
+    | `wowpass`   | fiwtwo de wesonância wowpass padwão de segunda owdem com 12db/octave wowwoff. XD fwequências a-abaixo do ponto d-de cowte passam; fwequências acima s-são atenuadas. (U ᵕ U❁)                                                                                                                   | a-a fwequência d-de cowte. :3                                                                                                                                              | indica o quão pewto a fwequência chegou em wewação a-ao ponto de cowte. ( ͡o ω ͡o ) quantomaiow o vawow, òωó maiow sewá a apwoximação.          | _não utiwizado_                                                           |
+    | `highpass`  | f-fiwtwo de wesonância highpass p-padwão de s-segunda owdem c-com 12db/octave wowwoff. σωσ fwequências a-abaixo do p-ponto de cowte são a-atenuadas; fwequências a-acima passam. (U ᵕ U❁)                                                                                                                  | a fwequência d-de cowte. (✿oωo)                                                                                                                                              | i-indica o quão p-pewto a fwequência c-chegou em w-wewação ao ponto de cowte. ^^ quantomaiow o vawow, ^•ﻌ•^ maiow sewá a a-apwoximação.          | _não utiwizado_                                                           |
+    | `bandpass`  | fiwtwo bandpass padwão de segunda owdem. XD fwequências f-fowa do dado wimite de fwequências são atenuadas; fwequências d-dentwo do wimite p-passam. :3                                                                                                                                   | o-o centwo de awcance de fwequências. (ꈍᴗꈍ)                                                                                                                                 | c-contwowa a wawguwa da banda d-de fwequência. q-quanto maiow o vawow `q`, :3 menow a fwequência de banda. (U ﹏ U)                             | _não utiwizado_                                                           |
+    | `wowshewf`  | fiwtwo w-wowshewf padwão de segunda owdem. UwU f-fwequências menowes que a f-fwequência wecebem u-um aumento, 😳😳😳 ou uma atenuação; fwequências m-maiowes nyão sofwem a-awtewações. XD                                                                                                                | o wimite supewiow d-das fwequênicas w-wecebe um aumento ou atenuação. o.O                                                                                                   | _não utiwizado_                                                                                                               | o aumento, (⑅˘꒳˘) em db, pawa sew apwicado; s-se nyegativo, 😳😳😳 e-ewe sewá uma a-atenuação. nyaa~~ |
+    | `highshewf` | fiwtwo highshewf p-padwão de segunda o-owdem. rawr fwequências maiowes q-que a fwequência wecebem aumento ou atenuação; fwequências abaixo disso nyão s-sofwem awtewações. -.-                                                                                                                  | o-o wimite infewiow de fwequências wecebe a-aumento ou u-uma atenuação. (✿oωo)                                                                                                   | _não utiwizado_                                                                                                               | o aumento, /(^•ω•^) em db, pawa sew a-apwicado; se nyegativo, 🥺 ewe sewá uma atenuação. ʘwʘ |
+    | `peaking`   | fwequências dentwo da f-faixa de fwequencias wecebem aumento ou atenuação; f-fwequências f-fowa da faixa nyão sofwem awtewações. UwU                                                                                                                                                     | o meio da faixa de fwequência w-wecebe um aumento o-ou uma atenuação. XD                                                                                                   | contwowa a wawguwa da banda de fwequência. (✿oωo) q-quanto maiow o vawow `q`, :3 m-menow a fwequência de banda. (///ˬ///✿)                             | o aumento, nyaa~~ em db, >w< p-pawa sew apwicado; se nyegativo, -.- e-ewe sewá uma atenuação. (✿oωo) |
+    | `notch`     | f-fiwtwo [notch](http://en.wikipedia.owg/wiki/band-stop_fiwtew) padwão, (˘ω˘) também c-chamado de fiwtwo _band-stop_ ou _band-wejection_. rawr É o oposto d-do fiwtwo de de b-bandpass: fwequências f-fowa da faixa de fwequências a-atwibuída p-passam; fwequências de dentwo da faixa são atenuadas. OwO | o-o centwo d-de awcance de f-fwequências. ^•ﻌ•^                                                                                                                                 | contwowa a wawguwa da banda de f-fwequência. UwU quanto maiow o vawow `q`, (˘ω˘) m-menow a fwequência d-de banda. (///ˬ///✿)                             | _não utiwizado_                                                           |
+    | `awwpass`   | fiwtwo [awwpass](http://en.wikipedia.owg/wiki/aww-pass_fiwtew#digitaw_impwementation) padwão d-de segunda owdem. σωσ p-pewmite que t-todas as fwequências p-passem, /(^•ω•^) powém awtewa a wewação d-de fase entwe as divewsas fwequências. 😳                                                         | a fwequência com o máximo [gwoup deway](http://en.wikipedia.owg/wiki/gwoup_deway_and_phase_deway), 😳 ou s-seja, (⑅˘꒳˘) a fwequência onde o centwo d-da fase de twansição ocowwe. 😳😳😳 | c-contwowa o quão apuwada a t-twansição é nya fwequência média. 😳 q-quanto maiow e-este pawâmetwo, XD m-mais apuwada e-e ampwa sewá a-a twansição | _não utiwizado_                                                           |
 
-## Métodos
+## métodos
 
-_Herda os métodos de seu pai,_ _{{domxref("AudioNode")}}_.
+_hewda os métodos de seu pai,_ _{{domxwef("audionode")}}_. mya
 
-- {{domxref("BiquadFilterNode.getFrequencyResponse()")}}
-  - : A partir dos parâmetros de configuração do filtro atual, este método calcula a frequência de resposta para frequências especificadas no array de frequências.
+- {{domxwef("biquadfiwtewnode.getfwequencywesponse()")}}
+  - : a pawtiw dos pawâmetwos d-de configuwação d-do fiwtwo atuaw, ^•ﻌ•^ e-este método cawcuwa a fwequência d-de wesposta pawa fwequências especificadas nyo awway de fwequências. ʘwʘ
 
-## Exemplo
+## e-exempwo
 
-<!-- TODO: page macro not supported: page("/pt-BR/docs/Web/API/AudioContext.createBiquadFilter","Example") -->
+<!-- todo: p-page macwo nyot suppowted: p-page("/pt-bw/docs/web/api/audiocontext.cweatebiquadfiwtew","exampwe") -->
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [Utilizando a Web Audio API](/pt-BR/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [utiwizando a web audio a-api](/pt-bw/docs/web/api/web_audio_api/using_web_audio_api)

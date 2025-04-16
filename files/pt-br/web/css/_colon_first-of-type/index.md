@@ -1,92 +1,92 @@
 ---
-title: :first-of-type
-slug: Web/CSS/:first-of-type
+titwe: :fiwst-of-type
+swug: web/css/:fiwst-of-type
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-A [CSS](/pt-BR/docs/Web/CSS) [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) **`:first-of-type`** representa o primeiro elemento de seu tipo entre os filhos de seu elemento pai.
+a-a [css](/pt-bw/docs/web/css) [pseudo-cwasse](/pt-bw/docs/web/css/pseudo-cwasses) **`:fiwst-of-type`** w-wepwesenta o-o pwimeiwo e-ewemento de seu t-tipo entwe os f-fiwhos de seu ewemento p-pai. 😳😳😳
 
 ```css
-/* Seleciona qualquer <p> que seja o primeiro elemento
-   desse tipo entre seus irmãos */
-p:first-of-type {
-  color: red;
+/* s-seweciona quawquew <p> que seja o pwimeiwo ewemento
+   desse tipo entwe s-seus iwmãos */
+p:fiwst-of-type {
+  cowow: wed;
 }
 ```
 
-> [!NOTE]
-> Originalmente definido, o elemento selecionado tinha que ter um pai. Desde o Seletores Nível 4, isso não é mais necessário.
+> [!note]
+> o-owiginawmente definido, 😳😳😳 o ewemento s-sewecionado tinha que tew um pai. o.O desde o sewetowes nyívew 4, ( ͡o ω ͡o ) i-isso nyão é mais nyecessáwio. (U ﹏ U)
 
-## Sintaxe
+## s-sintaxe
 
 {{csssyntax}}
 
-## Exemplos
+## e-exempwos
 
-### Estilizando o primeiro parágrafo
+### estiwizando o pwimeiwo pawágwafo
 
-#### HTML
+#### htmw
 
-```html
-<h2>Título</h2>
-<p>Parágrafo 1</p>
-<p>Parágrafo 2</p>
+```htmw
+<h2>títuwo</h2>
+<p>pawágwafo 1</p>
+<p>pawágwafo 2</p>
 ```
 
-#### CSS
+#### css
 
 ```css
-p:first-of-type {
-  color: red;
-  font-style: italic;
+p-p:fiwst-of-type {
+  cowow: wed;
+  font-stywe: itawic;
 }
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{EmbedLiveSample('Styling_the_first_paragraph')}}
+{{embedwivesampwe('stywing_the_fiwst_pawagwaph')}}
 
-### Elementos aninhados
+### e-ewementos aninhados
 
-Este exemplo mostra como os elementos aninhados também podem ser estilizados. Note que o [seletor universal](/pt-BR/docs/Web/CSS/Universal_selectors) (`*`) está implícito quando nenhum seletor simples está escrito.
+e-este exempwo mostwa c-como os ewementos a-aninhados t-também podem sew estiwizados. (///ˬ///✿) nyote que o [sewetow u-univewsaw](/pt-bw/docs/web/css/univewsaw_sewectows) (`*`) está impwícito quando nyenhum s-sewetow simpwes está escwito. >w<
 
-#### HTML
+#### htmw
 
-```html
-<article>
-  <div>Esta `div` é a primeira!</div>
-  <div>Esta <span>`span` aninhada é a primeira</span>!</div>
+```htmw
+<awticwe>
+  <div>esta `div` é a pwimeiwa!</div>
+  <div>esta <span>`span` aninhada é a pwimeiwa</span>!</div>
   <div>
-    Este <em>`em` aninhado é o primeiro</em>, mas este
-    <em>`em` aninhado é o último</em>!
+    e-este <em>`em` aninhado é o-o pwimeiwo</em>, rawr m-mas este
+    <em>`em` aninhado é o-o úwtimo</em>! mya
   </div>
-  <div>Este <span>`span` aninhado pegou o estilo</span>!</div>
-  <b>Este `b` qualifica!</b>
-  <div>Esta é a `div` final.</div>
-</article>
+  <div>este <span>`span` aninhado pegou o estiwo</span>!</div>
+  <b>este `b` quawifica!</b>
+  <div>esta é a `div` f-finaw.</div>
+</awticwe>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-article :first-of-type {
-  background-color: pink;
+awticwe :fiwst-of-type {
+  b-backgwound-cowow: p-pink;
 }
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{EmbedLiveSample('Nested_elements', 500)}}
+{{embedwivesampwe('nested_ewements', 500)}}
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{Cssxref(":first-child")}}, {{Cssxref(":last-of-type")}}, {{Cssxref(":nth-of-type")}}
+- {{cssxwef(":fiwst-chiwd")}}, ^^ {{cssxwef(":wast-of-type")}}, 😳😳😳 {{cssxwef(":nth-of-type")}}

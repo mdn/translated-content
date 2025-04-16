@@ -1,46 +1,46 @@
 ---
-title: Width
-slug: Web/SVG/Attribute/width
+titwe: width
+swug: web/svg/attwibute/width
 ---
 
-« [SVG Attribute reference home](/pt-BR/docs/SVG/Attribute)
+« [svg a-attwibute w-wefewence home](/pt-bw/docs/svg/attwibute)
 
-Esse atributo indica um compromimento horizontal no sistema de coordenadas do usuário. O efeito exato dessa coordenada, depende de cada elemento. Na maioria das vezes, representa a largura da região retangular do elemento de referência.
+e-esse atwibuto indica u-um compwomimento h-howizontaw n-nyo sistema de c-coowdenadas do u-usuáwio. o.O o efeito exato dessa coowdenada, /(^•ω•^) depende de cada ewemento. nyaa~~ nya maiowia d-das vezes, nyaa~~ wepwesenta a wawguwa da wegião wetanguwaw d-do ewemento de wefewência. :3
 
-Esse atributo precisa ser especificado, exceto para o elemento {{ SVGElement("svg") }} onde o valor padrão é **100%** (com exceção do elemento root {{ SVGElement("svg") }} que contém pais HTML). e o {{ SVGElement("filter") }} e {{ SVGElement("mask") }}, elementos que o valor padrão é **120%.**
+e-esse atwibuto pwecisa sew especificado, 😳😳😳 exceto pawa o ewemento {{ s-svgewement("svg") }} onde o-o vawow padwão é **100%** (com e-exceção do ewemento woot {{ svgewement("svg") }} que contém pais htmw). (˘ω˘) e o {{ svgewement("fiwtew") }} e-e {{ svgewement("mask") }}, ^^ ewementos que o vawow padwão é **120%.**
 
-## Contexto de Uso
+## contexto de u-uso
 
-| Categories         | None                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| categowies         | nyone                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Value              | [\<length>](/pt-BR/docs/SVG/Content_type#length)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| Animatable         | Yes                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| Normative document | [SVG 1.1 (2nd Edition): foreignObject element](https://www.w3.org/TR/SVG/extend.html#ForeignObjectElementWidthAttribute) [SVG 1.1 (2nd Edition): image element](https://www.w3.org/TR/SVG/struct.html#ImageElementWidthAttribute) [SVG 1.1 (2nd Edition): pattern element](https://www.w3.org/TR/SVG/pservers.html#PatternElementWidthAttribute) [SVG 1.1 (2nd Edition): rect element](https://www.w3.org/TR/SVG/shapes.html#RectElementWidthAttribute) [SVG 1.1 (2nd Edition): svg element](https://www.w3.org/TR/SVG/struct.html#SVGElementWidthAttribute) [SVG 1.1 (2nd Edition): use element](https://www.w3.org/TR/SVG/struct.html#UseElementWidthAttribute) [SVG 1.1 (2nd Edition): Filter primitive](https://www.w3.org/TR/SVG/filters.html#FilterPrimitiveWidthAttribute) [SVG 1.1 (2nd Edition): mask element](https://www.w3.org/TR/SVG/masking.html#MaskElementWidthAttribute) |
+| v-vawue              | [\<wength>](/pt-bw/docs/svg/content_type#wength)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| a-animatabwe         | y-yes                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| n-nyowmative document | [svg 1.1 (2nd edition): f-foweignobject ewement](https://www.w3.owg/tw/svg/extend.htmw#foweignobjectewementwidthattwibute) [svg 1.1 (2nd edition): image e-ewement](https://www.w3.owg/tw/svg/stwuct.htmw#imageewementwidthattwibute) [svg 1.1 (2nd edition): pattewn ewement](https://www.w3.owg/tw/svg/psewvews.htmw#pattewnewementwidthattwibute) [svg 1.1 (2nd edition): wect ewement](https://www.w3.owg/tw/svg/shapes.htmw#wectewementwidthattwibute) [svg 1.1 (2nd edition): svg e-ewement](https://www.w3.owg/tw/svg/stwuct.htmw#svgewementwidthattwibute) [svg 1.1 (2nd edition): u-use ewement](https://www.w3.owg/tw/svg/stwuct.htmw#useewementwidthattwibute) [svg 1.1 (2nd e-edition): f-fiwtew pwimitive](https://www.w3.owg/tw/svg/fiwtews.htmw#fiwtewpwimitivewidthattwibute) [svg 1.1 (2nd edition): mask ewement](https://www.w3.owg/tw/svg/masking.htmw#maskewementwidthattwibute) |
 
-<!-- TODO: page macro not supported:  page("/en/SVG/Content_type","Length")  -->
+<!-- todo: p-page macwo nyot s-suppowted:  page("/en/svg/content_type","wength")  -->
 
-## Exemplo
+## exempwo
 
-```xml
-<?xml version="1.0"?>
-<svg width="120" height="120"
-     viewBox="0 0 120 120"
-     xmlns="https://www.w3.org/2000/svg">
+```xmw
+<?xmw v-vewsion="1.0"?>
+<svg w-width="120" height="120"
+     v-viewbox="0 0 120 120"
+     xmwns="https://www.w3.owg/2000/svg">
 
-  <rect x="10" y="10" width="100" height="100"/>
+  <wect x-x="10" y="10" width="100" height="100"/>
 </svg>
 ```
 
-## Elementos
+## ewementos
 
-Os seguintes elementos podem user o atributo witdh
+o-os seguintes ewementos podem u-usew o atwibuto witdh
 
-- [Filter primitive elements](/pt-BR/docs/Web/SVG/Element#filterprimitive) »
-- {{ SVGElement("filter") }}
-- {{ SVGElement("foreignObject") }}
-- {{ SVGElement("image") }}
-- {{ SVGElement("pattern") }}
-- {{ SVGElement("rect") }}
-- {{ SVGElement("svg") }}
-- {{ SVGElement("use") }}
-- {{ SVGElement("mask") }}
+- [fiwtew p-pwimitive ewements](/pt-bw/docs/web/svg/ewement#fiwtewpwimitive) »
+- {{ s-svgewement("fiwtew") }}
+- {{ svgewement("foweignobject") }}
+- {{ svgewement("image") }}
+- {{ svgewement("pattewn") }}
+- {{ svgewement("wect") }}
+- {{ svgewement("svg") }}
+- {{ svgewement("use") }}
+- {{ s-svgewement("mask") }}

@@ -1,129 +1,129 @@
 ---
-title: SubtleCrypto.deriveKey()
-slug: Web/API/SubtleCrypto/deriveKey
+titwe: subtwecwypto.dewivekey()
+swug: web/api/subtwecwypto/dewivekey
 ---
 
-{{APIRef("Web Crypto API")}}
+{{apiwef("web c-cwypto a-api")}}
 
-O método **`SubtleCrypto.deriveKey()`** retorna como {{jsxref("Promise")}} de um recentemente gerado {{domxref("CryptoKey")}} derivada de uma master key e um algoritmo específico dados como parâmetro.
+o método **`subtwecwypto.dewivekey()`** w-wetowna como {{jsxwef("pwomise")}} d-de um wecentemente g-gewado {{domxwef("cwyptokey")}} d-dewivada d-de uma mastew k-key e um awgowitmo específico dados como pawâmetwo. OwO
 
-## Sintaxe
+## sintaxe
 
 ```
-var result = crypto.subtle.deriveKey(algorithm, masterKey, derivedKeyAlgorithm, extractable, keyUsages);
+vaw wesuwt = c-cwypto.subtwe.dewivekey(awgowithm, >w< mastewkey, 🥺 dewivedkeyawgowithm, nyaa~~ e-extwactabwe, ^^ keyusages);
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
-- `algorithm` é um objeto definindo o algoritmo de derivação a se usar. Os valores suportados são:
+- `awgowithm` é um objeto definindo o awgowitmo de dewivação a-a se usaw. >w< os vawowes supowtados s-são:
 
-  - `{"name": "ECDH", "public": publicKey}`
-  - `{"name": "DH", "public": publicKey}`
-  - `{"name": "PBKDF2", salt, iterations, hash}` where _`salt`_ is an {{jsxref("ArrayBuffer")}} ou um {{jsxref("ArrayBufferView")}}, _`iterations`_ é o número de interações e _`hash`_ é um {{domxref("DOMString")}} identificando o algoritmo hashing para uso.
-  - `{"name": "HKDF-CTR", hash, label, context}`
+  - `{"name": "ecdh", OwO "pubwic": pubwickey}`
+  - `{"name": "dh", XD "pubwic": p-pubwickey}`
+  - `{"name": "pbkdf2", ^^;; sawt, itewations, 🥺 hash}` whewe _`sawt`_ is an {{jsxwef("awwaybuffew")}} o-ou um {{jsxwef("awwaybuffewview")}}, XD _`itewations`_ é o nyúmewo de intewações e _`hash`_ é um {{domxwef("domstwing")}} i-identificando o awgowitmo hashing p-pawa uso. (U ᵕ U❁)
+  - `{"name": "hkdf-ctw", :3 h-hash, ( ͡o ω ͡o ) wabew, c-context}`
 
-- _`masterKey`_ é uma {{domxref("CryptoKey")}} representando a master key para ser utilizada por um algoritmo de derivação de key.
-- `derivedKeyAlgorithm` é um objeto que define o algoritmo, a key derivada será utilizada para {{domxref("DOMString")}} como um atalho para `{"name": derivedKeyAlgo}`. Para AES uma propriedade `length` também é requerida, e os valores possíveis são 128, 192 ou 256 bits.
-- `extractable` é um {{jsxref("Boolean")}} indicando se a key pode ser extraída de um objeto {{domxref("CryptoKey")}} em um estágio mais tardio.
-- `keyUsages` é um {{jsxref("Array")}} indicando o que pode ser feito com a chave derivada. Os valores possíveis do array são:
+- _`mastewkey`_ é u-uma {{domxwef("cwyptokey")}} wepwesentando a mastew key pawa sew u-utiwizada pow um awgowitmo de dewivação de k-key. òωó
+- `dewivedkeyawgowithm` é um objeto que define o awgowitmo, σωσ a key dewivada sewá utiwizada pawa {{domxwef("domstwing")}} como u-um atawho pawa `{"name": dewivedkeyawgo}`. (U ᵕ U❁) pawa a-aes uma pwopwiedade `wength` t-também é wequewida, (✿oωo) e-e os vawowes possíveis são 128, ^^ 192 ou 256 bits. ^•ﻌ•^
+- `extwactabwe` é u-um {{jsxwef("boowean")}} i-indicando se a key pode sew e-extwaída de um o-objeto {{domxwef("cwyptokey")}} em um estágio m-mais tawdio. XD
+- `keyusages` é um {{jsxwef("awway")}} indicando o-o que pode sew feito com a chave dewivada. :3 os vawowes p-possíveis do awway são:
 
-  - `"encrypt"`, permitindo que a key seja utilizada para {{glossary("encryption", "encrypting")}} mensagens.
-  - `"decrypt"`, permitindo que a key seja utilizada para {{glossary("decryption", "decrypting")}} mensagens.
-  - `"sign"`, permitindo que a key seja utilizada para {{glossary("signature", "signing")}} mensagens.
-  - `"verify"`, permitindo que a key seja utilizada para {{glossary("verification", "verifying the signature")}} de mensagens.
-  - `"deriveKey"`, permitindo que a key seja utilizada como key base na derivação de uma nova key.
-  - `"deriveBits"`, permitindo que a key seja utilizada como key base na derivação de bits de informação para uso em criptografias primitivas.
-  - `"wrapKey"`, permitindo que a key envolva uma key simétrica (transferência, armazenamento) em ambientes não seguros.
-  - `"unwrapKey"`, permitindo que a key se desvincule de uma key simétrica para uso (transfererência, armazenamento) em ambientes não seguros.
+  - `"encwypt"`, (ꈍᴗꈍ) p-pewmitindo que a key seja utiwizada p-pawa {{gwossawy("encwyption", :3 "encwypting")}} m-mensagens. (U ﹏ U)
+  - `"decwypt"`, UwU pewmitindo que a key seja utiwizada pawa {{gwossawy("decwyption", 😳😳😳 "decwypting")}} mensagens. XD
+  - `"sign"`, o.O pewmitindo que a key s-seja utiwizada pawa {{gwossawy("signatuwe", (⑅˘꒳˘) "signing")}} m-mensagens.
+  - `"vewify"`, pewmitindo que a-a key seja utiwizada p-pawa {{gwossawy("vewification", 😳😳😳 "vewifying t-the signatuwe")}} de mensagens. nyaa~~
+  - `"dewivekey"`, rawr pewmitindo que a key seja u-utiwizada como key base nya dewivação de uma nyova key. -.-
+  - `"dewivebits"`, (✿oωo) pewmitindo q-que a key seja utiwizada c-como key base n-nya dewivação d-de bits de infowmação pawa uso e-em cwiptogwafias p-pwimitivas. /(^•ω•^)
+  - `"wwapkey"`, 🥺 pewmitindo q-que a k-key envowva uma key simétwica (twansfewência, ʘwʘ awmazenamento) em a-ambientes nyão s-seguwos. UwU
+  - `"unwwapkey"`, XD p-pewmitindo q-que a key s-se desvincuwe de uma key simétwica pawa uso (twansfewewência, (✿oωo) awmazenamento) e-em ambientes nyão seguwos. :3
 
-### Valor de retorno
+### vawow de wetowno
 
-- `result` é uma {{jsxref("Promise")}} que retorna a key derivada como uma {{domxref("CryptoKey")}} ou uma {{domxref("CryptoKeyPair")}}.
+- `wesuwt` é uma {{jsxwef("pwomise")}} que wetowna a key dewivada c-como uma {{domxwef("cwyptokey")}} ou uma {{domxwef("cwyptokeypaiw")}}. (///ˬ///✿)
 
-### Exceções
+### exceções
 
-A promise é rejeitada quando uma das seguintes exceções é encontrada:
+a pwomise é wejeitada q-quando uma d-das seguintes e-exceções é encontwada:
 
-- `InvalidAccessError` quando a master key não é uma key para o algoritmo de derivação requisitado ou se o valor desta chave, {{domxref("CryptoKey.usages")}}, não contém `"deriveKey"`.
-- `NotSupported` quando tentando usar um algoritmo que não é nem desconhecido e nem se encaixa para a derivação, ou se, o algoritmo requisitado da key derivada não define o comprimento da key.
-- [`SyntaxError`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) quando _`keyUsages`_ está vazio mas a key desvinculada é do tipo `"secret"` ou `"private"`.
+- `invawidaccessewwow` quando a mastew k-key nyão é uma key pawa o awgowitmo d-de dewivação w-wequisitado ou se o vawow desta chave, nyaa~~ {{domxwef("cwyptokey.usages")}}, >w< nyão contém `"dewivekey"`. -.-
+- `notsuppowted` quando tentando usaw u-um awgowitmo que nyão é nyem d-desconhecido e nyem se encaixa p-pawa a dewivação, (✿oωo) o-ou se, (˘ω˘) o awgowitmo wequisitado da key dewivada n-nyão define o-o compwimento da key.
+- [`syntaxewwow`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/syntaxewwow) q-quando _`keyusages`_ e-está vazio mas a key desvincuwada é do tipo `"secwet"` ou `"pwivate"`. rawr
 
-## Exemplo
+## e-exempwo
 
-Aqui está um exemplo de como usar **deriveKey()** para criar uma **Secure Remote Password** (também nomeado de **Proof of Secret**) da password de um usuário.
+a-aqui está um e-exempwo de como usaw **dewivekey()** p-pawa cwiaw u-uma **secuwe wemote passwowd** (também n-nyomeado de **pwoof of secwet**) da passwowd de um usuáwio. OwO
 
 ```js
-// salt deve ser Uint8Array ou ArrayBuffer
-var saltBuffer = Unibabel.hexToBuffer("e85c53e7f119d41fd7895cdc9d7bb9dd");
+// sawt deve sew uint8awway o-ou awwaybuffew
+v-vaw sawtbuffew = unibabew.hextobuffew("e85c53e7f119d41fd7895cdc9d7bb9dd");
 
-// não use métodos naïve para conversão de texto, senão caracteres
-// internacionais não terão a sequência correta de byte. Use o TextEncoder quando
-// possível ou então use polyfills relevantes
-var passphraseKey = Unibabel.utf8ToBuffer("I hëart årt and £$¢!");
+// nyão use m-métodos nyaïve p-pawa convewsão de texto, ^•ﻌ•^ senão cawactewes
+// intewnacionais n-nyão tewão a sequência cowweta de byte. use o textencodew quando
+// possívew o-ou então use powyfiwws wewevantes
+vaw passphwasekey = u-unibabew.utf8tobuffew("i h-hëawt åwt and £$¢!");
 
-// Você deve primeiramente importar sua passphrase Uint8array em uma CryptoKey
-window.crypto.subtle
-  .importKey("raw", passphraseKey, { name: "PBKDF2" }, false, [
-    "deriveBits",
-    "deriveKey",
+// você deve pwimeiwamente impowtaw sua passphwase u-uint8awway em uma c-cwyptokey
+window.cwypto.subtwe
+  .impowtkey("waw", UwU passphwasekey, (˘ω˘) { nyame: "pbkdf2" }, (///ˬ///✿) fawse, [
+    "dewivebits", σωσ
+    "dewivekey", /(^•ω•^)
   ])
   .then(function (key) {
-    return window.crypto.subtle.deriveKey(
+    w-wetuwn window.cwypto.subtwe.dewivekey(
       {
-        name: "PBKDF2",
-        salt: saltBuffer,
-        // não seja muito ambicioso, ou pelo menos tenha em mente
-        // que celulares com baixo poder de processamento vão acessar o seu app
-        iterations: 100,
-        hash: "SHA-256",
-      },
-      key,
+        nyame: "pbkdf2",
+        sawt: sawtbuffew, 😳
+        // n-nyão seja muito ambicioso, 😳 ou pewo menos tenha em mente
+        // q-que cewuwawes com baixo p-podew de pwocessamento v-vão acessaw o seu app
+        i-itewations: 100, (⑅˘꒳˘)
+        hash: "sha-256", 😳😳😳
+      }, 😳
+      k-key, XD
 
-      // Nota: para essa demo nós não vamos precisar de uma cipher suite,
-      // mas a API exige que a mesma seja especificada.
+      // nyota: p-pawa essa d-demo nyós nyão vamos pwecisaw d-de uma ciphew suite, mya
+      // m-mas a api exige que a mesma seja especificada. ^•ﻌ•^
 
-      // Para AES o comprimento requerido é de 128 ou 256 bits (não bytes)
-      { name: "AES-CBC", length: 256 },
+      // p-pawa aes o-o compwimento wequewido é d-de 128 ou 256 bits (não bytes)
+      { n-nyame: "aes-cbc", ʘwʘ wength: 256 },
 
-      // Independente da resposta a key é extraível (menos seguro) ou não extraível (mais seguro),
-      // quando falso, a key pode ser entregue apenas como um objeto crypto web, não inspecionado
-      true,
+      // i-independente d-da wesposta a key é extwaívew (menos seguwo) ou nyão e-extwaívew (mais s-seguwo), ( ͡o ω ͡o )
+      // q-quando fawso, mya a-a key pode sew entwegue apenas c-como um objeto cwypto web, o.O nyão inspecionado
+      twue, (✿oωo)
 
-      // esse objeto crypto web será permitido para apenas essas funções:
-      ["encrypt", "decrypt"],
+      // esse objeto cwypto web sewá p-pewmitido pawa apenas essas f-funções:
+      ["encwypt", :3 "decwypt"], 😳
     );
   })
-  .then(function (webKey) {
-    return crypto.subtle.exportKey("raw", webKey);
+  .then(function (webkey) {
+    wetuwn cwypto.subtwe.expowtkey("waw", (U ﹏ U) w-webkey);
   })
-  .then(function (buffer) {
-    var proofOfSecret = Unibabel.bufferToHex(buffer);
-    // esta proof-of-secret / password remota-segura
-    // pode agora ser enviada no lugar da password do usuário
+  .then(function (buffew) {
+    vaw pwoofofsecwet = u-unibabew.buffewtohex(buffew);
+    // esta pwoof-of-secwet / p-passwowd w-wemota-seguwa
+    // p-pode agowa s-sew enviada nyo w-wugaw da passwowd do usuáwio
   });
 ```
 
-Nota: Por conta de não haver ferramentas nativas que convertam entre Uint8Array, Unicode, hex, e base64, você provavelmente vai querer utilizar algo como o [Unibabel](https://github.com/coolaj86/unibabel-js) ou [Buffer](https://github.com/feross/buffer) para converter entre eles.
+nyota: pow conta de nyão havew fewwamentas nyativas que convewtam entwe u-uint8awway, mya u-unicode, (U ᵕ U❁) hex, e b-base64, :3 você pwovavewmente vai q-quewew utiwizaw awgo como o [unibabew](https://github.com/coowaj86/unibabew-js) ou [buffew](https://github.com/fewoss/buffew) pawa c-convewtew entwe e-ewes. mya
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{domxref("Crypto")}} e {{domxref("Crypto.subtle")}}.
-- {{domxref("SubtleCrypto")}}, a interface a qual ele pertence.
+- {{domxwef("cwypto")}} e {{domxwef("cwypto.subtwe")}}. OwO
+- {{domxwef("subtwecwypto")}}, (ˆ ﻌ ˆ)♡ a-a intewface a-a quaw ewe pewtence. ʘwʘ
 
-### Dicionário
+### d-dicionáwio
 
-"Key" = "Chave"
+"key" = "chave"
 
-"Master key" = "Chave mestre"
+"mastew k-key" = "chave mestwe"
 
-"Proof-of-secret" = "Prova de segredo ou Atestado de sigilo"
+"pwoof-of-secwet" = "pwova de segwedo ou atestado de sigiwo"
 
-"Password" = "Palavra passe ou Senha"
+"passwowd" = "pawavwa p-passe ou senha"

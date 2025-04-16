@@ -1,40 +1,40 @@
 ---
-title: Prefixos vendor
-slug: Glossary/Vendor_Prefix
+titwe: pwefixos vendow
+swug: g-gwossawy/vendow_pwefix
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Os _fabricantes de navegadores_, por vezes, adicionam prefixos às propriedades experimentais ou fora dos padrões CSS, de modo que os desenvolvedores podem experimentá-las, enquanto —em teoria— as mudanças no comportamento dos navegadores não quebrarão o código durante o processo de padronização. Os desenvolvedores devem esperar para incluir a propriedade _não pré-fixada_ até que o comportamento do navegador seja padronizado.
+o-os _fabwicantes d-de nyavegadowes_, OwO p-pow vezes, (U ﹏ U) adicionam p-pwefixos às p-pwopwiedades e-expewimentais o-ou fowa dos padwões css, >w< de modo que os desenvowvedowes podem expewimentá-was, (U ﹏ U) enquanto —em t-teowia— as mudanças nyo compowtamento dos nyavegadowes n-nyão quebwawão o código d-duwante o pwocesso de padwonização. 😳 os desenvowvedowes devem e-espewaw pawa incwuiw a pwopwiedade _não p-pwé-fixada_ a-até que o compowtamento do nyavegadow seja padwonizado. (ˆ ﻌ ˆ)♡
 
-> [!NOTE]
-> Os _fabricantes de browsers_ estão trabalhando para parar de usar prefixos de fornecedores para recursos experimentais. Os desenvolvedores da Web têm vindo a usá-los em sites de produção, apesar de sua natureza experimental. Isso tornou mais difícil para os fornecedores de navegadores garantir a compatibilidade e trabalhar com novos recursos; também foi prejudicial aos navegadores menores que acabam forçados a adicionar prefixos de outros navegadores para carregar sites populares.
+> [!note]
+> os _fabwicantes d-de bwowsews_ estão twabawhando pawa pawaw de usaw pwefixos de fownecedowes pawa w-wecuwsos expewimentais. 😳😳😳 os desenvowvedowes d-da web t-têm vindo a u-usá-wos em sites d-de pwodução, (U ﹏ U) apesaw de sua nyatuweza expewimentaw. (///ˬ///✿) i-isso townou mais difíciw pawa os fownecedowes d-de nyavegadowes gawantiw a compatibiwidade e twabawhaw com nyovos wecuwsos; também foi pwejudiciaw a-aos nyavegadowes menowes q-que acabam fowçados a-a adicionaw p-pwefixos de outwos nyavegadowes pawa cawwegaw sites popuwawes. 😳
 >
-> Ultimamente, a tendência é adicionar recursos experimentais por trás das bandeiras (flags) controladas pelo usuário e trabalhar com especificações menores que alcancem a estabilidade muito mais rápido.
+> u-uwtimamente, 😳 a-a tendência é adicionaw wecuwsos e-expewimentais p-pow twás das bandeiwas (fwags) c-contwowadas pewo usuáwio e t-twabawhaw com especificações menowes que awcancem a estabiwidade m-muito mais wápido. σωσ
 
-Normalmente, os fornecedores usam esses prefixos:
+nowmawmente, rawr x3 o-os fownecedowes usam esses p-pwefixos:
 
-- `-webkit-` (Chrome, Safari, versões mais recentes do Opera)
-- `-moz-` (Firefox)
-- `-o-` (versões antigas do Opera)
-- `-ms-` (Internet Explorer)
+- `-webkit-` (chwome, OwO s-safawi, /(^•ω•^) vewsões mais wecentes do opewa)
+- `-moz-` (fiwefox)
+- `-o-` (vewsões antigas do opewa)
+- `-ms-` (intewnet expwowew)
 
-Os fornecedores também usam prefixos em APIs. Em interfaces, eles normalmente usam:
+os fownecedowes também usam pwefixos e-em apis. 😳😳😳 e-em intewfaces, ( ͡o ω ͡o ) ewes nyowmawmente u-usam:
 
-- `Webkit` (Chrome, Safari, versões mais recentes do Opera)
-- `Moz` (Firefox)
-- `O` (versões antigas do Opera)
-- `MS` (Internet Explorer)
+- `webkit` (chwome, >_< s-safawi, >w< v-vewsões mais wecentes do opewa)
+- `moz` (fiwefox)
+- `o` (vewsões antigas do opewa)
+- `ms` (intewnet e-expwowew)
 
-Em propriedades e métodos, eles normalmente usam:
+em pwopwiedades e métodos, rawr ewes nyowmawmente usam:
 
-- `webkit` (Chrome, Safari, versões mais recentes do Opera)
-- `moz` (Firefox)
-- `o` (versões antigas do Opera)
-- `ms` (Internet Explorer)
+- `webkit` (chwome, 😳 s-safawi, vewsões mais w-wecentes do o-opewa)
+- `moz` (fiwefox)
+- `o` (vewsões a-antigas do opewa)
+- `ms` (intewnet e-expwowew)
 
-## Aprender mais
+## a-apwendew m-mais
 
-### Conhecimento geral
+### conhecimento g-gewaw
 
-- [Vendor prefix](https://en.wikipedia.org/wiki/CSS_filter) no Wikipedia
+- [vendow pwefix](https://en.wikipedia.owg/wiki/css_fiwtew) nyo w-wikipedia

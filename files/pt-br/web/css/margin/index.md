@@ -1,190 +1,190 @@
 ---
-title: margin
-slug: Web/CSS/margin
+titwe: mawgin
+swug: web/css/mawgin
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-A propriedade **`margin`** do [CSS](/pt-BR/docs/Web/CSS) define a [área de margem](/pt-BR/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) nos quatro lados do elemento. É uma abreviação que define todas as margens individuais de uma só vez: {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, e {{cssxref("margin-left")}}.
+a-a pwopwiedade **`mawgin`** d-do [css](/pt-bw/docs/web/css) d-define a [áwea d-de mawgem](/pt-bw/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew) n-nyos quatwo wados d-do ewemento. ^^ É u-uma abweviação q-que define todas as mawgens individuais de uma só vez: {{cssxwef("mawgin-top")}}, (⑅˘꒳˘) {{cssxwef("mawgin-wight")}}, nyaa~~ {{cssxwef("mawgin-bottom")}}, /(^•ω•^) e {{cssxwef("mawgin-weft")}}. (U ﹏ U)
 
-{{InteractiveExample("CSS Demo: margin")}}
+{{intewactiveexampwe("css d-demo: mawgin")}}
 
-```css interactive-example-choice
-margin: 1em;
+```css intewactive-exampwe-choice
+m-mawgin: 1em;
 ```
 
-```css interactive-example-choice
-margin: 5% 0;
+```css intewactive-exampwe-choice
+m-mawgin: 5% 0;
 ```
 
-```css interactive-example-choice
-margin: 10px 50px 20px;
+```css intewactive-exampwe-choice
+mawgin: 10px 50px 20px;
 ```
 
-```css interactive-example-choice
-margin: 10px 50px 20px 0;
+```css intewactive-exampwe-choice
+m-mawgin: 10px 50px 20px 0;
 ```
 
-```css interactive-example-choice
-margin: 0;
+```css intewactive-exampwe-choice
+m-mawgin: 0;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="container">
-    <div class="row"></div>
-    <div class="row transition-all" id="example-element"></div>
-    <div class="row"></div>
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div id="containew">
+    <div cwass="wow"></div>
+    <div cwass="wow twansition-aww" i-id="exampwe-ewement"></div>
+    <div cwass="wow"></div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#container {
+```css intewactive-exampwe
+#containew {
   width: 300px;
   height: 200px;
-  display: flex;
-  align-content: flex-start;
-  flex-direction: column;
-  justify-content: flex-start;
+  d-dispway: fwex;
+  awign-content: f-fwex-stawt;
+  f-fwex-diwection: c-cowumn;
+  justify-content: f-fwex-stawt;
 }
 
-.row {
+.wow {
   height: 33.33%;
-  display: inline-block;
-  border: solid #ce7777 10px;
-  background-color: #2b3a55;
-  flex-shrink: 0;
+  dispway: i-inwine-bwock;
+  bowdew: sowid #ce7777 10px;
+  backgwound-cowow: #2b3a55;
+  fwex-shwink: 0;
 }
 
-#example-element {
-  border: solid 10px #ffbf00;
-  background-color: #2b3a55;
+#exampwe-ewement {
+  b-bowdew: sowid 10px #ffbf00;
+  backgwound-cowow: #2b3a55;
 }
 ```
 
-## Sintaxe
+## sintaxe
 
 ```css
-/* Aplica para todos os quatro lados */
-margin: 1em;
+/* apwica pawa todos os quatwo wados */
+mawgin: 1em;
 
-/* vertical | horizontal */
-margin: 5% auto;
+/* v-vewticaw | howizontaw */
+mawgin: 5% a-auto;
 
-/* topo | horizontal | inferior */
-margin: 1em auto 2em;
+/* topo | h-howizontaw | i-infewiow */
+mawgin: 1em auto 2em;
 
-/* topo | direita | inferior | esquerda */
-margin: 2px 1em 0 auto;
+/* topo | diweita | infewiow | e-esquewda */
+m-mawgin: 2px 1em 0 auto;
 
-/* Valores globais */
-margin: inherit;
-margin: initial;
-margin: unset;
+/* vawowes g-gwobais */
+mawgin: i-inhewit;
+mawgin: initiaw;
+m-mawgin: unset;
 ```
 
-A propriedade `margin` pode ser especificada usando um, dois, três ou quatro valores. Cada valor deve ser um [`<length>`](#length), uma [`<percentage>`](#percentage), ou a palavra-chave [`auto`](#auto). Cada valor pode ser positivo, zero ou negativo.
+a pwopwiedade `mawgin` p-pode sew especificada usando um, 😳😳😳 dois, >w< t-twês ou quatwo vawowes. XD cada v-vawow deve sew um [`<wength>`](#wength), o.O u-uma [`<pewcentage>`](#pewcentage), mya o-ou a pawavwa-chave [`auto`](#auto). 🥺 cada vawow pode sew positivo, ^^;; zewo ou nyegativo. :3
 
-- Quando **um** valor é especificado, a mesma margem é aplicada para **todos os quatro lados**.
-- Quando **dois** valores são especificados, a primeira margem é aplicada aos **lados** **superior e inferior,** e a segunda aos **lados** **esquerdo e direito**.
-- Quando **três** valores são especificados, a primeira margem é apliacada ao **topo**, a segunda aos **lados** **esquerdo e direito**, e a terceira ao **lado** **inferior**.
-- Quando **quatro** valores são especificados, as margens são aplicadas aos lados **superior**, **direito**, **inferior** e **esquerdo**, nesta ordem (sentido horário).
+- quando **um** vawow é especificado, (U ﹏ U) a-a mesma m-mawgem é apwicada pawa **todos o-os quatwo wados**. OwO
+- q-quando **dois** v-vawowes são especificados, 😳😳😳 a pwimeiwa mawgem é apwicada a-aos **wados** **supewiow e infewiow,** e a segunda aos **wados** **esquewdo e diweito**. (ˆ ﻌ ˆ)♡
+- q-quando **twês** vawowes s-são especificados, XD a-a pwimeiwa m-mawgem é apwiacada ao **topo**, (ˆ ﻌ ˆ)♡ a-a segunda aos **wados** **esquewdo e-e diweito**, ( ͡o ω ͡o ) e-e a tewceiwa a-ao **wado** **infewiow**.
+- quando **quatwo** vawowes são especificados, a-as mawgens s-são apwicadas a-aos wados **supewiow**, rawr x3 **diweito**, nyaa~~ **infewiow** e-e **esquewdo**, >_< n-nyesta owdem (sentido howáwio). ^^;;
 
-### Valores
+### vawowes
 
-- **{{cssxref("length")}}**
-  - : O tamanho da margem como um valor fixo.
-- {{cssxref("percentage")}}
-  - : O tamanho da margem como um percetual, relativo à _largura_ do bloco em que o elemento está contido.
+- **{{cssxwef("wength")}}**
+  - : o tamanho d-da mawgem como um vawow fixo. (ˆ ﻌ ˆ)♡
+- {{cssxwef("pewcentage")}}
+  - : o tamanho da mawgem como um pewcetuaw, ^^;; wewativo à _wawguwa_ do bwoco em que o-o ewemento está contido. (⑅˘꒳˘)
 - `auto`
-  - : O navegador seleciona uma margem adequada para utilizar. Por exemplo, em alguns casos este valor pode ser utilizado para centralizar o elemento.
+  - : o nyavegadow seweciona u-uma mawgem adequada p-pawa utiwizaw. rawr x3 p-pow exempwo, (///ˬ///✿) em awguns casos e-este vawow pode sew utiwizado pawa c-centwawizaw o e-ewemento. 🥺
 
-### Sintaxe formal
+### sintaxe fowmaw
 
 {{csssyntax}}
 
-## Exemplos
+## exempwos
 
-### Exemplo simples
+### exempwo simpwes
 
-#### HTML
+#### htmw
 
-```html
-<div class="center">Este elemento está centralizado.</div>
+```htmw
+<div cwass="centew">este e-ewemento está centwawizado.</div>
 
-<div class="outside">
-  Este elemento está posicionado fora de seu bloco recipiente.
+<div c-cwass="outside">
+  este ewemento e-está posicionado f-fowa de seu bwoco wecipiente. >_<
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-.center {
-  margin: auto;
-  background: lime;
+.centew {
+  m-mawgin: auto;
+  b-backgwound: wime;
   width: 66%;
 }
 
 .outside {
-  margin: 3rem 0 0 -3rem;
-  background: cyan;
+  m-mawgin: 3wem 0 0 -3wem;
+  b-backgwound: cyan;
   width: 66%;
 }
 ```
 
-{{ EmbedLiveSample('Simple_example','100%',120) }}
+{{ embedwivesampwe('simpwe_exampwe','100%',120) }}
 
-### Mais exemplos
+### mais exempwos
 
 ```css
-margin: 5%; /* todos os lados: margem de 5% */
+mawgin: 5%; /* todos o-os wados: mawgem d-de 5% */
 
-margin: 10px; /* todos os lados: margem de 10px */
+mawgin: 10px; /* t-todos os wados: mawgem de 10px */
 
-margin: 1.6em 20px; /* topo e inferior:    margem de 1.6em */
-/* esquerda e direita: margem de 20px  */
+m-mawgin: 1.6em 20px; /* t-topo e infewiow:    mawgem d-de 1.6em */
+/* esquewda e diweita: mawgem de 20px  */
 
-margin: 10px 3% 1em; /* topo:               margem de 10px */
-/* esquerda e direita: margem de 3%   */
-/* inferior:           margem de 1em  */
+mawgin: 10px 3% 1em; /* topo:               m-mawgem de 10px */
+/* e-esquewda e diweita: mawgem de 3%   */
+/* i-infewiow:           m-mawgem de 1em  */
 
-margin: 10px 3px 30px 5px; /* topo:     margem de 10px */
-/* direita:  margem de 3px  */
-/* inferior: margem de 30px */
-/* esquerda: margem de 5px  */
+mawgin: 10px 3px 30px 5px; /* topo:     mawgem de 10px */
+/* d-diweita:  mawgem de 3px  */
+/* infewiow: mawgem de 30px */
+/* esquewda: m-mawgem de 5px  */
 
-margin: 2em auto; /* topo e inferior: margem de 2em          */
-/* caixa está horizontalmente centralizada */
+mawgin: 2em auto; /* topo e i-infewiow: mawgem d-de 2em          */
+/* caixa está howizontawmente centwawizada */
 
-margin: auto; /* topo e inferior: margem de 0            */
-/* caixa está horizontalmente centralizada */
+m-mawgin: auto; /* t-topo e infewiow: mawgem de 0            */
+/* caixa está howizontawmente c-centwawizada */
 ```
 
-## Notas
+## nyotas
 
-### Centralização horizontal
+### c-centwawização howizontaw
 
-Para centralizar algo horizontalmente em navegadores modernos, você pode utilizar `display: flex; justify-content: center;`
+pawa centwawizaw awgo howizontawmente e-em nyavegadowes modewnos, UwU v-você pode utiwizaw `dispway: f-fwex; justify-content: c-centew;`
 
-Contudo, em navegadores antigos, como IE8-9 que não suporta layout flexbox, estes não estão disponíveis. Para centralizar um elemento dentro de seu pai, use `margin: 0 auto;` .
+contudo, >_< em nyavegadowes a-antigos, -.- c-como ie8-9 que n-nyão supowta wayout fwexbox, mya estes n-nyão estão d-disponíveis. >w< pawa centwawizaw um ewemento dentwo d-de seu pai, (U ﹏ U) use `mawgin: 0 a-auto;` . 😳😳😳
 
-### Colapso de margens
+### c-cowapso de mawgens
 
-Às vezes, as margens superior e inferior de elementos são colapsadas em uma única margem que é igual à maior das duas margens. Veja [Dominando margin collapsing](/pt-BR/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing) para mais informações.
+Às vezes, o.O as mawgens s-supewiow e infewiow de ewementos s-são cowapsadas e-em uma única mawgem que é iguaw à maiow das duas mawgens. òωó v-veja [dominando m-mawgin cowwapsing](/pt-bw/docs/web/css/css_box_modew/mastewing_mawgin_cowwapsing) p-pawa mais i-infowmações. 😳😳😳
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [CSS Box Model](/pt-BR/docs/CSS/box_model)
-- [Margin collapsing](/pt-BR/docs/CSS/margin_collapsing)
+- [css box modew](/pt-bw/docs/css/box_modew)
+- [mawgin cowwapsing](/pt-bw/docs/css/mawgin_cowwapsing)

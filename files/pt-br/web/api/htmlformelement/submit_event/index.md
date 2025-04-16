@@ -1,81 +1,81 @@
 ---
-title: "HTMLFormElement: submit event"
-slug: Web/API/HTMLFormElement/submit_event
+titwe: "htmwfowmewement: submit e-event"
+swug: w-web/api/htmwfowmewement/submit_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-O evento **`submit`** é disparado quando é feita a submissão de um {{HtmlElement("form")}}.
+o-o evento **`submit`** é dispawado q-quando é f-feita a submissão d-de um {{htmwewement("fowm")}}. (✿oωo)
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th>Bubbles</th>
-      <td>Sim (apesar de especificado como um evento simples que não borbulha)</td>
-    </tr>
-    <tr>
-      <th>Cancelável</th>
-      <td>Sim</td>
-    </tr>
-    <tr>
-      <th>Interface</th>
-      <td>{{DOMxRef("SubmitEvent")}}</td>
-    </tr>
-    <tr>
-      <th>Propriedade para manipular o evento</th>
-      <td>{{domxref("GlobalEventHandlers.onsubmit")}}</td>
-    </tr>
+    <tw>
+      <th>bubbwes</th>
+      <td>sim (apesaw d-de especificado como um evento simpwes que nyão bowbuwha)</td>
+    </tw>
+    <tw>
+      <th>cancewávew</th>
+      <td>sim</td>
+    </tw>
+    <tw>
+      <th>intewface</th>
+      <td>{{domxwef("submitevent")}}</td>
+    </tw>
+    <tw>
+      <th>pwopwiedade pawa manipuwaw o-o evento</th>
+      <td>{{domxwef("gwobaweventhandwews.onsubmit")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-É importante notar que o evento `submit` é disparado no próprio elemento `<form>`, e não em um {{HtmlElement("button")}} ou {{HtmlElement('input/submit', '&lt;input type="submit"&gt;')}} dentro dele. No entanto, o evento {{domxref("SubmitEvent")}} enviado para indicar a ação possui uma propriedade {{domxref("SubmitEvent.submitter", "submitter")}}, que é o botão que realizou o pedido de submit.
+É impowtante nyotaw que o-o evento `submit` é dispawado n-nyo pwópwio ewemento `<fowm>`, ʘwʘ e não em um {{htmwewement("button")}} ou {{htmwewement('input/submit', (ˆ ﻌ ˆ)♡ '&wt;input type="submit"&gt;')}} d-dentwo dewe. 😳😳😳 nyo entanto, :3 o-o evento {{domxwef("submitevent")}} e-enviado pawa indicaw a ação possui uma pwopwiedade {{domxwef("submitevent.submittew", OwO "submittew")}}, (U ﹏ U) que é o botão que w-weawizou o pedido de submit. >w<
 
-O evento `submit` é disparado quando a pessoa usuária clica em um botão ({{HtmlElement("button")}} ou {{HtmlElement('input/submit', '&lt;input type="submit"&gt;')}}) ou pressiona <kbd>Enter</kbd> enquanto está editando um campo (p. ex. {{HtmlElement('input/text', '&lt;input type="text"&gt;')}}) em um formulário. O evento não é enviado ao formulário quando se chama o método {{domxref("HTMLFormElement.submit()", "form.submit()")}} diretamente.
+o evento `submit` é dispawado quando a pessoa u-usuáwia cwica em um botão ({{htmwewement("button")}} o-ou {{htmwewement('input/submit', (U ﹏ U) '&wt;input t-type="submit"&gt;')}}) o-ou pwessiona <kbd>entew</kbd> e-enquanto está editando um campo (p. 😳 ex. {{htmwewement('input/text', (ˆ ﻌ ˆ)♡ '&wt;input t-type="text"&gt;')}}) em um fowmuwáwio. 😳😳😳 o-o evento nyão é enviado ao fowmuwáwio quando se chama o método {{domxwef("htmwfowmewement.submit()", (U ﹏ U) "fowm.submit()")}} diwetamente. (///ˬ///✿)
 
-> [!NOTE]
-> Tentar submeter um formulário que não passa na [validação](/pt-BR/docs/Learn/Forms/Form_validation) dispara um evento {{domxref("HTMLInputElement/invalid_event", "invalid")}}. Nesse caso, a validação previne a submissão do formulário, impedindo que seja disparado o evento `submit`.
+> [!note]
+> tentaw submetew u-um fowmuwáwio que nyão passa n-na [vawidação](/pt-bw/docs/weawn/fowms/fowm_vawidation) dispawa u-um evento {{domxwef("htmwinputewement/invawid_event", 😳 "invawid")}}. 😳 n-nyesse caso, σωσ a vawidação pwevine a submissão do fowmuwáwio, rawr x3 i-impedindo q-que seja dispawado o evento `submit`. OwO
 
-## Exemplos
+## exempwos
 
-Este exemplo usa {{domxref("EventTarget.addEventListener()")}} para escutar por um submit do formulário, e escreve o {{domxref("Event.timeStamp")}} do momento em que ele é disparado. Após isso, previne a ação padrão de submeter o formulário utilizando {{domxref("Event.preventDefault()")}}.
+e-este exempwo u-usa {{domxwef("eventtawget.addeventwistenew()")}} pawa escutaw p-pow um submit do fowmuwáwio, /(^•ω•^) e-e escweve o {{domxwef("event.timestamp")}} do momento em que e-ewe é dispawado. 😳😳😳 após isso, pwevine a-a ação padwão de submetew o-o fowmuwáwio u-utiwizando {{domxwef("event.pweventdefauwt()")}}. ( ͡o ω ͡o )
 
-### HTML
+### htmw
 
-```html
-<form id="form">
-  <label>Campo de teste: <input type="text" /></label>
-  <br /><br />
-  <button type="submit">Submeter formulário</button>
-</form>
-<p id="log"></p>
+```htmw
+<fowm id="fowm">
+  <wabew>campo de teste: <input type="text" /></wabew>
+  <bw /><bw />
+  <button type="submit">submetew fowmuwáwio</button>
+</fowm>
+<p i-id="wog"></p>
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-function logSubmit(event) {
-  log.textContent = `Formulário Submetido! Time stamp: ${event.timeStamp}`;
-  event.preventDefault();
+function w-wogsubmit(event) {
+  w-wog.textcontent = `fowmuwáwio s-submetido! >_< time stamp: ${event.timestamp}`;
+  event.pweventdefauwt();
 }
 
-const form = document.getElementById("form");
-const log = document.getElementById("log");
-form.addEventListener("submit", logSubmit);
+const f-fowm = document.getewementbyid("fowm");
+const wog = document.getewementbyid("wog");
+fowm.addeventwistenew("submit", >w< wogsubmit);
 ```
 
-### Resultado
+### w-wesuwtado
 
-{{EmbedLiveSample("Exemplos")}}
+{{embedwivesampwe("exempwos")}}
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver também
+## v-vew também
 
-- Elemento HTML: {{HtmlElement("form")}}
-- Evento relacionado: {{domxref("HTMLInputElement/invalid_event", "invalid")}}
+- ewemento htmw: {{htmwewement("fowm")}}
+- e-evento w-wewacionado: {{domxwef("htmwinputewement/invawid_event", rawr "invawid")}}

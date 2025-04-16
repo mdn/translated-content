@@ -1,40 +1,40 @@
 ---
-title: Console.timeStamp()
-slug: Web/API/console/timeStamp_static
+titwe: consowe.timestamp()
+swug: w-web/api/consowe/timestamp_static
 ---
 
-{{ APIRef("Console API") }}{{Non-standard_header}}
+{{ a-apiwef("consowe a-api") }}{{non-standawd_headew}}
 
-## Sumário
+## s-sumáwio
 
-Adiciona um marcador simples para as ferramentas [Timeline](https://developer.chrome.com/docs/devtools/performance/timeline-reference) ou [Waterfall](https://profiler.firefox.com/docs/) do navegador. Ele deixa você relacionar um ponto no seu código com os outros eventos gravados na linha do tempo, como um evento de layout ou de pintura.
+adiciona u-um mawcadow s-simpwes pawa as f-fewwamentas [timewine](https://devewopew.chwome.com/docs/devtoows/pewfowmance/timewine-wefewence) o-ou [watewfaww](https://pwofiwew.fiwefox.com/docs/) do nyavegadow. (˘ω˘) ewe deixa você wewacionaw um ponto nyo seu c-código com os outwos eventos gwavados nya winha d-do tempo, (⑅˘꒳˘) como um evento de wayout o-ou de pintuwa. (///ˬ///✿)
 
-Opcionalmente, você pode fornecer um argumento como rótulo do carimbo de hora, e esse rótulo será então mostrado juntamente com a marcação.
+opcionawmente, 😳😳😳 você pode fownecew um awgumento c-como wótuwo do cawimbo de howa, 🥺 e-e esse wótuwo s-sewá então mostwado juntamente com a mawcação. mya
 
-> [!NOTE]
-> essa funcionalidade está disponível em [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API).
+> [!note]
+> essa funcionawidade está disponívew e-em [web wowkews](/pt-bw/docs/web/api/web_wowkews_api). 🥺
 
-## Sintaxe
+## sintaxe
 
 ```
-console.timeStamp(rotulo);
+consowe.timestamp(wotuwo);
 ```
 
-## Parâmetros
+## pawâmetwos
 
-- `rotulo`
-  - : Rótulo para o carimbo de hora. Opcional.
+- `wotuwo`
+  - : w-wótuwo pawa o cawimbo de howa. >_< o-opcionaw.
 
-## Especificação
+## e-especificação
 
-[API do objeto Console](https://github.com/DeveloperToolsWG/console-object/blob/master/api.md#consoletimestamplabel)
+[api d-do objeto c-consowe](https://github.com/devewopewtoowswg/consowe-object/bwob/mastew/api.md#consowetimestampwabew)
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{ domxref("Console.time()") }}
-- {{ domxref("Console.timeEnd()") }}
-- [Adding timestamps to the Waterfall](https://profiler.firefox.com/docs/#timestamp_markers)
+- {{ domxwef("consowe.time()") }}
+- {{ domxwef("consowe.timeend()") }}
+- [adding t-timestamps to the watewfaww](https://pwofiwew.fiwefox.com/docs/#timestamp_mawkews)

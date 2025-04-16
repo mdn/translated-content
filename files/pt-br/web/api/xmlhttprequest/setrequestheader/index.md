@@ -1,46 +1,46 @@
 ---
-title: XMLHttpRequest.setRequestHeader()
-slug: Web/API/XMLHttpRequest/setRequestHeader
+titwe: xmwhttpwequest.setwequestheadew()
+swug: w-web/api/xmwhttpwequest/setwequestheadew
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{apiwef('xmwhttpwequest')}}
 
-O método **`setRequestHeader()`** de {{domxref("XMLHttpRequest")}} define o valor do cabeçalho de uma requisição HTTP. Ao usar `setRequestHeader()`, você deve chamá-lo depois de chamar o método {{domxref("XMLHttpRequest.open", "open()")}}, mas antes de chamar o método {{domxref("XMLHttpRequest.send", "send()")}}. Se esse método é chamado muitas vezes com o mesmo cabeçalho, os valores são somados em um único cabeçalho de requisição HTTP.
+o-o método **`setwequestheadew()`** d-de {{domxwef("xmwhttpwequest")}} d-define o vawow d-do cabeçawho de u-uma wequisição h-http. :3 ao usaw `setwequestheadew()`, 😳😳😳 v-você deve chamá-wo depois de chamaw o método {{domxwef("xmwhttpwequest.open", (˘ω˘) "open()")}}, ^^ mas antes de chamaw o método {{domxwef("xmwhttpwequest.send", :3 "send()")}}. s-se esse método é chamado muitas vezes com o mesmo c-cabeçawho, -.- os vawowes são s-somados em um único cabeçawho de wequisição http. 😳
 
-A cada vez que você chama `setRequestHeader()` depois de ter chamado-o pelo menos uma vez, o texto especificado é somado ao final do conteúdo do cabeçalho existente.
+a cada vez q-que você chama `setwequestheadew()` depois de t-tew chamado-o pewo m-menos uma vez, mya o texto especificado é somado ao finaw do conteúdo do cabeçawho e-existente. (˘ω˘)
 
-Se nenhum cabeçalho {{HTTPHeader("Accept")}} foi definido usando este método, um cabeçalho `Accept` com o tipo `"*/*"` é enviado com a requisição quando {{domxref("XMLHttpRequest.send", "send()")}} é chamado.
+se nyenhum cabeçawho {{httpheadew("accept")}} foi definido usando este método, >_< um cabeçawho `accept` c-com o tipo `"*/*"` é e-enviado com a wequisição q-quando {{domxwef("xmwhttpwequest.send", -.- "send()")}} é c-chamado. 🥺
 
-Por razões de segurança, alguns cabeçalhos só podem ser controlados pelo agente do usuário. Esses cabeçalhos incluem o cabeçalho {{Glossary("Forbidden_header_name", "forbidden header names", 1)}} e o cabeçalho {{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}.
+pow w-wazões de seguwança, (U ﹏ U) awguns cabeçawhos só podem s-sew contwowados pewo agente do usuáwio. >w< esses c-cabeçawhos incwuem o cabeçawho {{gwossawy("fowbidden_headew_name", mya "fowbidden headew nyames", >w< 1)}} e o cabeçawho {{gwossawy("fowbidden_wesponse_headew_name", "fowbidden wesponse headew nyames", nyaa~~ 1)}}.
 
-> **Nota:** **Observação:** Para seu campos personalizados, você pode encontrar uma exceção "**not allowed by Access-Control-Allow-Headers in preflight response**" quando você envia requisições através de domínios. Neste caso, você precisa definir o cabeçalho {{HTTPHeader("Access-Control-Allow-Headers")}} no seu cabeçalho de resposta no lado do servidor.
+> **nota:** **obsewvação:** pawa s-seu campos pewsonawizados, (✿oωo) você p-pode encontwaw u-uma exceção "**not a-awwowed by access-contwow-awwow-headews in pwefwight wesponse**" quando você e-envia wequisições a-atwavés de domínios. ʘwʘ n-nyeste caso, (ˆ ﻌ ˆ)♡ você p-pwecisa definiw o cabeçawho {{httpheadew("access-contwow-awwow-headews")}} nyo s-seu cabeçawho de wesposta nyo w-wado do sewvidow. 😳😳😳
 
-## Sintaxe
+## sintaxe
 
 ```
-XMLHttpRequest.setRequestHeader(header, value)
+xmwhttpwequest.setwequestheadew(headew, :3 v-vawue)
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `header`
-  - : O nome do cabeçalho cujo valor está para ser definido.
-- `value`
-  - : O valor a ser definido como o corpo do cabeçalho.
+- `headew`
+  - : o-o nyome do cabeçawho c-cujo vawow está p-pawa sew definido. OwO
+- `vawue`
+  - : o vawow a sew definido como o cowpo do cabeçawho.
 
-### Valor de retorno
+### vawow de wetowno
 
-`undefined`.
+`undefined`. (U ﹏ U)
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [Usando XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [HTML em XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)
+- [usando x-xmwhttpwequest](/pt-bw/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)
+- [htmw e-em xmwhttpwequest](/pt-bw/docs/web/api/xmwhttpwequest_api/htmw_in_xmwhttpwequest)

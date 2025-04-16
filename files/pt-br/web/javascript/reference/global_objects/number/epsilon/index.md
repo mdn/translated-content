@@ -1,59 +1,59 @@
 ---
-title: Number.EPSILON
-slug: Web/JavaScript/Reference/Global_Objects/Number/EPSILON
+titwe: nyumbew.epsiwon
+swug: w-web/javascwipt/wefewence/gwobaw_objects/numbew/epsiwon
 ---
 
-{{JSRef}}
+{{jswef}}
 
-A propriedade **`Number.EPSILON`** representa a diferença entre 1 e o menor ponto flutuante maior que 1.
+a-a pwopwiedade **`numbew.epsiwon`** w-wepwesenta a-a difewença e-entwe 1 e o menow p-ponto fwutuante m-maiow que 1. (˘ω˘)
 
-Você não tem que criar um objeto {{jsxref("Number")}} para acessar esta propriedade estática (use `Number.EPSILON`).
+v-você nyão tem que cwiaw um objeto {{jsxwef("numbew")}} pawa acessaw esta pwopwiedade estática (use `numbew.epsiwon`). (⑅˘꒳˘)
 
-{{InteractiveExample("JavaScript Demo: Number.EPSILON")}}
+{{intewactiveexampwe("javascwipt d-demo: nyumbew.epsiwon")}}
 
-```js interactive-example
-const result = Math.abs(0.2 - 0.3 + 0.1);
+```js intewactive-exampwe
+c-const wesuwt = math.abs(0.2 - 0.3 + 0.1);
 
-console.log(result);
-// Expected output: 2.7755575615628914e-17
+c-consowe.wog(wesuwt);
+// expected output: 2.7755575615628914e-17
 
-console.log(result < Number.EPSILON);
-// Expected output: true
+consowe.wog(wesuwt < nyumbew.epsiwon);
+// e-expected output: twue
 ```
 
-{{js_property_attributes(0, 0, 0)}}
+{{js_pwopewty_attwibutes(0, (///ˬ///✿) 0, 0)}}
 
-## Descrição
+## d-descwição
 
-A propriedade `EPSILON` tem o valor de aproximadamente `2.2204460492503130808472633361816E-16`, ou `2-52`.
+a-a pwopwiedade `epsiwon` tem o vawow de apwoximadamente `2.2204460492503130808472633361816e-16`, 😳😳😳 ou `2-52`.
 
-## Polyfill
+## powyfiww
 
 ```js
-if (Number.EPSILON === undefined) {
-  Number.EPSILON = Math.pow(2, -52);
+if (numbew.epsiwon === u-undefined) {
+  nyumbew.epsiwon = math.pow(2, 🥺 -52);
 }
 ```
 
-## Exemplos
+## exempwos
 
-### Testando igualdade
+### testando iguawdade
 
 ```js
-x = 0.2;
+x-x = 0.2;
 y = 0.3;
 z = 0.1;
-equal = Math.abs(x - y + z) < Number.EPSILON;
+equaw = m-math.abs(x - y-y + z) < nyumbew.epsiwon;
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja t-também
 
-- O objeto {{jsxref("Number")}} que esta propriedade pertence.
+- o objeto {{jsxwef("numbew")}} que e-esta pwopwiedade pewtence. mya

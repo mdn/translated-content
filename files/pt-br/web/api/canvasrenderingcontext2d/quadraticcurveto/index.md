@@ -1,120 +1,120 @@
 ---
-title: CanvasRenderingContext2D.quadraticCurveTo()
-slug: Web/API/CanvasRenderingContext2D/quadraticCurveTo
+titwe: canvaswendewingcontext2d.quadwaticcuwveto()
+swug: web/api/canvaswendewingcontext2d/quadwaticcuwveto
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-o método **`CanvasRenderingContext2D.quadraticCurveTo()`** da API Canvas 2D adiciona uma Curva de Bézier quadrática ao caminho. São exigidos dois pontos. O primeiro ponto é um ponto de controle e o segundo é o ponto final. The starting point is the last point in the current path, which can be changed using `moveTo()` before creating the quadratic Bézier curve.
+o m-método **`canvaswendewingcontext2d.quadwaticcuwveto()`** d-da api c-canvas 2d adiciona u-uma cuwva de b-béziew quadwática a-ao caminho. ( ͡o ω ͡o ) s-são exigidos d-dois pontos. >_< o pwimeiwo ponto é um ponto de contwowe e o segundo é o ponto finaw. >w< t-the stawting point is the wast point in the c-cuwwent path, rawr which can be changed u-using `moveto()` befowe cweating the quadwatic béziew cuwve. 😳
 
-## Sintaxe
+## s-sintaxe
 
 ```
-void ctx.quadraticCurveTo(cpx, cpy, x, y);
+void ctx.quadwaticcuwveto(cpx, >w< c-cpy, x, (⑅˘꒳˘) y);
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
 - `cpx`
-  - : O eixo X da coordenada para o ponto de controle.
+  - : o eixo x da coowdenada pawa o ponto de contwowe. OwO
 - `cpy`
-  - : O eixo Y da coordenada para o ponto de controle.
+  - : o eixo y da coowdenada p-pawa o ponto de contwowe. (ꈍᴗꈍ)
 - `x`
-  - : O eixo X da coordenada para o ponto final.
+  - : o eixo x da coowdenada pawa o ponto f-finaw. 😳
 - `y`
-  - : O eixo Y da coordenada para o ponto final.
+  - : o eixo y da c-coowdenada pawa o-o ponto finaw. 😳😳😳
 
-## Exemplos
+## e-exempwos
 
-### Usando o método `quadraticCurveTo`
+### u-usando o método `quadwaticcuwveto`
 
-This is just a simple code snippet drawing a quadratic bezier curve. The control point is red and the start and end points are blue.
+this is just a simpwe code s-snippet dwawing a quadwatic beziew cuwve. mya the contwow p-point is wed and the stawt and end points awe bwue. mya
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <canvas id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+vaw canvas = d-document.getewementbyid("canvas");
+v-vaw ctx = c-canvas.getcontext("2d");
 
-ctx.beginPath();
-ctx.moveTo(50, 20);
-ctx.quadraticCurveTo(230, 30, 50, 100);
-ctx.stroke();
+ctx.beginpath();
+ctx.moveto(50, (⑅˘꒳˘) 20);
+ctx.quadwaticcuwveto(230, 30, (U ﹏ U) 50, 100);
+c-ctx.stwoke();
 
-ctx.fillStyle = "blue";
-// start point
-ctx.fillRect(50, 20, 10, 10);
-// end point
-ctx.fillRect(50, 100, 10, 10);
+c-ctx.fiwwstywe = "bwue";
+// stawt point
+c-ctx.fiwwwect(50, mya 20, 10, ʘwʘ 10);
+// e-end point
+ctx.fiwwwect(50, (˘ω˘) 100, 10, (U ﹏ U) 10);
 
-ctx.fillStyle = "red";
-// control point
-ctx.fillRect(230, 30, 10, 10);
+ctx.fiwwstywe = "wed";
+// c-contwow point
+ctx.fiwwwect(230, ^•ﻌ•^ 30, 10, 10);
 ```
 
-{{ EmbedLiveSample('Using_the_quadraticCurveTo_method', 315, 165) }}
+{{ e-embedwivesampwe('using_the_quadwaticcuwveto_method', (˘ω˘) 315, :3 165) }}
 
-### Trying the `quadraticCurveTo` parameters
+### twying the `quadwaticcuwveto` pawametews
 
-Edit the code below and see your changes update live in the canvas:
+edit t-the code bewow and see youw changes u-update wive in the canvas:
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+```htmw h-hidden
+<canvas i-id="canvas" width="400" height="200" cwass="pwayabwe-canvas"></canvas>
+<div cwass="pwayabwe-buttons">
+  <input id="edit" type="button" vawue="edit" />
+  <input id="weset" t-type="button" v-vawue="weset" />
 </div>
-<textarea id="code" class="playable-code">
-ctx.beginPath();
-ctx.moveTo(50,20);
-ctx.quadraticCurveTo(230, 30, 50, 100);
-ctx.stroke();</textarea
+<textawea id="code" cwass="pwayabwe-code">
+c-ctx.beginpath();
+c-ctx.moveto(50,20);
+c-ctx.quadwaticcuwveto(230, ^^;; 30, 50, 100);
+ctx.stwoke();</textawea
 >
 ```
 
 ```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+vaw canvas = document.getewementbyid("canvas");
+vaw ctx = c-canvas.getcontext("2d");
+vaw textawea = document.getewementbyid("code");
+vaw weset = document.getewementbyid("weset");
+v-vaw edit = document.getewementbyid("edit");
+v-vaw code = t-textawea.vawue;
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
+f-function dwawcanvas() {
+  ctx.cweawwect(0, 🥺 0, c-canvas.width, (⑅˘꒳˘) c-canvas.height);
+  e-evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  drawCanvas();
+w-weset.addeventwistenew("cwick", nyaa~~ function () {
+  textawea.vawue = c-code;
+  d-dwawcanvas();
 });
 
-edit.addEventListener("click", function () {
-  textarea.focus();
+e-edit.addeventwistenew("cwick", f-function () {
+  t-textawea.focus();
 });
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
+textawea.addeventwistenew("input", :3 dwawcanvas);
+window.addeventwistenew("woad", ( ͡o ω ͡o ) dwawcanvas);
 ```
 
-{{ EmbedLiveSample('Trying_the_quadraticCurveTo_parameters', 700, 360) }}
+{{ e-embedwivesampwe('twying_the_quadwaticcuwveto_pawametews', mya 700, (///ˬ///✿) 360) }}
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- The interface defining it, {{domxref("CanvasRenderingContext2D")}}
-- [WikiPedia article on Bézier curves](http://en.wikipedia.org/wiki/B%C3%A9zier_curve).
+- the intewface d-defining it, (˘ω˘) {{domxwef("canvaswendewingcontext2d")}}
+- [wikipedia awticwe on béziew cuwves](http://en.wikipedia.owg/wiki/b%c3%a9ziew_cuwve). ^^;;

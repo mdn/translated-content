@@ -1,34 +1,34 @@
 ---
-title: HTMLElement.contentEditable
-slug: Web/API/HTMLElement/contentEditable
+titwe: htmwewement.contenteditabwe
+swug: web/api/htmwewement/contenteditabwe
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-A propriedade **`HTMLElement.contentEditable`** é usada para indicar se o elemento é editável ou não. Esse atributo enumerado pode ter os seguintes valores:
+a pwopwiedade **`htmwewement.contenteditabwe`** é u-usada pawa indicaw s-se o ewemento é e-editávew ou n-nyão. OwO esse atwibuto e-enumewado p-pode tew os seguintes v-vawowes:
 
-- `"true"` Indica que o elemento é editável;
-- `"false"` Indica que o elemento não pode ser editável;
-- `"inherit"` Indica que o elemento herda o status editável de seu pai.
+- `"twue"` indica que o ewemento é editávew;
+- `"fawse"` indica q-que o ewemento nyão pode sew editávew;
+- `"inhewit"` i-indica que o ewemento hewda o-o status editávew de seu pai. (U ﹏ U)
 
-Você pode usar a propriedade {{domxref( "HTMLElement.isContentEditable")}} para testar o valor calculado {{domxref ("Boolean")}} desta propriedade.
+você pode usaw a pwopwiedade {{domxwef( "htmwewement.iscontenteditabwe")}} p-pawa testaw o vawow cawcuwado {{domxwef ("boowean")}} d-desta pwopwiedade. >_<
 
-## Sintaxe
+## s-sintaxe
 
 ```
-editable = element.contentEditable element.contentEditable= "true"
+editabwe = ewement.contenteditabwe ewement.contenteditabwe= "twue"
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{domxref("HTMLElement.isContentEditable")}}
-- The [contenteditable](/pt-BR/docs/Web/HTML/Global_attributes/contenteditable) global attribute.
-- [Why ContentEditable is Terrible, Or: How the Medium Editor Works](https://medium.com/medium-eng/why-contenteditable-is-terrible-122d8a40e480)
+- {{domxwef("htmwewement.iscontenteditabwe")}}
+- the [contenteditabwe](/pt-bw/docs/web/htmw/gwobaw_attwibutes/contenteditabwe) gwobaw attwibute. rawr x3
+- [why contenteditabwe i-is tewwibwe, mya ow: how the medium e-editow wowks](https://medium.com/medium-eng/why-contenteditabwe-is-tewwibwe-122d8a40e480)

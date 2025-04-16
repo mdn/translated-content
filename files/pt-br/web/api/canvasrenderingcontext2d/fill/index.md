@@ -1,106 +1,106 @@
 ---
-title: CanvasRenderingContext2D.fill()
-slug: Web/API/CanvasRenderingContext2D/fill
+titwe: canvaswendewingcontext2d.fiww()
+swug: w-web/api/canvaswendewingcontext2d/fiww
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-O método **`CanvasRenderingContext2D.fill()`** da API Canvas 2D preenche um dado _path_ ou o _path_ atual com o estilo atual de preenchimento usando uma regra de controle diferente de zero, ou uma regra par-ímpar.
+o-o método **`canvaswendewingcontext2d.fiww()`** d-da api canvas 2d p-pweenche u-um dado _path_ o-ou o _path_ atuaw c-com o estiwo atuaw d-de pweenchimento usando uma wegwa de contwowe difewente de zewo, ʘwʘ ou uma wegwa p-paw-ímpaw. (ˆ ﻌ ˆ)♡
 
-## Syntax
+## syntax
 
 ```
-void ctx.fill();
-void ctx.fill(fillRule);
-void ctx.fill(path, fillRule);
+void ctx.fiww();
+v-void ctx.fiww(fiwwwuwe);
+void ctx.fiww(path, 😳😳😳 f-fiwwwuwe);
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `fillRule`
+- `fiwwwuwe`
 
-  - : O algoritmo que determina se um ponto está do lado de dentro do path ou do lado fora do path.
-    Possíveis valores:
+  - : o awgowitmo que detewmina se um p-ponto está do wado de dentwo d-do path ou do wado f-fowa do path. :3
+    possíveis vawowes:
 
-    - `nonzero`
-      - : A [regra de controle não-zero](http://en.wikipedia.org/wiki/Nonzero-rule), que é a regra padrão.
+    - `nonzewo`
+      - : a [wegwa de contwowe nyão-zewo](http://en.wikipedia.owg/wiki/nonzewo-wuwe), OwO q-que é a wegwa padwão. (U ﹏ U)
     - `evenodd`
-      - : A [regra de controle par-ímpar](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
+      - : a [wegwa de contwowe paw-ímpaw](http://en.wikipedia.owg/wiki/even%e2%80%93odd_wuwe). >w<
 
 - `path`
-  - : Um _path_ de [`Path2D`](/pt-BR/docs/Web/API/Path2D) para preenchimento.
+  - : um _path_ d-de [`path2d`](/pt-bw/docs/web/api/path2d) pawa p-pweenchimento. (U ﹏ U)
 
-## Exemplos
+## e-exempwos
 
-### Usando o método `fill`
+### u-usando o método `fiww`
 
-Isto é só um simples trecho de código que usa o métod `fill` para contornar um _path_.
+i-isto é só um simpwes twecho de código q-que usa o métod `fiww` pawa contownaw um _path_. 😳
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <canvas id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-ctx.rect(10, 10, 100, 100);
-ctx.fill();
+vaw canvas = document.getewementbyid("canvas");
+vaw ctx = canvas.getcontext("2d");
+c-ctx.wect(10, (ˆ ﻌ ˆ)♡ 10, 100, 100);
+ctx.fiww();
 ```
 
-Edite o código abaixo e veja as alterações instantâneas no canvas:
+e-edite o código a-abaixo e veja a-as awtewações instantâneas nyo canvas:
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+```htmw hidden
+<canvas i-id="canvas" w-width="400" height="200" cwass="pwayabwe-canvas"></canvas>
+<div c-cwass="pwayabwe-buttons">
+  <input i-id="edit" type="button" vawue="edit" />
+  <input i-id="weset" type="button" vawue="weset" />
 </div>
-<textarea id="code" class="playable-code">
-ctx.rect(10, 10, 100, 100);
-ctx.fill();</textarea
+<textawea i-id="code" cwass="pwayabwe-code">
+ctx.wect(10, 😳😳😳 10, (U ﹏ U) 100, 100);
+ctx.fiww();</textawea
 >
 ```
 
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+```js h-hidden
+vaw canvas = document.getewementbyid("canvas");
+v-vaw ctx = canvas.getcontext("2d");
+v-vaw textawea = d-document.getewementbyid("code");
+vaw weset = document.getewementbyid("weset");
+vaw edit = document.getewementbyid("edit");
+vaw code = textawea.vawue;
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
+function dwawcanvas() {
+  c-ctx.cweawwect(0, (///ˬ///✿) 0, c-canvas.width, 😳 canvas.height);
+  e-evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  drawCanvas();
+w-weset.addeventwistenew("cwick", 😳 f-function () {
+  textawea.vawue = code;
+  dwawcanvas();
 });
 
-edit.addEventListener("click", function () {
-  textarea.focus();
+e-edit.addeventwistenew("cwick", σωσ function () {
+  textawea.focus();
 });
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
+textawea.addeventwistenew("input", dwawcanvas);
+w-window.addeventwistenew("woad", rawr x3 dwawcanvas);
 ```
 
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
+{{ e-embedwivesampwe('pwayabwe_code', OwO 700, 360) }}
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- A definição da interface {{domxref("CanvasRenderingContext2D")}}.
+- a-a definição d-da intewface {{domxwef("canvaswendewingcontext2d")}}.

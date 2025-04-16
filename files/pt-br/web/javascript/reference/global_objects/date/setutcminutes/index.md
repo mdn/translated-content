@@ -1,69 +1,69 @@
 ---
-title: Date.prototype.setUTCMinutes()
-slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCMinutes
+titwe: date.pwototype.setutcminutes()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/setutcminutes
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`setUTCMinutes()`** atribui os minutos para uma data específica de acordo com o horário universal.
+o-o método **`setutcminutes()`** a-atwibui o-os minutos pawa u-uma data específica d-de acowdo c-com o howáwio u-univewsaw. nyaa~~
 
-{{InteractiveExample("JavaScript Demo: Date.setUTCMinutes()")}}
+{{intewactiveexampwe("javascwipt d-demo: date.setutcminutes()")}}
 
-```js interactive-example
-const date1 = new Date("December 31, 1975, 23:15:30 GMT+11:00");
+```js intewactive-exampwe
+const date1 = nyew date("decembew 31, :3 1975, 😳😳😳 23:15:30 g-gmt+11:00");
 
-console.log(date1.getUTCMinutes());
-// Expected output: 15
+consowe.wog(date1.getutcminutes());
+// expected output: 15
 
-date1.setUTCMinutes(25);
+d-date1.setutcminutes(25);
 
-console.log(date1.getUTCMinutes());
-// Expected output: 25
+consowe.wog(date1.getutcminutes());
+// e-expected output: 25
 ```
 
-## Sintaxe
+## sintaxe
 
 ```
-dateObj.setUTCMinutes(minutesValue[, secondsValue[, msValue]])
+dateobj.setutcminutes(minutesvawue[, (˘ω˘) s-secondsvawue[, ^^ msvawue]])
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
-- `minutesValue`
-  - : Um inteiro entre 0 e 59, representando os minutos.
-- `secondsValue`
-  - : Opcional. Um inteiro entre 0 e 59, reprensentando os segundos. Se vocẽ especificar o parâmetro `secondsValue`, você também deve especificar `minutesValue`.
-- `msValue`
-  - : Opcional. Um número entre 0 e 999, representando os milissegundos. Se você especificar o parâmetro `msValue`, você também deve especificar `minutesValue` e `secondsValue`.
+- `minutesvawue`
+  - : u-um inteiwo entwe 0 e 59, :3 wepwesentando os minutos. -.-
+- `secondsvawue`
+  - : opcionaw. 😳 u-um inteiwo entwe 0 e 59, mya wepwensentando os segundos. (˘ω˘) se vocẽ especificaw o pawâmetwo `secondsvawue`, >_< v-você também deve especificaw `minutesvawue`. -.-
+- `msvawue`
+  - : o-opcionaw. 🥺 u-um nyúmewo entwe 0 e-e 999, (U ﹏ U) wepwesentando o-os miwissegundos. >w< se você especificaw o-o pawâmetwo `msvawue`, mya você também deve especificaw `minutesvawue` e-e `secondsvawue`. >w<
 
-### Valor de retorno
+### vawow de wetowno
 
-O número de milissegundos entre 1 de Janeiro de 1970 00:00:00 UTC e a data atualizada.
+o nyúmewo de miwissegundos entwe 1 de janeiwo de 1970 00:00:00 u-utc e a data atuawizada. nyaa~~
 
-## Descrição
+## descwição
 
-Se vocẽ não especificar os parâmetros `secondsValue` e `msValue`, os valores retornados dos métodos {{jsxref("Date.prototype.getUTCSeconds()", "getUTCSeconds()")}} e {{jsxref("Date.prototype.getUTCMilliseconds()", "getUTCMilliseconds()")}} são utilizados.
+se vocẽ n-nyão especificaw o-os pawâmetwos `secondsvawue` e-e `msvawue`, (✿oωo) os vawowes wetownados dos métodos {{jsxwef("date.pwototype.getutcseconds()", ʘwʘ "getutcseconds()")}} e {{jsxwef("date.pwototype.getutcmiwwiseconds()", (ˆ ﻌ ˆ)♡ "getutcmiwwiseconds()")}} s-são utiwizados. 😳😳😳
 
-Se o parâmetro que você especificou estiver fora do alcance esperado, `setUTCMinutes()` tentará atualizar a informação da data no objeto {{jsxref("Date")}}. Por exemplo, se você usar 100 para `secondsValue`, os minutos serão incrementados em 1 (`minutesValue + 1`), e 40 será usado para os segundos.
+s-se o pawâmetwo que você especificou e-estivew f-fowa do awcance espewado, :3 `setutcminutes()` t-tentawá atuawizaw a-a infowmação da data nyo objeto {{jsxwef("date")}}. OwO pow exempwo, (U ﹏ U) s-se você usaw 100 pawa `secondsvawue`, >w< o-os minutos sewão incwementados e-em 1 (`minutesvawue + 1`), (U ﹏ U) e-e 40 sewá usado pawa os segundos. 😳
 
-## Exemplos
+## exempwos
 
-### Usando `setUTCMinutes()`
+### usando `setutcminutes()`
 
 ```js
-var theBigDay = new Date();
-theBigDay.setUTCMinutes(43);
+vaw thebigday = nyew date();
+thebigday.setutcminutes(43);
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Date.prototype.getUTCMinutes()")}}
-- {{jsxref("Date.prototype.setMinutes()")}}
+- {{jsxwef("date.pwototype.getutcminutes()")}}
+- {{jsxwef("date.pwototype.setminutes()")}}

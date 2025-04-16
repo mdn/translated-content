@@ -1,334 +1,334 @@
 ---
-title: Modelo de Objeto de Documento (DOM)
-slug: Web/API/Document_Object_Model
+titwe: modewo de objeto de documento (dom)
+s-swug: w-web/api/document_object_modew
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{defauwtapisidebaw("dom")}}
 
-O **Modelo de Objeto de Documento (_DOM_)** é uma interface de programação para documentos HTML, XML e SVG . Ele fornece uma representação estruturada do documento como uma árvore. O DOM define métodos que permitem acesso à árvore, para que eles possam alterar a estrutura, estilo e conteúdo do documento. O DOM fornece uma representação do documento como um grupo estruturado de nós e objetos, possuindo várias propriedades e métodos. Os nós também podem ter manipuladores de eventos que lhe são inerentes, e uma vez que um evento é acionado, os manipuladores de eventos são executados. Essencialmente, ele conecta páginas web a scripts ou linguagens de programação.
+o-o **modewo d-de objeto de documento (_dom_)** é u-uma intewface d-de pwogwamação p-pawa documentos h-htmw, :3 xmw e svg . ( ͡o ω ͡o ) ewe fownece uma wepwesentação estwutuwada do documento como u-uma áwvowe. mya o dom define métodos que pewmitem a-acesso à áwvowe, (///ˬ///✿) pawa que ewes p-possam awtewaw a estwutuwa, (˘ω˘) estiwo e conteúdo do documento. ^^;; o-o dom fownece uma wepwesentação d-do documento c-como um gwupo estwutuwado de nyós e objetos, (✿oωo) possuindo váwias pwopwiedades e métodos. (U ﹏ U) o-os nyós também podem tew manipuwadowes de eventos que whe são inewentes, -.- e-e uma vez que um evento é a-acionado, ^•ﻌ•^ os manipuwadowes d-de eventos s-são executados. rawr e-essenciawmente, (˘ω˘) ewe conecta páginas web a-a scwipts ou winguagens de pwogwamação. nyaa~~
 
-Embora o DOM seja frequentemente acessado usando JavaScript, não é uma parte da linguagem JavaScript. Ele também pode ser acessado por outras linguagens.
+embowa o-o dom seja fwequentemente acessado usando javascwipt, UwU nyão é uma pawte da winguagem javascwipt. e-ewe também pode sew acessado p-pow outwas winguagens. :3
 
-Uma [introdução](/pt-BR/docs/Web/API/Document_Object_Model/Introduction) ao DOM está disponível.
+u-uma [intwodução](/pt-bw/docs/web/api/document_object_modew/intwoduction) a-ao dom está disponívew. (⑅˘꒳˘)
 
-## DOM interfaces
+## dom intewfaces
 
-- {{domxref("Attr")}}
-- {{domxref("CharacterData")}}
-- {{domxref("ChildNode")}} {{experimental_inline}}
-- {{domxref("Comment")}}
-- {{domxref("CustomEvent")}}
-- {{domxref("Document")}}
-- {{domxref("DocumentFragment")}}
-- {{domxref("DocumentType")}}
-- {{domxref("DOMError")}}
-- {{domxref("DOMException")}}
-- {{domxref("DOMImplementation")}}
-- {{domxref("DOMString")}}
-- {{domxref("DOMTimeStamp")}}
-- {{domxref("DOMSettableTokenList")}}
-- {{domxref("DOMStringList")}}
-- {{domxref("DOMTokenList")}}
-- {{domxref("Element")}}
-- {{domxref("Event")}}
-- {{domxref("EventTarget")}}
-- {{domxref("HTMLCollection")}}
-- {{domxref("MutationObserver")}}
-- {{domxref("MutationRecord")}}
-- {{domxref("Node")}}
-- {{domxref("NodeFilter")}}
-- {{domxref("NodeIterator")}}
-- {{domxref("NodeList")}}
-- {{domxref("ParentNode")}} {{experimental_inline}}
-- {{domxref("ProcessingInstruction")}}
-- {{domxref("Range")}}
-- {{domxref("Text")}}
-- {{domxref("TreeWalker")}}
-- {{domxref("URL")}}
-- {{domxref("Window")}}
-- {{domxref("Worker")}}
-- {{domxref("XMLDocument")}} {{experimental_inline}}
+- {{domxwef("attw")}}
+- {{domxwef("chawactewdata")}}
+- {{domxwef("chiwdnode")}} {{expewimentaw_inwine}}
+- {{domxwef("comment")}}
+- {{domxwef("customevent")}}
+- {{domxwef("document")}}
+- {{domxwef("documentfwagment")}}
+- {{domxwef("documenttype")}}
+- {{domxwef("domewwow")}}
+- {{domxwef("domexception")}}
+- {{domxwef("domimpwementation")}}
+- {{domxwef("domstwing")}}
+- {{domxwef("domtimestamp")}}
+- {{domxwef("domsettabwetokenwist")}}
+- {{domxwef("domstwingwist")}}
+- {{domxwef("domtokenwist")}}
+- {{domxwef("ewement")}}
+- {{domxwef("event")}}
+- {{domxwef("eventtawget")}}
+- {{domxwef("htmwcowwection")}}
+- {{domxwef("mutationobsewvew")}}
+- {{domxwef("mutationwecowd")}}
+- {{domxwef("node")}}
+- {{domxwef("nodefiwtew")}}
+- {{domxwef("nodeitewatow")}}
+- {{domxwef("nodewist")}}
+- {{domxwef("pawentnode")}} {{expewimentaw_inwine}}
+- {{domxwef("pwocessinginstwuction")}}
+- {{domxwef("wange")}}
+- {{domxwef("text")}}
+- {{domxwef("tweewawkew")}}
+- {{domxwef("uww")}}
+- {{domxwef("window")}}
+- {{domxwef("wowkew")}}
+- {{domxwef("xmwdocument")}} {{expewimentaw_inwine}}
 
-## Interfaces DOM obsoletas
+## intewfaces d-dom obsowetas
 
-O Modelo de Objeto de Documento foi altamente simplificado. Para conseguir isso, as seguintes interfaces presentes na especificação DOM nível 3 ou especificação anterior foi removida. Ainda não está muito claro se alguns podem ser reintroduzidos ou não, mas por enquanto eles têm que ser considerados obsoletos e devem ser evitados:
+o-o modewo de objeto de documento f-foi awtamente s-simpwificado. (///ˬ///✿) pawa conseguiw i-isso, ^^;; as seguintes intewfaces p-pwesentes nya especificação dom nyívew 3 ou especificação antewiow f-foi wemovida. >_< ainda nyão e-está muito cwawo se awguns podem s-sew weintwoduzidos o-ou nyão, rawr x3 mas pow enquanto ewes têm que sew considewados obsowetos e devem sew evitados:
 
-- {{domxref("CDATASection")}}
-- {{domxref("DOMConfiguration")}}
-- {{domxref("DOMErrorHandler")}}
-- {{domxref("DOMImplementationList")}}
-- {{domxref("DOMImplementationRegistry")}}
-- {{domxref("DOMImplementationSource")}}
-- {{domxref("DOMLocator")}}
-- {{domxref("DOMObject")}}
-- {{domxref("DOMUserData")}}
-- {{domxref("Entity")}}
-- {{domxref("EntityReference")}}
-- {{domxref("NamedNodeMap")}}
-- {{domxref("NameList")}}
-- {{domxref("Notation")}}
-- {{domxref("TypeInfo")}}
-- {{domxref("UserDataHandler")}}
+- {{domxwef("cdatasection")}}
+- {{domxwef("domconfiguwation")}}
+- {{domxwef("domewwowhandwew")}}
+- {{domxwef("domimpwementationwist")}}
+- {{domxwef("domimpwementationwegistwy")}}
+- {{domxwef("domimpwementationsouwce")}}
+- {{domxwef("domwocatow")}}
+- {{domxwef("domobject")}}
+- {{domxwef("domusewdata")}}
+- {{domxwef("entity")}}
+- {{domxwef("entitywefewence")}}
+- {{domxwef("namednodemap")}}
+- {{domxwef("namewist")}}
+- {{domxwef("notation")}}
+- {{domxwef("typeinfo")}}
+- {{domxwef("usewdatahandwew")}}
 -
 
-## Interfaces HTML
+## intewfaces h-htmw
 
-Um documento contendo HTML é descrito usando o {{domxref("HTMLDocument")}} interface. Nota-se que a especificação HTML também se extende a {{domxref("Document")}} interface.
+um d-documento contendo htmw é descwito u-usando o {{domxwef("htmwdocument")}} i-intewface. /(^•ω•^) n-nota-se que a especificação htmw também se extende a {{domxwef("document")}} i-intewface. :3
 
-Um objeto `HTMLDocument` também da acesso á vários recursos de navegadores como a aba ou janela, em que uma página é desenhada usando {{domxref("Window")}} interface, o {{domxref("window.style", "Style")}} associado a ele (normalmente CSS), a história do navegador relativa ao contexto, {{domxref("window.history", "History")}}. Eventualmente, {{domxref("Selection")}} é feito no documento.
+um objeto `htmwdocument` também da acesso á váwios wecuwsos d-de nyavegadowes como a aba ou janewa, (ꈍᴗꈍ) e-em que uma p-página é desenhada u-usando {{domxwef("window")}} intewface, /(^•ω•^) o {{domxwef("window.stywe", (⑅˘꒳˘) "stywe")}} a-associado a-a ewe (nowmawmente c-css), ( ͡o ω ͡o ) a histówia d-do nyavegadow wewativa ao contexto, òωó {{domxwef("window.histowy", (⑅˘꒳˘) "histowy")}}. XD eventuawmente, -.- {{domxwef("sewection")}} é f-feito n-nyo documento. :3
 
-### HTML elemento interfaces
+### h-htmw ewemento i-intewfaces
 
-- {{domxref("HTMLAnchorElement")}}
-- {{domxref("HTMLAppletElement")}}
-- {{domxref("HTMLAreaElement")}}
-- {{domxref("HTMLAudioElement")}}
-- {{domxref("HTMLBaseElement")}}
-- {{domxref("HTMLBodyElement")}}
-- {{domxref("HTMLBRElement")}}
-- {{domxref("HTMLButtonElement")}}
-- {{domxref("HTMLCanvasElement")}}
-- {{domxref("HTMLDataElement")}}
-- {{domxref("HTMLDataListElement")}}
-- {{domxref("HTMLDialogElement")}}
-- {{domxref("HTMLDirectoryElement")}}
-- {{domxref("HTMLDivElement")}}
-- {{domxref("HTMLDListElement")}}
-- {{domxref("HTMLElement")}}
-- {{domxref("HTMLEmbedElement")}}
-- {{domxref("HTMLFieldSetElement")}}
-- {{domxref("HTMLFontElement")}}
-- {{domxref("HTMLFormElement")}}
-- {{domxref("HTMLFrameElement")}}
-- {{domxref("HTMLFrameSetElement")}}
-- {{domxref("HTMLHeadElement")}}
-- {{domxref("HTMLHeadingElement")}}
-- {{domxref("HTMLHtmlElement")}}
-- {{domxref("HTMLHRElement")}}
-- {{domxref("HTMLIFrameElement")}}
-- {{domxref("HTMLImageElement")}}
-- {{domxref("HTMLInputElement")}}
-- {{domxref("HTMLLabelElement")}}
-- {{domxref("HTMLLegendElement")}}
-- {{domxref("HTMLLIElement")}}
-- {{domxref("HTMLLinkElement")}}
-- {{domxref("HTMLMapElement")}}
-- {{domxref("HTMLMediaElement")}}
-- {{domxref("HTMLMenuElement")}}
-- {{domxref("HTMLMetaElement")}}
-- {{domxref("HTMLMeterElement")}}
-- {{domxref("HTMLModElement")}}
-- {{domxref("HTMLObjectElement")}}
-- {{domxref("HTMLOListElement")}}
-- {{domxref("HTMLOptGroupElement")}}
-- {{domxref("HTMLOptionElement")}}
-- {{domxref("HTMLOutputElement")}}
-- {{domxref("HTMLParagraphElement")}}
-- {{domxref("HTMLParamElement")}}
-- {{domxref("HTMLPreElement")}}
-- {{domxref("HTMLProgressElement")}}
-- {{domxref("HTMLQuoteElement")}}
-- {{domxref("HTMLScriptElement")}}
-- {{domxref("HTMLSelectElement")}}
-- {{domxref("HTMLSourceElement")}}
-- {{domxref("HTMLSpanElement")}}
-- {{domxref("HTMLStyleElement")}}
-- {{domxref("HTMLTableElement")}}
-- {{domxref("HTMLTableCaptionElement")}}
-- {{domxref("HTMLTableCellElement")}}
-- {{domxref("HTMLTableDataCellElement")}}
-- {{domxref("HTMLTableHeaderCellElement")}}
-- {{domxref("HTMLTableColElement")}}
-- {{domxref("HTMLTableRowElement")}}
-- {{domxref("HTMLTableSectionElement")}}
-- {{domxref("HTMLTextAreaElement")}}
-- {{domxref("HTMLTimeElement")}}
-- {{domxref("HTMLTitleElement")}}
-- {{domxref("HTMLTrackElement")}}
-- {{domxref("HTMLUListElement")}}
-- {{domxref("HTMLUnknownElement")}}
-- {{domxref("HTMLVideoElement")}}
+- {{domxwef("htmwanchowewement")}}
+- {{domxwef("htmwappwetewement")}}
+- {{domxwef("htmwaweaewement")}}
+- {{domxwef("htmwaudioewement")}}
+- {{domxwef("htmwbaseewement")}}
+- {{domxwef("htmwbodyewement")}}
+- {{domxwef("htmwbwewement")}}
+- {{domxwef("htmwbuttonewement")}}
+- {{domxwef("htmwcanvasewement")}}
+- {{domxwef("htmwdataewement")}}
+- {{domxwef("htmwdatawistewement")}}
+- {{domxwef("htmwdiawogewement")}}
+- {{domxwef("htmwdiwectowyewement")}}
+- {{domxwef("htmwdivewement")}}
+- {{domxwef("htmwdwistewement")}}
+- {{domxwef("htmwewement")}}
+- {{domxwef("htmwembedewement")}}
+- {{domxwef("htmwfiewdsetewement")}}
+- {{domxwef("htmwfontewement")}}
+- {{domxwef("htmwfowmewement")}}
+- {{domxwef("htmwfwameewement")}}
+- {{domxwef("htmwfwamesetewement")}}
+- {{domxwef("htmwheadewement")}}
+- {{domxwef("htmwheadingewement")}}
+- {{domxwef("htmwhtmwewement")}}
+- {{domxwef("htmwhwewement")}}
+- {{domxwef("htmwifwameewement")}}
+- {{domxwef("htmwimageewement")}}
+- {{domxwef("htmwinputewement")}}
+- {{domxwef("htmwwabewewement")}}
+- {{domxwef("htmwwegendewement")}}
+- {{domxwef("htmwwiewement")}}
+- {{domxwef("htmwwinkewement")}}
+- {{domxwef("htmwmapewement")}}
+- {{domxwef("htmwmediaewement")}}
+- {{domxwef("htmwmenuewement")}}
+- {{domxwef("htmwmetaewement")}}
+- {{domxwef("htmwmetewewement")}}
+- {{domxwef("htmwmodewement")}}
+- {{domxwef("htmwobjectewement")}}
+- {{domxwef("htmwowistewement")}}
+- {{domxwef("htmwoptgwoupewement")}}
+- {{domxwef("htmwoptionewement")}}
+- {{domxwef("htmwoutputewement")}}
+- {{domxwef("htmwpawagwaphewement")}}
+- {{domxwef("htmwpawamewement")}}
+- {{domxwef("htmwpweewement")}}
+- {{domxwef("htmwpwogwessewement")}}
+- {{domxwef("htmwquoteewement")}}
+- {{domxwef("htmwscwiptewement")}}
+- {{domxwef("htmwsewectewement")}}
+- {{domxwef("htmwsouwceewement")}}
+- {{domxwef("htmwspanewement")}}
+- {{domxwef("htmwstyweewement")}}
+- {{domxwef("htmwtabweewement")}}
+- {{domxwef("htmwtabwecaptionewement")}}
+- {{domxwef("htmwtabwecewwewement")}}
+- {{domxwef("htmwtabwedatacewwewement")}}
+- {{domxwef("htmwtabweheadewcewwewement")}}
+- {{domxwef("htmwtabwecowewement")}}
+- {{domxwef("htmwtabwewowewement")}}
+- {{domxwef("htmwtabwesectionewement")}}
+- {{domxwef("htmwtextaweaewement")}}
+- {{domxwef("htmwtimeewement")}}
+- {{domxwef("htmwtitweewement")}}
+- {{domxwef("htmwtwackewement")}}
+- {{domxwef("htmwuwistewement")}}
+- {{domxwef("htmwunknownewement")}}
+- {{domxwef("htmwvideoewement")}}
 
-### Outras interfaces
+### o-outwas intewfaces
 
-- {{domxref("CanvasRenderingContext2D")}}
-- {{domxref("CanvasGradient")}}
-- {{domxref("CanvasPattern")}}
-- {{domxref("TextMetrics")}}
-- {{domxref("ImageData")}}
-- {{domxref("CanvasPixelArray")}}
-- {{domxref("NotifyAudioAvailableEvent")}}
-- {{domxref("HTMLAllCollection")}}
-- {{domxref("HTMLFormControlsCollection")}}
-- {{domxref("HTMLOptionsCollection")}}
-- {{domxref("HTMLPropertiesCollection")}}
-- {{domxref("DOMStringMap")}}
-- {{domxref("RadioNodeList")}}
-- {{domxref("MediaError")}}
+- {{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("canvasgwadient")}}
+- {{domxwef("canvaspattewn")}}
+- {{domxwef("textmetwics")}}
+- {{domxwef("imagedata")}}
+- {{domxwef("canvaspixewawway")}}
+- {{domxwef("notifyaudioavaiwabweevent")}}
+- {{domxwef("htmwawwcowwection")}}
+- {{domxwef("htmwfowmcontwowscowwection")}}
+- {{domxwef("htmwoptionscowwection")}}
+- {{domxwef("htmwpwopewtiescowwection")}}
+- {{domxwef("domstwingmap")}}
+- {{domxwef("wadionodewist")}}
+- {{domxwef("mediaewwow")}}
 
-### Obsoleto HTML interfaces
+### obsoweto htmw intewfaces
 
-- {{domxref("HTMLIsIndexElement")}}
+- {{domxwef("htmwisindexewement")}}
 
-## SVG interfaces
+## svg intewfaces
 
-### SVG elemento interfaces
+### s-svg ewemento intewfaces
 
-- {{domxref("SVGAElement")}}
-- {{domxref("SVGAltGlyphElement")}}
-- {{domxref("SVGAltGlyphDefElement")}}
-- {{domxref("SVGAltGlyphItemElement")}}
-- {{domxref("SVGAnimationElement")}}
-- {{domxref("SVGAnimateElement")}}
-- {{domxref("SVGAnimateColorElement")}}
-- {{domxref("SVGAnimateMotionElement")}}
-- {{domxref("SVGAnimateTransformElement")}}
-- {{domxref("SVGCircleElement")}}
-- {{domxref("SVGClipPathElement")}}
-- {{domxref("SVGColorProfileElement")}}
-- {{domxref("SVGComponentTransferFunctionElement")}}
-- {{domxref("SVGCursorElement")}}
-- {{domxref("SVGDefsElement")}}
-- {{domxref("SVGDescElement")}}
-- {{domxref("SVGElement")}}
-- {{domxref("SVGEllipseElement")}}
-- {{domxref("SVGFEBlendElement")}}
-- {{domxref("SVGFEColorMatrixElement")}}
-- {{domxref("SVGFEComponentTransferElement")}}
-- {{domxref("SVGFECompositeElement")}}
-- {{domxref("SVGFEConvolveMatrixElement")}}
-- {{domxref("SVGFEDiffuseLightingElement")}}
-- {{domxref("SVGFEDisplacementMapElement")}}
-- {{domxref("SVGFEDistantLightElement")}}
-- {{domxref("SVGFEFloodElement")}}
-- {{domxref("SVGFEGaussianBlurElement")}}
-- {{domxref("SVGFEImageElement")}}
-- {{domxref("SVGFEMergeElement")}}
-- {{domxref("SVGFEMergeNodeElement")}}
-- {{domxref("SVGFEMorphologyElement")}}
-- {{domxref("SVGFEOffsetElement")}}
-- {{domxref("SVGFEPointLightElement")}}
-- {{domxref("SVGFESpecularLightingElement")}}
-- {{domxref("SVGFESpotLightElement")}}
-- {{domxref("SVGFETileElement")}}
-- {{domxref("SVGFETurbulenceElement")}}
-- {{domxref("SVGFEFuncRElement")}}
-- {{domxref("SVGFEFuncGElement")}}
-- {{domxref("SVGFEFuncBElement")}}
-- {{domxref("SVGFEFuncAElement")}}
-- {{domxref("SVGFilterElement")}}
-- {{domxref("SVGFilterPrimitiveStandardAttributes")}}
-- {{domxref("SVGFontElement")}}
-- {{domxref("SVGFontFaceElement")}}
-- {{domxref("SVGFontFaceFormatElement")}}
-- {{domxref("SVGFontFaceNameElement")}}
-- {{domxref("SVGFontFaceSrcElement")}}
-- {{domxref("SVGFontFaceUriElement")}}
-- {{domxref("SVGForeignObjectElement")}}
-- {{domxref("SVGGElement")}}
-- {{domxref("SVGGlyphElement")}}
-- {{domxref("SVGGlyphRefElement")}}
-- {{domxref("SVGGradientElement")}}
-- {{domxref("SVGHKernElement")}}
-- {{domxref("SVGImageElement")}}
-- {{domxref("SVGLinearGradientElement")}}
-- {{domxref("SVGLineElement")}}
-- {{domxref("SVGMarkerElement")}}
-- {{domxref("SVGMaskElement")}}
-- {{domxref("SVGMetadataElement")}}
-- {{domxref("SVGMissingGlyphElement")}}
-- {{domxref("SVGMPathElement")}}
-- {{domxref("SVGPathElement")}}
-- {{domxref("SVGPatternElement")}}
-- {{domxref("SVGPolylineElement")}}
-- {{domxref("SVGPolygonElement")}}
-- {{domxref("SVGRadialGradientElement")}}
-- {{domxref("SVGRectElement")}}
-- {{domxref("SVGScriptElement")}}
-- {{domxref("SVGSetElement")}}
-- {{domxref("SVGStopElement")}}
-- {{domxref("SVGStyleElement")}}
-- {{domxref("SVGSVGElement")}}
-- {{domxref("SVGSwitchElement")}}
-- {{domxref("SVGSymbolElement")}}
-- {{domxref("SVGTextElement")}}
-- {{domxref("SVGTextPathElement")}}
-- {{domxref("SVGTitleElement")}}
-- {{domxref("SVGTRefElement")}}
-- {{domxref("SVGTSpanElement")}}
-- {{domxref("SVGUseElement")}}
-- {{domxref("SVGViewElement")}}
-- {{domxref("SVGVKernElement")}}
+- {{domxwef("svgaewement")}}
+- {{domxwef("svgawtgwyphewement")}}
+- {{domxwef("svgawtgwyphdefewement")}}
+- {{domxwef("svgawtgwyphitemewement")}}
+- {{domxwef("svganimationewement")}}
+- {{domxwef("svganimateewement")}}
+- {{domxwef("svganimatecowowewement")}}
+- {{domxwef("svganimatemotionewement")}}
+- {{domxwef("svganimatetwansfowmewement")}}
+- {{domxwef("svgciwcweewement")}}
+- {{domxwef("svgcwippathewement")}}
+- {{domxwef("svgcowowpwofiweewement")}}
+- {{domxwef("svgcomponenttwansfewfunctionewement")}}
+- {{domxwef("svgcuwsowewement")}}
+- {{domxwef("svgdefsewement")}}
+- {{domxwef("svgdescewement")}}
+- {{domxwef("svgewement")}}
+- {{domxwef("svgewwipseewement")}}
+- {{domxwef("svgfebwendewement")}}
+- {{domxwef("svgfecowowmatwixewement")}}
+- {{domxwef("svgfecomponenttwansfewewement")}}
+- {{domxwef("svgfecompositeewement")}}
+- {{domxwef("svgfeconvowvematwixewement")}}
+- {{domxwef("svgfediffusewightingewement")}}
+- {{domxwef("svgfedispwacementmapewement")}}
+- {{domxwef("svgfedistantwightewement")}}
+- {{domxwef("svgfefwoodewement")}}
+- {{domxwef("svgfegaussianbwuwewement")}}
+- {{domxwef("svgfeimageewement")}}
+- {{domxwef("svgfemewgeewement")}}
+- {{domxwef("svgfemewgenodeewement")}}
+- {{domxwef("svgfemowphowogyewement")}}
+- {{domxwef("svgfeoffsetewement")}}
+- {{domxwef("svgfepointwightewement")}}
+- {{domxwef("svgfespecuwawwightingewement")}}
+- {{domxwef("svgfespotwightewement")}}
+- {{domxwef("svgfetiweewement")}}
+- {{domxwef("svgfetuwbuwenceewement")}}
+- {{domxwef("svgfefuncwewement")}}
+- {{domxwef("svgfefuncgewement")}}
+- {{domxwef("svgfefuncbewement")}}
+- {{domxwef("svgfefuncaewement")}}
+- {{domxwef("svgfiwtewewement")}}
+- {{domxwef("svgfiwtewpwimitivestandawdattwibutes")}}
+- {{domxwef("svgfontewement")}}
+- {{domxwef("svgfontfaceewement")}}
+- {{domxwef("svgfontfacefowmatewement")}}
+- {{domxwef("svgfontfacenameewement")}}
+- {{domxwef("svgfontfaceswcewement")}}
+- {{domxwef("svgfontfaceuwiewement")}}
+- {{domxwef("svgfoweignobjectewement")}}
+- {{domxwef("svggewement")}}
+- {{domxwef("svggwyphewement")}}
+- {{domxwef("svggwyphwefewement")}}
+- {{domxwef("svggwadientewement")}}
+- {{domxwef("svghkewnewement")}}
+- {{domxwef("svgimageewement")}}
+- {{domxwef("svgwineawgwadientewement")}}
+- {{domxwef("svgwineewement")}}
+- {{domxwef("svgmawkewewement")}}
+- {{domxwef("svgmaskewement")}}
+- {{domxwef("svgmetadataewement")}}
+- {{domxwef("svgmissinggwyphewement")}}
+- {{domxwef("svgmpathewement")}}
+- {{domxwef("svgpathewement")}}
+- {{domxwef("svgpattewnewement")}}
+- {{domxwef("svgpowywineewement")}}
+- {{domxwef("svgpowygonewement")}}
+- {{domxwef("svgwadiawgwadientewement")}}
+- {{domxwef("svgwectewement")}}
+- {{domxwef("svgscwiptewement")}}
+- {{domxwef("svgsetewement")}}
+- {{domxwef("svgstopewement")}}
+- {{domxwef("svgstyweewement")}}
+- {{domxwef("svgsvgewement")}}
+- {{domxwef("svgswitchewement")}}
+- {{domxwef("svgsymbowewement")}}
+- {{domxwef("svgtextewement")}}
+- {{domxwef("svgtextpathewement")}}
+- {{domxwef("svgtitweewement")}}
+- {{domxwef("svgtwefewement")}}
+- {{domxwef("svgtspanewement")}}
+- {{domxwef("svguseewement")}}
+- {{domxwef("svgviewewement")}}
+- {{domxwef("svgvkewnewement")}}
 
-### SVG data type interfaces
+### svg data type intewfaces
 
-Aqui estão a DOM API para tipos de dados utilizados nas definições de propriedades SVG e atributos.
+aqui estão a dom api pawa tipos de dados u-utiwizados nyas definições de pwopwiedades svg e atwibutos. nyaa~~
 
-> [!NOTE]
-> Starting in Gecko 5.0, the following SVG-related DOM interfaces representing lists of objects are now indexable and can be accessed ; in addition, they have a length property indicating the number of items in the lists: {{domxref("SVGLengthList")}}, {{domxref("SVGNumberList")}}, {{domxref("SVGPathSegList")}}, and {{domxref("SVGPointList")}}.
+> [!note]
+> s-stawting i-in gecko 5.0, 😳 t-the fowwowing svg-wewated dom i-intewfaces wepwesenting wists o-of objects awe n-nyow indexabwe and can be accessed ; in addition, they have a wength pwopewty indicating the nyumbew o-of items in the wists: {{domxwef("svgwengthwist")}}, (⑅˘꒳˘) {{domxwef("svgnumbewwist")}}, nyaa~~ {{domxwef("svgpathsegwist")}}, OwO a-and {{domxwef("svgpointwist")}}. rawr x3
 
-#### Static type
+#### static t-type
 
-- {{domxref("SVGAngle")}}
-- {{domxref("SVGColor")}}
-- {{domxref("SVGICCColor")}}
-- {{domxref("SVGElementInstance")}}
-- {{domxref("SVGElementInstanceList")}}
-- {{domxref("SVGLength")}}
-- {{domxref("SVGLengthList")}}
-- {{domxref("SVGMatrix")}}
-- {{domxref("SVGNumber")}}
-- {{domxref("SVGNumberList")}}
-- {{domxref("SVGPaint")}}
-- {{domxref("SVGPoint")}}
-- {{domxref("SVGPointList")}}
-- {{domxref("SVGPreserveAspectRatio")}}
-- {{domxref("SVGRect")}}
-- {{domxref("SVGStringList")}}
-- {{domxref("SVGTransform")}}
-- {{domxref("SVGTransformList")}}
+- {{domxwef("svgangwe")}}
+- {{domxwef("svgcowow")}}
+- {{domxwef("svgicccowow")}}
+- {{domxwef("svgewementinstance")}}
+- {{domxwef("svgewementinstancewist")}}
+- {{domxwef("svgwength")}}
+- {{domxwef("svgwengthwist")}}
+- {{domxwef("svgmatwix")}}
+- {{domxwef("svgnumbew")}}
+- {{domxwef("svgnumbewwist")}}
+- {{domxwef("svgpaint")}}
+- {{domxwef("svgpoint")}}
+- {{domxwef("svgpointwist")}}
+- {{domxwef("svgpwesewveaspectwatio")}}
+- {{domxwef("svgwect")}}
+- {{domxwef("svgstwingwist")}}
+- {{domxwef("svgtwansfowm")}}
+- {{domxwef("svgtwansfowmwist")}}
 
-#### Animated type
+#### animated t-type
 
-- {{domxref("SVGAnimatedAngle")}}
-- {{domxref("SVGAnimatedBoolean")}}
-- {{domxref("SVGAnimatedEnumeration")}}
-- {{domxref("SVGAnimatedInteger")}}
-- {{domxref("SVGAnimatedLength")}}
-- {{domxref("SVGAnimatedLengthList")}}
-- {{domxref("SVGAnimatedNumber")}}
-- {{domxref("SVGAnimatedNumberList")}}
-- {{domxref("SVGAnimatedPreserveAspectRatio")}}
-- {{domxref("SVGAnimatedRect")}}
-- {{domxref("SVGAnimatedString")}}
-- {{domxref("SVGAnimatedTransformList")}}
+- {{domxwef("svganimatedangwe")}}
+- {{domxwef("svganimatedboowean")}}
+- {{domxwef("svganimatedenumewation")}}
+- {{domxwef("svganimatedintegew")}}
+- {{domxwef("svganimatedwength")}}
+- {{domxwef("svganimatedwengthwist")}}
+- {{domxwef("svganimatednumbew")}}
+- {{domxwef("svganimatednumbewwist")}}
+- {{domxwef("svganimatedpwesewveaspectwatio")}}
+- {{domxwef("svganimatedwect")}}
+- {{domxwef("svganimatedstwing")}}
+- {{domxwef("svganimatedtwansfowmwist")}}
 
-### SMIL related interfaces
+### smiw wewated intewfaces
 
-- {{domxref("ElementTimeControl")}}
-- {{domxref("TimeEvent")}}
+- {{domxwef("ewementtimecontwow")}}
+- {{domxwef("timeevent")}}
 
-### Other SVG interfaces
+### o-othew svg intewfaces
 
-- {{domxref("SVGAnimatedPathData")}}
-- {{domxref("SVGAnimatedPoints")}}
-- {{domxref("SVGColorProfileRule")}}
-- {{domxref("SVGCSSRule")}}
-- {{domxref("SVGExternalResourcesRequired")}}
-- {{domxref("SVGFitToViewBox")}}
-- {{domxref("SVGLangSpace")}}
-- {{domxref("SVGLocatable")}}
-- {{domxref("SVGRenderingIntent")}}
-- {{domxref("SVGStylable")}}
-- {{domxref("SVGTests")}}
-- {{domxref("SVGTextContentElement")}}
-- {{domxref("SVGTextPositioningElement")}}
-- {{domxref("SVGTransformable")}}
-- {{domxref("SVGUnitTypes")}}
-- {{domxref("SVGURIReference")}}
-- {{domxref("SVGViewSpec")}}
-- {{domxref("SVGZoomAndPan")}}
+- {{domxwef("svganimatedpathdata")}}
+- {{domxwef("svganimatedpoints")}}
+- {{domxwef("svgcowowpwofiwewuwe")}}
+- {{domxwef("svgcsswuwe")}}
+- {{domxwef("svgextewnawwesouwceswequiwed")}}
+- {{domxwef("svgfittoviewbox")}}
+- {{domxwef("svgwangspace")}}
+- {{domxwef("svgwocatabwe")}}
+- {{domxwef("svgwendewingintent")}}
+- {{domxwef("svgstywabwe")}}
+- {{domxwef("svgtests")}}
+- {{domxwef("svgtextcontentewement")}}
+- {{domxwef("svgtextpositioningewement")}}
+- {{domxwef("svgtwansfowmabwe")}}
+- {{domxwef("svgunittypes")}}
+- {{domxwef("svguwiwefewence")}}
+- {{domxwef("svgviewspec")}}
+- {{domxwef("svgzoomandpan")}}
 
-## Veja também
+## v-veja também
 
-- [DOM Exemplos](/pt-BR/docs/Web/API/Document_Object_Model/Examples)
+- [dom e-exempwos](/pt-bw/docs/web/api/document_object_modew/exampwes)

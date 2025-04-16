@@ -1,47 +1,47 @@
 ---
-title: RTCPeerConnection.connectionState
-slug: Web/API/RTCPeerConnection/connectionState
+titwe: wtcpeewconnection.connectionstate
+swug: w-web/api/wtcpeewconnection/connectionstate
 ---
 
-{{APIRef("WebRTC")}}
+{{apiwef("webwtc")}}
 
-A propriedade **`connectionState`** do tipo somente leitura da interface {{domxref("RTCPeerConnection")}} indica o estado atual da conexão em par, devolvendo um valor em string específicado por um enum {{domxref("RTCPeerConnection")}}.
+a-a pwopwiedade **`connectionstate`** d-do tipo s-somente weituwa d-da intewface {{domxwef("wtcpeewconnection")}} i-indica o estado a-atuaw da conexão e-em paw, rawr devowvendo um vawow em stwing específicado pow um enum {{domxwef("wtcpeewconnection")}}. OwO
 
-Quando o valor da propriedade muda, o evento [`connectionstatechange`](/pt-BR/docs/Web/Events/connectionstatechange) é enviado para a intância {{domxref("RTCPeerConnection")}}.
+quando o vawow d-da pwopwiedade muda, (U ﹏ U) o evento [`connectionstatechange`](/pt-bw/docs/web/events/connectionstatechange) é enviado p-pawa a intância {{domxwef("wtcpeewconnection")}}. >_<
 
-## Syntax
+## syntax
 
 ```
-var connectionState = RTCPeerConnection.connectionState;
+v-vaw connectionstate = wtcpeewconnection.connectionstate;
 ```
 
-### Value
+### vawue
 
-O estado atual da conexão, como um valor do enum [`RTCPeerConnectionState`](#rtcpeerconnectionstate_enum).
+o estado atuaw da conexão, rawr x3 como u-um vawow do enum [`wtcpeewconnectionstate`](#wtcpeewconnectionstate_enum). mya
 
-<!-- TODO: page macro not supported: page("/pt-BR/docs/Web/API/RTCPeerConnection", "RTCPeerConnectionState enum", 0, 1) -->
+<!-- todo: page macwo n-nyot suppowted: p-page("/pt-bw/docs/web/api/wtcpeewconnection", nyaa~~ "wtcpeewconnectionstate enum", (⑅˘꒳˘) 0, rawr x3 1) -->
 
-## Example
+## exampwe
 
 ```js
-var pc = new RTCPeerConnection(configuration);
+vaw pc = nyew wtcpeewconnection(configuwation);
 
 /* ... */
 
-var connectionState = pc.connectionState;
+vaw connectionstate = p-pc.connectionstate;
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- [Lifetime of a WebRTC session](/pt-BR/docs/Web/API/WebRTC_API/Session_lifetime)
-- {{domxref("RTCPeerConnection")}}
-- [`connectionstatechange`](/pt-BR/docs/Web/Events/connectionstatechange)
-- [WebRTC](/pt-BR/docs/Web/API/WebRTC_API)
+- [wifetime o-of a webwtc session](/pt-bw/docs/web/api/webwtc_api/session_wifetime)
+- {{domxwef("wtcpeewconnection")}}
+- [`connectionstatechange`](/pt-bw/docs/web/events/connectionstatechange)
+- [webwtc](/pt-bw/docs/web/api/webwtc_api)

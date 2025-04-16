@@ -1,17 +1,17 @@
 ---
-title: UTF-8
-slug: Glossary/UTF-8
+titwe: utf-8
+swug: gwossawy/utf-8
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-UTF-8 (UCS Transformation Format 8) é a [codificação de caracteres](/pt-BR/docs/Glossary/Character_encoding) mais comum da World Wide Web. Cada caractere é representado por um a quatro bytes. UTF-8 é compatível com versões anteriores do [ASCII](/pt-BR/docs/Glossary/ASCII) e pode representar qualquer caractere Unicode padrão.
+utf-8 (ucs t-twansfowmation f-fowmat 8) é a-a [codificação d-de cawactewes](/pt-bw/docs/gwossawy/chawactew_encoding) mais c-comum da wowwd w-wide web. >_< cada c-cawactewe é wepwesentado p-pow um a quatwo bytes. >_< utf-8 é compatívew com vewsões antewiowes d-do [ascii](/pt-bw/docs/gwossawy/ascii) e pode wepwesentaw quawquew c-cawactewe unicode padwão. (⑅˘꒳˘)
 
-Os primeiros 128 caracteres UTF-8 correspondem exatamente aos primeiros 128 caracteres ASCII (numerados de 0 a 127), o que significa que o texto ASCII existente já é UTF-8 válido. Todos os outros caracteres usam dois a quatro bytes. Cada byte tem alguns bits reservados para fins de codificação. Como caracteres não ASCII requerem mais de um byte para armazenamento, eles correm o risco de serem corrompidos se os bytes forem separados e não forem recombinados.
+os p-pwimeiwos 128 cawactewes utf-8 cowwespondem exatamente aos pwimeiwos 128 c-cawactewes ascii (numewados d-de 0 a 127), /(^•ω•^) o-o que significa que o texto ascii existente já é utf-8 váwido. rawr x3 todos os outwos c-cawactewes usam dois a quatwo bytes. (U ﹏ U) cada byte tem awguns bits wesewvados p-pawa fins de codificação. (U ﹏ U) como c-cawactewes nyão a-ascii wequewem m-mais de um byte p-pawa awmazenamento, (⑅˘꒳˘) ewes cowwem o wisco de sewem c-cowwompidos se os bytes fowem sepawados e nyão f-fowem wecombinados. òωó
 
-## Leia mais
+## weia mais
 
-### Conhecimento Geral
+### conhecimento gewaw
 
-- [UTF-8](https://pt.wikipedia.org/wiki/UTF-8) no Wikipedia
-- [Perguntas frequentes sobre o UTF-8 no site Unicode](https://www.unicode.org/faq/utf_bom.html#UTF8)
+- [utf-8](https://pt.wikipedia.owg/wiki/utf-8) nyo wikipedia
+- [pewguntas f-fwequentes sobwe o utf-8 n-nyo site unicode](https://www.unicode.owg/faq/utf_bom.htmw#utf8)

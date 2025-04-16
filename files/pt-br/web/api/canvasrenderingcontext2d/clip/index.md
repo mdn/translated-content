@@ -1,116 +1,116 @@
 ---
-title: CanvasRenderingContext2D.clip()
-slug: Web/API/CanvasRenderingContext2D/clip
+titwe: canvaswendewingcontext2d.cwip()
+swug: w-web/api/canvaswendewingcontext2d/cwip
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-O método **`CanvasRenderingContext2D.clip()`** da API do Canvas 2D transforma o caminho atualmente construido em um caminho atual de recorte.
+o-o método **`canvaswendewingcontext2d.cwip()`** d-da api do c-canvas 2d twansfowma o-o caminho a-atuawmente constwuido e-em um caminho a-atuaw de wecowte. OwO
 
-## Sintaxe
+## sintaxe
 
 ```
-void ctx.clip();
-void ctx.clip(fillRule);
-void ctx.clip(path, fillRule);
+void ctx.cwip();
+void ctx.cwip(fiwwwuwe);
+void ctx.cwip(path, /(^•ω•^) f-fiwwwuwe);
 ```
 
-### Parâmetros
+### pawâmetwos
 
-![](canvas_clipping_path.png)
+![](canvas_cwipping_path.png)
 
-- `fillRule`
+- `fiwwwuwe`
 
-  - : O algoritmo pelo qual determina se um ponto esta dentro de um caminho ou fora de um caminho.
-    Valores Possíveis:
+  - : o awgowitmo p-pewo quaw detewmina se um ponto e-esta dentwo de um caminho ou fowa de um caminho. 😳😳😳
+    vawowes p-possíveis:
 
-    - `nonzero`
-      - : A [regra contorno diferente de zero](http://en.wikipedia.org/wiki/Nonzero-rule), que é a regra padrão.
+    - `nonzewo`
+      - : a [wegwa c-contowno difewente d-de zewo](http://en.wikipedia.owg/wiki/nonzewo-wuwe), ( ͡o ω ͡o ) que é a wegwa padwão. >_<
     - `evenodd`
-      - : A [regra do contorno par ou ímpar](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
+      - : a [wegwa do contowno p-paw ou ímpaw](http://en.wikipedia.owg/wiki/even%e2%80%93odd_wuwe). >w<
 
 - `path`
-  - : Um {{domxref("Path2D")}} caminho para recorte.
+  - : um {{domxwef("path2d")}} caminho pawa wecowte. rawr
 
-## Exemplos
+## exempwos
 
-### Usando do método de corte
+### u-usando do método de cowte
 
-Isso é só um simples fragmento de código que usa o método de corte para criar uma região de recorte.
+i-isso é só um s-simpwes fwagmento d-de código que u-usa o método de cowte pawa cwiaw uma wegião d-de wecowte. 😳
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <canvas id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+vaw canvas = document.getewementbyid("canvas");
+vaw ctx = canvas.getcontext("2d");
 
-// Cria uma região de recorte
-ctx.arc(100, 100, 75, 0, Math.PI * 2, false);
-ctx.clip();
+// cwia uma wegião d-de wecowte
+ctx.awc(100, >w< 100, 75, (⑅˘꒳˘) 0, math.pi * 2, OwO f-fawse);
+ctx.cwip();
 
-ctx.fillRect(0, 0, 100, 100);
+c-ctx.fiwwwect(0, (ꈍᴗꈍ) 0, 100, 😳 100);
 ```
 
-Edite o código abaixo e veja suas mudanças atualizadas ao vivo no canvas:
+e-edite o código abaixo e veja suas mudanças atuawizadas a-ao vivo nyo c-canvas:
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+```htmw hidden
+<canvas i-id="canvas" width="400" h-height="200" cwass="pwayabwe-canvas"></canvas>
+<div c-cwass="pwayabwe-buttons">
+  <input id="edit" type="button" v-vawue="edit" />
+  <input id="weset" type="button" vawue="weset" />
 </div>
-<textarea id="code" class="playable-code">
-ctx.arc(100, 100, 75, 0, Math.PI*2, false);
-ctx.clip();
-ctx.fillRect(0, 0, 100,100);</textarea
+<textawea i-id="code" cwass="pwayabwe-code">
+c-ctx.awc(100, 😳😳😳 100, mya 75, 0, math.pi*2, mya f-fawse);
+ctx.cwip();
+c-ctx.fiwwwect(0, (⑅˘꒳˘) 0, 100,100);</textawea
 >
 ```
 
 ```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+vaw canvas = document.getewementbyid("canvas");
+vaw ctx = canvas.getcontext("2d");
+vaw textawea = document.getewementbyid("code");
+vaw weset = document.getewementbyid("weset");
+v-vaw edit = document.getewementbyid("edit");
+v-vaw code = textawea.vawue;
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
+f-function d-dwawcanvas() {
+  c-ctx.cweawwect(0, (U ﹏ U) 0, canvas.width, mya canvas.height);
+  evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  drawCanvas();
+weset.addeventwistenew("cwick", ʘwʘ function () {
+  textawea.vawue = c-code;
+  dwawcanvas();
 });
 
-edit.addEventListener("click", function () {
-  textarea.focus();
+edit.addeventwistenew("cwick", (˘ω˘) function () {
+  textawea.focus();
 });
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
+textawea.addeventwistenew("input", (U ﹏ U) d-dwawcanvas);
+window.addeventwistenew("woad", ^•ﻌ•^ d-dwawcanvas);
 ```
 
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
+{{ e-embedwivesampwe('pwayabwe_code', (˘ω˘) 700, 360) }}
 
-> [!NOTE]
-> Tenha consciência de que o `clip()` só funciona com formas adicionadas ao caminho; ele não funciona com uma forma primitiva, como retângulos criados com {{domxref("CanvasRenderingContext2D.fillRect()","fillRect()")}}. Nesse caso você teria que usar {{domxref("CanvasRenderingContext2D.rect()","rect()")}} para desenhar um caminho de forma retângular para ser recortado.
+> [!note]
+> t-tenha consciência de que o `cwip()` s-só funciona c-com fowmas adicionadas a-ao caminho; e-ewe nyão funciona com uma fowma pwimitiva, :3 c-como wetânguwos c-cwiados com {{domxwef("canvaswendewingcontext2d.fiwwwect()","fiwwwect()")}}. ^^;; n-nyesse caso você t-tewia que usaw {{domxwef("canvaswendewingcontext2d.wect()","wect()")}} p-pawa desenhaw um caminho de fowma wetânguwaw pawa sew w-wecowtado. 🥺
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver também
+## vew também
 
-- A interface como defini-la, {{domxref("CanvasRenderingContext2D")}}.
+- a intewface como defini-wa, (⑅˘꒳˘) {{domxwef("canvaswendewingcontext2d")}}. nyaa~~

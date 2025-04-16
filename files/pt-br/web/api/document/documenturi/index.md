@@ -1,26 +1,26 @@
 ---
-title: Document.documentURI
-slug: Web/API/Document/documentURI
+titwe: document.documentuwi
+swug: web/api/document/documentuwi
 ---
 
-{{ApiRef("DOM")}}A propiedade **`documentURI`** da interface {{domxref("Document")}} retorna uma string com a localização de um documento.Na definição original DOM3 **`documentURI`** é um atributo de leitura/escrita.No padrão mais recente DOM4 é somente de leitura.
+{{apiwef("dom")}}a p-pwopiedade **`documentuwi`** d-da intewface {{domxwef("document")}} w-wetowna u-uma stwing com a-a wocawização d-de um documento.na d-definição o-owiginaw dom3 **`documentuwi`** é um atwibuto de weituwa/escwita.no padwão mais wecente dom4 é s-somente de weituwa. nyaa~~
 
-## Sintaxe
+## sintaxe
 
 ```
-var string = document.documentURI;
+vaw stwing = d-document.documentuwi;
 ```
 
-## Notas
+## nyotas
 
-Os Documentos HTML tem uma propriedade {{domxref("document.URL")}} que retorna o mesmo valor (localização do documento).
+os documentos h-htmw tem uma pwopwiedade {{domxwef("document.uww")}} que wetowna o mesmo vawow (wocawização d-do documento). /(^•ω•^)
 
-A diferençã é que **`document.URL`** só pode ser usado em documentos HTML, enquanto **`documentURI`** está disponivel para todos os documentos web.
+a difewençã é q-que **`document.uww`** s-só pode sew usado em documentos htmw, rawr enquanto **`documentuwi`** está disponivew pawa todos os d-documentos web. OwO
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}

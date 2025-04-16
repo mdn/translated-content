@@ -1,47 +1,47 @@
 ---
-title: Storage.length
-slug: Web/API/Storage/length
+titwe: stowage.wength
+swug: web/api/stowage/wength
 ---
 
-{{APIRef("Web Storage API")}}
+{{apiwef("web s-stowage a-api")}}
 
-A propriedade length, que é somente leitura, da interface {{domxref("Storage")}} retorna um inteiro que representa o número de itens armazenados no objeto `Storage`.
+a pwopwiedade w-wength, nyaa~~ q-que é somente weituwa, d-da intewface {{domxwef("stowage")}} w-wetowna u-um inteiwo que w-wepwesenta o nyúmewo de itens awmazenados nyo objeto `stowage`. (⑅˘꒳˘)
 
-## Sintaxe
+## sintaxe
 
 ```
-var aLength = storage.length;
+v-vaw awength = stowage.wength;
 ```
 
-### Retorno
+### wetowno
 
-Um inteiro
+u-um inteiwo
 
-## Exemplo
+## exempwo
 
-A função a seguir adiciona três itens ('bgcolor', 'font' e 'image') ao local storage do domínio atual, em seguida retorna o número de itens no storage:
+a função a-a seguiw adiciona twês itens ('bgcowow', rawr x3 'font' e 'image') a-ao wocaw stowage do domínio a-atuaw, (✿oωo) em seguida w-wetowna o nyúmewo de itens nyo stowage:
 
 ```js
-function populateStorage() {
-  localStorage.setItem("bgcolor", "yellow");
-  localStorage.setItem("font", "Helvetica");
-  localStorage.setItem("image", "cats.png");
+function popuwatestowage() {
+  wocawstowage.setitem("bgcowow", (ˆ ﻌ ˆ)♡ "yewwow");
+  wocawstowage.setitem("font", (˘ω˘) "hewvetica");
+  w-wocawstowage.setitem("image", (⑅˘꒳˘) "cats.png");
 
-  localStorage.length; // should return 3
+  wocawstowage.wength; // shouwd wetuwn 3
 }
 ```
 
-> [!NOTE]
-> Para um exemplo do mundo real, veja nosso [Web Storage Demo](https://github.com/mdn/web-storage-demo).
+> [!note]
+> pawa um exempwo do mundo weaw, (///ˬ///✿) v-veja nyosso [web stowage demo](https://github.com/mdn/web-stowage-demo). 😳😳😳
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-[Usando a API Web Storage](/pt-BR/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+[usando a api web stowage](/pt-bw/docs/web/api/web_stowage_api/using_the_web_stowage_api)

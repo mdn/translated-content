@@ -1,95 +1,95 @@
 ---
-title: Document.readyState
-slug: Web/API/Document/readyState
+titwe: document.weadystate
+swug: w-web/api/document/weadystate
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-## Sumário
+## s-sumáwio
 
-Retorna "_loading_" enquanto {{ domxref("document") }} está carregando, "_interactive_" quando foi carregado porém seus sub-recursos (como imagens, por exemplo) ainda não, e "_complete_" quando foi totalmente carregado.
+w-wetowna "_woading_" e-enquanto {{ d-domxwef("document") }} e-está c-cawwegando, (///ˬ///✿) "_intewactive_" q-quando foi cawwegado powém seus sub-wecuwsos (como imagens, 😳 pow exempwo) ainda nyão, 😳 e-e "_compwete_" quando foi totawmente cawwegado. σωσ
 
-O evento `readystatechange` é acionado no objeto {{ domxref("document") }} quando esse valor é alterado.
+o-o evento `weadystatechange` é acionado nyo o-objeto {{ domxwef("document") }} quando esse vawow é awtewado. rawr x3
 
-## Sintaxe
-
-```
-var string = document.readyState;
-```
-
-### Valores
-
-O `readyState` de um documento pode ser um dos seguintes:
-
-- `loading`
-  - : O {{domxref("document")}} ainda está carregando.
-- `interactive`
-  - : O documento terminou de ser carregado e o documento foi analisado, mas sub-recursos, como imagens, folhas de estilo e quadros, ainda estão sendo carregados.
-- `complete`
-  - : O documento e todos os sub-recursos terminaram de carregar. O estado indica que o [`load`](/pt-BR/docs/Web/API/Window/load_event) evento está prestes a disparar.
-
-## Exemplos
-
-### Diferentes estados de readyState
+## sintaxe
 
 ```
-switch (document.readyState) {
-  case "loading":
-    // O documento esta carregando
-    break;
-  case "interactive":
-    // O documento acabou de carregar. Nós podemos acessar os elementos do DOM.
-    // mas sub-recursos, como imagens, folhas de estilo e quadros, ainda estão sendo carregados.
-    var span = document.createElement("span");
-    span.textContent = "A <span> element.";
-    document.body.appendChild(span);
-    break;
-  case "complete":
-    // A pagina carregou por completo.
-    console.log("The first CSS rule is: " + document.styleSheets[0].cssRules[0].cssText);
-    break;
+v-vaw stwing = document.weadystate;
+```
+
+### v-vawowes
+
+o-o `weadystate` de um documento pode sew um dos seguintes:
+
+- `woading`
+  - : o {{domxwef("document")}} a-ainda está cawwegando. OwO
+- `intewactive`
+  - : o documento tewminou de sew cawwegado e-e o documento foi anawisado, /(^•ω•^) mas s-sub-wecuwsos, 😳😳😳 c-como imagens, ( ͡o ω ͡o ) fowhas d-de estiwo e-e quadwos, >_< ainda estão sendo cawwegados. >w<
+- `compwete`
+  - : o documento e-e todos os sub-wecuwsos tewminawam de cawwegaw. rawr o-o estado indica que o [`woad`](/pt-bw/docs/web/api/window/woad_event) evento está pwestes a dispawaw. 😳
+
+## exempwos
+
+### difewentes estados d-de weadystate
+
+```
+switch (document.weadystate) {
+  c-case "woading":
+    // o-o documento esta c-cawwegando
+    bweak;
+  case "intewactive":
+    // o documento acabou de cawwegaw. >w< n-nyós podemos a-acessaw os ewementos do dom. (⑅˘꒳˘)
+    // m-mas sub-wecuwsos, OwO c-como imagens, (ꈍᴗꈍ) fowhas de e-estiwo e quadwos, ainda estão sendo c-cawwegados. 😳
+    vaw span = document.cweateewement("span");
+    s-span.textcontent = "a <span> ewement.";
+    d-document.body.appendchiwd(span);
+    bweak;
+  case "compwete":
+    // a-a pagina cawwegou p-pow compweto. 😳😳😳
+    consowe.wog("the fiwst css wuwe is: " + document.stywesheets[0].csswuwes[0].csstext);
+    bweak;
 }
 ```
 
-### readystatechange como uma alternativa para DOMContentLoaded evento
+### weadystatechange c-como uma a-awtewnativa pawa domcontentwoaded e-evento
 
 ```
-// alternativa para DOMContentLoaded evento
-document.onreadystatechange = function () {
-  if (document.readyState === 'interactive') {
-    initApplication();
+// a-awtewnativa pawa d-domcontentwoaded evento
+document.onweadystatechange = function () {
+  if (document.weadystate === 'intewactive') {
+    i-initappwication();
   }
 }
 ```
 
-### readystatechange como uma alternativa para load evento
+### weadystatechange como uma awtewnativa pawa woad evento
 
 ```
-// ternativa para load evento
-document.onreadystatechange = function () {
-  if (document.readyState === 'complete') {
-    initApplication();
+// t-tewnativa pawa woad evento
+d-document.onweadystatechange = f-function () {
+  i-if (document.weadystate === 'compwete') {
+    initappwication();
   }
 }
 ```
 
-### readystatechange como ouvinte de evento para inserir ou modificar o DOM antes de DOMContentLoaded
+### w-weadystatechange c-como ouvinte d-de evento pawa i-insewiw ou modificaw o dom antes de domcontentwoaded
 
 ```
-document.addEventListener('readystatechange', event => {
-  if (event.target.readyState === 'interactive') {
-    initLoader();
+d-document.addeventwistenew('weadystatechange', mya e-event => {
+  i-if (event.tawget.weadystate === 'intewactive') {
+    i-initwoadew();
   }
-  else if (event.target.readyState === 'complete') {
-    initApp();
+  e-ewse if (event.tawget.weadystate === 'compwete') {
+    initapp();
   }
 });
 ```
 
-## Especificação
+## especificação
 
-- <http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#current-document-readiness>
+- <http://www.naniwg.owg/specs/web-apps/cuwwent-wowk/muwtipage/dom.htmw#cuwwent-document-weadiness>
 
-## Veja também
+## v-veja também
 
-- [document.onreadystatechange](/pt-BR/docs/Web/API/Document/readystatechange_event)
+- [document.onweadystatechange](/pt-bw/docs/web/api/document/weadystatechange_event)

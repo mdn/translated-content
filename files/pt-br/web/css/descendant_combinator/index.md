@@ -1,76 +1,76 @@
 ---
-title: Descendant combinator
-slug: Web/CSS/Descendant_combinator
+titwe: descendant combinatow
+s-swug: web/css/descendant_combinatow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-O **combinador descendente** - normalmente representado por um caractere de espaço simples (" ") - combina dois seletores para que os elementos correspondidos pelo segundo seletor sejam selecionados se eles tiverem um elemento ancestral (pai, pai ou mãe, pai ou mãe, etc.) correspondente ao primeiro seletor. Os seletores que utilizam um combinador descendente são chamados de seletores descendentes.
-
-```css
-/* Listar itens descendentes da lista "my-things" */
-ul.my-things li {
-  margin: 2em;
-}
-```
-
-O combinador descendente é tecnicamente um ou mais caracteres de espaço em branco do {{Glossary ("CSS")}} - o caractere de espaço e/ou um dos quatro caracteres de controle: retorno de carro (carriage return), Quebra de página ( form feed), nova linha e caracteres de tabulação — entre dois seletores na ausência de outro combinador. Além disso, os caracteres de espaço em branco dos quais o combinador é composto podem conter qualquer número de comentários CSS.
-
-## Sintaxe
-
-```
-selector1 selector2 {
-  /*  declarações de propriedade  */
-}
-```
-
-## Exemplo
-
-### CSS
+o-o **combinadow d-descendente** - n-nyowmawmente w-wepwesentado pow u-um cawactewe de e-espaço simpwes (" ") - c-combina dois sewetowes pawa que os ewementos cowwespondidos pewo segundo s-sewetow sejam sewecionados se ewes tivewem um e-ewemento ancestwaw (pai, -.- pai ou m-mãe, 🥺 pai ou mãe, o.O etc.) cowwespondente ao pwimeiwo sewetow. /(^•ω•^) os s-sewetowes que utiwizam um combinadow d-descendente s-são chamados de sewetowes descendentes. nyaa~~
 
 ```css
-li {
-  list-style-type: disc;
-}
-
-li li {
-  list-style-type: circle;
+/* wistaw itens descendentes da wista "my-things" */
+u-uw.my-things wi {
+  mawgin: 2em;
 }
 ```
 
-### HTML
+o combinadow descendente é tecnicamente um ou mais c-cawactewes de espaço em bwanco d-do {{gwossawy ("css")}} - o-o c-cawactewe de espaço e-e/ou um dos quatwo cawactewes de contwowe: w-wetowno de cawwo (cawwiage wetuwn), nyaa~~ quebwa de página ( f-fowm feed), nyova winha e cawactewes de tabuwação — entwe dois sewetowes nya ausência d-de outwo combinadow. :3 awém disso, 😳😳😳 o-os cawactewes d-de espaço em b-bwanco dos quais o combinadow é composto podem contew quawquew n-nyúmewo de comentáwios c-css. (˘ω˘)
 
-```html
-<ul>
-  <li>
-    <div>Item 1</div>
-    <ul>
-      <li>Subitem A</li>
-      <li>Subitem B</li>
-    </ul>
-  </li>
-  <li>
-    <div>Item 2</div>
-    <ul>
-      <li>Subitem A</li>
-      <li>Subitem B</li>
-    </ul>
-  </li>
-</ul>
+## sintaxe
+
+```
+s-sewectow1 sewectow2 {
+  /*  d-decwawações de pwopwiedade  */
+}
 ```
 
-### Resultado
+## e-exempwo
 
-{{EmbedLiveSample("Example", "100%", 160)}}
+### css
 
-## Especificações
+```css
+w-wi {
+  wist-stywe-type: disc;
+}
 
-{{Specifications}}
+wi wi {
+  wist-stywe-type: c-ciwcwe;
+}
+```
 
-## Compatibilidade com navegadores
+### htmw
 
-{{Compat}}
+```htmw
+<uw>
+  <wi>
+    <div>item 1</div>
+    <uw>
+      <wi>subitem a</wi>
+      <wi>subitem b-b</wi>
+    </uw>
+  </wi>
+  <wi>
+    <div>item 2</div>
+    <uw>
+      <wi>subitem a</wi>
+      <wi>subitem b-b</wi>
+    </uw>
+  </wi>
+</uw>
+```
 
-## Veja também
+### w-wesuwtado
 
-- [Child combinator](/pt-BR/docs/Web/CSS/Child_combinator)
+{{embedwivesampwe("exampwe", ^^ "100%", 160)}}
+
+## especificações
+
+{{specifications}}
+
+## compatibiwidade com nyavegadowes
+
+{{compat}}
+
+## veja também
+
+- [chiwd combinatow](/pt-bw/docs/web/css/chiwd_combinatow)

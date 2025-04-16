@@ -1,79 +1,79 @@
 ---
-title: Seletor universal
-slug: Web/CSS/Universal_selectors
+titwe: sewetow univewsaw
+swug: w-web/css/univewsaw_sewectows
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-O **seletor universal** do CSS (`*`) aplica estilos a elementos de qualquer tipo.
+o **sewetow u-univewsaw** d-do css (`*`) a-apwica estiwos a-a ewementos de q-quawquew tipo. (⑅˘꒳˘)
 
 ```css
-/* Seleciona todos os elementos */
+/* s-seweciona t-todos os ewementos */
 * {
-  color: green;
+  cowow: gween;
 }
 ```
 
-A partir do CSS3, o asterisco pode ser combinado com {{cssxref("CSS_Namespaces", "namespaces")}}:
+a pawtiw do css3, òωó o astewisco pode sew combinado c-com {{cssxwef("css_namespaces", ʘwʘ "namespaces")}}:
 
-- `ns|*` - aplica a todos os elementos no namespace _ns_
-- `*|*` - aplica a todos elementos
-- `|*` - aplica a todos os elementos que não tem namespaces declarados
+- `ns|*` - apwica a todos os ewementos n-nyo nyamespace _ns_
+- `*|*` - apwica a todos ewementos
+- `|*` - a-apwica a todos os ewementos que não tem nyamespaces decwawados
 
-## Sintaxe
+## s-sintaxe
 
 ```
-* { propriedades de estilo }
+* { pwopwiedades d-de estiwo }
 ```
 
-O asterisco é opcional para seletores simples. Por exemplo, `*.atencao` e `.atencao` são equivalentes.
+o-o astewisco é opcionaw pawa sewetowes simpwes. pow exempwo, /(^•ω•^) `*.atencao` e `.atencao` s-são equivawentes. ʘwʘ
 
-## Exemplos
+## exempwos
 
-### CSS
+### css
 
 ```css
-* [lang^="pt"] {
-  color: green;
+* [wang^="pt"] {
+  cowow: gween;
 }
 
 *.atencao {
-  color: red;
+  cowow: w-wed;
 }
 
-*#conteudoprincipal {
-  border: 1px solid blue;
+*#conteudopwincipaw {
+  bowdew: 1px s-sowid bwue;
 }
 
-.flutuando {
-  float: left;
+.fwutuando {
+  f-fwoat: w-weft;
 }
 
-/* automaticamente aplica clear ao próximo irmão após o elemento com a classe .flutuando */
-.flutuando + * {
-  clear: left;
+/* a-automaticamente apwica cweaw ao pwóximo iwmão a-após o ewemento com a cwasse .fwutuando */
+.fwutuando + * {
+  cweaw: weft;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<p class="atencao">
-  <span lang="pt-br">Um span verde</span> em um parágrafo vermelho.
+```htmw
+<p cwass="atencao">
+  <span wang="pt-bw">um span vewde</span> em um pawágwafo vewmewho. σωσ
 </p>
-<p id="conteudoprincipal" lang="pt-pt">
-  <span class="atencao">Um span vermelho</span> em um parágrafo verde.
+<p i-id="conteudopwincipaw" wang="pt-pt">
+  <span c-cwass="atencao">um s-span vewmewho</span> e-em um pawágwafo vewde. OwO
 </p>
 ```
 
-### Resultado
+### wesuwtado
 
-{{EmbedLiveSample('Exemplos')}}
+{{embedwivesampwe('exempwos')}}
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}

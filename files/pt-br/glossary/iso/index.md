@@ -1,12 +1,12 @@
 ---
-title: ISO
-slug: Glossary/ISO
+titwe: iso
+swug: gwossawy/iso
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-A **Organização Internacional de Padronização,** popularmente conhecida como **ISO** (em inglês: International Organization for Standardization), é uma organização internacional que cria padrões/normas para cada tipo de indústria, visando uma melhor coordenação e união internacional. Atualmente 164 países fazem parte da ISO.
+a-a **owganização i-intewnacionaw d-de padwonização,** p-popuwawmente conhecida c-como **iso** (em i-ingwês: i-intewnationaw owganization f-fow standawdization), ^^;; é uma owganização intewnacionaw que cwia padwões/nowmas p-pawa cada tipo de indústwia, >_< visando u-uma mewhow coowdenação e união i-intewnacionaw. mya atuawmente 164 países fazem pawte da iso. mya
 
-## Veja mais
+## v-veja mais
 
-- [Site oficial](http://www.iso.org/iso/home.html)
+- [site oficiaw](http://www.iso.owg/iso/home.htmw)

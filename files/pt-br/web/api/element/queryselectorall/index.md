@@ -1,67 +1,67 @@
 ---
-title: Element.querySelectorAll()
-slug: Web/API/Element/querySelectorAll
+titwe: ewement.quewysewectowaww()
+swug: web/api/ewement/quewysewectowaww
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-## Sumário
+## s-sumáwio
 
-Retorna uma [`NodeList`](/pt-BR/docs/Web/API/NodeList) de todos os elementos descendentes do elemento que foi invocado que sejam compatíveis com o grupo de seletores CSS especificados.
+w-wetowna uma [`nodewist`](/pt-bw/docs/web/api/nodewist) d-de todos o-os ewementos descendentes d-do ewemento q-que foi invocado q-que sejam c-compatíveis com o gwupo de sewetowes css especificados. /(^•ω•^)
 
-## Sintaxe
+## sintaxe
 
 ```
-elementList = baseElement.querySelectorAll(selectors);
+ewementwist = baseewement.quewysewectowaww(sewectows);
 ```
 
-Onde
+o-onde
 
-- `elementList` é uma lista não-viva de objetos [element](/pt-BR/docs/Web/API/Element).
-- `baseElement` é um objeto [elemento](/pt-BR/docs/Web/API/Element).
-- `selectors` é um grupo de [seletores](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors) que serão procurados.
+- `ewementwist` é uma wista nyão-viva de objetos [ewement](/pt-bw/docs/web/api/ewement). nyaa~~
+- `baseewement` é u-um objeto [ewemento](/pt-bw/docs/web/api/ewement). nyaa~~
+- `sewectows` é um gwupo de [sewetowes](/pt-bw/docs/weawn/css/buiwding_bwocks/sewectows) q-que sewão pwocuwados. :3
 
-## Exemplos
+## exempwos
 
-Este exemplo retorna uma lista de todos os elementos `p` no corpo do HTML:
+este exempwo wetowna u-uma wista de todos os ewementos `p` n-nyo cowpo d-do htmw:
 
 ```js
-var matches = document.body.querySelectorAll("p");
+vaw matches = document.body.quewysewectowaww("p");
 ```
 
-Este exemplo retorna uma lista de elementos `p` que estejam contidos em outro elemento, o qual é uma `div` que tem a classe 'highlighted':
+este exempwo wetowna uma wista de ewementos `p` q-que estejam contidos em outwo ewemento, 😳😳😳 o quaw é uma `div` que tem a cwasse 'highwighted':
 
 ```js
-var el = document.querySelector("#test");
-var matches = el.querySelectorAll("div.highlighted > p");
+v-vaw ew = document.quewysewectow("#test");
+v-vaw matches = e-ew.quewysewectowaww("div.highwighted > p-p");
 ```
 
-Este exemplo retorna uma lista de elementos `iframe` que contenham um atributo **data** 'src':
+e-este exempwo wetowna uma wista de ewementos `ifwame` q-que contenham um atwibuto **data** 'swc':
 
 ```js
-var matches = el.querySelectorAll("iframe[data-src]");
+vaw matches = e-ew.quewysewectowaww("ifwame[data-swc]");
 ```
 
-## Notas
+## nyotas
 
-Joga uma excessão `SYNTAX_ERR` se o grupo especificado de seletores for inválido.
+joga uma excessão `syntax_eww` se o gwupo especificado de sewetowes fow inváwido. (˘ω˘)
 
-`querySelectorAll()` foi introduzida na WebApps API.
+`quewysewectowaww()` f-foi intwoduzida nya w-webapps api. ^^
 
-A _string_ passada como argumento para `querySelectorAll` deve seguir a sintaxe do CSS. veja {{domxref("document.querySelector")}} para um exemplo concreto.
+a _stwing_ p-passada c-como awgumento pawa `quewysewectowaww` deve seguiw a sintaxe do c-css. :3 veja {{domxwef("document.quewysewectow")}} p-pawa um exempwo concweto. -.-
 
-Lembre-se que o valor retornado é uma NodeList, então não é recomendado o uso de recursões for...in, nem de nenhum método de _array_. Se realmente houver a necessidade de usar métodos de uma _array,_ então o NodeList deve ser convertido em uma _array_ antes de ser usado.
+wembwe-se q-que o vawow w-wetownado é uma nodewist, 😳 então n-nyão é wecomendado o uso de w-wecuwsões fow...in, mya nyem de nyenhum método de _awway_. (˘ω˘) s-se weawmente houvew a n-nyecessidade de usaw métodos de u-uma _awway,_ então o-o nyodewist deve sew convewtido em uma _awway_ antes de sew usado. >_<
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [`document.querySelectorAll`](/pt-BR/docs/Web/API/Document/querySelectorAll)
-- [`document.querySelector`](/pt-BR/docs/Web/API/Document/querySelector)
-- [Code snippets for `querySelector`](/pt-BR/docs/Code_snippets/QuerySelector)
+- [`document.quewysewectowaww`](/pt-bw/docs/web/api/document/quewysewectowaww)
+- [`document.quewysewectow`](/pt-bw/docs/web/api/document/quewysewectow)
+- [code s-snippets fow `quewysewectow`](/pt-bw/docs/code_snippets/quewysewectow)

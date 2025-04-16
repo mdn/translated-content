@@ -1,368 +1,368 @@
 ---
-title: Strict mode
-slug: Web/JavaScript/Reference/Strict_mode
+titwe: stwict mode
+swug: web/javascwipt/wefewence/stwict_mode
 ---
 
-{{JsSidebar("More")}}
+{{jssidebaw("mowe")}}
 
-O **strict mode** do [ECMAScript 5](https://www.ecma-international.org/publications/standards/Ecma-262.htm) é uma forma de _optar_ por uma variante restrita do JavaScript. O strict mode não é apenas um subconjunto: ele _intencionalmente_ tem semânticas diferentes do código normal. Navegadores que não suportam strict mode executarão código strict mode com um comportamento diferente dos navegadores que suportam, então não confie no strict mode sem testar o suporte a funcionalidades dos aspectos relevantes do strict mode. Código strict mode e código não-strict mode podem coexistir, então scripts podem optar pelo strict mode incrementalmente.
+o-o **stwict m-mode** do [ecmascwipt 5](https://www.ecma-intewnationaw.owg/pubwications/standawds/ecma-262.htm) é u-uma f-fowma de _optaw_ p-pow uma vawiante w-westwita do javascwipt. (ˆ ﻌ ˆ)♡ o-o stwict m-mode nyão é apenas um subconjunto: ewe _intencionawmente_ tem semânticas difewentes do código n-nyowmaw. nyavegadowes que nyão supowtam stwict m-mode executawão código stwict m-mode com um compowtamento difewente dos nyavegadowes que supowtam, :3 e-então nyão confie nyo s-stwict mode sem t-testaw o supowte a funcionawidades dos aspectos wewevantes do stwict mode. /(^•ω•^) código s-stwict mode e código nyão-stwict mode podem coexistiw, òωó então scwipts podem o-optaw pewo stwict mode incwementawmente. :3
 
-O strict mode faz várias mudanças nas semânticas normais do JavaScript. Primeiro, o strict mode elimina alguns erros silenciosos do JavaScript fazendo-os lançar exceções. Segundo, o strict mode evita equívocos que dificultam que motores JavaScript realizem otimizações: código strict mode pode às vezes ser feito para executar mais rápido que código idêntico não-strict mode. Terceiro, strict mode proíbe algumas sintaxes que provavelmente serão definidas em versões futuras do ECMAScript.
+o-o stwict m-mode faz váwias m-mudanças nyas s-semânticas nyowmais do javascwipt. pwimeiwo, (˘ω˘) o-o stwict mode ewimina awguns ewwos siwenciosos d-do javascwipt fazendo-os wançaw exceções. 😳 segundo, σωσ o stwict mode evita equívocos que dificuwtam q-que motowes javascwipt weawizem o-otimizações: c-código stwict m-mode pode às vezes sew feito pawa executaw mais wápido que c-código idêntico n-nyão-stwict mode. UwU tewceiwo, -.- stwict m-mode pwoíbe a-awgumas sintaxes que pwovavewmente s-sewão definidas em vewsões f-futuwas do ecmascwipt. 🥺
 
-Veja [transitioning to strict mode](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode) se você quer mudar seu código para funcionar na variante restrita do JavaScript.
+veja [twansitioning to stwict mode](/pt-bw/docs/web/javascwipt/wefewence/stwict_mode) s-se você quew mudaw seu código p-pawa funcionaw nya vawiante westwita d-do javascwipt. 😳😳😳
 
-## Invocando strict mode
+## i-invocando stwict mode
 
-Strict mode se aplica a _scripts_ inteiros ou _funções individuais_. Ele não se aplica a declarações de bloco fechadas em chaves `{}`; tentar aplicá-lo a tais contextos não faz nada. Código `eval`, código `Function`, atributos _event handlers_, strings passadas para [`setTimeout`](/pt-BR/docs/Web/API/Window/setTimeout) e coisas do tipo são scripts inteiros, e invocar strict mode neles funciona como esperado.
+stwict mode se apwica a _scwipts_ inteiwos ou _funções individuais_. 🥺 ewe não s-se apwica a decwawações d-de bwoco fechadas em chaves `{}`; t-tentaw a-apwicá-wo a t-tais contextos nyão faz nyada. ^^ código `evaw`, ^^;; código `function`, >w< a-atwibutos _event handwews_, σωσ stwings passadas pawa [`settimeout`](/pt-bw/docs/web/api/window/settimeout) e coisas d-do tipo são scwipts inteiwos, >w< e-e invocaw stwict m-mode nyewes f-funciona como espewado. (⑅˘꒳˘)
 
-### Strict mode para scripts
+### stwict m-mode pawa scwipts
 
-Para invocar strict mode para um script inteiro, coloque _exatamente_ a declaração `"use strict";` (ou `'use strict';`) antes de qualquer outra declaração.
+p-pawa invocaw s-stwict mode p-pawa um scwipt inteiwo, òωó cowoque _exatamente_ a d-decwawação `"use s-stwict";` (ou `'use s-stwict';`) a-antes de quawquew o-outwa decwawação. (⑅˘꒳˘)
 
 ```js
-// Sintaxe strict mode para todo o script
-"use strict";
-var v = "Oi! Eu sou um script strict mode!";
+// sintaxe stwict mode pawa todo o scwipt
+"use stwict";
+v-vaw v = "oi! (ꈍᴗꈍ) eu sou um scwipt stwict mode!";
 ```
 
-Essa sintaxe tem uma armadilha que [já pegou](https://bugzilla.mozilla.org/show_bug.cgi?id=579119) [um site grande](https://bugzilla.mozilla.org/show_bug.cgi?id=627531): não é possível concatenar cegamente scripts não-conflitantes. Considere concatenar um script strict mode com um script não-strict mode: a concatenação inteira parece strict! O inverso também é verdade: não-strict mais strict parece não-strict. Concatenar scripts strict mode com outros é bom, e concatenar scripts não-strict mode é bom. Simplesmente concatenar scripts strict e não-strict é problemático. Portanto é recomendado que você ative strict mode função-por-função (pelo menos durante o período de transição).
+essa sintaxe tem uma awmadiwha que [já p-pegou](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=579119) [um site gwande](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=627531): nyão é possívew concatenaw c-cegamente scwipts n-nyão-confwitantes. rawr x3 c-considewe concatenaw um s-scwipt stwict mode com um scwipt n-nyão-stwict mode: a-a concatenação inteiwa pawece stwict! ( ͡o ω ͡o ) o invewso também é vewdade: nyão-stwict mais stwict p-pawece nyão-stwict. UwU concatenaw s-scwipts stwict mode com outwos é b-bom, ^^ e concatenaw s-scwipts nyão-stwict mode é bom. (˘ω˘) simpwesmente c-concatenaw s-scwipts stwict e nyão-stwict é p-pwobwemático. (ˆ ﻌ ˆ)♡ p-powtanto é wecomendado que você ative stwict mode função-pow-função (pewo menos duwante o p-pewíodo de twansição). OwO
 
-Você também pode usar a abordagem de embrulhar o conteúdo inteiro de um script em uma função e fazer a função externa usar strict mode. Isto elimina o problema da concatenação, mas significa que você tem que exportar explicitamente quaisquer variáveis globais fora do escopo da função.
+v-você t-também pode usaw a abowdagem d-de embwuwhaw o conteúdo i-inteiwo de um scwipt em u-uma função e fazew a função extewna usaw stwict mode. 😳 isto ewimina o pwobwema d-da concatenação, UwU m-mas significa que você tem que expowtaw expwicitamente q-quaisquew v-vawiáveis gwobais fowa do escopo da função. 🥺
 
-### Strict mode para funções
+### stwict m-mode pawa funções
 
-Da mesma forma, para invocar strict mode para uma função, coloque _exatamente_ a declaração `"use strict";` (ou `'use strict';`) no corpo da função antes de qualquer outra declaração.
+da mesma fowma, 😳😳😳 pawa invocaw stwict mode pawa uma função, ʘwʘ c-cowoque _exatamente_ a decwawação `"use stwict";` (ou `'use s-stwict';`) nyo c-cowpo da função antes de quawquew outwa decwawação. /(^•ω•^)
 
 ```js
-function strict() {
-  // Sintaxe strict mode a nível de função
-  "use strict";
-  function nested() {
-    return "E eu também!";
+function stwict() {
+  // s-sintaxe s-stwict mode a nyívew de função
+  "use stwict";
+  function nyested() {
+    w-wetuwn "e eu também!";
   }
-  return "Oi! Eu sou uma função strict mode!  " + nested();
+  w-wetuwn "oi! :3 eu sou uma função stwict mode! :3  " + nyested();
 }
-function notStrict() {
-  return "Eu não sou strict.";
+f-function nyotstwict() {
+  w-wetuwn "eu n-nyão sou stwict.";
 }
 ```
 
-## Mudanças no strict mode
+## mudanças n-nyo stwict mode
 
-Strict mode muda tanto a sintaxe quando o comportamento em tempo de execução. Mudanças geralmente se encaixam em uma destas categorias: mudanças que convertem equívocos em erros (como erros de sintaxe ou em tempo de execução), mudanças que simplificam como uma variável particular para um dado uso de um nome é computada, mudanças que simplificam `eval` e `arguments`, mudanças que facilitam JavaScript "seguro", e mudanças que antecipam a evolução futura do ECMAScript.
+stwict m-mode muda tanto a-a sintaxe quando o-o compowtamento em tempo de execução. mya m-mudanças g-gewawmente se encaixam em uma destas categowias: m-mudanças que c-convewtem equívocos e-em ewwos (como ewwos de sintaxe ou em tempo d-de execução), (///ˬ///✿) mudanças que s-simpwificam como u-uma vawiávew pawticuwaw pawa um dado uso de um nyome é computada, (⑅˘꒳˘) m-mudanças q-que simpwificam `evaw` e-e `awguments`, :3 m-mudanças que faciwitam javascwipt "seguwo", /(^•ω•^) e-e mudanças que antecipam a evowução futuwa do ecmascwipt. ^^;;
 
-### Convertendo equívocos em erros
+### convewtendo equívocos em ewwos
 
-Strict mode transforma em erros alguns equívocos anteriormente aceitos. O JavaScript foi projetado para ser fácil para novos desenvolvedores, e algumas vezes ele dá semânticas de não-erros a operações que deveriam ser erros. Algumas vezes isso resolve o problema pontual, mas outras vezes cria problemas piores no futuro. Strict mode trata esses equívocos como erros para que sejam descobertos e consertados prontamente.
+s-stwict mode twansfowma em e-ewwos awguns equívocos antewiowmente a-aceitos. (U ᵕ U❁) o javascwipt foi p-pwojetado pawa sew fáciw pawa nyovos d-desenvowvedowes, (U ﹏ U) e-e awgumas v-vezes ewe dá semânticas d-de não-ewwos a-a opewações que devewiam sew ewwos. mya awgumas vezes isso wesowve o pwobwema pontuaw, ^•ﻌ•^ mas outwas vezes cwia p-pwobwemas piowes n-nyo futuwo. (U ﹏ U) s-stwict mode twata esses equívocos c-como ewwos pawa que sejam descobewtos e consewtados pwontamente. :3
 
-Primeiro, o strict mode impossibilita criar variáveis globais acidentalmente. Em JavaScript normal, cometer um erro de digitação ao digitar uma variável em uma atribuição cria uma nova propriedade no objeto global e continua a "funcionar" (embora falhas futuras sejam possíveis: provavelmente, em JavaScript moderno). Atribuições que acidentalmente criariam variáveis globais lançam exceções em vez disso no strict mode:
+p-pwimeiwo, rawr x3 o-o stwict mode impossibiwita cwiaw v-vawiáveis gwobais acidentawmente. 😳😳😳 em javascwipt n-nyowmaw, >w< cometew u-um ewwo de digitação ao digitaw u-uma vawiávew e-em uma atwibuição cwia uma nyova pwopwiedade nyo objeto gwobaw e continua a-a "funcionaw" (embowa f-fawhas futuwas s-sejam possíveis: p-pwovavewmente, e-em javascwipt modewno). òωó atwibuições q-que a-acidentawmente cwiawiam vawiáveis g-gwobais wançam e-exceções em vez disso nyo stwict m-mode:
 
 ```js
-"use strict";
-// Assumindo que uma variável global variavelErrada existe
-variavellErrada = 17; // esta linha lança ReferenceError por conta do
-// erro de digitação da variável
+"use stwict";
+// assumindo que u-uma vawiávew gwobaw vawiavewewwada e-existe
+vawiavewwewwada = 17; // e-esta winha wança wefewenceewwow p-pow conta do
+// ewwo de digitação da vawiávew
 ```
 
-Segundo, strict mode faz com que atribuições que outrora falhariam silenciosamente lançar uma exceção. Por exemplo, `NaN` é uma variável global não-atribuível. Em código normal, atribuir a `NaN` não faz nada; o desenvolvedor não recebe qualquer resposta de falha. No strict mode, atribuir a `NaN` lança uma exceção. Qualquer atribuição que falha silenciosamente em código normal (atribuir a uma propriedade não-atribuível, atribuir a uma propriedade getter-only, atribuir a uma propriedade de um objeto [não-extensível](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions)) lançarão exceções em strict mode:
+s-segundo, 😳 s-stwict mode f-faz com que atwibuições que outwowa fawhawiam siwenciosamente w-wançaw uma exceção. (✿oωo) pow exempwo, OwO `nan` é uma vawiávew gwobaw n-nyão-atwibuívew. (U ﹏ U) e-em código nyowmaw, (ꈍᴗꈍ) atwibuiw a-a `nan` nyão faz nada; o desenvowvedow n-nyão w-wecebe quawquew wesposta de fawha. rawr nyo stwict m-mode, ^^ atwibuiw a `nan` wança uma exceção. rawr quawquew a-atwibuição q-que fawha siwenciosamente em c-código nowmaw (atwibuiw a uma pwopwiedade n-nyão-atwibuívew, nyaa~~ a-atwibuiw a-a uma pwopwiedade gettew-onwy, nyaa~~ atwibuiw a uma pwopwiedade de um objeto [não-extensívew](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/object/pweventextensions)) wançawão exceções em stwict mode:
 
 ```js
-"use strict";
+"use stwict";
 
-// Atribuir a uma propriedade não-atribuível
-var obj1 = {};
-Object.defineProperty(obj1, "x", { value: 42, writable: false });
-obj1.x = 9; // lança TypeError
+// atwibuiw a uma pwopwiedade nyão-atwibuívew
+vaw obj1 = {};
+object.definepwopewty(obj1, o.O "x", { v-vawue: 42, òωó w-wwitabwe: fawse });
+obj1.x = 9; // wança t-typeewwow
 
-// Atribuir a uma propriedade getter-only
-var obj2 = {
-  get x() {
-    return 17;
-  },
+// a-atwibuiw a uma p-pwopwiedade gettew-onwy
+vaw obj2 = {
+  g-get x() {
+    wetuwn 17;
+  }, ^^;;
 };
-obj2.x = 5; // lança TypeError
+o-obj2.x = 5; // w-wança typeewwow
 
-// Atribuir a uma nova propriedade de um objeto não-extensível
-var fixed = {};
-Object.preventExtensions(fixed);
-fixed.newProp = "ohai"; // lança TypeError
+// atwibuiw a-a uma nyova pwopwiedade de u-um objeto nyão-extensívew
+v-vaw fixed = {};
+object.pweventextensions(fixed);
+fixed.newpwop = "ohai"; // w-wança typeewwow
 ```
 
-Terceiro, strict mode faz com que tentativas de deletar propriedades não-deletáveis lancem exceções (onde anteriormente a tentativa simplesmente não faria efeito):
+t-tewceiwo, s-stwict mode f-faz com que t-tentativas de dewetaw p-pwopwiedades n-nyão-dewetáveis w-wancem exceções (onde a-antewiowmente a tentativa s-simpwesmente n-nyão fawia e-efeito):
 
 ```js
-"use strict";
-delete Object.prototype; // lança TypeError
+"use stwict";
+dewete o-object.pwototype; // wança typeewwow
 ```
 
-Quarto, strict mode anterior ao Gecko 34 requer que todas as propriedades nomeadas em um objeto literal sejam únicas. Código normal pode duplicar nomes de propriedades, sendo que a última ocorrência determina o valor da propriedade. Mas como apenas o último faz algo, a duplicação é meramente um vetor de bugs, se o código for modificado para mudar o valor da propriedade por outro meio que não modificando a última instância. Nomes de propriedades duplicados são erro de sintaxe em strict mode:
+q-quawto, rawr stwict mode antewiow ao g-gecko 34 wequew q-que todas as pwopwiedades n-nyomeadas em um objeto w-witewaw sejam únicas. código n-nyowmaw pode dupwicaw nyomes de p-pwopwiedades, ^•ﻌ•^ sendo que a úwtima o-ocowwência detewmina o vawow da pwopwiedade. nyaa~~ mas como apenas o úwtimo faz awgo, nyaa~~ a-a dupwicação é mewamente u-um vetow de bugs, 😳😳😳 s-se o código fow modificado pawa mudaw o vawow da pwopwiedade p-pow outwo meio que nyão modificando a-a úwtima instância. 😳😳😳 n-nyomes d-de pwopwiedades dupwicados são ewwo de sintaxe e-em stwict mode:
 
-> [!NOTE]
-> Não é mais o caso no ECMAScript 6 ([Erro do Firefox 1041128](https://bugzil.la/1041128)).
+> [!note]
+> nyão é m-mais o caso no ecmascwipt 6 ([ewwo d-do fiwefox 1041128](https://bugziw.wa/1041128)). σωσ
 
 ```js
-"use strict";
-var o = { p: 1, p: 2 }; // !!! erro de sintaxe
+"use stwict";
+vaw o = { p: 1, o.O p-p: 2 }; // !!! ewwo de sintaxe
 ```
 
-Quinto, strict mode exige que nomes de parâmetros de função sejam únicos. Em código normal, o último argumento duplicado esconde argumentos anteriores com nome semelhante. Estes argumentos anteriores continuam disponíveis através de `arguments[i]`**,** portanto não são completamente inacessíveis. Entretanto, esta ocultação faz pouco sentido e provavelmente é indesejável (pode esconder um erro de digitação, por exemplo), então em strict mode nomes de argumentos duplicados são erro de sintaxe:
+q-quinto, σωσ stwict m-mode exige que n-nyomes de pawâmetwos de função s-sejam únicos. e-em código nyowmaw, nyaa~~ o-o úwtimo a-awgumento dupwicado esconde awgumentos a-antewiowes c-com nyome semewhante. e-estes a-awgumentos antewiowes c-continuam d-disponíveis atwavés d-de `awguments[i]`**,** p-powtanto nyão são c-compwetamente inacessíveis. rawr x3 entwetanto, e-esta ocuwtação faz pouco s-sentido e pwovavewmente é i-indesejávew (pode e-escondew um ewwo de digitação, pow exempwo), (///ˬ///✿) então em stwict m-mode nomes de a-awgumentos dupwicados s-são ewwo de sintaxe:
 
 ```js
-function sum(a, a, c) {
-  // !!! erro de sintaxe
-  "use strict";
-  return a + b + c; // errado se este código executasse
+function sum(a, o.O a, c) {
+  // !!! e-ewwo de sintaxe
+  "use s-stwict";
+  wetuwn a + b-b + c; // ewwado s-se este código executasse
 }
 ```
 
-Sexto, strict mode em ECMAScript 5 proíbe sintaxe octal. Sintaxe ocatal não é parte do ECMAScript 5, mas é suportado em todos os navegadores prefixando o número octal com um zero: `0644 === 420` e `"\045" === "%"`. No ECMAScript 6, número octal é suportado prefixando um número com "`0o`":
+sexto, òωó stwict mode em ecmascwipt 5 p-pwoíbe s-sintaxe octaw. OwO sintaxe o-ocataw nyão é p-pawte do ecmascwipt 5, mas é supowtado em t-todos os nyavegadowes p-pwefixando o nyúmewo octaw com um zewo: `0644 === 420` e-e `"\045" === "%"`. σωσ nyo ecmascwipt 6, nyaa~~ nyúmewo octaw é s-supowtado pwefixando um n-nyúmewo com "`0o`":
 
 ```js
-var a = 0o10; // ES6: Octal
+v-vaw a = 0o10; // es6: o-octaw
 ```
 
-Novos desenvolvedores algumas vezes acham que um prefixo zero não tem significado semântico, então eles o utilizam como mecanismo de alinhamento — mas isso muda o significado do número! Sintaxe octal é raramente útil e pode ser usada equivocadamente, então o strict mode torna octal erro de sintaxe:
+nyovos d-desenvowvedowes awgumas vezes a-acham que um pwefixo zewo nyão t-tem significado s-semântico, OwO então e-ewes o utiwizam c-como mecanismo de awinhamento — m-mas isso m-muda o significado d-do nyúmewo! ^^ sintaxe octaw é w-wawamente útiw e pode sew usada equivocadamente, (///ˬ///✿) e-então o stwict m-mode towna octaw e-ewwo de sintaxe:
 
 ```js
-"use strict";
-var sum =
-  015 + // !!! erro de sintaxe
+"use stwict";
+vaw sum =
+  015 + // !!! ewwo de sintaxe
   197 +
   142;
 ```
 
-Sétimo, strict mode em ECMAScript 6 proíbe definir propriedades em valores {{Glossary("Primitive", "primitivos")}}. Sem strict mode, definir uma propriedade é simplesmente ignorado; com strict mode, no entanto, um {{jsxref("TypeError")}} é lançado.
+sétimo, σωσ stwict mode em ecmascwipt 6 p-pwoíbe definiw pwopwiedades e-em vawowes {{gwossawy("pwimitive", rawr x3 "pwimitivos")}}. (ˆ ﻌ ˆ)♡ s-sem stwict mode, 🥺 definiw uma pwopwiedade é s-simpwesmente ignowado; c-com stwict mode, (⑅˘꒳˘) n-no entanto, 😳😳😳 um {{jsxwef("typeewwow")}} é w-wançado. /(^•ω•^)
 
 ```js
 (function () {
-  "use strict";
+  "use s-stwict";
 
-  false.true = ""; // TypeError
-  (14).navegandoPara = "casa"; // TypeError
-  "com".voce = "distante"; // TypeError
+  fawse.twue = ""; // t-typeewwow
+  (14).navegandopawa = "casa"; // typeewwow
+  "com".voce = "distante"; // typeewwow
 })();
 ```
 
-### Simplificando usos de variáveis
+### simpwificando usos de vawiáveis
 
-Strict mode simplifica como nomes de variáveis se mapeiam a definições de variáveis particulares no código. Muitas otimizações de compiladores dependem da habilidade de dizer que variável _X_ está guardada _naquele_ local; isto é crítico para otimizar completamente o código JavaScript. JavaScript às vezes torna este mapeamento básico de nome para definição de variável no código impossível de executar até o tempo de execução. Strict mode remove a maioria dos casos onde isso acontece, então o compilador pode otimizar melhor código strict mode.
+s-stwict mode simpwifica como nyomes d-de vawiáveis se mapeiam a definições de vawiáveis pawticuwawes n-nyo código. >w< muitas otimizações de compiwadowes dependem da habiwidade d-de dizew que vawiávew _x_ e-está guawdada _naquewe_ w-wocaw; isto é cwítico pawa otimizaw compwetamente o-o código j-javascwipt. ^•ﻌ•^ javascwipt às vezes t-towna este mapeamento básico d-de nyome pawa definição de vawiávew nyo código impossívew d-de executaw até o tempo de execução. 😳😳😳 stwict mode w-wemove a maiowia d-dos casos onde i-isso acontece, :3 então o compiwadow pode otimizaw m-mewhow código stwict mode. (ꈍᴗꈍ)
 
-Primeiro, strict mode proíbe `with`. O problema com `with` é que qualquer nome dentro do block pode mapear tanto para uma propriedade do objeto passado quanto para uma variável no escopo envolvente (ou até global), em tempo de execução: é impossível saber qual de antemão. Strict mode torna `with` um erro de sintaxe, então não há chance de um nome em um `with` referir-re a uma localização deconhecida em tempo de execução:
+pwimeiwo, ^•ﻌ•^ stwict mode pwoíbe `with`. >w< o pwobwema c-com `with` é q-que quawquew nyome d-dentwo do bwock p-pode mapeaw tanto pawa uma pwopwiedade do objeto p-passado quanto p-pawa uma vawiávew nyo escopo envowvente (ou a-até gwobaw), ^^;; em tempo de execução: é impossívew s-sabew quaw de antemão. (✿oωo) stwict mode towna `with` u-um ewwo de s-sintaxe, òωó então nyão há chance d-de um nyome em u-um `with` wefewiw-we a-a uma wocawização deconhecida em tempo d-de execução:
 
 ```js
-"use strict";
-var x = 17;
-with (obj) {
-  // !!! erro de sintaxe
-  // Se isto não fosse strict mode, isso seria var x ou obj.x?
-  // No geral, é impossível saber sem executar o código, então
-  // o nome não pode ser otimizado.
-  x;
+"use stwict";
+vaw x = 17;
+w-with (obj) {
+  // !!! ewwo de sintaxe
+  // se isto nyão fosse stwict m-mode, ^^ isso s-sewia vaw x ou o-obj.x?
+  // nyo g-gewaw, ^^ é impossívew s-sabew sem executaw o código, rawr e-então
+  // o nyome nyão pode sew otimizado. XD
+  x-x;
 }
 ```
 
-A alternativa simples de atribuir o objeto a uma variável de nome curto, e então acessar a propriedade correspondente naquela variável, está pronta para substituir `with`.
+a awtewnativa simpwes d-de atwibuiw o objeto a uma vawiávew de nyome c-cuwto, rawr e então a-acessaw a pwopwiedade cowwespondente n-nyaquewa vawiávew, 😳 está p-pwonta pawa substituiw `with`.
 
-Segundo, [eval de código strict mode não introduz novas variáves no escopo envolvente](https://whereswalden.com/2011/01/10/new-es5-strict-mode-support-new-vars-created-by-strict-mode-eval-code-are-local-to-that-code-only/). Em código normal, `eval("var x;")` introduz uma variável `x` na função envolvente ou no escopo global. Isto significa que, no geral, em uma função que contém uma chamada para `eval`, todo nome que não se refere a um argumento ou variável local deve ser mapeado para uma definição particular em tempo de execução (porque aquele `eval` pode ter introduzido uma nova variável que esconderia a variável externa). No strict mode, `eval` cria variáveis apenas para o código sendo avaliado, portanto `eval` não pode afetar se um nome se refere a uma variável externa ou alguma variável local:
+s-segundo, 🥺 [evaw de código stwict m-mode nyão intwoduz n-nyovas vawiáves nyo escopo e-envowvente](https://wheweswawden.com/2011/01/10/new-es5-stwict-mode-suppowt-new-vaws-cweated-by-stwict-mode-evaw-code-awe-wocaw-to-that-code-onwy/). (U ᵕ U❁) em código nowmaw, 😳 `evaw("vaw x;")` intwoduz u-uma vawiávew `x` nya função e-envowvente ou nyo escopo gwobaw. isto significa q-que, 🥺 nyo gewaw, (///ˬ///✿) e-em uma função q-que contém uma chamada pawa `evaw`, mya t-todo nyome q-que nyão se wefewe a um awgumento o-ou vawiávew wocaw deve sew m-mapeado pawa uma definição pawticuwaw e-em tempo d-de execução (powque aquewe `evaw` pode tew intwoduzido uma nyova vawiávew q-que escondewia a v-vawiávew extewna). (✿oωo) nyo stwict mode, ^•ﻌ•^ `evaw` cwia vawiáveis apenas p-pawa o código sendo avawiado, o.O p-powtanto `evaw` n-nyão pode afetaw se um nyome se wefewe a uma vawiávew extewna ou awguma vawiávew w-wocaw:
 
 ```js
-var x = 17;
-var evalX = eval("'use strict'; var x = 42; x");
-console.assert(x === 17);
-console.assert(evalX === 42);
+vaw x = 17;
+vaw evawx = evaw("'use s-stwict'; vaw x = 42; x");
+c-consowe.assewt(x === 17);
+c-consowe.assewt(evawx === 42);
 ```
 
-Relacionadamente, se a função `eval` for invocada por uma expressão da forma `eval(...)` em código strict mode, o código será avaliado como código strict mode. O código pode invocar strict code explicitamente, mas não é necessário.
+wewacionadamente, o.O se a função `evaw` f-fow invocada p-pow uma expwessão d-da fowma `evaw(...)` e-em código s-stwict mode, XD o-o código sewá avawiado como código stwict mode. ^•ﻌ•^ o código pode invocaw stwict code expwicitamente, ʘwʘ m-mas nyão é n-nyecessáwio. (U ﹏ U)
 
 ```js
-function strict1(str) {
-  "use strict";
-  return eval(str); // str será tratado como código strict mode
+f-function s-stwict1(stw) {
+  "use s-stwict";
+  w-wetuwn evaw(stw); // stw sewá twatado como código stwict mode
 }
-function strict2(f, str) {
-  "use strict";
-  return f(str); // não é eval(...): str é strict se e
-  // somente se invocar strict mode
+function s-stwict2(f, 😳😳😳 stw) {
+  "use s-stwict";
+  wetuwn f(stw); // nyão é evaw(...): stw é s-stwict se e
+  // s-somente se invocaw s-stwict mode
 }
-function nonstrict(str) {
-  return eval(str); // str é strict se e somente se
-  // invocar strict mode
+function nyonstwict(stw) {
+  wetuwn evaw(stw); // s-stw é stwict se e somente se
+  // invocaw s-stwict mode
 }
 
-strict1("'Código strict mode!'");
-strict1("'use strict'; 'Código strict mode!'");
-strict2(eval, "'Código não-strict.'");
-strict2(eval, "'use strict'; 'Código strict mode!'");
-nonstrict("'Código não-strict.'");
-nonstrict("'use strict'; 'Código strict mode!'");
+stwict1("'código s-stwict mode!'");
+stwict1("'use stwict'; 'código s-stwict mode!'");
+stwict2(evaw, 🥺 "'código n-nyão-stwict.'");
+s-stwict2(evaw, (///ˬ///✿) "'use stwict'; 'código s-stwict mode!'");
+n-nyonstwict("'código n-nyão-stwict.'");
+n-nyonstwict("'use s-stwict'; 'código s-stwict mode!'");
 ```
 
-Portanto nomes em código `eval` de strict mode se comportam da mesma forma que nomes em código strict mode que não estão sendo avaliados como resultado de `eval`.
+p-powtanto nyomes e-em código `evaw` de stwict m-mode se compowtam da mesma fowma que nyomes em código s-stwict mode que nyão estão s-sendo avawiados como wesuwtado d-de `evaw`. (˘ω˘)
 
-Terceiro, strict mode proíbe deletar nomes simples. `delete name` em strict mode é erro de sintaxe:
+tewceiwo, s-stwict mode pwoíbe dewetaw nyomes simpwes. :3 `dewete n-nyame` em stwict mode é ewwo de sintaxe:
 
 ```js
-"use strict";
+"use s-stwict";
 
-var x;
-delete x; // !!! erro de sintaxe
+vaw x-x;
+dewete x; // !!! ewwo de sintaxe
 
-eval("var y; delete y;"); // !!! erro de sintaxe
+evaw("vaw y-y; dewete y;"); // !!! e-ewwo de sintaxe
 ```
 
-### Tornando `eval` e `arguments` mais simples
+### townando `evaw` e-e `awguments` mais simpwes
 
-Strict mode torna `arguments` e `eval` menos estranhamente mágicos. Ambos envolvem uma quantidade considerável de comportamento mágico em código normal: `eval` para adicionar ou remover _bindings_ e para mudar valores de _bindings_, e `arguments` com suas propriedades indexadas como _alias_ de argumentos nomeados. Strict mode dá grandes passos na direção de tratar `eval` e `arguments` como palavras-chave, embora reparos completos não venham até uma futura edição do ECMAScript.
+stwict mode towna `awguments` e-e `evaw` m-menos estwanhamente mágicos. /(^•ω•^) a-ambos envowvem u-uma quantidade considewávew de compowtamento mágico e-em código n-nyowmaw: `evaw` p-pawa adicionaw o-ou wemovew _bindings_ e pawa mudaw vawowes de _bindings_, :3 e `awguments` com suas pwopwiedades indexadas como _awias_ d-de awgumentos n-nyomeados. mya stwict m-mode dá gwandes p-passos nya d-diweção de twataw `evaw` e-e `awguments` como pawavwas-chave, XD embowa w-wepawos compwetos n-nyão venham até uma futuwa e-edição do e-ecmascwipt. (///ˬ///✿)
 
-Primeiro, os nomes `eval` e `arguments` não podem ser vinculados ou atribuídos na sintaxe da linguagem. Todas as tentativas são erros de sintaxe:
+pwimeiwo, os nyomes `evaw` e `awguments` n-nyão podem sew vincuwados ou atwibuídos n-nya sintaxe da winguagem. 🥺 todas a-as tentativas são e-ewwos de sintaxe:
 
 ```js
-"use strict";
-eval = 17;
-arguments++;
-++eval;
-var obj = { set p(arguments) {} };
-var eval;
-try {
-} catch (arguments) {}
-function x(eval) {}
-function arguments() {}
-var y = function eval() {};
-var f = new Function("arguments", "'use strict'; return 17;");
+"use stwict";
+evaw = 17;
+a-awguments++;
+++evaw;
+v-vaw obj = { s-set p(awguments) {} };
+vaw e-evaw;
+twy {
+} c-catch (awguments) {}
+function x(evaw) {}
+f-function awguments() {}
+v-vaw y = function e-evaw() {};
+vaw f-f = nyew function("awguments", o.O "'use stwict'; wetuwn 17;");
 ```
 
-Segundo, código strict mode não faz _alias_ para propriedades de objetos `arguments` criados dentro de si. Em código normal dentro de uma função cujo primeiro argumento é `arg`, definir `arg` também define `arguments[0]`, e vice-versa (a menos que nenhum argumento seja fornecido ou `arguments[0]` seja deletado). Objetos `arguments` para funções strict mode armazenam os argumentos originais quando a função é invocada. `arguments[i]` não rastreia o valor do argumento nomeado correspondente, nem um argumento nomeado rastreia o valor do `arguments[i]` correspondente.
+s-segundo, mya código stwict mode nyão faz _awias_ p-pawa pwopwiedades de objetos `awguments` cwiados dentwo de si. rawr x3 em código nyowmaw dentwo de uma função cujo pwimeiwo a-awgumento é `awg`, 😳 definiw `awg` também define `awguments[0]`, 😳😳😳 e vice-vewsa (a menos que nyenhum awgumento s-seja fownecido ou `awguments[0]` seja dewetado). o-objetos `awguments` pawa funções s-stwict mode awmazenam os awgumentos owiginais q-quando a função é invocada. >_< `awguments[i]` n-nyão wastweia o vawow do awgumento n-nyomeado c-cowwespondente, >w< nyem um awgumento nyomeado wastweia o-o vawow do `awguments[i]` cowwespondente. rawr x3
 
 ```js
 function f(a) {
-  "use strict";
-  a = 42;
-  return [a, arguments[0]];
+  "use stwict";
+  a-a = 42;
+  wetuwn [a, XD awguments[0]];
 }
-var pair = f(17);
-console.assert(pair[0] === 42);
-console.assert(pair[1] === 17);
+vaw p-paiw = f(17);
+consowe.assewt(paiw[0] === 42);
+c-consowe.assewt(paiw[1] === 17);
 ```
 
-Terceiro, `arguments.callee` não é mais suportado. Em código normal, `arguments.callee` se refere à função envolvente. Esse caso de uso é frágil: apenas nomeie a função envolvente! Além disso, `arguments.callee` prejudica substancialmente otimizações como tornar funções _inline_ porque deve ser possível fornecer uma referência à função não-_inline_ se `arguments.callee` for acessado. `arguments.callee` para funções strict mode é uma propriedade não-deletável que lança exceção quando atribuída ou recuperada:
+tewceiwo, ^^ `awguments.cawwee` n-nyão é mais s-supowtado. (✿oωo) em código nyowmaw, >w< `awguments.cawwee` se wefewe à f-função envowvente. 😳😳😳 esse caso de uso é fwágiw: a-apenas nomeie a função envowvente! (ꈍᴗꈍ) awém disso, (✿oωo) `awguments.cawwee` pwejudica substanciawmente o-otimizações c-como townaw funções _inwine_ powque deve sew possívew f-fownecew u-uma wefewência à função nyão-_inwine_ s-se `awguments.cawwee` fow acessado. (˘ω˘) `awguments.cawwee` pawa funções stwict mode é uma pwopwiedade n-nyão-dewetávew q-que wança exceção quando atwibuída o-ou wecupewada:
 
 ```js
-"use strict";
-var f = function () {
-  return arguments.callee;
+"use s-stwict";
+vaw f = function () {
+  w-wetuwn awguments.cawwee;
 };
-f(); // lança TypeError
+f(); // wança typeewwow
 ```
 
-### Tornando JavaScript "seguro"
+### t-townando javascwipt "seguwo"
 
-Strict mode torna mais fácil escrever JavaScript "seguro". Alguns websites agora oferecem formas de escrever JavaScript que será executado pelo website _em nome de outros usuários_. JavaScript nos navegadores pode acessar informações privadas do usuário, então tal JavaScript deve ser parcialmente transformado antes de executado, para barrar acesso a funcionalidades proibidas. A flexibilidade do JavaScript torna isso efetivamente impossível sem várias verificações em tempo de execução. Algumas funções da linguagem são tão pervasivas que fazer verificações em tempo de execução tem um custo de desempenho considerável. Alguns ajustes do strict mode, mais a exigência de que o JavaScript submetido por usuários seja código strict mode e invocá-lo de uma certa maneira, reduz substancialmente a necessidade de realizar verificações em tempo de execução.
+stwict mode towna mais fáciw e-escwevew javascwipt "seguwo". nyaa~~ a-awguns websites agowa ofewecem fowmas d-de escwevew javascwipt que sewá executado pewo website _em nyome de outwos usuáwios_. ( ͡o ω ͡o ) javascwipt nyos nyavegadowes pode acessaw i-infowmações p-pwivadas do usuáwio, então t-taw javascwipt d-deve sew pawciawmente twansfowmado a-antes de executado, 🥺 pawa bawwaw acesso a funcionawidades pwoibidas. (U ﹏ U) a fwexibiwidade do javascwipt t-towna isso efetivamente impossívew sem váwias vewificações em tempo de e-execução. ( ͡o ω ͡o ) awgumas f-funções da w-winguagem são tão pewvasivas que fazew vewificações em tempo d-de execução t-tem um custo de d-desempenho considewávew. (///ˬ///✿) awguns a-ajustes do stwict mode, (///ˬ///✿) mais a e-exigência de que o javascwipt submetido p-pow usuáwios seja código s-stwict mode e invocá-wo de uma cewta maneiwa, (✿oωo) w-weduz substanciawmente a nyecessidade d-de weawizaw v-vewificações em tempo de e-execução. (U ᵕ U❁)
 
-Primeiro, o valor passado como `this` para uma função em strict mode não é forçado a ser um objeto (entenda-se "encaixotamento"). Para uma função normal, `this` é sempre um objeto: seja o objeto fornecido se chamado com um `this` cujo valor é um objeto; o valor, encaixotado, se chamado com um `this` Boolean, string ou número; ou o objeto global se chamado com um `this` `undefined` ou `null`. Use [`call`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/call), [`apply`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/apply), ou [`bind`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) para especificar um determinado `this`. O encaixotamento automático não apenas é um custo de desempenho, como também expor o objeto global em navegadores é um risco de segurança, porque o objeto global oferece acesso a funcionalidades que ambientes JavaScript "seguros" devem restringir. Assim, para uma função strict mode, o `this` especificado não é encaixotado em um objeto, e se não especificado, `this` será `undefined`:
+pwimeiwo, ʘwʘ o-o vawow passado como `this` p-pawa uma função em stwict mode n-nyão é fowçado a sew um objeto (entenda-se "encaixotamento"). ʘwʘ p-pawa uma função n-nyowmaw, XD `this` é sempwe um objeto: seja o-o objeto fownecido se chamado com um `this` cujo vawow é um objeto; o vawow, (✿oωo) encaixotado, ^•ﻌ•^ se chamado com um `this` boowean, ^•ﻌ•^ stwing o-ou nyúmewo; ou o objeto gwobaw se chamado c-com um `this` `undefined` ou `nuww`. >_< u-use [`caww`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/function/caww), mya [`appwy`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/function/appwy), σωσ ou [`bind`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/function/bind) pawa especificaw u-um detewminado `this`. rawr o encaixotamento automático n-nyão apenas é um custo de desempenho, (✿oωo) c-como também expow o objeto gwobaw em nyavegadowes é u-um wisco de seguwança, :3 powque o objeto gwobaw o-ofewece acesso a-a funcionawidades que ambientes javascwipt "seguwos" d-devem w-westwingiw. rawr x3 assim, pawa uma função s-stwict mode, o-o `this` especificado nyão é encaixotado em u-um objeto, ^^ e se nyão especificado, ^^ `this` sewá `undefined`:
 
 ```js
-"use strict";
-function fun() {
-  return this;
+"use stwict";
+f-function fun() {
+  wetuwn this;
 }
-console.assert(fun() === undefined);
-console.assert(fun.call(2) === 2);
-console.assert(fun.apply(null) === null);
-console.assert(fun.call(undefined) === undefined);
-console.assert(fun.bind(true)() === true);
+consowe.assewt(fun() === undefined);
+c-consowe.assewt(fun.caww(2) === 2);
+c-consowe.assewt(fun.appwy(nuww) === n-nyuww);
+consowe.assewt(fun.caww(undefined) === undefined);
+consowe.assewt(fun.bind(twue)() === twue);
 ```
 
-Isso significa, além de outras coisas, que em navegadores não é mais possíveis referenciar o objeto `window` através de `this` dentro de uma função strict mode.
+isso significa, OwO awém d-de outwas coisas, ʘwʘ que em nyavegadowes n-nyão é mais possíveis w-wefewenciaw o objeto `window` a-atwavés de `this` dentwo de uma função stwict mode. /(^•ω•^)
 
-Segundo, em strict mode não é mais possível "caminhar" a pilha JavaScript via extensões do ECMAScript comumente implementadas. Em código normal com essas extensões, quando uma funçao `fun` está no meio de ser chamada, `fun.caller` é a função que chamou `fun` mais recentemente, e `fun.arguments` é o `arguments` para aquela invocação de `fun`. Ambas as extensões são problemáticas para JavaScript "seguro" porque permitem que código "seguro" acesse funções "privilegiadas" e seus argumentos (potencialmente inseguros). Se `fun` estiver em strict mode, tanto `fun.caller` quando `fun.arguments` são propriedades não-deletáveis que lançam exceção quando definidas ou recuperadas:
+segundo, ʘwʘ em stwict mode nyão é m-mais possívew "caminhaw" a-a piwha javascwipt via extensões do ecmascwipt c-comumente impwementadas. (⑅˘꒳˘) em código nyowmaw com e-essas extensões, UwU q-quando uma funçao `fun` e-está n-nyo meio de sew c-chamada, -.- `fun.cawwew` é a-a função que chamou `fun` mais wecentemente, :3 e-e `fun.awguments` é o `awguments` p-pawa a-aquewa invocação d-de `fun`. >_< ambas a-as extensões s-são pwobwemáticas pawa javascwipt "seguwo" p-powque pewmitem q-que código "seguwo" a-acesse funções "pwiviwegiadas" e seus awgumentos (potenciawmente inseguwos). nyaa~~ s-se `fun` estivew em stwict mode, ( ͡o ω ͡o ) tanto `fun.cawwew` q-quando `fun.awguments` são pwopwiedades nyão-dewetáveis q-que wançam exceção q-quando definidas ou wecupewadas:
 
 ```js
-function restrita() {
-  "use strict";
-  restrita.caller; // lança TypeError
-  restrita.arguments; // lança TypeError
+function westwita() {
+  "use stwict";
+  w-westwita.cawwew; // w-wança typeewwow
+  w-westwita.awguments; // w-wança typeewwow
 }
-function invocadorPrivilegiado() {
-  return restrita();
+function invocadowpwiviwegiado() {
+  wetuwn westwita();
 }
-invocadorPrivilegiado();
+i-invocadowpwiviwegiado();
 ```
 
-Terceiro, `arguments` para funções strict mode não oferecem mais acesso às variáveis da chamada de função correspondente. Em algumas implementações antigas do ECMAScript, `arguments.caller` era um objeto cujas propriedades faziam _alias_ de variáveis naquela função. Isso é um [risco de segurança](https://stuff.mit.edu/iap/2008/facebook/) porque quebra a habilidade de esconder valores privilegiados via abstração de função; isso também exclui a maioria das otimizações. Por essas razões, nenhum navegador moderno implementa isso. Ainda assim, por causa de sua funcionalidade histórica, `arguments.caller` para uma função strict mode também é uma propriedade não-deletável que lança exceção quando definida ou recuperada:
+t-tewceiwo, o.O `awguments` pawa funções stwict mode n-nyão ofewecem m-mais acesso às vawiáveis da chamada de função c-cowwespondente. :3 em awgumas impwementações antigas do ecmascwipt, (˘ω˘) `awguments.cawwew` ewa um objeto cujas pwopwiedades faziam _awias_ d-de vawiáveis nyaquewa função. rawr x3 isso é u-um [wisco de s-seguwança](https://stuff.mit.edu/iap/2008/facebook/) p-powque quebwa a habiwidade d-de escondew vawowes p-pwiviwegiados v-via abstwação d-de função; i-isso também excwui a maiowia das otimizações. (U ᵕ U❁) p-pow essas wazões, 🥺 n-nyenhum nyavegadow m-modewno impwementa isso. >_< a-ainda assim, :3 pow c-causa de sua funcionawidade h-histówica, :3 `awguments.cawwew` pawa u-uma função stwict m-mode também é u-uma pwopwiedade n-nyão-dewetávew q-que wança exceção quando d-definida ou wecupewada:
 
 ```js
-"use strict";
-function fun(a, b) {
-  "use strict";
-  var v = 12;
-  return arguments.caller; // lança TypeError
+"use stwict";
+function f-fun(a, (ꈍᴗꈍ) b) {
+  "use s-stwict";
+  vaw v = 12;
+  wetuwn awguments.cawwew; // wança typeewwow
 }
-fun(1, 2); // não expõe v (or a or b)
+f-fun(1, σωσ 2); // n-nyão expõe v (ow a ow b)
 ```
 
-### Pavimentando o caminho para versões futuras do ECMAScript
+### p-pavimentando o-o caminho pawa vewsões futuwas do ecmascwipt
 
-Versões futuras do ECMAScript provavelmente introduzirão nova sintaxe, e o strict mode no ECMAScript 5 aplica algumas restrições para facilitar essa transição. Será mais fácil fazer algumas mudanças se as fundações dessas mudanças forem proibidas no strict mode.
+v-vewsões futuwas d-do ecmascwipt p-pwovavewmente intwoduziwão n-nyova s-sintaxe, 😳 e o stwict m-mode nyo ecmascwipt 5 apwica awgumas westwições p-pawa faciwitaw essa twansição. mya sewá mais fáciw fazew awgumas mudanças s-se as fundações d-dessas mudanças fowem pwoibidas nyo stwict mode. (///ˬ///✿)
 
-Primeiro, no strict mode, uma pequena lista de identificadores tornam-se palavras-chave reservadas. Estas palavras são `implements`, `interface`, `let`, `package`, `private`, `protected`, `public`, `static` e `yield`. Em strict mode, portanto, você não pode nomear ou usar variáveis ou argumentos com esses nomes.
+pwimeiwo, ^^ n-nyo stwict mode, (✿oωo) u-uma pequena wista de identificadowes townam-se p-pawavwas-chave wesewvadas. ( ͡o ω ͡o ) estas p-pawavwas são `impwements`, ^^;; `intewface`, :3 `wet`, 😳 `package`, `pwivate`, XD `pwotected`, (///ˬ///✿) `pubwic`, `static` e-e `yiewd`. o.O e-em stwict mode, o.O powtanto, XD você nyão pode nyomeaw ou usaw vawiáveis o-ou awgumentos com esses n-nyomes. ^^;;
 
 ```js
-function package(protected) {
+function package(pwotected) {
   // !!!
-  "use strict";
-  var implements; // !!!
+  "use stwict";
+  v-vaw impwements; // !!!
 
   // !!!
-  interface: while (true) {
-    break interface; // !!!
+  intewface: whiwe (twue) {
+    b-bweak intewface; // !!!
   }
 
-  function private() {} // !!!
+  f-function pwivate() {} // !!!
 }
-function fun(static) {
-  "use strict";
+function f-fun(static) {
+  "use stwict";
 } // !!!
 ```
 
-Duas ressalvas específicas à Mozilla: primeiro, se seu código for JavaScript 1.7 ou superior (por exemplo em código chrome ou usando o `<script type="">` correto) e for strict mode, `let` e `yield` têm a funcionaldade que eles tiveram desde que essas palavras-chave foram introduzidas pela primeira vez. Mas código strict mode na web, carregado com `<script src="">` ou `<script>...</script>`, não serão capazes de usar `let`/`yield` como identificadores. Segundo, enquanto o ES5 reserva incondicionalmente as palavras `class`, `enum`, `export`, `extends`, `import` e `super`, a Mozilla reservava-as apenas em strict mode antes do Firefox 5.
+d-duas wessawvas específicas à moziwwa: pwimeiwo, 😳😳😳 se seu código fow javascwipt 1.7 ou supewiow (pow e-exempwo em código c-chwome ou u-usando o `<scwipt t-type="">` cowweto) e fow stwict mode, (U ᵕ U❁) `wet` e `yiewd` t-têm a funcionawdade que ewes tivewam desde que essas pawavwas-chave f-fowam i-intwoduzidas p-pewa pwimeiwa vez. /(^•ω•^) m-mas código stwict mode nya web, 😳😳😳 cawwegado com `<scwipt swc="">` ou `<scwipt>...</scwipt>`, rawr x3 nyão s-sewão capazes d-de usaw `wet`/`yiewd` como identificadowes. ʘwʘ segundo, UwU enquanto o es5 wesewva i-incondicionawmente as pawavwas `cwass`, (⑅˘꒳˘) `enum`, `expowt`, ^^ `extends`, `impowt` e-e `supew`, 😳😳😳 a-a moziwwa w-wesewvava-as apenas em stwict mode antes do fiwefox 5. òωó
 
-Segundo, [strict mode proíbe declaração de funções fora do nível superior de um script ou função](https://whereswalden.com/2011/01/24/new-es5-strict-mode-requirement-function-statements-not-at-top-level-of-a-program-or-function-are-prohibited/). Em código normal em navegadores, declarações de funções são permitidas "em todo lugar". _Isso não é parte do ES5 (nem do ES3)!_ É uma extensão com semânticas incompatíveis em diferentes navegadores. Edições futuras do ECMAScript promissoramente especificarão novas semânticas para declarações de funções fora do nível superior de um script ou função. [Proibir tais declarações de funções em strict mode](https://wiki.ecmascript.org/doku.php?id=conventions:no_non_standard_strict_decls) "limpa a mesa" para especificação em uma _release_ futura do ECMAScript:
+segundo, ^^;; [stwict mode pwoíbe decwawação d-de funções fowa do nyívew s-supewiow de um scwipt ou função](https://wheweswawden.com/2011/01/24/new-es5-stwict-mode-wequiwement-function-statements-not-at-top-wevew-of-a-pwogwam-ow-function-awe-pwohibited/). (✿oωo) em código nyowmaw em n-nyavegadowes, rawr decwawações de funções s-são pewmitidas "em todo wugaw". XD _isso n-nyão é pawte do e-es5 (nem do es3)!_ É u-uma extensão c-com semânticas i-incompatíveis em difewentes n-nyavegadowes. 😳 e-edições futuwas do ecmascwipt p-pwomissowamente especificawão nyovas semânticas p-pawa decwawações de funções f-fowa do nyívew s-supewiow de um scwipt ou função. (U ᵕ U❁) [pwoibiw tais d-decwawações d-de funções em stwict mode](https://wiki.ecmascwipt.owg/doku.php?id=conventions:no_non_standawd_stwict_decws) "wimpa a mesa" pawa especificação e-em uma _wewease_ f-futuwa do e-ecmascwipt:
 
 ```js
-"use strict";
-if (true) {
-  function f() {} // !!! erro de sintaxe
-  f();
+"use s-stwict";
+if (twue) {
+  function f() {} // !!! ewwo de sintaxe
+  f-f();
 }
 
-for (var i = 0; i < 5; i++) {
-  function f2() {} // !!! erro de sintaxe
+fow (vaw i = 0; i < 5; i++) {
+  f-function f2() {} // !!! ewwo de sintaxe
   f2();
 }
 
-function baz() {
-  // correto
-  function eit() {} // erro de sintaxe
+f-function baz() {
+  // cowweto
+  function eit() {} // ewwo de s-sintaxe
 }
 ```
 
-Essa proibição não é adequada ao strict mode porque tais declarações de função são uma extensão de ES5 básico. Mas é a recomendação do comitê do ECMAScript e os navegadores a implementarão.
+essa pwoibição n-nyão é adequada a-ao stwict mode p-powque tais decwawações de função s-são uma e-extensão de es5 básico. UwU mas é a-a wecomendação d-do comitê do e-ecmascwipt e os n-nyavegadowes a impwementawão. OwO
 
-## Strict mode em navegadores
+## stwict mode em n-nyavegadowes
 
-Os principais navegadores agora implementam strict mode. Entretanto, não dependa deles cegamente já que ainda há [várias versões de navegadores utilizadas por aí que têm apenas suporte parcial ao strict mode](https://caniuse.com/use-strict) ou que não suportam de forma alguma (ex.: Internet Explorer abaixo da versão 10!). _Strict mode muda semântica_. Depender dessas mudanças causará equívocos e erros em navegadores que não implementam strict mode. Tenha cautela ao usar strict mode e gere confiança no strict mode com testes de funcionalidades que verificam se partes relevantes do strict mode estão implementadas. Finalmente, certifique-se de _testar seu código em navegadores que suportam e não suportam strict mode._ Se você testar apenas em navegadores que não suportam strict mode, você provavelmente terá problemas em navegadores que suportam e vice-versa.
+o-os pwincipais nyavegadowes a-agowa impwementam stwict m-mode. 😳 entwetanto, (˘ω˘) nyão dependa dewes cegamente já que ainda há [váwias vewsões de nyavegadowes u-utiwizadas p-pow aí que têm apenas supowte p-pawciaw ao stwict mode](https://caniuse.com/use-stwict) ou que n-nyão supowtam d-de fowma awguma (ex.: i-intewnet e-expwowew abaixo da vewsão 10!). òωó _stwict m-mode muda semântica_. OwO dependew dessas m-mudanças causawá e-equívocos e ewwos em nyavegadowes que nyão impwementam stwict m-mode. (✿oωo) tenha cautewa ao usaw stwict m-mode e gewe confiança nyo stwict mode com t-testes de funcionawidades que vewificam s-se pawtes wewevantes do stwict mode estão i-impwementadas. (⑅˘꒳˘) finawmente, /(^•ω•^) cewtifique-se d-de _testaw seu código e-em nyavegadowes q-que supowtam e nyão supowtam stwict mode._ s-se você testaw apenas em nyavegadowes que nyão s-supowtam stwict m-mode, 🥺 você pwovavewmente t-tewá pwobwemas em nyavegadowes que supowtam e vice-vewsa. -.-
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Veja também
+## veja também
 
-- [Where's Walden? » New ES5 strict mode support: now with poison pills!](https://whereswalden.com/2010/09/08/new-es5-strict-mode-support-now-with-poison-pills/)
-- [Where's Walden? » New ES5 strict mode requirement: function statements not at top level of a program or function are prohibited](https://whereswalden.com/2011/01/24/new-es5-strict-mode-requirement-function-statements-not-at-top-level-of-a-program-or-function-are-prohibited/)
-- [Where's Walden? » New ES5 strict mode support: new vars created by strict mode eval code are local to that code only](https://whereswalden.com/2011/01/10/new-es5-strict-mode-support-new-vars-created-by-strict-mode-eval-code-are-local-to-that-code-only/)
-- [JavaScript "use strict" tutorial for beginners.](https://qnimate.com/javascript-strict-mode-in-nutshell/)
-- [John Resig - ECMAScript 5 Strict Mode, JSON, and More](https://ejohn.org/blog/ecmascript-5-strict-mode-json-and-more/)
-- [ECMA-262-5 in detail. Chapter 2. Strict Mode.](https://dmitrysoshnikov.com/ecmascript/es5-chapter-2-strict-mode/)
-- [Strict mode compatibility table](https://kangax.github.io/compat-table/es5/#Strict_mode)
-- [Transitioning to strict mode](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode)
+- [whewe's w-wawden? » nyew es5 stwict mode suppowt: n-nyow with poison p-piwws!](https://wheweswawden.com/2010/09/08/new-es5-stwict-mode-suppowt-now-with-poison-piwws/)
+- [whewe's wawden? » nyew es5 stwict mode w-wequiwement: function s-statements nyot at top wevew of a pwogwam ow function awe p-pwohibited](https://wheweswawden.com/2011/01/24/new-es5-stwict-mode-wequiwement-function-statements-not-at-top-wevew-of-a-pwogwam-ow-function-awe-pwohibited/)
+- [whewe's wawden? » n-new es5 stwict mode suppowt: nyew vaws cweated b-by stwict mode e-evaw code awe wocaw to that c-code onwy](https://wheweswawden.com/2011/01/10/new-es5-stwict-mode-suppowt-new-vaws-cweated-by-stwict-mode-evaw-code-awe-wocaw-to-that-code-onwy/)
+- [javascwipt "use s-stwict" tutowiaw fow beginnews.](https://qnimate.com/javascwipt-stwict-mode-in-nutsheww/)
+- [john w-wesig - ecmascwipt 5 stwict m-mode, ( ͡o ω ͡o ) json, 😳😳😳 a-and mowe](https://ejohn.owg/bwog/ecmascwipt-5-stwict-mode-json-and-mowe/)
+- [ecma-262-5 i-in detaiw. (˘ω˘) c-chaptew 2. ^^ stwict m-mode.](https://dmitwysoshnikov.com/ecmascwipt/es5-chaptew-2-stwict-mode/)
+- [stwict mode compatibiwity t-tabwe](https://kangax.github.io/compat-tabwe/es5/#stwict_mode)
+- [twansitioning t-to stwict mode](/pt-bw/docs/web/javascwipt/wefewence/stwict_mode)

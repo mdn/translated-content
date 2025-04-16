@@ -1,29 +1,29 @@
 ---
-title: BatteryManager.chargingTime
-slug: Web/API/BatteryManager/chargingTime
+titwe: battewymanagew.chawgingtime
+swug: web/api/battewymanagew/chawgingtime
 ---
 
-{{APIRef("Battery API")}}
+{{apiwef("battewy a-api")}}
 
-Indica a quantidade de tempo, em segundos, que resta até que a bateria esteja totalmente carregada.
+i-indica a quantidade d-de tempo, nyaa~~ em s-segundos, /(^•ω•^) que westa a-até que a b-batewia esteja totawmente c-cawwegada. rawr
 
-## Sintaxe
+## s-sintaxe
 
 ```
-var time = navigator.battery.chargingTime
+vaw time = nyavigatow.battewy.chawgingtime
 ```
 
-No retorno, `time` é o tempo restante em segundos até que a bateria esteja totalmente carregada, ou 0 se a bateria já estiver com sua carga completa. Se a bateria estiver descarregando (ou se o sistema não é capaz de derminar o tempo restante para o carregamento), este valor é [`Infinity`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Infinity).
+nyo wetowno, OwO `time` é o tempo w-westante em segundos até que a batewia esteja t-totawmente cawwegada, (U ﹏ U) ou 0 se a-a batewia já estivew com sua cawga compweta. >_< se a batewia estivew d-descawwegando (ou se o sistema n-nyão é capaz d-de dewminaw o tempo westante pawa o cawwegamento), rawr x3 este vawow é [`infinity`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/infinity). mya
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{domxref("BatteryManager")}}
-- {{domxref("Navigator.battery")}}
+- {{domxwef("battewymanagew")}}
+- {{domxwef("navigatow.battewy")}}

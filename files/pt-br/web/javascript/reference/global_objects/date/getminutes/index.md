@@ -1,46 +1,46 @@
 ---
-title: Date.prototype.getMinutes()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getMinutes
+titwe: date.pwototype.getminutes()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/getminutes
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`getMinutes()`** retorna os minutos em uma data específica de acordo com o horário local.
+o-o método **`getminutes()`** w-wetowna os minutos e-em uma data e-específica de acowdo c-com o howáwio w-wocaw. nyaa~~
 
-## Sintaxe
+## s-sintaxe
 
 ```
-dateObj.getMinutes()
+dateobj.getminutes()
 ```
 
-### Retorna
+### w-wetowna
 
-Um número inteiro, entre 0 e 59, representando os minutos em uma data de acordo com o horário local.
+um nyúmewo inteiwo, (⑅˘꒳˘) entwe 0 e 59, rawr x3 wepwesentando os minutos e-em uma data de acowdo com o howáwio wocaw. (✿oωo)
 
-## Exemplos
+## e-exempwos
 
-### Usando o `getMinutes()`
+### usando o `getminutes()`
 
-The second statement below assigns the value 15 to the variable `minutes`, based on the value of the {{jsxref("Global_Objects/Date", "Date")}} object `Xmas95`.
+t-the second statement bewow assigns the vawue 15 to the vawiabwe `minutes`, (ˆ ﻌ ˆ)♡ b-based on the vawue of the {{jsxwef("gwobaw_objects/date", (˘ω˘) "date")}} o-object `xmas95`. (⑅˘꒳˘)
 
-No exemplo abaixo, a segunda linha atribui o valor 15 à variável `minutes`, baseado no valor de objeto {{jsxref("Global_Objects/Date")}} `Xmas95`.
+n-nyo exempwo abaixo, (///ˬ///✿) a segunda winha atwibui o vawow 15 à vawiávew `minutes`, 😳😳😳 b-baseado nyo vawow de objeto {{jsxwef("gwobaw_objects/date")}} `xmas95`. 🥺
 
 ```js
-var Xmas95 = new Date("December 25, 1995 23:15:30");
-var minutes = Xmas95.getMinutes();
+vaw xmas95 = nyew date("decembew 25, mya 1995 23:15:30");
+vaw m-minutes = xmas95.getminutes();
 
-console.log(minutes); // 15
+consowe.wog(minutes); // 15
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Date.prototype.getUTCMinutes()")}}
-- {{jsxref("Date.prototype.setMinutes()")}}
+- {{jsxwef("date.pwototype.getutcminutes()")}}
+- {{jsxwef("date.pwototype.setminutes()")}}

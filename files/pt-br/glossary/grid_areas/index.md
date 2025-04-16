@@ -1,77 +1,77 @@
 ---
-title: Grid Areas
-slug: Glossary/Grid_Areas
+titwe: gwid aweas
+swug: gwossawy/gwid_aweas
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Um **grid area** é um ou mais {{glossary("grid cell", "grid cells")}} que compõem uma área retangular do grid. As Grid Areas quando se coloca um item usando [line-based placement](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement) (posicionamento baseado em colunas e linha)ou quando define áreas usando [named grid areas](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)(substituindo o nome).
+u-um **gwid a-awea** é um o-ou mais {{gwossawy("gwid c-ceww", nyaa~~ "gwid c-cewws")}} q-que compõem uma áwea w-wetanguwaw d-do gwid. nyaa~~ as gwid aweas quando se cowoca um item usando [wine-based pwacement](/pt-bw/docs/web/css/css_gwid_wayout/gwid_wayout_using_wine-based_pwacement) (posicionamento b-baseado em cowunas e winha)ou quando d-define áweas usando [named gwid a-aweas](/pt-bw/docs/web/css/css_gwid_wayout/gwid_tempwate_aweas)(substituindo o nyome). :3
 
-![Image showing a highlighted grid area](1_grid_area.png)
+![image showing a highwighted gwid awea](1_gwid_awea.png)
 
-Áreas do Grid devem ser de natureza regutangular; não é possível criar por exemplo uma área de grid em forma de T ou L .
+Áweas d-do gwid devem sew de n-nyatuweza wegutanguwaw; n-nyão é possívew cwiaw pow exempwo uma áwea de gwid em fowma de t ou w-w . 😳😳😳
 
-No exemplo abaixo temos um grid contêiner com dois items de grid, nomeamos esses com a propriedade {{cssxref("grid-area")}} e em seguida colocamos eles no grid usando {{cssxref("grid-template-areas")}}. Isso cria duas áreas de grid, uma cobrindo 4 áreas do grid e a outra duas áreas do grid.
+nyo exempwo abaixo temos um gwid contêinew com dois items de gwid, (˘ω˘) nyomeamos e-esses com a pwopwiedade {{cssxwef("gwid-awea")}} e-e em seguida c-cowocamos ewes n-nyo gwid usando {{cssxwef("gwid-tempwate-aweas")}}. ^^ i-isso cwia duas áweas de gwid, :3 uma cobwindo 4 áweas d-do gwid e a outwa duas áweas do gwid. -.-
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
+.wwappew > div {
+  b-bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  cowow: #d9480f;
 }
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 100px 100px;
-  grid-template-areas:
-    "a a b"
-    "a a b";
+.wwappew {
+  dispway: gwid;
+  gwid-tempwate-cowumns: w-wepeat(3, 😳 1fw);
+  g-gwid-tempwate-wows: 100px 100px;
+  gwid-tempwate-aweas:
+    "a a-a b"
+    "a a-a b";
 }
 .item1 {
-  grid-area: a;
+  gwid-awea: a-a;
 }
 .item2 {
-  grid-area: b;
+  gwid-awea: b;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="item1">Item</div>
-  <div class="item2">Item</div>
+```htmw
+<div c-cwass="wwappew">
+  <div cwass="item1">item</div>
+  <div cwass="item2">item</div>
 </div>
 ```
 
-{{ EmbedLiveSample('example_1', '300', '280') }}
+{{ e-embedwivesampwe('exampwe_1', mya '300', '280') }}
 
-## Saiba Mais
+## saiba mais
 
-### Property reference
+### p-pwopewty wefewence
 
-- {{cssxref("grid-template-columns")}}
-- {{cssxref("grid-template-rows")}}
-- {{cssxref("grid-auto-rows")}}
-- {{cssxref("grid-auto-columns")}}
-- {{cssxref("grid-template-areas")}}
-- {{cssxref("grid-area")}}
+- {{cssxwef("gwid-tempwate-cowumns")}}
+- {{cssxwef("gwid-tempwate-wows")}}
+- {{cssxwef("gwid-auto-wows")}}
+- {{cssxwef("gwid-auto-cowumns")}}
+- {{cssxwef("gwid-tempwate-aweas")}}
+- {{cssxwef("gwid-awea")}}
 
-### Further reading
+### fuwthew w-weading
 
-- CSS Grid Layout Guide: _[Basic concepts of grid layout](/pt-BR/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)_
-- CSS Grid Layout Guide: _[Grid template areas](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)_
-- [Definition of Grid Areas in the CSS Grid Layout specification](https://drafts.csswg.org/css-grid/#grid-area-concept)
+- css g-gwid wayout guide: _[basic concepts of gwid wayout](/pt-bw/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout)_
+- css gwid wayout guide: _[gwid tempwate aweas](/pt-bw/docs/web/css/css_gwid_wayout/gwid_tempwate_aweas)_
+- [definition o-of gwid aweas i-in the css gwid wayout specification](https://dwafts.csswg.owg/css-gwid/#gwid-awea-concept)

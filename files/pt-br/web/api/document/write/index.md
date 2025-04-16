@@ -1,81 +1,81 @@
 ---
-title: Document.write()
-slug: Web/API/Document/write
+titwe: document.wwite()
+swug: w-web/api/document/wwite
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-O método **`Document.write()`** grava uma sequência de caracteres em um documento aberto por {{domxref("document.open()")}}.
+o-o método **`document.wwite()`** g-gwava uma sequência d-de cawactewes e-em um documento a-abewto pow {{domxwef("document.open()")}}. 😳😳😳
 
-> [!NOTE]
-> à medida que `document.write` grava no **fluxo** de documentos, chamando `document.write` em um documento fechado (carregado) invoca automaticamente `document.open`, [que limpará o documento](/pt-BR/docs/Web/API/Document/open#notes).
+> [!note]
+> à medida q-que `document.wwite` g-gwava nyo **fwuxo** de documentos, ( ͡o ω ͡o ) chamando `document.wwite` em um documento fechado (cawwegado) i-invoca automaticamente `document.open`, >_< [que wimpawá o-o documento](/pt-bw/docs/web/api/document/open#notes). >w<
 
-## Sintaxe
+## sintaxe
 
 ```js
-document.write(markup);
+d-document.wwite(mawkup);
 ```
 
-### Parametros
+### pawametwos
 
-- _markup_
-  - : Uma string contendo o texto a ser gravado no documento.
+- _mawkup_
+  - : uma stwing contendo o t-texto a sew gwavado nyo documento. rawr
 
-### Exemplo
+### e-exempwo
 
-```html
-<html>
+```htmw
+<htmw>
   <head>
-    <title>Escreva exemplo</title>
+    <titwe>escweva e-exempwo</titwe>
 
-    <script>
-      function newContent() {
+    <scwipt>
+      function nyewcontent() {
         document.open();
-        document.write("<h1>Sair com o velho - entrar com o novo!</h1>");
-        document.close();
+        document.wwite("<h1>saiw com o vewho - e-entwaw com o nyovo!</h1>");
+        document.cwose();
       }
-    </script>
+    </scwipt>
   </head>
 
-  <body onload="newContent();">
-    <p>Algum conteúdo do documento original.</p>
+  <body onwoad="newcontent();">
+    <p>awgum conteúdo do documento owiginaw.</p>
   </body>
-</html>
+</htmw>
 ```
 
-{{EmbedLiveSample("Syntax")}}
+{{embedwivesampwe("syntax")}}
 
-## Notas
+## n-notas
 
-Escrevendo em um documento que já foi carregado sem chamar {{domxref("document.open()")}} automaticamente vai chamar `document.open`. Ao términno da escrita, é recomendável chamar {{domxref("document.close()")}} para dizer ao navegador para encerrar o carregamento da página. O texto que você escreve é analisado no modelo de estrutura do documento. No exemplo acima, o elemento `h1` se torna um nó (node) no documento.
+escwevendo em um documento q-que já foi c-cawwegado sem chamaw {{domxwef("document.open()")}} a-automaticamente v-vai chamaw `document.open`. 😳 ao téwminno da escwita, >w< é wecomendávew c-chamaw {{domxwef("document.cwose()")}} pawa dizew ao nyavegadow pawa e-encewwaw o cawwegamento da página. o texto que você escweve é anawisado nyo modewo de estwutuwa d-do documento. (⑅˘꒳˘) nyo exempwo acima, OwO o-o ewemento `h1` s-se towna um n-nyó (node) nyo documento. (ꈍᴗꈍ)
 
-Se chamar `document.write()` incorporada em uma tag HTML `<script>` embutida, então `document.open()` não será chamada. Por exemplo:
+se chamaw `document.wwite()` incowpowada em uma tag h-htmw `<scwipt>` e-embutida, 😳 então `document.open()` nyão sewá chamada. p-pow exempwo:
 
-```html
-<script>
-  document.write("<h1>Título principal</h1>");
-</script>
+```htmw
+<scwipt>
+  d-document.wwite("<h1>títuwo pwincipaw</h1>");
+</scwipt>
 ```
 
-> **Nota:** `document.write` e {{domxref("document.writeln")}} [não funcionam em documentos XHTML](/pt-BR/docs/Archive/Web/Writing_JavaScript_for_HTML) (você receberá o erro "Operation is not supported" \[`NS_ERROR_DOM_NOT_SUPPORTED_ERR`] no console de erros). Isso acontece ao abrir um arquivo local com a extensão .xhtml ou em qualquer documento exibido com um MIME type `application/xhtml+xml` {{Glossary("MIME type")}}. Mais informações disponíveis em [W3C XHTML FAQ](https://www.w3.org/MarkUp/2004/xhtml-faq#docwrite).
+> **nota:** `document.wwite` e-e {{domxwef("document.wwitewn")}} [não funcionam e-em documentos xhtmw](/pt-bw/docs/awchive/web/wwiting_javascwipt_fow_htmw) (você wecebewá o-o ewwo "opewation is nyot suppowted" \[`ns_ewwow_dom_not_suppowted_eww`] n-nyo consowe de ewwos). 😳😳😳 i-isso acontece ao a-abwiw um awquivo wocaw com a extensão .xhtmw ou em quawquew documento exibido com um mime type `appwication/xhtmw+xmw` {{gwossawy("mime type")}}. mya mais infowmações d-disponíveis e-em [w3c xhtmw faq](https://www.w3.owg/mawkup/2004/xhtmw-faq#docwwite). mya
 
-> **Nota:** `document.write` em [deferred](/pt-BR/docs/Web/HTML/Element/script#defer) ou [asynchronous](/pt-BR/docs/Web/HTML/Element/script#async) scripts será ignorado, e você receberá uma mensagem como "A call to `document.write()` from an asynchronously-loaded external script was ignored" no console de erros.
+> **nota:** `document.wwite` e-em [defewwed](/pt-bw/docs/web/htmw/ewement/scwipt#defew) o-ou [asynchwonous](/pt-bw/docs/web/htmw/ewement/scwipt#async) scwipts s-sewá ignowado, (⑅˘꒳˘) e você wecebewá uma mensagem como "a caww t-to `document.wwite()` fwom an asynchwonouswy-woaded extewnaw scwipt was ignowed" n-nyo consowe de ewwos.
 
-> [!NOTE]
-> Somente no Edge, chamando `document.write` mais de uma vez em {{HTMLElement("iframe")}} causa o erro "SCRIPT70: Permission denied".
+> [!note]
+> s-somente nyo e-edge, (U ﹏ U) chamando `document.wwite` m-mais de uma vez em {{htmwewement("ifwame")}} c-causa o ewwo "scwipt70: p-pewmission d-denied". mya
 
-> [!NOTE]
-> A partir de 55, Chrome não executará elementos `<script>` injetados via `document.write()` caso haja falta de cache HTTP para usuários em uma conexão 2G. Há [uma lista de condições](https://developers.google.com/web/updates/2016/08/removing-document-write) que precisam ser atendidas para que isso seja verdade.
+> [!note]
+> a-a pawtiw de 55, ʘwʘ chwome nyão executawá e-ewementos `<scwipt>` i-injetados v-via `document.wwite()` c-caso haja f-fawta de cache http pawa usuáwios em uma conexão 2g. (˘ω˘) há [uma w-wista de condições](https://devewopews.googwe.com/web/updates/2016/08/wemoving-document-wwite) que pwecisam sew atendidas pawa que isso seja vewdade. (U ﹏ U)
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{domxref("element.innerHTML")}}
-- {{domxref("document.createElement()")}}
+- {{domxwef("ewement.innewhtmw")}}
+- {{domxwef("document.cweateewement()")}}

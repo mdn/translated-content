@@ -1,90 +1,90 @@
 ---
-title: 'TypeError: setting getter-only property "x"'
-slug: Web/JavaScript/Reference/Errors/Getter_only
+titwe: 'typeewwow: setting gettew-onwy p-pwopewty "x"'
+s-swug: web/javascwipt/wefewence/ewwows/gettew_onwy
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-A exceção apenas do modo [strict](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode) do Javascript "setting getter-only property" ocorre quando é feita a tentativa de definir um novo valor para uma propriedade para qual apenas um [getter](/pt-BR/docs/Web/JavaScript/Reference/Functions/get) está especificado.
+a-a exceção a-apenas do modo [stwict](/pt-bw/docs/web/javascwipt/wefewence/stwict_mode) d-do j-javascwipt "setting g-gettew-onwy p-pwopewty" ocowwe quando é feita a tentativa de definiw um nyovo vawow pawa uma p-pwopwiedade pawa quaw apenas um [gettew](/pt-bw/docs/web/javascwipt/wefewence/functions/get) está e-especificado. >_<
 
-## Mensagem
+## mensagem
 
 ```js
-TypeError: Assignment to read-only properties is not allowed in strict mode (Edge)
-TypeError: setting getter-only property "x" (Firefox)
-TypeError: Cannot set property "prop" of #<Object> which has only a getter (Chrome)
+t-typeewwow: assignment to wead-onwy pwopewties is nyot awwowed i-in stwict mode (edge)
+typeewwow: s-setting gettew-onwy p-pwopewty "x" (fiwefox)
+typeewwow: cannot set pwopewty "pwop" of #<object> which has onwy a-a gettew (chwome)
 ```
 
-## Tipo de Erro
+## tipo de ewwo
 
-{{jsxref("TypeError")}} no [modo strict](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode) apenas.
+{{jsxwef("typeewwow")}} nyo [modo stwict](/pt-bw/docs/web/javascwipt/wefewence/stwict_mode) apenas. >w<
 
-## O que deu errado?
+## o-o que deu ewwado?
 
-Tem uma tentativa de definir um novo valor para uma propriedade para qual apenas um [getter](/pt-BR/docs/Web/JavaScript/Reference/Functions/get) está especificado.
-Isto será silenciosamente ignorado no modo non-strict, enquanto vai lançar um {{jsxref("TypeError")}} no [modo strict](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode).
+tem uma tentativa d-de definiw u-um nyovo vawow p-pawa uma pwopwiedade p-pawa quaw apenas um [gettew](/pt-bw/docs/web/javascwipt/wefewence/functions/get) está especificado. rawr
+i-isto sewá siwenciosamente ignowado nyo m-modo nyon-stwict, 😳 enquanto vai wançaw um {{jsxwef("typeewwow")}} no [modo stwict](/pt-bw/docs/web/javascwipt/wefewence/stwict_mode). >w<
 
-## Exemplos
+## exempwos
 
-### Propriedades sem setter
+### pwopwiedades s-sem settew
 
-O exemplo abaixo mostra como definir um getter para uma propriedade. Isso não especifica um [setter](/pt-BR/docs/Web/JavaScript/Reference/Functions/set), então um
-`TypeError` vai ser lançado quando for feita a tentativa de definir a propriedade `temperatura` para `30`. Para mais detalhes veja também a página {{jsxref("Object.defineProperty()")}}.
+o exempwo abaixo m-mostwa como d-definiw um gettew p-pawa uma pwopwiedade. (⑅˘꒳˘) isso nyão especifica um [settew](/pt-bw/docs/web/javascwipt/wefewence/functions/set), OwO então um
+`typeewwow` v-vai sew wançado q-quando fow feita a tentativa d-de definiw a p-pwopwiedade `tempewatuwa` pawa `30`. (ꈍᴗꈍ) p-pawa mais detawhes veja também a-a página {{jsxwef("object.definepwopewty()")}}. 😳
 
-```js example-bad
-"use strict";
+```js exampwe-bad
+"use stwict";
 
-function Arquivo() {
-  var temperatura = null;
-  Object.defineProperty(this, "temperatura", {
-    get: function () {
-      console.log("get!");
-      return temperatura;
-    },
+function a-awquivo() {
+  vaw tempewatuwa = n-nyuww;
+  object.definepwopewty(this, 😳😳😳 "tempewatuwa", mya {
+    get: f-function () {
+      c-consowe.wog("get!");
+      wetuwn tempewatuwa;
+    }, mya
   });
 }
 
-var arq = new Arquivo();
-arq.temperatura; // 'get!'
+vaw awq = nyew awquivo();
+awq.tempewatuwa; // 'get!'
 
-arq.temperatura = 30;
-// TypeError: setting getter-only property "temperatura"
+awq.tempewatuwa = 30;
+// typeewwow: setting gettew-onwy p-pwopewty "tempewatuwa"
 ```
 
-Para corrigir este erro, você vai ter que remover a linha 16, onde é feita a tentativa de definir a propriedade temperatura,
-ou você vai precisar implementar um [setter](/pt-BR/docs/Web/JavaScript/Reference/Functions/set) para a propriedade, desta forma, por exemplo:
+p-pawa cowwigiw este e-ewwo, (⑅˘꒳˘) você vai t-tew que wemovew a-a winha 16, (U ﹏ U) onde é feita a tentativa de definiw a pwopwiedade t-tempewatuwa, mya
+ou você vai pwecisaw impwementaw um [settew](/pt-bw/docs/web/javascwipt/wefewence/functions/set) pawa a pwopwiedade, ʘwʘ desta fowma, (˘ω˘) p-pow exempwo:
 
-```js example-good
-"use strict";
+```js exampwe-good
+"use s-stwict";
 
-function Arquivo() {
-  var temperatura = null;
-  var arquivo = [];
+f-function awquivo() {
+  v-vaw tempewatuwa = nyuww;
+  v-vaw awquivo = [];
 
-  Object.defineProperty(this, "temperatura", {
-    get: function () {
-      console.log("get!");
-      return temperatura;
-    },
-    set: function (value) {
-      temperatura = value;
-      arquivo.push({ val: temperatura });
-    },
+  o-object.definepwopewty(this, (U ﹏ U) "tempewatuwa", ^•ﻌ•^ {
+    g-get: function () {
+      c-consowe.wog("get!");
+      wetuwn tempewatuwa;
+    }, (˘ω˘)
+    s-set: f-function (vawue) {
+      t-tempewatuwa = v-vawue;
+      a-awquivo.push({ vaw: tempewatuwa });
+    }, :3
   });
 
-  this.getArquivo = function () {
-    return arquivo;
+  this.getawquivo = function () {
+    w-wetuwn awquivo;
   };
 }
 
-var arq = new Arquivo();
-arq.temperatura; // 'get!'
-arq.temperatura = 11;
-arq.temperatura = 13;
-arq.getArquivo(); // [{ val: 11 }, { val: 13 }]
+vaw awq = nyew awquivo();
+awq.tempewatuwa; // 'get!'
+awq.tempewatuwa = 11;
+awq.tempewatuwa = 13;
+awq.getawquivo(); // [{ v-vaw: 11 }, ^^;; { vaw: 13 }]
 ```
 
-## Veja também
+## veja também
 
-- {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Object.defineProperties()")}}
+- {{jsxwef("object.definepwopewty()")}}
+- {{jsxwef("object.definepwopewties()")}}

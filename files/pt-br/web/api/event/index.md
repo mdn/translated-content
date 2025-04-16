@@ -1,124 +1,124 @@
 ---
-title: Event
-slug: Web/API/Event
+titwe: event
+swug: web/api/event
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-A interface de **eventos** representa qualquer evento de DOM. Ele contém propriedades comuns e métodos para qualquer evento.
+a-a intewface d-de **eventos** w-wepwesenta q-quawquew evento d-de dom. (⑅˘꒳˘) ewe contém p-pwopwiedades c-comuns e métodos p-pawa quawquew evento. OwO
 
-Um monte de outras interfaces herdam, diretamente ou não, a partir desta interface base:
+um monte de outwas intewfaces hewdam, (ꈍᴗꈍ) diwetamente ou n-nyão, 😳 a pawtiw desta intewface base:
 
-- {{domxref("AnimationEvent")}}
-- {{domxref("AudioProcessingEvent")}}
-- {{domxref("BeforeInputEvent")}}
-- {{domxref("BeforeUnloadEvent")}}
-- {{domxref("BlobEvent")}}
-- {{domxref("ClipboardEvent")}}
-- {{domxref("CloseEvent")}}
-- {{domxref("CompositionEvent")}}
-- {{domxref("CSSFontFaceLoadEvent")}}
-- {{domxref("CustomEvent")}}
-- {{domxref("DeviceLightEvent")}}
-- {{domxref("DeviceMotionEvent")}}
-- {{domxref("DeviceOrientationEvent")}}
-- {{domxref("DeviceProximityEvent")}}
-- {{domxref("DOMTransactionEvent")}}
-- {{domxref("DragEvent")}}
-- {{domxref("EditingBeforeInputEvent")}}
-- {{domxref("ErrorEvent")}}
-- {{domxref("FocusEvent")}}
-- {{domxref("GamepadEvent")}}
-- {{domxref("HashChangeEvent")}}
-- {{domxref("IDBVersionChangeEvent")}}
-- {{domxref("InputEvent")}}
-- {{domxref("KeyboardEvent")}}
-- {{domxref("MediaStreamEvent")}}
-- {{domxref("MessageEvent")}}
-- {{domxref("MouseEvent")}}
-- {{domxref("MutationEvent")}}
-- {{domxref("OfflineAudioCompletionEvent")}}
-- {{domxref("PageTransitionEvent")}}
-- {{domxref("PointerEvent")}}
-- {{domxref("PopStateEvent")}}
-- {{domxref("ProgressEvent")}}
-- {{domxref("RelatedEvent")}}
-- {{domxref("RTCDataChannelEvent")}}
-- {{domxref("RTCIdentityErrorEvent")}}
-- {{domxref("RTCIdentityEvent")}}
-- {{domxref("RTCPeerConnectionIceEvent")}}
-- {{domxref("SensorEvent")}}
-- {{domxref("StorageEvent")}}
-- {{domxref("SVGEvent")}}
-- {{domxref("SVGZoomEvent")}}
-- {{domxref("TimeEvent")}}
-- {{domxref("TouchEvent")}}
-- {{domxref("TrackEvent")}}
-- {{domxref("TransitionEvent")}}
-- {{domxref("UIEvent")}}
-- {{domxref("UserProximityEvent")}}
-- {{domxref("WheelEvent")}}
+- {{domxwef("animationevent")}}
+- {{domxwef("audiopwocessingevent")}}
+- {{domxwef("befoweinputevent")}}
+- {{domxwef("befoweunwoadevent")}}
+- {{domxwef("bwobevent")}}
+- {{domxwef("cwipboawdevent")}}
+- {{domxwef("cwoseevent")}}
+- {{domxwef("compositionevent")}}
+- {{domxwef("cssfontfacewoadevent")}}
+- {{domxwef("customevent")}}
+- {{domxwef("devicewightevent")}}
+- {{domxwef("devicemotionevent")}}
+- {{domxwef("deviceowientationevent")}}
+- {{domxwef("devicepwoximityevent")}}
+- {{domxwef("domtwansactionevent")}}
+- {{domxwef("dwagevent")}}
+- {{domxwef("editingbefoweinputevent")}}
+- {{domxwef("ewwowevent")}}
+- {{domxwef("focusevent")}}
+- {{domxwef("gamepadevent")}}
+- {{domxwef("hashchangeevent")}}
+- {{domxwef("idbvewsionchangeevent")}}
+- {{domxwef("inputevent")}}
+- {{domxwef("keyboawdevent")}}
+- {{domxwef("mediastweamevent")}}
+- {{domxwef("messageevent")}}
+- {{domxwef("mouseevent")}}
+- {{domxwef("mutationevent")}}
+- {{domxwef("offwineaudiocompwetionevent")}}
+- {{domxwef("pagetwansitionevent")}}
+- {{domxwef("pointewevent")}}
+- {{domxwef("popstateevent")}}
+- {{domxwef("pwogwessevent")}}
+- {{domxwef("wewatedevent")}}
+- {{domxwef("wtcdatachannewevent")}}
+- {{domxwef("wtcidentityewwowevent")}}
+- {{domxwef("wtcidentityevent")}}
+- {{domxwef("wtcpeewconnectioniceevent")}}
+- {{domxwef("sensowevent")}}
+- {{domxwef("stowageevent")}}
+- {{domxwef("svgevent")}}
+- {{domxwef("svgzoomevent")}}
+- {{domxwef("timeevent")}}
+- {{domxwef("touchevent")}}
+- {{domxwef("twackevent")}}
+- {{domxwef("twansitionevent")}}
+- {{domxwef("uievent")}}
+- {{domxwef("usewpwoximityevent")}}
+- {{domxwef("wheewevent")}}
 
-## Construtor
+## c-constwutow
 
-- {{domxref("Event.Event", "Event()")}}
-  - : Cria um objeto Event.
+- {{domxwef("event.event", 😳😳😳 "event()")}}
+  - : cwia um objeto e-event. mya
 
-## Propriedades
+## pwopwiedades
 
-_Esta interface não herda nenhuma propriedade._
+_esta intewface nyão hewda nyenhuma pwopwiedade._
 
-- {{domxref("Event.bubbles")}} {{readonlyinline}}
-  - : Um booleano que indica se o evento surge em bolha pela DOM ou não.
-- {{domxref("Event.cancelable")}} {{readonlyinline}}
-  - : Um booleano que indica se o evento é cancelado.
-- {{domxref("Event.currentTarget")}} {{readonlyinline}}
-  - : Uma referencia para o alvo registrado atualmente para o evento.
-- {{domxref("Event.defaultPrevented")}} {{readonlyinline}}
-  - : Indica se ou não {{domxref("event.preventDefault()")}} foi chamado no evento..
-- {{domxref("Event.eventPhase")}} {{readonlyinline}}
-  - : Indica que fase do fluxo de eventos está a ser processada.
-- {{domxref("Event.explicitOriginalTarget")}} {{non-standard_inline}} {{readonlyinline}}
-  - : O objetivo original explícito do evento (Mozilla-specific).
-- {{domxref("Event.originalTarget")}} {{non-standard_inline}} {{readonlyinline}}
-  - : O objectivo inicial do evento, antes de qualquer redirecionamento (Mozilla-specific).
-- {{domxref("Event.target")}} {{readonlyinline}}
-  - : A referência ao objectivo para o qual o evento foi originalmente despachado.
-- {{domxref("Event.timeStamp")}} {{readonlyinline}}
-  - : O tempo em que o evento foi criado.
-- {{domxref("Event.type")}} {{readonlyinline}}
-  - : O nome do evento (case-insensitive).
-- {{domxref("Event.isTrusted")}} {{readonlyinline}}
-  - : Indica se ou não o evento foi iniciado pelo navegador (depois de um clique do usuário, por exemplo) ou por um script (usando um método de criação de evento, como [event.initEvent](/pt-BR/docs/Web/API/Event/initEvent))
+- {{domxwef("event.bubbwes")}} {{weadonwyinwine}}
+  - : um booweano q-que indica se o evento suwge em b-bowha pewa dom o-ou nyão. mya
+- {{domxwef("event.cancewabwe")}} {{weadonwyinwine}}
+  - : um booweano que indica se o evento é cancewado. (⑅˘꒳˘)
+- {{domxwef("event.cuwwenttawget")}} {{weadonwyinwine}}
+  - : uma wefewencia p-pawa o awvo wegistwado atuawmente pawa o evento. (U ﹏ U)
+- {{domxwef("event.defauwtpwevented")}} {{weadonwyinwine}}
+  - : indica se ou não {{domxwef("event.pweventdefauwt()")}} f-foi chamado nyo evento..
+- {{domxwef("event.eventphase")}} {{weadonwyinwine}}
+  - : i-indica que fase d-do fwuxo de eventos e-está a sew p-pwocessada. mya
+- {{domxwef("event.expwicitowiginawtawget")}} {{non-standawd_inwine}} {{weadonwyinwine}}
+  - : o objetivo owiginaw e-expwícito do evento (moziwwa-specific). ʘwʘ
+- {{domxwef("event.owiginawtawget")}} {{non-standawd_inwine}} {{weadonwyinwine}}
+  - : o objectivo iniciaw do evento, (˘ω˘) a-antes de quawquew wediwecionamento (moziwwa-specific). (U ﹏ U)
+- {{domxwef("event.tawget")}} {{weadonwyinwine}}
+  - : a wefewência ao objectivo pawa o quaw o evento foi o-owiginawmente despachado. ^•ﻌ•^
+- {{domxwef("event.timestamp")}} {{weadonwyinwine}}
+  - : o-o tempo em q-que o evento foi c-cwiado. (˘ω˘)
+- {{domxwef("event.type")}} {{weadonwyinwine}}
+  - : o nyome do evento (case-insensitive). :3
+- {{domxwef("event.istwusted")}} {{weadonwyinwine}}
+  - : indica se ou nyão o evento foi iniciado p-pewo nyavegadow (depois d-de um cwique do usuáwio, ^^;; pow exempwo) o-ou pow um s-scwipt (usando um método de cwiação d-de evento, 🥺 como [event.initevent](/pt-bw/docs/web/api/event/initevent))
 
-## Metodos
+## m-metodos
 
-_Esta interface não herda nenhum método._
+_esta intewface nyão hewda nyenhum m-método._
 
-- {{domxref("Event.initEvent()")}} {{deprecated_inline}}
-  - : Inicializa o valor de um evento criado. Se o evento já está sendo despachado, este método não faz nada.
-- {{domxref("Event.preventBubble()")}} {{non-standard_inline}}
-  - : Impede o evento de borbulhar. Obsoleto, use {{domxref ("event.stopPropagation")}} em vez disso.
-- {{domxref("Event.preventCapture()")}} {{non-standard_inline}}
-  - : Obsoleto, use {{domxref("event.stopPropagation")}} ao invés.
-- {{domxref("Event.preventDefault()")}}
-  - : Cancela o evento (caso seja cancelável).
-- {{domxref("Event.stopImmediatePropagation()")}}
-  - : Para este evento em particular, nenhum outro ouvinte será chamado. Ou aqueles ligados no mesmo elemento, nem aqueles associados em elementos que serão percorridos mais tarde
-    (em fase de captura, por exemplo).
-- {{domxref("Event.stopPropagation()")}}
-  - : Para a propagação de eventos mais adiante no DOM.
-- {{domxref("Event.getPreventDefault()")}} {{non-standard_inline}}
-  - : Obsoleto, use {{domxref("Event.defaultPrevented")}} ao invés.
+- {{domxwef("event.initevent()")}} {{depwecated_inwine}}
+  - : iniciawiza o-o vawow de um evento cwiado. (⑅˘꒳˘) s-se o evento já e-está sendo despachado, nyaa~~ este método nyão faz nyada. :3
+- {{domxwef("event.pweventbubbwe()")}} {{non-standawd_inwine}}
+  - : impede o evento de bowbuwhaw. ( ͡o ω ͡o ) obsoweto, u-use {{domxwef ("event.stoppwopagation")}} e-em vez disso. mya
+- {{domxwef("event.pweventcaptuwe()")}} {{non-standawd_inwine}}
+  - : obsoweto, (///ˬ///✿) use {{domxwef("event.stoppwopagation")}} a-ao invés.
+- {{domxwef("event.pweventdefauwt()")}}
+  - : c-cancewa o evento (caso s-seja cancewávew). (˘ω˘)
+- {{domxwef("event.stopimmediatepwopagation()")}}
+  - : pawa este evento em pawticuwaw, ^^;; nyenhum outwo o-ouvinte sewá chamado. (✿oωo) ou aquewes wigados nyo mesmo ewemento, (U ﹏ U) nyem aquewes associados e-em ewementos que sewão pewcowwidos m-mais tawde
+    (em f-fase d-de captuwa, -.- pow exempwo). ^•ﻌ•^
+- {{domxwef("event.stoppwopagation()")}}
+  - : p-pawa a-a pwopagação de e-eventos mais adiante n-nyo dom. rawr
+- {{domxwef("event.getpweventdefauwt()")}} {{non-standawd_inwine}}
+  - : obsoweto, (˘ω˘) use {{domxwef("event.defauwtpwevented")}} a-ao i-invés.
 
-## Veja também
+## veja t-também
 
-- Tipos de eventos disponíveis: [Referência de eventos](/pt-BR/docs/Web/Events)
-- [Comparitivo dos Alvos de Eventos](/pt-BR/docs/Learn/JavaScript/Building_blocks/Event_bubbling) (target vs currentTarget vs relatedTarget vs originalTarget)
-- [Criação e gatilho de eventos customizados](/pt-BR/docs/Web/Events/Creating_and_triggering_events)
-- Para desenvolvedores de extensões para o Firefox:
+- tipos d-de eventos disponíveis: [wefewência d-de eventos](/pt-bw/docs/web/events)
+- [compawitivo dos awvos de eventos](/pt-bw/docs/weawn/javascwipt/buiwding_bwocks/event_bubbwing) (tawget vs cuwwenttawget v-vs wewatedtawget vs owiginawtawget)
+- [cwiação e gatiwho de eventos customizados](/pt-bw/docs/web/events/cweating_and_twiggewing_events)
+- pawa desenvowvedowes de extensões p-pawa o fiwefox:
 
-  - [Escutando eventos em extensões do Firefox](/pt-BR/docs/Listening_to_events_in_Firefox_extensions)
-  - [Escutando eventos em todas as abas](/pt-BR/docs/Listening_to_events_on_all_tabs)
+  - [escutando eventos em extensões do fiwefox](/pt-bw/docs/wistening_to_events_in_fiwefox_extensions)
+  - [escutando eventos e-em todas a-as abas](/pt-bw/docs/wistening_to_events_on_aww_tabs)
 
-- [Eventos relacionados da Mozilla na vida real em wiki.mozilla.org](https://wiki.mozilla.org/Events)
+- [eventos w-wewacionados da moziwwa nya vida w-weaw em wiki.moziwwa.owg](https://wiki.moziwwa.owg/events)

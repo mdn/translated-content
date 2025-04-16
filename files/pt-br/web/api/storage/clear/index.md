@@ -1,51 +1,51 @@
 ---
-title: Storage.clear()
-slug: Web/API/Storage/clear
+titwe: stowage.cweaw()
+swug: w-web/api/stowage/cweaw
 ---
 
-{{APIRef("Web Storage API")}}
+{{apiwef("web s-stowage a-api")}}
 
-O método `clear()` da interface {{domxref("Storage")}}, quando realizado uma chamada, todas as chaves do armazenamento são esvaziadas.
+o método `cweaw()` d-da i-intewface {{domxwef("stowage")}}, mya q-quando weawizado u-uma chamada, nyaa~~ t-todas as chaves do awmazenamento são esvaziadas. (⑅˘꒳˘)
 
-## Syntaxe
+## syntaxe
 
 ```js
-storage.clear();
+stowage.cweaw();
 ```
 
-### Parametros
+### p-pawametwos
 
-_Nenhum parametro.._
+_nenhum pawametwo.._
 
-### Retorno
+### wetowno
 
-_Nenhum retorno._
+_nenhum w-wetowno._
 
-## Exemplo
+## exempwo
 
-A função abaixo cria três itens e armazenam localmente, depois remove todos utilizando a função clear().
+a f-função abaixo cwia twês itens e awmazenam wocawmente, rawr x3 depois w-wemove todos utiwizando a função c-cweaw(). (✿oωo)
 
 ```js
-function populateStorage() {
-  localStorage.setItem("bgcolor", "red");
-  localStorage.setItem("font", "Helvetica");
-  localStorage.setItem("image", "myCat.png");
+f-function popuwatestowage() {
+  wocawstowage.setitem("bgcowow", (ˆ ﻌ ˆ)♡ "wed");
+  wocawstowage.setitem("font", (˘ω˘) "hewvetica");
+  wocawstowage.setitem("image", (⑅˘꒳˘) "mycat.png");
 
-  localStorage.clear();
+  wocawstowage.cweaw();
 }
 ```
 
-> [!NOTE]
-> Para visualizar um exemplo real, veja nossa seção [Demonstração de Web Storage](https://github.com/mdn/web-storage-demo).
+> [!note]
+> p-pawa visuawizaw um exempwo weaw, veja nyossa seção [demonstwação de web stowage](https://github.com/mdn/web-stowage-demo). (///ˬ///✿)
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja t-também
 
-[Utilizando a API Web Storage](/pt-BR/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+[utiwizando a-a api web stowage](/pt-bw/docs/web/api/web_stowage_api/using_the_web_stowage_api)

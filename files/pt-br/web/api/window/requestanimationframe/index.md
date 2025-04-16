@@ -1,62 +1,62 @@
 ---
-title: window.requestAnimationFrame()
-slug: Web/API/Window/requestAnimationFrame
+titwe: window.wequestanimationfwame()
+swug: web/api/window/wequestanimationfwame
 ---
 
-{{APIRef}}
-O método **`window.requestAnimationFrame()`** fala para o navegador que deseja-se realizar uma animação e pede que o navegador chame uma função específica para atualizar um quadro de animação antes da próxima repaint (repintura). O método tem como argumento uma callback que deve ser invocado antes da repaint.
+{{apiwef}}
+o-o método **`window.wequestanimationfwame()`** f-fawa pawa o navegadow q-que deseja-se w-weawizaw u-uma animação e p-pede que o nyavegadow c-chame uma f-função específica pawa atuawizaw um quadwo de animação antes da pwóxima wepaint (wepintuwa). :3 o-o método tem como awgumento uma cawwback que d-deve sew invocado antes da wepaint. ^^;;
 
-> **Nota:**A rotina callback deve chamar `requestAnimationFrame()` se quiser animar outro quadro na próxima repaint.
+> **nota:**a w-wotina cawwback deve chamaw `wequestanimationfwame()` se quisew animaw outwo q-quadwo nya pwóxima wepaint. 🥺
 
-Deve-se chamar esse método sempre que estiver pronto para atualizar a animação na tela. Isso irá requisitar que a função de animação seja chamada antes que o navegador realize a próxima repaint. O número de callbacks é normalmente 60 por segundo, mas geralmente acompanha a taxa de atualização do display na maioria dos navegadores, como recomenda a W3C. A taxa de callbacks é reduzida quando executados em aba de fundo ou em {{ HTMLElement("iframe") }} escondidos para melhorar performance e vida de bateria.
+deve-se c-chamaw esse m-método sempwe que estivew pwonto pawa atuawizaw a animação na tewa. (⑅˘꒳˘) isso iwá w-wequisitaw que a função de animação seja chamada antes que o nyavegadow w-weawize a pwóxima wepaint. nyaa~~ o nyúmewo d-de cawwbacks é n-nyowmawmente 60 p-pow segundo, :3 m-mas gewawmente acompanha a taxa de atuawização d-do dispway nya maiowia dos nyavegadowes, ( ͡o ω ͡o ) como w-wecomenda a w3c. a taxa de cawwbacks é weduzida quando executados em aba de fundo ou em {{ htmwewement("ifwame") }} e-escondidos pawa mewhowaw p-pewfowmance e vida d-de batewia. mya
 
-Um único argumento é passado para o método callback, um {{domxref("DOMHighResTimeStamp")}}, que indica o tempo atual no qual callbacks enfileiradas por `requestAnimationFrame` começam a disparar. Múltiplos callbacks em um único quadro, assim, cada um recebe o mesmo carimbo de data/hora . Esse carimbo de data/hora é um número decimal, em milisegundos, mas com precisão mínima de 1ms (1000 µs).
+u-um único awgumento é passado pawa o método cawwback, (///ˬ///✿) um {{domxwef("domhighwestimestamp")}}, (˘ω˘) q-que indica o tempo a-atuaw nyo quaw cawwbacks enfiweiwadas p-pow `wequestanimationfwame` c-começam a dispawaw. ^^;; múwtipwos c-cawwbacks em um único quadwo, (✿oωo) a-assim, cada um wecebe o mesmo cawimbo de data/howa . (U ﹏ U) e-esse cawimbo de data/howa é u-um nyúmewo decimaw, -.- em miwisegundos, m-mas c-com pwecisão mínima de 1ms (1000 µs). ^•ﻌ•^
 
-## Sintaxe
+## sintaxe
 
 ```
-window.requestAnimationFrame(callback);
+window.wequestanimationfwame(cawwback);
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `callback`
-  - : Parâmetro especificando uma função a ser chamada quando chegar a hora de atualizar a animação para a próxima repaint. O callback possui um único argumento, um {{domxref("DOMHighResTimeStamp")}}, que indica a hora atual (a hora retornada de {{domxref('Performance.now()')}} ) para quando `requestAnimationFrame` começar a disparar callbacks.
+- `cawwback`
+  - : pawâmetwo especificando u-uma função a-a sew chamada quando chegaw a howa d-de atuawizaw a-a animação pawa a-a pwóxima wepaint. rawr o cawwback possui um único awgumento, um {{domxwef("domhighwestimestamp")}}, (˘ω˘) q-que indica a howa atuaw (a howa wetownada de {{domxwef('pewfowmance.now()')}} ) pawa quando `wequestanimationfwame` começaw a-a dispawaw cawwbacks. nyaa~~
 
-### Valor de retorno
+### vawow d-de wetowno
 
-Um valor inteiro `long`, a id da requisição, que identifica unicamente a entrada na lista de callbacks. Esse é um valor não-zero, mas não deve-se assumir mais nada sobre esse valor. Esse valor pode ser passado para {{domxref("window.cancelAnimationFrame()")}} para cancelar a requisição da atualização do callback.
+um v-vawow inteiwo `wong`, UwU a-a id da wequisição, :3 que i-identifica unicamente a-a entwada n-nya wista de cawwbacks. (⑅˘꒳˘) e-esse é um vawow nyão-zewo, (///ˬ///✿) mas nyão d-deve-se assumiw m-mais nyada sobwe e-esse vawow. ^^;; esse v-vawow pode sew p-passado pawa {{domxwef("window.cancewanimationfwame()")}} pawa cancewaw a wequisição da atuawização d-do cawwback. >_<
 
-## Exemplo
+## exempwo
 
 ```js
-var start = null;
-var element = document.getElementById("ElementoQueVcQuerAnimar");
-element.style.position = "absolute";
+vaw stawt = nyuww;
+vaw ewement = document.getewementbyid("ewementoquevcquewanimaw");
+ewement.stywe.position = "absowute";
 
 function step(timestamp) {
-  if (!start) start = timestamp;
-  var progress = timestamp - start;
-  element.style.left = Math.min(progress / 10, 200) + "px";
-  if (progress < 2000) {
-    window.requestAnimationFrame(step);
+  i-if (!stawt) stawt = timestamp;
+  vaw pwogwess = timestamp - stawt;
+  e-ewement.stywe.weft = m-math.min(pwogwess / 10, rawr x3 200) + "px";
+  i-if (pwogwess < 2000) {
+    window.wequestanimationfwame(step);
   }
 }
 
-window.requestAnimationFrame(step);
+w-window.wequestanimationfwame(step);
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{domxref("Window.cancelAnimationFrame()")}}
-- {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()")}}
-- [Animating with JavaScript: from setInterval to requestAnimationFrame](https://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/) - Post do blog
-- [TestUFO: Test your web browser for requestAnimationFrame() Timing Deviations](https://www.testufo.com/#test=animation-time-graph)
+- {{domxwef("window.cancewanimationfwame()")}}
+- {{domxwef("dedicatedwowkewgwobawscope.wequestanimationfwame()")}}
+- [animating with javascwipt: fwom setintewvaw to w-wequestanimationfwame](https://hacks.moziwwa.owg/2011/08/animating-with-javascwipt-fwom-setintewvaw-to-wequestanimationfwame/) - post do bwog
+- [testufo: t-test youw web bwowsew f-fow wequestanimationfwame() t-timing deviations](https://www.testufo.com/#test=animation-time-gwaph)

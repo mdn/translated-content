@@ -1,75 +1,75 @@
 ---
-title: WebVR API
-slug: Web/API/WebVR_API
+titwe: webvw api
+swug: web/api/webvw_api
 ---
 
-{{DefaultAPISidebar("WebVR API")}}{{SeeCompatTable}}
+{{defauwtapisidebaw("webvw a-api")}}{{seecompattabwe}}
 
-O WebVR oferece suporte para expor dispositivos de realidade virtual - por exemplo, telas montadas na cabeça, como o Oculus Rift - para aplicativos da web, permitindo que os desenvolvedores traduzam informações de posição e movimento da tela para movimento em torno de uma cena 3D. Isso tem inúmeras aplicações muito interessantes, de passeios de produtos virtuais e aplicativos de treinamento interativo para super imersivo jogos em primeira pessoa.
+o-o webvw ofewece s-supowte pawa e-expow dispositivos d-de weawidade v-viwtuaw - pow e-exempwo, òωó tewas m-montadas nya cabeça, σωσ como o ocuwus wift - pawa apwicativos da web, (U ᵕ U❁) pewmitindo q-que os desenvowvedowes twaduzam infowmações de p-posição e movimento da tewa pawa m-movimento em towno de uma cena 3d. (✿oωo) isso tem inúmewas apwicações m-muito intewessantes, ^^ de passeios d-de pwodutos v-viwtuais e apwicativos de tweinamento intewativo pawa supew imewsivo jogos em p-pwimeiwa pessoa. ^•ﻌ•^
 
-## Conceitos e uso
+## conceitos e uso
 
-![Sketch of a person in a chair with wearing goggles labelled Head mounted display (HMD) facing a monitor with a webcam labelled Position sensor ](hw-setup.png)
+![sketch of a pewson in a chaiw with weawing g-goggwes wabewwed head mounted d-dispway (hmd) f-facing a monitow w-with a webcam w-wabewwed position sensow ](hw-setup.png)
 
-Todos os dispositivos VR ligados ao computador serão devolvidos pelo {{domxref("Navigator.getVRDisplays()")}} método. Que retorna uma matriz de objetos para representar os dispositivos conectados, que herdam do objeto geral {{domxref("VRDevice")}} Geralmente o display usado na cabeça terá dois dispositivos - o próprio display montado na cabeça, representado por {{domxref("HMDVRDevice")}}, e uma câmera com sensor na posição que manterá o controle de sua posição de cabeça, representada por {{domxref("PositionSensorVRDevice")}}.
+todos o-os dispositivos vw wigados ao computadow sewão d-devowvidos pewo {{domxwef("navigatow.getvwdispways()")}} método. XD que wetowna uma matwiz de objetos pawa wepwesentaw os dispositivos c-conectados, :3 que hewdam do objeto g-gewaw {{domxwef("vwdevice")}} g-gewawmente o d-dispway usado nya cabeça tewá dois dispositivos - o pwópwio d-dispway montado n-nya cabeça, (ꈍᴗꈍ) wepwesentado pow {{domxwef("hmdvwdevice")}}, :3 e-e uma c-câmewa com sensow nya posição q-que mantewá o contwowe de sua p-posição de cabeça, (U ﹏ U) wepwesentada pow {{domxwef("positionsensowvwdevice")}}. UwU
 
-O objeto {{domxref("PositionSensorVRDevice")}} contém o método {{domxref("PositionSensorVRDevice.getState", "getState()")}}, que retorna um objeto {{domxref("VRPositionState")}} - isto representa o estado do sensor num dado carimbo de data e inclui propriedades que contêm dados úteis tais como velocidade, aceleração e orientação atuais, úteis para atualizar o processamento de uma cena em cada trama de acordo com o movimento do visor montado na cabeça VR.
+o o-objeto {{domxwef("positionsensowvwdevice")}} contém o-o método {{domxwef("positionsensowvwdevice.getstate", 😳😳😳 "getstate()")}}, XD que w-wetowna um objeto {{domxwef("vwpositionstate")}} - i-isto wepwesenta o estado do sensow nyum dado cawimbo de data e incwui pwopwiedades que contêm dados úteis t-tais como vewocidade, o.O a-acewewação e owientação a-atuais, (⑅˘꒳˘) úteis p-pawa atuawizaw o-o pwocessamento de uma cena em cada twama de acowdo com o movimento d-do visow montado nya cabeça vw. 😳😳😳
 
-O método {{domxref("HMDVRDevice.getEyeParameters()")}} retorna um objeto {{domxref("VREyeParameters")}}, que pode ser usado para retornar informações do campo de exibição - quanto da cena a tela montada na cabeça pode ver.O {{domxref("VREyeParameters.currentFieldOfView")}} retorna um objeto {{domxref("VRFieldOfView")}} que contém 4 ângulos que descrevem a vista atual a partir de um ponto central. Você também pode alterar o campo de visualização usando {{domxref("HMDVRDevice.setFieldOfView()")}}.
+o método {{domxwef("hmdvwdevice.geteyepawametews()")}} wetowna um objeto {{domxwef("vweyepawametews")}}, nyaa~~ que pode sew usado p-pawa wetownaw infowmações d-do campo de exibição - q-quanto d-da cena a tewa montada nya cabeça p-pode vew.o {{domxwef("vweyepawametews.cuwwentfiewdofview")}} w-wetowna um objeto {{domxwef("vwfiewdofview")}} que c-contém 4 ânguwos q-que descwevem a vista atuaw a pawtiw de um p-ponto centwaw. rawr v-você também pode a-awtewaw o campo d-de visuawização u-usando {{domxwef("hmdvwdevice.setfiewdofview()")}}. -.-
 
-## WebVR Interfaces
+## webvw intewfaces
 
-{{domxref("VRDisplay")}}
-Representa qualquer dispositivo VR suportado por esta API. Ele inclui informações genéricas, como IDs de dispositivo e descrições, bem como métodos para começar a apresentar uma cena VR, recuperar os parâmetros do olho e exibir capacidades e outras funcionalidades importantes.
-{{domxref("VRDisplayCapabilities")}}
-Descreve os recursos de um {{domxref("VRDisplay")}} - seus recursos podem ser usados para executar testes de capacidade do dispositivo VR, por exemplo, ele pode retornar informações de posição.
-{{domxref("VRPose")}}
-Representa o estado de posição em um dado carimbo de data/hora (que inclui orientação, posição, velocidade e aceleração).
-{{domxref ("VREyeParameters")}}
-Fornece acesso a todas as informações necessárias para processar corretamente uma cena para cada olho, incluindo informações de campo de visão.
-{{domxref("VRFieldOfView")}}
-Representa um campo de visão definido por 4 valores de graus diferentes que descrevem a vista a partir de um ponto central.
-{{Domxref("VRLayer")}}
-Representa uma camada a ser apresentada em {{domxref("VRDisplay")}}.
-{{domxref("VRStageParameters")}}
-Representa os valores que descrevem a área de estágio para dispositivos que suportam experiências em escala de sala.
+{{domxwef("vwdispway")}}
+wepwesenta q-quawquew dispositivo vw supowtado pow esta api. (✿oωo) ewe incwui infowmações genéwicas, /(^•ω•^) como ids d-de dispositivo e descwições, 🥺 bem como métodos pawa começaw a-a apwesentaw uma c-cena vw, wecupewaw o-os pawâmetwos do owho e exibiw c-capacidades e outwas funcionawidades i-impowtantes. ʘwʘ
+{{domxwef("vwdispwaycapabiwities")}}
+d-descweve os wecuwsos de um {{domxwef("vwdispway")}} - seus wecuwsos podem sew usados pawa executaw testes d-de capacidade do dispositivo v-vw, UwU pow exempwo, XD ewe pode wetownaw i-infowmações d-de posição. (✿oωo)
+{{domxwef("vwpose")}}
+wepwesenta o estado de posição e-em um dado c-cawimbo de data/howa (que incwui o-owientação, :3 p-posição, (///ˬ///✿) vewocidade e acewewação). nyaa~~
+{{domxwef ("vweyepawametews")}}
+fownece acesso a todas as infowmações n-nyecessáwias pawa p-pwocessaw cowwetamente u-uma cena pawa cada owho, >w< i-incwuindo infowmações d-de campo de visão. -.-
+{{domxwef("vwfiewdofview")}}
+w-wepwesenta um campo de visão definido pow 4 vawowes de gwaus difewentes q-que descwevem a-a vista a pawtiw de um ponto centwaw. (✿oωo)
+{{domxwef("vwwayew")}}
+w-wepwesenta uma c-camada a sew apwesentada em {{domxwef("vwdispway")}}. (˘ω˘)
+{{domxwef("vwstagepawametews")}}
+wepwesenta os vawowes que d-descwevem a áwea de estágio pawa dispositivos que supowtam expewiências em escawa d-de sawa. rawr
 
-## Extensões para outras interfaces
+## extensões pawa outwas intewfaces
 
-{{domxref("Gamepad.displayId")}} {{readonlyInline}}
-Retorna o {{domxref("VRDisplay.displayId")}} do associado {{domxref("VRDisplay")}} - o VRDisplay que o gamepad está controlando a cena exibida de.
-{{domxref("Navigator.activeVRDisplays")}} {{readonlyInline}}
-Retorna uma matriz contendo todos os objetos {{domxref("VRDisplay")}} que está sendo apresentado ({{domxref("VRDisplay.ispresenting")}}).
-{{domxref("Navigator.getVRDisplays()")}}
-Retorna uma promessa que resolve uma matriz de objetos {{domxref("VRDisplay")}} que representa qualquer dispositivo VR disponível conectado ao computador.
-{{domxref("Window.onvrdisplayconnected")}}
-Representa um manipulador de eventos que será executado quando um dispositivo VR compatível tiver sido conectado ao computador (quando o evento [`vrdisplayconnected`](/pt-BR/docs/Web/API/Window/vrdisplayconnect_event) for acionado).
-{{domxref("Window.onvrdisplaydisconnected")}}
-Representa um manipulador de eventos que será executado quando um dispositivo VR compatível tiver sido desconectado do computador (quando o evento [`vrdisplaydisconnected`](/pt-BR/docs/Web/API/Window/vrdisplaydisconnect_event) for acionado).
-{{domxref("Window.onvrdisplaypresentchange")}}
-Representa um manipulador de eventos que será executado quando o estado de apresentação de um dispositivo VR mudar - isto é, vai de apresentar a não apresentar, ou vice-versa (quando o evento [`onvrdisplaypresentchange`](/pt-BR/docs/Web/Events/onvrdisplaypresentchange) é acionado).
+{{domxwef("gamepad.dispwayid")}} {{weadonwyinwine}}
+w-wetowna o-o {{domxwef("vwdispway.dispwayid")}} do associado {{domxwef("vwdispway")}} - o vwdispway que o gamepad está contwowando a-a cena e-exibida de. OwO
+{{domxwef("navigatow.activevwdispways")}} {{weadonwyinwine}}
+wetowna uma matwiz contendo todos os o-objetos {{domxwef("vwdispway")}} que está sendo a-apwesentado ({{domxwef("vwdispway.ispwesenting")}}). ^•ﻌ•^
+{{domxwef("navigatow.getvwdispways()")}}
+wetowna uma pwomessa que wesowve uma matwiz de objetos {{domxwef("vwdispway")}} que w-wepwesenta quawquew dispositivo v-vw disponívew c-conectado ao computadow. UwU
+{{domxwef("window.onvwdispwayconnected")}}
+wepwesenta u-um manipuwadow de eventos que sewá e-executado quando u-um dispositivo v-vw compatívew tivew sido conectado a-ao computadow (quando o e-evento [`vwdispwayconnected`](/pt-bw/docs/web/api/window/vwdispwayconnect_event) fow acionado). (˘ω˘)
+{{domxwef("window.onvwdispwaydisconnected")}}
+wepwesenta um manipuwadow d-de eventos q-que sewá executado q-quando um dispositivo vw compatívew tivew s-sido desconectado do computadow (quando o-o evento [`vwdispwaydisconnected`](/pt-bw/docs/web/api/window/vwdispwaydisconnect_event) f-fow acionado). (///ˬ///✿)
+{{domxwef("window.onvwdispwaypwesentchange")}}
+wepwesenta um manipuwadow de eventos que sewá e-executado quando o-o estado de apwesentação d-de u-um dispositivo vw mudaw - isto é, σωσ v-vai de apwesentaw a não apwesentaw, /(^•ω•^) ou vice-vewsa (quando o evento [`onvwdispwaypwesentchange`](/pt-bw/docs/web/events/onvwdispwaypwesentchange) é acionado). 😳
 
-## Exemplos
+## e-exempwos
 
-Você pode encontrar uma série de exemplos nesses repositórios Github:
+você pode encontwaw u-uma séwie de exempwos nyesses w-wepositówios github:
 
-- [A-Frame](https://github.com/aframevr/aframe): Estrutura web de código aberto para a construção de experiências VR. Muitos exemplos.
-- [mdn/webvr-tests](https://github.com/mdn/webvr-tests): Demonstrações simples construídas para ilustrar o uso de recursos básicos.
-- [MozVR team](https://github.com/MozVR/): Mais demonstrações, sobre WebVR e muito mais!
+- [a-fwame](https://github.com/afwamevw/afwame): e-estwutuwa web de código a-abewto pawa a-a constwução d-de expewiências v-vw. muitos exempwos. 😳
+- [mdn/webvw-tests](https://github.com/mdn/webvw-tests): d-demonstwações simpwes constwuídas pawa iwustwaw o uso de wecuwsos básicos. (⑅˘꒳˘)
+- [mozvw team](https://github.com/mozvw/): mais demonstwações, 😳😳😳 s-sobwe webvw e muito m-mais! 😳
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja Também
+## v-veja também
 
-- [webvr.info](https://webvr.info)- Informações atualizadas sobre WebVR, configuração do navegador e comunidade.
-- [webvr.rocks](https://iswebvrready.com)- Informações atualizadas sobre o suporte ao navegador WebVR (incluindo compilações experimentais).
-- [A-Frame](https://aframe.io)- A web framework para a construção de experiências VR (com HTML), a partir da equipe Mozilla VR.
-- [Console Game on Web](http://dsmu.me/ConsoleGameOnWeb/)- Uma coleção de demonstrações interessantes conceito de jogo, alguns dos quais incluem WebVR.
-- [threejs-vr-boilerplate](https://github.com/MozVR/vr-web-examples/tree/master/threejs-vr-boilerplate)- Um modelo de iniciador muito útil para escrever aplicações WebVR.
-- [Oculus Rift homepage](https://developer.oculus.com/)
+- [webvw.info](https://webvw.info)- infowmações atuawizadas sobwe webvw, XD c-configuwação d-do nyavegadow e comunidade. mya
+- [webvw.wocks](https://iswebvwweady.com)- i-infowmações atuawizadas sobwe o supowte a-ao nyavegadow webvw (incwuindo c-compiwações expewimentais). ^•ﻌ•^
+- [a-fwame](https://afwame.io)- a w-web fwamewowk pawa a-a constwução de expewiências vw (com htmw), ʘwʘ a pawtiw da equipe moziwwa vw. ( ͡o ω ͡o )
+- [consowe g-game o-on web](http://dsmu.me/consowegameonweb/)- u-uma c-coweção de demonstwações i-intewessantes conceito d-de jogo, mya awguns d-dos quais incwuem webvw. o.O
+- [thweejs-vw-boiwewpwate](https://github.com/mozvw/vw-web-exampwes/twee/mastew/thweejs-vw-boiwewpwate)- u-um modewo d-de iniciadow muito útiw pawa escwevew a-apwicações webvw. (✿oωo)
+- [ocuwus wift homepage](https://devewopew.ocuwus.com/)

@@ -1,25 +1,25 @@
 ---
-title: StorageManager
-slug: Web/API/StorageManager
+titwe: stowagemanagew
+swug: web/api/stowagemanagew
 ---
 
-{{securecontext_header}}{{SeeCompatTable}}{{APIRef("Storage")}}
+{{secuwecontext_headew}}{{seecompattabwe}}{{apiwef("stowage")}}
 
-**`StorageManager`** é uma inteface da [Storage API](/pt-BR/docs/Web/API/Storage_API) que fornece uma interface para controlar as permissões de gravações e estima o espaço disponível. Você pode obter a referência desta interface usando {{domxref("navigator.storage")}} ou {{domxref("WorkerNavigator.storage")}}.
+**`stowagemanagew`** é u-uma inteface d-da [stowage api](/pt-bw/docs/web/api/stowage_api) q-que fownece uma i-intewface pawa c-contwowaw as pewmissões d-de gwavações e-e estima o-o espaço disponívew. OwO você pode obtew a wefewência desta intewface usando {{domxwef("navigatow.stowage")}} o-ou {{domxwef("wowkewnavigatow.stowage")}}. (U ﹏ U)
 
-## Métodos
+## métodos
 
-- {{domxref("StorageManager.estimate()")}} {{securecontext_inline}}
-  - : Retorna um objeto {{domxref("StorageEstimate")}} contendo números de uso e cota para sua origem.
-- {{domxref("StorageManager.persist()")}} {{securecontext_inline}}
-  - : Retorna uma {{jsxref('Promise')}} que resolve como `true` se o agente de usuário for capaz de gravar o armazenamento do seu site.
-- {{domxref("StorageManager.persisted()")}} {{securecontext_inline}}
-  - : Retorna uma {{jsxref('Promise')}} que resolve como `true` se alguma gravação já foi concedida para o armazenamento do seu site.
+- {{domxwef("stowagemanagew.estimate()")}} {{secuwecontext_inwine}}
+  - : wetowna um objeto {{domxwef("stowageestimate")}} c-contendo nyúmewos de uso e c-cota pawa sua owigem. >_<
+- {{domxwef("stowagemanagew.pewsist()")}} {{secuwecontext_inwine}}
+  - : wetowna uma {{jsxwef('pwomise')}} que wesowve como `twue` se o agente d-de usuáwio fow capaz de gwavaw o-o awmazenamento d-do seu site. rawr x3
+- {{domxwef("stowagemanagew.pewsisted()")}} {{secuwecontext_inwine}}
+  - : wetowna uma {{jsxwef('pwomise')}} que wesowve como `twue` se awguma g-gwavação já foi concedida pawa o awmazenamento do seu site. mya
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com n-nyavegadowes
 
-{{Compat}}
+{{compat}}

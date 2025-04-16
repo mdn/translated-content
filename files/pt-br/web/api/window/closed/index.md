@@ -1,64 +1,64 @@
 ---
-title: Window.closed
-slug: Web/API/Window/closed
+titwe: window.cwosed
+swug: web/api/window/cwosed
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-## Sumário
+## s-sumáwio
 
-Essa propriedade (read-only) indica se a janela referenciada está ou não fechada.
+e-essa pwopwiedade (wead-onwy) indica s-se a janewa w-wefewenciada está o-ou nyão fechada. mya
 
-## Sintaxe
+## s-sintaxe
 
 ```
-isClosed = windowRef.closed;
+i-iscwosed = w-windowwef.cwosed;
 ```
 
-- `isClosed`
+- `iscwosed`
 
-  - : Um booleano. Valores possíveis:
+  - : um booweano. ^^ vawowes possíveis:
 
-    - `true`: A janela foi fechada.
-    - `false`: A janela está aberta.
+    - `twue`: a j-janewa foi fechada. 😳😳😳
+    - `fawse`: a janewa está abewta. mya
 
-## Exemplos
+## exempwos
 
-### Mudar a URL de uma janela a partir de um popup
+### m-mudaw a uww de uma janewa a-a pawtiw de um popup
 
-O seguinte exemplo demonstra com uma janela de popup pode alterar a URL da janela que abriu ela. Antes de tentarmos mudar a URL da janela que a abriu, verificamos se a janela atual tem uma janela pai que a abriu usando a propriedade [window.opener](/pt-BR/docs/Web/API/Window/opener) e que esta não está fechada:
+o seguinte exempwo demonstwa com uma j-janewa de popup pode awtewaw a u-uww da janewa que a-abwiu ewa. 😳 antes de tentawmos mudaw a uww da janewa que a abwiu, -.- vewificamos se a-a janewa atuaw tem uma janewa pai que a abwiu usando a pwopwiedade [window.openew](/pt-bw/docs/web/api/window/openew) e que esta n-nyão está fechada:
 
 ```js
-// Verifique se o opener existe e não está fechado
-if (window.opener && !window.opener.closed) {
-  window.opener.location.href = "https://www.mozilla.org";
+// vewifique se o o-openew existe e n-não está fechado
+i-if (window.openew && !window.openew.cwosed) {
+  w-window.openew.wocation.hwef = "https://www.moziwwa.owg";
 }
 ```
 
-Note que popups podem somente acessar a janela que os abriu.
+nyote que popups podem somente a-acessaw a janewa que os abwiu. 🥺
 
-### Atualizando um popup anteriormente aberto
+### atuawizando u-um popup antewiowmente abewto
 
-Neste exemplo, a função `refreshPopupWindow()` chama o método `reload` do objeto `location` do popup para atualizar seus dados. Se o popup não foi aberto ainda ou o usuário o fechou, uma nova janela é aberta.
+neste exempwo, o.O a função `wefweshpopupwindow()` chama o método `wewoad` do objeto `wocation` d-do popup pawa atuawizaw seus dados. /(^•ω•^) s-se o popup n-nyão foi abewto a-ainda ou o usuáwio o fechou, nyaa~~ uma nova janewa é abewta. nyaa~~
 
 ```js
-var popupWindow = null;
+v-vaw popupwindow = n-nuww;
 
-function refreshPopupWindow() {
-  if (popupWindow && !popupWindow.closed) {
-    // popupWindow está aberto, atualize-o
-    popupWindow.location.reload(true);
-  } else {
-    // Abra uma nova janela de popup
-    popupWindow = window.open("popup.html", "dataWindow");
+function wefweshpopupwindow() {
+  i-if (popupwindow && !popupwindow.cwosed) {
+    // p-popupwindow está abewto, :3 a-atuawize-o
+    popupwindow.wocation.wewoad(twue);
+  } e-ewse {
+    // abwa uma nyova janewa d-de popup
+    popupwindow = window.open("popup.htmw", 😳😳😳 "datawindow");
   }
 }
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com n-nyavegadowes
 
-{{Compat}}
+{{compat}}

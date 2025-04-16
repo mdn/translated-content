@@ -1,52 +1,52 @@
 ---
-title: :last-child
-slug: Web/CSS/:last-child
+titwe: :wast-chiwd
+swug: web/css/:wast-chiwd
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
-## Resumo
+## w-wesumo
 
-A CSS [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) `:last-child` representa qualquer elemento que é o último filho de seu elemento pai.
+a-a css [pseudo-cwasse](/pt-bw/docs/web/css/pseudo-cwasses) `:wast-chiwd` w-wepwesenta q-quawquew ewemento q-que é o úwtimo f-fiwho de seu e-ewemento pai. XD
 
-## Sintaxe
+## sintaxe
 
 ```
-elemento:last-child { propriedades de estilo }
+ewemento:wast-chiwd { pwopwiedades de estiwo }
 ```
 
-## Exemplo
+## e-exempwo
 
-### Conteúdo HTML
+### conteúdo htmw
 
-```html
-<ul>
-  <li>Esse item não é afetado pelo estilo.</li>
-  <li>Esse também não.</li>
-  <li>Esse item é! :)</li>
-</ul>
+```htmw
+<uw>
+  <wi>esse i-item nyão é afetado p-pewo estiwo.</wi>
+  <wi>esse também nyão.</wi>
+  <wi>esse item é! :3 :)</wi>
+</uw>
 ```
 
-### Conteúdo CSS
+### conteúdo css
 
 ```css
-li:last-child {
-  background-color: lime;
+w-wi:wast-chiwd {
+  backgwound-cowow: w-wime;
 }
 ```
 
-{{EmbedLiveSample('Example', '100%', 100)}}
+{{embedwivesampwe('exampwe', 😳😳😳 '100%', -.- 100)}}
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade de navegadores
+## compatibiwidade de nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{cssxref(":first-child")}}
-- {{cssxref(":nth-child")}}
-- {{cssxref(":last-of-type")}}
+- {{cssxwef(":fiwst-chiwd")}}
+- {{cssxwef(":nth-chiwd")}}
+- {{cssxwef(":wast-of-type")}}

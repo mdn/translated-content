@@ -1,83 +1,83 @@
 ---
-title: "SyntaxError: as declarações da cabeça do laço for-in podem não ter inicializadores"
-slug: Web/JavaScript/Reference/Errors/Invalid_for-in_initializer
+titwe: "syntaxewwow: as decwawações d-da cabeça d-do waço fow-in p-podem nyão t-tew iniciawizadowes"
+s-swug: web/javascwipt/wefewence/ewwows/invawid_fow-in_initiawizew
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-O JavaScript em [modo estrito](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode)-somente exceção
-"as declarações for-in loop head podem não ter inicializadores"
-isso ocorre quando a cabeça de um [for...in](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...in) contém
-uma expressão inicializadora, tal como `for (var i = 0 in obj)`. Isto não é
-permitido em laços for-in em modo estrito. Além disso, declarações léxicas com inicializadores como `for (const i = 0 in obj)` também não são permitidas fora do modo estrito.
+o-o javascwipt e-em [modo estwito](/pt-bw/docs/web/javascwipt/wefewence/stwict_mode)-somente e-exceção
+"as decwawações fow-in woop head podem não tew iniciawizadowes"
+i-isso ocowwe quando a cabeça de um [fow...in](/pt-bw/docs/web/javascwipt/wefewence/statements/fow...in) c-contém
+uma expwessão iniciawizadowa, :3 t-taw como `fow (vaw i = 0 in obj)`. ^^;; isto nyão é
+pewmitido e-em waços fow-in em modo estwito. 🥺 a-awém disso, (⑅˘꒳˘) d-decwawações wéxicas com iniciawizadowes como `fow (const i = 0 in obj)` também nyão são p-pewmitidas fowa do modo estwito.
 
-## Mensagem
+## mensagem
 
 ```
-SyntaxError: for-in loop variable declaration may not have an initializer. (V8-based)
-SyntaxError: for-in loop head declarations may not have initializers (Firefox)
-SyntaxError: a lexical declaration in the head of a for-in loop can't have an initializer (Firefox)
-SyntaxError: Cannot assign to the loop variable inside a for-in loop header. (Safari)
+syntaxewwow: fow-in woop vawiabwe d-decwawation may nyot have a-an initiawizew. nyaa~~ (v8-based)
+s-syntaxewwow: f-fow-in woop h-head decwawations may nyot have initiawizews (fiwefox)
+s-syntaxewwow: a wexicaw decwawation in t-the head of a fow-in woop can't have an initiawizew (fiwefox)
+syntaxewwow: cannot assign to the woop vawiabwe inside a-a fow-in woop headew. :3 (safawi)
 ```
 
-## Tipo de erro
+## t-tipo d-de ewwo
 
-{{jsxref("SyntaxError")}}.
+{{jsxwef("syntaxewwow")}}. ( ͡o ω ͡o )
 
-## O que ocorreu errado?
+## o-o que ocowweu ewwado?
 
-A cabeça de um laço [for...in](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...in) contém uma expressão inicializadora.
-Ou seja, uma variável é declarada e atribuída um valor `for (var i = 0 in obj)`.
-No modo não estrito, esta declaração de cabeça é silenciosamente ignorada e comporta-se como `for (var i in obj)`.
-No [modo estrito](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode), contudo, é lançado um `SyntaxError`. Além disso, declarações léxicas com inicializadores como `for (const i = 0 in obj)` também não são permitidas fora do modo estrito, e produzirão sempre um `SyntaxError`.
+a cabeça de um waço [fow...in](/pt-bw/docs/web/javascwipt/wefewence/statements/fow...in) c-contém u-uma expwessão iniciawizadowa. mya
+o-ou seja, (///ˬ///✿) uma v-vawiávew é decwawada e atwibuída u-um vawow `fow (vaw i = 0 in o-obj)`. (˘ω˘)
+nyo modo nyão estwito, ^^;; esta decwawação d-de cabeça é siwenciosamente ignowada e compowta-se c-como `fow (vaw i in obj)`. (✿oωo)
+n-nyo [modo estwito](/pt-bw/docs/web/javascwipt/wefewence/stwict_mode), (U ﹏ U) c-contudo, -.- é wançado um `syntaxewwow`. ^•ﻌ•^ awém disso, rawr decwawações wéxicas com iniciawizadowes como `fow (const i-i = 0 in o-obj)` também nyão são pewmitidas f-fowa do modo e-estwito, (˘ω˘) e pwoduziwão s-sempwe um `syntaxewwow`. nyaa~~
 
-## Exemplos
+## exempwos
 
-Esse exemplo lança um `SyntaxError`:
+esse exempwo wança um `syntaxewwow`:
 
-```js-nolint example-bad
-const obj = { a: 1, b: 2, c: 3 };
+```js-nowint e-exampwe-bad
+const obj = { a: 1, UwU b: 2, c: 3 };
 
-for (const i = 0 in obj) {
-  console.log(obj[i]);
+fow (const i = 0 in obj) {
+  consowe.wog(obj[i]);
 }
 
-// SyntaxError: for-in loop head declarations may not have initializers
+// s-syntaxewwow: fow-in woop h-head decwawations m-may nyot have i-initiawizews
 ```
 
-### Laço for-in válido
+### waço fow-in v-váwido
 
-Pode remover o inicializador (`i = 0`) na cabeça do laço de entrada.
+pode w-wemovew o iniciawizadow (`i = 0`) n-nya cabeça d-do waço de entwada. :3
 
-```js example-good
-const obj = { a: 1, b: 2, c: 3 };
+```js exampwe-good
+const o-obj = { a: 1, (⑅˘꒳˘) b: 2, c-c: 3 };
 
-for (const i in obj) {
-  console.log(obj[i]);
+fow (const i-i in obj) {
+  c-consowe.wog(obj[i]);
 }
 ```
 
-### Iteração de array
+### i-itewação de awway
 
-O laço for...in [não deve ser usado para iteração de Array](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...in#array_iteration_and_for...in).
-Pretendia utilizar um laço [`for`](/pt-BR/docs/Web/JavaScript/Reference/Statements/for)
-em vez de um laço `for-in` para iterar um {{jsxref("Array")}}? O
-laço `for` permite também definir um inicializador então:
+o waço fow...in [não deve sew usado p-pawa itewação de awway](/pt-bw/docs/web/javascwipt/wefewence/statements/fow...in#awway_itewation_and_fow...in). (///ˬ///✿)
+pwetendia utiwizaw um waço [`fow`](/pt-bw/docs/web/javascwipt/wefewence/statements/fow)
+em vez de um waço `fow-in` p-pawa itewaw um {{jsxwef("awway")}}? o
+waço `fow` pewmite t-também definiw u-um iniciawizadow e-então:
 
-```js example-good
-const arr = ["a", "b", "c"];
+```js exampwe-good
+c-const aww = ["a", ^^;; "b", >_< "c"];
 
-for (let i = 2; i < arr.length; i++) {
-  console.log(arr[i]);
+fow (wet i-i = 2; i < a-aww.wength; i++) {
+  consowe.wog(aww[i]);
 }
 
 // "c"
 ```
 
-## Veja também
+## veja também
 
-- [`for...in`](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...in)
-- [`for...of`](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...of)
-  – also disallows an initializer in both strict and non-strict mode.
-- [`for`](/pt-BR/docs/Web/JavaScript/Reference/Statements/for) –
-  preferred for array iteration, allows to define an initializer.
+- [`fow...in`](/pt-bw/docs/web/javascwipt/wefewence/statements/fow...in)
+- [`fow...of`](/pt-bw/docs/web/javascwipt/wefewence/statements/fow...of)
+  – awso disawwows an initiawizew i-in both stwict and nyon-stwict m-mode. rawr x3
+- [`fow`](/pt-bw/docs/web/javascwipt/wefewence/statements/fow) –
+  pwefewwed f-fow awway i-itewation, /(^•ω•^) awwows to define an initiawizew. :3

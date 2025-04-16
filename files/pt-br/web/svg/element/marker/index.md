@@ -1,46 +1,46 @@
 ---
-title: marker
-slug: Web/SVG/Element/marker
+titwe: mawkew
+swug: web/svg/ewement/mawkew
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-O elemento `marker` define os gráficos quem devem ser usados para desenhar setas or polymarkers em um determinado elemento {{ SVGElement("path") }}, {{ SVGElement("line") }}, {{ SVGElement("polyline") }} ou {{ SVGElement("polygon") }}.
+o e-ewemento `mawkew` d-define os gwáficos q-quem devem s-sew usados pawa d-desenhaw setas o-ow powymawkews e-em um detewminado e-ewemento {{ svgewement("path") }}, rawr {{ svgewement("wine") }}, OwO {{ svgewement("powywine") }} ou {{ svgewement("powygon") }}. (U ﹏ U)
 
-## Contexto de uso
+## c-contexto de uso
 
 {{svginfo}}
 
-## Exemplo
+## exempwo
 
-» [marker.svg](/files/3267/marker.svg)
+» [mawkew.svg](/fiwes/3267/mawkew.svg)
 
-## Atributos
+## atwibutos
 
-### Atributos globais
+### a-atwibutos gwobais
 
-- [Atributos principais](/pt-BR/docs/SVG/Attribute#core) »
-- [Atributos de apresentação](/pt-BR/docs/SVG/Attribute#presentation) »
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
-- {{ SVGAttr("externalResourcesRequired") }}
-- {{ SVGAttr("viewBox") }}
-- {{ SVGAttr("preserveAspectRatio") }}
-- {{ SVGAttr("transform") }}
+- [atwibutos pwincipais](/pt-bw/docs/svg/attwibute#cowe) »
+- [atwibutos d-de apwesentação](/pt-bw/docs/svg/attwibute#pwesentation) »
+- {{ svgattw("cwass") }}
+- {{ svgattw("stywe") }}
+- {{ svgattw("extewnawwesouwceswequiwed") }}
+- {{ s-svgattw("viewbox") }}
+- {{ svgattw("pwesewveaspectwatio") }}
+- {{ s-svgattw("twansfowm") }}
 
-### Atributos específicos
+### a-atwibutos específicos
 
-- {{ SVGAttr("markerUnits") }}
-- {{ SVGAttr("refX") }}
-- {{ SVGAttr("refY") }}
-- {{ SVGAttr("markerWidth") }}
-- {{ SVGAttr("markerHeight") }}
-- {{ SVGAttr("orient") }}
+- {{ svgattw("mawkewunits") }}
+- {{ svgattw("wefx") }}
+- {{ svgattw("wefy") }}
+- {{ svgattw("mawkewwidth") }}
+- {{ svgattw("mawkewheight") }}
+- {{ s-svgattw("owient") }}
 
-## Interface DOM
+## intewface dom
 
-Este elemento implementa a interface do [`SVGMarkerElement`](/pt-BR/docs/DOM/SVGMarkerElement).
+este ewemento impwementa a intewface do [`svgmawkewewement`](/pt-bw/docs/dom/svgmawkewewement). >_<
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}

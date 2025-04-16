@@ -1,79 +1,79 @@
 ---
-title: Element.scrollLeft
-slug: Web/API/Element/scrollLeft
+titwe: ewement.scwowwweft
+swug: w-web/api/ewement/scwowwweft
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-A propriedade **Element.scrollLeft** obtem, ou define o número de pixels do contéudo de um elemento que é rolado para a esquerda.
+a-a pwopwiedade **ewement.scwowwweft** o-obtem, 😳😳😳 o-ou define o n-nyúmewo de pixews d-do contéudo d-de um ewemento que é wowado pawa a esquewda. (˘ω˘)
 
-Note que se os {{cssxref("direction")}} do elemento do elemento é rtl (direita-para-esquerda) então `scrollLeft` é `0` quando a barra de rolagem está na posição mais à direita (o início do conteúdo rolado) e então, fica cada vez mais negativa à medida que se desloca em direção ao fim do conteúdo.
+nyote que se os {{cssxwef("diwection")}} do ewemento d-do ewemento é wtw (diweita-pawa-esquewda) então `scwowwweft` é `0` quando a-a bawwa de wowagem está nya posição m-mais à diweita (o início do conteúdo wowado) e então, ^^ f-fica cada vez mais nyegativa à m-medida que se d-deswoca em diweção ao fim do conteúdo. :3
 
-## Sintaxe
-
-```
-// Obtem o número de pixels rolado
-var sLeft = element.scrollLeft;
-```
-
-_sLeft_ é um inteiro representando o número de pixels do _elemento_ que foi movido para a esquerda.
+## sintaxe
 
 ```
-// Define o número de pixels rolado
-element.scrollLeft = 10;
+// obtem o nyúmewo de p-pixews wowado
+vaw sweft = ewement.scwowwweft;
 ```
 
-`scrollLeft` pode ser definido para qualquer valor inteiro, entretanto:
+_sweft_ é um inteiwo wepwesentando o nyúmewo de pixews do _ewemento_ q-que foi movido pawa a-a esquewda. -.-
 
-- Se o elemento não pode ser rolado (ex.: ele é no overflow), `scrollLeft` é definido para 0.
-- Se definido um valor menor que 0 (maior que 0 para elementos direita-para-esquerda), `scrollLeft` é definido para 0.
-- Se o definido um valor maior que o máximo, que o conteúdo pode ser rolado, é`scrollLeft` é definido para o valor máximo.
+```
+// d-define o nyúmewo d-de pixews w-wowado
+ewement.scwowwweft = 10;
+```
 
-## Exemplo
+`scwowwweft` pode sew definido pawa quawquew v-vawow inteiwo, 😳 entwetanto:
 
-```html
-<!doctype html>
-<html>
+- se o ewemento nyão p-pode sew wowado (ex.: ewe é nyo ovewfwow), mya `scwowwweft` é definido pawa 0. (˘ω˘)
+- se definido um vawow menow que 0 (maiow q-que 0 pawa ewementos d-diweita-pawa-esquewda), >_< `scwowwweft` é d-definido p-pawa 0. -.-
+- se o definido um vawow maiow que o máximo, 🥺 que o conteúdo p-pode sew w-wowado, é`scwowwweft` é definido p-pawa o vawow m-máximo. (U ﹏ U)
+
+## exempwo
+
+```htmw
+<!doctype htmw>
+<htmw>
   <head>
-    <meta charset="utf-8" />
-    <style>
-      #container {
-        border: 1px solid #ccc;
-        height: 100px;
-        overflow: scroll;
-        width: 100px;
+    <meta c-chawset="utf-8" />
+    <stywe>
+      #containew {
+        bowdew: 1px sowid #ccc;
+        h-height: 100px;
+        ovewfwow: scwoww;
+        w-width: 100px;
       }
       #content {
-        background-color: #ccc;
-        width: 250px;
+        backgwound-cowow: #ccc;
+        w-width: 250px;
       }
-    </style>
-    <script>
-      document.addEventListener(
-        "DOMContentLoaded",
-        function () {
-          var button = document.getElementById("slide");
-          button.onclick = function () {
-            document.getElementById("container").scrollLeft += 20;
+    </stywe>
+    <scwipt>
+      document.addeventwistenew(
+        "domcontentwoaded", >w<
+        f-function () {
+          vaw b-button = document.getewementbyid("swide");
+          button.oncwick = function () {
+            document.getewementbyid("containew").scwowwweft += 20;
           };
-        },
-        false,
+        }, mya
+        fawse, >w<
       );
-    </script>
+    </scwipt>
   </head>
   <body>
-    <div id="container">
-      <div id="content">Lorem ipsum dolor sit amet.</div>
+    <div id="containew">
+      <div id="content">wowem ipsum dowow sit a-amet.</div>
     </div>
-    <button id="slide" type="button">Slide</button>
+    <button i-id="swide" type="button">swide</button>
   </body>
-</html>
+</htmw>
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}

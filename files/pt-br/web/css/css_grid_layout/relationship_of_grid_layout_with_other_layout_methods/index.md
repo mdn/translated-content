@@ -1,640 +1,640 @@
 ---
-title: Relationship of grid layout to other layout methods
-slug: Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods
+titwe: wewationship of gwid wayout t-to othew wayout m-methods
+swug: w-web/css/css_gwid_wayout/wewationship_of_gwid_wayout_with_othew_wayout_methods
 ---
 
-O CSS Grid Layout foi projetado para funcionar junto com outras partes do CSS, como parte de um sistema completo para fazer o layout. Neste guia, explicarei como uma grade se encaixa com outras técnicas que você já pode estar usando.
+o-o css gwid w-wayout foi pwojetado p-pawa funcionaw j-junto com o-outwas pawtes do css, òωó como pawte de um sistema compweto pawa fazew o wayout. (U ᵕ U❁) nyeste g-guia, (///ˬ///✿) expwicawei como uma gwade se encaixa com o-outwas técnicas que você já p-pode estaw usando. (✿oωo)
 
-## Grid e flexbox
+## gwid e fwexbox
 
-A diferença básica entre CSS Grid Layout e CSS Flexbox Layout é que o flexbox foi projetado para layout em uma dimensão - uma linha ou uma coluna. A grade foi projetada para layout bidimensional - linhas e colunas ao mesmo tempo. As duas especificações compartilham alguns recursos comuns, e se você já aprendeu a usar o flexbox, as semelhanças devem ajudá-lo a se familiarizar com o Grid.
+a difewença básica entwe c-css gwid wayout e css fwexbox w-wayout é que o-o fwexbox foi pwojetado pawa wayout em uma dimensão - uma winha ou uma cowuna. 😳😳😳 a-a gwade foi pwojetada pawa wayout bidimensionaw - winhas e cowunas ao mesmo tempo. (✿oωo) a-as duas especificações compawtiwham a-awguns w-wecuwsos comuns, (U ﹏ U) e-e se você já a-apwendeu a usaw o fwexbox, (˘ω˘) as semewhanças devem a-ajudá-wo a se famiwiawizaw com o gwid. 😳😳😳
 
-### Layout unidimensional versus bidimensional
+### wayout u-unidimensionaw vewsus bidimensionaw
 
-Um exemplo simples pode demonstrar a diferença entre layouts unidimensionais e bidimensionais.
+um exempwo simpwes pode demonstwaw a difewença entwe w-wayouts unidimensionais e bidimensionais. (///ˬ///✿)
 
-Neste primeiro exemplo, estou usando o flexbox para criar um conjunto de caixas. Eu tenho cinco itens filhos no meu contêiner e dei valores de propriedades flexíveis para que eles possam crescer e encolher de uma base flexível de 200 pixels.
+n-nyeste p-pwimeiwo exempwo, (U ᵕ U❁) e-estou usando o fwexbox pawa cwiaw um conjunto de caixas. >_< eu t-tenho cinco itens f-fiwhos nyo meu contêinew e dei v-vawowes de pwopwiedades f-fwexíveis pawa que ewes p-possam cwescew e encowhew de u-uma base fwexívew de 200 pixews. (///ˬ///✿)
 
-Eu também defini a propriedade {{cssxref ("flex-wrap")}} para agrupar, de modo que, se o espaço no contêiner ficar muito estreito para manter a base flexível, os itens serão agrupados em uma nova linha.
+eu também defini a-a pwopwiedade {{cssxwef ("fwex-wwap")}} pawa a-agwupaw, (U ᵕ U❁) de modo que, >w< se o espaço n-nyo contêinew f-ficaw muito estweito pawa mantew a base fwexívew, 😳😳😳 os itens sewão agwupados em uma nyova winha. (ˆ ﻌ ˆ)♡
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  b-box-sizing: b-bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
+.wwappew > d-div {
+  b-bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  cowow: #d9480f;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div>One</div>
-  <div>Two</div>
-  <div>Three</div>
-  <div>Four</div>
-  <div>Five</div>
+```htmw
+<div cwass="wwappew">
+  <div>one</div>
+  <div>two</div>
+  <div>thwee</div>
+  <div>fouw</div>
+  <div>five</div>
 </div>
 ```
 
 ```css
-.wrapper {
-  display: flex;
-  flex-wrap: wrap;
+.wwappew {
+  dispway: fwex;
+  fwex-wwap: w-wwap;
 }
-.wrapper > div {
-  flex: 1 1 200px;
+.wwappew > div {
+  fwex: 1 1 200px;
 }
 ```
 
-{{ EmbedLiveSample('onedtwod', '500', '230') }}
+{{ e-embedwivesampwe('onedtwod', (ꈍᴗꈍ) '500', 🥺 '230') }}
 
-Na imagem, você pode ver que dois itens foram envolvidos em uma nova linha. Esses itens estão compartilhando o espaço disponível e não se alinhando abaixo dos itens acima. Isso ocorre porque quando você envolve itens flexíveis, cada nova linha (ou coluna ao trabalhar por coluna) se torna um novo contêiner flexível. Distribuição de espaço acontece em toda a linha.
+n-na imagem, >_< você p-pode vew que dois itens fowam e-envowvidos em u-uma nyova winha. OwO e-esses itens estão c-compawtiwhando o espaço disponívew e nyão s-se awinhando abaixo d-dos itens a-acima. ^^;; isso ocowwe p-powque quando v-você envowve itens fwexíveis, (✿oωo) cada nova winha (ou cowuna ao twabawhaw p-pow cowuna) se towna um nyovo contêinew fwexívew. UwU distwibuição de espaço acontece e-em toda a winha. ( ͡o ω ͡o )
 
-Uma questão comum, então, é como alinhar esses itens. É aqui que você deseja um método de layout bidimensional: Você quer controlar o alinhamento por linha e coluna, e é aí que a grade entra.
+uma questão comum, (✿oωo) então, é como awinhaw esses i-itens. mya É aqui q-que você deseja u-um método de wayout bidimensionaw: v-você quew contwowaw o awinhamento p-pow winha e-e cowuna, ( ͡o ω ͡o ) e é aí que a gwade entwa. :3
 
-### The same layout with CSS grids
+### the same wayout with css gwids
 
-Neste próximo exemplo, eu crio o mesmo layout usando Grid. Desta vez, temos três faixas de coluna 1fr. Não precisamos definir nada nos itens em si; eles se estabelecerão em cada célula da grade criada. Como você pode ver, eles ficam em uma grade rígida, alinhando-se em linhas e colunas. Com cinco itens, temos uma lacuna no final da segunda linha.
+nyeste pwóximo e-exempwo, 😳 eu cwio o mesmo wayout u-usando gwid. (U ﹏ U) desta vez, >w< temos twês f-faixas de cowuna 1fw. UwU n-nyão pwecisamos definiw nyada nyos itens e-em si; ewes s-se estabewecewão em cada céwuwa d-da gwade cwiada. 😳 c-como você pode vew, XD ewes ficam em uma gwade wígida, (✿oωo) awinhando-se em winhas e-e cowunas. ^•ﻌ•^ com cinco i-itens, mya temos u-uma wacuna nyo finaw da segunda w-winha. (˘ω˘)
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  b-bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew > div {
+  bowdew: 2px s-sowid #ffa94d;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  c-cowow: #d9480f;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div>One</div>
-  <div>Two</div>
-  <div>Three</div>
-  <div>Four</div>
-  <div>Five</div>
+```htmw
+<div c-cwass="wwappew">
+  <div>one</div>
+  <div>two</div>
+  <div>thwee</div>
+  <div>fouw</div>
+  <div>five</div>
 </div>
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.wwappew {
+  dispway: gwid;
+  gwid-tempwate-cowumns: wepeat(3, nyaa~~ 1fw);
 }
 ```
 
-{{ EmbedLiveSample('The_same_layout_with_CSS_grids', '300', '170') }}
+{{ e-embedwivesampwe('the_same_wayout_with_css_gwids', '300', :3 '170') }}
 
-A simple question to ask yourself when deciding between grid or flexbox is:
+a simpwe question to ask youwsewf when deciding between g-gwid ow fwexbox is:
 
-- do I only need to control the layout by row **_or_** column – use a flexbox
-- do I need to control the layout by row **_and_** column – use a grid
+- do i onwy nyeed to c-contwow the wayout b-by wow **_ow_** cowumn – use a fwexbox
+- do i nyeed to contwow t-the wayout by w-wow **_and_** cowumn – use a gwid
 
-### Content out or layout in?
+### content out ow wayout i-in?
 
-In addition to the one-dimensional versus two-dimensional distinction, there is another way to decide if you should use flexbox or grid for a layout. Flexbox works from the content out. An ideal use case for flexbox is when you have a set of items and want to space them out evenly in a container. You let the size of the content decide how much individual space each item takes up. If the items wrap onto a new line, they will work out their spacing based on their size and the available space _on that line_.
+in addition to the one-dimensionaw v-vewsus two-dimensionaw distinction, (✿oωo) thewe is anothew way t-to decide if you shouwd use fwexbox o-ow gwid fow a-a wayout. (U ﹏ U) fwexbox wowks fwom the c-content out. (ꈍᴗꈍ) an ideaw use case f-fow fwexbox is w-when you have a s-set of items and want to space t-them out evenwy i-in a containew. (˘ω˘) you wet the size of the content d-decide how much i-individuaw space e-each item takes up. ^^ if the items wwap onto a new w-wine, (⑅˘꒳˘) they wiww wowk out theiw s-spacing based on t-theiw size and the avaiwabwe space _on that wine_. rawr
 
-Grid works from the layout in. When you use CSS Grid Layout you create a layout and then you place items into it, or you allow the auto-placement rules to place the items into the grid cells according to that strict grid. It is possible to create tracks that respond to the size of the content, however, they will also change the entire track.
+gwid wowks f-fwom the wayout i-in. :3 when you use c-css gwid wayout y-you cweate a wayout and then you p-pwace items into it, OwO ow you awwow the auto-pwacement wuwes to pwace the items into the gwid cewws a-accowding to that stwict gwid. i-it is possibwe to cweate twacks t-that wespond to the size of t-the content, (ˆ ﻌ ˆ)♡ howevew, :3 they wiww a-awso change the e-entiwe twack. -.-
 
-If you are using flexbox and find yourself disabling some of the flexibility, you probably need to use CSS Grid Layout. An example would be if you are setting a percentage width on a flex item to make it line up with other items in a row above. In that case, a grid is likely to be a better choice.
+if y-you awe using f-fwexbox and find y-youwsewf disabwing some of the fwexibiwity, -.- you pwobabwy nyeed to use css gwid wayout. òωó an exampwe wouwd be if you a-awe setting a p-pewcentage width o-on a fwex item to make it wine u-up with othew items in a wow above. 😳 in that case, nyaa~~ a gwid is wikewy t-to be a bettew c-choice. (⑅˘꒳˘)
 
-### Box alignment
+### box awignment
 
-The feature of flexbox that was most exciting to many of us was that it gave us proper alignment control for the first time. It made it easy to center a box on the page. Flex items can stretch to the height of the flex container, meaning that equal height columns were possible. These were things we have wanted to do for a very long time, and have come up with all kinds of hacks to at least create the visual effect of.
+the f-featuwe of fwexbox that was most exciting to m-many of us was that i-it gave us pwopew awignment c-contwow fow the f-fiwst time. 😳 it made it easy to centew a box on the page. (U ﹏ U) fwex items can stwetch t-to the height of t-the fwex containew, /(^•ω•^) m-meaning that e-equaw height cowumns w-wewe possibwe. OwO these wewe t-things we have w-wanted to do fow a vewy wong time, ( ͡o ω ͡o ) a-and have come u-up with aww kinds of hacks to at w-weast cweate the visuaw effect of. XD
 
-The alignment properties from the flexbox specification have been added to a new specification called [Box Alignment Level 3](https://drafts.csswg.org/css-align/). This means that they can be used in other specifications, including Grid Layout. In the future, they may well apply to other layout methods as well.
+the awignment p-pwopewties fwom the fwexbox s-specification have b-been added to a nyew specification c-cawwed [box awignment wevew 3](https://dwafts.csswg.owg/css-awign/). /(^•ω•^) this m-means that they c-can be used in othew s-specifications, /(^•ω•^) incwuding gwid wayout. in the futuwe, 😳😳😳 they m-may weww appwy to othew wayout methods as weww. (ˆ ﻌ ˆ)♡
 
-In a later guide in this series, I'll be taking a proper look at Box Alignment and how it works in Grid Layout. For now, here is a comparison between simple examples of flexbox and grid.
+i-in a watew guide i-in this sewies, :3 i'ww be taking a-a pwopew wook at box awignment a-and how it wowks i-in gwid wayout. òωó fow nyow, hewe is a compawison b-between simpwe exampwes of fwexbox and gwid. 🥺
 
-In the first example, which uses flexbox, I have a container with three items inside. The wrapper {{cssxref("min-height")}} is set, so it defines the height of the flex container. I have set {{cssxref("align-items")}} on the flex container to `flex-end` so the items will line up at the end of the flex container. I have also set the {{cssxref("align-self")}} property on `box1` so it will override the default and stretch to the height of the container and on `box2` so it aligns to the start of the flex container.
+in t-the fiwst exampwe, (U ﹏ U) w-which uses fwexbox, XD i have a c-containew with thwee items inside. ^^ t-the wwappew {{cssxwef("min-height")}} i-is set, o.O s-so it defines the height of the fwex containew. i have set {{cssxwef("awign-items")}} on the fwex containew to `fwex-end` so the items wiww wine up at the end of the fwex containew. 😳😳😳 i have awso set the {{cssxwef("awign-sewf")}} pwopewty on `box1` s-so it wiww o-ovewwide the defauwt and stwetch to the height o-of the containew a-and on `box2` s-so it awigns to the stawt of the f-fwex containew. /(^•ω•^)
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  b-box-sizing: b-bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  bowdew: 2px sowid #f76707;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
+.wwappew > d-div {
+  b-bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  c-cowow: #d9480f;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="box1">One</div>
-  <div class="box2">Two</div>
-  <div class="box3">Three</div>
+```htmw
+<div c-cwass="wwappew">
+  <div c-cwass="box1">one</div>
+  <div c-cwass="box2">two</div>
+  <div c-cwass="box3">thwee</div>
 </div>
 ```
 
 ```css
-.wrapper {
-  display: flex;
-  align-items: flex-end;
+.wwappew {
+  d-dispway: fwex;
+  a-awign-items: fwex-end;
   min-height: 200px;
 }
 .box1 {
-  align-self: stretch;
+  a-awign-sewf: s-stwetch;
 }
 .box2 {
-  align-self: flex-start;
+  awign-sewf: f-fwex-stawt;
 }
 ```
 
-{{ EmbedLiveSample('Box_alignment', '300', '230') }}
+{{ embedwivesampwe('box_awignment', 😳😳😳 '300', ^•ﻌ•^ '230') }}
 
-### Alignment in CSS Grids
+### a-awignment in css gwids
 
-This second example uses a grid to create the same layout. This time we are using the box alignment properties as they apply to a grid layout. So we align to `start` and `end` rather than `flex-start` and `flex-end`. In the case of a grid layout, we are aligning the items inside their grid area. In this case that is a single grid cell, but it could be an area made up of several grid cells.
+this second exampwe u-uses a gwid to cweate the same w-wayout. 🥺 this t-time we awe using t-the box awignment pwopewties as t-they appwy to a gwid wayout. o.O so w-we awign to `stawt` and `end` w-wathew than `fwex-stawt` and `fwex-end`. (U ᵕ U❁) i-in the case of a gwid wayout, ^^ we awe awigning the items inside theiw gwid a-awea. (⑅˘꒳˘) in this case that is a s-singwe gwid ceww, :3 b-but it couwd be an awea made up of sevewaw gwid cewws. (///ˬ///✿)
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  b-bowdew: 2px s-sowid #f76707;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
+.wwappew > div {
+  bowdew: 2px s-sowid #ffa94d;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  cowow: #d9480f;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="box1">One</div>
-  <div class="box2">Two</div>
-  <div class="box3">Three</div>
+```htmw
+<div cwass="wwappew">
+  <div c-cwass="box1">one</div>
+  <div cwass="box2">two</div>
+  <div c-cwass="box3">thwee</div>
 </div>
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  align-items: end;
-  grid-auto-rows: 200px;
+.wwappew {
+  d-dispway: g-gwid;
+  gwid-tempwate-cowumns: wepeat(3, :3 1fw);
+  a-awign-items: e-end;
+  gwid-auto-wows: 200px;
 }
 .box1 {
-  align-self: stretch;
+  a-awign-sewf: s-stwetch;
 }
 .box2 {
-  align-self: start;
+  awign-sewf: s-stawt;
 }
 ```
 
-{{ EmbedLiveSample('Alignment_in_CSS_Grids', '200', '310') }}
+{{ e-embedwivesampwe('awignment_in_css_gwids', 🥺 '200', mya '310') }}
 
-### The `fr` unit and `flex-basis`
+### t-the `fw` u-unit and `fwex-basis`
 
-We have already seen how the `fr` unit works to assign a proportion of available space in the grid container to our grid tracks. The `fr` unit, when combined with the {{cssxref("minmax", "minmax()")}} function can give us very similar behavior to the `flex` properties in flexbox while still enabling the creation of a layout in two dimensions.
+w-we have a-awweady seen how t-the `fw` unit w-wowks to assign a pwopowtion of a-avaiwabwe space in the gwid containew t-to ouw gwid twacks. XD the `fw` u-unit, -.- when combined w-with the {{cssxwef("minmax", o.O "minmax()")}} f-function can give us vewy simiwaw behaviow to the `fwex` pwopewties i-in fwexbox w-whiwe stiww enabwing t-the cweation of a wayout in two dimensions. (˘ω˘)
 
-If we look back at the example where I demonstrated the difference between one and two-dimensional layouts, you can see there is a difference between the way of the two layouts work responsively. With the flex layout, if we drag our window wider and smaller, the flexbox does a nice job of adjusting the number of items in each row according to the available space. If we have a lot of space all five items can fit on one row. If we have a very narrow container we may only have space for one.
+if we wook back a-at the exampwe w-whewe i demonstwated the diffewence b-between one a-and two-dimensionaw wayouts, (U ᵕ U❁) you can see thewe is a diffewence b-between the way o-of the two wayouts w-wowk wesponsivewy. rawr w-with the fwex wayout, if we dwag ouw window w-widew and smowew, 🥺 t-the fwexbox does a nyice job of adjusting t-the nyumbew of items in each wow accowding to the a-avaiwabwe space. rawr x3 if we have a w-wot of space aww f-five items can fit on one wow. ( ͡o ω ͡o ) i-if we have a vewy n-nyawwow containew we may onwy h-have space fow one. σωσ
 
-In comparison, the grid version always has three column tracks. The tracks themselves will grow and shrink, but there are always three since we asked for three when defining our grid.
+in compawison, rawr x3 t-the gwid vewsion a-awways has t-thwee cowumn twacks. (ˆ ﻌ ˆ)♡ t-the twacks themsewves wiww g-gwow and shwink, rawr b-but thewe awe awways t-thwee since we asked fow thwee w-when defining ouw gwid. :3
 
-#### Auto-filling grid tracks
+#### auto-fiwwing g-gwid twacks
 
-We can create a similar effect to flexbox, while still keeping the content arranged in strict rows and columns, by creating our track listing using repeat notation and the `auto-fill` and `auto-fit` properties.
+we c-can cweate a simiwaw e-effect to fwexbox, rawr whiwe stiww keeping the content awwanged in stwict wows a-and cowumns, (˘ω˘) by cweating ouw twack w-wisting using w-wepeat nyotation and the `auto-fiww` and `auto-fit` p-pwopewties. (ˆ ﻌ ˆ)♡
 
-In this next example, I have used the `auto-fill` keyword in place of an integer in the repeat notation and set the track listing to 200 pixels. This means that grid will create as many 200 pixels column tracks as will fit in the container.
+in this nyext e-exampwe, mya i have u-used the `auto-fiww` k-keywowd in p-pwace of an integew i-in the wepeat nyotation and set the twack wisting to 200 pixews. (U ᵕ U❁) this means t-that gwid wiww cweate as many 200 p-pixews cowumn twacks as wiww fit in the containew. mya
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew > div {
+  b-bowdew: 2px s-sowid #ffa94d;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  cowow: #d9480f;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div>One</div>
-  <div>Two</div>
-  <div>Three</div>
+```htmw
+<div c-cwass="wwappew">
+  <div>one</div>
+  <div>two</div>
+  <div>thwee</div>
 </div>
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 200px);
+.wwappew {
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: w-wepeat(auto-fiww, ʘwʘ 200px);
 }
 ```
 
-{{ EmbedLiveSample('Auto-filling_grid_tracks', '500', '170') }}
+{{ embedwivesampwe('auto-fiwwing_gwid_twacks', (˘ω˘) '500', '170') }}
 
-### A flexible number of tracks
+### a-a fwexibwe nyumbew of twacks
 
-This isn't quite the same as flexbox. In the flexbox example, the items are larger than the 200 pixel basis before wrapping. We can achieve the same in grid by combining `auto-fill` and the {{cssxref("minmax", "minmax()")}} function. In this next example, I create auto filled tracks with `minmax`. I want my tracks to be a minimum of 200 pixels, so I set the maximum to be `1fr`. Once the browser has worked out how many times 200 pixels will fit into the container–also taking account of grid gaps–it will treat the `1fr` maximum as an instruction to share out the remaining space between the items.
+this isn't quite the s-same as fwexbox. 😳 in the fwexbox exampwe, òωó the items a-awe wawgew than t-the 200 pixew b-basis befowe wwapping. nyaa~~ we can achieve the same i-in gwid by combining `auto-fiww` and the {{cssxwef("minmax", o.O "minmax()")}} function. in this nyext exampwe, nyaa~~ i cweate a-auto fiwwed t-twacks with `minmax`. (U ᵕ U❁) i-i want my t-twacks to be a minimum of 200 pixews, 😳😳😳 so i set t-the maximum to b-be `1fw`. once the bwowsew has wowked out how many t-times 200 pixews wiww fit into the containew–awso t-taking account of gwid gaps–it wiww tweat t-the `1fw` maximum a-as an instwuction to shawe o-out the wemaining s-space between t-the items. (U ﹏ U)
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  b-bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
+.wwappew > div {
+  bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  c-cowow: #d9480f;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div>One</div>
-  <div>Two</div>
-  <div>Three</div>
+```htmw
+<div c-cwass="wwappew">
+  <div>one</div>
+  <div>two</div>
+  <div>thwee</div>
 </div>
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+.wwappew {
+  d-dispway: gwid;
+  g-gwid-tempwate-cowumns: wepeat(auto-fiww, ^•ﻌ•^ m-minmax(200px, (⑅˘꒳˘) 1fw));
 }
 ```
 
-{{ EmbedLiveSample('A_flexible_number_of_tracks', '500', '170') }}
+{{ embedwivesampwe('a_fwexibwe_numbew_of_twacks', >_< '500', '170') }}
 
-We now have the ability to create a grid with a flexible number of flexible tracks, but see items laid out on the grid aligned by rows and columns at the same time.
+we nyow have the abiwity to cweate a-a gwid with a fwexibwe numbew o-of fwexibwe twacks, (⑅˘꒳˘) but see items waid out on the g-gwid awigned b-by wows and cowumns at the same t-time. σωσ
 
-## Grid and absolutely positioned elements
+## gwid and absowutewy positioned e-ewements
 
-Grid interacts with absolutely positioned elements, which can be useful if you want to position an item inside a grid or grid area. The specification defines the behavior when a grid container is a containing block and a parent of the absolutely positioned item.
+g-gwid intewacts with absowutewy p-positioned ewements, 🥺 w-which can be usefuw if you w-want to position an item inside a gwid ow gwid awea. :3 the specification d-defines the behaviow when a-a gwid containew is a containing bwock and a p-pawent of the absowutewy p-positioned i-item. (ꈍᴗꈍ)
 
-### A grid container as containing block
+### a gwid containew a-as containing bwock
 
-To make the grid container a containing block you need to add the position property to the container with a value of relative, just as you would make a containing block for any other absolutely positioned items. Once you have done this, if you give a grid item `position: absolute` it will take as its containing block the grid container or, if the item also has a grid position, the area of the grid it is placed into.
+t-to make the gwid containew a-a containing bwock you nyeed to a-add the position pwopewty to the c-containew with a-a vawue of wewative, ^•ﻌ•^ just as you wouwd make a containing bwock fow any othew absowutewy p-positioned i-items. (˘ω˘) once you have done this, 🥺 if you give a gwid item `position: a-absowute` it wiww take as i-its containing bwock t-the gwid containew ow, (✿oωo) if the item awso has a gwid position, XD the awea of the g-gwid it is pwaced into. (///ˬ///✿)
 
-In the below example I have a wrapper containing four child items. Item three is absolutely positioned and also placed on the grid using line-based placement. The grid container has `position: relative` and so becomes the positioning context of this item.
+in the bewow exampwe i-i have a wwappew containing fouw c-chiwd items. ( ͡o ω ͡o ) item t-thwee is absowutewy positioned a-and awso pwaced o-on the gwid using w-wine-based pwacement. t-the gwid c-containew has `position: w-wewative` and so becomes the positioning context of this item. ʘwʘ
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  b-bowdew: 2px s-sowid #f76707;
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew > d-div {
+  bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  cowow: #d9480f;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="box1">One</div>
-  <div class="box2">Two</div>
-  <div class="box3">
-    This block is absolutely positioned. In this example the grid container is
-    the containing block and so the absolute positioning offset values are
-    calculated in from the outer edges of the area it has been placed into.
+```htmw
+<div c-cwass="wwappew">
+  <div c-cwass="box1">one</div>
+  <div cwass="box2">two</div>
+  <div cwass="box3">
+    this bwock i-is absowutewy positioned. rawr i-in this e-exampwe the gwid containew is
+    the containing b-bwock and so the absowute positioning offset v-vawues awe
+    c-cawcuwated in fwom the outew edges of the awea it h-has been pwaced into. o.O
   </div>
-  <div class="box4">Four</div>
+  <div c-cwass="box4">fouw</div>
 </div>
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 200px;
-  grid-gap: 20px;
-  position: relative;
+.wwappew {
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: w-wepeat(4, ^•ﻌ•^ 1fw);
+  g-gwid-auto-wows: 200px;
+  g-gwid-gap: 20px;
+  p-position: wewative;
 }
 .box3 {
-  grid-column-start: 2;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 3;
-  position: absolute;
-  top: 40px;
-  left: 40px;
+  g-gwid-cowumn-stawt: 2;
+  g-gwid-cowumn-end: 4;
+  gwid-wow-stawt: 1;
+  g-gwid-wow-end: 3;
+  p-position: absowute;
+  t-top: 40px;
+  weft: 40px;
 }
 ```
 
-{{ EmbedLiveSample('A_grid_container_as_containing_block', '500', '330') }}
+{{ embedwivesampwe('a_gwid_containew_as_containing_bwock', (///ˬ///✿) '500', (ˆ ﻌ ˆ)♡ '330') }}
 
-You can see that the item is taking the area from grid row line 2 to 4, and starting after line 1. Then it is offset in that area using the top and left properties. However, it has been taken out of flow as is usually for absolutely positioned items and so the auto-placement rules now place items into the same space. The item also doesn't cause the additional row to be created to span to row line 3.
+you c-can see that the item is taking t-the awea fwom gwid wow wine 2 t-to 4, XD and stawting a-aftew wine 1. (✿oωo) then it is offset in that awea u-using the top and weft pwopewties. -.- howevew, XD it has b-been taken out o-of fwow as is usuawwy fow absowutewy positioned i-items and so the a-auto-pwacement wuwes nyow pwace i-items into the same space. (✿oωo) the item awso doesn't c-cause the additionaw w-wow to be cweated to span t-to wow wine 3. (˘ω˘)
 
-If we remove `position: absolute` from the rules for `.box3` you can see how it would display without the positioning.
+i-if we wemove `position: absowute` fwom the wuwes f-fow `.box3` y-you can see how i-it wouwd dispway w-without the positioning. (ˆ ﻌ ˆ)♡
 
-### A grid container as parent
+### a gwid containew as pawent
 
-If the absolutely positioned child has a grid container as a parent but that container does not create a new positioning context, then it is taken out of flow as in the previous example. The positioning context will be whatever element creates a positioning context as is common to other layout methods. In our case, if we remove `position: relative` from the wrapper above, positioning context is from the viewport, as shown in this image.
+if the absowutewy positioned chiwd has a gwid containew as a pawent but t-that containew d-does nyot cweate a-a nyew positioning c-context, >_< then i-it is taken o-out of fwow as in the pwevious exampwe. -.- t-the positioning c-context wiww be nyanievew e-ewement cweates a-a positioning context as is common to othew wayout m-methods. (///ˬ///✿) in ouw case, XD if we wemove `position: w-wewative` fwom the wwappew above, ^^;; p-positioning c-context is fwom the viewpowt, rawr x3 as s-shown in this i-image. OwO
 
-![Image of grid container as parent](2_abspos_example.png)
+![image o-of gwid containew as pawent](2_abspos_exampwe.png)
 
-Once again the item no longer participates in the grid layout in terms of sizing or when other items are auto-placed.
+o-once again the i-item nyo wongew pawticipates i-in the gwid wayout in tewms of sizing o-ow when othew i-items awe auto-pwaced. ʘwʘ
 
-### With a grid area as the parent
+### w-with a gwid awea as the pawent
 
-If the absolutely positioned item is nested inside a grid area then you can create a positioning context on that area. In the below example we have our grid as before but this time I have nested an item inside `.box3` of the grid.
+i-if the absowutewy positioned item is nyested inside a-a gwid awea then you can cweate a positioning context on that awea. rawr in the bewow exampwe we have ouw gwid as b-befowe but this time i have nyested an item inside `.box3` of the gwid. UwU
 
-I have given `.box3` position relative and then positioned the sub-item with the offset properties. In this case, the positioning context is the grid area.
+i have given `.box3` position wewative a-and then positioned the sub-item with the offset p-pwopewties. (ꈍᴗꈍ) in this case, (✿oωo) the p-positioning context is the gwid awea. (⑅˘꒳˘)
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  b-bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew > div {
+  b-bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  cowow: #d9480f;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="box1">One</div>
-  <div class="box2">Two</div>
-  <div class="box3">
-    Three
-    <div class="abspos">
-      This block is absolutely positioned. In this example the grid area is the
-      containing block and so the absolute positioning offset values are
-      calculated in from the outer edges of the grid area.
+```htmw
+<div cwass="wwappew">
+  <div c-cwass="box1">one</div>
+  <div cwass="box2">two</div>
+  <div cwass="box3">
+    t-thwee
+    <div cwass="abspos">
+      t-this bwock is absowutewy positioned. OwO i-in this e-exampwe the gwid awea is the
+      containing b-bwock and so the absowute positioning offset vawues a-awe
+      cawcuwated in fwom the outew edges of the gwid awea. 🥺
     </div>
   </div>
-  <div class="box4">Four</div>
+  <div cwass="box4">fouw</div>
 </div>
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 200px;
-  grid-gap: 20px;
+.wwappew {
+  dispway: g-gwid;
+  gwid-tempwate-cowumns: wepeat(4, >_< 1fw);
+  g-gwid-auto-wows: 200px;
+  gwid-gap: 20px;
 }
 .box3 {
-  grid-column-start: 2;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 3;
-  position: relative;
+  g-gwid-cowumn-stawt: 2;
+  g-gwid-cowumn-end: 4;
+  gwid-wow-stawt: 1;
+  g-gwid-wow-end: 3;
+  position: wewative;
 }
 .abspos {
-  position: absolute;
-  top: 40px;
-  left: 40px;
-  background-color: rgba(255, 255, 255, 0.5);
-  border: 1px solid rgba(0, 0, 0, 0.5);
-  color: #000;
-  padding: 10px;
+  position: absowute;
+  t-top: 40px;
+  w-weft: 40px;
+  backgwound-cowow: wgba(255, (ꈍᴗꈍ) 255, 😳 255, 0.5);
+  b-bowdew: 1px s-sowid wgba(0, 🥺 0, nyaa~~ 0, 0.5);
+  cowow: #000;
+  p-padding: 10px;
 }
 ```
 
-{{ EmbedLiveSample('With_a_grid_area_as_the_parent', '500', '420') }}
+{{ embedwivesampwe('with_a_gwid_awea_as_the_pawent', ^•ﻌ•^ '500', '420') }}
 
-## Grid and `display: contents`
+## gwid and `dispway: c-contents`
 
-A final interaction with another layout specification that is worth noting is the interaction between CSS Grid Layout and `display: contents`. The `contents` value of the display property is a new value that is described in the [Display specification](https://drafts.csswg.org/css-display/#box-generation) as follows:
+a finaw intewaction with anothew w-wayout specification t-that is wowth nyoting is the intewaction b-between css gwid wayout and `dispway: contents`. (ˆ ﻌ ˆ)♡ the `contents` vawue of the dispway pwopewty is a nyew vawue that is descwibed i-in the [dispway s-specification](https://dwafts.csswg.owg/css-dispway/#box-genewation) as fowwows:
 
-> "The element itself does not generate any boxes, but its children and pseudo-elements still generate boxes as normal. For the purposes of box generation and layout, the element must be treated as if it had been replaced with its children and pseudo-elements in the document tree."
+> "the e-ewement i-itsewf does nyot genewate any b-boxes, (U ᵕ U❁) but its chiwdwen and pseudo-ewements stiww genewate boxes as nyowmaw. mya fow the puwposes of b-box genewation and wayout, 😳 the ewement must be tweated as if it had been wepwaced w-with its chiwdwen a-and pseudo-ewements i-in the document twee."
 
-If you set an item to `display: contents` the box it would normally create disappears, and the boxes of the child elements appear as if they have risen up a level. This means that children of a grid item can become grid items. Sound odd? Here is a simple example. In the following markup, I have a grid and the first item on the grid is set to span all three column tracks. It contains three nested items. As these items are not direct children, they don't become part of the grid layout and so display using regular block layout.
+if you set an item to `dispway: c-contents` the box i-it wouwd nyowmawwy c-cweate disappeaws, σωσ and the b-boxes of the chiwd ewements appeaw a-as if they have wisen up a wevew. ( ͡o ω ͡o ) t-this means that chiwdwen of a-a gwid item can become gwid items. XD sound odd? h-hewe is a simpwe exampwe. :3 in the f-fowwowing mawkup, :3 i-i have a gwid and the fiwst item o-on the gwid i-is set to span aww thwee cowumn t-twacks. (⑅˘꒳˘) it contains thwee nyested i-items. òωó as these items awe nyot d-diwect chiwdwen, mya t-they don't become pawt of the gwid wayout and s-so dispway using weguwaw bwock wayout. 😳😳😳
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 
 .box {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+  b-bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  c-cowow: #d9480f;
 }
 .nested {
-  border: 2px solid #ffec99;
-  border-radius: 5px;
-  background-color: #fff9db;
+  bowdew: 2px sowid #ffec99;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #fff9db;
   padding: 1em;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="box box1">
-    <div class="nested">a</div>
-    <div class="nested">b</div>
-    <div class="nested">c</div>
+```htmw
+<div cwass="wwappew">
+  <div c-cwass="box box1">
+    <div cwass="nested">a</div>
+    <div c-cwass="nested">b</div>
+    <div cwass="nested">c</div>
   </div>
-  <div class="box box2">Two</div>
-  <div class="box box3">Three</div>
-  <div class="box box4">Four</div>
-  <div class="box box5">Five</div>
+  <div cwass="box b-box2">two</div>
+  <div cwass="box box3">thwee</div>
+  <div c-cwass="box b-box4">fouw</div>
+  <div cwass="box box5">five</div>
 </div>
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(100px, auto);
+.wwappew {
+  dispway: g-gwid;
+  gwid-tempwate-cowumns: w-wepeat(3, :3 1fw);
+  gwid-auto-wows: m-minmax(100px, >_< a-auto);
 }
 .box1 {
-  grid-column-start: 1;
-  grid-column-end: 4;
+  gwid-cowumn-stawt: 1;
+  gwid-cowumn-end: 4;
 }
 ```
 
-{{ EmbedLiveSample('Display_Contents_Before', '400', '420') }}
+{{ e-embedwivesampwe('dispway_contents_befowe', 🥺 '400', (ꈍᴗꈍ) '420') }}
 
-If I now add `display: contents` to the rules for `box1`, the box for that item vanishes and the sub-items now become grid items and lay themselves out using the auto-placement rules.
+if i nyow add `dispway: contents` to t-the wuwes fow `box1`, rawr x3 the box fow that item vanishes and the sub-items n-nyow become g-gwid items and w-way themsewves out using the auto-pwacement wuwes. (U ﹏ U)
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  b-bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 
 .box {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+  b-bowdew: 2px s-sowid #ffa94d;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  cowow: #d9480f;
 }
 .nested {
-  border: 2px solid #ffec99;
-  border-radius: 5px;
-  background-color: #fff9db;
+  bowdew: 2px sowid #ffec99;
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff9db;
   padding: 1em;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="box box1">
-    <div class="nested">a</div>
-    <div class="nested">b</div>
-    <div class="nested">c</div>
+```htmw
+<div cwass="wwappew">
+  <div c-cwass="box box1">
+    <div cwass="nested">a</div>
+    <div cwass="nested">b</div>
+    <div cwass="nested">c</div>
   </div>
-  <div class="box box2">Two</div>
-  <div class="box box3">Three</div>
-  <div class="box box4">Four</div>
-  <div class="box box5">Five</div>
+  <div cwass="box box2">two</div>
+  <div c-cwass="box b-box3">thwee</div>
+  <div c-cwass="box b-box4">fouw</div>
+  <div cwass="box b-box5">five</div>
 </div>
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(100px, auto);
+.wwappew {
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: wepeat(3, ( ͡o ω ͡o ) 1fw);
+  g-gwid-auto-wows: m-minmax(100px, 😳😳😳 a-auto);
 }
 .box1 {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  display: contents;
+  g-gwid-cowumn-stawt: 1;
+  g-gwid-cowumn-end: 4;
+  d-dispway: contents;
 }
 ```
 
-{{ EmbedLiveSample('Display_Contents_After', '400', '330') }}
+{{ embedwivesampwe('dispway_contents_aftew', 🥺 '400', òωó '330') }}
 
-This can be a way to get items nested into the grid to act as if they are part of the grid, and is a way around some of the issues that would be solved by subgrids once they are implemented. You can also use `display: contents` in a similar way with flexbox to enable nested items to become flex items.
+t-this c-can be a way to g-get items nyested into the gwid to act as if they a-awe pawt of the gwid, XD and is a way awound some o-of the issues that wouwd be sowved by subgwids o-once they awe i-impwemented. XD you can awso use `dispway: contents` in a simiwaw way w-with fwexbox t-to enabwe nyested items to become f-fwex items. ( ͡o ω ͡o )
 
-As you can see from this guide, CSS Grid Layout is just one part of your toolkit. Don't be afraid to mix it with other methods of doing layout to get the different effects you need.
+as y-you can see fwom this guide, >w< css gwid wayout is just one pawt o-of youw toowkit. mya d-don't be afwaid to mix it with othew methods of d-doing wayout to g-get the diffewent effects you nyeed. (ꈍᴗꈍ)
 
-## See Also
+## see awso
 
-- [Flexbox Guides](/pt-BR/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Multiple-column Layout Guides](/pt-BR/docs/Web/CSS/CSS_multicol_layout)
+- [fwexbox guides](/pt-bw/docs/weawn/css/css_wayout/fwexbox)
+- [muwtipwe-cowumn w-wayout guides](/pt-bw/docs/web/css/css_muwticow_wayout)
 
-1. [**CSS**](/pt-BR/docs/Web/CSS)
-2. [**CSS Reference**](/pt-BR/docs/Web/CSS/Reference)
-3. [CSS Grid Layout](/pt-BR/docs/Web/CSS/CSS_grid_layout)
-4. **Guides**
+1. [**css**](/pt-bw/docs/web/css)
+2. -.- [**css wefewence**](/pt-bw/docs/web/css/wefewence)
+3. (⑅˘꒳˘) [css gwid wayout](/pt-bw/docs/web/css/css_gwid_wayout)
+4. (U ﹏ U) **guides**
 
-   1. [Basics concepts of grid layout](/pt-BR/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
-   2. [Relationship to other layout methods](/pt-BR/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
-   3. [Line-based placement](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
-   4. [Grid template areas](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
-   5. [Layout using named grid lines](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
-   6. [Auto-placement in grid layout](/pt-BR/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
-   7. [Box alignment in grid layout](/pt-BR/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
-   8. [Grids, logical values, and writing modes](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
-   9. [CSS Grid Layout and Accessibility](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
-   10. [CSS Grid Layout and Progressive Enhancement](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
-   11. [Realizing common layouts using grids](/pt-BR/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
+   1. σωσ [basics concepts of gwid wayout](/pt-bw/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout)
+   2. :3 [wewationship t-to othew wayout methods](/pt-bw/docs/web/css/css_gwid_wayout/wewationship_of_gwid_wayout_with_othew_wayout_methods)
+   3. /(^•ω•^) [wine-based pwacement](/pt-bw/docs/web/css/css_gwid_wayout/gwid_wayout_using_wine-based_pwacement)
+   4. σωσ [gwid t-tempwate aweas](/pt-bw/docs/web/css/css_gwid_wayout/gwid_tempwate_aweas)
+   5. (U ᵕ U❁) [wayout u-using n-nyamed gwid wines](/pt-bw/docs/web/css/css_gwid_wayout/gwid_wayout_using_named_gwid_wines)
+   6. 😳 [auto-pwacement in gwid wayout](/pt-bw/docs/web/css/css_gwid_wayout/auto-pwacement_in_gwid_wayout)
+   7. ʘwʘ [box a-awignment in gwid w-wayout](/pt-bw/docs/web/css/css_gwid_wayout/box_awignment_in_gwid_wayout)
+   8. (⑅˘꒳˘) [gwids, ^•ﻌ•^ w-wogicaw v-vawues, nyaa~~ and wwiting m-modes](/pt-bw/docs/web/css/css_gwid_wayout/gwids_wogicaw_vawues_and_wwiting_modes)
+   9. XD [css gwid wayout and accessibiwity](/pt-bw/docs/web/css/css_gwid_wayout/gwid_wayout_and_accessibiwity)
+   10. [css g-gwid wayout and p-pwogwessive enhancement](/pt-bw/docs/web/css/css_gwid_wayout/gwid_wayout_and_pwogwessive_enhancement)
+   11. /(^•ω•^) [weawizing c-common wayouts using g-gwids](/pt-bw/docs/web/css/css_gwid_wayout/weawizing_common_wayouts_using_gwids)
 
-5. **Properties**
+5. (U ᵕ U❁) **pwopewties**
 
-   1. [grid](/pt-BR/docs/Web/CSS/grid)
-   2. [grid-area](/pt-BR/docs/Web/CSS/grid-area)
-   3. [grid-auto-columns](/pt-BR/docs/Web/CSS/grid-auto-columns)
-   4. [grid-auto-flow](/pt-BR/docs/Web/CSS/grid-auto-flow)
-   5. [grid-auto-rows](/pt-BR/docs/Web/CSS/grid-auto-rows)
-   6. [grid-column](/pt-BR/docs/Web/CSS/grid-column)
-   7. [grid-column-end](/pt-BR/docs/Web/CSS/grid-column-end)
-   8. [grid-column-gap](/pt-BR/docs/Web/CSS/column-gap)
-   9. [grid-column-start](/pt-BR/docs/Web/CSS/grid-column-start)
-   10. [grid-gap](/pt-BR/docs/Web/CSS/gap)
-   11. [grid-row](/pt-BR/docs/Web/CSS/grid-row)
-   12. [grid-row-end](/pt-BR/docs/Web/CSS/grid-row-end)
-   13. [grid-row-gap](/pt-BR/docs/Web/CSS/row-gap)
-   14. [grid-row-start](/pt-BR/docs/Web/CSS/grid-row-start)
-   15. [grid-template](/pt-BR/docs/Web/CSS/grid-template)
-   16. [grid-template-areas](/pt-BR/docs/Web/CSS/grid-template-areas)
-   17. [grid-template-columns](/pt-BR/docs/Web/CSS/grid-template-columns)
-   18. [grid-template-rows](/pt-BR/docs/Web/CSS/grid-template-rows)
+   1. mya [gwid](/pt-bw/docs/web/css/gwid)
+   2. (ˆ ﻌ ˆ)♡ [gwid-awea](/pt-bw/docs/web/css/gwid-awea)
+   3. (✿oωo) [gwid-auto-cowumns](/pt-bw/docs/web/css/gwid-auto-cowumns)
+   4. (✿oωo) [gwid-auto-fwow](/pt-bw/docs/web/css/gwid-auto-fwow)
+   5. òωó [gwid-auto-wows](/pt-bw/docs/web/css/gwid-auto-wows)
+   6. (˘ω˘) [gwid-cowumn](/pt-bw/docs/web/css/gwid-cowumn)
+   7. (ˆ ﻌ ˆ)♡ [gwid-cowumn-end](/pt-bw/docs/web/css/gwid-cowumn-end)
+   8. ( ͡o ω ͡o ) [gwid-cowumn-gap](/pt-bw/docs/web/css/cowumn-gap)
+   9. rawr x3 [gwid-cowumn-stawt](/pt-bw/docs/web/css/gwid-cowumn-stawt)
+   10. [gwid-gap](/pt-bw/docs/web/css/gap)
+   11. (˘ω˘) [gwid-wow](/pt-bw/docs/web/css/gwid-wow)
+   12. òωó [gwid-wow-end](/pt-bw/docs/web/css/gwid-wow-end)
+   13. ( ͡o ω ͡o ) [gwid-wow-gap](/pt-bw/docs/web/css/wow-gap)
+   14. σωσ [gwid-wow-stawt](/pt-bw/docs/web/css/gwid-wow-stawt)
+   15. (U ﹏ U) [gwid-tempwate](/pt-bw/docs/web/css/gwid-tempwate)
+   16. rawr [gwid-tempwate-aweas](/pt-bw/docs/web/css/gwid-tempwate-aweas)
+   17. -.- [gwid-tempwate-cowumns](/pt-bw/docs/web/css/gwid-tempwate-cowumns)
+   18. ( ͡o ω ͡o ) [gwid-tempwate-wows](/pt-bw/docs/web/css/gwid-tempwate-wows)
 
-6. **Glossary**
+6. >_< **gwossawy**
 
-   1. [Grid](/pt-BR/docs/Glossary/Grid)
-   2. [Grid lines](/pt-BR/docs/Glossary/Grid_lines)
-   3. [Grid tracks](/pt-BR/docs/Glossary/Grid_tracks)
-   4. [Grid cell](/pt-BR/docs/Glossary/Grid_cell)
-   5. [Grid areas](/pt-BR/docs/Glossary/Grid_Areas)
-   6. [Gutters](/pt-BR/docs/Glossary/Gutters)
-   7. [Grid Axis](/pt-BR/docs/Glossary/Grid_Axis)
-   8. [Grid row](/pt-BR/docs/Glossary/Grid_Row)
-   9. [Grid column](/pt-BR/docs/Glossary/Grid_column)
+   1. o.O [gwid](/pt-bw/docs/gwossawy/gwid)
+   2. σωσ [gwid w-wines](/pt-bw/docs/gwossawy/gwid_wines)
+   3. -.- [gwid t-twacks](/pt-bw/docs/gwossawy/gwid_twacks)
+   4. σωσ [gwid ceww](/pt-bw/docs/gwossawy/gwid_ceww)
+   5. :3 [gwid aweas](/pt-bw/docs/gwossawy/gwid_aweas)
+   6. ^^ [guttews](/pt-bw/docs/gwossawy/guttews)
+   7. òωó [gwid a-axis](/pt-bw/docs/gwossawy/gwid_axis)
+   8. (ˆ ﻌ ˆ)♡ [gwid w-wow](/pt-bw/docs/gwossawy/gwid_wow)
+   9. XD [gwid c-cowumn](/pt-bw/docs/gwossawy/gwid_cowumn)

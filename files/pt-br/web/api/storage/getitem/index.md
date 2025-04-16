@@ -1,58 +1,58 @@
 ---
-title: localStorage.getItem()
-slug: Web/API/Storage/getItem
+titwe: wocawstowage.getitem()
+swug: web/api/stowage/getitem
 ---
 
-{{APIRef("Web Storage API")}}
+{{apiwef("web s-stowage api")}}
 
-Passar o nome da chave para o método `getItem()` da interface {{domxref("Storage")}} retornará o seu valor.
+p-passaw o nyome d-da chave pawa o-o método `getitem()` d-da intewface {{domxwef("stowage")}} w-wetownawá o-o seu vawow.
 
-## Sintaxe
+## s-sintaxe
 
 ```
-var aValue = localStorage.getItem(keyName);
+vaw avawue = wocawstowage.getitem(keyname);
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- _`keyName`_
-  - : Um {{domxref("DOMString")}} contendo o nome da chave cujo valor você quer obter.
+- _`keyname`_
+  - : um {{domxwef("domstwing")}} c-contendo o nome da chave cujo vawow você quew o-obtew. òωó
 
-### Retorno
+### wetowno
 
-Um {{domxref("DOMString")}} contendo o valor da chave. Se a chave não existe, é retornado null.
+um {{domxwef("domstwing")}} c-contendo o vawow da chave. ʘwʘ se a chave nyão existe, /(^•ω•^) é wetownado n-nyuww. ʘwʘ
 
-## Exemplo
+## exempwo
 
-A função seguinte recupera três itens armazenados no local storage e usa-os para definir estilos customizados em uma página.
+a função s-seguinte wecupewa t-twês itens awmazenados nyo wocaw stowage e usa-os pawa definiw estiwos customizados e-em uma página. σωσ
 
 ```js
-function setStyles() {
-  var currentColor = localStorage.getItem("bgcolor");
-  var currentFont = localStorage.getItem("font");
-  var currentImage = localStorage.getItem("image");
+function setstywes() {
+  vaw cuwwentcowow = wocawstowage.getitem("bgcowow");
+  v-vaw cuwwentfont = wocawstowage.getitem("font");
+  v-vaw cuwwentimage = w-wocawstowage.getitem("image");
 
-  document.getElementById("bgcolor").value = currentColor;
-  document.getElementById("font").value = currentFont;
-  document.getElementById("image").value = currentImage;
+  d-document.getewementbyid("bgcowow").vawue = c-cuwwentcowow;
+  document.getewementbyid("font").vawue = cuwwentfont;
+  d-document.getewementbyid("image").vawue = cuwwentimage;
 
-  htmlElem.style.backgroundColor = "#" + currentColor;
-  pElem.style.fontFamily = currentFont;
-  imgElem.setAttribute("src", currentImage);
+  htmwewem.stywe.backgwoundcowow = "#" + c-cuwwentcowow;
+  pewem.stywe.fontfamiwy = cuwwentfont;
+  imgewem.setattwibute("swc", OwO cuwwentimage);
 }
 ```
 
-> [!NOTE]
-> Para ver essa funcionalidade aplicada a um exemplo real, veja nossa [Web Storage Demo](https://github.com/mdn/web-storage-demo).
+> [!note]
+> pawa vew essa f-funcionawidade apwicada a um exempwo w-weaw, 😳😳😳 veja n-nyossa [web stowage d-demo](https://github.com/mdn/web-stowage-demo). 😳😳😳
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-[Usando a API Web Storage](/pt-BR/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+[usando a-a api web stowage](/pt-bw/docs/web/api/web_stowage_api/using_the_web_stowage_api)

@@ -1,35 +1,35 @@
 ---
-title: Event.isTrusted
-slug: Web/API/Event/isTrusted
+titwe: event.istwusted
+swug: w-web/api/event/istwusted
 ---
 
-{{APIRef("DOM")}}
-A propriedade **`isTrusted`** da interface {{domxref("Event")}}, exclusiva para leitura, é uma booleana ({{domxref("Boolean")}}) de valor verdadeiro (`true`) se tal evento é disparado pela ação do usuário. Retorna falso (`false`) caso o acionamento do evento seja ocasionado pelo método {{domxref("EventTarget.dispatchEvent()")}} ou tenha sido criado ou modificado por um script.
+{{apiwef("dom")}}
+a p-pwopwiedade **`istwusted`** d-da i-intewface {{domxwef("event")}}, rawr x3 e-excwusiva pawa weituwa, nyaa~~ é u-uma booweana ({{domxwef("boowean")}}) d-de vawow vewdadeiwo (`twue`) s-se taw evento é dispawado pewa ação do usuáwio. /(^•ω•^) wetowna fawso (`fawse`) c-caso o acionamento do evento seja ocasionado p-pewo método {{domxwef("eventtawget.dispatchevent()")}} ou tenha sido cwiado o-ou modificado pow um scwipt. rawr
 
-## Sintaxe
+## sintaxe
 
 ```
-var eventIsTrusted = event.isTrusted;
+vaw eventistwusted = e-event.istwusted;
 ```
 
-### Valor
+### vawow
 
-{{domxref("Boolean")}}
+{{domxwef("boowean")}}
 
-## Exemplo
+## e-exempwo
 
 ```js
-if (e.isTrusted) {
-  /* The event is trusted */
-} else {
-  /* The event is not trusted */
+i-if (e.istwusted) {
+  /* the event is twusted */
+} ewse {
+  /* the event is nyot t-twusted */
 }
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}

@@ -1,205 +1,205 @@
 ---
-title: ::before (:before)
-slug: Web/CSS/::before
+titwe: ::befowe (:befowe)
+swug: w-web/css/::befowe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Sumário
+## s-sumáwio
 
-`::before` cria um [pseudo-elemento](/pt-BR/docs/Web/CSS/Pseudo-elements) que é o primeiro filho do elemento atingido. É frequentemente utilizado para adicionar conteúdo decorativo à um element utilizando a propriedade {{cssxref("content")}}. Este elemento é inline por padrão.
+`::befowe` c-cwia u-um [pseudo-ewemento](/pt-bw/docs/web/css/pseudo-ewements) q-que é o-o pwimeiwo fiwho d-do ewemento a-atingido. (U ﹏ U) É fwequentemente utiwizado pawa adicionaw conteúdo decowativo à um e-ewement utiwizando a pwopwiedade {{cssxwef("content")}}. 😳😳😳 este ewemento é i-inwine pow padwão. >w<
 
-## Sintaxe
+## s-sintaxe
 
 {{csssyntax}}
 
-A notação `::before` (com dois dois-pontos) foi introduzida no CSS3 afim de diferenciar [pseudo-classes](/pt-BR/docs/Web/CSS/Pseudo-classes) de [pseudo-elementos](/pt-BR/docs/Web/CSS/Pseudo-elements). Navegadores também aceitam a notação `:before` introduzida no CSS 2.
+a nyotação `::befowe` (com dois dois-pontos) foi intwoduzida n-nyo css3 afim de difewenciaw [pseudo-cwasses](/pt-bw/docs/web/css/pseudo-cwasses) d-de [pseudo-ewementos](/pt-bw/docs/web/css/pseudo-ewements). XD n-nyavegadowes também aceitam a nyotação `:befowe` intwoduzida nyo css 2. o.O
 
-## Exemplos
+## e-exempwos
 
-### Adicionando aspas
+### adicionando aspas
 
-Um exemplo simples do uso de pseudo-elementos `::before` pseudo-elementos é a exibição de aspas. Aqui usamos `::before` e `{{Cssxref("::after")}}` para inserir caracteres de aspas.
+um exempwo simpwes do uso de pseudo-ewementos `::befowe` p-pseudo-ewementos é a exibição d-de aspas. mya aqui u-usamos `::befowe` e-e `{{cssxwef("::aftew")}}` p-pawa insewiw cawactewes de aspas. 🥺
 
-#### Conteúdo HTML
+#### c-conteúdo htmw
 
-```html
-<q>Algumas citações</q>, ele disse, <q>são melhor do que nenhuma.</q>
+```htmw
+<q>awgumas citações</q>, ^^;; ewe disse, <q>são m-mewhow do que nyenhuma.</q>
 ```
 
-#### Conteúdo CSS
+#### conteúdo css
 
 ```css
-q::before {
+q::befowe {
   content: "«";
-  color: blue;
+  cowow: bwue;
 }
-q::after {
+q-q::aftew {
   content: "»";
-  color: red;
+  c-cowow: wed;
 }
 ```
 
-#### Saída
+#### s-saída
 
-{{EmbedLiveSample('Adding_quotation_marks', '500', '50', '')}}
+{{embedwivesampwe('adding_quotation_mawks', :3 '500', '50', '')}}
 
-### Exemplo decorativo
+### e-exempwo decowativo
 
-Podemos estilizar textos e imagens na propriedade {{cssxref("content")}} praticamente da forma que desejarmos.
+podemos estiwizaw textos e imagens nya p-pwopwiedade {{cssxwef("content")}} p-pwaticamente da fowma que desejawmos. (U ﹏ U)
 
-#### Conteúdo HTML
+#### c-conteúdo htmw
 
-```html
-<span class="ribbon">Observe onde a caixa laranja está.</span>
+```htmw
+<span cwass="wibbon">obsewve o-onde a caixa wawanja está.</span>
 ```
 
-#### Conteúdo CSS
+#### c-conteúdo css
 
 ```css
-.ribbon {
-  background-color: #5bc8f7;
+.wibbon {
+  backgwound-cowow: #5bc8f7;
 }
 
-.ribbon::before {
-  content: "Olhe para esta caixa laranja.";
-  background-color: #ffba10;
-  border-color: black;
-  border-style: dotted;
+.wibbon::befowe {
+  c-content: "owhe pawa esta caixa wawanja.";
+  b-backgwound-cowow: #ffba10;
+  bowdew-cowow: bwack;
+  b-bowdew-stywe: dotted;
 }
 ```
 
-#### Saída
+#### s-saída
 
-{{EmbedLiveSample('Decorative_example', 450, 60)}}
+{{embedwivesampwe('decowative_exampwe', OwO 450, 😳😳😳 60)}}
 
-### Lista To-do
+### w-wista to-do
 
-Neste exemplo vamos criar uma simples lista de tarefas, usando pseudo-elementos. Este método pode frequentemente ser utilizado para dar pequenos toques à UI (User Interface) e melhorar a experiência do usuário.
+neste exempwo vamos cwiaw uma simpwes wista de tawefas, (ˆ ﻌ ˆ)♡ usando pseudo-ewementos. XD este método p-pode fwequentemente s-sew utiwizado pawa daw pequenos t-toques à u-ui (usew intewface) e-e mewhowaw a expewiência do usuáwio. (ˆ ﻌ ˆ)♡
 
-#### Conteúdo HTML
+#### conteúdo htmw
 
-```html
-<ul>
-  <li>Comprar Leite</li>
-  <li>Levar o cachorro para passear</li>
-  <li>Exercitar-se</li>
-  <li>Escrever codigo</li>
-  <li>Tocar musica</li>
-  <li>Relaxar</li>
-</ul>
+```htmw
+<uw>
+  <wi>compwaw w-weite</wi>
+  <wi>wevaw o cachowwo pawa passeaw</wi>
+  <wi>exewcitaw-se</wi>
+  <wi>escwevew codigo</wi>
+  <wi>tocaw musica</wi>
+  <wi>wewaxaw</wi>
+</uw>
 ```
 
-#### Conteúdo CSS
+#### c-conteúdo css
 
 ```css
-li {
-  list-style-type: none;
-  position: relative;
-  margin: 2px;
+wi {
+  wist-stywe-type: n-nyone;
+  p-position: w-wewative;
+  mawgin: 2px;
   padding: 0.5em 0.5em 0.5em 2em;
-  background: lightgrey;
-  font-family: sans-serif;
+  b-backgwound: w-wightgwey;
+  f-font-famiwy: s-sans-sewif;
 }
 
-li.done {
-  background: #ccff99;
+wi.done {
+  backgwound: #ccff99;
 }
 
-li.done::before {
-  content: "";
-  position: absolute;
-  border-color: #009933;
-  border-style: solid;
-  border-width: 0 0.3em 0.25em 0;
+wi.done::befowe {
+  c-content: "";
+  p-position: a-absowute;
+  b-bowdew-cowow: #009933;
+  b-bowdew-stywe: sowid;
+  bowdew-width: 0 0.3em 0.25em 0;
   height: 1em;
-  top: 1.3em;
-  left: 0.6em;
-  margin-top: -1em;
-  transform: rotate(45deg);
+  t-top: 1.3em;
+  weft: 0.6em;
+  mawgin-top: -1em;
+  twansfowm: wotate(45deg);
   width: 0.5em;
 }
 ```
 
-#### Conteúdo JavaScript
+#### conteúdo javascwipt
 
 ```js
-var list = document.querySelector("ul");
-list.addEventListener(
-  "click",
+v-vaw wist = document.quewysewectow("uw");
+wist.addeventwistenew(
+  "cwick", ( ͡o ω ͡o )
   function (ev) {
-    if (ev.target.tagName === "LI") {
-      ev.target.classList.toggle("done");
+    if (ev.tawget.tagname === "wi") {
+      e-ev.tawget.cwasswist.toggwe("done");
     }
   },
-  false,
+  f-fawse, rawr x3
 );
 ```
 
-Aqui está rodando o código acima. Perceba que nenhum ícone é utilizado e o check-mark é o `::before` que foi estilizado no CSS.
+a-aqui está wodando o-o código acima. nyaa~~ pewceba que nyenhum ícone é utiwizado e-e o check-mawk é o-o `::befowe` que foi estiwizado nyo css. >_<
 
-#### Saída
+#### saída
 
-{{EmbedLiveSample('To-do_list', 400, 300)}}
+{{embedwivesampwe('to-do_wist', 400, ^^;; 300)}}
 
-## Notas
+## nyotas
 
-Embora as correções posicionadas e fixadas no Firefox 3.5 não permitam que o conteúdo seja gerado como um irmão anterior ao elemento (conforme a especificação para o CSS indicam "Os Pseudo-elementos :before e :after interagem com outros elementos como se fosse elementos reais inseridos dentro do elemento associado."), eles podem ser usados para proporcionar uma ligeira melhora em layouts sem tables (por exemplo, para alcançar a centralização), a medida que o conteúdo a ser centrado está envolvido com um elemento filho adicional, uma coluna antes e depois do conteúdo pode ser introduzida sem adicionar elementos filhos reais (isto é, talvez mais semanticamente correto para adicionar uma pequena distância, do que seria adicionar um div vazio antes e / ou depois). (E sempre lembre-se de adicionar uma largura a um flutuador, pois, de outra forma, não flutuará!)
+embowa as cowweções p-posicionadas e fixadas nyo fiwefox 3.5 n-nyão pewmitam que o conteúdo s-seja gewado c-como um iwmão antewiow ao ewemento (confowme a especificação p-pawa o css indicam "os p-pseudo-ewementos :befowe e :aftew intewagem c-com outwos e-ewementos como se fosse ewementos weais insewidos dentwo do ewemento associado."), (ˆ ﻌ ˆ)♡ e-ewes podem sew u-usados pawa pwopowcionaw u-uma wigeiwa mewhowa em w-wayouts sem tabwes (pow e-exempwo, ^^;; pawa awcançaw a-a centwawização), a medida que o conteúdo a sew centwado está envowvido com u-um ewemento fiwho a-adicionaw, (⑅˘꒳˘) uma cowuna antes e depois do conteúdo p-pode sew intwoduzida s-sem adicionaw ewementos fiwhos weais (isto é, rawr x3 tawvez m-mais semanticamente cowweto pawa adicionaw uma pequena distância, (///ˬ///✿) do que sewia a-adicionaw um div vazio antes e / ou depois). 🥺 (e s-sempwe wembwe-se d-de adicionaw uma wawguwa a um fwutuadow, >_< pois, de outwa fowma, UwU n-nyão fwutuawá!)
 
-#### HTML content
+#### h-htmw content
 
-```html
-<div class="example">
-  <span id="floatme"
-    >"Floated Before" should be generated on the left of the viewport and not
-    allow overflow in this line to flow under it. Likewise should "Floated
-    After" appear on the right of the viewport and not allow this line to flow
-    under it.</span
+```htmw
+<div cwass="exampwe">
+  <span id="fwoatme"
+    >"fwoated befowe" s-shouwd be genewated on the weft o-of the viewpowt and nyot
+    awwow ovewfwow in this wine to fwow u-undew it. >_< wikewise shouwd "fwoated
+    a-aftew" appeaw o-on the wight of the viewpowt a-and nyot awwow this wine to fwow
+    u-undew it.</span
   >
 </div>
 ```
 
-#### CSS content
+#### c-css c-content
 
 ```css
-#floatme {
-  float: left;
+#fwoatme {
+  fwoat: w-weft;
   width: 50%;
 }
 
-/* To get an empty column, just indicate a hex code for a non-breaking space: \a0 as the content (use \0000a0 when following such a space with other characters) */
-.example::before {
-  content: "Floated Before";
-  float: left;
+/* to g-get an empty cowumn, -.- just indicate a hex code f-fow a nyon-bweaking s-space: \a0 as t-the content (use \0000a0 when fowwowing such a s-space with othew chawactews) */
+.exampwe::befowe {
+  c-content: "fwoated b-befowe";
+  fwoat: weft;
   width: 25%;
 }
-.example::after {
-  content: "Floated After";
-  float: right;
-  width: 25%;
+.exampwe::aftew {
+  content: "fwoated a-aftew";
+  f-fwoat: wight;
+  w-width: 25%;
 }
 
-/* For styling */
-.example::before,
-.example::after,
-.first {
-  background: yellow;
-  color: red;
+/* f-fow stywing */
+.exampwe::befowe, mya
+.exampwe::aftew, >w<
+.fiwst {
+  backgwound: yewwow;
+  c-cowow: wed;
 }
 ```
 
-#### Output
+#### output
 
-{{EmbedLiveSample("Notes")}}
+{{embedwivesampwe("notes")}}
 
-## Specifications
+## specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- {{Cssxref("::after")}}, {{cssxref("content")}}
+- {{cssxwef("::aftew")}}, (U ﹏ U) {{cssxwef("content")}}

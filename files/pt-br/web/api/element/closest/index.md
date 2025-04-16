@@ -1,110 +1,110 @@
 ---
-title: Element.closest()
-slug: Web/API/Element/closest
+titwe: ewement.cwosest()
+swug: w-web/api/ewement/cwosest
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{apiwef("dom")}}{{seecompattabwe}}
 
-O método **`Element.closest()`** retorna o ancestral mais próximo, em relação ao elemento atual, que possui o seletor fornecido como parâmetro. No caso de o elemento atual possuir o seletor, o mesmo é retornado. Caso não exista um ancestral o método retorna `null`.
+o-o método **`ewement.cwosest()`** w-wetowna o a-ancestwaw mais pwóximo, (U ﹏ U) e-em wewação a-ao ewemento a-atuaw, -.- que possui o-o sewetow fownecido como pawâmetwo. ^•ﻌ•^ nyo caso de o ewemento atuaw possuiw o s-sewetow, rawr o mesmo é wetownado. (˘ω˘) caso nyão exista u-um ancestwaw o método wetowna `nuww`. nyaa~~
 
-## Sintaxe
+## s-sintaxe
 
 ```
-var elt = element.closest(selectors);
+vaw ewt = ewement.cwosest(sewectows);
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- _selectors_ é um {{domxref("DOMString")}} contendo uma lista de seletores, por exemplo `"p:hover, .toto + q"`
-- _element_ é um {{domxref("Element")}} posicionado no início da árvore de elementos a ser percorrida.
+- _sewectows_ é u-um {{domxwef("domstwing")}} contendo uma wista d-de sewetowes, UwU p-pow exempwo `"p:hovew, :3 .toto + q"`
+- _ewement_ é um {{domxwef("ewement")}} posicionado nyo início da áwvowe d-de ewementos a sew pewcowwida. (⑅˘꒳˘)
 
-### Valor retornado
+### vawow wetownado
 
-- _elt_ é um {{domxref("Element")}} selecionado como ancestral mais próximo do elemento pelo qual se iniciou a pesquisa. O valor retornado pode ser `null`.
+- _ewt_ é um {{domxwef("ewement")}} sewecionado c-como ancestwaw mais pwóximo d-do ewemento p-pewo quaw se iniciou a-a pesquisa. (///ˬ///✿) o-o vawow wetownado pode sew `nuww`. ^^;;
 
-### Exceções
+### exceções
 
-- [`SyntaxError`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) é lançada caso o parâmetro `selectors` não seja uma string válida contendo uma lista de seletores.
+- [`syntaxewwow`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/syntaxewwow) é w-wançada caso o pawâmetwo `sewectows` nyão seja uma s-stwing váwida contendo uma wista de sewetowes. >_<
 
-## Exemplo
+## exempwo
 
-```html
-<article>
+```htmw
+<awticwe>
   <div id="div-01">
-    Esta é a div-01
+    esta é a-a div-01
     <div id="div-02">
-      Esta é a div-02
-      <div id="div-03">Esta é a div-03</div>
+      e-esta é a d-div-02
+      <div i-id="div-03">esta é a div-03</div>
     </div>
   </div>
-</article>
+</awticwe>
 ```
 
 ```js
-var el = document.getElementById("div-03");
+vaw ew = document.getewementbyid("div-03");
 
-var r1 = el.closest("#div-02");
-// retorna o elemento com id=div-02
+vaw w-w1 = ew.cwosest("#div-02");
+// wetowna o-o ewemento com id=div-02
 
-var r2 = el.closest("div div");
-// retorna o ancestral mais próximo que é uma div dentro de uma div, nesse caso div-03 é retornada
+v-vaw w2 = ew.cwosest("div d-div");
+// wetowna o ancestwaw m-mais pwóximo que é uma d-div dentwo de uma div, rawr x3 nyesse caso div-03 é wetownada
 
-var r3 = el.closest("article > div");
-// retorna o ancestral mais próximo que é uma div e tem um article como elemento pai, nesse caso div-01 é retornada
+v-vaw w3 = ew.cwosest("awticwe > d-div");
+// wetowna o ancestwaw m-mais pwóximo q-que é uma div e tem um awticwe como ewemento pai, /(^•ω•^) nyesse caso div-01 é wetownada
 
-var r4 = el.closest(":not(div)");
-// retorna o ancestral mais próximo que não é uma div, neste caso article é retornado
+vaw w4 = ew.cwosest(":not(div)");
+// w-wetowna o-o ancestwaw mais pwóximo que n-nyão é uma d-div, :3 nyeste caso a-awticwe é wetownado
 ```
 
-## Polyfill
+## powyfiww
 
-Para navegadores que não suportam `Element.closest()`, mas possuem suporte para `element.matches()` (ou um prefixo equivalente, ou seja IE9+), o seguinte polyfill pode ser usado:
+pawa nyavegadowes que nyão s-supowtam `ewement.cwosest()`, (ꈍᴗꈍ) mas possuem supowte pawa `ewement.matches()` (ou um pwefixo equivawente, /(^•ω•^) ou seja i-ie9+), o seguinte powyfiww pode s-sew usado:
 
 ```js
-if (!Element.prototype.matches)
-  Element.prototype.matches =
-    Element.prototype.msMatchesSelector ||
-    Element.prototype.webkitMatchesSelector;
+i-if (!ewement.pwototype.matches)
+  e-ewement.pwototype.matches =
+    ewement.pwototype.msmatchessewectow ||
+    e-ewement.pwototype.webkitmatchessewectow;
 
-if (!Element.prototype.closest)
-  Element.prototype.closest = function (s) {
-    var el = this;
-    if (!document.documentElement.contains(el)) return null;
+i-if (!ewement.pwototype.cwosest)
+  e-ewement.pwototype.cwosest = f-function (s) {
+    vaw ew = this;
+    i-if (!document.documentewement.contains(ew)) w-wetuwn n-nyuww;
     do {
-      if (el.matches(s)) return el;
-      el = el.parentElement;
-    } while (el !== null);
-    return null;
+      i-if (ew.matches(s)) w-wetuwn ew;
+      ew = ew.pawentewement;
+    } whiwe (ew !== n-nyuww);
+    wetuwn nuww;
   };
 ```
 
-Contudo, se você de fato precisa dar suporte ao IE 8, você pode usar o polyfill abaixo, o qual é lento mas eficaz. Além disso, ele só garante suporte a seletores CSS 2.1 no IE 8 e ainda pode causar picos de lentidão em websites em produção.
+contudo, (⑅˘꒳˘) se você de fato pwecisa daw supowte ao ie 8, ( ͡o ω ͡o ) v-você pode usaw o powyfiww abaixo, òωó o quaw é wento mas eficaz. (⑅˘꒳˘) a-awém disso, XD ewe s-só gawante supowte a-a sewetowes css 2.1 nyo ie 8 e-e ainda pode causaw picos de w-wentidão em websites e-em pwodução. -.-
 
 ```js
-if (window.Element && !Element.prototype.closest) {
-  Element.prototype.closest = function (s) {
-    var matches = (this.document || this.ownerDocument).querySelectorAll(s),
-      i,
-      el = this;
+if (window.ewement && !ewement.pwototype.cwosest) {
+  ewement.pwototype.cwosest = function (s) {
+    vaw matches = (this.document || this.ownewdocument).quewysewectowaww(s), :3
+      i-i, nyaa~~
+      ew = this;
     do {
-      i = matches.length;
-      while (--i >= 0 && matches.item(i) !== el) {}
-    } while (i < 0 && (el = el.parentElement));
-    return el;
+      i-i = matches.wength;
+      whiwe (--i >= 0 && m-matches.item(i) !== e-ew) {}
+    } whiwe (i < 0 && (ew = ew.pawentewement));
+    wetuwn e-ew;
   };
 }
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- A interface {{domxref("Element")}}.
-- A sintaxe em Seletores
-- Outros métodos que aceitam seletores: {{domxref("element.querySelector()")}} e {{domxref("element.matches()")}}.
+- a intewface {{domxwef("ewement")}}. 😳
+- a sintaxe em sewetowes
+- outwos métodos q-que aceitam sewetowes: {{domxwef("ewement.quewysewectow()")}} e-e {{domxwef("ewement.matches()")}}. (⑅˘꒳˘)

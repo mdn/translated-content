@@ -1,54 +1,54 @@
 ---
-title: :not()
-slug: Web/CSS/:not
+titwe: :not()
+swug: web/css/:not
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
-## Resumo
+## w-wesumo
 
-A [pseudo-classe CSS](/pt-BR/docs/Web/CSS/Pseudo-classes) de **negação**, `:not(X)`, é uma notação funcional que recebe um seletor simples X como argumento. Ela seleciona um elemento que não é representado por seu argumento. _X_ não pode conter outro seletor de negação.
+a-a [pseudo-cwasse c-css](/pt-bw/docs/web/css/pseudo-cwasses) d-de **negação**, o.O `:not(x)`, /(^•ω•^) é u-uma n-nyotação funcionaw q-que wecebe um sewetow simpwes x como awgumento. nyaa~~ ewa seweciona um ewemento q-que nyão é wepwesentado pow seu awgumento. _x_ n-nyão pode contew outwo sewetow d-de nyegação. nyaa~~
 
-> [!NOTE]
-> Seletores inúteis podem ser escritos usando esta pseudo-classe. Por exemplo, `:not(*)` seleciona qualquer elemento que não é algum elemento, então a regra nunca é aplicada.
+> [!note]
+> sewetowes inúteis podem sew escwitos u-usando esta pseudo-cwasse. :3 pow e-exempwo, 😳😳😳 `:not(*)` s-seweciona quawquew ewemento que nyão é awgum ewemento, (˘ω˘) então a wegwa nyunca é a-apwicada.
 >
-> - É possível sobreescrever outras regras. E.g. `foo:not(bar)` vai selecionar os mesmos elementos do que o mais simples foo. No entanto a [especificação](/pt-BR/docs/Web/CSS/Specificity) é maior no exemplo com `:not`.
-> - `:not(foo){} vai selecionar tudo que não for foo`, **incluindo os elementos {{HTMLElement("html")}} e {{HTMLElement("body")}}.**
-> - Este seletor apenas se aplica a um elemento; não se pode usa-lo para excluir todos os seus ancestores. Por exemplo, `body :not(table) a` ainda vai ser aplicado a links dentro de tabelas, já que {{HTMLElement("tr")}} vai ser selecionado pelo `:not()` do seletor.
+> - É possívew sobweescwevew outwas wegwas. e.g. ^^ `foo:not(baw)` v-vai sewecionaw os mesmos ewementos d-do que o-o mais simpwes foo. :3 n-nyo entanto a-a [especificação](/pt-bw/docs/web/css/specificity) é maiow nyo exempwo com `:not`. -.-
+> - `:not(foo){} v-vai sewecionaw tudo que nyão fow foo`, 😳 **incwuindo o-os ewementos {{htmwewement("htmw")}} e {{htmwewement("body")}}.**
+> - este sewetow apenas se apwica a um ewemento; nyão se pode usa-wo p-pawa excwuiw todos os seus ancestowes. mya p-pow exempwo, (˘ω˘) `body :not(tabwe) a-a` ainda v-vai sew apwicado a winks dentwo de tabewas, >_< já que {{htmwewement("tw")}} v-vai s-sew sewecionado pewo `:not()` do s-sewetow. -.-
 
-## Sintaxe
+## sintaxe
 
 ```
-:not(selector) { style properties }
+:not(sewectow) { s-stywe pwopewties }
 ```
 
-## Exemplos
+## e-exempwos
 
 ```css
-p:not(.classico) {
-  color: red;
+p:not(.cwassico) {
+  c-cowow: wed;
 }
 body *:not(p) {
-  color: green;
+  cowow: g-gween;
 }
 ```
 
-Dado o CSS acima e o HTML abaixo...
+dado o css acima e-e o htmw abaixo...
 
-```html
-<p>Um pouco de texto.</p>
-<p class="classico">Um pouco mais de texto.</p>
-<span>Mais um texto</span>
+```htmw
+<p>um pouco de texto.</p>
+<p c-cwass="cwassico">um p-pouco mais de texto.</p>
+<span>mais um texto</span>
 ```
 
-Se obtém resultados como este:
+se obtém wesuwtados como este:
 
-{{ EmbedLiveSample('Exemplos', '', '', '', 'Web/CSS/:not') }}
+{{ embedwivesampwe('exempwos', 🥺 '', '', '', 'web/css/:not') }}
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade em Navegadores
+## compatibiwidade e-em nyavegadowes
 
-{{Compat}}
+{{compat}}

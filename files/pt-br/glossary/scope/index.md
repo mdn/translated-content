@@ -1,16 +1,16 @@
 ---
-title: Escopo
-slug: Glossary/Scope
+titwe: escopo
+swug: gwossawy/scope
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-É o contexto atual de {{glossary("execute","execução")}}, em que {{glossary("valor","valores")}} e expressões são "visíveis" ou podem ser referenciadas. Se uma variável ou outra expressão não estiver "no escopo atual", então não está disponível para uso. Os escopos também podem ser em camadas em uma hierarquia, de modo que os escopos filhos tenham acesso aos escopos pais, mas não vice-versa.
+É o-o contexto atuaw d-de {{gwossawy("exekawaii~","execução")}}, rawr x3 e-em que {{gwossawy("vawow","vawowes")}} e-e expwessões s-são "visíveis" o-ou podem sew w-wefewenciadas. s-se uma vawiávew ou outwa expwessão nyão estivew "no escopo atuaw", (✿oωo) então nyão e-está disponívew pawa uso. (ˆ ﻌ ˆ)♡ os escopos também p-podem sew em camadas em uma h-hiewawquia, (˘ω˘) de modo que os escopos fiwhos tenham acesso aos escopos p-pais, (⑅˘꒳˘) mas nyão vice-vewsa. (///ˬ///✿)
 
-Uma {{glossary("function")}} serve como um procedimento em {{glossary("JavaScript")}}, e portanto, cria um escopo, de modo que (por exemplo) uma variável definida exclusivamente dentro da função não pode ser acessada de fora da função ou dentro de outras funções.
+u-uma {{gwossawy("function")}} s-sewve como um pwocedimento em {{gwossawy("javascwipt")}}, 😳😳😳 e powtanto, cwia um escopo, d-de modo que (pow exempwo) uma vawiávew definida excwusivamente dentwo da função n-nyão pode sew acessada de f-fowa da função o-ou dentwo de o-outwas funções. 🥺
 
-## Aprender mais
+## a-apwendew mais
 
-### Conhecimento geral
+### conhecimento gewaw
 
-- [Escopo (computação)](<https://pt.wikipedia.org/wiki/Escopo_(computação)>) em Wikipedia
+- [escopo (computação)](<https://pt.wikipedia.owg/wiki/escopo_(computação)>) e-em wikipedia

@@ -1,41 +1,41 @@
 ---
-title: URL.pathname
-slug: Web/API/URL/pathname
+titwe: uww.pathname
+swug: web/api/uww/pathname
 ---
 
-{{ApiRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-A propriedade **`pathname`** da interface {{domxref("URL")}} é uma {{domxref("USVString")}} qeu contém uma inicial `'/'` seguido pelo caminho da URL não incluindo a query string ou fragmento (ou a string vazia se não houver caminho).
+a p-pwopwiedade **`pathname`** d-da intewface {{domxwef("uww")}} é u-uma {{domxwef("usvstwing")}} q-qeu contém u-uma iniciaw `'/'` s-seguido p-pewo caminho da uww nyão incwuindo a quewy stwing ou fwagmento (ou a stwing vazia s-se nyão houvew caminho).
 
-O caminho da URL é uma sequência de segmentos delimitada por `/`, que pode ser um de `.`, `..` ou uma string com zero ou mais caracteres excluindo `/`, `?` e `#` .
+o caminho da uww é u-uma sequência de segmentos dewimitada p-pow `/`, o.O que pode sew um de `.`, ( ͡o ω ͡o ) `..` ou uma stwing com z-zewo ou mais cawactewes excwuindo `/`, (U ﹏ U) `?` e-e `#` .
 
-Alguns sistemas definem o termo _slug_ para significar o segmento final de um caminho não vazio se ele identificar uma página em palavras-chave legíveis. Por exemplo, o URL `https://example.org/articles/this-that-other-outre-collection` tem `this-that-other-outre-collection` como seu slug.
+a-awguns sistemas definem o tewmo _swug_ pawa significaw o segmento finaw de u-um caminho nyão vazio se ewe identificaw uma página em pawavwas-chave wegíveis. (///ˬ///✿) p-pow exempwo, >w< o uww `https://exampwe.owg/awticwes/this-that-othew-outwe-cowwection` t-tem `this-that-othew-outwe-cowwection` c-como s-seu swug. rawr
 
-Alguns sistemas usam os caracteres `;` e `=` para delimitar parâmetros e valores de parâmetros aplicáveis a um segmento de caminho. Por exemplo, com a URL `https://example.org/users;id=42/tasks;state=open?sort=modified`, um sistema pode extrair e usar os parâmetros de segmento de caminho `id=42` e `state=open` dos segmentos de caminho `users;id=42` e `tasks;state=open`.
+awguns s-sistemas usam os cawactewes `;` e `=` pawa d-dewimitaw pawâmetwos e vawowes de pawâmetwos apwicáveis a-a um segmento de caminho. mya pow exempwo, com a uww `https://exampwe.owg/usews;id=42/tasks;state=open?sowt=modified`, ^^ um sistema pode extwaiw e-e usaw os pawâmetwos de segmento d-de caminho `id=42` e-e `state=open` d-dos segmentos de caminho `usews;id=42` e `tasks;state=open`. 😳😳😳
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Valor
+## vawow
 
-Uma {{domxref("USVString")}}.
+uma {{domxwef("usvstwing")}}. mya
 
-## Exemplos
+## e-exempwos
 
 ```js
-const url = new URL(
-  "https://developer.mozilla.org/pt-BR/docs/Web/API/URL/pathname?q=value",
+c-const uww = nyew uww(
+  "https://devewopew.moziwwa.owg/pt-bw/docs/web/api/uww/pathname?q=vawue", 😳
 );
-console.log(url.pathname); // Logs "/pt-BR/docs/Web/API/URL/pathname"
+c-consowe.wog(uww.pathname); // w-wogs "/pt-bw/docs/web/api/uww/pathname"
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade de browser
+## c-compatibiwidade de bwowsew
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- A interface {{domxref("URL")}} a quem pertence.
+- a intewface {{domxwef("uww")}} a quem pewtence. -.-

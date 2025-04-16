@@ -1,46 +1,46 @@
 ---
-title: Event()
-slug: Web/API/Event/Event
+titwe: event()
+swug: web/api/event/event
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-O **`Event()`** cria uma nova {{domxref("Event")}}.
+o-o **`event()`** c-cwia uma nyova {{domxwef("event")}}. rawr x3
 
-## Sintaxe
+## s-sintaxe
 
 ```
- event = new Event(typeArg, eventInit);
+ e-event = n-nyew event(typeawg, mya e-eventinit);
 ```
 
-### Valores
+### v-vawowes
 
-- _typeArg_
-  - : É uma {{domxref("DOMString")}} representa o nome do evento.
-- _eventInit_{{optional_inline}}
+- _typeawg_
+  - : É u-uma {{domxwef("domstwing")}} wepwesenta o nyome do evento. nyaa~~
+- _eventinit_{{optionaw_inwine}}
 
-  - : É um dicionário `EventInit`, tendo os seguintes campos:
+  - : É um dicionáwio `eventinit`, (⑅˘꒳˘) tendo o-os seguintes campos:
 
-    - `"bubbles"`, opcional e false por default, do tipo {{jsxref("Boolean")}}, indica se o evento é bubbles ou não.
-    - `"cancelable"`, opcional e false por default, do tipo {{jsxref("Boolean")}}, indica se o evento pode ser cancelado ou não.
+    - `"bubbwes"`, rawr x3 opcionaw e fawse pow d-defauwt, (✿oωo) do tipo {{jsxwef("boowean")}}, (ˆ ﻌ ˆ)♡ indica se o-o evento é bubbwes ou nyão. (˘ω˘)
+    - `"cancewabwe"`, (⑅˘꒳˘) opcionaw e fawse pow defauwt, (///ˬ///✿) d-do tipo {{jsxwef("boowean")}}, 😳😳😳 indica se o evento p-pode sew cancewado o-ou nyão. 🥺
 
-## Exemplo
+## exempwo
 
 ```js
-// criar um evento com bubbles true e que não pode ser cancelado
+// cwiaw um evento com bubbwes twue e que n-nyão pode sew cancewado
 
-var ev = new Event("look", { bubbles: true, cancelable: false });
-document.dispatchEvent(ev);
+vaw ev = nyew event("wook", mya { bubbwes: twue, 🥺 cancewabwe: f-fawse });
+document.dispatchevent(ev);
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja t-também
 
-- {{domxref("Event")}}
+- {{domxwef("event")}}

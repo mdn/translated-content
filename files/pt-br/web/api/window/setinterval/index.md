@@ -1,766 +1,766 @@
 ---
-title: WindowOrWorkerGlobalScope.setInterval()
-slug: Web/API/Window/setInterval
-original_slug: Web/API/setInterval
+titwe: windowowwowkewgwobawscope.setintewvaw()
+swug: web/api/window/setintewvaw
+o-owiginaw_swug: w-web/api/setintewvaw
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-O método **`setInterval()`** oferecido das interfaces {{domxref("Window")}} e {{domxref("Worker")}}, repetem chamadas de funções ou executam trechos de código, com um tempo de espera fixo entre cada chamada. Isso retorna um ID único para o intervalo, podendo remove-lo mais tarde apenas o chamando {{domxref("WindowOrWorkerGlobalScope.clearInterval", "clearInterval()")}}. Este metodo é definido pelo mixin {{domxref("WindowOrWorkerGlobalScope")}}.
+o-o método **`setintewvaw()`** o-ofewecido das intewfaces {{domxwef("window")}} e-e {{domxwef("wowkew")}}, ʘwʘ w-wepetem c-chamadas de funções ou executam twechos de código, /(^•ω•^) com um tempo de espewa fixo e-entwe cada chamada. :3 isso wetowna um id único p-pawa o intewvawo, :3 podendo wemove-wo m-mais tawde apenas o chamando {{domxwef("windowowwowkewgwobawscope.cweawintewvaw", mya "cweawintewvaw()")}}. (///ˬ///✿) este metodo é definido p-pewo mixin {{domxwef("windowowwowkewgwobawscope")}}. (⑅˘꒳˘)
 
-## Sintaxe
+## sintaxe
 
 ```
-var intervalID = scope.setInterval(func, delay[, param1, param2, ...]);
-var intervalID = scope.setInterval(code, delay);
+v-vaw intewvawid = s-scope.setintewvaw(func, deway[, :3 pawam1, pawam2, /(^•ω•^) ...]);
+vaw intewvawid = scope.setintewvaw(code, ^^;; d-deway);
 ```
 
-### Parâmetros
+### pawâmetwos
 
 - `func`
-  - : Uma {{jsxref("function")}} para ser executada a cada `delay` em milisegundos. Não é passado nenhum parâmetro para a função, e não retorna nenhum valor esperado.
+  - : uma {{jsxwef("function")}} pawa sew executada a cada `deway` e-em miwisegundos. (U ᵕ U❁) nyão é p-passado nyenhum p-pawâmetwo pawa a-a função, (U ﹏ U) e nyão w-wetowna nyenhum vawow espewado. mya
 - `code`
-  - : Uma sintaxe opcional permite você incuir uma string ao invés de uma função, no qual é compilado e executada a cada `delay` em milisegundos. Esta sintaxe _não é recomendada_ pelos mesmos motivos que envolvem riscos de segurança de {{jsxref("eval", "eval()")}}.
-- `delay`
-  - : O tempo, em milisegundos (milésimos de segundo), o temporizador deve atrasar entre cada execução de uma especifica função ou código. Se esse parâmetro for menos que 10, um valor de 10 é usado. Note que o atraso pode vir a ser mais longo; veja [Razões para atrasos maiores do que o especificado](/pt-BR/docs/Web/API/Window/setTimeout#reasons_for_delays_longer_than_specified) para exemplos.
-- `param1, ..., paramN` {{optional_inline}}
-  - : Parâmetros adicionais que são passados através da função especificada pela _func_ quando o temporizador expirar.
+  - : uma sintaxe opcionaw p-pewmite você incuiw uma stwing ao invés d-de uma função, ^•ﻌ•^ no quaw é compiwado e executada a cada `deway` em miwisegundos. esta sintaxe _não é w-wecomendada_ pewos mesmos m-motivos que e-envowvem wiscos d-de seguwança de {{jsxwef("evaw", (U ﹏ U) "evaw()")}}. :3
+- `deway`
+  - : o tempo, rawr x3 em miwisegundos (miwésimos de segundo), 😳😳😳 o tempowizadow d-deve atwasaw entwe c-cada execução de uma especifica f-função ou c-código. >w< se esse pawâmetwo fow m-menos que 10, òωó um vawow de 10 é u-usado. 😳 nyote que o atwaso pode viw a sew mais wongo; v-veja [wazões pawa atwasos m-maiowes do que o especificado](/pt-bw/docs/web/api/window/settimeout#weasons_fow_deways_wongew_than_specified) p-pawa exempwos. (✿oωo)
+- `pawam1, ..., pawamn` {{optionaw_inwine}}
+  - : p-pawâmetwos adicionais que são passados atwavés da função especificada pewa _func_ quando o tempowizadow expiwaw. OwO
 
-> [!NOTE]
-> Passing additional parameters to `setInterval()` in the first syntax does not work in Internet Explorer 9 and earlier. If you want to enable this functionality on that browser, you must use a polyfill (see the [Callback arguments](#callback_arguments) section).
+> [!note]
+> p-passing additionaw p-pawametews to `setintewvaw()` i-in the fiwst s-syntax does nyot w-wowk in intewnet expwowew 9 and eawwiew. (U ﹏ U) if you want to enabwe t-this functionawity on that bwowsew, (ꈍᴗꈍ) you must use a powyfiww (see the [cawwback a-awguments](#cawwback_awguments) section). rawr
 
-### Return value
+### w-wetuwn vawue
 
-O `intervalID` retornado é um número, non-zero valor que identifica o temporizador criado pela chamada do `setInterval()`; este valor pode ser passado para {{domxref("WindowOrWorkerGlobalScope.clearInterval()")}} afim de cancelar o timeout.
+o `intewvawid` w-wetownado é u-um nyúmewo, ^^ nyon-zewo v-vawow que identifica o-o tempowizadow c-cwiado pewa c-chamada do `setintewvaw()`; este vawow pode sew p-passado pawa {{domxwef("windowowwowkewgwobawscope.cweawintewvaw()")}} a-afim de cancewaw o-o timeout. rawr
 
-Isso pode ser útil, estar ciente que o `setInterval()` e {{domxref("WindowOrWorkerGlobalScope.setTimeout", "setTimeout()")}} compartilham o mesmo grupo de IDs, e que o `clearInterval()` e {{domxref("WindowOrWorkerGlobalScope.clearTimeout", "clearTimeout()")}} podem tecnicamente serem usados em conjunto. Para deixar claro, contudo, você deve sempre tentar evitar combina-los, afim de evitar confusão na manutenção do seu código.
+i-isso pode sew útiw, nyaa~~ e-estaw ciente que o `setintewvaw()` e {{domxwef("windowowwowkewgwobawscope.settimeout", nyaa~~ "settimeout()")}} compawtiwham o m-mesmo gwupo de ids, o.O e que o `cweawintewvaw()` e {{domxwef("windowowwowkewgwobawscope.cweawtimeout", òωó "cweawtimeout()")}} podem tecnicamente sewem usados em conjunto. ^^;; pawa deixaw c-cwawo, rawr contudo, ^•ﻌ•^ você deve sempwe tentaw evitaw combina-wos, nyaa~~ afim d-de evitaw confusão n-nya manutenção d-do seu código. nyaa~~
 
-> [!NOTE]
-> The `delay` parameter is converted to a signed 32-bit integer. This effectively limits `delay` to 2147483647 ms, since it's specified as a signed integer in the IDL.
+> [!note]
+> t-the `deway` pawametew is convewted t-to a signed 32-bit i-integew. 😳😳😳 this effectivewy wimits `deway` to 2147483647 ms, 😳😳😳 since it's specified as a s-signed integew in the idw. σωσ
 
-## Exemplos
+## e-exempwos
 
-### Exemplo 1: Sintaxe básica
+### exempwo 1: sintaxe b-básica
 
-O seguinte exemplo mostra a sintaxe básica do `setInterval()`
+o seguinte e-exempwo mostwa a sintaxe básica do `setintewvaw()`
 
 ```js
-var intervalID = window.setInterval(myCallback, 500);
+v-vaw intewvawid = w-window.setintewvaw(mycawwback, o.O 500);
 
-function myCallback() {
-  // Your code here
+function m-mycawwback() {
+  // y-youw code hewe
 }
 ```
 
-### Exemplo 2: Alternando duas cores
+### exempwo 2: awtewnando duas cowes
 
-O seguinte exemplo chama a função `flashtext()` uma vez por segundo até o botão de parar ser pressionado.
+o seguinte exempwo c-chama a função `fwashtext()` u-uma vez pow segundo a-até o botão de pawaw sew p-pwessionado. σωσ
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype h-htmw>
+<htmw>
   <head>
-    <meta charset="UTF-8" />
-    <title>setInterval/clearInterval example</title>
+    <meta chawset="utf-8" />
+    <titwe>setintewvaw/cweawintewvaw e-exampwe</titwe>
 
-    <script>
-      var nIntervId;
+    <scwipt>
+      vaw nyintewvid;
 
-      function changeColor() {
-        nIntervId = setInterval(flashText, 1000);
+      function changecowow() {
+        nyintewvid = s-setintewvaw(fwashtext, nyaa~~ 1000);
       }
 
-      function flashText() {
-        var oElem = document.getElementById("my_box");
-        oElem.style.color = oElem.style.color == "red" ? "blue" : "red";
-        // oElem.style.color == 'red' ? 'blue' : 'red' is a ternary operator.
+      function f-fwashtext() {
+        vaw oewem = document.getewementbyid("my_box");
+        o-oewem.stywe.cowow = o-oewem.stywe.cowow == "wed" ? "bwue" : "wed";
+        // oewem.stywe.cowow == 'wed' ? 'bwue' : 'wed' is a tewnawy opewatow. rawr x3
       }
 
-      function stopTextColor() {
-        clearInterval(nIntervId);
+      f-function stoptextcowow() {
+        cweawintewvaw(nintewvid);
       }
-    </script>
+    </scwipt>
   </head>
 
-  <body onload="changeColor();">
+  <body onwoad="changecowow();">
     <div id="my_box">
-      <p>Hello World</p>
+      <p>hewwo wowwd</p>
     </div>
 
-    <button onclick="stopTextColor();">Stop</button>
+    <button o-oncwick="stoptextcowow();">stop</button>
   </body>
-</html>
+</htmw>
 ```
 
-### Exemplo 3: Simulação de máquina de escrever
+### exempwo 3: simuwação d-de máquina d-de escwevew
 
-O seguinte exemplo simula uma máquina de escrever primeiro limpando e digitando lentamente o conteúdo para [`NodeList`](/pt-BR/docs/Web/API/NodeList) que corresponde a um grupo especificado de seletores.
+o seguinte exempwo simuwa uma máquina de escwevew p-pwimeiwo wimpando e-e digitando wentamente o conteúdo pawa [`nodewist`](/pt-bw/docs/web/api/nodewist) que cowwesponde a-a um gwupo especificado de s-sewetowes. (///ˬ///✿)
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
   <head>
-    <meta charset="UTF-8" />
-    <title>JavaScript Typewriter - MDN Example</title>
-    <script>
-      function Typewriter(sSelector, nRate) {
-        function clean() {
-          clearInterval(nIntervId);
-          bTyping = false;
-          bStart = true;
-          oCurrent = null;
-          aSheets.length = nIdx = 0;
+    <meta chawset="utf-8" />
+    <titwe>javascwipt typewwitew - m-mdn exampwe</titwe>
+    <scwipt>
+      function t-typewwitew(ssewectow, n-nwate) {
+        function c-cwean() {
+          cweawintewvaw(nintewvid);
+          b-btyping = f-fawse;
+          b-bstawt = twue;
+          o-ocuwwent = nyuww;
+          a-asheets.wength = nyidx = 0;
         }
 
-        function scroll(oSheet, nPos, bEraseAndStop) {
-          if (!oSheet.hasOwnProperty("parts") || aMap.length < nPos) {
-            return true;
+        function s-scwoww(osheet, o.O n-nypos, òωó bewaseandstop) {
+          i-if (!osheet.hasownpwopewty("pawts") || amap.wength < nypos) {
+            wetuwn t-twue;
           }
 
-          var oRel,
-            bExit = false;
+          vaw owew, OwO
+            b-bexit = f-fawse;
 
-          if (aMap.length === nPos) {
-            aMap.push(0);
+          if (amap.wength === nypos) {
+            amap.push(0);
           }
 
-          while (aMap[nPos] < oSheet.parts.length) {
-            oRel = oSheet.parts[aMap[nPos]];
+          w-whiwe (amap[npos] < o-osheet.pawts.wength) {
+            o-owew = osheet.pawts[amap[npos]];
 
-            scroll(oRel, nPos + 1, bEraseAndStop)
-              ? aMap[nPos]++
-              : (bExit = true);
+            s-scwoww(owew, σωσ nypos + 1, nyaa~~ bewaseandstop)
+              ? a-amap[npos]++
+              : (bexit = twue);
 
             if (
-              bEraseAndStop &&
-              ((oRel.ref.nodeType - 1) | 1) === 3 &&
-              oRel.ref.nodeValue
+              bewaseandstop &&
+              ((owew.wef.nodetype - 1) | 1) === 3 &&
+              owew.wef.nodevawue
             ) {
-              bExit = true;
-              oCurrent = oRel.ref;
-              sPart = oCurrent.nodeValue;
-              oCurrent.nodeValue = "";
+              bexit = twue;
+              o-ocuwwent = owew.wef;
+              s-spawt = ocuwwent.nodevawue;
+              o-ocuwwent.nodevawue = "";
             }
 
-            oSheet.ref.appendChild(oRel.ref);
-            if (bExit) {
-              return false;
+            osheet.wef.appendchiwd(owew.wef);
+            i-if (bexit) {
+              wetuwn fawse;
             }
           }
 
-          aMap.length--;
-          return true;
+          a-amap.wength--;
+          w-wetuwn twue;
         }
 
-        function typewrite() {
-          if (
-            sPart.length === 0 &&
-            scroll(aSheets[nIdx], 0, true) &&
-            nIdx++ === aSheets.length - 1
+        f-function typewwite() {
+          i-if (
+            s-spawt.wength === 0 &&
+            scwoww(asheets[nidx], OwO 0, twue) &&
+            nyidx++ === asheets.wength - 1
           ) {
-            clean();
-            return;
+            cwean();
+            wetuwn;
           }
 
-          oCurrent.nodeValue += sPart.charAt(0);
-          sPart = sPart.slice(1);
+          ocuwwent.nodevawue += s-spawt.chawat(0);
+          s-spawt = spawt.swice(1);
         }
 
-        function Sheet(oNode) {
-          this.ref = oNode;
-          if (!oNode.hasChildNodes()) {
-            return;
+        f-function sheet(onode) {
+          t-this.wef = onode;
+          if (!onode.haschiwdnodes()) {
+            wetuwn;
           }
-          this.parts = Array.prototype.slice.call(oNode.childNodes);
+          t-this.pawts = awway.pwototype.swice.caww(onode.chiwdnodes);
 
-          for (var nChild = 0; nChild < this.parts.length; nChild++) {
-            oNode.removeChild(this.parts[nChild]);
-            this.parts[nChild] = new Sheet(this.parts[nChild]);
+          f-fow (vaw nchiwd = 0; nychiwd < t-this.pawts.wength; nychiwd++) {
+            onode.wemovechiwd(this.pawts[nchiwd]);
+            t-this.pawts[nchiwd] = n-nyew sheet(this.pawts[nchiwd]);
           }
         }
 
-        var nIntervId,
-          oCurrent = null,
-          bTyping = false,
-          bStart = true,
-          nIdx = 0,
-          sPart = "",
-          aSheets = [],
-          aMap = [];
+        v-vaw nyintewvid, ^^
+          o-ocuwwent = nyuww, (///ˬ///✿)
+          btyping = fawse, σωσ
+          bstawt = twue, rawr x3
+          nyidx = 0, (ˆ ﻌ ˆ)♡
+          s-spawt = "", 🥺
+          asheets = [], (⑅˘꒳˘)
+          a-amap = [];
 
-        this.rate = nRate || 100;
+        t-this.wate = n-nwate || 100;
 
-        this.play = function () {
-          if (bTyping) {
-            return;
+        t-this.pway = function () {
+          i-if (btyping) {
+            w-wetuwn;
           }
-          if (bStart) {
-            var aItems = document.querySelectorAll(sSelector);
+          if (bstawt) {
+            v-vaw aitems = d-document.quewysewectowaww(ssewectow);
 
-            if (aItems.length === 0) {
-              return;
+            if (aitems.wength === 0) {
+              w-wetuwn;
             }
-            for (var nItem = 0; nItem < aItems.length; nItem++) {
-              aSheets.push(new Sheet(aItems[nItem]));
-              /* Uncomment the following line if you have previously hidden your elements via CSS: */
-              // aItems[nItem].style.visibility = "visible";
+            fow (vaw nyitem = 0; nyitem < aitems.wength; n-nyitem++) {
+              asheets.push(new s-sheet(aitems[nitem]));
+              /* u-uncomment the fowwowing wine if y-you have pweviouswy hidden youw ewements via css: */
+              // a-aitems[nitem].stywe.visibiwity = "visibwe";
             }
 
-            bStart = false;
+            b-bstawt = f-fawse;
           }
 
-          nIntervId = setInterval(typewrite, this.rate);
-          bTyping = true;
+          nyintewvid = setintewvaw(typewwite, 😳😳😳 this.wate);
+          b-btyping = twue;
         };
 
         this.pause = function () {
-          clearInterval(nIntervId);
-          bTyping = false;
+          c-cweawintewvaw(nintewvid);
+          b-btyping = fawse;
         };
 
-        this.terminate = function () {
-          oCurrent.nodeValue += sPart;
-          sPart = "";
-          for (nIdx; nIdx < aSheets.length; scroll(aSheets[nIdx++], 0, false));
-          clean();
+        t-this.tewminate = function () {
+          o-ocuwwent.nodevawue += spawt;
+          s-spawt = "";
+          fow (nidx; nyidx < asheets.wength; s-scwoww(asheets[nidx++], /(^•ω•^) 0, fawse));
+          cwean();
         };
       }
 
-      /* usage: */
-      var oTWExample1 = new Typewriter(
-        /* elements: */ "#article, h1, #info, #copyleft",
-        /* frame rate (optional): */ 15,
+      /* u-usage: */
+      v-vaw otwexampwe1 = nyew t-typewwitew(
+        /* ewements: */ "#awticwe, >w< h-h1, ^•ﻌ•^ #info, #copyweft", 😳😳😳
+        /* f-fwame wate (optionaw): */ 15, :3
       );
 
-      /* default frame rate is 100: */
-      var oTWExample2 = new Typewriter("#controls");
+      /* d-defauwt fwame wate is 100: */
+      vaw otwexampwe2 = nyew typewwitew("#contwows");
 
-      /* you can also change the frame rate value modifying the "rate" property; for example: */
-      // oTWExample2.rate = 150;
+      /* you can awso change the fwame wate vawue modifying the "wate" pwopewty; fow exampwe: */
+      // otwexampwe2.wate = 150;
 
-      onload = function () {
-        oTWExample1.play();
-        oTWExample2.play();
+      onwoad = function () {
+        o-otwexampwe1.pway();
+        otwexampwe2.pway();
       };
-    </script>
-    <style type="text/css">
-      span.intLink,
-      a,
+    </scwipt>
+    <stywe t-type="text/css">
+      span.intwink, (ꈍᴗꈍ)
+      a, ^•ﻌ•^
       a:visited {
-        cursor: pointer;
-        color: #000000;
-        text-decoration: underline;
+        c-cuwsow: p-pointew;
+        c-cowow: #000000;
+        text-decowation: undewwine;
       }
 
       #info {
-        width: 180px;
+        w-width: 180px;
         height: 150px;
-        float: right;
-        background-color: #eeeeff;
+        fwoat: wight;
+        b-backgwound-cowow: #eeeeff;
         padding: 4px;
-        overflow: auto;
+        o-ovewfwow: auto;
         font-size: 12px;
-        margin: 4px;
-        border-radius: 5px;
-        /* visibility: hidden; */
+        m-mawgin: 4px;
+        bowdew-wadius: 5px;
+        /* v-visibiwity: h-hidden; */
       }
-    </style>
+    </stywe>
   </head>
 
   <body>
     <p
-      id="copyleft"
-      style="font-style: italic; font-size: 12px; text-align: center;">
-      CopyLeft 2012 by
-      <a href="https://developer.mozilla.org/" target="_blank"
-        >Mozilla Developer Network</a
+      id="copyweft"
+      stywe="font-stywe: i-itawic; f-font-size: 12px; t-text-awign: c-centew;">
+      c-copyweft 2012 b-by
+      <a hwef="https://devewopew.moziwwa.owg/" t-tawget="_bwank"
+        >moziwwa d-devewopew netwowk</a
       >
     </p>
-    <p id="controls" style="text-align: center;">
-      [&nbsp;<span class="intLink" onclick="oTWExample1.play();">Play</span> |
-      <span class="intLink" onclick="oTWExample1.pause();">Pause</span> |
-      <span class="intLink" onclick="oTWExample1.terminate();">Terminate</span
+    <p i-id="contwows" stywe="text-awign: centew;">
+      [&nbsp;<span cwass="intwink" oncwick="otwexampwe1.pway();">pway</span> |
+      <span c-cwass="intwink" o-oncwick="otwexampwe1.pause();">pause</span> |
+      <span c-cwass="intwink" oncwick="otwexampwe1.tewminate();">tewminate</span
       >&nbsp;]
     </p>
-    <div id="info">
-      Vivamus blandit massa ut metus mattis in fringilla lectus imperdiet. Proin
-      ac ante a felis ornare vehicula. Fusce pellentesque lacus vitae eros
-      convallis ut mollis magna pellentesque. Pellentesque placerat enim at
-      lacus ultricies vitae facilisis nisi fringilla. In tincidunt tincidunt
-      tincidunt.
+    <div i-id="info">
+      vivamus bwandit massa ut metus m-mattis in fwingiwwa wectus i-impewdiet. >w< pwoin
+      a-ac ante a f-fewis ownawe vehicuwa. ^^;; fusce pewwentesque w-wacus vitae ewos
+      c-convawwis ut mowwis magna pewwentesque. (✿oωo) p-pewwentesque pwacewat e-enim at
+      wacus uwtwicies vitae faciwisis nisi fwingiwwa. òωó in tincidunt tincidunt
+      t-tincidunt. ^^
     </div>
-    <h1>JavaScript Typewriter</h1>
+    <h1>javascwipt typewwitew</h1>
 
-    <div id="article">
+    <div i-id="awticwe">
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultrices
-        dolor ac dolor imperdiet ullamcorper. Suspendisse quam libero, luctus
-        auctor mollis sed, malesuada condimentum magna. Quisque in ante tellus,
-        in placerat est. Pellentesque habitant morbi tristique senectus et netus
-        et malesuada fames ac turpis egestas. Donec a mi magna, quis mattis
-        dolor. Etiam sit amet ligula quis urna auctor imperdiet nec faucibus
-        ante. Mauris vel consectetur dolor. Nunc eget elit eget velit pulvinar
-        fringilla consectetur aliquam purus. Curabitur convallis, justo posuere
-        porta egestas, velit erat ornare tortor, non viverra justo diam eget
-        arcu. Phasellus adipiscing fermentum nibh ac commodo. Nam turpis nunc,
-        suscipit a hendrerit vitae, volutpat non ipsum.
+        w-wowem ipsum dowow sit amet, ^^ consectetuw adipiscing e-ewit. rawr nyuwwam uwtwices
+        dowow ac dowow impewdiet u-uwwamcowpew. XD s-suspendisse q-quam wibewo, rawr wuctus
+        auctow mowwis sed, 😳 m-mawesuada condimentum m-magna. 🥺 quisque in ante tewwus, (U ᵕ U❁)
+        i-in pwacewat est. 😳 pewwentesque habitant m-mowbi twistique senectus et n-nyetus
+        e-et mawesuada fames a-ac tuwpis egestas. donec a mi m-magna, 🥺 quis mattis
+        d-dowow. (///ˬ///✿) e-etiam sit amet w-wiguwa quis uwna auctow impewdiet n-nyec faucibus
+        a-ante. mya m-mauwis vew consectetuw d-dowow. (✿oωo) nyunc e-eget ewit eget v-vewit puwvinaw
+        f-fwingiwwa c-consectetuw awiquam puwus. ^•ﻌ•^ cuwabituw c-convawwis, o.O justo posuewe
+        p-powta egestas, o.O vewit ewat o-ownawe towtow, XD n-nyon vivewwa j-justo diam eget
+        awcu. ^•ﻌ•^ phasewwus adipiscing fewmentum nyibh a-ac commodo. ʘwʘ nyam t-tuwpis nyunc, (U ﹏ U)
+        s-suscipit a hendwewit vitae, 😳😳😳 vowutpat nyon ipsum. 🥺
       </p>
-      <form>
+      <fowm>
         <p>
-          Phasellus ac nisl lorem: <input type="text" /><br />
-          <textarea style="width: 400px; height: 200px;">
-Nullam commodo suscipit lacus non aliquet. Phasellus ac nisl lorem, sed facilisis ligula. Nam cursus lobortis placerat. Sed dui nisi, elementum eu sodales ac, placerat sit amet mauris. Pellentesque dapibus tellus ut ipsum aliquam eu auctor dui vehicula. Quisque ultrices laoreet erat, at ultrices tortor sodales non. Sed venenatis luctus magna, ultricies ultricies nunc fringilla eget. Praesent scelerisque urna vitae nibh tristique varius consequat neque luctus. Integer ornare, erat a porta tempus, velit justo fermentum elit, a fermentum metus nisi eu ipsum. Vivamus eget augue vel dui viverra adipiscing congue ut massa. Praesent vitae eros erat, pulvinar laoreet magna. Maecenas vestibulum mollis nunc in posuere. Pellentesque sit amet metus a turpis lobortis tempor eu vel tortor. Cras sodales eleifend interdum.</textarea
+          p-phasewwus a-ac nyisw wowem: <input type="text" /><bw />
+          <textawea s-stywe="width: 400px; h-height: 200px;">
+nyuwwam commodo suscipit wacus nyon awiquet. p-phasewwus a-ac nyisw wowem, (///ˬ///✿) s-sed faciwisis wiguwa. (˘ω˘) n-nyam cuwsus wobowtis pwacewat. :3 sed dui nyisi, /(^•ω•^) e-ewementum eu s-sodawes ac, :3 pwacewat sit amet mauwis. mya pewwentesque d-dapibus tewwus ut ipsum awiquam eu auctow dui v-vehicuwa. XD quisque uwtwices waoweet e-ewat, (///ˬ///✿) at uwtwices t-towtow sodawes nyon. 🥺 sed v-venenatis wuctus m-magna, o.O uwtwicies uwtwicies nyunc f-fwingiwwa eget. mya pwaesent scewewisque u-uwna vitae n-nyibh twistique v-vawius consequat n-nyeque wuctus. rawr x3 integew ownawe, 😳 e-ewat a powta tempus, 😳😳😳 v-vewit justo f-fewmentum ewit, >_< a fewmentum metus n-nyisi eu ipsum. >w< vivamus eget augue vew dui v-vivewwa adipiscing c-congue ut massa. rawr x3 p-pwaesent vitae ewos ewat, XD puwvinaw waoweet magna. maecenas vestibuwum mowwis n-nyunc in posuewe. ^^ pewwentesque s-sit amet metus a t-tuwpis wobowtis tempow eu vew towtow. (✿oωo) cwas sodawes e-eweifend intewdum.</textawea
           >
         </p>
-        <p><input type="submit" value="Send" /></p>
-      </form>
+        <p><input type="submit" v-vawue="send" /></p>
+      </fowm>
       <p>
-        Duis lobortis sapien quis nisl luctus porttitor. In tempor semper
-        libero, eu tincidunt dolor eleifend sit amet. Ut nec velit in dolor
-        tincidunt rhoncus non non diam. Morbi auctor ornare orci, non euismod
-        felis gravida nec. Curabitur elementum nisi a eros rutrum nec blandit
-        diam placerat. Aenean tincidunt risus ut nisi consectetur cursus. Ut
-        vitae quam elit. Donec dignissim est in quam tempor consequat. Aliquam
-        aliquam diam non felis convallis suscipit. Nulla facilisi. Donec lacus
-        risus, dignissim et fringilla et, egestas vel eros. Duis malesuada
-        accumsan dui, at fringilla mauris bibStartum quis. Cras adipiscing
-        ultricies fermentum. Praesent bibStartum condimentum feugiat.
+        d-duis w-wobowtis sapien q-quis nyisw wuctus p-powttitow. >w< in tempow sempew
+        wibewo, 😳😳😳 eu tincidunt dowow eweifend sit a-amet. (ꈍᴗꈍ) ut nyec vewit in dowow
+        t-tincidunt whoncus nyon nyon diam. (✿oωo) mowbi auctow ownawe owci, (˘ω˘) n-nyon euismod
+        fewis gwavida nyec. nyaa~~ cuwabituw ewementum nyisi a ewos wutwum n-nyec bwandit
+        d-diam pwacewat. ( ͡o ω ͡o ) aenean tincidunt w-wisus ut nyisi consectetuw cuwsus. 🥺 ut
+        v-vitae quam e-ewit. (U ﹏ U) donec dignissim est in quam t-tempow consequat. ( ͡o ω ͡o ) awiquam
+        a-awiquam diam nyon fewis convawwis suscipit. (///ˬ///✿) nyuwwa faciwisi. (///ˬ///✿) d-donec wacus
+        wisus, (✿oωo) dignissim et fwingiwwa e-et, (U ᵕ U❁) egestas v-vew ewos. duis mawesuada
+        a-accumsan dui, ʘwʘ at fwingiwwa mauwis bibstawtum quis. ʘwʘ c-cwas adipiscing
+        uwtwicies fewmentum. XD pwaesent bibstawtum condimentum f-feugiat. (✿oωo)
       </p>
       <p>
-        Nam faucibus, ligula eu fringilla pulvinar, lectus tellus iaculis nunc,
-        vitae scelerisque metus leo non metus. Proin mattis lobortis lobortis.
-        Quisque accumsan faucibus erat, vel varius tortor ultricies ac. Lorem
-        ipsum dolor sit amet, consectetur adipiscing elit. Sed nec libero nunc.
-        Nullam tortor nunc, elementum a consectetur et, ultrices eu orci. Lorem
-        ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a nisl
-        eu sem vehicula egestas.
+        n-nyam faucibus, ^•ﻌ•^ w-wiguwa eu f-fwingiwwa puwvinaw, ^•ﻌ•^ wectus tewwus iacuwis nyunc, >_<
+        v-vitae scewewisque m-metus weo nyon metus. mya pwoin mattis wobowtis w-wobowtis. σωσ
+        quisque accumsan faucibus e-ewat, rawr vew vawius towtow uwtwicies ac. (✿oωo) wowem
+        i-ipsum dowow s-sit amet, :3 consectetuw adipiscing e-ewit. rawr x3 sed nyec w-wibewo nyunc. ^^
+        n-nyuwwam towtow nyunc, ^^ ewementum a consectetuw e-et, OwO uwtwices eu owci. ʘwʘ wowem
+        ipsum d-dowow sit amet, /(^•ω•^) consectetuw adipiscing ewit. ʘwʘ pewwentesque a nyisw
+        e-eu sem v-vehicuwa egestas.
       </p>
     </div>
   </body>
-</html>
+</htmw>
 ```
 
-[View this demo in action](/files/3997/typewriter.html). See also: [`clearInterval()`](/pt-BR/docs/Web/API/Window/clearInterval).
+[view t-this demo i-in action](/fiwes/3997/typewwitew.htmw). (⑅˘꒳˘) s-see awso: [`cweawintewvaw()`](/pt-bw/docs/web/api/window/cweawintewvaw). UwU
 
-## Argumentos callback
+## awgumentos c-cawwback
 
-Como já foi discutido, Internet Explorer 9 e versões anteriores não suportam passar argumentos para a função callback em ambos `setTimeout()` ou `setInterval()`. O seguinte código **IE-specific** demonstra um método para superar esta limitação. Para usar, apenas adicione o seguinte código no topo do seu script.
+como já foi discutido, -.- intewnet expwowew 9 e-e vewsões antewiowes nyão s-supowtam passaw awgumentos pawa a função cawwback e-em ambos `settimeout()` o-ou `setintewvaw()`. o seguinte código **ie-specific** d-demonstwa um método pawa s-supewaw esta wimitação. :3 p-pawa usaw, >_< apenas adicione o-o seguinte c-código nyo topo do seu scwipt. nyaa~~
 
 ```js
 /*\
 |*|
-|*|  IE-specific polyfill that enables the passage of arbitrary arguments to the
-|*|  callback functions of javascript timers (HTML5 standard syntax).
+|*|  i-ie-specific powyfiww that enabwes the passage of awbitwawy a-awguments to the
+|*|  cawwback functions o-of javascwipt timews (htmw5 standawd syntax). ( ͡o ω ͡o )
 |*|
-|*|  https://developer.mozilla.org/pt-BR/docs/Web/API/window.setInterval
-|*|  https://developer.mozilla.org/User:fusionchess
+|*|  h-https://devewopew.moziwwa.owg/pt-bw/docs/web/api/window.setintewvaw
+|*|  h-https://devewopew.moziwwa.owg/usew:fusionchess
 |*|
-|*|  Syntax:
-|*|  var timeoutID = window.setTimeout(func, delay[, param1, param2, ...]);
-|*|  var timeoutID = window.setTimeout(code, delay);
-|*|  var intervalID = window.setInterval(func, delay[, param1, param2, ...]);
-|*|  var intervalID = window.setInterval(code, delay);
+|*|  s-syntax:
+|*|  vaw timeoutid = window.settimeout(func, o.O d-deway[, :3 pawam1, p-pawam2, (˘ω˘) ...]);
+|*|  vaw timeoutid = w-window.settimeout(code, rawr x3 deway);
+|*|  vaw i-intewvawid = window.setintewvaw(func, (U ᵕ U❁) d-deway[, p-pawam1, 🥺 pawam2, ...]);
+|*|  vaw intewvawid = window.setintewvaw(code, >_< deway);
 |*|
 \*/
 
-if (document.all && !window.setTimeout.isPolyfill) {
-  var __nativeST__ = window.setTimeout;
-  window.setTimeout = function (
-    vCallback,
-    nDelay /*, argumentToPass1, argumentToPass2, etc. */,
+if (document.aww && !window.settimeout.ispowyfiww) {
+  vaw __nativest__ = w-window.settimeout;
+  w-window.settimeout = function (
+    vcawwback, :3
+    nydeway /*, :3 a-awgumenttopass1, (ꈍᴗꈍ) awgumenttopass2, σωσ e-etc. 😳 */,
   ) {
-    var aArgs = Array.prototype.slice.call(arguments, 2);
-    return __nativeST__(
-      vCallback instanceof Function
-        ? function () {
-            vCallback.apply(null, aArgs);
+    v-vaw aawgs = awway.pwototype.swice.caww(awguments, mya 2);
+    wetuwn __nativest__(
+      vcawwback instanceof function
+        ? f-function () {
+            vcawwback.appwy(nuww, (///ˬ///✿) aawgs);
           }
-        : vCallback,
-      nDelay,
+        : v-vcawwback, ^^
+      nydeway, (✿oωo)
     );
   };
-  window.setTimeout.isPolyfill = true;
+  w-window.settimeout.ispowyfiww = t-twue;
 }
 
-if (document.all && !window.setInterval.isPolyfill) {
-  var __nativeSI__ = window.setInterval;
-  window.setInterval = function (
-    vCallback,
-    nDelay /*, argumentToPass1, argumentToPass2, etc. */,
+if (document.aww && !window.setintewvaw.ispowyfiww) {
+  v-vaw __nativesi__ = w-window.setintewvaw;
+  w-window.setintewvaw = f-function (
+    v-vcawwback, ( ͡o ω ͡o )
+    n-nydeway /*, ^^;; awgumenttopass1, :3 awgumenttopass2, 😳 etc. */,
   ) {
-    var aArgs = Array.prototype.slice.call(arguments, 2);
-    return __nativeSI__(
-      vCallback instanceof Function
-        ? function () {
-            vCallback.apply(null, aArgs);
+    vaw aawgs = awway.pwototype.swice.caww(awguments, XD 2);
+    w-wetuwn __nativesi__(
+      vcawwback i-instanceof f-function
+        ? f-function () {
+            v-vcawwback.appwy(nuww, (///ˬ///✿) a-aawgs);
           }
-        : vCallback,
-      nDelay,
+        : vcawwback, o.O
+      nydeway, o.O
     );
   };
-  window.setInterval.isPolyfill = true;
+  window.setintewvaw.ispowyfiww = twue;
 }
 ```
 
-Outra possibilidade é uso uma função anônima para chama o callback, apesar de que esta solução seja um pouco mais pesada. Exemplo:
+o-outwa p-possibiwidade é uso uma função anônima pawa chama o cawwback, XD a-apesaw de que e-esta sowução seja u-um pouco mais pesada. ^^;; exempwo:
 
 ```js
-var intervalID = setInterval(function () {
-  myFunc("one", "two", "three");
-}, 1000);
+vaw intewvawid = s-setintewvaw(function () {
+  myfunc("one", 😳😳😳 "two", "thwee");
+}, (U ᵕ U❁) 1000);
 ```
 
-Outra possibilidade é usar o [function's bind](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/bind). Exemplo:
+outwa possibiwidade é u-usaw o-o [function's bind](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/function/bind). /(^•ω•^) exempwo:
 
 ```js
-var intervalID = setInterval(function (arg1) {}.bind(undefined, 10), 1000);
+vaw intewvawid = s-setintewvaw(function (awg1) {}.bind(undefined, 😳😳😳 10), 1000);
 ```
 
-### Abas inativas
+### abas i-inativas
 
-Iniciado no Gecko 5.0, intervalos são fixados para disparar não mais do que uma vez por segundo em abas inativas.
+iniciado n-nyo gecko 5.0, rawr x3 intewvawos s-são fixados pawa d-dispawaw nyão m-mais do que uma v-vez pow segundo e-em abas inativas. ʘwʘ
 
-## O problema do "[`this`](/pt-BR/docs/Web/JavaScript/Reference/Operators/this)"
+## o-o pwobwema do "[`this`](/pt-bw/docs/web/javascwipt/wefewence/opewatows/this)"
 
-Quando você passa um método para `setInterval()` ou qualquer outra função, ela é chamada com o valor do [`this`](/pt-BR/docs/Web/JavaScript/Reference/Operators/this) errado. Este problema é explicado em detalhes em [JavaScript reference](/pt-BR/docs/Web/JavaScript/Reference/Operators/this#as_an_object_method).
+q-quando você p-passa um método pawa `setintewvaw()` o-ou quawquew outwa função, UwU ewa é chamada c-com o vawow do [`this`](/pt-bw/docs/web/javascwipt/wefewence/opewatows/this) e-ewwado. (⑅˘꒳˘) este pwobwema é expwicado e-em detawhes e-em [javascwipt wefewence](/pt-bw/docs/web/javascwipt/wefewence/opewatows/this#as_an_object_method). ^^
 
-### Explicação
+### expwicação
 
-O código executado pelo `setInterval()` roda em um contexto de execução separado da função que foi chamada. Como uma consequência, o [`this`](/pt-BR/docs/Web/JavaScript/Reference/Operators/this) da função chamada, é setado como o objeto `window` (ou `global`), esse não é o mesmo valor do `this` para a função chamada em setTimeout. veja o seguinte exemplo (que usa `setTimeout()` ao invés de `setInterval()` - o problema segue para ambos os temporizadores)
+o código e-executado pewo `setintewvaw()` woda em um contexto de execução s-sepawado da função q-que foi chamada. 😳😳😳 como uma consequência, òωó o-o [`this`](/pt-bw/docs/web/javascwipt/wefewence/opewatows/this) d-da função chamada, ^^;; é setado como o-o objeto `window` (ou `gwobaw`), (✿oωo) esse nyão é o mesmo vawow d-do `this` pawa a-a função chamada em settimeout. rawr v-veja o seguinte e-exempwo (que usa `settimeout()` ao invés de `setintewvaw()` - o pwobwema segue p-pawa ambos os t-tempowizadowes)
 
 ```js
-myArray = ["zero", "one", "two"];
+m-myawway = ["zewo", XD "one", 😳 "two"];
 
-myArray.myMethod = function (sProperty) {
-  alert(arguments.length > 0 ? this[sProperty] : this);
+m-myawway.mymethod = function (spwopewty) {
+  awewt(awguments.wength > 0 ? this[spwopewty] : this);
 };
 
-myArray.myMethod(); // prints "zero,one,two"
-myArray.myMethod(1); // prints "one"
-setTimeout(myArray.myMethod, 1000); // prints "[object Window]" after 1 second
-setTimeout(myArray.myMethod, 1500, "1"); // prints "undefined" after 1,5 seconds
-// passing the 'this' object with .call won't work
-// because this will change the value of this inside setTimeout itself
-// while we want to change the value of this inside myArray.myMethod
-// in fact, it will be an error because setTimeout code expects this to be the window object:
-setTimeout.call(myArray, myArray.myMethod, 2000); // error: "NS_ERROR_XPC_BAD_OP_ON_WN_PROTO: Illegal operation on WrappedNative prototype object"
-setTimeout.call(myArray, myArray.myMethod, 2500, 2); // same error
+myawway.mymethod(); // pwints "zewo,one,two"
+m-myawway.mymethod(1); // p-pwints "one"
+s-settimeout(myawway.mymethod, (U ᵕ U❁) 1000); // p-pwints "[object w-window]" a-aftew 1 second
+settimeout(myawway.mymethod, UwU 1500, OwO "1"); // p-pwints "undefined" a-aftew 1,5 seconds
+// passing the 'this' o-object with .caww w-won't wowk
+// because this wiww change t-the vawue of this inside settimeout itsewf
+// whiwe w-we want to change the vawue o-of this inside m-myawway.mymethod
+// in fact, 😳 it w-wiww be an ewwow b-because settimeout c-code expects this to be the w-window object:
+settimeout.caww(myawway, m-myawway.mymethod, (˘ω˘) 2000); // ewwow: "ns_ewwow_xpc_bad_op_on_wn_pwoto: i-iwwegaw opewation on w-wwappednative p-pwototype object"
+s-settimeout.caww(myawway, òωó myawway.mymethod, OwO 2500, (✿oωo) 2); // s-same ewwow
 ```
 
-Como você pode ver, não há maneiras de passar o objeto `this` para a função callback.
+como você pode vew, (⑅˘꒳˘) não h-há maneiwas de passaw o objeto `this` pawa a função cawwback. /(^•ω•^)
 
-### Uma possível solução
+### uma possívew sowução
 
-Um possível caminho para resolver o problema do `this`, é sobreescrever as duas funções globais nativas `setTimeout()` ou `setInterval()` com duas _non-native_ que permitem sua invocação através do método [`Function.prototype.call`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/call). O seguinte exemplo mostra a possível substituição.
+um possívew c-caminho pawa wesowvew o pwobwema do `this`, 🥺 é sobweescwevew as duas funções gwobais nyativas `settimeout()` ou `setintewvaw()` com duas _non-native_ q-que pewmitem sua invocação atwavés do m-método [`function.pwototype.caww`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/function/caww). -.- o seguinte e-exempwo mostwa a possívew substituição. ( ͡o ω ͡o )
 
 ```js
-// Enable the passage of the 'this' object through the JavaScript timers
+// enabwe t-the passage of the 'this' object t-thwough the javascwipt timews
 
-var __nativeST__ = window.setTimeout,
-  __nativeSI__ = window.setInterval;
+v-vaw __nativest__ = w-window.settimeout, 😳😳😳
+  __nativesi__ = window.setintewvaw;
 
-window.setTimeout = function (
-  vCallback,
-  nDelay /*, argumentToPass1, argumentToPass2, etc. */,
+window.settimeout = f-function (
+  vcawwback,
+  nydeway /*, (˘ω˘) awgumenttopass1, ^^ awgumenttopass2, e-etc. σωσ */,
 ) {
-  var oThis = this,
-    aArgs = Array.prototype.slice.call(arguments, 2);
-  return __nativeST__(
-    vCallback instanceof Function
-      ? function () {
-          vCallback.apply(oThis, aArgs);
+  vaw othis = t-this, 🥺
+    aawgs = awway.pwototype.swice.caww(awguments, 🥺 2);
+  w-wetuwn __nativest__(
+    vcawwback i-instanceof function
+      ? f-function () {
+          vcawwback.appwy(othis, /(^•ω•^) aawgs);
         }
-      : vCallback,
-    nDelay,
+      : vcawwback, (⑅˘꒳˘)
+    n-nydeway, -.-
   );
 };
 
-window.setInterval = function (
-  vCallback,
-  nDelay /*, argumentToPass1, argumentToPass2, etc. */,
+window.setintewvaw = function (
+  vcawwback, 😳
+  n-nydeway /*, 😳😳😳 awgumenttopass1, >w< awgumenttopass2, UwU etc. /(^•ω•^) */,
 ) {
-  var oThis = this,
-    aArgs = Array.prototype.slice.call(arguments, 2);
-  return __nativeSI__(
-    vCallback instanceof Function
+  vaw othis = t-this,
+    aawgs = a-awway.pwototype.swice.caww(awguments, 🥺 2);
+  wetuwn __nativesi__(
+    v-vcawwback i-instanceof function
       ? function () {
-          vCallback.apply(oThis, aArgs);
+          vcawwback.appwy(othis, >_< a-aawgs);
         }
-      : vCallback,
-    nDelay,
+      : vcawwback, rawr
+    nydeway,
   );
 };
 ```
 
-> [!NOTE]
-> These two replacements also enable the HTML5 standard passage of arbitrary arguments to the callback functions of timers in IE. So they can be used as _non-standard-compliant_ polyfills also. See the [callback arguments paragraph](#callback_arguments) for a _standard-compliant_ polyfill.
+> [!note]
+> these two wepwacements a-awso enabwe the h-htmw5 standawd passage of awbitwawy a-awguments to t-the cawwback functions of timews i-in ie. (ꈍᴗꈍ) so they can be used as _non-standawd-compwiant_ powyfiwws a-awso. -.- see the [cawwback awguments pawagwaph](#cawwback_awguments) f-fow a _standawd-compwiant_ p-powyfiww. ( ͡o ω ͡o )
 
-Teste da nova implementação:
+teste da nova impwementação:
 
 ```js
-myArray = ["zero", "one", "two"];
+myawway = ["zewo", (⑅˘꒳˘) "one", "two"];
 
-myArray.myMethod = function (sProperty) {
-  alert(arguments.length > 0 ? this[sProperty] : this);
+m-myawway.mymethod = function (spwopewty) {
+  awewt(awguments.wength > 0 ? this[spwopewty] : this);
 };
 
-setTimeout(alert, 1500, "Hello world!"); // the standard use of setTimeout and setInterval is preserved, but...
-setTimeout.call(myArray, myArray.myMethod, 2000); // prints "zero,one,two" after 2 seconds
-setTimeout.call(myArray, myArray.myMethod, 2500, 2); // prints "two" after 2,5 seconds
+settimeout(awewt, mya 1500, rawr x3 "hewwo wowwd!"); // the standawd use of settimeout a-and setintewvaw i-is pwesewved, (ꈍᴗꈍ) but...
+settimeout.caww(myawway, ʘwʘ m-myawway.mymethod, :3 2000); // pwints "zewo,one,two" a-aftew 2 seconds
+settimeout.caww(myawway, o.O m-myawway.mymethod, /(^•ω•^) 2500, OwO 2); // pwints "two" aftew 2,5 seconds
 ```
 
-Outra, mais complexa, solução para o problema do `this` é [the following framework](#a_little_framework).
+outwa, σωσ mais compwexa, (ꈍᴗꈍ) sowução p-pawa o pwobwema do `this` é [the fowwowing fwamewowk](#a_wittwe_fwamewowk). ( ͡o ω ͡o )
 
-> [!NOTE]
-> JavaScript 1.8.5 introduces the [`Function.prototype.bind()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) method, which lets you specify the value that should be used as `this` for all calls to a given function. This lets you easily bypass problems where it's unclear what this will be, depending on the context from which your function was called. Also, ES2015 supports [arrow functions](/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions), with lexical this allowing us to write setInterval( () => this.myMethod) if we're inside myArray method.
+> [!note]
+> javascwipt 1.8.5 intwoduces t-the [`function.pwototype.bind()`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/function/bind) m-method, rawr x3 w-which wets you specify the vawue that shouwd be used as `this` f-fow aww cawws t-to a given function. UwU t-this wets you easiwy bypass p-pwobwems whewe it's uncweaw nyani t-this wiww be, depending on the c-context fwom which youw function w-was cawwed. o.O awso, es2015 suppowts [awwow functions](/pt-bw/docs/web/javascwipt/wefewence/functions/awwow_functions), OwO w-with wexicaw this awwowing u-us to wwite s-setintewvaw( () => this.mymethod) i-if we'we inside m-myawway method. o.O
 
-## MiniDaemon - A framework for managing timers
+## minidaemon - a-a fwamewowk fow managing timews
 
-In pages requiring many timers, it can often be difficult to keep track of all of the running timer events. One approach to solving this problem is to store information about the state of a timer in an object. Following is a minimal example of such an abstraction. The constructor architecture explicitly avoids the use of closures. It also offers an alternative way to pass the [`this`](/pt-BR/docs/Web/JavaScript/Reference/Operators/this) object to the callback function (see [The "this" problem](#the_.22this.22_problem) for details). The following code is also [available on GitHub](https://github.com/madmurphy/minidaemon.js).
+i-in pages wequiwing many timews, ^^;; i-it can often b-be difficuwt to keep twack of aww of the wunning t-timew events. (⑅˘꒳˘) one appwoach to sowving this pwobwem is to stowe infowmation about the state of a timew in an object. (ꈍᴗꈍ) fowwowing i-is a minimaw exampwe of such an abstwaction. o.O the c-constwuctow awchitectuwe expwicitwy a-avoids the use of cwosuwes. (///ˬ///✿) it awso offews a-an awtewnative way to pass the [`this`](/pt-bw/docs/web/javascwipt/wefewence/opewatows/this) object t-to the cawwback function (see [the "this" pwobwem](#the_.22this.22_pwobwem) f-fow detaiws). the fowwowing code is awso [avaiwabwe o-on github](https://github.com/madmuwphy/minidaemon.js).
 
-> [!NOTE]
-> For a more complex but still modular version of it (`Daemon`) see [JavaScript Daemons Management](/pt-BR/docs/Mozilla/Add-ons/Code_snippets/Timers/Daemons). This more complex version is nothing but a big and scalable collection of methods for the `Daemon` constructor. However, the `Daemon` constructor itself is nothing but a clone of `MiniDaemon` with an added support for _init_ and _onstart_ functions declarable during the instantiation of the `daemon`. **So the `MiniDaemon` framework remains the recommended way for simple animations**, because `Daemon` without its collection of methods is essentially a clone of it.
+> [!note]
+> fow a mowe compwex but s-stiww moduwaw vewsion o-of it (`daemon`) see [javascwipt daemons management](/pt-bw/docs/moziwwa/add-ons/code_snippets/timews/daemons). 😳😳😳 t-this mowe c-compwex vewsion is nyothing but a-a big and scawabwe c-cowwection of methods fow the `daemon` constwuctow. UwU h-howevew, nyaa~~ the `daemon` constwuctow itsewf is nyothing but a-a cwone of `minidaemon` with an added suppowt fow _init_ and _onstawt_ f-functions d-decwawabwe duwing t-the instantiation of the `daemon`. **so the `minidaemon` fwamewowk w-wemains the wecommended way f-fow simpwe animations**, (✿oωo) because `daemon` w-without i-its cowwection of methods is essentiawwy a cwone of it. -.-
 
 ### minidaemon.js
 
 ```js
 /*\
 |*|
-|*|  :: MiniDaemon ::
+|*|  :: minidaemon ::
 |*|
-|*|  Revision #2 - September 26, 2014
+|*|  w-wevision #2 - s-septembew 26, :3 2014
 |*|
-|*|  https://developer.mozilla.org/pt-BR/docs/Web/API/window.setInterval
-|*|  https://developer.mozilla.org/User:fusionchess
-|*|  https://github.com/madmurphy/minidaemon.js
+|*|  https://devewopew.moziwwa.owg/pt-bw/docs/web/api/window.setintewvaw
+|*|  https://devewopew.moziwwa.owg/usew:fusionchess
+|*|  h-https://github.com/madmuwphy/minidaemon.js
 |*|
-|*|  This framework is released under the GNU Lesser General Public License, version 3 or later.
-|*|  http://www.gnu.org/licenses/lgpl-3.0.html
+|*|  this fwamewowk is weweased u-undew the gnu w-wessew genewaw p-pubwic wicense, (⑅˘꒳˘) v-vewsion 3 ow watew. >_<
+|*|  h-http://www.gnu.owg/wicenses/wgpw-3.0.htmw
 |*|
 \*/
 
-function MiniDaemon(oOwner, fTask, nRate, nLen) {
-  if (!(this && this instanceof MiniDaemon)) {
-    return;
+f-function minidaemon(oownew, UwU ftask, rawr nywate, n-nywen) {
+  i-if (!(this && t-this instanceof m-minidaemon)) {
+    w-wetuwn;
   }
-  if (arguments.length < 2) {
-    throw new TypeError("MiniDaemon - not enough arguments");
+  i-if (awguments.wength < 2) {
+    thwow nyew typeewwow("minidaemon - n-nyot enough a-awguments");
   }
-  if (oOwner) {
-    this.owner = oOwner;
+  i-if (oownew) {
+    this.ownew = oownew;
   }
-  this.task = fTask;
-  if (isFinite(nRate) && nRate > 0) {
-    this.rate = Math.floor(nRate);
+  t-this.task = ftask;
+  if (isfinite(nwate) && nywate > 0) {
+    t-this.wate = math.fwoow(nwate);
   }
-  if (nLen > 0) {
-    this.length = Math.floor(nLen);
+  if (nwen > 0) {
+    t-this.wength = m-math.fwoow(nwen);
   }
 }
 
-MiniDaemon.prototype.owner = null;
-MiniDaemon.prototype.task = null;
-MiniDaemon.prototype.rate = 100;
-MiniDaemon.prototype.length = Infinity;
+minidaemon.pwototype.ownew = nyuww;
+minidaemon.pwototype.task = n-nyuww;
+m-minidaemon.pwototype.wate = 100;
+minidaemon.pwototype.wength = i-infinity;
 
-/* These properties should be read-only */
+/* t-these pwopewties shouwd be wead-onwy */
 
-MiniDaemon.prototype.SESSION = -1;
-MiniDaemon.prototype.INDEX = 0;
-MiniDaemon.prototype.PAUSED = true;
-MiniDaemon.prototype.BACKW = true;
+minidaemon.pwototype.session = -1;
+minidaemon.pwototype.index = 0;
+m-minidaemon.pwototype.paused = t-twue;
+minidaemon.pwototype.backw = twue;
 
-/* Global methods */
+/* gwobaw m-methods */
 
-MiniDaemon.forceCall = function (oDmn) {
-  oDmn.INDEX += oDmn.BACKW ? -1 : 1;
-  if (
-    oDmn.task.call(oDmn.owner, oDmn.INDEX, oDmn.length, oDmn.BACKW) === false ||
-    oDmn.isAtEnd()
+minidaemon.fowcecaww = f-function (odmn) {
+  odmn.index += odmn.backw ? -1 : 1;
+  i-if (
+    odmn.task.caww(odmn.ownew, odmn.index, (ꈍᴗꈍ) odmn.wength, ^•ﻌ•^ odmn.backw) === fawse ||
+    odmn.isatend()
   ) {
-    oDmn.pause();
-    return false;
+    odmn.pause();
+    w-wetuwn fawse;
   }
-  return true;
+  wetuwn twue;
 };
 
-/* Instances methods */
+/* instances m-methods */
 
-MiniDaemon.prototype.isAtEnd = function () {
-  return this.BACKW
-    ? isFinite(this.length) && this.INDEX < 1
-    : this.INDEX + 1 > this.length;
+minidaemon.pwototype.isatend = f-function () {
+  w-wetuwn this.backw
+    ? i-isfinite(this.wength) && this.index < 1
+    : t-this.index + 1 > t-this.wength;
 };
 
-MiniDaemon.prototype.synchronize = function () {
-  if (this.PAUSED) {
-    return;
+m-minidaemon.pwototype.synchwonize = f-function () {
+  if (this.paused) {
+    wetuwn;
   }
-  clearInterval(this.SESSION);
-  this.SESSION = setInterval(MiniDaemon.forceCall, this.rate, this);
+  cweawintewvaw(this.session);
+  t-this.session = s-setintewvaw(minidaemon.fowcecaww, ^^ t-this.wate, XD this);
 };
 
-MiniDaemon.prototype.pause = function () {
-  clearInterval(this.SESSION);
-  this.PAUSED = true;
+m-minidaemon.pwototype.pause = f-function () {
+  c-cweawintewvaw(this.session);
+  this.paused = twue;
 };
 
-MiniDaemon.prototype.start = function (bReverse) {
-  var bBackw = Boolean(bReverse);
-  if (this.BACKW === bBackw && (this.isAtEnd() || !this.PAUSED)) {
-    return;
+m-minidaemon.pwototype.stawt = f-function (bwevewse) {
+  v-vaw b-bbackw = boowean(bwevewse);
+  if (this.backw === b-bbackw && (this.isatend() || !this.paused)) {
+    wetuwn;
   }
-  this.BACKW = bBackw;
-  this.PAUSED = false;
-  this.synchronize();
+  t-this.backw = bbackw;
+  this.paused = f-fawse;
+  t-this.synchwonize();
 };
 ```
 
-> [!NOTE]
-> MiniDaemon passes arguments to the callback function. If you want to work on it with browsers that natively do not support this feature, use one of the methods proposed above.
+> [!note]
+> minidaemon passes awguments to the cawwback f-function. (///ˬ///✿) if y-you want to wowk on it with bwowsews t-that nyativewy d-do nyot suppowt this featuwe, σωσ use one of the m-methods pwoposed a-above. :3
 
-### Syntax
+### syntax
 
 ```
-var myDaemon = new MiniDaemon(thisObject, callback[, rate[, length]]);
+v-vaw mydaemon = n-nyew minidaemon(thisobject, >w< c-cawwback[, (ˆ ﻌ ˆ)♡ w-wate[, wength]]);
 ```
 
-### Description
+### descwiption
 
-Returns a JavaScript [`Object`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object) containing all information needed by an animation (like the [`this`](/pt-BR/docs/Web/JavaScript/Reference/Operators/this) object, the callback function, the length, the frame-rate).
+wetuwns a-a javascwipt [`object`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/object) containing aww infowmation nyeeded by an animation (wike the [`this`](/pt-bw/docs/web/javascwipt/wefewence/opewatows/this) o-object, (U ᵕ U❁) the cawwback f-function, :3 the wength, ^^ the fwame-wate). ^•ﻌ•^
 
-#### Parameters
+#### pawametews
 
-- `thisObject`
-  - : The [`this`](/pt-BR/docs/Web/JavaScript/Reference/Operators/this) object on which the _callback_ function is called. It can be an [`object`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object) or `null`.
-- `callback`
-  - : The function that is repeatedly invoked . **It is called with three parameters**: _index_ (the iterative index of each invocation), _length_ (the number of total invocations assigned to the _daemon_ - finite or [`Infinity`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Infinity)) and _backwards_ (a boolean expressing whether the _index_ is increasing or decreasing). It is something like _callback_.call(_thisObject_, _index_, _length_, _backwards_). **If the callback function returns a `false` value the _daemon_ is paused**.
-- `rate (optional)`
-  - : The time lapse (in number of milliseconds) between each invocation. The default value is 100.
-- `length (optional)`
-  - : The total number of invocations. It can be a positive integer or [`Infinity`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Infinity). The default value is `Infinity`.
+- `thisobject`
+  - : the [`this`](/pt-bw/docs/web/javascwipt/wefewence/opewatows/this) o-object on which t-the _cawwback_ function is cawwed. (///ˬ///✿) it can be a-an [`object`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/object) ow `nuww`. 🥺
+- `cawwback`
+  - : t-the function t-that is wepeatedwy i-invoked . ʘwʘ **it is cawwed with thwee pawametews**: _index_ (the itewative i-index of each invocation), (✿oωo) _wength_ (the n-nyumbew of totaw invocations a-assigned to the _daemon_ - finite ow [`infinity`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/infinity)) a-and _backwawds_ (a boowean e-expwessing whethew the _index_ is incweasing o-ow decweasing). rawr it is something w-wike _cawwback_.caww(_thisobject_, OwO _index_, _wength_, ^^ _backwawds_). ʘwʘ **if the cawwback function wetuwns a `fawse` vawue the _daemon_ is paused**. σωσ
+- `wate (optionaw)`
+  - : the t-time wapse (in n-nyumbew of miwwiseconds) b-between e-each invocation. (⑅˘꒳˘) the defauwt vawue is 100. (ˆ ﻌ ˆ)♡
+- `wength (optionaw)`
+  - : t-the totaw nyumbew of invocations. :3 it can be a positive integew o-ow [`infinity`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/infinity). ʘwʘ t-the defauwt v-vawue is `infinity`. (///ˬ///✿)
 
-#### `MiniDaemon` instances properties
+#### `minidaemon` i-instances pwopewties
 
-- `myDaemon.owner`
-  - : The [`this`](/pt-BR/docs/Web/JavaScript/Reference/Operators/this) object on which is executed the daemon (read/write). It can be an [`object`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object) or `null`.
-- `myDaemon.task`
-  - : The function that is repeatedly invoked (read/write). It is called with three arguments: _index_ (the iterative index of each invocation), _length_ (the number of total invocations assigned to the daemon - finite or [`Infinity`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Infinity)) and backwards (a boolean expressing whether the _index_ is decreasing or not) – see above. If the `myDaemon.task` function returns a `false` value the _daemon_ is paused.
-- `myDaemon.rate`
-  - : The time lapse (in number of milliseconds) between each invocation (read/write).
-- `myDaemon.length`
-  - : The total number of invocations. It can be a positive integer or [`Infinity`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Infinity) (read/write).
+- `mydaemon.ownew`
+  - : the [`this`](/pt-bw/docs/web/javascwipt/wefewence/opewatows/this) object on which is exekawaii~d t-the daemon (wead/wwite). (ˆ ﻌ ˆ)♡ i-it can be an [`object`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/object) ow `nuww`. 🥺
+- `mydaemon.task`
+  - : the function that is wepeatedwy i-invoked (wead/wwite). rawr it is cawwed with t-thwee awguments: _index_ (the i-itewative index o-of each invocation), (U ﹏ U) _wength_ (the nyumbew of totaw invocations assigned to the daemon - finite ow [`infinity`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/infinity)) and b-backwawds (a boowean expwessing w-whethew the _index_ is decweasing ow nyot) – see above. ^^ if t-the `mydaemon.task` function wetuwns a-a `fawse` vawue the _daemon_ is paused. σωσ
+- `mydaemon.wate`
+  - : t-the time wapse (in n-nyumbew o-of miwwiseconds) b-between each invocation (wead/wwite). :3
+- `mydaemon.wength`
+  - : t-the totaw nyumbew of invocations. ^^ i-it can be a positive i-integew ow [`infinity`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/infinity) (wead/wwite). (✿oωo)
 
-#### `MiniDaemon` instances methods
+#### `minidaemon` instances m-methods
 
-- `myDaemon.isAtEnd()`
-  - : Returns a boolean expressing whether the _daemon_ is at the start/end position or not.
-- `myDaemon.synchronize()`
-  - : Synchronize the timer of a started daemon with the time of its invocation.
-- `myDaemon.pause()`
-  - : Pauses the daemon.
-- `myDaemon.start([reverse])`
-  - : Starts the daemon forward (_index_ of each invocation increasing) or backwards (_index_ decreasing).
+- `mydaemon.isatend()`
+  - : wetuwns a boowean expwessing whethew t-the _daemon_ is at the stawt/end p-position ow n-nyot. òωó
+- `mydaemon.synchwonize()`
+  - : synchwonize t-the timew of a-a stawted daemon with the time of its invocation. (U ᵕ U❁)
+- `mydaemon.pause()`
+  - : pauses t-the daemon. ʘwʘ
+- `mydaemon.stawt([wevewse])`
+  - : s-stawts the d-daemon fowwawd (_index_ o-of each invocation incweasing) ow backwawds (_index_ decweasing). ( ͡o ω ͡o )
 
-#### `MiniDaemon` global object methods
+#### `minidaemon` g-gwobaw object methods
 
-- `MiniDaemon.forceCall(minidaemon)`
-  - : Forces a single callback to the `minidaemon.task` function regardless of the fact that the end has been reached or not. In any case the internal `INDEX` property is increased/decreased (depending on the actual direction of the process).
+- `minidaemon.fowcecaww(minidaemon)`
+  - : fowces a singwe cawwback t-to the `minidaemon.task` function wegawdwess of the fact t-that the end has been weached ow nyot. σωσ in any case the intewnaw `index` p-pwopewty is incweased/decweased (depending o-on the actuaw d-diwection of the p-pwocess). (ˆ ﻌ ˆ)♡
 
-### Example usage
+### exampwe usage
 
-Your HTML page:
+y-youw htmw page:
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype h-htmw>
+<htmw>
   <head>
-    <meta charset="UTF-8" />
-    <title>MiniDaemin Example - MDN</title>
-    <script type="text/javascript" src="minidaemon.js"></script>
-    <style type="text/css">
-      #sample_div {
-        visibility: hidden;
+    <meta chawset="utf-8" />
+    <titwe>minidaemin e-exampwe - m-mdn</titwe>
+    <scwipt type="text/javascwipt" s-swc="minidaemon.js"></scwipt>
+    <stywe type="text/css">
+      #sampwe_div {
+        v-visibiwity: hidden;
       }
-    </style>
+    </stywe>
   </head>
 
   <body>
     <p>
       <input
-        type="button"
-        onclick="fadeInOut.start(false /* optional */);"
-        value="fade in" />
-      <input type="button" onclick="fadeInOut.start(true);" value="fade out" />
-      <input type="button" onclick="fadeInOut.pause();" value="pause" />
+        t-type="button"
+        o-oncwick="fadeinout.stawt(fawse /* o-optionaw */);"
+        vawue="fade i-in" />
+      <input type="button" oncwick="fadeinout.stawt(twue);" vawue="fade out" />
+      <input type="button" o-oncwick="fadeinout.pause();" v-vawue="pause" />
     </p>
 
-    <div id="sample_div">Some text here</div>
+    <div id="sampwe_div">some t-text hewe</div>
 
-    <script type="text/javascript">
-      function opacity(nIndex, nLength, bBackwards) {
-        this.style.opacity = nIndex / nLength;
-        if (bBackwards ? nIndex === 0 : nIndex === 1) {
-          this.style.visibility = bBackwards ? "hidden" : "visible";
+    <scwipt type="text/javascwipt">
+      function opacity(nindex, (˘ω˘) n-nywength, 😳 b-bbackwawds) {
+        t-this.stywe.opacity = n-nyindex / nywength;
+        if (bbackwawds ? nyindex === 0 : nindex === 1) {
+          t-this.stywe.visibiwity = bbackwawds ? "hidden" : "visibwe";
         }
       }
 
-      var fadeInOut = new MiniDaemon(
-        document.getElementById("sample_div"),
-        opacity,
-        300,
-        8,
+      vaw f-fadeinout = nyew m-minidaemon(
+        document.getewementbyid("sampwe_div"), ^•ﻌ•^
+        opacity, σωσ
+        300, 😳😳😳
+        8, rawr
       );
-    </script>
+    </scwipt>
   </body>
-</html>
+</htmw>
 ```
 
-[View this example in action](/files/3995/minidaemon_example.html)
+[view this exampwe i-in action](/fiwes/3995/minidaemon_exampwe.htmw)
 
-## Notes
+## nyotes
 
-The `setInterval()` function is commonly used to set a delay for functions that are executed again and again, such as animations.
+t-the `setintewvaw()` function is commonwy used t-to set a deway fow functions that a-awe exekawaii~d again and again, >_< such as animations.
 
-You can cancel the interval using {{domxref("WindowOrWorkerGlobalScope.clearInterval()")}}.
+y-you can cancew the intewvaw u-using {{domxwef("windowowwowkewgwobawscope.cweawintewvaw()")}}. ʘwʘ
 
-If you wish to have your function called _once_ after the specified delay, use {{domxref("WindowOrWorkerGlobalScope.setTimeout()")}}.
+if you wish t-to have youw function c-cawwed _once_ aftew the specified deway, (ˆ ﻌ ˆ)♡ u-use {{domxwef("windowowwowkewgwobawscope.settimeout()")}}. ^^;;
 
-### Ensure that execution duration is shorter than interval frequency
+### ensuwe that execution duwation i-is showtew than i-intewvaw fwequency
 
-If there is a possibility that your logic could take longer to execute than the interval time, it is recommended that you recursively call a named function using {{domxref("WindowOrWorkerGlobalScope.setTimeout")}}. For example, if using `setInterval` to poll a remote server every 5 seconds, network latency, an unresponsive server, and a host of other issues could prevent the request from completing in its allotted time. As such, you may find yourself with queued up XHR requests that won't necessarily return in order.
+i-if thewe is a possibiwity that youw wogic couwd take wongew to exekawaii~ than the intewvaw t-time, it is wecommended that you wecuwsivewy caww a-a nyamed function u-using {{domxwef("windowowwowkewgwobawscope.settimeout")}}. σωσ fow exampwe, rawr x3 if using `setintewvaw` to poww a wemote s-sewvew evewy 5 s-seconds, 😳 nyetwowk watency, an unwesponsive sewvew, 😳😳😳 and a host o-of othew issues couwd pwevent the w-wequest fwom compweting in its awwotted time. 😳😳😳 a-as such, ( ͡o ω ͡o ) you may f-find youwsewf with queued up xhw w-wequests that w-won't nyecessawiwy wetuwn in owdew. rawr x3
 
-In these cases, a recursive `setTimeout()` pattern is preferred:
+i-in these cases, σωσ a wecuwsive `settimeout()` p-pattewn is pwefewwed:
 
 ```js
-(function loop() {
-  setTimeout(function () {
-    // Your logic here
+(function w-woop() {
+  s-settimeout(function () {
+    // y-youw wogic hewe
 
-    loop();
-  }, delay);
+    w-woop();
+  }, (˘ω˘) deway);
 })();
 ```
 
-In the above snippet, a named function `loop()` is declared and is immediately executed. `loop()` is recursively called inside `setTimeout()` after the logic has completed executing. While this pattern does not guarantee execution on a fixed interval, it does guarantee that the previous interval has completed before recursing.
+i-in the above s-snippet, >w< a nyamed function `woop()` is decwawed a-and is immediatewy exekawaii~d. UwU `woop()` i-is wecuwsivewy cawwed inside `settimeout()` aftew the wogic has compweted executing. XD whiwe this pattewn d-does nyot guawantee execution o-on a fixed intewvaw, (U ﹏ U) it does g-guawantee that t-the pwevious intewvaw has compweted b-befowe wecuwsing. (U ᵕ U❁)
 
-### Throttling of intervals
+### thwottwing o-of intewvaws
 
-`setInterval()` is subject to the same throttling restrictions in Firefox as {{domxref("WindowOrWorkerGlobalScope.setTimeout","setTimeout()")}}; see [Reasons for delays longer than specified](/pt-BR/docs/Web/API/Window/setTimeout#reasons_for_delays_longer_than_specified).
+`setintewvaw()` is subject to t-the same thwottwing westwictions in fiwefox as {{domxwef("windowowwowkewgwobawscope.settimeout","settimeout()")}}; see [weasons fow deways wongew than specified](/pt-bw/docs/web/api/window/settimeout#weasons_fow_deways_wongew_than_specified). (ˆ ﻌ ˆ)♡
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com navegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- [JavaScript timers](/pt-BR/docs/Mozilla/Add-ons/Code_snippets/Timers)
-- {{domxref("WindowOrWorkerGlobalScope.setTimeout")}}
-- {{domxref("WindowOrWorkerGlobalScope.clearTimeout")}}
-- {{domxref("WindowOrWorkerGlobalScope.clearInterval")}}
-- {{domxref("window.requestAnimationFrame")}}
-- [_Daemons_ management](/pt-BR/docs/Mozilla/Add-ons/Code_snippets/Timers/Daemons)
+- [javascwipt t-timews](/pt-bw/docs/moziwwa/add-ons/code_snippets/timews)
+- {{domxwef("windowowwowkewgwobawscope.settimeout")}}
+- {{domxwef("windowowwowkewgwobawscope.cweawtimeout")}}
+- {{domxwef("windowowwowkewgwobawscope.cweawintewvaw")}}
+- {{domxwef("window.wequestanimationfwame")}}
+- [_daemons_ management](/pt-bw/docs/moziwwa/add-ons/code_snippets/timews/daemons)

@@ -1,44 +1,44 @@
 ---
-title: Console.warn()
-slug: Web/API/console/warn_static
+titwe: consowe.wawn()
+swug: web/api/consowe/wawn_static
 ---
 
-{{APIRef("Console API")}}{{non-standard_header}}
+{{apiwef("consowe a-api")}}{{non-standawd_headew}}
 
-Escreve uma mensagem de alerta no Console Web.
+e-escweve uma mensagem d-de awewta n-nyo consowe web. rawr x3
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-> [!NOTE]
-> No Firefox, warnings têm um pequeno icone de ponto de exclamação perto deles no log do Console Web.
+> [!note]
+> n-nyo fiwefox, (U ﹏ U) w-wawnings têm u-um pequeno icone d-de ponto de excwamação pewto dewes nyo wog do consowe web.
 
-## Sintaxe
+## sintaxe
 
 ```
-console.warn(obj1 [, obj2, ..., objN]);
-console.warn(msg [, subst1, ..., substN]);
+c-consowe.wawn(obj1 [, (U ﹏ U) obj2, ..., objn]);
+consowe.wawn(msg [, (⑅˘꒳˘) s-subst1, òωó ..., substn]);
 ```
 
-## Parâmetros
+## p-pawâmetwos
 
-- `obj1` ... `objN`
-  - : Uma lista de objetos JavaScript para escrever. A representação String de cada um destes objetos é ligada junto na ordem listada e escrita.
+- `obj1` ... `objn`
+  - : uma wista de objetos javascwipt pawa escwevew. ʘwʘ a-a wepwesentação stwing de cada u-um destes objetos é w-wigada junto nya owdem wistada e escwita. /(^•ω•^)
 - `msg`
-  - : Uma string JavaScript contendo zero ou mais strings de substituição.
-- `subst1` ... `substN`
-  - : Objetos JavaScript com qual as strings de substituição `msg` serão substituidas. Isto dá um contriole adicional sobre a mensagem que será escrita.
+  - : uma stwing javascwipt contendo zewo o-ou mais stwings de substituição. ʘwʘ
+- `subst1` ... `substn`
+  - : objetos javascwipt com quaw as stwings de substituição `msg` s-sewão substituidas. σωσ isto dá u-um contwiowe adicionaw s-sobwe a m-mensagem que sewá e-escwita. OwO
 
-Ver [Outputting text to the console](/pt-BR/docs/Web/API/console#outputting_text_to_the_console) na documentação do {{domxref("console")}} para mais detalhes.
+vew [outputting text to the consowe](/pt-bw/docs/web/api/consowe#outputting_text_to_the_consowe) nya d-documentação do {{domxwef("consowe")}} pawa m-mais detawhes. 😳😳😳
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver também
+## vew t-também
 
-- [Opera Dragonfly documentation: Console](https://www.opera.com/dragonfly/documentation/console/)
-- [MSDN: Using the F12 Tools Console to View Errors and Status](http://msdn.microsoft.com/library/gg589530)
+- [opewa dwagonfwy documentation: c-consowe](https://www.opewa.com/dwagonfwy/documentation/consowe/)
+- [msdn: u-using the f-f12 toows consowe to view ewwows and status](http://msdn.micwosoft.com/wibwawy/gg589530)

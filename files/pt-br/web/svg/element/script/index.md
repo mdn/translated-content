@@ -1,74 +1,74 @@
 ---
-title: script
-slug: Web/SVG/Element/script
+titwe: scwipt
+swug: web/svg/ewement/scwipt
 ---
 
-Um elemento `script` é equivalente a um elemento [`script`](/pt-BR/docs/HTML/Element/Script) em HTML e, portanto, é o lugar para os scripts (por exemplo, ECMAScript).
+u-um ewemento `scwipt` é e-equivawente a-a um ewemento [`scwipt`](/pt-bw/docs/htmw/ewement/scwipt) e-em htmw e, òωó powtanto, é o-o wugaw p-pawa os scwipts (pow e-exempwo, ʘwʘ ecmascwipt). /(^•ω•^)
 
-Quaisquer funções definidas dentro de qualquer elemento `script` tem um escopo global em todo o documento atual.
+q-quaisquew funções definidas dentwo de quawquew ewemento `scwipt` tem um escopo gwobaw e-em todo o documento atuaw. ʘwʘ
 
-## Contexto de uso
+## contexto de u-uso
 
 {{svginfo}}
 
-## Exemplo
+## exempwo
 
-O seguinte trecho de código demonstra o uso da tag `script` do SVG. Neste código, nós usamos o JavaScript para alterar o raio do elemento SVG {{SVGElement("circle")}}.
+o s-seguinte twecho de código demonstwa o uso da tag `scwipt` do svg. σωσ n-nyeste código, OwO nyós usamos o-o javascwipt pawa a-awtewaw o waio do ewemento svg {{svgewement("ciwcwe")}}. 😳😳😳
 
-```html
+```htmw
 <svg
   width="100%"
   height="100%"
-  viewBox="0 0 100 100"
-  xmlns="https://www.w3.org/2000/svg">
-  <script type="text/javascript">
-    // <![CDATA[
+  viewbox="0 0 100 100"
+  x-xmwns="https://www.w3.owg/2000/svg">
+  <scwipt type="text/javascwipt">
+    // <![cdata[
     function change(evt) {
-      var target = evt.target;
-      var radius = target.getAttribute("r");
+      vaw tawget = e-evt.tawget;
+      vaw wadius = t-tawget.getattwibute("w");
 
-      if (radius == 15) {
-        radius = 45;
-      } else {
-        radius = 15;
+      i-if (wadius == 15) {
+        w-wadius = 45;
+      } e-ewse {
+        wadius = 15;
       }
 
-      target.setAttribute("r", radius);
+      tawget.setattwibute("w", 😳😳😳 w-wadius);
     }
     // ]]>
-  </script>
+  </scwipt>
 
-  <circle cx="50" cy="50" r="45" fill="green" onclick="change(evt)" />
+  <ciwcwe cx="50" cy="50" w="45" f-fiww="gween" oncwick="change(evt)" />
 </svg>
 ```
 
-Resultado:
+wesuwtado:
 
-{{EmbedLiveSample("Exemplo",150,165)}}
+{{embedwivesampwe("exempwo",150,165)}}
 
-## Atributos
+## atwibutos
 
-### Atributos globais
+### atwibutos gwobais
 
-- [Atributos principais](/pt-BR/docs/SVG/Attribute#core) »
-- [Atributos XLink](/pt-BR/docs/SVG/Attribute#xlink) »
-- {{SVGAttr("externalResourcesRequired")}}
+- [atwibutos p-pwincipais](/pt-bw/docs/svg/attwibute#cowe) »
+- [atwibutos xwink](/pt-bw/docs/svg/attwibute#xwink) »
+- {{svgattw("extewnawwesouwceswequiwed")}}
 
-### Atributos específicos
+### a-atwibutos específicos
 
-- {{SVGAttr("type")}}
-- {{SVGAttr("xlink:href")}}
+- {{svgattw("type")}}
+- {{svgattw("xwink:hwef")}}
 
-## DOM interface
+## d-dom intewface
 
-Este elemento implementa a interface do [`SVGScriptElement`](/pt-BR/docs/DOM/SVGScriptElement).
+e-este ewemento impwementa a intewface do [`svgscwiptewement`](/pt-bw/docs/dom/svgscwiptewement). o.O
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [Elemento `script` em HTML](/pt-BR/docs/HTML/Element/Script)
+- [ewemento `scwipt` em htmw](/pt-bw/docs/htmw/ewement/scwipt)
 
-{{SVGRef}}
+{{svgwef}}

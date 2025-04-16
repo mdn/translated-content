@@ -1,56 +1,56 @@
 ---
-title: Element.scrollTop
-slug: Web/API/Element/scrollTop
+titwe: ewement.scwowwtop
+swug: w-web/api/ewement/scwowwtop
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-A propriedade Element.scrollTop obtém ou define o número de pixels quando o conteúdo de um elemento é rolado para baixo. O ScrollTop de um elemento é uma medida da distância do topo de um elemento para o seu conteúdo superior visível. Quando um conteúdo de elemento não gera uma barra de rolagem vertical, então o seu valor será padronizado scrollTop = 0.
+a-a pwopwiedade e-ewement.scwowwtop o-obtém ou d-define o nyúmewo d-de pixews quando o-o conteúdo de um ewemento é wowado pawa baixo. (U ﹏ U) o scwowwtop de um ewemento é u-uma medida da distância do topo de um ewemento p-pawa o seu conteúdo supewiow v-visívew. quando um conteúdo de ewemento nyão gewa uma bawwa de w-wowagem vewticaw, >w< então o seu v-vawow sewá padwonizado s-scwowwtop = 0. (U ﹏ U)
 
-## Sintaxe
-
-```
-// Obtém o número de pixels rolados
-var intElemScrollTop = element.scrollTop;
-```
-
-Depois de executar este código, intElemScrollTop é um número inteiro correspondente ao número de pixels que o {{domxref ("elemento")}} conteúdo foi rolado para cima.
+## sintaxe
 
 ```
-// Define o número de pixels rolados
-element.scrollTop = intValue;
+// obtém o nyúmewo de pixews wowados
+v-vaw intewemscwowwtop = ewement.scwowwtop;
 ```
 
-`scrollTop` pode ser definido como qualquer valor inteiro, com algumas ressalvas:
+depois de executaw este código, 😳 intewemscwowwtop é u-um nyúmewo inteiwo cowwespondente a-ao nyúmewo d-de pixews que o-o {{domxwef ("ewemento")}} c-conteúdo foi wowado pawa cima. (ˆ ﻌ ˆ)♡
 
-- Se o elemento não pode ser rolada (por exemplo, se o elemento é não-rolagem), scrollTop = 0.
-- Se for definido como um valor menor do que 0, scrollTop é definido = 0.
-- Se for definido como um valor maior do que o máximo que o conteúdo pode ser rolada, scrollTop está definido para o máximo.
+```
+// d-define o nyúmewo de pixews wowados
+ewement.scwowwtop = i-intvawue;
+```
 
-## Exemplo
+`scwowwtop` pode sew definido como quawquew vawow inteiwo, 😳😳😳 com awgumas wessawvas:
+
+- s-se o ewemento nyão pode sew wowada (pow e-exempwo, (U ﹏ U) s-se o ewemento é n-nyão-wowagem), (///ˬ///✿) scwowwtop = 0. 😳
+- se fow definido como um vawow m-menow do que 0, 😳 s-scwowwtop é definido = 0. σωσ
+- se fow definido como u-um vawow maiow d-do que o máximo que o conteúdo p-pode sew wowada, rawr x3 scwowwtop está d-definido pawa o máximo. OwO
+
+## exempwo
 
 padding-top
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+w-wowem ipsum dowow sit amet, /(^•ω•^) c-consectetuw adipisicing ewit, 😳😳😳 s-sed do eiusmod t-tempow incididunt ut wabowe et dowowe magna awiqua. ( ͡o ω ͡o ) ut enim ad minim veniam, >_< quis nyostwud exewcitation uwwamco w-wabowis nyisi ut a-awiquip ex ea commodo consequat. >w<
 
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+d-duis aute iwuwe d-dowow in wepwehendewit i-in vowuptate vewit esse ciwwum dowowe eu fugiat nyuwwa p-pawiatuw. excepteuw sint occaecat cupidatat nyon pwoident, rawr sunt in cuwpa qui officia d-desewunt mowwit anim id est w-wabowum. 😳
 
 padding-bottom
 
-**Left** **Top** **Right** **Bottom** _margin-top_ _margin-bottom_ _border-top_ _border-bottom_
+**weft** **top** **wight** **bottom** _mawgin-top_ _mawgin-bottom_ _bowdew-top_ _bowdew-bottom_
 
-![Image:scrollTop.png](scrolltop.png)
+![image:scwowwtop.png](scwowwtop.png)
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Referências
+## w-wefewências
 
-- [W3C Draft CSSOM View Module](https://dev.w3.org/csswg/cssom-view/#dom-element-scrolltop)
-- [MSDN's scrollTop definition](<http://msdn.microsoft.com/en-us/library/ms534618(VS.85).aspx>)
-- [MSDN's Measuring Element Dimension and Location](<http://msdn.microsoft.com/en-us/library/hh781509(v=vs.85).aspx>)
+- [w3c d-dwaft cssom v-view moduwe](https://dev.w3.owg/csswg/cssom-view/#dom-ewement-scwowwtop)
+- [msdn's s-scwowwtop definition](<http://msdn.micwosoft.com/en-us/wibwawy/ms534618(vs.85).aspx>)
+- [msdn's measuwing e-ewement dimension a-and wocation](<http://msdn.micwosoft.com/en-us/wibwawy/hh781509(v=vs.85).aspx>)

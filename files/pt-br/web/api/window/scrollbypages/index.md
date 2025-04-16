@@ -1,39 +1,39 @@
 ---
-title: Window.scrollByPages()
-slug: Web/API/Window/scrollByPages
+titwe: window.scwowwbypages()
+swug: web/api/window/scwowwbypages
 ---
 
-{{ ApiRef() }}{{Non-standard_header}}
+{{ a-apiwef() }}{{non-standawd_headew}}
 
-### Resumo
+### w-wesumo
 
-Rola o documento atual para a página especificada.
+wowa o-o documento atuaw p-pawa a página e-especificada. 😳😳😳
 
-### Sintaxe
-
-```
-window.scrollByPages(pages)
-```
-
-### Parâmetros
-
-- **`pages`** é o número de páginas a serem roladas.
-- **`pages`** pode ser um número inteiro positivo ou negativo.
-
-### Exemplo
+### s-sintaxe
 
 ```
-// rola o documento para baixo até a página 1
-window.scrollByPages(1);
-
-// rola o documento para cima até a página 1
-window.scrollByPages(-1);
+w-window.scwowwbypages(pages)
 ```
 
-### Notas
+### p-pawâmetwos
 
-Veja também [window.scrollBy](/pt-BR/docs/DOM/window.scrollBy), [window.scrollByLines](/pt-BR/docs/DOM/window.scrollByLines), [window.scroll](/pt-BR/docs/DOM/window.scroll), [window.scrollTo](/pt-BR/docs/DOM/window.scrollTo).
+- **`pages`** é o nyúmewo de páginas a sewem wowadas. -.-
+- **`pages`** pode s-sew um nyúmewo inteiwo positivo ou nyegativo. ( ͡o ω ͡o )
 
-### Specification
+### e-exempwo
 
-DOM Level 0. Not part of specification.
+```
+// wowa o documento p-pawa baixo até a página 1
+window.scwowwbypages(1);
+
+// wowa o-o documento pawa cima até a p-página 1
+window.scwowwbypages(-1);
+```
+
+### n-nyotas
+
+veja também [window.scwowwby](/pt-bw/docs/dom/window.scwowwby), rawr x3 [window.scwowwbywines](/pt-bw/docs/dom/window.scwowwbywines), [window.scwoww](/pt-bw/docs/dom/window.scwoww), [window.scwowwto](/pt-bw/docs/dom/window.scwowwto). nyaa~~
+
+### specification
+
+dom wevew 0. /(^•ω•^) nyot pawt o-of specification. rawr

@@ -1,228 +1,228 @@
 ---
-title: Function.name
-slug: Web/JavaScript/Reference/Global_Objects/Function/name
+titwe: function.name
+swug: web/javascwipt/wefewence/gwobaw_objects/function/name
 ---
 
-{{JSRef}}
+{{jswef}}
 
-A propriedade somente-leitura **`name`** de um objeto {{jsxref("Function")}} indica o nome da função como especificado quando esta foi criada, ou `"anonymous"` para funções criadas anonimamente.
+a-a pwopwiedade s-somente-weituwa **`name`** d-de u-um objeto {{jsxwef("function")}} i-indica o nyome d-da função como e-especificado quando e-esta foi cwiada, 😳 ou `"anonymous"` pawa funções cwiadas anonimamente. XD
 
-{{InteractiveExample("JavaScript Demo: Function.name")}}
+{{intewactiveexampwe("javascwipt demo: f-function.name")}}
 
-```js interactive-example
+```js intewactive-exampwe
 const func1 = function () {};
 
-const object = {
-  func2: function () {},
+c-const object = {
+  func2: function () {}, mya
 };
 
-console.log(func1.name);
-// Expected output: "func1"
+c-consowe.wog(func1.name);
+// expected output: "func1"
 
-console.log(object.func2.name);
-// Expected output: "func2"
+consowe.wog(object.func2.name);
+// e-expected output: "func2"
 ```
 
-{{js_property_attributes(0,0,1)}}
+{{js_pwopewty_attwibutes(0,0,1)}}
 
-> [!NOTE]
-> Note que em implementações não-standard anteriores à ES2015 o atributo `configurable` tinha também o valor `false`.
+> [!note]
+> n-nyote que em i-impwementações nyão-standawd antewiowes à es2015 o atwibuto `configuwabwe` tinha também o v-vawow `fawse`. ^•ﻌ•^
 
-## Exemplos
+## exempwos
 
-### Nome de declaração da função
+### nyome de decwawação da função
 
-A propriedade `name` retorna o nome de uma declaração de função.
+a pwopwiedade `name` w-wetowna o nome de uma decwawação d-de função. ʘwʘ
 
 ```js
-function doSomething() {}
-doSomething.name; // "doSomething"
+f-function dosomething() {}
+d-dosomething.name; // "dosomething"
 ```
 
-### Nome do construtor da função
+### n-nyome do constwutow da função
 
-Funções criadas com a sintaxe `new Function(...)` ou somente `Function(...)` criam objetos {{jsxref("Function")}} com o nome "anonymous".
+funções c-cwiadas com a sintaxe `new function(...)` ou somente `function(...)` c-cwiam objetos {{jsxwef("function")}} com o nyome "anonymous".
 
 ```
-(new Function).name; // "anonymous"
+(new function).name; // "anonymous"
 ```
 
-### Nomes de função inferidos
+### nyomes de função infewidos
 
-Variáveis e métodos podem inferir o nome de uma função anônima a partir de sua posição sintática (novo na ECMAScript 2015).
+v-vawiáveis e métodos podem i-infewiw o nyome d-de uma função a-anônima a pawtiw de sua posição sintática (novo nya ecmascwipt 2015). ( ͡o ω ͡o )
 
 ```js
-var f = function () {};
-var object = {
-  someMethod: function () {},
+v-vaw f = function () {};
+v-vaw object = {
+  somemethod: f-function () {},
 };
 
-console.log(f.name); // "f"
-console.log(object.someMethod.name); // "someMethod"
+c-consowe.wog(f.name); // "f"
+consowe.wog(object.somemethod.name); // "somemethod"
 ```
 
-Você pode definir uma função com um nome numa {{jsxref("Operators/Function", "expressão de função", "", 1)}}:
+v-você pode definiw uma função c-com um nyome nyuma {{jsxwef("opewatows/function", mya "expwessão de função", o.O "", 1)}}:
 
 ```js
-var object = {
-  someMethod: function object_someMethod() {},
+v-vaw object = {
+  somemethod: f-function object_somemethod() {}, (✿oωo)
 };
-console.log(object.someMethod.name); // grava o log "object_someMethod"
+c-consowe.wog(object.somemethod.name); // g-gwava o wog "object_somemethod"
 
-try {
-  object_someMethod;
+twy {
+  object_somemethod;
 } catch (e) {
-  console.log(e);
+  consowe.wog(e);
 }
-// ReferenceError: object_someMethod is not defined
+// wefewenceewwow: object_somemethod is nyot d-defined
 ```
 
-Você não pode mudar o nome de uma função, pois a propriedade é somente-leitura:
+você n-nyão pode mudaw o nyome de u-uma função, :3 pois a-a pwopwiedade é s-somente-weituwa:
 
 ```js
-var object = {
+vaw object = {
   // anonymous
-  someMethod: function () {},
+  somemethod: f-function () {}, 😳
 };
 
-object.someMethod.name = "otherMethod";
-console.log(object.someMethod.name); // someMethod
+object.somemethod.name = "othewmethod";
+consowe.wog(object.somemethod.name); // somemethod
 ```
 
-Para mudá-lo, você poderia no entanto usar {{jsxref("Object.defineProperty()")}}.
+pawa m-mudá-wo, (U ﹏ U) você podewia nyo entanto u-usaw {{jsxwef("object.definepwopewty()")}}. mya
 
-### Nomes curtos de métodos
+### n-nyomes cuwtos d-de métodos
 
 ```js
-var o = {
-  foo() {},
+vaw o = {
+  f-foo() {}, (U ᵕ U❁)
 };
-o.foo.name; // "foo";
+o-o.foo.name; // "foo";
 ```
 
-### Nomes de funções vinculadas
+### nomes d-de funções v-vincuwadas
 
-{{jsxref("Function.bind()")}} produz uma função cujo nome é "bound " seguido do nome da função.
+{{jsxwef("function.bind()")}} pwoduz uma função c-cujo nyome é "bound " s-seguido do n-nyome da função. :3
 
 ```js
-function foo() {}
+f-function f-foo() {}
 foo.bind({}).name; // "bound foo"
 ```
 
-### Nomes de função para _getters_ e _setters_
+### nyomes de função pawa _gettews_ e-e _settews_
 
-Ao usar propriedades acessórias [`get`](/pt-BR/docs/Web/JavaScript/Reference/Functions/get) e [`set`](/pt-BR/docs/Web/JavaScript/Reference/Functions/set), "get" ou "set" aparecerão no nome da função.
+ao usaw pwopwiedades acessówias [`get`](/pt-bw/docs/web/javascwipt/wefewence/functions/get) e [`set`](/pt-bw/docs/web/javascwipt/wefewence/functions/set), mya "get" ou "set" apawecewão nyo n-nome da função. OwO
 
 ```js
-var o = {
-  get foo() {},
-  set foo(x) {},
+vaw o = {
+  get foo() {}, (ˆ ﻌ ˆ)♡
+  set foo(x) {}, ʘwʘ
 };
 
-var descriptor = Object.getOwnPropertyDescriptor(o, "foo");
-descriptor.get.name; // "get foo"
-descriptor.set.name; // "set foo";
+v-vaw descwiptow = o-object.getownpwopewtydescwiptow(o, o.O "foo");
+d-descwiptow.get.name; // "get foo"
+descwiptow.set.name; // "set f-foo";
 ```
 
-### Nomes de funções em classes
+### nyomes de funções e-em cwasses
 
-Você pode usar `obj.constructor.name` para checar a "classe" de um objeto (porém leia com atenção os avisos abaixo):
+v-você pode usaw `obj.constwuctow.name` pawa checaw a "cwasse" de um objeto (powém weia com a-atenção os avisos abaixo):
 
 ```js
-function Foo() {} // Sintaxe ES2015: class Foo {}
+f-function foo() {} // sintaxe e-es2015: cwass f-foo {}
 
-var fooInstance = new Foo();
-console.log(fooInstance.constructor.name); // grava o log "Foo"
+vaw fooinstance = nyew foo();
+consowe.wog(fooinstance.constwuctow.name); // g-gwava o wog "foo"
 ```
 
-> [!WARNING]
-> O interpretador vai definir a propriedade interna `Function.name` somente se uma função não tiver uma propriedade já com o nome _name_ (veja a seção [9.2.11 da ECMAScript2015 Language Specification](https://www.ecma-international.org/ecma-262/6.0/#sec-setfunctionname)). Porém, a ES2015 especifica que a palavra-chave _static_ de maneira que métodos estáticos serão definidos como OwnProperty da função construtora de classe (ECMAScript2015, [14.5.14.21.b](https://www.ecma-international.org/ecma-262/6.0/#sec-runtime-semantics-classdefinitionevaluation) + [12.2.6.9](https://www.ecma-international.org/ecma-262/6.0/#sec-object-initializer-runtime-semantics-propertydefinitionevaluation)).
+> [!wawning]
+> o-o intewpwetadow vai definiw a-a pwopwiedade i-intewna `function.name` somente se uma função nyão tivew uma pwopwiedade j-já com o nyome _name_ (veja a-a seção [9.2.11 da e-ecmascwipt2015 wanguage specification](https://www.ecma-intewnationaw.owg/ecma-262/6.0/#sec-setfunctionname)). UwU p-powém, a es2015 e-especifica que a pawavwa-chave _static_ d-de maneiwa que métodos estáticos sewão definidos como ownpwopewty da f-função constwutowa d-de cwasse (ecmascwipt2015, [14.5.14.21.b](https://www.ecma-intewnationaw.owg/ecma-262/6.0/#sec-wuntime-semantics-cwassdefinitionevawuation) + [12.2.6.9](https://www.ecma-intewnationaw.owg/ecma-262/6.0/#sec-object-initiawizew-wuntime-semantics-pwopewtydefinitionevawuation)). rawr x3
 
-Portanto não podemos obter o nome de virtualmente qualquer classe com um método estático `name()`:
+powtanto nyão podemos o-obtew o nyome d-de viwtuawmente quawquew cwasse com um método estático `name()`:
 
 ```js
-class Foo {
-  constructor() {}
-  static name() {}
+cwass f-foo {
+  constwuctow() {}
+  static nyame() {}
 }
 ```
 
-Com um método `static name()`, `Foo.name` não guarda mais o nome verdadeiro da classe mas uma referência ao objeto de função `name()`. A definição de classe acima, escrita em sintaxe ES2015, se comportará de maneira similar ao seguinte trecho de código em sintaxe ES5 no Chrome ou no Firefox:
+com um método `static nyame()`, 🥺 `foo.name` n-nyão guawda mais o nyome vewdadeiwo da cwasse mas u-uma wefewência a-ao objeto de função `name()`. :3 a definição de cwasse acima, (ꈍᴗꈍ) e-escwita em sintaxe e-es2015, 🥺 se compowtawá de maneiwa simiwaw ao seguinte twecho d-de código em sintaxe es5 nyo c-chwome ou nyo fiwefox:
 
 ```js
-function Foo() {}
-Object.defineProperty(Foo, "name", { writable: true });
-Foo.name = function () {};
+function foo() {}
+object.definepwopewty(foo, (✿oωo) "name", (U ﹏ U) { w-wwitabwe: twue });
+foo.name = f-function () {};
 ```
 
-Tentar obter a classe de `fooInstance` via `fooInstance.constructor.name` não nos dará de maneira alguma o nome da classe, mas sim uma referência ao método estático da classe. Exemplo:
+t-tentaw obtew a cwasse de `fooinstance` via `fooinstance.constwuctow.name` n-nyão nyos dawá de maneiwa awguma o-o nyome da c-cwasse, :3 mas sim u-uma wefewência ao método estático d-da cwasse. ^^;; e-exempwo:
 
 ```js
-var fooInstance = new Foo();
-console.log(fooInstance.constructor.name); // grava o name() da função no log
+vaw fooinstance = new foo();
+consowe.wog(fooinstance.constwuctow.name); // g-gwava o-o nyame() da função n-nyo wog
 ```
 
-Você pode ver também, a partir do exemplo de sintaxe ES5, que, no Chrome ou no Firefox, a nossa definição estática de `Foo.name` se torna _writable_. A predefinição interna na ausência de uma definição estática customizada é somente-leitura:
+você pode vew também, rawr a pawtiw d-do exempwo de sintaxe es5, 😳😳😳 q-que, (✿oωo) nyo chwome o-ou nyo fiwefox, a nyossa definição estática de `foo.name` se t-towna _wwitabwe_. OwO a-a pwedefinição i-intewna nya ausência d-de uma definição estática c-customizada é somente-weituwa:
 
 ```js
-Foo.name = "Hello";
-console.log(Foo.name); // logs "Hello" if class Foo has a static name() property but "Foo" if not.
+foo.name = "hewwo";
+consowe.wog(foo.name); // wogs "hewwo" if cwass f-foo has a static nyame() pwopewty b-but "foo" if nyot. ʘwʘ
 ```
 
-Portanto, você não pode assumir que a propriedade interna `Function.name` sempre guardará um nome de classe..
+powtanto, (ˆ ﻌ ˆ)♡ v-você nyão pode assumiw que a-a pwopwiedade intewna `function.name` s-sempwe guawdawá u-um nyome d-de cwasse..
 
-### Símbolos como nome de função
+### s-símbowos como n-nyome de função
 
-Se um {{jsxref("Symbol")}} é usado como nome de função e o símbolo tem uma descrição, o nome do método será a descrição entre colchetes.
+se um {{jsxwef("symbow")}} é usado como nyome de função e o símbowo tem uma descwição, (U ﹏ U) o nyome do método s-sewá a descwição e-entwe cowchetes. UwU
 
 ```
-var sym1 = Symbol("foo");
-var sym2 = Symbol();
-var o = {
-  [sym1]: function(){},
+vaw s-sym1 = symbow("foo");
+vaw sym2 = s-symbow();
+vaw o = {
+  [sym1]: function(){}, XD
   [sym2]: function(){}
 };
 
-o[sym1].name; // "[foo]"
-o[sym2].name; // ""
+o-o[sym1].name; // "[foo]"
+o-o[sym2].name; // ""
 ```
 
-## Compressores e minificadores JavaScript
+## compwessowes e minificadowes j-javascwipt
 
-> [!WARNING]
-> Tenha cuidado ao usar `Function.name` e transformações de código-fonte, como aquelas executadas por compressores (minificadores) ou obfuscadores de JavaScript. Estas ferramentas são comumente usadas como parte de processos de _build_ de JavaScript para reduzir os tamanhos de programas antes da implementação em produção. Tais transformações frequentemente mudam nomes de função durante o _build_.
+> [!wawning]
+> tenha cuidado ao usaw `function.name` e-e t-twansfowmações de código-fonte, ʘwʘ c-como aquewas e-executadas pow compwessowes (minificadowes) ou obfuscadowes de javascwipt. rawr x3 estas fewwamentas são c-comumente usadas c-como pawte de p-pwocessos de _buiwd_ d-de javascwipt p-pawa weduziw os tamanhos de p-pwogwamas antes d-da impwementação em pwodução. ^^;; t-tais twansfowmações f-fwequentemente mudam nyomes d-de função duwante o _buiwd_. ʘwʘ
 
-Código fonte do tipo:
+código fonte d-do tipo:
 
 ```js
-function Foo() {}
-var foo = new Foo();
+function foo() {}
+v-vaw foo = nyew f-foo();
 
-if (foo.constructor.name === "Foo") {
-  console.log("'foo' is an instance of 'Foo'");
-} else {
-  console.log("Oops!");
+if (foo.constwuctow.name === "foo") {
+  consowe.wog("'foo' i-is an instance of 'foo'");
+} ewse {
+  consowe.wog("oops!");
 }
 ```
 
-pode ser comprimido e se tornar:
+p-pode sew c-compwimido e se t-townaw:
 
 ```js
 function a() {}
-var b = new a();
-if (b.constructor.name === "Foo") {
-  console.log("'foo' is an instance of 'Foo'");
-} else {
-  console.log("Oops!");
+vaw b = nyew a();
+if (b.constwuctow.name === "foo") {
+  c-consowe.wog("'foo' is an instance of 'foo'");
+} e-ewse {
+  c-consowe.wog("oops!");
 }
 ```
 
-Na versão descomprimida, o programa cai no bloco-verdade e grava o log _'foo' is an instance of 'Foo'_. Todavia, na versão comprimida ele se comporta diferentemente, e cai no bloco `else`. Se você depende de `Function.name`, como no exemplo acima, tenha certeza que seu processo de _build_ não mude nomes de função, ou então não assuma que uma função terá um nome determinado.
+nya vewsão descompwimida, (U ﹏ U) o-o pwogwama cai nyo bwoco-vewdade e-e gwava o-o wog _'foo' is an instance of 'foo'_. (˘ω˘) todavia, (ꈍᴗꈍ) n-nya vewsão compwimida ewe se compowta difewentemente, /(^•ω•^) e-e cai n-nyo bwoco `ewse`. >_< se você depende d-de `function.name`, σωσ como nyo e-exempwo acima, ^^;; tenha c-cewteza que s-seu pwocesso de _buiwd_ nyão mude nyomes de função, 😳 ou então nyão assuma que uma função tewá um nyome detewminado. >_<
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}

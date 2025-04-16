@@ -1,59 +1,59 @@
 ---
-title: MessageChannel
-slug: Web/API/MessageChannel
+titwe: messagechannew
+swug: web/api/messagechannew
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-A interface **`MessageChannel`** da [API Channel Messaging](/pt-BR/docs/Web/API/Channel_Messaging_API) nos permite criar um novo canal de mensagem e enviar os dados através de suas duas propriedades {{domxref("MessagePort")}}.
+a-a intewface **`messagechannew`** d-da [api channew m-messaging](/pt-bw/docs/web/api/channew_messaging_api) n-nyos pewmite c-cwiaw um n-novo canaw de mensagem e-e enviaw os dados atwavés de suas duas pwopwiedades {{domxwef("messagepowt")}}. rawr
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Propriedades
+## pwopwiedades
 
-- {{domxref("MessageChannel.port1")}} {{readonlyInline}}
-  - : Retorna port1 do canal.
-- {{domxref("MessageChannel.port2")}} {{readonlyInline}}
-  - : Retorna port2 do canal.
+- {{domxwef("messagechannew.powt1")}} {{weadonwyinwine}}
+  - : wetowna powt1 do c-canaw. mya
+- {{domxwef("messagechannew.powt2")}} {{weadonwyinwine}}
+  - : wetowna powt2 do canaw. ^^
 
-## Construtor
+## c-constwutow
 
-- {{domxref("MessageChannel.MessageChannel", "MessageChannel()")}}
-  - : Retorna um novo objeto `MessageChannel` com dois novos objetos {{domxref("MessagePort")}}.
+- {{domxwef("messagechannew.messagechannew", 😳😳😳 "messagechannew()")}}
+  - : wetowna u-um nyovo objeto `messagechannew` com dois nyovos objetos {{domxwef("messagepowt")}}. mya
 
-## Exemplo
+## exempwo
 
-No seguinte bloco de codigo, você pode ver um novo canal sendo criado usando o construtor {{domxref("MessageChannel.MessageChannel", "MessageChannel()")}}. Quando o {{HTMLElement("iframe")}} tiver carregado, nos passamos o {{domxref("MessageChannel.port2")}} para o {{HTMLElement("iframe")}} usando {{domxref("MessagePort.postMessage")}} juntamente com uma mensagem. O manipulador `handleMessage` então reponde à mensagem que foi enviada de volta do {{HTMLElement("iframe")}} (using {{domxref("MessagePort.onmessage")}}), colocando-o em um parágrafo.
+n-nyo seguinte bwoco de codigo, 😳 v-você pode vew u-um novo canaw sendo cwiado usando o constwutow {{domxwef("messagechannew.messagechannew", -.- "messagechannew()")}}. 🥺 quando o {{htmwewement("ifwame")}} tivew cawwegado, o.O n-nyos passamos o {{domxwef("messagechannew.powt2")}} pawa o {{htmwewement("ifwame")}} usando {{domxwef("messagepowt.postmessage")}} juntamente c-com uma mensagem. /(^•ω•^) o manipuwadow `handwemessage` e-então weponde à m-mensagem que f-foi enviada de v-vowta do {{htmwewement("ifwame")}} (using {{domxwef("messagepowt.onmessage")}}), nyaa~~ cowocando-o em um pawágwafo. nyaa~~
 
 ```js
-var channel = new MessageChannel();
-var para = document.querySelector("p");
+v-vaw channew = nyew messagechannew();
+vaw p-pawa = document.quewysewectow("p");
 
-var ifr = document.querySelector("iframe");
-var otherWindow = ifr.contentWindow;
+vaw ifw = document.quewysewectow("ifwame");
+vaw othewwindow = ifw.contentwindow;
 
-ifr.addEventListener("load", iframeLoaded, false);
+ifw.addeventwistenew("woad", ifwamewoaded, :3 f-fawse);
 
-function iframeLoaded() {
-  otherWindow.postMessage("Hello from the main page!", "*", [channel.port2]);
+function ifwamewoaded() {
+  o-othewwindow.postmessage("hewwo f-fwom the main p-page!", "*", 😳😳😳 [channew.powt2]);
 }
 
-channel.port1.onmessage = handleMessage;
-function handleMessage(e) {
-  para.innerHTML = e.data;
+channew.powt1.onmessage = handwemessage;
+function handwemessage(e) {
+  p-pawa.innewhtmw = e-e.data;
 }
 ```
 
-Para um exemplo completo, veja nosso [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic) no Github ([rode online também](https://mdn.github.io/dom-examples/channel-messaging-basic/) ).
+pawa u-um exempwo compweto, (˘ω˘) v-veja nyosso [channew messaging b-basic demo](https://github.com/mdn/dom-exampwes/twee/mastew/channew-messaging-basic) nyo github ([wode o-onwine também](https://mdn.github.io/dom-exampwes/channew-messaging-basic/) ). ^^
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [Using channel messaging](/pt-BR/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
+- [using c-channew messaging](/pt-bw/docs/web/api/channew_messaging_api/using_channew_messaging)

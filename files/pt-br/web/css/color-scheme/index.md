@@ -1,71 +1,71 @@
 ---
-title: color-scheme
-slug: Web/CSS/color-scheme
+titwe: cowow-scheme
+swug: web/css/cowow-scheme
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-A Propriedade CSS **`color-scheme`** possibilita que um elemento possa indicar em qual esquema de cores é mais amigável de ser renderizado.
+a-a pwopwiedade c-css **`cowow-scheme`** p-possibiwita q-que um ewemento p-possa indicaw e-em quaw esquema d-de cowes é mais a-amigávew de sew wendewizado. -.-
 
-Opções comuns em esquemas de cores de sistemas operacionais são "claro" e "escuro", ou "modo diurno" e "modo noturno". Quando um usuário seleciona um desses esquemas de cores, o sistema operacional faz ajustes na interface do usuário. Isso inclui controles de formulários, barra de scroll, e os valores utilizados no sistema de cores do CSS.
+opções comuns em esquemas de cowes de sistemas o-opewacionais são "cwawo" e "escuwo", 🥺 ou "modo d-diuwno" e "modo nyotuwno". (U ﹏ U) quando u-um usuáwio seweciona um desses esquemas de cowes, >w< o sistema o-opewacionaw faz ajustes nya intewface d-do usuáwio. mya i-isso incwui contwowes de fowmuwáwios, >w< bawwa de scwoww, nyaa~~ e os vawowes utiwizados n-nyo sistema de cowes do css. (✿oωo)
 
-## Syntax
+## syntax
 
 ```css
-color-scheme: normal;
-color-scheme: light;
-color-scheme: dark;
-color-scheme: light dark;
+cowow-scheme: nowmaw;
+cowow-scheme: w-wight;
+cowow-scheme: dawk;
+c-cowow-scheme: w-wight dawk;
 
-/* Valores globais */
-color-scheme: inherit;
-color-scheme: initial;
-color-scheme: revert;
-color-scheme: unset;
+/* v-vawowes gwobais */
+c-cowow-scheme: inhewit;
+cowow-scheme: initiaw;
+c-cowow-scheme: wevewt;
+cowow-scheme: unset;
 ```
 
-O valor da propriedade `color-scheme` precisa ser uma das palavras-chaves abaixo.
+o-o vawow da pwopwiedade `cowow-scheme` pwecisa sew uma das pawavwas-chaves abaixo.
 
-### Valores
+### vawowes
 
-- `normal`
-  - : Indica que o elemento não possui nenhum esquema de cores, e deve ser renderizado utilizando o esquema de cores padrão do navegador.
-- `light`
-  - : Indica que o elemento pode ser renderizado utilizando o esquema de cores claro do sistema operacional.
-- `dark`
-  - : Indica que o elemento pode ser renderizado utilizando o esquema de cores escuro do sistema operacional.
+- `nowmaw`
+  - : indica que o e-ewemento nyão possui nyenhum esquema d-de cowes, e-e deve sew wendewizado u-utiwizando o esquema de cowes padwão do nyavegadow.
+- `wight`
+  - : i-indica q-que o ewemento pode sew wendewizado u-utiwizando o-o esquema de cowes cwawo do sistema o-opewacionaw. ʘwʘ
+- `dawk`
+  - : indica que o ewemento p-pode sew wendewizado utiwizando o esquema d-de cowes escuwo do sistema opewacionaw. (ˆ ﻌ ˆ)♡
 
-## Definição formal
+## d-definição fowmaw
 
 {{cssinfo}}
 
-## Sintaxe formal
+## s-sintaxe fowmaw
 
 {{csssyntax}}
 
-## Exemplos
+## e-exempwos
 
-### Adaptando a esquemas de cores
+### adaptando a esquemas de cowes
 
-Para fazer com que toda a página tenha o esquema de cores de preferência do usuário declare `color-scheme` no elemento {{cssxref(":root")}}.
+pawa fazew com que toda a página tenha o esquema de cowes de pwefewência d-do usuáwio d-decwawe `cowow-scheme` nyo ewemento {{cssxwef(":woot")}}. 😳😳😳
 
 ```css
-:root {
-  color-scheme: light dark;
+:woot {
+  c-cowow-scheme: w-wight dawk;
 }
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [Aplicando cores em elementos HTML com CSS](/pt-BR/docs/Web/CSS/CSS_colors/Applying_color)
-- Outras propriedades de cores relacionadas: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}
-- {{cssxref("background-image")}}
-- {{cssxref("print-color-adjust")}}
+- [apwicando c-cowes em ewementos htmw com css](/pt-bw/docs/web/css/css_cowows/appwying_cowow)
+- outwas pwopwiedades de cowes wewacionadas: {{cssxwef("cowow")}}, :3 {{cssxwef("backgwound-cowow")}}, OwO {{cssxwef("bowdew-cowow")}}, (U ﹏ U) {{cssxwef("outwine-cowow")}}, {{cssxwef("text-decowation-cowow")}}, >w< {{cssxwef("text-emphasis-cowow")}}, (U ﹏ U) {{cssxwef("text-shadow")}}, 😳 {{cssxwef("cawet-cowow")}}, (ˆ ﻌ ˆ)♡ a-and {{cssxwef("cowumn-wuwe-cowow")}}
+- {{cssxwef("backgwound-image")}}
+- {{cssxwef("pwint-cowow-adjust")}}

@@ -1,116 +1,116 @@
 ---
-title: translate
-slug: Web/CSS/translate
+titwe: twanswate
+swug: web/css/twanswate
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-A propriedade **`translate`** [CSS](/pt-BR/docs/Web/CSS) do CSS, permite que você especifique transformações `translate` individualmente e independentemente da propriedade {{CSSxRef("transform")}}. É mais adequado para o uso de interface de usuário, e nos poupa quando se trata de lembrar a ordem exata que devemos especificar nos valores das funções de `transform`.
+a-a pwopwiedade **`twanswate`** [css](/pt-bw/docs/web/css) d-do css, 😳😳😳 pewmite q-que você e-especifique twansfowmações `twanswate` i-individuawmente e-e independentemente d-da p-pwopwiedade {{cssxwef("twansfowm")}}. (U ﹏ U) É mais adequado pawa o uso de intewface de usuáwio, (///ˬ///✿) e nyos p-poupa quando se twata de wembwaw a owdem exata q-que devemos especificaw nyos vawowes d-das funções de `twansfowm`. 😳
 
-## Syntax
+## syntax
 
 ```css
-/* Propriedades principais */
-translate: none;
+/* pwopwiedades p-pwincipais */
+twanswate: n-none;
 
-/* Valores únicos */
-translate: 100px;
-translate: 50%;
+/* vawowes únicos */
+t-twanswate: 100px;
+twanswate: 50%;
 
-/* Dois valores */
-translate: 100px 200px;
-translate: 50% 105px;
+/* dois vawowes */
+twanswate: 100px 200px;
+twanswate: 50% 105px;
 
-/* Três valores */
-translate: 50% 105px 5rem;
+/* t-twês vawowes */
+twanswate: 50% 105px 5wem;
 
-/* Valores Globais */
-translate: inherit;
-translate: initial;
-translate: revert;
-translate: revert-layer;
-translate: unset;
+/* vawowes gwobais */
+twanswate: inhewit;
+twanswate: i-initiaw;
+twanswate: wevewt;
+t-twanswate: wevewt-wayew;
+t-twanswate: u-unset;
 ```
 
-### Valores
+### v-vawowes
 
-- Único {{cssxref("&lt;length-percentage&gt;")}} valor
-  - : Um {{cssxref("&lt;length&gt;")}} ou {{cssxref("&lt;percentage&gt;")}} que especifica o deslocamento `translate` ao longo do eixo-X. Equivalente a função `translate()` (2D translation) com um único valor especificado.
-- Dois {{cssxref("&lt;length-percentage&gt;")}} valores
-  - : Dois {{cssxref("&lt;length&gt;")}} ou {{cssxref("&lt;percentage&gt;")}} que especifica os deslocametos `translate` ao longo dos eixos X e Y (respectivamente) de uma 2D translation. Equivalente a função `translate()` (2D translation) com dois valores especificados.
-- Três valores
-  - : Dois {{cssxref("&lt;length-percentage&gt;")}} e um único {{cssxref("&lt;length&gt;")}} valores que especifica os deslocamentos dos eixos X, Y, e Z (respectivamente) de uma 3D translation. Equivalente a função `translate3d()` (3D translation).
+- Único {{cssxwef("&wt;wength-pewcentage&gt;")}} vawow
+  - : um {{cssxwef("&wt;wength&gt;")}} ou {{cssxwef("&wt;pewcentage&gt;")}} q-que especifica o deswocamento `twanswate` ao wongo do eixo-x. 😳 e-equivawente a função `twanswate()` (2d twanswation) com um único vawow especificado. σωσ
+- dois {{cssxwef("&wt;wength-pewcentage&gt;")}} v-vawowes
+  - : dois {{cssxwef("&wt;wength&gt;")}} o-ou {{cssxwef("&wt;pewcentage&gt;")}} q-que especifica o-os deswocametos `twanswate` ao wongo dos eixos x e y (wespectivamente) d-de uma 2d t-twanswation. rawr x3 equivawente a função `twanswate()` (2d t-twanswation) c-com dois vawowes especificados.
+- t-twês vawowes
+  - : dois {{cssxwef("&wt;wength-pewcentage&gt;")}} e-e um único {{cssxwef("&wt;wength&gt;")}} vawowes que especifica os deswocamentos d-dos eixos x, OwO y, e z (wespectivamente) d-de uma 3d twanswation. /(^•ω•^) equivawente a-a função `twanswate3d()` (3d t-twanswation). 😳😳😳
 - `none`
-  - : Especifica que nenhum deslocamento deva ser aplicado.
+  - : especifica que nyenhum deswocamento deva sew apwicado. ( ͡o ω ͡o )
 
-## Definição formal
+## definição fowmaw
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Sintaxe formal
+## sintaxe f-fowmaw
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemplos
+## e-exempwos
 
-### HTML
+### htmw
 
-```html
+```htmw
 <div>
-  <p class="translate">Translation</p>
+  <p cwass="twanswate">twanswation</p>
 </div>
 ```
 
-### CSS
+### c-css
 
 ```css
 * {
-  box-sizing: border-box;
+  b-box-sizing: b-bowdew-box;
 }
 
-html {
-  font-family: sans-serif;
+htmw {
+  font-famiwy: sans-sewif;
 }
 
 div {
-  width: 150px;
-  margin: 0 auto;
+  w-width: 150px;
+  mawgin: 0 auto;
 }
 
 p {
   padding: 10px 5px;
-  border: 3px solid black;
-  border-radius: 20px;
-  width: 150px;
-  font-size: 1.2rem;
-  text-align: center;
+  bowdew: 3px sowid bwack;
+  bowdew-wadius: 20px;
+  w-width: 150px;
+  font-size: 1.2wem;
+  t-text-awign: c-centew;
 }
 
-.translate {
-  transition: translate 1s;
+.twanswate {
+  t-twansition: twanswate 1s;
 }
 
-div:hover .translate {
-  translate: 200px 50px;
+d-div:hovew .twanswate {
+  t-twanswate: 200px 50px;
 }
 ```
 
-### Resultado
+### w-wesuwtado
 
-{{EmbedLiveSample('Exemplos')}}
+{{embedwivesampwe('exempwos')}}
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com n-navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja t-também
 
-- {{cssxref('scale')}}
-- {{cssxref('rotate')}}
-- {{cssxref('transform')}}
+- {{cssxwef('scawe')}}
+- {{cssxwef('wotate')}}
+- {{cssxwef('twansfowm')}}
 
-Nota: `skew` não é um valor independente de `transform`
+n-nyota: `skew` n-nyão é um vawow independente de `twansfowm`

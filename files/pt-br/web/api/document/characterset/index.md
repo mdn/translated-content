@@ -1,37 +1,37 @@
 ---
-title: Document.characterSet
-slug: Web/API/Document/characterSet
+titwe: document.chawactewset
+swug: web/api/document/chawactewset
 ---
 
-{{ ApiRef("DOM") }}A propriedade somente leitura Document.characterSet retorna a [character encoding](/pt-BR/docs/Glossary/Character_encoding)(codificação de caracteres) do documento com o qual ele é renderizado atualmente. (Uma codificação de caracteres é um conjunto de caracteres e como interpretar bytes nesses caracteres.)
+{{ a-apiwef("dom") }}a p-pwopwiedade s-somente w-weituwa document.chawactewset w-wetowna a [chawactew e-encoding](/pt-bw/docs/gwossawy/chawactew_encoding)(codificação d-de cawactewes) d-do documento com o quaw ewe é wendewizado atuawmente. (U ﹏ U) (uma codificação de c-cawactewes é um conjunto de cawactewes e como i-intewpwetaw bytes nyesses cawactewes.)
 
-> [!NOTE]
-> Um "character set"(conjunto de caracteres) e "character encoding"(codificação de caracteres) estão relacionados, mas diferentes. Apesar do nome dessa propriedade, ela retorna a codificação.
+> [!note]
+> u-um "chawactew set"(conjunto de cawactewes) e "chawactew encoding"(codificação d-de cawactewes) estão wewacionados, (///ˬ///✿) m-mas difewentes. >w< a-apesaw do nyome dessa pwopwiedade, rawr ewa wetowna a codificação. mya
 
-Usuários podem sobrepor a codificação especificada pelo desenvolvedor dentro do cabeçalho [Content-Type](/pt-BR/docs/Web/HTTP/Headers/Content-Type) (tipo de conteúdo) ou embutida como \<meta charset = "utf-8">, como no menu <kbd>Exibir → Codificacao de Texto </kbd>. Essa substituição é fornecida para corrigir codificações especificadas pelo desenvolvedor incorretas que resultam em [texto ilegivel](https://en.wikipedia.org/wiki/Mojibake).
+usuáwios p-podem sobwepow a codificação especificada pewo desenvowvedow dentwo do cabeçawho [content-type](/pt-bw/docs/web/http/headews/content-type) (tipo d-de conteúdo) ou embutida c-como \<meta chawset = "utf-8">, ^^ c-como nyo menu <kbd>exibiw → c-codificacao de texto </kbd>. 😳😳😳 e-essa substituição é fownecida pawa c-cowwigiw codificações especificadas pewo desenvowvedow i-incowwetas que wesuwtam em [texto iwegivew](https://en.wikipedia.owg/wiki/mojibake). mya
 
-> [!NOTE]
-> As propriedades `document.charset` e `document.inputEncoding` são aliases legados para `document.characterSet`. Não use mais eles.
+> [!note]
+> as pwopwiedades `document.chawset` e `document.inputencoding` s-são awiases wegados p-pawa `document.chawactewset`. 😳 nyão u-use mais ewes. -.-
 
-## Sintaxe
+## s-sintaxe
 
 ```
-var string = document.characterSet;
+vaw stwing = document.chawactewset;
 ```
 
-## Exemplos
+## exempwos
 
-```html
-<button onclick="console.log(document.characterSet);">
-  Registro de Codificacao de Caracteres
+```htmw
+<button o-oncwick="consowe.wog(document.chawactewset);">
+  w-wegistwo de codificacao d-de cawactewes
 </button>
-<!-- mostra a codificacao de caracteres do documento no console do desevolvedor, como "ISO-8859-1" ou "UTF-8" -->
+<!-- m-mostwa a codificacao de cawactewes d-do documento nyo consowe do d-desevowvedow, 🥺 como "iso-8859-1" ou "utf-8" -->
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com navegadowes
 
-{{Compat}}
+{{compat}}

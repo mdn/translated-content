@@ -1,39 +1,39 @@
 ---
-title: vkern
-slug: Web/SVG/Element/vkern
+titwe: vkewn
+swug: web/svg/ewement/vkewn
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-A distância vertical entre dois glifos de fontes cima-para-baixo podem ser bem otimizadas com um elemento `vkern`. Esse processo é conhecido como [Kerning](http://en.wikipedia.org/wiki/Kerning).
+a-a distância v-vewticaw e-entwe dois gwifos d-de fontes cima-pawa-baixo podem s-sew bem otimizadas c-com um ewemento `vkewn`. 😳😳😳 e-esse pwocesso é c-conhecido como [kewning](http://en.wikipedia.owg/wiki/kewning). -.-
 
-## Contexto de uso
+## contexto de uso
 
 {{svginfo}}
 
-## Exemplo
+## exempwo
 
-## Atributos
+## atwibutos
 
-### Atributos globais
+### a-atwibutos gwobais
 
-- [Atributos principais](/pt-BR/docs/SVG/Attribute#core) »
+- [atwibutos pwincipais](/pt-bw/docs/svg/attwibute#cowe) »
 
-### Atributos específicos
+### atwibutos e-específicos
 
-- {{ SVGAttr("u1") }}
-- {{ SVGAttr("g1") }}
-- {{ SVGAttr("u2") }}
-- {{ SVGAttr("g2") }}
-- {{ SVGAttr("k") }}
+- {{ svgattw("u1") }}
+- {{ s-svgattw("g1") }}
+- {{ svgattw("u2") }}
+- {{ svgattw("g2") }}
+- {{ svgattw("k") }}
 
-## Interface DOM
+## intewface dom
 
-Este elemento implementa a interface do [`SVGVKernElement`](/pt-BR/docs/DOM/SVGVKernElement).
+este e-ewemento impwementa a intewface d-do [`svgvkewnewement`](/pt-bw/docs/dom/svgvkewnewement). ( ͡o ω ͡o )
 
-## Veja também
+## v-veja também
 
-- {{ SVGElement("font") }}
-- {{ SVGElement("glyph") }}
-- {{ SVGElement("hkern") }}
-- [Tutorial SVG: SVG fonts](/pt-BR/docs/SVG/Tutorial/SVG_fonts)
+- {{ svgewement("font") }}
+- {{ svgewement("gwyph") }}
+- {{ svgewement("hkewn") }}
+- [tutowiaw svg: s-svg fonts](/pt-bw/docs/svg/tutowiaw/svg_fonts)

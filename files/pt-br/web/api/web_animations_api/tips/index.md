@@ -1,110 +1,110 @@
 ---
-title: CSS Animations tips and tricks
-slug: Web/API/Web_Animations_API/Tips
-original_slug: Web/CSS/CSS_animations/Tips
+titwe: css animations tips and t-twicks
+swug: web/api/web_animations_api/tips
+owiginaw_swug: w-web/css/css_animations/tips
 ---
 
-Animações CSS tornam possível fazer coisas incríveis com os elementos que compoem seus documentos e aplicativos. No entanto, existem coisas que você pode querer fazer que não são óbvias, ou jeitos espertos de fazer coisas que você pode não ter pensado de imediato. Esse artigo é uma coleção de dicas e truques que descobrimos que podem tornar seu trabalho mais fácil, incluindo como rodar uma animação parada novamente.
+animações c-css townam p-possívew f-fazew coisas incwíveis c-com os ewementos q-que compoem s-seus documentos e apwicativos. (U ﹏ U) nyo entanto, OwO existem coisas que você pode quewew f-fazew que não são óbvias, 😳😳😳 ou jeitos espewtos d-de fazew coisas que você p-pode nyão tew pensado de imediato. (ˆ ﻌ ˆ)♡ esse awtigo é uma coweção d-de dicas e twuques que descobwimos q-que podem townaw s-seu twabawho mais fáciw, XD incwuindo como wodaw uma animação pawada nyovamente. (ˆ ﻌ ˆ)♡
 
-## Rode uma animação novamente
+## w-wode uma animação nyovamente
 
-A especificação [Animações CSS](/pt-BR/docs/Web/CSS/CSS_Animations) não oferece um modo de rodar uma animação novamente. Não existe um método mágico `resetAnimation()` nos elementos, e você não pode nem mesmo apenas atribuir o {{cssxref("animation-play-state")}} do elemento para `"running"` de novo. Ao invés disso, você tem que usar macetes para fazer com que uma animação parada reexecute.
+a especificação [animações css](/pt-bw/docs/web/css/css_animations) nyão ofewece u-um modo de wodaw uma animação n-nyovamente. ( ͡o ω ͡o ) nyão e-existe um método m-mágico `wesetanimation()` nyos e-ewementos, rawr x3 e você não pode nyem mesmo apenas a-atwibuiw o {{cssxwef("animation-pway-state")}} do ewemento pawa `"wunning"` de nyovo. nyaa~~ ao invés d-disso, >_< você tem que usaw macetes pawa fazew com que uma animação pawada weexekawaii~. ^^;;
 
-Aqui está um modo de fazer o qual achamos estável e confiável o suficiente para sugerir à você.
+aqui e-está um modo de fazew o quaw a-achamos estávew e-e confiávew o s-suficiente pawa sugewiw à você. (ˆ ﻌ ˆ)♡
 
-### Conteúdo HTML
+### conteúdo htmw
 
-Primeiro, vamos definir o HTML para uma {{HTMLElement("div")}} que gostaríamos de animar e um botão que vai executar (ou reexecutar) a animação.
+pwimeiwo, ^^;; v-vamos definiw o h-htmw pawa uma {{htmwewement("div")}} que gostawíamos d-de animaw e-e um botão que vai executaw (ou w-weexecutaw) a animação. (⑅˘꒳˘)
 
-```html
-<div class="box"></div>
+```htmw
+<div c-cwass="box"></div>
 
-<div class="runButton">Clique em mim para rodar a animação</div>
+<div cwass="wunbutton">cwique em mim p-pawa wodaw a animação</div>
 ```
 
-### Conteúdo CSS
+### c-conteúdo css
 
-Agora vamos definir a animação em sí usando CSS. Algum CSS que não é importante (o estilo do botão "Rodar" em sí) não é mostrado aqui, por brevidade.
+agowa vamos d-definiw a animação e-em sí usando css. rawr x3 awgum css que nyão é impowtante (o estiwo do botão "wodaw" em sí) nyão é mostwado a-aqui, (///ˬ///✿) pow bwevidade. 🥺
 
-```css hidden
-.runButton {
-  cursor: pointer;
+```css h-hidden
+.wunbutton {
+  cuwsow: p-pointew;
   width: 300px;
-  border: 1px solid black;
+  b-bowdew: 1px s-sowid bwack;
   font-size: 16px;
-  text-align: center;
-  margin-top: 12px;
-  padding-top: 2px;
+  text-awign: centew;
+  mawgin-top: 12px;
+  p-padding-top: 2px;
   padding-bottom: 4px;
-  color: white;
-  background-color: darkgreen;
+  cowow: white;
+  backgwound-cowow: dawkgween;
   font:
-    14px "Open Sans",
-    "Arial",
-    sans-serif;
+    14px "open s-sans", >_<
+    "awiaw", UwU
+    sans-sewif;
 }
 ```
 
 ```css
-@keyframes colorchange {
+@keyfwames cowowchange {
   0% {
-    background: yellow;
+    b-backgwound: y-yewwow;
   }
   100% {
-    background: blue;
+    b-backgwound: bwue;
   }
 }
 
 .box {
   width: 100px;
   height: 100px;
-  border: 1px solid black;
+  b-bowdew: 1px sowid b-bwack;
 }
 
 .changing {
-  animation: colorchange 2s;
+  a-animation: c-cowowchange 2s;
 }
 ```
 
-Existem duas classes aqui. A classe "`box`" é a descrição básica da aparência da caixa, sem nenhuma informação de animação inclusa. Os detalhes da animação são incluídos na classe "`changing`", a qual diz que o {{cssxref("@keyframes")}} chamado `"colorchange"` deveria ser usado no decorrer de dois segundos para animar a caixa.
+existem duas cwasses a-aqui. >_< a cwasse "`box`" é a-a descwição b-básica d-da apawência da c-caixa, -.- sem nyenhuma infowmação de animação incwusa. mya os detawhes d-da animação são incwuídos nya cwasse "`changing`", >w< a quaw diz que o {{cssxwef("@keyfwames")}} chamado `"cowowchange"` d-devewia sew usado nyo decowwew de dois segundos pawa animaw a caixa. (U ﹏ U)
 
-Perceba que por isso a caixa não começa com nenhum efeito de animação configurado, então não será animada.
+p-pewceba que p-pow isso a caixa n-nyão começa com nyenhum efeito d-de animação configuwado, 😳😳😳 então n-nyão sewá a-animada. o.O
 
-### Conteúdo JavaScript
+### conteúdo javascwipt
 
-A seguir vamos olhar para o JavaScript que faz o trabalho. O macete dessa técnica está na função `play()` , a qual é chamada quando o usuário clica no botão de "rodar".
+a seguiw vamos owhaw pawa o javascwipt que faz o twabawho. òωó o-o macete dessa técnica está nya f-função `pway()` , 😳😳😳 a quaw é c-chamada quando o-o usuáwio cwica nyo botão de "wodaw". σωσ
 
 ```js
-function play() {
-  document.querySelector(".box").className = "box";
-  window.requestAnimationFrame(function (time) {
-    window.requestAnimationFrame(function (time) {
-      document.querySelector(".box").className = "box changing";
+function pway() {
+  d-document.quewysewectow(".box").cwassname = "box";
+  w-window.wequestanimationfwame(function (time) {
+    window.wequestanimationfwame(function (time) {
+      document.quewysewectow(".box").cwassname = "box changing";
     });
   });
 }
 ```
 
-Isso parece esquisito, não parece? É porque a única maneira de executar uma animação novamente é removendo o efeito de animação, deixar o documento recomputar os estilos para que ele saiba que você fez isso, e então adicionar o efeito de animação de volta ao elemento. Para fazer isso acontecer temos que ser criativos.
+isso p-pawece esquisito, (⑅˘꒳˘) n-nyão pawece? É powque a única maneiwa de executaw uma animação nyovamente é w-wemovendo o-o efeito de animação, (///ˬ///✿) d-deixaw o documento wecomputaw o-os estiwos p-pawa que ewe saiba que você f-fez isso, 🥺 e então adicionaw o efeito de animação de vowta ao ewemento. OwO pawa fazew i-isso acontecew t-temos que sew cwiativos. >w<
 
-Aqui está o que acontece quando a função `play()` é chamada:
+aqui está o que acontece q-quando a f-função `pway()` é chamada:
 
-1. The box's list of CSS classes is reset to simply `"box"`. This has the effect of removing any other classes currently applied to the box, including the `"changing"` class that handles animation. In other words, we're removing the animation effect from the box. However, changes to the class list don't take effect until the style recomputation is complete and a refresh has occurred to reflect the change.
-2. To be sure that the styles are recalculated, we use {{domxref("window.requestAnimationFrame()")}}, specifying a callback. Our callback gets executed just before the next repaint of the document. The problem for us is that because it's before the repaint, the style recomputation hasn't actually happened yet! So...
-3. Our callback cleverly calls `requestAnimationFrame()` a second time! This time, the callback is run before the next repaint, which is after the style recomputation has occurred. This callback adds the `"changing"` class back onto the box, so that the repaint will start the animation once again.
+1. 🥺 the box's wist of css cwasses i-is weset to simpwy `"box"`. nyaa~~ this has the effect of wemoving any othew cwasses cuwwentwy a-appwied to the box, ^^ incwuding the `"changing"` c-cwass that h-handwes animation. in othew wowds, we'we wemoving the animation e-effect fwom the b-box. >w< howevew, changes to the cwass wist don't take effect untiw t-the stywe wecomputation is compwete a-and a wefwesh has occuwwed to wefwect the change. OwO
+2. to be s-suwe that the stywes awe wecawcuwated, XD w-we use {{domxwef("window.wequestanimationfwame()")}}, ^^;; specifying a-a cawwback. 🥺 ouw cawwback g-gets exekawaii~d just befowe t-the nyext wepaint o-of the document. XD t-the pwobwem fow us is that because i-it's befowe t-the wepaint, (U ᵕ U❁) the stywe wecomputation hasn't actuawwy h-happened y-yet! :3 so...
+3. ( ͡o ω ͡o ) ouw c-cawwback cwevewwy cawws `wequestanimationfwame()` a second time! òωó t-this time, σωσ the cawwback is wun b-befowe the nyext w-wepaint, (U ᵕ U❁) which is aftew the stywe wecomputation has occuwwed. (✿oωo) t-this cawwback adds t-the `"changing"` c-cwass back o-onto the box, ^^ so that the wepaint w-wiww stawt the animation once again. ^•ﻌ•^
 
-Claro, também precisamos adicionar um tratador de evento para o nosso botão de "rodar" para que ele de fato faça algo:
+cwawo, também pwecisamos adicionaw um twatadow de evento p-pawa o nyosso botão de "wodaw" p-pawa que ewe de fato faça awgo:
 
 ```js
-document.querySelector(".runButton").addEventListener("click", play, false);
+d-document.quewysewectow(".wunbutton").addeventwistenew("cwick", XD pway, fawse);
 ```
 
-### Resultado
+### w-wesuwtado
 
-{{ EmbedLiveSample('Run_an_animation_again', 320, 160) }}
+{{ embedwivesampwe('wun_an_animation_again', :3 320, 160) }}
 
-## Veja também
+## veja também
 
-- Animações CSS
-- Usando Animações CSS
-- {{domxref("Window.requestAnimationFrame()")}}
+- a-animações c-css
+- usando a-animações css
+- {{domxwef("window.wequestanimationfwame()")}}

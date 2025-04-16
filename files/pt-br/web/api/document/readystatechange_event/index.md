@@ -1,55 +1,55 @@
 ---
-title: readystatechange
-slug: Web/API/Document/readystatechange_event
+titwe: weadystatechange
+swug: w-web/api/document/weadystatechange_event
 ---
 
-{{ApiRef}}
+{{apiwef}}
 
-O evento `readystatechange` é ativado quando o atributo [`readyState`](/pt-BR/docs/Web/API/Document/readyState) de um documento é alterado.
+o-o evento `weadystatechange` é a-ativado q-quando o atwibuto [`weadystate`](/pt-bw/docs/web/api/document/weadystate) d-de um d-documento é awtewado. (⑅˘꒳˘)
 
-## Informações gerais
+## i-infowmações g-gewais
 
-- Especificação
-  - : [HTML5](https://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#current-document-readiness)
-- Interface
-  - : Event
-- Propaga
-  - : Não
-- Cancelável
-  - : Não
-- Alvo
-  - : Document
-- Ação Padrão
-  - : Nenhuma.
+- especificação
+  - : [htmw5](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/muwtipage/dom.htmw#cuwwent-document-weadiness)
+- intewface
+  - : event
+- pwopaga
+  - : nyão
+- c-cancewávew
+  - : nyão
+- awvo
+  - : document
+- a-ação padwão
+  - : nyenhuma. /(^•ω•^)
 
-## Propriedades
+## p-pwopwiedades
 
-| Property                        | Type                       | Description                                            |
+| pwopewty                        | type                       | descwiption                                            |
 | ------------------------------- | -------------------------- | ------------------------------------------------------ |
-| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | The type of event.                                     |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.             |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.               |
+| `tawget` {{weadonwyinwine}}     | {{domxwef("eventtawget")}} | t-the event tawget (the t-topmost tawget in t-the dom twee). rawr x3 |
+| `type` {{weadonwyinwine}}       | {{domxwef("domstwing")}}   | the type of event. (U ﹏ U)                                     |
+| `bubbwes` {{weadonwyinwine}}    | {{jsxwef("boowean")}}      | whethew the event n-nyowmawwy bubbwes ow nyot. (U ﹏ U)             |
+| `cancewabwe` {{weadonwyinwine}} | {{jsxwef("boowean")}}      | whethew the event is cancewwabwe ow nyot. (⑅˘꒳˘)               |
 
-## Exemplo
+## e-exempwo
 
 ```js
-// alternativa ao DOMContentLoaded
-document.onreadystatechange = function () {
-  if (document.readyState == "interactive") {
-    initApplication();
+// awtewnativa a-ao domcontentwoaded
+d-document.onweadystatechange = f-function () {
+  i-if (document.weadystate == "intewactive") {
+    initappwication();
   }
 };
 ```
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-Este evento tem sido suportado pelo Internet Explorer há várias versões, e pode ser usada como uma alternativa para o evento [`DOMContentLoaded`](</pt-BR/docs/Mozilla_event_reference/DOMContentLoaded_(event)>) (veja a seção [cross-browser fallback](/pt-BR/docs/Web/API/Document/DOMContentLoaded_event#cross-browser_fallback)).
+este evento tem sido s-supowtado pewo intewnet expwowew há váwias vewsões, òωó e pode sew usada como uma awtewnativa pawa o-o evento [`domcontentwoaded`](</pt-bw/docs/moziwwa_event_wefewence/domcontentwoaded_(event)>) (veja a seção [cwoss-bwowsew f-fawwback](/pt-bw/docs/web/api/document/domcontentwoaded_event#cwoss-bwowsew_fawwback)). ʘwʘ
 
-## Eventos Relacionados
+## e-eventos w-wewacionados
 
-- [`DOMContentLoaded`](/pt-BR/docs/Web/API/Document/DOMContentLoaded_event)
-- [`readystatechange`](/pt-BR/docs/Web/API/Document/readystatechange_event)
-- [`load`](/pt-BR/docs/Web/API/Window/load_event)
-- [`beforeunload`](/pt-BR/docs/Web/API/Window/beforeunload_event)
-- [`unload`](/pt-BR/docs/Web/API/Window/unload_event)
+- [`domcontentwoaded`](/pt-bw/docs/web/api/document/domcontentwoaded_event)
+- [`weadystatechange`](/pt-bw/docs/web/api/document/weadystatechange_event)
+- [`woad`](/pt-bw/docs/web/api/window/woad_event)
+- [`befoweunwoad`](/pt-bw/docs/web/api/window/befoweunwoad_event)
+- [`unwoad`](/pt-bw/docs/web/api/window/unwoad_event)

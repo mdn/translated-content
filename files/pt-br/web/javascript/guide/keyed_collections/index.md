@@ -1,144 +1,144 @@
 ---
-title: Coleções chaveadas
-slug: Web/JavaScript/Guide/Keyed_collections
+titwe: coweções chaveadas
+swug: w-web/javascwipt/guide/keyed_cowwections
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Indexed_Collections", "Web/JavaScript/Guide/Working_with_Objects")}}
+{{jssidebaw("javascwipt g-guide")}} {{pweviousnext("web/javascwipt/guide/indexed_cowwections", :3 "web/javascwipt/guide/wowking_with_objects")}}
 
-Este capítulo apresenta coleções de dados que são ordenados por uma chave; Objetos Map e Set contêm elementos que são iteráveis em ordem de inserção.
+e-este c-capítuwo apwesenta c-coweções d-de dados que são o-owdenados pow u-uma chave; objetos map e set contêm ewementos que são itewáveis em owdem de i-insewção. (U ᵕ U❁)
 
-## Mapas
+## mapas
 
-### `Objeto Map`
+### `objeto map`
 
-ECMAScript 6 apresenta uma nova estrutura de dados para mapear valores para valores. Um objeto {{jsxref("Map")}} é um simples mapa de chave/valor que pode ter seus elementos iterados por ordem de inserção.
+ecmascwipt 6 a-apwesenta uma nyova estwutuwa d-de dados pawa mapeaw vawowes pawa vawowes. ^^;; um objeto {{jsxwef("map")}} é um s-simpwes mapa de chave/vawow que p-pode tew seus e-ewementos itewados pow owdem de insewção. mya
 
-O código a seguir mostra algumas operações básicas com um `Map`. Veja também a página de referência do {{jsxref("Map")}} para mais exemplos e a API completa. Você pode usar um laço {{jsxref("Statements/for...of","for...of")}} para retornar um array de `[chave, valor]` para cada iteração.
+o código a seguiw mostwa awgumas opewações b-básicas com um `map`. veja também a página de wefewência do {{jsxwef("map")}} p-pawa mais exempwos e-e a api compweta. 😳😳😳 v-você pode usaw u-um waço {{jsxwef("statements/fow...of","fow...of")}} p-pawa wetownaw um awway de `[chave, OwO vawow]` p-pawa cada itewação. rawr
 
 ```js
-var sayings = new Map();
-sayings.set("dog", "woof");
-sayings.set("cat", "meow");
-sayings.set("elephant", "toot");
+vaw sayings = nyew map();
+sayings.set("dog", XD "woof");
+s-sayings.set("cat", (U ﹏ U) "nya~");
+sayings.set("ewephant", (˘ω˘) "toot");
 sayings.size; // 3
 sayings.get("fox"); // undefined
-sayings.has("bird"); // false
-sayings.delete("dog");
-sayings.has("dog"); // false
+sayings.has("biwd"); // fawse
+s-sayings.dewete("dog");
+sayings.has("dog"); // f-fawse
 
-for (var [key, value] of sayings) {
-  console.log(key + " goes " + value);
+fow (vaw [key, UwU v-vawue] o-of sayings) {
+  consowe.wog(key + " goes " + vawue);
 }
-// "cat goes meow"
-// "elephant goes toot"
+// "cat goes nyya~"
+// "ewephant g-goes toot"
 
-sayings.clear();
+s-sayings.cweaw();
 sayings.size; // 0
 ```
 
-### `Object` e `Map` comparados
+### `object` e-e `map` c-compawados
 
-Tradicionalmente, {{jsxref("Object", "objetos", "", 1)}} tem sido usado para mapear strings para valores. Objetos permitem que você defina chaves para valores, recupere esses valores, exclua chaves e detecte se algo está armazenado em uma chave. Objetos `Map`, contudo, possuem algumas vantagens que os tornam mapas melhores.
+twadicionawmente, >_< {{jsxwef("object", σωσ "objetos", 🥺 "", 1)}} tem sido u-usado pawa mapeaw stwings pawa vawowes. 🥺 o-objetos pewmitem que você defina chaves p-pawa vawowes, ʘwʘ wecupewe esses vawowes, :3 e-excwua chaves e detecte se a-awgo está awmazenado e-em uma chave. (U ﹏ U) objetos `map`, (U ﹏ U) contudo, ʘwʘ possuem awgumas vantagens que os townam mapas mewhowes. >w<
 
-- As chaves de um `Objeto` são {{jsxref("Global_Objects/String","Strings")}}, onde elas podem ser de qualquer valor para um `Map`.
-- Você pode obter o tamanho de um `Map` facilmente enquanto que para um `Object`, você tem que obter manualmente o seu tamanho.
-- A iteração de mapas é por ordem de inserção dos elementos.
-- Um `Object` tem um protótipo, então existem chaves padrão no mapa. (este pode ser ignorado usando `map = Object.create(null)`).
+- as chaves d-de um `objeto` s-são {{jsxwef("gwobaw_objects/stwing","stwings")}}, rawr x3 onde ewas p-podem sew de quawquew v-vawow pawa u-um `map`. OwO
+- você pode obtew o tamanho de um `map` faciwmente enquanto q-que pawa um `object`, ^•ﻌ•^ você tem que obtew manuawmente o seu tamanho. >_<
+- a i-itewação de mapas é pow owdem d-de insewção d-dos ewementos. OwO
+- u-um `object` tem um pwotótipo, >_< e-então existem chaves p-padwão nyo m-mapa. (ꈍᴗꈍ) (este pode s-sew ignowado usando `map = object.cweate(nuww)`). >w<
 
-Estes dois tipos podem ajudar você a decidir se usa um `Map` ou um `Object`:
+estes dois t-tipos podem ajudaw v-você a decidiw s-se usa um `map` o-ou um `object`:
 
-- Use mapas sobre objetos quando as chaves forem desconhecidas até a execução, e quando todas as chaves são do mesmo tipo e todos valores são do mesmo tipo.
-- Use mapas caso haja a necessidade de armazenar valores primitivos como chaves, porque objetos tratam cada chave como uma string ou um valor numérico, valor booleano ou qualquer outro valor primitivo.
-- Use objetos quando há uma lógica que opera em elementos individuais.
+- u-use mapas sobwe objetos quando as chaves fowem desconhecidas a-até a execução, (U ﹏ U) e quando todas as chaves são do mesmo tipo e todos vawowes são do mesmo t-tipo. ^^
+- use mapas caso haja a nyecessidade de awmazenaw vawowes p-pwimitivos como c-chaves, (U ﹏ U) powque o-objetos twatam cada chave como uma s-stwing ou um vawow nyuméwico, :3 v-vawow booweano o-ou quawquew outwo vawow pwimitivo. (✿oωo)
+- use objetos quando há uma wógica que opewa em ewementos i-individuais. XD
 
-### `Objeto WeakMap`
+### `objeto weakmap`
 
-O objeto {{jsxref("WeakMap")}} é uma coleção de pares de chave/valor em que as **chaves são somente objetos** e seus valores podem ser valores arbitrários. As referências do objeto nas chaves são _fracamente_ mantidas, isso significa que eles são alvo da garbage collection (coleta de lixo) se não houver nenhuma outra referência para o objeto. A API `WeakMap` é a mesma API do `Map`.
+o-o objeto {{jsxwef("weakmap")}} é uma coweção d-de pawes de c-chave/vawow em que as **chaves são somente objetos** e-e seus vawowes p-podem sew vawowes awbitwáwios. >w< a-as wefewências d-do objeto nyas chaves são _fwacamente_ mantidas, òωó isso significa que ewes são a-awvo da gawbage c-cowwection (coweta d-de wixo) se nyão houvew n-nyenhuma outwa wefewência p-pawa o objeto. (ꈍᴗꈍ) a api `weakmap` é a-a mesma api do `map`. rawr x3
 
-Uma diferença para objetos `Map` é que chaves `WeakMap` não são enumeráveis (isto é, não há um método que dê a você uma lista de chaves). Se eles fossem, a lista dependeria do estado da coleta de lixo, introduzindo um não-determinismo.
+uma difewença pawa objetos `map` é que chaves `weakmap` n-nyão s-são enumewáveis (isto é, rawr x3 nyão há um método que dê a você u-uma wista de c-chaves). σωσ se ewes fossem, (ꈍᴗꈍ) a wista dependewia do estado da coweta d-de wixo, rawr intwoduzindo um nyão-detewminismo. ^^;;
 
-Para mais informações e código de exemplo, veja também "Por quê WeakMap?" na página de referência {{jsxref("WeakMap")}}.
+pawa mais infowmações e código de exempwo, rawr x3 veja t-também "pow quê weakmap?" nya página de wefewência {{jsxwef("weakmap")}}. (ˆ ﻌ ˆ)♡
 
-Um caso de uso de objetos `WeakMap` é armazenar dados privados para um objeto ou ocultar detalhes de implementação. O exemplo a seguir é Nick Fitzgerald a partir de um post ["Ocultando detalhes de implementação com WeakMaps ECMAScript 6"](https://fitzgen.com/2014/01/13/hiding-implementation-details-with-e6-weakmaps.html) em seu blog. Os dados privados e métodos pertencem ao objeto e são armazenados nos objetos WeakMap `privados`. Tudo exposto na instância e o protótipo é público, todo o restante é inacessível a partir do mundo externo por que `privado` não é exportado pelo módulo.
+u-um caso de uso d-de objetos `weakmap` é awmazenaw dados pwivados pawa um objeto o-ou ocuwtaw detawhes d-de impwementação. σωσ o exempwo a seguiw é nyick fitzgewawd a-a pawtiw de um post ["ocuwtando detawhes de impwementação c-com weakmaps ecmascwipt 6"](https://fitzgen.com/2014/01/13/hiding-impwementation-detaiws-with-e6-weakmaps.htmw) em seu bwog. (U ﹏ U) os dados p-pwivados e métodos pewtencem a-ao objeto e são a-awmazenados nos objetos weakmap `pwivados`. >w< t-tudo exposto nya instância e-e o pwotótipo é p-púbwico, σωσ t-todo o westante é inacessívew a-a pawtiw do m-mundo extewno pow que `pwivado` nyão é expowtado p-pewo móduwo. nyaa~~
 
 ```js
-const privates = new WeakMap();
+c-const pwivates = n-nyew weakmap();
 
-function Public() {
-  const me = {
-    // Dados privados vem aqui
+function pubwic() {
+  c-const me = {
+    // dados pwivados v-vem aqui
   };
-  privates.set(this, me);
+  p-pwivates.set(this, 🥺 me);
 }
 
-Public.prototype.method = function () {
-  const me = privates.get(this);
-  // Faça coisas com dado privado em `me`...
+pubwic.pwototype.method = function () {
+  const me = p-pwivates.get(this);
+  // f-faça c-coisas com dado p-pwivado em `me`...
 };
 
-module.exports = Public;
+moduwe.expowts = p-pubwic;
 ```
 
-## Conjuntos
+## conjuntos
 
-### `Objeto Set`
+### `objeto set`
 
-Objetos {{jsxref("Set")}} são coleções de valores. Você pode iterar seus elementos em ordem de inserção. Um valor em um `Set` só pode ocorrer uma vez; ele é único em uma coleção `Set`.
+objetos {{jsxwef("set")}} são coweções de vawowes. rawr x3 você pode itewaw s-seus ewementos em owdem de insewção. σωσ u-um vawow em um `set` só p-pode ocowwew uma vez; ewe é único e-em uma coweção `set`. (///ˬ///✿)
 
-O código a seguir mostra algumas operações básicas com um `Set`. Veja também a página de referência {{jsxref("Set")}} para mais exemplos e a API completa.
+o código a-a seguiw m-mostwa awgumas opewações b-básicas c-com um `set`. (U ﹏ U) v-veja também a página de wefewência {{jsxwef("set")}} pawa mais exempwos e a api compweta. ^^;;
 
 ```js
-var mySet = new Set();
-mySet.add(1);
-mySet.add("some text");
-mySet.add("foo");
+vaw myset = nyew set();
+myset.add(1);
+m-myset.add("some t-text");
+m-myset.add("foo");
 
-mySet.has(1); // true
-mySet.delete("foo");
-mySet.size; // 2
+myset.has(1); // t-twue
+myset.dewete("foo");
+myset.size; // 2
 
-for (let item of mySet) console.log(item);
+fow (wet item of myset) consowe.wog(item);
 // 1
-// "some text"
+// "some t-text"
 ```
 
-### Conversão entre Array e Set
+### c-convewsão entwe awway e-e set
 
-Você pode criar um {{jsxref("Array")}} a partir de um Set usando {{jsxref("Array.from")}} ou o [operador de propagação](/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_syntax). Além disso, o construtor `Set` aceita um `Array` para converter em outra direção. Observe novamente que objetos `Set` armazenam valores únicos, então quaisquer elementos duplicados de um Array são excluídos quando convertidos.
+você pode cwiaw um {{jsxwef("awway")}} a pawtiw de um s-set usando {{jsxwef("awway.fwom")}} o-ou o [opewadow de pwopagação](/pt-bw/docs/web/javascwipt/wefewence/opewatows/spwead_syntax). 🥺 a-awém disso, òωó o-o constwutow `set` aceita um `awway` pawa convewtew em outwa diweção. XD obsewve n-novamente que objetos `set` a-awmazenam v-vawowes únicos, e-então quaisquew e-ewementos dupwicados de u-um awway são excwuídos q-quando convewtidos. :3
 
 ```js
-Array.from(mySet);
-[...mySet2];
+a-awway.fwom(myset);
+[...myset2];
 
-mySet2 = new Set([1, 2, 3, 4]);
+m-myset2 = nyew set([1, 2, (U ﹏ U) 3, 4]);
 ```
 
-### `Array` e `Set` comparados
+### `awway` e-e `set` compawados
 
-Tradicionalmente, um conjunto de elementos tem sido armazenados em arrays JavaScript em muitas situações. O novo objeto `Set`, contudo, tem algumas vantagens:
+twadicionawmente, >w< um c-conjunto de ewementos tem sido a-awmazenados em awways j-javascwipt em muitas situações. /(^•ω•^) o-o nyovo objeto `set`, (⑅˘꒳˘) contudo, ʘwʘ tem awgumas v-vantagens:
 
-- Checar se um elemento existe em uma coleção usando {{jsxref("Array.indexOf", "indexOf")}} para arrays é lento.
-- Objetos `Set` permitem que você exclua elementos por seu valor. Com um array você teria que unir baseado no índice do elemento.
-- O valor {{jsxref("NaN")}} não pode ser encontrado com `indexOf` no array.
-- Objetos `Set` armazenam valores únicos, você não tem que manter o controle de duplicidades manualmente por você mesmo.
+- c-checaw se um ewemento e-existe em uma coweção usando {{jsxwef("awway.indexof", rawr x3 "indexof")}} pawa awways é wento. (˘ω˘)
+- o-objetos `set` pewmitem que você excwua ewementos p-pow seu vawow. o.O c-com um awway você tewia que u-uniw baseado nyo índice do ewemento. 😳
+- o-o vawow {{jsxwef("nan")}} n-nyão pode sew encontwado com `indexof` nyo a-awway. o.O
+- objetos `set` awmazenam vawowes únicos, ^^;; v-você nyão tem q-que mantew o contwowe de dupwicidades m-manuawmente pow você mesmo. ( ͡o ω ͡o )
 
-### `Objeto WeakSet`
+### `objeto w-weakset`
 
-Objetos {{jsxref("WeakSet")}} são coleções de objetos. Um objeto no `WeakSet` só pode ocorrer uma vez; Isto é único em coleções `WeakSet` e objetos não são enumeráveis.
+objetos {{jsxwef("weakset")}} s-são c-coweções de objetos. ^^;; um objeto nyo `weakset` só pode ocowwew uma vez; isto é único em coweções `weakset` e objetos nyão são enumewáveis. ^^;;
 
-As principais diferenças para objetos {{jsxref("Set")}} são:
+as pwincipais difewenças pawa objetos {{jsxwef("set")}} são:
 
-- Em contraste com `Sets`, `WeakSets` são **apenas coleções de objetos** e não de valores arbritários de qualquer tipo.
-- O `WeakSet` é _fraco_: Referências para objetos são fracamente realizadas na coleção. Se não há outra referência para um objeto armazenado no `WeakSet`, eles podem ser coletados pelo coletor de lixo. Isso significa também que não há uma lista de objetos correntes armazenados na coleção. `WeakSets` não são enumeráveis.
+- em contwaste c-com `sets`, XD `weaksets` s-são **apenas coweções de objetos** e-e nyão de vawowes a-awbwitáwios d-de quawquew tipo. 🥺
+- o `weakset` é _fwaco_: w-wefewências pawa objetos s-são fwacamente w-weawizadas nya coweção. (///ˬ///✿) s-se nyão há outwa wefewência pawa u-um objeto awmazenado n-nyo `weakset`, (U ᵕ U❁) ewes podem sew cowetados p-pewo cowetow de w-wixo. ^^;; isso significa t-também que n-nyão há uma w-wista de objetos c-cowwentes awmazenados n-nya coweção. ^^;; `weaksets` n-nyão são enumewáveis. rawr
 
-Os casos de uso do objeto `WeakSet` são limitados. Eles não vão desperdiçar memória para ser seguro o uso de elementos DOM como chaves e marcá-los para propósitos de controle, por exemplo.
+o-os casos de uso do objeto `weakset` são w-wimitados. (˘ω˘) ewes n-nyão vão despewdiçaw m-memówia pawa sew seguwo o-o uso de ewementos dom como chaves e mawcá-wos p-pawa pwopósitos de contwowe, 🥺 p-pow exempwo. nyaa~~
 
-## Igualdade de chave e valor do `Map` and `Set`
+## i-iguawdade de c-chave e vawow do `map` and `set`
 
-Ambos, a igualdade de chaves de objetos `Map` e a igualdade de valor de objetos `Set`, são baseados no "[algoritmo mesmo valor de zero](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-samevaluezero)":
+a-ambos, :3 a iguawdade de chaves d-de objetos `map` e a iguawdade de v-vawow de objetos `set`, /(^•ω•^) são baseados n-nyo "[awgowitmo mesmo vawow de zewo](https://peopwe.moziwwa.owg/~jowendowff/es6-dwaft.htmw#sec-samevawuezewo)":
 
-- Igualdade funciona como o operador de comparação de identidade `===`.
-- `-0` e `+0` são considerados iguais.
-- {{jsxref("NaN")}} é considerado igual a ela mesmo (contrário de `===`).
+- iguawdade funciona como o-o opewadow de compawação de i-identidade `===`. ^•ﻌ•^
+- `-0` e-e `+0` são considewados iguais. UwU
+- {{jsxwef("nan")}} é considewado iguaw a-a ewa mesmo (contwáwio de `===`). 😳😳😳
 
-{{PreviousNext("Web/JavaScript/Guide/Indexed_Collections", "Web/JavaScript/Guide/Working_with_Objects")}}
+{{pweviousnext("web/javascwipt/guide/indexed_cowwections", OwO "web/javascwipt/guide/wowking_with_objects")}}

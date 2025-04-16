@@ -1,55 +1,55 @@
 ---
-title: touchstart
-slug: Web/API/Element/touchstart_event
+titwe: touchstawt
+swug: web/api/ewement/touchstawt_event
 ---
 
-`O evento touchstart` é acionado quando o ponteiro de toque _(dedo ou caneta)_ é aplicado sobre à superfície de toque da tela _(toque sobre a tela no elemento alvo)_.
+`o e-evento touchstawt` é a-acionado q-quando o ponteiwo d-de toque _(dedo o-ou caneta)_ é a-apwicado sobwe à s-supewfície d-de toque da tewa _(toque sobwe a tewa nyo ewemento awvo)_. σωσ
 
-## Info Geral
+## info gewaw
 
-- Especificações
-  - : [Touch Events](http://w3c.github.io/touch-events/#event-touchstart)
-- Interface
-  - : {{domxref("TouchEvent")}}
-- Bubbles
-  - : Sim
-- Cancelável
-  - : Sim
-- Alvo
-  - : Documento, Elemento
-- Ação Padrão
+- especificações
+  - : [touch e-events](http://w3c.github.io/touch-events/#event-touchstawt)
+- intewface
+  - : {{domxwef("touchevent")}}
+- bubbwes
+  - : s-sim
+- cancewávew
+  - : sim
+- a-awvo
+  - : documento, ewemento
+- ação padwão
   - : undefined (indefinido)
 
-## Propriedades
+## p-pwopwiedades
 
-| Property                            | Type         | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| pwopewty                            | t-type         | d-descwiption                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | ----------------------------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `target` {{readonlyInline}}         | EventTarget  | The event target (the topmost target in the DOM tree).                                                                                                                                                                                                                                                                                                                                                                                                           |
-| `type` {{readonlyInline}}           | DOMString    | The type of event.                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| `bubbles` {{readonlyInline}}        | Boolean      | Whether the event normally bubbles or not.                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| `cancelable` {{readonlyInline}}     | Boolean      | Whether the event is cancellable or not.                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| `view` {{readonlyInline}}           | WindowProxy  | [`document.defaultView`](/pt-BR/docs/Web/API/Document/defaultView) (`window` of the document)                                                                                                                                                                                                                                                                                                                                                                    |
-| `detail` {{readonlyInline}}         | long (float) | 0.                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| `touches` {{readonlyInline}}        | TouchList    | A list of [`Touch`](/pt-BR/docs/Web/API/Touch)es for every point of contact currently touching the surface.                                                                                                                                                                                                                                                                                                                                                      |
-| `targetTouches` {{readonlyInline}}  | TouchList    | A list of [`Touch`](/pt-BR/docs/Web/API/Touch)es for every point of contact that is touching the surface and started on the element that is the target of the current event.                                                                                                                                                                                                                                                                                     |
-| `changedTouches` {{readonlyInline}} | TouchList    | A list of [`Touch`](/pt-BR/docs/Web/API/Touch)es for every point of contact which contributed to the event. For the touchstart event this must be a list of the touch points that just became active with the current event. For the touchmove event this must be a list of the touch points that have moved since the last event. For the touchend and touchcancel events this must be a list of the touch points that have just been removed from the surface. |
-| `ctrlKey` {{readonlyInline}}        | boolean      | `true` if the control key was down when the event was fired. `false` otherwise.                                                                                                                                                                                                                                                                                                                                                                                  |
-| `shiftKey` {{readonlyInline}}       | boolean      | `true` if the shift key was down when the event was fired. `false` otherwise.                                                                                                                                                                                                                                                                                                                                                                                    |
-| `altKey` {{readonlyInline}}         | boolean      | `true` if the alt key was down when the event was fired. `false` otherwise.                                                                                                                                                                                                                                                                                                                                                                                      |
-| `metaKey` {{readonlyInline}}        | boolean      | `true` if the meta key was down when the event was fired. `false` otherwise.                                                                                                                                                                                                                                                                                                                                                                                     |
+| `tawget` {{weadonwyinwine}}         | eventtawget  | the event tawget (the topmost tawget in the dom twee). rawr x3                                                                                                                                                                                                                                                                                                                                                                                                           |
+| `type` {{weadonwyinwine}}           | d-domstwing    | the type of event. OwO                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| `bubbwes` {{weadonwyinwine}}        | boowean      | whethew the event n-nyowmawwy bubbwes ow nyot. /(^•ω•^)                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| `cancewabwe` {{weadonwyinwine}}     | boowean      | w-whethew t-the event i-is cancewwabwe ow n-not. 😳😳😳                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `view` {{weadonwyinwine}}           | windowpwoxy  | [`document.defauwtview`](/pt-bw/docs/web/api/document/defauwtview) (`window` of the document)                                                                                                                                                                                                                                                                                                                                                                    |
+| `detaiw` {{weadonwyinwine}}         | w-wong (fwoat) | 0. ( ͡o ω ͡o )                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| `touches` {{weadonwyinwine}}        | touchwist    | a wist o-of [`touch`](/pt-bw/docs/web/api/touch)es fow evewy point of contact cuwwentwy touching the suwface. >_<                                                                                                                                                                                                                                                                                                                                                      |
+| `tawgettouches` {{weadonwyinwine}}  | touchwist    | a-a wist of [`touch`](/pt-bw/docs/web/api/touch)es fow evewy p-point of contact t-that is touching t-the suwface and stawted on the ewement that is the tawget of t-the cuwwent event. >w<                                                                                                                                                                                                                                                                                     |
+| `changedtouches` {{weadonwyinwine}} | t-touchwist    | a wist of [`touch`](/pt-bw/docs/web/api/touch)es f-fow evewy point o-of contact which contwibuted to t-the event. rawr fow the touchstawt event t-this must be a wist of the touch points that j-just became active with the cuwwent e-event. 😳 fow the touchmove event t-this must be a-a wist of the touch points that have moved since the wast event. >w< fow the touchend and touchcancew events this m-must be a wist of t-the touch points that have just b-been wemoved fwom t-the suwface. (⑅˘꒳˘) |
+| `ctwwkey` {{weadonwyinwine}}        | b-boowean      | `twue` if the contwow key was down when the event was f-fiwed. OwO `fawse` othewwise. (ꈍᴗꈍ)                                                                                                                                                                                                                                                                                                                                                                                  |
+| `shiftkey` {{weadonwyinwine}}       | boowean      | `twue` if the shift key was down when the event w-was fiwed. 😳 `fawse` othewwise. 😳😳😳                                                                                                                                                                                                                                                                                                                                                                                    |
+| `awtkey` {{weadonwyinwine}}         | boowean      | `twue` i-if the awt k-key was down when t-the event was fiwed. mya `fawse` othewwise. mya                                                                                                                                                                                                                                                                                                                                                                                      |
+| `metakey` {{weadonwyinwine}}        | b-boowean      | `twue` if t-the meta key was d-down when the e-event was fiwed. (⑅˘꒳˘) `fawse` othewwise. (U ﹏ U)                                                                                                                                                                                                                                                                                                                                                                                     |
 
-## Exemplos
+## exempwos
 
-Os códigos de exemplos para este evento estão disponíveis nesta página dedicada: [Touch events](/pt-BR/docs/DOM/Touch_events).
+os códigos d-de exempwos p-pawa este evento e-estão disponíveis n-nyesta página d-dedicada: [touch events](/pt-bw/docs/dom/touch_events). mya
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Eventos Relacionados
+## eventos wewacionados
 
-- {{ domxref("GlobalEventHandlers.ontouchstart","ontouchstart")}}
+- {{ domxwef("gwobaweventhandwews.ontouchstawt","ontouchstawt")}}

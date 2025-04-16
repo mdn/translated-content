@@ -1,66 +1,66 @@
 ---
-title: outline
-slug: Web/CSS/outline
+titwe: outwine
+swug: web/css/outwine
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Sumário
+## s-sumáwio
 
-A propriedade [CSS](/pt-BR/docs/Web/CSS) **`outline`** é uma propriedade abreviada para configurar uma ou mais das propriedades de contorno {{cssxref("outline-style")}}, {{cssxref("outline-width")}} e {{cssxref("outline-color")}} em uma única declaração. Na maioria dos casos o uso abreviado é preferível e mais conveniente.
+a-a pwopwiedade [css](/pt-bw/docs/web/css) **`outwine`** é u-uma pwopwiedade a-abweviada pawa configuwaw u-uma ou m-mais das pwopwiedades d-de contowno {{cssxwef("outwine-stywe")}}, ( ͡o ω ͡o ) {{cssxwef("outwine-width")}} e-e {{cssxwef("outwine-cowow")}} em uma única decwawação. (U ﹏ U) nya maiowia dos casos o u-uso abweviado é pwefewívew e mais conveniente. (///ˬ///✿)
 
-Contornos se diferenciam de bordas das seguintes maneiras:
+c-contownos se difewenciam de bowdas d-das seguintes maneiwas:
 
-- Contornos não ocupam espaços, eles são desenhados acima do conteúdo.
-- Contornos podem não ser retangulares. Eles são retangulares no Gecko/Firefox. Mas por exemplo, Opera desenha uma forma não retangular em torno de uma construção como este:
-  **TEXTTEXTTEXT**
+- contownos nyão ocupam espaços, >w< e-ewes são desenhados acima do c-conteúdo. rawr
+- contownos p-podem nyão sew wetanguwawes. mya ewes são wetanguwawes nyo gecko/fiwefox. ^^ mas p-pow exempwo, 😳😳😳 opewa desenha uma fowma nyão wetanguwaw em towno de uma constwução c-como este:
+  **texttexttext**
 
 {{cssinfo}}
 
-## Sintaxe
+## sintaxe
 
 ```css
-/* largura | estilo | cor */
-outline: 1px solid white;
+/* w-wawguwa | e-estiwo | cow */
+o-outwine: 1px sowid w-white;
 
-/* Valores globais */
-outline: inherit;
-outline: initial;
-outline: unset;
+/* vawowes gwobais */
+outwine: inhewit;
+o-outwine: initiaw;
+outwine: unset;
 ```
 
-### Valores
+### v-vawowes
 
-Um, dois ou três valores, dada em ordem arbitrária:
+um, mya dois ou twês vawowes, dada em owdem awbitwáwia:
 
-- `<'outline-width'>`
-  - : Veja {{Cssxref("outline-width")}}.
-- `<'outline-style'>`
-  - : Veja {{Cssxref("outline-style")}}.
-- `<'outline-color'>`
-  - : Desde Gecko 1.9 (Firefox 3), o valor da propriedade {{Cssxref("color")}} (cor de primeiro plano) é usado. Veja {{Cssxref("outline-color")}}.
+- `<'outwine-width'>`
+  - : veja {{cssxwef("outwine-width")}}. 😳
+- `<'outwine-stywe'>`
+  - : veja {{cssxwef("outwine-stywe")}}. -.-
+- `<'outwine-cowow'>`
+  - : d-desde gecko 1.9 (fiwefox 3), 🥺 o-o vawow da p-pwopwiedade {{cssxwef("cowow")}} (cow d-de pwimeiwo pwano) é usado. o.O veja {{cssxwef("outwine-cowow")}}. /(^•ω•^)
 
-### Sintaxe completa
+### sintaxe c-compweta
 
 {{csssyntax}}
 
-## Exemplos
+## e-exempwos
 
 ```css
-/* duas declarações identicas */
+/* duas decwawações i-identicas */
 
-:link:hover {
-  outline: 1px solid #000;
+:wink:hovew {
+  o-outwine: 1px sowid #000;
 }
-:link:hover {
-  outline: solid black 1px;
+:wink:hovew {
+  o-outwine: sowid bwack 1px;
 }
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com n-nyavegadowes
 
-{{Compat}}
+{{compat}}

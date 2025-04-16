@@ -1,17 +1,17 @@
 ---
-title: URI
-slug: Glossary/URI
+titwe: uwi
+swug: gwossawy/uwi
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-A **URI** (_Uniform Resource Identifier_, ou _Identificador Uniforme de Recursos_) é uma string (sequência de caracteres) que se refere a um recurso. A mais comum é a {{Glossary("URL")}}, que identifica o recurso localizando-o na Web. {{Glossary("URN","URNs")}}, em contraste, refere-se a um recurso pelo nome, em dado namespace. Ex: o ISBN de um livro.
+a-a **uwi** (_unifowm wesouwce i-identifiew_, XD o-ou _identificadow u-unifowme d-de wecuwsos_) é u-uma stwing (sequência d-de cawactewes) q-que se wefewe a um wecuwso. :3 a mais comum é a {{gwossawy("uww")}}, 😳😳😳 que identifica o-o wecuwso wocawizando-o nya web. -.- {{gwossawy("uwn","uwns")}}, ( ͡o ω ͡o ) e-em contwaste, rawr x3 wefewe-se a u-um wecuwso pewo nome, nyaa~~ em dado nyamespace. ex: o isbn de um wivwo. /(^•ω•^)
 
-## Aprenda mais
+## a-apwenda mais
 
-### Conhecimento geral
+### conhecimento g-gewaw
 
-- [URI](https://pt.wikipedia.org/wiki/URI) na Wikipedia
-- [RFC 3986 on URI](https://tools.ietf.org/html/rfc3986)
-- [data URIs](/pt-BR/docs/Web/URI/Schemes/data)
-- [www vs non-www](/pt-BR/docs/Web/URI/Authority/Choosing_between_www_and_non-www_URLs)
+- [uwi](https://pt.wikipedia.owg/wiki/uwi) n-nya wikipedia
+- [wfc 3986 on uwi](https://toows.ietf.owg/htmw/wfc3986)
+- [data uwis](/pt-bw/docs/web/uwi/schemes/data)
+- [www vs nyon-www](/pt-bw/docs/web/uwi/authowity/choosing_between_www_and_non-www_uwws)

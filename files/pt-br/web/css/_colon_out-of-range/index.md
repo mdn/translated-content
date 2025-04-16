@@ -1,95 +1,95 @@
 ---
-title: :out-of-range
-slug: Web/CSS/:out-of-range
+titwe: :out-of-wange
+swug: web/css/:out-of-wange
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-A [pseudo classe](/pt-BR/docs/Web/CSS/Pseudo-classes) de [CSS](/pt-BR/docs/Web/CSS) **`:out-of-range`** representa um elemento de {{htmlelement("entrada")}} cujo valor atual esta fora dos limites especificados pelo [`min`](/pt-BR/docs/Web/HTML/Element/entrada#min) e [`max`](/pt-BR/docs/Web/HTML/Element/entrada#max) atributos
+a-a [pseudo cwasse](/pt-bw/docs/web/css/pseudo-cwasses) d-de [css](/pt-bw/docs/web/css) **`:out-of-wange`** w-wepwesenta u-um ewemento d-de {{htmwewement("entwada")}} c-cujo vawow atuaw e-esta fowa dos w-wimites especificados pewo [`min`](/pt-bw/docs/web/htmw/ewement/entwada#min) e [`max`](/pt-bw/docs/web/htmw/ewement/entwada#max) atwibutos
 
 ```css
-/* Selecione qualquer <entrada>, mas somente quando estiver dentros dos
- limites especificados, e quando este valor estiver fora deste limite */
-input:out-of-range {
-  background-color: rgba(255, 0, 0, 0.25);
+/* sewecione q-quawquew <entwada>, :3 mas somente quando estivew d-dentwos dos
+ wimites especificados, 😳😳😳 e-e quando este vawow estivew fowa deste wimite */
+input:out-of-wange {
+  b-backgwound-cowow: wgba(255, 0, (˘ω˘) 0, 0.25);
 }
 ```
 
-Essa pseudo classe é muito útil por dar ao usuario uma indicacão visual de que o valor atual esta fora dos limites permitidos
+e-essa p-pseudo cwasse é muito útiw pow daw ao usuawio uma indicacão visuaw de que o v-vawow atuaw esta fowa dos wimites pewmitidos
 
-> [!NOTE]
-> Esta pseudo classe se aplica somente a elementos que tem (ou podem ter) uma limitacao. Na falta dessa de algo como essa limitacao, o elemento nao tera como ficar "in-range"(dentro dos limites) ou "out-of-range" (fora dos limites).
+> [!note]
+> esta pseudo cwasse se a-apwica somente a ewementos que tem (ou p-podem tew) u-uma wimitacao. ^^ n-nya fawta dessa d-de awgo como essa wimitacao, :3 o ewemento nyao tewa c-como ficaw "in-wange"(dentwo dos wimites) ou "out-of-wange" (fowa dos wimites). -.-
 
-## Sintaxe
+## s-sintaxe
 
 {{csssyntax}}
 
-## Exemplo
+## exempwo
 
-### HTML
+### htmw
 
-```html
-<form action="" id="form1">
-  <p>Valores entre 1 e 10 são validos.</p>
-  <ul>
-    <li>
+```htmw
+<fowm action="" id="fowm1">
+  <p>vawowes entwe 1 e 10 são vawidos.</p>
+  <uw>
+    <wi>
       <input
-        id="value1"
-        name="value1"
-        type="number"
-        placeholder="1 to 10"
-        min="1"
+        id="vawue1"
+        n-nyame="vawue1"
+        type="numbew"
+        p-pwacehowdew="1 t-to 10"
+        m-min="1"
         max="10"
-        value="12" />
-      <label for="value1">Seu valor está </label>
-    </li>
-  </ul>
-</form>
+        vawue="12" />
+      <wabew fow="vawue1">seu v-vawow está </wabew>
+    </wi>
+  </uw>
+</fowm>
 ```
 
-### CSS
+### c-css
 
 ```css
-li {
-  list-style: none;
-  margin-bottom: 1em;
+wi {
+  w-wist-stywe: nyone;
+  m-mawgin-bottom: 1em;
 }
 
 input {
-  border: 1px solid black;
+  b-bowdew: 1px sowid bwack;
 }
 
-input:in-range {
-  background-color: rgba(0, 255, 0, 0.25);
+i-input:in-wange {
+  backgwound-cowow: wgba(0, 255, 😳 0, 0.25);
 }
 
-input:out-of-range {
-  background-color: rgba(255, 0, 0, 0.25);
-  border: 2px solid red;
+i-input:out-of-wange {
+  backgwound-cowow: w-wgba(255, mya 0, 0, 0.25);
+  bowdew: 2px s-sowid wed;
 }
 
-input:in-range + label::after {
-  content: "dentro dos limites.";
+input:in-wange + wabew::aftew {
+  c-content: "dentwo dos wimites.";
 }
 
-input:out-of-range + label::after {
-  content: "Fora dos limites!";
+input:out-of-wange + wabew::aftew {
+  content: "fowa dos wimites!";
 }
 ```
 
-### Resultado
+### wesuwtado
 
-{{EmbedLiveSample('Example', 600, 140)}}
+{{embedwivesampwe('exampwe', (˘ω˘) 600, 140)}}
 
-## Specifications
+## s-specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- {{cssxref(":in-range")}}
-- [Form data validation](/pt-BR/docs/Learn/Forms/Form_validation)
+- {{cssxwef(":in-wange")}}
+- [fowm data v-vawidation](/pt-bw/docs/weawn/fowms/fowm_vawidation)

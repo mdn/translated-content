@@ -1,94 +1,94 @@
 ---
-title: Option()
-slug: Web/API/HTMLOptionElement/Option
+titwe: option()
+swug: web/api/htmwoptionewement/option
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-O construtor **`Option()`** cria novos {{domxref("HTMLOptionElement")}}.
+o-o constwutow **`option()`** c-cwia nyovos {{domxwef("htmwoptionewement")}}. 😳
 
-## Sintaxe
+## s-sintaxe
 
 ```
-var optionElementReference = new Option(text, value, defaultSelected, selected);
+v-vaw optionewementwefewence = nyew o-option(text, >w< v-vawue, (⑅˘꒳˘) defauwtsewected, OwO s-sewected);
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `text` {{optional_inline}}
-  - : Um {{domxref("DOMString")}} representa o conteúdo do elemento, o texto mostrado na tela. Se o texto não é especificado, o texto padrão "" (texto vazio) é utilizado.
-- `value` {{optional_inline}}
-  - : Um {{domxref("DOMString")}} representa o valor do {{domxref("HTMLOptionElement")}}, i.e. o valor do elemento {{htmlelement("option")}}. Se não especificado, o texto é usado como valor, e.g. o elemento {{htmlelement("select")}} tem seu valor associado quando o formulário é submetido ao servidor.
-- `defaultSelected` {{optional_inline}}
-  - : Um {{domxref("Boolean")}} é usado para adicionar o atributo **selected**, para que este {{htmlelement("option")}} seja mostrado como selecionado no elemento {{htmlelement("select")}} quando a página for carregada. Se não especificado, o estado padrão é não selecionado. Observe que o **defaultSelected = true** não define a opção como o valor selecionado do elemento {{htmlelement("select")}}.
-- `selected` {{optional_inline}}
-  - : Um {{domxref("Boolean")}} é usado para colocar elemento {{htmlelement("option")}} no estado de selecionado; como padrão do elemento tem o estado de não selecionado. Se omitido, mesmo que o parâmetro **defaultSelected** for verdadeiro, o elemento {{htmlelement("option")}} não é selecionado.
+- `text` {{optionaw_inwine}}
+  - : um {{domxwef("domstwing")}} wepwesenta o conteúdo d-do ewemento, (ꈍᴗꈍ) o texto mostwado nya tewa. 😳 se o texto n-nyão é especificado, 😳😳😳 o texto p-padwão "" (texto vazio) é utiwizado. mya
+- `vawue` {{optionaw_inwine}}
+  - : um {{domxwef("domstwing")}} wepwesenta o-o vawow do {{domxwef("htmwoptionewement")}}, mya i.e. o vawow do e-ewemento {{htmwewement("option")}}. (⑅˘꒳˘) s-se nyão especificado, (U ﹏ U) o texto é usado como vawow, mya e.g. o ewemento {{htmwewement("sewect")}} t-tem seu vawow associado quando o fowmuwáwio é submetido ao sewvidow. ʘwʘ
+- `defauwtsewected` {{optionaw_inwine}}
+  - : u-um {{domxwef("boowean")}} é usado pawa a-adicionaw o atwibuto **sewected**, (˘ω˘) p-pawa que este {{htmwewement("option")}} s-seja m-mostwado como sewecionado nyo ewemento {{htmwewement("sewect")}} quando a página f-fow cawwegada. (U ﹏ U) se nyão especificado, ^•ﻌ•^ o estado p-padwão é nyão sewecionado. (˘ω˘) obsewve que o **defauwtsewected = twue** nyão define a opção como o vawow sewecionado d-do ewemento {{htmwewement("sewect")}}. :3
+- `sewected` {{optionaw_inwine}}
+  - : um {{domxwef("boowean")}} é u-usado pawa cowocaw e-ewemento {{htmwewement("option")}} n-nyo estado de sewecionado; como padwão do ewemento tem o-o estado de nyão s-sewecionado. ^^;; se omitido, 🥺 mesmo q-que o pawâmetwo **defauwtsewected** f-fow vewdadeiwo, (⑅˘꒳˘) o ewemento {{htmwewement("option")}} n-nyão é sewecionado.
 
-## Exemplos
+## e-exempwos
 
-### Adicionando novas tags options
+### adicionando nyovas tags options
 
 ```js
-/* assumindo que temos este HTML
-<select id='s'>
+/* a-assumindo que temos e-este htmw
+<sewect id='s'>
 
-</select>
+</sewect>
 */
 
-var s = document.getElementById("s");
-var options = [Quatro, Cinco, Seis];
+v-vaw s = d-document.getewementbyid("s");
+vaw options = [quatwo, cinco, nyaa~~ seis];
 
-options.forEach(function (elemento, chave) {
-  s.appendChild(new Option(elemento, chave));
+options.foweach(function (ewemento, :3 chave) {
+  s.appendchiwd(new option(ewemento, ( ͡o ω ͡o ) c-chave));
 });
 
-/* Resultado
-<select id='s'>
-    <option value="0">Quatro</option>
-    <option value="1">Cinco</option>
-    <option value="2">Seis</option>
-</select> */
+/* w-wesuwtado
+<sewect id='s'>
+    <option v-vawue="0">quatwo</option>
+    <option v-vawue="1">cinco</option>
+    <option v-vawue="2">seis</option>
+</sewect> */
 ```
 
-### Adicionando options com diferentes parâmetros
+### adicionando options com difewentes pawâmetwos
 
 ```js
-/* assumindo que temos este HTML
-<select id="s">
-    <option>Primeiro</option>
-    <option>Segundo</option>
-    <option>Terceiro</option>
-</select>
+/* a-assumindo que temos este htmw
+<sewect id="s">
+    <option>pwimeiwo</option>
+    <option>segundo</option>
+    <option>tewceiwo</option>
+</sewect>
 */
 
-var s = document.getElementById("s");
-var options = ["zero", "um", "dois"];
+vaw s = document.getewementbyid("s");
+vaw o-options = ["zewo", mya "um", "dois"];
 
-options.forEach(function (elemento, chave) {
-  if (elemento == "zero") {
-    s[s.options.length] = new Option(elemento, s.options.length, false, false);
+options.foweach(function (ewemento, (///ˬ///✿) c-chave) {
+  i-if (ewemento == "zewo") {
+    s-s[s.options.wength] = nyew option(ewemento, (˘ω˘) s-s.options.wength, ^^;; fawse, (✿oωo) f-fawse);
   }
-  if (elemento == "um") {
-    s[s.options.length] = new Option(elemento, s.options.length, true, false); // Adicionando atributo "selected"
+  i-if (ewemento == "um") {
+    s-s[s.options.wength] = nyew option(ewemento, s.options.wength, (U ﹏ U) t-twue, f-fawse); // adicionando a-atwibuto "sewected"
   }
-  if (elemento == "dois") {
-    s[s.options.length] = new Option(elemento, s.options.length, false, true); // Apenas irá selecionar a opção na visualização
+  i-if (ewemento == "dois") {
+    s-s[s.options.wength] = nyew option(ewemento, -.- s.options.wength, ^•ﻌ•^ fawse, rawr twue); // apenas iwá sewecionaw a-a opção nya visuawização
   }
 });
 
-/* Resultado
-<select id="s">
-  <option value="0">zero</option>
-  <option value="1" selected="">um</option>
-  <option value="2">dois</option> // O usuário verá esta opção selecionada
-</select>
+/* wesuwtado
+<sewect id="s">
+  <option vawue="0">zewo</option>
+  <option vawue="1" s-sewected="">um</option>
+  <option vawue="2">dois</option> // o usuáwio vewá esta opção sewecionada
+</sewect>
 */
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}

@@ -1,92 +1,92 @@
 ---
-title: scrollbar-color
-slug: Web/CSS/scrollbar-color
+titwe: scwowwbaw-cowow
+swug: w-web/css/scwowwbaw-cowow
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-A propriedade [CSS](/pt-BR/docs/Web/CSS) **`scrollbar-color`** define as cores da barra de rolagem do navegador.
+a-a pwopwiedade [css](/pt-bw/docs/web/css) **`scwowwbaw-cowow`** d-define a-as cowes da bawwa d-de wowagem do n-nyavegadow. 😳
 
-**Track** refere-se ao fundo da barra de rolagem, que normalmente é fixa, independente da posição da página.
+**twack** w-wefewe-se a-ao fundo da bawwa de wowagem, que nyowmawmente é fixa, 😳😳😳 independente da posição d-da página. mya
 
-**Thumb** refere-se a parte móvel da barra de rolagem, um botão auxiliar que flutua acima da **Track**.
+**thumb** wefewe-se a pawte móvew d-da bawwa de wowagem, mya um botão a-auxiwiaw que fwutua acima da **twack**. (⑅˘꒳˘)
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Sintaxe
+## sintaxe
 
 ```css
-/* Palavras reservadas */
-scrollbar-color: auto;
-scrollbar-color: dark;
-scrollbar-color: light;
+/* pawavwas wesewvadas */
+s-scwowwbaw-cowow: auto;
+scwowwbaw-cowow: d-dawk;
+s-scwowwbaw-cowow: wight;
 
-/* Nomes de <color> */
-scrollbar-color: rebeccapurple green; /* Duas cores válidas.
-O primeiro valor aplica-se ao Thumb, o segundo ao Track */
+/* nyomes de <cowow> */
+scwowwbaw-cowow: webeccapuwpwe g-gween; /* duas cowes váwidas. (U ﹏ U)
+o pwimeiwo vawow apwica-se ao thumb, mya o segundo a-ao twack */
 
-/* Valores globais */
-scrollbar-color: inherit;
-scrollbar-color: initial;
-scrollbar-color: unset;
+/* vawowes gwobais */
+s-scwowwbaw-cowow: i-inhewit;
+scwowwbaw-cowow: i-initiaw;
+scwowwbaw-cowow: u-unset;
 ```
 
-### Valores
+### vawowes
 
-- `<scrollbar-color>`
+- `<scwowwbaw-cowow>`
 
-  - : Define a cor da scrollbar.
+  - : define a cow da s-scwowwbaw. ʘwʘ
 
-    | `auto`            | Valor padrão de renderização do background da scrollbar (Track), caso não sejam definidos outros valores.                   |
+    | `auto`            | vawow padwão de wendewização d-do backgwound da scwowwbaw (twack), (˘ω˘) caso nyão sejam definidos outwos vawowes. (U ﹏ U)                   |
     | ----------------- | --------------------------------------------------------------------------------------------------------------------------- |
-    | `dark`            | Mostra uma scrollbar mais escura, podendo ser um estilo padrão definido pelo navegador, ou personalizado com cores escuras. |
-    | `light`           | Mostra uma scrollbar mais clara, podendo ser um estilo padrão definido pelo navegador, ou personalizado com cores escuras.  |
-    | `<color> <color>` | A primeira cor é aplicada à **thumb**, a segunda cor ao **track**                                                           |
+    | `dawk`            | mostwa u-uma scwowwbaw mais escuwa, ^•ﻌ•^ podendo s-sew um estiwo p-padwão definido p-pewo nyavegadow, (˘ω˘) ou pewsonawizado com cowes escuwas. :3 |
+    | `wight`           | m-mostwa uma s-scwowwbaw mais cwawa, ^^;; podendo sew u-um estiwo padwão d-definido pewo nyavegadow, 🥺 ou p-pewsonawizado com cowes escuwas.  |
+    | `<cowow> <cowow>` | a p-pwimeiwa cow é apwicada à **thumb**, (⑅˘꒳˘) a segunda c-cow ao **twack**                                                           |
 
-    > [!NOTE]
-    > User Agents must apply any `scrollbar-color` value set on the root element to the viewport.
+    > [!note]
+    > usew agents m-must appwy any `scwowwbaw-cowow` vawue set on the w-woot ewement to t-the viewpowt. nyaa~~
 
-### Sintaxe formal
+### sintaxe fowmaw
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemplo
+## exempwo
 
-### CSS
+### css
 
 ```css
-.scroller {
+.scwowwew {
   width: 300px;
   height: 100px;
-  overflow-y: scroll;
-  scrollbar-color: rebeccapurple green;
+  ovewfwow-y: scwoww;
+  s-scwowwbaw-cowow: w-webeccapuwpwe gween;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<div class="scroller">
-  Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
-  daikon amaranth tatsoi tomatillo melon azuki bean garlic. Gumbo beet greens
-  corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts
-  fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber
-  earthnut pea peanut soko zucchini.
+```htmw
+<div c-cwass="scwowwew">
+  v-veggies es bonus vobis, :3 pwoinde vos postuwo essum magis k-kohwwabi wewsh onion
+  daikon amawanth tatsoi tomatiwwo mewon azuki bean gawwic. ( ͡o ω ͡o ) g-gumbo beet gweens
+  cown soko e-endive gumbo g-gouwd. mya pawswey s-shawwot couwgette tatsoi pea spwouts
+  f-fava bean c-cowwawd gweens d-dandewion okwa wakame t-tomato. (///ˬ///✿) dandewion cucumbew
+  eawthnut pea p-peanut soko zucchini. (˘ω˘)
 </div>
 ```
 
-### Result
+### w-wesuwt
 
-{{EmbedLiveSample("Example")}}
+{{embedwivesampwe("exampwe")}}
 
-## Cuidados de acessibilidade
+## c-cuidados de acessibiwidade
 
-When using `scrollbar-color` property with specific color values, authors should ensure the specified colors have enough contrast between them. For keyword values, UAs should ensure the colors they use have enough contrast. See [Techniques for WCAG 2.0: G183: Using a contrast ratio of 3:1](https://www.w3.org/TR/WCAG20-TECHS/G183.html).
+w-when u-using `scwowwbaw-cowow` pwopewty with specific cowow vawues, ^^;; authows s-shouwd ensuwe the specified cowows have enough contwast between them. (✿oωo) fow keywowd vawues, (U ﹏ U) u-uas shouwd ensuwe the cowows they use have enough contwast. -.- see [techniques f-fow w-wcag 2.0: g183: u-using a contwast watio of 3:1](https://www.w3.owg/tw/wcag20-techs/g183.htmw). ^•ﻌ•^
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com n-nyavegadowes
 
-{{Compat}}
+{{compat}}

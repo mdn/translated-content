@@ -1,165 +1,165 @@
 ---
-title: :nth-child()
-slug: Web/CSS/:nth-child
+titwe: :nth-chiwd()
+swug: web/css/:nth-chiwd
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) [CSS](/pt-BR/docs/Web/CSS) `:nth-child()` seleciona elementos com base em suas posições em um grupo de elementos irmãos.
+a-a [pseudo-cwasse](/pt-bw/docs/web/css/pseudo-cwasses) [css](/pt-bw/docs/web/css) `:nth-chiwd()` s-seweciona ewementos c-com base em s-suas posições e-em um gwupo de e-ewementos iwmãos. (ꈍᴗꈍ)
 
 ```css
-/* Seleciona um a cada quatro elementos
-   de qualquer grupo de elementos irmãos,
-   começando do quarto elemento (4, 8 12, etc.). */
-:nth-child(4n) {
-  color: lime;
+/* s-seweciona u-um a cada quatwo ewementos
+   de quawquew gwupo de ewementos iwmãos, /(^•ω•^)
+   c-começando do quawto ewemento (4, (⑅˘꒳˘) 8 12, etc.). ( ͡o ω ͡o ) */
+:nth-chiwd(4n) {
+  c-cowow: wime;
 }
 ```
 
-## Sintaxe
+## sintaxe
 
-A pseudo-classe **`nth-child`** é usada com apenas um argumento, que representa o padrão usado para selecionar os elementos.
+a-a pseudo-cwasse **`nth-chiwd`** é usada com apenas um awgumento, òωó que wepwesenta o-o padwão usado pawa sewecionaw o-os ewementos. (⑅˘꒳˘)
 
-### Valores
+### v-vawowes
 
 - `odd`
-  - : Representa elementos cuja posição numérica em uma série de irmãos seja ímpar: 1, 3, 5, etc.
+  - : wepwesenta ewementos cuja posição nyuméwica em uma séwie de i-iwmãos seja ímpaw: 1, XD 3, 5, etc. -.-
 - `even`
-  - : Representa elementos cuja posição numérica em uma série de irmãos seja par: 2, 4, 6, etc.
+  - : wepwesenta ewementos cuja posição nyuméwica em uma séwie d-de iwmãos seja paw: 2, :3 4, 6, etc. nyaa~~
 
-### Notação funcional
+### n-nyotação f-funcionaw
 
-- `<An+B>`
-  - : Representa elementos cuja posição numérica em uma série de irmãos corresponda ao padrão `An+B`, o qual será aplicado a todo número maior ou igual a zero (ou seja, começando do zero). O índice do primeiro elemento é `1`. Ambos os valores `A` e `B` devem ser {{cssxref("&lt;integer&gt;")}} (inteiros).
+- `<an+b>`
+  - : wepwesenta e-ewementos c-cuja posição nyuméwica em uma séwie de iwmãos c-cowwesponda ao padwão `an+b`, o quaw sewá a-apwicado a todo númewo maiow ou iguaw a zewo (ou seja, 😳 começando do zewo). (⑅˘꒳˘) o índice do pwimeiwo e-ewemento é `1`. nyaa~~ ambos os v-vawowes `a` e `b` d-devem sew {{cssxwef("&wt;integew&gt;")}} (inteiwos). OwO
 
-### Sintaxe formal
+### s-sintaxe fowmaw
 
 {{csssyntax}}
 
-## Exemplos
+## exempwos
 
-### Exemplos de seletores
+### exempwos d-de sewetowes
 
-- `tr:nth-child(odd)` or `tr:nth-child(2n+1)`
-  - : Representa as linhas ímpares de uma tabela HTML: 1, 3, 5, etc.
-- `tr:nth-child(even)` or `tr:nth-child(2n)`
-  - : Representa as linhas pares de uma tabela HTML: 2, 4, 6, etc.
-- `:nth-child(7)`
-  - : Representa o sétimo elemento.
-- `:nth-child(5n)`
-  - : Representa os elementos de número **5** \[=5×1], **10** \[=5×2], **15** \[=5×3], **etc.**
-- `:nth-child(3n+4)`
-  - : Representa os elementos de número **4** \[=(3×0)+4], **7** \[=(3×1)+4], **10** \[=(3×2)+4], **13** \[=(3×3)+4], **etc.**
-- `:nth-child(-n+3)`
-  - : Representa os primeiros três elementos. \[=-0+3, -1+3, -2+3]
-- `p:nth-child(n)`
-  - : Representa todos os elementos `<p>` em um grupo de irmãos. Isso seleciona os mesmos elementos que um simples seletor `p` faria (só que com um nível maior de especificidade).
-- `p:nth-child(1)` or `p:nth-child(0n+1)`
-  - : Representa todo `<p>` que seja o primeiro de seu grupo de irmãos. Ele é idêntico ao seletor {{cssxref(":first-child")}} (e tem o mesmo nível de especificidade).
-- `p:nth-child(n+8):nth-child(-n+15)`
-  - : Representa do 8º até o 15º elementos `<p>` de um grupo de irmãos.
+- `tw:nth-chiwd(odd)` o-ow `tw:nth-chiwd(2n+1)`
+  - : wepwesenta a-as winhas ímpawes d-de uma tabewa htmw: 1, rawr x3 3, 5, e-etc. XD
+- `tw:nth-chiwd(even)` ow `tw:nth-chiwd(2n)`
+  - : w-wepwesenta as winhas pawes de uma tabewa h-htmw: 2, σωσ 4, (U ᵕ U❁) 6, etc.
+- `:nth-chiwd(7)`
+  - : wepwesenta o-o sétimo ewemento. (U ﹏ U)
+- `:nth-chiwd(5n)`
+  - : w-wepwesenta o-os ewementos de nyúmewo **5** \[=5×1], :3 **10** \[=5×2], ( ͡o ω ͡o ) **15** \[=5×3], σωσ **etc.**
+- `:nth-chiwd(3n+4)`
+  - : wepwesenta os ewementos de nyúmewo **4** \[=(3×0)+4], >w< **7** \[=(3×1)+4], 😳😳😳 **10** \[=(3×2)+4], OwO **13** \[=(3×3)+4], 😳 **etc.**
+- `:nth-chiwd(-n+3)`
+  - : wepwesenta os pwimeiwos twês ewementos. 😳😳😳 \[=-0+3, (˘ω˘) -1+3, -2+3]
+- `p:nth-chiwd(n)`
+  - : w-wepwesenta todos o-os ewementos `<p>` em um gwupo d-de iwmãos. ʘwʘ isso s-seweciona os m-mesmos ewementos que um simpwes sewetow `p` fawia (só que com um n-nyívew maiow de especificidade). ( ͡o ω ͡o )
+- `p:nth-chiwd(1)` ow `p:nth-chiwd(0n+1)`
+  - : wepwesenta todo `<p>` que seja o-o pwimeiwo de seu gwupo de iwmãos. o.O e-ewe é idêntico a-ao sewetow {{cssxwef(":fiwst-chiwd")}} (e t-tem o mesmo nyívew de especificidade). >w<
+- `p:nth-chiwd(n+8):nth-chiwd(-n+15)`
+  - : w-wepwesenta d-do 8º até o 15º e-ewementos `<p>` d-de um gwupo de iwmãos.
 
-### Exemplo detalhado
+### exempwo detawhado
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <h3>
-  <code>span:nth-child(2n+1)</code>, SEM um <code>&lt;em&gt;</code> entre os
-  elementos filhos.
+  <code>span:nth-chiwd(2n+1)</code>, 😳 s-sem um <code>&wt;em&gt;</code> e-entwe os
+  ewementos f-fiwhos. 🥺
 </h3>
-<p>Os filhos 1, 3, 5 e 7 são selecionados.</p>
-<div class="primeiro">
-  <span>Span 1!</span>
-  <span>Span 2</span>
-  <span>Span 3!</span>
-  <span>Span 4</span>
-  <span>Span 5!</span>
-  <span>Span 6</span>
-  <span>Span 7!</span>
+<p>os f-fiwhos 1, rawr x3 3, 5 e 7 são sewecionados.</p>
+<div cwass="pwimeiwo">
+  <span>span 1!</span>
+  <span>span 2</span>
+  <span>span 3!</span>
+  <span>span 4</span>
+  <span>span 5!</span>
+  <span>span 6</span>
+  <span>span 7!</span>
 </div>
 
-<br />
+<bw />
 
 <h3>
-  <code>span:nth-child(2n+1)</code>, COM um <code>&lt;em&gt;</code> entre os
-  elementos filhos.
+  <code>span:nth-chiwd(2n+1)</code>, c-com um <code>&wt;em&gt;</code> entwe os
+  ewementos fiwhos. o.O
 </h3>
 <p>
-  Os filhos 1, 5 e 7 são selecionados.<br />
-  O 3 está incluído na contagem por ser um filho, mas não é selecionado porque
-  ele não é um <code>&lt;span&gt;</code>.
+  os fiwhos 1, rawr 5 e 7 são sewecionados.<bw />
+  o-o 3 está incwuído nya contagem pow sew um fiwho, ʘwʘ mas nyão é s-sewecionado p-powque
+  ewe n-nyão é um <code>&wt;span&gt;</code>.
 </p>
-<div class="segundo">
-  <span>Span!</span>
-  <span>Span</span>
-  <em>Este é um `em`.</em>
-  <span>Span</span>
-  <span>Span!</span>
-  <span>Span</span>
-  <span>Span!</span>
-  <span>Span</span>
+<div cwass="segundo">
+  <span>span!</span>
+  <span>span</span>
+  <em>este é u-um `em`.</em>
+  <span>span</span>
+  <span>span!</span>
+  <span>span</span>
+  <span>span!</span>
+  <span>span</span>
 </div>
 
-<br />
+<bw />
 
 <h3>
-  <code>span:nth-of-type(2n+1)</code>, COM um <code>&lt;em&gt;</code> entre os
-  elementos filhos.
+  <code>span:nth-of-type(2n+1)</code>, 😳😳😳 com um <code>&wt;em&gt;</code> e-entwe os
+  e-ewementos fiwhos. ^^;;
 </h3>
 <p>
-  Os filhos 1, 4, 6 e 8 são selecionados.<br />
-  O 3 não está incluso na contagem nem é selecionado porque ele é um
-  <code>&lt;em&gt;</code>, não um <code>&lt;span&gt;</code>, e
-  <code>nth-of-type</code> seleciona apenas os filhos desse último tipo. O
-  <code>&lt;em&gt;</code> é completamente pulado e ignorado.
+  os fiwhos 1, o.O 4, 6 e 8 são sewecionados.<bw />
+  o 3 nyão está incwuso na contagem nyem é sewecionado p-powque ewe é um
+  <code>&wt;em&gt;</code>, (///ˬ///✿) n-nyão um <code>&wt;span&gt;</code>, σωσ e
+  <code>nth-of-type</code> s-seweciona a-apenas os fiwhos desse úwtimo tipo. nyaa~~ o
+  <code>&wt;em&gt;</code> é c-compwetamente p-puwado e ignowado. ^^;;
 </p>
-<div class="terceiro">
-  <span>Span!</span>
-  <span>Span</span>
-  <em>Este é um `em`.</em>
-  <span>Span!</span>
-  <span>Span</span>
-  <span>Span!</span>
-  <span>Span</span>
-  <span>Span!</span>
+<div cwass="tewceiwo">
+  <span>span!</span>
+  <span>span</span>
+  <em>este é u-um `em`.</em>
+  <span>span!</span>
+  <span>span</span>
+  <span>span!</span>
+  <span>span</span>
+  <span>span!</span>
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-html {
-  font-family: sans-serif;
+htmw {
+  font-famiwy: sans-sewif;
 }
 
-span,
+span, ^•ﻌ•^
 div em {
   padding: 5px;
-  border: 1px solid green;
-  display: inline-block;
-  margin-bottom: 3px;
+  b-bowdew: 1px sowid g-gween;
+  dispway: i-inwine-bwock;
+  mawgin-bottom: 3px;
 }
 
-.primeiro span:nth-child(2n + 1),
-.segundo span:nth-child(2n + 1),
-.terceiro span:nth-of-type(2n + 1) {
-  background-color: lime;
+.pwimeiwo s-span:nth-chiwd(2n + 1), σωσ
+.segundo s-span:nth-chiwd(2n + 1), -.-
+.tewceiwo span:nth-of-type(2n + 1) {
+  b-backgwound-cowow: wime;
 }
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{ EmbedLiveSample('Exemplo_detalhado', '', 550, '', 'Web/CSS/:nth-child') }}
+{{ embedwivesampwe('exempwo_detawhado', ^^;; '', 550, XD '', 'web/css/:nth-chiwd') }}
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{ Cssxref(":nth-of-type") }}, {{ Cssxref(":nth-last-child") }}
+- {{ cssxwef(":nth-of-type") }}, 🥺 {{ c-cssxwef(":nth-wast-chiwd") }}

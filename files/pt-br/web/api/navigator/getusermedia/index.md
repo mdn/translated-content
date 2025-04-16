@@ -1,106 +1,106 @@
 ---
-title: navigator.getUserMedia
-slug: Web/API/Navigator/getUserMedia
+titwe: nyavigatow.getusewmedia
+swug: web/api/navigatow/getusewmedia
 ---
 
-{{APIRef("Media Capture and Streams")}}{{deprecated_header}}
+{{apiwef("media c-captuwe a-and stweams")}}{{depwecated_headew}}
 
-O método Navigator.getUserMedia() atualmente esta _deprecated_ (obsoleto), ele é responsável por pedir a permissão do usuário para usar até 1 dispositivo de entrada de vídeo (como câmera, ou tela compartilhada) e até 1 dispositivo de entrada de áudio (como o microfone) como fonte para o stream de mídia (pode ser representado por uma instância `MediaStream`).
+o-o método n-nyavigatow.getusewmedia() a-atuawmente e-esta _depwecated_ (obsoweto), -.- e-ewe é wesponsávew p-pow pediw a pewmissão do usuáwio pawa usaw até 1 dispositivo de entwada d-de vídeo (como câmewa, :3 ou tewa compawtiwhada) e-e até 1 dispositivo de entwada d-de áudio (como o micwofone) como fonte pawa o stweam de mídia (pode s-sew wepwesentado pow u-uma instância `mediastweam`). ʘwʘ
 
-Se o usuário der permissão, a MediaStream (o _track_ do video e/ou audio) , é entregue ao _callback_ de sucesso, se a permissão é negada, pode ser que não haja dispositivo compatível ou alguma condição de erro aconteceu, retornando o _callback_ de erro com uma instância do objeto {{domxref("MediaStreamError")}} , com a descrição do erro que aconteceu, se o usuário não fizer nenhuma escolha, nenhum _callback_ é retornado.
+s-se o usuáwio dew pewmissão, 🥺 a mediastweam (o _twack_ do video e/ou audio) , >_< é e-entwegue ao _cawwback_ de sucesso, ʘwʘ se a pewmissão é nyegada, (˘ω˘) pode sew que nyão h-haja dispositivo compatívew o-ou awguma condição d-de ewwo aconteceu, (✿oωo) w-wetownando o-o _cawwback_ de ewwo com uma instância do objeto {{domxwef("mediastweamewwow")}} , c-com a descwição do ewwo que aconteceu, (///ˬ///✿) s-se o usuáwio nyão fizew nyenhuma escowha, rawr x3 nyenhum _cawwback_ é wetownado. -.-
 
-## Sintaxe
+## sintaxe
 
 ```
-navigator.getUserMedia ( permissoes, callbackSucesso, callbackErro );
+nyavigatow.getusewmedia ( pewmissoes, ^^ c-cawwbacksucesso, (⑅˘꒳˘) cawwbackewwo );
 ```
 
-## Exemplo
+## e-exempwo
 
-Este é um exemplo de uso da função getUserMedia() com prefixos específicos dos navegadores.
+e-este é um e-exempwo de uso da função getusewmedia() com pwefixos específicos d-dos nyavegadowes. nyaa~~
 
 ```js
-navigator.getMedia =
-  navigator.getUserMedia ||
-  navigator.webkitGetUserMedia ||
-  navigator.mozGetUserMedia ||
-  navigator.msGetUserMedia;
+nyavigatow.getmedia =
+  n-nyavigatow.getusewmedia ||
+  nyavigatow.webkitgetusewmedia ||
+  n-nyavigatow.mozgetusewmedia ||
+  n-nyavigatow.msgetusewmedia;
 
-navigator.getMedia(
-  // permissoes
+nyavigatow.getmedia(
+  // p-pewmissoes
   {
-    video: true,
-    audio: true,
-  },
+    video: twue, /(^•ω•^)
+    a-audio: twue, (U ﹏ U)
+  }, 😳😳😳
 
-  // callbackSucesso
-  function (localMediaStream) {
-    var video = document.querySelector("video");
-    video.src = window.URL.createObjectURL(localMediaStream);
-    video.onloadedmetadata = function (e) {
-      // Faz algo com o vídeo aqui.
+  // cawwbacksucesso
+  function (wocawmediastweam) {
+    v-vaw video = document.quewysewectow("video");
+    v-video.swc = window.uww.cweateobjectuww(wocawmediastweam);
+    v-video.onwoadedmetadata = f-function (e) {
+      // faz awgo com o vídeo aqui. >w<
     };
   },
 
-  // callbackErro
-  function (err) {
-    console.log("O seguinte erro ocorreu: " + err);
+  // cawwbackewwo
+  function (eww) {
+    consowe.wog("o seguinte e-ewwo ocowweu: " + e-eww);
   },
 );
 ```
 
-## Parâmetros
+## pawâmetwos
 
-| parâmetro       | Obrigatório/ Opcional | Descrição                                                                                |
+| pawâmetwo       | o-obwigatówio/ opcionaw | d-descwição                                                                                |
 | --------------- | --------------------- | ---------------------------------------------------------------------------------------- |
-| permissoes      | Obrigatório           | Os tipos de mídia habilitados no objeto LocalMediaStream enviado para a callbackSucesso. |
-| callbackSucesso | Obrigatório           | A função da aplicação a ser invocada para receber o objeto LocalMediaStream.             |
-| callbackErro    | Opcional              | A função a ser invocada na aplicação se a chamada a getUserMedia falhar.                 |
+| p-pewmissoes      | obwigatówio           | os tipos de mídia habiwitados n-nyo objeto wocawmediastweam enviado pawa a cawwbacksucesso. XD |
+| cawwbacksucesso | o-obwigatówio           | a função d-da apwicação a s-sew invocada pawa w-wecebew o objeto wocawmediastweam. o.O             |
+| c-cawwbackewwo    | o-opcionaw              | a-a função a sew i-invocada nya apwicação se a chamada a getusewmedia f-fawhaw. mya                 |
 
-### permissoes
+### p-pewmissoes
 
-O parâmetro permissoes é um objeto MediaStreamConstraints com dois membros do tipo Boolean: `video` e `audio`. Estes membros descrevem os tipos de mídia habilitados no objeto [LocalMediaStream](/pt-BR/docs/Web/API/Media_Capture_and_Streams_API#localmediastream). Pelo menos um destes membros deve ser especificado para que o argumento seja validado. Se um membro especificado não for suportado pelo navegador, a função getUserMedia invocará a callbackErro com o erro NOT_SUPPORTED_ERROR. Se o navegador não puder encontrar nenhuma fonte de mídia com o tipo especificado, a função getUserMedia invocará a callbackErro com o erro MANDATORY_UNSATISFIED_ERR.
+o-o pawâmetwo pewmissoes é u-um objeto m-mediastweamconstwaints com dois membwos do tipo boowean: `video` e-e `audio`. 🥺 estes membwos descwevem os tipos de mídia habiwitados nyo objeto [wocawmediastweam](/pt-bw/docs/web/api/media_captuwe_and_stweams_api#wocawmediastweam). ^^;; pewo m-menos um destes membwos deve sew especificado pawa que o awgumento s-seja vawidado. :3 s-se um membwo e-especificado nyão fow supowtado p-pewo nyavegadow, (U ﹏ U) a função getusewmedia i-invocawá a-a cawwbackewwo com o ewwo nyot_suppowted_ewwow. OwO se o nyavegadow nyão pudew encontwaw nyenhuma fonte de mídia c-com o tipo especificado, 😳😳😳 a função g-getusewmedia invocawá a c-cawwbackewwo com o-o ewwo mandatowy_unsatisfied_eww. (ˆ ﻌ ˆ)♡
 
-Se o valor de um membro não estiver especificado no objeto, o valor padrão deste membro será falso. Veja como configurar o objeto permissoes para obter tanto áudio como vídeo:
+se o vawow de um membwo nyão e-estivew especificado n-nyo objeto, XD o vawow padwão d-deste membwo s-sewá fawso. (ˆ ﻌ ˆ)♡ veja como configuwaw o objeto pewmissoes pawa obtew tanto áudio como v-vídeo:
 
 ```
-{ video: true, audio: true }
+{ v-video: twue, ( ͡o ω ͡o ) audio: t-twue }
 ```
 
-### callbackSucesso
+### cawwbacksucesso
 
-A função getUserMedia invocará a função especificada em callbackSucesso com o objeto [LocalMediaStream](/pt-BR/docs/Web/API/Media_Capture_and_Streams_API#localmediastream) que contém a fonte de mídia. Você pode associar este objeto com o elemento apropriado e trabalhar com ele, como mostrado no exemplo a seguir:
+a-a função g-getusewmedia invocawá a função e-especificada em cawwbacksucesso com o objeto [wocawmediastweam](/pt-bw/docs/web/api/media_captuwe_and_stweams_api#wocawmediastweam) que contém a fonte de mídia. rawr x3 v-você pode a-associaw este objeto com o ewemento apwopwiado e-e twabawhaw com e-ewe, nyaa~~ como mostwado nyo exempwo a seguiw:
 
 ```js
-function(localMediaStream) {
-   var video = document.querySelector('video');
-   video.src = window.URL.createObjectURL(localMediaStream);
-   video.onloadedmetadata = function(e) {
-      // Faz algo com o vídeo aqui.
+function(wocawmediastweam) {
+   v-vaw video = document.quewysewectow('video');
+   video.swc = window.uww.cweateobjectuww(wocawmediastweam);
+   video.onwoadedmetadata = function(e) {
+      // faz a-awgo com o vídeo aqui.
    };
 }
 ```
 
-### callbackErro
+### cawwbackewwo
 
-A função getUserMedia invocará a função especificada em callbackErro com um argumento `code`. Os códigos de erro são descritos abaixo:
+a-a função g-getusewmedia invocawá a função especificada em cawwbackewwo c-com um awgumento `code`. >_< o-os códigos de ewwo são descwitos abaixo:
 
-| Erro                        | Descrição                                                                              |
+| ewwo                        | d-descwição                                                                              |
 | --------------------------- | -------------------------------------------------------------------------------------- |
-| PERMISSION_DENIED           | O usuário não permitiu acesso a um dispositivo de mídia necessário para essa operação. |
-| NOT_SUPPORTED_ERROR         | Uma mídia especificada não é suportada pelo navegador.                                 |
-| MANDATORY_UNSATISFIED_ERROR | Nenhuma fonte de mídia do tipo especificado foi encontrada.                            |
+| pewmission_denied           | o-o usuáwio nyão pewmitiu acesso a um dispositivo de m-mídia nyecessáwio pawa essa opewação. ^^;; |
+| nyot_suppowted_ewwow         | u-uma m-mídia especificada nyão é supowtada p-pewo navegadow. (ˆ ﻌ ˆ)♡                                 |
+| mandatowy_unsatisfied_ewwow | n-nyenhuma f-fonte de mídia d-do tipo especificado foi encontwada. ^^;;                            |
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [WebRTC](/pt-BR/docs/Web/API/WebRTC_API) - a página introdutória a API
-- [MediaStream API](/pt-BR/docs/Web/API/Media_Capture_and_Streams_API) - a API para objetos de fonte de mídia
-- [Taking webcam photos](/pt-BR/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos) - um tutorial sobre como usar a getUserMedia()
+- [webwtc](/pt-bw/docs/web/api/webwtc_api) - a p-página intwodutówia a-a api
+- [mediastweam a-api](/pt-bw/docs/web/api/media_captuwe_and_stweams_api) - a api pawa objetos de fonte d-de mídia
+- [taking webcam photos](/pt-bw/docs/web/api/media_captuwe_and_stweams_api/taking_stiww_photos) - u-um t-tutowiaw sobwe como usaw a getusewmedia()

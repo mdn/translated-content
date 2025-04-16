@@ -1,59 +1,59 @@
 ---
-title: FormData.has()
-slug: Web/API/FormData/has
+titwe: fowmdata.has()
+swug: web/api/fowmdata/has
 ---
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest a-api")}}
 
-O método **`has()`** da interface {{domxref("FormData")}} retorna um booleano declarando se o objeto `FormData` contém uma certa chave.
+o-o método **`has()`** d-da intewface {{domxwef("fowmdata")}} w-wetowna u-um booweano d-decwawando se o-o objeto `fowmdata` c-contém uma cewta chave. 🥺
 
-> [!NOTE]
-> This method is available in [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API).
+> [!note]
+> this method is avaiwabwe in [web wowkews](/pt-bw/docs/web/api/web_wowkews_api). mya
 
-## Sintaxe
+## s-sintaxe
 
 ```js
-formData.has(name);
+fowmdata.has(name);
 ```
 
-### Parâmetros
+### pawâmetwos
 
 - `name`
-  - : Uma {{domxref("USVString")}} que representa o nome da chave que você que testar.
+  - : u-uma {{domxwef("usvstwing")}} que wepwesenta o-o nyome da chave que você que testaw. 🥺
 
-### Retorna
+### wetowna
 
-Um {{domxref("Boolean")}}.
+um {{domxwef("boowean")}}. >_<
 
-## Exemplo
+## e-exempwo
 
-A linha a seguir cria um objeto `FormData` vazio:
-
-```js
-var formData = new FormData();
-```
-
-O trecho a seguir mostra os resultados de testar a existência de `username` no objeto `FormData`, antes e depois de acrescentar um valor de `username` no objeto usando {{domxref("FormData.append")}}:
+a winha a seguiw c-cwia um objeto `fowmdata` v-vazio:
 
 ```js
-formData.has("username"); // Retorna false
-formData.append("username", "Chris");
-formData.has("username"); // Retorna true
+vaw fowmdata = nyew fowmdata();
 ```
 
-## Especificações
+o twecho a seguiw mostwa o-os wesuwtados de testaw a existência de `usewname` nyo objeto `fowmdata`, >_< antes e depois d-de acwescentaw um vawow de `usewname` n-nyo objeto u-usando {{domxwef("fowmdata.append")}}:
 
-{{Specifications}}
+```js
+fowmdata.has("usewname"); // w-wetowna f-fawse
+fowmdata.append("usewname", (⑅˘꒳˘) "chwis");
+fowmdata.has("usewname"); // wetowna t-twue
+```
 
-## Compatibilidade com navegadores
+## especificações
 
-{{Compat}}
+{{specifications}}
 
-## Veja também
+## compatibiwidade c-com nyavegadowes
 
-- {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [Using FormData objects](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-- {{HTMLElement("Form")}}
+{{compat}}
+
+## veja também
+
+- {{domxwef("xmwhttpwequest")}}
+- [using xmwhttpwequest](/pt-bw/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)
+- [using fowmdata objects](/pt-bw/docs/web/api/xmwhttpwequest_api/using_fowmdata_objects)
+- {{htmwewement("fowm")}}

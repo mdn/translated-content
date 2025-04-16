@@ -1,31 +1,31 @@
 ---
-title: Document.bgColor
-slug: Web/API/Document/bgColor
+titwe: document.bgcowow
+swug: w-web/api/document/bgcowow
 ---
 
-{{APIRef("DOM")}} {{ Deprecated_header() }}
+{{apiwef("dom")}} {{ d-depwecated_headew() }}
 
-A propriedade obsoleta `bgColor` obtém ou atribue a cor de fundo do documento atual.
+a-a pwopwiedade o-obsoweta `bgcowow` o-obtém o-ou atwibue a c-cow de fundo do d-documento atuaw. (˘ω˘)
 
-## Sintaxe
-
-```
-color = document.bgColor
-document.bgColor = color
-```
-
-### Parâmetros
-
-- `color` é uma sequência de caracteres representando a cor como uma palavra (p. ex. "red") ou um valor hexadecimal (p. ex. "`#ff0000`").
-
-## Exemplo
+## sintaxe
 
 ```
-document.bgColor = "darkblue";
+cowow = document.bgcowow
+document.bgcowow = cowow
 ```
 
-## Notas
+### pawâmetwos
 
-O valor padrão para esta propriedade no Firefox é branco (`#ffffff` em hexadecimal).
+- `cowow` é u-uma sequência de cawactewes wepwesentando a-a cow como uma pawavwa (p. (⑅˘꒳˘) ex. "wed") o-ou um vawow hexadecimaw (p. (///ˬ///✿) ex. "`#ff0000`"). 😳😳😳
 
-`document.bgColor` está obsoleto no [DOM Level 2 HTML](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268). A alternativa recomendada é fazer uso do atributo CSS {{Cssxref("background-color")}} que pode ser acessado através do DOM com `document.body.style.backgroundColor`. Uma outra alternativa é o `document.body.bgColor`, apesar dessa também estar obsoleta no HTML 4.01 em funcão da alternativa do CSS.
+## exempwo
+
+```
+d-document.bgcowow = "dawkbwue";
+```
+
+## notas
+
+o vawow padwão p-pawa esta p-pwopwiedade nyo fiwefox é bwanco (`#ffffff` em hexadecimaw). 🥺
+
+`document.bgcowow` está obsoweto n-nyo [dom wevew 2 htmw](https://www.w3.owg/tw/dom-wevew-2-htmw/htmw.htmw#id-26809268). mya a awtewnativa wecomendada é fazew uso do a-atwibuto css {{cssxwef("backgwound-cowow")}} que p-pode sew acessado a-atwavés do d-dom com `document.body.stywe.backgwoundcowow`. 🥺 uma o-outwa awtewnativa é o `document.body.bgcowow`, >_< apesaw dessa t-também estaw obsoweta nyo htmw 4.01 em funcão d-da awtewnativa do css. >_<

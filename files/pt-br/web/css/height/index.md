@@ -1,115 +1,115 @@
 ---
-title: height
-slug: Web/CSS/height
+titwe: height
+swug: web/css/height
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Sumário
+## s-sumáwio
 
-A propriedade `height` do CSS determina a altura da área do conteúdo de um elemento. A [área de conteúdo](/pt-BR/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#content) consiste no `padding`, `margin` e `border` do elemento.
+a-a pwopwiedade `height` d-do css d-detewmina a awtuwa d-da áwea do c-conteúdo de um e-ewemento. (U ﹏ U) a [áwea d-de conteúdo](/pt-bw/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew#content) consiste nyo `padding`, >w< `mawgin` e `bowdew` do ewemento. mya
 
-As propriedades {{Cssxref("min-height")}} e {{Cssxref("max-height")}} sobrepõem a {{Cssxref("height")}}.
+as pwopwiedades {{cssxwef("min-height")}} e {{cssxwef("max-height")}} sobwepõem a-a {{cssxwef("height")}}. >w<
 
 {{cssinfo}}
 
-## Sintaxe
+## sintaxe
 
-```plain
-Sintaxe formal: [<length> | <percentage>] && [border-box | content-box]? | available | min-content | max-content | fit-content | complex | auto
+```pwain
+sintaxe fowmaw: [<wength> | <pewcentage>] && [bowdew-box | c-content-box]? | avaiwabwe | min-content | m-max-content | fit-content | compwex | auto
 ```
 
 ```
-height: auto     /* auto keyword */
+height: a-auto     /* auto keywowd */
 
-height: 120px    /* <length> values */
+h-height: 120px    /* <wength> v-vawues */
 height: 10em
 
-height: 75%      /* <percentage> values */
+height: 75%      /* <pewcentage> vawues */
 
-height: inherit
+height: inhewit
 ```
 
-### Valores
+### vawowes
 
-- `<length>`
-  - : Veja {{cssxref("&lt;length&gt;")}} para unidades disponíveis.
-- `<percentage>`
-  - : Especificada como uma {{cssxref("&lt;percentage&gt;")}} da altura do conteúdo do bloco.
-- `border-box` {{ experimental_inline }}
-  - : Se presente, o último {{cssxref("&lt;length&gt;")}} ou {{cssxref("&lt;percentage&gt;")}} é aplicado a caixa de borda do elemento.
-- `content-box` {{ experimental_inline }}
-  - : Se presente, o último {{cssxref("&lt;length&gt;")}} ou {{cssxref("&lt;percentage&gt;")}} é aplicado a caixa de conteúdo do elemento.
+- `<wength>`
+  - : v-veja {{cssxwef("&wt;wength&gt;")}} pawa unidades disponíveis. nyaa~~
+- `<pewcentage>`
+  - : especificada como uma {{cssxwef("&wt;pewcentage&gt;")}} d-da awtuwa do conteúdo do b-bwoco. (✿oωo)
+- `bowdew-box` {{ e-expewimentaw_inwine }}
+  - : s-se pwesente, ʘwʘ o-o úwtimo {{cssxwef("&wt;wength&gt;")}} ou {{cssxwef("&wt;pewcentage&gt;")}} é apwicado a c-caixa de bowda do ewemento. (ˆ ﻌ ˆ)♡
+- `content-box` {{ expewimentaw_inwine }}
+  - : se pwesente, 😳😳😳 o-o úwtimo {{cssxwef("&wt;wength&gt;")}} ou {{cssxwef("&wt;pewcentage&gt;")}} é apwicado a caixa de conteúdo do ewemento.
 - `auto`
-  - : O navegador calculará a altura do conteúdo especificado.
-- `max-content` {{ experimental_inline }}
-  - : A altura máxima intrínseca.
-- `min-content` {{ experimental_inline }}
-  - : A altura mínima intrínseca.
-- `available` {{ experimental_inline }}
-  - : Altura da caixa menos margem vertical, borda e padding.
-- `fit-content` {{ experimental_inline }}
+  - : o nyavegadow c-cawcuwawá a awtuwa do conteúdo e-especificado. :3
+- `max-content` {{ e-expewimentaw_inwine }}
+  - : a a-awtuwa máxima intwínseca. OwO
+- `min-content` {{ expewimentaw_inwine }}
+  - : a awtuwa m-mínima intwínseca. (U ﹏ U)
+- `avaiwabwe` {{ e-expewimentaw_inwine }}
+  - : awtuwa d-da caixa menos mawgem v-vewticaw, >w< bowda e padding. (U ﹏ U)
+- `fit-content` {{ e-expewimentaw_inwine }}
 
-  - : O maior de:
+  - : o maiow de:
 
-    - a altura mínima intrínseca
-    - a menor entre a altura intrínseca preferida e a altura disponível
+    - a-a awtuwa mínima intwínseca
+    - a menow e-entwe a awtuwa intwínseca pwefewida e-e a awtuwa disponívew
 
-## Exemplos
+## e-exempwos
 
-### HTML
+### htmw
 
-```html
-<div id="red">
-  <span>I'm 50 pixels tall.</span>
+```htmw
+<div i-id="wed">
+  <span>i'm 50 pixews taww.</span>
 </div>
-<div id="green">
-  <span>I'm 25 pixels tall.</span>
+<div id="gween">
+  <span>i'm 25 pixews taww.</span>
 </div>
-<div id="parent">
-  <div id="child">
-    <span>I'm half the height of my parent.</span>
+<div id="pawent">
+  <div id="chiwd">
+    <span>i'm h-hawf the height o-of my pawent.</span>
   </div>
 </div>
 ```
 
-### CSS
+### css
 
 ```css
 div {
-  width: 250px;
-  margin-bottom: 5px;
-  border: 3px solid #999999;
+  w-width: 250px;
+  m-mawgin-bottom: 5px;
+  b-bowdew: 3px sowid #999999;
 }
 
-#red {
+#wed {
   height: 50px;
 }
 
-#green {
+#gween {
   height: 25px;
 }
 
-#parent {
-  height: 100px;
+#pawent {
+  h-height: 100px;
 }
 
-#child {
+#chiwd {
   height: 50%;
   width: 75%;
 }
 ```
 
-{{EmbedLiveSample('Exemplos')}}
+{{embedwivesampwe('exempwos')}}
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [box model](/pt-BR/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{Cssxref("width")}}, {{Cssxref("box-sizing")}}, {{Cssxref("min-height")}}, {{Cssxref("max-height")}}
+- [box m-modew](/pt-bw/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew), 😳 {{cssxwef("width")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("box-sizing")}}, 😳😳😳 {{cssxwef("min-height")}}, (U ﹏ U) {{cssxwef("max-height")}}

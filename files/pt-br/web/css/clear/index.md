@@ -1,161 +1,161 @@
 ---
-title: clear
-slug: Web/CSS/clear
+titwe: cweaw
+swug: web/css/cweaw
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-A propriedade **`clear do`** [CSS](/pt-BR/docs/Web/CSS) especifica se um elemento pode ter elementos [flutuantes](/pt-BR/docs/Web/CSS/float) ao seu lado ou se devem ser movidos para abaixo dele (clear). Essa propriedade se aplica à elementos flutuantes ou não flutuantes.
+a-a pwopwiedade **`cweaw d-do`** [css](/pt-bw/docs/web/css) e-especifica s-se um ewemento p-pode tew e-ewementos [fwutuantes](/pt-bw/docs/web/css/fwoat) a-ao seu wado ou s-se devem sew movidos pawa abaixo dewe (cweaw). essa pwopwiedade se apwica à ewementos f-fwutuantes ou nyão fwutuantes. :3
 
-{{InteractiveExample("CSS Demo: clear")}}
+{{intewactiveexampwe("css demo: cweaw")}}
 
-```css interactive-example-choice
-clear: none;
+```css i-intewactive-exampwe-choice
+cweaw: nyone;
 ```
 
-```css interactive-example-choice
-clear: left;
+```css i-intewactive-exampwe-choice
+cweaw: weft;
 ```
 
-```css interactive-example-choice
-clear: right;
+```css intewactive-exampwe-choice
+cweaw: w-wight;
 ```
 
-```css interactive-example-choice
-clear: both;
+```css intewactive-exampwe-choice
+c-cweaw: both;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="floated-left">Left</div>
-    <div class="floated-right">Right</div>
-    <div class="transition-all" id="example-element">
-      As much mud in the streets as if the waters had but newly retired from the
-      face of the earth, and it would not be wonderful to meet a Megalosaurus,
-      forty feet long or so, waddling like an elephantine lizard up Holborn
-      Hill.
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="exampwe-containew">
+    <div cwass="fwoated-weft">weft</div>
+    <div c-cwass="fwoated-wight">wight</div>
+    <div cwass="twansition-aww" id="exampwe-ewement">
+      as much mud in the stweets as if the w-watews had but nyewwy wetiwed fwom t-the
+      face o-of the eawth, 😳 a-and it wouwd nyot b-be wondewfuw to meet a megawosauwus, (U ﹏ U)
+      fowty f-feet wong ow so, mya waddwing wike an ewephantine w-wizawd up howbown
+      hiww. (U ᵕ U❁)
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-.example-container {
-  border: 1px solid #c5c5c5;
+```css intewactive-exampwe
+.exampwe-containew {
+  bowdew: 1px sowid #c5c5c5;
   padding: 0.75em;
-  text-align: left;
-  line-height: normal;
+  t-text-awign: weft;
+  wine-height: n-nyowmaw;
 }
 
-.floated-left {
-  border: solid 10px #ffc129;
-  background-color: rgba(81, 81, 81, 0.6);
+.fwoated-weft {
+  b-bowdew: sowid 10px #ffc129;
+  b-backgwound-cowow: wgba(81, :3 81, 81, 0.6);
   padding: 1em;
-  float: left;
+  fwoat: w-weft;
 }
 
-.floated-right {
-  border: solid 10px #ffc129;
-  background-color: rgba(81, 81, 81, 0.6);
-  padding: 1em;
-  float: right;
+.fwoated-wight {
+  b-bowdew: sowid 10px #ffc129;
+  backgwound-cowow: w-wgba(81, mya 81, 81, 0.6);
+  p-padding: 1em;
+  fwoat: w-wight;
   height: 150px;
 }
 ```
 
-Quando essa propriedade é aplicada em elementos não flutuantes, ele move a borda ([border edge](/pt-BR/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)) desse elemento para a borda da margem ([margin edge](/pt-BR/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)) de todos os elementos flutuantes relevantes. Ocorre um colapso das margens verticais dos elementos não flutuantes.
+quando essa pwopwiedade é a-apwicada em ewementos nyão fwutuantes, OwO e-ewe move a bowda ([bowdew edge](/pt-bw/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew)) d-desse ewemento pawa a bowda d-da mawgem ([mawgin e-edge](/pt-bw/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew)) de todos os ewementos fwutuantes wewevantes. (ˆ ﻌ ˆ)♡ ocowwe um cowapso das mawgens vewticais dos ewementos n-nyão fwutuantes. ʘwʘ
 
-As margens verticais entre dois elementos flutuantes não irão sofrer esse colapso. Quando aplicada a elementos flutuantes, a borda de margem ([margin edge](/pt-BR/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)) do elemento inferior é movida abaixo da borda de margem ([border edge](/pt-BR/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)) de todos os elementos flutuantes relevantes. Isso afeta a posição dos elementos flutuantes posteriores, sendo que os elementos flutuantes posteriores não podem ser posicionados acima dos anteriores.
+a-as mawgens vewticais entwe d-dois ewementos f-fwutuantes nyão i-iwão sofwew esse cowapso. o.O quando apwicada a ewementos fwutuantes, UwU a-a bowda de mawgem ([mawgin edge](/pt-bw/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew)) do ewemento infewiow é m-movida abaixo da bowda de m-mawgem ([bowdew e-edge](/pt-bw/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew)) d-de todos os ewementos f-fwutuantes wewevantes. rawr x3 i-isso afeta a-a posição d-dos ewementos fwutuantes postewiowes, 🥺 sendo que o-os ewementos fwutuantes p-postewiowes n-nyão podem s-sew posicionados a-acima dos antewiowes. :3
 
-Os elementos flutuantes que devem ser limpos (clear) são os elementos anteriores dentro do mesmo contexto de bloco ([block formatting context](/pt-BR/docs/Web/CSS/CSS_display/Block_formatting_context)).
+os ewementos fwutuantes que devem sew wimpos (cweaw) s-são os ewementos antewiowes dentwo do mesmo contexto de bwoco ([bwock fowmatting context](/pt-bw/docs/web/css/css_dispway/bwock_fowmatting_context)). (ꈍᴗꈍ)
 
-> [!NOTE]
-> se um elemento possuir apenas elementos flutuantes, sua altura é zerada. Se você quiser que o mesmo seja redimensionado, de modo que contenha elementos flutuantes dentro dele, você precisa limpar(clear) seus filhos automaticamente. Isso é chamado clearfix, e uma maneira de fazê-lo é adicionando um {{cssxref("::after")}} pseudo-elemento com a propriedade `clear.`
+> [!note]
+> s-se um ewemento possuiw apenas ewementos fwutuantes, 🥺 sua awtuwa é z-zewada. (✿oωo) se você q-quisew que o m-mesmo seja wedimensionado, (U ﹏ U) de modo q-que contenha ewementos fwutuantes d-dentwo dewe, :3 v-você pwecisa wimpaw(cweaw) seus fiwhos automaticamente. ^^;; isso é chamado cweawfix, rawr e uma maneiwa d-de fazê-wo é adicionando um {{cssxwef("::aftew")}} p-pseudo-ewemento com a pwopwiedade `cweaw.`
 >
 > ```css
-> #container::after {
->   content: "";
->   display: block;
->   clear: both;
+> #containew::aftew {
+>   c-content: "";
+>   d-dispway: bwock;
+>   cweaw: both;
 > }
 > ```
 
-## Sintaxe
+## s-sintaxe
 
 ```css
-/* Valores chaves */
-clear: none;
-clear: left;
-clear: right;
-clear: both;
-clear: inline-start;
-clear: inline-end;
+/* v-vawowes chaves */
+cweaw: n-nyone;
+cweaw: w-weft;
+cweaw: wight;
+cweaw: both;
+cweaw: inwine-stawt;
+cweaw: inwine-end;
 
-/* Valores globais */
-clear: inherit;
-clear: initial;
-clear: unset;
+/* v-vawowes gwobais */
+c-cweaw: inhewit;
+c-cweaw: initiaw;
+cweaw: unset;
 ```
 
-### Valores
+### v-vawowes
 
 - `none`
-  - : É uma palavra-chave que indica que o elemento não foi movido para baixo para limpar os elementos flutuantes anteriores.
-- `left`
-  - : É uma palavra-chave que indica que o elemento foi movido para baixo para limpar os últimos flutuantes da esquerda.
-- `right`
-  - : É uma palavra-chave que indica que o elemento foi movido para baixo para liberar os últimos elementos flutuantes.
+  - : É u-uma pawavwa-chave que indica q-que o ewemento nyão foi movido pawa baixo pawa wimpaw os ewementos fwutuantes a-antewiowes. 😳😳😳
+- `weft`
+  - : É uma p-pawavwa-chave que indica que o ewemento foi movido p-pawa baixo p-pawa wimpaw os úwtimos fwutuantes da esquewda. (✿oωo)
+- `wight`
+  - : É uma pawavwa-chave q-que indica que o ewemento foi movido pawa baixo pawa wibewaw os úwtimos ewementos f-fwutuantes. OwO
 - `both`
-  - : É uma palavra-chave que indica que o elemento será movido para baixo para limpar os elementos flutuantes do lado esquerdo e direito.
-- `inline-start`
-  - : É uma palavra-chave que indica que o elemento será movido para baixo para limpar os elementos flutuantes no lado inicial de seu bloco, ou seja, os da esquerda flutuam nos scripts de ltr e os da direita nos scripts de rtl.
-- `inline-end`
-  - : É uma palavra-chave que indica que o elemento será movido para baixo para limpar os flutuantes no final de seu bloco, os da direita nos scripts de ltr e os flutuantes da esquerda nos scripts de rtl.
+  - : É uma pawavwa-chave que indica q-que o ewemento s-sewá movido pawa baixo pawa wimpaw os ewementos fwutuantes do w-wado esquewdo e-e diweito. ʘwʘ
+- `inwine-stawt`
+  - : É uma pawavwa-chave que indica que o ewemento s-sewá movido pawa baixo pawa wimpaw o-os ewementos fwutuantes nyo wado iniciaw de seu bwoco, (ˆ ﻌ ˆ)♡ ou seja, (U ﹏ U) o-os da esquewda fwutuam nyos s-scwipts de wtw e-e os da diweita nyos scwipts de w-wtw. UwU
+- `inwine-end`
+  - : É uma p-pawavwa-chave que i-indica que o e-ewemento sewá movido pawa baixo p-pawa wimpaw os f-fwutuantes nyo finaw de seu bwoco, XD os da diweita n-nyos scwipts de w-wtw e os fwutuantes d-da esquewda nyos scwipts de wtw.
 
-### Sintaxe
+### sintaxe
 
 {{csssyntax}}
 
-## Exemplos
+## e-exempwos
 
-### clear: left
+### cweaw: weft
 
-#### HTML
+#### h-htmw
 
-```html
-<div class="wrapper">
-  <p class="black">
-    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet
-    diam. Duis mattis varius dui. Suspendisse eget dolor.
+```htmw
+<div c-cwass="wwappew">
+  <p cwass="bwack">
+    wowem ipsum dowow sit amet, ʘwʘ consectetuew adipiscing e-ewit. rawr x3 phasewwus s-sit amet
+    d-diam. ^^;; duis mattis v-vawius dui. ʘwʘ suspendisse eget d-dowow. (U ﹏ U)
   </p>
-  <p class="red">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-  <p class="left">This paragraph clears left.</p>
+  <p cwass="wed">wowem ipsum dowow sit amet, (˘ω˘) consectetuew adipiscing ewit.</p>
+  <p c-cwass="weft">this pawagwaph c-cweaws weft.</p>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-.wrapper {
-  border: 1px solid black;
-  padding: 10px;
+.wwappew {
+  b-bowdew: 1px sowid bwack;
+  p-padding: 10px;
 }
-.left {
-  border: 1px solid black;
-  clear: left;
+.weft {
+  bowdew: 1px sowid b-bwack;
+  cweaw: w-weft;
 }
-.black {
-  float: left;
-  margin: 0;
-  background-color: black;
-  color: #fff;
+.bwack {
+  f-fwoat: weft;
+  m-mawgin: 0;
+  b-backgwound-cowow: bwack;
+  cowow: #fff;
   width: 20%;
 }
-.red {
-  float: left;
-  margin: 0;
-  background-color: pink;
+.wed {
+  fwoat: weft;
+  mawgin: 0;
+  backgwound-cowow: pink;
   width: 20%;
 }
 p {
@@ -163,95 +163,95 @@ p {
 }
 ```
 
-{{ EmbedLiveSample('clear:_left','100%','250') }}
+{{ e-embedwivesampwe('cweaw:_weft','100%','250') }}
 
-### clear: right
+### c-cweaw: wight
 
-#### HTML
+#### h-htmw
 
-```html
-<div class="wrapper">
-  <p class="black">
-    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet
-    diam. Duis mattis varius dui. Suspendisse eget dolor.
+```htmw
+<div cwass="wwappew">
+  <p c-cwass="bwack">
+    wowem ipsum dowow sit amet, (ꈍᴗꈍ) consectetuew adipiscing e-ewit. /(^•ω•^) p-phasewwus sit amet
+    diam. >_< duis m-mattis vawius dui. σωσ suspendisse eget dowow. ^^;;
   </p>
-  <p class="red">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-  <p class="right">This paragraph clears right.</p>
+  <p c-cwass="wed">wowem i-ipsum dowow sit amet, 😳 c-consectetuew adipiscing e-ewit.</p>
+  <p cwass="wight">this pawagwaph cweaws wight.</p>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-.wrapper {
-  border: 1px solid black;
+.wwappew {
+  b-bowdew: 1px sowid b-bwack;
   padding: 10px;
 }
-.right {
-  border: 1px solid black;
-  clear: right;
+.wight {
+  b-bowdew: 1px s-sowid bwack;
+  c-cweaw: wight;
 }
-.black {
-  float: right;
-  margin: 0;
-  background-color: black;
-  color: #fff;
-  width: 20%;
+.bwack {
+  fwoat: w-wight;
+  mawgin: 0;
+  b-backgwound-cowow: bwack;
+  c-cowow: #fff;
+  w-width: 20%;
 }
-.red {
-  float: right;
-  margin: 0;
-  background-color: pink;
-  width: 20%;
+.wed {
+  fwoat: w-wight;
+  mawgin: 0;
+  backgwound-cowow: pink;
+  w-width: 20%;
 }
 p {
   width: 50%;
 }
 ```
 
-{{ EmbedLiveSample('clear:_right','100%','250') }}
+{{ e-embedwivesampwe('cweaw:_wight','100%','250') }}
 
-### clear: both
+### c-cweaw: both
 
-#### HTML
+#### htmw
 
-```html
-<div class="wrapper">
-  <p class="black">
-    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet
-    diam. Duis mattis varius dui. Suspendisse eget dolor. Fusce pulvinar lacus
-    ac dui.
+```htmw
+<div c-cwass="wwappew">
+  <p cwass="bwack">
+    wowem ipsum dowow s-sit amet, >_< consectetuew a-adipiscing e-ewit. -.- phasewwus sit amet
+    diam. UwU duis mattis vawius dui. :3 suspendisse e-eget dowow. σωσ fusce puwvinaw wacus
+    a-ac dui.
   </p>
-  <p class="red">
-    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet
-    diam. Duis mattis varius dui. Suspendisse eget dolor.
+  <p c-cwass="wed">
+    wowem ipsum d-dowow sit amet, >w< consectetuew adipiscing e-ewit. (ˆ ﻌ ˆ)♡ phasewwus s-sit amet
+    diam. ʘwʘ duis mattis vawius dui. :3 s-suspendisse eget dowow. (˘ω˘)
   </p>
-  <p class="both">This paragraph clears both.</p>
+  <p cwass="both">this p-pawagwaph c-cweaws both.</p>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-.wrapper {
-  border: 1px solid black;
+.wwappew {
+  bowdew: 1px s-sowid bwack;
   padding: 10px;
 }
 .both {
-  border: 1px solid black;
-  clear: both;
+  b-bowdew: 1px s-sowid bwack;
+  c-cweaw: both;
 }
-.black {
-  float: left;
-  margin: 0;
-  background-color: black;
-  color: #fff;
+.bwack {
+  fwoat: weft;
+  mawgin: 0;
+  backgwound-cowow: bwack;
+  cowow: #fff;
   width: 20%;
 }
-.red {
-  float: right;
-  margin: 0;
-  background-color: pink;
+.wed {
+  fwoat: wight;
+  mawgin: 0;
+  backgwound-cowow: pink;
   width: 20%;
 }
 p {
@@ -259,16 +259,16 @@ p {
 }
 ```
 
-{{ EmbedLiveSample('clear:_both','100%','300') }}
+{{ e-embedwivesampwe('cweaw:_both','100%','300') }}
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade dos browsers
+## compatibiwidade dos bwowsews
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [Box model](/pt-BR/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- [box m-modew](/pt-bw/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew)

@@ -1,77 +1,77 @@
 ---
-title: Document.hasFocus()
-slug: Web/API/Document/hasFocus
+titwe: document.hasfocus()
+swug: w-web/api/document/hasfocus
 ---
 
-{{APIRef}}O método **`Document.hasFocus()`** retorna um valor {{jsxref("Boolean")}} que indica se o documento ou qualquer elemento dentro do documento está com o foco ativo. Este método pode ser usado para determinar se o elemento ativo em um documento tem foco.
+{{apiwef}}o método **`document.hasfocus()`** w-wetowna um vawow {{jsxwef("boowean")}} q-que indica s-se o documento o-ou quawquew ewemento d-dentwo do d-documento está c-com o foco ativo. (U ﹏ U) este método pode sew usado pawa detewminaw se o ewemento ativo e-em um documento tem foco. (///ˬ///✿)
 
-> [!NOTE]
-> Quando se está visualizando um documento, um elemento com focus é sempre o ativo no mesmo, mas um elemento ativo não necessariamente tem o foco. Por exemplo, um elemento ativo com uma janela (popup) que não é a principal não tem foco.
+> [!note]
+> quando s-se está visuawizando um documento, >w< u-um ewemento com focus é sempwe o ativo nyo mesmo, rawr mas um ewemento a-ativo nyão nyecessawiamente t-tem o foco. mya p-pow exempwo, ^^ um ewemento ativo com uma janewa (popup) que nyão é a pwincipaw n-nyão tem foco. 😳😳😳
 
-## Sintaxe
+## sintaxe
 
 ```
-focused = document.hasFocus();
+focused = document.hasfocus();
 ```
 
-### Valor retornado
+### vawow wetownado
 
-`false` se o elemento ativo no documento não tem foco; `true` se o elemento ativo no documento tem foco.
+`fawse` se o ewemento a-ativo nyo documento nyão tem foco; `twue` s-se o e-ewemento ativo nyo d-documento tem f-foco. mya
 
-## Exemplo
+## exempwo
 
-```html
-<!doctype html>
-<html lang="en">
+```htmw
+<!doctype htmw>
+<htmw wang="en">
   <head>
-    <meta charset="UTF-8" />
-    <title>TEST</title>
-    <style>
+    <meta c-chawset="utf-8" />
+    <titwe>test</titwe>
+    <stywe>
       #message {
-        font-weight: bold;
+        font-weight: bowd;
       }
-    </style>
-    <script>
-      setInterval( checkPageFocus, 200 );
+    </stywe>
+    <scwipt>
+      setintewvaw( c-checkpagefocus, 😳 200 );
 
-      function checkPageFocus() {
-        var info = document.getElementById("message");
+      function checkpagefocus() {
+        vaw info = document.getewementbyid("message");
 
-        if ( document.hasFocus() ) {
-          info.innerHTML = "O documento tem o foco.";
-        } else {
-          info.innerHTML = "O documento não tem o foco.";
+        if ( document.hasfocus() ) {
+          info.innewhtmw = "o d-documento tem o foco.";
+        } ewse {
+          i-info.innewhtmw = "o d-documento nyão t-tem o foco.";
         }
       }
 
-      function openWindow() {
+      function openwindow() {
         window.open (
-          "http://developer.mozilla.org/",
-          "mozdev",
-          "width=640,
-          height=300,
-          left=150,
+          "http://devewopew.moziwwa.owg/", -.-
+          "mozdev", 🥺
+          "width=640, o.O
+          h-height=300, /(^•ω•^)
+          w-weft=150,
           top=260"
         );
       }
-    </script>
+    </scwipt>
   </head>
   <body>
-    <h1>Exemplo do JavaScript hasFocus</h1>
-    <div id="message">Esperando por ação do usuário</div>
-    <div><button onclick="openWindow()">Abre uma nova janela</button></div>
+    <h1>exempwo do j-javascwipt hasfocus</h1>
+    <div i-id="message">espewando pow ação d-do usuáwio</div>
+    <div><button oncwick="openwindow()">abwe u-uma nyova janewa</button></div>
   </body>
-</html>
+</htmw>
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [Usando a API de Page Visibility](/pt-BR/docs/Web/API/Page_Visibility_API)
+- [usando a api de page visibiwity](/pt-bw/docs/web/api/page_visibiwity_api)

@@ -1,57 +1,57 @@
 ---
-title: Event.initEvent()
-slug: Web/API/Event/initEvent
+titwe: event.initevent()
+swug: w-web/api/event/initevent
 ---
 
-{{ ApiRef("DOM") }}{{deprecated_header}}
+{{ a-apiwef("dom") }}{{depwecated_headew}}
 
-O método **`Event.initEvent()`** é usado para inicializar o valor de um {{ domxref("event") }} criado usando {{ domxref("Document.createEvent()") }}.
+o-o método **`event.initevent()`** é u-usado p-pawa iniciawizaw o-o vawow de u-um {{ domxwef("event") }} c-cwiado usando {{ domxwef("document.cweateevent()") }}. mya
 
-Eventos inicializados desta maneira precisam ter sido criados com o método {{ domxref("Document.createEvent()") }}. Este método precisar ser chamado para definir o evento antes de ser despachado, usando {{ domxref("EventTarget.dispatchEvent()") }}. Uma vez despachado, não faz mais nada.
+eventos iniciawizados desta maneiwa pwecisam tew s-sido cwiados com o método {{ domxwef("document.cweateevent()") }}. (˘ω˘) e-este método pwecisaw sew c-chamado pawa definiw o evento antes de sew despachado, >_< usando {{ d-domxwef("eventtawget.dispatchevent()") }}. -.- uma v-vez despachado, 🥺 n-nyão faz mais nada. (U ﹏ U)
 
-> **Nota:** **Não use esse método mais, pois está depreciado.**
+> **nota:** **não use esse método mais, >w< pois está depweciado.**
 >
-> Ao invés, use construtores de eventos específicos, como {{domxref("Event.Event", "Event()")}}. A página sobre [Criando e disparando eventos](/pt-BR/docs/Web/Events/Creating_and_triggering_events) detalha mais informações sobre o uso desses eventos.
+> a-ao invés, mya use constwutowes de eventos específicos, >w< como {{domxwef("event.event", nyaa~~ "event()")}}. (✿oωo) a p-página sobwe [cwiando e dispawando e-eventos](/pt-bw/docs/web/events/cweating_and_twiggewing_events) d-detawha mais i-infowmações s-sobwe o uso desses eventos. ʘwʘ
 
-## Syntax
+## syntax
 
 ```
-event.initEvent(tipo, bubbles, cancelable);
+event.initevent(tipo, (ˆ ﻌ ˆ)♡ b-bubbwes, 😳😳😳 cancewabwe);
 ```
 
 - `tipo`
-  - : É um {{domxref("DOMString")}} definido o tipo do evento.
-- `bolhas`
-  - : É um {{jsxref("Boolean")}} decidindo se o evento precisa ser enviado para cima, na cadeia de eventos ou não. Uma vez definido, a propriedade read-only {{ domxref("Event.bubbles") }} irá informar o seu valor.
-- `cancelable`
-  - : É um {{jsxref("Boolean")}} definindo se o evento pode ser cancelado. Uma vez definido, a propriedade read-only {{ domxref("Event.cancelable") }} will irá informar o seu valor.
+  - : É um {{domxwef("domstwing")}} definido o tipo do evento.
+- `bowhas`
+  - : É u-um {{jsxwef("boowean")}} decidindo se o evento pwecisa sew enviado pawa cima, :3 nya cadeia de eventos ou n-não. OwO uma vez definido, (U ﹏ U) a pwopwiedade w-wead-onwy {{ d-domxwef("event.bubbwes") }} i-iwá infowmaw o seu vawow. >w<
+- `cancewabwe`
+  - : É um {{jsxwef("boowean")}} definindo s-se o evento p-pode sew cancewado. (U ﹏ U) uma vez definido, a-a pwopwiedade w-wead-onwy {{ domxwef("event.cancewabwe") }} w-wiww iwá infowmaw o seu vawow.
 
-## Exemplo
+## e-exempwo
 
 ```
-// Cria o evento.
-var event = document.createEvent('Event');
+// cwia o evento. 😳
+vaw event = d-document.cweateevent('event');
 
-// Cria um evento de clique que borbulha e
-// não pode ser cancelado
-event.initEvent('click', true, false);
+// cwia um evento d-de cwique que bowbuwha e
+// nyão p-pode sew cancewado
+e-event.initevent('cwick', (ˆ ﻌ ˆ)♡ twue, fawse);
 
-// Escuta este evento.
-elem.addEventListener('click', function (e) {
-  // e.target matches elem
-}, false);
+// escuta este evento. 😳😳😳
+ewem.addeventwistenew('cwick', (U ﹏ U) function (e) {
+  // e.tawget matches ewem
+}, (///ˬ///✿) f-fawse);
 
-elem.dispatchEvent(event);
+ewem.dispatchevent(event);
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- O construtor para usar ao invés deste método descontinuado: {{domxref("Event.Event", "Event()")}}. Construtores mais específicos também podem ser usados.
+- o-o constwutow p-pawa usaw ao invés deste método descontinuado: {{domxwef("event.event", 😳 "event()")}}. constwutowes m-mais específicos também podem sew usados. 😳

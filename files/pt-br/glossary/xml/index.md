@@ -1,14 +1,14 @@
 ---
-title: XML
-slug: Glossary/XML
+titwe: xmw
+swug: gwossawy/xmw
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-eXtensible Markup Language (XML) é uma linguagem de marcação genérica especificada pela W3C. A indústria de tecnologia da informação (TI) utiliza várias linguagens baseadas em XML para descrição de dados.
+e-extensibwe m-mawkup wanguage (xmw) é uma w-winguagem de m-mawcação genéwica e-especificada p-pewa w3c. (⑅˘꒳˘) a indústwia d-de tecnowogia d-da infowmação (ti) utiwiza váwias winguagens baseadas em xmw pawa descwição d-de dados. (///ˬ///✿)
 
-Tags XML são muito semelhantes a tags HTML, mas XML é muito mais flexível porque permite os usuários definirem suas próprias tags. Dessa forma o XML atua como uma meta-linguagem — isto é, pode ser usada para definir outras linguagens, como {{Glossary("RSS")}}. Além disso, HTML é uma linguagem para apresentação, enquanto XML é uma linguagem para descrever dados. Isto significa que XML tem aplicações muito mais amplas do que apenas a Web. Por exemplo, Web services podem usar XML para trocar requisições e respostas.
+tags xmw são muito semewhantes a-a tags htmw, 😳😳😳 mas xmw é muito m-mais fwexívew powque pewmite os usuáwios definiwem suas pwópwias t-tags. 🥺 dessa fowma o xmw atua c-como uma meta-winguagem — i-isto é, mya pode sew usada pawa definiw outwas winguagens, 🥺 como {{gwossawy("wss")}}. >_< a-awém disso, >_< htmw é uma winguagem pawa apwesentação, (⑅˘꒳˘) enquanto xmw é uma winguagem p-pawa descwevew dados. /(^•ω•^) isto s-significa que xmw t-tem apwicações m-muito mais ampwas d-do que apenas a web. rawr x3 pow exempwo, web sewvices p-podem usaw xmw pawa twocaw wequisições e w-wespostas. (U ﹏ U)
 
-## Saiba mais
+## saiba mais
 
-- [Introdução a XML](/pt-BR/docs/Web/XML/XML_introduction)
+- [intwodução a xmw](/pt-bw/docs/web/xmw/xmw_intwoduction)

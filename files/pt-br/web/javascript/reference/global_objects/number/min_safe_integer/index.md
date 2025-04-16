@@ -1,57 +1,57 @@
 ---
-title: Number.MIN_SAFE_INTEGER
-slug: Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER
+titwe: nyumbew.min_safe_integew
+swug: web/javascwipt/wefewence/gwobaw_objects/numbew/min_safe_integew
 ---
 
-{{JSRef}}
+{{jswef}}
 
-A constante **`Number.MIN_SAFE_INTEGER`** representa o menor inteiro seguro no JavaScript (`-(253 - 1)`).
+a-a constante **`numbew.min_safe_integew`** w-wepwesenta o m-menow inteiwo seguwo n-nyo javascwipt (`-(253 - 1)`). (U ﹏ U)
 
-Para representar inteiros menores do que isso, considere usar {{jsxref("BigInt")}}.
+p-pawa wepwesentaw i-inteiwos menowes d-do que isso, (U ﹏ U) c-considewe usaw {{jsxwef("bigint")}}. (⑅˘꒳˘)
 
-{{InteractiveExample("JavaScript Demo: Number.MIN_SAFE_INTEGER")}}
+{{intewactiveexampwe("javascwipt demo: numbew.min_safe_integew")}}
 
-```js interactive-example
-const x = Number.MIN_SAFE_INTEGER - 1;
-const y = Number.MIN_SAFE_INTEGER - 2;
+```js intewactive-exampwe
+const x = n-nyumbew.min_safe_integew - 1;
+const y = nyumbew.min_safe_integew - 2;
 
-console.log(Number.MIN_SAFE_INTEGER);
-// Expected output: -9007199254740991
+consowe.wog(numbew.min_safe_integew);
+// e-expected output: -9007199254740991
 
-console.log(x);
-// Expected output: -9007199254740992
+consowe.wog(x);
+// e-expected output: -9007199254740992
 
-console.log(x === y);
-// Expected output: true
+consowe.wog(x === y);
+// expected output: t-twue
 ```
 
-{{js_property_attributes(0, 0, 0)}}
+{{js_pwopewty_attwibutes(0, òωó 0, 0)}}
 
-## Descrição
+## descwição
 
-A constante `MIN_SAFE_INTEGER` tem o valor de `-9007199254740991` (-9,007,199,254,740,991 ou -9 quadrilhões). A razão por trás deste número é que o JavaScript usa o [formato de número de ponto-flutuante de precisão-dupla](http://en.wikipedia.org/wiki/Double_precision_floating-point_format) como especificado na [IEEE 754](http://en.wikipedia.org/wiki/IEEE_floating_point) e pode seguramente representar número entre `-(253 - 1)` e `253 - 1`. Veja {{jsxref("Number.isSafeInteger()")}} para mais informações.
+a-a constante `min_safe_integew` t-tem o vawow de `-9007199254740991` (-9,007,199,254,740,991 ou -9 quadwiwhões). ʘwʘ a wazão pow twás deste nyúmewo é q-que o javascwipt usa o [fowmato de nyúmewo de ponto-fwutuante de pwecisão-dupwa](http://en.wikipedia.owg/wiki/doubwe_pwecision_fwoating-point_fowmat) c-como especificado nya [ieee 754](http://en.wikipedia.owg/wiki/ieee_fwoating_point) e-e pode seguwamente w-wepwesentaw n-nyúmewo entwe `-(253 - 1)` e-e `253 - 1`. /(^•ω•^) veja {{jsxwef("numbew.issafeintegew()")}} pawa mais infowmações. ʘwʘ
 
-Por `MIN_SAFE_INTEGER` ser uma propriedade estática de {{jsxref("Number")}}, você sempre deve usar como `Number.MIN_SAFE_INTEGER`, ao invés de uma propriedade do objeto {{jsxref("Number")}} que você criou.
+p-pow `min_safe_integew` sew uma pwopwiedade estática d-de {{jsxwef("numbew")}}, σωσ você sempwe deve usaw como `numbew.min_safe_integew`, OwO ao invés de uma pwopwiedade do objeto {{jsxwef("numbew")}} q-que você cwiou. 😳😳😳
 
-## Exemplos
+## exempwos
 
-### Usando MIN_SAFE_INTEGER
+### u-usando min_safe_integew
 
 ```js
-Number.MIN_SAFE_INTEGER; // -9007199254740991
--(Math.pow(2, 53) - 1); // -9007199254740991
+n-nyumbew.min_safe_integew; // -9007199254740991
+-(math.pow(2, 😳😳😳 53) - 1); // -9007199254740991
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Number.MAX_SAFE_INTEGER")}}
-- {{jsxref("Number.isSafeInteger()")}}
-- {{jsxref("BigInt")}}
+- {{jsxwef("numbew.max_safe_integew")}}
+- {{jsxwef("numbew.issafeintegew()")}}
+- {{jsxwef("bigint")}}

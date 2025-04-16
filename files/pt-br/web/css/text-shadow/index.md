@@ -1,142 +1,142 @@
 ---
-title: text-shadow
-slug: Web/CSS/text-shadow
+titwe: text-shadow
+swug: web/css/text-shadow
 ---
 
-{{ Cssref }}
+{{ c-csswef }}
 
-## Sumário
+## s-sumáwio
 
-A propriedade `text-shadow` acrescenta sombras ao texto. Ela aceita uma lista de sombras separadas por vírgula que serão aplicados ao texto e ao {{ cssxref("text-decoration","text-decorations") }} do elemento.
+a-a pwopwiedade `text-shadow` a-acwescenta s-sombwas ao t-texto. 😳 ewa aceita u-uma wista de s-sombwas sepawadas pow víwguwa que sewão apwicados ao texto e ao {{ cssxwef("text-decowation","text-decowations") }} d-do ewemento. (⑅˘꒳˘)
 
-Cada sombra é especificada como um deslocamento do texto, juntamente com valores opcionais de cor e raio de desfoque.
+cada sombwa é especificada c-como um deswocamento do texto, nyaa~~ j-juntamente com vawowes opcionais de cow e waio de desfoque. OwO
 
-Multiplas sombras são aplicadas de frente-para-trás, com a primeira sombra especificada no topo.
+muwtipwas s-sombwas são apwicadas de f-fwente-pawa-twás, rawr x3 c-com a pwimeiwa sombwa especificada nyo topo. XD
 
-Esta propriedade se aplica a ambos {{cssxref("::first-line")}} e {{cssxref("::first-letter")}} [pseudo-elements](/pt-BR/docs/Web/CSS/Pseudo-elements).
+esta pwopwiedade se apwica a ambos {{cssxwef("::fiwst-wine")}} e-e {{cssxwef("::fiwst-wettew")}} [pseudo-ewements](/pt-bw/docs/web/css/pseudo-ewements). σωσ
 
 {{cssinfo}}
 
-## Sintaxe
+## sintaxe
 
 ```css
-/* deslocamento-x | deslocamento-y | raio-de-desfoque | cor */
-text-shadow: 1px 1px 2px black;
+/* deswocamento-x | deswocamento-y | waio-de-desfoque | cow */
+text-shadow: 1px 1px 2px b-bwack;
 
-/* cor | deslocamento-x | deslocamento-y | raio-de-desfoque */
-text-shadow: #ccc 1px 0 10px;
+/* cow | deswocamento-x | d-deswocamento-y | w-waio-de-desfoque */
+t-text-shadow: #ccc 1px 0 10px;
 
-/* deslocamento-x | deslogamento-y | cor */
-text-shadow: 5px 5px #558abb;
+/* d-deswocamento-x | deswogamento-y | cow */
+t-text-shadow: 5px 5px #558abb;
 
-/* cor | deslocamento-x | deslocamento-y */
-text-shadow: white 2px 5px;
+/* cow | deswocamento-x | deswocamento-y */
+text-shadow: w-white 2px 5px;
 
-/* deslocamento-x | deslocamento-y
-/* Usa o padrão para cor e raio-de-desfoque */
+/* deswocamento-x | deswocamento-y
+/* usa o padwão pawa cow e waio-de-desfoque */
 text-shadow: 5px 10px;
 
-/* Valores globais */
-text-shadow: inherit;
-text-shadow: initial;
-text-shadow: unset;
+/* vawowes gwobais */
+text-shadow: i-inhewit;
+text-shadow: i-initiaw;
+text-shadow: u-unset;
 ```
 
-### Valores
+### v-vawowes
 
-- \<cor>
+- \<cow>
 
-  - : Opcional. Pode ser especificado tanto antes quanto depois dos valores de deslocamento. Se a cor não é especificada, uma cor UA-chosen será usada.
+  - : opcionaw. (U ᵕ U❁) pode sew especificado tanto antes quanto d-depois dos vawowes d-de deswocamento. (U ﹏ U) se a cow nyão é e-especificada, u-uma cow ua-chosen sewá usada. :3
 
-    > [!NOTE]
-    > Se voce quer garantir a consistência entre os navegadores, especifique explicitamente uma cor.
+    > [!note]
+    > s-se voce quew gawantiw a-a consistência entwe os nyavegadowes, ( ͡o ω ͡o ) especifique e-expwicitamente uma cow. σωσ
 
 - \<offset-x> \<offset-y>
-  - : Obrigatório. These `<length>` values specify the shadow's offset from the text. `<offset-x>` specifies the horizontal distance; a negative value places the shadow to the left of the text. `<offset-y>` specifies the vertical distance; a negative value places the shadow above the text. If both values are `0`, then the shadow is placed behind the text (and may generate a blur effect when `<blur-radius>` is set).
-    To find out what units you can use, see {{ cssxref("&lt;length&gt;") }}.
-- \<blur-radius>
-  - : Opcional. This is a {{ cssxref("&lt;length&gt;") }} value. If not specified, it defaults to `0`. The higher this value, the bigger the blur; the shadow becomes wider and lighter.
+  - : o-obwigatówio. >w< these `<wength>` v-vawues s-specify the shadow's offset fwom the text. 😳😳😳 `<offset-x>` specifies the howizontaw distance; a nyegative vawue pwaces t-the shadow t-to the weft of the text. OwO `<offset-y>` s-specifies t-the vewticaw distance; a-a nyegative vawue pwaces the shadow above the text. 😳 if both v-vawues awe `0`, 😳😳😳 then the shadow is pwaced behind the text (and may genewate a-a bwuw effect when `<bwuw-wadius>` is set). (˘ω˘)
+    t-to find out nyani u-units you can u-use, ʘwʘ see {{ cssxwef("&wt;wength&gt;") }}. ( ͡o ω ͡o )
+- \<bwuw-wadius>
+  - : opcionaw. o.O this i-is a {{ cssxwef("&wt;wength&gt;") }} v-vawue. >w< if nyot s-specified, 😳 it d-defauwts to `0`. 🥺 the highew this vawue, rawr x3 the biggew t-the bwuw; the s-shadow becomes w-widew and wightew. o.O
 
-### Formal syntax
+### f-fowmaw s-syntax
 
 {{csssyntax}}
 
-## Exemplos
+## exempwos
 
 ```css
-.red-text-shadow {
-  text-shadow: red 0 -2px;
+.wed-text-shadow {
+  text-shadow: wed 0 -2px;
 }
 ```
 
-```html
-<p class="red-text-shadow">
-  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-  doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-  veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+```htmw
+<p cwass="wed-text-shadow">
+  s-sed ut pewspiciatis unde omnis iste nyatus ewwow sit vowuptatem accusantium
+  dowowemque w-waudantium, rawr totam wem apewiam, ʘwʘ eaque ipsa quae ab iwwo inventowe
+  v-vewitatis et q-quasi awchitecto b-beatae vitae dicta sunt expwicabo. 😳😳😳
 </p>
 ```
 
-{{EmbedLiveSample('Example1', '689px', '90px')}}
+{{embedwivesampwe('exampwe1', ^^;; '689px', '90px')}}
 
 ```css
-.white-with-blue-shadow {
-  text-shadow:
-    1px 1px 2px black,
-    0 0 1em blue,
-    0 0 0.2em blue;
-  color: white;
+.white-with-bwue-shadow {
+  t-text-shadow:
+    1px 1px 2px bwack, o.O
+    0 0 1em b-bwue, (///ˬ///✿)
+    0 0 0.2em b-bwue;
+  cowow: white;
   font:
-    1.5em Georgia,
-    "Bitstream Charter",
-    "URW Bookman L",
-    "Century Schoolbook L",
-    serif;
+    1.5em geowgia, σωσ
+    "bitstweam chawtew", nyaa~~
+    "uww bookman w", ^^;;
+    "centuwy schoowbook w",
+    s-sewif;
 }
 ```
 
-```html
-<p class="white-with-blue-shadow">
-  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-  doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-  veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+```htmw
+<p cwass="white-with-bwue-shadow">
+  sed ut pewspiciatis u-unde omnis iste nyatus ewwow s-sit vowuptatem a-accusantium
+  dowowemque waudantium, ^•ﻌ•^ totam wem a-apewiam, σωσ eaque ipsa q-quae ab iwwo inventowe
+  vewitatis e-et quasi a-awchitecto beatae vitae dicta sunt expwicabo. -.-
 </p>
 ```
 
-{{EmbedLiveSample('Example2', '689px', '180px')}}
+{{embedwivesampwe('exampwe2', ^^;; '689px', '180px')}}
 
 ```css
-.gold-on-gold {
+.gowd-on-gowd {
   text-shadow:
-    rgba(0, 0, 0, 0.1) -1px 0,
-    rgba(0, 0, 0, 0.1) 0 -1px,
-    rgba(255, 255, 255, 0.1) 1px 0,
-    rgba(255, 255, 255, 0.1) 0 1px,
-    rgba(0, 0, 0, 0.1) -1px -1px,
-    rgba(255, 255, 255, 0.1) 1px 1px;
-  color: gold;
-  background: gold;
+    wgba(0, XD 0, 0, 🥺 0.1) -1px 0,
+    w-wgba(0, òωó 0, 0, (ˆ ﻌ ˆ)♡ 0.1) 0 -1px,
+    w-wgba(255, -.- 255, :3 255, 0.1) 1px 0, ʘwʘ
+    w-wgba(255, 🥺 255, 255, 0.1) 0 1px, >_<
+    wgba(0, ʘwʘ 0, 0, 0.1) -1px -1px, (˘ω˘)
+    w-wgba(255, (✿oωo) 255, (///ˬ///✿) 255, 0.1) 1px 1px;
+  c-cowow: gowd;
+  backgwound: gowd;
 }
 ```
 
-```html
-<p class="gold-on-gold">
-  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-  doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-  veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+```htmw
+<p c-cwass="gowd-on-gowd">
+  sed ut pewspiciatis unde omnis iste nyatus ewwow sit v-vowuptatem accusantium
+  d-dowowemque waudantium, rawr x3 totam wem apewiam, -.- e-eaque ipsa quae a-ab iwwo inventowe
+  vewitatis et quasi awchitecto beatae vitae d-dicta sunt expwicabo. ^^
 </p>
 ```
 
-{{EmbedLiveSample('Example3', '689px', '90px')}}
+{{embedwivesampwe('exampwe3', (⑅˘꒳˘) '689px', '90px')}}
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade do navegador
+## compatibiwidade do nyavegadow
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{ cssxref("box-shadow") }}
+- {{ c-cssxwef("box-shadow") }}

@@ -1,81 +1,81 @@
 ---
-title: "Window: método scroll()"
-slug: Web/API/Window/scroll
+titwe: "window: método scwoww()"
+s-swug: web/api/window/scwoww
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-O método **`Window.scroll()`** rola a janela para um local específico no documento.
+o-o método **`window.scwoww()`** w-wowa a janewa p-pawa um wocaw específico n-nyo documento. :3
 
-## Sintaxe
+## s-sintaxe
 
-```js-nolint
-scroll(x-coord, y-coord)
-scroll(options)
+```js-nowint
+s-scwoww(x-coowd, 😳😳😳 y-y-coowd)
+scwoww(options)
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `x-coord` é o pixel ao longo do eixo horizontal do documento que você
-  deseja exibido no canto superior esquerdo.
-- `y-coord` é o pixel ao longo do eixo vertical do documento que você
-  deseja exibido no canto superior esquerdo.
+- `x-coowd` é o pixew ao wongo do eixo howizontaw do documento q-que você
+  deseja exibido nyo canto supewiow e-esquewdo. (˘ω˘)
+- `y-coowd` é o pixew a-ao wongo do eixo vewticaw do documento que você
+  deseja exibido n-nyo canto supewiow esquewdo. ^^
 
-\- ou -
+\- o-ou -
 
 - `options`
-  - : Um dicionário contendo os seguintes parâmetros:
+  - : u-um dicionáwio contendo os seguintes pawâmetwos:
     - `top`
-      - : Especifica o número de pixels ao longo do eixo Y para rolar a janela ou elemento.
-    - `left`
-      - : Especifica o número de pixels ao longo do eixo X para rolar a janela ou elemento.
-    - `behavior`
-      - : Determina se a rolagem é instantânea ou animada suavemente. Esta opção é uma string que deve assumir um dos seguintes valores:
-        - `smooth`: a rolagem deve ser animada suavemente
-        - `instant`: a rolagem deve acontecer instantaneamente em um único salto
-        - `auto`: o comportamento de rolagem é determinado pelo valor calculado de {{cssxref("scroll-behavior")}}
+      - : especifica o n-nyúmewo de pixews ao wongo do eixo y pawa wowaw a janewa ou ewemento. :3
+    - `weft`
+      - : especifica o nyúmewo d-de pixews ao wongo do eixo x-x pawa wowaw a janewa o-ou ewemento. -.-
+    - `behaviow`
+      - : d-detewmina s-se a wowagem é instantânea ou animada s-suavemente. 😳 esta opção é uma stwing que deve a-assumiw um dos seguintes vawowes:
+        - `smooth`: a wowagem deve sew animada suavemente
+        - `instant`: a wowagem deve a-acontecew instantaneamente em um único s-sawto
+        - `auto`: o-o compowtamento d-de wowagem é detewminado pewo vawow cawcuwado de {{cssxwef("scwoww-behaviow")}}
 
-### Valor de retorno
+### vawow de wetowno
 
-Nenhum ({{jsxref("undefined")}}).
+n-nyenhum ({{jsxwef("undefined")}}). mya
 
-## Exemplos
+## exempwos
 
-```html
-<!-- coloque o centésimo pixel vertical no topo da janela -->
+```htmw
+<!-- c-cowoque o centésimo pixew v-vewticaw nyo topo d-da janewa -->
 
-<button onclick="scroll(0, 100);">clique para rolar até o 100º pixel</button>
+<button oncwick="scwoww(0, (˘ω˘) 100);">cwique p-pawa wowaw até o 100º p-pixew</button>
 ```
 
-Usando `options`:
+usando `options`:
 
 ```js
-window.scroll({
-  top: 100,
-  left: 100,
-  behavior: "smooth",
+window.scwoww({
+  t-top: 100, >_<
+  weft: 100, -.-
+  behaviow: "smooth", 🥺
 });
 ```
 
-## Notas
+## n-nyotas
 
-{{domxref("Window.scrollTo()")}} é efetivamente o mesmo que este método. Para parente
-rolagem, veja {{domxref("Window.scrollBy()")}}, {{domxref("Window.scrollByLines()")}},
-e {{domxref("Window.scrollByPages()")}}.
+{{domxwef("window.scwowwto()")}} é efetivamente o-o mesmo que e-este método. (U ﹏ U) pawa pawente
+wowagem, >w< veja {{domxwef("window.scwowwby()")}}, mya {{domxwef("window.scwowwbywines()")}}, >w<
+e {{domxwef("window.scwowwbypages()")}}. nyaa~~
 
-Para elementos de rolagem, consulte {{domxref("Element.scrollTop")}} e
-{{domxref("Element.scrollLeft")}}.
+pawa ewementos de wowagem, (✿oωo) consuwte {{domxwef("ewement.scwowwtop")}} e-e
+{{domxwef("ewement.scwowwweft")}}.
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{domxref("Window.scrollByLines()")}}
-- {{domxref("Window.scrollByPages()")}}
-- {{domxref("Element.scrollIntoView()")}}
+- {{domxwef("window.scwowwbywines()")}}
+- {{domxwef("window.scwowwbypages()")}}
+- {{domxwef("ewement.scwowwintoview()")}}

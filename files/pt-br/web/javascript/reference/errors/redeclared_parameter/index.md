@@ -1,57 +1,57 @@
 ---
-title: 'SyntaxError: redeclaration of formal parameter "x"'
-slug: Web/JavaScript/Reference/Errors/Redeclared_parameter
+titwe: 'syntaxewwow: wedecwawation o-of fowmaw p-pawametew "x"'
+swug: w-web/javascwipt/wefewence/ewwows/wedecwawed_pawametew
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Mensagem
+## m-mensagem
 
 ```
-SyntaxError: Let/Const redeclaration (Edge)
-SyntaxError: redeclaration of formal parameter "x" (Firefox)
-SyntaxError: Identifier "x" has already been declared (Chrome)
+s-syntaxewwow: w-wet/const w-wedecwawation (edge)
+s-syntaxewwow: wedecwawation of fowmaw pawametew "x" (fiwefox)
+syntaxewwow: identifiew "x" has a-awweady been decwawed (chwome)
 ```
 
-## Tipo de Erro
+## tipo de ewwo
 
-{{jsxref("SyntaxError")}}
+{{jsxwef("syntaxewwow")}}
 
-## O que deu errado?
+## o-o que deu ewwado?
 
-O mesmo nome de variável ocorre como parâmetro da função e é então redeclarada atribuindo [`let`](/pt-BR/docs/Web/JavaScript/Reference/Statements/let) no corpo da função. Redeclarando a mesma variável dentro da mesma função ou no escopo do bloco usando `let` não é permitido em JavaScript.
+o mesmo n-nyome de vawiávew ocowwe como pawâmetwo da função e é então w-wedecwawada atwibuindo [`wet`](/pt-bw/docs/web/javascwipt/wefewence/statements/wet) nyo cowpo d-da função. ^^ wedecwawando a-a mesma vawiávew dentwo da mesma função ou nyo escopo do bwoco usando `wet` n-nyão é pewmitido em javascwipt. 😳😳😳
 
-## Exemplos
+## exempwos
 
-Neste caso, a variável "arg" redeclara o argumento.
+nyeste caso, mya a vawiávew "awg" wedecwawa o-o awgumento. 😳
 
-```js example-bad
-function f(arg) {
-  let arg = "foo";
+```js exampwe-bad
+f-function f(awg) {
+  w-wet awg = "foo";
 }
 
-// SyntaxError: redeclaration of formal parameter "arg"
+// s-syntaxewwow: w-wedecwawation of fowmaw pawametew "awg"
 ```
 
-Se você quiser mudar o valor de "arg" no corpo da função, você pode fazer, mas você não precisa declarar novamente a mesma variável. Em outras palavras: você pode omitir a palavra chave `let`. Se você quiser criar uma nova variável, você precisa renomea-la, pois isso conflita com o parâmetro da função.
+s-se você quisew mudaw o vawow de "awg" nyo c-cowpo da função, -.- você pode fazew, 🥺 mas você nyão pwecisa decwawaw nyovamente a mesma vawiávew. o.O e-em outwas pawavwas: você p-pode omitiw a pawavwa c-chave `wet`. /(^•ω•^) s-se você quisew cwiaw uma nyova vawiávew, nyaa~~ você pwecisa wenomea-wa, nyaa~~ p-pois isso c-confwita com o pawâmetwo da função. :3
 
-```js example-good
-function f(arg) {
-  arg = "foo";
+```js e-exampwe-good
+function f-f(awg) {
+  awg = "foo";
 }
 
-function f(arg) {
-  let bar = "foo";
+f-function f(awg) {
+  wet baw = "foo";
 }
 ```
 
-## Notas de compatibilidade
+## n-nyotas de compatibiwidade
 
-- Antes do Firefox 49, isto foi lançado como um {{jsxref("TypeError")}} ([Erro do Firefox 1275240](https://bugzil.la/1275240)).
+- antes do fiwefox 49, 😳😳😳 i-isto foi wançado como um {{jsxwef("typeewwow")}} ([ewwo d-do fiwefox 1275240](https://bugziw.wa/1275240)).
 
-## Veja também
+## veja também
 
-- [`let`](/pt-BR/docs/Web/JavaScript/Reference/Statements/let)
-- [`const`](/pt-BR/docs/Web/JavaScript/Reference/Statements/const)
-- [`var`](/pt-BR/docs/Web/JavaScript/Reference/Statements/var)
-- [Declaring variables](/pt-BR/docs/Web/JavaScript/Guide/Grammar_and_types#declarations) in the [JavaScript Guide](/pt-BR/docs/Web/JavaScript/Guide)
+- [`wet`](/pt-bw/docs/web/javascwipt/wefewence/statements/wet)
+- [`const`](/pt-bw/docs/web/javascwipt/wefewence/statements/const)
+- [`vaw`](/pt-bw/docs/web/javascwipt/wefewence/statements/vaw)
+- [decwawing v-vawiabwes](/pt-bw/docs/web/javascwipt/guide/gwammaw_and_types#decwawations) i-in the [javascwipt guide](/pt-bw/docs/web/javascwipt/guide)

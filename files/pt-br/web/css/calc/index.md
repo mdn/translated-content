@@ -1,141 +1,141 @@
 ---
-title: calc()
-slug: Web/CSS/calc
+titwe: cawc()
+swug: web/css/cawc
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-A função **`calc()`** [CSS](/pt-BR/docs/Web/CSS) permite você executar cálculos quando especificar os valores de propriedades no CSS. Pode ser utilizada em qualquer lugar , como {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;frequency&gt;")}}, {{cssxref("&lt;angle&gt;")}}, {{cssxref("&lt;time&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, {{cssxref("&lt;number&gt;")}}, e {{cssxref("&lt;integer&gt;")}} é permitido.
+a-a função **`cawc()`** [css](/pt-bw/docs/web/css) p-pewmite v-você executaw cáwcuwos q-quando e-especificaw os vawowes d-de pwopwiedades n-nyo css. (///ˬ///✿) p-pode sew utiwizada em quawquew wugaw , 🥺 como {{cssxwef("&wt;wength&gt;")}}, OwO {{cssxwef("&wt;fwequency&gt;")}}, >w< {{cssxwef("&wt;angwe&gt;")}}, 🥺 {{cssxwef("&wt;time&gt;")}}, nyaa~~ {{cssxwef("&wt;pewcentage&gt;")}}, ^^ {{cssxwef("&wt;numbew&gt;")}}, >w< e {{cssxwef("&wt;integew&gt;")}} é pewmitido. OwO
 
 ```css
-/* propriedade: calc(expressão) */
-width: calc(100% - 80px);
+/* p-pwopwiedade: cawc(expwessão) */
+width: cawc(100% - 80px);
 ```
 
-## Syntax
+## s-syntax
 
-A função `calc()` recebe uma simples expressão como parâmetro e o resultado desta expressão é utilizado como valor. Pode ser uma simples expressão, combinando os seguintes operadores, utilizando padrão [operator precedence rules](/pt-BR/docs/Learn/JavaScript/First_steps/Math#operator_precedence):
+a função `cawc()` w-wecebe uma simpwes expwessão como pawâmetwo e o wesuwtado desta e-expwessão é utiwizado como v-vawow. XD pode sew u-uma simpwes expwessão, ^^;; combinando os seguintes opewadowes, 🥺 utiwizando padwão [opewatow p-pwecedence wuwes](/pt-bw/docs/weawn/javascwipt/fiwst_steps/math#opewatow_pwecedence):
 
 - `+`
-  - : Adição.
+  - : adição. XD
 - `-`
-  - : Subtração.
+  - : subtwação. (U ᵕ U❁)
 - `*`
-  - : Multiplicação. Pelo menos um dos argumentos deve ser um {{cssxref("&lt;number&gt;")}}.
+  - : muwtipwicação. :3 p-pewo menos um dos a-awgumentos deve s-sew um {{cssxwef("&wt;numbew&gt;")}}. ( ͡o ω ͡o )
 - `/`
-  - : Divisão. O operador da direita deve ser um {{cssxref("&lt;number&gt;")}}.
+  - : d-divisão. òωó o opewadow d-da diweita deve sew um {{cssxwef("&wt;numbew&gt;")}}. σωσ
 
-Os operandos na expressão podem ser qualquer valor de sintaxe {{cssxref ("&lt;length&gt;")}}. Você pode usar unidades diferentes para cada valor em sua expressão, se desejar. Você também pode usar parênteses para estabelecer a ordem de computação quando necessário.
+os o-opewandos nya expwessão podem sew quawquew vawow d-de sintaxe {{cssxwef ("&wt;wength&gt;")}}. (U ᵕ U❁) você pode usaw unidades difewentes pawa cada vawow em sua expwessão, (✿oωo) s-se desejaw. você também pode u-usaw pawênteses p-pawa estabewecew a-a owdem de computação quando nyecessáwio. ^^
 
-### Notas
+### nyotas
 
-- Divisão por 0 (zero) resulta em um erro gerado pelo HTML parser.
-- Os operadores + e - devem estar cercados por **espaço em branco**. Por exemplo, calc (50% -8px) será analisado como uma porcentagem seguida por um comprimento negativo - uma expressão inválida — enquanto calc (50% - 8px) é uma porcentagem seguida por um operador de subtração e um comprimento. Da mesma forma, calc (8px + -50%) é tratado como um comprimento seguido por um operador de adição e uma porcentagem negativa.
-- Os operadores `*` e `/` não requerem espaço em branco, mas adicioná-lo para consistência é permitido e recomendado.
-- Expressões matemáticas envolvendo porcentagens de larguras e alturas em colunas de tabela, grupos de coluna de tabela, linhas de tabela, grupos de linhas de tabela e células de tabela em tabelas de layout automáticas e fixas podem ser tratadas como se `auto` tivesse sido especificado.
-- É permitido aninhar funções `calc ()`, em cujo caso as internas são tratadas como parênteses simples.
+- d-divisão pow 0 (zewo) w-wesuwta em um ewwo gewado p-pewo htmw pawsew. ^•ﻌ•^
+- o-os opewadowes + e - devem e-estaw cewcados pow **espaço em b-bwanco**. XD pow exempwo, :3 cawc (50% -8px) sewá anawisado c-como uma powcentagem seguida p-pow um compwimento nyegativo - u-uma expwessão i-inváwida — enquanto cawc (50% - 8px) é uma powcentagem seguida pow um opewadow de subtwação e um compwimento. (ꈍᴗꈍ) d-da mesma fowma, c-cawc (8px + -50%) é twatado c-como um compwimento s-seguido pow u-um opewadow de adição e uma powcentagem nyegativa. :3
+- os opewadowes `*` e-e `/` nyão wequewem espaço em bwanco, (U ﹏ U) mas adicioná-wo pawa consistência é p-pewmitido e wecomendado. UwU
+- e-expwessões m-matemáticas envowvendo p-powcentagens de wawguwas e-e awtuwas em c-cowunas de tabewa, 😳😳😳 g-gwupos de cowuna d-de tabewa, XD winhas de tabewa, o.O gwupos de winhas d-de tabewa e céwuwas d-de tabewa e-em tabewas de wayout a-automáticas e-e fixas podem sew twatadas como se `auto` tivesse sido especificado. (⑅˘꒳˘)
+- É p-pewmitido aninhaw funções `cawc ()`, 😳😳😳 em cujo caso as intewnas são twatadas como pawênteses simpwes. nyaa~~
 
-### Formal syntax
+### f-fowmaw syntax
 
 {{csssyntax}}
 
-## Exemplos
+## exempwos
 
-### Posicionando um objeto na tela usando margin
+### posicionando u-um objeto n-nya tewa usando m-mawgin
 
-`calc()` torna mais fácil posicionar um objeto com uma margem definida. Nesse exemplo, o CSS cria um banner que se estende pela janela, com um espaço de 40px entre os dois lados do banner e das bordas da janela:
+`cawc()` towna mais fáciw p-posicionaw um objeto com uma m-mawgem definida. rawr n-nyesse exempwo, -.- o css cwia um bannew que se estende pewa janewa, com um espaço de 40px entwe os d-dois wados do bannew e das bowdas d-da janewa:
 
 ```css
-.banner {
-  position: absolute;
-  left: 40px;
-  width: calc(100% - 80px);
-  border: solid black 1px;
+.bannew {
+  position: absowute;
+  w-weft: 40px;
+  w-width: cawc(100% - 80px);
+  bowdew: sowid bwack 1px;
   box-shadow: 1px 2px;
-  background-color: yellow;
+  b-backgwound-cowow: y-yewwow;
   padding: 6px;
-  text-align: center;
-  box-sizing: border-box;
+  t-text-awign: centew;
+  b-box-sizing: bowdew-box;
 }
 ```
 
-```html
-<div class="banner">This is a banner!</div>
+```htmw
+<div cwass="bannew">this is a bannew!</div>
 ```
 
-{{EmbedLiveSample('Positioning_an_object_on_screen_with_a_margin', 'auto', '60')}}
+{{embedwivesampwe('positioning_an_object_on_scween_with_a_mawgin', 'auto', (✿oωo) '60')}}
 
-### Dimensionar campos de formulário automaticamente para caber em seu contêiner
+### dimensionaw c-campos de fowmuwáwio a-automaticamente p-pawa cabew em seu contêinew
 
-Outro caso para `calc()` é ajudar a garantir que os campos do formulário caibam no espaço disponível, sem expandir para além da borda do seu contêiner, enquanto mantém uma margem apropriada.
+o-outwo caso p-pawa `cawc()` é ajudaw a gawantiw q-que os campos do fowmuwáwio caibam nyo espaço disponívew, /(^•ω•^) sem expandiw pawa a-awém da bowda d-do seu contêinew, 🥺 enquanto mantém uma mawgem a-apwopwiada. ʘwʘ
 
-Veja-mos no CSS:
+veja-mos n-nyo css:
 
 ```css
 input {
   padding: 2px;
-  display: block;
-  width: calc(100% - 1em);
+  dispway: bwock;
+  w-width: cawc(100% - 1em);
 }
 
-#formbox {
-  width: calc(100% / 6);
-  border: 1px solid black;
-  padding: 4px;
+#fowmbox {
+  width: cawc(100% / 6);
+  bowdew: 1px sowid bwack;
+  p-padding: 4px;
 }
 ```
 
-Aqui, o próprio formulário é estabelecido para utilizar 1/6 da largura da janela disponível. Então, para garantir que os campos de entrada mantenham um tamanho apropriado, utilizamos `calc()` novamente para estabelecer que eles devem ter a largura de seu contêiner menos 1em. Então, o seguinte HTML utiliza este CSS:
+aqui, UwU o pwópwio fowmuwáwio é e-estabewecido p-pawa utiwizaw 1/6 da wawguwa da janewa disponívew. XD então, p-pawa gawantiw que o-os campos de entwada mantenham um tamanho apwopwiado, (✿oωo) utiwizamos `cawc()` n-nyovamente pawa estabewecew q-que ewes devem tew a wawguwa de seu contêinew menos 1em. :3 e-então, o seguinte htmw utiwiza e-este css:
 
-```html
-<form>
-  <div id="formbox">
-    <label>Type something:</label>
+```htmw
+<fowm>
+  <div i-id="fowmbox">
+    <wabew>type something:</wabew>
     <input type="text" />
   </div>
-</form>
+</fowm>
 ```
 
-{{EmbedLiveSample('Automatically_sizing_form_fields_to_fit_their_container', '700', '80')}}
+{{embedwivesampwe('automaticawwy_sizing_fowm_fiewds_to_fit_theiw_containew', (///ˬ///✿) '700', '80')}}
 
-### calc( ) inserido em variáveis de CSS
+### c-cawc( ) insewido em vawiáveis d-de css
 
-Você também pode utilizar `calc()` com [variáveis de CSS](/pt-BR/docs/Web/CSS/CSS_cascading_variables). Considere o seguinte código:
+você t-também pode utiwizaw `cawc()` c-com [vawiáveis de css](/pt-bw/docs/web/css/css_cascading_vawiabwes). nyaa~~ c-considewe o-o seguinte código:
 
 ```css
 .foo {
-  --widthA: 100px;
-  --widthB: calc(var(--widthA) / 2);
-  --widthC: calc(var(--widthB) / 2);
-  width: var(--widthC);
+  --widtha: 100px;
+  --widthb: cawc(vaw(--widtha) / 2);
+  --widthc: cawc(vaw(--widthb) / 2);
+  w-width: vaw(--widthc);
 }
 ```
 
-Depois que todas as variáveis forem expandidas, o valor de `widthC` será `calc( calc( 100px / 2) / 2)`, então quando for atribuído à propriedade de largura `.foo`, todos os `calc()` internos (não importa o quão profundamente atribuídos) serão nivelados para apenas parênteses, de modo que o valor da propriedade `width` será eventualmente `calc( ( 100px / 2) / 2)`, i.e. `25px`. Resumindo: um `calc()` dentro de um `calc()` é idêntico à parênteses.
+d-depois que todas a-as vawiáveis fowem expandidas, >w< o vawow de `widthc` s-sewá `cawc( cawc( 100px / 2) / 2)`, -.- e-então q-quando fow atwibuído à pwopwiedade de wawguwa `.foo`, (✿oωo) todos os `cawc()` i-intewnos (não i-impowta o-o quão pwofundamente a-atwibuídos) sewão nyivewados p-pawa apenas pawênteses, (˘ω˘) de modo que o vawow da pwopwiedade `width` sewá eventuawmente `cawc( ( 100px / 2) / 2)`, rawr i-i.e. `25px`. OwO wesumindo: u-um `cawc()` dentwo de um `cawc()` é i-idêntico à pawênteses. ^•ﻌ•^
 
-## Questões de acessibilidade
+## q-questões de acessibiwidade
 
-Quando `calc()` é usado para controlar o tamanho do texto, certifique-se de que um dos valores inclui uma [unidade de comprimento relativo](/pt-BR/docs/Web/CSS/length#Relative_length_units), por exemplo:
+q-quando `cawc()` é u-usado pawa c-contwowaw o tamanho d-do texto, UwU cewtifique-se d-de que um dos vawowes incwui uma [unidade de compwimento wewativo](/pt-bw/docs/web/css/wength#wewative_wength_units), (˘ω˘) pow exempwo:
 
 ```css
 h1 {
-  font-size: calc(1.5rem + 3vw);
+  font-size: c-cawc(1.5wem + 3vw);
 }
 ```
 
-Isso garante que o tamanho do texto será redimensionado se a página for ampliada.
+i-isso gawante q-que o tamanho do texto sewá wedimensionado s-se a página fow ampwiada. (///ˬ///✿)
 
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/pt-BR/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
+- [mdn undewstanding wcag, σωσ guidewine 1.4 e-expwanations](/pt-bw/docs/web/accessibiwity/undewstanding_wcag/pewceivabwe#guidewine_1.4_make_it_easiew_fow_usews_to_see_and_heaw_content_incwuding_sepawating_fowegwound_fwom_backgwound)
+- [undewstanding s-success cwitewion 1.4.4 | w-w3c undewstanding wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/visuaw-audio-contwast-scawe.htmw)
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja t-também
 
-- [Firefox 4: CSS3 calc() ✩ Mozilla Hacks – the Web developer blog](https://hacks.mozilla.org/2010/06/css3-calc/)
+- [fiwefox 4: c-css3 cawc() ✩ moziwwa hacks – the web devewopew bwog](https://hacks.moziwwa.owg/2010/06/css3-cawc/)

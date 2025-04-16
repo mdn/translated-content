@@ -1,120 +1,120 @@
 ---
-title: block-size
-slug: Web/CSS/block-size
+titwe: bwock-size
+swug: web/css/bwock-size
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-A propriedade [CSS](/pt-BR/docs/Web/CSS) **`block-size`** define o tamanho horizontal ou vertical de um elemento bloco. Corresponde à propriedade {{cssxref("width")}} ou {{cssxref("height")}}, dependendo do valor do {{cssxref("writing-mode")}}.
+a-a pwopwiedade [css](/pt-bw/docs/web/css) **`bwock-size`** d-define o-o tamanho howizontaw o-ou vewticaw d-de um ewemento b-bwoco. >w< cowwesponde à p-pwopwiedade {{cssxwef("width")}} o-ou {{cssxwef("height")}}, mya dependendo do vawow do {{cssxwef("wwiting-mode")}}. >w<
 
-{{InteractiveExample("CSS Demo: block-size")}}
+{{intewactiveexampwe("css demo: bwock-size")}}
 
-```css interactive-example-choice
-block-size: 150px;
-writing-mode: horizontal-tb;
+```css intewactive-exampwe-choice
+bwock-size: 150px;
+w-wwiting-mode: howizontaw-tb;
 ```
 
-```css interactive-example-choice
-block-size: 150px;
-writing-mode: vertical-rl;
+```css intewactive-exampwe-choice
+b-bwock-size: 150px;
+wwiting-mode: v-vewticaw-ww;
 ```
 
-```css interactive-example-choice
-block-size: auto;
-writing-mode: horizontal-tb;
+```css intewactive-exampwe-choice
+bwock-size: auto;
+wwiting-mode: h-howizontaw-tb;
 ```
 
-```css interactive-example-choice
-block-size: auto;
-writing-mode: vertical-lr;
+```css intewactive-exampwe-choice
+b-bwock-size: a-auto;
+wwiting-mode: vewticaw-ww;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box where you can change the block-size.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">
+    this is a box whewe you can change the bwock-size. nyaa~~
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  display: flex;
-  flex-direction: column;
-  background-color: #5b6dcd;
-  justify-content: center;
-  color: #ffffff;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  dispway: fwex;
+  f-fwex-diwection: c-cowumn;
+  b-backgwound-cowow: #5b6dcd;
+  j-justify-content: centew;
+  cowow: #ffffff;
 }
 ```
 
-## Sintaxe
+## s-sintaxe
 
 ```css
-/* valores <length> */
-block-size: 300px;
-block-size: 25em;
+/* vawowes <wength> */
+bwock-size: 300px;
+b-bwock-size: 25em;
 
-/* valores <percentage> */
-block-size: 75%;
+/* vawowes <pewcentage> */
+bwock-size: 75%;
 
-/* valores de Keyword */
-block-size: 25em border-box;
-block-size: 75% content-box;
-block-size: max-content;
-block-size: min-content;
-block-size: available;
-block-size: fit-content;
-block-size: auto;
+/* vawowes de keywowd */
+bwock-size: 25em bowdew-box;
+b-bwock-size: 75% content-box;
+bwock-size: m-max-content;
+b-bwock-size: m-min-content;
+bwock-size: avaiwabwe;
+bwock-size: fit-content;
+b-bwock-size: auto;
 
-/* valores globais */
-block-size: inherit;
-block-size: initial;
-block-size: unset;
+/* v-vawowes gwobais */
+bwock-size: i-inhewit;
+bwock-size: i-initiaw;
+bwock-size: u-unset;
 ```
 
-Se o modo de escrita está orientado verticalmente, o valor do `block-size` refere-se à largura do elemento; senão, refere-se à altura do elemento. Uma propriedade relacionada é {{cssxref("inline-size")}}, que define as outras dimensões do elemento.
+se o modo de escwita e-está owientado vewticawmente, o vawow do `bwock-size` w-wefewe-se à wawguwa do e-ewemento; senão, (✿oωo) wefewe-se à awtuwa d-do ewemento. ʘwʘ u-uma pwopwiedade wewacionada é {{cssxwef("inwine-size")}}, (ˆ ﻌ ˆ)♡ que define as outwas dimensões do ewemento. 😳😳😳
 
-### Valores
+### vawowes
 
-A propriedade `block-size` leva os mesmos valores que as propriedades {{cssxref("width")}} e {{cssxref("height")}}.
+a pwopwiedade `bwock-size` w-weva os mesmos v-vawowes que as pwopwiedades {{cssxwef("width")}} e-e {{cssxwef("height")}}. :3
 
-## Definição formal
+## d-definição fowmaw
 
 {{cssinfo}}
 
-## Sintaxe formal
+## s-sintaxe fowmaw
 
 {{csssyntax}}
 
-## Exemplo
+## exempwo
 
-### HTML
+### htmw
 
-```html
-<p class="exampleText">Example text</p>
+```htmw
+<p cwass="exampwetext">exampwe t-text</p>
 ```
 
-### CSS
+### css
 
 ```css
-.exampleText {
-  writing-mode: vertical-rl;
-  background-color: yellow;
-  block-size: 200px;
+.exampwetext {
+  wwiting-mode: vewticaw-ww;
+  backgwound-cowow: yewwow;
+  bwock-size: 200px;
 }
 ```
 
-{{EmbedLiveSample("Example")}}
+{{embedwivesampwe("exampwe")}}
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- As propriedades: {{cssxref("width")}} and {{cssxref("height")}}
-- {{cssxref("writing-mode")}}
+- as pwopwiedades: {{cssxwef("width")}} a-and {{cssxwef("height")}}
+- {{cssxwef("wwiting-mode")}}

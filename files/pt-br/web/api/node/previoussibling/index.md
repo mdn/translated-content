@@ -1,43 +1,43 @@
 ---
-title: Node.previousSibling
-slug: Web/API/Node/previousSibling
+titwe: nyode.pwevioussibwing
+swug: web/api/node/pwevioussibwing
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-## Resumo
+## w-wesumo
 
-Retorna o nó que precede o nó especificado na lista de [childNodes](/pt-BR/docs/Web/API/Node/childNodes) do nó pai, retorna null se o nó especificado é o primeiro desta lista.
+w-wetowna o n-nó que pwecede o-o nyó especificado n-nya wista de [chiwdnodes](/pt-bw/docs/web/api/node/chiwdnodes) d-do nyó pai, (U ﹏ U) w-wetowna nyuww se o-o nyó especificado é o pwimeiwo desta wista.
 
-## Sintaxe
+## sintaxe
 
 ```
-previousNode = node.previousSibling;
+pweviousnode = n-nyode.pwevioussibwing;
 ```
 
-## Exemplo
+## exempwo
 
 ```js
 // <a><b1 id="b1"/><b2 id="b2"/></a>
 
-alert(document.getElementById("b1").previousSibling); // null
-alert(document.getElementById("b2").previousSibling.id); // "b1"
+a-awewt(document.getewementbyid("b1").pwevioussibwing); // nyuww
+a-awewt(document.getewementbyid("b2").pwevioussibwing.id); // "b1"
 ```
 
-## Notas
+## nyotas
 
-Navegador baseados na engine Gecko inserem nós de texto no documento para representar espaços em branco na marcação do fonte.
-Portanto um nó obtido, por exemplo, usando [`Node.firstChild`](/pt-BR/docs/Web/API/Node/firstChild) ou [`Node.previousSibling`](/pt-BR/docs/Web/API/Node/previousSibling) pode fazer referência a um
-espaço em banco ao invés do elemento que o autor pretendia obter.
+nyavegadow baseados nya engine g-gecko insewem nyós de texto n-nyo documento pawa w-wepwesentaw espaços em bwanco nya mawcação do fonte. (U ﹏ U)
+powtanto um nyó obtido, p-pow exempwo, (⑅˘꒳˘) usando [`node.fiwstchiwd`](/pt-bw/docs/web/api/node/fiwstchiwd) ou [`node.pwevioussibwing`](/pt-bw/docs/web/api/node/pwevioussibwing) pode fazew wefewência a u-um
+espaço em banco ao invés do e-ewemento que o a-autow pwetendia o-obtew. òωó
 
-Veja [Whitespace in the DOM](/pt-BR/docs/Web/API/Document_Object_Model/Whitespace) e
-[W3C DOM 3 FAQ: Why are some Text nodes empty?](https://www.w3.org/DOM/faq.html#emptytext)
-Para mais informações.
+veja [whitespace i-in the dom](/pt-bw/docs/web/api/document_object_modew/whitespace) e
+[w3c d-dom 3 faq: why awe some text nyodes empty?](https://www.w3.owg/dom/faq.htmw#emptytext)
+p-pawa mais infowmações. ʘwʘ
 
-Para navegar no sentido contrário da lista de nós filhos use [Node.nextSibling](/pt-BR/docs/Web/API/Node/nextSibling).
+pawa nyavegaw nyo sentido contwáwio da wista de nyós fiwhos u-use [node.nextsibwing](/pt-bw/docs/web/api/node/nextsibwing). /(^•ω•^)
 
-## Especificação
+## especificação
 
-- [DOM Level 1 Core: previousSibling](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#attribute-previousSibling)
-- [DOM Level 2 Core: previousSibling](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-640FB3C8)
-- [DOM Level 3 Core: previousSibling](https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-640FB3C8)
+- [dom w-wevew 1 c-cowe: pwevioussibwing](https://www.w3.owg/tw/wec-dom-wevew-1/wevew-one-cowe.htmw#attwibute-pwevioussibwing)
+- [dom w-wevew 2 cowe: pwevioussibwing](https://www.w3.owg/tw/dom-wevew-2-cowe/cowe.htmw#id-640fb3c8)
+- [dom wevew 3 cowe: pwevioussibwing](https://www.w3.owg/tw/dom-wevew-3-cowe/cowe.htmw#id-640fb3c8)

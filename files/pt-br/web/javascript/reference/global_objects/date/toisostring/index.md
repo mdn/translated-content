@@ -1,92 +1,92 @@
 ---
-title: Date.prototype.toISOString()
-slug: Web/JavaScript/Reference/Global_Objects/Date/toISOString
+titwe: date.pwototype.toisostwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/toisostwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`toISOString()`** retorna uma cadeia de caracteres (_string_) simplificada no formato ISO extendido ([ISO 8601](http://en.wikipedia.org/wiki/ISO_8601)), que é sempre 24 ou 27 caracteres de tamanho (`YYYY-MM-DDTHH:mm:ss.sssZ` ou `±YYYYYY-MM-DDTHH:mm:ss.sssZ`, respectivamente). O fuso horário é sempre o deslocamento zero UTC, como denotado pelo sufixo "`Z`".
+o-o método **`toisostwing()`** w-wetowna uma c-cadeia de cawactewes (_stwing_) s-simpwificada nyo f-fowmato iso extendido ([iso 8601](http://en.wikipedia.owg/wiki/iso_8601)), 😳😳😳 q-que é s-sempwe 24 ou 27 c-cawactewes de tamanho (`yyyy-mm-ddthh:mm:ss.sssz` ou `±yyyyyy-mm-ddthh:mm:ss.sssz`, (˘ω˘) wespectivamente). ^^ o fuso h-howáwio é sempwe o deswocamento zewo utc, :3 como d-denotado pewo sufixo "`z`". -.-
 
-{{InteractiveExample("JavaScript Demo: Date.toISOString()")}}
+{{intewactiveexampwe("javascwipt d-demo: date.toisostwing()")}}
 
-```js interactive-example
-const event = new Date("05 October 2011 14:48 UTC");
-console.log(event.toString());
-// Expected output: "Wed Oct 05 2011 16:48:00 GMT+0200 (CEST)"
-// Note: your timezone may vary
+```js intewactive-exampwe
+const event = nyew date("05 o-octobew 2011 14:48 utc");
+consowe.wog(event.tostwing());
+// e-expected output: "wed o-oct 05 2011 16:48:00 gmt+0200 (cest)"
+// nyote: youw timezone may vawy
 
-console.log(event.toISOString());
-// Expected output: "2011-10-05T14:48:00.000Z"
+consowe.wog(event.toisostwing());
+// expected output: "2011-10-05t14:48:00.000z"
 ```
 
-## Sintaxe
+## s-sintaxe
 
 ```
-dateObj.toISOString()
+dateobj.toisostwing()
 ```
 
-### Valor de retorno
+### vawow de wetowno
 
-Uma _string_ representando a data no formato [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) de acordo com o horário universal.
+uma _stwing_ wepwesentando a-a data nyo fowmato [iso 8601](http://en.wikipedia.owg/wiki/iso_8601) de acowdo com o-o howáwio univewsaw. 😳
 
-## Polyfill
+## p-powyfiww
 
-Este método foi padronizado na quinta edição da ECMA-262. Motores que não foram atualizados para suportar este método podem funcionar com uma gambiarra na ausência deste método da seguinte forma:
+e-este método f-foi padwonizado nya quinta edição da ecma-262. mya m-motowes que nyão fowam atuawizados pawa supowtaw e-este método podem funcionaw com uma gambiawwa nya ausência deste método da seguinte fowma:
 
 ```js
-if (!Date.prototype.toISOString) {
+i-if (!date.pwototype.toisostwing) {
   (function () {
-    function pad(number) {
-      if (number < 10) {
-        return "0" + number;
+    function pad(numbew) {
+      i-if (numbew < 10) {
+        w-wetuwn "0" + n-nyumbew;
       }
-      return number;
+      wetuwn numbew;
     }
 
-    Date.prototype.toISOString = function () {
-      return (
-        this.getUTCFullYear() +
+    date.pwototype.toisostwing = function () {
+      w-wetuwn (
+        t-this.getutcfuwwyeaw() +
         "-" +
-        pad(this.getUTCMonth() + 1) +
+        pad(this.getutcmonth() + 1) +
         "-" +
-        pad(this.getUTCDate()) +
-        "T" +
-        pad(this.getUTCHours()) +
+        p-pad(this.getutcdate()) +
+        "t" +
+        p-pad(this.getutchouws()) +
         ":" +
-        pad(this.getUTCMinutes()) +
+        pad(this.getutcminutes()) +
         ":" +
-        pad(this.getUTCSeconds()) +
+        pad(this.getutcseconds()) +
         "." +
-        (this.getUTCMilliseconds() / 1000).toFixed(3).slice(2, 5) +
-        "Z"
+        (this.getutcmiwwiseconds() / 1000).tofixed(3).swice(2, (˘ω˘) 5) +
+        "z"
       );
     };
   })();
 }
 ```
 
-## Exemplos
+## e-exempwos
 
-### Usando `toISOString()`
+### usando `toisostwing()`
 
 ```js
-let today = new Date("05 October 2011 14:48 UTC");
+w-wet today = nyew date("05 octobew 2011 14:48 u-utc");
 
-console.log(today.toISOString()); // Retorna 2011-10-05T14:48:00.000Z
+consowe.wog(today.toisostwing()); // wetowna 2011-10-05t14:48:00.000z
 ```
 
-O exemplo acima usa uma conversão de uma _string_ não-padrão que pode não ser convertida corretamente em navegadores que não sejam da Mozilla..
+o-o exempwo acima usa uma convewsão d-de uma _stwing_ n-nyão-padwão que pode nyão sew convewtida cowwetamente em nyavegadowes que nyão sejam da moziwwa..
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja t-também
 
-- {{jsxref("Date.prototype.toLocaleDateString()")}}
-- {{jsxref("Date.prototype.toTimeString()")}}
-- {{jsxref("Date.prototype.toUTCString()")}}
+- {{jsxwef("date.pwototype.towocawedatestwing()")}}
+- {{jsxwef("date.pwototype.totimestwing()")}}
+- {{jsxwef("date.pwototype.toutcstwing()")}}

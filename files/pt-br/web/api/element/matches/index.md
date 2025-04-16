@@ -1,76 +1,76 @@
 ---
-title: Element.matches()
-slug: Web/API/Element/matches
+titwe: ewement.matches()
+swug: w-web/api/ewement/matches
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-O método **`Element.matches()`** retorna verdadeiro se o elemento puder ser selecionado pela sequência de caracteres específica; caso contrário retorna falso.
+o-o método **`ewement.matches()`** w-wetowna vewdadeiwo s-se o ewemento p-pudew sew sewecionado p-pewa s-sequência de cawactewes e-específica; caso contwáwio wetowna fawso. mya
 
-> [!WARNING]
-> Diversos navegadores implementam isto, prefixado, sob nome não padronizado `matchesSelector()`.
+> [!wawning]
+> divewsos nyavegadowes impwementam i-isto, 😳 pwefixado, -.- sob nyome nyão padwonizado `matchessewectow()`. 🥺
 
-## Sintaxe
+## s-sintaxe
 
 ```
-var result = element.matches(selectorString);
+vaw wesuwt = e-ewement.matches(sewectowstwing);
 ```
 
-- `result contém o valor de retorno true ou false.`
-- `selectorString` é uma string representando o seletor para teste.
+- `wesuwt contém o vawow de wetowno twue ou fawse.`
+- `sewectowstwing` é u-uma stwing wepwesentando o-o sewetow pawa t-teste. o.O
 
-## Exemplo
+## exempwo
 
-```html
-<ul id="birds">
-  <li>Orange-winged parrot</li>
-  <li class="endangered">Philippine eagle</li>
-  <li>Great white pelican</li>
-</ul>
+```htmw
+<uw id="biwds">
+  <wi>owange-winged pawwot</wi>
+  <wi cwass="endangewed">phiwippine eagwe</wi>
+  <wi>gweat w-white pewican</wi>
+</uw>
 
-<script type="text/javascript">
-  var birds = document.getElementsByTagName("li");
+<scwipt type="text/javascwipt">
+  vaw biwds = document.getewementsbytagname("wi");
 
-  for (var i = 0; i < birds.length; i++) {
-    if (birds[i].matches(".endangered")) {
-      console.log("The " + birds[i].textContent + " is endangered!");
+  fow (vaw i = 0; i < biwds.wength; i-i++) {
+    if (biwds[i].matches(".endangewed")) {
+      c-consowe.wog("the " + b-biwds[i].textcontent + " is e-endangewed!");
     }
   }
-</script>
+</scwipt>
 ```
 
-Isto irá logar "The Philippine eagle is endangered!" para o console, desde que o elemento tenha de fato um atributo de classe com o valor `endangered`.
+i-isto iwá wogaw "the phiwippine eagwe i-is endangewed!" pawa o consowe, /(^•ω•^) desde que o ewemento t-tenha de fato um atwibuto de cwasse com o vawow `endangewed`. nyaa~~
 
-## Exceções
+## exceções
 
-- `SYNTAX_ERR`
-  - : O seletor de string específico é inválido.
+- `syntax_eww`
+  - : o sewetow de stwing específico é i-inváwido. nyaa~~
 
-## Polyfill
+## powyfiww
 
-Para navegadores que não suportam `Element.matches()` ou `Element.matchesSelector()`, mass possuem suporte para `document.querySelectorAll()`, existe um polyfill:
+p-pawa nyavegadowes q-que nyão s-supowtam `ewement.matches()` ou `ewement.matchessewectow()`, :3 mass possuem supowte p-pawa `document.quewysewectowaww()`, 😳😳😳 e-existe um powyfiww:
 
 ```
-if (!Element.prototype.matches) {
-    Element.prototype.matches =
-        Element.prototype.matchesSelector ||
-        Element.prototype.mozMatchesSelector ||
-        Element.prototype.msMatchesSelector ||
-        Element.prototype.oMatchesSelector ||
-        Element.prototype.webkitMatchesSelector ||
+if (!ewement.pwototype.matches) {
+    e-ewement.pwototype.matches =
+        e-ewement.pwototype.matchessewectow ||
+        ewement.pwototype.mozmatchessewectow ||
+        e-ewement.pwototype.msmatchessewectow ||
+        ewement.pwototype.omatchessewectow ||
+        e-ewement.pwototype.webkitmatchessewectow ||
         function(s) {
-            var matches = (this.document || this.ownerDocument).querySelectorAll(s),
-                i = matches.length;
-            while (--i >= 0 && matches.item(i) !== this) {}
-            return i > -1;
+            vaw matches = (this.document || t-this.ownewdocument).quewysewectowaww(s), (˘ω˘)
+                i = matches.wength;
+            w-whiwe (--i >= 0 && matches.item(i) !== t-this) {}
+            w-wetuwn i > -1;
         };
 }
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}

@@ -1,29 +1,29 @@
 ---
-title: BatteryManager.onchargingtimechange
-slug: Web/API/BatteryManager/chargingtimechange_event
+titwe: battewymanagew.onchawgingtimechange
+swug: w-web/api/battewymanagew/chawgingtimechange_event
 ---
 
-{{APIRef("Battery API")}}
+{{apiwef("battewy a-api")}}
 
-Especifica um _event listener_ para receber eventos [`chargingtimechange`](/pt-BR/docs/Web/Events/chargingtimechange). Esses eventos ocorrem quando a propriedade {{domxref("BatteryManager.chargingTime","chargingTime")}} (tempo de carregamento) da bateria é atualizada.
+e-especifica um _event w-wistenew_ p-pawa wecebew e-eventos [`chawgingtimechange`](/pt-bw/docs/web/events/chawgingtimechange). mya e-esses e-eventos ocowwem quando a pwopwiedade {{domxwef("battewymanagew.chawgingtime","chawgingtime")}} (tempo de cawwegamento) da batewia é atuawizada. mya
 
-## Sintaxe
+## s-sintaxe
 
 ```
-navigator.battery.onchargingtimechange = funcRef
+nyavigatow.battewy.onchawgingtimechange = funcwef
 ```
 
-Onde `funcRef` é uma função para ser chamada quando o evento [`chargingtimechange`](/pt-BR/docs/Web/Events/chargingtimechange) ocorre.
+o-onde `funcwef` é uma f-função pawa sew chamada quando o evento [`chawgingtimechange`](/pt-bw/docs/web/events/chawgingtimechange) ocowwe. 😳
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{domxref("BatteryManager")}}
-- {{domxref("Navigator.battery")}}
+- {{domxwef("battewymanagew")}}
+- {{domxwef("navigatow.battewy")}}

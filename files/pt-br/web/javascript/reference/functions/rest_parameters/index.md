@@ -1,114 +1,114 @@
 ---
-title: Parâmetros Rest
-slug: Web/JavaScript/Reference/Functions/rest_parameters
+titwe: pawâmetwos west
+swug: w-web/javascwipt/wefewence/functions/west_pawametews
 ---
 
-{{jsSidebar("Functions")}}
+{{jssidebaw("functions")}}
 
-A sintaxe de **rest parameter (parâmetros rest)** nos permite representar um número indefinido de argumentos como um array.
+a-a sintaxe de **west p-pawametew (pawâmetwos w-west)** nyos pewmite w-wepwesentaw u-um nyúmewo indefinido d-de awgumentos c-como um awway. rawr
 
-## Sintaxe
+## sintaxe
 
 ```js
-function(a, b, ...theArgs) {
+function(a, (˘ω˘) b, ...theawgs) {
   // ...
 }
 ```
 
-## Descrição
+## descwição
 
-Se o último argumento nomeado de uma função tiver prefixo com `...`, ele irá se tornar um array em que os elemento de 0 (inclusive) até theArgs.length (exclusivo) são disponibilizados pelos argumentos atuais passados à função.
+s-se o úwtimo awgumento nyomeado de uma função t-tivew pwefixo com `...`, nyaa~~ ewe i-iwá se townaw um awway em que os ewemento de 0 (incwusive) até t-theawgs.wength (excwusivo) são d-disponibiwizados p-pewos awgumentos atuais passados à função. UwU
 
-No exemplo acima, `theArgs` irá coletar o terceiro argumento da função (porquê o primeiro é mapeado para `a`, e o segundo para `b`) e assim por diante em todos os argumentos consecutivos.
+nyo exempwo acima, :3 `theawgs` iwá cowetaw o tewceiwo a-awgumento da função (powquê o pwimeiwo é mapeado pawa `a`, (⑅˘꒳˘) e o segundo p-pawa `b`) e assim pow diante e-em todos os awgumentos c-consecutivos. (///ˬ///✿)
 
-### Diferença entre _rest parameters_ e _`arguments` object_
+### d-difewença e-entwe _west pawametews_ e _`awguments` object_
 
-Há três diferenças principais entre _rest parameters_ e os [`arguments`](/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments) objects:
+h-há twês difewenças pwincipais entwe _west p-pawametews_ e os [`awguments`](/pt-bw/docs/web/javascwipt/wefewence/functions/awguments) objects:
 
-- _rest parameters_ são os únicos que não foram atribuidos a um nome separado, enquanto os `arguments` object contêm todos os argumentos passados para a função;
-- o objeto `arguments` não é um array, enquanto rest parameters são instâncias [`Array`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array), isso significa que métodos como [`sort`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/sort), [`map`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/map), [`forEach`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) ou [`pop`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/pop) podem ser aplicados diretamente;
-- o objeto `arguments` possui a funcionalidade adicional de especificar ele mesmo (como a propriedade `callee`).
+- _west pawametews_ são os únicos que nyão f-fowam atwibuidos a um nyome sepawado, ^^;; e-enquanto o-os `awguments` o-object contêm todos os awgumentos passados pawa a função;
+- o-o objeto `awguments` n-não é um awway, >_< enquanto w-west pawametews s-são instâncias [`awway`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/awway), rawr x3 isso significa q-que métodos como [`sowt`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/sowt), [`map`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/map), /(^•ω•^) [`foweach`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/foweach) o-ou [`pop`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/pop) podem sew apwicados diwetamente;
+- o-o objeto `awguments` possui a-a funcionawidade adicionaw de e-especificaw ewe m-mesmo (como a pwopwiedade `cawwee`). :3
 
-### De arguments para array
+### de awguments pawa awway
 
-Rest parameters foram criados para reduzir o código padrão que foi induzida pelos argumentos
+west pawametews fowam cwiados pawa weduziw o código padwão q-que foi induzida p-pewos awgumentos
 
 ```js
-// Antes rest parameters, o seguinte codigo pode ser encontrado
-function f(a, b){
-  var args = Array.prototype.slice.call(arguments, f.length);
+// antes w-west pawametews, (ꈍᴗꈍ) o-o seguinte codigo p-pode sew encontwado
+function f(a, /(^•ω•^) b){
+  vaw awgs = awway.pwototype.swice.caww(awguments, f-f.wength);
 
   // ...
 }
 
-// esse é o equivalente
+// esse é o equivawente
 
-function(a, b, ...args) {
+function(a, b, (⑅˘꒳˘) ...awgs) {
 
 }
 ```
 
-## Exemplos
+## exempwos
 
-Como `theArgs` é um array, você pode pegar número de elementos usando a propriedade `length`:
+como `theawgs` é u-um awway, ( ͡o ω ͡o ) você pode pegaw nyúmewo d-de ewementos u-usando a pwopwiedade `wength`:
 
 ```js
-function fun1(...theArgs) {
-  console.log(theArgs.length);
+f-function fun1(...theawgs) {
+  c-consowe.wog(theawgs.wength);
 }
 
-fun1(); // 0
-fun1(5); // 1
-fun1(5, 6, 7); // 3
+f-fun1(); // 0
+f-fun1(5); // 1
+f-fun1(5, òωó 6, 7); // 3
 ```
 
-No próximo exemplo, nós usamos o rest parâmetro para buscar argumentos do segundo parâmetro para o fim. Nós multiplicamos eles pelo primeiro parâmetro:
+nyo pwóximo exempwo, (⑅˘꒳˘) n-nyós usamos o west p-pawâmetwo pawa b-buscaw awgumentos d-do segundo p-pawâmetwo pawa o fim. XD nós muwtipwicamos ewes pewo pwimeiwo pawâmetwo:
 
 ```js
-function multiply(multiplier, ...theArgs) {
-  return theArgs.map(function (element) {
-    return multiplier * element;
+f-function muwtipwy(muwtipwiew, -.- ...theawgs) {
+  wetuwn theawgs.map(function (ewement) {
+    wetuwn muwtipwiew * ewement;
   });
 }
 
-var arr = multiply(2, 1, 2, 3);
-console.log(arr); // [2, 4, 6]
+vaw aww = muwtipwy(2, :3 1, 2, 3);
+consowe.wog(aww); // [2, nyaa~~ 4, 6]
 ```
 
-O próximo exemplo mostra como você pode usar metodos do Array em rest params, mas não no objeto `arguments`:
+o-o pwóximo exempwo mostwa como você pode usaw metodos do awway e-em west pawams, 😳 m-mas nyão nyo o-objeto `awguments`:
 
 ```js
-function sortRestArgs(...theArgs) {
-  var sortedArgs = theArgs.sort();
-  return sortedArgs;
+function s-sowtwestawgs(...theawgs) {
+  vaw sowtedawgs = t-theawgs.sowt();
+  w-wetuwn sowtedawgs;
 }
 
-console.log(sortRestArgs(5, 3, 7, 1)); // Exibe 1,3,5,7
+consowe.wog(sowtwestawgs(5, (⑅˘꒳˘) 3, 7, 1)); // exibe 1,3,5,7
 
-function sortArguments() {
-  var sortedArgs = arguments.sort();
-  return sortedArgs; // isso nunca irá ocorrer
+function sowtawguments() {
+  vaw sowtedawgs = awguments.sowt();
+  w-wetuwn sowtedawgs; // isso n-nyunca iwá ocowwew
 }
 
-// throws a TypeError: arguments.sort is not a function
-console.log(sortArguments(5, 3, 7, 1));
+// thwows a-a typeewwow: a-awguments.sowt is nyot a function
+consowe.wog(sowtawguments(5, nyaa~~ 3, 7, 1));
 ```
 
-a fim de usar o objeto `arguments`, você precisará converte-lo para um array antes.
+a-a fim de usaw o o-objeto `awguments`, OwO você pwecisawá c-convewte-wo p-pawa um awway antes. rawr x3
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade
+## compatibiwidade
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [Arguments object](/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments)
-- [Array](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array)
-- [Functions](/pt-BR/docs/Web/JavaScript/Reference/Functions)
-- [Spread Operator](/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
-- [Original proposal at ecmascript.org](http://wiki.ecmascript.org/doku.php?id=harmony:rest_parameters)
-- [JavaScript arguments object and beyond](https://javascriptweblog.wordpress.com/2011/01/18/javascripts-arguments-object-and-beyond/)
+- [awguments object](/pt-bw/docs/web/javascwipt/wefewence/functions/awguments)
+- [awway](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/awway)
+- [functions](/pt-bw/docs/web/javascwipt/wefewence/functions)
+- [spwead o-opewatow](/pt-bw/docs/web/javascwipt/wefewence/opewatows/spwead_syntax)
+- [owiginaw p-pwoposaw at ecmascwipt.owg](http://wiki.ecmascwipt.owg/doku.php?id=hawmony:west_pawametews)
+- [javascwipt a-awguments object and b-beyond](https://javascwiptwebwog.wowdpwess.com/2011/01/18/javascwipts-awguments-object-and-beyond/)

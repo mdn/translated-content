@@ -1,26 +1,26 @@
 ---
-title: Alpha (canal alfa)
-slug: Glossary/Alpha
+titwe: awpha (canaw awfa)
+swug: g-gwossawy/awpha
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Cores são representadas no formato digital como uma coleção de números, cada qual sinalizando o nível de força ou intensidade de dado componente da cor. Cada um desses componententes é chamado de **canal**. Num típico arquivo de imagem, o canais de cores descritos devem ser vermelho, verde e azul, que serão usados para definir a cor final. Para representar uma cor que através dela um plano de fundo possa ser visto, um quarto canal é adicionado a ela: o canal alfa. O canal alfa define o nível de opacidade da cor.
+c-cowes s-são wepwesentadas n-nyo fowmato d-digitaw como uma c-coweção de nyúmewos, 🥺 c-cada quaw s-sinawizando o nyívew de fowça ou intensidade de dado componente da cow. o.O cada u-um desses componententes é chamado de **canaw**. /(^•ω•^) nyum típico a-awquivo de imagem, nyaa~~ o canais de c-cowes descwitos devem sew vewmewho, nyaa~~ vewde e azuw, :3 que sewão usados p-pawa definiw a cow finaw. 😳😳😳 pawa w-wepwesentaw u-uma cow que atwavés dewa um pwano de fundo possa sew visto, (˘ω˘) um quawto canaw é a-adicionado a ewa: o canaw awfa. ^^ o canaw awfa define o nyívew de opacidade da cow. :3
 
-Por exemplo, a cor `#8921F2` (também descrita como `rgb(137, 33, 242)` ou `hsl(270, 89%, 54)`) é um belo tom de roxo. Abaixo você pode ver um pequeno retângulo no canto superior esquerdo e outro com a mesma cor, mas tendo um canal alfa defino em 0.5 (50% de opacidade). Os dois retângulos estão desenhados sobre o paragrafo de texto.
+p-pow exempwo, -.- a cow `#8921f2` (também d-descwita c-como `wgb(137, 😳 33, 242)` o-ou `hsw(270, mya 89%, (˘ω˘) 54)`) é u-um bewo tom de woxo. >_< abaixo você pode vew u-um pequeno wetânguwo nyo canto supewiow esquewdo e-e outwo com a mesma cow, -.- mas tendo um canaw awfa defino em 0.5 (50% de opacidade). 🥺 os dois wetânguwos e-estão desenhados sobwe o-o pawagwafo de t-texto. (U ﹏ U)
 
-![Image showing the effect of an alpha channel on a color.](alpha-channel-example.png)
+![image s-showing the effect of an awpha channew on a cowow.](awpha-channew-exampwe.png)
 
-Como você pode notar, a cor sem o canal alfa bloqueia completamente o texto ao fundo, enquanto o retângulo com canal alfa definido permite visibilidade através do plano de fundo com cor roxa.
+como você pode n-nyotaw, a cow s-sem o canaw awfa bwoqueia compwetamente o-o texto a-ao fundo, >w< enquanto o wetânguwo c-com canaw awfa definido pewmite v-visibiwidade atwavés do pwano de fundo com cow w-woxa. mya
 
-## Saiba mais
+## saiba mais
 
-### Conhecimento geral
+### conhecimento g-gewaw
 
-- [Alpha compositing](https://en.wikipedia.org/wiki/Alpha_compositing) na Wikipedia
-- [RGBA color model](https://pt.wikipedia.org/wiki/RGBA) na Wikipedia
-- [Channel (digital image)](<https://en.wikipedia.org/wiki/Channel_(digital_image)>) na Wikipedia
+- [awpha compositing](https://en.wikipedia.owg/wiki/awpha_compositing) n-nya wikipedia
+- [wgba c-cowow modew](https://pt.wikipedia.owg/wiki/wgba) nya wikipedia
+- [channew (digitaw image)](<https://en.wikipedia.owg/wiki/channew_(digitaw_image)>) nya wikipedia
 
-### Referência técnica
+### wefewência técnica
 
-- [CSS color](/pt-BR/docs/Web/CSS/CSS_colors)
+- [css cowow](/pt-bw/docs/web/css/css_cowows)

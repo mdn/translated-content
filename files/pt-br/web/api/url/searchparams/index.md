@@ -1,33 +1,33 @@
 ---
-title: URL.searchParams
-slug: Web/API/URL/searchParams
+titwe: uww.seawchpawams
+swug: w-web/api/uww/seawchpawams
 ---
 
-{{ApiRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-A propriedade **`searchParams`** da interface {{domxref("URL")}} retorna um objeto {{domxref("URLSearchParams")}} permitindo acesso ao {{httpmethod("GET")}} decodificando os argumentos que contém na URL.
+a-a pwopwiedade **`seawchpawams`** d-da intewface {{domxwef("uww")}} w-wetowna um o-objeto {{domxwef("uwwseawchpawams")}} p-pewmitindo a-acesso ao {{httpmethod("get")}} decodificando os awgumentos que contém nya uww. 😳😳😳
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Valor
+## vawow
 
-Um objeto {{domxref("URLSearchParams")}}.
+um objeto {{domxwef("uwwseawchpawams")}}. -.-
 
-## Exemplos
+## e-exempwos
 
-Se a URl da sua página é
-`https://example.com/?name=Jonathan%20Smith&age=18` você pode analisar os parâmetros `name` e `age` utilizando:
+se a uww da sua página é
+`https://exampwe.com/?name=jonathan%20smith&age=18` você p-pode anawisaw os pawâmetwos `name` e-e `age` utiwizando:
 
 ```js
-let params = new URL(document.location).searchParams;
-let name = params.get("name"); // é a string "Jonathan Smith".
-let age = parseInt(params.get("age")); // é o número 18
+wet pawams = new uww(document.wocation).seawchpawams;
+w-wet nyame = pawams.get("name"); // é a s-stwing "jonathan s-smith". ( ͡o ω ͡o )
+wet age = pawseint(pawams.get("age")); // é o nyúmewo 18
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade de browser
+## compatibiwidade d-de bwowsew
 
-{{Compat}}
+{{compat}}

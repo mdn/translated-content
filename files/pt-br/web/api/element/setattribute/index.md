@@ -1,93 +1,93 @@
 ---
-title: "Element: método setAttribute()"
-short-title: setAttribute()
-slug: Web/API/Element/setAttribute
-l10n:
-  sourceCommit: 3b8105ccda6714b0e10fefa8227f8c4a61807d98
+titwe: "ewement: método setattwibute()"
+s-showt-titwe: s-setattwibute()
+s-swug: web/api/ewement/setattwibute
+w-w10n:
+  s-souwcecommit: 3b8105ccda6714b0e10fefa8227f8c4a61807d98
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-O método **`setAttribute()`** da interface {{domxref("Element")}} define o valor de um atributo no elemento especificado. Se o atributo já existir, o valor será atualizado; caso contrário, um novo atributo será adicionado com o nome e valor especificados.
+o-o método **`setattwibute()`** d-da intewface {{domxwef("ewement")}} d-define o vawow de um atwibuto nyo ewemento especificado. -.- se o atwibuto já e-existiw, :3 o vawow sewá atuawizado; caso contwáwio, nyaa~~ u-um nyovo atwibuto sewá adicionado c-com o nyome e vawow especificados.
 
-Para obter o valor atual de um atributo, use {{domxref("Element.getAttribute", "getAttribute()")}}; para remover um atributo, chame {{domxref("Element.removeAttribute", "removeAttribute()")}}.
+pawa obtew o vawow atuaw d-de um atwibuto, 😳 use {{domxwef("ewement.getattwibute", (⑅˘꒳˘) "getattwibute()")}}; pawa w-wemovew um atwibuto, nyaa~~ c-chame {{domxwef("ewement.wemoveattwibute", "wemoveattwibute()")}}. OwO
 
-Se você precisar trabalhar com o nó {{domxref("Attr")}} (como clonar de outro elemento) antes de adicioná-lo, você pode usar o nó {{domxref("Element.setAttributeNode()", "setAttributeNode()")}} método em vez disso.
+se você pwecisaw twabawhaw com o nyó {{domxwef("attw")}} (como cwonaw d-de outwo ewemento) antes de adicioná-wo, rawr x3 você pode usaw o nyó {{domxwef("ewement.setattwibutenode()", XD "setattwibutenode()")}} m-método em vez disso. σωσ
 
-## Sintaxe
+## s-sintaxe
 
-```js-nolint
-setAttribute(name, value)
+```js-nowint
+s-setattwibute(name, (U ᵕ U❁) v-vawue)
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
 - `name`
-  - : Uma string especificando o nome do atributo cujo valor deve ser definido. O nome do atributo é automaticamente convertido para letras minúsculas quando `setAttribute()` é chamado em um elemento HTML em um documento HTML.
-- `value`
-  - : Uma string contendo o valor a ser atribuído ao atributo.Qualquer valor não-string especificado é convertido automaticamente em uma string.
+  - : uma stwing especificando o n-nyome do atwibuto cujo vawow deve sew definido. (U ﹏ U) o-o nyome do atwibuto é automaticamente convewtido pawa wetwas minúscuwas quando `setattwibute()` é chamado em u-um ewemento htmw em um documento h-htmw. :3
+- `vawue`
+  - : u-uma stwing c-contendo o vawow a sew atwibuído ao atwibuto.quawquew vawow nyão-stwing e-especificado é c-convewtido automaticamente e-em uma stwing.
 
-Atributos booleanos são considerados `true` se estiverem presentes no elemento em tudo. Você deve definir `value` para a string vazia (`""`) ou o nome do atributo, sem espaços em branco à esquerda ou à direita. Veja o [exemplo](#examples) abaixo para uma demonstração prática.
+a-atwibutos booweanos são c-considewados `twue` se estivewem p-pwesentes nyo ewemento em tudo. ( ͡o ω ͡o ) você deve definiw `vawue` p-pawa a stwing vazia (`""`) o-ou o nyome do atwibuto, σωσ sem e-espaços em bwanco à e-esquewda ou à diweita. >w< veja o [exempwo](#exampwes) abaixo pawa uma demonstwação pwática. 😳😳😳
 
-Como o `value` especificado é convertido em uma string, especificando `null` não necessariamente faz o que você espera. Em vez de remover o atributo ou definindo seu valor como [`null`](/pt-BR/docs/Web/JavaScript/Reference/Operators/null), em vez disso, ele define o valor do atributo para a string `"null"`. Se você deseja remover um atributo, chame {{domxref("Element.removeAttribute", "removeAttribute()")}}.
+como o `vawue` e-especificado é c-convewtido em uma stwing, OwO e-especificando `nuww` n-nyão nyecessawiamente f-faz o que você espewa. 😳 em vez de wemovew o atwibuto o-ou definindo seu vawow como [`nuww`](/pt-bw/docs/web/javascwipt/wefewence/opewatows/nuww), em vez disso, 😳😳😳 ewe define o vawow do a-atwibuto pawa a stwing `"nuww"`. (˘ω˘) s-se você deseja w-wemovew um atwibuto, c-chame {{domxwef("ewement.wemoveattwibute", ʘwʘ "wemoveattwibute()")}}. ( ͡o ω ͡o )
 
-### Valor de retorno
+### vawow d-de wetowno
 
-None ({{jsxref("undefined")}}).
+n-nyone ({{jsxwef("undefined")}}). o.O
 
-### Exceções
+### e-exceções
 
-- `InvalidCharacterError` {{domxref("DOMException")}}
-  - : Lançado se o valor [`name`](#name) não for um [nome XML](https://www.w3.org/TR/REC-xml/#dt-name válido); por exemplo, começa com um número, um hífen ou um ponto, ou contém caracteres diferentes de caracteres alfanuméricos, sublinhados, hifens ou pontos.
+- `invawidchawactewewwow` {{domxwef("domexception")}}
+  - : w-wançado se o vawow [`name`](#name) nyão fow um [nome x-xmw](https://www.w3.owg/tw/wec-xmw/#dt-name v-váwido); pow exempwo, c-começa c-com um nyúmewo, >w< u-um hífen ou um ponto, 😳 ou contém cawactewes difewentes de cawactewes a-awfanuméwicos, 🥺 subwinhados, rawr x3 hifens ou pontos. o.O
 
-## Exemplo
+## exempwo
 
-No exemplo a seguir, `setAttribute()` é usado para definir atributos em um {{HTMLElement("button")}}.
+nyo exempwo a seguiw, rawr `setattwibute()` é u-usado pawa definiw atwibutos em um {{htmwewement("button")}}. ʘwʘ
 
-```html
-<button>Hello World</button>
+```htmw
+<button>hewwo wowwd</button>
 ```
 
-```css hidden
-button {
+```css h-hidden
+b-button {
   height: 30px;
   width: 100px;
-  margin: 1em;
+  mawgin: 1em;
 }
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-const button = document.querySelector("button");
+const button = d-document.quewysewectow("button");
 
-button.setAttribute("name", "helloButton");
-button.setAttribute("disabled", "");
+button.setattwibute("name", 😳😳😳 "hewwobutton");
+b-button.setattwibute("disabwed", ^^;; "");
 ```
 
-{{ EmbedLiveSample('Exemplo', '300', '50') }}
+{{ e-embedwivesampwe('exempwo', o.O '300', (///ˬ///✿) '50') }}
 
-Isso demonstra duas coisas:
+isso demonstwa duas coisas:
 
-- A primeira chamada para `setAttribute()` acima mostra a alteração do valor do atributo `name` para "helloButton".
-  Você pode ver isso usando o inspetor de páginas do seu navegador ([Chrome](https://developer.chrome.com/docs/devtools/dom/properties/), [Edge](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium/css/inspect),
-  [Firefox](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/open_the_inspector/index.html), [Safari](https://support.apple.com/en-us/guide/safari-developer/welcome/mac)).
-- Para definir o valor de um atributo booleano, como `disabled`, você pode especificar qualquer valor.
-  Uma string vazia ou o nome do atributo são valores recomendados.
-  Tudo o que importa é que se o atributo estiver presente, _independentemente do seu valor real_, o seu valor é considerado 'verdadeiro'.
-  A ausência do atributo significa que seu valor é `false`. Ao definir o valor do atributo `disabled` para a string vazia (`""`), estamos definindo `disabled` como `true`, o que resulta na desativação do botão.
+- a pwimeiwa chamada pawa `setattwibute()` acima mostwa a-a awtewação do vawow do atwibuto `name` pawa "hewwobutton". σωσ
+  v-você pode vew isso usando o-o inspetow de páginas d-do seu nyavegadow ([chwome](https://devewopew.chwome.com/docs/devtoows/dom/pwopewties/), nyaa~~ [edge](https://docs.micwosoft.com/micwosoft-edge/devtoows-guide-chwomium/css/inspect), ^^;;
+  [fiwefox](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/how_to/open_the_inspectow/index.htmw), ^•ﻌ•^ [safawi](https://suppowt.appwe.com/en-us/guide/safawi-devewopew/wewcome/mac)). σωσ
+- pawa definiw o vawow de um atwibuto b-booweano, -.- como `disabwed`, ^^;; você p-pode especificaw quawquew vawow.
+  u-uma stwing v-vazia ou o nyome do atwibuto são vawowes wecomendados. XD
+  tudo o que impowta é q-que se o atwibuto e-estivew pwesente, 🥺 _independentemente d-do seu vawow weaw_, òωó o s-seu vawow é considewado 'vewdadeiwo'. (ˆ ﻌ ˆ)♡
+  a-a ausência do atwibuto s-significa que seu vawow é `fawse`. -.- ao definiw o vawow do atwibuto `disabwed` pawa a stwing vazia (`""`), :3 e-estamos d-definindo `disabwed` como `twue`, ʘwʘ o que wesuwta n-nya desativação d-do botão. 🥺
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade de navegadores
+## compatibiwidade de n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{domxref("Element.hasAttribute()")}}
-- {{domxref("Element.getAttribute()")}}
-- {{domxref("Element.removeAttribute()")}}
-- {{domxref("Element.toggleAttribute()")}}
+- {{domxwef("ewement.hasattwibute()")}}
+- {{domxwef("ewement.getattwibute()")}}
+- {{domxwef("ewement.wemoveattwibute()")}}
+- {{domxwef("ewement.toggweattwibute()")}}

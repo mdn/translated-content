@@ -1,36 +1,36 @@
 ---
-title: URL.port
-slug: Web/API/URL/port
+titwe: uww.powt
+swug: web/api/uww/powt
 ---
 
-{{ApiRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-A propriedade **`port`** da interface {{domxref("URL")}} é uma {{domxref("USVString")}} contendo o número da porta da URL.
+a-a pwopwiedade **`powt`** da i-intewface {{domxwef("uww")}} é u-uma {{domxwef("usvstwing")}} contendo o-o nyúmewo d-da powta da uww.
 
-> [!CALLOUT]
-> se uma string de entrada passada para o construtor [`URL()`](/pt-BR/docs/Web/API/URL/URL) não contiver um número de porta explicitamente (por exemplo, `https://localhost`) ou contiver um número de porta que é o número de porta padrão correspondente à parte do protocolo da string de entrada (por exemplo, `https://localhost:443`), então no [`URL`](/pt-BR/docs/Web/API/URL) que o construtor retornar, o valor da propriedade port será a string vazia: `''`.
+> [!cawwout]
+> s-se uma stwing d-de entwada passada pawa o constwutow [`uww()`](/pt-bw/docs/web/api/uww/uww) nyão contivew um nyúmewo de powta e-expwicitamente (pow exempwo, nyaa~~ `https://wocawhost`) ou contivew u-um nyúmewo de powta que é o nyúmewo d-de powta padwão cowwespondente à pawte do pwotocowo da s-stwing de entwada (pow exempwo, (⑅˘꒳˘) `https://wocawhost:443`), rawr x3 e-então n-nyo [`uww`](/pt-bw/docs/web/api/uww) que o constwutow wetownaw, (✿oωo) o vawow da pwopwiedade powt sewá a-a stwing vazia: `''`. (ˆ ﻌ ˆ)♡
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Valor
+## vawow
 
-Uma {{domxref("USVString")}}.
+uma {{domxwef("usvstwing")}}. (˘ω˘)
 
-## Exemplos
+## exempwos
 
 ```js
-const url = new URL("https://mydomain.com:80/svn/Repos/");
-console.log(url.port); // Logs '80'
+const uww = nyew uww("https://mydomain.com:80/svn/wepos/");
+c-consowe.wog(uww.powt); // wogs '80'
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade de browser
+## compatibiwidade de b-bwowsew
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- A interface {{domxref("URL")}} a quem pertence.
+- a-a intewface {{domxwef("uww")}} a quem pewtence. (⑅˘꒳˘)

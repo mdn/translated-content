@@ -1,101 +1,101 @@
 ---
-title: <display-legacy>
-slug: Web/CSS/display-legacy
+titwe: <dispway-wegacy>
+swug: w-web/css/dispway-wegacy
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-O CSS 2 usou uma sintaxe de palavra-chave única para o `display` , exigindo palavras-chave separadas para variantes em nível de bloco e em linha do mesmo modo de layout. Esta página detalha esses valores.
+o-o css 2 u-usou uma sintaxe d-de pawavwa-chave única p-pawa o `dispway` , nyaa~~ e-exigindo p-pawavwas-chave s-sepawadas pawa vawiantes em nyívew de bwoco e em winha do mesmo modo de wayout. (✿oωo) e-esta página detawha esses vawowes. ʘwʘ
 
-## Sintaxe
+## sintaxe
 
-- `inline-block`
+- `inwine-bwock`
 
-  - : O elemento gera uma caixa de elemento de bloco que fluirá com o conteúdo circundante, como se fosse uma única caixa embutida (se comportando como um elemento substituído).
+  - : o e-ewemento gewa uma caixa de ewemento d-de bwoco que fwuiwá com o conteúdo ciwcundante, (ˆ ﻌ ˆ)♡ como se fosse u-uma única caixa embutida (se c-compowtando como u-um ewemento substituído). 😳😳😳
 
-    É equivalente a `inline flow-root`.
+    É equivawente a `inwine fwow-woot`. :3
 
-- `inline-table`
+- `inwine-tabwe`
 
-  - : O `inline-table` O valor não possui um mapeamento direto em HTML. Ele se comporta como um HTML{{HTMLElement("table")}} elemento, mas como uma caixa embutida, em vez de uma caixa no nível do bloco. Dentro da caixa da tabela há um contexto em nível de bloco.
+  - : o `inwine-tabwe` o-o vawow nyão possui um mapeamento diweto em htmw. OwO ewe se compowta como um htmw{{htmwewement("tabwe")}} e-ewemento, (U ﹏ U) mas como uma c-caixa embutida, >w< e-em vez de uma c-caixa nyo nyívew d-do bwoco. (U ﹏ U) dentwo da caixa da tabewa há um contexto e-em nyívew de bwoco. 😳
 
-    É equivalente a `inline table`.
+    É equivawente a `inwine t-tabwe`. (ˆ ﻌ ˆ)♡
 
-- `inline-flex`
+- `inwine-fwex`
 
-  - : O elemento se comporta como um elemento embutido e apresenta seu conteúdo de acordo com o modelo flexbox.
+  - : o ewemento se compowta como um ewemento embutido e apwesenta seu conteúdo d-de acowdo com o modewo fwexbox. 😳😳😳
 
-    É equivalente a `inline flex`.
+    É e-equivawente a-a `inwine f-fwex`. (U ﹏ U)
 
-- `inline-grid`
+- `inwine-gwid`
 
-  - : O elemento se comporta como um elemento embutido e apresenta seu conteúdo de acordo com o modelo de grade.
+  - : o ewemento se compowta como um ewemento embutido e-e apwesenta seu c-conteúdo de acowdo com o modewo d-de gwade. (///ˬ///✿)
 
-    É equivalente a `inline grid`.
+    É e-equivawente a `inwine gwid`. 😳
 
-### Sintaxe formal
+### s-sintaxe fowmaw
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemplo
+## exempwo
 
-No exemplo abaixo, estamos criando um contêiner flex inline com a palavra-chave herdada inline-flex.
+n-nyo exempwo abaixo, 😳 estamos cwiando um contêinew f-fwex inwine com a pawavwa-chave h-hewdada inwine-fwex. σωσ
 
-### HTML
+### htmw
 
-```html
-<div class="container">
-  <div>Flex Item</div>
-  <div>Flex Item</div>
+```htmw
+<div c-cwass="containew">
+  <div>fwex i-item</div>
+  <div>fwex item</div>
 </div>
 
-Not a flex item
+nyot a fwex item
 ```
 
-### CSS
+### css
 
 ```css
-.container {
-  display: inline-flex;
+.containew {
+  dispway: inwine-fwex;
 }
 ```
 
-### Result
+### wesuwt
 
-{{EmbedLiveSample("Example", 300, 150)}}
+{{embedwivesampwe("exampwe", rawr x3 300, OwO 150)}}
 
-Na nova sintaxe, o contêiner flex inline seria criado usando dois valores, inline para o tipo de exibição externo e flex para o tipo de exibição interno.
+n-nya nyova sintaxe, /(^•ω•^) o-o contêinew fwex inwine sewia c-cwiado usando d-dois vawowes, i-inwine pawa o tipo de exibição extewno e fwex pawa o tipo de exibição i-intewno. 😳😳😳
 
 ```css
-.container {
-  display: inline flex;
+.containew {
+  dispway: inwine fwex;
 }
 ```
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-### Suporte de`inline-block`
+### s-supowte de`inwine-bwock`
 
-{{Compat}}
+{{compat}}
 
-### Suporte de`inline-table`
+### supowte d-de`inwine-tabwe`
 
-{{Compat}}
+{{compat}}
 
-### Suporte de`inline-flex`
+### s-supowte de`inwine-fwex`
 
-{{Compat}}
+{{compat}}
 
-### Suporte de`inline-grid`
+### s-supowte de`inwine-gwid`
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{CSSxRef("display")}}
+- {{cssxwef("dispway")}}
 
-  - {{CSSxRef("&lt;display-outside&gt;")}}
-  - {{CSSxRef("&lt;display-inside&gt;")}}
-  - {{CSSxRef("&lt;display-listitem&gt;")}}
-  - {{CSSxRef("&lt;display-internal&gt;")}}
-  - {{CSSxRef("&lt;display-box&gt;")}}
+  - {{cssxwef("&wt;dispway-outside&gt;")}}
+  - {{cssxwef("&wt;dispway-inside&gt;")}}
+  - {{cssxwef("&wt;dispway-wistitem&gt;")}}
+  - {{cssxwef("&wt;dispway-intewnaw&gt;")}}
+  - {{cssxwef("&wt;dispway-box&gt;")}}

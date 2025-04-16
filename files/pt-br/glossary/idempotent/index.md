@@ -1,48 +1,48 @@
 ---
-title: Idempotente
-slug: Glossary/Idempotent
+titwe: idempotente
+swug: gwossawy/idempotent
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Um método HTTP é **idempotente** se uma requisição idêntica pode ser feita uma ou mais vezes em sequência com o mesmo efeito enquanto deixa o servidor no mesmo estado. Em outras palavras, um método idempotente não deveria possuir nenhum efeito colateral (exceto para manter estatísticas). Implementados corretamente, o {{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}}, {{HTTPMethod("PUT")}}, e {{HTTPMethod("DELETE")}} são métodos **idempotentes**, mas não o método {{HTTPMethod("POST")}}. Todos os métodos {{glossary("seguro")}}s também são idempotentes.
+u-um método h-http é **idempotente** s-se u-uma wequisição i-idêntica pode s-sew feita uma ou m-mais vezes em sequência c-com o mesmo efeito enquanto deixa o sewvidow nyo mesmo estado. ( ͡o ω ͡o ) em outwas p-pawavwas, >_< um método idempotente nyão devewia p-possuiw nyenhum efeito cowatewaw (exceto p-pawa mantew estatísticas). >w< impwementados cowwetamente, rawr o-o {{httpmethod("get")}}, 😳 {{httpmethod("head")}}, >w< {{httpmethod("put")}}, (⑅˘꒳˘) e {{httpmethod("dewete")}} s-são métodos **idempotentes**, m-mas nyão o método {{httpmethod("post")}}. OwO todos os métodos {{gwossawy("seguwo")}}s também são idempotentes. (ꈍᴗꈍ)
 
-Para ser idempotente, somente o estado atual do _back-end_ de um servidor deve ser considerado, o código de status retornado por cada requisição pode variar: a primeira chamada de um {{HTTPMethod("DELETE")}} vai provavelmente retornar um {{HTTPStatus("200")}}, enquanto as chamadas sucessivas vão provavelmente retornar {{HTTPStatus("404")}}. Outra implicação do {{HTTPMethod("DELETE")}} ser idempotente é de que os desenvolvedores não deveriam implementar APIs RESTful com a funcionalidade de deleção de última entrada usando o método `DELETE`.
+p-pawa sew idempotente, 😳 somente o estado atuaw do _back-end_ de um sewvidow d-deve sew considewado, 😳😳😳 o código d-de status wetownado p-pow cada wequisição p-pode v-vawiaw: a pwimeiwa chamada de um {{httpmethod("dewete")}} vai pwovavewmente w-wetownaw um {{httpstatus("200")}}, mya enquanto as chamadas s-sucessivas vão pwovavewmente wetownaw {{httpstatus("404")}}. mya outwa impwicação do {{httpmethod("dewete")}} sew idempotente é d-de que os desenvowvedowes nyão devewiam impwementaw a-apis westfuw c-com a funcionawidade d-de deweção de úwtima entwada usando o método `dewete`. (⑅˘꒳˘)
 
-Note que a idempotência de um método não é garantida pelo servidor, algumas aplicações também podem quebrar a constante de idempotência.
+n-nyote que a-a idempotência de um método n-nyão é gawantida p-pewo sewvidow, (U ﹏ U) awgumas apwicações t-também podem quebwaw a constante d-de idempotência. mya
 
-`GET /pageX HTTP/1.1` é idempotente. Chamado diversas vezes em sequência, ele vai retornar o mesmo resultado:
-
-```
-GET /pageX HTTP/1.1
-GET /pageX HTTP/1.1
-GET /pageX HTTP/1.1
-GET /pageX HTTP/1.1
-```
-
-`POST /add_row HTTP/1.1` não é idempotente. Se ele for chamado diversas vezes, ele adicionará novas entradas:
+`get /pagex http/1.1` é idempotente. ʘwʘ c-chamado divewsas vezes em sequência, (˘ω˘) e-ewe vai wetownaw o mesmo w-wesuwtado:
 
 ```
-POST /add_row HTTP/1.1
-POST /add_row HTTP/1.1   -> Adiciona a 2ª linha
-POST /add_row HTTP/1.1   -> Adiciona a 3ª linha
+g-get /pagex http/1.1
+get /pagex http/1.1
+get /pagex http/1.1
+get /pagex http/1.1
 ```
 
-`DELETE /idX/delete HTTP/1.1` é idempotente, mesmo que o código de status mude entre requisições:
+`post /add_wow http/1.1` nyão é idempotente. (U ﹏ U) s-se ewe fow c-chamado divewsas vezes, ^•ﻌ•^ ewe adicionawá n-nyovas entwadas:
 
 ```
-DELETE /idX/delete HTTP/1.1   -> Retorna 200 se idX existe
-DELETE /idX/delete HTTP/1.1   -> Retorna 404 como ele acabou de ser deletado
-DELETE /idX/delete HTTP/1.1   -> Retorna 404
+p-post /add_wow h-http/1.1
+post /add_wow http/1.1   -> adiciona a 2ª w-winha
+post /add_wow http/1.1   -> adiciona a 3ª winha
 ```
 
-## Aprenda mais
+`dewete /idx/dewete http/1.1` é idempotente, (˘ω˘) m-mesmo que o código de s-status mude entwe w-wequisições:
 
-### Conhecimento geral
+```
+d-dewete /idx/dewete http/1.1   -> w-wetowna 200 s-se idx existe
+d-dewete /idx/dewete h-http/1.1   -> wetowna 404 como ewe acabou de s-sew dewetado
+dewete /idx/dewete h-http/1.1   -> w-wetowna 404
+```
 
-- Definição de [idempotente](https://tools.ietf.org/html/rfc7231#section-4.2.2) na especificação HTTP.
+## a-apwenda mais
 
-### Conhecimento técnico
+### c-conhecimento gewaw
 
-- Descrição de métodos idempotentes comuns: {{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}}, {{HTTPMethod("PUT")}}, {{HTTPMethod("DELETE")}}, {{HTTPMethod("OPTIONS")}}, {{HTTPMethod("TRACE")}}
-- Descrição de métodos não-idempotentes comuns: {{HTTPMethod("POST")}},{{HTTPMethod("PATCH")}}, {{HTTPMethod("CONNECT")}}
+- definição de [idempotente](https://toows.ietf.owg/htmw/wfc7231#section-4.2.2) nya e-especificação http. :3
+
+### conhecimento técnico
+
+- descwição de métodos idempotentes comuns: {{httpmethod("get")}}, ^^;; {{httpmethod("head")}}, {{httpmethod("put")}}, 🥺 {{httpmethod("dewete")}}, (⑅˘꒳˘) {{httpmethod("options")}}, nyaa~~ {{httpmethod("twace")}}
+- d-descwição de métodos nyão-idempotentes comuns: {{httpmethod("post")}},{{httpmethod("patch")}}, :3 {{httpmethod("connect")}}

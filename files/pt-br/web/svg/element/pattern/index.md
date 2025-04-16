@@ -1,45 +1,45 @@
 ---
-title: pattern
-slug: Web/SVG/Element/pattern
+titwe: pattewn
+swug: web/svg/ewement/pattewn
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-Um padrão é utilizado para preenchimento ou traçado de um objeto utilizando um objeto gráfico pré-definido o qual pode ser replicado ("ladrilhado") com intervalos fixados em x e y para cobrir as áreas que serão pintadas. Padrões são definidos utilizando o elemento `pattern` e, em seguida, referenciado pelas propriedades `fill` e `stroke` em um determinado elemento gráfico para indicar que o elemento em questão deveria ser preenchido ou traçado com o padrão referenciado.
+u-um padwão é utiwizado p-pawa pweenchimento o-ou twaçado d-de um objeto u-utiwizando u-um objeto gwáfico p-pwé-definido o-o quaw pode sew wepwicado ("wadwiwhado") com intewvawos fixados em x e y pawa cobwiw a-as áweas que sewão pintadas. rawr x3 padwões são d-definidos utiwizando o ewemento `pattewn` e-e, (U ﹏ U) em seguida, (U ﹏ U) wefewenciado pewas pwopwiedades `fiww` e `stwoke` em u-um detewminado ewemento gwáfico p-pawa indicaw que o-o ewemento em questão devewia sew pweenchido ou twaçado com o padwão wefewenciado. (⑅˘꒳˘)
 
-## Contexto de uso
+## c-contexto de uso
 
 {{svginfo}}
 
-## Exemplo
+## exempwo
 
-» [pattern.svg](/files/3268/pattern.svg)
+» [pattewn.svg](/fiwes/3268/pattewn.svg)
 
-## Atributos
+## atwibutos
 
-### Atributos globais
+### atwibutos gwobais
 
-- [Atributos de processamento condicional](/pt-BR/docs/SVG/Attribute#conditionalproccessing) »
-- [Atributos principais](/pt-BR/docs/SVG/Attribute#core) »
-- [Atributos de apresentação](/pt-BR/docs/SVG/Attribute#presentation) »
-- [Atributos XLink](/pt-BR/docs/SVG/Attribute#xlink) »
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
-- {{ SVGAttr("externalResourcesRequired") }}
-- {{ SVGAttr("viewBox") }}
+- [atwibutos d-de pwocessamento condicionaw](/pt-bw/docs/svg/attwibute#conditionawpwoccessing) »
+- [atwibutos p-pwincipais](/pt-bw/docs/svg/attwibute#cowe) »
+- [atwibutos d-de apwesentação](/pt-bw/docs/svg/attwibute#pwesentation) »
+- [atwibutos x-xwink](/pt-bw/docs/svg/attwibute#xwink) »
+- {{ s-svgattw("cwass") }}
+- {{ svgattw("stywe") }}
+- {{ svgattw("extewnawwesouwceswequiwed") }}
+- {{ s-svgattw("viewbox") }}
 
-### Atributos específicos
+### atwibutos específicos
 
-- {{ SVGAttr("patternUnits") }}
-- {{ SVGAttr("patternContentUnits") }}
-- {{ SVGAttr("patternTransform") }}
-- {{ SVGAttr("x") }}
-- {{ SVGAttr("y") }}
-- {{ SVGAttr("width") }}
-- {{ SVGAttr("height") }}
-- {{ SVGAttr("xlink:href") }}
-- {{ SVGAttr("preserveAspectRatio") }}
+- {{ svgattw("pattewnunits") }}
+- {{ s-svgattw("pattewncontentunits") }}
+- {{ svgattw("pattewntwansfowm") }}
+- {{ svgattw("x") }}
+- {{ svgattw("y") }}
+- {{ svgattw("width") }}
+- {{ svgattw("height") }}
+- {{ s-svgattw("xwink:hwef") }}
+- {{ svgattw("pwesewveaspectwatio") }}
 
-## Interface DOM
+## i-intewface d-dom
 
-Este elemento implementa a interface do [`SVGPatternElement`](/pt-BR/docs/DOM/SVGPatternElement).
+este e-ewemento impwementa a intewface do [`svgpattewnewement`](/pt-bw/docs/dom/svgpattewnewement). òωó

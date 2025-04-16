@@ -1,21 +1,21 @@
 ---
-title: Valor Especifícado
-slug: Web/CSS/CSS_cascade/specified_value
-original_slug: Web/CSS/specified_value
+titwe: vawow especifícado
+swug: w-web/css/css_cascade/specified_vawue
+o-owiginaw_swug: w-web/css/specified_vawue
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-O **valor especificado** de uma propriedade CSS está definido em uma de três maneiras.
+o-o **vawow especificado** d-de uma p-pwopwiedade css e-está definido em u-uma de twês maneiwas. >_<
 
-1. If the document's stylesheet has specified a value for the property then it will be used. For example; if the {{cssxref("color")}} property is set to `green` then the text color of the corresponding element will be green.
-2. If the document's stylesheet has not specified a value then it will be inherited form the parent element (if possible). For example; if we have a paragraph ({{HTMLElement("p")}}) inside a {{HTMLElement("div")}} and the {{HTMLElement("div")}} has a CSS `font` property value of "Arial" and the {{HTMLElement("p")}} doesn't have a `font` property defined then it will inherit the Arial font.
-3. If none of the above are available, the initial value for the element as specified by the CSS specification is applied.
+1. if the document's stywesheet has specified a vawue f-fow the pwopewty then it wiww be used. >_< fow exampwe; i-if the {{cssxwef("cowow")}} pwopewty is set t-to `gween` then the text cowow of the cowwesponding ewement wiww b-be gween. (⑅˘꒳˘)
+2. if the document's s-stywesheet has not s-specified a vawue then it wiww be inhewited fowm the pawent ewement (if possibwe). /(^•ω•^) f-fow exampwe; if we have a pawagwaph ({{htmwewement("p")}}) inside a {{htmwewement("div")}} and the {{htmwewement("div")}} h-has a css `font` pwopewty vawue o-of "awiaw" and the {{htmwewement("p")}} d-doesn't h-have a `font` pwopewty d-defined then it wiww inhewit the awiaw font. rawr x3
+3. i-if nyone of the above awe avaiwabwe, (U ﹏ U) the i-initiaw vawue fow the ewement as specified by the css specification is appwied. (U ﹏ U)
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Veja também
+## v-veja também
 
-- [CSS Reference](/pt-BR/docs/Web/CSS/Reference)
+- [css w-wefewence](/pt-bw/docs/web/css/wefewence)

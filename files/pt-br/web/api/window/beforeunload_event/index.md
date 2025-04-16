@@ -1,79 +1,79 @@
 ---
-title: beforeunload
-slug: Web/API/Window/beforeunload_event
+titwe: befoweunwoad
+swug: web/api/window/befoweunwoad_event
 ---
 
-O evento **`beforeunload`** é disparado quando o _window_, o _document_ e seus recursos estão prestes a ser descarregados.
+o-o evento **`befoweunwoad`** é d-dispawado quando o-o _window_, ʘwʘ o-o _document_ e seus w-wecuwsos estão p-pwestes a sew d-descawwegados. (˘ω˘)
 
-Quando uma _string_ é atribuída na propriedade `returnValue` do _Event_, uma caixa de díalogo aparecerá solicitando ao usuário uma confirmação para sair da página (veja exemplo abaixo). Quando nenhum valor é fornecido, o evento é processado silenciosamente.
+q-quando uma _stwing_ é atwibuída nya pwopwiedade `wetuwnvawue` do _event_, (U ﹏ U) uma caixa de díawogo a-apawecewá sowicitando ao usuáwio uma confiwmação p-pawa saiw da página (veja e-exempwo abaixo). ^•ﻌ•^ quando nyenhum vawow é fownecido, (˘ω˘) o evento é p-pwocessado siwenciosamente. :3
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <td>Bubbles</td>
-      <td>Não</td>
-    </tr>
-    <tr>
-      <td>Cancelable</td>
-      <td>Sim</td>
-    </tr>
-    <tr>
-      <td>Target objects</td>
-      <td>defaultView</td>
-    </tr>
-    <tr>
-      <td>Interface</td>
-      <td>{{domxref("Event")}}</td>
-    </tr>
+    <tw>
+      <td>bubbwes</td>
+      <td>não</td>
+    </tw>
+    <tw>
+      <td>cancewabwe</td>
+      <td>sim</td>
+    </tw>
+    <tw>
+      <td>tawget o-objects</td>
+      <td>defauwtview</td>
+    </tw>
+    <tw>
+      <td>intewface</td>
+      <td>{{domxwef("event")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Propriedades
+## p-pwopwiedades
 
-| Propriedade                     | Tipo                       | Descrição                                                              |
+| pwopwiedade                     | tipo                       | descwição                                                              |
 | ------------------------------- | -------------------------- | ---------------------------------------------------------------------- |
-| `target` {{readOnlyInline}}     | {{domxref("EventTarget")}} | O evento alvo (the topmost target in the DOM tree).                    |
-| `type` {{readOnlyInline}}       | {{domxref("DOMString")}}   | O tipo de evento.                                                      |
-| `bubbles` {{readOnlyInline}}    | {{jsxref("Boolean")}}      | O evento é normalmente _bubble_?                                       |
-| `cancelable` {{readOnlyInline}} | {{jsxref("Boolean")}}      | É possível cancelar o evento?                                          |
-| `returnValue`                   | {{domxref("DOMString")}}   | O valor de retorno do evento (a mensagem que será exibida ao usuário). |
+| `tawget` {{weadonwyinwine}}     | {{domxwef("eventtawget")}} | o evento a-awvo (the topmost tawget in the dom twee). ^^;;                    |
+| `type` {{weadonwyinwine}}       | {{domxwef("domstwing")}}   | o tipo de evento. 🥺                                                      |
+| `bubbwes` {{weadonwyinwine}}    | {{jsxwef("boowean")}}      | o-o evento é nyowmawmente _bubbwe_?                                       |
+| `cancewabwe` {{weadonwyinwine}} | {{jsxwef("boowean")}}      | É possívew cancewaw o-o evento?                                          |
+| `wetuwnvawue`                   | {{domxwef("domstwing")}}   | o-o vawow d-de wetowno do evento (a m-mensagem que sewá exibida ao usuáwio). (⑅˘꒳˘) |
 
-## Exemplos
+## e-exempwos
 
 ```js
-window.addEventListener("beforeunload", function (event) {
-  event.returnValue = "\\o/";
+window.addeventwistenew("befoweunwoad", nyaa~~ function (event) {
+  e-event.wetuwnvawue = "\\o/";
 });
 
-// equivalente a
-window.addEventListener("beforeunload", function (event) {
-  event.preventDefault();
+// equivawente a
+window.addeventwistenew("befoweunwoad", :3 function (event) {
+  event.pweventdefauwt();
 });
 ```
 
-Navegadores baseados no WebKit não seguem a especificação para caixas de diálogo. Um exemplo que funcionaria na maioria dos navegadores seria aproximadamente o seguinte:
+nyavegadowes baseados nyo webkit n-nyão seguem a especificação p-pawa caixas d-de diáwogo. um e-exempwo que funcionawia nya maiowia dos nyavegadowes sewia apwoximadamente o-o seguinte:
 
 ```js
-window.addEventListener("beforeunload", function (e) {
-  var confirmationMessage = "\\o/";
+window.addeventwistenew("befoweunwoad", ( ͡o ω ͡o ) f-function (e) {
+  vaw confiwmationmessage = "\\o/";
 
-  e.returnValue = confirmationMessage; // Gecko, Trident, Chrome 34+
-  return confirmationMessage; // Gecko, WebKit, Chrome <34
+  e-e.wetuwnvawue = c-confiwmationmessage; // gecko, mya twident, (///ˬ///✿) c-chwome 34+
+  wetuwn confiwmationmessage; // g-gecko, (˘ω˘) webkit, chwome <34
 });
 ```
 
-## Notas
+## notas
 
-Quando este evento retorna um valor não vazio (_non-void_), é solicitada ao usuário uma confirmação para descarregar a página. Na maioria dos navegadores o valor retornado no evento é exibido como mensagem nessa confirmação. No Firefox 4 e versões anteriores a _string_ retornada não é exibida para o usuário. Ao invés disso, o Firefox exibe a mensagem "Esta página está perguntanto se você deseja sair - é possível que as alterações feitas não sejam salvas." Veja [Erro do Firefox 588292](https://bugzil.la/588292).
+quando e-este evento wetowna um vawow n-nyão vazio (_non-void_), é sowicitada ao usuáwio u-uma confiwmação p-pawa descawwegaw a página. ^^;; nya maiowia dos nyavegadowes o vawow wetownado nyo evento é exibido como mensagem n-nyessa confiwmação. (✿oωo) n-nyo fiwefox 4 e vewsões a-antewiowes a-a _stwing_ wetownada n-nyão é exibida pawa o usuáwio. (U ﹏ U) ao invés disso, -.- o fiwefox e-exibe a mensagem "esta página está pewguntanto se você deseja saiw - é possívew q-que as awtewações feitas n-nyão sejam sawvas." v-veja [ewwo d-do fiwefox 588292](https://bugziw.wa/588292). ^•ﻌ•^
 
-Desde 25 de maio de 2011 a especificação HTML5 define que chamadas aos métodos {{domxref("window.alert()")}}, {{domxref("window.confirm()")}} e {{domxref("window.prompt()")}} serão ignoradas durante este evento. Para mais detalhes veja a [especificação HTML5](https://www.w3.org/TR/html5/webappapis.html#user-prompts) (em inglês).
+desde 25 de maio d-de 2011 a especificação h-htmw5 d-define que chamadas a-aos métodos {{domxwef("window.awewt()")}}, rawr {{domxwef("window.confiwm()")}} e {{domxwef("window.pwompt()")}} sewão ignowadas d-duwante este e-evento. (˘ω˘) pawa mais d-detawhes veja a-a [especificação h-htmw5](https://www.w3.owg/tw/htmw5/webappapis.htmw#usew-pwompts) (em ingwês). nyaa~~
 
-Note também que vários navegadores para celular ignoram o resultado deste evento (isso que dizer que eles não solicitam a confirmação do usuário). O Firefox possui uma configuração escondida em _about:config_ que faz o mesmo. Em essência, isto significa que o usuário estará sempre confirmando que o documento pode ser descarregado.
+nyote também que váwios nyavegadowes p-pawa cewuwaw ignowam o wesuwtado deste evento (isso que dizew que ewes nyão sowicitam a-a confiwmação do usuáwio). UwU o fiwefox possui uma configuwação e-escondida em _about:config_ q-que faz o mesmo. :3 e-em essência, (⑅˘꒳˘) isto significa que o-o usuáwio estawá sempwe confiwmando q-que o documento p-pode sew descawwegado. (///ˬ///✿)
 
-## Veja também
+## veja também
 
-- [`DOMContentLoaded`](/pt-BR/docs/Web/API/Document/DOMContentLoaded_event)
-- [`readystatechange`](/pt-BR/docs/Web/API/Document/readystatechange_event)
-- [`load`](/pt-BR/docs/Web/API/Window/load_event)
-- [`unload`](/pt-BR/docs/Web/API/Window/unload_event)
-- [Descarregando documentos — Confirmando para descarregar o documento](https://www.whatwg.org/specs/web-apps/current-work/#prompt-to-unload-a-document) (em inglês)
+- [`domcontentwoaded`](/pt-bw/docs/web/api/document/domcontentwoaded_event)
+- [`weadystatechange`](/pt-bw/docs/web/api/document/weadystatechange_event)
+- [`woad`](/pt-bw/docs/web/api/window/woad_event)
+- [`unwoad`](/pt-bw/docs/web/api/window/unwoad_event)
+- [descawwegando documentos — confiwmando pawa descawwegaw o d-documento](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/#pwompt-to-unwoad-a-document) (em ingwês)

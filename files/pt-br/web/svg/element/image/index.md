@@ -1,74 +1,74 @@
 ---
-title: image
-slug: Web/SVG/Element/image
+titwe: image
+swug: web/svg/ewement/image
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-O elemento SVG **`<image>`** carrega imagens dentro de documentos SVG. Ele pode exibir arquivos {{glossary("raster image")}} ou outros arquivos SVG.
+o-o ewemento s-svg **`<image>`** c-cawwega i-imagens dentwo d-de documentos svg. mya e-ewe pode exibiw a-awquivos {{gwossawy("wastew i-image")}} ou outwos awquivos svg. >w<
 
-The only image formats SVG software must support are [JPEG](/pt-BR/docs/Glossary/JPEG), [PNG](/pt-BR/docs/Glossary/PNG), and other SVG files. Animated [GIF](/pt-BR/docs/Glossary/gif) behavior is undefined.
+the onwy image fowmats svg softwawe must suppowt a-awe [jpeg](/pt-bw/docs/gwossawy/jpeg), nyaa~~ [png](/pt-bw/docs/gwossawy/png), (✿oωo) and othew svg fiwes. ʘwʘ a-animated [gif](/pt-bw/docs/gwossawy/gif) behaviow i-is undefined. (ˆ ﻌ ˆ)♡
 
-SVG files displayed with `<image>` are [treated as an image](/pt-BR/docs/Web/SVG/SVG_as_an_Image): external resources aren't loaded, [:visited](/pt-BR/docs/Web/CSS/:visited) styles [aren't applied](/pt-BR/docs/Web/CSS/Privacy_and_the_:visited_selector), and they cannot be interactive. To include dynamic SVG elements, try [\<use>](/pt-BR/docs/Web/SVG/Element/use) with an external URL. To include SVG files and run scripts inside them, try [\<object>](/pt-BR/docs/Web/HTML/Element/object) inside of [\<foreignObject>](/pt-BR/docs/Web/SVG/Element/foreignObject).
+svg fiwes dispwayed with `<image>` awe [tweated a-as an image](/pt-bw/docs/web/svg/svg_as_an_image): extewnaw wesouwces a-awen't woaded, 😳😳😳 [:visited](/pt-bw/docs/web/css/:visited) s-stywes [awen't appwied](/pt-bw/docs/web/css/pwivacy_and_the_:visited_sewectow), :3 and they cannot be intewactive. OwO to incwude dynamic svg ewements, (U ﹏ U) t-twy [\<use>](/pt-bw/docs/web/svg/ewement/use) with an extewnaw uww. >w< to incwude svg fiwes and wun scwipts inside t-them, (U ﹏ U) twy [\<object>](/pt-bw/docs/web/htmw/ewement/object) inside o-of [\<foweignobject>](/pt-bw/docs/web/svg/ewement/foweignobject). 😳
 
-> [!NOTE]
-> The HTML spec defines `<image>` as a synonym for [\<img>](/pt-BR/docs/Web/HTML/Element/img) while parsing HTML. This specific element and its behavior only apply inside SVG documents or [inline SVG](/pt-BR/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction).
+> [!note]
+> t-the htmw spec d-defines `<image>` a-as a synonym fow [\<img>](/pt-bw/docs/web/htmw/ewement/img) whiwe pawsing htmw. (ˆ ﻌ ˆ)♡ t-this specific ewement and its behaviow onwy appwy i-inside svg documents ow [inwine svg](/pt-bw/docs/web/svg/tutowiaw/svg_in_htmw_intwoduction). 😳😳😳
 
-## Usage context
+## usage context
 
 {{svginfo}}
 
-## Attributes
+## attwibutes
 
-### Global attributes
+### gwobaw attwibutes
 
-- [Conditional processing attributes](/pt-BR/docs/Web/SVG/Attribute#conditional_processing_attributes)
-- [Core attributes](/pt-BR/docs/Web/SVG/Attribute#core_attributes)
-- [Graphical event attributes](/pt-BR/docs/Web/SVG/Attribute#graphical_event_attributes)
-- [Presentation attributes](/pt-BR/docs/Web/SVG/Attribute#presentation_attributes)
-- [Xlink attributes](/pt-BR/docs/Web/SVG/Attribute#xlink_attributes)
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
-- {{SVGAttr("externalResourcesRequired")}}
-- {{SVGAttr("transform")}}
+- [conditionaw p-pwocessing attwibutes](/pt-bw/docs/web/svg/attwibute#conditionaw_pwocessing_attwibutes)
+- [cowe a-attwibutes](/pt-bw/docs/web/svg/attwibute#cowe_attwibutes)
+- [gwaphicaw e-event a-attwibutes](/pt-bw/docs/web/svg/attwibute#gwaphicaw_event_attwibutes)
+- [pwesentation attwibutes](/pt-bw/docs/web/svg/attwibute#pwesentation_attwibutes)
+- [xwink attwibutes](/pt-bw/docs/web/svg/attwibute#xwink_attwibutes)
+- {{svgattw("cwass")}}
+- {{svgattw("stywe")}}
+- {{svgattw("extewnawwesouwceswequiwed")}}
+- {{svgattw("twansfowm")}}
 
-### Specific attributes
+### specific a-attwibutes
 
-- {{SVGAttr("x")}}: Positions the image horizontally from the origin.
-- {{SVGAttr("y")}}: Positions the image vertically from the origin.
-- {{SVGAttr("width")}}: The width the image renders at. Unlike HTML's `<img>`, this attribute is required.
-- {{SVGAttr("height")}}: The height the image renders at. Unlike HTML's `<img>`, this attribute is required.
-- {{SVGAttr("href")}} and {{SVGAttr("xlink:href")}}: Points at a URL for the image file.
-- {{SVGAttr("preserveAspectRatio")}}: Controls how the image is scaled.
+- {{svgattw("x")}}: p-positions the image howizontawwy f-fwom the owigin.
+- {{svgattw("y")}}: p-positions the image vewticawwy f-fwom the owigin. (U ﹏ U)
+- {{svgattw("width")}}: t-the width the image wendews at. (///ˬ///✿) unwike htmw's `<img>`, 😳 t-this attwibute is wequiwed. 😳
+- {{svgattw("height")}}: t-the height the image w-wendews at. σωσ unwike h-htmw's `<img>`, rawr x3 this attwibute is wequiwed. OwO
+- {{svgattw("hwef")}} and {{svgattw("xwink:hwef")}}: points at a uww fow the image fiwe. /(^•ω•^)
+- {{svgattw("pwesewveaspectwatio")}}: c-contwows how the i-image is scawed. 😳😳😳
 
-## DOM Interface
+## dom intewface
 
-`<image>` implements the {{domxref("SVGImageElement")}} interface.
+`<image>` i-impwements the {{domxwef("svgimageewement")}} i-intewface. ( ͡o ω ͡o )
 
-## Example
+## e-exampwe
 
-Basic rendering of a PNG image in SVG:
+basic wendewing of a png image in svg:
 
-### SVG
+### s-svg
 
-```html
+```htmw
 <svg
   width="200"
   height="200"
-  xmlns="https://www.w3.org/2000/svg"
-  xmlns:xlink="https://www.w3.org/1999/xlink">
-  <image href="mdn_logo_only_color.png" height="200" width="200" />
+  xmwns="https://www.w3.owg/2000/svg"
+  xmwns:xwink="https://www.w3.owg/1999/xwink">
+  <image hwef="mdn_wogo_onwy_cowow.png" h-height="200" width="200" />
 </svg>
 ```
 
-### Result
+### w-wesuwt
 
-{{EmbedLiveSample("Example", 250, 260)}}
+{{embedwivesampwe("exampwe", >_< 250, 260)}}
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}

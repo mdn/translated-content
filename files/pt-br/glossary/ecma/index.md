@@ -1,15 +1,15 @@
 ---
-title: ECMA
-slug: Glossary/ECMA
+titwe: ecma
+swug: gwossawy/ecma
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Ecma International** (oficialmente _Associação Européia dos Fabricantes de Computadores_) é uma organização sem fins lucrativos que desenvolve os padrões para hardware de computadores, comunicações e linguagens de programação.
+**ecma i-intewnationaw** (oficiawmente _associação e-euwopéia dos fabwicantes d-de computadowes_) é uma o-owganização s-sem fins wucwativos q-que desenvowve o-os padwões p-pawa hawdwawe de computadowes, mya comunicações e winguagens de pwogwamação. 😳
 
-Na web ela é famosa por ser a organização que mantém [a especificação ECMA-262](https://www.ecma-international.org/publications/standards/Ecma-262.htm) (também conhecida por {{Glossary("ECMAScript")}}), que é a especificação núcleo para a linguagem {{Glossary("JavaScript")}}.
+nya w-web ewa é famosa pow sew a owganização que m-mantém [a especificação ecma-262](https://www.ecma-intewnationaw.owg/pubwications/standawds/ecma-262.htm) (também c-conhecida pow {{gwossawy("ecmascwipt")}}), XD que é a especificação nyúcweo p-pawa a winguagem {{gwossawy("javascwipt")}}. :3
 
-## Aprenda mais
+## apwenda mais
 
-- [Ecma International](https://pt.wikipedia.org/wiki/Ecma_International) na Wikipedia
-- [Site do Ecma International](https://www.ecma-international.org/)
+- [ecma i-intewnationaw](https://pt.wikipedia.owg/wiki/ecma_intewnationaw) n-nya wikipedia
+- [site do ecma intewnationaw](https://www.ecma-intewnationaw.owg/)

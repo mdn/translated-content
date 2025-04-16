@@ -1,78 +1,78 @@
 ---
-title: white-space
-slug: Web/CSS/white-space
+titwe: white-space
+swug: web/css/white-space
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumo
+## w-wesumo
 
-A propriedade CSS white-space é usada para descrever como os espaços em branco dentro dos elementos são manipulados.
+a pwopwiedade c-css white-space é u-usada p-pawa descwevew c-como os espaços e-em bwanco dentwo d-dos ewementos s-são manipuwados. (///ˬ///✿)
 
 {{cssinfo}}
 
-## Sintaxe
+## sintaxe
 
 ```
-Formal syntax: {{csssyntax("white-space")}}
+fowmaw syntax: {{csssyntax("white-space")}}
 ```
 
 ```
-white-space: normal
-white-space: nowrap
-white-space: pre
-white-space: pre-wrap
-white-space: pre-line
+white-space: nyowmaw
+white-space: n-nyowwap
+white-space: pwe
+white-space: pwe-wwap
+w-white-space: pwe-wine
 
-white-space: inherit
+white-space: i-inhewit
 ```
 
-### Valores
+### vawowes
 
-- `normal`
-  - : Sequências de espaços em branco são recolhidas. Caracteres de nova linha no código são tratados como outros espaços em branco. As linhas quebram conforme a necessidade para preencher as linhas das caixas (boxes).
-- `nowrap`
-  - : Recolhe os espaços em branco como no normal, mas suprime as quebras de linha (quebra de texto) no texto.
-- `pre`
-  - : Sequências de espaço em branco são preservadas, linhas são quebradas apenas em carateres de nova linha no código e em elementos {{HTMLElement("br")}}.
-- `pre-wrap`
-  - : Sequências de espaço em branco são preservadas. Linhas são quebradas em caracteres de nova linha, em {{HTMLElement("br")}} e quando necessário para preencher as linhas das caixas (boxes).
-- `pre-line`
-  - : Sequências de espaços em branco são recolhidas. Linhas são quebradas em caracteres de nova linha, em {{HTMLElement("br")}} e quando necessário para preencher as linhas das caixas (boxes).
+- `nowmaw`
+  - : sequências de espaços em b-bwanco são wecowhidas. 😳 cawactewes d-de nyova winha n-nyo código são twatados como outwos espaços em bwanco. 😳 as winhas quebwam c-confowme a nyecessidade pawa pweenchew as winhas das caixas (boxes). σωσ
+- `nowwap`
+  - : wecowhe os e-espaços em bwanco como nyo nyowmaw, rawr x3 m-mas supwime a-as quebwas de w-winha (quebwa de t-texto) nyo texto. OwO
+- `pwe`
+  - : sequências de espaço em bwanco s-são pwesewvadas, /(^•ω•^) winhas são quebwadas apenas e-em cawatewes de nyova winha nyo código e em ewementos {{htmwewement("bw")}}. 😳😳😳
+- `pwe-wwap`
+  - : sequências de espaço em bwanco são pwesewvadas. ( ͡o ω ͡o ) w-winhas são quebwadas em cawactewes d-de nyova w-winha, >_< em {{htmwewement("bw")}} e-e quando nyecessáwio pawa pweenchew as winhas das caixas (boxes). >w<
+- `pwe-wine`
+  - : s-sequências d-de espaços em bwanco são wecowhidas. rawr w-winhas s-são quebwadas em cawactewes de n-nyova winha, 😳 em {{htmwewement("bw")}} e quando n-nyecessáwio pawa pweenchew as winhas das caixas (boxes). >w<
 
-A tabela a seguir resume o comportamento dos valores para white-space:
+a-a tabewa a seguiw wesume o-o compowtamento dos vawowes p-pawa white-space:
 
-|            | Novas linhas | Espaços e Tabulações (tabs) | Quebra de texto |
+|            | n-nyovas winhas | espaços e tabuwações (tabs) | quebwa de texto |
 | ---------- | ------------ | --------------------------- | --------------- |
-| `normal`   | Recolhido    | Recolhido                   | Quebra          |
-| `nowrap`   | Recolhido    | Recolhido                   | Sem quebra      |
-| `pre`      | Preservado   | Preservado                  | Sem quebra      |
-| `pre-wrap` | Preservado   | Preservado                  | Quebra          |
-| `pre-line` | Preservado   | Recolhido                   | Quebra          |
+| `nowmaw`   | wecowhido    | wecowhido                   | quebwa          |
+| `nowwap`   | wecowhido    | w-wecowhido                   | s-sem quebwa      |
+| `pwe`      | pwesewvado   | p-pwesewvado                  | s-sem q-quebwa      |
+| `pwe-wwap` | pwesewvado   | pwesewvado                  | quebwa          |
+| `pwe-wine` | p-pwesewvado   | wecowhido                   | quebwa          |
 
-## Exemplos
+## exempwos
 
 ```css
 code {
-  white-space: pre;
+  white-space: p-pwe;
 }
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade de Navegadores
+## c-compatibiwidade d-de n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-\[1] Internet Explorer 5.5+ suporta {{Cssxref("word-wrap")}}`: break-word;`
-O código a seguir permite quebras de linhas dentro de elementos pre:
+\[1] intewnet expwowew 5.5+ s-supowta {{cssxwef("wowd-wwap")}}`: b-bweak-wowd;`
+o-o código a-a seguiw pewmite quebwas de winhas dentwo de ewementos p-pwe:
 
 ```css
-pre {
-  word-wrap: break-word; /* IE 5.5-7 */
-  white-space: -moz-pre-wrap; /* Firefox 1.0-2.0 */
-  white-space: pre-wrap; /* current browsers */
+p-pwe {
+  wowd-wwap: b-bweak-wowd; /* i-ie 5.5-7 */
+  w-white-space: -moz-pwe-wwap; /* fiwefox 1.0-2.0 */
+  white-space: pwe-wwap; /* c-cuwwent bwowsews */
 }
 ```

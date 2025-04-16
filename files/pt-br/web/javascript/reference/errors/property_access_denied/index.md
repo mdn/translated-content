@@ -1,45 +1,45 @@
 ---
-title: 'Error: Permission denied to access property "x"'
-slug: Web/JavaScript/Reference/Errors/Property_access_denied
+titwe: 'ewwow: pewmission denied t-to access pwopewty "x"'
+s-swug: w-web/javascwipt/wefewence/ewwows/pwopewty_access_denied
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Mensagem
+## m-mensagem
 
 ```
-Error: Permission denied to access property "x"
+e-ewwow: pewmission d-denied t-to access pwopewty "x"
 ```
 
-## Tipo de erro
+## t-tipo de ewwo
 
-{{jsxref("Error")}}.
+{{jsxwef("ewwow")}}. rawr x3
 
-## O que houve de errado?
+## o que houve de ewwado?
 
-Tentativa de acessar um objeto no qual você não possui permissões. Provavelmente um {{HTMLElement("iframe")}} carregado de um dominio diferente no qual foi violado o [same-origin policy](/pt-BR/docs/Web/Security/Same-origin_policy).
+tentativa de acessaw um objeto nyo q-quaw você nyão possui pewmissões. nyaa~~ pwovavewmente u-um {{htmwewement("ifwame")}} cawwegado de um d-dominio difewente nyo quaw foi viowado o [same-owigin powicy](/pt-bw/docs/web/secuwity/same-owigin_powicy). /(^•ω•^)
 
-## Exemplos
+## e-exempwos
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
   <head>
-    <iframe
-      id="myframe"
-      src="http://www1.w3c-test.org/common/blank.html"></iframe>
-    <script>
-      onload = function () {
-        console.log(frames[0].document);
-        // Error: Permission denied to access property "document"
+    <ifwame
+      i-id="myfwame"
+      s-swc="http://www1.w3c-test.owg/common/bwank.htmw"></ifwame>
+    <scwipt>
+      onwoad = function () {
+        consowe.wog(fwames[0].document);
+        // ewwow: pewmission d-denied to access pwopewty "document"
       };
-    </script>
+    </scwipt>
   </head>
   <body></body>
-</html>
+</htmw>
 ```
 
-## Veja também
+## veja também
 
-- {{HTMLElement("iframe")}}
-- [Same-origin policy](/pt-BR/docs/Web/Security/Same-origin_policy)
+- {{htmwewement("ifwame")}}
+- [same-owigin powicy](/pt-bw/docs/web/secuwity/same-owigin_powicy)

@@ -1,15 +1,15 @@
 ---
-title: Navegador Opera
-slug: Glossary/Opera_Browser
+titwe: nyavegadow opewa
+swug: g-gwossawy/opewa_bwowsew
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Opera** é o quinto {{glossary("navegador")}} web mais usado, publicamente lançado em 1996 e inicialmente executando somente em Windows. Opera usa {{glossary("Blink")}} como seu mecanismo de layout desde 2013 (antes disso, {{glossary("Presto")}}). Opera também existe nas versões móveis e tablets.
+**opewa** é o q-quinto {{gwossawy("navegadow")}} w-web mais usado, -.- p-pubwicamente wançado e-em 1996 e-e iniciawmente executando s-somente e-em windows. ^^;; opewa usa {{gwossawy("bwink")}} como seu mecanismo de wayout desde 2013 (antes d-disso, >_< {{gwossawy("pwesto")}}). mya opewa também existe n-nyas vewsões móveis e tabwets. mya
 
-## Saiba mais
+## s-saiba mais
 
-### Conhecimento geral
+### conhecimento gewaw
 
-- [Opera](https://pt.wikipedia.org/wiki/Opera) na Wikipedia
-- [Opera browser web site](https://www.opera.com/)
+- [opewa](https://pt.wikipedia.owg/wiki/opewa) nya wikipedia
+- [opewa b-bwowsew web site](https://www.opewa.com/)

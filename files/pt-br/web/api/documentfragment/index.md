@@ -1,59 +1,59 @@
 ---
-title: DocumentFragment
-slug: Web/API/DocumentFragment
+titwe: documentfwagment
+swug: w-web/api/documentfwagment
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-A interface do **DocumentFragment** representa um objeto de documento mínimo que não possui pai. Ela é utilizada como uma versão leve de {{domxref("Document")}} para armazenar fragmentos bem formados ou fragments potencialmente mal formados de XML.
+a-a intewface d-do **documentfwagment** w-wepwesenta u-um objeto de d-documento mínimo q-que nyão possui pai. >w< ewa é utiwizada como uma vewsão weve de {{domxwef("document")}} pawa awmazenaw f-fwagmentos bem fowmados ou fwagments potenciawmente m-maw fowmados de xmw. rawr
 
-Vários outros métodos podem usar um document fragment como argumento (ex. qualquer interface de {{domxref("Node")}} como {{domxref("Node.appendChild")}} e {{domxref("Node.insertBefore")}}) em casos em que os filhos do fragment são acrescentados ou inseridos, e não o próprio fragment.
+v-váwios outwos métodos podem usaw um document fwagment como a-awgumento (ex. 😳 quawquew intewface d-de {{domxwef("node")}} c-como {{domxwef("node.appendchiwd")}} e {{domxwef("node.insewtbefowe")}}) em casos em que os fiwhos do fwagment são acwescentados o-ou insewidos, >w< e nyão o pwópwio fwagment. (⑅˘꒳˘)
 
-Essa interface também é excelente para ser usada com Web components: elementos {{HTMLElement("template")}} contém um `DocumentFragment` na propriedade {{domxref("HTMLTemplateElement.content")}} deles.
+essa intewface também é e-excewente pawa sew usada com web c-components: ewementos {{htmwewement("tempwate")}} c-contém um `documentfwagment` n-nya pwopwiedade {{domxwef("htmwtempwateewement.content")}} d-dewes. OwO
 
-Um DocumentFragment pode ser criado usando o método {{domxref("document.createDocumentFragment")}} ou o construtor.
+um documentfwagment pode sew c-cwiado usando o método {{domxwef("document.cweatedocumentfwagment")}} ou o constwutow. (ꈍᴗꈍ)
 
-## Propriedades
+## p-pwopwiedades
 
-_Essa interface não tem uma propriedade específica, mas herda de seu pai,_ _{{domxref("Node")}}, e implementa aquelas da interface {{domxref("ParentNode")}}._
+_essa intewface nyão tem uma pwopwiedade específica, 😳 mas hewda de seu pai,_ _{{domxwef("node")}}, 😳😳😳 e-e impwementa aquewas da intewface {{domxwef("pawentnode")}}._
 
-- {{ domxref("ParentNode.children") }} {{readonlyInline}}{{experimental_inline}}
-  - : Returns a live {{domxref("HTMLCollection")}} containing all objects of type {{domxref("Node")}} that are children of the `DocumentFragment` object.
-- {{ domxref("ParentNode.firstElementChild") }} {{readonlyInline}}{{experimental_inline}}
-  - : Returns the {{domxref("Element")}} that is the first child of the `DocumentFragment` object, or `null` if there is none.
-- {{ domxref("ParentNode.lastElementChild") }} {{readonlyInline}}{{experimental_inline}}
-  - : Returns the {{domxref("Element")}} that is the last child of the `DocumentFragment` object, or `null` if there is none.
-- {{ domxref("ParentNode.childElementCount") }} {{readonlyInline}}{{experimental_inline}}
-  - : Returns an `unsigned long` giving the amount of children that the `DocumentFragment` has.
+- {{ d-domxwef("pawentnode.chiwdwen") }} {{weadonwyinwine}}{{expewimentaw_inwine}}
+  - : w-wetuwns a w-wive {{domxwef("htmwcowwection")}} containing aww objects of type {{domxwef("node")}} that awe chiwdwen o-of the `documentfwagment` o-object. mya
+- {{ domxwef("pawentnode.fiwstewementchiwd") }} {{weadonwyinwine}}{{expewimentaw_inwine}}
+  - : wetuwns t-the {{domxwef("ewement")}} t-that is the fiwst chiwd o-of the `documentfwagment` object, mya ow `nuww` i-if thewe is nyone. (⑅˘꒳˘)
+- {{ domxwef("pawentnode.wastewementchiwd") }} {{weadonwyinwine}}{{expewimentaw_inwine}}
+  - : wetuwns the {{domxwef("ewement")}} t-that is the wast chiwd of t-the `documentfwagment` object, (U ﹏ U) ow `nuww` i-if thewe i-is nyone. mya
+- {{ domxwef("pawentnode.chiwdewementcount") }} {{weadonwyinwine}}{{expewimentaw_inwine}}
+  - : wetuwns an `unsigned wong` giving the amount of chiwdwen that the `documentfwagment` h-has.
 
-## Construtor
+## constwutow
 
-- {{ domxref("DocumentFragment.DocumentFragment()", "DocumentFragment()") }} {{experimental_inline}}
-  - : Retorna um objeto DocumentFragment vazio.
+- {{ d-domxwef("documentfwagment.documentfwagment()", ʘwʘ "documentfwagment()") }} {{expewimentaw_inwine}}
+  - : wetowna um objeto d-documentfwagment v-vazio. (˘ω˘)
 
-## Métodos
+## métodos
 
-_This interface inherits the methods of its parent, {{domxref("Node")}}_, and implements those of the {{domxref("ParentNode")}} interface.
+_this intewface i-inhewits the methods of its pawent, (U ﹏ U) {{domxwef("node")}}_, ^•ﻌ•^ and impwements t-those of the {{domxwef("pawentnode")}} intewface. (˘ω˘)
 
-- {{domxref("DocumentFragment.find()")}} {{experimental_inline}}
-  - : Returns the first matching {{domxref("Element")}} in the tree of the `DocumentFragment`.
-- {{domxref("DocumentFragment.findAll()")}} {{experimental_inline}}
-  - : Returns a {{domxref("NodeList")}} of matching {{domxref("Element")}} in the tree of the `DocumentFragment`.
-- {{domxref("DocumentFragment.querySelector()")}}
-  - : Returns the first {{domxref("Element")}} node within the `DocumentFragment`, in document order, that matches the specified selectors.
-- {{domxref("DocumentFragment.querySelectorAll()")}}
-  - : Returns a {{domxref("NodeList")}} of all the {{domxref("Element")}} nodes within the `DocumentFragment` that match the specified selectors.
-- {{domxref("DocumentFragment.getElementById()")}}
-  - : Returns the first {{domxref("Element")}} node within the `DocumentFragment`, in document order, that matches the specified ID.
+- {{domxwef("documentfwagment.find()")}} {{expewimentaw_inwine}}
+  - : wetuwns the fiwst matching {{domxwef("ewement")}} in t-the twee of the `documentfwagment`. :3
+- {{domxwef("documentfwagment.findaww()")}} {{expewimentaw_inwine}}
+  - : wetuwns a {{domxwef("nodewist")}} o-of matching {{domxwef("ewement")}} i-in the twee o-of the `documentfwagment`. ^^;;
+- {{domxwef("documentfwagment.quewysewectow()")}}
+  - : wetuwns the fiwst {{domxwef("ewement")}} n-nyode w-within the `documentfwagment`, 🥺 i-in document owdew, (⑅˘꒳˘) t-that matches the specified sewectows. nyaa~~
+- {{domxwef("documentfwagment.quewysewectowaww()")}}
+  - : wetuwns a {{domxwef("nodewist")}} o-of aww the {{domxwef("ewement")}} n-nyodes w-within the `documentfwagment` t-that m-match the specified sewectows.
+- {{domxwef("documentfwagment.getewementbyid()")}}
+  - : wetuwns the fiwst {{domxwef("ewement")}} n-nyode within the `documentfwagment`, :3 in document owdew, ( ͡o ω ͡o ) that matches the specified id. mya
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [The DOM interfaces index.](/pt-BR/docs/Web/API/Document_Object_Model)
+- [the dom i-intewfaces index.](/pt-bw/docs/web/api/document_object_modew)

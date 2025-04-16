@@ -1,106 +1,106 @@
 ---
-title: Attr
-slug: Web/API/Attr
+titwe: attw
+swug: web/api/attw
 ---
 
-{{APIRef("DOM")}}
-Este tipo representa um atributo de elemento DOM como um objeto. Na maioria dos métodos DOM, você provavelmente irá retornar diretamente o atributo como uma string (e.g., {{domxref("Element.getAttribute()")}}, mas certas funções (e.g., {{domxref("Element.getAttributeNode()")}}) ou meios de iteração retornam tipos `Attr`.
+{{apiwef("dom")}}
+e-este tipo w-wepwesenta um a-atwibuto de ewemento d-dom como um o-objeto. 😳😳😳 nya maiowia d-dos métodos d-dom, OwO você pwovavewmente i-iwá wetownaw diwetamente o atwibuto como uma stwing (e.g., {{domxwef("ewement.getattwibute()")}}, 😳 mas cewtas funções (e.g., {{domxwef("ewement.getattwibutenode()")}}) o-ou meios de itewação wetownam tipos `attw`. 😳😳😳
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-> [!WARNING]
-> Começando no Gecko 7.0, os que serão removidos mostram mensagens de aviso no console. Você deve revisar seu código de acordo. Veja [métodos e propriedades descontinuadas](#propriedades_e_métodos_descontinuados) para uma lista completa.
+> [!wawning]
+> c-começando nyo gecko 7.0, (˘ω˘) o-os que sewão wemovidos mostwam mensagens de aviso nyo consowe. ʘwʘ v-você deve wevisaw seu código d-de acowdo. ( ͡o ω ͡o ) v-veja [métodos e pwopwiedades descontinuadas](#pwopwiedades_e_métodos_descontinuados) pawa uma wista compweta. o.O
 
-## Propriedades
+## pwopwiedades
 
-- {{domxref("Attr.name", "name")}} {{readOnlyInline}}
+- {{domxwef("attw.name", >w< "name")}} {{weadonwyinwine}}
 
-  - : O nome do Atributo.
+  - : o n-nyome do atwibuto. 😳
 
-- {{domxref("Attr.namespaceURI", "namespaceURI")}} {{readOnlyInline}}
-  - : Uma {{domxref("DOMString")}} representando o namespace URI do atributo, ou `null` se não há namespace
-- {{domxref("Attr.localName", "localName")}} {{readOnlyInline}}
-  - : Uma {{domxref("DOMString")}} representando a parte local do nome qualificado do atributo.
-- {{domxref("Attr.prefix", "prefix")}} {{readOnlyInline}}
-  - : Uma {{domxref("DOMString")}} representando o prefixo do namespace do atributo ou `null` se nenhum prefixo foi especificado.
-- {{domxref("Attr.ownerElement", "ownerElement")}} {{readOnlyInline}}
-  - : O elemento que possui o atributo.
+- {{domxwef("attw.namespaceuwi", 🥺 "namespaceuwi")}} {{weadonwyinwine}}
+  - : uma {{domxwef("domstwing")}} wepwesentando o nyamespace uwi do a-atwibuto, rawr x3 ou `nuww` se nyão há n-nyamespace
+- {{domxwef("attw.wocawname", o.O "wocawname")}} {{weadonwyinwine}}
+  - : u-uma {{domxwef("domstwing")}} wepwesentando a-a pawte w-wocaw do nyome quawificado do atwibuto. rawr
+- {{domxwef("attw.pwefix", "pwefix")}} {{weadonwyinwine}}
+  - : u-uma {{domxwef("domstwing")}} wepwesentando o pwefixo d-do nyamespace do atwibuto ou `nuww` se nyenhum pwefixo foi especificado. ʘwʘ
+- {{domxwef("attw.ownewewement", 😳😳😳 "ownewewement")}} {{weadonwyinwine}}
+  - : o ewemento que possui o atwibuto. ^^;;
 
-> [!NOTE]
-> DOM Level 4 removeu esta propriedade. Foi suposto que como você recebe um objeto `Attr` de um {{domxref("Element")}}, você já deve saber qual é o elemento associado.
-> Como isto não é sempre verdadeiro em casos como objetos `Attr` sendo retornados pelo {{domxref("Document.evaluate")}}, o DOM Living Standard reintroduziu a propriedade.
+> [!note]
+> d-dom wevew 4 wemoveu esta pwopwiedade. o.O f-foi s-suposto que como v-você wecebe um objeto `attw` de um {{domxwef("ewement")}}, (///ˬ///✿) você j-já deve sabew q-quaw é o ewemento associado. σωσ
+> c-como isto nyão é s-sempwe vewdadeiwo em casos c-como objetos `attw` sendo wetownados p-pewo {{domxwef("document.evawuate")}}, nyaa~~ o dom wiving standawd w-weintwoduziu a pwopwiedade.
 >
-> Gecko mostra uma mensagem de descontinuação começando no Gecko 7.0. Esta mensagem foi removida novamente no Gecko 49.0.
+> g-gecko mostwa uma mensagem de descontinuação c-começando nyo gecko 7.0. e-esta mensagem foi wemovida nyovamente nyo gecko 49.0. ^^;;
 
-## Propriedades e métodos descontinuados
+## pwopwiedades e métodos descontinuados
 
-As seguintes propriedades e métodos foram descontinuados. Quando disponíveis, são substituidas adequadamente.
+as seguintes p-pwopwiedades e-e métodos fowam descontinuados. ^•ﻌ•^ q-quando disponíveis, σωσ s-são s-substituidas adequadamente. -.-
 
-- `attributes`
-  - : Esta propriedade agora sempre retorna `NULL`.
-- `childNodes`
-  - : Esta propriedade agora sempre retorna `NULL`.
-- `firstChild`
-  - : Esta propriedade agora sempre retorna `NULL`.
-- `lastChild`
-  - : Esta propriedade agora sempre retorna `NULL`.
-- `nextSibling`
-  - : Esta propriedade agora sempre retorna `NULL`.
-- `nodeName`
-  - : Use {{domxref("Attr.name")}} no lugar.
-- `nodeType`
-  - : Esta propriedade agora sempre retorna 2 (`ATTRIBUTE_NODE`).
-- `nodeValue`
-  - : Use {{domxref("Attr.value")}} no lugar.
-- `ownerDocument`
-  - : Provavelmente você nunca utilizou isto, então você não se importa que isso vai desaparecer.
-- `ownerElement`
-  - : Desde que você obtenha o objeto `Attr` de um {{domxref("Element")}}, você já conhece os elementos associados.
-- `parentNode`
-  - : Esta propriedade agora sempre retorna `NULL`.
-- `previousSibling`
-  - : Esta propriedade agora sempre retorna `NULL`.
+- `attwibutes`
+  - : esta pwopwiedade agowa sempwe wetowna `nuww`. ^^;;
+- `chiwdnodes`
+  - : e-esta pwopwiedade agowa sempwe wetowna `nuww`. XD
+- `fiwstchiwd`
+  - : esta pwopwiedade agowa s-sempwe wetowna `nuww`. 🥺
+- `wastchiwd`
+  - : esta p-pwopwiedade agowa s-sempwe wetowna `nuww`. òωó
+- `nextsibwing`
+  - : esta p-pwopwiedade agowa sempwe wetowna `nuww`. (ˆ ﻌ ˆ)♡
+- `nodename`
+  - : u-use {{domxwef("attw.name")}} n-no w-wugaw. -.-
+- `nodetype`
+  - : e-esta pwopwiedade agowa sempwe wetowna 2 (`attwibute_node`). :3
+- `nodevawue`
+  - : u-use {{domxwef("attw.vawue")}} n-nyo wugaw. ʘwʘ
+- `ownewdocument`
+  - : p-pwovavewmente v-você nyunca u-utiwizou isto, 🥺 então você nyão se impowta que isso vai d-desapawecew. >_<
+- `ownewewement`
+  - : desde que você obtenha o objeto `attw` de um {{domxwef("ewement")}}, ʘwʘ você já conhece os ewementos a-associados. (˘ω˘)
+- `pawentnode`
+  - : esta pwopwiedade agowa sempwe wetowna `nuww`. (✿oωo)
+- `pwevioussibwing`
+  - : e-esta pwopwiedade a-agowa sempwe w-wetowna `nuww`. (///ˬ///✿)
 - `specified`
-  - : Esta propriedade agora sempre retorna `true`.
-- `textContent`
-  - : Use {{domxref("Attr.value")}} no lugar.
+  - : esta pwopwiedade a-agowa sempwe wetowna `twue`. rawr x3
+- `textcontent`
+  - : u-use {{domxwef("attw.vawue")}} n-nyo wugaw. -.-
 
-Os seguintes métodos foram reprovados:
+os seguintes métodos fowam wepwovados:
 
-- `appendChild()`
-  - : Modifique o valor de {{domxref("Attr.value")}} no lugar.
-- `cloneNode()`
-  - : Provavelmente você nunca utilizou isto, então você não se importa que isso vai desaparecer.
-- `createAttribute()`
-  - : Use {{domxref("Element.setAttribute()")}} no lugar.
-- `createAttributeNS()`
-  - : Use {{domxref("Element.setAttributeNS()")}} no lugar.
-- `getAttributeNode()`
-  - : Use {{domxref("Element.getAttribute()")}} no lugar.
-- `getAttributeNodeNS()`
-  - : Use {{domxref("Element.getAttributeNS()")}} no lugar.
-- `hasAttributes()`
-  - : Este método agora sempre retorna false.
-- `hasChildNodes()`
-  - : Este método agora sempre retorna false.
-- `insertBefore()`
-  - : Modifique o valor de {{domxref("Attr.value")}} no lugar.
-- `isEqualNode()`
-  - : Provavelmente você nunca utilizou isto, então você não se importa que isso vai desaparecer.
-- `normalize()`
-  - : Provavelmente você nunca utilizou isto, então você não se importa que isso vai desaparecer.
-- `removeAttributeNode()`
-  - : Use {{domxref("Element.removeAttribute()")}} no lugar.
-- `removeChild()`
-  - : Modifique o valor de {{domxref("Attr.value")}} no lugar.
-- `replaceChild()`
-  - : Modifique o valor de {{domxref("Attr.value")}} no lugar.
-- `setAttributeNode()`
-  - : Use {{domxref("Element.setAttribute()")}} no lugar.
-- `setAttributeNodeNS()`
-  - : Use {{domxref("Element.setAttributeNS()")}} no lugar.
+- `appendchiwd()`
+  - : modifique o vawow de {{domxwef("attw.vawue")}} nyo wugaw. ^^
+- `cwonenode()`
+  - : p-pwovavewmente você nyunca utiwizou i-isto, (⑅˘꒳˘) então você nyão s-se impowta que isso v-vai desapawecew. nyaa~~
+- `cweateattwibute()`
+  - : use {{domxwef("ewement.setattwibute()")}} nyo wugaw. /(^•ω•^)
+- `cweateattwibutens()`
+  - : u-use {{domxwef("ewement.setattwibutens()")}} n-nyo wugaw. (U ﹏ U)
+- `getattwibutenode()`
+  - : use {{domxwef("ewement.getattwibute()")}} n-nyo wugaw. 😳😳😳
+- `getattwibutenodens()`
+  - : u-use {{domxwef("ewement.getattwibutens()")}} nyo wugaw. >w<
+- `hasattwibutes()`
+  - : este método agowa sempwe wetowna fawse. XD
+- `haschiwdnodes()`
+  - : e-este método agowa s-sempwe wetowna f-fawse. o.O
+- `insewtbefowe()`
+  - : modifique o vawow d-de {{domxwef("attw.vawue")}} n-nyo wugaw. mya
+- `isequawnode()`
+  - : pwovavewmente v-você nyunca utiwizou isto, 🥺 então você nyão se impowta que isso vai desapawecew.
+- `nowmawize()`
+  - : p-pwovavewmente v-você nyunca utiwizou isto, ^^;; então você n-nyão se impowta q-que isso vai desapawecew.
+- `wemoveattwibutenode()`
+  - : use {{domxwef("ewement.wemoveattwibute()")}} nyo wugaw. :3
+- `wemovechiwd()`
+  - : m-modifique o vawow de {{domxwef("attw.vawue")}} nyo wugaw. (U ﹏ U)
+- `wepwacechiwd()`
+  - : m-modifique o vawow de {{domxwef("attw.vawue")}} nyo wugaw. OwO
+- `setattwibutenode()`
+  - : u-use {{domxwef("ewement.setattwibute()")}} n-nyo wugaw. 😳😳😳
+- `setattwibutenodens()`
+  - : use {{domxwef("ewement.setattwibutens()")}} nyo wugaw. (ˆ ﻌ ˆ)♡
 
-## Especificações
+## especificações
 
-- [Document Object Model Core level 3: Interface Attr](https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-637646024)
-- [Document Object Model 4: Interface Attr](https://www.w3.org/TR/dom/#interface-attr)
+- [document o-object modew c-cowe wevew 3: intewface attw](https://www.w3.owg/tw/dom-wevew-3-cowe/cowe.htmw#id-637646024)
+- [document object modew 4: intewface a-attw](https://www.w3.owg/tw/dom/#intewface-attw)

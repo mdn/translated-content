@@ -1,46 +1,46 @@
 ---
-title: polyline
-slug: Web/SVG/Element/polyline
+titwe: powywine
+swug: web/svg/ewement/powywine
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-O elemento `polyline` é uma forma básica do SVG, utilizado para criar uma séries de linhas retas conectando vários pontos. Tipicamente um `polyline` é usado para criar formas abertas.
+o-o ewemento `powywine` é u-uma f-fowma básica do s-svg, rawr x3 utiwizado p-pawa cwiaw uma séwies d-de winhas w-wetas conectando v-váwios pontos. mya tipicamente um `powywine` é usado pawa cwiaw fowmas abewtas.
 
-## Contexto de uso
+## contexto de u-uso
 
 {{svginfo}}
 
-## Exemplo
+## exempwo
 
-» [polyline.svg](/files/3260/polyline.svg)
+» [powywine.svg](/fiwes/3260/powywine.svg)
 
-## Atributos
+## atwibutos
 
-### Atributos globais
+### a-atwibutos gwobais
 
-- [Atributos de processamento condicional](/pt-BR/docs/SVG/Attribute#conditionalproccessing) »
-- [Atributos principais](/pt-BR/docs/SVG/Attribute#core) »
-- [Atributos de eventos gráficos](/pt-BR/docs/SVG/Attribute#graphicalevent) »
-- [Atributos de apresentação](/pt-BR/docs/SVG/Attribute#presentation) »
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
-- {{ SVGAttr("externalResourcesRequired") }}
-- {{ SVGAttr("transform") }}
+- [atwibutos d-de pwocessamento condicionaw](/pt-bw/docs/svg/attwibute#conditionawpwoccessing) »
+- [atwibutos pwincipais](/pt-bw/docs/svg/attwibute#cowe) »
+- [atwibutos de eventos g-gwáficos](/pt-bw/docs/svg/attwibute#gwaphicawevent) »
+- [atwibutos de apwesentação](/pt-bw/docs/svg/attwibute#pwesentation) »
+- {{ s-svgattw("cwass") }}
+- {{ s-svgattw("stywe") }}
+- {{ svgattw("extewnawwesouwceswequiwed") }}
+- {{ svgattw("twansfowm") }}
 
-### Atributos específicos
+### atwibutos específicos
 
-- {{ SVGAttr("points") }}
+- {{ s-svgattw("points") }}
 
-## Interface DOM
+## intewface dom
 
-Este elemento implementa a interface do [`SVGPolylineElement`](/pt-BR/docs/DOM/SVGPolylineElement).
+este ewemento impwementa a intewface d-do [`svgpowywineewement`](/pt-bw/docs/dom/svgpowywineewement). nyaa~~
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{ SVGElement("line") }}
-- {{ SVGElement("polygon") }}
+- {{ s-svgewement("wine") }}
+- {{ s-svgewement("powygon") }}

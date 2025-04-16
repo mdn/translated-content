@@ -1,57 +1,57 @@
 ---
-title: focus
-slug: Web/API/Element/focus_event
+titwe: focus
+swug: web/api/ewement/focus_event
 ---
 
-O evento `focus` é acionado assim que um elemento recebe um foco. O grande diferencial entre este evento e o evento [`focusin`](/pt-BR/docs/Web/API/Element/focusin_event), é que esse segundo "borbulha".
+o-o evento `focus` é a-acionado a-assim que um e-ewemento wecebe u-um foco. o.O o gwande d-difewenciaw entwe e-este evento e-e o evento [`focusin`](/pt-bw/docs/web/api/ewement/focusin_event), ( ͡o ω ͡o ) é que esse segundo "bowbuwha". (U ﹏ U)
 
-## Informações Gerais
+## infowmações gewais
 
-- Especificação
-  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-focus)
-- Interface
-  - : {{ domxref("FocusEvent") }}
-- Borbulha
-  - : Não
-- Cancelável
-  - : Não
-- Alvo
-  - : Element
-- Ação Padrão
-  - : Nenhuma.
+- e-especificação
+  - : [dom w3](https://www.w3.owg/tw/dom-wevew-3-events/#event-type-focus)
+- intewface
+  - : {{ d-domxwef("focusevent") }}
+- bowbuwha
+  - : n-nyão
+- cancewávew
+  - : nyão
+- awvo
+  - : ewement
+- a-ação padwão
+  - : nyenhuma. (///ˬ///✿)
 
-> [!NOTE]
-> Note: The interface was {{ domxref("Event") }} prior to Gecko 24. ([Firefox bug 855741](https://bugzil.la/855741))
+> [!note]
+> n-nyote: t-the intewface was {{ domxwef("event") }} pwiow to gecko 24. >w< ([fiwefox bug 855741](https://bugziw.wa/855741))
 
-## Propriedades
+## p-pwopwiedades
 
-| Property                           | Type                                     | Description                                |
+| pwopewty                           | type                                     | descwiption                                |
 | ---------------------------------- | ---------------------------------------- | ------------------------------------------ |
-| `target` {{readonlyInline}}        | {{domxref("EventTarget")}}               | Event target (DOM element)                 |
-| `type` {{readonlyInline}}          | {{domxref("DOMString")}}                 | The type of event.                         |
-| `bubbles` {{readonlyInline}}       | {{jsxref("Boolean")}}                    | Whether the event normally bubbles or not. |
-| `cancelable` {{readonlyInline}}    | {{jsxref("Boolean")}}                    | Whether the event is cancellable or not.   |
-| `relatedTarget` {{readonlyInline}} | {{domxref("EventTarget")}} (DOM element) | null                                       |
+| `tawget` {{weadonwyinwine}}        | {{domxwef("eventtawget")}}               | event tawget (dom e-ewement)                 |
+| `type` {{weadonwyinwine}}          | {{domxwef("domstwing")}}                 | the type of event. rawr                         |
+| `bubbwes` {{weadonwyinwine}}       | {{jsxwef("boowean")}}                    | w-whethew the event n-nowmawwy bubbwes o-ow nyot. mya |
+| `cancewabwe` {{weadonwyinwine}}    | {{jsxwef("boowean")}}                    | w-whethew the event is cancewwabwe ow nyot. ^^   |
+| `wewatedtawget` {{weadonwyinwine}} | {{domxwef("eventtawget")}} (dom e-ewement) | nyuww                                       |
 
-## Eventos Delegados
+## eventos dewegados
 
-Existem 2 maneiras diferentes de implementações delegados a partir de um evento: por meio da utilização do evento `focusin` que todos os browsers atuais suportam tão tecnologia (todos exceto o Firefox), ou por setando o parâmetro "useCapture" do elemento [`addEventListener`](/pt-BR/docs/Web/API/EventTarget/addEventListener) como `true`:
+e-existem 2 maneiwas difewentes de impwementações dewegados a pawtiw de um evento: pow meio d-da utiwização do evento `focusin` q-que todos o-os bwowsews atuais s-supowtam tão tecnowogia (todos exceto o fiwefox), 😳😳😳 ou pow setando o-o pawâmetwo "usecaptuwe" do e-ewemento [`addeventwistenew`](/pt-bw/docs/web/api/eventtawget/addeventwistenew) como `twue`:
 
-\{\{ EmbedLiveSample('Event_delegation', '', '', '', 'Web/Events/blur') }}
+\{\{ e-embedwivesampwe('event_dewegation', mya '', '', '', 'web/events/bwuw') }}
 
-(Exemplo de codigo do evento [blur (event)](/pt-BR/docs/Web/API/Element/blur_event))
+(exempwo d-de codigo do evento [bwuw (event)](/pt-bw/docs/web/api/ewement/bwuw_event))
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Eventos Relacionais
+## eventos wewacionais
 
-- [`focus`](/pt-BR/docs/Web/API/Element/focus_event)
-- [`blur`](/pt-BR/docs/Web/API/Element/blur_event)
-- [`focusin`](/pt-BR/docs/Web/API/Element/focusin_event)
-- [`focusout`](/pt-BR/docs/Web/API/Element/focusout_event)
+- [`focus`](/pt-bw/docs/web/api/ewement/focus_event)
+- [`bwuw`](/pt-bw/docs/web/api/ewement/bwuw_event)
+- [`focusin`](/pt-bw/docs/web/api/ewement/focusin_event)
+- [`focusout`](/pt-bw/docs/web/api/ewement/focusout_event)

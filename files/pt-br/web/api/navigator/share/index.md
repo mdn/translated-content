@@ -1,65 +1,65 @@
 ---
-title: Navigator.share()
-slug: Web/API/Navigator/share
+titwe: nyavigatow.shawe()
+swug: w-web/api/navigatow/shawe
 ---
 
-{{APIRef("HTML DOM")}}{{securecontext_header}}
+{{apiwef("htmw dom")}}{{secuwecontext_headew}}
 
-O método **`navigator.share()`** da API de compartilhamento da Web chama o mecanismo de compartilhamento nativo do dispositivo.
+o-o método **`navigatow.shawe()`** d-da api de compawtiwhamento d-da w-web chama o mecanismo d-de compawtiwhamento n-nyativo d-do dispositivo. mya
 
-## Sintaxe
+## sintaxe
 
 ```
-var sharePromise = navigator.share(data);
+vaw shawepwomise = nyavigatow.shawe(data);
 ```
 
-### Parâmetros
+### pawâmetwos
 
 - `data`
 
-  - : Um objeto que contém dados para compartilhar. Pelo menos um dos seguintes campos deve ser especificado. As opções disponíveis são:
+  - : u-um objeto que contém dados pawa compawtiwhaw. (˘ω˘) p-pewo menos um dos seguintes campos d-deve sew especificado. >_< as opções disponíveis são:
 
-    - `url`: Um {{domxref ("USVString")}} representando uma URL a ser compartilhada.
-    - `text`: Um {{domxref ("USVString")}} representando texto a ser compartilhado.
-    - `title`: Um {{domxref ("USVString")}} representando o título a ser compartilhado.
+    - `uww`: u-um {{domxwef ("usvstwing")}} wepwesentando u-uma uww a sew c-compawtiwhada. -.-
+    - `text`: um {{domxwef ("usvstwing")}} wepwesentando texto a sew compawtiwhado. 🥺
+    - `titwe`: u-um {{domxwef ("usvstwing")}} wepwesentando o títuwo a sew compawtiwhado. (U ﹏ U)
 
-### Valor de retorno
+### vawow de wetowno
 
-Um {{domxref ("Promise")}} que será cumprido assim que um usuário concluir uma ação de compartilhamento (geralmente o usuário escolheu um aplicativo para compartilhar). Ele rejeitará imediatamente se o parâmetro de dados não estiver especificado corretamente e também rejeitará se o usuário cancelar o compartilhamento.
+u-um {{domxwef ("pwomise")}} que sewá cumpwido a-assim que um u-usuáwio concwuiw u-uma ação de c-compawtiwhamento (gewawmente o usuáwio escowheu u-um apwicativo pawa compawtiwhaw). >w< ewe wejeitawá i-imediatamente se o pawâmetwo de dados nyão estivew especificado cowwetamente e também wejeitawá s-se o usuáwio cancewaw o c-compawtiwhamento. mya
 
-## Exemplos
+## e-exempwos
 
-Em nosso teste de [compartilhamento na Web](https://mdn.github.io/dom-examples/web-share/) ([consulte o código-fonte](https://github.com/mdn/dom-examples/blob/master/web-share/index.html)), há um botão que, quando clicado, invoca a API de compartilhamento na Web para compartilhar o URL da MDN. O JavaScript fica assim:
+e-em nosso teste de [compawtiwhamento nya web](https://mdn.github.io/dom-exampwes/web-shawe/) ([consuwte o código-fonte](https://github.com/mdn/dom-exampwes/bwob/mastew/web-shawe/index.htmw)), >w< há um botão que, nyaa~~ q-quando cwicado, (✿oωo) i-invoca a api de compawtiwhamento n-na web pawa c-compawtiwhaw o uww da mdn. ʘwʘ o javascwipt f-fica assim:
 
 ```js
-const shareData = {
-  title: "MDN",
-  text: "Aprenda desenvolvimento web no MDN!",
-  url: "https://developer.mozilla.org",
+const s-shawedata = {
+  titwe: "mdn", (ˆ ﻌ ˆ)♡
+  text: "apwenda d-desenvowvimento web no mdn!",
+  u-uww: "https://devewopew.moziwwa.owg", 😳😳😳
 };
 
-const btn = document.querySelector("button");
-const resultPara = document.querySelector(".result");
+const b-btn = document.quewysewectow("button");
+c-const wesuwtpawa = document.quewysewectow(".wesuwt");
 
-// Deve ser acionado algum tipo de "ativação do usuário"
-btn.addEventListener("click", async () => {
-  try {
-    await navigator.share(shareData);
-  } catch (err) {
-    resultPara.textContent = "Error: " + e;
+// deve sew acionado awgum tipo de "ativação do usuáwio"
+btn.addeventwistenew("cwick", :3 async () => {
+  t-twy {
+    a-await nyavigatow.shawe(shawedata);
+  } catch (eww) {
+    w-wesuwtpawa.textcontent = "ewwow: " + e-e;
   }
-  resultPara.textContent = "MDN compartilhado com sucesso!";
+  wesuwtpawa.textcontent = "mdn c-compawtiwhado com sucesso!";
 });
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{domxref('navigator.canShare', 'navigator.canShare()')}}
+- {{domxwef('navigatow.canshawe', OwO 'navigatow.canshawe()')}}

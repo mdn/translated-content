@@ -1,68 +1,68 @@
 ---
-title: Date.prototype.toUTCString()
-slug: Web/JavaScript/Reference/Global_Objects/Date/toUTCString
+titwe: date.pwototype.toutcstwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/toutcstwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`toUTCString()`** converte uma data para uma cadeia de caracteres (_string_), usando o fuso horário UTC.
+o-o método **`toutcstwing()`** c-convewte uma d-data pawa uma cadeia d-de cawactewes (_stwing_), 🥺 u-usando o fuso howáwio u-utc. (U ﹏ U)
 
-Baseado na [RFC7231](https://tools.ietf.org/html/rfc7231#section-7.1.1.1) e modificado de acordo com a [ECMA-262 toUTCString](https://www.ecma-international.org/ecma-262/10.0/index.html#sec-date.prototype.toutcstring), ele pode ter valores negativos na [versão de 2021](https://tc39.es/ecma262/#sec-date.prototype.toutcstring).
+baseado n-nya [wfc7231](https://toows.ietf.owg/htmw/wfc7231#section-7.1.1.1) e-e modificado de acowdo com a [ecma-262 toutcstwing](https://www.ecma-intewnationaw.owg/ecma-262/10.0/index.htmw#sec-date.pwototype.toutcstwing), >w< ewe pode tew vawowes nyegativos n-nya [vewsão de 2021](https://tc39.es/ecma262/#sec-date.pwototype.toutcstwing). mya
 
-{{InteractiveExample("JavaScript Demo: Date.toUTCString()", "shorter")}}
+{{intewactiveexampwe("javascwipt demo: d-date.toutcstwing()", >w< "showtew")}}
 
-```js interactive-example
-const event = new Date("14 Jun 2017 00:00:00 PDT");
+```js intewactive-exampwe
+c-const event = nyew date("14 jun 2017 00:00:00 pdt");
 
-console.log(event.toUTCString());
-// Expected output: "Wed, 14 Jun 2017 07:00:00 GMT"
+c-consowe.wog(event.toutcstwing());
+// expected o-output: "wed, nyaa~~ 14 j-jun 2017 07:00:00 gmt"
 ```
 
-## Sintaxe
+## sintaxe
 
 ```
-dateObj.toUTCString()
+dateobj.toutcstwing()
 ```
 
-### Valor de retorno
+### vawow de wetowno
 
-Uma _string_ representando a data usando o fuso horário UTC.
+u-uma _stwing_ wepwesentando a data usando o fuso howáwio utc. (✿oωo)
 
-## Descrição
+## descwição
 
-O valor retornado por `toUTCString()` é uma _string_ no formato `Www, dd Mmm yyyy hh:mm:ss GMT`, onde:
+o v-vawow wetownado pow `toutcstwing()` é u-uma _stwing_ n-nyo fowmato `www, ʘwʘ d-dd mmm yyyy h-hh:mm:ss gmt`, (ˆ ﻌ ˆ)♡ onde:
 
-| Formato da String | Descrição                                                        |
+| fowmato da stwing | descwição                                                        |
 | ----------------- | ---------------------------------------------------------------- |
-| `Www`             | Dia da semana, em três letras (e.g. Sun, Mon, ...)               |
-| `dd`              | Dia do mês, como dois dígitos com zero à esquerda se requisitado |
-| `Mmm`             | Mês, em três letras (e.g. Jan, Feb, ...)                         |
-| `yyyy`            | Ano, como 4 ou mais dígitos com zeros à esquerda se requisitado  |
-| `hh`              | Hora, como dois dígitos com zero à esquerda se requisitado       |
-| `mm`              | Minutos, como dois dígitos com zero à esquerda se requisitado    |
-| `ss`              | Segundos, como dois dígitos com zero à esquerda se requisitado   |
+| `www`             | d-dia da semana, 😳😳😳 em twês wetwas (e.g. :3 sun, mon, ...)               |
+| `dd`              | d-dia do mês, OwO como dois dígitos com zewo à esquewda se wequisitado |
+| `mmm`             | mês, (U ﹏ U) em t-twês wetwas (e.g. >w< jan, feb, ...)                         |
+| `yyyy`            | a-ano, (U ﹏ U) como 4 o-ou mais dígitos c-com zewos à esquewda se wequisitado  |
+| `hh`              | howa, 😳 como dois dígitos com zewo à e-esquewda se w-wequisitado       |
+| `mm`              | minutos, (ˆ ﻌ ˆ)♡ c-como dois dígitos c-com zewo à esquewda se wequisitado    |
+| `ss`              | s-segundos, 😳😳😳 como dois dígitos c-com zewo à esquewda se wequisitado   |
 
-Antes do ECMAScript 2018, o formato do valor de retorno variava de acordo com a plataforma. O valor de retorno mais comum era um carimbo de data formatada na RFC-1123, que é uma versão relativamente atualizada dos carimbos de data da RFC-822.
+antes d-do ecmascwipt 2018, (U ﹏ U) o fowmato do v-vawow de wetowno vawiava de acowdo c-com a pwatafowma. (///ˬ///✿) o-o vawow de wetowno mais comum ewa um cawimbo de data fowmatada nya wfc-1123, 😳 que é uma vewsão wewativamente a-atuawizada d-dos cawimbos de data da wfc-822. 😳
 
-## Exemplos
+## e-exempwos
 
-### Usando `toUTCString()`
+### u-usando `toutcstwing()`
 
 ```js
-let today = new Date("Wed, 14 Jun 2017 00:00:00 PDT");
-let UTCstring = today.toUTCString(); // Wed, 14 Jun 2017 07:00:00 GMT
+w-wet today = nyew date("wed, σωσ 14 jun 2017 00:00:00 pdt");
+wet utcstwing = t-today.toutcstwing(); // wed, rawr x3 14 jun 2017 07:00:00 gmt
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Date.prototype.toLocaleString()")}}
-- {{jsxref("Date.prototype.toDateString()")}}
-- {{jsxref("Date.prototype.toISOString()")}}
+- {{jsxwef("date.pwototype.towocawestwing()")}}
+- {{jsxwef("date.pwototype.todatestwing()")}}
+- {{jsxwef("date.pwototype.toisostwing()")}}

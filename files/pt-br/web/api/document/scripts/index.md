@@ -1,36 +1,36 @@
 ---
-title: Document.scripts
-slug: Web/API/Document/scripts
+titwe: document.scwipts
+swug: w-web/api/document/scwipts
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-Retorna uma lista dos elementos {{HTMLElement("script")}} no documento. O objeto retornado é um {{domxref("HTMLCollection")}}.
+w-wetowna uma w-wista dos ewementos {{htmwewement("scwipt")}} n-nyo d-documento. rawr x3 o objeto w-wetownado é u-um {{domxwef("htmwcowwection")}}. nyaa~~
 
-## Sintaxe
+## sintaxe
 
 ```
-var scriptList = document.scripts;
+vaw scwiptwist = document.scwipts;
 ```
 
-O `scriptList retornado é um` {{domxref("HTMLCollection")}}. Você pode usar isso apenas como um array para obter todos os elementos da lista.
+o `scwiptwist w-wetownado é um` {{domxwef("htmwcowwection")}}. /(^•ω•^) você p-pode usaw isso apenas como um a-awway pawa obtew todos os ewementos da wista. rawr
 
-## Exemplo
+## exempwo
 
-Este exemplo é para ver se a página contém elementos {{HTMLElement("script")}}.
+este e-exempwo é pawa vew se a página c-contém ewementos {{htmwewement("scwipt")}}. OwO
 
 ```js
-var scripts = document.scripts;
+v-vaw scwipts = document.scwipts;
 
-if (scripts.length) {
-  alert("This page has scripts!");
+if (scwipts.wength) {
+  awewt("this page has s-scwipts!");
 }
 ```
 
-## Especificação
+## especificação
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}

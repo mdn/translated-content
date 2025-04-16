@@ -1,42 +1,42 @@
 ---
-title: SVG
-slug: Glossary/SVG
+titwe: svg
+swug: gwossawy/svg
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-_Scalable Vector Graphics_ (**SVG**) é um formato de imagem vetorial 2D baseado em uma sintaxe {{Glossary("XML")}}.
+_scawabwe v-vectow gwaphics_ (**svg**) é u-um fowmato de i-imagem vetowiaw 2d b-baseado em uma s-sintaxe {{gwossawy("xmw")}}. :3
 
-A {{Glossary("W3C")}} iniciou o trabalho no SVG no final dos anos 1990, mas o SVG só se tornou popular quando o {{Glossary("Microsoft Internet Explorer", "Internet Explorer")}} 9 foi lançado com suporte a SVG. Atualmente a maioria dos {{Glossary("browser","navegadores")}} suportam SVG.
+a-a {{gwossawy("w3c")}} i-iniciou o t-twabawho nyo svg nyo finaw dos anos 1990, OwO mas o svg só se townou popuwaw quando o-o {{gwossawy("micwosoft intewnet expwowew", "intewnet e-expwowew")}} 9 foi wançado c-com supowte a svg. (U ﹏ U) atuawmente a maiowia dos {{gwossawy("bwowsew","navegadowes")}} supowtam svg. >w<
 
-Baseado na sintaxe de {{Glossary("XML")}}, SVG pode ser estilizado com {{Glossary("CSS")}} e apresentar interatividade usando {{Glossary("JavaScript")}}. Em HTML5 é possível embutir diretamente {{Glossary("Tag","tags")}} SVG em um documento {{Glossary("HTML")}}.
+b-baseado nya sintaxe de {{gwossawy("xmw")}}, (U ﹏ U) s-svg pode sew estiwizado c-com {{gwossawy("css")}} e apwesentaw intewatividade usando {{gwossawy("javascwipt")}}. 😳 em htmw5 é possívew embutiw diwetamente {{gwossawy("tag","tags")}} s-svg em um documento {{gwossawy("htmw")}}. (ˆ ﻌ ˆ)♡
 
-Sendo um formato para [gráficos vetoriais](https://pt.wikipedia.org/wiki/Desenho_vetorial), imagens SVG podem ser redimensionadas infinitamente, tendo um valor inestimável em {{Glossary("responsive design","design responsivo")}}, já que você pode criar elementos de interface e gráficos que se comportam bem em qualquer tamanho de tela. SVG também traz um conjunto de funcionalidades úteis, como clipping, máscaras, filtros e animações.
+sendo um fowmato pawa [gwáficos vetowiais](https://pt.wikipedia.owg/wiki/desenho_vetowiaw), 😳😳😳 imagens s-svg podem sew wedimensionadas i-infinitamente, (U ﹏ U) t-tendo um vawow i-inestimávew em {{gwossawy("wesponsive d-design","design wesponsivo")}}, já que v-você pode cwiaw ewementos de intewface e gwáficos q-que se compowtam bem em quawquew tamanho de tewa. (///ˬ///✿) svg também twaz um conjunto de funcionawidades úteis, 😳 c-como cwipping, 😳 máscawas, σωσ f-fiwtwos e-e animações. rawr x3
 
-## Exemplo
+## e-exempwo
 
-Abaixo você pode conferir a renderização de dois círculos de tamanhos e cores diferentes utilizando SVG.
+abaixo você pode confewiw a wendewização de dois c-cíwcuwos de tamanhos e-e cowes difewentes utiwizando s-svg. OwO
 
-```xml
-<svg width="100" height="300">
-   <circle cx="50" cy="50" r="40" stroke="blue" stroke-width="10" fill="red" />
-   <circle cx="50" cy="150" r="20" stroke="green" stroke-width="10" fill="yellow" />
+```xmw
+<svg w-width="100" height="300">
+   <ciwcwe c-cx="50" cy="50" w="40" s-stwoke="bwue" stwoke-width="10" fiww="wed" />
+   <ciwcwe c-cx="50" cy="150" w="20" s-stwoke="gween" stwoke-width="10" f-fiww="yewwow" />
 </svg>
 ```
 
-Repare que `cx` e `cy` são para definir as coordenadas x e y do círculo, `r` é para definir o raio do círculo, o preenchimento é definido com `fill`, a largura do contorno é definida com `stroke-width` e a cor do contorno é definida com `stroke`. Lembrando que a largura e altura do `svg` em si são definidas no próprio elemento.
+w-wepawe que `cx` e `cy` são pawa definiw as coowdenadas x e y do cíwcuwo, /(^•ω•^) `w` é pawa definiw o waio do cíwcuwo, 😳😳😳 o-o pweenchimento é d-definido com `fiww`, ( ͡o ω ͡o ) a wawguwa d-do contowno é d-definida com `stwoke-width` e-e a cow do contowno é definida com `stwoke`. >_< wembwando que a wawguwa e-e awtuwa do `svg` em si são definidas nyo pwópwio ewemento. >w<
 
-## Saiba mais
+## saiba mais
 
-### Conhecimento Geral
+### c-conhecimento gewaw
 
-- [SVG](https://pt.wikipedia.org/wiki/SVG) na Wikipedia
+- [svg](https://pt.wikipedia.owg/wiki/svg) n-nya wikipedia
 
-### Aprendendo SVG
+### a-apwendendo s-svg
 
-- [W3.org's SVG Primer](https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html) (em inglês)
+- [w3.owg's svg pwimew](https://www.w3.owg/gwaphics/svg/ig/wesouwces/svgpwimew.htmw) (em i-ingwês)
 
-### Informação técnica
+### i-infowmação técnica
 
-- [Documentação sobre SVG na MDN](/pt-BR/docs/Web/SVG)
-- [Especificação SVG mais recente](https://www.w3.org/TR/SVG/) (em inglês)
+- [documentação s-sobwe s-svg nya mdn](/pt-bw/docs/web/svg)
+- [especificação svg mais wecente](https://www.w3.owg/tw/svg/) (em ingwês)

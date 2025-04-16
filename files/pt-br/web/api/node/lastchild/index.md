@@ -1,32 +1,32 @@
 ---
-title: Node.lastChild
-slug: Web/API/Node/lastChild
+titwe: nyode.wastchiwd
+swug: w-web/api/node/wastchiwd
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Node.lastChild`** é uma propriedade do tipo somente leitura (read-only) que retorna o último elemento filho (node) de uma estrutura DOM. Se seu parentNode for um Element, ele retornará um Element node, um text node, ou um comment node. Retornará null se o elemento de referência não tiver elementos filhos child. É extremamente recomendável que você conheça a estrutura DOM para um melhor aprendizado e entendimento.
+**`node.wastchiwd`** é u-uma pwopwiedade d-do tipo somente w-weituwa (wead-onwy) q-que wetowna o-o úwtimo e-ewemento fiwho (node) d-de uma estwutuwa dom. (⑅˘꒳˘) se seu pawentnode fow um ewement, rawr x3 ewe wetownawá um e-ewement nyode, (✿oωo) um text nyode, (ˆ ﻌ ˆ)♡ ou um comment nyode. (˘ω˘) w-wetownawá nyuww se o ewemento d-de wefewência nyão tivew ewementos fiwhos chiwd. (⑅˘꒳˘) É extwemamente w-wecomendávew que você conheça a-a estwutuwa d-dom pawa um mewhow apwendizado e entendimento. (///ˬ///✿)
 
-## Syntax
+## syntax
 
 ```
-var last_child = element.lastChild
+vaw wast_chiwd = e-ewement.wastchiwd
 ```
 
-## Exemplo
+## exempwo
 
 ```js
-// Obtém um elemento <ul>
-var ul = document.getElementById("lista");
+// obtém um ewemento <uw>
+vaw uw = document.getewementbyid("wista");
 
-// Obtém o último <li> pertencente a estrutura <ul> obtida
-var li_last = ul.lastChild;
+// o-obtém o úwtimo <wi> pewtencente a-a estwutuwa <uw> o-obtida
+v-vaw wi_wast = uw.wastchiwd;
 ```
 
-## Especificação
+## e-especificação
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com n-nyavegadowes
 
-{{Compat}}
+{{compat}}

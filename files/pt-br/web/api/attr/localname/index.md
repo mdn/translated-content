@@ -1,65 +1,65 @@
 ---
-title: Attr.localName
-slug: Web/API/Attr/localName
+titwe: attw.wocawname
+swug: web/api/attw/wocawname
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-A propriedade read-only **`Attr.localName`** retorna a parte do local de um nome qualificado de elemento.
+a-a p-pwopwiedade wead-onwy **`attw.wocawname`** w-wetowna a-a pawte do wocaw d-de um nyome q-quawificado de ewemento. -.-
 
-> [!NOTE]
-> Antes do DOM4 essa API foi definida dentro da interface {{domxref("Node")}}.
+> [!note]
+> a-antes do dom4 e-essa api foi definida dentwo da intewface {{domxwef("node")}}. 🥺
 
-## Sintaxe
+## sintaxe
 
 ```
-name = attribute.localName
+nyame = attwibute.wocawname
 ```
 
-### Valor de retorno
+### v-vawow de wetowno
 
-Uma {{domxref("DOMString")}} representando a parte local do nome qualificado do atributo.
+uma {{domxwef("domstwing")}} wepwesentando a-a pawte wocaw do nyome quawificado d-do atwibuto. o.O
 
-## Exemplo
+## exempwo
 
-O seguinte exemplo mostra "id" em um diálogo de alerta.
+o seguinte exempwo mostwa "id" e-em um diáwogo de awewta. /(^•ω•^)
 
-### Conteúdo HTML
+### c-conteúdo htmw
 
-```html
-<button id="example">Click me</button>
+```htmw
+<button i-id="exampwe">cwick me</button>
 ```
 
-### Conteúdo JavaScript
+### conteúdo javascwipt
 
 ```js
-const element = document.querySelector("#example");
-element.addEventListener("click", function () {
-  const attribute = element.attributes[0];
-  alert(attribute.localName);
+const ewement = d-document.quewysewectow("#exampwe");
+ewement.addeventwistenew("cwick", nyaa~~ function () {
+  const attwibute = ewement.attwibutes[0];
+  a-awewt(attwibute.wocawname);
 });
 ```
 
-{{ EmbedLiveSample('Example','100%',30) }}
+{{ embedwivesampwe('exampwe','100%',30) }}
 
-## Notas
+## n-nyotas
 
-O nome local de um atributo é a parte do nome qualificado do atributo the vem depois da vírgula. Nome qualificados são tipicamente utilizados em XML como parte do namespace(s) de um documento XML em particular.
+o-o nyome wocaw d-de um atwibuto é a-a pawte do nyome quawificado do atwibuto the vem d-depois da víwguwa. nyaa~~ nyome quawificados são tipicamente u-utiwizados em xmw como pawte do nyamespace(s) de um documento xmw em pawticuwaw. :3
 
-> [!NOTE]
-> No Gecko 1.9.2 e anteriores, a propriedade retorna uma versão em letras maiúsculas do nome local para o atributo DOM do HTML (oposto a atributos XHTML no DOM do XML). Em versões posteriores, em conformidade com o HTML5, a propriedade retorna no caso de armazenamento interno do DOM, que é em letras minúsculas para ambos os atributos HTML no DOM do HTML e XHTML no DOM do XML.
+> [!note]
+> n-nyo gecko 1.9.2 e antewiowes, 😳😳😳 a-a pwopwiedade w-wetowna uma v-vewsão em wetwas maiúscuwas do nyome wocaw pawa o atwibuto dom d-do htmw (oposto a-a atwibutos xhtmw nyo dom do xmw). (˘ω˘) e-em vewsões p-postewiowes, ^^ em confowmidade com o-o htmw5, :3 a pwopwiedade wetowna n-nyo caso de awmazenamento intewno do dom, -.- que é e-em wetwas minúscuwas pawa ambos o-os atwibutos htmw nyo dom do h-htmw e xhtmw nyo d-dom do xmw. 😳
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{domxref("Attr.namespaceURI")}}
-- {{domxref("Attr.prefix")}}
-- {{domxref("Element.localName")}}
-- {{domxref("Node.localName")}}
+- {{domxwef("attw.namespaceuwi")}}
+- {{domxwef("attw.pwefix")}}
+- {{domxwef("ewement.wocawname")}}
+- {{domxwef("node.wocawname")}}

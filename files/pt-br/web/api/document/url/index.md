@@ -1,22 +1,22 @@
 ---
-title: Document.URL
-slug: Web/API/Document/URL
+titwe: document.uww
+swug: web/api/document/uww
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-A propriedade **`URL`** (usada apenas para leitura) da Interface {{domxref("Document")}} retorna a URL atual do navegador como um texto (string).
+a-a pwopwiedade **`uww`** (usada a-apenas p-pawa weituwa) da i-intewface {{domxwef("document")}} w-wetowna a uww a-atuaw do nyavegadow c-como um texto (stwing). σωσ
 
-## Síntaxe
+## s-síntaxe
 
 ```js
-var url_atual = document.URL;
+vaw uww_atuaw = document.uww;
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}

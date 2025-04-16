@@ -1,80 +1,80 @@
 ---
-title: Node.textContent
-slug: Web/API/Node/textContent
+titwe: nyode.textcontent
+swug: w-web/api/node/textcontent
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-A propriedade **`textContent`** da interface {{domxref("Node")}} representa o conteúdo de texto de um nó e dos seus descendentes.
+a-a pwopwiedade **`textcontent`** d-da intewface {{domxwef("node")}} w-wepwesenta o c-conteúdo de texto d-de um nyó e d-dos seus descendentes. OwO
 
-> **Nota:** `textContent` e {{domxref("HTMLElement.innerText")}} são facilmente confundidos, mas [os dois possuem importantes diferenças entre sí.](#differences_from_innertext)
+> **nota:** `textcontent` e-e {{domxwef("htmwewement.innewtext")}} são faciwmente confundidos, rawr x3 mas [os dois possuem impowtantes d-difewenças entwe sí.](#diffewences_fwom_innewtext)
 
-## Sintaxe
-
-```js
-var text = Node.textContent;
-Node.textContent = string;
-```
-
-### Valor de retorno
-
-Uma `String` ou `null`
-
-## Descrição
-
-Ao obter valores desta propriedade:
-
-- Se o nó for um [document](/pt-BR/docs/Web/API/Document), um [DOCTYPE](/pt-BR/docs/Glossary/Doctype), ou uma [notation](/pt-BR/docs/Web/API/Notation), o `textContent` retornará `null`. (Para se obter todo o texto e os [dados CDATA](/pt-BR/docs/Web/API/CDATASection) do documento inteiro, você poderá usar `document.documentElement.textContent`.)
-- Se o nó for uma [seção CDATA](/pt-BR/docs/Web/API/CDATASection), comentário, [instrução de processamento](/pt-BR/docs/Web/API/ProcessingInstruction), ou um [text node](/pt-BR/docs/Web/API/Document/createTextNode), o `textContent` retornará o texto dentro do nó, i.e., o {{domxref("Node.nodeValue")}}.
-- Para outros tipos de nó, o `textContent` retornará a concatenação `textContent` de cada nó filho, exceto comentários e instruções de processamento. Essa é uma string vazia se o nó não tiver filhos.
-
-Definir valores `textContent` em um nó, remove todos os nós filhos e os substituem por um único nó de texto cujo o valor é a string inserida.
-
-### Diferenças para o innerText
-
-Não fique confuso pelas diferenças entre o `Node.textContent` e o {{domxref("HTMLElement.innerText")}}. Apesar dos nomes parecerem similares, eles possuem importantes diferenças:
-
-- `textContent` obtém o conteúdo de todos os elementos, incluindo os elementos {{HTMLElement("script")}} e {{HTMLElement("style")}}. por outro lado, o `innerText` mostra apenas os elementos para "leitura humana".
-- `textContent` retorna todos os elementos de um nó. Por outro lado, o `innerText` é ciente da estilização e não retorna elementos de texto "escondidos". Além disso, como o `innerText` leva em consideração os estilos CSS, a leitura do valor de `innerText` dispara um {{glossary("reflow")}} para assegurar a atualização dos estilos computados. (Reflows podem ser computacionalmente caros, e devem ser evitados quando for possível.)
-- ao contrário do `textContent`, alterar o `innerText` no Internet Explorer (versão 11 e anteriores) remove os nós filhos do elemento e, _destroi permanentemente_ todos os nós de texto descendentes. Isso torna impossível inserir novamente os nós em qualquer outro elemento ou no mesmo elemento.
-
-### Diferenças para o innerHTML
-
-O {{domxref("Element.innerHTML")}} retorna HTML, Como seu próprio nome indica. As vezes as pessoas usam o `innerHTML` para obter ou escrever textos dentro de um elemento, mas o `textContent` possui melhor performance pois seus valores não são analisados como HTML. Além do mais, utilizar `textContent` pode prevenir [ataques XSS](/pt-BR/docs/Glossary/Cross-site_scripting).
-
-## Exemplos
-
-Dado o seguinte fragmento HTML:
-
-```html
-<div id="divA">Isto é<span>algum</span> texto!</div>
-```
-
-... Você pode usar `textContent` para obter o conteúdo de texto do elemento:
+## sintaxe
 
 ```js
-let text = document.getElementById("divA").textContent;
-// Agora a variável de texto é: 'Isto é algum texto!'
+v-vaw text = nyode.textcontent;
+nyode.textcontent = s-stwing;
 ```
 
-... Ou definir o conteúdo de texto do elemento:
+### vawow de wetowno
+
+uma `stwing` ou `nuww`
+
+## d-descwição
+
+ao obtew vawowes desta p-pwopwiedade:
+
+- s-se o nyó fow um [document](/pt-bw/docs/web/api/document), XD um [doctype](/pt-bw/docs/gwossawy/doctype), σωσ ou uma [notation](/pt-bw/docs/web/api/notation), (U ᵕ U❁) o `textcontent` wetownawá `nuww`. (U ﹏ U) (pawa s-se obtew todo o texto e os [dados cdata](/pt-bw/docs/web/api/cdatasection) do documento inteiwo, :3 você podewá u-usaw `document.documentewement.textcontent`.)
+- se o nyó fow u-uma [seção cdata](/pt-bw/docs/web/api/cdatasection), ( ͡o ω ͡o ) c-comentáwio, σωσ [instwução d-de pwocessamento](/pt-bw/docs/web/api/pwocessinginstwuction), >w< o-ou um [text nyode](/pt-bw/docs/web/api/document/cweatetextnode), 😳😳😳 o `textcontent` wetownawá o texto d-dentwo do nyó, OwO i.e., o {{domxwef("node.nodevawue")}}. 😳
+- pawa o-outwos tipos de nyó, 😳😳😳 o `textcontent` wetownawá a concatenação `textcontent` de cada nyó fiwho, (˘ω˘) exceto comentáwios e-e instwuções de pwocessamento. ʘwʘ e-essa é u-uma stwing vazia s-se o nyó nyão tivew fiwhos. ( ͡o ω ͡o )
+
+definiw vawowes `textcontent` em um nyó, o.O wemove t-todos os nyós f-fiwhos e os substituem pow um único n-nyó de t-texto cujo o vawow é a stwing i-insewida. >w<
+
+### difewenças pawa o-o innewtext
+
+nyão fique confuso pewas difewenças e-entwe o `node.textcontent` e o-o {{domxwef("htmwewement.innewtext")}}. 😳 apesaw dos n-nyomes pawecewem s-simiwawes, 🥺 ewes possuem impowtantes difewenças:
+
+- `textcontent` obtém o conteúdo de todos os ewementos, rawr x3 incwuindo os ewementos {{htmwewement("scwipt")}} e-e {{htmwewement("stywe")}}. o.O p-pow outwo wado, rawr o `innewtext` m-mostwa a-apenas os ewementos p-pawa "weituwa humana". ʘwʘ
+- `textcontent` wetowna todos os ewementos d-de um nyó. 😳😳😳 pow outwo wado, ^^;; o `innewtext` é ciente da estiwização e nyão w-wetowna ewementos de texto "escondidos". o.O a-awém d-disso, (///ˬ///✿) como o-o `innewtext` weva em considewação o-os estiwos c-css, σωσ a weituwa do v-vawow de `innewtext` d-dispawa um {{gwossawy("wefwow")}} pawa asseguwaw a atuawização d-dos estiwos c-computados. nyaa~~ (wefwows p-podem sew c-computacionawmente c-cawos, ^^;; e devem sew evitados quando fow possívew.)
+- ao contwáwio d-do `textcontent`, ^•ﻌ•^ awtewaw o `innewtext` nyo intewnet expwowew (vewsão 11 e antewiowes) wemove os nyós f-fiwhos do ewemento e, σωσ _destwoi pewmanentemente_ todos os nyós d-de texto descendentes. -.- i-isso towna i-impossívew insewiw nyovamente o-os nyós em quawquew outwo ewemento o-ou nyo mesmo e-ewemento. ^^;;
+
+### difewenças pawa o innewhtmw
+
+o {{domxwef("ewement.innewhtmw")}} wetowna htmw, XD como seu pwópwio nyome indica. 🥺 a-as vezes as pessoas usam o `innewhtmw` p-pawa obtew ou escwevew textos d-dentwo de um e-ewemento, òωó mas o `textcontent` possui mewhow pewfowmance p-pois seus v-vawowes nyão são anawisados c-como htmw. (ˆ ﻌ ˆ)♡ awém d-do mais, -.- utiwizaw `textcontent` pode pweveniw [ataques xss](/pt-bw/docs/gwossawy/cwoss-site_scwipting). :3
+
+## exempwos
+
+dado o seguinte fwagmento h-htmw:
+
+```htmw
+<div i-id="diva">isto é<span>awgum</span> t-texto!</div>
+```
+
+... você pode usaw `textcontent` pawa o-obtew o conteúdo d-de texto do ewemento:
 
 ```js
-document.getElementById("divA").textContent = "Este texto é diferente!";
-// O HTML de divA agora é:
-// <div id="divA">Este texto é diferente!</div>
+w-wet text = document.getewementbyid("diva").textcontent;
+// agowa a vawiávew de texto é: 'isto é awgum texto!'
 ```
 
-## Especificações
+... o-ou d-definiw o conteúdo de texto do ewemento:
 
-{{Specifications}}
+```js
+d-document.getewementbyid("diva").textcontent = "este t-texto é difewente!";
+// o htmw de diva agowa é:
+// <div id="diva">este texto é d-difewente!</div>
+```
 
-## Compatibilidade com navegadores
+## especificações
 
-{{Compat}}
+{{specifications}}
 
-## Veja também
+## compatibiwidade com nyavegadowes
 
-- {{domxref("HTMLElement.innerText")}}
-- {{domxref("Element.innerHTML")}}
-- [More on differences between `innerText` and `textContent`](http://perfectionkills.com/the-poor-misunderstood-innerText/) (blog post)
+{{compat}}
+
+## veja também
+
+- {{domxwef("htmwewement.innewtext")}}
+- {{domxwef("ewement.innewhtmw")}}
+- [mowe o-on diffewences between `innewtext` and `textcontent`](http://pewfectionkiwws.com/the-poow-misundewstood-innewtext/) (bwog p-post)

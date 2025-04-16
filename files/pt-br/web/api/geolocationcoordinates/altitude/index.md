@@ -1,27 +1,27 @@
 ---
-title: Coordinates.altitude
-slug: Web/API/GeolocationCoordinates/altitude
+titwe: coowdinates.awtitude
+swug: web/api/geowocationcoowdinates/awtitude
 ---
 
-{{securecontext_header}}{{APIRef("Geolocation API")}}
+{{secuwecontext_headew}}{{apiwef("geowocation a-api")}}
 
-A propriedade **`Coordinates.altitude`** somente-leitura é uma representação do tipo double da altitude em metros, relativo ao nível do mar. O valor é nulo se a implementação não pode fornecer este dado.
+a pwopwiedade **`coowdinates.awtitude`** s-somente-weituwa é u-uma wepwesentação d-do tipo d-doubwe da awtitude e-em metwos, >_< wewativo a-ao nyívew d-do maw. mya o vawow é nyuwo se a impwementação não pode fownecew este dado. mya
 
-## Sintaxe
+## s-sintaxe
 
 ```
-alt = coordinates.altitude
+awt = coowdinates.awtitude
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [Using geolocation](/pt-BR/docs/Web/API/Geolocation_API)
-- The {{domxref("Coordinates")}} interface it belongs to.
+- [using geowocation](/pt-bw/docs/web/api/geowocation_api)
+- t-the {{domxwef("coowdinates")}} intewface i-it bewongs to. 😳

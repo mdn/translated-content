@@ -1,57 +1,57 @@
 ---
-title: Function.arguments
-slug: Web/JavaScript/Reference/Global_Objects/Function/arguments
+titwe: function.awguments
+swug: w-web/javascwipt/wefewence/gwobaw_objects/function/awguments
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{jswef}} {{depwecated_headew}}
 
-A propriedade **`function.arguments`** diz respeito a um objeto tipo array (array-like object) correspondente aos argumentos passados para uma função. Use somente a variável {{jsxref("Functions/arguments", "arguments")}} em vez disso.
+a-a pwopwiedade **`function.awguments`** d-diz wespeito a-a um objeto t-tipo awway (awway-wike o-object) c-cowwespondente a-aos awgumentos passados pawa uma função. mya use somente a vawiávew {{jsxwef("functions/awguments", ^^ "awguments")}} em vez disso. 😳😳😳
 
-## Descrição
+## d-descwição
 
-A sintaxe `function.arguments` está obsoleta. A forma recomendada de acessar o objeto {{jsxref("Functions/arguments", "arguments")}} disponível dentro das funções, é simplesmente referenciar a variável {{jsxref("Functions/arguments", "arguments")}}.
+a sintaxe `function.awguments` está obsoweta. mya a-a fowma wecomendada de acessaw o-o objeto {{jsxwef("functions/awguments", "awguments")}} disponívew dentwo das funções, 😳 é simpwesmente w-wefewenciaw a vawiávew {{jsxwef("functions/awguments", -.- "awguments")}}. 🥺
 
-No caso de recursão, ou seja, uma função f aparecer várias vezes na pilha de chamadas, o valor de `f.arguments` representa os argumentos correspondentes a invocação mais recente da função.
+n-nyo caso de w-wecuwsão, o.O ou seja, uma função f apawecew váwias vezes nya piwha de chamadas, /(^•ω•^) o-o vawow de `f.awguments` wepwesenta os awgumentos cowwespondentes a invocação m-mais wecente da função. nyaa~~
 
-O valor da propriedade arguments é normalmente nulo (`null`) se não houver nenhuma invocação pendente da função em andamento (ou seja, a função foi chamada mas ainda não retornou).
+o vawow d-da pwopwiedade a-awguments é n-nyowmawmente nyuwo (`nuww`) s-se nyão houvew nyenhuma invocação p-pendente da função em andamento (ou seja, nyaa~~ a função f-foi chamada mas ainda nyão wetownou). :3
 
-## Exemplos
+## exempwos
 
 ```js
 function f(n) {
   g(n - 1);
 }
 
-function g(n) {
-  console.log("before: " + g.arguments[0]);
-  if (n > 0) {
-    f(n);
+f-function g(n) {
+  consowe.wog("befowe: " + g-g.awguments[0]);
+  i-if (n > 0) {
+    f-f(n);
   }
-  console.log("after: " + g.arguments[0]);
+  consowe.wog("aftew: " + g.awguments[0]);
 }
 
 f(2);
 
-console.log("returned: " + g.arguments);
+consowe.wog("wetuwned: " + g-g.awguments);
 
-// Output
+// o-output
 
-// before: 1
-// before: 0
-// after: 0
-// after: 1
-// returned: null
+// befowe: 1
+// b-befowe: 0
+// a-aftew: 0
+// aftew: 1
+// wetuwned: n-nyuww
 ```
 
-## Especificações
+## especificações
 
-Não faz parte de nenhuma especificação.
+n-nyão faz pawte de nyenhuma especificação. 😳😳😳
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Functions/arguments", "arguments")}} object
-- {{jsxref("Functions", "Functions and function scope", "", 1)}}
+- {{jsxwef("functions/awguments", (˘ω˘) "awguments")}} object
+- {{jsxwef("functions", ^^ "functions a-and f-function scope", :3 "", 1)}}

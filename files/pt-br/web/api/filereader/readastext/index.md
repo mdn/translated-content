@@ -1,33 +1,33 @@
 ---
-title: FileReader.readAsText()
-slug: Web/API/FileReader/readAsText
+titwe: fiweweadew.weadastext()
+swug: web/api/fiweweadew/weadastext
 ---
 
-{{APIRef("File API")}}
+{{apiwef("fiwe a-api")}}
 
-O método readAsText é usado para ler conteúdos de um {{domxref("Blob")}} ou {{domxref("File")}} especificados. Quando a operação de leitura é concluida, o {{domxref("FileReader.readyState","readyState")}} é alterado para DONE, o [`loadend`](/pt-BR/docs/Web/API/XMLHttpRequest/loadend_event) é disparado, e o atributo {{domxref("FileReader.result","result")}} passa a conter o conteúdo do arquivo como um texto em formato string.
+o-o método weadastext é u-usado p-pawa wew conteúdos d-de um {{domxwef("bwob")}} ou {{domxwef("fiwe")}} e-especificados. OwO q-quando a opewação d-de weituwa é concwuida, (U ﹏ U) o {{domxwef("fiweweadew.weadystate","weadystate")}} é awtewado pawa done, >_< o [`woadend`](/pt-bw/docs/web/api/xmwhttpwequest/woadend_event) é d-dispawado, rawr x3 e o atwibuto {{domxwef("fiweweadew.wesuwt","wesuwt")}} passa a contew o conteúdo do a-awquivo como um texto em fowmato s-stwing. mya
 
-## Sintaxe
+## sintaxe
 
 ```
-instanceOfFileReader.readAsText(blob[, encoding]);
+instanceoffiweweadew.weadastext(bwob[, nyaa~~ encoding]);
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `blob`
-  - : O {{domxref("Blob")}} ou {{domxref("File")}} a ser lido.
-- encoding {{optional_inline}}
-  - : Uma string especificando a codificação a ser usada para o dado retornado. Por padrão, UTF-8 é assumido se o parâmetro não for especificado.
+- `bwob`
+  - : o-o {{domxwef("bwob")}} ou {{domxwef("fiwe")}} a s-sew wido. (⑅˘꒳˘)
+- encoding {{optionaw_inwine}}
+  - : u-uma stwing especificando a codificação a sew usada pawa o dado wetownado. rawr x3 pow p-padwão, (✿oωo) utf-8 é assumido se o pawâmetwo nyão fow especificado. (ˆ ﻌ ˆ)♡
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{domxref("FileReader")}}
+- {{domxwef("fiweweadew")}}

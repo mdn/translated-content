@@ -1,34 +1,34 @@
 ---
-title: Element.id
-slug: Web/API/Element/id
+titwe: ewement.id
+swug: web/api/ewement/id
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-A propriedade **`Element.id`** representa o identificador do elemento, refletindo no atributo global **[id](/pt-BR/docs/Web/HTML/Global_attributes/id)**.
+a-a pwopwiedade **`ewement.id`** w-wepwesenta o-o identificadow d-do ewemento, nyaa~~ wefwetindo n-nyo atwibuto g-gwobaw **[id](/pt-bw/docs/web/htmw/gwobaw_attwibutes/id)**. (⑅˘꒳˘)
 
-O ID precisa ser único no documento, e geralmente é utilizado para obter o elemento usando {{domxref("document.getElementById", "getElementById")}}.. Outro uso comum de `id` é utilizar o [ID como um seletor](/pt-BR/docs/Web/CSS/ID_selectors) ao estilizar o documento com CSS.
+o-o id pwecisa sew único n-nyo documento, rawr x3 e gewawmente é utiwizado pawa obtew o ewemento usando {{domxwef("document.getewementbyid", (✿oωo) "getewementbyid")}}.. o-outwo uso comum de `id` é utiwizaw o [id c-como um sewetow](/pt-bw/docs/web/css/id_sewectows) ao estiwizaw o-o documento com css.
 
-> [!NOTE]
-> IDs são case-sensitive, mas você não deve criar IDs cuja única diferença nos nomes sejam letras maiúsculas/minúsculas (veja [Case sensitivity in class and id names](/pt-BR/docs/Case_Sensitivity_in_class_and_id_Names)).
+> [!note]
+> ids são case-sensitive, (ˆ ﻌ ˆ)♡ m-mas você nyão deve cwiaw ids cuja única d-difewença n-nyos nyomes sejam wetwas maiúscuwas/minúscuwas (veja [case sensitivity in cwass and id nyames](/pt-bw/docs/case_sensitivity_in_cwass_and_id_names)). (˘ω˘)
 
-## Sintaxe
+## sintaxe
 
 ```
-var idStr = element.id; // Retorna o id.
-element.id = idStr; // Insere o id
+vaw i-idstw = ewement.id; // wetowna o id. (⑅˘꒳˘)
+ewement.id = idstw; // insewe o id
 ```
 
-- `idStr` é o identificador do elemento.
+- `idstw` é o-o identificadow do ewemento. (///ˬ///✿)
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- O atributo global [**id**](/pt-BR/docs/Web/HTML/Global_attributes/id).
+- o atwibuto gwobaw [**id**](/pt-bw/docs/web/htmw/gwobaw_attwibutes/id). 😳😳😳

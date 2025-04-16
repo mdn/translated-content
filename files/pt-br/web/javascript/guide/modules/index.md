@@ -1,517 +1,517 @@
 ---
-title: Módulos JavaScript
-slug: Web/JavaScript/Guide/Modules
+titwe: móduwos javascwipt
+swug: w-web/javascwipt/guide/moduwes
 ---
 
-{{JSSidebar("JavaScript Guide")}}{{Previous("Web/JavaScript/Guide/Meta_programming")}}
+{{jssidebaw("javascwipt g-guide")}}{{pwevious("web/javascwipt/guide/meta_pwogwamming")}}
 
-Este guia fornece tudo o que você precisa para começar com a sintaxe de módulo do JavaScript.
+e-este g-guia fownece t-tudo o que você p-pwecisa pawa começaw c-com a sintaxe d-de móduwo do javascwipt. ʘwʘ
 
-## Um background em módulos
+## um backgwound em móduwos
 
-Os programas JavaScript começaram muito pequenos - a maior parte do seu uso nos primeiros dias era para executar tarefas isoladas de script, fornecendo um pouco de interatividade às suas páginas da Web sempre que necessário, de modo que scripts grandes geralmente não eram necessários. Com o avanço rápido da tecnologia agora temos aplicativos completos sendo executados em navegadores com muito JavaScript, além de JavaScript ser usado em outros contextos ([Node.js](/pt-BR/docs/Glossary/Node.js), por exemplo).
+os pwogwamas javascwipt c-começawam muito pequenos - a maiow pawte d-do seu uso nyos pwimeiwos dias ewa p-pawa executaw tawefas isowadas de scwipt, (U ﹏ U) fownecendo um pouco d-de intewatividade às suas páginas d-da web sempwe q-que nyecessáwio, 😳😳😳 de modo que scwipts gwandes gewawmente nyão ewam nyecessáwios. 🥺 c-com o avanço wápido da tecnowogia agowa temos apwicativos compwetos sendo e-executados em nyavegadowes com m-muito javascwipt, (///ˬ///✿) a-awém de javascwipt s-sew usado e-em outwos contextos ([node.js](/pt-bw/docs/gwossawy/node.js), (˘ω˘) pow exempwo). :3
 
-Portanto, fez sentido nos últimos anos começar a pensar em fornecer mecanismos para dividir programas JavaScript em módulos separados que podem ser importados quando necessário. O Node.js possui essa capacidade há muito tempo e existem várias bibliotecas e estruturas JavaScript que permitem o uso do módulo (por exemplo, outros [CommonJS](https://en.wikipedia.org/wiki/CommonJS) e [AMD](https://github.com/amdjs/amdjs-api/blob/master/AMD.md)-sistemas de módulos baseados em [RequireJS](https://requirejs.org/), e mais recentemente [Webpack](https://webpack.github.io/) e [Babel](https://babeljs.io/)).
+powtanto, fez sentido n-nos úwtimos anos começaw a pensaw em fownecew m-mecanismos pawa dividiw pwogwamas javascwipt em móduwos sepawados que podem sew impowtados q-quando nyecessáwio. /(^•ω•^) o nyode.js p-possui essa capacidade h-há muito t-tempo e existem váwias bibwiotecas e estwutuwas javascwipt que p-pewmitem o uso d-do móduwo (pow exempwo, :3 outwos [commonjs](https://en.wikipedia.owg/wiki/commonjs) e-e [amd](https://github.com/amdjs/amdjs-api/bwob/mastew/amd.md)-sistemas d-de móduwos baseados e-em [wequiwejs](https://wequiwejs.owg/), mya e mais wecentemente [webpack](https://webpack.github.io/) e-e [babew](https://babewjs.io/)). XD
 
-A boa notícia é que os navegadores modernos começaram a dar suporte nativamente à funcionalidade do módulo, e é sobre isso que este artigo trata. Isso só pode ser uma coisa boa - os navegadores podem otimizar o carregamento de módulos, tornando-o mais eficiente do que ter que usar uma biblioteca e fazer todo esse processamento extra no lado do cliente e viagens de ida e volta extras.
+a boa nyotícia é que os nyavegadowes m-modewnos começawam a d-daw supowte nyativamente à funcionawidade d-do móduwo, (///ˬ///✿) e-e é sobwe isso que este awtigo twata. 🥺 isso só pode sew uma coisa boa - os nyavegadowes podem otimizaw o-o cawwegamento de m-móduwos, o.O townando-o mais eficiente d-do que tew q-que usaw uma bibwioteca e-e fazew todo esse pwocessamento extwa nyo wado do cwiente e-e viagens de ida e vowta extwas. mya
 
-## Suporte do navegador
+## supowte do nyavegadow
 
-O uso de módulos JavaScript nativos depende do{{JSxRef("Statements/import", "import")}} e {{JSxRef("Statements/export", "export")}} afirmações; estes são suportados nos navegadores da seguinte maneira:
+o uso de móduwos j-javascwipt nativos depende do{{jsxwef("statements/impowt", rawr x3 "impowt")}} e-e {{jsxwef("statements/expowt", "expowt")}} a-afiwmações; e-estes são supowtados nyos navegadowes d-da seguinte m-maneiwa:
 
-### importa
+### i-impowta
 
-{{Compat}}
+{{compat}}
 
-### exporta
+### e-expowta
 
-{{Compat}}
+{{compat}}
 
-## Apresentando um exemplo
+## apwesentando um exempwo
 
-Para demonstrar o uso dos módulos, criamos um [conjunto simples de exemplos](https://github.com/mdn/js-examples/tree/master/module-examples) que você pode encontrar no GitHub. Estes exemplos demonstram um conjunto simples de módulos que criam um[`<canvas>`](/pt-BR/docs/Web/HTML/Element/canvas) em uma página da Web e desenhe (e relate informações sobre) formas diferentes na tela.
+pawa d-demonstwaw o uso d-dos móduwos, 😳 c-cwiamos um [conjunto s-simpwes de e-exempwos](https://github.com/mdn/js-exampwes/twee/mastew/moduwe-exampwes) que você pode encontwaw nyo github. 😳😳😳 e-estes exempwos demonstwam um conjunto simpwes de móduwos que cwiam um[`<canvas>`](/pt-bw/docs/web/htmw/ewement/canvas) em uma página d-da web e desenhe (e wewate infowmações sobwe) fowmas difewentes n-nya tewa. >_<
 
-Estes são bastante triviais, mas foram mantidos deliberadamente simples para demonstrar claramente os módulos.
+e-estes são bastante t-twiviais, >w< mas fowam mantidos d-dewibewadamente simpwes pawa d-demonstwaw cwawamente o-os móduwos. rawr x3
 
-> **Nota:** **Nota: Se você deseja fazer o download dos exemplos e executá-los localmente, precisará executá-los por meio de um servidor da web local.**
+> **nota:** **nota: se você deseja fazew o downwoad dos exempwos e executá-wos wocawmente, XD p-pwecisawá executá-wos pow meio d-de um sewvidow da web wocaw.**
 
-## Exemplo de uma estrutura básica
+## e-exempwo de u-uma estwutuwa básica
 
-No nosso primeiro exemplo (consulte [basic-modules](https://github.com/mdn/js-examples/tree/master/module-examples/basic-modules)) nós temos uma estrutura de arquivos da seguinte maneira:
+nyo nyosso pwimeiwo exempwo (consuwte [basic-moduwes](https://github.com/mdn/js-exampwes/twee/mastew/moduwe-exampwes/basic-moduwes)) n-nyós t-temos uma estwutuwa de awquivos d-da seguinte m-maneiwa:
 
 ```
-index.html
+index.htmw
 main.js
-modules/
+moduwes/
     canvas.js
-    square.js
+    squawe.js
 ```
 
-> **Nota:** **Nota: Todos os exemplos neste guia têm basicamente a mesma estrutura; o exposto acima deve começar a ficar bem familiar.**
+> **nota:** **nota: todos os exempwos n-nyeste guia têm b-basicamente a m-mesma estwutuwa; o exposto acima d-deve começaw a f-ficaw bem famiwiaw.**
 
-Os dois módulos do diretório modules são descritos abaixo:
+os dois m-móduwos do diwetówio moduwes são descwitos abaixo:
 
-- `canvas.js` — contém funções relacionadas à configuração da tela:
+- `canvas.js` — contém funções wewacionadas à c-configuwação d-da tewa:
 
-  - `create()` — cria uma tela com uma largura e altura especificadas dentro de um invólucro [`<div>`](/pt-BR/docs/Web/HTML/Element/div) com um ID especificado, que é anexado dentro de um elemento pai especificado. Retorna um objeto que contém o contexto 2D da tela e o ID do [wrapper](/pt-BR/docs/Glossary/Wrapper).
-  - `createReportList()` — cria uma lista não ordenada anexada dentro de um elemento de wrapper especificado, que pode ser usado para gerar dados de relatório. Retorna o ID da lista.
+  - `cweate()` — cwia uma tewa com uma wawguwa e-e awtuwa especificadas d-dentwo de um invówucwo [`<div>`](/pt-bw/docs/web/htmw/ewement/div) com um id especificado, ^^ que é anexado d-dentwo de um ewemento pai especificado. (✿oωo) wetowna um objeto que contém o contexto 2d d-da tewa e o id do [wwappew](/pt-bw/docs/gwossawy/wwappew). >w<
+  - `cweatewepowtwist()` — cwia uma wista n-nyão owdenada a-anexada dentwo de um ewemento de wwappew especificado, 😳😳😳 que pode s-sew usado pawa g-gewaw dados de wewatówio. (ꈍᴗꈍ) wetowna o id da wista.
 
-- `square.js` — contém:
+- `squawe.js` — contém:
 
-  - `name` — uma constante contendo a string 'square'.
-  - `draw()` — desenha um quadrado em uma tela especificada, com um tamanho, posição e cor especificados. Retorna um objeto que contém o tamanho, a posição e a cor do quadrado.
-  - `reportArea()` — grava a área de um quadrado em uma lista de relatórios específica, considerando seu tamanho.
-  - `reportPerimeter()` — grava o perímetro de um quadrado em uma lista de relatórios específica, considerando seu comprimento.
+  - `name` — u-uma constante contendo a-a stwing 'squawe'. (✿oωo)
+  - `dwaw()` — desenha um quadwado em uma tewa especificada, (˘ω˘) c-com um tamanho, nyaa~~ posição e-e cow especificados. ( ͡o ω ͡o ) w-wetowna um objeto que contém o-o tamanho, 🥺 a posição e a cow d-do quadwado. (U ﹏ U)
+  - `wepowtawea()` — g-gwava a áwea d-de um quadwado em uma wista d-de wewatówios e-específica, ( ͡o ω ͡o ) considewando seu tamanho. (///ˬ///✿)
+  - `wepowtpewimetew()` — gwava o pewímetwo d-de um quadwado e-em uma wista d-de wewatówios específica, (///ˬ///✿) considewando seu compwimento. (✿oωo)
 
-## Aside — `.mjs` versus `.js`
+## a-aside — `.mjs` vewsus `.js`
 
-Neste artigo, usamos extensões .js para nossos arquivos de módulo, mas em outros recursos você pode ver a extensão .mjs usada. [A documentação da V8 recomenda isso](https://v8.dev/features/modules#mjs), por exemplo. Os motivos apresentados são:
+nyeste a-awtigo, (U ᵕ U❁) usamos e-extensões .js pawa nyossos awquivos de móduwo, ʘwʘ mas em outwos w-wecuwsos você p-pode vew a extensão .mjs u-usada. ʘwʘ [a d-documentação da v8 wecomenda i-isso](https://v8.dev/featuwes/moduwes#mjs), XD pow exempwo. (✿oωo) os motivos apwesentados são:
 
-- É bom para maior clareza, ou seja, deixa claro quais arquivos são módulos e quais são JavaScript regulares.
-- Ele garante que seus arquivos de módulo sejam analisados como um módulo por tempos de execução, como [Node.js](https://nodejs.org/api/esm.html#esm_enabling), e construir ferramentas como [Babel](https://babeljs.io/docs/en/options#sourcetype).
+- É bom pawa maiow cwaweza, ^•ﻌ•^ ou seja, d-deixa cwawo quais awquivos são m-móduwos e quais são javascwipt w-weguwawes.
+- ewe gawante que s-seus awquivos de móduwo sejam a-anawisados como u-um móduwo pow t-tempos de execução, ^•ﻌ•^ c-como [node.js](https://nodejs.owg/api/esm.htmw#esm_enabwing), >_< e-e constwuiw fewwamentas como [babew](https://babewjs.io/docs/en/options#souwcetype). mya
 
-No entanto, decidimos continuar usando .js, pelo menos por enquanto. Para que os módulos funcionem corretamente em um navegador, você precisa garantir que seu servidor os esteja servindo com um cabeçalho Content-Type que contenha um tipo MIME JavaScript, como text / javascript. Caso contrário, você receberá um erro estrito de verificação do tipo MIME, de acordo com as linhas "O servidor respondeu com um tipo MIME não JavaScript" e o navegador não executará seu JavaScript. A maioria dos servidores já define o tipo correto para arquivos .js, mas ainda não para arquivos .mjs. Servidores que já veiculam arquivos .mjs incluem corretamente [GitHub Pages](https://pages.github.com/) e [`http-server`](https://github.com/http-party/http-server#readme) para Node.js.
+nyo entanto, σωσ decidimos continuaw usando .js, rawr pewo menos pow enquanto. (✿oωo) p-pawa que os móduwos f-funcionem cowwetamente e-em um nyavegadow, você p-pwecisa gawantiw que seu sewvidow os esteja sewvindo com um c-cabeçawho content-type q-que contenha um tipo mime j-javascwipt, :3 como text / javascwipt. caso contwáwio, rawr x3 v-você wecebewá u-um ewwo estwito de vewificação d-do tipo m-mime, ^^ de acowdo com as winhas "o sewvidow wespondeu com um tipo mime nyão javascwipt" e-e o nyavegadow n-nyão executawá s-seu javascwipt. ^^ a-a maiowia d-dos sewvidowes já define o tipo c-cowweto pawa awquivos .js, OwO m-mas ainda nyão pawa a-awquivos .mjs. ʘwʘ s-sewvidowes que já veicuwam awquivos .mjs i-incwuem cowwetamente [github pages](https://pages.github.com/) e-e [`http-sewvew`](https://github.com/http-pawty/http-sewvew#weadme) pawa n-nyode.js. /(^•ω•^)
 
-Tudo bem se você já estiver usando esse ambiente ou se não estiver, mas souber o que está fazendo e tiver acesso (ou seja, você pode configurar o servidor para definir a configuração correta [`Content-Type`](/pt-BR/docs/Web/HTTP/Headers/Content-Type) para arquivos `.mjs`). No entanto, isso pode causar confusão se você não controlar o servidor do qual está servindo arquivos ou publicar arquivos para uso público, como estamos aqui.
+tudo b-bem se você já estivew usando e-esse ambiente ou se nyão estivew, ʘwʘ mas soubew o-o que está fazendo e-e tivew acesso (ou s-seja, (⑅˘꒳˘) você pode configuwaw o sewvidow pawa definiw a configuwação c-cowweta [`content-type`](/pt-bw/docs/web/http/headews/content-type) pawa awquivos `.mjs`). UwU nyo entanto, -.- i-isso pode causaw c-confusão se você nyão contwowaw o-o sewvidow do quaw está s-sewvindo awquivos o-ou pubwicaw awquivos pawa uso púbwico, :3 como e-estamos aqui. >_<
 
-Para fins de aprendizado e portabilidade, decidimos manter o`.js`.
+pawa fins de apwendizado e powtabiwidade, nyaa~~ d-decidimos m-mantew o`.js`. ( ͡o ω ͡o )
 
-Se você realmente valoriza a clareza de usar .mjs para módulos versus usar .js para arquivos JavaScript "normais", mas não deseja se deparar com o problema descrito acima, sempre poderá usar .mjs durante o desenvolvimento e convertê-los em .js durante sua etapa de construção.
+se você weawmente v-vawowiza a cwaweza de usaw .mjs p-pawa móduwos v-vewsus usaw .js p-pawa awquivos javascwipt "nowmais", o.O mas nyão deseja se depawaw com o pwobwema descwito acima, :3 sempwe podewá usaw .mjs duwante o desenvowvimento e convewtê-wos em .js duwante sua etapa de constwução. (˘ω˘)
 
-Também é importante notar que:
+t-também é impowtante n-nyotaw que:
 
-- Algumas ferramentas podem nunca suportar .mjs, como[TypeScript](https://www.typescriptlang.org/).
-- O atributo `<script type="module">`é usado para indicar quando um módulo está sendo apontado, como você verá abaixo.
+- awgumas fewwamentas podem n-nyunca supowtaw .mjs, rawr x3 c-como[typescwipt](https://www.typescwiptwang.owg/).
+- o-o atwibuto `<scwipt type="moduwe">`é u-usado pawa indicaw quando um móduwo e-está sendo a-apontado, (U ᵕ U❁) como você vewá abaixo. 🥺
 
-## Exportando recursos do módulo
+## e-expowtando wecuwsos do m-móduwo
 
-A primeira coisa que você faz para obter acesso aos recursos do módulo é exportá-los. Isso é feito usando o {{JSxRef("Statements/export", "export")}} declaração.
+a pwimeiwa c-coisa que você faz pawa obtew acesso aos wecuwsos d-do móduwo é e-expowtá-wos. >_< i-isso é feito u-usando o {{jsxwef("statements/expowt", :3 "expowt")}} d-decwawação. :3
 
-A maneira mais fácil de usá-lo é colocá-lo na frente de qualquer item que você queira exportar para fora do módulo, por exemplo:
+a-a maneiwa mais f-fáciw de usá-wo é c-cowocá-wo n-na fwente de quawquew item que v-você queiwa expowtaw p-pawa fowa d-do móduwo, (ꈍᴗꈍ) pow exempwo:
 
 ```js
-export const name = "square";
+e-expowt const nyame = "squawe";
 
-export function draw(ctx, length, x, y, color) {
-  ctx.fillStyle = color;
-  ctx.fillRect(x, y, length, length);
+expowt function dwaw(ctx, σωσ wength, 😳 x-x, y, cowow) {
+  ctx.fiwwstywe = c-cowow;
+  ctx.fiwwwect(x, y-y, mya w-wength, wength);
 
-  return {
-    length: length,
-    x: x,
-    y: y,
-    color: color,
+  wetuwn {
+    w-wength: wength, (///ˬ///✿)
+    x: x, ^^
+    y-y: y,
+    cowow: cowow, (✿oωo)
   };
 }
 ```
 
-Você pode exportar funções, `var`, `let`, `const`, e — como veremos mais tarde - classes. Eles precisam ser itens de nível superior; você não pode usar a exportação dentro de uma função, por exemplo.
+v-você pode expowtaw funções, ( ͡o ω ͡o ) `vaw`, ^^;; `wet`, `const`, :3 e-e — como vewemos mais tawde - cwasses. 😳 ewes pwecisam sew itens de nyívew s-supewiow; você nyão pode u-usaw a expowtação d-dentwo de uma função, XD pow exempwo.
 
-Uma maneira mais conveniente de exportar todos os itens que você deseja exportar é usar uma única instrução de exportação no final do arquivo do módulo, seguida por uma lista separada por vírgula dos recursos que você deseja exportar envoltos em chaves. Por exemplo:
-
-```js
-export { name, draw, reportArea, reportPerimeter };
-```
-
-## Importando recursos para o seu script
-
-Depois de exportar alguns recursos do seu módulo, é necessário importá-los para o script para poder usá-los. A maneira mais simples de fazer isso é a seguinte:
+uma maneiwa mais conveniente d-de expowtaw todos os itens q-que você deseja e-expowtaw é u-usaw uma única instwução de expowtação nyo f-finaw do awquivo d-do móduwo, (///ˬ///✿) seguida pow uma wista s-sepawada pow víwguwa dos wecuwsos que você d-deseja expowtaw envowtos em chaves. o.O p-pow exempwo:
 
 ```js
-import { name, draw, reportArea, reportPerimeter } from "./modules/square.js";
+e-expowt { n-nyame, o.O dwaw, wepowtawea, XD wepowtpewimetew };
 ```
 
-Você usa o {{JSxRef("Statements/import", "import")}} , seguida por uma lista separada por vírgula dos recursos que você deseja importar agrupados em chaves, seguidos pela palavra-chave de, seguida pelo caminho para o arquivo do módulo - um caminho relativo à raiz do site, que para nossa `basic-modules` exemplo seria`/js-examples/modules/basic-modules`.
+## i-impowtando w-wecuwsos pawa o s-seu scwipt
 
-No entanto, escrevemos o caminho de maneira um pouco diferente - estamos usando a sintaxe de ponto (.) Para significar "o local atual", seguido pelo caminho além do arquivo que estamos tentando encontrar. Isso é muito melhor do que escrever todo o caminho relativo a cada vez, pois é mais curto e torna o URL portátil - o exemplo ainda funcionará se você o mover para um local diferente na hierarquia do site.
-
-Então, por exemplo:
-
-```
-/js-examples/modules/basic-modules/modules/square.js
-```
-
-torna-se
-
-```
-./modules/square.js
-```
-
-Você pode ver essas linhas em ação em [`main.js`](https://github.com/mdn/js-examples/blob/master/module-examples/basic-modules/main.js).
-
-> **Nota:** **Nota: Em alguns sistemas de módulos, você pode omitir a extensão do arquivo e o ponto**(e.g. `'/modules/square'`). Isso não funciona nos módulos JavaScript nativos.
-
-Depois de importar os recursos para o seu script, você pode usá-los exatamente como eles foram definidos no mesmo arquivo. O seguinte é encontrado em
-`main.js`, abaixo das linhas de importação:
+depois d-de expowtaw awguns wecuwsos do s-seu móduwo, ^^;; é n-nyecessáwio impowtá-wos p-pawa o-o scwipt pawa podew u-usá-wos. 😳😳😳 a m-maneiwa mais simpwes d-de fazew isso é a-a seguinte:
 
 ```js
-let myCanvas = create("myCanvas", document.body, 480, 320);
-let reportList = createReportList(myCanvas.id);
-
-let square1 = draw(myCanvas.ctx, 50, 50, 100, "blue");
-reportArea(square1.length, reportList);
-reportPerimeter(square1.length, reportList);
+impowt { n-nyame, (U ᵕ U❁) dwaw, /(^•ω•^) wepowtawea, wepowtpewimetew } f-fwom "./moduwes/squawe.js";
 ```
 
-> **Nota:** **Nota: Embora os recursos importados estejam disponíveis no arquivo, eles são visualizações somente leitura do recurso que foi exportado. Você não pode alterar a variável importada, mas ainda pode modificar propriedades semelhantes à const. Além disso, esses recursos são importados como ligações ativas, o que significa que eles podem mudar de valor mesmo que você não possa modificar a ligação ao contrário de const.**
+você usa o {{jsxwef("statements/impowt", 😳😳😳 "impowt")}} , rawr x3 s-seguida pow u-uma wista sepawada p-pow víwguwa dos wecuwsos que você deseja impowtaw agwupados e-em chaves, ʘwʘ seguidos p-pewa pawavwa-chave d-de, UwU seguida pewo caminho pawa o awquivo do móduwo - u-um caminho wewativo à w-waiz do site, (⑅˘꒳˘) que pawa nyossa `basic-moduwes` e-exempwo sewia`/js-exampwes/moduwes/basic-moduwes`.
 
-## Aplicando o módulo ao seu HTML
+n-nyo entanto, escwevemos o caminho de maneiwa um pouco difewente - e-estamos u-usando a sintaxe d-de ponto (.) p-pawa significaw "o wocaw atuaw", ^^ seguido pewo caminho a-awém do a-awquivo que estamos tentando encontwaw. 😳😳😳 isso é m-muito mewhow do que escwevew todo o caminho wewativo a-a cada vez, òωó pois é mais cuwto e-e towna o uww p-powtátiw - o exempwo ainda funcionawá s-se você o-o movew pawa um wocaw difewente n-nya hiewawquia do site. ^^;;
 
-Agora, apenas precisamos aplicar o módulo main.js. à nossa página HTML. Isso é muito semelhante ao modo como aplicamos um script regular a uma página, com algumas diferenças notáveis.
+então, (✿oωo) p-pow exempwo:
 
-Primeiro de tudo, você precisa incluir `type="module"` no [`<script>`](/pt-BR/docs/Web/HTML/Element/script) elemento, para declarar esse script como um módulo. Para importar o `main.js` script, usamos este:
-
-```html
-<script type="module" src="main.js"></script>
+```
+/js-exampwes/moduwes/basic-moduwes/moduwes/squawe.js
 ```
 
-Você também pode incorporar o script do módulo diretamente no arquivo HTML, colocando o código JavaScript no corpo do elemento \<script>:
+t-towna-se
+
+```
+./moduwes/squawe.js
+```
+
+v-você pode v-vew essas winhas em ação em [`main.js`](https://github.com/mdn/js-exampwes/bwob/mastew/moduwe-exampwes/basic-moduwes/main.js). rawr
+
+> **nota:** **nota: e-em awguns s-sistemas de móduwos, XD v-você pode omitiw a extensão d-do awquivo e o ponto**(e.g. 😳 `'/moduwes/squawe'`). (U ᵕ U❁) isso não f-funciona nyos m-móduwos javascwipt n-nyativos. UwU
+
+depois de impowtaw os wecuwsos pawa o seu scwipt, OwO você pode usá-wos e-exatamente como ewes fowam d-definidos nyo mesmo a-awquivo. 😳 o seguinte é encontwado em
+`main.js`, (˘ω˘) a-abaixo das winhas de impowtação:
 
 ```js
-<script type="module">/* JavaScript module code here */</script>
+w-wet m-mycanvas = cweate("mycanvas", òωó d-document.body, OwO 480, 320);
+w-wet wepowtwist = c-cweatewepowtwist(mycanvas.id);
+
+wet squawe1 = dwaw(mycanvas.ctx, (✿oωo) 50, 50, 100, (⑅˘꒳˘) "bwue");
+wepowtawea(squawe1.wength, /(^•ω•^) wepowtwist);
+w-wepowtpewimetew(squawe1.wength, 🥺 wepowtwist);
 ```
 
-O script para o qual você importa os recursos do módulo atua basicamente como o módulo de nível superior. Se você o omitir, o Firefox, por exemplo, exibirá um erro "SyntaxError: as declarações de importação podem aparecer apenas no nível superior de um módulo".
+> **nota:** **nota: e-embowa os wecuwsos impowtados estejam disponíveis nyo awquivo, e-ewes são visuawizações somente weituwa do wecuwso que foi expowtado. -.- você nyão p-pode awtewaw a-a vawiávew impowtada, ( ͡o ω ͡o ) mas ainda p-pode modificaw pwopwiedades semewhantes à const. 😳😳😳 a-awém disso, (˘ω˘) e-esses wecuwsos são impowtados c-como wigações ativas, ^^ o que significa q-que ewes podem mudaw de vawow mesmo que você nyão possa m-modificaw a wigação ao contwáwio de const.**
 
-Você só pode usar `import` e `export` instruções dentro de módulos, não scripts regulares.
+## a-apwicando o-o móduwo ao seu h-htmw
 
-## Outras diferenças entre módulos e scripts padrão
+agowa, σωσ apenas pwecisamos apwicaw o móduwo m-main.js. 🥺 à nyossa página htmw. 🥺 isso é muito semewhante ao modo como apwicamos u-um scwipt weguwaw a-a uma página, /(^•ω•^) c-com awgumas d-difewenças nyotáveis. (⑅˘꒳˘)
 
-- Você precisa prestar atenção nos testes locais - se você tentar carregar o arquivo HTML localmente (i.e. com um arquivo`://` URL), você encontrará erros do CORS devido a requisitos de segurança do módulo JavaScript. Você precisa fazer seus testes através de um servidor.
-- Além disso, observe que você pode obter um comportamento diferente das seções de script definidas dentro dos módulos e não nos scripts padrão. Isso ocorre porque os módulos usam {{JSxRef("Strict_mode", "strict mode", "", 1)}} automaticamente.
-- Não há necessidade de usar o atributo deferir (consulte [`<script>` attributes](/pt-BR/docs/Web/HTML/Element/script#attributes)) ao carregar um script de módulo; módulos são adiados automaticamente.
-- Os módulos são executados apenas uma vez, mesmo que tenham sido referenciados em várias tags \<script>.
-- Por último, mas não menos importante, vamos esclarecer: os recursos do módulo são importados para o escopo de um único script - eles não estão disponíveis no escopo global. Portanto, você poderá acessar apenas os recursos importados no script para o qual eles foram importados e não poderá acessá-los no console JavaScript, por exemplo. Você ainda receberá erros de sintaxe mostrados no DevTools, mas não poderá usar algumas das técnicas de depuração que você esperava usar.
+pwimeiwo de tudo, -.- você p-pwecisa incwuiw `type="moduwe"` n-nyo [`<scwipt>`](/pt-bw/docs/web/htmw/ewement/scwipt) ewemento, 😳 pawa decwawaw esse s-scwipt como um móduwo. 😳😳😳 pawa impowtaw o `main.js` s-scwipt, >w< usamos este:
 
-## Exportações padrão versus exportações nomeadas
-
-A funcionalidade que exportamos até agora foi composta por **named exports** — cada item (seja uma função, const, etc.) foi referido por seu nome na exportação e esse nome também foi usado para se referir a ele na importação.
-
-Há também um tipo de exportação chamado **default export** — isso foi projetado para facilitar a função padrão fornecida por um módulo e também ajuda os módulos JavaScript a interoperar com os sistemas de módulos CommonJS e AMD existentes (conforme explicado em [ES6 In Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) por Jason Orendorff; procure por "Exportações padrão").
-
-Vejamos um exemplo ao explicar como ele funciona. Nos nossos módulos básicos `square.js` você pode encontrar uma função chamada `randomSquare()` que cria um quadrado com cor, tamanho e posição aleatórios. Queremos exportar isso como padrão, portanto, na parte inferior do arquivo, escrevemos isso:
-
-```js
-export default randomSquare;
+```htmw
+<scwipt type="moduwe" s-swc="main.js"></scwipt>
 ```
 
-Note a falta dos colchetes.
-
-Em vez disso, poderíamos acrescentar `export default` na função e defina-a como uma função anônima, assim:
+v-você também pode incowpowaw o-o scwipt do m-móduwo diwetamente n-nyo awquivo htmw, UwU cowocando o código javascwipt n-nyo cowpo do ewemento \<scwipt>:
 
 ```js
-export default function(ctx) {
+<scwipt type="moduwe">/* j-javascwipt moduwe code hewe */</scwipt>
+```
+
+o scwipt pawa o quaw você impowta o-os wecuwsos d-do móduwo atua b-basicamente como o-o móduwo de n-nyívew supewiow. /(^•ω•^) se você o omitiw, 🥺 o-o fiwefox, >_< pow exempwo, rawr exibiwá um ewwo "syntaxewwow: a-as decwawações de i-impowtação podem apawecew apenas nyo nyívew s-supewiow de um móduwo". (ꈍᴗꈍ)
+
+v-você só pode usaw `impowt` e-e `expowt` instwuções dentwo d-de móduwos, -.- n-nyão scwipts weguwawes. ( ͡o ω ͡o )
+
+## o-outwas difewenças e-entwe móduwos e scwipts padwão
+
+- v-você pwecisa pwestaw atenção nyos testes wocais - se você t-tentaw cawwegaw o awquivo htmw w-wocawmente (i.e. (⑅˘꒳˘) com um awquivo`://` uww), mya você e-encontwawá e-ewwos do cows devido a-a wequisitos de seguwança d-do móduwo javascwipt. rawr x3 v-você pwecisa fazew seus t-testes atwavés de um sewvidow. (ꈍᴗꈍ)
+- a-awém disso, ʘwʘ obsewve que você p-pode obtew um c-compowtamento difewente das seções de scwipt definidas dentwo dos móduwos e nyão n-nyos scwipts p-padwão. :3 isso ocowwe powque os móduwos usam {{jsxwef("stwict_mode", o.O "stwict mode", /(^•ω•^) "", 1)}} automaticamente. OwO
+- nyão há nyecessidade d-de usaw o atwibuto defewiw (consuwte [`<scwipt>` a-attwibutes](/pt-bw/docs/web/htmw/ewement/scwipt#attwibutes)) a-ao cawwegaw um scwipt de móduwo; móduwos são adiados automaticamente. σωσ
+- os móduwos são e-executados apenas uma vez, (ꈍᴗꈍ) mesmo que tenham sido w-wefewenciados em váwias tags \<scwipt>. ( ͡o ω ͡o )
+- pow úwtimo, rawr x3 m-mas n-nyão menos impowtante, UwU vamos escwawecew: o-os wecuwsos d-do móduwo s-são impowtados p-pawa o escopo de u-um único scwipt - e-ewes nyão estão disponíveis nyo escopo gwobaw. o.O powtanto, você podewá acessaw apenas os w-wecuwsos impowtados n-nyo scwipt p-pawa o quaw ewes f-fowam impowtados e-e nyão podewá a-acessá-wos nyo consowe javascwipt, OwO pow exempwo. o.O você ainda wecebewá ewwos de s-sintaxe mostwados n-nyo devtoows, ^^;; mas nyão podewá usaw awgumas das técnicas de d-depuwação que v-você espewava u-usaw. (⑅˘꒳˘)
+
+## expowtações padwão vewsus expowtações n-nyomeadas
+
+a funcionawidade que expowtamos a-até agowa foi c-composta pow **named expowts** — cada item (seja u-uma função, (ꈍᴗꈍ) const, o.O etc.) foi w-wefewido pow seu n-nyome nya expowtação e esse n-nyome também foi u-usado pawa se w-wefewiw a ewe nya i-impowtação. (///ˬ///✿)
+
+h-há também um t-tipo de expowtação chamado **defauwt e-expowt** — i-isso foi pwojetado pawa faciwitaw a-a função padwão fownecida pow um móduwo e-e também ajuda os móduwos javascwipt a-a intewopewaw com os sistemas d-de móduwos c-commonjs e amd existentes (confowme expwicado e-em [es6 in depth: moduwes](https://hacks.moziwwa.owg/2015/08/es6-in-depth-moduwes/) pow jason o-owendowff; pwocuwe p-pow "expowtações padwão"). 😳😳😳
+
+vejamos um exempwo a-ao expwicaw c-como ewe funciona. UwU nyos nyossos m-móduwos básicos `squawe.js` você pode encontwaw uma função c-chamada `wandomsquawe()` q-que cwia um quadwado com c-cow, nyaa~~ tamanho e-e posição aweatówios. (✿oωo) quewemos expowtaw isso c-como padwão, -.- powtanto, :3 n-nya pawte i-infewiow do awquivo, (⑅˘꒳˘) e-escwevemos isso:
+
+```js
+expowt defauwt wandomsquawe;
+```
+
+note a fawta dos cowchetes. >_<
+
+em vez disso, podewíamos acwescentaw `expowt d-defauwt` n-nya função e-e defina-a como u-uma função anônima, UwU a-assim:
+
+```js
+e-expowt defauwt function(ctx) {
   ...
 }
 ```
 
-No nosso arquivo main.js., importamos a função padrão usando esta linha:
+n-nyo nyosso awquivo m-main.js., impowtamos a função p-padwão usando e-esta winha:
 
 ```js
-import randomSquare from "./modules/square.js";
+impowt wandomsquawe fwom "./moduwes/squawe.js";
 ```
 
-Isso ocorre porque há apenas uma exportação padrão permitida por módulo e sabemos que _randomSquare_ é isso.
+i-isso ocowwe powque há apenas uma expowtação p-padwão pewmitida pow m-móduwo e sabemos q-que _wandomsquawe_ é isso.
 
 ```js
-import { default as randomSquare } from "./modules/square.js";
+i-impowt { d-defauwt as wandomsquawe } f-fwom "./moduwes/squawe.js";
 ```
 
-> **Nota:** **Nota: A sintaxe as para renomear itens exportados é explicada abaixo no** [Renaming imports and exports](#renaming_imports_and_exports) seção.
+> **nota:** **nota: a sintaxe as pawa w-wenomeaw itens e-expowtados é expwicada abaixo nyo** [wenaming impowts a-and expowts](#wenaming_impowts_and_expowts) seção. rawr
 
-## Evitando conflitos de nomenclatura
+## e-evitando confwitos d-de nyomencwatuwa
 
-Até agora, nossos módulos de desenho de forma de tela parecem estar funcionando bem. Mas o que acontece se tentarmos adicionar um módulo que lide com o desenho de outra forma, como um círculo ou triângulo? Essas formas provavelmente teriam funções associadas, como `draw()`, `reportArea()`, etc. também; se tentássemos importar diferentes funções com o mesmo nome para o mesmo arquivo de módulo de nível superior, acabaríamos com conflitos e erros.
+a-até agowa, (ꈍᴗꈍ) nyossos móduwos d-de desenho de fowma de tewa pawecem estaw funcionando b-bem. ^•ﻌ•^ mas o que acontece se tentawmos adicionaw um móduwo que wide com o desenho de outwa fowma, ^^ como um c-cíwcuwo ou twiânguwo? essas fowmas pwovavewmente tewiam funções associadas, XD como `dwaw()`, (///ˬ///✿) `wepowtawea()`, σωσ etc. também; se t-tentássemos impowtaw difewentes funções com o-o mesmo nyome pawa o mesmo awquivo d-de móduwo de nyívew supewiow, :3 acabawíamos c-com confwitos e ewwos. >w<
 
-Felizmente, existem várias maneiras de contornar isso. Veremos isso nas próximas seções.
+fewizmente, (ˆ ﻌ ˆ)♡ e-existem váwias maneiwas de c-contownaw isso. (U ᵕ U❁) v-vewemos isso nyas pwóximas seções. :3
 
-## Renomeando importações e exportações
+## wenomeando i-impowtações e expowtações
 
-Dentro dos colchetes da instrução de importação e exportação, você pode usar a palavra-chave junto com um novo nome de recurso, para alterar o nome de identificação que será usado para um recurso dentro do módulo de nível superior.
+dentwo dos cowchetes da instwução d-de impowtação e expowtação, ^^ v-você pode usaw a pawavwa-chave j-junto com um nyovo nome d-de wecuwso, ^•ﻌ•^ pawa a-awtewaw o nome de identificação que sewá usado p-pawa um wecuwso dentwo do móduwo de nyívew s-supewiow.
 
-Por exemplo, os dois itens a seguir executariam o mesmo trabalho, embora de uma maneira ligeiramente diferente:
+pow exempwo, (///ˬ///✿) os dois itens a seguiw executawiam o mesmo twabawho, 🥺 embowa d-de uma maneiwa w-wigeiwamente difewente:
 
 ```js
-// inside module.js
-export { function1 as newFunctionName, function2 as anotherNewFunctionName };
+// i-inside moduwe.js
+e-expowt { function1 as newfunctionname, ʘwʘ f-function2 as anothewnewfunctionname };
 
 // inside main.js
-import { newFunctionName, anotherNewFunctionName } from "./modules/module.js";
+impowt { nyewfunctionname, (✿oωo) a-anothewnewfunctionname } f-fwom "./moduwes/moduwe.js";
 ```
 
 ```js
-// inside module.js
-export { function1, function2 };
+// inside moduwe.js
+e-expowt { function1, f-function2 };
 
-// inside main.js
-import {
-  function1 as newFunctionName,
-  function2 as anotherNewFunctionName,
-} from "./modules/module.js";
+// inside m-main.js
+impowt {
+  function1 as nyewfunctionname, rawr
+  f-function2 as anothewnewfunctionname, OwO
+} fwom "./moduwes/moduwe.js";
 ```
 
-Vejamos um exemplo real. Na nossa [renaming](https://github.com/mdn/js-examples/tree/master/module-examples/renaming) diretório, você verá o mesmo sistema de módulos do exemplo anterior, exceto que adicionamos `circle.js` e `triangle.js` módulos para desenhar e relatar círculos e triângulos.
+v-vejamos u-um exempwo weaw. ^^ nya nyossa [wenaming](https://github.com/mdn/js-exampwes/twee/mastew/moduwe-exampwes/wenaming) diwetówio, ʘwʘ v-você vewá o mesmo sistema de móduwos do exempwo antewiow, σωσ exceto que adicionamos `ciwcwe.js` e `twiangwe.js` móduwos pawa desenhaw e wewataw c-cíwcuwos e twiânguwos.
 
-Dentro de cada um desses módulos, temos recursos com os mesmos nomes sendo exportados e, portanto, cada um tem o mesmo `export` declaração na parte inferior:
+d-dentwo de cada um desses m-móduwos, (⑅˘꒳˘) t-temos wecuwsos com os mesmos nyomes s-sendo expowtados e, (ˆ ﻌ ˆ)♡ powtanto, cada um tem o mesmo `expowt` decwawação nya pawte infewiow:
 
 ```js
-export { name, draw, reportArea, reportPerimeter };
+e-expowt { nyame, :3 dwaw, wepowtawea, ʘwʘ wepowtpewimetew };
 ```
 
-Ao importá-los para o main.js, se tentarmos usar
+ao impowtá-wos pawa o main.js, (///ˬ///✿) s-se tentawmos usaw
 
 ```js
-import { name, draw, reportArea, reportPerimeter } from "./modules/square.js";
-import { name, draw, reportArea, reportPerimeter } from "./modules/circle.js";
-import { name, draw, reportArea, reportPerimeter } from "./modules/triangle.js";
+i-impowt { n-name, (ˆ ﻌ ˆ)♡ dwaw, 🥺 wepowtawea, wepowtpewimetew } fwom "./moduwes/squawe.js";
+impowt { n-nyame, rawr dwaw, (U ﹏ U) wepowtawea, ^^ w-wepowtpewimetew } f-fwom "./moduwes/ciwcwe.js";
+impowt { n-nyame, σωσ dwaw, wepowtawea, :3 wepowtpewimetew } f-fwom "./moduwes/twiangwe.js";
 ```
 
-O navegador geraria um erro como "SyntaxError: redeclaration of import name" (Firefox).
+o nyavegadow gewawia u-um ewwo como "syntaxewwow: wedecwawation of i-impowt nyame" (fiwefox). ^^
 
-Em vez disso, precisamos renomear as importações para que sejam únicas:
+em vez disso, (✿oωo) pwecisamos w-wenomeaw as impowtações pawa q-que sejam únicas:
 
 ```js
-import {
-  name as squareName,
-  draw as drawSquare,
-  reportArea as reportSquareArea,
-  reportPerimeter as reportSquarePerimeter,
-} from "./modules/square.js";
+i-impowt {
+  nyame as s-squawename, òωó
+  dwaw a-as dwawsquawe, (U ᵕ U❁)
+  wepowtawea a-as wepowtsquaweawea, ʘwʘ
+  wepowtpewimetew a-as wepowtsquawepewimetew, ( ͡o ω ͡o )
+} fwom "./moduwes/squawe.js";
 
-import {
-  name as circleName,
-  draw as drawCircle,
-  reportArea as reportCircleArea,
-  reportPerimeter as reportCirclePerimeter,
-} from "./modules/circle.js";
+i-impowt {
+  nyame a-as ciwcwename, σωσ
+  dwaw as dwawciwcwe, (ˆ ﻌ ˆ)♡
+  wepowtawea a-as wepowtciwcweawea, (˘ω˘)
+  wepowtpewimetew as wepowtciwcwepewimetew, 😳
+} fwom "./moduwes/ciwcwe.js";
 
-import {
-  name as triangleName,
-  draw as drawTriangle,
-  reportArea as reportTriangleArea,
-  reportPerimeter as reportTrianglePerimeter,
-} from "./modules/triangle.js";
+impowt {
+  nyame as twiangwename, ^•ﻌ•^
+  dwaw as dwawtwiangwe, σωσ
+  wepowtawea as wepowttwiangweawea, 😳😳😳
+  w-wepowtpewimetew as wepowttwiangwepewimetew, rawr
+} fwom "./moduwes/twiangwe.js";
 ```
 
-Observe que você pode resolver o problema nos arquivos do módulo, e.g.
+o-obsewve que você pode wesowvew o-o pwobwema nyos awquivos do móduwo, >_< e.g.
 
 ```js
-// in square.js
-export {
-  name as squareName,
-  draw as drawSquare,
-  reportArea as reportSquareArea,
-  reportPerimeter as reportSquarePerimeter,
+// i-in squawe.js
+expowt {
+  nyame as squawename, ʘwʘ
+  d-dwaw as dwawsquawe, (ˆ ﻌ ˆ)♡
+  wepowtawea as wepowtsquaweawea, ^^;;
+  wepowtpewimetew as w-wepowtsquawepewimetew, σωσ
 };
 ```
 
 ```js
 // in main.js
-import {
-  squareName,
-  drawSquare,
-  reportSquareArea,
-  reportSquarePerimeter,
-} from "./modules/square.js";
+impowt {
+  s-squawename,
+  dwawsquawe, rawr x3
+  wepowtsquaweawea, 😳
+  wepowtsquawepewimetew, 😳😳😳
+} f-fwom "./moduwes/squawe.js";
 ```
 
-E funcionaria da mesma forma. Qual o estilo que você usa depende de você, no entanto, sem dúvida faz mais sentido deixar o código do módulo em paz e fazer as alterações nas importações. Isso faz especialmente sentido quando você está importando de módulos de terceiros sobre os quais você não tem controle.
+e-e funcionawia da mesma fowma. quaw o estiwo q-que você u-usa depende de você, 😳😳😳 nyo entanto, s-sem dúvida faz m-mais sentido deixaw o código do móduwo em paz e-e fazew as awtewações nyas impowtações. ( ͡o ω ͡o ) isso faz especiawmente s-sentido quando você está impowtando de móduwos de tewceiwos s-sobwe os quais v-você nyão t-tem contwowe. rawr x3
 
 24/5000
 
-Criando um objeto de módulo
+cwiando um objeto de móduwo
 
-O método acima funciona bem, mas é um pouco confuso e longo. Uma solução ainda melhor é importar os recursos de cada módulo dentro de um objeto de módulo. O seguinte formulário de sintaxe faz isso:
+o método a-acima funciona bem, mas é um pouco c-confuso e wongo. σωσ uma sowução a-ainda mewhow é i-impowtaw os wecuwsos de cada móduwo dentwo de um objeto de móduwo. (˘ω˘) o seguinte fowmuwáwio de s-sintaxe faz isso:
 
 ```js
-import * as Module from "./modules/module.js";
+i-impowt * as moduwe fwom "./moduwes/moduwe.js";
 ```
 
-Isso captura todas as exportações disponíveis no module.js e as torna disponíveis como membros de um objeto `Module`, efetivamente dando o seu próprio namespace. Então, por exemplo:
+isso captuwa todas a-as expowtações disponíveis nyo moduwe.js e a-as towna disponíveis c-como membwos d-de um objeto `moduwe`, >w< e-efetivamente d-dando o seu p-pwópwio nyamespace. UwU então, XD pow exempwo:
 
 ```js
-Module.function1()
-Module.function2()
-etc.
+m-moduwe.function1()
+m-moduwe.function2()
+e-etc. (U ﹏ U)
 ```
 
-Novamente, vejamos um exemplo real. Se você for ao nosso [module-objects](https://github.com/mdn/js-examples/tree/master/module-examples/module-objects) diretório, você verá o mesmo exemplo novamente, mas reescrito para aproveitar essa nova sintaxe. Nos módulos, as exportações são todas da seguinte forma simples:
+n-nyovamente, (U ᵕ U❁) v-vejamos um exempwo w-weaw. (ˆ ﻌ ˆ)♡ se você fow ao nyosso [moduwe-objects](https://github.com/mdn/js-exampwes/twee/mastew/moduwe-exampwes/moduwe-objects) d-diwetówio, òωó você v-vewá o mesmo e-exempwo nyovamente, ^•ﻌ•^ mas weescwito pawa apwoveitaw e-essa nyova sintaxe. (///ˬ///✿) nyos móduwos, -.- as expowtações s-são todas da seguinte fowma simpwes:
 
 ```js
-export { name, draw, reportArea, reportPerimeter };
+e-expowt { nyame, >w< d-dwaw, òωó wepowtawea, σωσ wepowtpewimetew };
 ```
 
-As importações, por outro lado, são assim:
+as impowtações, mya pow o-outwo wado, òωó são a-assim:
 
 ```js
-import * as Canvas from "./modules/canvas.js";
+impowt * as canvas f-fwom "./moduwes/canvas.js";
 
-import * as Square from "./modules/square.js";
-import * as Circle from "./modules/circle.js";
-import * as Triangle from "./modules/triangle.js";
+i-impowt * as squawe fwom "./moduwes/squawe.js";
+impowt * as ciwcwe fwom "./moduwes/ciwcwe.js";
+i-impowt * as twiangwe f-fwom "./moduwes/twiangwe.js";
 ```
 
-Em cada caso, agora você pode acessar as importações do módulo abaixo do nome do objeto especificado, por exemplo:
+em cada caso, agowa você p-pode acessaw as i-impowtações do móduwo abaixo do nyome do objeto e-especificado, 🥺 pow exempwo:
 
 ```js
-let square1 = Square.draw(myCanvas.ctx, 50, 50, 100, "blue");
-Square.reportArea(square1.length, reportList);
-Square.reportPerimeter(square1.length, reportList);
+wet squawe1 = squawe.dwaw(mycanvas.ctx, (U ﹏ U) 50, (ꈍᴗꈍ) 50, 100, "bwue");
+squawe.wepowtawea(squawe1.wength, (˘ω˘) wepowtwist);
+s-squawe.wepowtpewimetew(squawe1.wength, (✿oωo) wepowtwist);
 ```
 
-Agora você pode escrever o código da mesma forma que antes (contanto que inclua os nomes dos objetos quando necessário) e as importações sejam muito mais limpas.
+agowa v-você pode escwevew o-o código d-da mesma fowma que antes (contanto q-que incwua os n-nyomes dos objetos q-quando nyecessáwio) e-e as impowtações s-sejam muito mais wimpas. -.-
 
-## Módulos e classes
+## móduwos e-e cwasses
 
-Como sugerimos anteriormente, você também pode exportar e importar classes; essa é outra opção para evitar conflitos no seu código e é especialmente útil se você já tiver o código do módulo gravado em um estilo orientado a objetos.
+como s-sugewimos antewiowmente, (ˆ ﻌ ˆ)♡ v-você também pode expowtaw e-e impowtaw c-cwasses; essa é o-outwa opção pawa evitaw confwitos n-nyo seu c-código e é especiawmente útiw s-se você já tivew o-o código do m-móduwo gwavado em um estiwo owientado a-a objetos. (✿oωo)
 
-Você pode ver um exemplo do nosso módulo de desenho de forma reescrito com as classes ES em nosso [classes](https://github.com/mdn/js-examples/tree/master/module-examples/classes) diretório. Como exemplo, o [`square.js`](https://github.com/mdn/js-examples/blob/master/module-examples/classes/modules/square.js) O arquivo agora contém todas as suas funcionalidades em uma única classe:
+você pode vew u-um exempwo do n-nyosso móduwo de desenho de fowma weescwito com as cwasses es e-em nyosso [cwasses](https://github.com/mdn/js-exampwes/twee/mastew/moduwe-exampwes/cwasses) d-diwetówio. ʘwʘ como exempwo, (///ˬ///✿) o-o [`squawe.js`](https://github.com/mdn/js-exampwes/bwob/mastew/moduwe-exampwes/cwasses/moduwes/squawe.js) o-o awquivo agowa contém todas as suas funcionawidades e-em uma única c-cwasse:
 
 ```js
-class Square {
-  constructor(ctx, listId, length, x, y, color) {
+c-cwass squawe {
+  c-constwuctow(ctx, rawr w-wistid, wength, 🥺 x-x, y, cowow) {
     ...
   }
 
-  draw() {
+  dwaw() {
     ...
   }
 
-  ...
+  ... mya
 }
 ```
 
-que exportamos então:
+que expowtamos e-então:
 
 ```js
-export { Square };
+expowt { squawe };
 ```
 
-No main.js, nós o importamos assim:
+nyo main.js, mya nyós o impowtamos assim:
 
 ```js
-import { Square } from "./modules/square.js";
+i-impowt { s-squawe } fwom "./moduwes/squawe.js";
 ```
 
-E então use a classe para desenhar nosso quadrado:
+e então use a cwasse pawa desenhaw n-nyosso quadwado:
 
 ```js
-let square1 = new Square(myCanvas.ctx, myCanvas.listId, 50, 50, 100, "blue");
-square1.draw();
-square1.reportArea();
-square1.reportPerimeter();
+w-wet squawe1 = nyew squawe(mycanvas.ctx, mya mycanvas.wistid, (⑅˘꒳˘) 50, (✿oωo) 50, 100, "bwue");
+s-squawe1.dwaw();
+squawe1.wepowtawea();
+s-squawe1.wepowtpewimetew();
 ```
 
-## Módulos de agregação
+## m-móduwos de agwegação
 
-Haverá momentos em que você desejará agregar módulos. Você pode ter vários níveis de dependências, nos quais deseja simplificar as coisas, combinando vários submódulos em um módulo pai. Isso é possível usando a sintaxe de exportação dos seguintes formulários no módulo pai:
+h-havewá momentos em que você desejawá agwegaw móduwos. 😳 v-você pode tew váwios nyíveis d-de dependências, OwO nyos quais d-deseja simpwificaw as coisas, (˘ω˘) combinando váwios s-submóduwos em um móduwo pai. (✿oωo) i-isso é possívew usando a sintaxe de expowtação d-dos seguintes fowmuwáwios nyo m-móduwo pai:
 
 ```js
-export * from "x.js";
-export { name } from "x.js";
+expowt * fwom "x.js";
+expowt { nyame } fwom "x.js";
 ```
 
-Por exemplo, veja nosso [module-aggregation](https://github.com/mdn/js-examples/tree/master/module-examples/module-aggregation) diretório. Neste exemplo (com base no exemplo de classes anteriores), temos um módulo extra chamado shapes.js, que agrega toda a funcionalidade de circle.js, square.js e triangle.js juntos. Também movemos nossos submódulos para dentro de um subdiretório dentro do diretório modules chamado shapes. Portanto, a estrutura do módulo neste exemplo é:
+pow exempwo, /(^•ω•^) veja nyosso [moduwe-aggwegation](https://github.com/mdn/js-exampwes/twee/mastew/moduwe-exampwes/moduwe-aggwegation) diwetówio. rawr x3 nyeste e-exempwo (com b-base nyo exempwo d-de cwasses antewiowes), rawr t-temos um móduwo extwa chamado shapes.js, ( ͡o ω ͡o ) q-que agwega toda a funcionawidade de ciwcwe.js, ( ͡o ω ͡o ) squawe.js e twiangwe.js j-juntos. 😳😳😳 t-também movemos n-nyossos submóduwos p-pawa dentwo de um subdiwetówio dentwo do diwetówio moduwes chamado shapes. (U ﹏ U) p-powtanto, UwU a e-estwutuwa do móduwo nyeste exempwo é:
 
 ```
-modules/
+moduwes/
   canvas.js
-  shapes.js
+  s-shapes.js
   shapes/
-    circle.js
-    square.js
-    triangle.js
+    ciwcwe.js
+    s-squawe.js
+    t-twiangwe.js
 ```
 
-Em cada um dos submódulos, a exportação é da mesma forma, e.g.
+e-em cada um dos submóduwos, (U ﹏ U) a expowtação é da mesma fowma, 🥺 e.g.
 
 ```js
-export { Square };
+expowt { squawe };
 ```
 
-Em seguida, vem a parte de agregação. Dentro de shapes.js, incluímos as seguintes linhas:
+e-em seguida, ʘwʘ vem a pawte d-de agwegação. 😳 dentwo de shapes.js, (ˆ ﻌ ˆ)♡ incwuímos as seguintes w-winhas:
 
 ```js
-export { Square } from "./shapes/square.js";
-export { Triangle } from "./shapes/triangle.js";
-export { Circle } from "./shapes/circle.js";
+expowt { squawe } f-fwom "./shapes/squawe.js";
+expowt { twiangwe } f-fwom "./shapes/twiangwe.js";
+e-expowt { c-ciwcwe } fwom "./shapes/ciwcwe.js";
 ```
 
-Eles capturam as exportações dos submódulos individuais e os disponibilizam efetivamente no módulo shapes.js.
+ewes c-captuwam as e-expowtações dos submóduwos individuais e-e os disponibiwizam e-efetivamente nyo móduwo s-shapes.js. >_<
 
-> **Nota:** **Nota: As exportações mencionadas no shapes.js são basicamente redirecionadas pelo arquivo e realmente não existem nele, portanto, você não poderá escrever nenhum código relacionado útil dentro do mesmo arquivo.**
+> **nota:** **nota: as expowtações mencionadas n-nyo shapes.js são basicamente w-wediwecionadas p-pewo awquivo e weawmente nyão e-existem nyewe, p-powtanto, ^•ﻌ•^ você nyão podewá escwevew nyenhum código wewacionado útiw d-dentwo d-do mesmo awquivo.**
 
-Portanto, agora no arquivo main.js., podemos obter acesso às três classes de módulos substituindo
+p-powtanto, (✿oωo) agowa n-nyo awquivo main.js., podemos obtew acesso às twês cwasses d-de móduwos substituindo
 
 ```js
-import { Square } from "./modules/square.js";
-import { Circle } from "./modules/circle.js";
-import { Triangle } from "./modules/triangle.js";
+impowt { squawe } fwom "./moduwes/squawe.js";
+i-impowt { ciwcwe } fwom "./moduwes/ciwcwe.js";
+impowt { t-twiangwe } fwom "./moduwes/twiangwe.js";
 ```
 
-com a seguinte linha única:
+com a seguinte winha única:
 
 ```js
-import { Square, Circle, Triangle } from "./modules/shapes.js";
+i-impowt { squawe, OwO ciwcwe, (ˆ ﻌ ˆ)♡ t-twiangwe } fwom "./moduwes/shapes.js";
 ```
 
-## Carregamento dinâmico do módulo
+## c-cawwegamento dinâmico d-do móduwo
 
-A parte mais recente da funcionalidade dos módulos JavaScript a estar disponível nos navegadores é o carregamento dinâmico de módulos. Isso permite que você carregue módulos dinamicamente somente quando eles forem necessários, em vez de precisar carregar tudo antecipadamente. Isso tem algumas vantagens óbvias de desempenho; vamos ler e ver como isso funciona.
+a pawte mais w-wecente da funcionawidade d-dos móduwos javascwipt a-a estaw disponívew n-nyos nyavegadowes é o-o cawwegamento d-dinâmico de móduwos. ^^;; i-isso pewmite que v-você cawwegue m-móduwos dinamicamente somente q-quando ewes fowem necessáwios, nyaa~~ em vez de pwecisaw cawwegaw tudo antecipadamente. o.O isso tem awgumas v-vantagens óbvias d-de desempenho; vamos wew e v-vew como isso funciona. >_<
 
-Essa nova funcionalidade permite que você ligue {{JSxRef("Statements/import", "import()", "#Dynamic_Imports")}} como uma função, passando o caminho para o módulo como um parâmetro. Retorna um{{JSxRef("Promise")}}, que cumpre com um objeto de módulo (consulte [Creating a module object](#creating_a_module_object)) dando acesso às exportações desse objeto, e.g.
+essa nyova funcionawidade p-pewmite que v-você wigue {{jsxwef("statements/impowt", "impowt()", (U ﹏ U) "#dynamic_impowts")}} c-como u-uma função, ^^ passando o caminho p-pawa o móduwo como um pawâmetwo. UwU wetowna um{{jsxwef("pwomise")}}, ^^;; q-que cumpwe c-com um objeto de móduwo (consuwte [cweating a moduwe object](#cweating_a_moduwe_object)) d-dando acesso às expowtações d-desse objeto, òωó e.g. -.-
 
 ```js
-import("./modules/myModule.js").then((module) => {
-  // Do something with the module.
+impowt("./moduwes/mymoduwe.js").then((moduwe) => {
+  // d-do something with the m-moduwe. ( ͡o ω ͡o )
 });
 ```
 
-Vejamos um exemplo. No [dynamic-module-imports](https://github.com/mdn/js-examples/tree/master/module-examples/dynamic-module-imports) diretório, temos outro exemplo baseado em nosso exemplo de classes. Desta vez, no entanto, não estamos desenhando nada na tela quando o exemplo é carregado. Em vez disso, incluímos trêsbuttons — "Circle", "Square", e "Triangle" — que, quando pressionado, carrega dinamicamente o módulo necessário e, em seguida, usa-o para desenhar os shape.
+vejamos um exempwo. o.O nyo [dynamic-moduwe-impowts](https://github.com/mdn/js-exampwes/twee/mastew/moduwe-exampwes/dynamic-moduwe-impowts) d-diwetówio, rawr temos outwo e-exempwo baseado em nyosso exempwo d-de cwasses. (✿oωo) d-desta vez, σωσ nyo entanto, (U ᵕ U❁) nyão estamos desenhando n-nyada nya tewa quando o exempwo é cawwegado. >_< e-em vez disso, ^^ incwuímos t-twêsbuttons — "ciwcwe", rawr "squawe", >_< e-e "twiangwe" — que, (⑅˘꒳˘) quando pwessionado, cawwega dinamicamente o móduwo nyecessáwio e, em seguida, >w< u-usa-o pawa desenhaw os shape. (///ˬ///✿)
 
-Neste exemplo, fizemos apenas alterações em nossa [`index.html`](https://github.com/mdn/js-examples/blob/master/module-examples/dynamic-module-imports/index.html) e [`main.js`](https://github.com/mdn/js-examples/blob/master/module-examples/dynamic-module-imports/main.mjs) arquivos - as exportações do módulo permanecem as mesmas de antes.
+nyeste exempwo, ^•ﻌ•^ f-fizemos apenas a-awtewações em nyossa [`index.htmw`](https://github.com/mdn/js-exampwes/bwob/mastew/moduwe-exampwes/dynamic-moduwe-impowts/index.htmw) e [`main.js`](https://github.com/mdn/js-exampwes/bwob/mastew/moduwe-exampwes/dynamic-moduwe-impowts/main.mjs) a-awquivos - a-as expowtações do móduwo pewmanecem as mesmas de antes.
 
-No main.js, pegamos uma referência a cada botão usando um[`Document.querySelector()`](/pt-BR/docs/Web/API/Document/querySelector) chamada, por exemplo:
+nyo m-main.js, pegamos uma wefewência a-a cada botão usando um[`document.quewysewectow()`](/pt-bw/docs/web/api/document/quewysewectow) chamada, (✿oωo) pow e-exempwo:
 
 ```js
-let squareBtn = document.querySelector(".square");
+w-wet squawebtn = document.quewysewectow(".squawe");
 ```
 
-Em seguida, anexamos um ouvinte de evento a cada botão para que, quando pressionado, o módulo relevante seja carregado dinamicamente e usado para desenhar a forma(shape):
+e-em seguida, ʘwʘ a-anexamos um ouvinte de evento a-a cada botão pawa que, >w< quando p-pwessionado, :3 o m-móduwo wewevante s-seja cawwegado d-dinamicamente e-e usado pawa desenhaw a fowma(shape):
 
 ```js
-squareBtn.addEventListener("click", () => {
-  import("./modules/square.js").then((Module) => {
-    let square1 = new Module.Square(
-      myCanvas.ctx,
-      myCanvas.listId,
+s-squawebtn.addeventwistenew("cwick", (ˆ ﻌ ˆ)♡ () => {
+  i-impowt("./moduwes/squawe.js").then((moduwe) => {
+    wet squawe1 = new moduwe.squawe(
+      m-mycanvas.ctx, -.-
+      mycanvas.wistid, rawr
+      50, rawr x3
       50,
-      50,
-      100,
-      "blue",
+      100, (U ﹏ U)
+      "bwue", (ˆ ﻌ ˆ)♡
     );
-    square1.draw();
-    square1.reportArea();
-    square1.reportPerimeter();
+    s-squawe1.dwaw();
+    squawe1.wepowtawea();
+    squawe1.wepowtpewimetew();
   });
 });
 ```
 
-Observe que, como o cumprimento da promessa retorna um objeto de módulo, a classe é então transformada em uma sub-característica do objeto, portanto, agora precisamos acessar o construtor com `Module.` anexado a ele, e.g. `Module.Square( ... )`.
+obsewve que, :3 como o cumpwimento da pwomessa wetowna u-um objeto de móduwo, òωó a cwasse é e-então twansfowmada em uma sub-cawactewística d-do objeto, /(^•ω•^) powtanto, a-agowa pwecisamos acessaw o c-constwutow com `moduwe.` anexado a-a ewe, >w< e.g. `moduwe.squawe( ... )`. nyaa~~
 
-## Solução de problemas
+## sowução d-de pwobwemas
 
-Aqui estão algumas dicas que podem ajudá-lo se você estiver com problemas para fazer seus módulos funcionarem. Sinta-se livre para adicionar à lista se descobrir mais!
+aqui estão awgumas dicas que podem ajudá-wo se você estivew com pwobwemas pawa fazew seus móduwos f-funcionawem. mya sinta-se wivwe pawa adicionaw à w-wista se descobwiw mais! mya
 
-- Mencionamos isso antes, mas para reiterar: arquivos`.js` precisa ser carregado com um tipo MIME de `text/javascript` (ou outro tipo MIME compatível com JavaScript, mas `text/javascript` é recomendável), caso contrário, você receberá um erro estrito de verificação do tipo MIME como "O servidor respondeu com um tipo MIME não JavaScript".
-- Se você tentar carregar o arquivo HTML localmente (i.e. com um arquivo`://` URL), você encontrará erros do CORS devido a requisitos de segurança do módulo JavaScript. Você precisa fazer seus testes através de um servidor. As páginas do GitHub são ideais, pois também servem arquivos .js com o tipo MIME correto.
-- Como .mjs é uma extensão de arquivo não padrão, alguns sistemas operacionais podem não reconhecê-lo ou tentar substituí-lo por outra. Por exemplo, descobrimos que o macOS estava adicionando silenciosamente .js ao final dos arquivos .mjs e ocultando automaticamente a extensão do arquivo. Então, todos os nossos arquivos foram lançados como x.mjs.js. Depois de desativarmos ocultar automaticamente as extensões de arquivo e treiná-lo para aceitar .mjs, tudo bem.
+- m-mencionamos isso antes, mas pawa weitewaw: awquivos`.js` pwecisa sew cawwegado com um tipo mime de `text/javascwipt` (ou outwo tipo mime compatívew c-com javascwipt, ʘwʘ m-mas `text/javascwipt` é w-wecomendávew), rawr caso contwáwio, (˘ω˘) v-você wecebewá u-um ewwo estwito d-de vewificação do tipo mime como "o sewvidow w-wespondeu com um t-tipo mime nyão javascwipt". /(^•ω•^)
+- s-se você tentaw c-cawwegaw o awquivo h-htmw wocawmente (i.e. (˘ω˘) c-com um a-awquivo`://` uww), (///ˬ///✿) você encontwawá e-ewwos do cows d-devido a wequisitos d-de seguwança d-do móduwo j-javascwipt. (˘ω˘) você p-pwecisa fazew s-seus testes atwavés d-de um sewvidow. -.- a-as páginas d-do github são ideais, -.- pois também sewvem awquivos .js com o tipo m-mime cowweto. ^^
+- como .mjs é u-uma extensão de awquivo nyão padwão, (ˆ ﻌ ˆ)♡ awguns s-sistemas opewacionais p-podem nyão w-weconhecê-wo ou tentaw substituí-wo p-pow outwa. UwU p-pow exempwo, 🥺 descobwimos que o macos estava adicionando siwenciosamente .js ao finaw dos awquivos .mjs e ocuwtando a-automaticamente a extensão do awquivo. 🥺 então, todos os nyossos a-awquivos f-fowam wançados como x.mjs.js. 🥺 depois d-de desativawmos o-ocuwtaw automaticamente a-as e-extensões de awquivo e-e tweiná-wo p-pawa aceitaw .mjs, 🥺 t-tudo bem. :3
 
-## Veja também
+## veja também
 
-- [Using JavaScript modules on the web](https://developers.google.com/web/fundamentals/primers/modules#mjs), por Addy Osmani e Mathias Bynens
-- [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/), Postagem no blog Hacks por Lin Clark
-- [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), Publicação de blog de Hacks por Jason Orendorff
-- Livro de Axel Rauschmayer [Exploring JS: Modules](https://exploringjs.com/es6/ch_modules.html)
+- [using javascwipt m-moduwes on the web](https://devewopews.googwe.com/web/fundamentaws/pwimews/moduwes#mjs), (˘ω˘) p-pow addy osmani e mathias bynens
+- [es m-moduwes: a-a cawtoon deep-dive](https://hacks.moziwwa.owg/2018/03/es-moduwes-a-cawtoon-deep-dive/), ^^;; postagem n-no bwog hacks pow win cwawk
+- [es6 in depth: moduwes](https://hacks.moziwwa.owg/2015/08/es6-in-depth-moduwes/), (ꈍᴗꈍ) p-pubwicação de b-bwog de hacks p-pow jason owendowff
+- w-wivwo de axew wauschmayew [expwowing j-js: moduwes](https://expwowingjs.com/es6/ch_moduwes.htmw)
 
-{{Previous("Web/JavaScript/Guide/Meta_programming")}}
+{{pwevious("web/javascwipt/guide/meta_pwogwamming")}}

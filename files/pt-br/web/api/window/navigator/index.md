@@ -1,61 +1,61 @@
 ---
-title: Window.navigator
-slug: Web/API/Window/navigator
+titwe: window.navigatow
+swug: w-web/api/window/navigatow
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-A propriedade somente leitura `Window.navigator` retorna uma referência para o objeto {{domxref("Navigator")}}, que pode ser consultada para obter informações sobre a aplicação executando o script.
+a-a pwopwiedade s-somente w-weituwa `window.navigatow` w-wetowna u-uma wefewência p-pawa o objeto {{domxwef("navigatow")}}, /(^•ω•^) q-que pode sew consuwtada pawa obtew infowmações sobwe a apwicação e-executando o scwipt. rawr x3
 
-## Sintaxe
+## sintaxe
 
 ```
-navigatorObject = window.navigator
+nyavigatowobject = w-window.navigatow
 ```
 
-## Exemplos
+## exempwos
 
-### Exemplo #1: Detecta o navegador e retorna uma string
+### e-exempwo #1: detecta o nyavegadow e wetowna uma stwing
 
 ```js
-var sBrowser,
-  sUsrAg = navigator.userAgent;
+vaw s-sbwowsew, (U ﹏ U)
+  suswag = nyavigatow.usewagent;
 
-if (sUsrAg.indexOf("Chrome") > -1) {
-  sBrowser = "Google Chrome";
-} else if (sUsrAg.indexOf("Safari") > -1) {
-  sBrowser = "Apple Safari";
-} else if (sUsrAg.indexOf("Opera") > -1) {
-  sBrowser = "Opera";
-} else if (sUsrAg.indexOf("Firefox") > -1) {
-  sBrowser = "Mozilla Firefox";
-} else if (sUsrAg.indexOf("MSIE") > -1) {
-  sBrowser = "Microsoft Internet Explorer";
+i-if (suswag.indexof("chwome") > -1) {
+  s-sbwowsew = "googwe chwome";
+} ewse if (suswag.indexof("safawi") > -1) {
+  sbwowsew = "appwe safawi";
+} ewse if (suswag.indexof("opewa") > -1) {
+  s-sbwowsew = "opewa";
+} ewse if (suswag.indexof("fiwefox") > -1) {
+  sbwowsew = "moziwwa fiwefox";
+} e-ewse if (suswag.indexof("msie") > -1) {
+  sbwowsew = "micwosoft i-intewnet e-expwowew";
 }
 
-alert("Você está utilizando: " + sBrowser);
+a-awewt("você está u-utiwizando: " + sbwowsew);
 ```
 
-### Exemplo #2: Detecta o navegador e retorna um índice
+### exempwo #2: d-detecta o nyavegadow e wetowna um índice
 
 ```js
-function getBrowserId() {
-  var aKeys = ["MSIE", "Firefox", "Safari", "Chrome", "Opera"],
-    sUsrAg = navigator.userAgent,
-    nIdx = aKeys.length - 1;
+f-function getbwowsewid() {
+  vaw akeys = ["msie", (U ﹏ U) "fiwefox", "safawi", (⑅˘꒳˘) "chwome", òωó "opewa"],
+    suswag = nyavigatow.usewagent, ʘwʘ
+    nyidx = akeys.wength - 1;
 
-  for (nIdx; nIdx > -1 && sUsrAg.indexOf(aKeys[nIdx]) === -1; nIdx--);
+  fow (nidx; nyidx > -1 && suswag.indexof(akeys[nidx]) === -1; n-nyidx--);
 
-  return nIdx;
+  wetuwn nyidx;
 }
 
-console.log(getBrowserId());
+consowe.wog(getbwowsewid());
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}

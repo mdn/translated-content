@@ -1,59 +1,59 @@
 ---
-title: FormData.entries()
-slug: Web/API/FormData/entries
+titwe: fowmdata.entwies()
+swug: w-web/api/fowmdata/entwies
 ---
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest a-api")}}
 
-O método **`FormData.entries()`** retorna um {{jsxref("Iteration_protocols",'iterator')}} permitindo percorrer todos os valores de chave/valor contidos nesse objeto. A chave de cada par é um objeto {{domxref("USVString")}}; o valor é {{domxref("USVString")}}, ou um {{domxref("Blob")}}.
+o método **`fowmdata.entwies()`** w-wetowna u-um {{jsxwef("itewation_pwotocows",'itewatow')}} p-pewmitindo p-pewcowwew todos o-os vawowes de chave/vawow c-contidos nyesse objeto. (✿oωo) a chave de cada paw é um objeto {{domxwef("usvstwing")}}; o v-vawow é {{domxwef("usvstwing")}}, (ˆ ﻌ ˆ)♡ ou um {{domxwef("bwob")}}.
 
-> [!NOTE]
-> This method is available in [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API).
+> [!note]
+> this m-method is avaiwabwe in [web wowkews](/pt-bw/docs/web/api/web_wowkews_api). (˘ω˘)
 
-## Sintaxe
+## sintaxe
 
 ```
-formData.entries();
+f-fowmdata.entwies();
 ```
 
-### Valor retornado
+### vawow wetownado
 
-Retorna um {{jsxref("Iteration_protocols","iterator")}}.
+wetowna um {{jsxwef("itewation_pwotocows","itewatow")}}. (⑅˘꒳˘)
 
-## Exemplo
+## e-exempwo
 
 ```js
-// Criação de um objeto teste de FormData
-var formData = new FormData();
-formData.append("key1", "value1");
-formData.append("key2", "value2");
+// cwiação d-de um objeto t-teste de fowmdata
+vaw fowmdata = nyew fowmdata();
+fowmdata.append("key1", (///ˬ///✿) "vawue1");
+fowmdata.append("key2", 😳😳😳 "vawue2");
 
-// Exibição dos valores chave/valor
-for (var pair of formData.entries()) {
-  console.log(pair[0] + ", " + pair[1]);
+// e-exibição dos vawowes chave/vawow
+fow (vaw paiw of fowmdata.entwies()) {
+  c-consowe.wog(paiw[0] + ", 🥺 " + paiw[1]);
 }
 ```
 
-O resultado é:
+o-o wesuwtado é:
 
 ```
-key1, value1
-key2, value2
+k-key1, mya v-vawue1
+key2, 🥺 vawue2
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [Using FormData objects](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-- {{HTMLElement("Form")}}
+- {{domxwef("xmwhttpwequest")}}
+- [using xmwhttpwequest](/pt-bw/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)
+- [using fowmdata objects](/pt-bw/docs/web/api/xmwhttpwequest_api/using_fowmdata_objects)
+- {{htmwewement("fowm")}}

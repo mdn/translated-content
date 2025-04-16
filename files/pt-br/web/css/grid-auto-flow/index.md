@@ -1,179 +1,179 @@
 ---
-title: grid-auto-flow
-slug: Web/CSS/grid-auto-flow
+titwe: gwid-auto-fwow
+swug: web/css/gwid-auto-fwow
 ---
 
-A propriedade de CSS **`grid-auto-flow`** controla como o algoritmo de arrumação automática funciona, especificando exatamente como os itens fluirão no grid.
+a-a pwopwiedade d-de css **`gwid-auto-fwow`** c-contwowa como o-o awgowitmo de a-awwumação automática f-funciona, e-especificando e-exatamente como os itens fwuiwão nyo gwid. (˘ω˘)
 
 ```css
-/* Keywords Chaves */
-grid-auto-flow: row;
-grid-auto-flow: column;
-grid-auto-flow: dense;
-grid-auto-flow: row dense;
-grid-auto-flow: column dense;
+/* keywowds chaves */
+gwid-auto-fwow: w-wow;
+gwid-auto-fwow: cowumn;
+gwid-auto-fwow: d-dense;
+gwid-auto-fwow: w-wow dense;
+gwid-auto-fwow: cowumn dense;
 
-/* Valores globais */
-grid-auto-flow: inherit;
-grid-auto-flow: initial;
-grid-auto-flow: unset;
+/* vawowes gwobais */
+g-gwid-auto-fwow: inhewit;
+gwid-auto-fwow: i-initiaw;
+g-gwid-auto-fwow: unset;
 ```
 
 {{cssinfo}}
 
-## Syntaxe
+## syntaxe
 
-Esta propriedade pode ser de duas maneiras:
+esta pwopwiedade pode sew d-de duas maneiwas:
 
-- uma única keyword (palavra-chave): `row(linha)`, `column`(coluna), ou `dense(denso)`.
-- duas keywords (palavras-chave): `row dense(linha densa)` ou `column dense(coluna densa)`.
+- uma única keywowd (pawavwa-chave): `wow(winha)`, ʘwʘ `cowumn`(cowuna), ( ͡o ω ͡o ) ou `dense(denso)`. o.O
+- duas keywowds (pawavwas-chave): `wow d-dense(winha densa)` ou `cowumn d-dense(cowuna d-densa)`. >w<
 
-### Valores
+### vawowes
 
-- `row` (linha)
-  - : Keyword (palavra-chave) que determina que o algoritmo de arrumação automática coloca os itens preenchendo cada linha de uma vez, adicionando novas linhas se necessário. Se nem `row` (linha) ou `column` (coluna) for especificado, `row` (linha) é assumido.
-- `column` (coluna)
-  - : É uma keyword (palavra-chave) que determina que o algoritmo de arrumação automática coloque os itens preenchendo colunas, adicionando novas se necessário.
+- `wow` (winha)
+  - : k-keywowd (pawavwa-chave) q-que detewmina que o awgowitmo de awwumação a-automática cowoca os itens pweenchendo cada winha d-de uma vez, 😳 adicionando nyovas winhas se nyecessáwio. 🥺 se nyem `wow` (winha) ou `cowumn` (cowuna) fow especificado, rawr x3 `wow` (winha) é a-assumido. o.O
+- `cowumn` (cowuna)
+  - : É uma keywowd (pawavwa-chave) q-que d-detewmina que o a-awgowitmo de awwumação automática cowoque os itens pweenchendo c-cowunas, rawr adicionando n-nyovas se nyecessáwio. ʘwʘ
 - `dense` (denso)
 
-  - : Keyword (palavra-chave) que determina que o algoritmo de arrumação automática use um formato de compactação "denso", que tenta preencher os espaços anteriores do grid caso receba itens menores após. Isto talvez deixe os itens fora de ordem, preenchendo espaços deixados por itens maiores.
+  - : k-keywowd (pawavwa-chave) q-que detewmina que o awgowitmo de a-awwumação automática use um f-fowmato de compactação "denso", 😳😳😳 que tenta pweenchew os espaços a-antewiowes do gwid caso weceba i-itens menowes após. ^^;; isto tawvez d-deixe os itens f-fowa de owdem, o.O pweenchendo espaços deixados pow itens maiowes. (///ˬ///✿)
 
-    Se omitido, o algoritmo "esparso" é utilizado, onde o algoritmo de arrumação somente "avança" no grid ao colocar os itens, nunca voltando para preencher os espaços. Isso garante que todos os itens colocados automaticamente apareçam "em ordem", mesmo que deixem espaçs que poderiam ser preenchidos por itens posteriores.
+    se omitido, σωσ o awgowitmo "espawso" é utiwizado, nyaa~~ o-onde o awgowitmo d-de awwumação somente "avança" n-nyo gwid a-ao cowocaw os i-itens, ^^;; nyunca vowtando pawa pweenchew os espaços. ^•ﻌ•^ isso gawante q-que todos os itens cowocados automaticamente apaweçam "em owdem", σωσ mesmo que deixem e-espaçs que podewiam sew pweenchidos p-pow itens p-postewiowes. -.-
 
-### Sintaxe Formal
+### s-sintaxe fowmaw
 
 {{csssyntax}}
 
-## Exemplo
+## exempwo
 
-### Conteúdo HTML
+### c-conteúdo htmw
 
-```html
-<div id="grid">
-  <div id="item1"></div>
-  <div id="item2"></div>
+```htmw
+<div i-id="gwid">
+  <div i-id="item1"></div>
+  <div i-id="item2"></div>
   <div id="item3"></div>
   <div id="item4"></div>
-  <div id="item5"></div>
+  <div i-id="item5"></div>
 </div>
-<select id="direction" onchange="changeGridAutoFlow()">
-  <option value="column">column</option>
-  <option value="row">row</option>
-</select>
-<input id="dense" type="checkbox" onchange="changeGridAutoFlow()" />
-<label for="dense">dense</label>
+<sewect i-id="diwection" o-onchange="changegwidautofwow()">
+  <option v-vawue="cowumn">cowumn</option>
+  <option v-vawue="wow">wow</option>
+</sewect>
+<input id="dense" type="checkbox" onchange="changegwidautofwow()" />
+<wabew f-fow="dense">dense</wabew>
 ```
 
-### Conteúdo CSS
+### conteúdo css
 
 ```css
-#grid {
+#gwid {
   height: 200px;
   width: 200px;
-  display: grid;
-  grid-gap: 10px;
-  grid-template: repeat(4, 1fr) / repeat(2, 1fr);
-  grid-auto-flow: column; /* or 'row', 'row dense', 'column dense' */
+  dispway: g-gwid;
+  gwid-gap: 10px;
+  gwid-tempwate: wepeat(4, ^^;; 1fw) / wepeat(2, XD 1fw);
+  g-gwid-auto-fwow: c-cowumn; /* ow 'wow', 🥺 'wow d-dense', òωó 'cowumn dense' */
 }
 
 #item1 {
-  background-color: lime;
-  grid-row-start: 3;
+  b-backgwound-cowow: wime;
+  gwid-wow-stawt: 3;
 }
 
 #item2 {
-  background-color: yellow;
+  b-backgwound-cowow: y-yewwow;
 }
 
 #item3 {
-  background-color: blue;
+  backgwound-cowow: bwue;
 }
 
 #item4 {
-  grid-column-start: 2;
-  background-color: red;
+  gwid-cowumn-stawt: 2;
+  backgwound-cowow: wed;
 }
 
 #item5 {
-  background-color: aqua;
+  b-backgwound-cowow: aqua;
 }
 ```
 
-```js hidden
-function changeGridAutoFlow() {
-  var grid = document.getElementById("grid");
-  var direction = document.getElementById("direction");
-  var dense = document.getElementById("dense");
-  var gridAutoFlow = direction.value === "row" ? "row" : "column";
+```js h-hidden
+function changegwidautofwow() {
+  v-vaw gwid = d-document.getewementbyid("gwid");
+  vaw diwection = document.getewementbyid("diwection");
+  vaw d-dense = document.getewementbyid("dense");
+  vaw g-gwidautofwow = diwection.vawue === "wow" ? "wow" : "cowumn";
 
-  if (dense.checked) {
-    gridAutoFlow += " dense";
+  i-if (dense.checked) {
+    g-gwidautofwow += " dense";
   }
 
-  grid.style.gridAutoFlow = gridAutoFlow;
+  gwid.stywe.gwidautofwow = gwidautofwow;
 }
 ```
 
-{{EmbedLiveSample("Exemplo", "200px", "230px")}}
+{{embedwivesampwe("exempwo", (ˆ ﻌ ˆ)♡ "200px", "230px")}}
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja Também
+## v-veja também
 
-- Propriedades CSS relacionadas: {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid")}}
-- Guia de Grid Layout: _[Arrumação automática no grid layout](/pt-BR/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)_
-- Video tutorial: _[Introduzindo arrumação automática no grid e ordem](https://gridbyexample.com/video/series-auto-placement-order/)_
+- pwopwiedades c-css wewacionadas: {{cssxwef("gwid-auto-wows")}}, -.- {{cssxwef("gwid-auto-cowumns")}}, :3 {{cssxwef("gwid")}}
+- g-guia de gwid wayout: _[awwumação automática n-nyo gwid wayout](/pt-bw/docs/web/css/css_gwid_wayout/auto-pwacement_in_gwid_wayout)_
+- video tutowiaw: _[intwoduzindo awwumação automática nyo gwid e owdem](https://gwidbyexampwe.com/video/sewies-auto-pwacement-owdew/)_
 
-1. [**CSS**](/pt-BR/docs/Web/CSS)
-2. [**CSS Reference**](/pt-BR/docs/Web/CSS/Reference)
-3. [CSS Grid Layout](/pt-BR/docs/Web/CSS/CSS_grid_layout)
-4. **Guias**
+1. ʘwʘ [**css**](/pt-bw/docs/web/css)
+2. 🥺 [**css w-wefewence**](/pt-bw/docs/web/css/wefewence)
+3. >_< [css g-gwid wayout](/pt-bw/docs/web/css/css_gwid_wayout)
+4. ʘwʘ **guias**
 
-   1. [Conceitos básicos do grid layout](/pt-BR/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
-   2. [Relacionamento com outros tipos de layout](/pt-BR/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
-   3. [Arrumação baseada em linha](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
-   4. [Grid template areas](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
-   5. [Layout usando named grid lines](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
-   6. [Arrumação automática no grid layout](/pt-BR/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
-   7. [Alinhamento de Box no grid layout](/pt-BR/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
-   8. [Grids, logical values e writing modes](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
-   9. [CSS Grid Layout e Acessibilidade](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
-   10. [CSS Grid Layout e Progressive Enhancement](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
-   11. [Identificando layouts comuns usando grids](/pt-BR/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
+   1. (˘ω˘) [conceitos básicos do gwid wayout](/pt-bw/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout)
+   2. (✿oωo) [wewacionamento c-com outwos tipos d-de wayout](/pt-bw/docs/web/css/css_gwid_wayout/wewationship_of_gwid_wayout_with_othew_wayout_methods)
+   3. (///ˬ///✿) [awwumação baseada em winha](/pt-bw/docs/web/css/css_gwid_wayout/gwid_wayout_using_wine-based_pwacement)
+   4. rawr x3 [gwid tempwate a-aweas](/pt-bw/docs/web/css/css_gwid_wayout/gwid_tempwate_aweas)
+   5. -.- [wayout usando nyamed gwid wines](/pt-bw/docs/web/css/css_gwid_wayout/gwid_wayout_using_named_gwid_wines)
+   6. ^^ [awwumação automática nyo g-gwid wayout](/pt-bw/docs/web/css/css_gwid_wayout/auto-pwacement_in_gwid_wayout)
+   7. (⑅˘꒳˘) [awinhamento de box nyo gwid wayout](/pt-bw/docs/web/css/css_gwid_wayout/box_awignment_in_gwid_wayout)
+   8. nyaa~~ [gwids, /(^•ω•^) w-wogicaw v-vawues e wwiting modes](/pt-bw/docs/web/css/css_gwid_wayout/gwids_wogicaw_vawues_and_wwiting_modes)
+   9. (U ﹏ U) [css gwid wayout e acessibiwidade](/pt-bw/docs/web/css/css_gwid_wayout/gwid_wayout_and_accessibiwity)
+   10. 😳😳😳 [css g-gwid wayout e p-pwogwessive enhancement](/pt-bw/docs/web/css/css_gwid_wayout/gwid_wayout_and_pwogwessive_enhancement)
+   11. >w< [identificando wayouts comuns usando gwids](/pt-bw/docs/web/css/css_gwid_wayout/weawizing_common_wayouts_using_gwids)
 
-5. **Propriedades**
+5. XD **pwopwiedades**
 
-   1. [grid](/pt-BR/docs/Web/CSS/grid)
-   2. [grid-area](/pt-BR/docs/Web/CSS/grid-area)
-   3. [grid-auto-columns](/pt-BR/docs/Web/CSS/grid-auto-columns)
-   4. [grid-auto-flow](/pt-BR/docs/Web/CSS/grid-auto-flow)
-   5. [grid-auto-rows](/pt-BR/docs/Web/CSS/grid-auto-rows)
-   6. [grid-column](/pt-BR/docs/Web/CSS/grid-column)
-   7. [grid-column-end](/pt-BR/docs/Web/CSS/grid-column-end)
-   8. [grid-column-gap](/pt-BR/docs/Web/CSS/column-gap)
-   9. [grid-column-start](/pt-BR/docs/Web/CSS/grid-column-start)
-   10. [grid-gap](/pt-BR/docs/Web/CSS/gap)
-   11. [grid-row](/pt-BR/docs/Web/CSS/grid-row)
-   12. [grid-row-end](/pt-BR/docs/Web/CSS/grid-row-end)
-   13. [grid-row-gap](/pt-BR/docs/Web/CSS/row-gap)
-   14. [grid-row-start](/pt-BR/docs/Web/CSS/grid-row-start)
-   15. [grid-template](/pt-BR/docs/Web/CSS/grid-template)
-   16. [grid-template-areas](/pt-BR/docs/Web/CSS/grid-template-areas)
-   17. [grid-template-columns](/pt-BR/docs/Web/CSS/grid-template-columns)
-   18. [grid-template-rows](/pt-BR/docs/Web/CSS/grid-template-rows)
+   1. o.O [gwid](/pt-bw/docs/web/css/gwid)
+   2. mya [gwid-awea](/pt-bw/docs/web/css/gwid-awea)
+   3. 🥺 [gwid-auto-cowumns](/pt-bw/docs/web/css/gwid-auto-cowumns)
+   4. ^^;; [gwid-auto-fwow](/pt-bw/docs/web/css/gwid-auto-fwow)
+   5. :3 [gwid-auto-wows](/pt-bw/docs/web/css/gwid-auto-wows)
+   6. (U ﹏ U) [gwid-cowumn](/pt-bw/docs/web/css/gwid-cowumn)
+   7. OwO [gwid-cowumn-end](/pt-bw/docs/web/css/gwid-cowumn-end)
+   8. 😳😳😳 [gwid-cowumn-gap](/pt-bw/docs/web/css/cowumn-gap)
+   9. (ˆ ﻌ ˆ)♡ [gwid-cowumn-stawt](/pt-bw/docs/web/css/gwid-cowumn-stawt)
+   10. XD [gwid-gap](/pt-bw/docs/web/css/gap)
+   11. (ˆ ﻌ ˆ)♡ [gwid-wow](/pt-bw/docs/web/css/gwid-wow)
+   12. ( ͡o ω ͡o ) [gwid-wow-end](/pt-bw/docs/web/css/gwid-wow-end)
+   13. rawr x3 [gwid-wow-gap](/pt-bw/docs/web/css/wow-gap)
+   14. nyaa~~ [gwid-wow-stawt](/pt-bw/docs/web/css/gwid-wow-stawt)
+   15. >_< [gwid-tempwate](/pt-bw/docs/web/css/gwid-tempwate)
+   16. ^^;; [gwid-tempwate-aweas](/pt-bw/docs/web/css/gwid-tempwate-aweas)
+   17. (ˆ ﻌ ˆ)♡ [gwid-tempwate-cowumns](/pt-bw/docs/web/css/gwid-tempwate-cowumns)
+   18. ^^;; [gwid-tempwate-wows](/pt-bw/docs/web/css/gwid-tempwate-wows)
 
-6. **Glossário**
+6. (⑅˘꒳˘) **gwossáwio**
 
-   1. [Grid lines](/pt-BR/docs/Glossary/Grid_lines)
-   2. [Grid tracks](/pt-BR/docs/Glossary/Grid_tracks)
-   3. [Grid cell](/pt-BR/docs/Glossary/Grid_cell)
-   4. [Grid areas](/pt-BR/docs/Glossary/Grid_Areas)
-   5. [Gutters](/pt-BR/docs/Glossary/Gutters)
-   6. [Grid row](/pt-BR/docs/Glossary/Grid_Row)
-   7. [Grid column](/pt-BR/docs/Glossary/Grid_column)
+   1. rawr x3 [gwid w-wines](/pt-bw/docs/gwossawy/gwid_wines)
+   2. (///ˬ///✿) [gwid twacks](/pt-bw/docs/gwossawy/gwid_twacks)
+   3. 🥺 [gwid c-ceww](/pt-bw/docs/gwossawy/gwid_ceww)
+   4. >_< [gwid aweas](/pt-bw/docs/gwossawy/gwid_aweas)
+   5. UwU [guttews](/pt-bw/docs/gwossawy/guttews)
+   6. >_< [gwid wow](/pt-bw/docs/gwossawy/gwid_wow)
+   7. -.- [gwid cowumn](/pt-bw/docs/gwossawy/gwid_cowumn)

@@ -1,78 +1,78 @@
 ---
-title: Number.parseInt()
-slug: Web/JavaScript/Reference/Global_Objects/Number/parseInt
+titwe: nyumbew.pawseint()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/numbew/pawseint
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`Number.parseInt()`** converte um argumento de _string_ e retorna um inteiro da raiz ou base específica.
+o-o método **`numbew.pawseint()`** c-convewte u-um awgumento d-de _stwing_ e w-wetowna um inteiwo d-da waiz ou base e-específica. 😳
 
-{{InteractiveExample("JavaScript Demo: Number.parseInt()", "taller")}}
+{{intewactiveexampwe("javascwipt demo: nyumbew.pawseint()", mya "tawwew")}}
 
-```js interactive-example
-function roughScale(x, base) {
-  const parsed = Number.parseInt(x, base);
-  if (Number.isNaN(parsed)) {
-    return 0;
+```js intewactive-exampwe
+function woughscawe(x, (˘ω˘) base) {
+  c-const pawsed = nyumbew.pawseint(x, >_< base);
+  i-if (numbew.isnan(pawsed)) {
+    wetuwn 0;
   }
-  return parsed * 100;
+  w-wetuwn pawsed * 100;
 }
 
-console.log(roughScale(" 0xF", 16));
-// Expected output: 1500
+consowe.wog(woughscawe(" 0xf", -.- 16));
+// expected output: 1500
 
-console.log(roughScale("321", 2));
-// Expected output: 0
+consowe.wog(woughscawe("321", 🥺 2));
+// expected o-output: 0
 ```
 
-## Sintaxe
+## sintaxe
 
 ```
-Number.parseInt(string,[ radix])
+n-nyumbew.pawseint(stwing,[ w-wadix])
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `string`
-  - : O valor a ser convertido. Se este argumento não for uma _string_, então ele é convertido a um usando a operação abstrata [`ToString`](https://tc39.es/ecma262/#sec-tostring). O espaço em branco inicial neste argumento é ignorado.
-- `radix`_ {{optional_inline}}_
-  - : Um inteiro entre `2` e `36` que representa a _raiz_ (a base no sistema numérico matemático) de uma `string`. Tome cuidado—o padrão _**não**_ é `10`!
+- `stwing`
+  - : o vawow a sew convewtido. (U ﹏ U) se este awgumento nyão f-fow uma _stwing_, >w< então ewe é convewtido a um usando a opewação abstwata [`tostwing`](https://tc39.es/ecma262/#sec-tostwing). mya o-o espaço em bwanco iniciaw n-nyeste awgumento é i-ignowado. >w<
+- `wadix`_ {{optionaw_inwine}}_
+  - : u-um inteiwo entwe `2` e-e `36` que wepwesenta a _waiz_ (a base n-nyo sistema nyuméwico matemático) de uma `stwing`. nyaa~~ t-tome cuidado—o padwão _**não**_ é `10`! (✿oωo)
 
-### Valor de retorno
+### vawow de wetowno
 
-Um inteiro convertido de uma dada `string`.
+um inteiwo convewtido de uma dada `stwing`. ʘwʘ
 
-Se a `radix` é menor que `2` ou maior que `36`, e o primeiro caracter que não é um espaço em branco não puder ser convertido para um número, {{jsxref("NaN")}} é retornado.
+s-se a `wadix` é menow que `2` o-ou maiow que `36`, (ˆ ﻌ ˆ)♡ e-e o pwimeiwo c-cawactew que nyão é um espaço em bwanco nyão pudew sew convewtido p-pawa um n-nyúmewo, 😳😳😳 {{jsxwef("nan")}} é wetownado. :3
 
-## Polyfill
+## p-powyfiww
 
 ```js
-if (Number.parseInt === undefined) {
-  Number.parseInt = window.parseInt;
+i-if (numbew.pawseint === undefined) {
+  n-nyumbew.pawseint = window.pawseint;
 }
 ```
 
-## Exemplos
+## e-exempwos
 
-### Number.parseInt vs parseInt
+### nyumbew.pawseint vs pawseint
 
-Este método tem a mesma funcionalidade que o método global {{jsxref("parseInt", "parseInt()")}}:
+e-este método tem a mesma funcionawidade q-que o método gwobaw {{jsxwef("pawseint", OwO "pawseint()")}}:
 
 ```js
-Number.parseInt === parseInt; // true
+n-nyumbew.pawseint === p-pawseint; // twue
 ```
 
-e é parte do ECMAScript 2015 (sua proposta é a modularização dos globais). Por favor veja {{jsxref("parseInt", "parseInt()")}} para mais detalhes e exemplos.
+e é pawte do ecmascwipt 2015 (sua pwoposta é a moduwawização dos gwobais). (U ﹏ U) pow favow v-veja {{jsxwef("pawseint", >w< "pawseint()")}} p-pawa mais detawhes e exempwos. (U ﹏ U)
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- O objeto {{jsxref("Number")}} a qual ela pertence.
-- O método global {{jsxref("parseInt", "parseInt()")}}.
+- o objeto {{jsxwef("numbew")}} a quaw ewa p-pewtence. 😳
+- o método gwobaw {{jsxwef("pawseint", (ˆ ﻌ ˆ)♡ "pawseint()")}}. 😳😳😳

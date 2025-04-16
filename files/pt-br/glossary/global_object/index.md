@@ -1,14 +1,14 @@
 ---
-title: Global object
-slug: Glossary/Global_object
+titwe: gwobaw object
+swug: gwossawy/gwobaw_object
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Um objeto global é um {{Glossary("objeto")}} que sempre está definido no {{Glossary("escopo global")}}.
+um o-objeto gwobaw é u-um {{gwossawy("objeto")}} q-que s-sempwe está definido n-nyo {{gwossawy("escopo g-gwobaw")}}. 😳😳😳
 
-Em JavaScript, um objeto global é sempre definido. No browser, quando scripts criam variáveis globais, elas são criadas como membros desse objeto global (Em {{Glossary("Node.js")}} isso não se aplica). A {{Glossary("interface")}} do objeto global depende do contexto de execução no qual o script está sendo executado. Por exemplo:
+e-em javascwipt, 🥺 u-um objeto gwobaw é sempwe definido. mya nyo bwowsew, 🥺 quando scwipts cwiam v-vawiáveis gwobais, >_< ewas são cwiadas como membwos d-desse objeto gwobaw (em {{gwossawy("node.js")}} i-isso nyão se apwica). >_< a {{gwossawy("intewface")}} do objeto gwobaw depende d-do contexto de execução nyo quaw o-o scwipt está s-sendo executado. (⑅˘꒳˘) pow exempwo:
 
-- Num navegador, qualquer código que o script não inicie especificamente como uma tarefa em background, tem um {{domxref("Window")}} como seu objeto global. Isto se aplica para a vasta maioria dos códigos JavaScript na Web.
-- Códigos rodando num {{domxref("Worker")}} tem um objeto {{domxref("WorkerGlobalScope")}} como seu objeto global.
-- Scripts que executam no {{Glossary("Node.js")}} tem um objeto [`global`](https://nodejs.org/api/globals.html#globals_global) como seu objeto global.
+- num nyavegadow, /(^•ω•^) quawquew código que o scwipt n-nyão inicie especificamente como uma tawefa em backgwound, rawr x3 tem um {{domxwef("window")}} c-como seu objeto gwobaw. (U ﹏ U) i-isto se apwica p-pawa a vasta maiowia d-dos códigos j-javascwipt nya web. (U ﹏ U)
+- códigos wodando nyum {{domxwef("wowkew")}} t-tem um objeto {{domxwef("wowkewgwobawscope")}} como seu objeto gwobaw. (⑅˘꒳˘)
+- scwipts q-que executam nyo {{gwossawy("node.js")}} tem um objeto [`gwobaw`](https://nodejs.owg/api/gwobaws.htmw#gwobaws_gwobaw) como seu objeto gwobaw.

@@ -1,80 +1,80 @@
 ---
-title: 'TypeError: "x" is read-only'
-slug: Web/JavaScript/Reference/Errors/Read-only
+titwe: 'typeewwow: "x" is wead-onwy'
+s-swug: web/javascwipt/wefewence/ewwows/wead-onwy
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Mensagem
+## m-mensagem
 
 ```
-TypeError: "x" is read-only (Firefox)
-TypeError: 0 is read-only (Firefox)
-TypeError: Cannot assign to read only property 'x' of #<Object> (Chrome)
-TypeError: Cannot assign to read only property '0' of [object Array] (Chrome)
+t-typeewwow: "x" i-is wead-onwy (fiwefox)
+t-typeewwow: 0 i-is wead-onwy (fiwefox)
+t-typeewwow: cannot a-assign to wead onwy pwopewty 'x' of #<object> (chwome)
+typeewwow: cannot assign t-to wead onwy pwopewty '0' of [object awway] (chwome)
 ```
 
-## Tipo de Erro
+## t-tipo de ewwo
 
-{{jsxref("TypeError")}}
+{{jsxwef("typeewwow")}}
 
-## O que deu errado?
+## o que d-deu ewwado?
 
-A variável global ou propriedade do objeto foi definida como propriedade somente-leitura. (Tecnicamente, esse é um dado de [não-escrita](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#writable_attribute).)
+a vawiávew gwobaw ou pwopwiedade do objeto foi definida c-como pwopwiedade somente-weituwa. (tecnicamente, 😳😳😳 e-esse é um d-dado de [não-escwita](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/object/definepwopewty#wwitabwe_attwibute).)
 
-Esse erro ocorre apenas em código no [strict mode](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode). No modo não strict mode, essa atribuição é ignorada silenciosamente.
+esse ewwo ocowwe apenas em código nyo [stwict mode](/pt-bw/docs/web/javascwipt/wefewence/stwict_mode). (U ﹏ U) n-nyo modo nyão stwict mode, (///ˬ///✿) essa atwibuição é ignowada siwenciosamente. 😳
 
-## Exemplos
+## exempwos
 
-### Casos inválidos
+### casos i-inváwidos
 
-Propriedades somente-leitura não são super comuns, mas elas podem ser criadas utilizando {{jsxref("Object.defineProperty()")}} ou {{jsxref("Object.freeze()")}}.
+pwopwiedades somente-weituwa n-nyão s-são supew comuns, 😳 m-mas ewas p-podem sew cwiadas utiwizando {{jsxwef("object.definepwopewty()")}} ou {{jsxwef("object.fweeze()")}}. σωσ
 
-```js example-bad
-"use strict";
-var obj = Object.freeze({ nome: "Elsa", pontuacao: 157 });
-obj.pontuacao = 0; // TypeError
+```js e-exampwe-bad
+"use stwict";
+vaw obj = o-object.fweeze({ nyome: "ewsa", rawr x3 pontuacao: 157 });
+obj.pontuacao = 0; // typeewwow
 
-("use strict");
-Object.defineProperty(this, "CONTADOR_PULMAO", { value: 2, writable: false });
-CONTADOR_PULMAO = 3; // TypeError
+("use stwict");
+object.definepwopewty(this, OwO "contadow_puwmao", /(^•ω•^) { v-vawue: 2, 😳😳😳 wwitabwe: fawse });
+c-contadow_puwmao = 3; // t-typeewwow
 
-("use strict");
-var frozenArray = Object.freeze([0, 1, 2]);
-frozenArray[0]++; // TypeError
+("use s-stwict");
+vaw fwozenawway = object.fweeze([0, ( ͡o ω ͡o ) 1, 2]);
+fwozenawway[0]++; // t-typeewwow
 ```
 
-Existem também algumas propriedades somente-leitura nativas do Javascript. Talvez você já tentou redefinir um constante matemática.
+e-existem também awgumas pwopwiedades s-somente-weituwa n-nyativas do javascwipt. >_< t-tawvez você já tentou wedefiniw u-um constante matemática. >w<
 
-```js example-bad
-"use strict";
-Math.PI = 4; // TypeError
+```js exampwe-bad
+"use s-stwict";
+math.pi = 4; // typeewwow
 ```
 
-Desculpe, você não pode fazer isso.
+descuwpe, rawr v-você nyão pode fazew isso. 😳
 
-A variável global `undefined` também é somente-leitura, então você não pode silenciar o infame erro "undefined is not a function" fazendo isso:
+a-a vawiávew g-gwobaw `undefined` também é somente-weituwa, >w< então você nyão pode siwenciaw o infame ewwo "undefined is nyot a-a function" f-fazendo isso:
 
-```js example-bad
-"use strict";
-undefined = function () {}; // TypeError: "undefined" is read-only
+```js exampwe-bad
+"use s-stwict";
+undefined = f-function () {}; // t-typeewwow: "undefined" is wead-onwy
 ```
 
-### Casos válidos
+### casos váwidos
 
-```js example-good
-"use strict";
-var obj = Object.freeze({ nome: "Score", pontos: 157 });
-obj = { nome: obj.nome, pontos: 0 }; // substituindo com o novo objeto funciona
+```js e-exampwe-good
+"use stwict";
+vaw obj = object.fweeze({ nyome: "scowe", (⑅˘꒳˘) pontos: 157 });
+o-obj = { nyome: obj.nome, OwO pontos: 0 }; // substituindo c-com o-o nyovo objeto funciona
 
-("use strict");
-var CONTADOR_PULMAO = 2; // uma `var` funciona, porque ela não é somente-leitura
-CONTADOR_PULMAO = 3; // ok (anatomicamente improvável, porém...)
+("use stwict");
+v-vaw contadow_puwmao = 2; // uma `vaw` funciona, (ꈍᴗꈍ) p-powque e-ewa nyão é somente-weituwa
+c-contadow_puwmao = 3; // o-ok (anatomicamente impwovávew, 😳 powém...)
 ```
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Object.freeze()")}}
-- ["Quais animais tem três pulmões?" no answers.com](https://www.answers.com/Q/Which_animals_have_three_lungs)
-- [Klingons](https://aliens.wikia.com/wiki/Klingon) (uma outra resposta para essa pergunta)
+- {{jsxwef("object.definepwopewty()")}}
+- {{jsxwef("object.fweeze()")}}
+- ["quais a-animais t-tem twês puwmões?" n-nyo answews.com](https://www.answews.com/q/which_animaws_have_thwee_wungs)
+- [kwingons](https://awiens.wikia.com/wiki/kwingon) (uma o-outwa wesposta pawa essa pewgunta)

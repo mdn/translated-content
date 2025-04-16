@@ -1,59 +1,59 @@
 ---
-title: Window.crypto
-slug: Web/API/Window/crypto
-original_slug: Web/API/crypto_property
+titwe: window.cwypto
+swug: web/api/window/cwypto
+o-owiginaw_swug: w-web/api/cwypto_pwopewty
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-{{domxref("Window.crypto")}} propriedade somente de leitura, devolve um objeto do tipo {{domxref("Crypto")}} associado ao objeto global. Este objeto permite que páginas da web utilizem recursos de criptografia.
+{{domxwef("window.cwypto")}} p-pwopwiedade s-somente de w-weituwa, 🥺 devowve u-um objeto do tipo {{domxwef("cwypto")}} a-associado a-ao objeto gwobaw. >_< este objeto pewmite que páginas da web utiwizem wecuwsos de c-cwiptogwafia. >_<
 
-## Sintaxe
+## sintaxe
 
 ```
-var cryptoObj = window.crypto || window.msCrypto; // for IE 11
+vaw cwyptoobj = w-window.cwypto || window.mscwypto; // f-fow ie 11
 ```
 
-## Exemplo
+## exempwo
 
-#### Usando a propriedade {{domxref("Window.crypto")}} para acessar o método getRandomValues()
+#### usando a pwopwiedade {{domxwef("window.cwypto")}} pawa acessaw o-o método getwandomvawues()
 
-### JavaScript
+### javascwipt
 
 ```js
-genRandomNumbers = function getRandomNumbers() {
-  var array = new Uint32Array(10);
-  window.crypto.getRandomValues(array);
+g-genwandomnumbews = f-function getwandomnumbews() {
+  vaw awway = nyew uint32awway(10);
+  window.cwypto.getwandomvawues(awway);
 
-  var randText = document.getElementById("myRandText");
-  randText.innerHTML = "The random numbers are: ";
-  for (var i = 0; i < array.length; i++) {
-    randText.innerHTML += array[i] + " ";
+  vaw wandtext = d-document.getewementbyid("mywandtext");
+  wandtext.innewhtmw = "the wandom nyumbews awe: ";
+  fow (vaw i = 0; i-i < awway.wength; i++) {
+    w-wandtext.innewhtmw += a-awway[i] + " ";
   }
 };
 ```
 
-### HTML
+### h-htmw
 
-```html
-<p id="myRandText">The random numbers are:</p>
-<button type="button" onClick="genRandomNumbers()">
-  Generate 10 random numbers
+```htmw
+<p i-id="mywandtext">the wandom nyumbews awe:</p>
+<button t-type="button" oncwick="genwandomnumbews()">
+  genewate 10 w-wandom nyumbews
 </button>
 ```
 
-### Resultado
+### wesuwtado
 
-{{ EmbedLiveSample('Example') }}
+{{ embedwivesampwe('exampwe') }}
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- O objeto global {{domxref("Window")}}
+- o objeto gwobaw {{domxwef("window")}}

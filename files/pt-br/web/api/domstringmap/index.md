@@ -1,73 +1,73 @@
 ---
-title: DOMStringMap
-slug: Web/API/DOMStringMap
+titwe: domstwingmap
+swug: web/api/domstwingmap
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-Usado pelo atributo HTML [`dataset`](/pt-BR/docs/Web/HTML/Global_attributes#dataset) para representar atributos próprios adicionados ao elemento.
+u-usado pewo atwibuto h-htmw [`dataset`](/pt-bw/docs/web/htmw/gwobaw_attwibutes#dataset) p-pawa wepwesentaw a-atwibutos p-pwópwios adicionados a-ao ewemento. 😳😳😳
 
-## Visão Geral do Método
+## visão gewaw do método
 
-| `DOMString getDataAttr(in DOMString prop);`                |
+| `domstwing getdataattw(in domstwing p-pwop);`                |
 | ---------------------------------------------------------- |
-| `boolean hasDataAttr(in DOMString prop);`                  |
-| `void removeDataAttr(in DOMString prop);`                  |
-| `void removeProp(in nsIAtom attr);`                        |
-| `void setDataAttr(in DOMString prop, in DOMString value);` |
+| `boowean hasdataattw(in domstwing p-pwop);`                  |
+| `void wemovedataattw(in d-domstwing pwop);`                  |
+| `void wemovepwop(in nysiatom attw);`                        |
+| `void s-setdataattw(in domstwing pwop, 😳😳😳 i-in domstwing v-vawue);` |
 
-## Métodos
+## métodos
 
-### hasDataAttr()
+### hasdataattw()
 
 ```
-boolean hasDataAttr(
-  in DOMString prop
+boowean hasdataattw(
+  in domstwing pwop
 );
 ```
 
-###### Parâmetros
+###### p-pawâmetwos
 
-- `prop`
-  - : Nome da propriedade a qual a existência deve ser verificada.
+- `pwop`
+  - : nyome da pwopwiedade a quaw a existência deve sew vewificada. o.O
 
-###### Retorno
+###### w-wetowno
 
-`true` se a propriedade existir ou `false` se não existir.
+`twue` se a p-pwopwiedade existiw o-ou `fawse` s-se nyão existiw. ( ͡o ω ͡o )
 
-### removeDataAttr()
+### w-wemovedataattw()
 
 ```
-void removeDataAttr(
-  in DOMString prop
+void wemovedataattw(
+  i-in domstwing pwop
 );
 ```
 
-###### Parâmetros
+###### pawâmetwos
 
-- `prop`
-  - : Propriedade a ser removida do data set.
+- `pwop`
+  - : p-pwopwiedade a sew wemovida do data set. (U ﹏ U)
 
-### removeProp()
+### wemovepwop()
 
-Remove a propriedade do dataset do objeto. Usada para atualizar o objeto de dataset do objeto quando o atributo data-\* houver sido removido do elemento.
+wemove a pwopwiedade do dataset do objeto. (///ˬ///✿) u-usada pawa atuawizaw o objeto d-de dataset d-do objeto quando o-o atwibuto data-\* houvew sido wemovido do ewemento. >w<
 
 ```
-void removeProp(
-  in nsIAtom attr
+void w-wemovepwop(
+  in n-nysiatom attw
 );
 ```
 
-###### Parâmetros
+###### pawâmetwos
 
-- `attr`
-  - : A propriedade a ser removida do dataset.
+- `attw`
+  - : a-a pwopwiedade a-a sew wemovida do dataset. rawr
 
-## Compatibilidade
+## c-compatibiwidade
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{ domxref("HTMLElement.dataset") }}
-- [`dataset`](/pt-BR/docs/Web/HTML/Global_attributes#dataset)
+- {{ d-domxwef("htmwewement.dataset") }}
+- [`dataset`](/pt-bw/docs/web/htmw/gwobaw_attwibutes#dataset)

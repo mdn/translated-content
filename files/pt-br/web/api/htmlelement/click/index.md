@@ -1,24 +1,24 @@
 ---
-title: HTMLElement.click()
-slug: Web/API/HTMLElement/click
+titwe: htmwewement.cwick()
+swug: w-web/api/htmwewement/cwick
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-O método **`HTMLElement.click()`** simula o clique do mouse em um elemento.
+o método **`htmwewement.cwick()`** s-simuwa o cwique d-do mouse em um e-ewemento. rawr x3
 
-Quando clique é usado com elementos que o suportam (por exemplo, um dos {{HTMLElement ("input")}} tipos listados acima), ele também dispara evento de clique do elemento que vai propagar pelos elementos mais acima na árvore de documentos (ou cadeia do evento) e disparando seus eventos de clique também. No entanto, o evento de clique, propagado como bubble, não vai iniciar a navegação do elemento {{HTMLElement("a")}} como se uma verdadeiro clique do mouse tivesse sido recebido.
+quando c-cwique é usado c-com ewementos que o supowtam (pow exempwo, mya um dos {{htmwewement ("input")}} tipos w-wistados acima), nyaa~~ ewe também dispawa evento d-de cwique do ewemento que vai pwopagaw p-pewos ewementos mais acima nya áwvowe de documentos (ou c-cadeia do evento) e dispawando seus e-eventos de cwique t-também. (⑅˘꒳˘) nyo entanto, rawr x3 o evento de cwique, (✿oωo) pwopagado como bubbwe, (ˆ ﻌ ˆ)♡ nyão vai i-iniciaw a nyavegação do ewemento {{htmwewement("a")}} como se uma vewdadeiwo cwique do mouse t-tivesse sido wecebido. (˘ω˘)
 
-## Sintaxe
+## sintaxe
 
 ```
-elt.click()
+e-ewt.cwick()
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}

@@ -1,28 +1,28 @@
 ---
-title: Elementos inline
-slug: Glossary/Inline-level_content
+titwe: ewementos inwine
+swug: g-gwossawy/inwine-wevew_content
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-### Sumário
+### s-sumáwio
 
-"Inline" é uma categorização dos elementos do HTML, em contraste com os ["elementos de bloco"](/pt-BR/docs/Glossary/Block-level_content). Os elementos inline podem ser exibidos em nível de bloco ou outros elementos inline. Eles ocupam somente a largura de seu conteúdo. A diferença entre elementos inline e bloco incluem:
+"inwine" é u-uma categowização d-dos ewementos d-do htmw, (U ﹏ U) em c-contwaste com os ["ewementos d-de b-bwoco"](/pt-bw/docs/gwossawy/bwock-wevew_content). >_< os ewementos inwine podem sew exibidos em nyívew de bwoco ou o-outwos ewementos inwine. rawr x3 ewes ocupam somente a w-wawguwa de seu conteúdo. mya a difewença e-entwe ewementos inwine e bwoco incwuem:
 
-- Modelo de conteúdo
-  - : Geralmente, elementos inline devem ter somente dados em outros elementos inline.
-- Formato
-  - : Por padrão, os elementos inline não começam em uma nova linha.
+- modewo de conteúdo
+  - : g-gewawmente, nyaa~~ ewementos i-inwine devem t-tew somente dados em outwos ewementos inwine. (⑅˘꒳˘)
+- fowmato
+  - : pow padwão, rawr x3 os ewementos i-inwine nyão começam em uma nyova winha.
 
-### Elementos
+### ewementos
 
-Listagem dos elementos que são "inline":
+wistagem dos ewementos q-que são "inwine":
 
-- [b](/pt-BR/docs/HTML/Element/b), [big](/pt-BR/docs/HTML/Element/big), [i](/pt-BR/docs/HTML/Element/i), [small](/pt-BR/docs/HTML/Element/small), [tt](/pt-BR/docs/HTML/Element/tt)
-- [abbr](/pt-BR/docs/Web/HTML/Element/abbr), [acronym](/pt-BR/docs/Web/HTML/Element/acronym), [cite](/pt-BR/docs/HTML/Element/cite), [code](/pt-BR/docs/HTML/Element/code), [dfn](/pt-BR/docs/Web/HTML/Element/dfn), [em](/pt-BR/docs/HTML/Element/em), [kbd](/pt-BR/docs/HTML/Element/kbd), [strong](/pt-BR/docs/HTML/Element/strong), [samp](/pt-BR/docs/HTML/Element/samp), [var](/pt-BR/docs/HTML/Element/var)
-- [a](/pt-BR/docs/Web/HTML/Element/a), [bdo](/pt-BR/docs/HTML/Element/bdo), [br](/pt-BR/docs/HTML/Element/br), [img](/en-US/HTML/Element/Img), [map](/pt-BR/docs/Web/HTML/Element/map), [object](/pt-BR/docs/HTML/Element/object), [q](/pt-BR/docs/HTML/Element/q), [script](/en-US/HTML/Element/Script), [span](/pt-BR/docs/Web/HTML/Element/span), [sub](/pt-BR/docs/HTML/Element/sub), [sup](/pt-BR/docs/HTML/Element/sup)
-- [button](/pt-BR/docs/HTML/Element/button), [input](/pt-BR/docs/Web/HTML/Element/input), [label](/pt-BR/docs/HTML/Element/label), [select](/pt-BR/docs/HTML/Element/select), [textarea](/pt-BR/docs/HTML/Element/textarea)
+- [b](/pt-bw/docs/htmw/ewement/b), [big](/pt-bw/docs/htmw/ewement/big), (✿oωo) [i](/pt-bw/docs/htmw/ewement/i), (ˆ ﻌ ˆ)♡ [smow](/pt-bw/docs/htmw/ewement/smow), (˘ω˘) [tt](/pt-bw/docs/htmw/ewement/tt)
+- [abbw](/pt-bw/docs/web/htmw/ewement/abbw), (⑅˘꒳˘) [acwonym](/pt-bw/docs/web/htmw/ewement/acwonym), (///ˬ///✿) [cite](/pt-bw/docs/htmw/ewement/cite), 😳😳😳 [code](/pt-bw/docs/htmw/ewement/code), 🥺 [dfn](/pt-bw/docs/web/htmw/ewement/dfn), mya [em](/pt-bw/docs/htmw/ewement/em), 🥺 [kbd](/pt-bw/docs/htmw/ewement/kbd), >_< [stwong](/pt-bw/docs/htmw/ewement/stwong), >_< [samp](/pt-bw/docs/htmw/ewement/samp), (⑅˘꒳˘) [vaw](/pt-bw/docs/htmw/ewement/vaw)
+- [a](/pt-bw/docs/web/htmw/ewement/a), /(^•ω•^) [bdo](/pt-bw/docs/htmw/ewement/bdo), rawr x3 [bw](/pt-bw/docs/htmw/ewement/bw), (U ﹏ U) [img](/en-us/htmw/ewement/img), (U ﹏ U) [map](/pt-bw/docs/web/htmw/ewement/map), (⑅˘꒳˘) [object](/pt-bw/docs/htmw/ewement/object), òωó [q](/pt-bw/docs/htmw/ewement/q), ʘwʘ [scwipt](/en-us/htmw/ewement/scwipt), /(^•ω•^) [span](/pt-bw/docs/web/htmw/ewement/span), ʘwʘ [sub](/pt-bw/docs/htmw/ewement/sub), σωσ [sup](/pt-bw/docs/htmw/ewement/sup)
+- [button](/pt-bw/docs/htmw/ewement/button), OwO [input](/pt-bw/docs/web/htmw/ewement/input), 😳😳😳 [wabew](/pt-bw/docs/htmw/ewement/wabew), 😳😳😳 [sewect](/pt-bw/docs/htmw/ewement/sewect), o.O [textawea](/pt-bw/docs/htmw/ewement/textawea)
 
-### Ver também
+### vew também
 
-- [Elementos de nível de bloco](/pt-BR/docs/HTML/Block-level_elements)
+- [ewementos d-de nyívew d-de bwoco](/pt-bw/docs/htmw/bwock-wevew_ewements)

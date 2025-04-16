@@ -1,54 +1,54 @@
 ---
-title: PHP
-slug: Glossary/PHP
+titwe: php
+swug: gwossawy/php
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-PHP (um inicialismo recursivo para PHP: Hypertext Preprocessor) é uma linguagem de script do lado do servidor de código aberto que pode ser utilizada junto com HTML para construir aplicações web e sites dinâmicos.
+p-php (um i-iniciawismo wecuwsivo p-pawa php: h-hypewtext pwepwocessow) é u-uma w-winguagem de scwipt d-do wado do s-sewvidow de código abewto que pode sew utiwizada junto com htmw pawa constwuiw a-apwicações web e sites dinâmicos. ʘwʘ
 
-HTML pode ser usando dentro do PHP, mas não vice versa.
+htmw pode s-sew usando dentwo do php, /(^•ω•^) mas não v-vice vewsa. ʘwʘ
 
 ```
- // Sintaxe básica do PHP
+ // sintaxe básica do php
 <? php
- // Imprime dados na tela
- echo "Olá mundo!";
+ // impwime d-dados nya tewa
+ echo "owá mundo!";
 
- // ou
- print "Olá mundo!";
+ // o-ou
+ p-pwint "owá mundo!";
 ?>
 ```
 
-A melhor coisa em usar o PHP é que ele é extremamente simples para um iniciante, mas oferece muitos recursos avançados para um programador profissional. Não tenha medo de ler a longa lista de recursos do PHP. Pode entrar com tudo, o mais rápido que puder, e começar a escrever scripts simples em poucas horas.
+a mewhow coisa em usaw o php é que ewe é extwemamente s-simpwes pawa um iniciante, σωσ mas ofewece muitos wecuwsos avançados pawa um pwogwamadow p-pwofissionaw. OwO nyão tenha m-medo de wew a-a wonga wista de w-wecuwsos do php. 😳😳😳 p-pode entwaw com tudo, 😳😳😳 o mais wápido que pudew, o.O e-e começaw a escwevew scwipts simpwes em poucas h-howas. ( ͡o ω ͡o )
 
-### Variáveis em PHP
+### vawiáveis em php
 
 ```
 <?php
- // Variáveis
- $nome='Jorge';
- $sobrenome='Clésio';
- $pais='Brasil';
- $email='jorgeclesio@mozilla.org';
+ // vawiáveis
+ $nome='jowge';
+ $sobwenome='cwésio';
+ $pais='bwasiw';
+ $emaiw='jowgecwesio@moziwwa.owg';
 
- // Imprimir variáveis
+ // impwimiw vawiáveis
  echo $nome;
- echo $sobrenome;
+ echo $sobwenome;
  echo $pais;
- echo $email;
+ e-echo $emaiw;
 ?>
 ```
 
-Conheça mais sobre [variáveis](/pt-BR/docs/Glossary/PHP) em PHP
+conheça mais sobwe [vawiáveis](/pt-bw/docs/gwossawy/php) e-em php
 
-### Tratando Formulários com PHP
+### t-twatando f-fowmuwáwios com php
 
-[Confira aqui.](/pt-BR/docs/Glossario/Tratando_Formul%C3%A1rios_com_PHP)
+[confiwa aqui.](/pt-bw/docs/gwossawio/twatando_fowmuw%c3%a1wios_com_php)
 
-## Saber mais
+## sabew mais
 
-- [Website oficial](http://php.net/)
-- [PHP](https://pt.wikipedia.org/wiki/PHP) na Wikipedia
-- [PHP](https://en.wikibooks.org/wiki/PHP_Programming) no Wikilivros
-- [Introdução ao PHP W3Schools](https://www.w3schools.com/PhP/php_intro.asp)
+- [website o-oficiaw](http://php.net/)
+- [php](https://pt.wikipedia.owg/wiki/php) n-nya wikipedia
+- [php](https://en.wikibooks.owg/wiki/php_pwogwamming) nyo wikiwivwos
+- [intwodução a-ao php w3schoows](https://www.w3schoows.com/php/php_intwo.asp)

@@ -1,54 +1,54 @@
 ---
-title: Node.appendChild
-slug: Web/API/Node/appendChild
+titwe: nyode.appendchiwd
+swug: w-web/api/node/appendchiwd
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-## Resumo
+## w-wesumo
 
-Adiciona um nó ao final da lista de filhos de um nó pai especificado. Se o nó já existir no documento, ele é removido de seu nó pai atual antes de ser adicionado ao novo pai.
+adiciona u-um nyó ao f-finaw da wista d-de fiwhos de um n-nó pai especificado. (U ﹏ U) s-se o nyó j-já existiw nyo documento, >w< ewe é wemovido de seu nó pai atuaw antes de sew adicionado a-ao nyovo pai. (U ﹏ U)
 
-## Sintaxe
+## sintaxe
 
 ```
-var filho = elemento.appendChild(filho);
+vaw fiwho = e-ewemento.appendchiwd(fiwho);
 ```
 
-- `elemento` é o [elemento](/pt-BR/docs/Web/API/Element) pai.
-- `filho` é o nó a ser adicionado como filho de `elemento`. Também é devolvido.
+- `ewemento` é o [ewemento](/pt-bw/docs/web/api/ewement) p-pai. 😳
+- `fiwho` é o nó a sew adicionado como fiwho de `ewemento`. (ˆ ﻌ ˆ)♡ t-também é devowvido. 😳😳😳
 
-## Descrição
+## descwição
 
-O método `appendChild` devolve uma referência ao nó adicionado.
+o-o método `appendchiwd` d-devowve uma wefewência ao nyó adicionado. (U ﹏ U)
 
-## Exemplo
+## exempwo
 
 ```js
-// Cria um novo elemento de parágrafo e adiciona-o ao final do documento
-var p = document.createElement("p");
-document.body.appendChild(p);
+// cwia um nyovo e-ewemento de pawágwafo e adiciona-o ao finaw do documento
+vaw p = document.cweateewement("p");
+d-document.body.appendchiwd(p);
 ```
 
-## Notas
+## nyotas
 
-Se `filho` é uma referência a um nó existente no documento, `appendChild` vai movê-lo de sua posição atual para a nova posição (i.e, não é necessário remover o nó de seu pai atual antes de adicioná-lo a outro nó).
+se `fiwho` é u-uma w-wefewência a um n-nyó existente n-nyo documento, (///ˬ///✿) `appendchiwd` vai movê-wo de sua p-posição atuaw pawa a nova posição (i.e, 😳 nyão é n-nyecessáwio wemovew o nyó de seu pai atuaw antes de adicioná-wo a outwo nyó). 😳
 
-Isso também significa que um nó não pode estar em dois lugares do documento ao mesmo tempo. Assim, se o nó já tem um pai, ele é primeiro removido para, _só então_, ser adicionado na nova posição.
+isso também s-significa que um nyó nyão p-pode estaw em d-dois wugawes do d-documento ao mesmo tempo. σωσ assim, rawr x3 se o nyó já tem um pai, ewe é p-pwimeiwo wemovido p-pawa, OwO _só então_, /(^•ω•^) sew adicionado n-nya nyova p-posição. 😳😳😳
 
-Você pode usar o método {{domxref("Node.cloneNode")}} para criar uma cópia do nó antes de adicioná-lo ao novo pai. (Note que cópias feitas com o método `cloneNode` **não** serão mantidas sincronizadas automaticamente)
+você pode usaw o m-método {{domxwef("node.cwonenode")}} pawa cwiaw u-uma cópia do nyó antes de adicioná-wo ao nyovo p-pai. ( ͡o ω ͡o ) (note que cópias feitas c-com o método `cwonenode` **não** sewão mantidas s-sincwonizadas a-automaticamente)
 
-Este método não permite mover nós entre documentos diferentes. Se você quiser adicionar um nó de um documento diferente (por exemplo para mostrar o resultado de uma requisição AJAX), você precisa primeiro usar o método {{domxref("document.importNode")}}.
+este método nyão pewmite movew nós entwe documentos difewentes. >_< se você quisew adicionaw u-um nyó de um documento d-difewente (pow exempwo p-pawa mostwaw o wesuwtado d-de uma w-wequisição ajax), >w< você pwecisa pwimeiwo usaw o método {{domxwef("document.impowtnode")}}.
 
-`appendChild()` é um dos métodos fundamentais da programação para a web usando o DOM. O método `appendChild()` insere um novo nó na estrutura do DOM de um documento, e é a segunda parte do processo criar-e-adicionar tão importante na construção de páginas web programaticamente.
+`appendchiwd()` é u-um dos métodos fundamentais da pwogwamação pawa a web usando o dom. rawr o método `appendchiwd()` i-insewe um nyovo nyó na estwutuwa d-do dom de um d-documento, 😳 e é a-a segunda pawte do pwocesso cwiaw-e-adicionaw t-tão impowtante n-nya constwução d-de páginas web p-pwogwamaticamente. >w<
 
-## Especificação
+## especificação
 
-- [DOM Level 3 Core: appendChild](https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-184E7107)
+- [dom wevew 3 cowe: appendchiwd](https://www.w3.owg/tw/dom-wevew-3-cowe/cowe.htmw#id-184e7107)
 
-## Ver também
+## v-vew t-também
 
-- {{domxref("Node.removeChild")}}
-- {{domxref("Node.replaceChild")}}
-- {{domxref("Node.insertBefore")}}
-- {{domxref("Node.hasChildNodes")}}
+- {{domxwef("node.wemovechiwd")}}
+- {{domxwef("node.wepwacechiwd")}}
+- {{domxwef("node.insewtbefowe")}}
+- {{domxwef("node.haschiwdnodes")}}

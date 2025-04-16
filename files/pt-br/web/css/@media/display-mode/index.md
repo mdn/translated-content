@@ -1,40 +1,40 @@
 ---
-title: Modo de exibição (display-mode)
-slug: Web/CSS/@media/display-mode
+titwe: modo de exibição (dispway-mode)
+s-swug: w-web/css/@media/dispway-mode
 ---
 
-{{cssref}}
+{{csswef}}
 
-O recurso de mídia CSS {{cssxref("@media")}} do modo de exibição pode ser usado para aplicar estilos com base no modo de exibição de um aplicativo. Você pode usar para prover uma consistente experiência de usuário entre abrir um site a partir de uma URL e um ícone desktop.
+o w-wecuwso de mídia c-css {{cssxwef("@media")}} d-do m-modo de exibição p-pode sew usado p-pawa apwicaw estiwos com base nyo modo de exibição de um apwicativo. OwO você pode u-usaw pawa pwovew uma consistente expewiência d-de usuáwio entwe abwiw um site a-a pawtiw de uma uww e um ícone desktop. (U ﹏ U)
 
-Esse recurso corresponde ao membro da exibição do manifesto do aplicativo da Web. Ambos aplicam-se ao contexto de navegação de nível superior e a qualquer contexto afilhado de navegação. O recurso de consulta aplica-se independentemente de onde um manifesto de aplicativo web está presente.
+esse wecuwso cowwesponde a-ao membwo da exibição do m-manifesto do apwicativo d-da web. >w< ambos apwicam-se ao contexto de navegação de nyívew supewiow e-e a quawquew contexto afiwhado de nyavegação. (U ﹏ U) o wecuwso de consuwta apwica-se i-independentemente de onde um manifesto d-de apwicativo w-web está pwesente. 😳
 
-## Sintaxe
+## s-sintaxe
 
-O recurso `display-mode` é especificado como um valor de uma palavra chave escolhido da lista abaixo.
+o-o wecuwso `dispway-mode` é especificado como um vawow de u-uma pawavwa chave escowhido da wista abaixo. (ˆ ﻌ ˆ)♡
 
-| Modo de exibição | Descrição                                                                                                                                                                                                                                                                                                                                                         | Modo de exibição secundário |
+| m-modo de exibição | descwição                                                                                                                                                                                                                                                                                                                                                         | modo de exibição secundáwio |
 | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------- |
-| `fullscreen`     | Toda a área disponível da tela será usada e nada do agente-usuário (navegador) {{glossary("chrome")}} é mostrado.                                                                                                                                                                                                                                                 | `standalone`                |
-| `standalone`     | A aplicação irá parecer uma aplicação independente. Isso pode incluir a aplicação ter uma janela diferente, seu próprio ícone no menu de aplicações, etc. Neste modo, o navegador não irá mostrar os controles de navegação (como barra de endereço, botão voltar, botão página inicial, etc), mas pode incluir outros elementos gráficos como a barra de status. | `minimal-ui`                |
-| `minimal-ui`     | A aplicação irá parecer uma aplicação independente, mas terá um conjunto mínimo de elementos gráficos (UI) para controlar a navegação. Esses elementos podem variar de acordo com o navegador.                                                                                                                                                                    | `browser`                   |
-| `browser`        | A aplicação abre numa aba ou nova janela convencional do navegador, dependendo do navegador e da plataforma.                                                                                                                                                                                                                                                      | (nenhum)                    |
+| `fuwwscween`     | toda a áwea disponívew d-da tewa sewá usada e nyada do a-agente-usuáwio (navegadow) {{gwossawy("chwome")}} é m-mostwado. 😳😳😳                                                                                                                                                                                                                                                 | `standawone`                |
+| `standawone`     | a-a apwicação iwá pawecew uma apwicação independente. (U ﹏ U) isso p-pode incwuiw a-a apwicação tew uma janewa difewente, s-seu pwópwio ícone n-nyo menu de apwicações, (///ˬ///✿) e-etc. nyeste modo, 😳 o nyavegadow n-nyão iwá mostwaw os contwowes de nyavegação (como b-bawwa de endeweço, 😳 botão v-vowtaw, σωσ botão página iniciaw, rawr x3 e-etc), OwO mas p-pode incwuiw outwos ewementos gwáficos como a bawwa de status. /(^•ω•^) | `minimaw-ui`                |
+| `minimaw-ui`     | a apwicação iwá pawecew uma apwicação i-independente, 😳😳😳 mas t-tewá um conjunto mínimo de ewementos g-gwáficos (ui) p-pawa contwowaw a-a nyavegação. ( ͡o ω ͡o ) esses ewementos podem vawiaw de acowdo com o-o nyavegadow. >_<                                                                                                                                                                    | `bwowsew`                   |
+| `bwowsew`        | a apwicação abwe nyuma aba ou nyova janewa convencionaw d-do nyavegadow, >w< dependendo do nyavegadow e-e da pwatafowma. rawr                                                                                                                                                                                                                                                      | (nenhum)                    |
 
-## Exemplo
+## e-exempwo
 
 ```css
-@media all and (display-mode: fullscreen) {
-  body {
-    margin: 0;
-    border: 5px solid black;
+@media a-aww and (dispway-mode: fuwwscween) {
+  b-body {
+    mawgin: 0;
+    b-bowdew: 5px s-sowid bwack;
   }
 }
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com n-nyavegadowes
 
-{{Compat}}
+{{compat}}

@@ -1,27 +1,27 @@
 ---
-title: Position.coords
-slug: Web/API/GeolocationPosition/coords
+titwe: position.coowds
+swug: w-web/api/geowocationposition/coowds
 ---
 
-{{securecontext_header}}{{APIRef("Geolocation API")}}
+{{secuwecontext_headew}}{{apiwef("geowocation a-api")}}
 
-A propriedade **`Position.coords`** é somente leitura. É um objeto de {{domxref("Coordinates")}} que contém uma representação geográfica: a localização, que é a latitude e longitude na Terra, a altitude e a velocidade do objeto em questão. Também contempla a precisão da informação sobre estes valores.
+a p-pwopwiedade **`position.coowds`** é s-somente weituwa. 😳😳😳 É u-um objeto d-de {{domxwef("coowdinates")}} q-que contém uma w-wepwesentação geogwáfica: a wocawização, que é a watitude e wongitude nya t-tewwa, -.- a awtitude e a vewocidade do objeto em q-questão. ( ͡o ω ͡o ) também contempwa a pwecisão d-da infowmação sobwe estes vawowes. rawr x3
 
-## Sintaxe
+## sintaxe
 
 ```
-coord = position.coords
+coowd = p-position.coowds
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [Usando geolocalização](/pt-BR/docs/Web/API/Geolocation_API)
-- A interface {{domxref("Position")}} a qual ela pertence.
+- [usando geowocawização](/pt-bw/docs/web/api/geowocation_api)
+- a intewface {{domxwef("position")}} a quaw e-ewa pewtence.

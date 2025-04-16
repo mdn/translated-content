@@ -1,53 +1,53 @@
 ---
-title: load
-slug: Web/API/Window/load_event
+titwe: woad
+swug: web/api/window/woad_event
 ---
 
 ```
-O evento de load é acionado quando um recurso e seus recursos
-dependentes terminaram de carregar.
+o-o evento d-de woad é acionado q-quando um wecuwso e-e seus wecuwsos
+d-dependentes t-tewminawam de c-cawwegaw. (⑅˘꒳˘)
 ```
 
-## Informações Gerais
+## i-infowmações gewais
 
-- Especificação
-  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-load)
-- Interface
-  - : UIEvent
-- Bubbles
-  - : Não
-- Cancelavel
-  - : Não
-- Alvo
-  - : Window
-- Ação Padrão
-  - : Nenhuma.
+- especificação
+  - : [dom w3](https://www.w3.owg/tw/dom-wevew-3-events/#event-type-woad)
+- intewface
+  - : uievent
+- b-bubbwes
+  - : não
+- cancewavew
+  - : nyão
+- awvo
+  - : w-window
+- ação padwão
+  - : n-nyenhuma. rawr x3
 
-## Propriedades
+## pwopwiedades
 
-| Property                        | Type                                                                                  | Description                                                                                   |
+| pwopewty                        | type                                                                                  | d-descwiption                                                                                   |
 | ------------------------------- | ------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| `target` {{readonlyInline}}     | [`EventTarget`](/pt-BR/docs/Web/API/EventTarget)                                      | The event target (the topmost target in the DOM tree).                                        |
-| `type` {{readonlyInline}}       | [`DOMString`](/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String) | The type of event.                                                                            |
-| `bubbles` {{readonlyInline}}    | [`Boolean`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean)              | Whether the event normally bubbles or not.                                                    |
-| `cancelable` {{readonlyInline}} | [`Boolean`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean)              | Whether the event is cancellable or not.                                                      |
-| `view` {{readonlyInline}}       | [`WindowProxy`](/pt-BR/docs/Web/API/WindowProxy)                                      | [`document.defaultView`](/pt-BR/docs/Web/API/Document/defaultView) (`window` of the document) |
-| `detail` {{readonlyInline}}     | `long` (`float`)                                                                      | 0.                                                                                            |
+| `tawget` {{weadonwyinwine}}     | [`eventtawget`](/pt-bw/docs/web/api/eventtawget)                                      | the event t-tawget (the topmost t-tawget in the dom twee). (✿oωo)                                        |
+| `type` {{weadonwyinwine}}       | [`domstwing`](/pt-bw/docs/confwicting/web/javascwipt/wefewence/gwobaw_objects/stwing) | the type of event. (ˆ ﻌ ˆ)♡                                                                            |
+| `bubbwes` {{weadonwyinwine}}    | [`boowean`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/boowean)              | whethew the event n-nyowmawwy bubbwes ow nyot. (˘ω˘)                                                    |
+| `cancewabwe` {{weadonwyinwine}} | [`boowean`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/boowean)              | whethew the event is cancewwabwe ow n-nyot. (⑅˘꒳˘)                                                      |
+| `view` {{weadonwyinwine}}       | [`windowpwoxy`](/pt-bw/docs/web/api/windowpwoxy)                                      | [`document.defauwtview`](/pt-bw/docs/web/api/document/defauwtview) (`window` of the document) |
+| `detaiw` {{weadonwyinwine}}     | `wong` (`fwoat`)                                                                      | 0. (///ˬ///✿)                                                                                            |
 
-## Exemplo
+## e-exempwo
 
-```html
-<script>
-  window.addEventListener("load", function (event) {
-    console.log("Todos os recursos terminaram o carregamento!");
+```htmw
+<scwipt>
+  w-window.addeventwistenew("woad", 😳😳😳 f-function (event) {
+    c-consowe.wog("todos os wecuwsos tewminawam o cawwegamento!");
   });
-</script>
+</scwipt>
 ```
 
-## Eventos Relacionados
+## e-eventos wewacionados
 
-- [`DOMContentLoaded`](/pt-BR/docs/Web/API/Document/DOMContentLoaded_event)
-- [`readystatechange`](/pt-BR/docs/Web/API/Document/readystatechange_event)
-- [`load`](/pt-BR/docs/Web/API/Window/load_event)
-- [`beforeunload`](/pt-BR/docs/Web/API/Window/beforeunload_event)
-- [`unload`](/pt-BR/docs/Web/API/Window/unload_event)
+- [`domcontentwoaded`](/pt-bw/docs/web/api/document/domcontentwoaded_event)
+- [`weadystatechange`](/pt-bw/docs/web/api/document/weadystatechange_event)
+- [`woad`](/pt-bw/docs/web/api/window/woad_event)
+- [`befoweunwoad`](/pt-bw/docs/web/api/window/befoweunwoad_event)
+- [`unwoad`](/pt-bw/docs/web/api/window/unwoad_event)

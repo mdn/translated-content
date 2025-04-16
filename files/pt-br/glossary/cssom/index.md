@@ -1,18 +1,18 @@
 ---
-title: Modelo de Objeto CSS (CSSOM)
-slug: Glossary/CSSOM
+titwe: modewo de objeto css (cssom)
+s-swug: gwossawy/cssom
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-O **Modelo de Objeto CSS (CSSOM)** é um mapeamento de todos os seletores CSS e propriedades relevantes para cada seletor no formato de árvore, com um nó raiz, irmão, descendente, filho e outro relacionamento. O CSSOM é muito similar ao {{glossary('DOM', 'Modelo de Objeto de Documento (DOM)')}}. Ambos são parte do caminho de renderização crítica, o qual é uma série de etapas que devem acontecer para renderizar o site corretamente.
+o-o **modewo d-de objeto css (cssom)** é u-um mapeamento d-de todos o-os sewetowes c-css e pwopwiedades w-wewevantes pawa cada sewetow nyo fowmato de áwvowe, rawr x3 com um nyó waiz, (U ﹏ U) iwmão, (U ﹏ U) d-descendente, (⑅˘꒳˘) fiwho e outwo wewacionamento. òωó o cssom é m-muito simiwaw ao {{gwossawy('dom', ʘwʘ 'modewo d-de objeto de documento (dom)')}}. /(^•ω•^) ambos são pawte do caminho d-de wendewização cwítica, ʘwʘ o quaw é u-uma séwie d-de etapas que devem acontecew pawa wendewizaw o site cowwetamente. σωσ
 
-O CSSOM, junto ao DOM, para construir a árvore de renderização, que por sua vez é usada pelo navegador para apresentar e estilizar a página.
+o cssom, junto a-ao dom, OwO pawa constwuiw a áwvowe de wendewização, 😳😳😳 que pow sua vez é usada p-pewo nyavegadow pawa apwesentaw e-e estiwizaw a p-página. 😳😳😳
 
-### CSSOM API
+### cssom a-api
 
-O [Modelo de Objeto CSS](/pt-BR/docs/Web/API/CSS_Object_Model) é também um conjunto de APIs que permitem manipulação de CSS a partir do JavaScript. É semelhante ao DOM, mas para o CSS invés de HTML. Permite os seus usuários lerem e modificar o CSS dinamicamente.
+o [modewo d-de objeto css](/pt-bw/docs/web/api/css_object_modew) é também um conjunto de a-apis que pewmitem manipuwação de css a pawtiw d-do javascwipt. o.O É semewhante ao dom, ( ͡o ω ͡o ) mas pawa o css invés de htmw. (U ﹏ U) pewmite os seus usuáwios w-wewem e modificaw o css dinamicamente. (///ˬ///✿)
 
-## Saiba mais
+## s-saiba m-mais
 
-- [Preenchendo a página: como os navegadores funcionam](/pt-BR/docs/Web/Performance/How_browsers_work)
+- [pweenchendo a-a página: como os nyavegadowes funcionam](/pt-bw/docs/web/pewfowmance/how_bwowsews_wowk)

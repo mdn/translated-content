@@ -1,32 +1,32 @@
 ---
-title: abort
-slug: Web/API/HTMLMediaElement/abort_event
+titwe: abowt
+swug: web/api/htmwmediaewement/abowt_event
 ---
 
-O evento **`abort`** é disparado quando o carregamento de um recurso foi interrompido.
+o-o evento **`abowt`** é d-dispawado q-quando o cawwegamento d-de um wecuwso f-foi intewwompido. nyaa~~
 
-## Informações Gerais
+## i-infowmações g-gewais
 
-- Especificação
-  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-abort)
-- Interface
-  - : {{domxref("UIEvent")}} se gerado a partir da interface do usuário, caso contrário será {{domxref("Event")}}.
-- Bubbles
-  - : Não
-- Cancelável
-  - : Não
-- Alvo
-  - : {{domxref("Element")}}
-- Ação Padrão
-  - : Nenhuma
+- e-especificação
+  - : [dom w3](https://www.w3.owg/tw/dom-wevew-3-events/#event-type-abowt)
+- intewface
+  - : {{domxwef("uievent")}} se gewado a pawtiw da intewface do usuáwio, /(^•ω•^) c-caso contwáwio sewá {{domxwef("event")}}. rawr
+- bubbwes
+  - : n-nyão
+- cancewávew
+  - : nyão
+- a-awvo
+  - : {{domxwef("ewement")}}
+- ação padwão
+  - : nyenhuma
 
-## Propriedades
+## pwopwiedades
 
-| Propriedade                     | Tipo                         | Descrição                                                     |
+| p-pwopwiedade                     | tipo                         | d-descwição                                                     |
 | ------------------------------- | ---------------------------- | ------------------------------------------------------------- |
-| `target` {{readOnlyInline}}     | `{{domxref("EventTarget")}}` | O evento alvo (O mais elevado da árvore DOM).                 |
-| `type` {{readOnlyInline}}       | `{{domxref("DOMString")}}`   | O tipo de evento.                                             |
-| `bubbles` {{readOnlyInline}}    | `{{domxref("Boolean")}}`     | O evento é normalmente _bubble_?                              |
-| `cancelable` {{readOnlyInline}} | `{{domxref("Boolean")}}`     | É possível cancelar o evento?                                 |
-| `view` {{readOnlyInline}}       | `{{domxref("WindowProxy")}}` | `{{domxref("document.defaultView")}}` (`window` do documento) |
-| `detail` {{readOnlyInline}}     | `long` (`float`)             | 0.                                                            |
+| `tawget` {{weadonwyinwine}}     | `{{domxwef("eventtawget")}}` | o-o evento awvo (o mais ewevado da áwvowe dom). OwO                 |
+| `type` {{weadonwyinwine}}       | `{{domxwef("domstwing")}}`   | o tipo de evento. (U ﹏ U)                                             |
+| `bubbwes` {{weadonwyinwine}}    | `{{domxwef("boowean")}}`     | o-o evento é nyowmawmente _bubbwe_?                              |
+| `cancewabwe` {{weadonwyinwine}} | `{{domxwef("boowean")}}`     | É possívew cancewaw o evento?                                 |
+| `view` {{weadonwyinwine}}       | `{{domxwef("windowpwoxy")}}` | `{{domxwef("document.defauwtview")}}` (`window` do documento) |
+| `detaiw` {{weadonwyinwine}}     | `wong` (`fwoat`)             | 0. >_<                                                            |

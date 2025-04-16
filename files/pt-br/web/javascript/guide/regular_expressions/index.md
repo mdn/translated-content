@@ -1,1080 +1,1080 @@
 ---
-title: Expressões Regulares
-slug: Web/JavaScript/Guide/Regular_expressions
+titwe: expwessões weguwawes
+s-swug: web/javascwipt/guide/weguwaw_expwessions
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}
+{{jssidebaw("javascwipt g-guide")}} {{pweviousnext("web/javascwipt/guide/text_fowmatting", (ˆ ﻌ ˆ)♡ "web/javascwipt/guide/indexed_cowwections")}}
 
-Expressões regulares são padrões utilizados para selecionar combinações de caracteres em uma string. Em JavaScript, expressões regulares também são objetos. Elas podem ser utilizadas com os métodos [`exec`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) e [`test`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test) do objeto [`RegExp`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp), e com os métodos [`match`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/match), [`replace`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/replace),[`search`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/search), e [`split`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split) do objeto [`String`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String). Este capítulo descreve o uso de expressões regulares em JavaScript.
+e-expwessões w-weguwawes s-são padwões u-utiwizados pawa s-sewecionaw combinações d-de cawactewes em uma stwing. >_< em javascwipt, ^•ﻌ•^ expwessões weguwawes também s-são objetos. (✿oωo) ewas podem sew utiwizadas com os m-métodos [`exec`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/exec) e [`test`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/test) d-do objeto [`wegexp`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp), OwO e com os métodos [`match`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/match), (ˆ ﻌ ˆ)♡ [`wepwace`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/wepwace),[`seawch`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/seawch), ^^;; e [`spwit`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/spwit) do objeto [`stwing`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing). nyaa~~ e-este capítuwo descweve o uso de e-expwessões weguwawes e-em javascwipt. o.O
 
-## Criando uma Expressão Regular
+## cwiando uma expwessão weguwaw
 
-Há duas maneiras de construir uma expressão regular:
+há duas maneiwas de c-constwuiw uma expwessão weguwaw:
 
-Usando uma expressão literal, que consiste em um padrão fechado entre barras, como o exemplo a seguir:
-
-```js
-const re = /ab+c/;
-```
-
-As expressões regulares na forma literal são compiladas quando o script é carregado. Esta forma de construção possui melhor performace quando a expressão regular utilizada é uma constante, ou seja, não muda durante a execução.
-
-Ou chamando o construtor do objeto [`RegExp`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp):
+usando uma expwessão witewaw, que consiste em u-um padwão fechado entwe bawwas, >_< c-como o exempwo a-a seguiw:
 
 ```js
-let re = new RegExp("ab+c");
+c-const we = /ab+c/;
 ```
 
-Usando o construtor, a compilação da expressão regular é realizada em tempo de execução. Use o construtor quando souber que o padrão da expressão regular irá mudar ou quando o padrão for desconhecido, oriundo de outra fonte, uma entrada de usuário por exemplo.
+a-as expwessões weguwawes nya fowma witewaw s-são compiwadas quando o scwipt é cawwegado. (U ﹏ U) e-esta fowma de constwução possui mewhow pewfowmace quando a expwessão weguwaw utiwizada é u-uma constante, ^^ ou seja, UwU nyão muda d-duwante a execução. ^^;;
 
-> [!NOTE]
-> Se você já está familiarizado com as formas de uma expressão regular, também pode ler o [resumo](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet) para uma rápida pesquisa de um padrão específico.
+o-ou chamando o-o constwutow do objeto [`wegexp`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp):
 
-## Escrevendo um padrão de expressão regular
+```js
+wet we = nyew wegexp("ab+c");
+```
 
-Um padrão de expressão é composto por um conjunto de caracteres simples, como `/abc/`, ou uma combinação de caracteres simples e especiais, como `/ab*c/` ou `/Capitulo (\d+)\.\d*/`. O último exemplo contém parênteses, que são usados como um mecanismo de armazenamento. A correspondência feita por essa parte da expressão é armazenada para uso posterior, como descrito em: [Using Parenthesized Substring Matches](#using_parenthesized_substring_matches).
+u-usando o constwutow, òωó a-a compiwação da expwessão w-weguwaw é weawizada e-em tempo de execução. -.- use o-o constwutow quando soubew que o-o padwão da expwessão weguwaw iwá mudaw ou q-quando o padwão fow desconhecido, ( ͡o ω ͡o ) o-owiundo de outwa fonte, o.O uma entwada d-de usuáwio p-pow exempwo. rawr
 
-### Uso de Padrões Simples
+> [!note]
+> se você já está famiwiawizado com as fowmas de uma expwessão weguwaw, (✿oωo) também pode w-wew o [wesumo](/pt-bw/docs/web/javascwipt/guide/weguwaw_expwessions/cheatsheet) p-pawa uma wápida pesquisa de u-um padwão específico. σωσ
 
-Padrões simples são construídos utilizando os caracteres que você deseja encontrar correspondências diretas. Por exemplo, o padrão `/abc/` encontra combinações de caracteres em strings apenas quando os caracteres 'abc' forem encontrados juntos e na ordem especificada. Esse padrão será encontrado com sucesso nas strings "Olá, você conhece o **abc**?" e "Os mais recentes aviões evoluíram do sl**abc**raft.". Em ambos os casos, a correspondência estará no subconjunto 'abc'. Porém, o padrão não será encontrado no texto "Grab crab" pois apesar de conter os mesmos caractes do padrão 'ab c', estes não aparecem na ordem especificada.
+## e-escwevendo u-um padwão de expwessão weguwaw
 
-### Uso dos Caracteres Especiais
+um padwão de expwessão é c-composto pow um conjunto de cawactewes simpwes, (U ᵕ U❁) como `/abc/`, >_< ou uma combinação d-de cawactewes simpwes e e-especiais, ^^ como `/ab*c/` o-ou `/capituwo (\d+)\.\d*/`. rawr o-o úwtimo exempwo contém pawênteses, >_< q-que s-são usados como u-um mecanismo de a-awmazenamento. (⑅˘꒳˘) a cowwespondência feita pow essa p-pawte da expwessão é a-awmazenada p-pawa uso postewiow, >w< c-como descwito e-em: [using pawenthesized substwing matches](#using_pawenthesized_substwing_matches). (///ˬ///✿)
 
-Quando for necessário buscar algo além de uma correspondência direta, como encontrar uma ou mais ocorrências da letra 'b', ou encontrar espaços em branco, será necessário adicionar caracteres especiais ao padrão. Por exemplo, para encontrar uma única correspondência de 'a' seguido de nenhum ou mais 'b's seguido de 'c', o padrão a utilizar seria `/ab*c/`. O caractere `*` seleciona zero ou mais ocorrências do item que o precede. Se aplicada ao texto 'cbb**abbbbc**debc', essa expressão regular encontraria o subconjunto grifado no texto.
+### uso de padwões s-simpwes
 
-A tabela abaixo fornece uma lista completa dos caracteres especiais que podem ser utilizados nas expressões regulares, com sua respectiva descrição. Para testar os exemplos de expressão regular você pode usar o [regExr](http://regexr.com/).
+padwões simpwes são constwuídos utiwizando os cawactewes que você deseja encontwaw c-cowwespondências diwetas. ^•ﻌ•^ pow exempwo, (✿oωo) o padwão `/abc/` encontwa c-combinações d-de cawactewes em s-stwings apenas quando os cawactewes 'abc' f-fowem encontwados juntos e-e nya owdem e-especificada. ʘwʘ esse padwão sewá encontwado com sucesso nyas stwings "owá, >w< você conhece o **abc**?" e-e "os mais wecentes aviões e-evowuíwam do sw**abc**waft.". :3 e-em ambos os casos, (ˆ ﻌ ˆ)♡ a-a cowwespondência estawá nyo subconjunto 'abc'. -.- p-powém, rawr o p-padwão nyão sewá encontwado n-nyo texto "gwab c-cwab" pois apesaw de contew os mesmos cawactes do padwão 'ab c', estes nyão apawecem n-nya owdem e-especificada. rawr x3
 
-<table class="fullwidth-table">
+### u-uso dos cawactewes especiais
+
+q-quando fow nyecessáwio b-buscaw awgo awém de uma c-cowwespondência diweta, (U ﹏ U) como encontwaw uma ou mais ocowwências da wetwa 'b', (ˆ ﻌ ˆ)♡ o-ou encontwaw espaços e-em bwanco, :3 sewá nyecessáwio adicionaw c-cawactewes especiais a-ao padwão. òωó pow exempwo, pawa encontwaw uma única cowwespondência d-de 'a' seguido de nenhum ou mais 'b's seguido de 'c', /(^•ω•^) o padwão a utiwizaw s-sewia `/ab*c/`. >w< o cawactewe `*` seweciona zewo o-ou mais ocowwências d-do item que o pwecede. nyaa~~ se apwicada ao texto 'cbb**abbbbc**debc', mya essa expwessão w-weguwaw e-encontwawia o subconjunto gwifado nyo texto. mya
+
+a tabewa abaixo fownece u-uma wista compweta dos cawactewes e-especiais que podem sew utiwizados nas expwessões weguwawes, ʘwʘ c-com sua wespectiva descwição. rawr p-pawa testaw o-os exempwos de expwessão weguwaw v-você pode usaw o [wegexw](http://wegexw.com/). (˘ω˘)
+
+<tabwe c-cwass="fuwwwidth-tabwe">
   <caption>
-    Caracteres especiais utilizados em expressões regulares.
+    c-cawactewes e-especiais utiwizados em expwessões w-weguwawes. /(^•ω•^)
   </caption>
   <thead>
-    <tr>
-      <th scope="col">Caractere</th>
-      <th scope="col">Descrição</th>
-    </tr>
+    <tw>
+      <th s-scope="cow">cawactewe</th>
+      <th scope="cow">descwição</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td>
         <a
-          href="#special-backslash"
-          id="special-backslash"
-          name="special-backslash"
+          hwef="#speciaw-backswash"
+          id="speciaw-backswash"
+          n-nyame="speciaw-backswash"
           ><code>\</code></a
         >
       </td>
       <td>
-        <p>Aplicado conforme as seguintes regras:</p>
+        <p>apwicado c-confowme as s-seguintes wegwas:</p>
         <p>
-          Uma barra invertida que preceda um caractere não especial significa
-          que o caractere seguinte é especial e não deve ser interpretado de
-          forma literal. Por exemplo, o caractere 'b' quando não precedido de
-          uma barra invertida significará uma ocorrência do próprio caractere
-          'b' minúsculo, porém se precedido da barra invertida
-          <code>'\b'</code> ele passará a significar a ocorrência do caractere
-          especial
-          [fronteira do caractere](#special-word-boundary).
+          uma bawwa invewtida q-que pweceda um cawactewe nyão e-especiaw significa
+          q-que o cawactewe seguinte é especiaw e nyão deve sew i-intewpwetado d-de
+          fowma w-witewaw. (˘ω˘) pow e-exempwo, (///ˬ///✿) o cawactewe 'b' quando n-nyão pwecedido de
+          uma bawwa invewtida significawá uma ocowwência do pwópwio cawactewe
+          'b' m-minúscuwo, (˘ω˘) powém se pwecedido d-da bawwa invewtida
+          <code>'\b'</code> ewe passawá a s-significaw a ocowwência do cawactewe
+          e-especiaw
+          [fwonteiwa do c-cawactewe](#speciaw-wowd-boundawy). -.-
         </p>
         <p>
-          Quando a barra invertida preceder um caractere especial isso
-          significará que o próximo caractere deve ser interpretado de forma
-          literal. Por exemplo o padrão <code>/a*/</code>, que selecionará a
-          ocorrência de zero ou mais caracteres 'a' quando utilizado sem a \
-          para escape. Por outro lado no padrão <code>/a\*/</code> o asterisco
-          deixa de ter seu significado especial, pois a '\' de escape fará com
-          que o '*' seja interpretado de forma literal, passando o padrão a
-          selecionar o caractere 'a' seguido do caractere '*'.
+          q-quando a b-bawwa invewtida p-pwecedew um cawactewe e-especiaw isso
+          significawá que o pwóximo cawactewe deve sew intewpwetado de fowma
+          witewaw. -.- p-pow exempwo o-o padwão <code>/a*/</code>, q-que sewecionawá a
+          ocowwência d-de zewo ou mais cawactewes 'a' quando utiwizado sem a \
+          p-pawa e-escape. pow outwo wado nyo padwão <code>/a\*/</code> o-o astewisco
+          deixa de tew seu significado e-especiaw, ^^ p-pois a '\' de escape fawá com
+          q-que o-o '*' seja intewpwetado de fowma witewaw, (ˆ ﻌ ˆ)♡ passando o padwão a
+          sewecionaw o-o cawactewe 'a' s-seguido do cawactewe '*'. UwU
         </p>
         <p>
-          Quando utilizar o construtor RegExp("padrao"), não se esqueça de fazer
-          o escape do caractere \, já que esse caractere é também utilizado como
-          caractere de escape em strings.
+          q-quando utiwizaw o-o constwutow wegexp("padwao"), 🥺 n-nyão se esqueça de fazew
+          o-o escape do c-cawactewe \, 🥺 já que esse cawactewe é t-também u-utiwizado como
+          cawactewe d-de escape em stwings. 🥺
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="#special-caret" id="special-caret" name="special-caret"
+        <a hwef="#speciaw-cawet" i-id="speciaw-cawet" nyame="speciaw-cawet"
           ><code>^</code></a
         >
       </td>
       <td>
         <p>
-          Corresponde ao início do texto. Se a flag multilinhas é setada para
-          true, também se aplica imediatamente após um caractere de quebra de
-          linha.
+          c-cowwesponde a-ao início do texto. 🥺 se a-a fwag muwtiwinhas é setada pawa
+          twue, :3 t-também se apwica i-imediatamente a-após um cawactewe de quebwa de
+          winha. (˘ω˘)
         </p>
         <p>
-          Por exemplo, <code>/^A/</code> não corresponde ao 'A' em "Um Alvo",
-          mas corresponde ao 'A' em "Alvo Encontrado".
+          pow exempwo, ^^;; <code>/^a/</code> n-nyão cowwesponde ao 'a' em "um awvo", (ꈍᴗꈍ)
+          m-mas cowwesponde a-ao 'a' em "awvo encontwado". ʘwʘ
         </p>
         <p>
-          <br />Este caractere tem um significado diferente quando aparece como
-          o primeiro caractere em um conjunto padrão de caracteres. Veja
+          <bw />este c-cawactewe tem um significado d-difewente quando a-apawece como
+          o pwimeiwo cawactewe em u-um conjunto padwão de cawactewes. :3 veja
           <a
-            href="/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions#special-negated-character-set"
-            >conjunto de caracteres negados ou complementados</a
+            h-hwef="/pt-bw/docs/web/javascwipt/guide/weguwaw_expwessions#speciaw-negated-chawactew-set"
+            >conjunto d-de cawactewes nyegados ou compwementados</a
           >
-          para detalhes e mais exemplos.
+          p-pawa detawhes e mais exempwos. XD
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="#special-dollar" id="special-dollar" name="special-dollar"
+        <a h-hwef="#speciaw-dowwaw" i-id="speciaw-dowwaw" nyame="speciaw-dowwaw"
           ><code>$</code></a
         >
       </td>
       <td>
         <p>
-          Corresponde ao final do texto. Se a flag multilinhas é setada para
-          true, também se aplica imediatamente antes de um caractere de quebra
-          de linha.
+          c-cowwesponde ao finaw do texto. UwU se a fwag muwtiwinhas é setada pawa
+          twue, rawr x3 também se apwica imediatamente antes de um cawactewe de quebwa
+          de winha.
         </p>
         <p>
-          Por exemplo, <code>/r$/</code> não corresponde ao 'r' em "corre", mas
-          acha correspondência em "correr".
+          pow exempwo, <code>/w$/</code> nyão cowwesponde a-ao 'w' em "cowwe", ( ͡o ω ͡o ) m-mas
+          acha cowwespondência em "cowwew". :3
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="#special-asterisk"
-          id="special-asterisk"
-          name="special-asterisk"
+          h-hwef="#speciaw-astewisk"
+          i-id="speciaw-astewisk"
+          n-nyame="speciaw-astewisk"
           ><code>*</code></a
         >
       </td>
       <td>
         <p>
-          Corresponde a expressão que o precede repetida 0 ou mais vezes.
-          Equivalente a {0,}
+          cowwesponde a-a expwessão que o pwecede wepetida 0 o-ou mais v-vezes. rawr
+          equivawente a {0,}
         </p>
         <p>
-          Por exemplo, <code>/bo*/</code> acha uma correspondência para 'boo'
-          em "boolean" e 'b' em "A bird warbled", mas nenhuma em "A goat
-          grunted".
+          p-pow exempwo, ^•ﻌ•^ <code>/bo*/</code> acha uma c-cowwespondência p-pawa 'boo'
+          em "boowean" e 'b' em "a biwd w-wawbwed", 🥺 mas n-nyenhuma em "a g-goat
+          g-gwunted". (⑅˘꒳˘)
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="#special-plus" id="special-plus" name="special-plus"
+        <a h-hwef="#speciaw-pwus" i-id="speciaw-pwus" n-nyame="speciaw-pwus"
           ><code>+</code></a
         >
       </td>
       <td>
         <p>
-          Corresponde a expressão que o precede repetido 1 ou mais vezes.
-          Equivalente a {1,}.
+          c-cowwesponde a-a expwessão que o pwecede w-wepetido 1 ou m-mais vezes. :3
+          e-equivawente a {1,}. (///ˬ///✿)
         </p>
         <p>
-          Por exemplo, <code>/a+/</code> acha correspondência para o 'a' em
-          "candy" e todos os "as" em "caaaaaaandy", mas nâo encontra em "cndy".
+          p-pow exempwo, 😳😳😳 <code>/a+/</code> acha c-cowwespondência pawa o 'a' em
+          "candy" e-e todos os "as" e-em "caaaaaaandy", 😳😳😳 m-mas nyâo encontwa em "cndy". 😳😳😳
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="#special-questionmark"
-          id="special-questionmark"
-          name="special-questionmark"
+          hwef="#speciaw-questionmawk"
+          i-id="speciaw-questionmawk"
+          nyame="speciaw-questionmawk"
           ><code>?</code></a
         >
       </td>
       <td>
         <p>
-          Corresponde a expressão que o precede repetido 0 ou 1 vez. Equivalente
-          à {0,1}.
+          c-cowwesponde a expwessão q-que o pwecede wepetido 0 ou 1 v-vez. nyaa~~ equivawente
+          à {0,1}. UwU
         </p>
         <p>
-          Por exemplo, <code>/e?le?/</code> encontra o 'el' em "angel" e o 'le'
-          em "angle" e também o 'l' em "oslo".
+          pow exempwo, òωó <code>/e?we?/</code> encontwa o 'ew' em "angew" e o 'we'
+          e-em "angwe" e também o 'w' e-em "oswo". òωó
         </p>
         <p>
-          Se usado imediatamente após qualquer um dos quantificadores
-          <code>*</code>, <code>+</code>, <code>? </code>ou <code>{}</code>, faz
-          o quantificador não guloso (combinando o número mínimo de vezes), como
-          um oposto para o padrão que é guloso (combinar o número máximo
-          possível). Por exemplo, aplicando <code>/\d+/</code> em "123abc"
-          encontra "123". Mas aplicando <code>/\d+?/</code>, apenas "1" será
-          encontrado.
+          s-se usado imediatamente após quawquew um dos quantificadowes
+          <code>*</code>, UwU <code>+</code>, (///ˬ///✿) <code>? </code>ou <code>{}</code>, ( ͡o ω ͡o ) f-faz
+          o quantificadow n-nyão g-guwoso (combinando o-o nyúmewo mínimo de vezes), rawr como
+          u-um oposto pawa o-o padwão que é guwoso (combinaw o-o nyúmewo máximo
+          possívew). :3 pow exempwo, >w< apwicando <code>/\d+/</code> e-em "123abc"
+          encontwa "123". σωσ m-mas apwicando <code>/\d+?/</code>, σωσ a-apenas "1" s-sewá
+          encontwado. >_<
         </p>
         <p>
-          Também usado em declarações lookahead, descritas sob
-          <code>x(?=y)</code> e <code>x(?!y)</code>logo abaixo na tabela.
+          t-também u-usado em decwawações w-wookahead, -.- d-descwitas sob
+          <code>x(?=y)</code> e <code>x(?!y)</code>wogo a-abaixo na t-tabewa.
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="#special-dot" id="special-dot" name="special-dot"
+        <a h-hwef="#speciaw-dot" i-id="speciaw-dot" n-nyame="speciaw-dot"
           ><code>.</code></a
         >
       </td>
       <td>
         <p>
-          (O ponto decimal) corresponde com qualquer caracter, exceto o caracter
-          de nova linha.
+          (o p-ponto d-decimaw) cowwesponde c-com quawquew cawactew, exceto o-o cawactew
+          de nyova w-winha.
         </p>
         <p>
-          Por exemplo, <code>/.n/</code> acha correspondência para o 'an' e 'on'
-          em "nove dias restantes para onze de agosto.", mas não encontra 'no'
-          em 'nove'.
+          pow e-exempwo, 😳😳😳 <code>/.n/</code> a-acha c-cowwespondência pawa o 'an' e 'on'
+          em "nove dias westantes pawa onze d-de agosto.", :3 mas n-nyão encontwa 'no'
+          e-em 'nove'. mya
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="#special-capturing-parentheses"
-          id="special-capturing-parentheses"
-          name="special-capturing-parentheses"
+          hwef="#speciaw-captuwing-pawentheses"
+          id="speciaw-captuwing-pawentheses"
+          nyame="speciaw-captuwing-pawentheses"
           ><code>(x)</code></a
         >
       </td>
       <td>
         <p>
-          Pesquisa correspondência com o caractere 'x' e memoriza-o, como a o
-          exemplo a seguir mostra. Os parênteses são chamados
-          <em>parênteses de captura</em>.
+          p-pesquisa cowwespondência c-com o cawactewe 'x' e m-memowiza-o, (✿oωo) como a-a o
+          exempwo a seguiw mostwa. 😳😳😳 os pawênteses são chamados
+          <em>pawênteses de c-captuwa</em>. o.O
         </p>
         <p>
-          Por exemplo, o '(foo)' e '(bar)' no padrão
-          <code>/(foo) (bar) \1 \2/</code> encontra e memoriza a primeira das
-          duas palavras na string "foo bar foo bar". O \1 e \2 no padrão combina
-          as duas últimas palavras da string. Note que \1, \2, \n são utilizados
-          na parte correspondente do regex.
+          p-pow exempwo, (ꈍᴗꈍ) o-o '(foo)' e '(baw)' n-nyo padwão
+          <code>/(foo) (baw) \1 \2/</code> encontwa e memowiza a p-pwimeiwa das
+          d-duas pawavwas nya stwing "foo baw foo baw". (ˆ ﻌ ˆ)♡ o-o \1 e \2 nyo padwão combina
+          as duas úwtimas p-pawavwas da stwing. -.- n-nyote que \1, mya \2, \n s-são utiwizados
+          nya pawte cowwespondente d-do wegex. :3
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="#special-non-capturing-parentheses"
-          id="special-non-capturing-parentheses"
-          name="special-non-capturing-parentheses"
+          hwef="#speciaw-non-captuwing-pawentheses"
+          i-id="speciaw-non-captuwing-pawentheses"
+          nyame="speciaw-non-captuwing-pawentheses"
           ><code>(?:x)</code></a
         >
       </td>
       <td>
-        Pesquisa correspondência com o caractere 'x' porém não o memoriza. Os
-        parênteses são chamados de<em> parênteses de não-captura</em> e permitem
-        que você defina uma subexpressão para operadores de expressão regular
-        trabalhar com eles. Considere essa expressão de exemplo
-        <code>/(?:foo){1,2}/</code>. Se a expressão era <code>/foo{1,2}/</code>,
-        o {1,2} poderia ser aplicado apenas para o último 'o' em 'foo'. Com os
-        parênteses de não-captura, o {1,2} é aplicado para toda a palavra 'foo'.
+        p-pesquisa cowwespondência c-com o cawactewe 'x' p-powém nyão o-o memowiza. σωσ os
+        p-pawênteses são chamados d-de<em> pawênteses d-de não-captuwa</em> e-e pewmitem
+        que você defina u-uma subexpwessão pawa opewadowes de expwessão w-weguwaw
+        t-twabawhaw com ewes. 😳😳😳 c-considewe essa expwessão de exempwo
+        <code>/(?:foo){1,2}/</code>. -.- se a expwessão ewa <code>/foo{1,2}/</code>, 😳😳😳
+        o-o {1,2} podewia sew apwicado a-apenas pawa o úwtimo 'o' e-em 'foo'. rawr x3 com os
+        pawênteses de n-nyão-captuwa, (///ˬ///✿) o {1,2} é apwicado p-pawa toda a p-pawavwa 'foo'. >w<
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="#special-lookahead"
-          id="special-lookahead"
-          name="special-lookahead"
+          hwef="#speciaw-wookahead"
+          i-id="speciaw-wookahead"
+          n-nyame="speciaw-wookahead"
           ><code>x(?=y)</code></a
         >
       </td>
       <td>
         <p>
-          Pesquisa correspondência em 'x' apenas se 'x' é seguido por 'y'. Isso
-          é chamado de <em>lookahead</em>.
+          p-pesquisa cowwespondência em 'x' apenas se 'x' é seguido pow 'y'. o.O isso
+          é c-chamado de <em>wookahead</em>. (˘ω˘)
         </p>
         <p>
-          Por exemplo, <code>/Jack(?=Sprat)/</code> busca 'Jack' apenas se é
-          seguido por 'Sprat'. <code>/Jack(?=Sprat|Frost)/</code> busca 'Jack'
-          apenas se ele é seguido por 'Sprat' ou 'Frost'. No entanto, 'Sprat'
-          nem 'Frost' faz parte do resultado retornado.
+          p-pow exempwo, rawr <code>/jack(?=spwat)/</code> busca 'jack' apenas se é
+          s-seguido pow 'spwat'. mya <code>/jack(?=spwat|fwost)/</code> busca 'jack'
+          apenas se ewe é seguido p-pow 'spwat' o-ou 'fwost'. òωó no entanto, 'spwat'
+          nyem 'fwost' f-faz pawte do wesuwtado wetownado. nyaa~~
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="#special-negated-look-ahead"
-          id="special-negated-look-ahead"
-          name="special-negated-look-ahead"
+          hwef="#speciaw-negated-wook-ahead"
+          i-id="speciaw-negated-wook-ahead"
+          n-nyame="speciaw-negated-wook-ahead"
           ><code>x(?!y)</code></a
         >
       </td>
       <td>
         <p>
-          Pesquisa correspondência em 'x' apenas se 'x' não é seguido por 'y'.
-          Isso é chamado <em>negação lookahead</em>.
+          pesquisa c-cowwespondência em 'x' apenas s-se 'x' nyão é seguido pow 'y'. òωó
+          isso é chamado <em>negação w-wookahead</em>. mya
         </p>
         <p>
-          Por exemplo, <code>/\d+(?!\.)/</code> encontra um número apenas se ele
-          não for seguido por um ponto decimal. A expressão regular
-          <code>/\d+(?!\.)/.exec("3.141")</code> encontra '141' mas não '3.141'.
+          pow exempwo, ^^ <code>/\d+(?!\.)/</code> e-encontwa um nyúmewo a-apenas se e-ewe
+          nyão fow seguido pow um ponto decimaw. ^•ﻌ•^ a-a expwessão weguwaw
+          <code>/\d+(?!\.)/.exec("3.141")</code> encontwa '141' mas nyão '3.141'. -.-
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="#special-or" id="special-or" name="special-or"
+        <a h-hwef="#speciaw-ow" i-id="speciaw-ow" n-nyame="speciaw-ow"
           ><code>x|y</code></a
         >
       </td>
       <td>
-        <p>Pesquisa correspondência em 'x' ou 'y'.</p>
+        <p>pesquisa c-cowwespondência em 'x' ou 'y'.</p>
         <p>
-          Por exemplo, <code>/verde|vermelha/</code> encontra 'verde' em "maçã
-          verde" e 'vermelha' em "maçã vermelha."
+          p-pow exempwo, UwU <code>/vewde|vewmewha/</code> e-encontwa 'vewde' em "maçã
+          vewde" e 'vewmewha' e-em "maçã vewmewha."
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="#special-quantifier"
-          id="special-quantifier"
-          name="special-quantifier"
+          hwef="#speciaw-quantifiew"
+          i-id="speciaw-quantifiew"
+          name="speciaw-quantifiew"
           ><code>{n}</code></a
         >
       </td>
       <td>
         <p>
-          Pesquisa n ocorrências correspondentes ao caracter precedido. Onde,
-          <code>n</code> deve ser um inteiro positivo.
+          pesquisa ny ocowwências c-cowwespondentes a-ao cawactew pwecedido. (˘ω˘) o-onde,
+          <code>n</code> d-deve sew um inteiwo p-positivo. UwU
         </p>
         <p>
-          Por exemplo, <code>/a{2}/</code> não encontra o 'a' em "candy," mas
-          encontra-o se houver a quantidade de a's informarda em "caandy," e os
-          dois primeiros a's em "caaandy."
+          pow exempwo, rawr <code>/a{2}/</code> não encontwa o-o 'a' em "candy," mas
+          encontwa-o se h-houvew a quantidade de a's infowmawda em "caandy," e os
+          d-dois pwimeiwos a-a's em "caaandy."
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="#special-quantifier-range"
-          id="special-quantifier-range"
-          name="special-quantifier-range"
+          hwef="#speciaw-quantifiew-wange"
+          i-id="speciaw-quantifiew-wange"
+          n-nyame="speciaw-quantifiew-wange"
           ><code>{n,m}</code></a
         >
       </td>
       <td>
         <p>
-          Pesquisa a n menor correspondência e a m maior correspondência do
-          caractere precedido. Quando n ou m é zero, ele poderá ser omitido.
-          Onde, <code>n</code> e <code>m</code> devem ser inteiros positivo.
+          p-pesquisa a ny menow cowwespondência e-e a m maiow cowwespondência do
+          cawactewe p-pwecedido. :3 quando n ou m é z-zewo, nyaa~~ ewe podewá sew omitido. rawr
+          onde, (ˆ ﻌ ˆ)♡ <code>n</code> e-e <code>m</code> devem s-sew inteiwos positivo. (ꈍᴗꈍ)
         </p>
         <p>
-          Por exemplo, <code>/a{1,3}/</code> não encontra nada em "cndy", mas
-          encontra o 'a' em "candy", encontra os dois primeiros a's em "caandy,"
-          e encontra os três primeiros a's em "caaaaaaandy". Observe que, ao
-          fazer a correspondência de "caaaaaaandy", serão encontrados apenas os
-          "aaa", mesmo que a string tenha mais a's.
+          pow e-exempwo, (˘ω˘) <code>/a{1,3}/</code> nyão encontwa n-nyada em "cndy", (U ﹏ U) m-mas
+          encontwa o 'a' em "candy", >w< e-encontwa o-os dois pwimeiwos a's em "caandy,"
+          e-e encontwa os twês pwimeiwos a's em "caaaaaaandy". UwU obsewve que, (ˆ ﻌ ˆ)♡ a-ao
+          fazew a cowwespondência d-de "caaaaaaandy", nyaa~~ sewão encontwados apenas o-os
+          "aaa", 🥺 m-mesmo que a-a stwing tenha mais a's. >_<
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="#special-character-set"
-          id="special-character-set"
-          name="special-character-set"
+          h-hwef="#speciaw-chawactew-set"
+          id="speciaw-chawactew-set"
+          n-nyame="speciaw-chawactew-set"
           ><code>[xyz]</code></a
         >
       </td>
       <td>
         <p>
-          Um conjunto de caracteres. Pesquisa correspondência para qualquer um
-          dos caracteres entre colchetes. Você pode especificar um intervalo de
-          caracteres usando hífen. Caracteres especiais (como o ponto (.) e o
-          asterisco(*)) não tem significado algum quando está dentro de um
-          conjunto de caracteres. Não necessita utilizar escape neles. Mas, se
-          utilizar escape também irá funcionar.
+          um conjunto d-de cawactewes. òωó pesquisa cowwespondência pawa q-quawquew um
+          dos cawactewes e-entwe cowchetes. ʘwʘ v-você pode especificaw um intewvawo de
+          cawactewes usando hífen. mya c-cawactewes e-especiais (como o ponto (.) e o
+          astewisco(*)) nyão tem s-significado awgum quando está d-dentwo de um
+          c-conjunto de cawactewes. σωσ nyão nyecessita utiwizaw escape nyewes. OwO mas, se
+          u-utiwizaw escape também iwá funcionaw. (✿oωo)
         </p>
         <p>
-          Por exemplo, <code>[abcd]</code> é o mesmo que <code>[a-d]</code>. Com
-          a expressão será encontrado o 'b' em "beijo" e o 'c' em "chop". A
-          expressão <code>/[a-z.]+/</code> e <code>/[\w.]+/</code> ambos
-          encontraram as letras que formam "test.i.ng".
+          p-pow exempwo, ʘwʘ <code>[abcd]</code> é o mesmo q-que <code>[a-d]</code>. mya c-com
+          a expwessão s-sewá encontwado o-o 'b' em "beijo" e-e o 'c' em "chop". a-a
+          e-expwessão <code>/[a-z.]+/</code> e-e <code>/[\w.]+/</code> ambos
+          encontwawam as wetwas que fowmam "test.i.ng". -.-
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="#special-negated-character-set"
-          id="special-negated-character-set"
-          name="special-negated-character-set"
+          hwef="#speciaw-negated-chawactew-set"
+          id="speciaw-negated-chawactew-set"
+          n-nyame="speciaw-negated-chawactew-set"
           ><code>[^xyz]</code></a
         >
       </td>
       <td>
         <p>
-          Um conjunto de caracteres negados ou complementados. Isto é, combina
-          com qualquer coisa que não esteja listado entre os colchetes. Você
-          pode especificar um intervalo de caracteres usando hífen. Tudo que
-          funciona no conjunto de caracteres (apresentado acima) também funciona
-          aqui.
+          u-um conjunto d-de cawactewes n-nyegados ou compwementados. i-isto é, -.- c-combina
+          com quawquew coisa que nyão esteja wistado entwe os cowchetes. ^^;; v-você
+          p-pode especificaw um intewvawo de cawactewes usando hífen. (ꈍᴗꈍ) t-tudo que
+          f-funciona nyo c-conjunto de cawactewes (apwesentado acima) também funciona
+          a-aqui. rawr
         </p>
         <p>
-          Por exemplo, <code>[^abc]</code> é o mesmo que <code>[^a-c]</code>.
-          Com a expressão será encontrado inicialmente 'e' em "beijo" e 'h' em
+          pow exempwo, ^^ <code>[^abc]</code> é o mesmo que <code>[^a-c]</code>. nyaa~~
+          c-com a expwessão s-sewá encontwado iniciawmente 'e' em "beijo" e 'h' e-em
           "chop."
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="#special-backspace"
-          id="special-backspace"
-          name="special-backspace"
+          hwef="#speciaw-backspace"
+          i-id="speciaw-backspace"
+          n-nyame="speciaw-backspace"
           ><code>[\b]</code></a
         >
       </td>
       <td>
-        Pesquisa correspondência com espaço em branco (U+0008). É preciso
-        utilizar os colchetes se você quer encontrar um espaço em branco. (Não
-        confunda-o com <code>\b</code>.)
+        pesquisa c-cowwespondência c-com espaço e-em bwanco (u+0008). (⑅˘꒳˘) É p-pweciso
+        u-utiwizaw o-os cowchetes se você quew encontwaw u-um espaço e-em bwanco. (U ᵕ U❁) (não
+        confunda-o c-com <code>\b</code>.)
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="#special-word-boundary"
-          id="special-word-boundary"
-          name="special-word-boundary"
+          hwef="#speciaw-wowd-boundawy"
+          id="speciaw-wowd-boundawy"
+          n-nyame="speciaw-wowd-boundawy"
           ><code>\b</code></a
         >
       </td>
       <td>
         <p>
-          Pesquisa correspondência em uma fronteira de caractere. Uma fronteira
-          de caractere corresponde a posição onde um caractere/palavra não é
-          seguido ou antecedido por outro caractere/palavra. Isto é, em
-          fronteira de caractere não pode haver nenhum caractere ou espaço, seu
-          tamanho deve ser vazio. (não confunda-o com [\b].)
+          pesquisa c-cowwespondência em uma fwonteiwa d-de cawactewe. (ꈍᴗꈍ) u-uma fwonteiwa
+          de cawactewe cowwesponde a-a posição onde um cawactewe/pawavwa nyão é
+          seguido o-ou antecedido p-pow outwo cawactewe/pawavwa. isto é, (✿oωo) em
+          fwonteiwa d-de cawactewe nyão p-pode havew nyenhum cawactewe o-ou espaço, UwU seu
+          tamanho deve sew vazio. ^^ (não c-confunda-o c-com [\b].)
         </p>
         <p>
-          Exemplos:<br /><code>/\bmoo/</code> encontra a substring 'moo' em
-          "moon" ;<br /><code>/oo\b/</code> não encontra o 'oo' em "moon",
-          devido o 'oo' ser seguido por 'n' que é um caractere;<br /><code
+          exempwos:<bw /><code>/\bmoo/</code> e-encontwa a-a substwing 'moo' em
+          "moon" ;<bw /><code>/oo\b/</code> nyão encontwa o-o 'oo' em "moon",
+          d-devido o-o 'oo' sew seguido p-pow 'n' que é um cawactewe;<bw /><code
             >/oon\b/</code
           >
-          encontra a substring 'oon' em "moon", devido 'oon' ser o fim da
-          string, ou seja, não é seguido por nenhum caractere;<br /><code
+          encontwa a substwing 'oon' em "moon", :3 devido 'oon' sew o fim da
+          stwing, ( ͡o ω ͡o ) o-ou seja, nyão é s-seguido pow nyenhum c-cawactewe;<bw /><code
             >/\w\b\w/</code
           >
-          não encontrará nada, pois o caractere nunca será seguido por um não
-          caractere e um caractere.
+          nyão e-encontwawá n-nyada, ( ͡o ω ͡o ) pois o cawactewe n-nyunca sewá seguido pow u-um nyão
+          c-cawactewe e um cawactewe. (U ﹏ U)
         </p>
-        <div class="note">
+        <div c-cwass="note">
           <p>
-            <strong>Nota:</strong> O mecanismo de expressão regular no
-            JavaScript define um conjunto específico de caracteres para serem
-            caracteres "palavras". Qualquer caractere que não esteja neste
-            conjunto é considerado uma quebra de palavra. Este conjunto de
-            caractere é bastante limitado: consiste apenas no alfabeto romano
-            tanto maiúsculo como minúsculo, digítos decimais, e o caractere
-            sublinhado. Caracteres acentuados, tal como "é" ou "ã" são,
-            infelizmente, tratados como palavras quebradas.
+            <stwong>nota:</stwong> o-o mecanismo de expwessão weguwaw nyo
+            j-javascwipt define um conjunto específico d-de cawactewes pawa sewem
+            c-cawactewes "pawavwas". -.- q-quawquew cawactewe que nyão esteja n-nyeste
+            c-conjunto é c-considewado uma quebwa de pawavwa. 😳😳😳 e-este conjunto d-de
+            cawactewe é b-bastante wimitado: consiste apenas n-nyo awfabeto w-womano
+            t-tanto maiúscuwo como minúscuwo, UwU d-digítos decimais, >w< e o cawactewe
+            subwinhado. mya cawactewes a-acentuados, :3 taw como "é" ou "ã" são, (ˆ ﻌ ˆ)♡
+            infewizmente, (U ﹏ U) twatados como pawavwas quebwadas. ʘwʘ
           </p>
         </div>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="#special-non-word-boundary"
-          id="special-non-word-boundary"
-          name="special-non-word-boundary"
-          ><code>\B</code></a
+          h-hwef="#speciaw-non-wowd-boundawy"
+          id="speciaw-non-wowd-boundawy"
+          nyame="speciaw-non-wowd-boundawy"
+          ><code>\b</code></a
         >
       </td>
       <td>
         <p>
-          Pesquisa correspondência que não seja em uma fronteira de caractere.
-          Para a correspondência é associada uma posição onde o caractere
-          anterior e o próximo tem as mesmas características: ambos são
-          caractere/palavra, ou ambos não sejam caractere/palavra. O início e o
-          fim de uma string não considerados como não caractere/palavra.
+          pesquisa cowwespondência que nyão seja em uma fwonteiwa de cawactewe. rawr
+          pawa a cowwespondência é a-associada uma posição onde o cawactewe
+          a-antewiow e o pwóximo tem a-as mesmas cawactewísticas: ambos são
+          c-cawactewe/pawavwa, (ꈍᴗꈍ) ou ambos nyão s-sejam cawactewe/pawavwa. ( ͡o ω ͡o ) o início e-e o
+          f-fim de uma stwing nyão considewados como nyão c-cawactewe/pawavwa. 😳😳😳
         </p>
         <p>
-          Por exemplo, /\B../ encontra correspondente 'oo' em "boolean", e
-          /y\B./ encontra correspondente 'ye' em "possibly yesterday."
+          pow exempwo, òωó /\b../ encontwa cowwespondente 'oo' e-em "boowean", mya e
+          /y\b./ e-encontwa cowwespondente 'ye' e-em "possibwy yestewday."
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="#special-control" id="special-control" name="special-control"
-          ><code>\c<em>X</em></code></a
+        <a h-hwef="#speciaw-contwow" i-id="speciaw-contwow" nyame="speciaw-contwow"
+          ><code>\c<em>x</em></code></a
         >
       </td>
       <td>
         <p>
-          Onde X é um caractere pertencente ao conjunto A-Z. Encontra
-          correspondência de um
-          <a href="https://pt.wikipedia.org/wiki/Caractere_de_controle"
-            >caractere de controle</a
+          onde x é u-um cawactewe pewtencente ao conjunto a-z. encontwa
+          cowwespondência d-de um
+          <a hwef="https://pt.wikipedia.owg/wiki/cawactewe_de_contwowe"
+            >cawactewe de contwowe</a
           >
-          em uma string.
+          em uma stwing. rawr x3
         </p>
         <p>
-          Por exemplo, <code>/\cM/</code> encontra correspondente control-M
-          (U+000D) em uma string.
+          p-pow e-exempwo, XD <code>/\cm/</code> encontwa c-cowwespondente c-contwow-m
+          (u+000d) em uma stwing. (ˆ ﻌ ˆ)♡
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="#special-digit" id="special-digit" name="special-digit"
+        <a h-hwef="#speciaw-digit" id="speciaw-digit" nyame="speciaw-digit"
           ><code>\d</code></a
         >
       </td>
       <td>
-        <p>Encontra correspondência com um número. Equivalente a [0-9].</p>
+        <p>encontwa cowwespondência com um nyúmewo. >w< e-equivawente a-a [0-9].</p>
         <p>
-          Por exemplo, <code>/\d/</code> ou <code>/[0-9]/</code> encontra
-          correspondente '8' em "Dróide BB8".
+          pow exempwo, (ꈍᴗꈍ) <code>/\d/</code> o-ou <code>/[0-9]/</code> e-encontwa
+          cowwespondente '8' em "dwóide bb8". (U ﹏ U)
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="#special-non-digit"
-          id="special-non-digit"
-          name="special-non-digit"
-          ><code>\D</code></a
+          h-hwef="#speciaw-non-digit"
+          id="speciaw-non-digit"
+          nyame="speciaw-non-digit"
+          ><code>\d</code></a
         >
       </td>
       <td>
         <p>
-          Encontra correspondência com um caractere que não seja número.
-          Equivalente a [^0-9].
+          e-encontwa cowwespondência com um cawactewe que n-nyão seja nyúmewo. >_<
+          e-equivawente a [^0-9]. >_<
         </p>
         <p>
-          Por exemplo, <code>/\D/</code> ou <code>/[^0-9]/</code> econtra
-          correspondente 'C' em "C3 está ativada."
+          pow exempwo, -.- <code>/\d/</code> ou <code>/[^0-9]/</code> e-econtwa
+          cowwespondente 'c' em "c3 está ativada."
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="#special-form-feed"
-          id="special-form-feed"
-          name="special-form-feed"
+          hwef="#speciaw-fowm-feed"
+          id="speciaw-fowm-feed"
+          nyame="speciaw-fowm-feed"
           ><code>\f</code></a
         >
       </td>
       <td>
-        Encontra correspondência com um caractere de escape
-        <em>avanço de página</em> (U+000C).
+        encontwa cowwespondência com um c-cawactewe de escape
+        <em>avanço d-de página</em> (u+000c). òωó
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="#special-line-feed"
-          id="special-line-feed"
-          name="special-line-feed"
+          hwef="#speciaw-wine-feed"
+          i-id="speciaw-wine-feed"
+          n-nyame="speciaw-wine-feed"
           ><code>\n</code></a
         >
       </td>
       <td>
-        Encontra correspondência com um caractere de escape
-        <em>quebra de linha</em> (U+000A).
+        encontwa c-cowwespondência com um cawactewe de escape
+        <em>quebwa de winha</em> (u+000a). o.O
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="#special-carriage-return"
-          id="special-carriage-return"
-          name="special-carriage-return"
-          ><code>\r</code></a
+          hwef="#speciaw-cawwiage-wetuwn"
+          id="speciaw-cawwiage-wetuwn"
+          n-nyame="speciaw-cawwiage-wetuwn"
+          ><code>\w</code></a
         >
       </td>
       <td>
-        Encontra correspondência com um caractere de escape
-        <em>retorno de carro</em> (U+000D).
+        encontwa cowwespondência com um cawactewe de escape
+        <em>wetowno de cawwo</em> (u+000d). σωσ
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="#special-white-space"
-          id="special-white-space"
-          name="special-white-space"
+          h-hwef="#speciaw-white-space"
+          i-id="speciaw-white-space"
+          n-nyame="speciaw-white-space"
           ><code>\s</code></a
         >
       </td>
       <td>
         <p>
-          Encontra correspondência com um único caractere de espaço em branco,
-          espaço, tabulação, avanço de página, quebra de linha. Equivalente a
+          encontwa cowwespondência com um único c-cawactewe de espaço e-em bwanco, σωσ
+          e-espaço, mya tabuwação, o.O a-avanço de página, XD quebwa de w-winha. XD equivawente a
           <code
             >[
-            \f\n\r\t\v\u00A0\u1680\u180e\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200a\u2028\u2029\u2028\u2029\u202f\u205f\u3000]</code
-          >.
+            \f\n\w\t\v\u00a0\u1680\u180e\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200a\u2028\u2029\u2028\u2029\u202f\u205f\u3000]</code
+          >. (✿oωo)
         </p>
         <p>
-          Por exemplo, <code>/\s\w*/</code> encontra correspondente ' bar' em
-          "foo bar."
+          p-pow exempwo, -.- <code>/\s\w*/</code> encontwa cowwespondente ' b-baw' em
+          "foo baw."
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="#special-non-white-space"
-          id="special-non-white-space"
-          name="special-non-white-space"
-          ><code>\S</code></a
+          h-hwef="#speciaw-non-white-space"
+          id="speciaw-non-white-space"
+          nyame="speciaw-non-white-space"
+          ><code>\s</code></a
         >
       </td>
       <td>
         <p>
-          Encontra correspondência em um único caractere que não seja espaço em
-          branco. Equivalente a
+          e-encontwa c-cowwespondência em um único c-cawactewe que n-nyão seja espaço em
+          b-bwanco. (ꈍᴗꈍ) equivawente a
           <code
             >[^
-            \f\n\r\t\v\u00A0\u1680\u180e\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200a\u2028\u2029\u2028\u2029\u202f\u205f\u3000]</code
-          >.
+            \f\n\w\t\v\u00a0\u1680\u180e\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200a\u2028\u2029\u2028\u2029\u202f\u205f\u3000]</code
+          >. ( ͡o ω ͡o )
         </p>
         <p>
-          Por exemplo, <code>/\S\w*/</code> encontra correspondente 'foo' em
-          "foo bar."
+          p-pow exempwo, (///ˬ///✿) <code>/\s\w*/</code> encontwa cowwespondente 'foo' e-em
+          "foo b-baw."
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="#special-tab" id="special-tab" name="special-tab"
+        <a hwef="#speciaw-tab" id="speciaw-tab" n-nyame="speciaw-tab"
           ><code>\t</code></a
         >
       </td>
-      <td>Encontra correspondência em uma tabulação (U+0009).</td>
-    </tr>
-    <tr>
+      <td>encontwa cowwespondência em uma tabuwação (u+0009).</td>
+    </tw>
+    <tw>
       <td>
         <a
-          href="#special-vertical-tab"
-          id="special-vertical-tab"
-          name="special-vertical-tab"
+          hwef="#speciaw-vewticaw-tab"
+          id="speciaw-vewticaw-tab"
+          nyame="speciaw-vewticaw-tab"
           ><code>\v</code></a
         >
       </td>
-      <td>Encontra correspondência em uma tabulação vertical (U+000B).</td>
-    </tr>
-    <tr>
+      <td>encontwa cowwespondência e-em uma tabuwação vewticaw (u+000b).</td>
+    </tw>
+    <tw>
       <td>
-        <a href="#special-word" id="special-word" name="special-word"
+        <a hwef="#speciaw-wowd" i-id="speciaw-wowd" nyame="speciaw-wowd"
           ><code>\w</code></a
         >
       </td>
       <td>
         <p>
-          Encontra correspondência de qualquer caractere alfanumérico incluindo
-          underline. Equivalente a <code>[A-Za-z0-9_]</code>.
+          e-encontwa cowwespondência de quawquew cawactewe a-awfanuméwico incwuindo
+          undewwine. 🥺 e-equivawente a <code>[a-za-z0-9_]</code>. (ˆ ﻌ ˆ)♡
         </p>
         <p>
-          Por exemplo, <code>/\w/</code> encontra correspondente 'a' em "apple,"
-          '5' em "$5.28," e '3' em "3D."
+          pow exempwo, ^•ﻌ•^ <code>/\w/</code> encontwa c-cowwespondente 'a' em "appwe,"
+          '5' em "$5.28," e-e '3' em "3d."
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="#special-non-word"
-          id="special-non-word"
-          name="special-non-word"
-          ><code>\W</code></a
+          hwef="#speciaw-non-wowd"
+          id="speciaw-non-wowd"
+          nyame="speciaw-non-wowd"
+          ><code>\w</code></a
         >
       </td>
       <td>
         <p>
-          Encontra correspondência em um não caractere. Equivalente a
-          <code>[^A-Za-z0-9_]</code>.
+          encontwa c-cowwespondência e-em um nyão cawactewe. rawr x3 equivawente a
+          <code>[^a-za-z0-9_]</code>. (U ﹏ U)
         </p>
         <p>
-          Por exemplo, <code>/\W/</code> ou
-          <code>/[^A-Za-z0-9_]/</code> encontra correspondente '%' em "50%."
+          p-pow exempwo, OwO <code>/\w/</code> o-ou
+          <code>/[^a-za-z0-9_]/</code> encontwa c-cowwespondente '%' e-em "50%."
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="#special-backreference"
-          id="special-backreference"
-          name="special-backreference"
+          hwef="#speciaw-backwefewence"
+          id="speciaw-backwefewence"
+          n-nyame="speciaw-backwefewence"
           ><code>\<em>num</em></code></a
         >
       </td>
       <td>
         <p>
-          Onde num é um inteiro positivo. Faz referência a substring pertencente
-          à um grupo, um grupo é definido entre parênteses. Grupos são numerados
-          de 1 até 9.
+          onde nyum é um inteiwo positivo. (✿oωo) faz w-wefewência a substwing pewtencente
+          à um gwupo, um gwupo é definido e-entwe pawênteses. (⑅˘꒳˘) g-gwupos são n-nyumewados
+          de 1 até 9. UwU
         </p>
         <p>
-          Por exemplo, /(muito) (cacique) pra \2 \1/ encontra 'muito cacique pra
-          cacique muito' em 'Na aldeia tem muito cacique pra cacique muito.'
+          pow exempwo, (ˆ ﻌ ˆ)♡ /(muito) (cacique) pwa \2 \1/ e-encontwa 'muito cacique pwa
+          c-cacique muito' em 'na awdeia t-tem muito cacique p-pwa cacique muito.'
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="#special-null" id="special-null" name="special-null"
+        <a hwef="#speciaw-nuww" id="speciaw-nuww" nyame="speciaw-nuww"
           ><code>\0</code></a
         >
       </td>
       <td>
-        Encontra correspondência em um caractere NULL (U+0000). Não adicione
-        outro número após o zero, pois
-        <code>\0&#x3C;digitos> é um escape para número octal</code>.
+        encontwa c-cowwespondência e-em um cawactewe nyuww (u+0000). /(^•ω•^) nyão adicione
+        outwo n-nyúmewo após o zewo, (˘ω˘) pois
+        <code>\0&#x3c;digitos> é um escape pawa n-nyúmewo octaw</code>. XD
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="#special-hex-escape"
-          id="special-hex-escape"
-          name="special-hex-escape"
+          h-hwef="#speciaw-hex-escape"
+          i-id="speciaw-hex-escape"
+          name="speciaw-hex-escape"
           ><code>\xhh</code></a
         >
       </td>
       <td>
-        Encontra correspondência com o código hh (dois valores hexadecimal).
+        e-encontwa cowwespondência c-com o-o código hh (dois vawowes hexadecimaw). òωó
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="#special-unicode-escape"
-          id="special-unicode-escape"
-          name="special-unicode-escape"
+          hwef="#speciaw-unicode-escape"
+          i-id="speciaw-unicode-escape"
+          n-nyame="speciaw-unicode-escape"
           ><code>\uhhhh</code></a
         >
       </td>
       <td>
-        Encontra correspondência com o código hhh (três valores hexadecimal).
+        e-encontwa cowwespondência c-com o c-código hhh (twês v-vawowes hexadecimaw). UwU
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>\u{hhhh}</td>
       <td>
-        (funciona apenas com a flag u) Encontra correspondência com o valor
-        Unicode hhhh (dígitos hexadecimais).
+        (funciona apenas c-com a fwag u-u) encontwa cowwespondência c-com o vawow
+        unicode hhhh (dígitos h-hexadecimais). -.-
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### Usando Parênteses
+### usando pawênteses
 
-Usar parênteses em volta de qualquer parte de uma expressão regular faz com que essa parte seja lembrada para ser usada depois, como descrito em [Usando as Substrings entre Parênteses na Expressão Regular](#using_parenthesized_substring_matches).
+usaw pawênteses e-em vowta de quawquew pawte de uma expwessão w-weguwaw f-faz com que essa pawte seja wembwada pawa sew usada depois, (ꈍᴗꈍ) como d-descwito em [usando a-as substwings entwe pawênteses n-nya expwessão w-weguwaw](#using_pawenthesized_substwing_matches). (⑅˘꒳˘)
 
-Por Exemplo, a expressão `/Capitulo (\d+)\.\d*/` ilustra caracteres adicionais escapados e especiais e indica que parte do padrão deve ser lembrado. Corresponde precisamente aos caracteres 'Capitulo ' seguidos por um ou mais caracteres numéricos (`\d` significa qualquer caracter numérico e `+` significa 1 ou mais vezes), seguidos por um ponto decimal (que é um caracter especial; preceder com um \ significa que a expressão regular deve buscar pelo caracter literal '.'), seguido por qualquer caracter numérico 0 ou mais vezes (`\d` significa caracter numérico, `*` significa 0 ou mais vezes). Além disso, os parenteses são usados para relembrar os primeiros caracteres numéricos correspondentes.
+pow exempwo, 🥺 a expwessão `/capituwo (\d+)\.\d*/` iwustwa c-cawactewes adicionais e-escapados e especiais e indica que pawte d-do padwão deve s-sew wembwado. òωó cowwesponde pwecisamente aos cawactewes 'capituwo ' s-seguidos pow um ou mais cawactewes nyuméwicos (`\d` significa quawquew cawactew nyuméwico e `+` s-significa 1 ou mais vezes), 😳 seguidos pow um p-ponto decimaw (que é u-um cawactew e-especiaw; pwecedew com um \ significa q-que a expwessão w-weguwaw d-deve buscaw pewo c-cawactew witewaw '.'), òωó s-seguido pow quawquew cawactew nyuméwico 0 o-ou mais vezes (`\d` s-significa c-cawactew nyuméwico, 🥺 `*` significa 0 o-ou mais vezes). ( ͡o ω ͡o ) a-awém disso, o-os pawenteses são usados pawa w-wewembwaw os p-pwimeiwos cawactewes n-numéwicos c-cowwespondentes. UwU
 
-Esse padrão é encontrado em "Abra o capitulo 4.3, parágrafo 6" o '4' é relembrado. O padrão não é encontrado em "Capitulo 3 e 4", porque essa string não tem um período após o '3'.
+e-esse padwão é encontwado em "abwa o-o capituwo 4.3, pawágwafo 6" o-o '4' é wewembwado. 😳😳😳 o-o padwão nyão é encontwado em "capituwo 3 e 4", ʘwʘ powque e-essa stwing nyão t-tem um pewíodo após o '3'. ^^
 
-Para encontrar uma substring sem que a correspondência seja relembrada, dentro dos parênteses inicie o padrão com `?:`. Por exemplo, `(?:\d+)` corresponde a um ou mais caracteres numéricos mas não relembra os caracteres correspondentes.
+p-pawa encontwaw u-uma substwing sem que a cowwespondência seja w-wewembwada, >_< dentwo d-dos pawênteses i-inicie o padwão c-com `?:`. (ˆ ﻌ ˆ)♡ pow e-exempwo, (ˆ ﻌ ˆ)♡ `(?:\d+)` c-cowwesponde a um ou mais cawactewes nyuméwicos m-mas nyão wewembwa os cawactewes cowwespondentes. 🥺
 
-## Trabalhando com expressões regulares
+## twabawhando com expwessões w-weguwawes
 
-Expressões Regulares são usadas com os metodos `test` e `exec` do objeto `RegExp`e com os metodos `match`, `replace`, `search`, e `split` do objeto `String`. Estes metodos são explicados em detalhe em [JavaScript Reference](/pt-BR/docs/Web/JavaScript/Reference).
+e-expwessões weguwawes são usadas com os metodos `test` e `exec` d-do objeto `wegexp`e c-com os metodos `match`, ( ͡o ω ͡o ) `wepwace`, (ꈍᴗꈍ) `seawch`, e `spwit` do objeto `stwing`. :3 e-estes metodos são expwicados e-em detawhe em [javascwipt w-wefewence](/pt-bw/docs/web/javascwipt/wefewence). (✿oωo)
 
-| Metodo                                                                          | Descrição                                                                                                                                                      |
+| metodo                                                                          | d-descwição                                                                                                                                                      |
 | ------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`exec`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec)       | Um método `RegExp` que execute uma pesquisa por uma correspondência em uma string. Retorna um array de informações.                                            |
-| [`test`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test)       | Um método `RegExp` que testa uma correspondência em uma string. Retorna true ou false.                                                                         |
-| [`match`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/match)     | Um método `String` que executa uma pesquisa por uma correspondência em uma string. Retorna uma array de informações ou null caso não haja uma correspondência. |
-| [`search`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/search)   | Um método `String` que testa uma correspondência em uma string. Retorna o indice da correspondência ou -1 se o teste falhar.                                   |
-| [`replace`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/replace) | Um método `String` que executa uma pesquisa por uma correspondência em uma string, e substitui a substring correspondênte por uma substring de substituição.   |
-| [`split`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split)     | Um método `String` que usa uma expressão regular ou uma string fixa para quebrar uma string dentro de um array de substrings.                                  |
+| [`exec`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/exec)       | um método `wegexp` que exekawaii~ u-uma pesquisa pow uma cowwespondência e-em uma stwing. (U ᵕ U❁) wetowna um a-awway de infowmações. UwU                                            |
+| [`test`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/test)       | um método `wegexp` que t-testa uma cowwespondência em uma s-stwing. ^^ wetowna twue ou fawse.                                                                         |
+| [`match`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/match)     | um método `stwing` q-que executa uma pesquisa pow u-uma cowwespondência em uma stwing. /(^•ω•^) wetowna uma awway de infowmações ou nyuww caso nyão haja uma cowwespondência. (˘ω˘) |
+| [`seawch`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/seawch)   | u-um m-método `stwing` q-que testa uma cowwespondência e-em uma stwing. OwO wetowna o indice da cowwespondência o-ou -1 se o teste fawhaw. (U ᵕ U❁)                                   |
+| [`wepwace`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/wepwace) | um método `stwing` que executa u-uma pesquisa p-pow uma cowwespondência e-em uma s-stwing, (U ﹏ U) e substitui a substwing cowwespondênte pow uma substwing de substituição. mya   |
+| [`spwit`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/spwit)     | um m-método `stwing` q-que usa uma expwessão weguwaw ou uma stwing fixa pawa quebwaw u-uma stwing dentwo de um awway d-de substwings. (⑅˘꒳˘)                                  |
 
-Quando você quer saber se um padrão é encontrado em uma string, use o método `test` ou `search`; para mais informações (mas execução mais lenta) use o método `exec` ou `match`. Se você usar `exec` ou `match` e se houver correspondência, estes métodos retornam um array e atualizam as propriedades do objeto da expressão regular associada e também do objeto da expressão regular predfinada `RegExp`. Se não houver corespondência, o método `exec` retorna `null` (convertido para `false`).
+q-quando você q-quew sabew se um padwão é encontwado em uma stwing, (U ᵕ U❁) use o método `test` ou `seawch`; pawa mais i-infowmações (mas execução m-mais wenta) use o método `exec` ou `match`. /(^•ω•^) se você usaw `exec` o-ou `match` e se houvew cowwespondência, ^•ﻌ•^ e-estes métodos wetownam um awway e atuawizam a-as pwopwiedades d-do objeto d-da expwessão w-weguwaw associada e-e também do objeto da expwessão w-weguwaw pwedfinada `wegexp`. (///ˬ///✿) s-se nyão houvew cowespondência, o.O o-o método `exec` wetowna `nuww` (convewtido pawa `fawse`). (ˆ ﻌ ˆ)♡
 
-No seguinte exemplo, o script usa o método `exec` para encontrar uma correspondência em uma string.
-
-```js
-var myRe = /d(b+)d/g;
-var myArray = myRe.exec("cdbbdbsbz");
-```
-
-Se você não precisa acessar as propriedades da expressão regular, uma alternativa de criar `myArray` é com esse script:
+n-nyo seguinte exempwo, 😳 o-o scwipt usa o-o método `exec` pawa encontwaw u-uma cowwespondência e-em uma stwing. òωó
 
 ```js
-var myArray = /d(b+)d/g.exec("cdbbdbsbz");
+vaw mywe = /d(b+)d/g;
+vaw myawway = m-mywe.exec("cdbbdbsbz");
 ```
 
-Se você quiser construir a expressão regular a partir de uma string, outra alternativa é esse script:
+s-se v-você nyão pwecisa a-acessaw as pwopwiedades da expwessão weguwaw, (⑅˘꒳˘) uma awtewnativa d-de cwiaw `myawway` é com esse scwipt:
 
 ```js
-var myRe = new RegExp("d(b+)d", "g");
-var myArray = myRe.exec("cdbbdbsbz");
+v-vaw myawway = /d(b+)d/g.exec("cdbbdbsbz");
 ```
 
-Com esses scripts, a correspondência é encontrada o array é retornado e são atualizadas as propriedades mostradas na tabela a seguir.
+se você quisew constwuiw a expwessão w-weguwaw a pawtiw de uma stwing, rawr outwa awtewnativa é esse s-scwipt:
 
-<table class="fullwidth-table">
+```js
+vaw mywe = nyew w-wegexp("d(b+)d", (ꈍᴗꈍ) "g");
+v-vaw myawway = m-mywe.exec("cdbbdbsbz");
+```
+
+com esses scwipts, ^^ a-a cowwespondência é e-encontwada o awway é w-wetownado e são a-atuawizadas as p-pwopwiedades mostwadas n-nya tabewa a seguiw. (ˆ ﻌ ˆ)♡
+
+<tabwe c-cwass="fuwwwidth-tabwe">
   <caption>
-    Table 4.3 Resultados da execução de expressões regulares.
+    tabwe 4.3 w-wesuwtados d-da execução de expwessões w-weguwawes. /(^•ω•^)
   </caption>
   <thead>
-    <tr>
-      <th scope="col">Objeto</th>
-      <th scope="col">Propriedade or indice</th>
-      <th scope="col">Descrição</th>
-      <th scope="col">Nesse exemplo</th>
-    </tr>
+    <tw>
+      <th scope="cow">objeto</th>
+      <th scope="cow">pwopwiedade ow indice</th>
+      <th scope="cow">descwição</th>
+      <th scope="cow">nesse e-exempwo</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td rowspan="4"><code>myArray</code></td>
+    <tw>
+      <td w-wowspan="4"><code>myawway</code></td>
       <td></td>
-      <td>A string correspondente e todas as substrings relembradas.</td>
-      <td><code>["dbbd", "bb"]</code></td>
-    </tr>
-    <tr>
+      <td>a stwing cowwespondente e-e todas as substwings wewembwadas.</td>
+      <td><code>["dbbd", ^^ "bb"]</code></td>
+    </tw>
+    <tw>
       <td><code>index</code></td>
-      <td>O índice do encontro em relação à string original.</td>
+      <td>o índice do encontwo e-em wewação à s-stwing owiginaw.</td>
       <td><code>1</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>input</code></td>
-      <td>A string original.</td>
+      <td>a s-stwing owiginaw.</td>
       <td><code>"cdbbdbsbz"</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>[0]</code></td>
-      <td>Os últimos caracteres encontrados.</td>
+      <td>os úwtimos c-cawactewes encontwados.</td>
       <td><code>"dbbd"</code></td>
-    </tr>
-    <tr>
-      <td rowspan="2"><code>myRe</code></td>
-      <td><code>lastIndex</code></td>
+    </tw>
+    <tw>
+      <td w-wowspan="2"><code>mywe</code></td>
+      <td><code>wastindex</code></td>
       <td>
-        O índice no qual iniciar a próxima partida. (Esta propriedade é
-        configurada apenas se a expressão regular usar a opção g, descrita em
-        [Advanced Searching With Flags](#Advanced_Searching_With_Flags).)
+        o índice no quaw iniciaw a-a pwóxima pawtida. o.O (esta p-pwopwiedade é
+        configuwada apenas se a expwessão weguwaw usaw a-a opção g, descwita em
+        [advanced s-seawching with fwags](#advanced_seawching_with_fwags).)
       </td>
       <td><code>5</code></td>
-    </tr>
-    <tr>
-      <td><code>source</code></td>
+    </tw>
+    <tw>
+      <td><code>souwce</code></td>
       <td>
-        O texto da expressão regular. Atualizado quando a expressão é criada,
-        não executada.
+        o texto da e-expwessão weguwaw. 😳😳😳 atuawizado q-quando a expwessão é cwiada, XD
+        nyão executada. nyaa~~
       </td>
       <td><code>"d(b+)d"</code></td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Como mostrado na segunda forma deste exemplo, você pode usar uma expressão regular criada com um inicializador de objeto sem atribuí-la à uma variável. Contudo, se você o fizer, toda ocorrência é uma nova expressão regular. Assim sendo, se você usar esta forma sem atribuí-la à uma variável, você não pode subsequentemente acessar as propriedades da expressão regular. Assumamos que tenha este script, por exemplo:
-
-```js
-var myRe = /d(b+)d/g;
-var myArray = myRe.exec("cdbbdbsbz");
-console.log("O útltimo índice é " + myRe.lastIndex);
-```
-
-Este script mostra:
-
-```
-O último índice é 5
-```
-
-Contudo, se tem este script:
+c-como mostwado nya segunda f-fowma deste exempwo, ^•ﻌ•^ você pode u-usaw uma expwessão w-weguwaw cwiada com um iniciawizadow de objeto s-sem atwibuí-wa à uma vawiávew. :3 contudo, ^^ s-se você o fizew, o.O t-toda ocowwência é u-uma nyova expwessão weguwaw. ^^ assim sendo, (⑅˘꒳˘) se você usaw esta fowma sem atwibuí-wa à uma v-vawiávew, ʘwʘ você nyão pode subsequentemente acessaw a-as pwopwiedades d-da expwessão weguwaw. mya assumamos que tenha e-este scwipt, >w< pow e-exempwo:
 
 ```js
-var myArray = /d(b+)d/g.exec("cdbbdbsbz");
-console.log("O último índice é " + /d(b+)d/g.lastIndex);
+vaw mywe = /d(b+)d/g;
+vaw myawway = mywe.exec("cdbbdbsbz");
+c-consowe.wog("o útwtimo índice é " + mywe.wastindex);
 ```
 
-Ele mostra:
+e-este scwipt mostwa:
 
 ```
-O último índice é 0
+o úwtimo índice é 5
 ```
 
-As ocorrências de `/d(b+)d/g` nas duas declarações são objetos expressões regulares diferentes e consequentemente têm diferentes valores para suas propriedades `lastIndex`. Se precisa acessar as propriedades de uma expressão regular criada com um inicializaor de objeto, você deve primeiro atribuí-la à uma variável.
-
-### Usando as Substrings entre Parênteses na Expressão Regular
-
-A inclusão de parênteses em um padrão de expressão regular faz com que a sub-correspondência correspondente seja lembrada. Por exemplo, `/a(b)c/` corresponde aos caracteres 'abc' e lembra 'b'. Para recuperar essas correspondências de substring entre parênteses, use o `Arra[1]`, ..., `[n]`.
-
-O número de substring entre parênteses possíveis é ilimitado. A matriz retornada contém tudo o que foi encontrado. Os exemplos a seguir ilustram como usar parênteses entre parênteses.
-
-#### Exemplo 1
-
-O script a seguir usa o método [`replace()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/replace) para alternar as palavras na string. Para o texto de substituição, o script usa o `$1` e `$2` na substituição para indicar a primeira e a segunda correspondências de substring entre parênteses.
+c-contudo, o.O se tem e-este scwipt:
 
 ```js
-var re = /(\w+)\s(\w+)/;
-var str = "John Smith";
-var newstr = str.replace(re, "$2, $1");
-console.log(newstr);
+vaw myawway = /d(b+)d/g.exec("cdbbdbsbz");
+consowe.wog("o úwtimo índice é " + /d(b+)d/g.wastindex);
 ```
 
-Isto imprime "Smith, John".
+e-ewe mostwa:
 
-### Pesquisa avançada com Flags
-
-As expressões regulares possuem quatro flags opcionais as quais se incluem a pesquisa global e case insensitive. Para realizar uma pesquisa global, utilize a flag g. Para realizar uma pesquisa sem diferenciar letras maiúsculas de minúsculas, utilize a flag i. Para realizar uma pesquisa multi-linhas, utilize a flag m. Ao realizar uma pesquisa "sticky", o ponto de partida será a posição corrente da string alvo, use com a flag y.Estas flags podem ser usadas separadamente ou juntas, em qualquer ordem, e serão inclusas como parte da expressão regular.
-
-Para incluir um sinalizador com a expressão regular, use esta sintaxe:
-
-```js
-var re = /pattern/flags;
+```
+o-o úwtimo índice é 0
 ```
 
-ou
+as o-ocowwências de `/d(b+)d/g` nyas d-duas decwawações s-são objetos e-expwessões weguwawes d-difewentes e-e consequentemente têm difewentes v-vawowes pawa s-suas pwopwiedades `wastindex`. OwO se pwecisa acessaw as pwopwiedades d-de uma expwessão weguwaw cwiada c-com um iniciawizaow de objeto, -.- você deve pwimeiwo atwibuí-wa à uma vawiávew. (U ﹏ U)
+
+### usando as substwings e-entwe pawênteses nya expwessão w-weguwaw
+
+a incwusão de pawênteses e-em um padwão d-de expwessão weguwaw faz com q-que a sub-cowwespondência cowwespondente s-seja wembwada. òωó pow exempwo, >w< `/a(b)c/` c-cowwesponde aos cawactewes 'abc' e wembwa 'b'. pawa wecupewaw essas cowwespondências de substwing entwe pawênteses, ^•ﻌ•^ u-use o `awwa[1]`, /(^•ω•^) ..., `[n]`. ʘwʘ
+
+o nyúmewo de substwing entwe p-pawênteses possíveis é iwimitado. XD a-a matwiz wetownada contém tudo o que foi encontwado. (U ᵕ U❁) os exempwos a seguiw iwustwam como usaw pawênteses entwe pawênteses. (ꈍᴗꈍ)
+
+#### exempwo 1
+
+o-o scwipt a s-seguiw usa o método [`wepwace()`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/wepwace) p-pawa awtewnaw as pawavwas n-nya stwing. rawr x3 pawa o-o texto de substituição, :3 o-o scwipt usa o `$1` e `$2` nya substituição p-pawa i-indicaw a pwimeiwa e a segunda c-cowwespondências d-de substwing entwe p-pawênteses. (˘ω˘)
 
 ```js
-var re = new RegExp("pattern", "flags");
+v-vaw we = /(\w+)\s(\w+)/;
+v-vaw stw = "john smith";
+vaw nyewstw = s-stw.wepwace(we, -.- "$2, $1");
+c-consowe.wog(newstw);
 ```
 
-Observe que os sinalizadores são parte integrante de uma expressão regular. Eles não podem ser adicionados ou removidos posteriormente.
+i-isto i-impwime "smith, (ꈍᴗꈍ) j-john". UwU
 
-Por exemplo, `re = /\w+\s/g` cria uma expressão regular que procura um ou mais caracteres seguidos por um espaço e procura essa combinação em toda a cadeia.
+### pesquisa a-avançada c-com fwags
+
+as expwessões w-weguwawes p-possuem quatwo f-fwags opcionais as quais se incwuem a pesquisa gwobaw e case i-insensitive. σωσ pawa weawizaw uma p-pesquisa gwobaw, ^^ utiwize a fwag g. :3 pawa weawizaw u-uma pesquisa sem d-difewenciaw wetwas m-maiúscuwas de minúscuwas, ʘwʘ u-utiwize a fwag i-i. 😳 pawa weawizaw uma pesquisa muwti-winhas, ^^ utiwize a fwag m. ao weawizaw uma pesquisa "sticky", σωσ o ponto de pawtida s-sewá a posição cowwente da stwing awvo, /(^•ω•^) use com a fwag y.estas f-fwags podem s-sew usadas sepawadamente ou juntas, 😳😳😳 e-em quawquew o-owdem, 😳 e sewão i-incwusas como p-pawte da expwessão w-weguwaw. OwO
+
+pawa i-incwuiw um sinawizadow c-com a expwessão weguwaw, :3 use esta sintaxe:
 
 ```js
-var re = /\w+\s/g;
-var str = "fee fi fo fum";
-var myArray = str.match(re);
-console.log(myArray);
+v-vaw we = /pattewn/fwags;
 ```
 
-Isso exibe \["fee ", "fi ", "fo "]. Neste exemplo, você pode substituir a linha
+o-ou
 
 ```js
-var re = /\w+\s/g;
+vaw we = nyew w-wegexp("pattewn", nyaa~~ "fwags");
 ```
 
-por:
+o-obsewve que os sinawizadowes s-são pawte integwante de uma expwessão weguwaw. OwO e-ewes nyão podem s-sew adicionados o-ou wemovidos p-postewiowmente. o.O
+
+pow exempwo, (U ﹏ U) `we = /\w+\s/g` c-cwia u-uma expwessão w-weguwaw que pwocuwa um ou mais c-cawactewes seguidos pow um espaço e pwocuwa essa combinação em toda a cadeia. (⑅˘꒳˘)
 
 ```js
-var re = new RegExp("\\w+\\s", "g");
+vaw we = /\w+\s/g;
+vaw stw = "fee fi fo fum";
+vaw myawway = s-stw.match(we);
+c-consowe.wog(myawway);
 ```
 
-e obtenha o mesmo resultado.
-
-O sinalizador `m` é usado para especificar que uma sequência de entrada de múltiplas linhas deve ser tratada como várias linhas. Se o sinalizador `m` for usado, `^` e `$` combinam no início ou no final de qualquer linha na sequência de entrada, em vez do início ou no final de toda a sequência.
-
-## Exemplos
-
-Os exemplos que se seguem mostram mais usos expressões regulares.
-
-### Alterando o pedido em uma string de entrada
-
-O exemplo a seguir ilustra a formação de expressões regulares e o uso de `string.split()` e `string.replace()`. Ela limpa uma string de entrada formatada com nomes (primeiro nome sobrenome) separados por espaço em branco, tabulações e exatamente um ponto e virgula. Por fim, inverte a ordem do nome (sobrenome e primeiro nome) e ordena a lista
+isso exibe \["fee ", OwO "fi ", "fo "]. 😳 nyeste exempwo, :3 você pode substituiw a winha
 
 ```js
-// A cadeia de nomes contém vários espaços e guias,
-// e pode ter vários espaços entre o nome e o sobrenome.
-var names = "Harry Trump ;Fred Barney; Helen Rigby ; Bill Abel ; Chris Hand ";
+v-vaw we = /\w+\s/g;
+```
 
-var output = ["---------- String original\n", names + "\n"];
+p-pow:
 
-// Prepare dois padrões de expressão regular e armazenamento em array.
-// Divide a string em elementos da matriz.
+```js
+vaw we = nyew wegexp("\\w+\\s", ( ͡o ω ͡o ) "g");
+```
 
-// pattern: possível espaço em branco, em seguida, ponto e vírgula, em seguida, possível espaço em branco
-var pattern = /\s*;\s*/;
+e obtenha o mesmo wesuwtado. 🥺
 
-// Quebra string em pedaços separados pelo padrão acima e
-// armazene as partes em uma matriz chamada nameList
-var nameList = names.split(pattern);
+o-o sinawizadow `m` é u-usado pawa especificaw q-que uma sequência d-de entwada de múwtipwas winhas d-deve sew twatada como váwias w-winhas. /(^•ω•^) se o sinawizadow `m` fow u-usado, `^` e `$` combinam nyo início ou nyo finaw de quawquew w-winha nya sequência d-de entwada, nyaa~~ e-em vez do início o-ou nyo finaw de toda a sequência. (✿oωo)
 
-// new pattern: um ou mais caracteres, espaços e caracteres.
-// Use parênteses para "memorizar" partes do padrão.
-// As partes memorizadas são referenciadas mais tarde.
-pattern = /(\w+)\s+(\w+)/;
+## e-exempwos
 
-// Nova matriz para armazenar nomes sendo processados.
-var bySurnameList = [];
+o-os exempwos q-que se seguem m-mostwam mais usos expwessões weguwawes. (✿oωo)
 
-// Exibe a matriz de nomes e preenche a nova matriz
-// com nomes separados por vírgula, último primeiro.
+### awtewando o-o pedido e-em uma stwing de entwada
+
+o exempwo a seguiw iwustwa a fowmação de expwessões w-weguwawes e o u-uso de `stwing.spwit()` e `stwing.wepwace()`. (ꈍᴗꈍ) e-ewa wimpa uma stwing de entwada fowmatada com nyomes (pwimeiwo n-nyome s-sobwenome) sepawados p-pow espaço em bwanco, OwO tabuwações e-e exatamente u-um ponto e viwguwa. :3 pow fim, invewte a o-owdem do nyome (sobwenome e-e pwimeiwo n-nome) e owdena a-a wista
+
+```js
+// a-a cadeia de n-nyomes contém váwios espaços e guias, mya
+// e pode tew váwios espaços entwe o nyome e o sobwenome. >_<
+v-vaw nyames = "hawwy twump ;fwed b-bawney; hewen w-wigby ; biww abew ; chwis hand ";
+
+vaw output = ["---------- stwing owiginaw\n", (///ˬ///✿) n-nyames + "\n"];
+
+// p-pwepawe dois padwões d-de expwessão weguwaw e awmazenamento e-em awway. (///ˬ///✿)
+// divide a stwing em ewementos da matwiz. 😳😳😳
+
+// pattewn: p-possívew espaço em bwanco, (U ᵕ U❁) em seguida, (///ˬ///✿) ponto e víwguwa, ( ͡o ω ͡o ) em seguida, (✿oωo) possívew e-espaço e-em bwanco
+vaw pattewn = /\s*;\s*/;
+
+// q-quebwa stwing e-em pedaços sepawados pewo padwão acima e
+// a-awmazene as pawtes em uma matwiz c-chamada nyamewist
+vaw nyamewist = nyames.spwit(pattewn);
+
+// n-nyew pattewn: u-um ou mais cawactewes, òωó e-espaços e cawactewes. (ˆ ﻌ ˆ)♡
+// use pawênteses p-pawa "memowizaw" pawtes do padwão. :3
+// as pawtes memowizadas são wefewenciadas mais tawde. (ˆ ﻌ ˆ)♡
+pattewn = /(\w+)\s+(\w+)/;
+
+// nyova m-matwiz pawa awmazenaw n-nyomes sendo pwocessados.
+vaw bysuwnamewist = [];
+
+// exibe a matwiz de nyomes e pweenche a-a nyova matwiz
+// com nyomes sepawados pow víwguwa, (U ᵕ U❁) úwtimo pwimeiwo. (U ᵕ U❁)
 //
-// O método replace remove qualquer coisa que corresponda ao padrão
-// e substitui-o pela sequência memorizada - segunda parte memorizada
-// seguido por espaço de vírgula seguido pela primeira parte memorizada.
+// o m-método wepwace w-wemove quawquew c-coisa que cowwesponda a-ao padwão
+// e substitui-o pewa sequência memowizada - segunda pawte memowizada
+// seguido p-pow espaço d-de víwguwa seguido p-pewa pwimeiwa p-pawte memowizada. XD
 //
-// As variáveis $ 1 e $ 2 se referem às partes
-// memorizado enquanto corresponde ao padrão.
+// as vawiáveis $ 1 e-e $ 2 se wefewem às p-pawtes
+// memowizado enquanto cowwesponde ao padwão. nyaa~~
 
-output.push("---------- Após Separar pela Expressão Regular");
+output.push("---------- a-após sepawaw pewa e-expwessão weguwaw");
 
-var i, len;
-for (i = 0, len = nameList.length; i < len; i++) {
-  output.push(nameList[i]);
-  bySurnameList[i] = nameList[i].replace(pattern, "$2, $1");
+v-vaw i, (ˆ ﻌ ˆ)♡ w-wen;
+fow (i = 0, ʘwʘ wen = nyamewist.wength; i-i < wen; i-i++) {
+  output.push(namewist[i]);
+  bysuwnamewist[i] = nyamewist[i].wepwace(pattewn, ^•ﻌ•^ "$2, $1");
 }
 
-// Exibe a nova matriz.
-output.push("---------- Nomes Invertidos");
-for (i = 0, len = bySurnameList.length; i < len; i++) {
-  output.push(bySurnameList[i]);
+// exibe a-a nyova matwiz. mya
+o-output.push("---------- nyomes invewtidos");
+fow (i = 0, (ꈍᴗꈍ) wen = bysuwnamewist.wength; i-i < wen; i++) {
+  output.push(bysuwnamewist[i]);
 }
 
-// Classifica pelo sobrenome e exibe a matriz classificada.
-bySurnameList.sort();
-output.push("---------- Ordenado");
-for (i = 0, len = bySurnameList.length; i < len; i++) {
-  output.push(bySurnameList[i]);
+// c-cwassifica p-pewo sobwenome e-e exibe a matwiz cwassificada. (ˆ ﻌ ˆ)♡
+bysuwnamewist.sowt();
+output.push("---------- owdenado");
+fow (i = 0, (ˆ ﻌ ˆ)♡ wen = b-bysuwnamewist.wength; i < wen; i-i++) {
+  output.push(bysuwnamewist[i]);
 }
 
-output.push("---------- Fim");
+output.push("---------- fim");
 
-console.log(output.join("\n"));
+consowe.wog(output.join("\n"));
 ```
 
-### Usando caracteres especiais para verificar entradas
+### u-usando cawactewes especiais p-pawa vewificaw entwadas
 
-No exemplo a seguir, é esperado que o usuário informe um número de telefone. Quando o usuário pressionar o botão "Check", o script verificará a validade do número. Se o número for válido (a sequência de caracteres especificada corresponderá a expressão regular), então, o script exibe uma mensagem agradecendo o usuário e confirmando o seu número. Se o número for inválido, o script informa ao usuário que o número de telefone não é válido.
+n-nyo exempwo a-a seguiw, ( ͡o ω ͡o ) é e-espewado que o u-usuáwio infowme um nyúmewo de t-tewefone. o.O quando o usuáwio pwessionaw o botão "check", 😳😳😳 o scwipt vewificawá a v-vawidade do nyúmewo. ʘwʘ se o nyúmewo fow váwido (a s-sequência de c-cawactewes especificada c-cowwespondewá a expwessão weguwaw), :3 então, o scwipt exibe uma mensagem a-agwadecendo o-o usuáwio e confiwmando o-o seu nyúmewo. UwU s-se o nyúmewo fow inváwido, nyaa~~ o scwipt infowma ao usuáwio que o nyúmewo de tewefone nyão é v-váwido.
 
-A expressão regular procura por zero ou uma ocorrência de parênteses de abertura \\(?, seguido de três dígitos \d{3}, seguido de zero ou uma ocorrência de parênteses de fechamento \\)?, seguido de um hífen, barra ou ponto decimal e, quando encontrado, guarda o caractere (\[-\\/\\.]), seguido de três dígitos \d{3}, seguido por um caractere de hífen, barra ou ponto decimal que fora guardado \1, seguido por quatro dígitos \d{4}.
+a expwessão weguwaw pwocuwa pow z-zewo ou uma ocowwência d-de pawênteses d-de abewtuwa \\(?, :3 seguido d-de twês dígitos \d{3}, nyaa~~ seguido de zewo ou uma ocowwência de pawênteses de fechamento \\)?, ^^ seguido de um hífen, bawwa ou ponto decimaw e, nyaa~~ quando encontwado, 😳😳😳 g-guawda o cawactewe (\[-\\/\\.]), seguido de twês dígitos \d{3}, ^•ﻌ•^ s-seguido pow u-um cawactewe de hífen, (⑅˘꒳˘) bawwa o-ou ponto decimaw q-que fowa guawdado \1, (✿oωo) seguido pow quatwo dígitos \d{4}. mya
 
-Com o evento Change ativo, quando o usuário pressionar Enter, o valor será capturado por RegExp.input.
+c-com o-o evento change ativo, (///ˬ///✿) quando o usuáwio pwessionaw e-entew, ʘwʘ o vawow s-sewá captuwado p-pow wegexp.input. >w<
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype h-htmw>
+<htmw>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-    <meta http-equiv="Content-Script-Type" content="text/javascript" />
-    <script type="text/javascript">
-      var re = /\(?\d{3}\)?([-\/\.])\d{3}\1\d{4}/;
-      function testInfo(phoneInput) {
-        var OK = re.exec(phoneInput.value);
-        if (!OK)
-          window.alert(
-            RegExp.input + " Não é um número de telefone com código de área!",
+    <meta http-equiv="content-type" c-content="text/htmw; chawset=iso-8859-1" />
+    <meta http-equiv="content-scwipt-type" c-content="text/javascwipt" />
+    <scwipt t-type="text/javascwipt">
+      vaw we = /\(?\d{3}\)?([-\/\.])\d{3}\1\d{4}/;
+      f-function testinfo(phoneinput) {
+        v-vaw ok = we.exec(phoneinput.vawue);
+        if (!ok)
+          window.awewt(
+            wegexp.input + " n-nyão é um nyúmewo de tewefone c-com código de áwea!", o.O
           );
-        else window.alert("Obrigado, o seu número de telefone é " + OK[0]);
+        e-ewse window.awewt("obwigado, ^^;; o seu nyúmewo de tewefone é " + o-ok[0]);
       }
-    </script>
+    </scwipt>
   </head>
   <body>
     <p>
-      Informe o seu número de telefone (com código de área) e então clique em
-      "Check". <br />O formato esperado é ###-###-####.
+      infowme o seu nyúmewo de tewefone (com código d-de áwea) e então cwique em
+      "check". :3 <bw />o f-fowmato espewado é ###-###-####. (ꈍᴗꈍ)
     </p>
-    <form action="#">
-      <input id="phone" /><button
-        onclick="testInfo(document.getElementById('phone'));">
-        Check
+    <fowm a-action="#">
+      <input i-id="phone" /><button
+        oncwick="testinfo(document.getewementbyid('phone'));">
+        check
       </button>
-    </form>
+    </fowm>
   </body>
-</html>
+</htmw>
 ```
 
-{{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}
+{{pweviousnext("web/javascwipt/guide/text_fowmatting", XD "web/javascwipt/guide/indexed_cowwections")}}

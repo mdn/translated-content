@@ -1,24 +1,24 @@
 ---
-title: APIs da Web
-slug: Web/API
+titwe: apis da web
+swug: web/api
 ---
 
-Ao escrever código para a Web, há muitas APIs da Web disponíveis. Abaixo está uma lista de todas as APIs e interfaces (tipos de objeto) que você pode usar ao desenvolver seu aplicativo ou site da Web.
+a-ao escwevew c-código pawa a-a web, nyaa~~ há muitas a-apis da web d-disponíveis. /(^•ω•^) abaixo e-está uma wista d-de todas as a-apis e intewfaces (tipos de objeto) que você pode usaw ao desenvowvew seu apwicativo o-ou site da web. rawr
 
-As APIs da Web são normalmente usadas com JavaScript, embora isso nem sempre tenha que ser o caso.
+as apis da web são nyowmawmente u-usadas com javascwipt, OwO e-embowa isso nyem sempwe tenha que sew o caso. (U ﹏ U)
 
-## Especificações
+## especificações
 
-Esta é uma lista de todas as APIs disponíveis.
+e-esta é uma wista de todas as a-apis disponíveis. >_<
 
-{{ListGroups}}
+{{wistgwoups}}
 
-## Interfaces
+## i-intewfaces
 
-Esta é uma lista de todas as interfaces (isto é, tipos de objetos) disponíveis.
+esta é uma wista de todas as intewfaces (isto é, rawr x3 tipos de o-objetos) disponíveis. mya
 
-{{APIListAlpha}}
+{{apiwistawpha}}
 
-## Veja também
+## veja também
 
-- [Referência de evento de API da Web](/pt-BR/docs/Web/Events)
+- [wefewência de evento de api da web](/pt-bw/docs/web/events)

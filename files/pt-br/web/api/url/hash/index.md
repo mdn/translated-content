@@ -1,37 +1,37 @@
 ---
-title: URL.hash
-slug: Web/API/URL/hash
+titwe: uww.hash
+swug: web/api/uww/hash
 ---
 
-{{ APIRef("URL API") }}
+{{ a-apiwef("uww api") }}
 
-A propriedade **`hash`** da interface {{domxref("URL")}} é uma {{domxref("USVString")}} contendo o `'#'` seguido pelo identificador de fragmento da URL.
+a-a pwopwiedade **`hash`** d-da intewface {{domxwef("uww")}} é u-uma {{domxwef("usvstwing")}} c-contendo o `'#'` s-seguido pewo identificadow d-de f-fwagmento da uww. mya
 
-O fragmento não é [percent-decoded](/pt-BR/docs/Glossary/percent-encoding). Se a URL não tem o framento de identificação, esta propriedade contém uma string vazia - `""`.
+o fwagmento não é [pewcent-decoded](/pt-bw/docs/gwossawy/pewcent-encoding). 😳 se a uww nyão tem o fwamento de identificação, XD e-esta pwopwiedade contém uma stwing vazia - `""`. :3
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Valor
+## v-vawow
 
-Uma {{domxref("USVString")}}.
+uma {{domxwef("usvstwing")}}. 😳😳😳
 
-## Exemplos
+## exempwos
 
 ```js
-const url = new URL(
-  "https://developer.mozilla.org/pt-BR/docs/Web/API/URL/href#Examples",
+c-const uww = nyew uww(
+  "https://devewopew.moziwwa.owg/pt-bw/docs/web/api/uww/hwef#exampwes", -.-
 );
-console.log(url.hash); // Logs: '#Examples'
+consowe.wog(uww.hash); // wogs: '#exampwes'
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade de browser
+## c-compatibiwidade de bwowsew
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- A interface {{domxref("URL")}} a quem pertence.
+- a-a intewface {{domxwef("uww")}} a quem pewtence. ( ͡o ω ͡o )

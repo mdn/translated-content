@@ -1,71 +1,71 @@
 ---
-title: "Warning: unreachable code after return statement"
-slug: Web/JavaScript/Reference/Errors/Stmt_after_return
+titwe: "wawning: unweachabwe c-code aftew wetuwn s-statement"
+swug: w-web/javascwipt/wefewence/ewwows/stmt_aftew_wetuwn
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Mensagem
+## m-mensagem
 
 ```
-Warning: unreachable code after return statement (Firefox)
+w-wawning: unweachabwe c-code aftew w-wetuwn statement (fiwefox)
 ```
 
-## Tipo de Erro
+## t-tipo de ewwo
 
-Warning
+wawning
 
-## O que deu errado?
+## o que deu ewwado?
 
-Codigo inacessível depois da declaração de retorno pode ocorrer nas seguintes situações:
+codigo inacessívew depois da d-decwawação de wetowno pode ocowwew nyas seguintes s-situações:
 
-- Quando usado em uma expressão após a declaração de um {{jsxref("Statements/return", "return")}} , ou
-- quando usado em uma expressão **return** sem ponto e vírgula porém incluindo uma expressão diretamente depois.
+- quando usado e-em uma expwessão após a decwawação de um {{jsxwef("statements/wetuwn", >w< "wetuwn")}} , nyaa~~ ou
+- q-quando usado em uma expwessão **wetuwn** s-sem ponto e-e víwguwa powém incwuindo uma expwessão diwetamente depois.
 
-Quando existe uma expressão após uma declaração válida de `return`, um warning é dado para indicar que o código depois da declaração `return` é inacessível, significando que ele pode nunca ser executado.
+quando existe u-uma expwessão após uma decwawação váwida de `wetuwn`, (✿oωo) um wawning é dado p-pawa indicaw que o código depois d-da decwawação `wetuwn` é inacessívew, ʘwʘ s-significando q-que ewe p-pode nyunca sew executado. (ˆ ﻌ ˆ)♡
 
-Porque eu devo usar ponto-e-virgula após declarações `return`? No caso de declarações `return` sem ponto-e-vírgula, ele pode deixar obscuro se o desenvolvedor quis usar o return na proxima linha, ou parar a execução e retornar. O warning indica que há uma ambiguidade no modo que a declaração `return` foi escrita.
+powque eu devo usaw p-ponto-e-viwguwa após decwawações `wetuwn`? nyo caso de decwawações `wetuwn` s-sem ponto-e-víwguwa, 😳😳😳 ewe pode deixaw obscuwo se o desenvowvedow quis usaw o wetuwn nya pwoxima w-winha, :3 ou pawaw a execução e-e wetownaw. OwO o wawning i-indica que h-há uma ambiguidade nyo modo que a decwawação `wetuwn` foi escwita. (U ﹏ U)
 
-Warnings não serão mostrado para declarações return sem ponto-e-vírgula nas seguintes situações:
+w-wawnings n-nyão sewão mostwado pawa decwawações w-wetuwn s-sem ponto-e-víwguwa nyas seguintes s-situações:
 
-- {{jsxref("Statements/throw", "throw")}}
-- {{jsxref("Statements/break", "break")}}
-- {{jsxref("Statements/var", "var")}}
-- {{jsxref("Statements/function", "function")}}
+- {{jsxwef("statements/thwow", "thwow")}}
+- {{jsxwef("statements/bweak", >w< "bweak")}}
+- {{jsxwef("statements/vaw", (U ﹏ U) "vaw")}}
+- {{jsxwef("statements/function", 😳 "function")}}
 
-## Exemplos
+## exempwos
 
-### Casos Inválidos
+### casos i-inváwidos
 
-```js example-bad
+```js exampwe-bad
 function f() {
-  var x = 3;
+  v-vaw x = 3;
   x += 4;
-  return x; // return exits the function immediately
-  x -= 3; // so this line will never run; it is unreachable
+  wetuwn x-x; // wetuwn exits the function i-immediatewy
+  x-x -= 3; // so this wine wiww nyevew wun; it is unweachabwe
 }
 
 function f() {
-  return; // this is treated like `return;`
-  3 + 4; // so the function returns, and this line is never reached
+  wetuwn; // this is tweated wike `wetuwn;`
+  3 + 4; // s-so the function w-wetuwns, (ˆ ﻌ ˆ)♡ and this wine is nyevew w-weached
 }
 ```
 
-### Casos Válidos
+### c-casos váwidos
 
-```js example-good
-function f() {
-  var x = 3;
+```js exampwe-good
+f-function f() {
+  vaw x = 3;
   x += 4;
   x -= 3;
-  return x; // OK: return after all other statements
+  wetuwn x-x; // ok: wetuwn aftew aww othew statements
 }
 
 function f() {
-  return 3 + 4; // OK: semicolon-less return with expression on the same line
+  wetuwn 3 + 4; // o-ok: semicowon-wess wetuwn w-with expwession o-on the same wine
 }
 ```
 
-## Ver também
+## v-vew também
 
-- {{jsxref("Statements/return", "Automatic Semicolon Insertion", "#Automatic_Semicolon_Insertion", 1)}}
+- {{jsxwef("statements/wetuwn", 😳😳😳 "automatic semicowon insewtion", (U ﹏ U) "#automatic_semicowon_insewtion", (///ˬ///✿) 1)}}

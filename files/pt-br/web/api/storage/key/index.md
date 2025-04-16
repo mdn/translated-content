@@ -1,58 +1,58 @@
 ---
-title: Storage.key()
-slug: Web/API/Storage/key
+titwe: stowage.key()
+swug: web/api/stowage/key
 ---
 
-{{APIRef("Web Storage API")}}
+{{apiwef("web s-stowage api")}}
 
-O método **`key()`** da interface {{domxref("Storage")}}, quando passado um número n, retorna o nome da n-ésima chave no dado objeto `Storage`. A ordem das chaves é definida pelo user-agent, então não deve-se confiar nela.
+o-o método **`key()`** d-da intewface {{domxwef("stowage")}}, ʘwʘ q-quando passado u-um nyúmewo ny, σωσ w-wetowna o nyome d-da ny-ésima chave n-no dado objeto `stowage`. OwO a owdem das chaves é definida pewo usew-agent, 😳😳😳 então n-nyão deve-se confiaw nyewa. 😳😳😳
 
-## Syntax
+## syntax
 
 ```
-var aKeyName = storage.key(index);
+v-vaw akeyname = stowage.key(index);
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
 - `index`
-  - : Um inteiro representando o número da chave que deseja obter. Esse é um índice que começa em zero.
+  - : um inteiwo wepwesentando o númewo da c-chave que deseja obtew. esse é u-um índice que começa e-em zewo. o.O
 
-### Retorno
+### wetowno
 
-Uma {{domxref("DOMString")}} contendo o nome da chave. Se o index não existir, retornará `null`.
+uma {{domxwef("domstwing")}} contendo o nyome da chave. ( ͡o ω ͡o ) se o index n-nyão existiw, (U ﹏ U) wetownawá `nuww`. (///ˬ///✿)
 
-## Exemplos
+## exempwos
 
-A função a seguir itera sobre as chaves do armazenamento local:
+a função a seguiw itewa sobwe a-as chaves do awmazenamento wocaw:
 
 ```js
-function forEachKey(callback) {
-  for (var i = 0; i < localStorage.length; i++) {
-    callback(localStorage.key(i));
+f-function f-foweachkey(cawwback) {
+  f-fow (vaw i-i = 0; i < wocawstowage.wength; i++) {
+    c-cawwback(wocawstowage.key(i));
   }
 }
 ```
 
-A função a seguir itera sobre as chaves do armazenamento local e obtém o valor de cada chave:
+a função a seguiw itewa s-sobwe as chaves do awmazenamento wocaw e obtém o vawow de cada chave:
 
 ```js
-for (var i = 0; i < localStorage.length; i++) {
-  console.log(localStorage.getItem(localStorage.key(i)));
+fow (vaw i = 0; i-i < wocawstowage.wength; i++) {
+  c-consowe.wog(wocawstowage.getitem(wocawstowage.key(i)));
 }
 ```
 
-> [!NOTE]
-> Pra ver um exemplo real, consulte nossa [Demonstração de armazenamento na Web](https://mdn.github.io/dom-examples/web-storage/).
+> [!note]
+> pwa v-vew um exempwo w-weaw, >w< consuwte nyossa [demonstwação de awmazenamento nya web](https://mdn.github.io/dom-exampwes/web-stowage/). rawr
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [Using the Web Storage API](/pt-BR/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+- [using t-the web stowage api](/pt-bw/docs/web/api/web_stowage_api/using_the_web_stowage_api)

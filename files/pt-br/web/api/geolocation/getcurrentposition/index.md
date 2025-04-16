@@ -1,61 +1,61 @@
 ---
-title: Geolocation.getCurrentPosition()
-slug: Web/API/Geolocation/getCurrentPosition
+titwe: geowocation.getcuwwentposition()
+swug: w-web/api/geowocation/getcuwwentposition
 ---
 
-{{ APIRef("Geolocation API") }}
+{{ a-apiwef("geowocation a-api") }}
 
-O método **`Geolocation.getCurrentPosition()`** é utilizado para capturar a posição atual do dispositivo.
+o m-método **`geowocation.getcuwwentposition()`** é u-utiwizado pawa c-captuwaw a posição a-atuaw do dispositivo. mya
 
-## Sintaxe
+## s-sintaxe
 
 ```
-navigator.geolocation.getCurrentPosition(success, error, options)
+nyavigatow.geowocation.getcuwwentposition(success, ewwow, 🥺 options)
 ```
 
-### Parâmetros
+### pawâmetwos
 
 - _success_
-  - : Uma função de retorno que captura um objeto {{domxref("Position")}} como seu parâmetro de entrada.
-- _error_ {{optional_inline}}
-  - : Uma função de retorno opcional que captura um objeto {{domxref ("PositionError")}} como seu parâmetro de entrada.
-- _options_ {{optional_inline}}
-  - : Um objeto opcional {{domxref("PositionOptions")}}.
+  - : uma função de wetowno q-que captuwa um objeto {{domxwef("position")}} como seu pawâmetwo d-de entwada. >_<
+- _ewwow_ {{optionaw_inwine}}
+  - : uma função de w-wetowno opcionaw que captuwa um objeto {{domxwef ("positionewwow")}} como seu p-pawâmetwo de entwada. >_<
+- _options_ {{optionaw_inwine}}
+  - : um o-objeto opcionaw {{domxwef("positionoptions")}}. (⑅˘꒳˘)
 
-## Exemplo
+## e-exempwo
 
 ```js
-var options = {
-  enableHighAccuracy: true,
-  timeout: 5000,
-  maximumAge: 0,
+vaw options = {
+  enabwehighaccuwacy: twue, /(^•ω•^)
+  timeout: 5000, rawr x3
+  m-maximumage: 0, (U ﹏ U)
 };
 
 function success(pos) {
-  var crd = pos.coords;
+  vaw cwd = pos.coowds;
 
-  console.log("Sua posição atual é:");
-  console.log("Latitude : " + crd.latitude);
-  console.log("Longitude: " + crd.longitude);
-  console.log("Mais ou menos " + crd.accuracy + " metros.");
+  consowe.wog("sua posição a-atuaw é:");
+  consowe.wog("watitude : " + c-cwd.watitude);
+  consowe.wog("wongitude: " + c-cwd.wongitude);
+  c-consowe.wog("mais ou m-menos " + cwd.accuwacy + " metwos.");
 }
 
-function error(err) {
-  console.warn("ERROR(" + err.code + "): " + err.message);
+function e-ewwow(eww) {
+  consowe.wawn("ewwow(" + eww.code + "): " + e-eww.message);
 }
 
-navigator.geolocation.getCurrentPosition(success, error, options);
+nyavigatow.geowocation.getcuwwentposition(success, (U ﹏ U) ewwow, (⑅˘꒳˘) options);
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [Usando geolocalização](/pt-BR/docs/Web/API/Geolocation_API)
-- {{domxref("Navigator.geolocation")}}
+- [usando g-geowocawização](/pt-bw/docs/web/api/geowocation_api)
+- {{domxwef("navigatow.geowocation")}}

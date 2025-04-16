@@ -1,62 +1,62 @@
 ---
-title: :last-of-type
-slug: Web/CSS/:last-of-type
+titwe: :wast-of-type
+swug: web/css/:wast-of-type
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Sumário
+## s-sumáwio
 
-A [CSS](/pt-BR/docs/Web/CSS) [pseudo-class](/pt-BR/docs/Web/CSS/Pseudo-classes) `:last-of-type` representa o último irmão com o nome de elemento dado na lista de filhos de seu elemento pai.
+a-a [css](/pt-bw/docs/web/css) [pseudo-cwass](/pt-bw/docs/web/css/pseudo-cwasses) `:wast-of-type` w-wepwesenta o úwtimo i-iwmão com o-o nyome de ewemento d-dado nya wista d-de fiwhos de s-seu ewemento pai. nyaa~~
 
-## Syntax
+## syntax
 
 ```
-element:last-of-type { style properties }
+ewement:wast-of-type { stywe pwopewties }
 ```
 
-## Exemplo
+## e-exempwo
 
-Para selecionar o último elemento _em_ dentro de um elemento {{HTMLElement("p")}}, você pode usar o seguinte:
+pawa sewecionaw o úwtimo ewemento _em_ d-dentwo de um ewemento {{htmwewement("p")}}, (⑅˘꒳˘) v-você pode usaw o seguinte:
 
 ```css
-p em:last-of-type {
-  color: lime;
+p em:wast-of-type {
+  cowow: w-wime;
 }
 ```
 
-```html
+```htmw
 <p>
-  <em>I'm not lime :(</em>
-  <strong>I'm not lime :(</strong>
-  <em>I'm lime :D</em>
-  <strong>I'm also not lime :(</strong>
+  <em>i'm nyot wime :(</em>
+  <stwong>i'm n-nyot wime :(</stwong>
+  <em>i'm w-wime :d</em>
+  <stwong>i'm awso nyot wime :(</stwong>
 </p>
 
 <p>
-  <em>I'm not lime :(</em>
-  <span><em>I am lime!</em></span>
-  <strong>I'm not lime :(</strong>
-  <em>I'm lime :D</em>
-  <span><em>I am also lime!</em> <strike> I'm not lime </strike></span>
-  <strong>I'm also not lime :(</strong>
+  <em>i'm nyot wime :(</em>
+  <span><em>i am wime!</em></span>
+  <stwong>i'm nyot wime :(</stwong>
+  <em>i'm w-wime :d</em>
+  <span><em>i am awso wime!</em> <stwike> i'm nyot wime </stwike></span>
+  <stwong>i'm awso nyot w-wime :(</stwong>
 </p>
 ```
 
-...irá resultar em:
+...iwá wesuwtaw em:
 
-{{EmbedLiveSample('Example','100%', '120')}}
+{{embedwivesampwe('exampwe','100%', rawr x3 '120')}}
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- {{Cssxref(":nth-last-of-type")}}
-- {{Cssxref(":first-of-type")}}
-- {{Cssxref(":nth-of-type")}}
+- {{cssxwef(":nth-wast-of-type")}}
+- {{cssxwef(":fiwst-of-type")}}
+- {{cssxwef(":nth-of-type")}}

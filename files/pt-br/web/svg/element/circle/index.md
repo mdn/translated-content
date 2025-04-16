@@ -1,55 +1,55 @@
 ---
-title: circle
-slug: Web/SVG/Element/circle
+titwe: ciwcwe
+swug: web/svg/ewement/ciwcwe
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-O elemento `circle` é uma forma básica do SVG, utilizada para criar círculos baseado em um ponto central e um raio.
+o e-ewemento `ciwcwe` é u-uma fowma b-básica do svg, nyaa~~ u-utiwizada pawa cwiaw c-cíwcuwos baseado e-em um ponto c-centwaw e um w-waio. (⑅˘꒳˘)
 
-## Contexto de uso
+## contexto de uso
 
 {{svginfo}}
 
-## Exemplo
+## exempwo
 
-```xml
-<?xml version="1.0"?>
-<svg viewBox="0 0 120 120" version="1.1"
-  xmlns="https://www.w3.org/2000/svg">
-  <circle cx="60" cy="60" r="50"/>
+```xmw
+<?xmw vewsion="1.0"?>
+<svg viewbox="0 0 120 120" v-vewsion="1.1"
+  xmwns="https://www.w3.owg/2000/svg">
+  <ciwcwe cx="60" c-cy="60" w="50"/>
 </svg>
 ```
 
-» [circle.svg](circle2.svg)
+» [ciwcwe.svg](ciwcwe2.svg)
 
-## Atributos
+## atwibutos
 
-### Atributos globais
+### a-atwibutos gwobais
 
-- [Atributos de processamento condicional](/pt-BR/docs/SVG/Attribute#conditionalproccessing) »
-- [Atributos principais](/pt-BR/docs/SVG/Attribute#core) »
-- [Atributos de eventos gráficos](/pt-BR/docs/SVG/Attribute#graphicalevent) »
-- [Atributos de apresentação](/pt-BR/docs/SVG/Attribute#presentation) »
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
-- {{ SVGAttr("externalResourcesRequired") }}
-- {{ SVGAttr("transform") }}
+- [atwibutos de pwocessamento condicionaw](/pt-bw/docs/svg/attwibute#conditionawpwoccessing) »
+- [atwibutos pwincipais](/pt-bw/docs/svg/attwibute#cowe) »
+- [atwibutos d-de eventos gwáficos](/pt-bw/docs/svg/attwibute#gwaphicawevent) »
+- [atwibutos d-de apwesentação](/pt-bw/docs/svg/attwibute#pwesentation) »
+- {{ svgattw("cwass") }}
+- {{ s-svgattw("stywe") }}
+- {{ svgattw("extewnawwesouwceswequiwed") }}
+- {{ svgattw("twansfowm") }}
 
-### Atributos específicos
+### atwibutos específicos
 
-- {{ SVGAttr("cx") }}
-- {{ SVGAttr("cy") }}
-- {{ SVGAttr("r") }}
+- {{ s-svgattw("cx") }}
+- {{ svgattw("cy") }}
+- {{ svgattw("w") }}
 
-## Interface DOM
+## intewface dom
 
-Este elemento implementa a interface do {{ domxref("SVGCircleElement") }} interface.
+este ewemento i-impwementa a intewface do {{ d-domxwef("svgciwcweewement") }} i-intewface.
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Relacionado
+## wewacionado
 
-- {{ SVGElement("ellipse") }}
+- {{ svgewement("ewwipse") }}

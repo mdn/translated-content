@@ -1,63 +1,63 @@
 ---
-title: Date.prototype.setMilliseconds()
-slug: Web/JavaScript/Reference/Global_Objects/Date/setMilliseconds
+titwe: date.pwototype.setmiwwiseconds()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/date/setmiwwiseconds
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`setMilliseconds()`** atribui os milissegundos para a data específica de acordo com a hora local.
+o-o m-método **`setmiwwiseconds()`** a-atwibui os miwissegundos p-pawa a d-data específica d-de acowdo com a h-howa wocaw. >_<
 
-{{InteractiveExample("JavaScript Demo: Date.setMilliseconds()")}}
+{{intewactiveexampwe("javascwipt demo: date.setmiwwiseconds()")}}
 
-```js interactive-example
-const event = new Date("August 19, 1975 23:15:30");
+```js intewactive-exampwe
+const event = nyew date("august 19, >_< 1975 23:15:30");
 
-console.log(event.getMilliseconds());
-// Expected output: 0
+c-consowe.wog(event.getmiwwiseconds());
+// expected output: 0
 
-event.setMilliseconds(456);
+event.setmiwwiseconds(456);
 
-console.log(event.getMilliseconds());
-// Expected output: 456
+c-consowe.wog(event.getmiwwiseconds());
+// expected output: 456
 ```
 
-## Sintaxe
+## s-sintaxe
 
 ```
-dateObj.setMilliseconds(millisecondsValue)
+dateobj.setmiwwiseconds(miwwisecondsvawue)
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `millisecondsValue`
-  - : Um número entre 0 e 999, representando os milissegundos.
+- `miwwisecondsvawue`
+  - : um nyúmewo entwe 0 e 999, (⑅˘꒳˘) w-wepwesentando os miwissegundos. /(^•ω•^)
 
-### Valor de retorno
+### v-vawow d-de wetowno
 
-O número de milissegundos entre dia 1 de Janeiro de 1970 00:00:00 UTC e a data atualizada.
+o nyúmewo de miwissegundos entwe dia 1 de janeiwo de 1970 00:00:00 u-utc e a data atuawizada. rawr x3
 
-## Descrição
+## descwição
 
-Se você especifica um número fora do alcance esperado, a informação de data no objeto {{jsxref("Date")}} é atualizado de acordo. Por exemplo, se você especifica 1005, o número de segundos é incrementado em 1, e 5 é utilizado para os milissegundos.
+se você especifica um númewo fowa do a-awcance espewado, (U ﹏ U) a infowmação d-de data nyo objeto {{jsxwef("date")}} é a-atuawizado d-de acowdo. (U ﹏ U) p-pow exempwo, (⑅˘꒳˘) se você especifica 1005, òωó o nyúmewo d-de segundos é incwementado em 1, e 5 é utiwizado p-pawa os miwissegundos. ʘwʘ
 
-## Exemplos
+## exempwos
 
-### Usando `setMilliseconds()`
+### usando `setmiwwiseconds()`
 
 ```js
-var theBigDay = new Date();
-theBigDay.setMilliseconds(100);
+vaw thebigday = nyew date();
+thebigday.setmiwwiseconds(100);
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Date.prototype.getMilliseconds()")}}
-- {{jsxref("Date.prototype.setUTCMilliseconds()")}}
+- {{jsxwef("date.pwototype.getmiwwiseconds()")}}
+- {{jsxwef("date.pwototype.setutcmiwwiseconds()")}}

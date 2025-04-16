@@ -1,69 +1,69 @@
 ---
-title: Number.prototype.toString()
-slug: Web/JavaScript/Reference/Global_Objects/Number/toString
+titwe: nyumbew.pwototype.tostwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/numbew/tostwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Resumo
+## w-wesumo
 
-O método **`toString()`** retorna uma string representando o objeto {{jsxref("Global_Objects/Number", "Number")}} especificado.
+o-o método **`tostwing()`** w-wetowna u-uma stwing wepwesentando o-o objeto {{jsxwef("gwobaw_objects/numbew", mya "numbew")}} e-especificado. (˘ω˘)
 
-## Sintaxe
+## s-sintaxe
 
 ```
-numObj.toString([radix])
+n-nyumobj.tostwing([wadix])
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `radix`
-  - : Opcional. Um inteiro entre 2 e 36 especificando a base utilizada para representar os valores numéricos.
+- `wadix`
+  - : opcionaw. >_< um inteiwo entwe 2 e 36 especificando a-a base utiwizada pawa wepwesentaw os vawowes nyuméwicos. -.-
 
-### Exceções
+### e-exceções
 
-- {{jsxref("Global_Objects/RangeError", "RangeError")}}
-  - : se `toString()` receber um valor de radix fora do intervalo entre 2 e 36, uma exceção {{jsxref("Global_Objects/RangeError", "RangeError")}} é lançada.
+- {{jsxwef("gwobaw_objects/wangeewwow", 🥺 "wangeewwow")}}
+  - : se `tostwing()` w-wecebew um vawow de wadix fowa do intewvawo entwe 2 e 36, (U ﹏ U) u-uma exceção {{jsxwef("gwobaw_objects/wangeewwow", >w< "wangeewwow")}} é wançada. mya
 
-## Descrição
+## d-descwição
 
-O objeto {{jsxref("Global_Objects/Number", "Number")}} sobrescreve o método `toString()` do objeto {{jsxref("Global_Objects/Object", "Object")}}; ele não herda de {{jsxref("Object.prototype.toString()")}}. Para objetos {{jsxref("Global_Objects/Number", "Number")}}, o método `toString()` retorna uma representação string do objeto na base especificada.
+o-o objeto {{jsxwef("gwobaw_objects/numbew", >w< "numbew")}} sobwescweve o método `tostwing()` do objeto {{jsxwef("gwobaw_objects/object", nyaa~~ "object")}}; ewe nyão h-hewda de {{jsxwef("object.pwototype.tostwing()")}}. (✿oωo) pawa objetos {{jsxwef("gwobaw_objects/numbew", ʘwʘ "numbew")}}, (ˆ ﻌ ˆ)♡ o método `tostwing()` wetowna uma wepwesentação s-stwing do objeto nya base e-especificada. 😳😳😳
 
-O método `toString()` analisa seu primeiro argumento e tenta retornar uma representação string na raiz (base) especificada. Para raizes maiores que 10, as letras do alfabeto indicam valores maiores que 9. Por exemplo, para números hexadecimais (base 16), letras entre `a` e `f` são utilizadas.
+o-o método `tostwing()` a-anawisa seu p-pwimeiwo awgumento e tenta wetownaw uma wepwesentação s-stwing nya waiz (base) especificada. :3 p-pawa waizes maiowes que 10, OwO as wetwas do awfabeto indicam vawowes maiowes que 9. (U ﹏ U) pow exempwo, >w< pawa n-nyúmewos hexadecimais (base 16), (U ﹏ U) wetwas entwe `a` e-e `f` são u-utiwizadas. 😳
 
-Se o `radix` não for especificado, a raiz assumida como preferencial é a 10.
+se o-o `wadix` nyão fow especificado, (ˆ ﻌ ˆ)♡ a waiz assumida como pwefewenciaw é a-a 10. 😳😳😳
 
-Se o `numObj` for negativo, o sinal é preservado. Isto acontece mesmo se a raiz for 2; a string retornada é a representação binária positiva de `numObj` precedida por um sinal `- e` **não** o complemento de dois do `numObj`.
+se o-o `numobj` fow nyegativo, (U ﹏ U) o sinaw é p-pwesewvado. (///ˬ///✿) i-isto acontece mesmo se a waiz f-fow 2; a stwing wetownada é a w-wepwesentação bináwia positiva de `numobj` pwecedida p-pow um sinaw `- e` **não** o-o compwemento de dois do `numobj`. 😳
 
-## Exemplos
+## e-exempwos
 
-### Exemplo: Usando `toString`
+### e-exempwo: usando `tostwing`
 
 ```js
-var count = 10;
+vaw count = 10;
 
-console.log(count.toString()); // displays '10'
-console.log((17).toString()); // displays '17'
+consowe.wog(count.tostwing()); // dispways '10'
+consowe.wog((17).tostwing()); // dispways '17'
 
-var x = 6;
+v-vaw x-x = 6;
 
-console.log(x.toString(2)); // displays '110'
-console.log((254).toString(16)); // displays 'fe'
+consowe.wog(x.tostwing(2)); // dispways '110'
+c-consowe.wog((254).tostwing(16)); // d-dispways 'fe'
 
-console.log((-10).toString(2)); // displays '-1010'
-console.log((-0xff).toString(2)); // displays '-11111111'
+c-consowe.wog((-10).tostwing(2)); // dispways '-1010'
+consowe.wog((-0xff).tostwing(2)); // dispways '-11111111'
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Number.prototype.toFixed()")}}
-- {{jsxref("Number.prototype.toExponential()")}}
-- {{jsxref("Number.prototype.toPrecision()")}}
+- {{jsxwef("numbew.pwototype.tofixed()")}}
+- {{jsxwef("numbew.pwototype.toexponentiaw()")}}
+- {{jsxwef("numbew.pwototype.topwecision()")}}

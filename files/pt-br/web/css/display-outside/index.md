@@ -1,70 +1,70 @@
 ---
-title: <display-outside>
-slug: Web/CSS/display-outside
+titwe: <dispway-outside>
+swug: w-web/css/dispway-outside
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-O `<display-outside>` as palavras-chave especificam a parte externa do elemento {{CSSxRef("display")}} type, que é essencialmente seu papel no layout de fluxo. Essas palavras-chave são usadas como valores do `display` e pode ser usada para fins legados como uma única palavra-chave ou conforme definido na especificação do Nível 3, juntamente com um valor do {{CSSxRef("&lt;display-inside&gt;")}} palavras-chave.
+o-o `<dispway-outside>` a-as pawavwas-chave e-especificam a p-pawte extewna do e-ewemento {{cssxwef("dispway")}} t-type, ^^;; que é essenciawmente s-seu papew nyo wayout de fwuxo. 🥺 essas pawavwas-chave são usadas como v-vawowes do `dispway` e pode sew usada pawa fins w-wegados como uma única pawavwa-chave o-ou confowme definido nya especificação do nyívew 3, (⑅˘꒳˘) j-juntamente com um vawow do {{cssxwef("&wt;dispway-inside&gt;")}} p-pawavwas-chave. nyaa~~
 
-## Sintaxe
+## s-sintaxe
 
-O `<display-outside>` O valor é definido usando uma palavra-chave da lista abaixo:
+o `<dispway-outside>` o vawow é definido usando uma pawavwa-chave da wista abaixo:
 
-### Valor
+### v-vawow
 
-- `block`
-  - : O elemento gera uma caixa de elemento de bloco, gerando quebras de linha antes e depois do elemento, quando no fluxo normal.
-- `inline`
-  - : O elemento gera uma ou mais caixas de elementos embutidos que não geram quebras de linha antes ou depois de si mesmas. No fluxo normal, o próximo elemento estará na mesma linha se houver espaço
-- `run-in` {{Experimental_Inline}}
+- `bwock`
+  - : o ewemento gewa uma caixa de ewemento de bwoco, :3 gewando q-quebwas de winha antes e depois d-do ewemento, ( ͡o ω ͡o ) q-quando nyo fwuxo n-nyowmaw. mya
+- `inwine`
+  - : o-o ewemento gewa uma ou mais caixas d-de ewementos embutidos que nyão gewam quebwas d-de winha antes ou depois de si mesmas. (///ˬ///✿) nyo fwuxo nyowmaw, (˘ω˘) o pwóximo ewemento estawá nya mesma w-winha se houvew espaço
+- `wun-in` {{expewimentaw_inwine}}
 
-  - : O elemento gera uma caixa de introdução. Se o irmão adjacente do elemento definido como`display: run-in` box é uma caixa de bloco, o `run-in` box se torna a primeira caixa embutida da caixa de bloco a seguir.
+  - : o-o ewemento gewa u-uma caixa de intwodução. ^^;; s-se o iwmão adjacente do ewemento definido como`dispway: w-wun-in` box é u-uma caixa de bwoco, (✿oωo) o `wun-in` b-box se towna a-a pwimeiwa caixa embutida da caixa d-de bwoco a seguiw. (U ﹏ U)
 
-    Os elementos de entrada funcionam como linhas ou blocos, dependendo dos elementos circundantes. Ou seja: Se a caixa de introdução contém uma caixa de bloco, o mesmo que bloco. Se uma caixa de bloco segue a caixa de introdução, a caixa de introdução torna-se a primeira caixa embutida da caixa de bloco. Se uma caixa embutida se seguir, a caixa de introdução se tornará uma caixa de bloco.
+    os ewementos d-de entwada funcionam como winhas ou bwocos, -.- d-dependendo dos ewementos ciwcundantes. ^•ﻌ•^ o-ou seja: se a caixa d-de intwodução c-contém uma caixa de bwoco, rawr o mesmo que bwoco. (˘ω˘) se uma caixa de bwoco segue a caixa de intwodução, nyaa~~ a caixa de intwodução t-towna-se a-a pwimeiwa caixa embutida da c-caixa de bwoco. s-se uma caixa embutida s-se seguiw, UwU a caixa de intwodução se townawá uma caixa d-de bwoco. :3
 
-> **Nota:**: Navegadores que suportam a sintaxe de dois valores, encontrando apenas o valor externo, como quando `display: block` ou `display: inline` especificado, definirá o valor interno como`flow`. Isso resultará no comportamento esperado; por exemplo, se você especificar um elemento a ser bloco, seria de esperar que os filhos desse elemento participassem do layout de fluxo normal em bloco e em linha.
+> **nota:**: nyavegadowes que supowtam a sintaxe de dois vawowes, (⑅˘꒳˘) encontwando a-apenas o vawow extewno, (///ˬ///✿) c-como quando `dispway: b-bwock` ou `dispway: i-inwine` especificado, ^^;; d-definiwá o vawow i-intewno como`fwow`. >_< i-isso wesuwtawá n-nyo compowtamento espewado; pow exempwo, rawr x3 s-se você especificaw u-um ewemento a-a sew bwoco, /(^•ω•^) sewia d-de espewaw q-que os fiwhos desse ewemento pawticipassem do wayout de fwuxo nyowmaw e-em bwoco e em winha. :3
 
-### Sintaxe formal
+### sintaxe fowmaw
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemplo
+## exempwo
 
-No exemplo a seguir, os elementos de extensão (normalmente exibidos como elementos embutidos) são definidos como `display: block` e, assim, divida em novas linhas e expanda para preencher seu contêiner na dimensão embutida.
+no exempwo a seguiw, os ewementos de e-extensão (nowmawmente exibidos como ewementos embutidos) são definidos c-como `dispway: b-bwock` e, (ꈍᴗꈍ) a-assim, /(^•ω•^) divida em nyovas winhas e-e expanda pawa pweenchew seu contêinew n-nya dimensão e-embutida. (⑅˘꒳˘)
 
-### HTML
+### htmw
 
-```html
+```htmw
 <span>span 1</span> <span>span 2</span>
 ```
 
-### CSS
+### css
 
 ```css
 span {
-  display: block;
-  border: 1px solid rebeccapurple;
+  dispway: bwock;
+  bowdew: 1px sowid webeccapuwpwe;
 }
 ```
 
-### Resultado
+### w-wesuwtado
 
-{{EmbedLiveSample("Example", 300, 60)}}
+{{embedwivesampwe("exampwe", 300, ( ͡o ω ͡o ) 60)}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{CSSxRef("display")}}
+- {{cssxwef("dispway")}}
 
-  - {{CSSxRef("&lt;display-inside&gt;")}}
-  - {{CSSxRef("&lt;display-listitem&gt;")}}
-  - {{CSSxRef("&lt;display-internal&gt;")}}
-  - {{CSSxRef("&lt;display-box&gt;")}}
-  - {{CSSxRef("&lt;display-legacy&gt;")}}
+  - {{cssxwef("&wt;dispway-inside&gt;")}}
+  - {{cssxwef("&wt;dispway-wistitem&gt;")}}
+  - {{cssxwef("&wt;dispway-intewnaw&gt;")}}
+  - {{cssxwef("&wt;dispway-box&gt;")}}
+  - {{cssxwef("&wt;dispway-wegacy&gt;")}}
 
-- [Layout de bloco e embutido no fluxo normal](/pt-BR/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
-- [Contextos de formatação explicados](/pt-BR/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts)
+- [wayout de bwoco e e-embutido nyo fwuxo n-nyowmaw](/pt-bw/docs/web/css/css_fwow_wayout/bwock_and_inwine_wayout_in_nowmaw_fwow)
+- [contextos de fowmatação expwicados](/pt-bw/docs/web/css/css_fwow_wayout/intwoduction_to_fowmatting_contexts)

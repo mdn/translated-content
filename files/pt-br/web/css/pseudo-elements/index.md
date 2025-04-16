@@ -1,91 +1,91 @@
 ---
-title: Pseudo-elementos
-slug: Web/CSS/Pseudo-elements
+titwe: pseudo-ewementos
+swug: w-web/css/pseudo-ewements
 ---
 
-{{ CSSRef() }}Um **pseudo-elemento** CSS é uma palavra-chave adicionada a um seletor que permite que você estilize uma parte específica do elemento selecionado. Por exemplo, o pseudo-elemento {{CSSxRef("::first-line")}} aplica o estilo apenas na primeira linha de um parágrafo.
+{{ c-csswef() }}um **pseudo-ewemento** c-css é uma pawavwa-chave a-adicionada a-a um sewetow q-que pewmite q-que você estiwize u-uma pawte específica do ewemento sewecionado. o.O pow exempwo, o pseudo-ewemento {{cssxwef("::fiwst-wine")}} a-apwica o estiwo apenas nya pwimeiwa w-winha de um pawágwafo. /(^•ω•^)
 
 ```css
-/* A primeira linha de todo elemento <p>. */
-p::first-line {
-  color: blue;
-  text-transform: uppercase;
+/* a pwimeiwa winha d-de todo ewemento <p>. nyaa~~ */
+p::fiwst-wine {
+  cowow: bwue;
+  text-twansfowm: uppewcase;
 }
 ```
 
-> [!NOTE]
-> Diferentemente dos pseudo-elementos, {{cssxref("pseudo-classes")}} podem ser utilizadas para estilizar um elemento baseado em seu _estado_.
+> [!note]
+> difewentemente d-dos pseudo-ewementos, nyaa~~ {{cssxwef("pseudo-cwasses")}} p-podem sew utiwizadas p-pawa estiwizaw um ewemento baseado em seu _estado_. :3
 
-## Sintaxe
+## sintaxe
 
 ```
-seletor::pseudo-elemento {
-  propriedade: valor;
+sewetow::pseudo-ewemento {
+  p-pwopwiedade: vawow;
 }
 ```
 
-Você pode utilizar apenas um pseudo-elemento em um seletor. Ele deve aparecer depois da declaração de um elemento simples.
+você pode utiwizaw apenas um pseudo-ewemento e-em um sewetow. 😳😳😳 ewe deve apawecew d-depois da decwawação d-de um ewemento s-simpwes. (˘ω˘)
 
-> [!NOTE]
-> Como regra, os dois pontos devem ser usados duas vezes (`::`) ao invés de uma única vez (`:`). Isso distingue pseudo-classes de pseudo-elementos. Apesar disso, devido a essa distinção não estar presente em versões mais antigas da especificação da W3C, a maioria dos navegadores suportam ambas as sintaxes para os pseudo-elementos originais.
+> [!note]
+> c-como wegwa, ^^ os dois pontos devem sew u-usados duas vezes (`::`) ao invés de uma única v-vez (`:`). :3 isso distingue pseudo-cwasses de pseudo-ewementos. -.- apesaw disso, 😳 devido a essa distinção nyão estaw p-pwesente em vewsões mais antigas d-da especificação d-da w3c, mya a-a maiowia dos nyavegadowes supowtam ambas as sintaxes pawa os p-pseudo-ewementos o-owiginais. (˘ω˘)
 
-## Índice de pseudo-elementos comuns
+## Índice de pseudo-ewementos c-comuns
 
-- {{ Cssxref("::after") }}
-- {{ Cssxref("::before") }}
-- {{ cssxref("::cue")}}
-- {{ Cssxref("::first-letter") }}
-- {{ Cssxref("::first-line") }}
-- {{ Cssxref("::selection") }}
-- {{ Cssxref("::slotted") }}
-- {{ Cssxref("::backdrop") }} {{experimental_inline}}
-- {{ Cssxref("::placeholder") }} {{experimental_inline}}
-- {{ Cssxref("::marker") }} {{experimental_inline}}
-- {{ Cssxref("::spelling-error") }} {{experimental_inline}}
-- {{ Cssxref("::grammar-error") }} {{experimental_inline}}
+- {{ c-cssxwef("::aftew") }}
+- {{ cssxwef("::befowe") }}
+- {{ c-cssxwef("::cue")}}
+- {{ cssxwef("::fiwst-wettew") }}
+- {{ c-cssxwef("::fiwst-wine") }}
+- {{ cssxwef("::sewection") }}
+- {{ cssxwef("::swotted") }}
+- {{ c-cssxwef("::backdwop") }} {{expewimentaw_inwine}}
+- {{ cssxwef("::pwacehowdew") }} {{expewimentaw_inwine}}
+- {{ c-cssxwef("::mawkew") }} {{expewimentaw_inwine}}
+- {{ cssxwef("::spewwing-ewwow") }} {{expewimentaw_inwine}}
+- {{ c-cssxwef("::gwammaw-ewwow") }} {{expewimentaw_inwine}}
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th>Navegador</th>
-      <th>Versão mais baixa</th>
-      <th>Suporte de</th>
-    </tr>
-    <tr>
-      <td rowspan="2">Internet Explorer</td>
+    <tw>
+      <th>navegadow</th>
+      <th>vewsão mais baixa</th>
+      <th>supowte de</th>
+    </tw>
+    <tw>
+      <td wowspan="2">intewnet expwowew</td>
       <td>8.0</td>
-      <td><code>:pseudo-element</code></td>
-    </tr>
-    <tr>
+      <td><code>:pseudo-ewement</code></td>
+    </tw>
+    <tw>
       <td>9.0</td>
-      <td><code>:pseudo-element ::pseudo-element</code></td>
-    </tr>
-    <tr>
-      <td rowspan="2">Firefox (Gecko)</td>
+      <td><code>:pseudo-ewement ::pseudo-ewement</code></td>
+    </tw>
+    <tw>
+      <td wowspan="2">fiwefox (gecko)</td>
       <td>1.0 (1.0)</td>
-      <td><code>:pseudo-element</code></td>
-    </tr>
-    <tr>
+      <td><code>:pseudo-ewement</code></td>
+    </tw>
+    <tw>
       <td>1.0 (1.5)</td>
-      <td><code>:pseudo-element ::pseudo-element</code></td>
-    </tr>
-    <tr>
-      <td rowspan="2">Opera</td>
+      <td><code>:pseudo-ewement ::pseudo-ewement</code></td>
+    </tw>
+    <tw>
+      <td wowspan="2">opewa</td>
       <td>4.0</td>
-      <td><code>:pseudo-element</code></td>
-    </tr>
-    <tr>
+      <td><code>:pseudo-ewement</code></td>
+    </tw>
+    <tw>
       <td>7.0</td>
-      <td><code>:pseudo-element ::pseudo-element</code></td>
-    </tr>
-    <tr>
-      <td>Safari (WebKit)</td>
+      <td><code>:pseudo-ewement ::pseudo-ewement</code></td>
+    </tw>
+    <tw>
+      <td>safawi (webkit)</td>
       <td>1.0 (85)</td>
-      <td><code>:pseudo-element ::pseudo-element</code></td>
-    </tr>
+      <td><code>:pseudo-ewement ::pseudo-ewement</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Ver também
+## v-vew também
 
-- [pseudo-classes](/pt-BR/docs/Web/CSS/Pseudo-classes)
+- [pseudo-cwasses](/pt-bw/docs/web/css/pseudo-cwasses)

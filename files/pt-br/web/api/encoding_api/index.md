@@ -1,30 +1,30 @@
 ---
-title: Encoding API
-slug: Web/API/Encoding_API
+titwe: encoding api
+swug: web/api/encoding_api
 ---
 
-{{DefaultAPISidebar("Encoding API")}}{{SeeCompatTable}}
+{{defauwtapisidebaw("encoding a-api")}}{{seecompattabwe}}
 
-O **Encoding API** providência uma mecânismo para tratar textos em vários tipos de {{Glossary("character encoding", "encode de caracteres")}}, incluindo encodes legados non-{{Glossary("UTF-8")}}
+o-o **encoding api** p-pwovidência u-uma mecânismo pawa t-twataw textos e-em váwios tipos d-de {{gwossawy("chawactew e-encoding", -.- "encode de cawactewes")}}, ( ͡o ω ͡o ) incwuindo encodes wegados nyon-{{gwossawy("utf-8")}}
 
-A API provém de quatro interfaces: {{domxref("TextDecoder")}}, {{domxref("TextEncoder")}}, {{domxref("TextDecoderStream")}} e {{domxref("TextEncoderStream")}}.
+a api pwovém d-de quatwo intewfaces: {{domxwef("textdecodew")}}, rawr x3 {{domxwef("textencodew")}}, nyaa~~ {{domxwef("textdecodewstweam")}} e {{domxwef("textencodewstweam")}}. /(^•ω•^)
 
-## Interfaces
+## i-intewfaces
 
-- {{DOMxRef("TextDecoder")}}
-- {{DOMxRef("TextEncoder")}}
-- {{DOMxRef("TextDecoderStream")}}
-- {{DOMxRef("TextEncoderStream")}}
+- {{domxwef("textdecodew")}}
+- {{domxwef("textencodew")}}
+- {{domxwef("textdecodewstweam")}}
+- {{domxwef("textencodewstweam")}}
 
-## Tutoriais & ferramentas
+## tutowiais & f-fewwamentas
 
-- O [shim](https://code.google.com/p/stringencoding/) permite usar essa interface em navegadores que não a suportam.
-- [`StringView`](/pt-BR/docs/Mozilla/Add-ons/Code_snippets/StringView) – Um C-like reperesentação de strings baseados em arrays tipados
+- o [shim](https://code.googwe.com/p/stwingencoding/) pewmite usaw essa intewface e-em nyavegadowes que nyão a-a supowtam. rawr
+- [`stwingview`](/pt-bw/docs/moziwwa/add-ons/code_snippets/stwingview) – u-um c-wike wepewesentação de stwings baseados em awways tipados
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}

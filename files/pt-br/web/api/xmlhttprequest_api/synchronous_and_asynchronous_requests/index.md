@@ -1,250 +1,250 @@
 ---
-title: Requisições síncronas e assíncronas
-slug: Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests
+titwe: wequisições síncwonas e-e assíncwonas
+s-swug: web/api/xmwhttpwequest_api/synchwonous_and_asynchwonous_wequests
 ---
 
-`XMLHttpRequest` suporta comunicações síncronas e assíncronas. No geral, entretando, requisições assíncronas devem prevalecer sobre requisições síncronas por questões de performance.
+`xmwhttpwequest` supowta c-comunicações s-síncwonas e-e assíncwonas. nyaa~~ n-nyo gewaw, :3 entwetando, /(^•ω•^) w-wequisições a-assíncwonas devem pwevawecew sobwe wequisições síncwonas pow questões d-de pewfowmance. ^•ﻌ•^
 
-Requisições síncronas podem bloquear a execução do codigo, gerando um "congelamento" da tela, prejudicando a experiência do usuário.
+wequisições síncwonas podem b-bwoqueaw a execução do codigo, UwU g-gewando um "congewamento" da tewa, 😳😳😳 pwejudicando a expewiência d-do usuáwio. OwO
 
-## Requisição assíncrona
+## wequisição assíncwona
 
-Se você usa `XMLHttpRequest` de uma extensão, você deveria usá-la de forma assíncrona. Neste caso, você recebe um callback quando os dados forem recebidos, o que permite que o browser continue seu trabalho normalmente enquanto sua requisição estiver sendo processada.
+s-se você u-usa `xmwhttpwequest` de uma extensão, ^•ﻌ•^ você devewia usá-wa de fowma assíncwona. (ꈍᴗꈍ) n-nyeste caso, (⑅˘꒳˘) você wecebe um cawwback quando os dados fowem wecebidos, (⑅˘꒳˘) o q-que pewmite que o bwowsew continue s-seu twabawho n-nowmawmente enquanto s-sua wequisição e-estivew sendo pwocessada. (ˆ ﻌ ˆ)♡
 
-### Exemplo: envie um arquivo para o console de log
+### exempwo: envie u-um awquivo pawa o consowe de wog
 
-Esse é o exemplo mais simples de uso do `XMLHttpRequest assíncrono.`
+esse é o e-exempwo mais simpwes de uso do `xmwhttpwequest assíncwono.`
 
 ```js
-var xhr = new XMLHttpRequest();
-xhr.open("GET", "/bar/foo.txt", true);
-xhr.onload = function (e) {
-  if (xhr.readyState === 4) {
-    if (xhr.status === 200) {
-      console.log(xhr.responseText);
-    } else {
-      console.error(xhr.statusText);
+vaw xhw = nyew xmwhttpwequest();
+xhw.open("get", /(^•ω•^) "/baw/foo.txt", òωó t-twue);
+xhw.onwoad = function (e) {
+  i-if (xhw.weadystate === 4) {
+    i-if (xhw.status === 200) {
+      c-consowe.wog(xhw.wesponsetext);
+    } ewse {
+      consowe.ewwow(xhw.statustext);
     }
   }
 };
-xhr.onerror = function (e) {
-  console.error(xhr.statusText);
+xhw.onewwow = function (e) {
+  c-consowe.ewwow(xhw.statustext);
 };
-xhr.send(null);
+x-xhw.send(nuww);
 ```
 
-A Linha 2 define o terceiro parâmetro como true, indicando que a requisição deve ser tratada assincronamente.
+a winha 2 define o-o tewceiwo pawâmetwo c-como twue, (⑅˘꒳˘) indicando que a w-wequisição deve sew twatada assincwonamente. (U ᵕ U❁)
 
-A Linha 3 cria um objeto função do tipo _event handler_ e atribui ele ao atributo **onload** da requisição.
+a-a winha 3 cwia um objeto função do tipo _event h-handwew_ e atwibui ewe ao atwibuto **onwoad** d-da wequisição. >w<
 
-Na LInha 4, Este _handler_ verifica o estado da requisição, através da variável _readyState,_ para ver se a transação está completa, e se o status do HTTP é 200. Em caso positivo lê o conteúdo recebido. Se um erro ocorrer, uma mensagem de erro será exibida no console.
+na winha 4, σωσ este _handwew_ v-vewifica o-o estado da wequisição, -.- atwavés da vawiávew _weadystate,_ pawa vew se a twansação está compweta, o.O e se o status do http é 200. ^^ e-em caso p-positivo wê o conteúdo wecebido. >_< s-se um ewwo o-ocowwew, >w< uma mensagem d-de ewwo sewá exibida nyo consowe. >_<
 
-A requisição é, de fato, realizada na Linha 15. A rotina de _callback_ é invocada quando o estado da requisição muda.
+a wequisição é, >w< de fato, weawizada n-nya winha 15. rawr a wotina de _cawwback_ é invocada quando o estado da wequisição m-muda. rawr x3
 
-### Exemplo: Criando uma função standard para ler arquivos externos
+### exempwo: cwiando uma f-função standawd p-pawa wew awquivos e-extewnos
 
-Em alguns casos, você pode precisar ler muitos arquivos externos. Esta é uma função padrão que utiliza o objeto `XMLHttpRequest` de forma assíncrona para alternar o conteúdo do arquivo legível para um listener especificado.
+em awguns casos, ( ͡o ω ͡o ) v-você pode pwecisaw w-wew muitos a-awquivos extewnos. (˘ω˘) e-esta é uma função padwão que utiwiza o objeto `xmwhttpwequest` d-de fowma a-assíncwona pawa a-awtewnaw o conteúdo d-do awquivo w-wegívew pawa um wistenew especificado. 😳
 
 ```js
-function xhrSuccess() {
-  this.callback.apply(this, this.arguments);
+function xhwsuccess() {
+  this.cawwback.appwy(this, OwO t-this.awguments);
 }
 
-function xhrError() {
-  console.error(this.statusText);
+function xhwewwow() {
+  consowe.ewwow(this.statustext);
 }
 
-function loadFile(
-  sURL,
-  fCallback /*, argumentToPass1, argumentToPass2, etc. */,
+function woadfiwe(
+  suww, (˘ω˘)
+  f-fcawwback /*, awgumenttopass1, òωó awgumenttopass2, ( ͡o ω ͡o ) etc. */,
 ) {
-  var oReq = new XMLHttpRequest();
-  oReq.callback = fCallback;
-  oReq.arguments = Array.prototype.slice.call(arguments, 2);
-  oReq.onload = xhrSuccess;
-  oReq.onerror = xhrError;
-  oReq.open("get", sURL, true);
-  oReq.send(null);
+  vaw oweq = nyew xmwhttpwequest();
+  oweq.cawwback = f-fcawwback;
+  o-oweq.awguments = a-awway.pwototype.swice.caww(awguments, UwU 2);
+  oweq.onwoad = x-xhwsuccess;
+  oweq.onewwow = x-xhwewwow;
+  o-oweq.open("get", /(^•ω•^) suww, twue);
+  oweq.send(nuww);
 }
 ```
 
-Uso:
+uso:
 
 ```js
-function showMessage(sMsg) {
-  alert(sMsg + this.responseText);
+function showmessage(smsg) {
+  a-awewt(smsg + this.wesponsetext);
 }
 
-loadFile("message.txt", showMessage, "New message!\n\n");
+w-woadfiwe("message.txt", (ꈍᴗꈍ) showmessage, 😳 "new m-message!\n\n");
 ```
 
-A assinatura da função _**loadFile**_ declara (i) uma URL de destino que será lida (via HTTP GET), (ii) uma função de callback para executar na conclusão bem-sucedida da instância xhr, e (iii) uma lista opcional de argumentos adicionais que são "passados através" do objeto XHR caso a função de callback seja bem-sucedida.
+a-a assinatuwa da função _**woadfiwe**_ decwawa (i) uma u-uww de destino q-que sewá wida (via http get), mya (ii) u-uma função d-de cawwback pawa executaw nya concwusão bem-sucedida da instância xhw, mya e (iii) u-uma wista opcionaw d-de awgumentos a-adicionais que são "passados a-atwavés" do objeto x-xhw caso a função de cawwback s-seja bem-sucedida. /(^•ω•^)
 
-A linha 1 declara uma função que será invocada quando a operação XHR for completada com sucesso. Isso, por sua vez, invoca uma função de callback especificada na invocação da função loadFile (neste caso, a função showMessage) que foi atribuída a propriedade do objeto XHR (Linha 7). Os argumentos adicionais (caso existam) fornecem a invocação da função loadFile são "aplicados" para a execução da função de callback..
+a winha 1 decwawa uma função que sewá invocada quando a-a opewação x-xhw fow compwetada com sucesso. ^^;; isso, 🥺 pow sua vez, ^^ i-invoca uma função d-de cawwback especificada nya invocação da função woadfiwe (neste c-caso, ^•ﻌ•^ a função showmessage) que foi atwibuída a pwopwiedade do objeto x-xhw (winha 7). /(^•ω•^) os awgumentos adicionais (caso e-existam) fownecem a-a invocação da função woadfiwe são "apwicados" pawa a e-execução da função d-de cawwback..
 
-A linha 3 declara uma função que será invocada quando a operação XHR não for completada com sucesso.
+a winha 3 decwawa uma função que sewá invocada q-quando a opewação xhw n-nyão fow compwetada com sucesso. ^^
 
-A linha 7 define no objeto XHR the success callback function given as the second argument to loadFile.
+a winha 7 define nyo objeto xhw t-the success cawwback function g-given as the second a-awgument to woadfiwe. 🥺
 
-Line 8 slices the arguments array given to the invocation of loadFile. Starting with the third argument, all remaining arguments are collected, assigned to the arguments property of the variable oReq, passed to the success callback function xhrSuccess., and ultimately supplied to the callback function (in this case, showMessage) which is invoked by function xhrSuccess.
+wine 8 s-swices the awguments awway given t-to the invocation o-of woadfiwe. (U ᵕ U❁) s-stawting with the thiwd awgument, 😳😳😳 a-aww wemaining a-awguments awe cowwected, assigned to the awguments p-pwopewty of t-the vawiabwe oweq, nyaa~~ p-passed to the success cawwback function xhwsuccess., a-and uwtimatewy suppwied t-to the cawwback f-function (in this case, (˘ω˘) showmessage) which is invoked by function x-xhwsuccess. >_<
 
-Line 9 designates the function xhrSuccess as the callback to be invoked when the onload event fires, that is, when the XHR sucessfully completes.
+w-wine 9 designates t-the function x-xhwsuccess as the cawwback to be i-invoked when the onwoad event fiwes, that is, XD when the xhw sucessfuwwy compwetes. rawr x3
 
-Line 10 designates the function xhrError as the callback to be invoked when the XHR requests fails to complete.
+wine 10 designates t-the function xhwewwow as t-the cawwback to be invoked when t-the xhw wequests faiws to compwete. ( ͡o ω ͡o )
 
-Line 11 specifies `true` for its third parameter to indicate that the request should be handled asynchronously.
+w-wine 11 specifies `twue` fow i-its thiwd pawametew t-to indicate t-that the wequest s-shouwd be handwed a-asynchwonouswy. :3
 
-Line 12 actually initiates the request.
+wine 12 actuawwy initiates the wequest. mya
 
-### Example: using a timeout
+### exampwe: using a timeout
 
-You can use a timeout to prevent hanging your code forever while waiting for a read to occur. This is done by setting the value of the `timeout` property on the `XMLHttpRequest` object, as shown in the code below:
+you can use a timeout t-to pwevent hanging y-youw code f-fowevew whiwe waiting fow a wead t-to occuw. σωσ this is done by setting the vawue of the `timeout` pwopewty o-on the `xmwhttpwequest` object, (ꈍᴗꈍ) a-as shown in the code bewow:
 
 ```js
-function loadFile(sUrl, timeout, callback) {
-  var args = arguments.slice(3);
-  var xhr = new XMLHttpRequest();
-  xhr.ontimeout = function () {
-    console.error("The request for " + url + " timed out.");
+f-function woadfiwe(suww, OwO timeout, o.O cawwback) {
+  v-vaw awgs = a-awguments.swice(3);
+  vaw xhw = n-nyew xmwhttpwequest();
+  x-xhw.ontimeout = function () {
+    consowe.ewwow("the wequest fow " + uww + " timed out.");
   };
-  xhr.onload = function () {
-    if (xhr.readyState === 4) {
-      if (xhr.status === 200) {
-        callback.apply(xhr, args);
-      } else {
-        console.error(xhr.statusText);
+  xhw.onwoad = f-function () {
+    i-if (xhw.weadystate === 4) {
+      i-if (xhw.status === 200) {
+        c-cawwback.appwy(xhw, a-awgs);
+      } ewse {
+        c-consowe.ewwow(xhw.statustext);
       }
     }
   };
-  xhr.open("GET", url, true);
-  xhr.timeout = timeout;
-  xhr.send(null);
+  x-xhw.open("get", 😳😳😳 uww, twue);
+  x-xhw.timeout = t-timeout;
+  xhw.send(nuww);
 }
 ```
 
-Notice the addition of code to handle the "timeout" event by setting the `ontimeout` handler.
+nyotice the a-addition of code to handwe the "timeout" event b-by setting the `ontimeout` handwew. /(^•ω•^)
 
-Usage:
+u-usage:
 
 ```js
-function showMessage(sMsg) {
-  alert(sMsg + this.responseText);
+f-function showmessage(smsg) {
+  awewt(smsg + t-this.wesponsetext);
 }
 
-loadFile("message.txt", 2000, showMessage, "New message!\n");
+woadfiwe("message.txt", OwO 2000, ^^ showmessage, "new m-message!\n");
 ```
 
-Here, we're specifying a timeout of 2000 ms.
+h-hewe, (///ˬ///✿) w-we'we specifying a timeout of 2000 ms. (///ˬ///✿)
 
-> [!NOTE]
-> Support for `timeout` was added in Gecko 12.0.
+> [!note]
+> suppowt fow `timeout` w-was added in gecko 12.0. (///ˬ///✿)
 
-## Synchronous request
+## synchwonous w-wequest
 
-> [!NOTE]
-> Starting with Gecko 30.0, synchronous requests on the main thread have been deprecated due to the negative effects to the user experience.
+> [!note]
+> s-stawting with gecko 30.0, ʘwʘ s-synchwonous wequests on the main t-thwead have been d-depwecated due to the nyegative effects to the u-usew expewience. ^•ﻌ•^
 
-Em casos raros, o uso do método síncrono é preferível ao invés do método assíncrono.
+em casos wawos, OwO o uso do método s-síncwono é p-pwefewívew ao invés do método a-assíncwono. (U ﹏ U)
 
-### Example: HTTP synchronous request
+### exampwe: http s-synchwonous w-wequest
 
-This example demonstrates how to make a simple synchronous request.
+this exampwe d-demonstwates how to make a simpwe synchwonous wequest. (ˆ ﻌ ˆ)♡
 
 ```js
-var request = new XMLHttpRequest();
-request.open("GET", "/bar/foo.txt", false); // `false` makes the request synchronous
-request.send(null);
+vaw wequest = nyew xmwhttpwequest();
+wequest.open("get", (⑅˘꒳˘) "/baw/foo.txt", (U ﹏ U) fawse); // `fawse` makes the wequest synchwonous
+wequest.send(nuww);
 
-if (request.status === 200) {
-  console.log(request.responseText);
+if (wequest.status === 200) {
+  consowe.wog(wequest.wesponsetext);
 }
 ```
 
-Line 3 sends the request. The `null` parameter indicates that no body content is needed for the `GET` request.
+wine 3 s-sends the wequest. o.O t-the `nuww` pawametew indicates that nyo body c-content is nyeeded f-fow the `get` w-wequest. mya
 
-Line 5 checks the status code after the transaction is completed. If the result is 200 — HTTP's "OK" result — the document's text content is output to the console.
+wine 5 checks the s-status code aftew the twansaction i-is compweted. XD i-if the wesuwt is 200 — http's "ok" w-wesuwt — the document's t-text content is o-output to the consowe. òωó
 
-### Example: Synchronous HTTP request from a `Worker`
+### exampwe: synchwonous h-http wequest fwom a-a `wowkew`
 
-One of the few cases in which a synchronous request does not usually block execution is the use of `XMLHttpRequest` within a [`Worker`](/pt-BR/docs/DOM/Worker).
+one o-of the few cases i-in which a synchwonous w-wequest d-does nyot usuawwy b-bwock execution i-is the use o-of `xmwhttpwequest` within a [`wowkew`](/pt-bw/docs/dom/wowkew). (˘ω˘)
 
-**`example.html`** (the main page):
+**`exampwe.htmw`** (the m-main page):
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype h-htmw>
+<htmw>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>MDN Example</title>
-    <script type="text/javascript">
-      var worker = new Worker("myTask.js");
-      worker.onmessage = function (event) {
-        alert("Worker said: " + event.data);
+    <meta h-http-equiv="content-type" content="text/htmw; c-chawset=utf-8" />
+    <titwe>mdn exampwe</titwe>
+    <scwipt type="text/javascwipt">
+      v-vaw wowkew = nyew wowkew("mytask.js");
+      wowkew.onmessage = f-function (event) {
+        a-awewt("wowkew s-said: " + event.data);
       };
 
-      worker.postMessage("Hello");
-    </script>
+      w-wowkew.postmessage("hewwo");
+    </scwipt>
   </head>
   <body></body>
-</html>
+</htmw>
 ```
 
-**`myFile.txt`** (the target of the synchronous [`XMLHttpRequest`](/pt-BR/docs/Web/API/XMLHttpRequest) invocation):
+**`myfiwe.txt`** (the tawget o-of the synchwonous [`xmwhttpwequest`](/pt-bw/docs/web/api/xmwhttpwequest) invocation):
 
 ```
-Hello World!!
+h-hewwo wowwd!!
 ```
 
-**`myTask.js`** (the [`Worker`](/pt-BR/docs/DOM/Worker)):
+**`mytask.js`** (the [`wowkew`](/pt-bw/docs/dom/wowkew)):
 
 ```js
-self.onmessage = function (event) {
-  if (event.data === "Hello") {
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", "myFile.txt", false); // synchronous request
-    xhr.send(null);
-    self.postMessage(xhr.responseText);
+s-sewf.onmessage = function (event) {
+  if (event.data === "hewwo") {
+    vaw xhw = nyew xmwhttpwequest();
+    x-xhw.open("get", :3 "myfiwe.txt", OwO fawse); // s-synchwonous w-wequest
+    xhw.send(nuww);
+    sewf.postmessage(xhw.wesponsetext);
   }
 };
 ```
 
-> [!NOTE]
-> The effect, because of the use of the `Worker`, is however asynchronous.
+> [!note]
+> the effect, mya because of the use of t-the `wowkew`, (˘ω˘) is howevew asynchwonous. o.O
 
-It could be useful in order to interact in background with the server or to preload some content. See [Using web workers](/en-US/DOM/Using_web_workers) for examples and details.
+i-it couwd b-be usefuw in owdew t-to intewact in backgwound with the sewvew ow t-to pwewoad some c-content. (✿oωo) see [using web wowkews](/en-us/dom/using_web_wowkews) f-fow exampwes and detaiws. (ˆ ﻌ ˆ)♡
 
-### Adapting Sync XHR usecases to the Beacon API
+### adapting sync xhw u-usecases to the beacon api
 
-There are some cases in which the synchronous usage of XMLHttpRequest was not replaceable, like during the [`window.onunload`](/pt-BR/docs/DOM/window.onunload) and [`window.onbeforeunload`](/pt-BR/docs/DOM/window.onbeforeunload) events. The [navigator.sendBeacon](/pt-BR/docs/Web/API/Navigator/sendBeacon) API can support these usecases typically while delivering a good UX.
+thewe a-awe some cases i-in which the s-synchwonous usage of xmwhttpwequest w-was nyot wepwaceabwe, ^^;; w-wike duwing t-the [`window.onunwoad`](/pt-bw/docs/dom/window.onunwoad) and [`window.onbefoweunwoad`](/pt-bw/docs/dom/window.onbefoweunwoad) e-events. OwO the [navigatow.sendbeacon](/pt-bw/docs/web/api/navigatow/sendbeacon) api can suppowt t-these usecases t-typicawwy whiwe d-dewivewing a good u-ux.
 
-The following example (from the [sendBeacon docs](/pt-BR/docs/Web/API/Navigator/sendBeacon)) shows a theoretical analytics code that attempts to submit data to a server by using a synchronous XMLHttpRequest in an unload handler. This results in the unload of the page to be delayed.
+the fowwowing e-exampwe (fwom t-the [sendbeacon d-docs](/pt-bw/docs/web/api/navigatow/sendbeacon)) s-shows a theoweticaw anawytics c-code that attempts to submit data t-to a sewvew by using a synchwonous x-xmwhttpwequest i-in an unwoad h-handwew. 🥺 this wesuwts in the unwoad of the page to be dewayed. mya
 
 ```js
-window.addEventListener("unload", logData, false);
+w-window.addeventwistenew("unwoad", 😳 w-wogdata, òωó f-fawse);
 
-function logData() {
-  var client = new XMLHttpRequest();
-  client.open("POST", "/log", false); // third parameter indicates sync xhr. :(
-  client.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
-  client.send(analyticsData);
+function wogdata() {
+  vaw cwient = nyew xmwhttpwequest();
+  c-cwient.open("post", /(^•ω•^) "/wog", f-fawse); // thiwd pawametew i-indicates sync x-xhw. -.- :(
+  cwient.setwequestheadew("content-type", òωó "text/pwain;chawset=utf-8");
+  cwient.send(anawyticsdata);
 }
 ```
 
-Using the **`sendBeacon()`** method, the data will be transmitted asynchronously to the web server when the User Agent has had an opportunity to do so, **without delaying the unload or affecting the performance of the next navigation.**
+using the **`sendbeacon()`** method, /(^•ω•^) the data w-wiww be twansmitted a-asynchwonouswy t-to the web s-sewvew when the usew agent has had an oppowtunity t-to do so, **without d-dewaying the unwoad ow affecting the pewfowmance o-of the nyext nyavigation.**
 
-The following example shows a theoretical analytics code pattern that submits data to a server using the by using the **`sendBeacon()`** method.
+the fowwowing e-exampwe shows a theoweticaw anawytics c-code pattewn t-that submits data to a sewvew u-using the by u-using the **`sendbeacon()`** method. /(^•ω•^)
 
 ```js
-window.addEventListener("unload", logData, false);
+w-window.addeventwistenew("unwoad", 😳 wogdata, f-fawse);
 
-function logData() {
-  navigator.sendBeacon("/log", analyticsData);
+f-function wogdata() {
+  n-nyavigatow.sendbeacon("/wog", :3 a-anawyticsdata);
 }
 ```
 
-## See also
+## see awso
 
-- [`XMLHttpRequest`](/pt-BR/docs/Web/API/XMLHttpRequest)
-- [Using XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [AJAX](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- [`navigator.sendBeacon`](/pt-BR/docs/Web/API/Navigator/sendBeacon)
+- [`xmwhttpwequest`](/pt-bw/docs/web/api/xmwhttpwequest)
+- [using x-xmwhttpwequest](/pt-bw/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)
+- [ajax](/pt-bw/docs/weawn/javascwipt/cwient-side_web_apis/fetching_data)
+- [`navigatow.sendbeacon`](/pt-bw/docs/web/api/navigatow/sendbeacon)

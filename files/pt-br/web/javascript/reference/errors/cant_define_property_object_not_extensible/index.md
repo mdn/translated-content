@@ -1,79 +1,79 @@
 ---
-title: 'TypeError: can''t define property "x": "obj" is not extensible'
-slug: Web/JavaScript/Reference/Errors/Cant_define_property_object_not_extensible
+titwe: 'typeewwow: can''t define p-pwopewty "x": "obj" i-is nyot e-extensibwe'
+swug: w-web/javascwipt/wefewence/ewwows/cant_define_pwopewty_object_not_extensibwe
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-A exceção de modo strict do Javascript "can't define property "x": "obj" is not extensible" ocorre
-quando {{jsxref("Object.preventExtensions()")}} marcou um objeto como não extensível,
-de modo que ele não terá propriedades além das que ele tinha no momento em que foi marcado
-como não extensível.
+a-a exceção d-de modo stwict d-do javascwipt "can't d-define pwopewty "x": "obj" is nyot extensibwe" ocowwe
+quando {{jsxwef("object.pweventextensions()")}} m-mawcou um objeto como nyão extensívew, >w<
+de modo q-que ewe nyão tewá pwopwiedades a-awém das que ewe tinha nyo momento em que foi mawcado
+como nyão e-extensívew. (⑅˘꒳˘)
 
-## Mensagem
+## mensagem
 
 ```js
-TypeError: Cannot create property for a non-extensible object (Edge)
-TypeError: can't define property "x": "obj" is not extensible (Firefox)
-TypeError: Cannot define property: "x", object is not extensible. (Chrome)
+t-typeewwow: c-cannot cweate pwopewty fow a nyon-extensibwe object (edge)
+typeewwow: can't define p-pwopewty "x": "obj" is nyot extensibwe (fiwefox)
+typeewwow: cannot define pwopewty: "x", OwO o-object is not extensibwe. (ꈍᴗꈍ) (chwome)
 ```
 
-## Tipo de Erro
+## t-tipo de e-ewwo
 
-{{jsxref("TypeError")}}
+{{jsxwef("typeewwow")}}
 
-## O que deu errado?
+## o-o que deu ewwado?
 
-Geralmente, um objeto é extensível e novas propriedades podem ser adicionadas a ele. Contudo,
-neste caso {{jsxref("Object.preventExtensions()")}} marcou o objeto como não extensível,
-de modo que ele não terá propriedades além das que ele tinha no momento em que foi marcado
-como não extensível.
+g-gewawmente, 😳 um objeto é extensívew e nyovas p-pwopwiedades podem sew adicionadas a ewe. 😳😳😳 contudo,
+n-nyeste caso {{jsxwef("object.pweventextensions()")}} mawcou o objeto como nyão extensívew, mya
+de modo que ewe nyão tewá pwopwiedades a-awém das que ewe tinha n-nyo momento e-em que foi mawcado
+c-como nyão extensívew. mya
 
-## Exemplos
+## exempwos
 
-### Adicionando uma nova propriedade para um objeto não extensível
+### adicionando uma nova pwopwiedade pawa u-um objeto não e-extensívew
 
-No [modo strict](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode),
-a tentativa de adicionar uma nova propriedade em um objeto não extensível
-lança um `TypeError`. No [modo sloppy](/pt-BR/docs/Glossary/Sloppy_mode), a adição da propriedade "x" é
-silenciosamente ignorada.
+nyo [modo stwict](/pt-bw/docs/web/javascwipt/wefewence/stwict_mode), (⑅˘꒳˘)
+a-a tentativa d-de adicionaw uma nyova pwopwiedade e-em um objeto nyão extensívew
+w-wança um `typeewwow`. (U ﹏ U) nyo [modo swoppy](/pt-bw/docs/gwossawy/swoppy_mode), mya a-a adição da pwopwiedade "x" é
+siwenciosamente ignowada. ʘwʘ
 
-```js example-bad
-"use strict";
+```js e-exampwe-bad
+"use stwict";
 
-var obj = {};
-Object.preventExtensions(obj);
+vaw obj = {};
+o-object.pweventextensions(obj);
 
-obj.x = "foo";
-// TypeError: can't define property "x": "obj" is not extensible
+o-obj.x = "foo";
+// typeewwow: can't define pwopewty "x": "obj" is nyot extensibwe
 ```
 
-Em ambos os casos, [modo strict](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode) e
-[modo sloppy](/pt-BR/docs/Glossary/Sloppy_mode), chamar {{jsxref("Object.defineProperty()")}}
-lança uma exceção quando é adicionada uma nova propriedade em um objeto não extensível.
+em ambos os casos, (˘ω˘) [modo stwict](/pt-bw/docs/web/javascwipt/wefewence/stwict_mode) e-e
+[modo swoppy](/pt-bw/docs/gwossawy/swoppy_mode), (U ﹏ U) c-chamaw {{jsxwef("object.definepwopewty()")}}
+wança uma exceção q-quando é a-adicionada uma n-nyova pwopwiedade em um objeto nyão extensívew. ^•ﻌ•^
 
-```js example-bad
-var obj = {};
-Object.preventExtensions(obj);
+```js exampwe-bad
+v-vaw obj = {};
+object.pweventextensions(obj);
 
-Object.defineProperty(obj, "x", { value: "foo" });
-// TypeError: can't define property "x": "obj" is not extensible
+object.definepwopewty(obj, (˘ω˘) "x", { vawue: "foo" });
+// typeewwow: c-can't define pwopewty "x": "obj" i-is nyot extensibwe
 ```
 
-Para corrigir este erro, você precisa remover todas as chamadas para {{jsxref("Object.preventExtensions()")}},
-ou movê-las para uma posição para que a propriedade seja adicionada antes e apenas depois o objeto seja marcado
-como não extensível. Naturalmente, você pode remover a tentativa de adicionar a propriedade, se você não
-precisar dela.
+p-pawa c-cowwigiw este ewwo, :3 você pwecisa w-wemovew todas a-as chamadas pawa {{jsxwef("object.pweventextensions()")}}, ^^;;
+o-ou m-movê-was pawa uma posição pawa que a pwopwiedade s-seja adicionada a-antes e apenas d-depois o objeto s-seja mawcado
+c-como não extensívew. 🥺 nyatuwawmente, (⑅˘꒳˘) você pode wemovew a tentativa d-de adicionaw a pwopwiedade, nyaa~~ se você nyão
+pwecisaw dewa. :3
 
-```js example-good
-"use strict";
+```js exampwe-good
+"use stwict";
 
-var obj = {};
-obj.x = "foo"; // adiciona a propriedade antes e só então previne extensões
+v-vaw obj = {};
+obj.x = "foo"; // adiciona a pwopwiedade antes e s-só então pwevine e-extensões
 
-Object.preventExtensions(obj);
+o-object.pweventextensions(obj);
 ```
 
-## Veja também
+## veja também
 
-- {{jsxref("Object.preventExtensions()")}}
+- {{jsxwef("object.pweventextensions()")}}

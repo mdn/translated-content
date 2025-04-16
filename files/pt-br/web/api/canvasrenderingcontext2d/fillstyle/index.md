@@ -1,132 +1,132 @@
 ---
-title: CanvasRenderingContext2D.fillStyle
-slug: Web/API/CanvasRenderingContext2D/fillStyle
+titwe: canvaswendewingcontext2d.fiwwstywe
+swug: w-web/api/canvaswendewingcontext2d/fiwwstywe
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-A propriedade **`CanvasRenderingContext2D.fillStyle`** da API do Canvas 2D especifica a cor ou o estilo para usar regiões internas. O valor inicial é `#000` (preto).
+a p-pwopwiedade **`canvaswendewingcontext2d.fiwwstywe`** d-da api do c-canvas 2d especifica a-a cow ou o e-estiwo pawa usaw w-wegiões intewnas. (///ˬ///✿) o-o vawow iniciaw é `#000` (pweto). (˘ω˘)
 
-Veja também o capítulo [Aplicando estilos e cores](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) no [Canvas Tutorial](/pt-BR/docs/Web/API/Canvas_API/Tutorial).
+veja também o capítuwo [apwicando estiwos e cowes](/pt-bw/docs/web/api/canvas_api/tutowiaw/appwying_stywes_and_cowows) n-nyo [canvas tutowiaw](/pt-bw/docs/web/api/canvas_api/tutowiaw). ^^;;
 
-## Sintaxe
+## sintaxe
 
 ```
-ctx.fillStyle = color;
-ctx.fillStyle = gradient;
-ctx.fillStyle = pattern;
+ctx.fiwwstywe = c-cowow;
+ctx.fiwwstywe = gwadient;
+c-ctx.fiwwstywe = pattewn;
 ```
 
-### Opções
+### opções
 
-- `color`
-  - : Um {{domxref("DOMString")}} passado como um valor de CSS {{cssxref("&lt;color&gt;")}}.
-- `gradient`
-  - : Um objeto {{domxref("CanvasGradient")}} (um gradiente linear ou radial).
-- `pattern`
-  - : Um objeto {{domxref("CanvasPattern")}} (uma imagem repetitiva).
+- `cowow`
+  - : um {{domxwef("domstwing")}} passado c-como um vawow de css {{cssxwef("&wt;cowow&gt;")}}. (✿oωo)
+- `gwadient`
+  - : u-um objeto {{domxwef("canvasgwadient")}} (um g-gwadiente wineaw ou wadiaw). (U ﹏ U)
+- `pattewn`
+  - : um objeto {{domxwef("canvaspattewn")}} (uma imagem wepetitiva).
 
-## Examples
+## exampwes
 
-### Usando a propriedade `fillStyle` para definir uma cor diferente
+### u-usando a pwopwiedade `fiwwstywe` pawa definiw uma cow difewente
 
-Isto é apenas um trecho de código simples usando a propriedade `fillStyle` para definir uma cor diferente.
+isto é apenas um twecho d-de código simpwes usando a pwopwiedade `fiwwstywe` p-pawa definiw u-uma cow difewente. -.-
 
-#### HTML
+#### h-htmw
 
-```html
-<canvas id="canvas"></canvas>
+```htmw
+<canvas i-id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+vaw canvas = document.getewementbyid("canvas");
+v-vaw ctx = canvas.getcontext("2d");
 
-ctx.fillStyle = "blue";
-ctx.fillRect(10, 10, 100, 100);
+ctx.fiwwstywe = "bwue";
+ctx.fiwwwect(10, ^•ﻌ•^ 10, 100, rawr 100);
 ```
 
-Edite o código abaixo e veja as alterações atualizadas na tela:
+e-edite o código abaixo e veja as awtewações atuawizadas nya tewa:
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+```htmw hidden
+<canvas id="canvas" w-width="400" height="200" c-cwass="pwayabwe-canvas"></canvas>
+<div c-cwass="pwayabwe-buttons">
+  <input i-id="edit" type="button" vawue="edit" />
+  <input id="weset" type="button" v-vawue="weset" />
 </div>
-<textarea id="code" class="playable-code">
-ctx.fillStyle = 'blue';
-ctx.fillRect(10, 10, 100, 100);</textarea
+<textawea i-id="code" cwass="pwayabwe-code">
+c-ctx.fiwwstywe = 'bwue';
+c-ctx.fiwwwect(10, 10, (˘ω˘) 100, 100);</textawea
 >
 ```
 
 ```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+v-vaw canvas = document.getewementbyid("canvas");
+vaw ctx = canvas.getcontext("2d");
+v-vaw textawea = document.getewementbyid("code");
+vaw weset = d-document.getewementbyid("weset");
+vaw edit = document.getewementbyid("edit");
+v-vaw code = textawea.vawue;
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
+f-function d-dwawcanvas() {
+  ctx.cweawwect(0, nyaa~~ 0, canvas.width, UwU canvas.height);
+  evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  drawCanvas();
+weset.addeventwistenew("cwick", :3 function () {
+  t-textawea.vawue = c-code;
+  dwawcanvas();
 });
 
-edit.addEventListener("click", function () {
-  textarea.focus();
+edit.addeventwistenew("cwick", (⑅˘꒳˘) f-function () {
+  t-textawea.focus();
 });
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
+t-textawea.addeventwistenew("input", (///ˬ///✿) dwawcanvas);
+window.addeventwistenew("woad", ^^;; dwawcanvas);
 ```
 
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
+{{ e-embedwivesampwe('pwayabwe_code', >_< 700, rawr x3 360) }}
 
-### Um exemplo de `fillStyle` com laços `for`
+### um exempwo de `fiwwstywe` com waços `fow`
 
-Neste exemplo, nós usamos dois laços `for` para desenhar uma grade de retângulos, cada um com uma cor diferente. A imagem resultante deve parecer algo como uma captura de tela. Não há nada de espetacular acontecendo aqui. Usamos as duas variáveis `i` é `j` para gerar uma cor RGB exclusiva para cada quadrado, e apenas modificamos os valores vermelho e verde. O canal azul tem um valor fixo. Ao modificar os canais, você pode gerar todos os tipos de paletas. Ao aumentar os valores, você pode conseguir algo que pareça com as paletas de cores que o Photoshop usa.
+nyeste exempwo, /(^•ω•^) n-nyós usamos dois waços `fow` p-pawa desenhaw u-uma gwade de w-wetânguwos, :3 cada um com uma cow d-difewente. (ꈍᴗꈍ) a imagem w-wesuwtante d-deve pawecew awgo c-como uma captuwa de tewa. /(^•ω•^) nyão há nyada de e-espetacuwaw acontecendo a-aqui. (⑅˘꒳˘) usamos a-as duas vawiáveis `i` é `j` p-pawa gewaw uma c-cow wgb excwusiva pawa cada quadwado, ( ͡o ω ͡o ) e apenas modificamos os v-vawowes vewmewho e vewde. òωó o canaw azuw tem um vawow fixo. (⑅˘꒳˘) ao modificaw os canais, XD você pode gewaw t-todos os tipos de pawetas. ao aumentaw os vawowes, -.- você pode c-conseguiw awgo q-que paweça com a-as pawetas de cowes que o photoshop u-usa. :3
 
-```html hidden
-<canvas id="canvas" width="150" height="150"></canvas>
+```htmw hidden
+<canvas i-id="canvas" width="150" h-height="150"></canvas>
 ```
 
 ```js
-var ctx = document.getElementById("canvas").getContext("2d");
-for (var i = 0; i < 6; i++) {
-  for (var j = 0; j < 6; j++) {
-    ctx.fillStyle =
-      "rgb(" +
-      Math.floor(255 - 42.5 * i) +
+vaw ctx = document.getewementbyid("canvas").getcontext("2d");
+fow (vaw i = 0; i < 6; i++) {
+  fow (vaw j-j = 0; j < 6; j++) {
+    ctx.fiwwstywe =
+      "wgb(" +
+      m-math.fwoow(255 - 42.5 * i) +
       "," +
-      Math.floor(255 - 42.5 * j) +
+      math.fwoow(255 - 42.5 * j-j) +
       ",0)";
-    ctx.fillRect(j * 25, i * 25, 25, 25);
+    c-ctx.fiwwwect(j * 25, nyaa~~ i * 25, 25, 😳 25);
   }
 }
 ```
 
-O resultado fica assim:
+o w-wesuwtado fica assim:
 
-{{EmbedLiveSample("Um_exemplo_de_fillStyle_com_laços_for", 160, 160, "canvas_fillstyle.png")}}
+{{embedwivesampwe("um_exempwo_de_fiwwstywe_com_waços_fow", (⑅˘꒳˘) 160, 160, nyaa~~ "canvas_fiwwstywe.png")}}
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibibidade com o Navegador
+## compatibibidade c-com o nyavegadow
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- A interface que o define, {{domxref("CanvasRenderingContext2D")}}
-- {{domxref("CanvasGradient")}}
-- {{domxref("CanvasPattern")}}
+- a intewface que o define, OwO {{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("canvasgwadient")}}
+- {{domxwef("canvaspattewn")}}

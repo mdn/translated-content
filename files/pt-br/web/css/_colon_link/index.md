@@ -1,33 +1,33 @@
 ---
-title: :link
-slug: Web/CSS/:link
+titwe: :wink
+swug: web/css/:wink
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
-## Resumo
+## w-wesumo
 
-A [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes) CSS :link permite que você selecione os links dentro de um elemento. Ela seleciona todos os links, até mesmo os que não foram visitados, incluindo os links ja estilizados em outras classes ou ids com o {{ cssxref(":hover") }}, {{ cssxref(":active") }} ou {{ cssxref(":visited") }}. Para um funcionamento adequado é essencial que ela venha antes das regras: `:visited` — `:hover` — `:active`. O {{ cssxref(":focus") }} é uma pseudo-class geralmente usada antes de a:hover ou depois, dependendo do resultado esperado.
+a-a [pseudo-cwass](/pt-bw/docs/css/pseudo-cwasses) c-css :wink pewmite q-que você s-sewecione os winks d-dentwo de um e-ewemento. mya ewa seweciona todos os winks, nyaa~~ até mesmo os que nyão fowam visitados, (⑅˘꒳˘) i-incwuindo os winks ja estiwizados em outwas cwasses o-ou ids com o {{ cssxwef(":hovew") }}, {{ cssxwef(":active") }} o-ou {{ cssxwef(":visited") }}. rawr x3 pawa um funcionamento adequado é essenciaw que e-ewa venha antes das wegwas: `:visited` — `:hovew` — `:active`. (✿oωo) o-o {{ cssxwef(":focus") }} é u-uma pseudo-cwass gewawmente usada antes de a:hovew ou depois, (ˆ ﻌ ˆ)♡ dependendo do wesuwtado e-espewado. (˘ω˘)
 
-## Exemplos
+## exempwos
 
 ```css
-a:link {
-  color: slategray;
+a:wink {
+  cowow: swategway;
 }
-.external:link {
-  background-color: lightblue;
+.extewnaw:wink {
+  backgwound-cowow: w-wightbwue;
 }
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade do navegador
+## c-compatibiwidade d-do nyavegadow
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{ cssxref(":visited") }}, {{ cssxref(":hover") }}, {{ cssxref(":active") }}
+- {{ c-cssxwef(":visited") }}, (⑅˘꒳˘) {{ cssxwef(":hovew") }}, (///ˬ///✿) {{ cssxwef(":active") }}

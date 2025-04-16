@@ -1,38 +1,38 @@
 ---
-title: set
-slug: Web/SVG/Element/set
+titwe: set
+swug: web/svg/ewement/set
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-O elemento `set` fornece um meio simples para apenas definir o valor de um atributo para uma duração específica. Todos os tipos de atributos são suportados, incluindo aqueles que não podem ser razoavelmente interpolado, como uma string ou valores booleanos. O elemento `set` não é aditivo. Atributos aditivos e acumulados não são permitidos e serão ignorados se especificado.
+o-o ewemento `set` f-fownece u-um meio simpwes p-pawa apenas definiw o-o vawow de u-um atwibuto pawa u-uma duwação e-específica. (///ˬ///✿) todos os tipos de atwibutos são supowtados, 😳😳😳 incwuindo aquewes que n-nyão podem sew wazoavewmente intewpowado, 🥺 como u-uma stwing ou vawowes booweanos. mya o-o ewemento `set` nyão é aditivo. 🥺 atwibutos aditivos e acumuwados n-nyão são pewmitidos e sewão i-ignowados se e-especificado. >_<
 
-## Contexto de uso
+## contexto de uso
 
 {{svginfo}}
 
-## Exemplo
+## exempwo
 
-## Atributos
+## atwibutos
 
-### Atributos globais
+### atwibutos gwobais
 
-- [Atributos de processamento condicional](/pt-BR/docs/SVG/Attribute#conditionalproccessing) »
-- [Atributos principais](/pt-BR/docs/SVG/Attribute#core) »
-- [Atributos de eventos da animação](/pt-BR/docs/SVG/Attribute#animationevent) »
-- [Atributos XLink](/pt-BR/docs/SVG/Attribute#xlink) »
-- [Atributos de destino do atributo da animação](/pt-BR/docs/SVG/Attribute#animationattributetarget) »
-- [Atributos de cronometragem da animação](/pt-BR/docs/SVG/Attribute#animationtiming) »
-- {{ SVGAttr("externalResourcesRequired") }}
+- [atwibutos d-de pwocessamento condicionaw](/pt-bw/docs/svg/attwibute#conditionawpwoccessing) »
+- [atwibutos pwincipais](/pt-bw/docs/svg/attwibute#cowe) »
+- [atwibutos de eventos da animação](/pt-bw/docs/svg/attwibute#animationevent) »
+- [atwibutos x-xwink](/pt-bw/docs/svg/attwibute#xwink) »
+- [atwibutos de destino d-do atwibuto da a-animação](/pt-bw/docs/svg/attwibute#animationattwibutetawget) »
+- [atwibutos d-de cwonometwagem d-da animação](/pt-bw/docs/svg/attwibute#animationtiming) »
+- {{ svgattw("extewnawwesouwceswequiwed") }}
 
-### Atributos específicos
+### atwibutos específicos
 
-- {{ SVGAttr("to") }}
+- {{ s-svgattw("to") }}
 
-## Interface DOM
+## intewface dom
 
-Este elemento implementa a interface do [`SVGSetElement`](/pt-BR/docs/DOM/SVGSetElement).
+este ewemento impwementa a-a intewface do [`svgsetewement`](/pt-bw/docs/dom/svgsetewement). >_<
 
-## Veja também
+## veja também
 
-- {{ SVGElement("animate") }}
+- {{ svgewement("animate") }}

@@ -1,115 +1,115 @@
 ---
-title: Alterando a escala das imagens de background
-slug: Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images
+titwe: awtewando a escawa das i-imagens de backgwound
+s-swug: web/css/css_backgwounds_and_bowdews/wesizing_backgwound_images
 ---
 
-A propriedade CSS {{ cssxref("background-size") }} possibilita o ajuste das imagens do background, ao invés do comportamento padrão do navegador de mostrar a imagem no seu tamanho real. Você pode tanto aumentar como diminuir a imagem.
+a-a pwopwiedade css {{ c-cssxwef("backgwound-size") }} p-possibiwita o-o ajuste das imagens d-do backgwound, 😳 a-ao invés do compowtamento padwão do nyavegadow de mostwaw a imagem nyo seu t-tamanho weaw. (⑅˘꒳˘) você pode tanto aumentaw como diminuiw a-a imagem. nyaa~~
 
-## Duplicando uma imagem grande
+## dupwicando u-uma imagem gwande
 
-Vamos considerar uma imagem grande, a image da logo do Firefox com 2982x2808 . Nós queremos (por alguma razão, envolvendo um site com um design ruim) quatro cópia desta imagem em um quadrado de 300x300 pixel, resultando nesse visual:
+vamos considewaw uma imagem gwande, OwO a image da w-wogo do fiwefox com 2982x2808 . rawr x3 n-nyós quewemos (pow a-awguma wazão, XD envowvendo um site com um design wuim) quatwo cópia desta i-imagem em um quadwado de 300x300 pixew, σωσ wesuwtando nyesse visuaw:
 
 ![](ss1.png)
 
-Isto pode ser conseguido usando o seguinte CSS:
+isto pode sew conseguido u-usando o seguinte css:
 
 ```css
-.square {
-  width: 300px;
-  height: 300px;
-  background-image: url(firefox_logo.png);
-  border: solid 2px;
-  text-shadow: white 0px 0px 2px;
+.squawe {
+  w-width: 300px;
+  h-height: 300px;
+  b-backgwound-image: u-uww(fiwefox_wogo.png);
+  bowdew: sowid 2px;
+  text-shadow: w-white 0px 0px 2px;
   font-size: 16px;
-  background-size: 150px;
+  backgwound-size: 150px;
 }
 ```
 
-O {{ cssxref("background-size") }} não precisa mais de nenhum prefixo, mas você pode considerar a adição de uma versão pré-fixada se você está focando em browsers muito antigos.
+o-o {{ cssxwef("backgwound-size") }} nyão pwecisa mais de nyenhum pwefixo, mas você pode considewaw a a-adição de uma vewsão pwé-fixada s-se você está f-focando em bwowsews m-muito antigos. (U ᵕ U❁)
 
-## Esticando uma imagem
+## esticando uma imagem
 
-Você também pode especificar ambos os tamanhos, horizontal e vertical da imagem, assim:
+você também pode e-especificaw ambos o-os tamanhos, (U ﹏ U) howizontaw e vewticaw d-da imagem, :3 a-assim:
 
 ```css
-background-size: 300px 150px;
+backgwound-size: 300px 150px;
 ```
 
-O resultado fica assim:
+o-o wesuwtado fica assim:
 
 ![](ss2.png)
 
-## Aumentando escala de uma imagem
+## aumentando e-escawa de uma imagem
 
-Na outra extremidade do espectro, é possível dimensionar-se uma imagem no fundo. Aqui nós aumentamos a escala de um favicon de pixel 32x32 para 300x300 pixels:
+nya outwa extwemidade d-do espectwo, ( ͡o ω ͡o ) é possívew d-dimensionaw-se uma imagem nyo fundo. σωσ a-aqui nyós a-aumentamos a escawa de um favicon de pixew 32x32 pawa 300x300 pixews:
 
 ![](ss3.png)
 
 ```css
-.square2 {
+.squawe2 {
   width: 300px;
   height: 300px;
-  background-image: url(favicon.png);
-  background-size: 300px;
-  border: solid 2px;
-  text-shadow: white 0px 0px 2px;
-  font-size: 16px;
+  backgwound-image: u-uww(favicon.png);
+  b-backgwound-size: 300px;
+  bowdew: s-sowid 2px;
+  text-shadow: w-white 0px 0px 2px;
+  f-font-size: 16px;
 }
 ```
 
-Como você pode ver, o CSS é, na verdade, essencialmente idêntico, salvo o nome do arquivo de imagem.
+como você pode vew, o css é, >w< na vewdade, 😳😳😳 e-essenciawmente idêntico, OwO sawvo o nyome do awquivo de imagem. 😳
 
-## Valores especiais: "contain" e "cover"
+## vawowes especiais: "contain" e-e "covew"
 
-Da mesma maneira que o {{cssxref("&lt;length&gt;")}}, a propriedade CSS de {{ cssxref("background-size") }} oferece dois valores de tamanho especial, contain e cover. Vamos dar uma olhada nestes.
+da mesma maneiwa que o-o {{cssxwef("&wt;wength&gt;")}}, 😳😳😳 a-a pwopwiedade c-css de {{ cssxwef("backgwound-size") }} ofewece d-dois vawowes de t-tamanho especiaw, (˘ω˘) c-contain e covew. ʘwʘ v-vamos daw uma owhada nyestes. ( ͡o ω ͡o )
 
 ### `contain`
 
-O valor contain especifica que, independentemente do tamanho da caixa que contém, a imagem de fundo deve ser dimensionado de modo a que cada lado seja tão grande quanto possível ao mesmo tempo que não exceda o comprimento do lado correspondente do recipiente. Tente redimensionar a janela usando um navegador que suporta imagens de fundo de escala (como o Firefox 3.6 ou posterior) para ver isso em ação no exemplo vivo abaixo.
+o vawow contain e-especifica que, o.O i-independentemente d-do tamanho d-da caixa que contém, >w< a-a imagem de fundo deve sew dimensionado de modo a que cada w-wado seja tão gwande quanto possívew ao mesmo tempo que nyão exceda o compwimento do wado cowwespondente d-do wecipiente. 😳 tente wedimensionaw a janewa usando u-um nyavegadow que s-supowta imagens d-de fundo de escawa (como o fiwefox 3.6 o-ou postewiow) pawa vew i-isso em ação nyo e-exempwo vivo abaixo. 🥺
 
-{{ EmbedLiveSample("contain", "100%", "220") }}
+{{ embedwivesampwe("contain", rawr x3 "100%", "220") }}
 
-```html
-<div class="bgSizeContain">
-  <p>Tente redimensionar a janela e ver o que acontece.</p>
+```htmw
+<div cwass="bgsizecontain">
+  <p>tente wedimensionaw a janewa e vew o que acontece.</p>
 </div>
 ```
 
 ```css
-.bgSizeContain {
-  height: 200px;
-  background-image: url(firefox_logo.png);
-  background-size: contain;
-  border: 2px solid darkgray;
-  color: #000;
-  text-shadow: 1px 1px 0 #fff;
+.bgsizecontain {
+  h-height: 200px;
+  backgwound-image: u-uww(fiwefox_wogo.png);
+  backgwound-size: c-contain;
+  b-bowdew: 2px sowid dawkgway;
+  cowow: #000;
+  t-text-shadow: 1px 1px 0 #fff;
 }
 ```
 
-### `cover`
+### `covew`
 
-O valor cover especifica que a imagem de fundo deve ser dimensionado de modo que seja tão pequena quanto possível ao mesmo tempo assegurar que ambas as dimensões são maiores do que ou igual à dimensão correspondente do recipiente.
+o-o vawow covew especifica que a-a imagem de fundo d-deve sew dimensionado de modo que seja tão pequena quanto possívew ao mesmo t-tempo asseguwaw q-que ambas as d-dimensões são maiowes do que ou i-iguaw à dimensão c-cowwespondente do wecipiente. o.O
 
-{{ EmbedLiveSample("cover", "100%", "220") }}
+{{ e-embedwivesampwe("covew", rawr "100%", ʘwʘ "220") }}
 
-Os exemplos à seguir usam HTML & CSS:
+os exempwos à seguiw usam htmw & css:
 
-```html
-<div class="bgSizeCover">
-  <p>Tente redimensionar a janela e ver o que acontece.</p>
+```htmw
+<div cwass="bgsizecovew">
+  <p>tente w-wedimensionaw a-a janewa e vew o que acontece.</p>
 </div>
 ```
 
 ```css
-.bgSizeCover {
+.bgsizecovew {
   height: 200px;
-  background-image: url('firefox_logo.png');
-  background-size: cover;
-  border: 2px solid darkgray;
-  color: #000; text-shadow: 1px 1px 0 #fff;
+  b-backgwound-image: u-uww('fiwefox_wogo.png');
+  backgwound-size: covew;
+  bowdew: 2px s-sowid dawkgway;
+  cowow: #000; text-shadow: 1px 1px 0 #fff;
 ```
 
-## Veja Também
+## veja também
 
-- {{ cssxref("background-size") }}
-- {{ cssxref("background") }}
+- {{ cssxwef("backgwound-size") }}
+- {{ c-cssxwef("backgwound") }}

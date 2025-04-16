@@ -1,103 +1,103 @@
 ---
-title: CanvasRenderingContext2D.lineTo()
-slug: Web/API/CanvasRenderingContext2D/lineTo
+titwe: canvaswendewingcontext2d.wineto()
+swug: w-web/api/canvaswendewingcontext2d/wineto
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-O método **`CanvasRenderingContext2D.lineTo()`** da API Canvas 2D conecta o último ponto do sub-caminho (_sub-path_) para as coordenadas `x, y`, através de uma linha (mas na realidade não a desenha).
+o-o método **`canvaswendewingcontext2d.wineto()`** d-da a-api canvas 2d conecta o-o úwtimo p-ponto do sub-caminho (_sub-path_) p-pawa as coowdenadas `x, (U ﹏ U) y-y`, atwavés de uma winha (mas nya weawidade nyão a desenha). >w<
 
-## Sintaxe
+## sintaxe
 
 ```
-void ctx.lineTo(x, y);
+v-void ctx.wineto(x, mya y);
 ```
 
-### Parâmetros
+### pawâmetwos
 
 - `x`
-  - : O valor da coordenada x que indica o fim da linha.
+  - : o-o vawow da coowdenada x que indica o-o fim da winha. >w<
 - `y`
-  - : O valor da coordenada y que indica o fim da linha.
+  - : o vawow da coowdenada y que indica o fim da winha. nyaa~~
 
-## Exemplos
+## e-exempwos
 
-### Usando o método `lineTo`
+### usando o m-método `wineto`
 
-sto é só um simples trecho de código que usa o método `lineTo`. Use o {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} para indicar o _path_ onde será desenhada a linha, mova a caneta (_pen_) com {{domxref("CanvasRenderingContext.moveTo", "moveTo()")}} e use o método {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}} para desenhar a linha.
+s-sto é só um simpwes twecho de código que usa o método `wineto`. (✿oωo) use o {{domxwef("canvaswendewingcontext2d.beginpath", ʘwʘ "beginpath()")}} p-pawa indicaw o _path_ onde sewá desenhada a winha, (ˆ ﻌ ˆ)♡ mova a caneta (_pen_) c-com {{domxwef("canvaswendewingcontext.moveto", 😳😳😳 "moveto()")}} e use o método {{domxwef("canvaswendewingcontext2d.stwoke", :3 "stwoke()")}} pawa d-desenhaw a winha. OwO
 
-#### HTML
+#### h-htmw
 
-```html
-<canvas id="canvas"></canvas>
+```htmw
+<canvas i-id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+vaw canvas = document.getewementbyid("canvas");
+v-vaw ctx = canvas.getcontext("2d");
 
-ctx.beginPath();
-ctx.moveTo(50, 50);
-ctx.lineTo(100, 100);
-ctx.stroke();
+ctx.beginpath();
+ctx.moveto(50, (U ﹏ U) 50);
+c-ctx.wineto(100, >w< 100);
+ctx.stwoke();
 ```
 
-Edite o código abaixo e veja as alterações instantâneas no canvas:
+edite o código abaixo e veja as awtewações instantâneas n-nyo canvas:
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+```htmw hidden
+<canvas i-id="canvas" w-width="400" height="200" c-cwass="pwayabwe-canvas"></canvas>
+<div cwass="pwayabwe-buttons">
+  <input id="edit" type="button" vawue="edit" />
+  <input i-id="weset" t-type="button" vawue="weset" />
 </div>
-<textarea id="code" class="playable-code">
-ctx.beginPath();
-ctx.moveTo(50,50);
-ctx.lineTo(100, 100);
-ctx.stroke();</textarea
+<textawea id="code" cwass="pwayabwe-code">
+c-ctx.beginpath();
+c-ctx.moveto(50,50);
+ctx.wineto(100, (U ﹏ U) 100);
+c-ctx.stwoke();</textawea
 >
 ```
 
 ```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+vaw canvas = d-document.getewementbyid("canvas");
+vaw ctx = canvas.getcontext("2d");
+v-vaw textawea = document.getewementbyid("code");
+v-vaw weset = document.getewementbyid("weset");
+v-vaw edit = d-document.getewementbyid("edit");
+vaw code = textawea.vawue;
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
+function dwawcanvas() {
+  ctx.cweawwect(0, 😳 0, canvas.width, (ˆ ﻌ ˆ)♡ canvas.height);
+  evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  drawCanvas();
+weset.addeventwistenew("cwick", f-function () {
+  t-textawea.vawue = code;
+  d-dwawcanvas();
 });
 
-edit.addEventListener("click", function () {
-  textarea.focus();
+e-edit.addeventwistenew("cwick", 😳😳😳 f-function () {
+  textawea.focus();
 });
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
+textawea.addeventwistenew("input", (U ﹏ U) dwawcanvas);
+w-window.addeventwistenew("woad", (///ˬ///✿) dwawcanvas);
 ```
 
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
+{{ embedwivesampwe('pwayabwe_code', 😳 700, 360) }}
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- A definição da interface {{domxref("CanvasRenderingContext2D")}}
-- {{domxref("CanvasRenderingContext2D.moveTo()")}}
-- {{domxref("CanvasRenderingContext2D.stroke()")}}
+- a definição d-da intewface {{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("canvaswendewingcontext2d.moveto()")}}
+- {{domxwef("canvaswendewingcontext2d.stwoke()")}}

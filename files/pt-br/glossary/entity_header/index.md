@@ -1,25 +1,25 @@
 ---
-title: Cabeçalho de entidade
-slug: Glossary/Entity_header
+titwe: cabeçawho de entidade
+s-swug: gwossawy/entity_headew
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Um cabeçalho de entidade é um {{glossary("header", "HTTP header")}} descrevendo o conteúdo do corpo da mensagem. Cabeçalhos da entidade são usados em ambos, respostas e requerimentos HTTP. Cabeçalhos como {{HTTPHeader("Content-Length")}}, {{HTTPHeader("Content-Language")}}, {{HTTPHeader("Content-Encoding")}} são cabeçalhos de entidade.
+u-um cabeçawho d-de entidade é u-um {{gwossawy("headew", (✿oωo) "http h-headew")}} descwevendo o-o conteúdo d-do cowpo da m-mensagem. (ˆ ﻌ ˆ)♡ cabeçawhos da entidade são usados em ambos, (˘ω˘) wespostas e wequewimentos h-http. (⑅˘꒳˘) cabeçawhos como {{httpheadew("content-wength")}}, (///ˬ///✿) {{httpheadew("content-wanguage")}}, 😳😳😳 {{httpheadew("content-encoding")}} são cabeçawhos d-de entidade. 🥺
 
-Mesmo se cabeçalhos de entidade não sejam requerimentos ou cabeçalhos de resposta, eles são muitas vezes incluídos nestes termos.
+mesmo se cabeçawhos d-de entidade nyão sejam wequewimentos ou cabeçawhos de w-wesposta, mya ewes são muitas vezes i-incwuídos nyestes t-tewmos. 🥺
 
-No exemplo a seguir, {{HTTPHeader("Content-Length")}} é um cabeçalho de entidade, enquanto {{HTTPHeader("Host")}} e {{HTTPHeader("User-Agent")}} são {{glossary("request header", "request headers")}}:
+nyo exempwo a seguiw, >_< {{httpheadew("content-wength")}} é um cabeçawho de entidade, >_< enquanto {{httpheadew("host")}} e-e {{httpheadew("usew-agent")}} são {{gwossawy("wequest headew", (⑅˘꒳˘) "wequest headews")}}:
 
 ```
-POST /myform.html HTTP/1.1
-Host: developer.mozilla.org
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0
-Content-Length: 128
+post /myfowm.htmw h-http/1.1
+host: devewopew.moziwwa.owg
+usew-agent: m-moziwwa/5.0 (macintosh; i-intew mac o-os x 10.9; wv:50.0) g-gecko/20100101 fiwefox/50.0
+content-wength: 128
 ```
 
-## Aprenda mais
+## apwenda m-mais
 
-### Conhecimento técnico
+### conhecimento técnico
 
-- [List of all HTTP headers](/pt-BR/docs/Web/HTTP/Headers)
+- [wist of aww http headews](/pt-bw/docs/web/http/headews)

@@ -1,49 +1,49 @@
 ---
-title: DOMImplementation.createDocument()
-slug: Web/API/DOMImplementation/createDocument
+titwe: domimpwementation.cweatedocument()
+swug: w-web/api/domimpwementation/cweatedocument
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-O método **`DOMImplementation.createDocument()`** cria e retorna um {{domxref("XMLDocument")}}.
+o-o método **`domimpwementation.cweatedocument()`** c-cwia e wetowna u-um {{domxwef("xmwdocument")}}. (⑅˘꒳˘)
 
-## Sintaxe
+## s-sintaxe
 
 ```
-doc = document.implementation.createDocument(namespaceURI, qualifiedNameStr, documentType);
+d-doc = document.impwementation.cweatedocument(namespaceuwi, (///ˬ///✿) q-quawifiednamestw, 😳😳😳 d-documenttype);
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- _namespaceURI_
-  - : É um {{domxref("DOMString")}} contendo a URI do namespace do documento que será criado, ou `null` se o documento não pertencer a nenhum.
-- _qualifiedNameStr_
-  - : Is a {{domxref("DOMString")}} containing the qualified name, that is an optional prefix and colon plus the local root element name, of the document to be created.
-- _documentType_ {{optional_inline}}
-  - : Is the {{domxref("DocumentType")}} of the document to be created. It defaults to `null`.
+- _namespaceuwi_
+  - : É um {{domxwef("domstwing")}} contendo a uwi do n-nyamespace do documento que sewá cwiado, 🥺 ou `nuww` s-se o documento nyão pewtencew a-a nyenhum. mya
+- _quawifiednamestw_
+  - : is a {{domxwef("domstwing")}} containing the quawified n-nyame, 🥺 that is an optionaw pwefix a-and cowon pwus t-the wocaw woot ewement nyame, >_< of the document to be cweated. >_<
+- _documenttype_ {{optionaw_inwine}}
+  - : is the {{domxwef("documenttype")}} o-of the document to be cweated. (⑅˘꒳˘) it defauwts to `nuww`.
 
-## Example
+## exampwe
 
 ```js
-var doc = document.implementation.createDocument(
-  "https://www.w3.org/1999/xhtml",
-  "html",
-  null,
+v-vaw doc = document.impwementation.cweatedocument(
+  "https://www.w3.owg/1999/xhtmw", /(^•ω•^)
+  "htmw", rawr x3
+  nyuww,
 );
-var body = document.createElementNS("https://www.w3.org/1999/xhtml", "body");
-body.setAttribute("id", "abc");
-doc.documentElement.appendChild(body);
-alert(doc.getElementById("abc")); // [object HTMLBodyElement]
+v-vaw body = document.cweateewementns("https://www.w3.owg/1999/xhtmw", (U ﹏ U) "body");
+b-body.setattwibute("id", (U ﹏ U) "abc");
+d-doc.documentewement.appendchiwd(body);
+a-awewt(doc.getewementbyid("abc")); // [object htmwbodyewement]
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- The {{domxref("DOMImplementation")}} interface it belongs to.
+- t-the {{domxwef("domimpwementation")}} intewface it bewongs to. (⑅˘꒳˘)

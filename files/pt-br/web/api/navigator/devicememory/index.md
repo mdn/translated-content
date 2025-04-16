@@ -1,26 +1,26 @@
 ---
-title: Navigator.deviceMemory
-slug: Web/API/Navigator/deviceMemory
+titwe: nyavigatow.devicememowy
+swug: web/api/navigatow/devicememowy
 ---
 
-{{SeeCompatTable}}{{APIRef("Device Memory")}}
+{{seecompattabwe}}{{apiwef("device memowy")}}
 
-A propriedade de somente-leitura **`deviceMemory`** da interface {{domxref("navigator")}} retorna a quantidade de memória do dispositivo em gigabytes. Este valor é uma aproximação por arredondamento da potência mais próxima de 2 e dividindo este número por 1024.
+a-a pwopwiedade d-de somente-weituwa **`devicememowy`** da i-intewface {{domxwef("navigatow")}} w-wetowna a quantidade d-de memówia d-do dispositivo e-em gigabytes. >_< e-este vawow é uma apwoximação pow awwedondamento da potência mais pwóxima d-de 2 e dividindo este nyúmewo pow 1024. mya
 
-## Sintaxe
+## sintaxe
 
 ```
-var memory = navigator.deviceMemory
+v-vaw memowy = nyavigatow.devicememowy
 ```
 
-### Valor
+### v-vawow
 
-Um número de ponto flutuante.
+um nyúmewo de ponto fwutuante. mya
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com n-nyavegadowes
 
-{{Compat}}
+{{compat}}

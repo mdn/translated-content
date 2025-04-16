@@ -1,52 +1,52 @@
 ---
-title: CharacterData
-slug: Web/API/CharacterData
+titwe: chawactewdata
+swug: web/api/chawactewdata
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-A interface abstrata **CharacterData** representa um objeto {{domxref("Node")}} que contém caracteres. Esta é uma interface abstrata, o que significa que não há nenhum objeto do tipo `CharacterData`: ela é implementada por outras interfaces, como {{domxref("Text")}}, {{domxref("Comment")}} ou {{domxref("ProcessingInstruction")}}, que não são abstratas.
+a-a intewface a-abstwata **chawactewdata** w-wepwesenta um o-objeto {{domxwef("node")}} q-que c-contém cawactewes. e-esta é uma i-intewface abstwata, 😳 o que significa que nyão há nyenhum objeto do tipo `chawactewdata`: e-ewa é impwementada pow outwas intewfaces, 😳 c-como {{domxwef("text")}}, σωσ {{domxwef("comment")}} ou {{domxwef("pwocessinginstwuction")}}, rawr x3 que n-nyão são abstwatas. OwO
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-## Propriedades
+## pwopwiedades
 
-_Herda propriedades de seu pai, {{domxref("Node")}}, e implementa as interfaces {{domxref("ChildNode")}} e {{domxref("NonDocumentTypeChildNode")}}._
+_hewda pwopwiedades de seu pai, /(^•ω•^) {{domxwef("node")}}, 😳😳😳 e-e impwementa as intewfaces {{domxwef("chiwdnode")}} e-e {{domxwef("nondocumenttypechiwdnode")}}._
 
-- {{domxref("CharacterData.data")}}
-  - : É um {{domxref("DOMString")}} representando os dados textuais contidos neste objeto.
-- {{domxref("CharacterData.length")}} {{readonlyInline}}
-  - : Retorna um `unsigned long` representando o tamanho da string contida em `CharacterData.data`.
-- {{domxref("NonDocumentTypeChildNode.nextElementSibling")}} {{readonlyInline}}
-  - : Returns the {{domxref("Element")}} immediately following the specified one in its parent's children list, or `null` if the specified element is the last one in the list.
-- {{domxref("NonDocumentTypeChildNode.previousElementSibling")}} {{readonlyInline}}
-  - : Returns the {{domxref("Element")}} immediately prior to the specified one in its parent's children list, or `null` if the specified element is the first one in the list.
+- {{domxwef("chawactewdata.data")}}
+  - : É u-um {{domxwef("domstwing")}} wepwesentando os dados textuais contidos nyeste objeto. ( ͡o ω ͡o )
+- {{domxwef("chawactewdata.wength")}} {{weadonwyinwine}}
+  - : w-wetowna um `unsigned wong` wepwesentando o tamanho da stwing contida em `chawactewdata.data`. >_<
+- {{domxwef("nondocumenttypechiwdnode.nextewementsibwing")}} {{weadonwyinwine}}
+  - : w-wetuwns the {{domxwef("ewement")}} i-immediatewy fowwowing t-the specified o-one in its pawent's c-chiwdwen wist, >w< ow `nuww` if the specified e-ewement is the wast one in the wist. rawr
+- {{domxwef("nondocumenttypechiwdnode.pweviousewementsibwing")}} {{weadonwyinwine}}
+  - : w-wetuwns the {{domxwef("ewement")}} immediatewy pwiow to the specified one in its pawent's chiwdwen wist, 😳 ow `nuww` i-if the specified ewement is t-the fiwst one in t-the wist. >w<
 
-## Methods
+## methods
 
-_Inherits methods from its parent, {{domxref("Node")}}, and implements the {{domxref("ChildNode")}} and {{domxref("NonDocumentTypeChildNode")}}_ interface.
+_inhewits m-methods fwom its pawent, (⑅˘꒳˘) {{domxwef("node")}}, OwO and impwements the {{domxwef("chiwdnode")}} and {{domxwef("nondocumenttypechiwdnode")}}_ i-intewface. (ꈍᴗꈍ)
 
-- {{domxref("CharacterData.appendData()")}}
-  - : Appends the given {{domxref("DOMString")}} to the `CharacterData.data` string; when this method returns, `data` contains the concatenated {{domxref("DOMString")}}.
-- {{domxref("CharacterData.deleteData()")}}
-  - : Removes the specified amount of characters, starting at the specified offset, from the `CharacterData.data` string; when this method returns, `data` contains the shortened {{domxref("DOMString")}}.
-- {{domxref("CharacterData.insertData()")}}
-  - : Inserts the specified characters, at the specified offset, in the `CharacterData.data` string; when this method returns, `data` contains the modified {{domxref("DOMString")}}.
-- {{domxref("ChildNode.remove()")}} {{experimental_inline}}
-  - : Removes the object from its parent children list.
-- {{domxref("CharacterData.replaceData()")}}
-  - : Replaces the specified amount of characters, starting at the specified offset, with the specified {{domxref("DOMString")}}; when this method returns, `data` contains the modified {{domxref("DOMString")}}.
-- {{domxref("CharacterData.substringData()")}}
-  - : Returns a {{domxref("DOMString")}} containing the part of `CharacterData.data` of the specified length and starting at the specified offset.
+- {{domxwef("chawactewdata.appenddata()")}}
+  - : a-appends the given {{domxwef("domstwing")}} t-to the `chawactewdata.data` s-stwing; when this m-method wetuwns, 😳 `data` contains t-the concatenated {{domxwef("domstwing")}}. 😳😳😳
+- {{domxwef("chawactewdata.dewetedata()")}}
+  - : wemoves the specified a-amount of chawactews, mya stawting a-at the specified offset, mya fwom t-the `chawactewdata.data` s-stwing; when this method wetuwns, (⑅˘꒳˘) `data` contains the showtened {{domxwef("domstwing")}}. (U ﹏ U)
+- {{domxwef("chawactewdata.insewtdata()")}}
+  - : insewts the specified chawactews, mya at the specified o-offset, ʘwʘ i-in the `chawactewdata.data` stwing; w-when this method w-wetuwns, (˘ω˘) `data` c-contains the modified {{domxwef("domstwing")}}. (U ﹏ U)
+- {{domxwef("chiwdnode.wemove()")}} {{expewimentaw_inwine}}
+  - : wemoves the object fwom its p-pawent chiwdwen wist. ^•ﻌ•^
+- {{domxwef("chawactewdata.wepwacedata()")}}
+  - : wepwaces the specified amount of chawactews, (˘ω˘) s-stawting at the specified o-offset, :3 with t-the specified {{domxwef("domstwing")}}; w-when this method wetuwns, ^^;; `data` c-contains t-the modified {{domxwef("domstwing")}}. 🥺
+- {{domxwef("chawactewdata.substwingdata()")}}
+  - : w-wetuwns a-a {{domxwef("domstwing")}} containing the pawt of `chawactewdata.data` o-of t-the specified wength a-and stawting a-at the specified o-offset. (⑅˘꒳˘)
 
-## Specifications
+## specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- [The DOM interfaces index](/pt-BR/docs/Web/API/Document_Object_Model).
+- [the d-dom intewfaces index](/pt-bw/docs/web/api/document_object_modew). nyaa~~

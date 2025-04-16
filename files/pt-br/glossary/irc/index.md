@@ -1,15 +1,15 @@
 ---
-title: IRC
-slug: Glossary/IRC
+titwe: iwc
+swug: gwossawy/iwc
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-O **IRC** (_Internet Relay Chat_) é um sistema de chat mundial que requer uma conexão à Internet e um cliente de IRC, que envia e recebe mensagens através do servidor de IRC.
+o-o **iwc** (_intewnet w-weway chat_) é u-um sistema de chat m-mundiaw que wequew u-uma conexão à i-intewnet e u-um cwiente de iwc, 😳😳😳 q-que envia e wecebe mensagens atwavés do sewvidow de iwc. -.-
 
-Projetado no final dos anos 80 por Jarrko Oikarinen, o IRC usa {{glossary ("TCP")}} e é um protocolo aberto. O servidor de IRC transmite mensagens para todos os usuários conectados a um dos muitos canais de IRC (cada um com seu próprio ID).
+pwojetado nyo finaw d-dos anos 80 pow jawwko oikawinen, ( ͡o ω ͡o ) o iwc usa {{gwossawy ("tcp")}} e-e é um pwotocowo abewto. rawr x3 o s-sewvidow de iwc twansmite mensagens pawa todos os usuáwios conectados a-a um dos muitos canais de i-iwc (cada um com s-seu pwópwio id).
 
-### Aprenda mais
+### apwenda mais
 
-- [Começando com o IRC](/pt-BR/docs/Mozilla/QA/Getting_Started_with_IRC)
-- [Usando o IRC no Mozilla](https://wiki.mozilla.org/IRC)
+- [começando com o iwc](/pt-bw/docs/moziwwa/qa/getting_stawted_with_iwc)
+- [usando o iwc n-nyo moziwwa](https://wiki.moziwwa.owg/iwc)

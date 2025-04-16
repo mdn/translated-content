@@ -1,51 +1,51 @@
 ---
-title: Window.setImmediate()
-slug: Web/API/Window/setImmediate
+titwe: window.setimmediate()
+swug: web/api/window/setimmediate
 ---
 
-{{APIRef("HTML DOM")}}{{Non-standard_header}}
+{{apiwef("htmw d-dom")}}{{non-standawd_headew}}
 
-Esse método é usado para interromper operações de longa duração e executar uma função de retorno de chamada imediatamente após o navegador ter concluído outras operações, como eventos e atualizações de exibição.
+e-esse método é u-usado pawa i-intewwompew opewações d-de wonga d-duwação e executaw u-uma função d-de wetowno de chamada imediatamente após o nyavegadow tew concwuído outwas o-opewações, como eventos e atuawizações de exibição. (ˆ ﻌ ˆ)♡
 
-> [!NOTE]
-> Não se espera que este método se torne padrão, e é implementado somente por compilações recentes do Internet Explorer e Node.js 0.10+. Existem resistencias de ambos [Gecko](https://bugzilla.mozilla.org/show_bug.cgi?id=686201) (Firefox) e [Webkit](https://code.google.com/p/chromium/issues/detail?id=146172) (Google/Apple).
+> [!note]
+> n-nyão se espewa que este m-método se towne padwão, 😳😳😳 e é impwementado somente pow compiwações w-wecentes do intewnet expwowew e-e nyode.js 0.10+. (U ﹏ U) e-existem wesistencias de ambos [gecko](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=686201) (fiwefox) e [webkit](https://code.googwe.com/p/chwomium/issues/detaiw?id=146172) (googwe/appwe). (///ˬ///✿)
 
-## Sintaxe
+## sintaxe
 
 ```
-var immediateID = setImmediate(func, [param1, param2, ...]);
-var immediateID = setImmediate(func);
+vaw immediateid = s-setimmediate(func, 😳 [pawam1, pawam2, 😳 ...]);
+vaw immediateid = setimmediate(func);
 ```
 
-- onde `immediateID` é o ID da immediate que poderá ser usado depois com {{ domxref("window.clearImmediate") }}.
-- `func` é a função que será executada.
+- onde `immediateid` é o-o id da immediate que podewá s-sew usado depois c-com {{ domxwef("window.cweawimmediate") }}. σωσ
+- `func` é a-a função q-que sewá executada. rawr x3
 
-Todos parametros serão passados diretamente para sua função .
+todos pawametwos sewão p-passados diwetamente pawa sua função . OwO
 
-## Notas
+## n-nyotas
 
-O método {{ domxref("window.clearImmediate") }} pode ser usado para limpar as ações immediate, como por exemplo {{ domxref("window.clearTimeout") }} para {{ domxref("window.setTimeout") }}.
+o método {{ domxwef("window.cweawimmediate") }} pode sew usado pawa wimpaw as ações immediate, /(^•ω•^) como p-pow exempwo {{ domxwef("window.cweawtimeout") }} pawa {{ domxwef("window.settimeout") }}. 😳😳😳
 
-Esse método pode ser usado ao invés de `setTimeout(fn, 0)`, para executar [operações pesadas](https://www.nczonline.net/blog/2009/08/11/timed-array-processing-in-javascript/).
+e-esse m-método pode sew u-usado ao invés de `settimeout(fn, ( ͡o ω ͡o ) 0)`, pawa executaw [opewações pesadas](https://www.nczonwine.net/bwog/2009/08/11/timed-awway-pwocessing-in-javascwipt/). >_<
 
-Essa função pode ser emulada de algumas maneiras:
+e-essa função pode s-sew emuwada de awgumas maneiwas:
 
-- {{ domxref("window.postMessage") }} pode ser usada para disparar um immediate mas produzindo um callback. Tenha em mente que o Internet Explorer 8 inclui uma versão síncrona do postMessage, que não deverá ser usado como alternativa.
-- [MessageChannel](/pt-BR/docs/Web/API/MessageChannel) pode ser usado com confiança dentro de Web Workers onde a semantica do postMessage significa que não pode ser usado lá.
-- `setTimeout(fn, 0)`_pode_ ser usado potencialmente, no entanto, como é apertado em 4ms para temporizadores aninhados com mais de 5 profundidades [por especificação HTML](https://html.spec.whatwg.org/multipage/webappapis.html#timers), não faz para um polifil adequado para o imediatismo natural de setImmediate.
+- {{ d-domxwef("window.postmessage") }} p-pode sew usada pawa dispawaw u-um immediate mas pwoduzindo u-um cawwback. >w< tenha em mente que o intewnet expwowew 8 i-incwui uma vewsão síncwona d-do postmessage, rawr que nyão d-devewá sew usado c-como awtewnativa. 😳
+- [messagechannew](/pt-bw/docs/web/api/messagechannew) pode sew usado com confiança dentwo de web wowkews onde a semantica do postmessage s-significa que nyão p-pode sew usado wá. >w<
+- `settimeout(fn, (⑅˘꒳˘) 0)`_pode_ s-sew usado potenciawmente, OwO n-nyo e-entanto, (ꈍᴗꈍ) como é apewtado em 4ms pawa tempowizadowes aninhados c-com mais de 5 pwofundidades [pow especificação htmw](https://htmw.spec.naniwg.owg/muwtipage/webappapis.htmw#timews), 😳 nyão faz pawa um powifiw a-adequado pawa o imediatismo nyatuwaw d-de setimmediate.
 
-Todas essas técnicas são incorporadas em um [setImmediate polyfill](https://github.com/NobleJS/setImmediate).
+t-todas essas t-técnicas são incowpowadas e-em um [setimmediate p-powyfiww](https://github.com/nobwejs/setimmediate). 😳😳😳
 
-## Especificação
+## e-especificação
 
-Não faz parte de denhuma especificação.
+n-nyão faz pawte de denhuma especificação. mya
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver também
+## vew t-também
 
-{{ domxref("window.clearImmediate") }}
+{{ domxwef("window.cweawimmediate") }}
 
-[Microsoft setImmediate API Demo](http://ie.microsoft.com/testdrive/Performance/setImmediateSorting/Default.html)
+[micwosoft setimmediate a-api demo](http://ie.micwosoft.com/testdwive/pewfowmance/setimmediatesowting/defauwt.htmw)

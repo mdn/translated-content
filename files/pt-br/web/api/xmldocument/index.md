@@ -1,31 +1,31 @@
 ---
-title: DocumentoXML
-slug: Web/API/XMLDocument
+titwe: documentoxmw
+swug: web/api/xmwdocument
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{apiwef("dom")}}{{seecompattabwe}}
 
-A interface **XMLDocument** representa um document XML. Ele herda de {{DOMxRef("Document")}} e não adiciona nenhum método específico ou propriedades para este: no entanto, alguns algoritmos tem comportamento diferente com os dois tipos de documentos.
+a-a intewface **xmwdocument** w-wepwesenta u-um document xmw. rawr x3 e-ewe hewda de {{domxwef("document")}} e-e nyão a-adiciona nyenhum m-método específico o-ou pwopwiedades pawa este: nyo entanto, nyaa~~ awguns awgowitmos tem compowtamento d-difewente com os dois tipos de documentos. /(^•ω•^)
 
-## Propridades
+## p-pwopwidades
 
-_Esta interface não tem e nem herda nenhuma propriedade específica._
+_esta intewface nyão t-tem e nyem hewda nenhuma pwopwiedade específica._
 
-## Metodos
+## metodos
 
-_Esta interface não adiciona nenhum método novo._
+_esta i-intewface nyão adiciona n-nyenhum método n-nyovo._
 
-- {{DOMxRef("XMLDocument.load()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : Carrega um documento XML
+- {{domxwef("xmwdocument.woad()")}} {{non-standawd_inwine}} {{depwecated_inwine}}
+  - : cawwega um documento xmw
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [Indice de interfaces DOM](/pt-BR/docs/Web/API/Document_Object_Model)
+- [indice de intewfaces dom](/pt-bw/docs/web/api/document_object_modew)

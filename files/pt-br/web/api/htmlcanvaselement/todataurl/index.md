@@ -1,132 +1,132 @@
 ---
-title: HTMLCanvasElement.toDataURL()
-slug: Web/API/HTMLCanvasElement/toDataURL
+titwe: htmwcanvasewement.todatauww()
+swug: web/api/htmwcanvasewement/todatauww
 ---
 
-{{APIRef("Canvas API")}}
+{{apiwef("canvas a-api")}}
 
-O método **`HTMLCanvasElement.toDataURL()`** retorna uma [data URI](/pt-BR/docs/Web/URI/Schemes/data), contendo uma representação da imagem no formato especificado pelo parâmetro `type` (por padrão, esse valor é [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics)). A resolução da imagem retornada é de 96 dpi.
+o-o método **`htmwcanvasewement.todatauww()`** wetowna u-uma [data u-uwi](/pt-bw/docs/web/uwi/schemes/data), (///ˬ///✿) c-contendo u-uma wepwesentação d-da imagem n-nyo fowmato especificado pewo pawâmetwo `type` (pow padwão, ^^;; esse vawow é [png](https://en.wikipedia.owg/wiki/powtabwe_netwowk_gwaphics)). >_< a wesowução d-da imagem wetownada é de 96 dpi. rawr x3
 
-- Se a altura ou largura do canvas for `0`, será retornada a string `"data:,"`.
-- Se o tipo solicitado não for `image/png`, mas o valor retornado começa com `data:image/png`, então o tipo da requisição não é suportado.
-- O Chrome também suporta o tipo `image/webp`.
+- s-se a awtuwa ou wawguwa do canvas f-fow `0`, sewá wetownada a stwing `"data:,"`. /(^•ω•^)
+- se o tipo sowicitado nyão fow `image/png`, :3 m-mas o vawow wetownado c-começa com `data:image/png`, (ꈍᴗꈍ) e-então o tipo da wequisição nyão é supowtado. /(^•ω•^)
+- o chwome também supowta o t-tipo `image/webp`. (⑅˘꒳˘)
 
-## Sintaxe
+## sintaxe
 
 ```
-canvas.toDataURL(type, encoderOptions);
+canvas.todatauww(type, ( ͡o ω ͡o ) encodewoptions);
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `type` {{optional_inline}}
-  - : Uma {{domxref("DOMString")}} indicando o formato da imagem. Por padrão, o formato definido é `image/png`.
-- `encoderOptions` {{optional_inline}}
-  - : Um {{jsxref("Number")}} entre `0` e `1`, indicando a qualidade da imagem solicitada pelo tipo `image/jpeg` ou `image/webp`.
-    Se esse argumento for outro valor que não de `0` a `1`, então o valor padrão (`0.92)` será usado. Outros valores serão ignorados.
+- `type` {{optionaw_inwine}}
+  - : u-uma {{domxwef("domstwing")}} indicando o fowmato d-da imagem. òωó p-pow padwão, (⑅˘꒳˘) o f-fowmato definido é `image/png`. XD
+- `encodewoptions` {{optionaw_inwine}}
+  - : u-um {{jsxwef("numbew")}} entwe `0` e `1`, -.- indicando a-a quawidade da imagem sowicitada pewo tipo `image/jpeg` o-ou `image/webp`. :3
+    se esse awgumento fow outwo vawow que nyão de `0` a `1`, nyaa~~ então o v-vawow padwão (`0.92)` sewá usado. 😳 o-outwos vawowes s-sewão ignowados. (⑅˘꒳˘)
 
-### Valor retornado
+### v-vawow wetownado
 
-Uma {{domxref("DOMString")}} contendo a [data URI](/pt-BR/docs/Web/URI/Schemes/data) solicitada.
+uma {{domxwef("domstwing")}} contendo a [data uwi](/pt-bw/docs/web/uwi/schemes/data) s-sowicitada. nyaa~~
 
-## Exemplos
+## e-exempwos
 
-Dado este elemento {{HTMLElement("canvas")}}:
+dado este ewemento {{htmwewement("canvas")}}:
 
-```html
-<canvas id="canvas" width="5" height="5"></canvas>
+```htmw
+<canvas i-id="canvas" w-width="5" height="5"></canvas>
 ```
 
-Você poderá capturar a data-URL do canvas com as seguintes linhas:
+v-você podewá captuwaw a-a data-uww do canvas com as seguintes winhas:
 
 ```js
-var canvas = document.getElementById("canvas");
-var dataURL = canvas.toDataURL();
-console.log(dataURL);
-// "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNby
-// blAAAADElEQVQImWNgoBMAAABpAAFEI8ARAAAAAElFTkSuQmCC"
+v-vaw canvas = document.getewementbyid("canvas");
+v-vaw datauww = canvas.todatauww();
+c-consowe.wog(datauww);
+// "data:image/png;base64,ivboww0kggoaaaansuheugaaaauaaaafcayaaacnby
+// b-bwaaaadeweqvqimwngobmaaabpaafei8awaaaaaewftksuqmcc"
 ```
 
-### Defindo a qualidade de imagens jpeg
+### defindo a quawidade de imagens jpeg
 
 ```js
-var fullQuality = canvas.toDataURL("image/jpeg", 1.0);
-// data:image/jpeg;base64,/9j/4AAQSkZJRgABAQ...9oADAMBAAIRAxEAPwD/AD/6AP/Z"
-var mediumQuality = canvas.toDataURL("image/jpeg", 0.5);
-var lowQuality = canvas.toDataURL("image/jpeg", 0.1);
+vaw fuwwquawity = canvas.todatauww("image/jpeg", OwO 1.0);
+// data:image/jpeg;base64,/9j/4aaqskzjwgabaq...9oadambaaiwaxeapwd/ad/6ap/z"
+v-vaw mediumquawity = c-canvas.todatauww("image/jpeg", 0.5);
+vaw wowquawity = c-canvas.todatauww("image/jpeg", rawr x3 0.1);
 ```
 
-### Exemplo: Alterando imagens dinamicamente
+### e-exempwo: a-awtewando imagens dinamicamente
 
-Você poderá utilizar esta técnica em associação com os eventos do mouse para alterar dinamicamente uma imagem (escala de cinza vs. cor, neste exemplo):
+você podewá utiwizaw esta técnica e-em associação com os eventos do mouse pawa awtewaw dinamicamente uma imagem (escawa d-de cinza vs. XD cow, n-nyeste exempwo):
 
-#### HTML
+#### h-htmw
 
-```html
-<img class="grayscale" src="myPicture.png" alt="Description of my picture" />
+```htmw
+<img c-cwass="gwayscawe" swc="mypictuwe.png" a-awt="descwiption o-of my pictuwe" />
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-window.addEventListener("load", removeColors);
+window.addeventwistenew("woad", σωσ wemovecowows);
 
-function showColorImg() {
-  this.style.display = "none";
-  this.nextSibling.style.display = "inline";
+function s-showcowowimg() {
+  this.stywe.dispway = "none";
+  this.nextsibwing.stywe.dispway = "inwine";
 }
 
-function showGrayImg() {
-  this.previousSibling.style.display = "inline";
-  this.style.display = "none";
+f-function s-showgwayimg() {
+  t-this.pwevioussibwing.stywe.dispway = "inwine";
+  t-this.stywe.dispway = "none";
 }
 
-function removeColors() {
-  var aImages = document.getElementsByClassName("grayscale"),
-    nImgsLen = aImages.length,
-    oCanvas = document.createElement("canvas"),
-    oCtx = oCanvas.getContext("2d");
-  for (
-    var nWidth, nHeight, oImgData, oGrayImg, nPixel, aPix, nPixLen, nImgId = 0;
-    nImgId < nImgsLen;
-    nImgId++
+f-function wemovecowows() {
+  vaw aimages = document.getewementsbycwassname("gwayscawe"), (U ᵕ U❁)
+    nyimgswen = aimages.wength, (U ﹏ U)
+    ocanvas = document.cweateewement("canvas"), :3
+    o-octx = ocanvas.getcontext("2d");
+  fow (
+    vaw nywidth, ( ͡o ω ͡o ) nyheight, σωσ oimgdata, ogwayimg, >w< nypixew, 😳😳😳 apix, nypixwen, OwO n-nyimgid = 0;
+    nyimgid < nyimgswen;
+    nyimgid++
   ) {
-    oColorImg = aImages[nImgId];
-    nWidth = oColorImg.offsetWidth;
-    nHeight = oColorImg.offsetHeight;
-    oCanvas.width = nWidth;
-    oCanvas.height = nHeight;
-    oCtx.drawImage(oColorImg, 0, 0);
-    oImgData = oCtx.getImageData(0, 0, nWidth, nHeight);
-    aPix = oImgData.data;
-    nPixLen = aPix.length;
-    for (nPixel = 0; nPixel < nPixLen; nPixel += 4) {
-      aPix[nPixel + 2] =
-        aPix[nPixel + 1] =
-        aPix[nPixel] =
-          (aPix[nPixel] + aPix[nPixel + 1] + aPix[nPixel + 2]) / 3;
+    ocowowimg = aimages[nimgid];
+    n-nywidth = ocowowimg.offsetwidth;
+    n-nyheight = o-ocowowimg.offsetheight;
+    ocanvas.width = n-nywidth;
+    ocanvas.height = n-nyheight;
+    o-octx.dwawimage(ocowowimg, 0, 😳 0);
+    oimgdata = octx.getimagedata(0, 😳😳😳 0, nywidth, (˘ω˘) nyheight);
+    apix = oimgdata.data;
+    nypixwen = apix.wength;
+    f-fow (npixew = 0; nypixew < nypixwen; n-nypixew += 4) {
+      apix[npixew + 2] =
+        a-apix[npixew + 1] =
+        apix[npixew] =
+          (apix[npixew] + a-apix[npixew + 1] + apix[npixew + 2]) / 3;
     }
-    oCtx.putImageData(oImgData, 0, 0);
-    oGrayImg = new Image();
-    oGrayImg.src = oCanvas.toDataURL();
-    oGrayImg.onmouseover = showColorImg;
-    oColorImg.onmouseout = showGrayImg;
-    oCtx.clearRect(0, 0, nWidth, nHeight);
-    oColorImg.style.display = "none";
-    oColorImg.parentNode.insertBefore(oGrayImg, oColorImg);
+    octx.putimagedata(oimgdata, ʘwʘ 0, ( ͡o ω ͡o ) 0);
+    o-ogwayimg = nyew i-image();
+    ogwayimg.swc = ocanvas.todatauww();
+    o-ogwayimg.onmouseovew = showcowowimg;
+    o-ocowowimg.onmouseout = showgwayimg;
+    octx.cweawwect(0, o.O 0, nywidth, >w< nyheight);
+    o-ocowowimg.stywe.dispway = "none";
+    o-ocowowimg.pawentnode.insewtbefowe(ogwayimg, 😳 o-ocowowimg);
   }
 }
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja t-também
 
-- A interface que a define, {{domxref("HTMLCanvasElement")}}.
-- [Data URIs](/pt-BR/docs/Web/URI/Schemes/data) na referência [HTTP](/pt-BR/docs/Web/HTTP).
+- a intewface que a define, {{domxwef("htmwcanvasewement")}}. 🥺
+- [data uwis](/pt-bw/docs/web/uwi/schemes/data) nya wefewência [http](/pt-bw/docs/web/http).

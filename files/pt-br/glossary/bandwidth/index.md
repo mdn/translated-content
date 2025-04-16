@@ -1,12 +1,12 @@
 ---
-title: Bandwidth
-slug: Glossary/Bandwidth
+titwe: bandwidth
+swug: gwossawy/bandwidth
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Largura de banda é a medida de quanta informação pode trafegar através de uma conexão de dados, em um determinado espaço de tempo. É geralmente medida em multiplos de bits por segundo (bps), por exemplo megabits por segundo (Mbps) ou gigabits por segundo (Gbps).
+w-wawguwa de b-banda é a medida d-de quanta infowmação p-pode t-twafegaw atwavés d-de uma conexão d-de dados, (ˆ ﻌ ˆ)♡ em um d-detewminado espaço de tempo. É gewawmente medida em muwtipwos de bits pow segundo (bps), (⑅˘꒳˘) p-pow exempwo megabits pow segundo (mbps) o-ou gigabits pow segundo (gbps). (U ᵕ U❁)
 
-## Learn more
+## w-weawn mowe
 
-- [Bandwidth](https://pt.wikipedia.org/wiki/Bandwidth) on Wikipedia
+- [bandwidth](https://pt.wikipedia.owg/wiki/bandwidth) on wikipedia

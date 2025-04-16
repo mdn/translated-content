@@ -1,391 +1,391 @@
 ---
-title: Funções
-slug: Web/JavaScript/Reference/Functions
+titwe: funções
+swug: web/javascwipt/wefewence/functions
 ---
 
-{{jsSidebar("Functions")}}
+{{jssidebaw("functions")}}
 
-De modo geral, função é um "subprograma" que pode ser _chamado_ por código externo (ou interno no caso de recursão) à função. Assim como o programa em si, uma função é composta por uma sequência de instruções chamada _corpo da função_. Valores podem ser _passados_ para uma função e ela vai _retornar_ um valor.
+d-de m-modo gewaw, (✿oωo) função é u-um "subpwogwama" q-que pode s-sew _chamado_ p-pow código extewno (ou i-intewno n-nyo caso de wecuwsão) à função. XD assim como o pwogwama em si, :3 uma função é c-composta pow uma sequência de instwuções chamada _cowpo d-da função_. (U ﹏ U) vawowes p-podem sew _passados_ pawa uma função e ewa vai _wetownaw_ um v-vawow. UwU
 
-Em JavaScript, funções são objetos de primeira classe, pois elas podem ter propriedades e métodos como qualquer outro objeto. O que as difere de outros objetos é que as funções podem ser chamados. Em resumo, elas são objetos [`Function`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function).
+em javascwipt, ʘwʘ funções s-são objetos d-de pwimeiwa cwasse, pois ewas podem tew pwopwiedades e métodos como quawquew outwo o-objeto. >w< o que as difewe de outwos objetos é que as funções podem sew chamados. 😳😳😳 e-em wesumo, rawr ewas são objetos [`function`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/function). ^•ﻌ•^
 
-Para mais exemplos e explicações, veja também o [Guia de JavaScript sobre funções](/pt-BR/docs/Web/JavaScript/Guide/Functions).
+p-pawa mais exempwos e-e expwicações, σωσ v-veja também o-o [guia de javascwipt sobwe funções](/pt-bw/docs/web/javascwipt/guide/functions). :3
 
-## Descrição
+## descwição
 
-Toda função em JavaScript é um objeto `Function`. Veja {{jsxref("Function")}} para informação das propriedades e métodos dos objetos `Function`.
+t-toda função em javascwipt é um objeto `function`. rawr x3 v-veja {{jsxwef("function")}} pawa infowmação das pwopwiedades e métodos dos objetos `function`. nyaa~~
 
-Funções não são como procedimentos (_procedure_). Uma função sempre retorna um valor, mas um procedimento pode ou não retornar um valor.
+funções n-nyão são como pwocedimentos (_pwoceduwe_). :3 u-uma função s-sempwe wetowna u-um vawow, >w< mas um pwocedimento pode ou nyão wetownaw um vawow. rawr
 
-Para retornar um valor diferente do padrão, uma função deve ter uma instrução [return](/pt-BR/docs/Web/JavaScript/Reference/Statements/return) que específica o valor a ser retornado. Uma função sem um `return` retornará um valor padrão. No caso de um [método construtor](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) chamado com a palavra reservada [`new`](/pt-BR/docs/Web/JavaScript/Reference/Operators/new), o valor padrão é o valor do parâmetro `this`. Para todas as outras funções, o valor padrão de retorno é `undefined`.
+p-pawa wetownaw um v-vawow difewente do padwão, 😳 uma f-função deve t-tew uma instwução [wetuwn](/pt-bw/docs/web/javascwipt/wefewence/statements/wetuwn) que específica o-o vawow a sew wetownado. 😳 uma f-função sem um `wetuwn` wetownawá um vawow padwão. 🥺 n-nyo caso de um [método c-constwutow](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/object/constwuctow) chamado com a-a pawavwa wesewvada [`new`](/pt-bw/docs/web/javascwipt/wefewence/opewatows/new), rawr x3 o-o vawow padwão é o vawow do pawâmetwo `this`. ^^ pawa todas as outwas funções, ( ͡o ω ͡o ) o vawow padwão de wetowno é `undefined`. XD
 
-Os parâmetros de uma função são chamados de argumentos da função. Argumentos são passados para a função _por valor_. Se uma função muda o valor de um argumento, esta mudança não é refletida globalmente ou na chamada da função. Contudo, referência de objetos são valores também, e eles são especiais: se a função muda as propriedades do objeto referenciado, estas mudanças são visíveis fora da função, como é mostrado no exemplo a seguir:
+os p-pawâmetwos de u-uma função são chamados de awgumentos d-da função. ^^ a-awgumentos s-são passados pawa a função _pow vawow_. (⑅˘꒳˘) se uma função muda o-o vawow de um awgumento, (⑅˘꒳˘) esta mudança nyão é wefwetida gwobawmente ou nya chamada d-da função. ^•ﻌ•^ contudo, ( ͡o ω ͡o ) wefewência d-de objetos s-são vawowes t-também, ( ͡o ω ͡o ) e ewes são especiais: s-se a função muda a-as pwopwiedades d-do objeto wefewenciado, (✿oωo) e-estas mudanças são visíveis fowa da f-função, 😳😳😳 como é m-mostwado nyo e-exempwo a seguiw:
 
 ```js
-/* Declare a função 'minhaFunção' */
-function minhaFuncao(objeto) {
-  objeto.marca = "Toyota";
+/* d-decwawe a-a função 'minhafunção' */
+function minhafuncao(objeto) {
+  objeto.mawca = "toyota";
 }
 
 /*
- * Declare a variável 'meucarro';
- * crie e inicialize um novo Objeto;
- * atribua referência para 'meucarro'
+ * decwawe a v-vawiávew 'meucawwo';
+ * cwie e iniciawize um nyovo objeto;
+ * atwibua wefewência pawa 'meucawwo'
  */
-var meucarro = {
-  marca: "Honda",
-  modelo: "Accord",
-  ano: 1998,
+v-vaw meucawwo = {
+  mawca: "honda", OwO
+  modewo: "accowd",
+  ano: 1998, ^^
 };
 
-/* Exibe 'Honda' */
-console.log(meucarro.marca);
+/* e-exibe 'honda' */
+c-consowe.wog(meucawwo.mawca);
 
-/* Passe a referência do objeto para a função */
-minhaFuncao(meucarro);
+/* p-passe a wefewência do objeto p-pawa a função */
+minhafuncao(meucawwo);
 
 /*
- * Exibe 'Toyota' como valor para a propriedade 'marca'
- * do objeto, mudado pela função.
+ * e-exibe 'toyota' c-como vawow pawa a pwopwiedade 'mawca'
+ * do objeto, rawr x3 mudado pewa função. 🥺
  */
-console.log(meucarro.marca);
+consowe.wog(meucawwo.mawca);
 ```
 
-A palavra reservada [`this`](/pt-BR/docs/Web/JavaScript/Reference/Operators/this) não se refere a função sendo executada no momento, então você deve referenciar um objeto `Function` pelo nome, mesmo dentro do corpo da função.
+a-a pawavwa wesewvada [`this`](/pt-bw/docs/web/javascwipt/wefewence/opewatows/this) nyão se wefewe a-a função sendo executada nyo m-momento, então v-você deve wefewenciaw um objeto `function` pewo nyome, (ˆ ﻌ ˆ)♡ mesmo d-dentwo do cowpo d-da função. ( ͡o ω ͡o )
 
-## Definindo funções
+## definindo funções
 
-Há várias maneiras de definir funções:
+h-há váwias m-maneiwas de definiw funções:
 
-### Declaração de função (Instrução `function`)
+### decwawação de função (instwução `function`)
 
-Há um sintaxe especial para declarar funções (veja [Instrução function](/pt-BR/docs/Web/JavaScript/Reference/Statements/function) para detalhes):
+há um s-sintaxe especiaw p-pawa decwawaw f-funções (veja [instwução function](/pt-bw/docs/web/javascwipt/wefewence/statements/function) p-pawa detawhes):
 
 ```
-function nome([param[, param[, ... param]]]) {
-   instruções
+f-function nyome([pawam[, >w< pawam[, ... p-pawam]]]) {
+   instwuções
 }
 ```
 
 - `nome`
-  - : O nome da função.
-- `param`
-  - : O nome de um argumento a ser passado para a função.
-- `instruções`
-  - : As instruções que formam o corpo da função.
+  - : o nyome da função. /(^•ω•^)
+- `pawam`
+  - : o nyome de um awgumento a-a sew passado p-pawa a função. 😳😳😳
+- `instwuções`
+  - : as instwuções que fowmam o cowpo d-da função. (U ᵕ U❁)
 
-### A expressão function (Operador `function`)
+### a-a expwessão function (opewadow `function`)
 
-Uma expressão function é parecida com uma declaração function e tem até a mesma sintaxe (veja [Operador function](/pt-BR/docs/Web/JavaScript/Reference/Operators/function) para detalhes):
+uma expwessão function é pawecida c-com uma decwawação function e tem até a mesma sintaxe (veja [opewadow function](/pt-bw/docs/web/javascwipt/wefewence/opewatows/function) p-pawa detawhes):
 
 ```
-function [nome]([param] [, param] [..., param]) {
-   instruções
+function [nome]([pawam] [, (˘ω˘) pawam] [..., pawam]) {
+   i-instwuções
 }
 ```
 
 - `nome`
-  - : O nome da função. Pode ser omitido, e neste caso a função é conhecida como função anônima.
-- `param`
-  - : O nome de um argumento a ser passado para a função.
-- `instruções`
-  - : As instruções que formam o corpo da função.
+  - : o-o nyome da função. 😳 pode sew omitido, (ꈍᴗꈍ) e nyeste caso a-a função é c-conhecida como função anônima. :3
+- `pawam`
+  - : o nyome de um awgumento a sew p-passado pawa a função. /(^•ω•^)
+- `instwuções`
+  - : a-as instwuções que fowmam o cowpo da função. ^^;;
 
-### O gerador de declaração de função (instrução `function*`)
+### o gewadow d-de decwawação de função (instwução `function*`)
 
-> [!NOTE]
-> Expressão Arrow function é uma tecnologia experimental, parte da proposta do ECMAScript 6, e ainda não é amplamente suportada pelos navegadores.
+> [!note]
+> e-expwessão awwow f-function é uma tecnowogia expewimentaw, o.O p-pawte da pwoposta do e-ecmascwipt 6, 😳 e-e ainda nyão é a-ampwamente supowtada pewos nyavegadowes. UwU
 
-Uma expressão arrow function tem uma sintaxe curta e conecta seu valor lexicamente (veja [arrow functions](/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions) para mais detalhes):
+u-uma expwessão a-awwow function tem uma sintaxe cuwta e c-conecta seu vawow w-wexicamente (veja [awwow f-functions](/pt-bw/docs/web/javascwipt/wefewence/functions/awwow_functions) pawa mais detawhes):
 
 ```
-([param] [, param]) => {
-   instruções
+([pawam] [, >w< p-pawam]) => {
+   instwuções
 }
 
-param => expressão
+p-pawam => e-expwessão
 ```
 
-- `param`
-  - : O nome de um argumento. Quando não há argumentos deve ser indicado com o uso dos parênteses ( ). Para apenas um argumento os parênteses não são obrigatórios. (por exemplo `foo => 1`)
-- `instruções ou expressão`
-  - : Múltiplas instruções precisam ser envolvidas por chaves. Uma única expressão não requer chaves. A expressão também é implicitamente o valor de retorno dessa função.
+- `pawam`
+  - : o nyome de um awgumento. o.O quando nyão há a-awgumentos deve s-sew indicado com o-o uso dos pawênteses ( ). (˘ω˘) p-pawa apenas um awgumento o-os pawênteses não são obwigatówios. òωó (pow exempwo `foo => 1`)
+- `instwuções ou expwessão`
+  - : múwtipwas instwuções p-pwecisam sew envowvidas pow chaves. nyaa~~ u-uma única expwessão nyão w-wequew chaves. ( ͡o ω ͡o ) a expwessão também é i-impwicitamente o vawow d-de wetowno dessa f-função. 😳😳😳
 
-### O construtor `Function`
+### o-o constwutow `function`
 
-> [!NOTE]
-> O uso do construtor Function para criar funções não é recomendado uma vez que é requerido o corpo da função como string, o que pode impedir algumas otimizações por parte do motor JS e pode também causar outros problemas.
+> [!note]
+> o-o uso do constwutow f-function pawa cwiaw funções nyão é wecomendado uma vez que é wequewido o cowpo da função como stwing, ^•ﻌ•^ o-o que pode i-impediw awgumas o-otimizações pow pawte do motow j-js e pode também causaw outwos pwobwemas. (˘ω˘)
 
-Como todos os outros objetos, objetos {{jsxref("Function")}} podem ser criados usando o operador new:
+como todos os outwos o-objetos, (˘ω˘) objetos {{jsxwef("function")}} p-podem sew cwiados usando o-o opewadow nyew:
 
 ```
-new Function (arg1, arg2, ... argN, corpoDaFuncao)
+nyew function (awg1, -.- a-awg2, ^•ﻌ•^ ... awgn, c-cowpodafuncao)
 ```
 
-- `arg1, arg2, ... argN`
-  - : Nenhum ou mais nomes para serem usados pela função como nomes formais de argumentos. Cada um deve ser uma string em conformidade com as regras para um identificador JavaScript válido ou uma lista com tais strings separadas por vírgula; por exemplo "x", "oValor", ou "a, b".
-- _corpoDaFuncao_
-  - : Uma string contento as instruções JavaScript correspondendo a definição da função.
+- `awg1, /(^•ω•^) awg2, (///ˬ///✿) ... a-awgn`
+  - : n-nyenhum ou mais nyomes pawa sewem usados pewa função como nyomes fowmais de a-awgumentos. mya cada u-um deve sew uma s-stwing em confowmidade c-com as w-wegwas pawa um identificadow javascwipt v-váwido o-ou uma wista com tais stwings sepawadas p-pow víwguwa; p-pow exempwo "x", o.O "ovawow", ^•ﻌ•^ ou "a, b".
+- _cowpodafuncao_
+  - : u-uma stwing contento as instwuções javascwipt c-cowwespondendo a definição d-da função. (U ᵕ U❁)
 
-Invocar o construtor Function como uma função (sem usar o operador new) the o mesmo efeito de invocá-lo como um construtor comum.
+invocaw o-o constwutow function como u-uma função (sem usaw o opewadow nyew) the o mesmo e-efeito de invocá-wo c-como um c-constwutow comum. :3
 
-## Parâmetros de Função
+## pawâmetwos de função
 
-> [!NOTE]
-> Parâmetros Default e Rest são tecnologias experimentais, parte da proposta do ECMAScript 6, e ainda não são amplamente suportados pelos navegadores.
+> [!note]
+> pawâmetwos d-defauwt e west são tecnowogias expewimentais, (///ˬ///✿) p-pawte da p-pwoposta do ecmascwipt 6, (///ˬ///✿) e ainda n-nyão são ampwamente supowtados p-pewos nyavegadowes. 🥺
 
-### Parâmetros Default
+### p-pawâmetwos defauwt
 
-Parâmetro Default de função permite que parâmetros formais sejam inicializados com valores padrão se nenhum valor ou valor undefined é passado. Para mais detalhes, veja [parâmetros default](/pt-BR/docs/Web/JavaScript/Reference/Functions/Default_parameters).
+pawâmetwo defauwt d-de função pewmite que pawâmetwos fowmais s-sejam iniciawizados c-com vawowes padwão se nyenhum v-vawow ou vawow undefined é p-passado. -.- pawa mais d-detawhes, nyaa~~ veja [pawâmetwos defauwt](/pt-bw/docs/web/javascwipt/wefewence/functions/defauwt_pawametews). (///ˬ///✿)
 
-### Parâmetros Rest
+### p-pawâmetwos west
 
-A sintaxe do parâmetro rest permite representar um número indefinido de argumentos em forma de array. Para mais detalhes, veja [parâmetros rest](/pt-BR/docs/Web/JavaScript/Reference/Functions/rest_parameters).
+a sintaxe do pawâmetwo west pewmite wepwesentaw um nyúmewo indefinido de awgumentos em fowma de awway. 🥺 pawa mais detawhes, >w< veja [pawâmetwos west](/pt-bw/docs/web/javascwipt/wefewence/functions/west_pawametews). rawr x3
 
-## O objeto `arguments`
+## o objeto `awguments`
 
-Você pode referenciar aos argumentos da função dentro da função utilizando o objeto arguments. Veja [arguments](/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments).
+você pode wefewenciaw a-aos awgumentos d-da função dentwo da função utiwizando o-o objeto awguments. (⑅˘꒳˘) v-veja [awguments](/pt-bw/docs/web/javascwipt/wefewence/functions/awguments). σωσ
 
-- [`arguments`](/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments): Um objeto array-like contendo os argumentos passados para a função atualmente em execução.
-- [`arguments.callee`](/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments/callee) {{Deprecated_inline}}: A função atualmente em execução.
-- [`arguments.caller`](/pt-BR/docs/JavaScript/Reference/Functions_and_function_scope/arguments/caller): A função que invocou a função atualmente em execução.
-- [`arguments.length`](/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments/length): O número de argumentos passados para a função.
+- [`awguments`](/pt-bw/docs/web/javascwipt/wefewence/functions/awguments): um o-objeto awway-wike contendo os a-awgumentos passados pawa a função a-atuawmente em e-execução. XD
+- [`awguments.cawwee`](/pt-bw/docs/web/javascwipt/wefewence/functions/awguments/cawwee) {{depwecated_inwine}}: a função a-atuawmente em execução. -.-
+- [`awguments.cawwew`](/pt-bw/docs/javascwipt/wefewence/functions_and_function_scope/awguments/cawwew): a-a função q-que invocou a função atuawmente em execução. >_<
+- [`awguments.wength`](/pt-bw/docs/web/javascwipt/wefewence/functions/awguments/wength): o n-nyúmewo de awgumentos p-passados p-pawa a função. rawr
 
-## Definindo Métodos de Funções
+## d-definindo m-métodos de funções
 
-### Funções Getter e setter
+### f-funções g-gettew e settew
 
-Você pode definir getters (métodos de acesso) and setters (métodos de alteração) em qualquer objeto interno padrão ou objeto definido pelo usuário que ofereça suporte à adição de novas propriedades. A sintaxe para definir getters e setters usa a sintaxe literal do objeto.
+v-você pode d-definiw gettews (métodos de acesso) a-and settews (métodos d-de awtewação) e-em quawquew objeto intewno p-padwão ou objeto definido pewo usuáwio q-que ofeweça supowte à adição d-de nyovas pwopwiedades. 😳😳😳 a-a sintaxe p-pawa definiw gettews e settews u-usa a sintaxe witewaw do objeto. UwU
 
-- [get](/pt-BR/docs/Web/JavaScript/Reference/Functions/get)
-  - : Vincula uma propriedade de objeto a uma função que será chamada quando essa propriedade é requisitada.
-- [set](/pt-BR/docs/Web/JavaScript/Reference/Functions/set)
-  - : Vincula uma propriedade de objeto a uma função a ser chamada quando há uma tentativa de definir essa propriedade.
+- [get](/pt-bw/docs/web/javascwipt/wefewence/functions/get)
+  - : v-vincuwa uma pwopwiedade de o-objeto a uma função que sewá c-chamada quando essa pwopwiedade é wequisitada. (U ﹏ U)
+- [set](/pt-bw/docs/web/javascwipt/wefewence/functions/set)
+  - : vincuwa uma pwopwiedade de objeto a-a uma função a sew chamada q-quando há uma t-tentativa de definiw essa pwopwiedade. (˘ω˘)
 
-### Sintaxe dos métodos de funções
+### sintaxe dos métodos d-de funções
 
-> [!NOTE]
-> Definições de métodos são tecnologias experimentais, parte da proposta do ECMAScript 6, e ainda não são amplamente suportados pelos navegadores.
+> [!note]
+> definições d-de métodos s-são tecnowogias e-expewimentais, /(^•ω•^) pawte da pwoposta do ecmascwipt 6, (U ﹏ U) e-e ainda n-nyão são ampwamente supowtados p-pewos nyavegadowes. ^•ﻌ•^
 
-Começando com ECMAScript 6, você é capaz de definir métodos próprios em uma sintaxe mais curta, semelhante aos getters e setters. Veja [method definitions](/pt-BR/docs/Web/JavaScript/Reference/Functions/Method_definitions) para mais informações.
+começando com ecmascwipt 6, >w< v-você é capaz de definiw métodos p-pwópwios e-em uma sintaxe mais c-cuwta, ʘwʘ semewhante aos gettews e-e settews. òωó veja [method d-definitions](/pt-bw/docs/web/javascwipt/wefewence/functions/method_definitions) p-pawa mais i-infowmações. o.O
 
 ```js
-var obj = {
-  foo() {},
-  bar() {},
+vaw obj = {
+  f-foo() {}, ( ͡o ω ͡o )
+  b-baw() {}, mya
 };
 ```
 
-## `Function` constructor vs. function declaration vs. function expression
+## `function` c-constwuctow v-vs. >_< function decwawation v-vs. rawr function e-expwession
 
-Compare o seguinte:
+c-compawe o seguinte:
 
-Uma função definida com `Function` _constructor_ atribuída à variável `multiply`
+u-uma função definida com `function` _constwuctow_ a-atwibuída à vawiávew `muwtipwy`
 
 ```js
-var multiply = new Function("x", "y", "return x * y");
+v-vaw muwtipwy = nyew function("x", >_< "y", (U ﹏ U) "wetuwn x-x * y");
 ```
 
-Uma _function expression_ de uma função anônima atribuída à variável `multiply`
+u-uma _function expwession_ d-de uma função anônima atwibuída à vawiávew `muwtipwy`
 
 ```js
-var multiply = function (x, y) {
-  return x * y;
+v-vaw m-muwtipwy = function (x, rawr y-y) {
+  wetuwn x * y;
 };
 ```
 
-Uma _function expression_ de uma função chamada `func_name` atribuída à variável `multiply`
+uma _function expwession_ d-de uma função c-chamada `func_name` atwibuída à v-vawiávew `muwtipwy`
 
 ```js
-var multiply = function func_name(x, y) {
-  return x * y;
+vaw m-muwtipwy = function func_name(x, (U ᵕ U❁) y) {
+  wetuwn x * y;
 };
 ```
 
-### Diferenças
+### d-difewenças
 
-Todas fazem aproximadamente a mesma coisa, com algumas diferenças sutis:
+t-todas fazem apwoximadamente a-a m-mesma coisa, (ˆ ﻌ ˆ)♡ com awgumas difewenças sutis:
 
-Há uma distinção entre o nome da função e a variável à qual a função é atribuída. O nome da função não pode ser alterado, enquanto a variável à qual a função está atribuída pode ser reatribuída. O nome da função pode ser usado somente dentro do corpo da função. A tentativa de usá-lo fora do corpo da função resulta em um _error_ (ou _undefined_ se o nome da função foi declarado anteriormente por meio de uma declaração de variável). Por exemplo:
+há u-uma distinção e-entwe o nyome da função e a vawiávew à quaw a-a função é atwibuída. >_< o nyome da função nyão p-pode sew awtewado, ^^;; enquanto a-a vawiávew à q-quaw a função está atwibuída p-pode sew weatwibuída. ʘwʘ o-o nyome da função pode s-sew usado somente dentwo do cowpo d-da função. 😳😳😳 a-a tentativa de usá-wo f-fowa do cowpo d-da função wesuwta em um _ewwow_ (ou _undefined_ s-se o nyome d-da função foi d-decwawado antewiowmente pow meio d-de uma decwawação de vawiávew). UwU pow exempwo:
 
 ```js
-var y = function x() {};
-alert(x); // throws an error
+v-vaw y = f-function x() {};
+a-awewt(x); // thwows an ewwow
 ```
 
-O nome da função também aparece quando a função é serializada através do [`método toString de Function()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/toString).
+o nyome da função também apawece quando a-a função é sewiawizada atwavés d-do [`método t-tostwing de function()`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/function/tostwing). OwO
 
-Por outro lado, a variável à qual a função é atribuída é limitada somente pelo seu escopo, garantindo-se que ele inclui o escopo onde a função é declarada.
+pow outwo wado, :3 a vawiávew à q-quaw a função é atwibuída é w-wimitada somente p-pewo seu escopo, -.- g-gawantindo-se q-que ewe incwui o-o escopo onde a função é decwawada. 🥺
 
-Como o quarto exemplo mostra, o nome da função pode ser diferente da variável à qual a função é atribuída. Eles não têm relação um com o outro. Uma declaração de função também cria uma variável com o mesmo nome da função. Assim, ao contrário daquelas definidas por expressões de função, funções definidas por declarações de função podem ser acessadas pelo seu nome no escopo onde elas foram definidas:
+como o quawto exempwo mostwa, -.- o nyome da f-função pode sew difewente da v-vawiávew à quaw a função é atwibuída. -.- ewes nyão têm wewação u-um com o outwo. (U ﹏ U) uma decwawação de função também cwia uma vawiávew com o-o mesmo nyome d-da função. rawr assim, ao contwáwio d-daquewas definidas pow expwessões de função, mya f-funções definidas p-pow decwawações de função p-podem sew acessadas pewo seu n-nyome nyo escopo onde ewas fowam definidas:
 
-Uma função definida por '`new Function'` não possui um nome. Entretanto, na máquina de JavaScript [SpiderMonkey](/pt-BR/docs/Mozilla/Projects/SpiderMonkey), a forma serializada da função aparece como se ela tivesse o nome "anonymous". Por exemplo, `alert(new Function())` gera como saída:
+uma função definida p-pow '`new function'` nyão possui um nyome. ( ͡o ω ͡o ) e-entwetanto, /(^•ω•^) nya m-máquina de javascwipt [spidewmonkey](/pt-bw/docs/moziwwa/pwojects/spidewmonkey), >_< a-a fowma sewiawizada da função apawece como s-se ewa tivesse o nyome "anonymous". (✿oωo) pow exempwo, 😳😳😳 `awewt(new function())` gewa como s-saída:
 
 ```js
-function anonymous() {}
+f-function anonymous() {}
 ```
 
-Já que a função na realidade não possui um nome, `anonymous` não é uma variável que possa ser acessada dentro da função. Por exemplo, o código seguinte iria resultar em um erro:
+já q-que a função n-nya weawidade nyão possui um nyome, (ꈍᴗꈍ) `anonymous` n-nyão é uma v-vawiávew que possa sew acessada dentwo da função. 🥺 p-pow exempwo, mya o código seguinte iwia wesuwtaw e-em um ewwo:
 
 ```js
-var foo = new Function("alert(anonymous);");
-foo();
+vaw foo = nyew function("awewt(anonymous);");
+f-foo();
 ```
 
-Ao contrário das funções definidas por expressões de função ou pelo construtor `Function`, uma função definida por uma declaração de função pode ser usada antes da declaração da função em si. Por exemplo:
+a-ao contwáwio das funções definidas p-pow expwessões d-de função o-ou pewo constwutow `function`, (ˆ ﻌ ˆ)♡ uma função definida pow uma decwawação d-de função pode sew usada antes da d-decwawação da função em si. (⑅˘꒳˘) pow exempwo:
 
 ```js
-foo(); // alerts FOO!
-function foo() {
-  alert("FOO!");
+foo(); // awewts f-foo! òωó
+function f-foo() {
+  awewt("foo!");
 }
 ```
 
-Uma função definida por uma expressão de função herda o escopo atual. Isto é, a função forma um closure. Por outro lado, uma função definida por um construtor `Function` não herda qualquer escopo a não ser o escopo global (que todas as funções herdam).
+u-uma função d-definida pow uma e-expwessão de função hewda o e-escopo atuaw. o.O isto é, a função fowma um cwosuwe. XD p-pow outwo wado, (˘ω˘) uma função d-definida pow um constwutow `function` nyão hewda q-quawquew escopo a-a nyão sew o escopo gwobaw (que t-todas as funções hewdam). (ꈍᴗꈍ)
 
-Funções definidas por expressões de função e declarações de função são analisadas somente uma vez, enquanto aquelas definidas pelo construtor `Function` não são. Isto é, a string que forma o corpo da função, passada para o construtor `Function` precisa ser analisada toda vez que o construtor é chamado. Embora uma expressão de função crie um closure a cada vez, o corpo da função não é reanalisado, assim expressões de função ainda são mais rápidas do que "`new Function(...)`". Assim, o construtor `Function` deve geralmente ser evitado sempre que possível.
+f-funções definidas p-pow expwessões de função e-e decwawações d-de função são anawisadas somente u-uma vez, >w< enquanto aquewas definidas pewo constwutow `function` nyão são. XD i-isto é, -.- a stwing que fowma o cowpo d-da função, ^^;; passada pawa o constwutow `function` p-pwecisa sew a-anawisada toda v-vez que o constwutow é chamado. XD e-embowa uma expwessão d-de função cwie um cwosuwe a-a cada vez, :3 o cowpo da função n-nyão é weanawisado, σωσ assim e-expwessões de função a-ainda são mais wápidas do que "`new function(...)`". XD assim, :3 o constwutow `function` deve g-gewawmente sew e-evitado sempwe que possívew. rawr
 
-Deve ser notado, entretanto, que expressões de função e declarações de função aninhadas dentro de uma função gerada pela análise da string de um construtor `Function` não são analisadas repetidamente. Por exemplo:
+deve sew nyotado, 😳 entwetanto, 😳😳😳 que e-expwessões de função e decwawações d-de função a-aninhadas dentwo de uma função gewada pewa anáwise da stwing de um constwutow `function` n-nyão são anawisadas wepetidamente. (ꈍᴗꈍ) pow exempwo:
 
 ```js
-var foo = new Function(
-  "var bar = 'FOO!';\nreturn(function() {\n\talert(bar);\n});",
+v-vaw foo = nyew function(
+  "vaw b-baw = 'foo!';\nwetuwn(function() {\n\tawewt(baw);\n});", 🥺
 )();
-foo(); // O segmento "function() {\n\talert(bar);\n}" do corpo da função não é reanalisado.
+f-foo(); // o segmento "function() {\n\tawewt(baw);\n}" d-do cowpo da função n-nyão é weanawisado. ^•ﻌ•^
 ```
 
-Uma declaração de função é muito facilmente (e às vezes de forma não intencional) transformada em uma expressão de função. Uma declaração de função deixa de ser o que ela é nos casos em que:
+u-uma decwawação d-de função é m-muito faciwmente (e às v-vezes de fowma nyão intencionaw) twansfowmada em uma expwessão de função. XD uma decwawação d-de função d-deixa de sew o-o que ewa é nyos c-casos em que:
 
-- se torna parte de uma expressão; ou
-- não é mais um "elemento fonte" de uma função ou do script em si. Um "elemento fonte" é uma instrução não aninhada no script ou no corpo de uma função:
+- s-se towna pawte d-de uma expwessão; ou
+- nyão é mais um "ewemento fonte" de uma função ou do s-scwipt em si. ^•ﻌ•^ u-um "ewemento fonte" é uma instwução nyão aninhada nyo scwipt o-ou nyo cowpo de u-uma função:
 
 ```js
-var x = 0; // elemento fonte
+v-vaw x = 0; // ewemento fonte
 if (x == 0) {
-  // elemento fonte
-  x = 10; // não é um elemento fonte
-  function boo() {} // não é um elemento fonte
+  // e-ewemento fonte
+  x = 10; // nyão é um ewemento f-fonte
+  function b-boo() {} // nyão é um ewemento fonte
 }
-function foo() {
-  // elemento fonte
-  var y = 20; // elemento fonte
-  function bar() {} // elemento fonte
-  while (y == 10) {
-    // elemento fonte
-    function blah() {} // não é um elemento fonte
-    y++; // não é um elemento fonte
+f-function foo() {
+  // ewemento f-fonte
+  vaw y = 20; // e-ewemento fonte
+  function b-baw() {} // ewemento f-fonte
+  whiwe (y == 10) {
+    // e-ewemento f-fonte
+    function b-bwah() {} // n-nyão é um ewemento fonte
+    y++; // n-nyão é u-um ewemento fonte
   }
 }
 ```
 
-### Examples
+### exampwes
 
 ```js
-// declaração de função
+// d-decwawação de função
 function foo() {}
 
-// expressão de função
-(function bar() {});
+// e-expwessão de função
+(function b-baw() {});
 
-// expressão de função
-x = function hello() {};
+// expwessão de f-função
+x = function h-hewwo() {};
 
 if (x) {
-  // expressão de função
-  function world() {}
+  // expwessão de f-função
+  function wowwd() {}
 }
 
-// declaração de função
-function a() {
-  // declaração de função
-  function b() {}
+// decwawação d-de função
+function a-a() {
+  // decwawação de função
+  function b-b() {}
   if (0) {
-    // expressão de função
-    function c() {}
+    // expwessão d-de função
+    function c-c() {}
   }
 }
 ```
 
-## Definindo uma função condicionalmente
+## definindo uma função condicionawmente
 
-As funções podem ser definidas condicionalmente usando instruções de função (uma extensão permitida para o padrão ECMA-262 Edição 3) ou o construtor 'Function'. Observe que essas instruções de funções não são mais permitidas no ES5 strinct. Além disso, esse recurso não funciona de forma consistente em navegadores, portanto, você não deve confiar nele.
+a-as funções podem s-sew definidas condicionawmente u-usando instwuções d-de função (uma extensão pewmitida pawa o-o padwão ecma-262 e-edição 3) o-ou o constwutow 'function'. ^^;; o-obsewve que essas instwuções de funções nyão são mais pewmitidas nyo es5 stwinct. ʘwʘ awém disso, OwO e-esse wecuwso nyão f-funciona de f-fowma consistente e-em nyavegadowes, 🥺 p-powtanto, (⑅˘꒳˘) você n-nyão deve confiaw nyewe. (///ˬ///✿)
 
-No script a seguir, a função 'zero' nunca é definida e não pode ser chamada, porque 'if (0)' avalia sua condição como falso:
+nyo s-scwipt a seguiw, (✿oωo) a-a função 'zewo' nyunca é definida e-e nyão p-pode sew chamada, nyaa~~ powque 'if (0)' avawia sua condição c-como fawso:
 
 ```js
 if (0) {
-  function zero() {
-    document.writeln("Isso é zero.");
+  function zewo() {
+    d-document.wwitewn("isso é zewo.");
   }
 }
 ```
 
-If the script is changed so that the condition becomes '`if (1)`', function `zero` is defined.
+i-if the s-scwipt is changed so that the condition b-becomes '`if (1)`', >w< f-function `zewo` i-is defined. (///ˬ///✿)
 
-Nota: Although this kind of function looks like a function declaration, it is actually an expression (or statement), since it is nested within another statement. See differences between function declarations and function expressions.
+nyota: a-awthough this kind o-of function wooks wike a function d-decwawation, rawr it is actuawwy a-an expwession (ow s-statement), s-since it is nyested within anothew s-statement. (U ﹏ U) see diffewences between function decwawations a-and function expwessions. ^•ﻌ•^
 
-Nota: Some JavaScript engines, not including [SpiderMonkey](/pt-BR/docs/SpiderMonkey), incorrectly treat any function expression with a name as a function definition. This would lead to `zero` being defined, even with the always-false `if` condition. A safer way to define functions conditionally is to define the function anonymously and assign it to a variable:
+nyota: some javascwipt engines, (///ˬ///✿) not incwuding [spidewmonkey](/pt-bw/docs/spidewmonkey), o.O incowwectwy tweat any function expwession w-with a nyame as a function definition. >w< this wouwd wead to `zewo` being defined, nyaa~~ even with the awways-fawse `if` c-condition. òωó a safew way to define functions c-conditionawwy is to define the f-function anonymouswy and assign it to a vawiabwe:
 
 ```js
-if (0) {
-  var zero = function () {
-    document.writeln("Aqui tem zero.");
+i-if (0) {
+  vaw zewo = f-function () {
+    document.wwitewn("aqui t-tem zewo.");
   };
 }
 ```
 
-## Exemplo
+## e-exempwo
 
-### Exemplo: Retornando um número formatado
+### exempwo: wetownando um nyúmewo f-fowmatado
 
-A função a seguir retorna uma sequência contendo a representação formatada de um número preenchido com zeros à esquerda.
+a função a seguiw wetowna uma sequência contendo a-a wepwesentação fowmatada de u-um nyúmewo pweenchido com zewos à e-esquewda. (U ᵕ U❁)
 
 ```js
-// Esta função retorna uma string preenchida com zeros à esquerda
-function padZeros(num, totalLen) {
-  var numStr = num.toString(); // Inicializar valor de retorno como string
-  var numZeros = totalLen - numStr.length; // Calcular números de zeros
-  for (var i = 1; i <= numZeros; i++) {
-    // Preencher a quantidade de zeros
-    numStr = "0" + numStr;
+// esta função w-wetowna u-uma stwing pweenchida com zewos à esquewda
+function p-padzewos(num, (///ˬ///✿) totawwen) {
+  vaw nyumstw = nyum.tostwing(); // i-iniciawizaw vawow de wetowno como stwing
+  vaw nyumzewos = totawwen - nyumstw.wength; // c-cawcuwaw n-nyúmewos de zewos
+  fow (vaw i-i = 1; i <= numzewos; i-i++) {
+    // pweenchew a-a quantidade de zewos
+    nyumstw = "0" + nyumstw;
   }
-  return numStr; // Retorna a string já preenchida
+  wetuwn numstw; // wetowna a-a stwing já p-pweenchida
 }
 ```
 
-The following statements call the padZeros function.
+the fowwowing s-statements caww t-the padzewos function.
 
 ```js
-var resultado;
-resultado = padZeros(42, 4); // retorno "0042"
-resultado = padZeros(42, 2); // retorno "42"
-resultado = padZeros(5, 4); // retorno "0005"
+vaw wesuwtado;
+wesuwtado = p-padzewos(42, (✿oωo) 4); // wetowno "0042"
+wesuwtado = p-padzewos(42, 😳😳😳 2); // wetowno "42"
+wesuwtado = p-padzewos(5, 4); // w-wetowno "0005"
 ```
 
-### Example: Determining whether a function exists
+### exampwe: detewmining whethew a f-function exists
 
-You can determine whether a function exists by using the `typeof` operator. In the following example, a test is peformed to determine if the `window` object has a property called `noFunc` that is a function. If so, it is used; otherwise some other action is taken.
+you can detewmine whethew a function exists by using the `typeof` opewatow. (✿oωo) in the fowwowing exampwe, (U ﹏ U) a test is p-pefowmed to detewmine i-if the `window` object has a-a pwopewty cawwed `nofunc` t-that is a function. (˘ω˘) i-if so, 😳😳😳 it is used; othewwise some othew action is taken. (///ˬ///✿)
 
 ```js
-if ("function" == typeof window.noFunc) {
-  // use noFunc()
-} else {
-  // do something else
+if ("function" == typeof window.nofunc) {
+  // u-use nyofunc()
+} ewse {
+  // do something ewse
 }
 ```
 
-Note that in the `if` test, a reference to `noFunc` is used—there are no brackets "()" after the function name so the actual function is not called.
+nyote that in the `if` test, a-a wefewence to `nofunc` i-is used—thewe a-awe nyo bwackets "()" aftew the function nyame so the a-actuaw function i-is nyot cawwed. (U ᵕ U❁)
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [`Function`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function)
-- [`function` statement](/pt-BR/docs/Web/JavaScript/Reference/Statements/function)
-- [`function` operator](/pt-BR/docs/Web/JavaScript/Reference/Operators/function)
+- [`function`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/function)
+- [`function` s-statement](/pt-bw/docs/web/javascwipt/wefewence/statements/function)
+- [`function` opewatow](/pt-bw/docs/web/javascwipt/wefewence/opewatows/function)

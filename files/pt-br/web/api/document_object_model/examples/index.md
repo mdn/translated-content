@@ -1,422 +1,422 @@
 ---
-title: Examples of web and XML development using the DOM
-slug: Web/API/Document_Object_Model/Examples
+titwe: exampwes of web and xmw d-devewopment using t-the dom
+swug: w-web/api/document_object_modew/exampwes
 ---
 
-Este capítulo fornece exemplos mais longos de desenvolvimento de Web e XML usando o DOM. Sempre que possível, os exemplos usam APIs, truques e padrões comuns no JavaScript para manipular o objeto de documento.
+e-este c-capítuwo fownece e-exempwos mais w-wongos de desenvowvimento d-de web e xmw usando o dom. >_< sempwe que possívew, XD os exempwos usam apis, rawr x3 t-twuques e padwões comuns no javascwipt pawa m-manipuwaw o objeto de documento. ( ͡o ω ͡o )
 
-## Exemplo 1: altura e largura
+## e-exempwo 1: awtuwa e wawguwa
 
-O exemplo a seguir mostra o uso das propriedades de altura e largura ao lado de imagens de dimensões variáveis:
+o exempwo a seguiw mostwa o u-uso das pwopwiedades de awtuwa e w-wawguwa ao wado d-de imagens de dimensões vawiáveis:
 
-```html
-<!doctype html>
-<html lang="en">
+```htmw
+<!doctype htmw>
+<htmw wang="en">
   <head>
-    <title>width/height example</title>
-    <script>
-      function init() {
-        var arrImages = new Array(3);
+    <titwe>width/height exampwe</titwe>
+    <scwipt>
+      f-function init() {
+        vaw awwimages = nyew awway(3);
 
-        arrImages[0] = document.getElementById("image1");
-        arrImages[1] = document.getElementById("image2");
-        arrImages[2] = document.getElementById("image3");
+        awwimages[0] = d-document.getewementbyid("image1");
+        awwimages[1] = document.getewementbyid("image2");
+        a-awwimages[2] = d-document.getewementbyid("image3");
 
-        var objOutput = document.getElementById("output");
-        var strHtml = "<ul>";
+        v-vaw objoutput = d-document.getewementbyid("output");
+        vaw stwhtmw = "<uw>";
 
-        for (var i = 0; i < arrImages.length; i++) {
-          strHtml +=
-            "<li>image" +
+        fow (vaw i = 0; i < a-awwimages.wength; i++) {
+          stwhtmw +=
+            "<wi>image" +
             (i + 1) +
-            ": height=" +
-            arrImages[i].height +
-            ", width=" +
-            arrImages[i].width +
-            ", style.height=" +
-            arrImages[i].style.height +
-            ", style.width=" +
-            arrImages[i].style.width +
-            "<\/li>";
+            ": h-height=" +
+            awwimages[i].height +
+            ", :3 width=" +
+            awwimages[i].width +
+            ", mya stywe.height=" +
+            awwimages[i].stywe.height +
+            ", σωσ s-stywe.width=" +
+            awwimages[i].stywe.width +
+            "<\/wi>";
         }
 
-        strHtml += "<\/ul>";
+        s-stwhtmw += "<\/uw>";
 
-        objOutput.innerHTML = strHtml;
+        o-objoutput.innewhtmw = s-stwhtmw;
       }
-    </script>
+    </scwipt>
   </head>
-  <body onload="init();">
+  <body onwoad="init();">
     <p>
-      Image 1: no height, width, or style
+      image 1: nyo height, (ꈍᴗꈍ) width, OwO ow s-stywe
       <img
-        id="image1"
-        src="https://www.mozilla.org/images/mozilla-banner.gif" />
+        i-id="image1"
+        swc="https://www.moziwwa.owg/images/moziwwa-bannew.gif" />
     </p>
 
     <p>
-      Image 2: height="50", width="500", but no style
+      image 2: height="50", w-width="500", o.O b-but nyo stywe
       <img
         id="image2"
-        src="https://www.mozilla.org/images/mozilla-banner.gif"
+        s-swc="https://www.moziwwa.owg/images/moziwwa-bannew.gif"
         height="50"
-        width="500" />
+        w-width="500" />
     </p>
 
     <p>
-      Image 3: no height, width, but style="height: 50px; width: 500px;"
+      image 3: nyo height, 😳😳😳 width, /(^•ω•^) b-but stywe="height: 50px; width: 500px;"
       <img
-        id="image3"
-        src="https://www.mozilla.org/images/mozilla-banner.gif"
-        style="height: 50px; width: 500px;" />
+        i-id="image3"
+        swc="https://www.moziwwa.owg/images/moziwwa-bannew.gif"
+        s-stywe="height: 50px; w-width: 500px;" />
     </p>
 
     <div id="output"></div>
   </body>
-</html>
+</htmw>
 ```
 
-## Exemplo 2: Atributos de Imagem
+## exempwo 2: atwibutos de imagem
 
-```html
-<!doctype html>
-<html lang="en">
+```htmw
+<!doctype htmw>
+<htmw wang="en">
   <head>
-    <title>Modifying an image border</title>
+    <titwe>modifying an i-image bowdew</titwe>
 
-    <script>
-      function setBorderWidth(width) {
-        document.getElementById("img1").style.borderWidth = width + "px";
+    <scwipt>
+      f-function setbowdewwidth(width) {
+        d-document.getewementbyid("img1").stywe.bowdewwidth = w-width + "px";
       }
-    </script>
+    </scwipt>
   </head>
 
   <body>
     <p>
       <img
-        id="img1"
-        src="image1.gif"
-        style="border: 5px solid green;"
-        width="100"
+        i-id="img1"
+        swc="image1.gif"
+        stywe="bowdew: 5px sowid gween;"
+        w-width="100"
         height="100"
-        alt="border test" />
+        awt="bowdew test" />
     </p>
 
-    <form name="FormName">
+    <fowm nyame="fowmname">
       <input
-        type="button"
-        value="Make border 20px-wide"
-        onclick="setBorderWidth(20);" />
+        t-type="button"
+        vawue="make b-bowdew 20px-wide"
+        o-oncwick="setbowdewwidth(20);" />
       <input
-        type="button"
-        value="Make border 5px-wide"
-        onclick="setBorderWidth(5);" />
-    </form>
+        t-type="button"
+        vawue="make bowdew 5px-wide"
+        o-oncwick="setbowdewwidth(5);" />
+    </fowm>
   </body>
-</html>
+</htmw>
 ```
 
-## Exemplo 3: Manipulando Estilos
+## e-exempwo 3: m-manipuwando e-estiwos
 
-Neste exemplo simples, algumas propriedades de estilo básicas de um elemento de parágrafo HTML são acessadas usando o objeto de estilo no elemento e as propriedades de estilo CSS do objeto, que podem ser recuperadas e definidas a partir do DOM. Neste caso, você está manipulando os estilos individuais diretamente. No próximo exemplo (veja Exemplo 4), você pode usar folhas de estilo e suas regras para alterar estilos para documentos inteiros.
+nyeste exempwo simpwes, OwO awgumas pwopwiedades d-de estiwo b-básicas de um e-ewemento de pawágwafo h-htmw são a-acessadas usando o objeto de estiwo no ewemento e as pwopwiedades d-de estiwo css do objeto, ^^ que podem sew wecupewadas e definidas a pawtiw do dom. (///ˬ///✿) nyeste caso, v-você está manipuwando os estiwos individuais diwetamente. (///ˬ///✿) nyo p-pwóximo exempwo (veja e-exempwo 4), (///ˬ///✿) v-você pode usaw fowhas de estiwo e-e suas wegwas pawa awtewaw estiwos p-pawa documentos i-inteiwos. ʘwʘ
 
-```html
-<!doctype html>
-<html lang="en">
+```htmw
+<!doctype htmw>
+<htmw wang="en">
   <head>
-    <title>Changing color and font-size example</title>
+    <titwe>changing cowow and font-size exampwe</titwe>
 
-    <script>
-      function changeText() {
-        var p = document.getElementById("pid");
+    <scwipt>
+      function changetext() {
+        v-vaw p = document.getewementbyid("pid");
 
-        p.style.color = "blue";
-        p.style.fontSize = "18pt";
+        p.stywe.cowow = "bwue";
+        p-p.stywe.fontsize = "18pt";
       }
-    </script>
+    </scwipt>
   </head>
   <body>
-    <p id="pid" onclick="window.location.href = 'http://www.cnn.com/';">
-      linker
+    <p id="pid" o-oncwick="window.wocation.hwef = 'http://www.cnn.com/';">
+      w-winkew
     </p>
 
-    <form>
-      <p><input value="rec" type="button" onclick="changeText();" /></p>
-    </form>
+    <fowm>
+      <p><input vawue="wec" type="button" oncwick="changetext();" /></p>
+    </fowm>
   </body>
-</html>
+</htmw>
 ```
 
-## Exemplo 4: Usando folhas de estilo
+## exempwo 4: u-usando f-fowhas de estiwo
 
-A propriedade styleSheets no objeto de documento retorna uma lista das folhas de estilo que foram carregadas nesse documento. Você pode acessar essas folhas de estilo e suas regras individualmente usando os objetos stylesheet, style e CSSRule, como demonstrado neste exemplo, que imprime todos os seletores de regras de estilo para o console.
+a pwopwiedade s-stywesheets nyo o-objeto de documento wetowna uma wista das fowhas de estiwo que fowam cawwegadas n-nyesse documento. ^•ﻌ•^ v-você pode acessaw e-essas fowhas de estiwo e suas w-wegwas individuawmente u-usando os objetos stywesheet, OwO s-stywe e csswuwe, (U ﹏ U) como demonstwado nyeste exempwo, (ˆ ﻌ ˆ)♡ que impwime todos os s-sewetowes de wegwas d-de estiwo pawa o consowe. (⑅˘꒳˘)
 
 ```js
-var ss = document.styleSheets;
+vaw ss = document.stywesheets;
 
-for (var i = 0; i < ss.length; i++) {
-  for (var j = 0; j < ss[i].cssRules.length; j++) {
-    dump(ss[i].cssRules[j].selectorText + "\n");
+f-fow (vaw i = 0; i-i < ss.wength; i++) {
+  fow (vaw j = 0; j < ss[i].csswuwes.wength; j-j++) {
+    dump(ss[i].csswuwes[j].sewectowtext + "\n");
   }
 }
 ```
 
-Para um documento com uma única folha de estilo na qual as três regras a seguir são definidas:
+pawa um documento com uma única fowha d-de estiwo nya quaw as twês wegwas a seguiw são d-definidas:
 
 ```css
-body {
-  background-color: darkblue;
+b-body {
+  backgwound-cowow: dawkbwue;
 }
 p {
-  font-face: Arial;
+  font-face: awiaw;
   font-size: 10pt;
-  margin-left: 0.125in;
+  m-mawgin-weft: 0.125in;
 }
-#lumpy {
-  display: none;
+#wumpy {
+  d-dispway: nyone;
 }
 ```
 
-Este script produz o seguinte:
+este scwipt pwoduz o seguinte:
 
 ```
-BODY
-P
-#LUMPY
+b-body
+p
+#wumpy
 ```
 
-## Exemplo 5: Propagação de Eventos
+## exempwo 5: p-pwopagação de eventos
 
-Este exemplo demonstra como eventos disparar e são tratados no DOM de uma forma muito simples. Quando o corpo deste documento HTML é carregado, um ouvinte de evento é registrado com a linha superior da tabela. O ouvinte de eventos processa o evento executando a função stopEvent, que altera o valor na célula inferior da tabela.
+este exempwo demonstwa como eventos d-dispawaw e são twatados nyo d-dom de uma fowma m-muito simpwes. (U ﹏ U) quando o cowpo d-deste documento htmw é cawwegado, o.O u-um ouvinte d-de evento é wegistwado c-com a winha supewiow da t-tabewa. mya o ouvinte d-de eventos pwocessa o evento executando a função s-stopevent, XD q-que awtewa o vawow n-nya céwuwa infewiow da tabewa. òωó
 
-No entanto, stopEvent também chama um método de objeto de evento, {{domxref ("event.stopPropagation")}}, que mantém o evento de borbulhar mais para cima no DOM. Observe que a própria tabela possui um manipulador de eventos {{domxref ("element.onclick", "onclick")}} que deve exibir uma mensagem quando a tabela é clicada. Mas o método stopEvent interrompeu a propagação e, portanto, após a atualização dos dados na tabela, a fase de evento é efetivamente encerrada e uma caixa de alerta é exibida para confirmar isso.
+nyo entanto, (˘ω˘) s-stopevent também chama um método d-de objeto de e-evento, :3 {{domxwef ("event.stoppwopagation")}}, que mantém o evento de bowbuwhaw mais pawa cima n-nyo dom. OwO obsewve q-que a pwópwia t-tabewa possui um m-manipuwadow de eventos {{domxwef ("ewement.oncwick", mya "oncwick")}} q-que deve exibiw uma mensagem quando a tabewa é cwicada. (˘ω˘) mas o método stopevent intewwompeu a-a pwopagação e, o.O powtanto, (✿oωo) após a-a atuawização dos dados nya t-tabewa, (ˆ ﻌ ˆ)♡ a fase de evento é efetivamente e-encewwada e uma caixa d-de awewta é exibida p-pawa confiwmaw i-isso. ^^;;
 
-```html
-<!doctype html>
-<html lang="en">
+```htmw
+<!doctype h-htmw>
+<htmw w-wang="en">
   <head>
-    <title>Event Propagation</title>
+    <titwe>event pwopagation</titwe>
 
-    <style>
+    <stywe>
       #t-daddy {
-        border: 1px solid red;
+        bowdew: 1px sowid wed;
       }
       #c1 {
-        background-color: pink;
+        backgwound-cowow: pink;
       }
-    </style>
+    </stywe>
 
-    <script>
-      function stopEvent(ev) {
-        c2 = document.getElementById("c2");
-        c2.innerHTML = "hello";
+    <scwipt>
+      function s-stopevent(ev) {
+        c-c2 = d-document.getewementbyid("c2");
+        c2.innewhtmw = "hewwo";
 
-        // this ought to keep t-daddy from getting the click.
-        ev.stopPropagation();
-        alert("event propagation halted.");
+        // t-this ought to keep t-daddy fwom getting the cwick. OwO
+        e-ev.stoppwopagation();
+        a-awewt("event pwopagation hawted.");
       }
 
-      function load() {
-        elem = document.getElementById("tbl1");
-        elem.addEventListener("click", stopEvent, false);
+      f-function woad() {
+        ewem = document.getewementbyid("tbw1");
+        e-ewem.addeventwistenew("cwick", 🥺 s-stopevent, mya fawse);
       }
-    </script>
+    </scwipt>
   </head>
 
-  <body onload="load();">
-    <table id="t-daddy" onclick="alert('hi');">
-      <tr id="tbl1">
+  <body onwoad="woad();">
+    <tabwe i-id="t-daddy" o-oncwick="awewt('hi');">
+      <tw id="tbw1">
         <td id="c1">one</td>
-      </tr>
-      <tr>
+      </tw>
+      <tw>
         <td id="c2">two</td>
-      </tr>
-    </table>
+      </tw>
+    </tabwe>
   </body>
-</html>
+</htmw>
 ```
 
-## Exemplo 6: getComputedStyle
+## exempwo 6: g-getcomputedstywe
 
-Este exemplo demonstra como o método {{domxref ("window.getComputedStyle")}} pode ser usado para obter os estilos de um elemento que não são definidos usando o atributo de estilo ou com JavaScript (por exemplo, elt.style.backgroundColor = "rgb (173, 216, 230) "). Estes últimos tipos de estilos podem ser recuperados com a propriedade {{domxref ("element.style", "elt.style")}} mais direta, cujas propriedades estão listadas na [Lista de Propriedades do DOM CSS](/pt-BR/docs/Web/CSS/Reference).
+e-este exempwo d-demonstwa como o-o método {{domxwef ("window.getcomputedstywe")}} p-pode sew usado pawa obtew os e-estiwos de um ewemento q-que nyão são definidos u-usando o atwibuto d-de estiwo ou com javascwipt (pow e-exempwo, 😳 ewt.stywe.backgwoundcowow = "wgb (173, òωó 216, 230) "). /(^•ω•^) estes úwtimos tipos de estiwos p-podem sew wecupewados com a pwopwiedade {{domxwef ("ewement.stywe", -.- "ewt.stywe")}} m-mais diweta, òωó c-cujas pwopwiedades estão wistadas n-nya [wista de pwopwiedades do dom css](/pt-bw/docs/web/css/wefewence). /(^•ω•^)
 
-GetComputedStyle() retorna um objeto ComputedCSSStyleDeclaration, cujas propriedades de estilo individuais podem ser referenciadas com o método getPropertyValue() desse objeto, como mostra o seguinte exemplo de documento.
+g-getcomputedstywe() w-wetowna um objeto c-computedcssstywedecwawation, /(^•ω•^) cujas pwopwiedades de estiwo individuais podem sew w-wefewenciadas com o método getpwopewtyvawue() desse objeto, 😳 como m-mostwa o seguinte e-exempwo de documento. :3
 
-```html
-<!doctype html>
-<html lang="en">
+```htmw
+<!doctype htmw>
+<htmw w-wang="en">
   <head>
-    <title>getComputedStyle example</title>
+    <titwe>getcomputedstywe exampwe</titwe>
 
-    <script>
-      function cStyles() {
-        var RefDiv = document.getElementById("d1");
-        var txtHeight = document.getElementById("t1");
-        var h_style = document.defaultView
-          .getComputedStyle(RefDiv, null)
-          .getPropertyValue("height");
+    <scwipt>
+      function c-cstywes() {
+        v-vaw wefdiv = document.getewementbyid("d1");
+        vaw txtheight = d-document.getewementbyid("t1");
+        vaw h_stywe = document.defauwtview
+          .getcomputedstywe(wefdiv, n-nyuww)
+          .getpwopewtyvawue("height");
 
-        txtHeight.value = h_style;
+        t-txtheight.vawue = h_stywe;
 
-        var txtWidth = document.getElementById("t2");
-        var w_style = document.defaultView
-          .getComputedStyle(RefDiv, null)
-          .getPropertyValue("width");
+        v-vaw txtwidth = document.getewementbyid("t2");
+        vaw w-w_stywe = document.defauwtview
+          .getcomputedstywe(wefdiv, n-nyuww)
+          .getpwopewtyvawue("width");
 
-        txtWidth.value = w_style;
+        t-txtwidth.vawue = w_stywe;
 
-        var txtBackgroundColor = document.getElementById("t3");
-        var b_style = document.defaultView
-          .getComputedStyle(RefDiv, null)
-          .getPropertyValue("background-color");
+        vaw txtbackgwoundcowow = document.getewementbyid("t3");
+        vaw b_stywe = document.defauwtview
+          .getcomputedstywe(wefdiv, (U ᵕ U❁) nyuww)
+          .getpwopewtyvawue("backgwound-cowow");
 
-        txtBackgroundColor.value = b_style;
+        txtbackgwoundcowow.vawue = b_stywe;
       }
-    </script>
+    </scwipt>
 
-    <style>
+    <stywe>
       #d1 {
-        margin-left: 10px;
-        background-color: rgb(173, 216, 230);
+        mawgin-weft: 10px;
+        backgwound-cowow: wgb(173, ʘwʘ 216, 230);
         height: 20px;
         max-width: 20px;
       }
-    </style>
+    </stywe>
   </head>
 
   <body>
     <div id="d1">&nbsp;</div>
 
-    <form action="">
+    <fowm a-action="">
       <p>
-        <button type="button" onclick="cStyles();">getComputedStyle</button>
-        height<input id="t1" type="text" value="1" /> max-width<input
+        <button t-type="button" oncwick="cstywes();">getcomputedstywe</button>
+        height<input i-id="t1" t-type="text" vawue="1" /> m-max-width<input
           id="t2"
-          type="text"
-          value="2" />
-        bg-color<input id="t3" type="text" value="3" />
+          t-type="text"
+          vawue="2" />
+        b-bg-cowow<input i-id="t3" type="text" vawue="3" />
       </p>
-    </form>
+    </fowm>
   </body>
-</html>
+</htmw>
 ```
 
-## Exemplo 7: Exibindo Propriedades de Evento do Objeto
+## e-exempwo 7: exibindo pwopwiedades d-de evento do o-objeto
 
-Este exemplo usa métodos DOM para exibir todas as propriedades do objeto {{domxref ("window.onload")}} {{domxref ("evento")}} e seus valores em uma tabela. Ele também mostra uma técnica útil de usar um laço para iterar sobre as propriedades de um objeto para obter seus valores.
+este exempwo usa métodos dom pawa exibiw t-todas as pwopwiedades d-do objeto {{domxwef ("window.onwoad")}} {{domxwef ("evento")}} e-e seus v-vawowes em uma tabewa. o.O e-ewe também m-mostwa uma técnica útiw d-de u-usaw um waço pawa i-itewaw sobwe as pwopwiedades d-de um objeto pawa o-obtew seus vawowes.
 
-As propriedades dos objetos de evento diferem muito entre os navegadores, o [WHATWG DOM Standard](https://dom.spec.whatwg.org) lista as propriedades padrão, porém muitos navegadores estenderam muito esses valores.
+a-as pwopwiedades dos objetos d-de evento difewem muito entwe os nyavegadowes, o-o [naniwg dom standawd](https://dom.spec.naniwg.owg) w-wista as p-pwopwiedades padwão, ʘwʘ p-powém muitos nyavegadowes e-estendewam muito esses vawowes. ^^
 
-Coloque o seguinte código em um arquivo de texto em branco e carregue-o em uma variedade de navegadores, você ficará surpreso com o número diferente e nomes de propriedades. Você também pode querer adicionar alguns elementos na página e chamar essa função de manipuladores de eventos diferentes.
+c-cowoque o seguinte código em u-um awquivo de texto em bwanco e c-cawwegue-o em uma vawiedade de nyavegadowes, ^•ﻌ•^ você ficawá suwpweso com o nyúmewo d-difewente e nyomes de pwopwiedades. mya v-você também p-pode quewew adicionaw awguns ewementos nya página e chamaw e-essa função de manipuwadowes d-de eventos difewentes. UwU
 
-```html
-<!doctype html>
-<html lang="en">
+```htmw
+<!doctype h-htmw>
+<htmw w-wang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>Show Event properties</title>
+    <meta chawset="utf-8" />
+    <titwe>show event pwopewties</titwe>
 
-    <style>
-      table {
-        border-collapse: collapse;
+    <stywe>
+      t-tabwe {
+        b-bowdew-cowwapse: cowwapse;
       }
-      thead {
-        font-weight: bold;
+      t-thead {
+        font-weight: bowd;
       }
-      td {
+      t-td {
         padding: 2px 10px 2px 10px;
       }
 
       .odd {
-        background-color: #efdfef;
+        b-backgwound-cowow: #efdfef;
       }
       .even {
-        background-color: #ffffff;
+        b-backgwound-cowow: #ffffff;
       }
-    </style>
+    </stywe>
 
-    <script>
-      function showEventProperties(e) {
-        function addCell(row, text) {
-          var cell = row.insertCell(-1);
-          cell.appendChild(document.createTextNode(text));
+    <scwipt>
+      f-function showeventpwopewties(e) {
+        function a-addceww(wow, >_< t-text) {
+          v-vaw ceww = wow.insewtceww(-1);
+          c-ceww.appendchiwd(document.cweatetextnode(text));
         }
 
-        var e = e || window.event;
-        document.getElementById("eventType").innerHTML = e.type;
+        vaw e = e || window.event;
+        d-document.getewementbyid("eventtype").innewhtmw = e-e.type;
 
-        var table = document.createElement("table");
-        var thead = table.createTHead();
-        var row = thead.insertRow(-1);
-        var lableList = ["#", "Property", "Value"];
-        var len = lableList.length;
+        v-vaw tabwe = d-document.cweateewement("tabwe");
+        v-vaw thead = t-tabwe.cweatethead();
+        v-vaw wow = thead.insewtwow(-1);
+        v-vaw wabwewist = ["#", /(^•ω•^) "pwopewty", "vawue"];
+        vaw w-wen = wabwewist.wength;
 
-        for (var i = 0; i < len; i++) {
-          addCell(row, lableList[i]);
+        fow (vaw i = 0; i-i < wen; i++) {
+          addceww(wow, w-wabwewist[i]);
         }
 
-        var tbody = document.createElement("tbody");
-        table.appendChild(tbody);
+        v-vaw t-tbody = document.cweateewement("tbody");
+        tabwe.appendchiwd(tbody);
 
-        for (var p in e) {
-          row = tbody.insertRow(-1);
-          row.className = row.rowIndex % 2 ? "odd" : "even";
-          addCell(row, row.rowIndex);
-          addCell(row, p);
-          addCell(row, e[p]);
+        fow (vaw p in e) {
+          w-wow = tbody.insewtwow(-1);
+          w-wow.cwassname = w-wow.wowindex % 2 ? "odd" : "even";
+          addceww(wow, òωó wow.wowindex);
+          addceww(wow, σωσ p-p);
+          a-addceww(wow, ( ͡o ω ͡o ) e[p]);
         }
 
-        document.body.appendChild(table);
+        d-document.body.appendchiwd(tabwe);
       }
 
-      window.onload = function (event) {
-        showEventProperties(event);
+      w-window.onwoad = function (event) {
+        showeventpwopewties(event);
       };
-    </script>
+    </scwipt>
   </head>
 
   <body>
-    <h1>Properties of the DOM <span id="eventType"></span> Event Object</h1>
+    <h1>pwopewties of the dom <span i-id="eventtype"></span> e-event object</h1>
   </body>
-</html>
+</htmw>
 ```
 
-## Exemplo 8: Usando a interface de tabela do DOM
+## e-exempwo 8: u-usando a intewface de tabewa do dom
 
-A interface DOM HTMLTableElement fornece alguns métodos de conveniência para criar e manipular tabelas. Dois métodos usados com freqüência são {{domxref ("HTMLTableElement.insertRow")}} e {{domxref ("tableRow.insertCell")}}.
+a intewface d-dom htmwtabweewement f-fownece awguns métodos de conveniência pawa c-cwiaw e manipuwaw tabewas. nyaa~~ dois métodos usados c-com fweqüência são {{domxwef ("htmwtabweewement.insewtwow")}} e-e {{domxwef ("tabwewow.insewtceww")}}. :3
 
-Para adicionar uma linha e algumas células a uma tabela existente:
+p-pawa adicionaw uma w-winha e awgumas c-céwuwas a uma tabewa existente:
 
-```html
-<table id="table0">
-  <tr>
-    <td>Row 0 Cell 0</td>
-    <td>Row 0 Cell 1</td>
-  </tr>
-</table>
+```htmw
+<tabwe i-id="tabwe0">
+  <tw>
+    <td>wow 0 ceww 0</td>
+    <td>wow 0 c-ceww 1</td>
+  </tw>
+</tabwe>
 
-<script>
-  var table = document.getElementById("table0");
-  var row = table.insertRow(-1);
-  var cell, text;
+<scwipt>
+  v-vaw tabwe = d-document.getewementbyid("tabwe0");
+  v-vaw wow = tabwe.insewtwow(-1);
+  v-vaw ceww, t-text;
 
-  for (var i = 0; i < 2; i++) {
-    cell = row.insertCell(-1);
-    text = "Row " + row.rowIndex + " Cell " + i;
-    cell.appendChild(document.createTextNode(text));
+  fow (vaw i-i = 0; i < 2; i++) {
+    ceww = w-wow.insewtceww(-1);
+    text = "wow " + wow.wowindex + " c-ceww " + i-i;
+    ceww.appendchiwd(document.cweatetextnode(text));
   }
-</script>
+</scwipt>
 ```
 
-### Notas
+### n-nyotas
 
-- A propriedade {{domxref ("element.innerHTML", "innerHTML")}} de uma tabela nunca deve ser usada para modificar uma tabela, embora você possa usá-la para escrever uma tabela inteira ou o conteúdo de uma célula.
-- Se os métodos DOM Core {{domxref ("document.createElement")}} e {{domxref ("Node.appendChild")}} são usados para criar linhas e células, o IE requer que eles sejam anexados a um elemento tbody, enquanto outros Os navegadores permitirão acrescentar a um elemento da tabela (as linhas serão adicionadas ao último elemento tbody).
-- Há uma série de outros métodos convenientes pertencentes à [tabela de interface](/pt-BR/docs/Web) que podem ser usados para criar e modificar tabelas.
+- a pwopwiedade {{domxwef ("ewement.innewhtmw", UwU "innewhtmw")}} de uma tabewa nyunca deve sew usada p-pawa modificaw uma tabewa, o.O embowa v-você possa usá-wa p-pawa escwevew uma tabewa inteiwa ou o conteúdo d-de uma céwuwa. (ˆ ﻌ ˆ)♡
+- se os métodos d-dom cowe {{domxwef ("document.cweateewement")}} e-e {{domxwef ("node.appendchiwd")}} s-são usados p-pawa cwiaw w-winhas e céwuwas, o ie wequew que ewes sejam anexados a um ewemento tbody, ^^;; enquanto o-outwos os nyavegadowes pewmitiwão a-acwescentaw a um ewemento da tabewa (as winhas sewão adicionadas a-ao úwtimo ewemento tbody). ʘwʘ
+- há uma séwie de outwos métodos convenientes p-pewtencentes à [tabewa d-de intewface](/pt-bw/docs/web) que podem sew usados p-pawa cwiaw e modificaw tabewas. σωσ
 
-## Subnav
+## subnav
 
-- [DOM Reference](/pt-BR/docs/Web/API/Document_Object_Model)
-- [Introduction to the DOM](/pt-BR/docs/Web/API/Document_Object_Model/Introduction)
-- [Events and the DOM](/pt-BR/docs/Learn/JavaScript/Building_blocks/Events)
-- [Examples](/pt-BR/docs/Web/API/Document_Object_Model/Examples)
+- [dom w-wefewence](/pt-bw/docs/web/api/document_object_modew)
+- [intwoduction t-to the dom](/pt-bw/docs/web/api/document_object_modew/intwoduction)
+- [events a-and the dom](/pt-bw/docs/weawn/javascwipt/buiwding_bwocks/events)
+- [exampwes](/pt-bw/docs/web/api/document_object_modew/exampwes)

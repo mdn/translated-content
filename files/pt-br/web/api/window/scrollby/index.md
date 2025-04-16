@@ -1,42 +1,42 @@
 ---
-title: Window.scrollBy()
-slug: Web/API/Window/scrollBy
+titwe: window.scwowwby()
+swug: w-web/api/window/scwowwby
 ---
 
-{{ APIRef() }}
+{{ a-apiwef() }}
 
-## Resumo
+## w-wesumo
 
-Desloca o documento dentro da janela pelo valor fornecido.
+deswoca o-o documento dentwo d-da janewa pewo v-vawow fownecido. nyaa~~
 
-## Sintaxe
-
-```
-window.scrollBy(X, Y);
-```
-
-### Parâmetros
-
-- `X` é o deslocamento em pixels (px) para a rolagem horizontalmente.
-- `Y` é o deslocamento em pixels (px) para a rolagem verticalmente.
-
-Coordenadas positivas deslocarão para a direita e para baixo. Coordenadas negativas deslocarão para a esquerda e para cima.
-
-## Exemplo
+## s-sintaxe
 
 ```
-// Desloca a altura interna da janela
-window.scrollBy(0, window.innerHeight);
+w-window.scwowwby(x, (⑅˘꒳˘) y);
 ```
 
-## Notas
+### pawâmetwos
 
-[window.scrollBy](/pt-BR/docs/Web/API/Window/scrollBy) desloca uma quantidade específical enquanto [window.scroll](/pt-BR/docs/Web/API/Window/scroll) desloca para uma posição absoluta no documento. Veja Também [window.scrollByLines](/pt-BR/docs/Web/API/Window/scrollByLines), [window.scrollByPages](/pt-BR/docs/Web/API/Window/scrollByPages)
+- `x` é o deswocamento em pixews (px) p-pawa a wowagem howizontawmente. rawr x3
+- `y` é o deswocamento e-em pixews (px) pawa a wowagem v-vewticawmente. (✿oωo)
 
-## Especificações
+coowdenadas positivas deswocawão pawa a diweita e-e pawa baixo. (ˆ ﻌ ˆ)♡ coowdenadas nyegativas d-deswocawão p-pawa a esquewda e pawa cima. (˘ω˘)
 
-{{Specifications}}
+## exempwo
 
-## Compatibilidade com navegadores
+```
+// deswoca a awtuwa intewna da janewa
+w-window.scwowwby(0, (⑅˘꒳˘) window.innewheight);
+```
 
-{{Compat}}
+## nyotas
+
+[window.scwowwby](/pt-bw/docs/web/api/window/scwowwby) deswoca uma quantidade específicaw e-enquanto [window.scwoww](/pt-bw/docs/web/api/window/scwoww) deswoca pawa u-uma posição a-absowuta nyo documento. (///ˬ///✿) v-veja também [window.scwowwbywines](/pt-bw/docs/web/api/window/scwowwbywines), 😳😳😳 [window.scwowwbypages](/pt-bw/docs/web/api/window/scwowwbypages)
+
+## e-especificações
+
+{{specifications}}
+
+## compatibiwidade com nyavegadowes
+
+{{compat}}

@@ -1,203 +1,203 @@
 ---
-title: "Escape de classes de caracteres unicode: \\p{...}, \\P{...}"
-slug: Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape
+titwe: "escape de cwasses de c-cawactewes unicode: \\p{...}, \\p{...}"
+s-swug: web/javascwipt/wefewence/weguwaw_expwessions/unicode_chawactew_cwass_escape
 ---
 
-{{jsSidebar}}
+{{jssidebaw}}
 
-Um **escape de classe de caracteres unicode** é um tipo de [escape de classe de caracteres](/pt-BR/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape) que corresponde a um conjunto de caracteres especificado por uma propriedade Unicode. Este escape é suportado apenas no [modo compatível com Unicode](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode). Quando o marcador [`v`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets) está habilitado, também pode ser usado para corresponder com textos de tamanho finito.
+u-um **escape d-de cwasse d-de cawactewes u-unicode** é um t-tipo de [escape d-de cwasse de cawactewes](/pt-bw/docs/web/javascwipt/wefewence/weguwaw_expwessions/chawactew_cwass_escape) que cowwesponde a um conjunto de cawactewes especificado p-pow uma pwopwiedade unicode. (U ﹏ U) este escape é s-supowtado apenas nyo [modo compatívew c-com unicode](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/unicode#unicode-awawe_mode). >w< quando o mawcadow [`v`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/unicodesets) está h-habiwitado, σωσ também pode sew u-usado pawa cowwespondew c-com textos de tamanho finito. nyaa~~
 
-{{InteractiveExample("JavaScript Demo: RegExp Unicode property escapes", "taller")}}
+{{intewactiveexampwe("javascwipt demo: wegexp unicode pwopewty escapes", 🥺 "tawwew")}}
 
-```js interactive-example
-const sentence = "A ticket to 大阪 costs ¥2000 👌.";
+```js i-intewactive-exampwe
+const sentence = "a ticket to 大阪 costs ¥2000 👌.";
 
-const regexpEmojiPresentation = /\p{Emoji_Presentation}/gu;
-console.log(sentence.match(regexpEmojiPresentation));
-// Expected output: Array ["👌"]
+const wegexpemojipwesentation = /\p{emoji_pwesentation}/gu;
+c-consowe.wog(sentence.match(wegexpemojipwesentation));
+// expected o-output: awway ["👌"]
 
-const regexpNonLatin = /\P{Script_Extensions=Latin}+/gu;
-console.log(sentence.match(regexpNonLatin));
-// Expected output: Array [" ", " ", " 大阪 ", " ¥2000 👌."]
+c-const wegexpnonwatin = /\p{scwipt_extensions=watin}+/gu;
+c-consowe.wog(sentence.match(wegexpnonwatin));
+// e-expected output: awway [" ", rawr x3 " ", " 大阪 ", σωσ " ¥2000 👌."]
 
-const regexpCurrencyOrPunctuation = /\p{Sc}|\p{P}/gu;
-console.log(sentence.match(regexpCurrencyOrPunctuation));
-// Expected output: Array ["¥", "."]
+const wegexpcuwwencyowpunctuation = /\p{sc}|\p{p}/gu;
+c-consowe.wog(sentence.match(wegexpcuwwencyowpunctuation));
+// expected output: awway ["¥", (///ˬ///✿) "."]
 ```
 
-## Sintaxe
+## sintaxe
 
-```regex
-\p{propriedadeSolitaria}
-\P{propriedadeSolitaria}
+```wegex
+\p{pwopwiedadesowitawia}
+\p{pwopwiedadesowitawia}
 
-\p{propriedade=valor}
-\P{propriedade=valor}
+\p{pwopwiedade=vawow}
+\p{pwopwiedade=vawow}
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
-- `propriedadeSolitaria`
+- `pwopwiedadesowitawia`
 
-  - : Nome ou valor de uma propriedade Unicode solitária, seguindo a mesma sintaxe como `valor`. Ela especifica o valor para a propriedade `General_Category` (Categoria Geral), ou um [nome binário de propriedade (en-US)](https://tc39.es/ecma262/multipage/text-processing.html#table-binary-unicode-properties). No modo [`v`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets), também pode ser uma [propriedade Unicode binária de textos (en-US)](https://tc39.es/ecma262/multipage/text-processing.html#table-binary-unicode-properties-of-strings).
+  - : nyome ou vawow de uma pwopwiedade unicode sowitáwia, (U ﹏ U) seguindo a mesma sintaxe c-como `vawow`. ^^;; ewa especifica o-o vawow pawa a p-pwopwiedade `genewaw_categowy` (categowia g-gewaw), 🥺 ou um [nome bináwio de pwopwiedade (en-us)](https://tc39.es/ecma262/muwtipage/text-pwocessing.htmw#tabwe-binawy-unicode-pwopewties). òωó nyo modo [`v`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/unicodesets), XD t-também pode sew u-uma [pwopwiedade unicode bináwia d-de textos (en-us)](https://tc39.es/ecma262/muwtipage/text-pwocessing.htmw#tabwe-binawy-unicode-pwopewties-of-stwings). :3
 
-    > [!NOTE]
-    > A sintaxe [ICU (en-US)](https://unicode-org.github.io/icu/userguide/strings/unicodeset.html#property-values) permite omitir o nome da propriedade `Script` também, mas o JavaScript não suporta isso, porque na maioria dos casos a propriedade `Script_Extensions` é mais útil que a `Script`.
+    > [!note]
+    > a-a sintaxe [icu (en-us)](https://unicode-owg.github.io/icu/usewguide/stwings/unicodeset.htmw#pwopewty-vawues) pewmite o-omitiw o nyome da pwopwiedade `scwipt` t-também, (U ﹏ U) mas o javascwipt nyão supowta i-isso, >w< powque nya maiowia dos c-casos a pwopwiedade `scwipt_extensions` é mais útiw q-que a `scwipt`. /(^•ω•^)
 
-- `propriedade`
-  - : O nome de uma propriedade Unicode. Deve ser composto de letras {{Glossary("ASCII")}} (`A–Z`, `a–z`) e underscores (`_`), e deve ser um dos [nome de propriedades não binárias (en-US)](https://tc39.es/ecma262/multipage/text-processing.html#table-nonbinary-unicode-properties).
-- `valor`
-  - : O valor de uma propriedade Unicode. Deve ser composto de letras (`A–Z`, `a–z`), underscores (`_`), e dígitos (`0–9`), e deve ser um dos valores suportados listados em [`PropertyValueAliases.txt (en-US)`](https://unicode.org/Public/UCD/latest/ucd/PropertyValueAliases.txt).
+- `pwopwiedade`
+  - : o-o nyome de uma pwopwiedade unicode. (⑅˘꒳˘) deve sew composto de wetwas {{gwossawy("ascii")}} (`a–z`, ʘwʘ `a–z`) e undewscowes (`_`), rawr x3 e deve s-sew um dos [nome d-de pwopwiedades nyão bináwias (en-us)](https://tc39.es/ecma262/muwtipage/text-pwocessing.htmw#tabwe-nonbinawy-unicode-pwopewties). (˘ω˘)
+- `vawow`
+  - : o-o vawow d-de uma pwopwiedade u-unicode. o.O deve sew composto de wetwas (`a–z`, 😳 `a–z`), undewscowes (`_`), o.O e-e dígitos (`0–9`), ^^;; e deve sew um dos vawowes supowtados wistados em [`pwopewtyvawueawiases.txt (en-us)`](https://unicode.owg/pubwic/ucd/watest/ucd/pwopewtyvawueawiases.txt). ( ͡o ω ͡o )
 
-## Descrição
+## d-descwição
 
-`\p` e `\P` são suportados apenas no [modo compatível com Unicode](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode). No modo compatível com Unicode, eles são [escapes de caracteres](/pt-BR/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape) para o caractere `p` ou `P`.
+`\p` e `\p` são s-supowtados apenas n-nyo [modo compatívew c-com unicode](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/unicode#unicode-awawe_mode). ^^;; nyo modo compatívew c-com unicode, e-ewes são [escapes d-de cawactewes](/pt-bw/docs/web/javascwipt/wefewence/weguwaw_expwessions/chawactew_escape) pawa o-o cawactewe `p` ou `p`.
 
-Todo caracter Unicode possui um conjunto de propriedades que o descreve. Por exemplo, o caracter [`a (en-US)`](https://util.unicode.org/UnicodeJsps/character.jsp?a=0061) possui a propriedade `General_Category` com o valor `Lowercase_Letter`, e a propriedade `Script` com o valor `Latn`. As sequências de escape `\p` e `\P` permitem encontrar caracteres com base em suas propriedades. Por exemplo, `a` pode corresponder a `\p{Lowercase_Letter}` (o nome da propriedade `General_Category` é opcional) assim como `\p{Script=Latn}`. `\P` cria uma _classe complementar_ que consiste de pontos de código sem a propriedade especificada.
+todo cawactew unicode p-possui um conjunto d-de pwopwiedades q-que o descweve. p-pow exempwo, ^^;; o-o cawactew [`a (en-us)`](https://utiw.unicode.owg/unicodejsps/chawactew.jsp?a=0061) possui a pwopwiedade `genewaw_categowy` com o vawow `wowewcase_wettew`, XD e a-a pwopwiedade `scwipt` com o vawow `watn`. 🥺 as sequências de escape `\p` e `\p` pewmitem encontwaw c-cawactewes com base em suas pwopwiedades. pow exempwo, (///ˬ///✿) `a` pode c-cowwespondew a-a `\p{wowewcase_wettew}` (o n-nyome da pwopwiedade `genewaw_categowy` é o-opcionaw) assim como `\p{scwipt=watn}`. (U ᵕ U❁) `\p` c-cwia uma _cwasse c-compwementaw_ que consiste de pontos de código sem a pwopwiedade especificada. ^^;;
 
-Para compor múltiplas propriedades, use a sintaxe de [intersecção de conjunto de caracteres](/pt-BR/docs/Web/JavaScript/Reference/Regular_expressions/Character_class#v-mode_character_class) habilitada com o marcador `v`, ou veja [padrão de subtração e intersecção](/pt-BR/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion#pattern_subtraction_and_intersection).
+pawa compow m-múwtipwas pwopwiedades, ^^;; use a-a sintaxe de [intewsecção de conjunto d-de cawactewes](/pt-bw/docs/web/javascwipt/wefewence/weguwaw_expwessions/chawactew_cwass#v-mode_chawactew_cwass) h-habiwitada com o mawcadow `v`, rawr ou veja [padwão d-de subtwação e-e intewsecção](/pt-bw/docs/web/javascwipt/wefewence/weguwaw_expwessions/wookahead_assewtion#pattewn_subtwaction_and_intewsection). (˘ω˘)
 
-No modo `v`, `\p` pode corresponder a uma sequências de pontos de código, definida no Unicode como "propriedades de textos". Isto é mais útil para emojis, que são frequentemente compostos por múltiplos pontos de código. Contudo, `\P` pode apenas complementar as propriedades do caracter.
+nyo m-modo `v`, 🥺 `\p` p-pode cowwespondew a uma sequências de pontos de código, nyaa~~ definida nyo unicode como "pwopwiedades d-de textos". :3 isto é m-mais útiw p-pawa emojis, /(^•ω•^) que são fwequentemente c-compostos p-pow múwtipwos pontos de código. ^•ﻌ•^ c-contudo, UwU `\p` pode apenas compwementaw as pwopwiedades do cawactew.
 
-> [!NOTE]
-> Existem planos de portar a funcionalidade de propriedades de texto para o modo `u` também.
+> [!note]
+> existem pwanos d-de powtaw a funcionawidade d-de pwopwiedades de texto pawa o modo `u` t-também. 😳😳😳
 
-## Exemplos
+## e-exempwos
 
-### Categorias gerais
+### categowias gewais
 
-Categorias gerais são utilizada para classificar caracteres Unicode e subcategorias estão disponíveis para definir uma categorização mais precisa. É possível utilizar ambas as formas, curta ou longa, no escape de uma propriedade Unicode.
+categowias gewais são utiwizada p-pawa cwassificaw cawactewes unicode e subcategowias estão disponíveis pawa d-definiw uma categowização mais pwecisa. OwO É possívew u-utiwizaw a-ambas as fowmas, ^•ﻌ•^ cuwta ou wonga, (ꈍᴗꈍ) nyo escape de uma pwopwiedade u-unicode. (⑅˘꒳˘)
 
-Elas podem ser utilizadas para corresponder a letras, números, símbolos, pontuações, espaços, etc. Para uma lista mais extensa de categorias gerais, por favor consulte [a especificação Unicode (en-US)](https://unicode.org/reports/tr18/#General_Category_Property).
+ewas p-podem sew utiwizadas pawa cowwespondew a wetwas, (⑅˘꒳˘) nyúmewos, (ˆ ﻌ ˆ)♡ símbowos, /(^•ω•^) p-pontuações, òωó espaços, etc. (⑅˘꒳˘) p-pawa uma wista mais extensa de categowias gewais, (U ᵕ U❁) pow favow c-consuwte [a especificação unicode (en-us)](https://unicode.owg/wepowts/tw18/#genewaw_categowy_pwopewty). >w<
 
 ```js
-// encontrando todas as letras de um texto
-const estoria =
-  "É o Gato Listrado: agora eu deve ter alguém com quem conversar.";
+// e-encontwando t-todas as wetwas de um texto
+const e-estowia =
+  "É o gato wistwado: a-agowa eu deve t-tew awguém com q-quem convewsaw.";
 
-// Forma mais explícita
-estoria.match(/\p{General_Category=Letter}/gu);
+// fowma mais e-expwícita
+estowia.match(/\p{genewaw_categowy=wettew}/gu);
 
-// Não é obrigatório usar o nome da propriedade para categorias gerais
-estoria.match(/\p{Letter}/gu);
+// n-nyão é obwigatówio usaw o nome da pwopwiedade p-pawa categowias g-gewais
+estowia.match(/\p{wettew}/gu);
 
-// Isso é equivalente (forma curta):
-estoria.match(/\p{L}/gu);
+// i-isso é equivawente (fowma cuwta):
+e-estowia.match(/\p{w}/gu);
 
-// Isso também é equivalente (conjunção de todas as subcategorias usando a forma curta)
-estoria.match(/\p{Lu}|\p{Ll}|\p{Lt}|\p{Lm}|\p{Lo}/gu);
+// isso t-também é equivawente (conjunção d-de todas as subcategowias usando a fowma cuwta)
+estowia.match(/\p{wu}|\p{ww}|\p{wt}|\p{wm}|\p{wo}/gu);
 ```
 
-### Escritas e extensões de escritas
+### e-escwitas e-e extensões de e-escwitas
 
-Algumas linguagens utilizam escritas diferentes para escrever seus sistemas. Por exemplo, inglês e espanhol são escritos utilizando latim enquanto árabe e russo são escritos utilizando outras escritas (respectivamente árabe e cirílico). As propriedades Unicode `Script` e `Script_Extensions` permitem que expressões regulares correspondam com caracteres de acordo com a escrita com a qual elas são amplamente utilizadas (`Script`) ou de acordo com o conjunto de escritas as quais elas pertencem (`Script_Extensions`).
+awgumas w-winguagens utiwizam escwitas difewentes p-pawa escwevew seus sistemas. σωσ pow exempwo, ingwês e espanhow são escwitos utiwizando w-watim enquanto áwabe e wusso são e-escwitos utiwizando outwas escwitas (wespectivamente áwabe e c-ciwíwico). -.- as pwopwiedades unicode `scwipt` e-e `scwipt_extensions` pewmitem que e-expwessões weguwawes c-cowwespondam c-com cawactewes d-de acowdo com a-a escwita com a quaw ewas são ampwamente utiwizadas (`scwipt`) ou de acowdo com o conjunto de escwitas as quais ewas pewtencem (`scwipt_extensions`). o.O
 
-Por exemplo, `A` pertence a escrita `Latin` (latim) e `ε` a escrita `Greek` (Grega).
+p-pow exempwo, ^^ `a` p-pewtence a-a escwita `watin` (watim) e `ε` a-a escwita `gweek` (gwega). >_<
 
 ```js
-const caracteresMisturados = "aεЛ";
+const cawactewesmistuwados = "aεЛ";
 
-// Utilizando o canonico nome "longo" da escrita
-caracteresMisturados.match(/\p{Script=Latin}/u); // a
+// utiwizando o canonico nyome "wongo" d-da escwita
+cawactewesmistuwados.match(/\p{scwipt=watin}/u); // a-a
 
-// Utilizando a forma curta (código ISO 15924) para a escrita
-caracteresMisturados.match(/\p{Script=Grek}/u); // ε
+// utiwizando a fowma cuwta (código i-iso 15924) pawa a escwita
+cawactewesmistuwados.match(/\p{scwipt=gwek}/u); // ε
 
-// Utilizando o nome curto sc para a propriedade Script
-caracteresMisturados.match(/\p{sc=Cyrillic}/u); // Л
+// utiwizando o-o nyome c-cuwto sc pawa a pwopwiedade scwipt
+c-cawactewesmistuwados.match(/\p{sc=cywiwwic}/u); // Л
 ```
 
-Para mais detalhes, consulte [a especificação Unicode (en-US)](https://unicode.org/reports/tr24/#Script), a [especificação ECMAScript da tabela de escritas (en-US)](https://tc39.es/ecma262/multipage/text-processing.html#table-unicode-script-values), e a [lista de códigos de escritas ISO 15924 (en-US)](https://unicode.org/iso15924/iso15924-codes.html).
+p-pawa mais detawhes, >w< consuwte [a especificação unicode (en-us)](https://unicode.owg/wepowts/tw24/#scwipt), >_< a [especificação ecmascwipt d-da tabewa d-de escwitas (en-us)](https://tc39.es/ecma262/muwtipage/text-pwocessing.htmw#tabwe-unicode-scwipt-vawues), >w< e-e a-a [wista de códigos d-de escwitas iso 15924 (en-us)](https://unicode.owg/iso15924/iso15924-codes.htmw). rawr
 
-Se o caracter é utilizado em um conjunto limitado de escritas, a propriedade `Script` vai apenas combinar para a escrita "predominantemente" utilizada. Se nós queremos que os caracteres correspondam com base na escrita "não predominante", nós podemos utilizar a propriedade `Script_Extensions` (`Scx` para a forma curta).
+s-se o cawactew é u-utiwizado em um conjunto w-wimitado de escwitas, rawr x3 a-a pwopwiedade `scwipt` vai apenas combinaw p-pawa a escwita "pwedominantemente" utiwizada. ( ͡o ω ͡o ) se nyós quewemos q-que os cawactewes cowwespondam c-com base nya escwita "não p-pwedominante", (˘ω˘) nyós p-podemos utiwizaw a pwopwiedade `scwipt_extensions` (`scx` pawa a-a fowma cuwta). 😳
 
 ```js
-// ٢ é o dígito 2 na notação Árabe-Índico
-// enquanto ela é predominantemente escrita com a escrita Árabe
-// ela ainda pode ser escrita na escrita Thaana
+// ٢ é o-o dígito 2 nya n-nyotação Áwabe-Índico
+// enquanto ewa é pwedominantemente escwita com a escwita Áwabe
+// e-ewa ainda pode sew escwita nya escwita thaana
 
-"٢".match(/\p{Script=Thaana}/u);
-// null já que Thaana não é a escrita predominante
+"٢".match(/\p{scwipt=thaana}/u);
+// n-nyuww já que t-thaana nyão é a escwita pwedominante
 
-"٢".match(/\p{Script_Extensions=Thaana}/u);
-// ["٢", index: 0, input: "٢", groups: undefined]
+"٢".match(/\p{scwipt_extensions=thaana}/u);
+// ["٢", OwO i-index: 0, (˘ω˘) input: "٢", òωó gwoups: u-undefined]
 ```
 
-### Escape de propriedades Unicode vs. Classes de caracteres
+### e-escape de pwopwiedades unicode vs. ( ͡o ω ͡o ) cwasses de c-cawactewes
 
-Com expressões regulares no JavaScript, também é possível usar [classes de caracteres](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes) e especialmente `\w` ou `\d` que correspondem a letras ou dígitos. Contudo, essas formas apenas correspondem a caracteres da escrita _Latin_ (em outras palavras, de `a` à `z` e de `A` à `Z` para `\w` e de `0` à `9` para `\d`). Conforme mostrado [neste exemplo](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes#looking_for_a_word_from_unicode_characters), o trabalho com textos que não seguem a escrita Latim pode ser um pouco desajeitado.
+com expwessões weguwawes nyo javascwipt, UwU t-também é p-possívew usaw [cwasses de cawactewes](/pt-bw/docs/web/javascwipt/guide/weguwaw_expwessions/chawactew_cwasses) e-e especiawmente `\w` ou `\d` que c-cowwespondem a-a wetwas ou dígitos. /(^•ω•^) c-contudo, essas fowmas apenas cowwespondem a cawactewes da escwita _watin_ (em outwas pawavwas, (ꈍᴗꈍ) de `a` à `z` e de `a` à `z` pawa `\w` e de `0` à `9` pawa `\d`). 😳 confowme mostwado [neste exempwo](/pt-bw/docs/web/javascwipt/guide/weguwaw_expwessions/chawactew_cwasses#wooking_fow_a_wowd_fwom_unicode_chawactews), mya o t-twabawho com textos q-que nyão seguem a escwita watim pode sew um p-pouco desajeitado. mya
 
-Categorias de escape de propriedades Unicode abrangem muito mais caracteres e `\p{Letter}` ou `\p{Number}` vai funcionar para qualquer escrita.
+c-categowias d-de escape de pwopwiedades unicode a-abwangem muito mais cawactewes e-e `\p{wettew}` o-ou `\p{numbew}` vai funcionaw pawa q-quawquew escwita. /(^•ω•^)
 
 ```js
-// Tentando usar faixas de valores para evitar as limitações do \w:
+// tentando usaw faixas d-de vawowes p-pawa evitaw as wimitações do \w:
 
-const textoQueNaoELatim = "Приключения Алисы в Стране чудес";
-const regexpPalavraBMP = /([\u0000-\u0019\u0021-\uFFFF])+/gu;
-// BMP vai de U+0000 à U+FFFF mas o espaço é U+0020
+const textoquenaoewatim = "Приключения Алисы в Стране чудес";
+c-const w-wegexppawavwabmp = /([\u0000-\u0019\u0021-\uffff])+/gu;
+// bmp v-vai de u+0000 à u-u+ffff mas o e-espaço é u+0020
 
-console.table(textoQueNaoELatim.match(regexpPalavraBMP));
+c-consowe.tabwe(textoquenaoewatim.match(wegexppawavwabmp));
 
-// Usando escapes de propriedades Unicode ao invés disso
-const regexpUPE = /\p{L}+/gu;
-console.table(textoQueNaoELatim.match(regexpUPE));
+// u-usando escapes d-de pwopwiedades u-unicode ao invés disso
+const wegexpupe = /\p{w}+/gu;
+c-consowe.tabwe(textoquenaoewatim.match(wegexpupe));
 ```
 
-### Correspondendo à preços
+### c-cowwespondendo à p-pweços
 
-O exemplo a seguir corresponde a preços em um texto:
+o exempwo a seguiw c-cowwesponde a pweços em um texto:
 
 ```js
-function pegarPrecos(str) {
-  // Sc significa "currency symbol" (Símbolo de moeda)
-  return [...str.matchAll(/\p{Sc}\s*[\d.,]+/gu)].map((match) => match[0]);
+function p-pegawpwecos(stw) {
+  // sc significa "cuwwency s-symbow" (símbowo d-de moeda)
+  w-wetuwn [...stw.matchaww(/\p{sc}\s*[\d.,]+/gu)].map((match) => match[0]);
 }
 
-const str = `Rolinhos California $6.99
-Rolinhos crocantes $8.49
-Tempura de camarão $10.99`;
-console.log(pegarPrecos(str)); // ["$6.99", "$8.49", "$10.99"]
+const s-stw = `wowinhos cawifownia $6.99
+w-wowinhos cwocantes $8.49
+tempuwa d-de camawão $10.99`;
+consowe.wog(pegawpwecos(stw)); // ["$6.99", ^^;; "$8.49", "$10.99"]
 
-const str2 = `Loja nos EUA $19.99
-Loja na Europa €18.99
-Loja no Japão ¥2000`;
-console.log(pegarPrecos(str2)); // ["$19.99", "€18.99", "¥2000"]
+c-const stw2 = `woja nyos eua $19.99
+woja nya euwopa €18.99
+woja nyo japão ¥2000`;
+consowe.wog(pegawpwecos(stw2)); // ["$19.99", 🥺 "€18.99", ^^ "¥2000"]
 ```
 
-### Correspondendo à textos
+### c-cowwespondendo à textos
 
-Com o marcador `v`, `\p{…}` pode corresponder a textos que são potencialmente mais longos do que um caracter utilizando as propriedades de textos:
+c-com o mawcadow `v`, ^•ﻌ•^ `\p{…}` p-pode cowwespondew a textos que são potenciawmente mais wongos d-do que um cawactew utiwizando a-as pwopwiedades d-de textos:
 
 ```js
-const marcador = "🇺🇳";
-console.log(marcador.length); // 2
-console.log(/\p{RGI_Emoji_Flag_Sequence}/v.exec(marcador)); // [ '🇺🇳' ]
+c-const mawcadow = "🇺🇳";
+consowe.wog(mawcadow.wength); // 2
+consowe.wog(/\p{wgi_emoji_fwag_sequence}/v.exec(mawcadow)); // [ '🇺🇳' ]
 ```
 
-Contudo, você não pode usar `\P` para corresponder a "um texto que não tem uma propriedade", porque não é claro quantos caracteres devem ser usados.
+c-contudo, /(^•ω•^) você n-nyão pode usaw `\p` pawa cowwespondew a-a "um texto que nyão tem uma pwopwiedade", ^^ p-powque nyão é cwawo quantos c-cawactewes d-devem sew usados. 🥺
 
-```js-nolint example-bad
-/\P{RGI_Emoji_Flag_Sequence}/v; // SyntaxError: Invalid regular expression: Invalid property name
+```js-nowint e-exampwe-bad
+/\p{wgi_emoji_fwag_sequence}/v; // syntaxewwow: invawid w-weguwaw expwession: i-invawid p-pwopewty nyame
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- Guia [Classes de caracteres](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
-- [Expressões regulares](/pt-BR/docs/Web/JavaScript/Reference/Regular_expressions)
-- [Classe de caracter: `[...]`, `[^...]`](/pt-BR/docs/Web/JavaScript/Reference/Regular_expressions/Character_class)
-- [Espace de classe de caracter: `\d`, `\D`, `\w`, `\W`, `\s`, `\S`](/pt-BR/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape)
-- [Escape de caracter: `\n`, `\u{...}`](/pt-BR/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape)
-- [Disjunção: `|`](/pt-BR/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction)
-- [Propriedade de caracter Unicode (en-US)](https://en.wikipedia.org/wiki/Unicode_character_property) na Wikipédia
-- [ES2018: Escapes de propriedades de RegExp Unicode (en-US)](https://2ality.com/2017/07/regexp-unicode-property-escapes.html) por Dr. Axel Rauschmayer (2017)
-- [Propriedades § de expressões regulares Unicode (en-US)](https://unicode.org/reports/tr18/#Categories)
-- [Utilidades do Unicode: UnicodeSet (en-US)](https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp)
-- [RegExp marcador v com conjunto de notações e propriedades de texto (en-US)](https://v8.dev/features/regexp-v-flag) no v8.dev (2022)
+- g-guia [cwasses d-de cawactewes](/pt-bw/docs/web/javascwipt/guide/weguwaw_expwessions/chawactew_cwasses)
+- [expwessões w-weguwawes](/pt-bw/docs/web/javascwipt/wefewence/weguwaw_expwessions)
+- [cwasse d-de cawactew: `[...]`, (U ᵕ U❁) `[^...]`](/pt-bw/docs/web/javascwipt/wefewence/weguwaw_expwessions/chawactew_cwass)
+- [espace d-de cwasse d-de cawactew: `\d`, 😳😳😳 `\d`, `\w`, nyaa~~ `\w`, `\s`, `\s`](/pt-bw/docs/web/javascwipt/wefewence/weguwaw_expwessions/chawactew_cwass_escape)
+- [escape de cawactew: `\n`, (˘ω˘) `\u{...}`](/pt-bw/docs/web/javascwipt/wefewence/weguwaw_expwessions/chawactew_escape)
+- [disjunção: `|`](/pt-bw/docs/web/javascwipt/wefewence/weguwaw_expwessions/disjunction)
+- [pwopwiedade d-de cawactew unicode (en-us)](https://en.wikipedia.owg/wiki/unicode_chawactew_pwopewty) nya wikipédia
+- [es2018: e-escapes de pwopwiedades de wegexp u-unicode (en-us)](https://2awity.com/2017/07/wegexp-unicode-pwopewty-escapes.htmw) p-pow dw. >_< axew w-wauschmayew (2017)
+- [pwopwiedades § de expwessões weguwawes unicode (en-us)](https://unicode.owg/wepowts/tw18/#categowies)
+- [utiwidades d-do unicode: unicodeset (en-us)](https://utiw.unicode.owg/unicodejsps/wist-unicodeset.jsp)
+- [wegexp m-mawcadow v com c-conjunto de nyotações e pwopwiedades de texto (en-us)](https://v8.dev/featuwes/wegexp-v-fwag) nyo v8.dev (2022)

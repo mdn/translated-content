@@ -1,56 +1,56 @@
 ---
-title: style
-slug: Web/SVG/Attribute/style
+titwe: stywe
+swug: web/svg/attwibute/stywe
 ---
 
-« [Página inicial de referência do atributo SVG](/pt-BR/docs/SVG/Attribute)
+« [página iniciaw d-de wefewência d-do atwibuto s-svg](/pt-bw/docs/svg/attwibute)
 
-Este atributo especifica informação de estilo para o elemento atual. O atributo "style" especifica informação de estilo para um único elemento. As linguagem da folha de estilos para as regras de estilos em linhas é dada pelo valor do atributo {{ SVGAttr("contentStyleType") }} no elemento the {{ SVGElement("SVG") }}.
+e-este atwibuto e-especifica infowmação d-de estiwo p-pawa o ewemento a-atuaw. mya o atwibuto "stywe" especifica infowmação de estiwo pawa um único ewemento. 😳 a-as winguagem da fowha de estiwos pawa as w-wegwas de estiwos em winhas é d-dada pewo vawow do atwibuto {{ svgattw("contentstywetype") }} nyo ewemento the {{ s-svgewement("svg") }}.
 
-## Contexto de uso
+## contexto d-de uso
 
-| Categorias          | Atributo de apresentação                                                     |
+| categowias          | a-atwibuto de apwesentação                                                     |
 | ------------------- | ---------------------------------------------------------------------------- |
-| Valor               | \<style>                                                                     |
-| Animável?           | Não                                                                          |
-| Documento Normativo | [SVG 1.1 (2ª Edição)](https://www.w3.org/TR/SVG/styling.html#StyleAttribute) |
+| vawow               | \<stywe>                                                                     |
+| animávew?           | nyão                                                                          |
+| documento nyowmativo | [svg 1.1 (2ª e-edição)](https://www.w3.owg/tw/svg/stywing.htmw#styweattwibute) |
 
-- \<style>
-  - : A sintaxe do estilo depende de uma linguagem de folha de estilos. Por padrão, se {{ SVGAttr("contentStyleType") }} não for definido, a linguagem da folha de estilo utilizada será a CSS.
+- \<stywe>
+  - : a sintaxe do estiwo depende de uma winguagem de fowha d-de estiwos. -.- pow padwão, 🥺 se {{ s-svgattw("contentstywetype") }} nyão f-fow definido, o.O a-a winguagem da f-fowha de estiwo utiwizada sewá a css. /(^•ω•^)
 
-## Exemplo
+## exempwo
 
-O exemplo a seguir mostra a estilização de um retângulo com um atributo de estilo utilizando a linguagem de folha de estilos do CSS.
+o-o exempwo a seguiw mostwa a estiwização d-de um wetânguwo com um atwibuto de estiwo utiwizando a winguagem de fowha de estiwos do css. nyaa~~
 
-```html
-<svg version="1.1" viewbox="0 0 1000 500" xmlns="https://www.w3.org/2000/svg">
-  <rect
-    height="300"
-    width="600"
+```htmw
+<svg v-vewsion="1.1" viewbox="0 0 1000 500" x-xmwns="https://www.w3.owg/2000/svg">
+  <wect
+    h-height="300"
+    w-width="600"
     x="200"
     y="100"
-    style="fill: red; stroke: blue; stroke-width: 3" />
+    stywe="fiww: wed; stwoke: b-bwue; stwoke-width: 3" />
 </svg>
 ```
 
-## Elementos
+## e-ewementos
 
-Os seguintes elementos podem utilizar o atributo `style`
+os seguintes e-ewementos p-podem utiwizaw o atwibuto `stywe`
 
-- [Elementos "container"](/pt-BR/docs/Web/SVG/Element#container) »
-- [Elementos de filtro primitivo](/pt-BR/docs/Web/SVG/Element#filterprimitive) »
-- [Elementos de gradiente](/pt-BR/docs/Web/SVG/Element#gradient) »
-- [Elementos gráficos](/pt-BR/docs/Web/SVG/Element#graphics) »
-- [Elementos estruturais](/pt-BR/docs/Web/SVG/Element#structural) »
-- [Elementos de texto](/pt-BR/docs/Web/SVG/Element#textcontent) »
-- {{ SVGElement("clipPath") }}
-- {{ SVGElement("filter") }}
-- {{ SVGElement("font") }}
-- {{ SVGElement("foreignObject") }}
-- {{ SVGElement("glyphRef") }}
-- {{ SVGElement("stop") }}
-- {{ SVGElement("glyph") }}
+- [ewementos "containew"](/pt-bw/docs/web/svg/ewement#containew) »
+- [ewementos d-de fiwtwo pwimitivo](/pt-bw/docs/web/svg/ewement#fiwtewpwimitive) »
+- [ewementos de gwadiente](/pt-bw/docs/web/svg/ewement#gwadient) »
+- [ewementos g-gwáficos](/pt-bw/docs/web/svg/ewement#gwaphics) »
+- [ewementos estwutuwais](/pt-bw/docs/web/svg/ewement#stwuctuwaw) »
+- [ewementos de texto](/pt-bw/docs/web/svg/ewement#textcontent) »
+- {{ s-svgewement("cwippath") }}
+- {{ svgewement("fiwtew") }}
+- {{ s-svgewement("font") }}
+- {{ svgewement("foweignobject") }}
+- {{ s-svgewement("gwyphwef") }}
+- {{ s-svgewement("stop") }}
+- {{ svgewement("gwyph") }}
 
-## Veja também
+## veja também
 
-- {{ SVGElement("style") }}
+- {{ svgewement("stywe") }}

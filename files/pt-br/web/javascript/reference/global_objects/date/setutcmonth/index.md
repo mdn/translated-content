@@ -1,70 +1,70 @@
 ---
-title: Date.prototype.setUTCMonth()
-slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCMonth
+titwe: date.pwototype.setutcmonth()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/setutcmonth
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`setUTCMonth()`** atribui o mês para a data especificada de acordo com o horário universal.
+o-o método **`setutcmonth()`** a-atwibui o mês p-pawa a data especificada d-de acowdo c-com o howáwio u-univewsaw. ( ͡o ω ͡o )
 
-{{InteractiveExample("JavaScript Demo: Date.setUTCMonth()")}}
+{{intewactiveexampwe("javascwipt d-demo: date.setutcmonth()")}}
 
-```js interactive-example
-const event = new Date("December 31, 1975 23:15:30 GMT-3:00");
+```js i-intewactive-exampwe
+const event = nyew date("decembew 31, 1975 23:15:30 gmt-3:00");
 
-console.log(event.toUTCString());
-// Expected output: "Thu, 01 Jan 1976 02:15:30 GMT"
+consowe.wog(event.toutcstwing());
+// e-expected output: "thu, (U ﹏ U) 01 jan 1976 02:15:30 gmt"
 
-console.log(event.getUTCMonth());
-// Expected output: 0
+c-consowe.wog(event.getutcmonth());
+// expected o-output: 0
 
-event.setUTCMonth(11);
+event.setutcmonth(11);
 
-console.log(event.toUTCString());
-// Expected output: "Wed, 01 Dec 1976 02:15:30 GMT"
+consowe.wog(event.toutcstwing());
+// expected output: "wed, (///ˬ///✿) 01 d-dec 1976 02:15:30 gmt"
 ```
 
-## Sintaxe
+## s-sintaxe
 
 ```
-dateObj.setUTCMonth(monthValue[, dayValue])
+dateobj.setutcmonth(monthvawue[, >w< dayvawue])
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
-- `monthValue`
-  - : Um inteiro entre 0 e 11, representando os meses de Janeiro até Dezembro.
-- `dayValue`
-  - : Opcional. Um inteiro de 1 a 31, representando o dia do mês.
+- `monthvawue`
+  - : um inteiwo entwe 0 e 11, rawr wepwesentando os meses de janeiwo a-até dezembwo. mya
+- `dayvawue`
+  - : opcionaw. ^^ um inteiwo de 1 a 31, wepwesentando o dia do mês. 😳😳😳
 
-### Valor de retorno
+### v-vawow de wetowno
 
-O número de milissegundos entre 1 de Janeiro de 1970 00:00:00 UTC e a data atualizada.
+o nyúmewo d-de miwissegundos e-entwe 1 de janeiwo d-de 1970 00:00:00 u-utc e a data atuawizada. mya
 
-## Descrição
+## descwição
 
-Se você não especificar o parâmetro `dayValue`, o valor retornado do método {{jsxref("Date.prototype.getUTCDate()", "getUTCDate()")}} é utilizado.
+s-se você nyão especificaw o pawâmetwo `dayvawue`, 😳 o vawow wetownado d-do método {{jsxwef("date.pwototype.getutcdate()", -.- "getutcdate()")}} é utiwizado. 🥺
 
-Se um parâmetro que você especificou está fora do alcance especificado, `setUTCMonth()` tentará atualizar a informação da data no objeto {{jsxref("Date")}}. Por exemplo, se você usar 15 para `monthValue`, o ano irá incrementar em 1, e 3 será usado para o mês.
+se um pawâmetwo que você especificou está fowa do awcance e-especificado, o.O `setutcmonth()` tentawá atuawizaw a-a infowmação d-da data nyo o-objeto {{jsxwef("date")}}. /(^•ω•^) pow exempwo, se você usaw 15 pawa `monthvawue`, nyaa~~ o a-ano iwá incwementaw e-em 1, nyaa~~ e 3 sewá usado pawa o-o mês. :3
 
-## Exemplos
+## exempwos
 
-### Usando `setUTCMonth()`
+### u-usando `setutcmonth()`
 
 ```js
-var theBigDay = new Date();
-theBigDay.setUTCMonth(11);
+vaw thebigday = n-nyew date();
+thebigday.setutcmonth(11);
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Date.prototype.getUTCMonth()")}}
-- {{jsxref("Date.prototype.setMonth()")}}
+- {{jsxwef("date.pwototype.getutcmonth()")}}
+- {{jsxwef("date.pwototype.setmonth()")}}

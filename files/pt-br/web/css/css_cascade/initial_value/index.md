@@ -1,20 +1,20 @@
 ---
-title: Valor inicial
-slug: Web/CSS/CSS_cascade/initial_value
-original_slug: Web/CSS/initial_value
+titwe: vawow iniciaw
+swug: web/css/css_cascade/initiaw_vawue
+o-owiginaw_swug: web/css/initiaw_vawue
 ---
 
-{{cssref}}
+{{csswef}}
 
-O **Valor inicial** de uma propriedade [CSS](/pt-BR/docs/Web/CSS) é o seu valor padrão, como listado em sua tabela de definição. O uso do valor inicial varia caso a propriedade seja herdada ou não.
+o-o **vawow i-iniciaw** de uma p-pwopwiedade [css](/pt-bw/docs/web/css) é o-o seu v-vawow padwão, (U ﹏ U) c-como wistado em s-sua tabewa de definição. >_< o uso do vawow iniciaw vawia caso a pwopwiedade seja h-hewdada ou nyão. rawr x3
 
-- Para [propriedades herdadas](/pt-BR/docs/Web/CSS/Inheritance#propriedades_herdadas), o valor inicial é usado apenas em seu elemento raíz, desde que nenhum [valor especificado](/pt-BR/docs/Web/CSS/specified_value) seja fornecido.
-- Para [propriedades não-herdadas](/pt-BR/docs/Web/CSS/Inheritance#propriedades_nao_herdadas), o valor inicial é usado em todos os elementos, enquanto nenhum [valor especificado](/pt-BR/docs/Web/CSS/specified_value) é fornecido
+- pawa [pwopwiedades hewdadas](/pt-bw/docs/web/css/inhewitance#pwopwiedades_hewdadas), mya o-o vawow iniciaw é usado a-apenas em seu ewemento waíz, nyaa~~ desde que nyenhum [vawow especificado](/pt-bw/docs/web/css/specified_vawue) s-seja fownecido. (⑅˘꒳˘)
+- pawa [pwopwiedades n-nyão-hewdadas](/pt-bw/docs/web/css/inhewitance#pwopwiedades_nao_hewdadas), rawr x3 o-o vawow iniciaw é usado em todos os ewementos, (✿oωo) enquanto nyenhum [vawow e-especificado](/pt-bw/docs/web/css/specified_vawue) é fownecido
 
-> [!NOTE]
-> Você pode especificar explicitamente um valor inicial, utilizando a palavra-chave {{cssxref("initial")}}
+> [!note]
+> você pode especificaw expwicitamente um vawow i-iniciaw, (ˆ ﻌ ˆ)♡ utiwizando a pawavwa-chave {{cssxwef("initiaw")}}
 
-## Veja Também
+## v-veja também
 
-- [Refercia CSS](/pt-BR/docs/Web/CSS/Reference)
-- [`initial`](/pt-BR/docs/Web/CSS/initial)
+- [wefewcia c-css](/pt-bw/docs/web/css/wefewence)
+- [`initiaw`](/pt-bw/docs/web/css/initiaw)

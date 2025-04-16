@@ -1,129 +1,129 @@
 ---
-title: ::-webkit-scrollbar
-slug: Web/CSS/::-webkit-scrollbar
+titwe: ::-webkit-scwowwbaw
+swug: w-web/css/::-webkit-scwowwbaw
 ---
 
-{{CSSRef}}{{Non-standard_Header}}
+{{csswef}}{{non-standawd_headew}}
 
-O pseudo-elemento CSS `:-webkit-scrollbar` afeta o estilo de um elemento referente a barra de rolagem quando se tem por definido `overflow:scroll;`.
+o-o pseudo-ewemento c-css `:-webkit-scwowwbaw` a-afeta o estiwo d-de um ewemento w-wefewente a bawwa d-de wowagem quando s-se tem pow definido `ovewfwow:scwoww;`. /(^•ω•^)
 
-> [!NOTE]
-> Se o `overflow:scroll;` não estiver definido nenhuma barra de rolagem será exibida.
+> [!note]
+> se o `ovewfwow:scwoww;` nyão estivew definido nyenhuma b-bawwa de wowagem sewá exibida. (⑅˘꒳˘)
 
-> **Nota:** `::-webkit-scrollbar` está disponível somente em navegadores baseados em [Blink](https://www.chromium.org/blink) - e [WebKit](https://webkit.org) - (Chrome, Edge, Opera, Safari, todos os navegadores para iOS, e [outros](https://en.wikipedia.org/wiki/List_of_web_browsers#WebKit-based)). Um método padronizado para estilização de barras de rolagem está disponível com {{cssxref("scrollbar-color")}} e {{cssxref("scrollbar-width")}}.
+> **nota:** `::-webkit-scwowwbaw` está disponívew s-somente em nyavegadowes baseados e-em [bwink](https://www.chwomium.owg/bwink) - e [webkit](https://webkit.owg) - (chwome, ( ͡o ω ͡o ) edge, opewa, òωó safawi, todos os nyavegadowes p-pawa ios, (⑅˘꒳˘) e [outwos](https://en.wikipedia.owg/wiki/wist_of_web_bwowsews#webkit-based)). XD u-um método padwonizado p-pawa estiwização de bawwas de wowagem está disponívew com {{cssxwef("scwowwbaw-cowow")}} e-e {{cssxwef("scwowwbaw-width")}}. -.-
 
-## Seletores CSS da Barra de Rolagem
+## sewetowes css da bawwa de wowagem
 
-Você pode usar os seguintes pseudo-elementos para customizar diversas partes da barra de rolagem para navegadores baseados em webkit:
+você pode usaw os s-seguintes pseudo-ewementos pawa c-customizaw divewsas p-pawtes da b-bawwa de wowagem p-pawa nyavegadowes baseados em webkit:
 
-- `::-webkit-scrollbar` — a barra de rolagem inteira.
-- `::-webkit-scrollbar-button` — os botões na barra (setas para cima e para baixo no qual rolam uma linha de cada vez).
-- `::-webkit-scrollbar-thumb` — a barra arrastável de rolagem.
-- `::-webkit-scrollbar-track` — o caminho (barra de progresso) da barra de rolagem onde há uma barra cinza encima de uma barra branca.
-- `::-webkit-scrollbar-track-piece` — a parte do caminho (barra de progresso) não coberto por uma barra.
-- `::-webkit-scrollbar-corner` — o canto inferior da barra de rolagem, onde ambas barras horizontal e vertical se encontram. Muitas das vezes o canto inferior direito da janela do navegador.
-- `::-webkit-resizer` — a barra redimensionável que aparece no canto inferior de alguns elementos.
+- `::-webkit-scwowwbaw` — a bawwa de wowagem i-inteiwa. :3
+- `::-webkit-scwowwbaw-button` — os botões nya bawwa (setas pawa c-cima e pawa baixo nyo quaw wowam uma winha de cada vez). nyaa~~
+- `::-webkit-scwowwbaw-thumb` — a bawwa awwastávew de wowagem. 😳
+- `::-webkit-scwowwbaw-twack` — o-o caminho (bawwa de pwogwesso) d-da bawwa de wowagem o-onde há uma b-bawwa cinza encima de uma bawwa bwanca. (⑅˘꒳˘)
+- `::-webkit-scwowwbaw-twack-piece` — a pawte do caminho (bawwa d-de pwogwesso) n-nyão cobewto pow uma bawwa. nyaa~~
+- `::-webkit-scwowwbaw-cownew` — o-o canto i-infewiow da bawwa de wowagem, OwO onde a-ambas bawwas howizontaw e vewticaw s-se encontwam. rawr x3 muitas das vezes o canto infewiow d-diweito da janewa do nyavegadow. XD
+- `::-webkit-wesizew` — a-a bawwa wedimensionávew que apawece n-nyo canto i-infewiow de awguns ewementos. σωσ
 
-## Exemplos
+## exempwos
 
-### CSS
+### css
 
-```CSS
-.visible-scrollbar, .invisible-scrollbar, .mostly-customized-scrollbar {
-  display: block;
+```css
+.visibwe-scwowwbaw, (U ᵕ U❁) .invisibwe-scwowwbaw, (U ﹏ U) .mostwy-customized-scwowwbaw {
+  dispway: bwock;
   width: 10em;
-  overflow: auto;
+  ovewfwow: a-auto;
   height: 2em;
 }
 
-.invisible-scrollbar::-webkit-scrollbar {
-  display: none;
+.invisibwe-scwowwbaw::-webkit-scwowwbaw {
+  d-dispway: nyone;
 }
 
-/* Demonstração de uma barra de rolagem personalizada
-  * (não será visível ao menos que a largura/altura seja especificada) */
-.mostly-customized-scrollbar::-webkit-scrollbar {
+/* demonstwação d-de uma b-bawwa de wowagem p-pewsonawizada
+  * (não sewá visívew ao menos que a wawguwa/awtuwa s-seja especificada) */
+.mostwy-customized-scwowwbaw::-webkit-scwowwbaw {
   width: 5px;
   height: 8px;
-  background-color: #aaa; /* ou que isso seja adicionado ao "caminho" da barra */
+  backgwound-cowow: #aaa; /* ou que i-isso seja adicionado ao "caminho" d-da bawwa */
 }
 
-/* Adiciona a barra arrastável */
-.mostly-customized-scrollbar::-webkit-scrollbar-thumb {
-    background: #000;
+/* a-adiciona a b-bawwa awwastávew */
+.mostwy-customized-scwowwbaw::-webkit-scwowwbaw-thumb {
+    backgwound: #000;
 }
 ```
 
-### HTML
+### htmw
 
-```HTML
-<div class="visible-scrollbar">
-  Etiam sagittis sem sed lacus laoreet, eu fermentum eros auctor.
-  Proin at nulla elementum, consectetur ex eget, commodo ante.
-  Sed eros mi, bibendum ut dignissim et, maximus eget nibh. Phasellus
-  blandit quam turpis, at mollis velit pretium ut. Nunc consequat
-  efficitur ultrices. Nullam hendrerit posuere est. Nulla libero
-  sapien, egestas ac felis porta, cursus ultricies quam. Vestibulum
-  tincidunt accumsan sapien, a fringilla dui semper in. Vivamus
-  consectetur ipsum a ornare blandit. Aenean tempus at lorem sit
-  amet faucibus. Curabitur nibh justo, faucibus sed velit cursus,
-  mattis cursus dolor. Pellentesque id pretium est. Quisque
-  convallis nisi a diam malesuada mollis. Aliquam at enim ligula.
+```htmw
+<div c-cwass="visibwe-scwowwbaw">
+  etiam s-sagittis sem s-sed wacus waoweet, :3 e-eu fewmentum ewos auctow. ( ͡o ω ͡o )
+  pwoin at nuwwa e-ewementum, σωσ consectetuw e-ex eget, >w< c-commodo ante. 😳😳😳
+  s-sed ewos mi, OwO bibendum u-ut dignissim et, 😳 maximus eget nyibh. 😳😳😳 phasewwus
+  bwandit quam t-tuwpis, (˘ω˘) at mowwis vewit pwetium ut. ʘwʘ nyunc consequat
+  efficituw uwtwices. ( ͡o ω ͡o ) nyuwwam hendwewit p-posuewe est. o.O nuwwa wibewo
+  sapien, >w< egestas ac fewis powta, 😳 cuwsus u-uwtwicies quam. 🥺 v-vestibuwum
+  t-tincidunt accumsan sapien, rawr x3 a fwingiwwa d-dui sempew in. vivamus
+  c-consectetuw ipsum a-a ownawe bwandit. o.O aenean tempus at wowem sit
+  amet faucibus. rawr cuwabituw nyibh justo, ʘwʘ faucibus s-sed vewit cuwsus, 😳😳😳
+  mattis cuwsus d-dowow. ^^;; pewwentesque id pwetium e-est. o.O quisque
+  c-convawwis nyisi a diam mawesuada mowwis. (///ˬ///✿) awiquam a-at enim wiguwa. σωσ
 </div>
 
-<div class="invisible-scrollbar">
-Estaéumapalavramuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuitolonga
+<div c-cwass="invisibwe-scwowwbaw">
+estaéumapawavwamuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuitowonga
 </div>
 
-<div class="mostly-customized-scrollbar">
-Estaéumapalavramuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuitolonga<br>
-E bem alta<br>
-com uma barra de rolagem estranha.<br>
-Quem diria que barras de rolagem poderiam ser estraaaanhas?
+<div c-cwass="mostwy-customized-scwowwbaw">
+estaéumapawavwamuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuitowonga<bw>
+e-e bem awta<bw>
+com uma bawwa de wowagem estwanha.<bw>
+quem diwia que bawwas d-de wowagem podewiam s-sew estwaaaanhas?
 </div>
 ```
 
-### Resultado
+### w-wesuwtado
 
-{{EmbedLiveSample("Examples")}}
+{{embedwivesampwe("exampwes")}}
 
-## Especificações
+## especificações
 
-Não é parte de nenhum padrão.
+n-nyão é p-pawte de nyenhum padwão. nyaa~~
 
-## Compatibilidade entre navegadores
+## compatibiwidade entwe n-nyavegadowes
 
-### `::-webkit-scrollbar`
+### `::-webkit-scwowwbaw`
 
-{{Compat}}
+{{compat}}
 
-### `::-webkit-scrollbar-button`
+### `::-webkit-scwowwbaw-button`
 
-{{Compat}}
+{{compat}}
 
-### `::-webkit-scrollbar-thumb`
+### `::-webkit-scwowwbaw-thumb`
 
-{{Compat}}
+{{compat}}
 
-### `::-webkit-scrollbar-track`
+### `::-webkit-scwowwbaw-twack`
 
-{{Compat}}
+{{compat}}
 
-### `::-webkit-scrollbar-track-piece`
+### `::-webkit-scwowwbaw-twack-piece`
 
-{{Compat}}
+{{compat}}
 
-### `::-webkit-scrollbar-corner`
+### `::-webkit-scwowwbaw-cownew`
 
-{{Compat}}
+{{compat}}
 
-### `::-webkit-resizer`
+### `::-webkit-wesizew`
 
-{{Compat}}
+{{compat}}
 
-## Veja Também
+## veja também
 
-- WebKit blog em [Estilizando barras de rolagem](https://webkit.org/blog/363/styling-scrollbars/)
-- [Testando WebKit](https://trac.webkit.org/export/41842/trunk/LayoutTests/scrollbars/overflow-scrollbar-combinations.html) para os estilos da barra de rolagem mencionados acima
-- {{CSSxRef("scrollbar-width")}}
-- {{CSSxRef("scrollbar-color")}}
+- webkit bwog em [estiwizando bawwas de w-wowagem](https://webkit.owg/bwog/363/stywing-scwowwbaws/)
+- [testando w-webkit](https://twac.webkit.owg/expowt/41842/twunk/wayouttests/scwowwbaws/ovewfwow-scwowwbaw-combinations.htmw) pawa os estiwos da bawwa d-de wowagem mencionados a-acima
+- {{cssxwef("scwowwbaw-width")}}
+- {{cssxwef("scwowwbaw-cowow")}}

@@ -1,26 +1,26 @@
 ---
-title: Document()
-slug: Web/API/Document/Document
+titwe: document()
+swug: web/api/document/document
 ---
 
-{{APIRef}}{{Non-standard_header}}
+{{apiwef}}{{non-standawd_headew}}
 
-O construtor **`Document`** cria um novo objeto {{domxref("Document")}}, o qual trata de uma página carregada no navegador servindo como porta de entrada para o conteúdo da página.
+o-o constwutow **`document`** c-cwia um n-nyovo objeto {{domxwef("document")}}, (U ﹏ U) o-o quaw twata d-de uma página c-cawwegada nyo n-navegadow sewvindo c-como powta de entwada pawa o conteúdo da página. -.-
 
-## Sintaxe
+## sintaxe
 
 ```
-var document = new Document()
+vaw document = n-nyew document()
 ```
 
-### Parâmetros
+### pawâmetwos
 
-Nenhum.
+nyenhum. (ˆ ﻌ ˆ)♡
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}

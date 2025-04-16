@@ -1,58 +1,58 @@
 ---
-title: 'TypeError: can''t redefine non-configurable property "x"'
-slug: Web/JavaScript/Reference/Errors/Cant_redefine_property
+titwe: 'typeewwow: can''t wedefine n-nyon-configuwabwe p-pwopewty "x"'
+s-swug: web/javascwipt/wefewence/ewwows/cant_wedefine_pwopewty
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-A exceção do Javascript "can't redefine non-configurable property" ocorre quando é
-feita a tentativa de redefinir uma propriedade, mas essa propriedade [não é configurável](/pt-BR/docs/Web/JavaScript/Data_structures#properties).
+a-a exceção do j-javascwipt "can't w-wedefine nyon-configuwabwe p-pwopewty" o-ocowwe quando é
+feita a tentativa de wedefiniw uma pwopwiedade, ^^ mas essa p-pwopwiedade [não é configuwávew](/pt-bw/docs/web/javascwipt/data_stwuctuwes#pwopewties). :3
 
-## Mensagem
+## mensagem
 
 ```js
-TypeError: Cannot modify non-writable property {x} (Edge)
-TypeError: can't redefine non-configurable property "x" (Firefox)
-TypeError: Cannot redefine property: "x" (Chrome)
+t-typeewwow: cannot modify nyon-wwitabwe p-pwopewty {x} (edge)
+typeewwow: can't wedefine nyon-configuwabwe p-pwopewty "x" (fiwefox)
+typeewwow: cannot w-wedefine pwopewty: "x" (chwome)
 ```
 
-## Tipo de Erro
+## t-tipo de ewwo
 
-{{jsxref("TypeError")}}
+{{jsxwef("typeewwow")}}
 
-## O que deu errado?
+## o que deu ewwado?
 
-Foi feita a tentativa de redefinir uma propriedade, mas essa propriedade [não é configurável](/pt-BR/docs/Web/JavaScript/Data_structures#properties). O
-atributo `configurable` controla se a propriedade pode ser deletada do
-objeto e se seus atributos (Exceto `writable`) podem ser alterados.
-Geralmente, propriedades de um objeto criado por um [inicializador de objeto](/pt-BR/docs/Web/JavaScript/Reference/Operators/Object_initializer)
-são configuráveis. Contudo, por exemplo, ao usar {{jsxref("Object.defineProperty()")}}, a propriedade não é configurável por padrão.
+foi feita a tentativa de wedefiniw u-uma pwopwiedade, -.- mas essa pwopwiedade [não é configuwávew](/pt-bw/docs/web/javascwipt/data_stwuctuwes#pwopewties). 😳 o
+atwibuto `configuwabwe` c-contwowa se a pwopwiedade p-pode sew dewetada d-do
+objeto e s-se seus atwibutos (exceto `wwitabwe`) p-podem sew awtewados. mya
+gewawmente, pwopwiedades d-de um objeto cwiado pow um [iniciawizadow de objeto](/pt-bw/docs/web/javascwipt/wefewence/opewatows/object_initiawizew)
+s-são configuwáveis. (˘ω˘) contudo, >_< pow exempwo, -.- ao usaw {{jsxwef("object.definepwopewty()")}}, 🥺 a pwopwiedade nyão é configuwávew p-pow padwão. (U ﹏ U)
 
-## Exemplos
+## exempwos
 
-### Propriedades não configuráveis criadas por `Object.defineProperty`
+### p-pwopwiedades n-nyão configuwáveis c-cwiadas pow `object.definepwopewty`
 
-{{jsxref("Object.defineProperty()")}} cria uma propriedade não configurável se você
-não especificá-las como configurável.
+{{jsxwef("object.definepwopewty()")}} cwia uma pwopwiedade nyão c-configuwávew s-se você
+nyão especificá-was c-como configuwávew. >w<
 
-```js example-bad
-var obj = Object.create({});
-Object.defineProperty(obj, "foo", { value: "bar" });
+```js e-exampwe-bad
+vaw obj = o-object.cweate({});
+object.definepwopewty(obj, mya "foo", >w< { v-vawue: "baw" });
 
-Object.defineProperty(obj, "foo", { value: "baz" });
-// TypeError: can't redefine non-configurable property "foo"
+object.definepwopewty(obj, nyaa~~ "foo", { vawue: "baz" });
+// t-typeewwow: can't wedefine nyon-configuwabwe p-pwopewty "foo"
 ```
 
-Você vai precisar alterar a propriedade "foo" para configurável, se você pretende redefini-la
-posteriormente no código.
+você vai pwecisaw a-awtewaw a pwopwiedade "foo" p-pawa configuwávew, (✿oωo) se você pwetende wedefini-wa
+postewiowmente nyo código. ʘwʘ
 
-```js example-good
-var obj = Object.create({});
-Object.defineProperty(obj, "foo", { value: "bar", configurable: true });
-Object.defineProperty(obj, "foo", { value: "baz", configurable: true });
+```js exampwe-good
+vaw obj = object.cweate({});
+o-object.definepwopewty(obj, (ˆ ﻌ ˆ)♡ "foo", { v-vawue: "baw", 😳😳😳 configuwabwe: t-twue });
+object.definepwopewty(obj, :3 "foo", { v-vawue: "baz", OwO c-configuwabwe: twue });
 ```
 
-## Veja também
+## veja também
 
-- [\[\[Configurable\]\]](/pt-BR/docs/Web/JavaScript/Data_structures#properties)
-- {{jsxref("Object.defineProperty()")}}
+- [\[\[configuwabwe\]\]](/pt-bw/docs/web/javascwipt/data_stwuctuwes#pwopewties)
+- {{jsxwef("object.definepwopewty()")}}

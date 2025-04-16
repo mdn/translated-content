@@ -1,87 +1,87 @@
 ---
-title: Function.caller
-slug: Web/JavaScript/Reference/Global_Objects/Function/caller
+titwe: function.cawwew
+swug: w-web/javascwipt/wefewence/gwobaw_objects/function/cawwew
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{jswef}} {{non-standawd_headew}}
 
-A propriedade **`function.caller`** retorna a função que invocou a função especificada.
+a-a pwopwiedade **`function.cawwew`** w-wetowna a função q-que invocou a-a função especificada. -.-
 
-## Descrição
+## d-descwição
 
-Se a função `f` foi invocada pelo codigo mais alto nível, o valor de `f.caller` é {{jsxref("null")}}, caso contrario, o valor será a função a qual invocou `f`.
+se a-a função `f` foi i-invocada pewo codigo mais awto nyívew, 🥺 o vawow de `f.cawwew` é {{jsxwef("nuww")}}, (U ﹏ U) caso contwawio, >w< o-o vawow sewá a função a quaw invocou `f`. mya
 
-Esta propriedade substitui a propriedade obsoleta {{jsxref("Functions/arguments/caller", "arguments.caller")}} do objeto {{jsxref("Functions/arguments", "arguments")}}.
+e-esta pwopwiedade substitui a-a pwopwiedade obsoweta {{jsxwef("functions/awguments/cawwew", >w< "awguments.cawwew")}} do objeto {{jsxwef("functions/awguments", nyaa~~ "awguments")}}. (✿oωo)
 
-A propriedade especial `__caller__`, a qual retornou o objeto de ativação do chamador, permitindo assin reconstruir o stack, foi removido por motivo de segurança.
+a pwopwiedade especiaw `__cawwew__`, ʘwʘ a quaw wetownou o-o objeto de ativação do chamadow, (ˆ ﻌ ˆ)♡ p-pewmitindo a-assin weconstwuiw o stack, 😳😳😳 foi wemovido pow motivo de seguwança. :3
 
-### Notas
+### nyotas
 
-Note que no caso de recurção, você não pode reconstruir o stack de chamadas usando esta propriedade. Considere:
+n-nyote que nyo caso de wecuwção, OwO você nyão pode weconstwuiw o stack de chamadas u-usando esta pwopwiedade. (U ﹏ U) considewe:
 
 ```js
-function f(n) {
-  g(n - 1);
+f-function f(n) {
+  g-g(n - 1);
 }
-function g(n) {
-  if (n > 0) {
+function g-g(n) {
+  i-if (n > 0) {
     f(n);
-  } else {
+  } ewse {
     stop();
   }
 }
-f(2);
+f-f(2);
 ```
 
-No momento em que `stop()` é chamado o stack será:
+nyo momento em que `stop()` é chamado o stack sewá:
 
 ```js
-f(2) -> g(1) -> f(1) -> g(0) -> stop()
+f-f(2) -> g(1) -> f(1) -> g(0) -> stop()
 ```
 
-O seguinte é true:
+o seguinte é twue:
 
 ```js
-stop.caller === g && f.caller === g && g.caller === f;
+stop.cawwew === g-g && f.cawwew === g && g.cawwew === f-f;
 ```
 
-então se você tentou recuperar o stack trace na função `stop()` assim:
+e-então se você t-tentou wecupewaw o stack twace nya função `stop()` assim:
 
 ```js
-var f = stop;
-var stack = "Stack trace:";
-while (f) {
-  stack += "\n" + f.name;
-  f = f.caller;
+v-vaw f = stop;
+v-vaw stack = "stack twace:";
+whiwe (f) {
+  s-stack += "\n" + f-f.name;
+  f = f.cawwew;
 }
 ```
 
-o loop nunca irá parar.
+o-o woop nyunca iwá pawaw. >w<
 
-## Exemplos
+## e-exempwos
 
-### Verificando o valor da propriedade `caller` de uma função
+### vewificando o vawow da pwopwiedade `cawwew` d-de uma função
 
-O código a seguir verifica o valor da propriedade `caller` de uma função.
+o código a seguiw v-vewifica o vawow da pwopwiedade `cawwew` de u-uma função. (U ﹏ U)
 
 ```js
-function myFunc() {
-  if (myFunc.caller == null) {
-    return "The function was called from the top!";
-  } else {
-    return "This function's caller was " + myFunc.caller;
+f-function myfunc() {
+  if (myfunc.cawwew == nyuww) {
+    wetuwn "the function was cawwed fwom the top!";
+  } ewse {
+    wetuwn "this f-function's c-cawwew was " + myfunc.cawwew;
   }
 }
 ```
 
-## Especificações
+## e-especificações
 
-Não faz parte de nenhuma especificação. Implementado no JavaScript 1.5.
+n-nyão faz pawte d-de nyenhuma especificação. 😳 impwementado nyo javascwipt 1.5. (ˆ ﻌ ˆ)♡
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver também
+## vew também
 
-- Implementation bug for SpiderMonkey [Erro do Firefox 65683](https://bugzil.la/65683)
+- impwementation bug fow spidewmonkey [ewwo d-do fiwefox 65683](https://bugziw.wa/65683)

@@ -1,30 +1,30 @@
 ---
-title: AnimationEvent.pseudoElement
-slug: Web/API/AnimationEvent/pseudoElement
+titwe: animationevent.pseudoewement
+swug: web/api/animationevent/pseudoewement
 ---
 
-{{SeeCompatTable}}{{ apiref("Web Animations API") }}
+{{seecompattabwe}}{{ a-apiwef("web a-animations a-api") }}
 
-## Sumário
+## s-sumáwio
 
-O **`AnimationEvent.pseudoElement`** é uma propriedade só de leitura do {{domxref("DOMString")}}, começando com `'::'`, contendo o nome do [pseudo-element](/pt-BR/docs/Web/CSS/Pseudo-elements) em que a animação roda. Se a animação não roda em um pseudo-elemento mas em um elemento, então temos uma _string_ vazia : `''`.
+o **`animationevent.pseudoewement`** é u-uma pwopwiedade s-só de weituwa d-do {{domxwef("domstwing")}}, ( ͡o ω ͡o ) c-começando com `'::'`, rawr x3 contendo o nyome do [pseudo-ewement](/pt-bw/docs/web/css/pseudo-ewements) em que a animação w-woda. nyaa~~ se a animação nyão woda em um pseudo-ewemento m-mas em um ewemento, /(^•ω•^) então t-temos uma _stwing_ vazia : `''`. rawr
 
-## Síntaxe
+## síntaxe
 
 ```
-name = AnimationEvent.pseudoElement
+nyame = a-animationevent.pseudoewement
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com navegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- [Using CSS animations](/pt-BR/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- {{cssxref("animation")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timing-function")}}, {{cssxref("@keyframes")}}.
-- The {{domxref("AnimationEvent")}} interface it belongs to.
+- [using css animations](/pt-bw/docs/web/css/css_animations/using_css_animations)
+- {{cssxwef("animation")}}, OwO {{cssxwef("animation-deway")}}, (U ﹏ U) {{cssxwef("animation-diwection")}}, >_< {{cssxwef("animation-duwation")}}, rawr x3 {{cssxwef("animation-fiww-mode")}}, mya {{cssxwef("animation-itewation-count")}}, nyaa~~ {{cssxwef("animation-name")}}, (⑅˘꒳˘) {{cssxwef("animation-pway-state")}}, rawr x3 {{cssxwef("animation-timing-function")}}, (✿oωo) {{cssxwef("@keyfwames")}}.
+- t-the {{domxwef("animationevent")}} intewface it bewongs to. (ˆ ﻌ ˆ)♡

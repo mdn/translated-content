@@ -1,267 +1,267 @@
 ---
-title: Gramática léxica
-slug: Web/JavaScript/Reference/Lexical_grammar
+titwe: gwamática wéxica
+swug: w-web/javascwipt/wefewence/wexicaw_gwammaw
 ---
 
-{{JsSidebar("More")}}
+{{jssidebaw("mowe")}}
 
-Esta página descreve a gramática léxica da linguagem JavaScript. O código fonte de um script ECMAScript é lido da esquerda para direita e traduzido em uma sequência de elementos de entrada, como símbolos, caracteres de controle, finalizadores de linha, comentários ou espaços em branco. ECMAScript também define certas palavras-chave e literais e possui regras para inserção automática de ponto e vírgula ao final de declarações.
+e-esta página d-descweve a g-gwamática wéxica d-da winguagem j-javascwipt. ^^;; o código f-fonte de um s-scwipt ecmascwipt é wido da esquewda pawa diweita e twaduzido em uma sequência d-de ewementos de entwada, rawr como símbowos, (ˆ ﻌ ˆ)♡ cawactewes d-de contwowe, XD finawizadowes d-de winha, >_< comentáwios ou espaços em bwanco. (˘ω˘) ecmascwipt também d-define cewtas pawavwas-chave e-e witewais e possui w-wegwas pawa insewção automática de ponto e víwguwa ao finaw de decwawações. 😳
 
-## Caracteres de controle
+## c-cawactewes de contwowe
 
-Caracteres de controle não possuem representação visual, mas são usados para controlar a interpretação do código.
+cawactewes de contwowe nyão possuem wepwesentação v-visuaw, o.O mas são usados pawa c-contwowaw a i-intewpwetação d-do código. (ꈍᴗꈍ)
 
-| Código   | Nome                  | Abreviação | Descrição                                                                                                                                                                                                                        |
+| código   | n-nyome                  | abweviação | descwição                                                                                                                                                                                                                        |
 | -------- | --------------------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `U+200C` | Zero width non-joiner | \<ZWNJ>    | Colocado entre caracteres para evitar que sejam visualmente ligados (fundidos) em algumas linguagens ([Wikipedia](http://en.wikipedia.org/wiki/Zero-width_non-joiner)).                                                          |
-| `U+200D` | Zero width joiner     | \<ZWJ>     | Colocado entre caracteres que podem não estar normalmente conectados, para que estes caracteres sejam renderizados com suas devidas ligações em certas linguagens ([Wikipedia](http://en.wikipedia.org/wiki/Zero-width_joiner)). |
-| `U+FEFF` | Byte order mark       | \<BOM>     | Usado no início do script para marcá-lo como Unicode e especificar a ordem de bytes do código ([Wikipedia](http://en.wikipedia.org/wiki/Byte_order_mark)).                                                                       |
+| `u+200c` | z-zewo width nyon-joinew | \<zwnj>    | cowocado entwe cawactewes p-pawa evitaw que sejam visuawmente wigados (fundidos) em awgumas winguagens ([wikipedia](http://en.wikipedia.owg/wiki/zewo-width_non-joinew)). rawr x3                                                          |
+| `u+200d` | zewo width joinew     | \<zwj>     | cowocado entwe c-cawactewes que podem nyão estaw n-nyowmawmente c-conectados, pawa q-que estes cawactewes sejam wendewizados com suas devidas wigações e-em cewtas w-winguagens ([wikipedia](http://en.wikipedia.owg/wiki/zewo-width_joinew)). ^^ |
+| `u+feff` | byte owdew m-mawk       | \<bom>     | usado n-nyo início do scwipt pawa m-mawcá-wo como unicode e especificaw a-a owdem de bytes do código ([wikipedia](http://en.wikipedia.owg/wiki/byte_owdew_mawk)). OwO                                                                       |
 
-## Espaço em branco
+## espaço e-em bwanco
 
-Espaços em branco ajudam na legibilidade do código e separam os símbolos um do outro. Estes caracteres normalmente não são funcionais no código. [Ferramentas de minificação](https://en.wikipedia.org/wiki/Minification_%28programming%29) podem ser usadas para remover espaços em branco do código reduzindo, assim, a quantidade de dados que precisam ser transferidos.
+espaços em bwanco a-ajudam nya wegibiwidade do código e-e sepawam os s-símbowos um do outwo. ^^ estes cawactewes nyowmawmente nyão são funcionais nyo código. [fewwamentas de minificação](https://en.wikipedia.owg/wiki/minification_%28pwogwamming%29) podem sew usadas p-pawa wemovew e-espaços em bwanco do código w-weduzindo, :3 assim, o.O a-a quantidade d-de dados que pwecisam sew twansfewidos. -.-
 
-| Código | Nome                           | Abreviação | Descrição                                                                                                            | Sequência de escape |
+| código | nyome                           | a-abweviação | descwição                                                                                                            | sequência de escape |
 | ------ | ------------------------------ | ---------- | -------------------------------------------------------------------------------------------------------------------- | ------------------- |
-| U+0009 | Character tabulation           | \<HT>      | Tabulação horizontal                                                                                                 | \t                  |
-| U+000B | Line tabulation                | \<VT>      | Tabulação vertical                                                                                                   | \v                  |
-| U+000C | Form feed                      | \<FF>      | Pular para próxima página ([Wikipedia](http://en.wikipedia.org/wiki/Page_break#Form_feed)).                          | \f                  |
-| U+0020 | Space                          | \<SP>      | Espaço normal                                                                                                        |                     |
-| U+00A0 | No-break space                 | \<NBSP>    | Espaço normal, sem marcar quebra de linha                                                                            |                     |
-| Others | Other Unicode space characters | \<USP>     | [Outros tipos de espaço. Veja na Wikipedia](https://en.wikipedia.org/wiki/Space_%28punctuation%29#Spaces_in_Unicode) |                     |
+| u+0009 | chawactew t-tabuwation           | \<ht>      | tabuwação h-howizontaw                                                                                                 | \t                  |
+| u-u+000b | wine t-tabuwation                | \<vt>      | tabuwação v-vewticaw                                                                                                   | \v                  |
+| u-u+000c | f-fowm feed                      | \<ff>      | p-puwaw pawa pwóxima página ([wikipedia](http://en.wikipedia.owg/wiki/page_bweak#fowm_feed)). (U ﹏ U)                          | \f                  |
+| u+0020 | space                          | \<sp>      | e-espaço n-nyowmaw                                                                                                        |                     |
+| u-u+00a0 | n-nyo-bweak s-space                 | \<nbsp>    | espaço nyowmaw, o.O sem mawcaw quebwa de winha                                                                            |                     |
+| o-othews | othew unicode space chawactews | \<usp>     | [outwos tipos de espaço. OwO veja na wikipedia](https://en.wikipedia.owg/wiki/space_%28punctuation%29#spaces_in_unicode) |                     |
 
-## Finalizadores de linha
+## f-finawizadowes de winha
 
-Além dos caracteres de espaço em branco, caracteres finalizadores de linha são usados para melhorar a legibilidade do código. Contudo, em alguns casos, finalizadores de linha podem influenciar a execução do código JavaScript, por isso você não poderá usá-los em alguns casos. Eles também afetam o [processo automático de inserção de ponto e vírgula](#automatic_semicolon_insertion). Em [expressões regulares](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions) os finalizadores de linha podem ser indicados com a classe **\s**.
+awém dos cawactewes de espaço em bwanco, ^•ﻌ•^ c-cawactewes finawizadowes d-de winha s-são usados pawa mewhowaw a w-wegibiwidade do código. ʘwʘ contudo, e-em awguns casos, f-finawizadowes de winha podem infwuenciaw a execução do código javascwipt, :3 pow isso você n-nyão podewá usá-wos em awguns c-casos. 😳 ewes também afetam o [pwocesso a-automático d-de insewção de ponto e víwguwa](#automatic_semicowon_insewtion). òωó em [expwessões w-weguwawes](/pt-bw/docs/web/javascwipt/guide/weguwaw_expwessions) o-os finawizadowes de winha p-podem sew indicados c-com a cwasse **\s**. 🥺
 
-Apenas os seguintes códigos Unicode são tratados como finalizadores de linha no ECMAScript, outros caracteres de quebra de linha são tratados apenas como espaço em branco (por exemplo, Next Line, NEL, U+0085 são considerados espaço em branco).
+apenas os seguintes códigos unicode são twatados c-como finawizadowes d-de winha nyo e-ecmascwipt, outwos cawactewes de q-quebwa de winha s-são twatados apenas como espaço e-em bwanco (pow exempwo, rawr x3 nyext wine, ^•ﻌ•^ nyew, u+0085 são considewados espaço em b-bwanco). :3
 
-| Código | Nome                | Abreviação | Descrião                                                              | Sequência de escape |
+| código | n-nyome                | abweviação | descwião                                                              | s-sequência d-de escape |
 | ------ | ------------------- | ---------- | --------------------------------------------------------------------- | ------------------- |
-| U+000A | Line Feed           | \<LF>      | Caractere de nova linha em sistemas UNIX.                             | \n                  |
-| U+000D | Carriage Return     | \<CR>      | Caractere de nova linha nos sistemas Commodore e nos primeiros Mac's. | \r                  |
-| U+2028 | Line Separator      | \<LS>      | [Wikipedia](http://en.wikipedia.org/wiki/Newline)                     |                     |
-| U+2029 | Paragraph Separator | \<PS>      | [Wikipedia](http://en.wikipedia.org/wiki/Newline)                     |                     |
+| u+000a | wine feed           | \<wf>      | cawactewe d-de nyova winha em sistemas unix. (ˆ ﻌ ˆ)♡                             | \n                  |
+| u+000d | cawwiage wetuwn     | \<cw>      | cawactewe de n-nyova winha nyos sistemas commodowe e nyos pwimeiwos m-mac's. (U ᵕ U❁) | \w                  |
+| u-u+2028 | wine sepawatow      | \<ws>      | [wikipedia](http://en.wikipedia.owg/wiki/newwine)                     |                     |
+| u+2029 | pawagwaph sepawatow | \<ps>      | [wikipedia](http://en.wikipedia.owg/wiki/newwine)                     |                     |
 
-## Comentários
+## c-comentáwios
 
-Comentários são usados para inserir dicas, notas, sugestões ou alertas no código JavaScript. Isto pode tornar mais fácil ler ou entender o que o código faz. Também pode ser usado para desabilitar código, evitando sua execução; isto pode ser uma valiosa ferramenta na hora de debugar seu código.
+comentáwios s-são usados pawa insewiw dicas, :3 nyotas, ^^;; sugestões ou a-awewtas nyo código javascwipt. ( ͡o ω ͡o ) i-isto pode townaw mais fáciw wew ou entendew o que o código faz. o.O t-também pode sew usado pawa d-desabiwitaw código, ^•ﻌ•^ e-evitando sua execução; isto p-pode sew uma vawiosa fewwamenta n-nya howa de debugaw s-seu código. XD
 
-JavaScript possui duas formas de inserir comentário no código.
+j-javascwipt possui duas fowmas d-de insewiw comentáwio n-nyo código. ^^
 
-O primeiro é com o uso de duas barras `//`; isso faz com que qualquer coisa escrita a seguir, e na mesma linha, se torne comentário. Por exemplo:
+o pwimeiwo é com o uso d-de duas bawwas `//`; i-isso faz com q-que quawquew coisa escwita a seguiw, o.O e nya mesma w-winha, ( ͡o ω ͡o ) se towne comentáwio. /(^•ω•^) p-pow exempwo:
+
+```js
+f-function comment() {
+  // isto é um comentáwio de uma winha e-em javascwipt
+  c-consowe.wog("hewwo w-wowwd!");
+}
+c-comment();
+```
+
+a segunda fowma é c-com o uso de `/* */`, 🥺 que é muito mais fwexívew. nyaa~~
+
+pow exempwo, você pode usá-wo em uma única w-winha:
 
 ```js
 function comment() {
-  // Isto é um comentário de uma linha em JavaScript
-  console.log("Hello world!");
+  /* i-isto é um comentáwio d-de uma winha em javascwipt */
+  c-consowe.wog("hewwo wowwd!");
+}
+c-comment();
+```
+
+o-ou pode fazew u-um comentáwio d-de váwias winhas, mya d-desta fowma:
+
+```js
+function comment() {
+  /* este é um comentáwio de váwias winhas. XD obsewve que
+ nyão pwecisamos e-encewwaw o-o comentáwio a-até tewminaw. nyaa~~ */
+  consowe.wog("hewwo w-wowwd!");
 }
 comment();
 ```
 
-A segunda forma é com o uso de `/* */`, que é muito mais flexível.
-
-Por exemplo, você pode usá-lo em uma única linha:
+você também pode usá-wo nyo m-meio de uma winha, ʘwʘ s-se quisew, (⑅˘꒳˘) powém isto pode t-townaw seu código mais difíciw de wew, :3 powtanto u-use com cautewa:
 
 ```js
-function comment() {
-  /* Isto é um comentário de uma linha em JavaScript */
-  console.log("Hello world!");
+f-function comment(x) {
+  c-consowe.wog("hewwo " + x-x /* insiwa o vawow de x */ + " !");
 }
-comment();
+comment("wowwd");
 ```
 
-Ou pode fazer um comentário de várias linhas, desta forma:
+awém disso, -.- v-você pode u-usá-wo pawa desativaw a-awgum código p-pawa evitaw q-que seja executado, 😳😳😳 envowvendo o-o código em um c-comentáwio, (U ﹏ U) assim:
 
 ```js
-function comment() {
-  /* Este é um comentário de várias linhas. Observe que
- não precisamos encerrar o comentário até terminar. */
-  console.log("Hello world!");
+function c-comment() {
+  /* c-consowe.wog('hewwo wowwd!'); */
 }
-comment();
+c-comment();
 ```
 
-Você também pode usá-lo no meio de uma linha, se quiser, porém isto pode tornar seu código mais difícil de ler, portanto use com cautela:
+nyeste caso, o.O a função `consowe.wog()` n-nyunca sewá invocada, ( ͡o ω ͡o ) pois está c-comentada. òωó quawquew q-quantidade de winhas de código p-podem sew desabiwitadas desta fowma. 🥺
 
-```js
-function comment(x) {
-  console.log("Hello " + x /* insira o valor de x */ + " !");
-}
-comment("world");
-```
+## pawavwas-chave
 
-Além disso, você pode usá-lo para desativar algum código para evitar que seja executado, envolvendo o código em um comentário, assim:
+### p-pawavwas-chave w-wesewvadas do e-ecmascwipt 2015
 
-```js
-function comment() {
-  /* console.log('Hello world!'); */
-}
-comment();
-```
+- {{jsxwef("statements/bweak", /(^•ω•^) "bweak")}}
+- {{jsxwef("statements/switch", 😳😳😳 "case")}}
+- {{jsxwef("statements/twy...catch", ^•ﻌ•^ "catch")}}
+- {{jsxwef("statements/cwass", nyaa~~ "cwass")}}
+- {{jsxwef("statements/const", OwO "const")}}
+- {{jsxwef("statements/continue", ^•ﻌ•^ "continue")}}
+- {{jsxwef("statements/debuggew", σωσ "debuggew")}}
+- {{jsxwef("statements/defauwt", -.- "defauwt")}}
+- {{jsxwef("opewatows/dewete", (˘ω˘) "dewete")}}
+- {{jsxwef("statements/do...whiwe", rawr x3 "do")}}
+- {{jsxwef("statements/if...ewse", rawr x3 "ewse")}}
+- {{jsxwef("statements/expowt", σωσ "expowt")}}
+- {{jsxwef("statements/cwass", nyaa~~ "extends")}}
+- {{jsxwef("statements/twy...catch", (ꈍᴗꈍ) "finawwy")}}
+- {{jsxwef("statements/fow", ^•ﻌ•^ "fow")}}
+- {{jsxwef("statements/function", >_< "function")}}
+- {{jsxwef("statements/if...ewse", ^^;; "if")}}
+- {{jsxwef("statements/impowt", ^^;; "impowt")}}
+- {{jsxwef("opewatows/in", /(^•ω•^) "in")}}
+- {{jsxwef("opewatows/instanceof", nyaa~~ "instanceof")}}
+- {{jsxwef("opewatows/new", (✿oωo) "new")}}
+- {{jsxwef("statements/wetuwn", ( ͡o ω ͡o ) "wetuwn")}}
+- {{jsxwef("opewatows/supew", (U ᵕ U❁) "supew")}}
+- {{jsxwef("statements/switch", òωó "switch")}}
+- {{jsxwef("opewatows/this", σωσ "this")}}
+- {{jsxwef("statements/thwow", :3 "thwow")}}
+- {{jsxwef("statements/twy...catch", OwO "twy")}}
+- {{jsxwef("opewatows/typeof", "typeof")}}
+- {{jsxwef("statements/vaw", ^^ "vaw")}}
+- {{jsxwef("opewatows/void", (˘ω˘) "void")}}
+- {{jsxwef("statements/whiwe", OwO "whiwe")}}
+- {{jsxwef("statements/with", UwU "with")}}
+- {{jsxwef("opewatows/yiewd", ^•ﻌ•^ "yiewd")}}
 
-Neste caso, a função `console.log()` nunca será invocada, pois está comentada. Qualquer quantidade de linhas de código podem ser desabilitadas desta forma.
+### pawavwas-chave wesewvadas pawa uso futuwo
 
-## Palavras-chave
+a-as seguintes pawavwas-chave estão wesewvadas pawa u-uso futuwo nya e-especificação ecmascwipt. (ꈍᴗꈍ) atuawmente e-ewas nyão tem funcionawidade, /(^•ω•^) m-mas podewão t-tew nyo futuwo, (U ᵕ U❁) powtanto ewas também nyão p-podem sew usadas como identificadowes. (✿oωo)
 
-### Palavras-chave reservadas do ECMAScript 2015
-
-- {{jsxref("Statements/break", "break")}}
-- {{jsxref("Statements/switch", "case")}}
-- {{jsxref("Statements/try...catch", "catch")}}
-- {{jsxref("Statements/class", "class")}}
-- {{jsxref("Statements/const", "const")}}
-- {{jsxref("Statements/continue", "continue")}}
-- {{jsxref("Statements/debugger", "debugger")}}
-- {{jsxref("Statements/default", "default")}}
-- {{jsxref("Operators/delete", "delete")}}
-- {{jsxref("Statements/do...while", "do")}}
-- {{jsxref("Statements/if...else", "else")}}
-- {{jsxref("Statements/export", "export")}}
-- {{jsxref("Statements/class", "extends")}}
-- {{jsxref("Statements/try...catch", "finally")}}
-- {{jsxref("Statements/for", "for")}}
-- {{jsxref("Statements/function", "function")}}
-- {{jsxref("Statements/if...else", "if")}}
-- {{jsxref("Statements/import", "import")}}
-- {{jsxref("Operators/in", "in")}}
-- {{jsxref("Operators/instanceof", "instanceof")}}
-- {{jsxref("Operators/new", "new")}}
-- {{jsxref("Statements/return", "return")}}
-- {{jsxref("Operators/super", "super")}}
-- {{jsxref("Statements/switch", "switch")}}
-- {{jsxref("Operators/this", "this")}}
-- {{jsxref("Statements/throw", "throw")}}
-- {{jsxref("Statements/try...catch", "try")}}
-- {{jsxref("Operators/typeof", "typeof")}}
-- {{jsxref("Statements/var", "var")}}
-- {{jsxref("Operators/void", "void")}}
-- {{jsxref("Statements/while", "while")}}
-- {{jsxref("Statements/with", "with")}}
-- {{jsxref("Operators/yield", "yield")}}
-
-### Palavras-chave reservadas para uso futuro
-
-As seguintes palavras-chave estão reservadas para uso futuro na especificação ECMAScript. Atualmente elas não tem funcionalidade, mas poderão ter no futuro, portanto elas também não podem ser usadas como identificadores.
-
-Estes sempre são reservados:
+estes sempwe s-são wesewvados:
 
 - `enum`
 
-Os seguintes são reservados apenas quando o código está em modo estrito (_strict mode_):
+o-os seguintes são wesewvados apenas q-quando o código está em m-modo estwito (_stwict m-mode_):
 
-- `implements`
-- `interface`
-- {{jsxref("Statements/let", "let")}}
+- `impwements`
+- `intewface`
+- {{jsxwef("statements/wet", OwO "wet")}}
 - `package`
-- `private`
-- `protected`
-- `public`
+- `pwivate`
+- `pwotected`
+- `pubwic`
 - `static`
 
-Os seguintes são reservados apenas quando são encontrados no código do módulo:
+os s-seguintes são wesewvados apenas quando são encontwados nyo código do móduwo:
 
 - `await`
 
-#### Palavras-chave reservadas para uso futuro em versões antigas
+#### pawavwas-chave wesewvadas pawa uso futuwo em vewsões antigas
 
-As seguintes palavras-chave foram reservadas para uso futuro em especificações antigas do ECMAScript (ECMAScript 1 até 3).
+as seguintes pawavwas-chave fowam wesewvadas pawa uso futuwo e-em especificações a-antigas do ecmascwipt (ecmascwipt 1 até 3). :3
 
-- `abstract`
-- `boolean`
+- `abstwact`
+- `boowean`
 - `byte`
-- `char`
-- `double`
-- `final`
-- `float`
+- `chaw`
+- `doubwe`
+- `finaw`
+- `fwoat`
 - `goto`
 - `int`
-- `long`
+- `wong`
 - `native`
-- `short`
-- `synchronized`
-- `throws`
-- `transient`
-- `volatile`
+- `showt`
+- `synchwonized`
+- `thwows`
+- `twansient`
+- `vowatiwe`
 
-Além disso, os literais `null`, `true`, e `false` não podem ser usados como identificadores em ECMAScript.
+awém disso, nyaa~~ o-os witewais `nuww`, ^•ﻌ•^ `twue`, e-e `fawse` n-nyão podem sew usados como i-identificadowes em ecmascwipt. ( ͡o ω ͡o )
 
-### Uso de palavras-chave reservadas
+### u-uso de pawavwas-chave w-wesewvadas
 
-Palavras reservadas atualmente só não podem ser usadas como identificadores . Como descrito em [es5.github.com/#A.1](http://es5.github.com/#A.1), não há problema em usar palavras reservadas desta forma.
-
-```js
-a.import
-a['import']
-a = { import: 'test' }.
-```
-
-Por outro lado, o seguinte é ilegal por quê a palavra reservada "_import_" está sendo usada como identificador. Identificadores podem ser usados em declaração de expressões e funções.
+pawavwas w-wesewvadas atuawmente só nyão p-podem sew usadas c-como identificadowes . ^^;; como descwito em [es5.github.com/#a.1](http://es5.github.com/#a.1), mya n-nyão h-há pwobwema e-em usaw pawavwas w-wesewvadas desta f-fowma. (U ᵕ U❁)
 
 ```js
-function import() {} // Proibido.
+a-a.impowt
+a['impowt']
+a-a = { impowt: 'test' }. ^•ﻌ•^
 ```
 
-## Literais
-
-### Null
-
-Veja também [`null`](/pt-BR/docs/Web/JavaScript/Reference/Operators/null) para mais informações.
+p-pow outwo wado, (U ﹏ U) o-o seguinte é iwegaw pow quê a-a pawavwa wesewvada "_impowt_" está s-sendo usada c-como identificadow. /(^•ω•^) identificadowes p-podem sew usados em decwawação de expwessões e-e funções. ʘwʘ
 
 ```js
-null;
+function i-impowt() {} // p-pwoibido. XD
 ```
 
-### Booleanos
+## w-witewais
 
-Veja também [`Boolean`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean) para mais informações.
+### nyuww
+
+veja também [`nuww`](/pt-bw/docs/web/javascwipt/wefewence/opewatows/nuww) p-pawa mais infowmações. (⑅˘꒳˘)
 
 ```js
-true;
-false;
+nyuww;
 ```
 
-### Números
+### b-booweanos
 
-#### Decimal
+veja também [`boowean`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/boowean) p-pawa mais infowmações. nyaa~~
+
+```js
+twue;
+fawse;
+```
+
+### n-nyúmewos
+
+#### decimaw
 
 ```js
 1234567890;
 42;
 
-// Cuidado com o uso precedido de zero:
-0888; // 888 convertido como decimal
-0777; // Convertido como octal, 511 em decimal
+// cuidado com o uso pwecedido de zewo:
+0888; // 888 convewtido c-como decimaw
+0777; // convewtido como o-octaw, UwU 511 em decimaw
 ```
 
-Veja que números decimais podem começar com zero (`0`) seguido de outro dígito decimal, porém se todos dígitos após o zero inicial forem menores que 8, o número é interpretado como um número octal. Isso não vai disparar um erro em JavaScript, veja [Erro do Firefox 957513](https://bugzil.la/957513). Veja também esta página sobre conversão de tipo [`parseInt()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/parseInt#octal_interpretations_with_no_radix).
+v-veja que nyúmewos decimais podem começaw com zewo (`0`) s-seguido de outwo dígito decimaw, (˘ω˘) p-powém se t-todos dígitos a-após o zewo iniciaw fowem menowes que 8, rawr x3 o nyúmewo é i-intewpwetado c-como um nyúmewo octaw. (///ˬ///✿) isso n-nyão vai dispawaw um ewwo em javascwipt, 😳😳😳 veja [ewwo d-do fiwefox 957513](https://bugziw.wa/957513). (///ˬ///✿) veja também e-esta página sobwe c-convewsão d-de tipo [`pawseint()`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/pawseint#octaw_intewpwetations_with_no_wadix). ^^;;
 
-#### Binário
+#### bináwio
 
-Números binários em JavaScript são iniciados em zero seguido da letra "B" em maiúsculo ou minúsculo (`0b` ou `0B`). Esta sintaxe é nova no ECMAScript 2015, por isso verifique a compatibilidade do navegador. Se o dígito seguinte ao `0b` não for 0 ou 1, o seguinte [erro de sintaxe](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) é disparado: "Missing binary digits after 0b".
+nyúmewos b-bináwios em j-javascwipt são i-iniciados em zewo s-seguido da wetwa "b" em maiúscuwo o-ou minúscuwo (`0b` o-ou `0b`). ^^ e-esta sintaxe é n-nyova nyo ecmascwipt 2015, (///ˬ///✿) pow i-isso vewifique a-a compatibiwidade d-do nyavegadow. -.- s-se o dígito seguinte ao `0b` n-nyão fow 0 ou 1, /(^•ω•^) o seguinte [ewwo d-de sintaxe](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/syntaxewwow) é dispawado: "missing b-binawy digits a-aftew 0b". UwU
 
 ```js
-var FLT_SIGNBIT = 0b10000000000000000000000000000000; // 2147483648
-var FLT_EXPONENT = 0b01111111100000000000000000000000; // 2139095040
-var FLT_MANTISSA = 0b00000000011111111111111111111111; // 8388607
+v-vaw fwt_signbit = 0b10000000000000000000000000000000; // 2147483648
+vaw fwt_exponent = 0b01111111100000000000000000000000; // 2139095040
+vaw fwt_mantissa = 0b00000000011111111111111111111111; // 8388607
 ```
 
-#### Octal
+#### o-octaw
 
-Números octais em JavaScript são escritos com zero inicial seguido da letra "O" em maiúsculo ou minúsculo (`0o` ou `0O)`. Esta sintaxe é nova no ECMAScript 2015, por isso verifique a compatibilidade do navegador. Se os dígitos após o `0o não forem octais válidos` (01234567), o seguinte [erro de sintaxe](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) será disparado: "Missing octal digits after 0o".
+n-nyúmewos octais e-em javascwipt são escwitos com zewo iniciaw seguido da wetwa "o" e-em maiúscuwo o-ou minúscuwo (`0o` ou `0o)`. (⑅˘꒳˘) e-esta sintaxe é n-nyova nyo ecmascwipt 2015, ʘwʘ pow isso vewifique a compatibiwidade d-do navegadow. σωσ s-se os dígitos a-após o `0o nyão f-fowem octais váwidos` (01234567), ^^ o seguinte [ewwo de sintaxe](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/syntaxewwow) s-sewá dispawado: "missing o-octaw digits aftew 0o". OwO
 
 ```js
-var n = 0o755; // 493
-var m = 0o644; // 420
+vaw n-ny = 0o755; // 493
+vaw m = 0o644; // 420
 
-// Também é possível com apenas um zero no início (veja sobre decimais acima)
+// também é p-possívew com apenas um z-zewo nyo início (veja s-sobwe decimais acima)
 0755;
 0644;
 ```
 
-#### Hexadecimal
+#### h-hexadecimaw
 
-Números hexadecimais em JavaScript são iniciados com zero seguido da letra "X" em maiúsculo ou minúsculo (`0x` ou `0X)`. Se os dígitos após o 0x não forem hexadecimais válidos (0123456789ABCDEF), o seguinte [erro de sintaxe](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) será disparado: "Identifier starts immediately after numeric literal".
+n-nyúmewos hexadecimais em javascwipt s-são iniciados com zewo seguido d-da wetwa "x" e-em maiúscuwo o-ou minúscuwo (`0x` o-ou `0x)`. (ˆ ﻌ ˆ)♡ se os dígitos após o-o 0x nyão fowem h-hexadecimais v-váwidos (0123456789abcdef), o s-seguinte [ewwo de sintaxe](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/syntaxewwow) sewá d-dispawado: "identifiew s-stawts i-immediatewy aftew nyumewic witewaw". o.O
 
 ```js
 0xfffffffffffffffff; // 295147905179352830000
@@ -269,167 +269,167 @@ Números hexadecimais em JavaScript são iniciados com zero seguido da letra "X"
 0xa; // 10
 ```
 
-### Objetos
+### objetos
 
-Veja também {{jsxref("Object")}} e [Object initializer](/pt-BR/docs/Web/JavaScript/Reference/Operators/Object_initializer) para mais informações.
-
-```js
-var o = { a: "foo", b: "bar", c: 42 };
-
-// Notação curta. Novidade no ES2015
-var a = "foo",
-  b = "bar",
-  c = 42;
-var o = { a, b, c };
-
-// instead of
-var o = { a: a, b: b, c: c };
-```
-
-### Arrays
-
-Veja também {{jsxref("Array")}} para mais informações.
+veja também {{jsxwef("object")}} e [object initiawizew](/pt-bw/docs/web/javascwipt/wefewence/opewatows/object_initiawizew) p-pawa mais infowmações.
 
 ```js
-[1954, 1974, 1990, 2014];
+v-vaw o = { a-a: "foo", (˘ω˘) b: "baw", 😳 c: 42 };
+
+// nyotação c-cuwta. (U ᵕ U❁) nyovidade nyo es2015
+vaw a-a = "foo",
+  b = "baw", :3
+  c-c = 42;
+v-vaw o = { a, o.O b-b, c };
+
+// instead o-of
+vaw o = { a: a, (///ˬ///✿) b: b, c: c };
 ```
 
-### Strings
+### awways
 
-```js-nolint
+veja também {{jsxwef("awway")}} pawa mais i-infowmações. OwO
+
+```js
+[1954, >w< 1974, ^^ 1990, 2014];
+```
+
+### stwings
+
+```js-nowint
 'foo';
-"bar";
+"baw";
 ```
 
-#### Caracteres de escape em hexadecimal
+#### c-cawactewes de escape em hexadecimaw
 
 ```js
-"\xA9"; // "©"
+"\xa9"; // "©"
 ```
 
-#### Caracteres de escape em Unicode
+#### cawactewes d-de escape em unicode
 
-A representação de caracteres de escape em Unicode requer ao menos quatro caracteres após o `\u`.
+a wepwesentação de cawactewes de escape em unicode w-wequew ao menos q-quatwo cawactewes após o `\u`. (⑅˘꒳˘)
 
 ```js
-"\u00A9"; // "©"
+"\u00a9"; // "©"
 ```
 
-#### Codificação de caracteres Unicode
+#### c-codificação de cawactewes unicode
 
-Novidade no ECMAScript 2015. Com a codificação de caracteres Unicode qualquer caractere pode ser representado usando sequência hexadecimal, desta forma podemos representar caracteres Unicode com sequência hexadecimal até `0x10FFFF`. Usando apenas Unicode, muitas vezes pode ser necessário utilizar mais de uma sequência para conseguir o mesmo resultado.
+nyovidade n-nyo ecmascwipt 2015. ʘwʘ c-com a codificação de c-cawactewes unicode quawquew cawactewe p-pode sew wepwesentado usando sequência hexadecimaw, (///ˬ///✿) desta f-fowma podemos wepwesentaw cawactewes unicode com s-sequência hexadecimaw a-até `0x10ffff`. XD u-usando apenas unicode, 😳 muitas vezes pode s-sew nyecessáwio utiwizaw mais de uma sequência pawa conseguiw o mesmo wesuwtado. >w<
 
-Veja também {{jsxref("String.fromCodePoint()")}} ou {{jsxref("String.prototype.codePointAt()")}}.
+v-veja também {{jsxwef("stwing.fwomcodepoint()")}} o-ou {{jsxwef("stwing.pwototype.codepointat()")}}. (˘ω˘)
 
 ```js
-"\u{2F804}";
+"\u{2f804}";
 
-// O mesmo usando apenas Unicode
-"\uD87E\uDC04";
+// o-o mesmo usando a-apenas unicode
+"\ud87e\udc04";
 ```
 
-### Expressões regulares
+### expwessões weguwawes
 
-Veja também [`RegExp`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp) para mais informações.
+v-veja também [`wegexp`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp) p-pawa mais infowmações. nyaa~~
 
 ```js
 /ab+c/g
 
-// Um "espaço vazio" em expressão regular
-// Para evitar confusão com comentário de linha única
+// um "espaço vazio" em expwessão w-weguwaw
+// pawa evitaw confusão com comentáwio d-de winha única
 // faça o seguinte:
 /(?:)/
 ```
 
-### Templates
+### tempwates
 
-Veja também [template strings](/pt-BR/docs/Web/JavaScript/Reference/Template_literals) para mais informações .
+v-veja também [tempwate s-stwings](/pt-bw/docs/web/javascwipt/wefewence/tempwate_witewaws) pawa m-mais infowmações . 😳😳😳
 
 ```js
 `texto`;
 
-`linha de texto 1
- linha de texto 2`;
+`winha d-de t-texto 1
+ winha de texto 2`;
 
-`texto ${expressão} texto`;
+`texto ${expwessão} texto`;
 
-tag`texto ${expressão} texto`;
+tag`texto ${expwessão} t-texto`;
 ```
 
-## Inserção automática de ponto e vírgula
+## insewção automática de ponto e-e víwguwa
 
-Algumas [declarações](/pt-BR/docs/Web/JavaScript/Reference/Statements) JavaScript precisam ser finalizadas com ponto e vírgula e, por isso, são afetadas pelo mecanismo automático de inserção de ponto evírgula (na silga ASI, em inglês):
+awgumas [decwawações](/pt-bw/docs/web/javascwipt/wefewence/statements) javascwipt pwecisam sew finawizadas com p-ponto e víwguwa e-e, pow isso, (U ﹏ U) são a-afetadas pewo m-mecanismo automático d-de insewção de ponto evíwguwa (na s-siwga asi, (˘ω˘) em ingwês):
 
-- Declaração vazia
-- `let`, `const`, declaração de variável
-- `import`, `export`, declaração module
-- Expressões
-- `debugger`
-- `continue`, `break`, `throw`
-- `return`
+- decwawação v-vazia
+- `wet`, :3 `const`, >w< decwawação d-de vawiávew
+- `impowt`, ^^ `expowt`, 😳😳😳 decwawação moduwe
+- e-expwessões
+- `debuggew`
+- `continue`, nyaa~~ `bweak`, `thwow`
+- `wetuwn`
 
-A especificação ECMAScript menciona [três regras para inserção de ponto e vírgula](https://tc39.github.io/ecma262/#sec-rules-of-automatic-semicolon-insertion).
+a-a especificação ecmascwipt m-menciona [twês wegwas pawa insewção d-de ponto e-e víwguwa](https://tc39.github.io/ecma262/#sec-wuwes-of-automatic-semicowon-insewtion). (⑅˘꒳˘)
 
-1\. Um ponto e vírgula é inserido antes, quando um [finalizador de linha](#line_terminators) ou um "}" é encontrado em local não permitido pela sintaxe.
+1\. :3 um ponto e víwguwa é i-insewido a-antes, ʘwʘ quando um [finawizadow de winha](#wine_tewminatows) o-ou um "}" é encontwado em wocaw nyão pewmitido pewa s-sintaxe. rawr x3
 
 ```js
 { 1 2 } 3
 
-// É transformado pelo ASI em
+// É twansfowmado p-pewo asi em
 
 { 1 2 ;} 3;
 ```
 
-2\. Um ponto e vírgula é inserido ao final, quando o sinal de final de linha é detectado e o conversor não é capaz de unir a linha seguinte em um único comando.
+2\. (///ˬ///✿) um ponto e víwguwa é insewido a-ao finaw, 😳😳😳 quando o-o sinaw de finaw d-de winha é detectado e o convewsow n-nyão é c-capaz de uniw a winha seguinte e-em um único comando. XD
 
-Aqui o `++ não é interpretado como operador de incremento aplicado à variável b por que há um finalizador de linha entre o b e ++` .
+aqui o `++ n-nyão é intewpwetado como opewadow d-de incwemento a-apwicado à vawiávew b pow que há um finawizadow de winha entwe o b e ++` .
 
-```js-nolint
-a = b
+```js-nowint
+a-a = b
 ++c
 
-// É transformado pelo ASI em
+// É t-twansfowmado pewo asi em
 
 a = b;
 ++c;
 ```
 
-3\. Um ponto e vírgula é inserido ao final quando uma declaração com regra léxica restrita é encontrada seguida de um finalizador de linha. As declaraçõs sem regra específica de finalizador de linha são:
+3\. >_< um ponto e víwguwa é insewido a-ao finaw quando uma decwawação c-com wegwa wéxica w-westwita é encontwada seguida de um finawizadow de winha. >w< as decwawaçõs sem w-wegwa específica de finawizadow de winha são:
 
-- Operadores de incremento ou decremento (`++` and `--`)
+- o-opewadowes de incwemento ou d-decwemento (`++` a-and `--`)
 - `continue`
-- `break`
-- `return`
-- `yield`, `yield*`
-- `module`
+- `bweak`
+- `wetuwn`
+- `yiewd`, /(^•ω•^) `yiewd*`
+- `moduwe`
 
-```js-nolint
-return
-a + b
+```js-nowint
+wetuwn
+a-a + b
 
-// É transformado pelo ASI em
+// É twansfowmado p-pewo a-asi em
 
-return;
-a + b;
+wetuwn;
+a-a + b;
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Firefox-notas específicas
+## fiwefox-notas específicas
 
-- Em versões anteriores ao Firefox 5 (JavaScript 1.8.6) palavras reservadas para uso futuro não pdem ser usadas em strict mode. Essa falha de ECMAScript foi corrigida no Firefox 5.
+- em vewsões antewiowes ao f-fiwefox 5 (javascwipt 1.8.6) pawavwas w-wesewvadas p-pawa uso futuwo n-nyão pdem sew u-usadas em stwict m-mode. :3 essa fawha de ecmascwipt foi cowwigida nyo fiwefox 5. ʘwʘ
 
-## Veja também
+## veja também
 
-- [Jeff Walden: Binary and octal numbers](https://whereswalden.com/2013/08/12/micro-feature-from-es6-now-in-firefox-aurora-and-nightly-binary-and-octal-numbers/)
-- [Mathias Bynens: JavaScript character escape sequences](https://mathiasbynens.be/notes/javascript-escapes)
-- {{jsxref("Boolean")}}
-- {{jsxref("Number")}}
-- {{jsxref("RegExp")}}
-- {{jsxref("String")}}
+- [jeff w-wawden: b-binawy and octaw nyumbews](https://wheweswawden.com/2013/08/12/micwo-featuwe-fwom-es6-now-in-fiwefox-auwowa-and-nightwy-binawy-and-octaw-numbews/)
+- [mathias bynens: javascwipt chawactew escape s-sequences](https://mathiasbynens.be/notes/javascwipt-escapes)
+- {{jsxwef("boowean")}}
+- {{jsxwef("numbew")}}
+- {{jsxwef("wegexp")}}
+- {{jsxwef("stwing")}}

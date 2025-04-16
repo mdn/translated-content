@@ -1,66 +1,66 @@
 ---
-title: Document.elementFromPoint()
-slug: Web/API/Document/elementFromPoint
+titwe: document.ewementfwompoint()
+swug: web/api/document/ewementfwompoint
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-O método **`elementFromPoint()`** da interface {{domxref("Document")}} retorna o elemento de maior nível nas coordenadas especificadas.
+o-o método **`ewementfwompoint()`** d-da intewface {{domxwef("document")}} w-wetowna o-o ewemento d-de maiow nyívew n-nyas coowdenadas e-especificadas.
 
-Se o elemento no ponto especificado pertencer à outro documento (por exemplo, um subdocumento em um iframe), será retornado o pai do subdocumento (o próprio iframe). Se o elemento em determinado ponto for anônimo ou for um conteudo gerado por XBL, como por exemplo barras de scroll de caixas de texto, então será retornado o primeiro elemento pai, não-anônimo (por exemplo, a própria caixa de texto).
+s-se o ewemento no ponto especificado pewtencew à outwo documento (pow exempwo, /(^•ω•^) u-um subdocumento em um ifwame), nyaa~~ sewá wetownado o-o pai do subdocumento (o pwópwio i-ifwame). nyaa~~ se o ewemento em detewminado ponto fow anônimo ou fow u-um conteudo gewado pow xbw, :3 como p-pow exempwo b-bawwas de scwoww de caixas de texto, 😳😳😳 então sewá wetownado o pwimeiwo ewemento p-pai, (˘ω˘) nyão-anônimo (pow exempwo, a pwópwia caixa de texto). ^^
 
-Se o ponto especificado estiver fora dos limites visíveis do documento ou tiver uma coordenada negativa, o resultado é `null`.
+se o ponto especificado e-estivew fowa dos wimites v-visíveis do documento o-ou tivew u-uma coowdenada nyegativa, o-o wesuwtado é `nuww`. :3
 
-Se você precisa encontrar uma posição específica dentro do elemento, use {{domxref("Document.caretPositionFromPoint()")}}.
+se você pwecisa encontwaw uma p-posição específica dentwo do ewemento, -.- use {{domxwef("document.cawetpositionfwompoint()")}}. 😳
 
-> [!NOTE]
-> Chamados por documentos XUL devem esperar até o evento `onload` ser acionado antes de chamar este método.
+> [!note]
+> c-chamados pow documentos xuw devem espewaw até o evento `onwoad` sew acionado antes de chamaw este m-método. mya
 
-## Sintaxe
+## sintaxe
 
 ```
-var element = document.elementFromPoint(x, y);
+vaw ewement = d-document.ewementfwompoint(x, (˘ω˘) y-y);
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
 - x
-  - : Uma posição horizontal dentro do viewport atual.
+  - : uma posição howizontaw dentwo do viewpowt a-atuaw. >_<
 - y
-  - : Uma position vertical dentro do viewport atual.
+  - : u-uma position vewticaw dentwo d-do viewpowt a-atuaw. -.-
 
-### Valor retornado
+### vawow wetownado
 
-O objeto de nível mais alto {{domxref("Element")}} dentro das coordenadas declaradas.
+o objeto d-de nyívew mais awto {{domxwef("ewement")}} d-dentwo das coowdenadas decwawadas. 🥺
 
-## Exemplo
+## exempwo
 
-```html
-<!doctype html>
-<html lang="en">
+```htmw
+<!doctype h-htmw>
+<htmw wang="en">
   <head>
-    <title>exemplo de elementFromPoint</title>
+    <titwe>exempwo d-de ewementfwompoint</titwe>
 
-    <script>
-      function changeColor(newColor) {
-        elem = document.elementFromPoint(2, 2);
-        elem.style.color = newColor;
+    <scwipt>
+      function c-changecowow(newcowow) {
+        e-ewem = document.ewementfwompoint(2, (U ﹏ U) 2);
+        ewem.stywe.cowow = nyewcowow;
       }
-    </script>
+    </scwipt>
   </head>
 
   <body>
-    <p id="para1">Algum texto aqui</p>
-    <button onclick="changeColor('blue');">azul</button>
-    <button onclick="changeColor('red');">vermelho</button>
+    <p id="pawa1">awgum texto aqui</p>
+    <button oncwick="changecowow('bwue');">azuw</button>
+    <button oncwick="changecowow('wed');">vewmewho</button>
   </body>
-</html>
+</htmw>
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}

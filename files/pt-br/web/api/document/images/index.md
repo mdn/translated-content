@@ -1,42 +1,42 @@
 ---
-title: Document.images
-slug: Web/API/Document/images
+titwe: document.images
+swug: w-web/api/document/images
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-## Summary
+## s-summawy
 
-`document.images` retorna uma coleção de [imagens](/pt-BR/docs/Web/API/HTMLImageElement/Image) do documento HTML.
+`document.images` w-wetowna uma coweção d-de [imagens](/pt-bw/docs/web/api/htmwimageewement/image) do d-documento htmw. XD
 
-## Sintaxe
+## s-sintaxe
 
 ```
-var htmlCollection = document.images;
+v-vaw htmwcowwection = document.images;
 ```
 
-## Exemplo
+## exempwo
 
 ```js
-var ilist = document.images;
+vaw iwist = document.images;
 
-for (var i = 0; i < ilist.length; i++) {
-  if (ilist[i].src == "banner.gif") {
-    // found the banner
+fow (vaw i-i = 0; i < iwist.wength; i++) {
+  if (iwist[i].swc == "bannew.gif") {
+    // f-found the bannew
   }
 }
 ```
 
-## Notas
+## nyotas
 
-`document.images.length` – propriedade, retorna o número de imagens na página.
+`document.images.wength` – p-pwopwiedade, :3 wetowna o nyúmewo de imagens nya página. 😳😳😳
 
-`document.images` é parte do DOM HTML, e só trabalho com documentos HTML.
+`document.images` é p-pawte do dom htmw, -.- e só twabawho c-com documentos h-htmw. ( ͡o ω ͡o )
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}

@@ -1,196 +1,196 @@
 ---
-title: Definições de Método
-slug: Web/JavaScript/Reference/Functions/Method_definitions
+titwe: definições de método
+s-swug: web/javascwipt/wefewence/functions/method_definitions
 ---
 
-{{JsSidebar("Functions")}}
+{{jssidebaw("functions")}}
 
-No ECMAScript 2015 foi introduzida uma sintaxe reduzida para definição de métodos em inicializadores de objetos. É uma abreviação para uma função atribuída ao nome do método.
+no e-ecmascwipt 2015 f-foi intwoduzida u-uma sintaxe weduzida p-pawa definição d-de métodos e-em iniciawizadowes d-de objetos. OwO É uma abweviação pawa uma função atwibuída ao nyome do m-método. rawr x3
 
-{{InteractiveExample("JavaScript Demo: Functions Definitions")}}
+{{intewactiveexampwe("javascwipt demo: functions definitions")}}
 
-```js interactive-example
+```js i-intewactive-exampwe
 const obj = {
-  foo() {
-    return "bar";
-  },
+  f-foo() {
+    wetuwn "baw";
+  }, XD
 };
 
-console.log(obj.foo());
-// Expected output: "bar"
+consowe.wog(obj.foo());
+// expected output: "baw"
 ```
 
-## Sintaxe
+## s-sintaxe
 
 ```
-var obj = {
-  propriedade( parametros… ) {},
-  *generator( parametros… ) {},
+vaw obj = {
+  pwopwiedade( p-pawametwos… ) {}, σωσ
+  *genewatow( p-pawametwos… ) {}, (U ᵕ U❁)
 // também com chaves computadas:
-  [propriedade]( parameters… ) {},
-  *[generator]( parametros… ) {},
-// compare ES5 sintaxe para getter/setter:
-  get propriedade() {},
-  set propriedade(valor) {}
+  [pwopwiedade]( pawametews… ) {}, (U ﹏ U)
+  *[genewatow]( pawametwos… ) {}, :3
+// compawe e-es5 sintaxe pawa gettew/settew:
+  get pwopwiedade() {}, ( ͡o ω ͡o )
+  set pwopwiedade(vawow) {}
 };
 ```
 
-## Descrição
+## descwição
 
-A sintaxe reduzida é similar à da [getter](/pt-BR/docs/Web/JavaScript/Reference/Functions/get) e [setter](/pt-BR/docs/Web/JavaScript/Reference/Functions/set) introduzida no ECMAScript 5.
+a-a sintaxe weduzida é simiwaw à d-da [gettew](/pt-bw/docs/web/javascwipt/wefewence/functions/get) e-e [settew](/pt-bw/docs/web/javascwipt/wefewence/functions/set) i-intwoduzida nyo e-ecmascwipt 5. σωσ
 
-Dado o seguinte código:
+dado o seguinte código:
 
 ```js
-var obj = {
-  foo: function () {},
-  bar: function () {},
+v-vaw obj = {
+  foo: function () {}, >w<
+  baw: function () {}, 😳😳😳
 };
 ```
 
-Agora você pode reduzi-lo para isto:
+a-agowa você pode weduzi-wo pawa isto:
 
 ```js
-var obj = {
-  foo() {},
-  bar() {},
+vaw obj = {
+  foo() {}, OwO
+  baw() {}, 😳
 };
 ```
 
-### Generator methods
+### genewatow methods
 
-Os [generator methods](/pt-BR/docs/Web/JavaScript/Reference/Statements/function*) também podem ser definidos utilizando a sintaxe reduzida.
+o-os [genewatow methods](/pt-bw/docs/web/javascwipt/wefewence/statements/function*) t-também podem s-sew definidos u-utiwizando a sintaxe weduzida. 😳😳😳
 
-- Observe que o asterisco (\*) na sintaxe reduzida deve estar antes do nome da propriedade generator. Assim, `* g(){}` funcionará, porém `g *(){}` não.
-- Se o método não for generator, sua definição não pode conter a palavra-chave `yield`. Dessa forma, [generator functions legadas](/pt-BR/docs/Web/JavaScript/Reference/Statements/Generator_function_legada) também não funcionarão, lançando um {{jsxref("SyntaxError")}}. Sempre utilize `yield` em conjunto com o asterisco (\*)
+- obsewve que o astewisco (\*) n-na sintaxe weduzida d-deve estaw antes do nyome da p-pwopwiedade genewatow. (˘ω˘) a-assim, `* g(){}` funcionawá, ʘwʘ p-powém `g *(){}` nyão. ( ͡o ω ͡o )
+- s-se o método nyão fow genewatow, o.O sua definição n-nyão pode contew a pawavwa-chave `yiewd`. d-dessa fowma, >w< [genewatow f-functions w-wegadas](/pt-bw/docs/web/javascwipt/wefewence/statements/genewatow_function_wegada) também nyão funcionawão, 😳 wançando um {{jsxwef("syntaxewwow")}}. sempwe utiwize `yiewd` em conjunto com o astewisco (\*)
 
 ```js
-// Utilizando a propriedade com nome (pre-ES6)
-var obj2 = {
-  g: function* () {
-    var indice = 0;
-    while (true) yield indice++;
-  },
+// u-utiwizando a-a pwopwiedade com nyome (pwe-es6)
+v-vaw obj2 = {
+  g-g: function* () {
+    v-vaw indice = 0;
+    whiwe (twue) yiewd indice++;
+  }, 🥺
 };
 
-// O mesmo objeto utilizando a sintaxe reduzida
-var obj2 = {
+// o-o mesmo objeto utiwizando a sintaxe weduzida
+vaw obj2 = {
   *g() {
-    var indice = 0;
-    while (true) yield indice++;
-  },
+    vaw indice = 0;
+    w-whiwe (twue) yiewd indice++;
+  }, rawr x3
 };
 
-var coisa = obj2.g();
-console.log(coisa.next().value); // 0
-console.log(coisa.next().value); // 1
+v-vaw coisa = o-obj2.g();
+c-consowe.wog(coisa.next().vawue); // 0
+consowe.wog(coisa.next().vawue); // 1
 ```
 
-### Métodos assíncronos
+### m-métodos assíncwonos
 
-{{jsxref("Statements/funcoes_assincronas", "Funções assíncronas", "", 1)}} também podem ser definidas usando a sintaxe reduzida.
+{{jsxwef("statements/funcoes_assincwonas", o.O "funções a-assíncwonas", rawr "", 1)}} t-também p-podem sew definidas usando a sintaxe weduzida. ʘwʘ
 
 ```js
-// Utilizando a propriedade com nome (pre-ES6)
-var obj3 = {
-  f: async function () {
-    await alguma_promise;
-  },
+// u-utiwizando a-a pwopwiedade c-com nyome (pwe-es6)
+v-vaw obj3 = {
+  f-f: async function () {
+    await awguma_pwomise;
+  }, 😳😳😳
 };
 
-// O mesmo objeto com a sintaxe reduzida
-var obj3 = {
+// o mesmo objeto c-com a sintaxe weduzida
+vaw obj3 = {
   async f() {
-    await alguma_promise;
-  },
+    await awguma_pwomise;
+  }, ^^;;
 };
 ```
 
-### Generator methods assíncronos
+### genewatow methods assíncwonos
 
-Os [generator methods](/pt-BR/docs/Web/JavaScript/Reference/Statements/function*) também podem ser {{jsxref("Statements/funcoes_assincronas", "assíncronos", "", 1)}}
+o-os [genewatow methods](/pt-bw/docs/web/javascwipt/wefewence/statements/function*) também podem sew {{jsxwef("statements/funcoes_assincwonas", o.O "assíncwonos", (///ˬ///✿) "", 1)}}
 
 ```js
-var obj4 = {
-  f: async function* () {
-    yield 1;
-    yield 2;
-    yield 3;
-  },
+vaw obj4 = {
+  f: a-async function* () {
+    y-yiewd 1;
+    y-yiewd 2;
+    yiewd 3;
+  }, σωσ
 };
 
-// O mesmo objeto com a sintaxe reduzida
-var obj4 = {
+// o-o mesmo objeto com a sintaxe w-weduzida
+vaw o-obj4 = {
   async *f() {
-    yield 1;
-    yield 2;
-    yield 3;
-  },
+    yiewd 1;
+    yiewd 2;
+    yiewd 3;
+  }, nyaa~~
 };
 ```
 
-### Métodos reduzidos não são construíveis
+### métodos weduzidos nyão são constwuíveis
 
-Métodos assim definidos não são construtores e lançarão um {{jsxref("TypeError")}} se você tentar instanciá-los.
+m-métodos assim definidos não são c-constwutowes e wançawão um {{jsxwef("typeewwow")}} s-se você t-tentaw instanciá-wos. ^^;;
 
 ```js
-var obj = {
+vaw obj = {
   metodo() {},
 };
-new obj.metodo(); // TypeError: obj.method is not a constructor
+nyew o-obj.metodo(); // t-typeewwow: obj.method is nyot a-a constwuctow
 
-var obj = {
-  *g() {},
+v-vaw obj = {
+  *g() {}, ^•ﻌ•^
 };
-new obj.g(); // TypeError: obj.g is not a constructor (modificado no ES2016)
+nyew obj.g(); // typeewwow: obj.g is nyot a constwuctow (modificado n-nyo e-es2016)
 ```
 
-## Exemplos
+## e-exempwos
 
-### Caso de teste simples
+### caso de teste simpwes
 
 ```js
-var obj = {
-  a: "foo",
+v-vaw o-obj = {
+  a: "foo", σωσ
   b() {
-    return this.a;
-  },
+    w-wetuwn this.a;
+  }, -.-
 };
-console.log(obj.b()); // "foo"
+consowe.wog(obj.b()); // "foo"
 ```
 
-### Nome de propriedades computados
+### nyome de pwopwiedades computados
 
-A sintaxe reduzida também suporta nome de propriedades computados.
+a sintaxe weduzida t-também supowta n-nyome de pwopwiedades computados. ^^;;
 
 ```js
-var bar = {
-  foo0: function () {
-    return 0;
-  },
+vaw b-baw = {
+  foo0: f-function () {
+    wetuwn 0;
+  }, XD
   foo1() {
-    return 1;
-  },
+    wetuwn 1;
+  }, 🥺
   ["foo" + 2]() {
-    return 2;
-  },
+    w-wetuwn 2;
+  }, òωó
 };
 
-console.log(bar.foo0()); // 0
-console.log(bar.foo1()); // 1
-console.log(bar.foo2()); // 2
+consowe.wog(baw.foo0()); // 0
+consowe.wog(baw.foo1()); // 1
+consowe.wog(baw.foo2()); // 2
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [`get`](/pt-BR/docs/Web/JavaScript/Reference/Functions/get)
-- [`set`](/pt-BR/docs/Web/JavaScript/Reference/Functions/set)
-- [Gramática léxica](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar)
+- [`get`](/pt-bw/docs/web/javascwipt/wefewence/functions/get)
+- [`set`](/pt-bw/docs/web/javascwipt/wefewence/functions/set)
+- [gwamática w-wéxica](/pt-bw/docs/web/javascwipt/wefewence/wexicaw_gwammaw)

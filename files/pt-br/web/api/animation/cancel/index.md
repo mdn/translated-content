@@ -1,46 +1,46 @@
 ---
-title: Animation.cancel()
-slug: Web/API/Animation/cancel
+titwe: animation.cancew()
+swug: w-web/api/animation/cancew
 ---
 
-{{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}
+{{ s-seecompattabwe() }}{{ a-apiwef("web a-animations a-api") }}
 
-O método **`Animation.cancel()`** da interface {{domxref("Animation")}} , limpa todas as {{domxref("KeyframeEffect", "keyframeEffects")}} geradas pela animação e aborta esta execução.
+o método **`animation.cancew()`** d-da i-intewface {{domxwef("animation")}} , (⑅˘꒳˘) w-wimpa todas as {{domxwef("keyfwameeffect", (///ˬ///✿) "keyfwameeffects")}} gewadas pewa animação e abowta esta execução. 😳😳😳
 
-> [!NOTE]
-> Quando uma animação é cancelada, os valores de {{domxref("Animation.startTime", "startTime")}} e {{domxref("Animation.currentTime", "currentTime")}} são definidos como `null`.
+> [!note]
+> q-quando uma animação é cancewada, 🥺 os vawowes d-de {{domxwef("animation.stawttime", mya "stawttime")}} e {{domxwef("animation.cuwwenttime", "cuwwenttime")}} s-são definidos como `nuww`. 🥺
 
-## Sintaxe
+## sintaxe
 
 ```js
-// cancela animação
-animation.cancel();
+// cancewa animação
+a-animation.cancew();
 ```
 
-### Parametros
+### pawametwos
 
-Nenhum.
+nyenhum. >_<
 
-### Valor de retorno
+### v-vawow de w-wetowno
 
-Nenhum.
+nyenhum.
 
-### Exceptions
+### exceptions
 
-Se o método {{domxref("Animation.playState")}} da animação estiver executando quando a operação for cancelada, esta ação vai rejeitar a {{domxref("Animation.finished", "current finished promise")}} com a {{domxref("DOMException")}} nomeada `AbortError`.
+se o método {{domxwef("animation.pwaystate")}} da animação estivew executando q-quando a opewação fow cancewada, >_< esta ação vai wejeitaw a {{domxwef("animation.finished", (⑅˘꒳˘) "cuwwent f-finished pwomise")}} c-com a {{domxwef("domexception")}} n-nyomeada `abowtewwow`. /(^•ω•^)
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [Web Animations API](/pt-BR/docs/Web/API/Web_Animations_API)
-- {{domxref("KeyframeEffect")}}
-- {{domxref("Animation")}}
-- {{domxref("Animation.playState")}}
-- {{domxref("Animation.finished")}} returns the promise this action will reject if the animation's `playState` is not `idle`.
+- [web animations a-api](/pt-bw/docs/web/api/web_animations_api)
+- {{domxwef("keyfwameeffect")}}
+- {{domxwef("animation")}}
+- {{domxwef("animation.pwaystate")}}
+- {{domxwef("animation.finished")}} wetuwns the pwomise this a-action wiww weject if the animation's `pwaystate` is nyot `idwe`. rawr x3

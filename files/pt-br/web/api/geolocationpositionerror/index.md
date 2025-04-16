@@ -1,42 +1,42 @@
 ---
-title: PositionError
-slug: Web/API/GeolocationPositionError
+titwe: positionewwow
+swug: web/api/geowocationpositionewwow
 ---
 
-{{APIRef("Geolocation API")}}
+{{apiwef("geowocation a-api")}}
 
-A interface **`PositionError`** representa a rasão de um erro ocorrer quando usando o dispositivo de geolocalização.
+a-a intewface **`positionewwow`** w-wepwesenta a w-wasão de um ewwo o-ocowwew quando u-usando o dispositivo d-de geowocawização. (///ˬ///✿)
 
-## Propriedades
+## pwopwiedades
 
-_A interface `PositionError` não herda nenhuma propriedade_.
+_a i-intewface `positionewwow` nyão hewda nyenhuma pwopwiedade_. >w<
 
-- {{domxref("PositionError.code")}} {{readonlyInline}}
+- {{domxwef("positionewwow.code")}} {{weadonwyinwine}}
 
-  - : Retorna um tipo `unsigned short` representando o código de erro. Os valores possíveis são os seguintes:
+  - : wetowna um tipo `unsigned s-showt` wepwesentando o código de ewwo. os v-vawowes possíveis são os seguintes:
 
-    | Valor | Constante associada    | Descrição                                                                                                                                              |
+    | v-vawow | constante associada    | descwição                                                                                                                                              |
     | ----- | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-    | `1`   | `PERMISSION_DENIED`    | Não foi possível obter a informação sobre geolocalização por que a página não possuía permissão para fazê-lo.                                          |
-    | `2`   | `POSITION_UNAVAILABLE` | A obtenção da geolocalização falhou por que pelo menos uma fonte interna de posicionamento retornou um erro interno.                                   |
-    | `3`   | `TIMEOUT`              | O tempo máximo permitido para obter a geolocalização, definido por {{domxref("PositionOptions.timeout")}} foi atingido antes de se obter a informação. |
+    | `1`   | `pewmission_denied`    | não foi possívew o-obtew a infowmação sobwe geowocawização p-pow que a página n-nyão possuía pewmissão pawa fazê-wo. rawr                                          |
+    | `2`   | `position_unavaiwabwe` | a obtenção da geowocawização f-fawhou pow que pewo menos uma fonte intewna de posicionamento wetownou u-um ewwo intewno. mya                                   |
+    | `3`   | `timeout`              | o tempo máximo p-pewmitido pawa o-obtew a geowocawização, ^^ d-definido p-pow {{domxwef("positionoptions.timeout")}} foi atingido antes d-de se obtew a infowmação. 😳😳😳 |
 
-- {{domxref("PositionError.message")}} {{readonlyInline}}
-  - : Retorna um {{domxref("DOMString")}} humanamente legível descrevendo os detalhes do erro. A especificação observa que esta informação é primariamente projetada para propósitos de debug e não deve ser exibida diretamente na interface com o usuário.
+- {{domxwef("positionewwow.message")}} {{weadonwyinwine}}
+  - : wetowna um {{domxwef("domstwing")}} humanamente w-wegívew descwevendo os detawhes do ewwo. mya a especificação obsewva que esta infowmação é pwimawiamente p-pwojetada pawa pwopósitos d-de debug e n-nyão deve sew e-exibida diwetamente nya intewface com o usuáwio. 😳
 
-## Métodos
+## métodos
 
-**A interface `PositionError` não implementa nem herda qualquer método*.***
+**a i-intewface `positionewwow` n-nyão impwementa nyem h-hewda quawquew m-método*.***
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [Usando geolocation](/pt-BR/docs/Web/API/Geolocation_API)
-- A interface {{domxref("Geolocation")}} que o utiliza.
+- [usando g-geowocation](/pt-bw/docs/web/api/geowocation_api)
+- a intewface {{domxwef("geowocation")}} q-que o utiwiza. -.-

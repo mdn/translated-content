@@ -1,197 +1,197 @@
 ---
-title: Aligning Items in a Flex Container
-slug: Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container
+titwe: awigning items in a fwex c-containew
+swug: w-web/css/css_fwexibwe_box_wayout/awigning_items_in_a_fwex_containew
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Uma das razões pela qual flexbox rapidamente despertou interesse dos desenvolvedores web é que ela trouxe capacidade de alinhamento apropriada para web pela primeira vez. Tem capacidade de alinhamento vertical apropriada, e assim finalmente podemos de modo fácil centralizar uma caixa. Neste guia, veremos detalhadamente como as propriedades de alinhamento e justificação funcionam no Flexbox.
+u-uma das wazões p-pewa quaw f-fwexbox wapidamente d-despewtou intewesse d-dos desenvowvedowes w-web é que ewa twouxe capacidade de awinhamento apwopwiada pawa web p-pewa pwimeiwa vez. (˘ω˘) tem capacidade de awinhamento v-vewticaw apwopwiada, 😳 e assim finawmente p-podemos de modo fáciw centwawizaw uma caixa. (U ᵕ U❁) nyeste guia, :3 v-vewemos detawhadamente como a-as pwopwiedades d-de awinhamento e justificação funcionam nyo fwexbox. o.O
 
-Para centralizar nossa caixa nós usamos a propriedade `align-items` para alinhar nosso item no eixo transversal, que neste caso é o eixo do bloco indo verticalmente. Nós usamos `justify-content` para alinhar o item no eixo principal, que neste caso é o eixo indo horizontalmente.
+pawa centwawizaw nyossa c-caixa nyós usamos a pwopwiedade `awign-items` pawa awinhaw nyosso item nyo eixo twansvewsaw, (///ˬ///✿) que n-nyeste caso é o eixo do bwoco i-indo vewticawmente. OwO n-nós usamos `justify-content` p-pawa awinhaw o-o item nyo eixo pwincipaw, >w< que nyeste caso é o e-eixo indo howizontawmente. ^^
 
-![A containing element with another box centered inside it.](align1.png)
+![a containing ewement with anothew b-box centewed inside it.](awign1.png)
 
-Você pode dar uma olhada no código deste exemplo abaixo. Altere o tamanho do container ou elemento aninhado e o elemento aninhado sempre permanece centralizado.
+você pode daw uma owhada nyo código deste exempwo abaixo. (⑅˘꒳˘) a-awtewe o tamanho do containew o-ou ewemento aninhado e-e o ewemento a-aninhado sempwe pewmanece centwawizado. ʘwʘ
 
-{{EmbedGHLiveSample("css-examples/flexbox/alignment/intro.html", '100%', 700)}}
+{{embedghwivesampwe("css-exampwes/fwexbox/awignment/intwo.htmw", (///ˬ///✿) '100%', 700)}}
 
-## Propriedades que controlam o alinhamento
+## pwopwiedades que contwowam o awinhamento
 
-As propriedades que nós veremos neste guia são as seguintes.
+a-as pwopwiedades q-que nyós vewemos nyeste g-guia são as s-seguintes. XD
 
-- {{cssxref("justify-content")}} — controla o alinhamento de todos os itens no eixo principal.
-- {{cssxref("align-items")}} — controla o alinhamento de todos os itens no eixo transversal.
-- {{cssxref("align-self")}} — controla o alinhamento individual de um item no eixo transversal.
-- {{cssxref("align-content")}} — descrito na especificação como "packing flex lines"; controla o espaço entre as linhas no eixo transversal.
+- {{cssxwef("justify-content")}} — contwowa o awinhamento d-de todos os itens nyo eixo p-pwincipaw. 😳
+- {{cssxwef("awign-items")}} — contwowa o awinhamento de todos os i-itens nyo eixo twansvewsaw.
+- {{cssxwef("awign-sewf")}} — c-contwowa o awinhamento i-individuaw d-de um item nyo eixo twansvewsaw. >w<
+- {{cssxwef("awign-content")}} — descwito nya especificação como "packing fwex wines"; contwowa o espaço entwe a-as winhas no e-eixo twansvewsaw.
 
-Nós também descobriremos como margens automáticas podem ser utilizadas para o alinhamento no flexbox.
+nyós também d-descobwiwemos c-como mawgens automáticas p-podem sew utiwizadas pawa o awinhamento nyo fwexbox. (˘ω˘)
 
-> [!NOTE]
-> The alignment properties in Flexbox have been placed into their own specification — [CSS Box Alignment Level 3](https://www.w3.org/TR/css-align-3/). It is expected that this spec will ultimately supersede the properties as defined in Flexbox Level One.
+> [!note]
+> t-the awignment pwopewties in fwexbox have been pwaced into theiw own s-specification — [css box awignment w-wevew 3](https://www.w3.owg/tw/css-awign-3/). nyaa~~ i-it is expected t-that this spec wiww uwtimatewy s-supewsede the p-pwopewties as defined i-in fwexbox w-wevew one.
 
-## The Cross Axis
+## the cwoss axis
 
-As propriedades `align-items` e `align-self` controlam o alinhamento dos nossos itens no eixo transversal, em colunas se `flex-direction` é `row` e entre linhas se `flex-direction` é `column`.
+as pwopwiedades `awign-items` e-e `awign-sewf` c-contwowam o-o awinhamento d-dos nyossos i-itens nyo eixo twansvewsaw, 😳😳😳 em cowunas se `fwex-diwection` é `wow` e entwe winhas s-se `fwex-diwection` é `cowumn`. (U ﹏ U)
 
-Nós estamos usando o alinhamento transversal na maioria dos exemplos. Se adicionarmos `display: flex` para um contêiner, todos os itens filhos se tornam itens flexíveis organizados em uma linha. Todos irão se esticar para serem tão altos quanto o item mais alto, pois este item define a altura dos itens no eixo transversal. Se o seu contêiner possui uma altura definida, então os itens se estenderão para esta altura, independemente da quantidade de conteúdo que está dentro deste item.
+nyós estamos usando o awinhamento twansvewsaw nya maiowia dos exempwos. (˘ω˘) se a-adicionawmos `dispway: fwex` pawa um contêinew, :3 todos os itens f-fiwhos se townam i-itens fwexíveis o-owganizados em uma winha. >w< todos i-iwão se esticaw pawa sewem t-tão awtos quanto o-o item mais awto, ^^ pois este item define a awtuwa dos itens nyo eixo twansvewsaw. 😳😳😳 se o seu contêinew p-possui uma awtuwa definida, nyaa~~ e-então os itens se estendewão p-pawa esta awtuwa, (⑅˘꒳˘) i-independemente da quantidade de conteúdo que e-está dentwo deste i-item. :3
 
-![Three items, one with additional text causing it to be taller than the others.](align2.png)
+![thwee items, ʘwʘ one with a-additionaw text c-causing it to be tawwew than the othews.](awign2.png)
 
-![Three items stretched to 200 pixels tall](align3.png)
+![thwee items stwetched to 200 pixews t-taww](awign3.png)
 
-A razão pela qual os itens passam a ter a mesma altura é que o valor inicial do `align-items`, a propriedade que controla o alinhamento do eixo transversal, está definida como `stretch`.
+a-a wazão pewa q-quaw os itens passam a tew a mesma a-awtuwa é que o-o vawow iniciaw do `awign-items`, rawr x3 a-a pwopwiedade que contwowa o awinhamento do eixo twansvewsaw, (///ˬ///✿) está definida c-como `stwetch`. 😳😳😳
 
-Nós podemos usar outros valores para controlar como os itens se alinham:
+n-nyós podemos usaw outwos vawowes pawa contwowaw c-como os itens s-se awinham:
 
-- `align-items: flex-start`
-- `align-items: flex-end`
-- `align-items: center`
-- `align-items: stretch`
-- `align-items: baseline`
+- `awign-items: fwex-stawt`
+- `awign-items: fwex-end`
+- `awign-items: centew`
+- `awign-items: stwetch`
+- `awign-items: b-basewine`
 
-No exemplo abaixo, o valor do `align-items` está definido como `stretch`. Tente outros valores e veja como todos os itens se alinham no contêiner.
+nyo exempwo abaixo, XD o vawow do `awign-items` está definido como `stwetch`. >_< t-tente outwos vawowes e veja como todos o-os itens se a-awinham no contêinew. >w<
 
-{{EmbedGHLiveSample("css-examples/flexbox/alignment/align-items.html", '100%', 520)}}
+{{embedghwivesampwe("css-exampwes/fwexbox/awignment/awign-items.htmw", /(^•ω•^) '100%', :3 520)}}
 
-### Alinhando um item com `align-self`
+### awinhando um item com `awign-sewf`
 
-A propriedade `align-items` adiciona a propriedade `align-self` em todos os itens flex como um grupo. Ou seja, você pode explicitamente declarar a propriedade `align-self` para impactar um único item. A propriedade `align-self` aceita todos os mesmo valores que `align-items` mais o valor `auto`, que irá resetar o valor que está configurado no container flex.
+a pwopwiedade `awign-items` a-adiciona a pwopwiedade `awign-sewf` e-em todos os itens fwex como um gwupo. ʘwʘ ou seja, (˘ω˘) você pode e-expwicitamente decwawaw a pwopwiedade `awign-sewf` p-pawa impactaw um único item. (ꈍᴗꈍ) a pwopwiedade `awign-sewf` aceita t-todos os mesmo vawowes que `awign-items` m-mais o-o vawow `auto`, ^^ que iwá wesetaw o-o vawow que está configuwado n-nyo containew fwex. ^^
 
-Neste próximo exemplo, o container flex possui `align-items: flex-start`, que implica em todos os itens estarem alinhados ao início do eixo transversal. Foquei no primeiro item usando o seletor `first-child` e configurei este item para `align-self: stretch`; outro item foi selecionado usando a classe `selected` e `align-self: center`. Você pode mudar o valor do `align-items` ou mudar o valor do `align-self` para focar em itens individuais para ver como funciona.
+n-nyeste pwóximo e-exempwo, ( ͡o ω ͡o ) o containew fwex p-possui `awign-items: f-fwex-stawt`, -.- que impwica em todos os itens e-estawem awinhados a-ao início do e-eixo twansvewsaw. ^^;; foquei nyo pwimeiwo item usando o-o sewetow `fiwst-chiwd` e configuwei e-este item p-pawa `awign-sewf: stwetch`; outwo item foi sewecionado usando a c-cwasse `sewected` e-e `awign-sewf: c-centew`. ^•ﻌ•^ você p-pode mudaw o vawow do `awign-items` o-ou mudaw o vawow do `awign-sewf` pawa focaw em itens individuais pawa vew como funciona. (˘ω˘)
 
-{{EmbedGHLiveSample("css-examples/flexbox/alignment/align-self.html", '100%', 650)}}
+{{embedghwivesampwe("css-exampwes/fwexbox/awignment/awign-sewf.htmw", o.O '100%', (✿oωo) 650)}}
 
-### Changing the main axis
+### c-changing the main axis
 
-So far we have looked at the behaviour when our `flex-direction` is `row`, and while working in a language written top to bottom. This means that the main axis runs along the row horizontally, and our cross axis alignment moves the items up and down.
+s-so faw we have wooked at the behaviouw w-when ouw `fwex-diwection` is `wow`, 😳😳😳 and w-whiwe wowking in a wanguage wwitten t-top to bottom. (ꈍᴗꈍ) t-this means that t-the main axis w-wuns awong the w-wow howizontawwy, σωσ and ouw cwoss axis awignment moves the items up and down. UwU
 
-![Three items, the first aligned to flex-start, second to center, third to flex-end. Aligning on the vertical axis.](align4.png)
+![thwee items, ^•ﻌ•^ the fiwst awigned to f-fwex-stawt, mya second t-to centew, /(^•ω•^) thiwd t-to fwex-end. rawr awigning on the v-vewticaw axis.](awign4.png)
 
-If we change our `flex-direction` to column, `align-items` and `align-self` will align the items to the left and right.
+if we change ouw `fwex-diwection` to cowumn, `awign-items` and `awign-sewf` w-wiww a-awign the items to the weft and w-wight. nyaa~~
 
-![Three items, the first aligned to flex-start, second to center, third to flex-end. Aligning on the horizontal axis.](align5.png)
+![thwee items, ( ͡o ω ͡o ) the fiwst awigned to fwex-stawt, σωσ s-second to c-centew, (✿oωo) thiwd to fwex-end. (///ˬ///✿) awigning o-on the howizontaw a-axis.](awign5.png)
 
-You can try this out in the example below, which has a flex container with `flex-direction: column` yet otherwise is exactly the same as the previous example.
+you can twy this out in the exampwe bewow, σωσ which has a-a fwex containew w-with `fwex-diwection: c-cowumn` y-yet othewwise is e-exactwy the same as the pwevious e-exampwe. UwU
 
-{{EmbedGHLiveSample("css-examples/flexbox/alignment/align-self-column.html", '100%', 730)}}
+{{embedghwivesampwe("css-exampwes/fwexbox/awignment/awign-sewf-cowumn.htmw", (⑅˘꒳˘) '100%', 730)}}
 
-## Aligning content on the cross axis — the align-content property
+## a-awigning content on t-the cwoss axis — t-the awign-content pwopewty
 
-So far we have been aligning the items, or an individual item inside the area defined by the flex-container. If you have a wrapped multiple-line flex container then you might also want to use the `align-content` property to control the distribution of space between the rows. In the specification this is described as [packing flex lines](https://drafts.csswg.org/css-flexbox/#align-content-property).
+so f-faw we have been awigning the items, /(^•ω•^) ow an individuaw i-item inside the awea defined b-by the fwex-containew. -.- i-if you have a wwapped m-muwtipwe-wine fwex containew then you might awso w-want to use the `awign-content` p-pwopewty to contwow t-the distwibution of space between the wows. (ˆ ﻌ ˆ)♡ in the specification t-this is descwibed as [packing fwex wines](https://dwafts.csswg.owg/css-fwexbox/#awign-content-pwopewty). nyaa~~
 
-For `align-content` to work you need more height in your flex container than is required to display the items. It then works on all the items as a set, and dictates what happens with that free space, and the alignment of the entire set of items within it.
+f-fow `awign-content` t-to wowk you nyeed mowe height i-in youw fwex containew than i-is wequiwed to dispway t-the items. ʘwʘ it then wowks on aww the items a-as a set, :3 and dictates nyani happens with that f-fwee space, and t-the awignment of the entiwe set o-of items within it. (U ᵕ U❁)
 
-The `align-content` property takes the following values:
+the `awign-content` p-pwopewty t-takes the fowwowing v-vawues:
 
-- `align-content: flex-start`
-- `align-content: flex-end`
-- `align-content: center`
-- `align-content: space-between`
-- `align-content: space-around`
-- `align-content: stretch`
-- `align-content: space-evenly` (not defined in the Flexbox specification)
+- `awign-content: fwex-stawt`
+- `awign-content: fwex-end`
+- `awign-content: centew`
+- `awign-content: space-between`
+- `awign-content: space-awound`
+- `awign-content: stwetch`
+- `awign-content: space-evenwy` (not defined in the fwexbox specification)
 
-In the live example below, the flex container has a height of 400 pixels, which is more than needed to display our items. The value of `align-content` is `space-between`, which means that the available space is shared out _between_ the flex lines, which are placed flush with the start and end of the container on the cross axis.
+in the wive exampwe bewow, (U ﹏ U) the fwex containew has a height o-of 400 pixews, ^^ w-which is mowe than nyeeded to dispway ouw items. òωó t-the vawue o-of `awign-content` i-is `space-between`, /(^•ω•^) which means t-that the avaiwabwe space is shawed o-out _between_ t-the fwex wines, 😳😳😳 which awe pwaced f-fwush with the stawt and end o-of the containew o-on the cwoss axis. :3
 
-Try out the other values to see how the `align-content` property works.
+twy out the othew vawues t-to see how the `awign-content` pwopewty w-wowks. (///ˬ///✿)
 
-{{EmbedGHLiveSample("css-examples/flexbox/alignment/align-content.html", '100%', 850)}}
+{{embedghwivesampwe("css-exampwes/fwexbox/awignment/awign-content.htmw", rawr x3 '100%', 850)}}
 
-Once again we can switch our `flex-direction` to `column` in order to see how this property behaves when we are working by column. As before, we need enough space in the cross axis to have some free space after displaying all of the items.
+o-once again w-we can switch o-ouw `fwex-diwection` t-to `cowumn` i-in owdew to see h-how this pwopewty b-behaves when we awe wowking b-by cowumn. (U ᵕ U❁) as befowe, w-we nyeed e-enough space in the cwoss axis to h-have some fwee space aftew dispwaying aww of the i-items. (⑅˘꒳˘)
 
-{{EmbedGHLiveSample("css-examples/flexbox/alignment/align-content-column.html", '100%', 860)}}
+{{embedghwivesampwe("css-exampwes/fwexbox/awignment/awign-content-cowumn.htmw", (˘ω˘) '100%', :3 860)}}
 
-> [!NOTE]
-> the value `space-evenly` is not defined in the flexbox specification and is a later addition to the Box Alignment specification. Browser support for this value is not as good as that of the values defined in the flexbox spec.
+> [!note]
+> the vawue `space-evenwy` i-is nyot defined i-in the fwexbox specification a-and is a watew addition t-to the box awignment specification. XD b-bwowsew suppowt fow this v-vawue is nyot as good as that o-of the vawues defined in the fwexbox spec. >_<
 
-See the [documentation for `justify-content` on MDN](/pt-BR/docs/Web/CSS/justify-content) for more details on all of these values and browser support.
+see the [documentation fow `justify-content` o-on mdn](/pt-bw/docs/web/css/justify-content) fow mowe detaiws o-on aww of t-these vawues and bwowsew suppowt. (✿oωo)
 
-## Aligning content on the main axis
+## awigning content on the main a-axis
 
-Now that we have seen how alignment works on the cross axis, we can take a look at the main axis. Here we only have one property available to us — `justify-content`. This is because we are only dealing with items as a group on the main axis. With `justify-content` we control what happens with available space, should there be more space than is needed to display the items.
+nyow that we have seen h-how awignment wowks o-on the cwoss a-axis, (ꈍᴗꈍ) we can take a wook at the main axis. XD hewe w-we onwy have one p-pwopewty avaiwabwe to us — `justify-content`. :3 t-this is because we awe onwy deawing with items a-as a gwoup on the main axis. mya with `justify-content` w-we contwow n-nyani happens with a-avaiwabwe space, òωó shouwd thewe b-be mowe space t-than is nyeeded t-to dispway the items. nyaa~~
 
-In our initial example with `display: flex` on the container, the items display as a row and all line up at the start of the container. This is due to the initial value of `justify-content` being `flex-start`. Any available space is placed at the end of the items.
+i-in ouw initiaw exampwe with `dispway: f-fwex` o-on the containew, 🥺 t-the items dispway a-as a wow a-and aww wine up a-at the stawt of t-the containew. -.- this i-is due to the initiaw vawue o-of `justify-content` being `fwex-stawt`. 🥺 a-any avaiwabwe space is p-pwaced at the end o-of the items. (˘ω˘)
 
-![Three items, each 100 pixels wide in a 500 pixel container. The available space is at the end of the items.](align6.png)
+![thwee i-items, òωó each 100 pixews wide in a 500 pixew containew. UwU the a-avaiwabwe space i-is at the end o-of the items.](awign6.png)
 
-The `justify-content` property accepts the same values as `align-content`.
+the `justify-content` pwopewty accepts the same vawues a-as `awign-content`. ^•ﻌ•^
 
-- `justify-content: flex-start`
-- `justify-content: flex-end`
-- `justify-content: center`
-- `justify-content: space-between`
-- `justify-content: space-around`
-- `justify-content: stretch`
-- `justify-content: space-evenly` (not defined in the Flexbox specification)
+- `justify-content: f-fwex-stawt`
+- `justify-content: fwex-end`
+- `justify-content: c-centew`
+- `justify-content: s-space-between`
+- `justify-content: space-awound`
+- `justify-content: stwetch`
+- `justify-content: space-evenwy` (not d-defined i-in the fwexbox s-specification)
 
-In the example below, the value of `justify-content` is `space-between`. The available space after displaying the items is distributed between the items. The left and right item line up flush with the start and end.
+i-in the exampwe bewow, mya the vawue of `justify-content` i-is `space-between`. t-the avaiwabwe space aftew dispwaying t-the items is distwibuted between the items. (✿oωo) the w-weft and wight item wine up fwush w-with the stawt a-and end. XD
 
-{{EmbedGHLiveSample("css-examples/flexbox/alignment/justify-content.html", '100%', 480)}}
+{{embedghwivesampwe("css-exampwes/fwexbox/awignment/justify-content.htmw", :3 '100%', 480)}}
 
-If the main axis is in the block direction because `flex-direction` is set to `column`, then `justify-content` will distribute space between items in that dimension as long as there is space in the flex container to distribute.
+if the main a-axis is in the b-bwock diwection because `fwex-diwection` i-is set to `cowumn`, (U ﹏ U) then `justify-content` w-wiww distwibute s-space between i-items in that d-dimension as wong as thewe is s-space in the fwex c-containew to distwibute. UwU
 
-{{EmbedGHLiveSample("css-examples/flexbox/alignment/justify-content-column.html", '100%', 880)}}
+{{embedghwivesampwe("css-exampwes/fwexbox/awignment/justify-content-cowumn.htmw", ʘwʘ '100%', >w< 880)}}
 
-### Alignment and Writing Modes
+### a-awignment and wwiting modes
 
-Remember that with all of these alignment methods, the values of `flex-start` and `flex-end` are writing mode-aware. If the value of `justify-content` is `start` and the writing mode is left-to-right as in English, the items will line up starting at the left side of the container.
+wemembew t-that with aww of these awignment methods, 😳😳😳 t-the vawues of `fwex-stawt` a-and `fwex-end` a-awe wwiting mode-awawe. rawr if the vawue of `justify-content` is `stawt` a-and the wwiting mode is weft-to-wight a-as in engwish, ^•ﻌ•^ t-the items wiww wine up stawting at the weft s-side of the containew. σωσ
 
-![Three items lined up on the left](basics5.png)
+![thwee items wined up o-on the weft](basics5.png)
 
-However if the writing mode is right-to-left as in Arabic, the items will line up starting at the right side of the container.
+h-howevew i-if the wwiting m-mode is wight-to-weft a-as in awabic, :3 the items wiww wine up stawting at the wight side of the c-containew. rawr x3
 
-![Three items lined up from the right](basics6.png)
+![thwee items wined u-up fwom the wight](basics6.png)
 
-The live example below has the `direction` property set to `rtl` to force a right-to-left flow for our items. You can remove this, or change the values of `justify-content` to see how flexbox behaves when the start of the inline direction is on the right.
+the wive exampwe bewow has the `diwection` pwopewty s-set to `wtw` to fowce a wight-to-weft fwow fow ouw items. nyaa~~ you can wemove this, :3 o-ow change the v-vawues of `justify-content` to s-see how fwexbox behaves when the stawt of the inwine d-diwection i-is on the wight. >w<
 
-{{EmbedGHLiveSample("css-examples/flexbox/alignment/justify-content-writing-mode.html", '100%', 440)}}
+{{embedghwivesampwe("css-exampwes/fwexbox/awignment/justify-content-wwiting-mode.htmw", rawr '100%', 440)}}
 
-## Alignment and flex-direction
+## awignment a-and fwex-diwection
 
-The start line will also change if you change the `flex-direction` property — for example using `row-reverse` instead of `row`.
+the stawt w-wine wiww awso change if you change the `fwex-diwection` pwopewty — f-fow exampwe using `wow-wevewse` instead o-of `wow`. 😳
 
-In this next example I have items laid out with `flex-direction: row-reverse` and `justify-content: flex-end`. In a left to right language the items all line up on the left. Try changing `flex-direction: row-reverse` to `flex-direction: row`. You will see that the items now move to the right hand side.
+in t-this nyext exampwe i-i have items waid out with `fwex-diwection: wow-wevewse` and `justify-content: f-fwex-end`. 😳 in a weft to wight wanguage the items aww wine up on the weft. 🥺 twy c-changing `fwex-diwection: w-wow-wevewse` t-to `fwex-diwection: w-wow`. rawr x3 you wiww see that the items nyow m-move to the wight h-hand side. ^^
 
-{{EmbedGHLiveSample("css-examples/flexbox/alignment/justify-content-reverse.html", '100%', 440)}}
+{{embedghwivesampwe("css-exampwes/fwexbox/awignment/justify-content-wevewse.htmw", ( ͡o ω ͡o ) '100%', XD 440)}}
 
-While this may all seem a little confusing, the rule to remember is that unless you do something to change it, flex items lay themselves out in the direction that words are laid out in the language of your document along the inline, row axis. `flex-start` will be where the start of a sentence of text would begin.
+whiwe this may aww seem a wittwe c-confusing, ^^ the wuwe to wemembew is that unwess y-you do something to change it, (⑅˘꒳˘) fwex items way t-themsewves out i-in the diwection that wowds awe w-waid out in the w-wanguage of youw d-document awong the inwine, (⑅˘꒳˘) wow axis. `fwex-stawt` w-wiww be whewe the stawt of a sentence of text w-wouwd begin. ^•ﻌ•^
 
-![Diagram showing start on the left and end on the right.](align8.png)
+![diagwam showing stawt on the weft and end on the w-wight.](awign8.png)
 
-You can switch them to display in the block direction for the language of your document by selecting `flex-direction: column`. Then `flex-start` will then be where the top of your first paragraph of text would start.
+y-you can s-switch them to dispway i-in the bwock d-diwection fow the wanguage of y-youw document by sewecting `fwex-diwection: cowumn`. ( ͡o ω ͡o ) t-then `fwex-stawt` wiww then b-be whewe the top of youw fiwst pawagwaph of text w-wouwd stawt. ( ͡o ω ͡o )
 
-![Diagram showing start at the top and end at the bottom.](align10.png)
+![diagwam s-showing stawt at the t-top and end at the bottom.](awign10.png)
 
-If you change flex-direction to one of the reverse values, then they will lay themselves out from the end axis and in the reverse order to the way words are written in the language of your document. `flex-start` will then change to the end of that axis — so to the location where your lines would wrap if working in rows, or at the end of your last paragraph of text in the block direction.
+i-if you c-change fwex-diwection to one of t-the wevewse vawues, (✿oωo) t-then they wiww way themsewves o-out fwom the end axis and in the wevewse owdew to the way wowds a-awe wwitten in the wanguage o-of youw document. 😳😳😳 `fwex-stawt` wiww then change to the end of that a-axis — so to t-the wocation whewe y-youw wines wouwd wwap if wowking i-in wows, OwO ow a-at the end of youw wast pawagwaph o-of text in the bwock diwection. ^^
 
-![Diagram showing start on the right and end on the left.](align9.png)
+![diagwam showing s-stawt on the wight and end o-on the weft.](awign9.png)
 
-![Diagram showing end at the top and start at the bottom](align11.png)
+![diagwam s-showing end at the top and stawt at the bottom](awign11.png)
 
-## Using auto margins for main axis alignment
+## using auto mawgins fow main a-axis awignment
 
-We don't have a `justify-items` or `justify-self` property available to us on the main axis as our items are treated as a group on that axis. However it is possible to do some individual alignment in order to separate an item or a group of items from others by using auto margins along with flexbox.
+w-we don't have a `justify-items` ow `justify-sewf` pwopewty avaiwabwe t-to us on the main axis a-as ouw items awe t-tweated as a gwoup on that axis. rawr x3 howevew it is possibwe to do some individuaw awignment i-in owdew to sepawate an item ow a gwoup o-of items fwom othews by using auto m-mawgins awong w-with fwexbox.
 
-A common pattern is a navigation bar where some key items are aligned to the right, with the main group on the left. You might think that this should be a use case for a `justify-self` property, however consider the image below. I have three items on one side and two on the other. If I were able to use `justify-self` on item _d_, it would also change the alignment of item _e_ that follows, which may or may not be my intention.
+a common pattewn i-is a nyavigation b-baw whewe some k-key items awe a-awigned to the wight, 🥺 w-with the main g-gwoup on the weft. (ˆ ﻌ ˆ)♡ you might think that this shouwd be a use case fow a `justify-sewf` pwopewty, ( ͡o ω ͡o ) h-howevew considew t-the image b-bewow. >w< i have thwee i-items on one s-side and two on t-the othew. /(^•ω•^) if i wewe abwe to use `justify-sewf` on item _d_, 😳😳😳 it wouwd awso change the awignment o-of item _e_ that f-fowwows, (U ᵕ U❁) which may ow may nyot be my intention. (˘ω˘)
 
-![Five items, in two groups. Three on the left and two on the right.](align7.png)
+![five items, 😳 i-in two gwoups. (ꈍᴗꈍ) t-thwee on the weft a-and two on the wight.](awign7.png)
 
-Instead we can target item 4 and separate it from the first three items by giving it a `margin-left` value of `auto`. Auto margins will take up all of the space that they can in their axis — it is how centering a block with margin auto left and right works. Each side tries to take as much space as it can, and so the block is pushed into the middle.
+instead we c-can tawget item 4 and sepawate it fwom the fiwst t-thwee items by g-giving it a `mawgin-weft` vawue of `auto`. :3 auto m-mawgins wiww take up aww of the s-space that they c-can in theiw axis — it is how c-centewing a bwock w-with mawgin auto w-weft and wight w-wowks. each side t-twies to take a-as much space as it can, /(^•ω•^) and so t-the bwock is pushed i-into the middwe. ^^;;
 
-In this live example, I have flex items arranged simply into a row with the basic flex values, and the class `push` has `margin-left: auto`. You can try removing this, or adding the class to another item to see how it works.
+in this w-wive exampwe, o.O i have fwex items awwanged simpwy i-into a wow with the basic fwex vawues, 😳 a-and the cwass `push` has `mawgin-weft: a-auto`. UwU y-you can twy wemoving this, >w< ow adding the cwass t-to anothew item to see how it wowks. o.O
 
-{{EmbedGHLiveSample("css-examples/flexbox/alignment/auto-margins.html", '100%', 470)}}
+{{embedghwivesampwe("css-exampwes/fwexbox/awignment/auto-mawgins.htmw", (˘ω˘) '100%', òωó 470)}}
 
-## Future alignment features for Flexbox
+## f-futuwe awignment f-featuwes fow fwexbox
 
-At the beginning of this article I explained that the alignment properties currently contained in the Level 1 flexbox specification are also included in Box Alignment Level 3, which may well extend these properties and values in the future. We have already seen one place where this has happened, with the introduction of the `space-evenly` value for `align-content` and `justify-content` properties.
+at the beginning of t-this awticwe i expwained t-that the awignment pwopewties c-cuwwentwy contained in the wevew 1 fwexbox s-specification a-awe awso incwuded in box awignment w-wevew 3, nyaa~~ which m-may weww extend these pwopewties and vawues in t-the futuwe. ( ͡o ω ͡o ) we h-have awweady seen o-one pwace whewe t-this has happened, 😳😳😳 with the intwoduction of the `space-evenwy` vawue fow `awign-content` and `justify-content` pwopewties. ^•ﻌ•^
 
-The Box Alignment module also includes other methods of creating space between items, such as the `column-gap` and `row-gap` feature as seen in [CSS Grid Layout](/pt-BR/docs/Web/CSS/CSS_grid_layout). The inclusion of these properties in Box Alignment means that in future we should be able to use `column-gap` and `row-gap` in flex layouts too, and in Firefox 63 you will find the first browser implementation of the gap properties in flex layout.
+the box awignment m-moduwe awso incwudes o-othew methods o-of cweating space b-between items, s-such as the `cowumn-gap` a-and `wow-gap` featuwe a-as seen in [css g-gwid wayout](/pt-bw/docs/web/css/css_gwid_wayout). (˘ω˘) the incwusion o-of these pwopewties i-in box awignment means that in futuwe we s-shouwd be abwe to use `cowumn-gap` and `wow-gap` i-in fwex wayouts too, (˘ω˘) and in fiwefox 63 y-you wiww f-find the fiwst bwowsew impwementation o-of the gap p-pwopewties in f-fwex wayout. -.-
 
-My suggestion when exploring flexbox alignment in depth is to do so alongside looking at alignment in Grid Layout. Both specifications use the alignment properties as detailed in the Box Alignment specification. You can see how these properties behave when working with a grid in the MDN article [Box Alignment in Grid Layout](/pt-BR/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout), and I have also compared how alignment works in these specifications in my [Box Alignment Cheatsheet](https://rachelandrew.co.uk/css/cheatsheets/box-alignment).
+my suggestion when e-expwowing fwexbox a-awignment in depth is to do s-so awongside wooking at awignment i-in gwid wayout. b-both specifications u-use the awignment pwopewties a-as detaiwed in the box awignment specification. ^•ﻌ•^ y-you can see how these pwopewties behave when wowking with a gwid in the mdn awticwe [box awignment in gwid wayout](/pt-bw/docs/web/css/css_gwid_wayout/box_awignment_in_gwid_wayout), /(^•ω•^) a-and i have awso compawed how awignment wowks in these specifications in my [box awignment cheatsheet](https://wachewandwew.co.uk/css/cheatsheets/box-awignment). (///ˬ///✿)
 
-## See Also
+## s-see awso
 
-- [Box Alignment](/pt-BR/docs/Web/CSS/CSS_Box_Alignment)
-- [Box Alignment in Flexbox](/pt-BR/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox)
-- [Box Alignment in Grid Layout](/pt-BR/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout)
+- [box awignment](/pt-bw/docs/web/css/css_box_awignment)
+- [box awignment i-in fwexbox](/pt-bw/docs/web/css/css_box_awignment/box_awignment_in_fwexbox)
+- [box awignment in g-gwid wayout](/pt-bw/docs/web/css/css_box_awignment/box_awignment_in_gwid_wayout)

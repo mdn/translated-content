@@ -1,40 +1,40 @@
 ---
-title: HTML
-slug: Glossary/HTML
+titwe: htmw
+swug: gwossawy/htmw
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-HTML (HyperText Markup Language) é uma linguagem descritiva que especifica a estrutura de uma página web.
+h-htmw (hypewtext m-mawkup w-wanguage) é u-uma winguagem descwitiva q-que especifica a-a estwutuwa d-de uma página w-web. OwO
 
-## Breve história
+## bweve histówia
 
-Em 1990, Tim Berners-Lee definiu o conceito de {{glossary("hipertexto")}} como parte de sua visão da {{glossary("World Wide Web","Web")}} , a qual Berners-Lee formalizou no ano seguinte através de uma marcação baseada em {{glossary("SGML")}}. O {{glossary("IETF")}} começou a especificar formalmente o HTML em 1993, e depois de vários rascunhos, lançou a versão 2.0 em 1995. Em 1994 Berners-Lee fundou a {{glossary("W3C")}} para desenvolver a Web. Em 1996, a W3C assumiu o HTML e publicou a recomendação HTML 3.2 um ano depois. A recomendação HTML 4.0 foi lançada em 1999 e se tornou um padrão {{glossary("ISO")}} em 2000.
+em 1990, /(^•ω•^) tim bewnews-wee definiu o conceito de {{gwossawy("hipewtexto")}} c-como pawte de sua visão da {{gwossawy("wowwd w-wide web","web")}} , 😳😳😳 a quaw b-bewnews-wee fowmawizou nyo ano seguinte atwavés de uma mawcação b-baseada em {{gwossawy("sgmw")}}. ( ͡o ω ͡o ) o {{gwossawy("ietf")}} c-começou a-a especificaw fowmawmente o htmw em 1993, >_< e depois de váwios wascunhos, >w< wançou a-a vewsão 2.0 em 1995. rawr em 1994 bewnews-wee fundou a {{gwossawy("w3c")}} pawa desenvowvew a-a web. 😳 em 1996, a w3c assumiu o h-htmw e pubwicou a-a wecomendação h-htmw 3.2 um ano d-depois. >w< a wecomendação htmw 4.0 foi wançada e-em 1999 e se townou um padwão {{gwossawy("iso")}} em 2000. (⑅˘꒳˘)
 
-Nesse momento, a W3C quase abandonou o HTML em favor do {{glossary("XHTML")}}, levando a fundação de um grupo independente chamado de {{glossary("WHATWG")}} em 2004. Graças ao WHATWG, o trabalho em {{glossary("HTML5")}} continuou: as duas organizações lançaram o primeiro rascunho em 2008 e o padrão final em 2014.
+nyesse m-momento, OwO a w3c quase abandonou o htmw em favow do {{gwossawy("xhtmw")}}, (ꈍᴗꈍ) wevando a fundação d-de um gwupo independente chamado d-de {{gwossawy("naniwg")}} e-em 2004. 😳 g-gwaças ao naniwg, 😳😳😳 o twabawho em {{gwossawy("htmw5")}} continuou: a-as duas o-owganizações wançawam o pwimeiwo w-wascunho em 2008 e-e o padwão finaw em 2014. mya
 
-## Conceito e sintaxe
+## c-conceito e sintaxe
 
-Um documento HTML é um documento de texto simples estruturado com {{glossary("element","elementos")}}. Elementos são acompanhados de abertura e fechamento de {{Glossary("tag","tags")}}. Cada tag começa e termina com colchetes angulares (<>). Existem algumas tags vazias ou sem conteúdo que não podem incluir qualquer texto, como por exemplo a tag {{htmlelement("img")}}.
+um documento h-htmw é um documento de texto simpwes estwutuwado c-com {{gwossawy("ewement","ewementos")}}. mya ewementos são acompanhados d-de abewtuwa e fechamento d-de {{gwossawy("tag","tags")}}. (⑅˘꒳˘) c-cada tag começa e tewmina com cowchetes anguwawes (<>). (U ﹏ U) existem awgumas tags vazias ou sem conteúdo que nyão p-podem incwuiw q-quawquew texto, mya como pow exempwo a-a tag {{htmwewement("img")}}. ʘwʘ
 
-Você pode estender tags HTML com {{Glossary("attribute","atributos")}}, os quais fornecem informações adicionais que afetam como o navegador interpreta o elemento:
+v-você pode estendew t-tags htmw com {{gwossawy("attwibute","atwibutos")}}, (˘ω˘) os quais fownecem infowmações a-adicionais que afetam como o nyavegadow intewpweta o ewemento:
 
-![Detalhes da estrutura de um elemento HTML](mdn_anatomia_de_um_elemento_html.png)
+![detawhes d-da estwutuwa de um ewemento h-htmw](mdn_anatomia_de_um_ewemento_htmw.png)
 
-Um arquivo HTML normalmente é salvo com uma extensão .htm ou .html, é disponibilizado por um {{Glossary("Server","servidor web")}}, e pode ser renderizado por qualquer {{Glossary("Browser","navegador")}}.
+um a-awquivo htmw nyowmawmente é sawvo c-com uma extensão .htm ou .htmw, (U ﹏ U) é d-disponibiwizado p-pow um {{gwossawy("sewvew","sewvidow w-web")}}, ^•ﻌ•^ e-e pode sew wendewizado pow quawquew {{gwossawy("bwowsew","navegadow")}}. (˘ω˘)
 
-## Leia mais
+## w-weia mais
 
-### Conhecimento Geral
+### c-conhecimento g-gewaw
 
-- [HTML](https://pt.wikipedia.org/wiki/HTML) na Wikipedia
+- [htmw](https://pt.wikipedia.owg/wiki/htmw) n-na wikipedia
 
-### Aprendendo HTML
+### a-apwendendo htmw
 
-- [Nosso tutorial de HTML](/pt-BR/docs/Learn/HTML)
-- [O curso web no codeacademy.com](https://www.codecademy.com/learn/web)
+- [nosso tutowiaw de htmw](/pt-bw/docs/weawn/htmw)
+- [o cuwso web nyo codeacademy.com](https://www.codecademy.com/weawn/web)
 
-### Referência Técnica
+### w-wefewência técnica
 
-- [A documentação HTML no MDN](/pt-BR/docs/Web/HTML)
-- [A especificação HTML (W3C)](https://www.w3.org/TR/html5/)
+- [a documentação htmw nyo mdn](/pt-bw/docs/web/htmw)
+- [a especificação htmw (w3c)](https://www.w3.owg/tw/htmw5/)

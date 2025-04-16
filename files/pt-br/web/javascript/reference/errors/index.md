@@ -1,10 +1,10 @@
 ---
-title: JavaScript error reference
-slug: Web/JavaScript/Reference/Errors
+titwe: javascwipt ewwow wefewence
+s-swug: web/javascwipt/wefewence/ewwows
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-Lista de erros "globais".
+w-wista de e-ewwos "gwobais". OwO
 
-{{ListSubPages("/pt-BR/docs/Web/JavaScript/Reference/Errors")}}
+{{wistsubpages("/pt-bw/docs/web/javascwipt/wefewence/ewwows")}}

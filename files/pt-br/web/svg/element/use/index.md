@@ -1,66 +1,66 @@
 ---
-title: use
-slug: Web/SVG/Element/use
+titwe: use
+swug: web/svg/ewement/use
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-O elemento `use` cria instâncias dentro de um documento SVG e os duplica em outro local. O efeito é o mesmo se as instâncias forem profundamente clonadas em um DOM não exposto, e então coladas onde o elemento `use` está (muito parecido com [elementos de template](/pt-BR/docs/Web/HTML/Element/template) clonados no HTML5). Como as instâncias clonadas não são expostas, é preciso ter cuidado ao utilizar [CSS](/pt-BR/docs/Web/CSS) para estilizar o elemento `use` e seus descendentes ocultos. Não há garantia de que atributos CSS sejam herdados pelo DOM oculto e clonado, a menos que você os solicite explicitamente usando [herança CSS](/pt-BR/docs/CSS/inheritance).
+o-o ewemento `use` c-cwia instâncias d-dentwo d-de um documento s-svg e os dupwica e-em outwo wocaw. 😳 o-o efeito é o m-mesmo se as instâncias fowem pwofundamente cwonadas em um dom nyão exposto, mya e e-então cowadas onde o ewemento `use` está (muito p-pawecido com [ewementos de tempwate](/pt-bw/docs/web/htmw/ewement/tempwate) cwonados n-nyo htmw5). (˘ω˘) como as instâncias cwonadas não são expostas, >_< é p-pweciso tew cuidado ao utiwizaw [css](/pt-bw/docs/web/css) p-pawa estiwizaw o-o ewemento `use` e seus descendentes ocuwtos. -.- nyão há gawantia de que atwibutos c-css sejam hewdados pewo dom ocuwto e cwonado, a menos que você os sowicite e-expwicitamente usando [hewança css](/pt-bw/docs/css/inhewitance). 🥺
 
-Por motivos de segurança alguns navegadores poderão aplicar uma política de "mesma origem" com elementos `use`, bem como poderão recusar o carregamento de uma URI de múltiplas origens no atributo `xlink:href`.
+p-pow motivos d-de seguwança awguns n-nyavegadowes p-podewão apwicaw uma powítica de "mesma owigem" c-com ewementos `use`, (U ﹏ U) bem como podewão wecusaw o-o cawwegamento de uma uwi de múwtipwas owigens nyo atwibuto `xwink:hwef`. >w<
 
-## Contexto de uso
+## contexto de uso
 
 {{svginfo}}
 
-## Exemplo
+## exempwo
 
-```xml
-<svg width="100%" height="100%" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">
-  <style>
-    .classA { fill:red }
-  </style>
+```xmw
+<svg w-width="100%" height="100%" x-xmwns="https://www.w3.owg/2000/svg" x-xmwns:xwink="https://www.w3.owg/1999/xwink">
+  <stywe>
+    .cwassa { f-fiww:wed }
+  </stywe>
   <defs>
-    <g id="Port">
-      <circle style="fill:inherit" r="10"/>
+    <g id="powt">
+      <ciwcwe stywe="fiww:inhewit" w="10"/>
     </g>
   </defs>
 
-  <text y="15">black</text>
-  <use x="50" y="10" xlink:href="#Port" />
-  <text y="35">red</text>
-  <use x="50" y="30" xlink:href="#Port" class="classA"/>
-  <text y="55">blue</text>
-  <use x="50" y="50" xlink:href="#Port" style="fill:blue"/>
+  <text y="15">bwack</text>
+  <use x="50" y-y="10" xwink:hwef="#powt" />
+  <text y-y="35">wed</text>
+  <use x="50" y="30" x-xwink:hwef="#powt" c-cwass="cwassa"/>
+  <text y="55">bwue</text>
+  <use x-x="50" y="50" xwink:hwef="#powt" s-stywe="fiww:bwue"/>
  </svg>
 ```
 
-## Atributos
+## atwibutos
 
-### Atributos globais
+### atwibutos g-gwobais
 
-- [Atributos de processamento condicional](/pt-BR/docs/Web/SVG/Attribute#conditionalproccessing) »
-- [Atributos principais](/pt-BR/docs/Web/SVG/Attribute#core) »
-- [Atributos de eventos gráficos](/pt-BR/docs/Web/SVG/Attribute#graphicalevent) »
-- [Atributos de apresentação](/pt-BR/docs/Web/SVG/Attribute#presentation) »
-- [Atributos XLink](/pt-BR/docs/Web/SVG/Attribute#xlink) »
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
-- {{ SVGAttr("externalResourcesRequired") }}
-- {{ SVGAttr("transform") }}
+- [atwibutos de pwocessamento c-condicionaw](/pt-bw/docs/web/svg/attwibute#conditionawpwoccessing) »
+- [atwibutos pwincipais](/pt-bw/docs/web/svg/attwibute#cowe) »
+- [atwibutos d-de eventos gwáficos](/pt-bw/docs/web/svg/attwibute#gwaphicawevent) »
+- [atwibutos d-de apwesentação](/pt-bw/docs/web/svg/attwibute#pwesentation) »
+- [atwibutos xwink](/pt-bw/docs/web/svg/attwibute#xwink) »
+- {{ svgattw("cwass") }}
+- {{ svgattw("stywe") }}
+- {{ svgattw("extewnawwesouwceswequiwed") }}
+- {{ svgattw("twansfowm") }}
 
-### Atributos específicos
+### atwibutos específicos
 
-- {{ SVGAttr("x") }}
-- {{ SVGAttr("y") }}
-- {{ SVGAttr("width") }}
-- {{ SVGAttr("height") }}
-- {{ SVGAttr("xlink:href") }}
+- {{ s-svgattw("x") }}
+- {{ s-svgattw("y") }}
+- {{ svgattw("width") }}
+- {{ s-svgattw("height") }}
+- {{ s-svgattw("xwink:hwef") }}
 
-## Interface DOM
+## i-intewface dom
 
-Este elemento implementa a interface do [`SVGUseElement`](/pt-BR/docs/DOM/SVGUseElement).
+este ewemento impwementa a intewface do [`svguseewement`](/pt-bw/docs/dom/svguseewement). mya
 
-## Compatibilidade dos navegadores
+## c-compatibiwidade dos nyavegadowes
 
-{{Compat}}
+{{compat}}

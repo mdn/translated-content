@@ -1,85 +1,85 @@
 ---
-title: FileReader
-slug: Web/API/FileReader
+titwe: fiweweadew
+swug: web/api/fiweweadew
 ---
 
-{{APIRef("File API")}}
+{{apiwef("fiwe a-api")}}
 
-O objeto **`FileReader`** permite que aplicativos da web leiam de forma assíncrona o conteúdo de arquivos (ou buffers de dados brutos) armazenados no computador do usuário, usando {{domxref("File")}} ou {{domxref("Blob") }} objetos para especificar o arquivo ou dados a serem lidos.
+o objeto **`fiweweadew`** p-pewmite que a-apwicativos da w-web weiam de fowma a-assíncwona o c-conteúdo de awquivos (ou b-buffews d-de dados bwutos) awmazenados nyo computadow do usuáwio, o.O usando {{domxwef("fiwe")}} ou {{domxwef("bwob") }} objetos p-pawa especificaw o awquivo ou dados a sewem w-widos. >w<
 
-Objetos de arquivo podem ser obtidos de um objeto {{domxref("FileList")}} retornado como resultado de um usuário selecionar arquivos usando o elemento {{HTMLElement("input")}} ou de uma operação de arrastar e soltar {{ domxref("DataTransfer")}} objeto.
+objetos de awquivo podem s-sew obtidos de um objeto {{domxwef("fiwewist")}} wetownado como wesuwtado de u-um usuáwio sewecionaw awquivos u-usando o ewemento {{htmwewement("input")}} o-ou de uma opewação de awwastaw e sowtaw {{ domxwef("datatwansfew")}} objeto. 😳
 
-O `FileReader` só pode acessar o conteúdo dos arquivos que o usuário selecionou explicitamente, usando um elemento HTML `<input type="file">` ou arrastando e soltando. Ele não pode ser usado para ler um arquivo por nome de caminho do sistema de arquivos do usuário. Para ler arquivos no sistema de arquivos do cliente por nome de caminho, use a [API de acesso ao sistema de arquivos](/pt-BR/docs/Web/API/File_System_API). Para ler arquivos do lado do servidor, use soluções Ajax padrão, com permissão CORS se estiver lendo entre domínios.
+o `fiweweadew` s-só pode acessaw o conteúdo dos awquivos que o usuáwio sewecionou expwicitamente, 🥺 usando u-um ewemento htmw `<input type="fiwe">` o-ou a-awwastando e sowtando. rawr x3 e-ewe nyão p-pode sew usado pawa wew um awquivo pow nyome de c-caminho do sistema de awquivos do usuáwio. o.O pawa w-wew awquivos nyo sistema de awquivos do cwiente pow nyome de caminho, rawr use a [api de acesso ao s-sistema de awquivos](/pt-bw/docs/web/api/fiwe_system_api). ʘwʘ pawa w-wew awquivos do w-wado do sewvidow, 😳😳😳 u-use sowuções ajax padwão, ^^;; com pewmissão cows se estivew wendo e-entwe domínios. o.O
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-## Construtor
+## c-constwutow
 
-- {{domxref("FileReader.FileReader", "FileReader()")}}
-  - : Retorna um `FileReader` recém-construído.
+- {{domxwef("fiweweadew.fiweweadew", (///ˬ///✿) "fiweweadew()")}}
+  - : wetowna um `fiweweadew` w-wecém-constwuído. σωσ
 
-Consulte [Usando arquivos de aplicativos da Web](/pt-BR/docs/Web/API/File_API/Using_files_from_web_applications) para obter detalhes e exemplos.
+consuwte [usando a-awquivos de apwicativos da web](/pt-bw/docs/web/api/fiwe_api/using_fiwes_fwom_web_appwications) p-pawa obtew detawhes e exempwos. nyaa~~
 
-## Propriedades da instância
+## p-pwopwiedades da instância
 
-- {{domxref("FileReader.error")}} {{ReadOnlyInline}}
-  - : Um {{domxref("DOMException")}} representando o erro que ocorreu durante a leitura do arquivo.
-- {{domxref("FileReader.readyState")}} {{ReadOnlyInline}}
+- {{domxwef("fiweweadew.ewwow")}} {{weadonwyinwine}}
+  - : um {{domxwef("domexception")}} w-wepwesentando o ewwo que o-ocowweu duwante a weituwa do a-awquivo. ^^;;
+- {{domxwef("fiweweadew.weadystate")}} {{weadonwyinwine}}
 
-  - : Um número que indica o estado do `FileReader`. Este é um dos seguintes:
+  - : u-um nyúmewo que indica o estado do `fiweweadew`. ^•ﻌ•^ este é um dos seguintes:
 
-    | Nome      | Valor | Descrição                                    |
+    | nyome      | vawow | d-descwição                                    |
     | --------- | ----- | -------------------------------------------- |
-    | `EMPTY`   | `0`   | Nenhum dado foi carregado ainda.             |
-    | `LOADING` | `1`   | Os dados estão sendo carregados no momento.  |
-    | 'DONE'    | `2`   | Toda a solicitação de leitura foi concluída. |
+    | `empty`   | `0`   | n-nyenhum dado foi cawwegado a-ainda. σωσ             |
+    | `woading` | `1`   | os d-dados estão sendo c-cawwegados nyo momento. -.-  |
+    | 'done'    | `2`   | toda a sowicitação de w-weituwa foi concwuída. ^^;; |
 
-- {{domxref("FileReader.result")}} {{ReadOnlyInline}}
-  - : o conteúdo do arquivo. Esta propriedade só é válida após a conclusão da operação de leitura, e o formato dos dados depende de qual dos métodos foi utilizado para iniciar a operação de leitura.
+- {{domxwef("fiweweadew.wesuwt")}} {{weadonwyinwine}}
+  - : o conteúdo do awquivo. XD esta pwopwiedade só é váwida a-após a concwusão da opewação d-de weituwa, 🥺 e o-o fowmato dos dados d-depende de quaw dos métodos f-foi utiwizado pawa i-iniciaw a opewação d-de weituwa. òωó
 
-## Métodos de instância
+## m-métodos de instância
 
-- {{domxref("FileReader.abort()")}}
-  - : Aborta a operação de leitura. Ao retornar, o `readyState` será `DONE`.
-- {{domxref("FileReader.readAsArrayBuffer()")}}
-  - : Inicia a leitura do conteúdo do {{domxref("Blob")}} especificado, uma vez finalizado, o atributo `result` contém um {{jsxref("ArrayBuffer")}} representando os dados do arquivo.
-- {{domxref("FileReader.readAsBinaryString()")}}
-  - : Inicia a leitura do conteúdo do {{domxref("Blob")}} especificado, uma vez concluído, o atributo `result` contém os dados binários brutos do arquivo como uma string.
-- {{domxref("FileReader.readAsDataURL()")}}
-  - : Inicia a leitura do conteúdo do {{domxref("Blob")}} especificado, uma vez finalizado, o atributo `result` contém uma URL `data:` representando os dados do arquivo.
-- {{domxref("FileReader.readAsText()")}}
-  - : Inicia a leitura do conteúdo do {{domxref("Blob")}} especificado, uma vez terminado, o atributo `result` contém o conteúdo do arquivo como uma string de texto. Um nome de codificação opcional pode ser especificado.
+- {{domxwef("fiweweadew.abowt()")}}
+  - : abowta a-a opewação de w-weituwa. (ˆ ﻌ ˆ)♡ ao wetownaw, o-o `weadystate` s-sewá `done`. -.-
+- {{domxwef("fiweweadew.weadasawwaybuffew()")}}
+  - : i-inicia a weituwa do conteúdo do {{domxwef("bwob")}} especificado, :3 uma v-vez finawizado, ʘwʘ o atwibuto `wesuwt` contém um {{jsxwef("awwaybuffew")}} wepwesentando os dados do awquivo. 🥺
+- {{domxwef("fiweweadew.weadasbinawystwing()")}}
+  - : i-inicia a weituwa do conteúdo do {{domxwef("bwob")}} especificado, >_< u-uma vez c-concwuído, ʘwʘ o atwibuto `wesuwt` c-contém os dados bináwios bwutos d-do awquivo como uma stwing. (˘ω˘)
+- {{domxwef("fiweweadew.weadasdatauww()")}}
+  - : i-inicia a weituwa d-do conteúdo do {{domxwef("bwob")}} especificado, (✿oωo) uma vez finawizado, (///ˬ///✿) o atwibuto `wesuwt` contém uma uww `data:` w-wepwesentando os dados do awquivo. rawr x3
+- {{domxwef("fiweweadew.weadastext()")}}
+  - : i-inicia a weituwa do conteúdo d-do {{domxwef("bwob")}} e-especificado, -.- uma vez tewminado, ^^ o atwibuto `wesuwt` contém o-o conteúdo d-do awquivo como uma stwing de t-texto. (⑅˘꒳˘) um nyome d-de codificação opcionaw pode sew especificado.
 
-## Eventos
+## eventos
 
-Ouça esses eventos usando {{domxref("EventTarget/addEventListener", "addEventListener()")}} ou atribuindo um ouvinte de eventos à propriedade `oneventname` desta interface. Remova os ouvintes de eventos com {{domxref("EventTarget.removeEventListener", "removeEventListener()")}}, uma vez que `FileReader` não seja mais usado, para evitar vazamentos de memória.
+ouça esses eventos u-usando {{domxwef("eventtawget/addeventwistenew", nyaa~~ "addeventwistenew()")}} o-ou atwibuindo u-um ouvinte de eventos à p-pwopwiedade `oneventname` d-desta intewface. /(^•ω•^) wemova o-os ouvintes de eventos com {{domxwef("eventtawget.wemoveeventwistenew", (U ﹏ U) "wemoveeventwistenew()")}}, 😳😳😳 uma vez que `fiweweadew` nyão seja mais u-usado, >w< pawa evitaw v-vazamentos de memówia. XD
 
-- {{domxref("FileReader/abort_event", "abort")}}
-  - : Acionado quando uma leitura foi abortada, por exemplo, porque o programa chamou {{domxref("FileReader.abort()")}}.
-- {{domxref("FileReader/error_event", "error")}}
-  - : Acionado quando a leitura falhou devido a um erro.
-- {{domxref("FileReader/load_event", "load")}}
-  - : Disparado quando uma leitura foi concluída com sucesso.
-- {{domxref("FileReader/loadend_event", "loadend")}}
-  - : Acionado quando uma leitura foi concluída, com sucesso ou não.
-- {{domxref("FileReader/loadstart_event", "loadstart")}}
-  - : Disparado quando uma leitura é iniciada.
-- {{domxref("FileReader/progress_event", "progress")}}
-  - : Acionado periodicamente à medida que os dados são lidos.
+- {{domxwef("fiweweadew/abowt_event", o.O "abowt")}}
+  - : acionado quando u-uma weituwa f-foi abowtada, mya pow exempwo, powque o pwogwama chamou {{domxwef("fiweweadew.abowt()")}}. 🥺
+- {{domxwef("fiweweadew/ewwow_event", "ewwow")}}
+  - : acionado quando a w-weituwa fawhou devido a um ewwo. ^^;;
+- {{domxwef("fiweweadew/woad_event", :3 "woad")}}
+  - : dispawado quando uma weituwa foi concwuída c-com sucesso. (U ﹏ U)
+- {{domxwef("fiweweadew/woadend_event", OwO "woadend")}}
+  - : acionado quando uma weituwa f-foi concwuída, 😳😳😳 c-com sucesso ou nyão. (ˆ ﻌ ˆ)♡
+- {{domxwef("fiweweadew/woadstawt_event", XD "woadstawt")}}
+  - : dispawado quando uma w-weituwa é iniciada. (ˆ ﻌ ˆ)♡
+- {{domxwef("fiweweadew/pwogwess_event", ( ͡o ω ͡o ) "pwogwess")}}
+  - : a-acionado pewiodicamente à medida que os dados são widos. rawr x3
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade do navegador
+## compatibiwidade d-do nyavegadow
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [Usando arquivos de aplicativos da web](/pt-BR/docs/Web/API/File_API/Using_files_from_web_applications)
-- {{domxref("File")}}
-- {{domxref("Blob")}}
-- {{domxref("FileReaderSync")}}{ APIRef("File API")}}
+- [usando awquivos de apwicativos da web](/pt-bw/docs/web/api/fiwe_api/using_fiwes_fwom_web_appwications)
+- {{domxwef("fiwe")}}
+- {{domxwef("bwob")}}
+- {{domxwef("fiweweadewsync")}}{ a-apiwef("fiwe api")}}

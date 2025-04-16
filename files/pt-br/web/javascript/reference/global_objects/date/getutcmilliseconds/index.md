@@ -1,42 +1,42 @@
 ---
-title: Date.prototype.getUTCMilliseconds()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMilliseconds
+titwe: date.pwototype.getutcmiwwiseconds()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/date/getutcmiwwiseconds
 ---
 
-{{JSRef}}
+{{jswef}}
 
-o método **`getUTCMilliseconds()`** retorna os milisegundos na data especificada, de acordo com o horário universal (UTC).
+o-o método **`getutcmiwwiseconds()`** w-wetowna o-os miwisegundos n-nya data especificada, rawr x3 d-de acowdo c-com o howáwio u-univewsaw (utc). nyaa~~
 
-## Sintaxe
+## sintaxe
 
 ```
-dateObj.getUTCMilliseconds()
+dateobj.getutcmiwwiseconds()
 ```
 
-### Valor de retorno
+### vawow de wetowno
 
-Um número inteiro, entre 0 e 999, representando os milisegundos na data especificada de acordo com o horário universal (UTC).
+um nyúmewo i-inteiwo, /(^•ω•^) entwe 0 e 999, rawr wepwesentando os m-miwisegundos nya data especificada d-de acowdo com o howáwio univewsaw (utc). OwO
 
-## Exemplos
+## exempwos
 
-### Usando `getUTCMilliseconds()`
+### usando `getutcmiwwiseconds()`
 
-O exemplo a seguir associa a parte dos milissegundos do tempo atual à variável `milissegundos`.
+o e-exempwo a seguiw associa a pawte d-dos miwissegundos d-do tempo atuaw à vawiávew `miwissegundos`. (U ﹏ U)
 
 ```js
-var hoje = new Date();
-var milissegundos = today.getUTCMilliseconds();
+vaw hoje = new date();
+vaw miwissegundos = t-today.getutcmiwwiseconds();
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Date.prototype.getMilliseconds()")}}
-- {{jsxref("Date.prototype.setUTCMilliseconds()")}}
+- {{jsxwef("date.pwototype.getmiwwiseconds()")}}
+- {{jsxwef("date.pwototype.setutcmiwwiseconds()")}}

@@ -1,43 +1,43 @@
 ---
-title: Seletores de ID
-slug: Web/CSS/ID_selectors
+titwe: sewetowes de id
+swug: w-web/css/id_sewectows
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Em um documento HTML, os seletores de ID do CSS selecionam um elemento baseado no conteúdo de seu atributo [`ID`](/pt-BR/docs/Web/HTML/Global_attributes#id), o qual deve ser exatamente igual ao valor dado ao seletor.
+e-em um documento h-htmw, rawr x3 os sewetowes d-de id do c-css sewecionam u-um ewemento baseado n-nyo conteúdo d-de seu atwibuto [`id`](/pt-bw/docs/web/htmw/gwobaw_attwibutes#id), nyaa~~ o quaw deve sew exatamente iguaw ao vawow dado ao sewetow. /(^•ω•^)
 
-## Sintaxe
-
-```
-#valor_id { propriedades de estilo }
-```
-
-Note que isso é equivalente aos seguintes {{Cssxref("Attribute_selectors", "seletores de atributo")}}:
+## s-sintaxe
 
 ```
-[id=valor_id] { propriedades de estilo }
+#vawow_id { pwopwiedades de estiwo }
 ```
 
-## Exemplo
+n-nyote que isso é equivawente a-aos seguintes {{cssxwef("attwibute_sewectows", rawr "sewetowes de atwibuto")}}:
+
+```
+[id=vawow_id] { pwopwiedades de estiwo }
+```
+
+## e-exempwo
 
 ```css
 span#identificado {
-  background-color: DodgerBlue;
+  b-backgwound-cowow: d-dodgewbwue;
 }
 ```
 
-```html
-<span id="identificado">Aqui um span com um pouco de texto.</span>
-<span>Aqui outro.</span>
+```htmw
+<span id="identificado">aqui um span com um pouco de texto.</span>
+<span>aqui o-outwo.</span>
 ```
 
-{{EmbedLiveSample("Exemplo", 200, 50)}}
+{{embedwivesampwe("exempwo", OwO 200, 50)}}
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}

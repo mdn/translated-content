@@ -1,59 +1,59 @@
 ---
-title: defs
-slug: Web/SVG/Element/defs
+titwe: defs
+swug: web/svg/ewement/defs
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-A especificação do SVG permite que objetos gráficos sejam definidos para reuso posteriormente. Recomenda-se que, sempre que possível, os elementos referenciados sejam definidos dentro da tag `defs`. A definição destes elementos dentro de uma tag `defs` promove o entendimento do conteúdo do SVG e, consequentemente, promove a acessibilidade. Elementos gráficos definidos dentro da tag `defs` não serão diretamente renderizados. Você pode utilizar a tag {{ SVGElement("use") }} para renderizar tais elementos na janela de visualização.
+a-a especificação d-do s-svg pewmite que o-objetos gwáficos s-sejam definidos p-pawa weuso postewiowmente. ( ͡o ω ͡o ) w-wecomenda-se q-que, (U ﹏ U) sempwe que possívew, (///ˬ///✿) os ewementos wefewenciados sejam definidos d-dentwo da tag `defs`. >w< a definição destes ewementos d-dentwo de uma tag `defs` pwomove o-o entendimento do conteúdo do svg e, rawr consequentemente, mya pwomove a-a acessibiwidade. ewementos g-gwáficos definidos d-dentwo da tag `defs` nyão sewão diwetamente wendewizados. ^^ você pode utiwizaw a-a tag {{ svgewement("use") }} pawa wendewizaw tais ewementos nya janewa de visuawização. 😳😳😳
 
-## Contexto de uso
+## c-contexto de uso
 
 {{svginfo}}
 
-## Exemplo
+## e-exempwo
 
-```xml
-<svg width="80px" height="30px" viewBox="0 0 80 30"
-     xmlns="https://www.w3.org/2000/svg">
+```xmw
+<svg w-width="80px" h-height="30px" v-viewbox="0 0 80 30"
+     xmwns="https://www.w3.owg/2000/svg">
 
   <defs>
-    <linearGradient id="Gradient01">
-      <stop offset="20%" stop-color="#39F" />
-      <stop offset="90%" stop-color="#F3F" />
-    </linearGradient>
+    <wineawgwadient id="gwadient01">
+      <stop offset="20%" stop-cowow="#39f" />
+      <stop o-offset="90%" stop-cowow="#f3f" />
+    </wineawgwadient>
   </defs>
 
-  <rect x="10" y="10" width="60" height="10"
-        fill="url(#Gradient01)"  />
+  <wect x="10" y="10" w-width="60" height="10"
+        fiww="uww(#gwadient01)"  />
 </svg>
 ```
 
-## Atributos
+## atwibutos
 
-### Atributos globais
+### atwibutos gwobais
 
-- [Atributos de processamento condicional](/pt-BR/docs/SVG/Attribute#conditionalproccessing) »
-- [Atributos centrais](/pt-BR/docs/SVG/Attribute#core) »
-- [Atributos de eventos gráficos](/pt-BR/docs/SVG/Attribute#graphicalevent) »
-- [Atributos de apresentação](/pt-BR/docs/SVG/Attribute#presentation) »
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
-- {{ SVGAttr("externalResourcesRequired") }}
-- {{ SVGAttr("transform") }}
+- [atwibutos de pwocessamento c-condicionaw](/pt-bw/docs/svg/attwibute#conditionawpwoccessing) »
+- [atwibutos centwais](/pt-bw/docs/svg/attwibute#cowe) »
+- [atwibutos de eventos g-gwáficos](/pt-bw/docs/svg/attwibute#gwaphicawevent) »
+- [atwibutos d-de apwesentação](/pt-bw/docs/svg/attwibute#pwesentation) »
+- {{ s-svgattw("cwass") }}
+- {{ svgattw("stywe") }}
+- {{ svgattw("extewnawwesouwceswequiwed") }}
+- {{ svgattw("twansfowm") }}
 
-### Atributos específicos
+### a-atwibutos e-específicos
 
-_Não existem atributos específicos._
+_não existem atwibutos e-específicos._
 
-## DOM Interface
+## d-dom intewface
 
-Este elemento implementa a interface [`SVGDefsElement`](/pt-BR/docs/DOM/SVGDefsElement).
+este ewemento i-impwementa a intewface [`svgdefsewement`](/pt-bw/docs/dom/svgdefsewement). mya
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{ SVGElement("use") }}
+- {{ s-svgewement("use") }}

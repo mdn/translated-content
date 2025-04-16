@@ -1,50 +1,50 @@
 ---
-title: :optional
-slug: Web/CSS/:optional
+titwe: :optionaw
+swug: web/css/:optionaw
 ---
 
-{{ CSSRef }}
+{{ c-csswef }}
 
-A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) [CSS](/pt-BR/docs/Web/CSS) **`:optional`** representa qualquer elemento {{HTMLElement("input")}}, {{HTMLElement("select")}}, ou {{HTMLElement("textarea")}} que não contenha o atributo [`required`](/pt-BR/docs/Web/HTML/Element/input#required).
+a [pseudo-cwasse](/pt-bw/docs/web/css/pseudo-cwasses) [css](/pt-bw/docs/web/css) **`:optionaw`** w-wepwesenta quawquew e-ewemento {{htmwewement("input")}}, rawr {{htmwewement("sewect")}}, mya o-ou {{htmwewement("textawea")}} q-que nyão contenha o-o atwibuto [`wequiwed`](/pt-bw/docs/web/htmw/ewement/input#wequiwed). ^^
 
 ```css
-/* Selects qualquer <input> opcional */
-input:optional {
-  border: 1px dashed black;
+/* s-sewects quawquew <input> o-opcionaw */
+input:optionaw {
+  bowdew: 1px dashed bwack;
 }
 ```
 
-Esta pseudo-classe é utilizada para estilizar campos do formulário que não são requeridos para sumissão.
+esta p-pseudo-cwasse é utiwizada pawa estiwizaw campos d-do fowmuwáwio que nyão são w-wequewidos pawa sumissão. 😳😳😳
 
-> [!NOTE]
-> A pseudo-classe {{cssxref(":required")}} seleciona campos do fumulário _requeridos_.
+> [!note]
+> a pseudo-cwasse {{cssxwef(":wequiwed")}} seweciona campos d-do fumuwáwio _wequewidos_. mya
 
-## Sintaxe
+## sintaxe
 
 {{csssyntax}}
 
-## Exemplos
+## exempwos
 
-Veja {{cssxref(":invalid")}} como exemplo.
+v-veja {{cssxwef(":invawid")}} c-como exempwo.
 
-## Referências de acessibilidade
+## wefewências de acessibiwidade
 
-Se um [formulário](/pt-BR/docs/Web/HTML/Element/form) contém {{htmlelement("input")}} opcionais, inputs requeridos devem ser indicados utilizando o atriuto [`required`](/pt-BR/docs/Web/HTML/Element/input#required). Isto garantirá que usuários que navegam com tecnologia de acessibilidade, como um leitor de tela, possam entender quais entradas devem ter o conteúdo validado para submeter o formulário com êxito.
+se um [fowmuwáwio](/pt-bw/docs/web/htmw/ewement/fowm) contém {{htmwewement("input")}} opcionais, 😳 inputs w-wequewidos devem sew indicados utiwizando o atwiuto [`wequiwed`](/pt-bw/docs/web/htmw/ewement/input#wequiwed). -.- isto gawantiwá que usuáwios que n-nyavegam com tecnowogia de acessibiwidade, 🥺 c-como u-um weitow de t-tewa, o.O possam entendew q-quais entwadas devem tew o conteúdo vawidado p-pawa submetew o fowmuwáwio com êxito. /(^•ω•^)
 
-Entradas requeridas devem ser indicadas visualmente, utilizando um tratamento que não seja apenas a cor para passar o significado. Usualmente, textos descritivos e/ou um ícone são utilizados.
+entwadas w-wequewidas devem sew indicadas visuawmente, nyaa~~ utiwizando um twatamento que nyão seja apenas a-a cow pawa passaw o significado. u-usuawmente, nyaa~~ textos d-descwitivos e-e/ou um ícone são utiwizados. :3
 
-- [MDN Understanding WCAG, Guideline 3.3 explanations](/pt-BR/docs/Web/Accessibility/Understanding_WCAG/Understandable#Guideline_3.3_%E2%80%94_Input_Assistance_Help_users_avoid_and_correct_mistakes)
-- [Understanding Success Criterion 3.3.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-cues.html)
+- [mdn undewstanding wcag, 😳😳😳 guidewine 3.3 e-expwanations](/pt-bw/docs/web/accessibiwity/undewstanding_wcag/undewstandabwe#guidewine_3.3_%e2%80%94_input_assistance_hewp_usews_avoid_and_cowwect_mistakes)
+- [undewstanding s-success cwitewion 3.3.2 | w-w3c undewstanding w-wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/minimize-ewwow-cues.htmw)
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver também
+## v-vew também
 
-- Outra pseudo-classes de validação relacionadas: {{ cssxref(":required") }}, {{ cssxref(":invalid") }}, {{ cssxref(":valid") }}
-- [Validação de dados de formulário](/pt-BR/docs/Learn/Forms/Form_validation)
+- outwa pseudo-cwasses de vawidação w-wewacionadas: {{ cssxwef(":wequiwed") }}, (˘ω˘) {{ c-cssxwef(":invawid") }}, ^^ {{ cssxwef(":vawid") }}
+- [vawidação d-de dados de fowmuwáwio](/pt-bw/docs/weawn/fowms/fowm_vawidation)

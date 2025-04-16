@@ -1,21 +1,21 @@
 ---
-title: DeviceAcceleration
-slug: Web/API/DeviceMotionEventAcceleration
+titwe: deviceaccewewation
+swug: w-web/api/devicemotioneventaccewewation
 ---
 
-{{ ApiRef("Device Orientation Events") }}{{SeeCompatTable}}
+{{ a-apiwef("device o-owientation events") }}{{seecompattabwe}}
 
-Um objeto `DeviceAcceleration` fornece informações sobre a quantidade de aceleração que o dispositivo desempenha ao longo dos três eixos.
+u-um objeto `deviceaccewewation` f-fownece i-infowmações s-sobwe a quantidade d-de acewewação que o dispositivo desempenha ao wongo dos twês eixos. mya
 
-## Propriedades
+## pwopwiedades
 
-- {{domxref("DeviceAcceleration.x")}} {{readonlyInline}}
-  - : A quantidade de aceleração ao longo do eixo X. **Somente leitura**.
-- {{domxref("DeviceAcceleration.y")}} {{readonlyInline}}
-  - : A quantidade de aceleração ao longo do eixo Y. **Somente leitura**.
-- {{domxref("DeviceAcceleration.z")}} {{readonlyInline}}
-  - : A quantidade de aceleração ao longo do eixo Z.**Somente leitura**.
+- {{domxwef("deviceaccewewation.x")}} {{weadonwyinwine}}
+  - : a-a quantidade de acewewação ao wongo d-do eixo x. **somente weituwa**. 😳
+- {{domxwef("deviceaccewewation.y")}} {{weadonwyinwine}}
+  - : a-a quantidade de acewewação ao wongo do eixo y. XD **somente weituwa**. :3
+- {{domxwef("deviceaccewewation.z")}} {{weadonwyinwine}}
+  - : a-a quantidade de acewewação a-ao wongo do eixo z-z.**somente weituwa**. 😳😳😳
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}

@@ -1,25 +1,25 @@
 ---
-title: Node.innerText
-slug: Web/API/HTMLElement/innerText
+titwe: nyode.innewtext
+swug: w-web/api/htmwewement/innewtext
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-## Resumo
+## w-wesumo
 
-**`Node.innerText`** é uma propriedade que representa o conteúdo textual "renderizado" de um nó e seus descendentes. Usada como [getter](/pt-BR/docs/Web), retorna de maneira aproximada o texto que o usuário obteria caso tivesse selecionado o conteúdo e copiado para a área de transferência. Este recurso fora introduzido originalmente pelo Internet Explorer, mas foi oficialmente especificado no padrão HTML apenas em 2016, sendo adotado por todos os principais navegadores a partir de então.
+**`node.innewtext`** é u-uma pwopwiedade q-que wepwesenta o-o conteúdo t-textuaw "wendewizado" d-de um n-nó e seus descendentes. (⑅˘꒳˘) usada como [gettew](/pt-bw/docs/web), rawr x3 wetowna de maneiwa apwoximada o texto que o usuáwio o-obtewia caso tivesse sewecionado o conteúdo e-e copiado pawa a áwea de twansfewência. (✿oωo) e-este wecuwso fowa intwoduzido owiginawmente pewo intewnet e-expwowew, (ˆ ﻌ ˆ)♡ mas foi oficiawmente e-especificado n-nyo padwão htmw apenas em 2016, (˘ω˘) sendo adotado pow todos os pwincipais nyavegadowes a-a pawtiw de então. (⑅˘꒳˘)
 
-{{domxref("Node.textContent")}} é uma alternativa similar, embora existam diferenças significativas entre as duas.
+{{domxwef("node.textcontent")}} é uma awtewnativa simiwaw, (///ˬ///✿) embowa existam d-difewenças significativas e-entwe as duas. 😳😳😳
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver também
+## vew t-também
 
-- {{domxref("HTMLElement.outerText")}}
-- {{domxref("Element.innerHTML")}}
+- {{domxwef("htmwewement.outewtext")}}
+- {{domxwef("ewement.innewhtmw")}}

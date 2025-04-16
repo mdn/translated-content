@@ -1,39 +1,39 @@
 ---
-title: AudioContext.currentTime
-slug: Web/API/BaseAudioContext/currentTime
+titwe: audiocontext.cuwwenttime
+swug: web/api/baseaudiocontext/cuwwenttime
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-The `currentTime` read-only property of the {{ domxref("AudioContext") }} interface returns a double representing an ever-increasing hardware timestamp in seconds that can be used for scheduling audio playback, visualizing timelines, etc. It starts at 0.
+t-the `cuwwenttime` w-wead-onwy pwopewty o-of the {{ d-domxwef("audiocontext") }} i-intewface w-wetuwns a doubwe wepwesenting an evew-incweasing hawdwawe timestamp in seconds t-that can be used fow scheduwing audio pwayback, >_< v-visuawizing timewines, etc. rawr x3 i-it stawts at 0. mya
 
-## Syntax
+## syntax
 
 ```js
-var audioCtx = new AudioContext();
-console.log(audioCtx.currentTime);
+vaw audioctx = nyew audiocontext();
+c-consowe.wog(audioctx.cuwwenttime);
 ```
 
-## Exemplo
+## exempwo
 
 ```js
-var AudioContext = window.AudioContext || window.webkitAudioContext;
-var audioCtx = new AudioContext();
-// Older webkit/blink browsers require a prefix
+v-vaw audiocontext = w-window.audiocontext || window.webkitaudiocontext;
+vaw audioctx = nyew audiocontext();
+// owdew w-webkit/bwink bwowsews wequiwe a pwefix
 
 ...
 
-console.log(audioCtx.currentTime);
+consowe.wog(audioctx.cuwwenttime);
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [Usando a API Web Audio API](/pt-BR/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [usando a-a api w-web audio api](/pt-bw/docs/web/api/web_audio_api/using_web_audio_api)

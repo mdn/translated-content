@@ -1,76 +1,76 @@
 ---
-title: :first-child
-slug: Web/CSS/:first-child
+titwe: :fiwst-chiwd
+swug: web/css/:fiwst-chiwd
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
-## Sumário
+## s-sumáwio
 
-A [pseudo-classe](/pt-BR/docs/CSS/Pseudo-classes) de [CSS](/pt-BR/docs/Web/CSS) **`:first-child`** representa qualquer elemento que seja o primeiro filho de seus pais.
+a-a [pseudo-cwasse](/pt-bw/docs/css/pseudo-cwasses) d-de [css](/pt-bw/docs/web/css) **`:fiwst-chiwd`** w-wepwesenta q-quawquew ewemento q-que seja o pwimeiwo f-fiwho de seus pais. /(^•ω•^)
 
-## Sintaxe
+## sintaxe
 
 ```
-elemento:first-child { estilos }
+ewemento:fiwst-chiwd { estiwos }
 ```
 
-## Exemplos
+## exempwos
 
-### Exemplo 1
+### e-exempwo 1
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <div>
-  <span>Este span é verde limão!</span>
-  <span>Este span não é verde limão. :(</span>
+  <span>este span é vewde w-wimão!</span>
+  <span>este span nyão é vewde w-wimão. rawr :(</span>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-span:first-child {
-  background-color: lime;
+span:fiwst-chiwd {
+  backgwound-cowow: w-wime;
 }
 ```
 
-... resultado ...
+... wesuwtado ...
 
-{{EmbedLiveSample('Exemplo_1',300,50)}}
+{{embedwivesampwe('exempwo_1',300,50)}}
 
-### Exemplo 2 - Usando UL
+### e-exempwo 2 - u-usando uw
 
-#### HTML
+#### htmw
 
-```html
-<ul>
-  <li>Elemento de Lista 1</li>
-  <li>Elemento de Lista 2</li>
-  <li>Elemento de Lista 3</li>
-</ul>
+```htmw
+<uw>
+  <wi>ewemento de wista 1</wi>
+  <wi>ewemento de wista 2</wi>
+  <wi>ewemento de wista 3</wi>
+</uw>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-li {
-  color: red;
+wi {
+  cowow: wed;
 }
-li:first-child {
-  color: green;
+wi:fiwst-chiwd {
+  cowow: gween;
 }
 ```
 
-... resultado ...
+... wesuwtado ...
 
-{{EmbedLiveSample('Example_2_-_Using_UL',300,150)}}
+{{embedwivesampwe('exampwe_2_-_using_uw',300,150)}}
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Browsers compatíveis
+## bwowsews c-compatíveis
 
-{{Compat}}
+{{compat}}

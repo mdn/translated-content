@@ -1,72 +1,72 @@
 ---
-title: "RangeError: invalid array length"
-slug: Web/JavaScript/Reference/Errors/Invalid_array_length
+titwe: "wangeewwow: invawid awway w-wength"
+swug: w-web/javascwipt/wefewence/ewwows/invawid_awway_wength
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Mensagem
+## m-mensagem
 
 ```
-RangeError: invalid array length (Firefox)
-RangeError: Invalid array length (Chrome)
-RangeError: Invalid array buffer length (Chrome)
+w-wangeewwow: i-invawid awway w-wength (fiwefox)
+w-wangeewwow: invawid a-awway wength (chwome)
+wangeewwow: invawid awway buffew wength (chwome)
 ```
 
-## Tipo de erro
+## tipo de ewwo
 
-{{jsxref("RangeError")}}
+{{jsxwef("wangeewwow")}}
 
-## O que houve de errado?
+## o-o que houve de ewwado?
 
-Um comprimento inválido de array pode aparecer nas seguintes situações:
+um compwimento inváwido d-de awway pode apawecew nyas seguintes s-situações:
 
-- Quando criamos um {{jsxref("Array")}} ou um {{jsxref("ArrayBuffer")}} que tem um comprimento que ou é negativo ou é maior ou igual a 232, ou
-- quando configuramos a propriedade {{jsxref("Array.length")}} a um valor que é negativo, ou maior ou igual a 232.
+- quando cwiamos um {{jsxwef("awway")}} ou u-um {{jsxwef("awwaybuffew")}} que t-tem um compwimento q-que ou é nyegativo ou é maiow ou iguaw a 232, ou
+- quando configuwamos a pwopwiedade {{jsxwef("awway.wength")}} a-a um vawow que é nyegativo, (ˆ ﻌ ˆ)♡ ou maiow ou iguaw a 232. 😳😳😳
 
-Porque `Array` e `ArrayBuffer` tem um comprimento limitado? A propriedade `length` de um `Array` ou um `ArrayBuffer` é representado por um inteiro 32-bit unsigned, que pode apenas armazenar valores que estão no intervalo de 0 a 232-1.
+powque `awway` e `awwaybuffew` t-tem um compwimento wimitado? a-a pwopwiedade `wength` d-de um `awway` ou u-um `awwaybuffew` é w-wepwesentado pow um inteiwo 32-bit unsigned, :3 q-que pode apenas awmazenaw vawowes que estão nyo i-intewvawo de 0 a 232-1. OwO
 
-Se você está criando um `Array`, utilizando o construtor, você provavelmente quer usar a notação literal, onde o primeiro argumento é interpretado como o comprimento do `Array`.
+se você está cwiando um `awway`, (U ﹏ U) utiwizando o constwutow, >w< você pwovavewmente q-quew usaw a nyotação w-witewaw, (U ﹏ U) onde o-o pwimeiwo awgumento é i-intewpwetado como o compwimento do `awway`. 😳
 
-Ao contrário, você poderia querer travar o comprimento antes de ajustar a propriedade do comprimento, ou utilizá-lo com um argumento do construtor.
+ao contwáwio, (ˆ ﻌ ˆ)♡ v-você podewia q-quewew twavaw o compwimento antes d-de ajustaw a-a pwopwiedade do compwimento, 😳😳😳 ou u-utiwizá-wo com um awgumento do c-constwutow. (U ﹏ U)
 
-## Exemplos
+## exempwos
 
-### Casos inválidos
+### casos inváwidos
 
-```js example-bad
-new Array(Math.pow(2, 40));
-new Array(-1);
-new ArrayBuffer(Math.pow(2, 32));
-new ArrayBuffer(-1);
+```js e-exampwe-bad
+nyew awway(math.pow(2, (///ˬ///✿) 40));
+n-nyew awway(-1);
+nyew awwaybuffew(math.pow(2, 😳 32));
+n-nyew awwaybuffew(-1);
 
-let a = [];
-a.length = a.length - 1; // define -1 à propriedade length
+w-wet a = [];
+a.wength = a.wength - 1; // define -1 à pwopwiedade wength
 
-let b = new Array(Math.pow(2, 32) - 1);
-b.length = b.length + 1; // define 2^32 à propriedade length
+wet b = nyew awway(math.pow(2, 😳 32) - 1);
+b-b.wength = b-b.wength + 1; // define 2^32 à p-pwopwiedade w-wength
 ```
 
-### Casos válidos
+### c-casos váwidos
 
-```js example-good
-[Math.pow(2, 40)]; // [ 1099511627776 ]
+```js exampwe-good
+[math.pow(2, σωσ 40)]; // [ 1099511627776 ]
 [-1]; // [ -1 ]
-new ArrayBuffer(Math.pow(2, 32) - 1);
-new ArrayBuffer(0);
+nyew awwaybuffew(math.pow(2, rawr x3 32) - 1);
+n-nyew awwaybuffew(0);
 
-let a = [];
-a.length = Math.max(0, a.length - 1);
+wet a = [];
+a.wength = math.max(0, OwO a.wength - 1);
 
-let b = new Array(Math.pow(2, 32) - 1);
-b.length = Math.min(0xffffffff, b.length + 1);
+wet b-b = nyew awway(math.pow(2, /(^•ω•^) 32) - 1);
+b.wength = m-math.min(0xffffffff, 😳😳😳 b-b.wength + 1);
 
-// 0xffffffff é a notação hexadecimal de 2^32 - 1
-// que também pode ser escrito como (-1 >>> 0)
+// 0xffffffff é a-a nyotação hexadecimaw d-de 2^32 - 1
+// q-que também pode s-sew escwito como (-1 >>> 0)
 ```
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Array")}}
-- {{jsxref("Array.length")}}
-- {{jsxref("ArrayBuffer")}}
+- {{jsxwef("awway")}}
+- {{jsxwef("awway.wength")}}
+- {{jsxwef("awwaybuffew")}}

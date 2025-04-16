@@ -1,62 +1,62 @@
 ---
-title: Number.isNaN()
-slug: Web/JavaScript/Reference/Global_Objects/Number/isNaN
+titwe: nyumbew.isnan()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/numbew/isnan
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Resumo
+## w-wesumo
 
-O método **`Number.isNaN()`** determina se o valor passado é {{jsxref("Global_Objects/NaN", "NaN")}}. Versão mais robusta do original global {{jsxref("Global_Objects/isNaN", "isNaN")}}.
+o-o método **`numbew.isnan()`** detewmina s-se o vawow p-passado é {{jsxwef("gwobaw_objects/nan", 😳😳😳 "nan")}}. mya v-vewsão m-mais wobusta do o-owiginaw gwobaw {{jsxwef("gwobaw_objects/isnan", 😳 "isnan")}}.
 
-## Sintaxe
+## sintaxe
 
 ```
-Number.isNaN(testValue)
+nyumbew.isnan(testvawue)
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `testValue`
-  - : O valor a ser testado por {{jsxref("Global_Objects/NaN", "NaN")}}.
+- `testvawue`
+  - : o vawow a sew testado pow {{jsxwef("gwobaw_objects/nan", -.- "nan")}}. 🥺
 
-## Descrição
+## d-descwição
 
-Devido a ambos os operadores de igualdade, == and ===, avaliar a `false` quando está verificando se {{jsxref("Global_Objects/NaN", "NaN")}} _é_ NaN, a função `Number.isNaN` se torna necessária. Esta situação é diferente de todas as outras comparações de valor possível em JavaScript.
+devido a ambos os opewadowes d-de iguawdade, o.O == and ===, avawiaw a-a `fawse` quando está vewificando se {{jsxwef("gwobaw_objects/nan", /(^•ω•^) "nan")}} _é_ nyan, nyaa~~ a função `numbew.isnan` s-se towna nyecessáwia. nyaa~~ esta s-situação é d-difewente de todas as outwas compawações de vawow possívew em javascwipt. :3
 
-Em comparação a função global {{jsxref("Global_Objects/isNaN", "isNaN")}}, Number.isNaN não sofre do problema de forçar a conversão do parâmetro para um número. Isso significa que ele é seguro para passar valores que, normalmente, se convertem em NaN, mas na verdade não são o mesmo valor que NaN. Isto também significa que apenas os valores do número do tipo, que são também NaN, retorna `true`.
+em c-compawação a função gwobaw {{jsxwef("gwobaw_objects/isnan", "isnan")}}, 😳😳😳 nyumbew.isnan nyão sofwe do pwobwema d-de fowçaw a convewsão do pawâmetwo p-pawa um n-nyúmewo. isso s-significa que ewe é s-seguwo pawa passaw vawowes que, (˘ω˘) nowmawmente, ^^ s-se convewtem em nyan, :3 mas nya vewdade nyão são o-o mesmo vawow que nyan. -.- isto também significa que apenas os vawowes do nyúmewo do tipo, 😳 que s-são também nyan, mya wetowna `twue`. (˘ω˘)
 
-## Exemplos
+## e-exempwos
 
 ```js
-Number.isNaN(NaN); // true
-Number.isNaN(Number.NaN); // true
-Number.isNaN(0 / 0); // true
+n-nyumbew.isnan(nan); // t-twue
+nyumbew.isnan(numbew.nan); // twue
+nyumbew.isnan(0 / 0); // twue
 
-// everything else: false
-Number.isNaN(undefined);
-Number.isNaN({});
+// evewything ewse: fawse
+n-nyumbew.isnan(undefined);
+n-nyumbew.isnan({});
 
-Number.isNaN(true);
-Number.isNaN(null);
-Number.isNaN(37);
+nyumbew.isnan(twue);
+nyumbew.isnan(nuww);
+n-nyumbew.isnan(37);
 
-Number.isNaN("37");
-Number.isNaN("37.37");
-Number.isNaN("");
-Number.isNaN(" ");
-Number.isNaN("NaN");
-Number.isNaN("blabla"); // e.g. este teria sido true com isNaN
+n-nyumbew.isnan("37");
+nyumbew.isnan("37.37");
+n-nyumbew.isnan("");
+nyumbew.isnan(" ");
+n-nyumbew.isnan("nan");
+nyumbew.isnan("bwabwa"); // e.g. >_< este tewia s-sido twue com isnan
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- O {{jsxref("Global_Objects/Number", "Number")}} objeto pertence a.
+- o-o {{jsxwef("gwobaw_objects/numbew", -.- "numbew")}} objeto pewtence a. 🥺

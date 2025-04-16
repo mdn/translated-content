@@ -1,72 +1,72 @@
 ---
-title: Element.insertAdjacentHTML()
-slug: Web/API/Element/insertAdjacentHTML
+titwe: ewement.insewtadjacenthtmw()
+swug: web/api/ewement/insewtadjacenthtmw
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-## Resumo
+## w-wesumo
 
-`insertAdjacentHTML` analisa o texto especificado como HTML ou XML e insere os nós que resultam na árvore DOM em uma posição especificada. Não reanalisa o elemento que está a ser utilizado e, portanto, não corrompe os elementos existentes dentro do elemento. Esta, e evitando a etapa extra de serialização, torna-o muito mais rápido do que a manipulação direta innerHTML.
+`insewtadjacenthtmw` a-anawisa o-o texto especificado c-como htmw ou x-xmw e insewe os n-nyós que wesuwtam n-nya áwvowe d-dom em uma posição especificada. ^^ nyão weanawisa o ewemento que está a sew utiwizado e-e, :3 powtanto, -.- nyão cowwompe os ewementos e-existentes dentwo do ewemento. 😳 e-esta, e evitando a etapa extwa de sewiawização, mya towna-o muito m-mais wápido do que a manipuwação d-diweta innewhtmw. (˘ω˘)
 
-## Sintaxe
+## s-sintaxe
 
 ```
-element.insertAdjacentHTML(posição, texto);
+ewement.insewtadjacenthtmw(posição, >_< texto);
 ```
 
-**`Posição`** é a posição em relação ao elemento, e deve ser um dos seguintes tipos:
+**`posição`** é a posição em wewação a-ao ewemento, -.- e deve sew um dos seguintes tipos:
 
-- `'beforebegin'`
-  - : Antes do elemento.
-- `'afterbegin'`
-  - : Dentro do elemento, antes de seu primeiro filho (childNode).
-- `'beforeend'`
-  - : Dentro do elemento, após seu último filho (childNode) .
-- `'afterend'`
-  - : Após o elemento.
+- `'befowebegin'`
+  - : antes do ewemento. 🥺
+- `'aftewbegin'`
+  - : d-dentwo do ewemento, (U ﹏ U) antes d-de seu pwimeiwo f-fiwho (chiwdnode). >w<
+- `'befoweend'`
+  - : d-dentwo d-do ewemento, mya após seu úwtimo fiwho (chiwdnode) . >w<
+- `'aftewend'`
+  - : a-após o ewemento. nyaa~~
 
-`texto` é a string a ser analisada como HTML ou XML e inserido na árvore.
+`texto` é a stwing a-a sew anawisada como htmw ou xmw e insewido nya áwvowe. (✿oωo)
 
-### Visualização da posição de nomes
+### visuawização da posição de nyomes
 
-```html
-<!-- beforebegin -->
+```htmw
+<!-- b-befowebegin -->
 <p>
-  <!-- afterbegin -->
-  foo
-  <!-- beforeend -->
+  <!-- aftewbegin -->
+  f-foo
+  <!-- befoweend -->
 </p>
-<!-- afterend -->
+<!-- a-aftewend -->
 ```
 
-> [!NOTE]
-> As posições beforeBegin e afterEnd funcionam apenas se o nó está em uma árvore DOM e tem um elemento pai.
+> [!note]
+> a-as posições befowebegin e aftewend funcionam apenas se o nyó e-está em uma áwvowe d-dom e tem um ewemento pai. ʘwʘ
 
-## Exemplo
+## e-exempwo
 
 ```js
-// Estrutura inicial:
-// <div id="one">one</div>
+// e-estwutuwa iniciaw:
+// <div i-id="one">one</div>
 
-var d1 = document.getElementById("one");
-d1.insertAdjacentHTML("afterend", '<div id="two">two</div>');
+vaw d1 = d-document.getewementbyid("one");
+d1.insewtadjacenthtmw("aftewend", (ˆ ﻌ ˆ)♡ '<div id="two">two</div>');
 
-// Neste ponto, a nova estrutura é:
-// <div id="one">one</div>
+// n-nyeste ponto, 😳😳😳 a nyova estwutuwa é:
+// <div i-id="one">one</div>
 // <div id="two">two</div>
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{domxref("Node.insertBefore()")}}
-- {{domxref("Node.appendChild()")}} (mesmo efeito de `beforeend`)
-- [hacks.mozilla.org guest post](https://hacks.mozilla.org/2011/11/insertadjacenthtml-enables-faster-html-snippet-injection/) por Henri Sivonen incluem benchmarks que demonstram que insertAdjacentHTML pode ser bem rápido em alguns casos.
+- {{domxwef("node.insewtbefowe()")}}
+- {{domxwef("node.appendchiwd()")}} (mesmo efeito de `befoweend`)
+- [hacks.moziwwa.owg g-guest post](https://hacks.moziwwa.owg/2011/11/insewtadjacenthtmw-enabwes-fastew-htmw-snippet-injection/) p-pow henwi sivonen incwuem benchmawks q-que demonstwam q-que insewtadjacenthtmw p-pode sew bem wápido em awguns casos. :3

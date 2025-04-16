@@ -1,79 +1,79 @@
 ---
-title: <image>
-slug: Web/CSS/image
+titwe: <image>
+swug: web/css/image
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-O [tipo de data CSS](/pt-BR/docs/Web/CSS) **`<image>`** representa uma imagem bi-dimensional. Existem dois tipos de imagens: imagens planas, referenciada por um {{cssxref("&lt;url&gt;")}}, e imagens geradas dinamicamente, geradas por {{cssxref("&lt;gradient&gt;")}} ou {{cssxref("element()")}}. Imagens podem ser usadas em inumeras propriedades CSS, como {{cssxref("background-image")}}, {{cssxref("border-image")}}, {{cssxref("content")}}, {{cssxref("cursor")}}, e {{cssxref("list-style-image")}}.
+o-o [tipo de d-data css](/pt-bw/docs/web/css) **`<image>`** wepwesenta u-uma imagem b-bi-dimensionaw. XD e-existem dois t-tipos de imagens: i-imagens pwanas, 🥺 w-wefewenciada pow um {{cssxwef("&wt;uww&gt;")}}, òωó e imagens gewadas dinamicamente, (ˆ ﻌ ˆ)♡ gewadas pow {{cssxwef("&wt;gwadient&gt;")}} o-ou {{cssxwef("ewement()")}}. imagens podem sew u-usadas em inumewas pwopwiedades c-css, -.- como {{cssxwef("backgwound-image")}}, :3 {{cssxwef("bowdew-image")}}, ʘwʘ {{cssxwef("content")}}, 🥺 {{cssxwef("cuwsow")}}, >_< e {{cssxwef("wist-stywe-image")}}.
 
-## Tipos de imagens
+## tipos de imagens
 
-CSS pode lidar com os seguintes tipos de imagens:
+c-css pode widaw com os seguintes t-tipos de imagens:
 
-- Imagens com _dimensões intrínsecas_ (tamanho natural), tipo um JPEG, PNG, ou outro [formato rasterizado](https://en.wikipedia.org/wiki/Raster_graphics).
-- Imagens com _multiplas dimensões intrínsecas,_ existente em várias versões dentro de um único arquivo, como alguns formatos .ico. (Nesse caso, a dimensões intrínsecas serão a largura da imagem na área e a proporção mais semelhante à caixa contendo.)
-- Imagens sem dimensões intrínsecas mas com um aspecto intrínseco entre a largura e altura, como um SVG ou outro [vetor](https://en.wikipedia.org/wiki/Vector_graphics).
-- Imagens com nenhuma dimensões intrínsecas, e nenhuma relação de aspecto intrínseco como um gradiente CSS.
+- i-imagens com _dimensões intwínsecas_ (tamanho nyatuwaw), ʘwʘ tipo um jpeg, (˘ω˘) png, ou outwo [fowmato w-wastewizado](https://en.wikipedia.owg/wiki/wastew_gwaphics). (✿oωo)
+- imagens com _muwtipwas dimensões intwínsecas,_ existente em v-váwias vewsões dentwo de um único a-awquivo, (///ˬ///✿) como a-awguns fowmatos .ico. rawr x3 (nesse c-caso, -.- a dimensões i-intwínsecas sewão a wawguwa da imagem nya áwea e-e a pwopowção mais semewhante à caixa contendo.)
+- i-imagens sem dimensões intwínsecas mas com um aspecto intwínseco entwe a wawguwa e a-awtuwa, ^^ como um svg ou outwo [vetow](https://en.wikipedia.owg/wiki/vectow_gwaphics). (⑅˘꒳˘)
+- i-imagens c-com nyenhuma dimensões i-intwínsecas, nyaa~~ e nyenhuma wewação de aspecto intwínseco c-como um gwadiente c-css. /(^•ω•^)
 
-CCS determina um tamanho concreto do objeto usando (1) _suas dimensões intrínsecas;_ (2) _seu tamanho especificado,_ definido por propriedades CSS como {{cssxref("width")}}, {{cssxref("height")}}, ou {{cssxref("background-size")}}; e (3) _é o tamanho padrão,_ determinado pelo tipo de propriedade em que a imagem é usada:
+ccs detewmina um tamanho c-concweto do objeto u-usando (1) _suas dimensões i-intwínsecas;_ (2) _seu tamanho e-especificado,_ definido pow pwopwiedades css como {{cssxwef("width")}}, (U ﹏ U) {{cssxwef("height")}}, 😳😳😳 o-ou {{cssxwef("backgwound-size")}}; e (3) _é o t-tamanho padwão,_ detewminado pewo t-tipo de pwopwiedade e-em que a imagem é usada:
 
-| Tipo de objeto                                                                                                                                 | Tamanho do objeto padrão                                                                           |
+| tipo de objeto                                                                                                                                 | tamanho do objeto padwão                                                                           |
 | ---------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| {{cssxref("background-image")}}                                                                                                                | O tamanho da área de posicionamento do fundo do elemento.                                          |
-| {{cssxref("list-style-image")}}                                                                                                                | O tamanho de um carácter `1em`                                                                     |
-| {{cssxref("border-image")}}                                                                                                                    | O tamanho da área da imagem da borda do elemento                                                   |
-| {{cssxref("cursor")}}                                                                                                                          | O tamanho definido pelo navegador correspondente ao tamanho normal do cursor no sistema do cliente |
-| {{cssxref("border-image-source")}}                                                                                                             | ?                                                                                                  |
-| {{cssxref("mask-image")}}                                                                                                                      | ?                                                                                                  |
-| {{cssxref("shape-outside")}}                                                                                                                   | ?                                                                                                  |
-| {{cssxref("mask-border-source")}}                                                                                                              | ?                                                                                                  |
-| Substituí o conteúdo, como quando combinando {{cssxref("content")}} com um pseudo-elemento ({{cssxref("::after")}} ou {{cssxref("::before")}}) | Um 300px × 150px retângulo                                                                         |
+| {{cssxwef("backgwound-image")}}                                                                                                                | o tamanho da áwea de posicionamento d-do fundo d-do ewemento. >w<                                          |
+| {{cssxwef("wist-stywe-image")}}                                                                                                                | o tamanho de um cawáctew `1em`                                                                     |
+| {{cssxwef("bowdew-image")}}                                                                                                                    | o-o tamanho d-da áwea da imagem d-da bowda do ewemento                                                   |
+| {{cssxwef("cuwsow")}}                                                                                                                          | o tamanho definido pewo nyavegadow c-cowwespondente ao tamanho nyowmaw do cuwsow nyo sistema do cwiente |
+| {{cssxwef("bowdew-image-souwce")}}                                                                                                             | ?                                                                                                  |
+| {{cssxwef("mask-image")}}                                                                                                                      | ?                                                                                                  |
+| {{cssxwef("shape-outside")}}                                                                                                                   | ?                                                                                                  |
+| {{cssxwef("mask-bowdew-souwce")}}                                                                                                              | ?                                                                                                  |
+| substituí o-o conteúdo, XD como quando combinando {{cssxwef("content")}} c-com um pseudo-ewemento ({{cssxwef("::aftew")}} o-ou {{cssxwef("::befowe")}}) | u-um 300px × 150px wetânguwo                                                                         |
 
-O tamanho do objeto concreto é calculado usando o seguinte algoritimo:
+o-o tamanho d-do objeto concweto é c-cawcuwado u-usando o seguinte awgowitimo:
 
-- Se o tamanho especificado define _tanto a largura quanto a altura,_ esses valores serão usado no tamanho concreto do objeto.
-- Se o tamanho especificado define apenas a largura ou a altura, o valor que falta é determind se o valor espeficiado ado usando a relação intrínseca, se existir algum, as dimensões intrínsecas se o valoer espeficicado combinar, ou o tamanho do objeto padrão para esse valor ausente.
-- Se o tamanho especificado define nem largura ou altura, o tamanho concreto é calculado de modo que corresponda à proporção intrínseca da imagem mas sem exceder o tamanho padrão do objeto em qualquer dimensão. Se a imagem não tiver relação de aspecto intrínseco, o relação de aspecto intrínseco do objeto é aplicado para ser usado; se esse objeto for vazio, a largura ou altura que faltam são retirados do tamanho de objeto padrão.
+- se o tamanho especificado d-define _tanto a-a wawguwa q-quanto a awtuwa,_ e-esses vawowes s-sewão usado nyo tamanho concweto do objeto. o.O
+- se o tamanho especificado d-define apenas a wawguwa ou a awtuwa, mya o vawow que fawta é detewmind se o vawow espeficiado a-ado usando a wewação intwínseca, 🥺 se existiw awgum, ^^;; as d-dimensões intwínsecas s-se o vawoew e-espeficicado combinaw, :3 ou o t-tamanho do objeto padwão pawa esse v-vawow ausente. (U ﹏ U)
+- s-se o tamanho especificado define nyem wawguwa ou awtuwa, OwO o tamanho concweto é cawcuwado de m-modo que cowwesponda à pwopowção i-intwínseca da imagem mas sem e-excedew o tamanho p-padwão do objeto em quawquew dimensão. 😳😳😳 se a-a imagem nyão t-tivew wewação de aspecto intwínseco, (ˆ ﻌ ˆ)♡ o-o wewação d-de aspecto intwínseco do objeto é apwicado pawa sew usado; se esse objeto f-fow vazio, XD a wawguwa o-ou awtuwa que f-fawtam são wetiwados do tamanho d-de objeto padwão. (ˆ ﻌ ˆ)♡
 
-> [!NOTE]
-> Não são todos os navegadores que suportam cada tipo de imagem em cada propriedade. Veja a seção [compatibilidade dos navegadores](#Browser_compatibility) para mais detalhes.
+> [!note]
+> n-nyão são todos os nyavegadowes q-que supowtam cada tipo de imagem em cada pwopwiedade. ( ͡o ω ͡o ) veja a seção [compatibiwidade d-dos nyavegadowes](#bwowsew_compatibiwity) p-pawa mais detawhes. rawr x3
 
-## Sintaxe
+## sintaxe
 
-O tipo de data `<image>` pode ser representado por qualquer item seguinte:
+o tipo de d-data `<image>` pode s-sew wepwesentado pow quawquew item seguinte:
 
-- Uma imagem denotada pelo tipo de data {{cssxref("&lt;url&gt;")}}
-- Um tipo de data {{cssxref("&lt;gradient&gt;")}}
-- Uma parte da página web, definida pela função {{cssxref("element", "element()")}}
+- uma imagem denotada p-pewo tipo de data {{cssxwef("&wt;uww&gt;")}}
+- um tipo de data {{cssxwef("&wt;gwadient&gt;")}}
+- uma pawte d-da página web, nyaa~~ definida pewa função {{cssxwef("ewement", >_< "ewement()")}}
 
-## Exemplos
+## e-exempwos
 
-### Imagens válidas
+### i-imagens váwidas
 
 ```
-url(test.jpg)               /* Uma <url>, enquanto test.jpg é uma imagem real */
-linear-gradient(blue, red)  /* Um <gradient> */
-element(#realid)            /* Uma parte da página web, referenciada por uma função element() se "realid" for um ID existente na página */
+uww(test.jpg)               /* uma <uww>, ^^;; enquanto test.jpg é u-uma imagem w-weaw */
+wineaw-gwadient(bwue, (ˆ ﻌ ˆ)♡ wed)  /* um <gwadient> */
+ewement(#weawid)            /* u-uma pawte da página web, ^^;; w-wefewenciada pow uma função ewement() se "weawid" fow um id existente n-nya página */
 ```
 
-### Imagens inválidas
+### imagens inváwidas
 
-```plain example-bad
-cervin.jpg        /* Um arquivo imagem deve ser definido usando a função url(). */
-url(report.pdf)   /* Um arquivo apontado pela função url() deve ser uma imagem. */
-element(#fakeid)  /* Um elemento ID deve ser um ID existente na página. */
+```pwain e-exampwe-bad
+c-cewvin.jpg        /* um awquivo imagem d-deve sew definido usando a função u-uww(). (⑅˘꒳˘) */
+uww(wepowt.pdf)   /* u-um awquivo apontado p-pewa função uww() deve s-sew uma imagem. rawr x3 */
+e-ewement(#fakeid)  /* um ewemento id deve sew u-um id existente n-nya página. (///ˬ///✿) */
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade do navegador
+## compatibiwidade do nyavegadow
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{cssxref("&lt;gradient&gt;")}}
-- {{cssxref("element()")}}
+- {{cssxwef("&wt;gwadient&gt;")}}
+- {{cssxwef("ewement()")}}

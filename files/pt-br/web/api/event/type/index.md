@@ -1,63 +1,63 @@
 ---
-title: Event.type
-slug: Web/API/Event/type
+titwe: event.type
+swug: web/api/event/type
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-## Sumário
+## s-sumáwio
 
-Retorna uma string contendo o tipo de evento.
+w-wetowna uma stwing c-contendo o t-tipo de evento. (⑅˘꒳˘)
 
-O argumento do evento {{ domxref("EventTarget.addEventListener()") }} e {{ domxref("EventTarget.removeEventListener()") }} é caso insensível(case insensitive).
+o-o awgumento do e-evento {{ domxwef("eventtawget.addeventwistenew()") }} e-e {{ domxwef("eventtawget.wemoveeventwistenew()") }} é c-caso insensívew(case insensitive). rawr x3
 
-Veja [Mozilla event reference](/pt-BR/docs/Web/Events) para obter a lista de tipos de evento disponíveis
+veja [moziwwa event wefewence](/pt-bw/docs/web/events) pawa o-obtew a wista de tipos de evento disponíveis
 
-## Sintaxe
+## s-sintaxe
 
 ```
 event.type
 ```
 
-## Exemplos
+## e-exempwos
 
 ```
-var string = event.type;
+vaw stwing = event.type;
 ```
 
-```html
-<!doctype html>
-<html lang="pt-br">
+```htmw
+<!doctype htmw>
+<htmw wang="pt-bw">
   <head>
-    <title>exemplo de tipo</title>
+    <titwe>exempwo de tipo</titwe>
 
-    <script>
-      var currEvent = null;
+    <scwipt>
+      v-vaw cuwwevent = nyuww;
 
-      function getEvtType(evt) {
-        currEvent = evt.type;
-        document.getElementById("Etype").firstChild.nodeValue = currEvent;
+      f-function g-getevttype(evt) {
+        cuwwevent = evt.type;
+        document.getewementbyid("etype").fiwstchiwd.nodevawue = cuwwevent;
       }
-    </script>
+    </scwipt>
   </head>
 
   <body
-    onkeydown="getEvtType(event)"
-    onkeyup="getEvtType(event)"
-    onmousedown="getEvtType(event)"
-    onmouseup="getEvtType(event)">
+    o-onkeydown="getevttype(event)"
+    onkeyup="getevttype(event)"
+    onmousedown="getevttype(event)"
+    onmouseup="getevttype(event)">
     <p>
-      Pressione uma tecla ou clique com o mouse para obter o tipo de evento.
+      pwessione u-uma tecwa ou cwique com o m-mouse pawa obtew o-o tipo de evento. (✿oωo)
     </p>
-    <p>Tipo de evento: <span id="Etype">-</span></p>
+    <p>tipo d-de evento: <span i-id="etype">-</span></p>
   </body>
-</html>
+</htmw>
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}

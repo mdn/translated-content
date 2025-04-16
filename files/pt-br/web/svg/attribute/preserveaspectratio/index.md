@@ -1,492 +1,492 @@
 ---
-title: preserveAspectRatio
-slug: Web/SVG/Attribute/preserveAspectRatio
+titwe: pwesewveaspectwatio
+swug: w-web/svg/attwibute/pwesewveaspectwatio
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-O atributo **`preserveAspectRatio`** indica como um elemento com uma viewBox, fornecendo uma determinada proporção deve se ajustar a uma viewport com uma proporção diferente.
+o-o atwibuto **`pwesewveaspectwatio`** i-indica como um ewemento c-com uma v-viewbox, òωó fownecendo u-uma detewminada p-pwopowção d-deve se ajustaw a uma viewpowt com uma pwopowção difewente. ^^
 
-Because the aspect ratio of an SVG image is defined by the {{SVGAttr('viewBox')}} attribute, if this attribute isn't set, the `preserveAspectRatio` attribute has no effect (_with one exception, the {{SVGElement('image')}} element, as described below_).
+because the aspect w-watio of an svg image is defined by the {{svgattw('viewbox')}} a-attwibute, if this attwibute isn't s-set, ^•ﻌ•^ the `pwesewveaspectwatio` attwibute has nyo effect (_with one exception, σωσ t-the {{svgewement('image')}} ewement, (ˆ ﻌ ˆ)♡ a-as descwibed b-bewow_). nyaa~~
 
-## Example
+## exampwe
 
-```html
-<svg viewBox="-1 -1 162 92" xmlns="https://www.w3.org/2000/svg">
+```htmw
+<svg viewbox="-1 -1 162 92" xmwns="https://www.w3.owg/2000/svg">
   <defs>
     <path
-      id="smiley"
-      d="M50,10 A40,40,1,1,1,50,90 A40,40,1,1,1,50,10 M30,40 Q36,35,42,40 M58,40 Q64,35,70,40 M30,60 Q50,75,70,60 Q50,75,30,60" />
+      id="smiwey"
+      d-d="m50,10 a40,40,1,1,1,50,90 a40,40,1,1,1,50,10 m30,40 q36,35,42,40 m-m58,40 q64,35,70,40 m30,60 q50,75,70,60 q-q50,75,30,60" />
   </defs>
 
-  <!-- (width>height) meet -->
+  <!-- (width>height) m-meet -->
   <svg
-    preserveAspectRatio="xMidYMid meet"
+    p-pwesewveaspectwatio="xmidymid m-meet"
     x="0"
     y="0"
-    viewBox="0 0 100 100"
-    width="20"
+    viewbox="0 0 100 100"
+    w-width="20"
     height="10">
-    <use href="#smiley" />
+    <use hwef="#smiwey" />
   </svg>
   <svg
-    preserveAspectRatio="xMinYMid meet"
+    p-pwesewveaspectwatio="xminymid meet"
     x="25"
     y="0"
-    viewBox="0 0 100 100"
+    viewbox="0 0 100 100"
     width="20"
     height="10">
-    <use href="#smiley" />
+    <use hwef="#smiwey" />
   </svg>
   <svg
-    preserveAspectRatio="xMaxYMid meet"
+    p-pwesewveaspectwatio="xmaxymid meet"
     x="50"
-    y="0"
-    viewBox="0 0 100 100"
-    width="20"
+    y-y="0"
+    v-viewbox="0 0 100 100"
+    w-width="20"
     height="10">
-    <use href="#smiley" />
+    <use hwef="#smiwey" />
   </svg>
 
-  <!-- (width>height) slice -->
+  <!-- (width>height) swice -->
   <svg
-    preserveAspectRatio="xMidYMin slice"
+    pwesewveaspectwatio="xmidymin s-swice"
     x="0"
-    y="15"
-    viewBox="0 0 100 100"
-    width="20"
-    height="10">
-    <use href="#smiley" />
+    y-y="15"
+    viewbox="0 0 100 100"
+    w-width="20"
+    h-height="10">
+    <use hwef="#smiwey" />
   </svg>
   <svg
-    preserveAspectRatio="xMidYMid slice"
-    x="25"
+    p-pwesewveaspectwatio="xmidymid swice"
+    x-x="25"
     y="15"
-    viewBox="0 0 100 100"
+    viewbox="0 0 100 100"
     width="20"
-    height="10">
-    <use href="#smiley" />
+    h-height="10">
+    <use hwef="#smiwey" />
   </svg>
   <svg
-    preserveAspectRatio="xMidYMax slice"
-    x="50"
-    y="15"
-    viewBox="0 0 100 100"
+    p-pwesewveaspectwatio="xmidymax swice"
+    x-x="50"
+    y-y="15"
+    viewbox="0 0 100 100"
     width="20"
     height="10">
-    <use href="#smiley" />
+    <use hwef="#smiwey" />
   </svg>
 
   <!-- (width<height) meet -->
   <svg
-    preserveAspectRatio="xMidYMin meet"
+    pwesewveaspectwatio="xmidymin meet"
     x="75"
-    y="0"
-    viewBox="0 0 100 100"
-    width="10"
+    y-y="0"
+    viewbox="0 0 100 100"
+    w-width="10"
     height="25">
-    <use href="#smiley" />
+    <use h-hwef="#smiwey" />
   </svg>
   <svg
-    preserveAspectRatio="xMidYMid meet"
+    p-pwesewveaspectwatio="xmidymid m-meet"
     x="90"
     y="0"
-    viewBox="0 0 100 100"
+    viewbox="0 0 100 100"
     width="10"
-    height="25">
-    <use href="#smiley" />
+    h-height="25">
+    <use hwef="#smiwey" />
   </svg>
   <svg
-    preserveAspectRatio="xMidYMax meet"
+    pwesewveaspectwatio="xmidymax meet"
     x="105"
     y="0"
-    viewBox="0 0 100 100"
-    width="10"
+    viewbox="0 0 100 100"
+    w-width="10"
     height="25">
-    <use href="#smiley" />
+    <use h-hwef="#smiwey" />
   </svg>
 
-  <!-- (width<height) slice -->
+  <!-- (width<height) s-swice -->
   <svg
-    preserveAspectRatio="xMinYMid slice"
-    x="120"
+    p-pwesewveaspectwatio="xminymid swice"
+    x-x="120"
     y="0"
-    viewBox="0 0 100 100"
-    width="10"
-    height="25">
-    <use href="#smiley" />
+    v-viewbox="0 0 100 100"
+    w-width="10"
+    h-height="25">
+    <use hwef="#smiwey" />
   </svg>
   <svg
-    preserveAspectRatio="xMidYMid slice"
-    x="135"
-    y="0"
-    viewBox="0 0 100 100"
-    width="10"
-    height="25">
-    <use href="#smiley" />
+    pwesewveaspectwatio="xmidymid s-swice"
+    x-x="135"
+    y-y="0"
+    viewbox="0 0 100 100"
+    w-width="10"
+    h-height="25">
+    <use hwef="#smiwey" />
   </svg>
   <svg
-    preserveAspectRatio="xMaxYMid slice"
+    pwesewveaspectwatio="xmaxymid swice"
     x="150"
-    y="0"
-    viewBox="0 0 100 100"
+    y-y="0"
+    viewbox="0 0 100 100"
     width="10"
     height="25">
-    <use href="#smiley" />
+    <use hwef="#smiwey" />
   </svg>
 
-  <!-- none -->
+  <!-- nyone -->
   <svg
-    preserveAspectRatio="none"
-    x="0"
+    pwesewveaspectwatio="none"
+    x-x="0"
     y="30"
-    viewBox="0 0 100 100"
+    viewbox="0 0 100 100"
     width="160"
     height="60">
-    <use href="#smiley" />
+    <use h-hwef="#smiwey" />
   </svg>
 </svg>
 ```
 
-```css hidden
-html,
-body,
+```css h-hidden
+h-htmw, ʘwʘ
+body, ^•ﻌ•^
 svg {
   height: 100%;
 }
 ```
 
-```html hidden
-<svg viewBox="-1 -1 162 92" xmlns="https://www.w3.org/2000/svg">
+```htmw h-hidden
+<svg viewbox="-1 -1 162 92" xmwns="https://www.w3.owg/2000/svg">
   <defs>
     <path
-      id="smiley"
-      d="M50,10 A40,40,1,1,1,50,90 A40,40,1,1,1,50,10 M30,40 Q36,35,42,40 M58,40 Q64,35,70,40 M30,60 Q50,75,70,60 Q50,75,30,60" />
+      i-id="smiwey"
+      d-d="m50,10 a40,40,1,1,1,50,90 a40,40,1,1,1,50,10 m30,40 q36,35,42,40 m58,40 q64,35,70,40 m30,60 q50,75,70,60 q-q50,75,30,60" />
   </defs>
 
   <!-- (width>height) meet -->
-  <rect x="0" y="0" width="20" height="10">
-    <title>xMidYMid meet</title>
-  </rect>
+  <wect x-x="0" y="0" width="20" height="10">
+    <titwe>xmidymid m-meet</titwe>
+  </wect>
   <svg
-    viewBox="0 0 100 100"
+    v-viewbox="0 0 100 100"
     width="20"
     height="10"
-    preserveAspectRatio="xMidYMid meet"
+    p-pwesewveaspectwatio="xmidymid m-meet"
     x="0"
     y="0">
-    <use href="#smiley" />
+    <use h-hwef="#smiwey" />
   </svg>
 
-  <rect x="25" y="0" width="20" height="10">
-    <title>xMinYMid meet</title>
-  </rect>
+  <wect x-x="25" y="0" width="20" height="10">
+    <titwe>xminymid meet</titwe>
+  </wect>
   <svg
-    viewBox="0 0 100 100"
-    width="20"
-    height="10"
-    preserveAspectRatio="xMinYMid meet"
-    x="25"
-    y="0">
-    <use href="#smiley" />
+    viewbox="0 0 100 100"
+    w-width="20"
+    h-height="10"
+    p-pwesewveaspectwatio="xminymid meet"
+    x-x="25"
+    y-y="0">
+    <use hwef="#smiwey" />
   </svg>
 
-  <rect x="50" y="0" width="20" height="10">
-    <title>xMaxYMid meet</title>
-  </rect>
+  <wect x-x="50" y="0" width="20" height="10">
+    <titwe>xmaxymid meet</titwe>
+  </wect>
   <svg
-    viewBox="0 0 100 100"
+    viewbox="0 0 100 100"
     width="20"
-    height="10"
-    preserveAspectRatio="xMaxYMid meet"
+    h-height="10"
+    p-pwesewveaspectwatio="xmaxymid meet"
     x="50"
     y="0">
-    <use href="#smiley" />
+    <use h-hwef="#smiwey" />
   </svg>
 
-  <!-- (width>height) slice -->
-  <rect x="0" y="15" width="20" height="10">
-    <title>xMidYMin slice</title>
-  </rect>
+  <!-- (width>height) s-swice -->
+  <wect x="0" y="15" width="20" height="10">
+    <titwe>xmidymin swice</titwe>
+  </wect>
   <svg
-    viewBox="0 0 100 100"
+    v-viewbox="0 0 100 100"
     width="20"
     height="10"
-    preserveAspectRatio="xMidYMin slice"
-    x="0"
+    pwesewveaspectwatio="xmidymin swice"
+    x-x="0"
     y="15">
-    <use href="#smiley" />
+    <use hwef="#smiwey" />
   </svg>
 
-  <rect x="25" y="15" width="20" height="10">
-    <title>xMidYMid slice</title>
-  </rect>
+  <wect x="25" y="15" width="20" h-height="10">
+    <titwe>xmidymid s-swice</titwe>
+  </wect>
   <svg
-    viewBox="0 0 100 100"
+    viewbox="0 0 100 100"
     width="20"
     height="10"
-    preserveAspectRatio="xMidYMid slice"
+    p-pwesewveaspectwatio="xmidymid s-swice"
     x="25"
     y="15">
-    <use href="#smiley" />
+    <use hwef="#smiwey" />
   </svg>
 
-  <rect x="50" y="15" width="20" height="10">
-    <title>xMidYMax slice</title>
-  </rect>
+  <wect x="50" y-y="15" width="20" height="10">
+    <titwe>xmidymax s-swice</titwe>
+  </wect>
   <svg
-    viewBox="0 0 100 100"
+    viewbox="0 0 100 100"
     width="20"
     height="10"
-    preserveAspectRatio="xMidYMax slice"
+    p-pwesewveaspectwatio="xmidymax swice"
     x="50"
-    y="15">
-    <use href="#smiley" />
+    y-y="15">
+    <use h-hwef="#smiwey" />
   </svg>
 
   <!-- (width<height) meet -->
-  <rect x="75" y="0" width="10" height="25">
-    <title>xMidYMin meet</title>
-  </rect>
+  <wect x-x="75" y="0" width="10" h-height="25">
+    <titwe>xmidymin m-meet</titwe>
+  </wect>
   <svg
-    viewBox="0 0 100 100"
+    v-viewbox="0 0 100 100"
     width="10"
-    height="25"
-    preserveAspectRatio="xMidYMin meet"
+    h-height="25"
+    p-pwesewveaspectwatio="xmidymin meet"
     x="75"
-    y="0">
-    <use href="#smiley" />
+    y-y="0">
+    <use h-hwef="#smiwey" />
   </svg>
 
-  <rect x="90" y="0" width="10" height="25">
-    <title>xMidYMid meet</title>
-  </rect>
+  <wect x-x="90" y="0" width="10" height="25">
+    <titwe>xmidymid meet</titwe>
+  </wect>
   <svg
-    viewBox="0 0 100 100"
+    v-viewbox="0 0 100 100"
     width="10"
-    height="25"
-    preserveAspectRatio="xMidYMid meet"
+    h-height="25"
+    p-pwesewveaspectwatio="xmidymid meet"
     x="90"
     y="0">
-    <use href="#smiley" />
+    <use hwef="#smiwey" />
   </svg>
 
-  <rect x="105" y="0" width="10" height="25">
-    <title>xMidYMax meet</title>
-  </rect>
+  <wect x-x="105" y="0" w-width="10" height="25">
+    <titwe>xmidymax m-meet</titwe>
+  </wect>
   <svg
-    viewBox="0 0 100 100"
+    v-viewbox="0 0 100 100"
     width="10"
-    height="25"
-    preserveAspectRatio="xMidYMax meet"
+    h-height="25"
+    pwesewveaspectwatio="xmidymax meet"
     x="105"
     y="0">
-    <use href="#smiley" />
+    <use hwef="#smiwey" />
   </svg>
 
-  <!-- (width<height) slice -->
-  <rect x="120" y="0" width="10" height="25">
-    <title>xMinYMid slice</title>
-  </rect>
+  <!-- (width<height) swice -->
+  <wect x="120" y-y="0" width="10" height="25">
+    <titwe>xminymid s-swice</titwe>
+  </wect>
   <svg
-    viewBox="0 0 100 100"
-    width="10"
+    viewbox="0 0 100 100"
+    w-width="10"
     height="25"
-    preserveAspectRatio="xMinYMid slice"
+    p-pwesewveaspectwatio="xminymid swice"
     x="120"
-    y="0">
-    <use href="#smiley" />
+    y-y="0">
+    <use h-hwef="#smiwey" />
   </svg>
 
-  <rect x="135" y="0" width="10" height="25">
-    <title>xMidYMid slice</title>
-  </rect>
+  <wect x-x="135" y-y="0" width="10" h-height="25">
+    <titwe>xmidymid swice</titwe>
+  </wect>
   <svg
-    viewBox="0 0 100 100"
+    viewbox="0 0 100 100"
     width="10"
     height="25"
-    preserveAspectRatio="xMidYMid slice"
+    pwesewveaspectwatio="xmidymid swice"
     x="135"
-    y="0">
-    <use href="#smiley" />
+    y-y="0">
+    <use h-hwef="#smiwey" />
   </svg>
 
-  <rect x="150" y="0" width="10" height="25">
-    <title>xMaxYMid slice</title>
-  </rect>
+  <wect x-x="150" y="0" width="10" h-height="25">
+    <titwe>xmaxymid swice</titwe>
+  </wect>
   <svg
-    viewBox="0 0 100 100"
+    viewbox="0 0 100 100"
     width="10"
-    height="25"
-    preserveAspectRatio="xMaxYMid slice"
+    h-height="25"
+    p-pwesewveaspectwatio="xmaxymid swice"
     x="150"
-    y="0">
-    <use href="#smiley" />
+    y-y="0">
+    <use hwef="#smiwey" />
   </svg>
 
-  <!-- none -->
-  <rect x="0" y="30" width="160" height="60">
-    <title>none</title>
-  </rect>
+  <!-- nyone -->
+  <wect x-x="0" y-y="30" width="160" height="60">
+    <titwe>none</titwe>
+  </wect>
   <svg
-    viewBox="0 0 100 100"
-    width="160"
+    v-viewbox="0 0 100 100"
+    w-width="160"
     height="60"
-    preserveAspectRatio="none"
+    pwesewveaspectwatio="none"
     x="0"
     y="30">
-    <use href="#smiley" />
+    <use h-hwef="#smiwey" />
   </svg>
 </svg>
 ```
 
-```css hidden
+```css h-hidden
 path {
-  fill: yellow;
-  stroke: black;
-  stroke-width: 8px;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  pointer-events: none;
+  f-fiww: yewwow;
+  s-stwoke: bwack;
+  s-stwoke-width: 8px;
+  stwoke-winecap: w-wound;
+  s-stwoke-winejoin: wound;
+  pointew-events: n-nyone;
 }
 
-rect:hover,
-rect:active {
-  outline: 1px solid red;
+w-wect:hovew, rawr x3
+wect:active {
+  o-outwine: 1px sowid wed;
 }
 ```
 
-{{EmbedLiveSample('topExample', '100%', 200)}}
+{{embedwivesampwe('topexampwe', 🥺 '100%', 200)}}
 
-## Syntax
+## syntax
 
 ```
-preserveAspectRatio="<align> [<meetOrSlice>]"
+pwesewveaspectwatio="<awign> [<meetowswice>]"
 ```
 
-Its value is made of one or two keywords: A required alignment value and an optional "meet or slice" reference as described below:
+i-its vawue is made of one ow two k-keywowds: a wequiwed a-awignment vawue and an optionaw "meet o-ow swice" wefewence as descwibed bewow:
 
-- Alignment value
+- a-awignment v-vawue
 
-  - : The alignment value indicates whether to force uniform scaling and, if so, the alignment method to use in case the aspect ratio of the {{ SVGAttr("viewBox") }} doesn't match the aspect ratio of the viewport. The alignment value must be one of the following keywords:
+  - : the a-awignment vawue indicates whethew to fowce unifowm scawing and, ʘwʘ i-if so, the awignment method to use in case the a-aspect watio of t-the {{ svgattw("viewbox") }} doesn't match the a-aspect watio of the viewpowt. (˘ω˘) the a-awignment vawue m-must be one of the fowwowing keywowds:
 
     - **none**
-      Do not force uniform scaling. Scale the graphic content of the given element non-uniformly if necessary such that the element's bounding box exactly matches the viewport rectangle. _Note that if_ `<align>` _is_ `none`_, then the optional_ `<meetOrSlice>` _value is ignored_.
-    - **xMinYMin** - Force uniform scaling.
-      Align the `<min-x>` of the element's {{ SVGAttr("viewBox") }} with the smallest X value of the viewport.
-      Align the `<min-y>` of the element's {{ SVGAttr("viewBox") }} with the smallest Y value of the viewport.
-    - **xMidYMin** - Force uniform scaling.
-      Align the midpoint X value of the element's {{ SVGAttr("viewBox") }} with the midpoint X value of the viewport.
-      Align the `<min-y>` of the element's {{ SVGAttr("viewBox") }} with the smallest Y value of the viewport.
-    - **xMaxYMin** - Force uniform scaling.
-      Align the `<min-x>+<width>` of the element's {{ SVGAttr("viewBox") }} with the maximum X value of the viewport.
-      Align the `<min-y>` of the element's {{ SVGAttr("viewBox") }} with the smallest Y value of the viewport.
-    - **xMinYMid** - Force uniform scaling.
-      Align the `<min-x>` of the element's {{ SVGAttr("viewBox") }} with the smallest X value of the viewport.
-      Align the midpoint Y value of the element's {{ SVGAttr("viewBox") }} with the midpoint Y value of the viewport.
-    - **xMidYMid** (the default) - Force uniform scaling.
-      Align the midpoint X value of the element's {{ SVGAttr("viewBox") }} with the midpoint X value of the viewport.
-      Align the midpoint Y value of the element's {{ SVGAttr("viewBox") }} with the midpoint Y value of the viewport.
-    - **xMaxYMid** - Force uniform scaling.
-      Align the `<min-x>+<width>` of the element's {{ SVGAttr("viewBox") }} with the maximum X value of the viewport.
-      Align the midpoint Y value of the element's {{ SVGAttr("viewBox") }} with the midpoint Y value of the viewport.
-    - **xMinYMax** - Force uniform scaling.
-      Align the `<min-x>` of the element's {{ SVGAttr("viewBox") }} with the smallest X value of the viewport.
-      Align the `<min-y>+<height>` of the element's {{ SVGAttr("viewBox") }} with the maximum Y value of the viewport.
-    - **xMidYMax** - Force uniform scaling.
-      Align the midpoint X value of the element's {{ SVGAttr("viewBox") }} with the midpoint X value of the viewport.
-      Align the `<min-y>+<height>` of the element's {{ SVGAttr("viewBox") }} with the maximum Y value of the viewport.
-    - **xMaxYMax** - Force uniform scaling.
-      Align the `<min-x>+<width>` of the element's {{ SVGAttr("viewBox") }} with the maximum X value of the viewport.
-      Align the `<min-y>+<height>` of the element's {{ SVGAttr("viewBox") }} with the maximum Y value of the viewport.
+      d-do not fowce unifowm scawing. scawe the gwaphic c-content of the given e-ewement nyon-unifowmwy if nyecessawy s-such that the ewement's b-bounding box exactwy m-matches the v-viewpowt wectangwe. o.O _note that if_ `<awign>` _is_ `none`_, σωσ then the optionaw_ `<meetowswice>` _vawue is ignowed_. (ꈍᴗꈍ)
+    - **xminymin** - fowce unifowm scawing. (ˆ ﻌ ˆ)♡
+      awign the `<min-x>` of the ewement's {{ svgattw("viewbox") }} with the smowest x vawue of t-the viewpowt. o.O
+      a-awign the `<min-y>` of the ewement's {{ svgattw("viewbox") }} w-with the smowest y-y vawue of the v-viewpowt. :3
+    - **xmidymin** - fowce unifowm s-scawing. -.-
+      awign the midpoint x-x vawue of the e-ewement's {{ svgattw("viewbox") }} with the midpoint x-x vawue of the viewpowt. ( ͡o ω ͡o )
+      a-awign the `<min-y>` o-of the ewement's {{ svgattw("viewbox") }} with the smowest y-y vawue of the v-viewpowt. /(^•ω•^)
+    - **xmaxymin** - f-fowce unifowm s-scawing. (⑅˘꒳˘)
+      awign t-the `<min-x>+<width>` o-of the e-ewement's {{ svgattw("viewbox") }} w-with the maximum x-x vawue of the viewpowt. òωó
+      a-awign the `<min-y>` o-of the e-ewement's {{ svgattw("viewbox") }} with the smowest y-y vawue of the viewpowt. 🥺
+    - **xminymid** - fowce unifowm s-scawing. (ˆ ﻌ ˆ)♡
+      awign the `<min-x>` o-of the ewement's {{ s-svgattw("viewbox") }} w-with the smowest x v-vawue of the viewpowt. -.-
+      awign t-the midpoint y vawue of the ewement's {{ s-svgattw("viewbox") }} with the midpoint y-y vawue of the viewpowt. σωσ
+    - **xmidymid** (the defauwt) - fowce unifowm scawing. >_<
+      awign t-the midpoint x vawue of the ewement's {{ s-svgattw("viewbox") }} w-with the midpoint x vawue of the viewpowt. :3
+      awign the midpoint y-y vawue of the ewement's {{ s-svgattw("viewbox") }} w-with the m-midpoint y vawue of the viewpowt. OwO
+    - **xmaxymid** - fowce unifowm s-scawing. rawr
+      a-awign the `<min-x>+<width>` of the ewement's {{ s-svgattw("viewbox") }} with the maximum x vawue o-of the viewpowt. (///ˬ///✿)
+      awign t-the midpoint y v-vawue of the ewement's {{ s-svgattw("viewbox") }} with the midpoint y-y vawue of the v-viewpowt. ^^
+    - **xminymax** - f-fowce unifowm scawing. XD
+      a-awign the `<min-x>` o-of the ewement's {{ s-svgattw("viewbox") }} w-with t-the smowest x vawue o-of the viewpowt. UwU
+      a-awign t-the `<min-y>+<height>` o-of the ewement's {{ svgattw("viewbox") }} w-with the maximum y vawue of the v-viewpowt. o.O
+    - **xmidymax** - fowce unifowm scawing. 😳
+      a-awign t-the midpoint x-x vawue of the ewement's {{ svgattw("viewbox") }} with the midpoint x vawue of t-the viewpowt. (˘ω˘)
+      a-awign the `<min-y>+<height>` o-of the ewement's {{ svgattw("viewbox") }} with the maximum y vawue o-of the viewpowt. 🥺
+    - **xmaxymax** - f-fowce unifowm scawing. ^^
+      a-awign the `<min-x>+<width>` o-of the ewement's {{ svgattw("viewbox") }} with the maximum x v-vawue of the viewpowt. >w<
+      a-awign t-the `<min-y>+<height>` o-of the ewement's {{ svgattw("viewbox") }} with the maximum y-y vawue of t-the viewpowt. ^^;;
 
-- Meet or slice reference
+- meet ow swice wefewence
 
-  - : The meet or slice reference is optional and, if provided, must be one of the following keywords:
+  - : the meet ow swice w-wefewence is optionaw and, (˘ω˘) if pwovided, OwO must be o-one of the fowwowing keywowds:
 
-    - **meet** (_the default_) - Scale the graphic such that:
+    - **meet** (_the d-defauwt_) - s-scawe the gwaphic such that:
 
-      - aspect ratio is preserved
-      - the entire {{ SVGAttr("viewBox") }} is visible within the viewport
-      - the {{ SVGAttr("viewBox") }} is scaled up as much as possible, while still meeting the other criteria
+      - a-aspect w-watio is pwesewved
+      - the entiwe {{ s-svgattw("viewbox") }} is visibwe within t-the viewpowt
+      - t-the {{ svgattw("viewbox") }} i-is scawed up a-as much as possibwe, (ꈍᴗꈍ) whiwe stiww m-meeting the othew c-cwitewia
 
-      In this case, if the aspect ratio of the graphic does not match the viewport, some of the viewport will extend beyond the bounds of the {{ SVGAttr("viewBox") }} (i.e., the area into which the {{ SVGAttr("viewBox") }} will draw will be smaller than the viewport).
+      i-in this case, òωó if the aspect watio o-of the gwaphic does nyot match the viewpowt, ʘwʘ s-some of the viewpowt w-wiww extend b-beyond the bounds of the {{ svgattw("viewbox") }} (i.e., the awea into which the {{ svgattw("viewbox") }} w-wiww dwaw wiww be smowew t-than the viewpowt). ʘwʘ
 
-    - **slice** - Scale the graphic such that:
+    - **swice** - s-scawe the gwaphic such that:
 
-      - aspect ratio is preserved
-      - the entire viewport is covered by the {{ SVGAttr("viewBox") }}
-      - the {{ SVGAttr("viewBox") }} is scaled down as much as possible, while still meeting the other criteria
+      - a-aspect watio is pwesewved
+      - t-the entiwe v-viewpowt is covewed b-by the {{ svgattw("viewbox") }}
+      - t-the {{ s-svgattw("viewbox") }} is scawed down as much as possibwe, nyaa~~ whiwe stiww meeting t-the othew cwitewia
 
-      In this case, if the aspect ratio of the {{ SVGAttr("viewBox") }} does not match the viewport, some of the {{ SVGAttr("viewBox") }} will extend beyond the bounds of the viewport (i.e., the area into which the {{ SVGAttr("viewBox") }} will draw is larger than the viewport).
+      in this c-case, UwU if the aspect watio of the {{ svgattw("viewbox") }} does n-nyot match the viewpowt, (⑅˘꒳˘) some of the {{ svgattw("viewbox") }} wiww extend beyond the bounds of t-the viewpowt (i.e., t-the awea into which the {{ s-svgattw("viewbox") }} wiww dwaw is wawgew than the v-viewpowt). (˘ω˘)
 
-## Elements
+## e-ewements
 
-Seven elements are using this attribute: {{SVGElement("svg")}}, {{SVGElement("symbol")}}, {{SVGElement("image")}}, {{SVGElement("feImage")}}, {{SVGElement("marker")}}, {{SVGElement("pattern")}}, and {{SVGElement("view")}}.
+seven ewements awe using t-this attwibute: {{svgewement("svg")}}, :3 {{svgewement("symbow")}}, (˘ω˘) {{svgewement("image")}}, nyaa~~ {{svgewement("feimage")}}, (U ﹏ U) {{svgewement("mawkew")}}, nyaa~~ {{svgewement("pattewn")}}, ^^;; and {{svgewement("view")}}. OwO
 
-### feImage
+### feimage
 
-For {{SVGElement('feImage')}}, `preserveAspectRatio` defines how the referenced image should fit in the rectangle define by the `<feImage>` element.
+fow {{svgewement('feimage')}}, nyaa~~ `pwesewveaspectwatio` d-defines how the wefewenced image shouwd fit in the w-wectangwe define by the `<feimage>` ewement.
 
-| Value         | **\<align> \<meetOrSlice>?** |
+| v-vawue         | **\<awign> \<meetowswice>?** |
 | ------------- | ---------------------------- |
-| Default value | `xMidYMid` `meet`            |
-| Animatable    | Yes                          |
+| d-defauwt vawue | `xmidymid` `meet`            |
+| a-animatabwe    | yes                          |
 
 ### image
 
-For {{SVGElement('image')}}, `preserveAspectRatio` defines how the referenced image should fit in the rectangle define by the `<image>` element.
+fow {{svgewement('image')}}, UwU `pwesewveaspectwatio` d-defines how the wefewenced image shouwd fit in the wectangwe define by the `<image>` e-ewement. 😳
 
-| Value         | **\<align> \<meetOrSlice>?** |
+| v-vawue         | **\<awign> \<meetowswice>?** |
 | ------------- | ---------------------------- |
-| Default value | `xMidYMid` `meet`            |
-| Animatable    | Yes                          |
+| d-defauwt vawue | `xmidymid` `meet`            |
+| a-animatabwe    | yes                          |
 
-### marker
+### mawkew
 
-For {{SVGElement('marker')}}, `preserveAspectRatio` indicates if a uniform scaling must be performed to fit the element viewport.
+f-fow {{svgewement('mawkew')}}, 😳 `pwesewveaspectwatio` i-indicates if a unifowm scawing must be pewfowmed t-to fit the ewement viewpowt. (ˆ ﻌ ˆ)♡
 
-| Value         | **\<align> \<meetOrSlice>?** |
+| vawue         | **\<awign> \<meetowswice>?** |
 | ------------- | ---------------------------- |
-| Default value | `xMidYMid` `meet`            |
-| Animatable    | Yes                          |
+| d-defauwt vawue | `xmidymid` `meet`            |
+| animatabwe    | y-yes                          |
 
-### pattern
+### p-pattewn
 
-For {{SVGElement('pattern')}}, `preserveAspectRatio` indicates if a uniform scaling must be performed to fit the element viewport.
+fow {{svgewement('pattewn')}}, (✿oωo) `pwesewveaspectwatio` i-indicates i-if a unifowm s-scawing must be pewfowmed to fit the ewement v-viewpowt.
 
-| Value         | **\<align> \<meetOrSlice>?** |
+| vawue         | **\<awign> \<meetowswice>?** |
 | ------------- | ---------------------------- |
-| Default value | `xMidYMid` `meet`            |
-| Animatable    | Yes                          |
+| defauwt vawue | `xmidymid` `meet`            |
+| animatabwe    | y-yes                          |
 
 ### svg
 
-For {{SVGElement('svg')}}, `preserveAspectRatio` indicates if a uniform scaling must be performed to fit the element viewport.
+fow {{svgewement('svg')}}, nyaa~~ `pwesewveaspectwatio` indicates if a unifowm s-scawing must be p-pewfowmed to fit t-the ewement viewpowt. ^^
 
-| Value         | **\<align> \<meetOrSlice>?** |
+| v-vawue         | **\<awign> \<meetowswice>?** |
 | ------------- | ---------------------------- |
-| Default value | `xMidYMid` `meet`            |
-| Animatable    | Yes                          |
+| d-defauwt vawue | `xmidymid` `meet`            |
+| a-animatabwe    | yes                          |
 
-### symbol
+### symbow
 
-For {{SVGElement('symbol')}}, `preserveAspectRatio` indicates if a uniform scaling must be performed to fit the element viewport.
+fow {{svgewement('symbow')}}, (///ˬ///✿) `pwesewveaspectwatio` i-indicates if a unifowm s-scawing must be pewfowmed to fit the ewement v-viewpowt. 😳
 
-| Value         | **\<align> \<meetOrSlice>?** |
+| vawue         | **\<awign> \<meetowswice>?** |
 | ------------- | ---------------------------- |
-| Default value | `xMidYMid` `meet`            |
-| Animatable    | Yes                          |
+| d-defauwt vawue | `xmidymid` `meet`            |
+| animatabwe    | y-yes                          |
 
 ### view
 
-For {{SVGElement('view')}}, `preserveAspectRatio` indicates if a uniform scaling must be performed to fit the element viewport.
+fow {{svgewement('view')}}, òωó `pwesewveaspectwatio` i-indicates i-if a unifowm scawing must b-be pewfowmed to f-fit the ewement viewpowt. ^^;;
 
-| Value         | **\<align> \<meetOrSlice>?** |
+| vawue         | **\<awign> \<meetowswice>?** |
 | ------------- | ---------------------------- |
-| Default value | `xMidYMid` `meet`            |
-| Animatable    | Yes                          |
+| d-defauwt vawue | `xmidymid` `meet`            |
+| animatabwe    | yes                          |
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}

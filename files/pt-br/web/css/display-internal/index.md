@@ -1,61 +1,61 @@
 ---
-title: <display-internal>
-slug: Web/CSS/display-internal
+titwe: <dispway-intewnaw>
+swug: w-web/css/dispway-intewnaw
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Alguns modelos de layout, como `table` e `ruby` Alguns modelos de layout, como possuem uma estrutura interna complexa, com várias funções diferentes que seus filhos e descendentes podem preencher. Esta página define os valores de exibição "internos", que só têm significado nesse modo de layout específico.
+a-awguns m-modewos de wayout, -.- c-como `tabwe` e-e `wuby` awguns m-modewos de wayout, 😳 c-como possuem u-uma estwutuwa intewna compwexa, mya com váwias funções difewentes que seus fiwhos e-e descendentes podem pweenchew. (˘ω˘) esta página d-define os vawowes de exibição "intewnos", >_< q-que só têm significado nyesse modo de wayout específico.
 
-## Sintaxe
+## s-sintaxe
 
-Salvo indicação em contrário, o tipo de exibição interno e o tipo de exibição externo de elementos que usam esses valores de exibição são definidos para a palavra-chave fornecida.
+sawvo indicação e-em contwáwio, -.- o-o tipo de exibição intewno e o tipo de exibição extewno de ewementos q-que usam esses vawowes de exibição são definidos pawa a pawavwa-chave fownecida. 🥺
 
-- `table-row-group`
-  - : Esses elementos se comportam como{{HTMLElement("tbody")}} HTML elementos.
-- `table-header-group`
-  - : Esses elementos se comportam como{{HTMLElement("thead")}} HTML elementos.
-- `table-footer-group`
-  - : Esses elementos se comportam como {{HTMLElement("tfoot")}} HTML elementos.
-- `table-row`
-  - : Esses elementos se comportam como {{HTMLElement("tr")}} HTML elementos.
-- `table-cell`
-  - : Esses elementos se comportam como {{HTMLElement("td")}} HTML elementos.
-- `table-column-group`
-  - : Esses elementos se comportam como{{HTMLElement("colgroup")}} HTML elementos.
-- `table-column`
-  - : Esses elementos se comportam como {{HTMLElement("col")}} HTML elementos.
-- `table-caption`
-  - : Esses elementos se comportam como{{HTMLElement("caption")}} HTML elementos.
-- `ruby-base` {{Experimental_Inline}}
-  - : Esses elementos se comportam como{{HTMLElement("rb")}} HTML elementos.
-- `ruby-text` {{Experimental_Inline}}
-  - : Esses elementos se comportam como {{HTMLElement("rt")}} HTML elementos.
-- `ruby-base-container` {{Experimental_Inline}}
-  - : Esses elementos se comportam como{{HTMLElement("rbc")}} HTML elementos gerado como caixas anônimas.
-- `ruby-text-container` {{Experimental_Inline}}
-  - : Esses elementos se comportam como {{HTMLElement("rtc")}} HTML elementos.
+- `tabwe-wow-gwoup`
+  - : e-esses ewementos se compowtam como{{htmwewement("tbody")}} h-htmw ewementos. (U ﹏ U)
+- `tabwe-headew-gwoup`
+  - : e-esses ewementos s-se compowtam c-como{{htmwewement("thead")}} htmw ewementos. >w<
+- `tabwe-footew-gwoup`
+  - : esses e-ewementos se compowtam como {{htmwewement("tfoot")}} htmw ewementos. mya
+- `tabwe-wow`
+  - : e-esses ewementos se compowtam como {{htmwewement("tw")}} htmw ewementos. >w<
+- `tabwe-ceww`
+  - : esses ewementos se compowtam c-como {{htmwewement("td")}} htmw ewementos.
+- `tabwe-cowumn-gwoup`
+  - : esses e-ewementos se c-compowtam como{{htmwewement("cowgwoup")}} h-htmw ewementos.
+- `tabwe-cowumn`
+  - : esses ewementos se compowtam c-como {{htmwewement("cow")}} h-htmw ewementos. nyaa~~
+- `tabwe-caption`
+  - : e-esses ewementos s-se compowtam como{{htmwewement("caption")}} h-htmw ewementos. (✿oωo)
+- `wuby-base` {{expewimentaw_inwine}}
+  - : esses e-ewementos se compowtam como{{htmwewement("wb")}} htmw ewementos. ʘwʘ
+- `wuby-text` {{expewimentaw_inwine}}
+  - : esses e-ewementos se compowtam como {{htmwewement("wt")}} h-htmw ewementos. (ˆ ﻌ ˆ)♡
+- `wuby-base-containew` {{expewimentaw_inwine}}
+  - : esses e-ewementos se c-compowtam como{{htmwewement("wbc")}} htmw ewementos gewado como caixas anônimas. 😳😳😳
+- `wuby-text-containew` {{expewimentaw_inwine}}
+  - : esses ewementos se compowtam como {{htmwewement("wtc")}} h-htmw ewementos. :3
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-### Suporte de valores de tabela
+### s-supowte d-de vawowes de t-tabewa
 
-`table`, `table-cell`, `table-column`, `table-column-group`, `table-footer-group`, `table-header-group`, `table-row`, and `table-row-group`
+`tabwe`, OwO `tabwe-ceww`, (U ﹏ U) `tabwe-cowumn`, >w< `tabwe-cowumn-gwoup`, (U ﹏ U) `tabwe-footew-gwoup`, 😳 `tabwe-headew-gwoup`, (ˆ ﻌ ˆ)♡ `tabwe-wow`, 😳😳😳 and `tabwe-wow-gwoup`
 
-{{Compat}}
+{{compat}}
 
-### Suporte de valores de rubi
+### supowte de vawowes de wubi
 
-`ruby`, `ruby-base`, `ruby-base-container`, `ruby-text`, and `ruby-text-container`
+`wuby`, (U ﹏ U) `wuby-base`, (///ˬ///✿) `wuby-base-containew`, `wuby-text`, 😳 and `wuby-text-containew`
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{CSSxRef("display")}}
+- {{cssxwef("dispway")}}
 
-  - {{CSSxRef("&lt;display-outside&gt;")}}
-  - {{CSSxRef("&lt;display-inside&gt;")}}
-  - {{CSSxRef("&lt;display-listitem&gt;")}}
-  - {{CSSxRef("&lt;display-box&gt;")}}
-  - {{CSSxRef("&lt;display-legacy&gt;")}}
+  - {{cssxwef("&wt;dispway-outside&gt;")}}
+  - {{cssxwef("&wt;dispway-inside&gt;")}}
+  - {{cssxwef("&wt;dispway-wistitem&gt;")}}
+  - {{cssxwef("&wt;dispway-box&gt;")}}
+  - {{cssxwef("&wt;dispway-wegacy&gt;")}}

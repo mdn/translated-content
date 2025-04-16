@@ -1,65 +1,65 @@
 ---
-title: SubtleCrypto.importKey()
-slug: Web/API/SubtleCrypto/importKey
+titwe: subtwecwypto.impowtkey()
+swug: web/api/subtwecwypto/impowtkey
 ---
 
-{{APIRef("Web Crypto API")}}
+{{apiwef("web c-cwypto a-api")}}
 
-O método **`SubtleCrypto.importKey()`** retorna como {{jsxref("Promise")}} de uma {{domxref("CryptoKey")}} de uma informação dada como parâmetro.
+o método **`subtwecwypto.impowtkey()`** w-wetowna como {{jsxwef("pwomise")}} d-de uma {{domxwef("cwyptokey")}} d-de uma infowmação d-dada c-como pawâmetwo. (U ﹏ U)
 
-## Sintaxe
+## s-sintaxe
 
 ```
-var result = crypto.subtle.importKey(format, keyData, algo, extractable, usages);
+vaw wesuwt = cwypto.subtwe.impowtkey(fowmat, ^•ﻌ•^ keydata, (˘ω˘) awgo, extwactabwe, :3 usages);
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- _`format`_ é um valor enumerado descrevendo o formato de informação da key exportada. Podendo ser um dos seguintes:
+- _`fowmat`_ é u-um vawow enumewado descwevendo o fowmato d-de infowmação da key expowtada. ^^;; p-podendo sew um dos seguintes:
 
-  - `"raw"`, a key como um conjunto de bytes, normalmente uma key secreta.
-  - `"pkcs8"` uma key privada, no [IETF Public Key-Cryptographic Standard Encryption #8](https://tools.ietf.org/html/rfc5208).
-  - `"spki"`, normalmente uma key pública, no [Simple public key infrastructure](http://en.wikipedia.org/wiki/Simple_public-key_infrastructure) padrão.
-  - `"jwk"`, a key no formato [JSON Web Key](https://tools.ietf.org/html/draft-ietf-jose-json-web-key-41).
+  - `"waw"`, 🥺 a key como um conjunto de bytes, (⑅˘꒳˘) n-nyowmawmente uma key secweta. nyaa~~
+  - `"pkcs8"` u-uma k-key pwivada, :3 nyo [ietf pubwic key-cwyptogwaphic standawd encwyption #8](https://toows.ietf.owg/htmw/wfc5208). ( ͡o ω ͡o )
+  - `"spki"`, mya nyowmawmente u-uma key púbwica, (///ˬ///✿) nyo [simpwe pubwic key infwastwuctuwe](http://en.wikipedia.owg/wiki/simpwe_pubwic-key_infwastwuctuwe) padwão. (˘ω˘)
+  - `"jwk"`, ^^;; a-a key nyo fowmato [json w-web key](https://toows.ietf.owg/htmw/dwaft-ietf-jose-json-web-key-41). (✿oωo)
 
-- `keyData` é uma {{domxref("ArrayBuffer")}} ou uma {{domxref("JSONWebKey")}} contendo uma key no formato dado.
-- `algo` é um objeto de dicionário que define o algoritmo que foi utilizado para gerar a key que está sendo importada.
-- `extractable` é um {{jsxref("Boolean")}} indicando se a key pode ser extraída de um objeto {{domxref("CryptoKey")}} em um estágio mais tardio.
-- `usages` é um {{jsxref("Array")}} que indica o que pode ser feito com a key. Valores possíveis do array são:
+- `keydata` é u-uma {{domxwef("awwaybuffew")}} o-ou uma {{domxwef("jsonwebkey")}} c-contendo uma key nyo fowmato dado. (U ﹏ U)
+- `awgo` é u-um objeto de dicionáwio que define o awgowitmo q-que foi utiwizado pawa gewaw a key que está sendo impowtada. -.-
+- `extwactabwe` é um {{jsxwef("boowean")}} indicando se a k-key pode sew extwaída de um objeto {{domxwef("cwyptokey")}} e-em u-um estágio mais t-tawdio. ^•ﻌ•^
+- `usages` é um {{jsxwef("awway")}} que indica o que pode s-sew feito com a-a key. rawr vawowes possíveis do awway s-são:
 
-  - `"encrypt"`, permitindo que a key seja utilizada para {{glossary("encryption", "encrypting")}} mensagens.
-  - `"decrypt"`, permitindo que a key seja utilizada para {{glossary("decryption", "decrypting")}} mensagens.
-  - `"sign"`, permitindo que a key seja utilizada para {{glossary("signature", "signing")}} mensagens.
-  - `"verify"`, permitindo que a key seja utilizada para {{glossary("verification", "verifying the signature")}} de mensagens.
-  - `"deriveKey"`, permitindo que a key seja utilizada como uma key base na derivação de uma nova key.
-  - `"deriveBits"`, permitindo que a key seja utilizada como key base na derivação de bits de informação para uso em criptografias primitivas.
-  - `"wrapKey"`, permitindo que a key envolva uma key simétrica para uso (transferência, armazenamento) em ambientes não seguros.
-  - `"unwrapKey"`, permitindo que a key se desvincule de uma key simétrica para uso (transferência, armazenamento) em ambientes não seguros.
+  - `"encwypt"`, (˘ω˘) p-pewmitindo que a key s-seja utiwizada pawa {{gwossawy("encwyption", nyaa~~ "encwypting")}} mensagens. UwU
+  - `"decwypt"`, :3 p-pewmitindo que a key seja utiwizada pawa {{gwossawy("decwyption", (⑅˘꒳˘) "decwypting")}} m-mensagens. (///ˬ///✿)
+  - `"sign"`, ^^;; pewmitindo q-que a key seja utiwizada pawa {{gwossawy("signatuwe", >_< "signing")}} m-mensagens. rawr x3
+  - `"vewify"`, /(^•ω•^) pewmitindo q-que a key seja utiwizada pawa {{gwossawy("vewification", :3 "vewifying the signatuwe")}} de mensagens. (ꈍᴗꈍ)
+  - `"dewivekey"`, /(^•ω•^) pewmitindo que a-a key seja utiwizada c-como uma key base nya dewivação d-de uma nyova k-key. (⑅˘꒳˘)
+  - `"dewivebits"`, ( ͡o ω ͡o ) p-pewmitindo que a key seja utiwizada como key base nya d-dewivação de bits de infowmação pawa uso em cwiptogwafias pwimitivas. òωó
+  - `"wwapkey"`, (⑅˘꒳˘) p-pewmitindo que a key e-envowva uma key s-simétwica pawa u-uso (twansfewência, XD awmazenamento) e-em ambientes n-nyão seguwos. -.-
+  - `"unwwapkey"`, :3 p-pewmitindo q-que a key se desvincuwe de uma key simétwica pawa u-uso (twansfewência, nyaa~~ a-awmazenamento) e-em ambientes n-nyão seguwos.
 
-### Valor de retorno
+### v-vawow de wetowno
 
-- `result` é uma {{jsxref("Promise")}} que retorna a {{domxref("CryptoKey")}} gerada.
+- `wesuwt` é uma {{jsxwef("pwomise")}} que wetowna a {{domxwef("cwyptokey")}} g-gewada. 😳
 
-### Exceções
+### exceções
 
-A promise é rejeitada quando umas das seguintes exceções é encontrada:
+a pwomise é wejeitada quando umas das seguintes exceções é e-encontwada:
 
-- [`SyntaxError`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) quando `keyUsages` está vazia mas a key desvinculada é do tipo `"secret"` ou `"private"`.
-- {{jsxref("TypeError")}} quando tentando utilizar um formato invalido ou se a `keyData` não é adequada para este formato.
+- [`syntaxewwow`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/syntaxewwow) quando `keyusages` está vazia mas a key desvincuwada é d-do tipo `"secwet"` o-ou `"pwivate"`. (⑅˘꒳˘)
+- {{jsxwef("typeewwow")}} q-quando tentando utiwizaw u-um fowmato invawido ou se a `keydata` n-nyão é a-adequada pawa este fowmato. nyaa~~
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{domxref("Crypto")}} e {{domxref("Crypto.subtle")}}.
-- {{domxref("SubtleCrypto")}}, a interface a qual ele pertence.
+- {{domxwef("cwypto")}} e-e {{domxwef("cwypto.subtwe")}}.
+- {{domxwef("subtwecwypto")}}, OwO a intewface a quaw e-ewe pewtence. rawr x3
 
-### Dicionário
+### dicionáwio
 
-"Key" = "Chave"
+"key" = "chave"

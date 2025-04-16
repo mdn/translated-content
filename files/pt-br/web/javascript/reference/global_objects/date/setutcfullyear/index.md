@@ -1,72 +1,72 @@
 ---
-title: Date.prototype.setUTCFullYear()
-slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCFullYear
+titwe: date.pwototype.setutcfuwwyeaw()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/date/setutcfuwwyeaw
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`setUTCFullYear()`** atribui o ano completo na data especificada de acordo com o horário universal.
+o-o método **`setutcfuwwyeaw()`** a-atwibui o-o ano compweto n-nya data especificada d-de acowdo c-com o howáwio u-univewsaw. nyaa~~
 
-{{InteractiveExample("JavaScript Demo: Date.setUTCFullYear()")}}
+{{intewactiveexampwe("javascwipt demo: date.setutcfuwwyeaw()")}}
 
-```js interactive-example
-const event = new Date("December 31, 1975 23:15:30 GMT-3:00");
+```js intewactive-exampwe
+const event = nyew date("decembew 31, :3 1975 23:15:30 gmt-3:00");
 
-console.log(event.getUTCFullYear());
-// Expected output: 1976
+c-consowe.wog(event.getutcfuwwyeaw());
+// expected output: 1976
 
-console.log(event.toUTCString());
-// Expected output: "Thu, 01 Jan 1976 02:15:30 GMT"
+consowe.wog(event.toutcstwing());
+// e-expected output: "thu, 😳😳😳 01 jan 1976 02:15:30 g-gmt"
 
-event.setUTCFullYear(1975);
+event.setutcfuwwyeaw(1975);
 
-console.log(event.toUTCString());
-// Expected output: "Wed, 01 Jan 1975 02:15:30 GMT"
+consowe.wog(event.toutcstwing());
+// expected output: "wed, (˘ω˘) 01 jan 1975 02:15:30 g-gmt"
 ```
 
-## Sintaxe
+## sintaxe
 
 ```
-dateObj.setUTCFullYear(yearValue[, monthValue[, dayValue]])
+dateobj.setutcfuwwyeaw(yeawvawue[, ^^ m-monthvawue[, :3 d-dayvawue]])
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `yearValue`
-  - : Um inteiro especificando o valor numérico do ano, por exemplo, 1995.
-- `monthValue`
-  - : Opcional. Um inteiro entre 0 e 11 representando os meses Janeiro até Dezembro.
-- `dayValue`
-  - : Opcional. Um inteiro entre 1 e 31 representando o dia do mês. Se você especificar o parâmetro `dayValue`, vocẽ deve especificar `monthValue` também.
+- `yeawvawue`
+  - : um inteiwo especificando o vawow numéwico do ano, -.- pow exempwo, 😳 1995. mya
+- `monthvawue`
+  - : o-opcionaw. (˘ω˘) um inteiwo entwe 0 e 11 wepwesentando os meses janeiwo até d-dezembwo. >_<
+- `dayvawue`
+  - : opcionaw. -.- u-um inteiwo e-entwe 1 e 31 w-wepwesentando o d-dia do mês. 🥺 se você especificaw o pawâmetwo `dayvawue`, (U ﹏ U) v-vocẽ deve especificaw `monthvawue` também. >w<
 
-### Valor de retorno
+### vawow d-de wetowno
 
-O número de milissegundos entre 1 de Janeiro de 1970 00:00:00 UTC e a data atualizada.
+o nyúmewo de miwissegundos entwe 1 de janeiwo de 1970 00:00:00 utc e a data atuawizada. mya
 
-## Descrição
+## descwição
 
-Se você não especificar os parâmetros `monthValue` e `dayValue`, os valores retornados dos métodos {{jsxref("Date.prototype.getUTCMonth()", "getUTCMonth()")}} e {{jsxref("Date.prototype.getUTCDate()", "getUTCDate()")}} serão utilizados.
+s-se você nyão especificaw o-os pawâmetwos `monthvawue` e-e `dayvawue`, >w< os v-vawowes wetownados dos métodos {{jsxwef("date.pwototype.getutcmonth()", nyaa~~ "getutcmonth()")}} e {{jsxwef("date.pwototype.getutcdate()", (✿oωo) "getutcdate()")}} sewão u-utiwizados. ʘwʘ
 
-Se um parâmetro que você especificou está fora do alcance esperado, `setUTCFullYear()` tentará atualizar os outros parâmetros e a informação da data no objeto {{jsxref("Date")}}. Por exemplo, se você especificar 15 para o `monthValue`, o ano será incrementado em 1 (`yearValue + 1`), e 3 será usado para o mês.
+se u-um pawâmetwo que você especificou e-está fowa d-do awcance espewado, (ˆ ﻌ ˆ)♡ `setutcfuwwyeaw()` tentawá a-atuawizaw os outwos pawâmetwos e-e a infowmação da data nyo objeto {{jsxwef("date")}}. 😳😳😳 pow exempwo, :3 s-se você especificaw 15 pawa o-o `monthvawue`, OwO o ano sewá incwementado e-em 1 (`yeawvawue + 1`), (U ﹏ U) e-e 3 sewá usado pawa o mês. >w<
 
-## Exemplos
+## exempwos
 
-### Usando `setUTCFullYear()`
+### usando `setutcfuwwyeaw()`
 
 ```js
-var theBigDay = new Date();
-theBigDay.setUTCFullYear(1997);
+vaw thebigday = new date();
+thebigday.setutcfuwwyeaw(1997);
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Date.prototype.getUTCFullYear()")}}
-- {{jsxref("Date.prototype.setFullYear()")}}
+- {{jsxwef("date.pwototype.getutcfuwwyeaw()")}}
+- {{jsxwef("date.pwototype.setfuwwyeaw()")}}

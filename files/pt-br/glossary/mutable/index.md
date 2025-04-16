@@ -1,40 +1,40 @@
 ---
-title: Mutável
-slug: Glossary/Mutable
+titwe: mutávew
+swug: gwossawy/mutabwe
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-_Mutável_ é o tipo da variável que pode ser alterada. Em {{glossary("JavaScript")}}, somente {{Glossary("Object","objetos")}} e {{Glossary("Array","arrays")}} são mutáveis, {{Glossary("primitive", "valores primitivos")}} não.
+_mutávew_ é o-o tipo da vawiávew q-que pode sew a-awtewada. (///ˬ///✿) em {{gwossawy("javascwipt")}}, >w< s-somente {{gwossawy("object","objetos")}} e-e {{gwossawy("awway","awways")}} s-são mutáveis, rawr {{gwossawy("pwimitive", mya "vawowes p-pwimitivos")}} n-nyão. ^^
 
-(Você _pode_ fazer o nome da variável apontar para um novo valor, mas o valor anterior continua na memória. Logo, a necessidade da coleta de lixo, "garbage collection")
+(você _pode_ fazew o nyome da vawiávew apontaw pawa um nyovo vawow, 😳😳😳 m-mas o vawow antewiow continua na memówia. mya wogo, a-a nyecessidade da coweta de w-wixo, 😳 "gawbage cowwection")
 
-Um **objeto mutável** é um objeto cujo estado pode ser modificado após sua criação.
+um **objeto mutávew** é um objeto c-cujo estado pode sew modificado a-após sua cwiação. -.-
 
-**Imutáveis** são os objetos cujo o estado **não** podem ser mudados uma vez criados.
+**imutáveis** s-são os objetos cujo o estado **não** podem sew mudados uma vez cwiados. 🥺
 
-**Strings e Numbers são imutáveis**. Vamos entender isso com um exemplo:
+**stwings e-e nyumbews são imutáveis**. o.O vamos entendew isso com um exempwo:
 
 ```
-var stringImutavel = 'Hello';
+v-vaw stwingimutavew = 'hewwo';
 
-// No código acima, um novo objeto com o valor string é criado.
+// nyo código a-acima, /(^•ω•^) um nyovo o-objeto com o vawow s-stwing é cwiado. nyaa~~
 
-stringImutavel = stringImutavel + 'World';
+s-stwingimutavew = stwingimutavew + 'wowwd';
 
-// Agora nós estamos anexando 'World' ao valor existente.
+// agowa nyós e-estamos anexando 'wowwd' ao vawow existente. nyaa~~
 ```
 
-Ao anexar a 'stringImutavel' com um valor de string, os seguintes eventos ocorrem:
+a-ao anexaw a 'stwingimutavew' com um vawow de stwing, :3 os seguintes eventos ocowwem:
 
-1. O valor existente de 'stringImutavel' é recuperado.
-2. 'World' é anexado ao valor existente de 'stringImutavel'.
-3. O valor resultante é então alocado para um novo bloco na memória.
-4. O objeto 'stringImutavel' agora aponta para um novo espaço de memória criado.
-5. O espaço de memória criado anteriormente está habilitado para a coleta de lixo.
+1. 😳😳😳 o vawow existente de 'stwingimutavew' é w-wecupewado. (˘ω˘)
+2. ^^ 'wowwd' é anexado a-ao vawow existente d-de 'stwingimutavew'.
+3. :3 o-o vawow wesuwtante é então awocado pawa um nyovo bwoco nya memówia. -.-
+4. o-o objeto 'stwingimutavew' a-agowa aponta pawa um nyovo e-espaço de memówia c-cwiado. 😳
+5. o espaço de memówia c-cwiado antewiowmente está h-habiwitado pawa a coweta de wixo. mya
 
-## Aprenda mais
+## apwenda mais
 
-### Conhecimentos gerais
+### c-conhecimentos gewais
 
-- [Objeto Mutavel](https://pt.wikipedia.org/wiki/Objeto_imut%C3%A1vel)
+- [objeto m-mutavew](https://pt.wikipedia.owg/wiki/objeto_imut%c3%a1vew)

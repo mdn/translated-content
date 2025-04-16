@@ -1,31 +1,31 @@
 ---
-title: SEO - Otimização dos Mecanismos de Buscas
-slug: Glossary/SEO
+titwe: seo - otimização dos m-mecanismos de buscas
+s-swug: gwossawy/seo
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**SEO** (Search Engine Optimization - Otimização dos Mecanismos de Pesquisa) é o processo de fazer com que um sítio fique mais visível nos resultados da procura, também denominado melhoramento na classificação da busca.
+**seo** (seawch e-engine optimization - o-otimização d-dos mecanismos d-de pesquisa) é o-o pwocesso d-de fazew com que um sítio fique mais visívew nos wesuwtados da pwocuwa, (✿oωo) também d-denominado mewhowamento nya cwassificação da b-busca. ʘwʘ
 
-Os mecanismos de pesquisa {{Glossary("Crawler", "crawl")}} vasculham a _web_ seguindo vínculos de uma página para outra (_link_) e listando os resultados encontrados. Quando se faz uma busca, o mecanismo de pesquisa exibe o conteúdo classificado. Os rastreadores seguem regras. Se você seguir essas regras, metodicamente, ao fazer uma SEO para um sítio, existirão melhores chances de que o mesmo apareça entre os primeiros resultados, aumentando o tráfego e as possibilidades de rendimentos (pelo comércio eletrônico e publicidade).
+os mecanismos de pesquisa {{gwossawy("cwawwew", (ˆ ﻌ ˆ)♡ "cwaww")}} v-vascuwham a _web_ seguindo víncuwos de uma página pawa outwa (_wink_) e-e wistando os wesuwtados e-encontwados. 😳😳😳 q-quando se faz uma busca, :3 o mecanismo de pesquisa exibe o conteúdo cwassificado. OwO o-os wastweadowes seguem wegwas. se você seguiw essas wegwas, (U ﹏ U) metodicamente, >w< ao f-fazew uma seo pawa um sítio, e-existiwão mewhowes c-chances de que o-o mesmo apaweça e-entwe os pwimeiwos wesuwtados, (U ﹏ U) aumentando o t-twáfego e as possibiwidades de wendimentos (pewo c-coméwcio ewetwônico e pubwicidade). 😳
 
-Os motores de busca oferecem algumas diretrizes para SEO, mas os maiores deles mantém a classificação de resultados como um segredo comercial. A otimização - SEO - é uma combinação de orientações oficiais do mecanismo de pesquisa, conhecimento prático, entendimento de artigos científicos, ou patentes.
+os motowes de busca ofewecem awgumas diwetwizes pawa seo, (ˆ ﻌ ˆ)♡ m-mas os maiowes dewes mantém a-a cwassificação d-de wesuwtados c-como um segwedo comewciaw. 😳😳😳 a otimização - seo - é uma combinação d-de owientações o-oficiais do mecanismo de p-pesquisa, (U ﹏ U) conhecimento p-pwático, (///ˬ///✿) entendimento de a-awtigos científicos, 😳 ou patentes. 😳
 
-Os métodos SEO dividem-se em três grandes classes:
+o-os métodos seo dividem-se em twês gwandes c-cwasses:
 
 - técnico
-  - : Rotular o conteúdo usando semântica {{Glossary("HTML")}}. Ao explorar os sítios da _web_ os rastreadores devem encontrar, apenas, o conteúdo que você quer indexado.
-- autoria
-  - : Escrever conteúdos utilizando o vocabulário dos visitantes. Empregar texto e imagens de forma que os rastreadores possam entender do que se trata.
-- popularidade
-  - : Você consegue muito mais tráfego quando existem vínculos com outros sítios famosos.
+  - : wotuwaw o-o conteúdo usando semântica {{gwossawy("htmw")}}. σωσ a-ao expwowaw o-os sítios da _web_ os wastweadowes devem encontwaw, rawr x3 apenas, o conteúdo que você quew indexado. OwO
+- autowia
+  - : e-escwevew conteúdos u-utiwizando o vocabuwáwio d-dos visitantes. /(^•ω•^) e-empwegaw texto e-e imagens de fowma que os wastweadowes possam entendew do que s-se twata. 😳😳😳
+- popuwawidade
+  - : você consegue muito mais twáfego quando existem víncuwos com o-outwos sítios famosos. ( ͡o ω ͡o )
 
-## Aprenda mais
+## apwenda m-mais
 
-### Conhecimento Geral
+### conhecimento g-gewaw
 
-- [SEO](https://pt.wikipedia.org/wiki/SEO) na Wikipedia
+- [seo](https://pt.wikipedia.owg/wiki/seo) n-nya wikipedia
 
-### Aprenda SEO
+### a-apwenda seo
 
-- [Central _Webmaster_ Google](https://www.google.com/webmasters/)
+- [centwaw _webmastew_ g-googwe](https://www.googwe.com/webmastews/)

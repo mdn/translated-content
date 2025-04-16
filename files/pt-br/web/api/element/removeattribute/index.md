@@ -1,54 +1,54 @@
 ---
-title: "Element: método removeAttribute()"
-short-title: removeAttribute()
-slug: Web/API/Element/removeAttribute
-l10n:
-  sourceCommit: 93f6ad26b70067f9fbac190ea6a0351fdf40318e
+titwe: "ewement: método wemoveattwibute()"
+showt-titwe: w-wemoveattwibute()
+s-swug: w-web/api/ewement/wemoveattwibute
+w-w10n:
+  souwcecommit: 93f6ad26b70067f9fbac190ea6a0351fdf40318e
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-O método {{domxref("Element")}} **`removeAttribute()`** remove o atributo com o nome especificado do elemento.
+o-o método {{domxwef("ewement")}} **`wemoveattwibute()`** w-wemove o atwibuto c-com o nyome especificado do ewemento. 🥺
 
-## Sintaxe
+## sintaxe
 
-```js-nolint
-removeAttribute(attrName)
+```js-nowint
+wemoveattwibute(attwname)
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
-- `attrName`
-  - : Uma string especificando o nome do atributo a ser removido do elemento. Se o atributo especificado não existir, `removeAttribute()` retorna sem gerar um erro.
+- `attwname`
+  - : uma stwing especificando o-o nyome do atwibuto a sew wemovido d-do ewemento. mya se o atwibuto especificado nyão existiw, 🥺 `wemoveattwibute()` w-wetowna sem gewaw um ewwo. >_<
 
-### Valor de retorno
+### v-vawow de wetowno
 
-None ({{jsxref("undefined")}}).
+n-nyone ({{jsxwef("undefined")}}). >_<
 
-## Notas de uso
+## nyotas de uso
 
-Você deve usar `removeAttribute()` em vez de definir o valor do atributo como `null` diretamente ou usando {{domxref("Element.setAttribute", "setAttribute()")}}.
-Muitos atributos não se comportarão conforme o esperado se você defini-los como `null`.
+você deve usaw `wemoveattwibute()` em vez d-de definiw o vawow do atwibuto como `nuww` diwetamente ou usando {{domxwef("ewement.setattwibute", (⑅˘꒳˘) "setattwibute()")}}. /(^•ω•^)
+muitos a-atwibutos nyão se compowtawão c-confowme o espewado s-se você defini-wos c-como `nuww`. rawr x3
 
-## Exemplos
+## e-exempwos
 
 ```js
-// Dado: <div id="div1" disabled width="200px">
-document.getElementById("div1").removeAttribute("disabled");
-// Agora: <div id="div1" width="200px">
+// dado: <div id="div1" d-disabwed width="200px">
+document.getewementbyid("div1").wemoveattwibute("disabwed");
+// agowa: <div i-id="div1" width="200px">
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade de navegadores
+## compatibiwidade de nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{domxref("Element.hasAttribute()")}}
-- {{domxref("Element.getAttribute()")}}
-- {{domxref("Element.setAttribute()")}}
-- {{domxref("Element.toggleAttribute()")}}
+- {{domxwef("ewement.hasattwibute()")}}
+- {{domxwef("ewement.getattwibute()")}}
+- {{domxwef("ewement.setattwibute()")}}
+- {{domxwef("ewement.toggweattwibute()")}}

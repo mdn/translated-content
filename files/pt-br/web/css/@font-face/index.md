@@ -1,144 +1,144 @@
 ---
-title: "@font-face"
-slug: Web/CSS/@font-face
+titwe: "@font-face"
+swug: web/css/@font-face
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-O **`@font-face`** [CSS](/pt-BR/docs/Web/CSS) [at-rule](/pt-BR/docs/Web/CSS/At-rule) especifica uma fonte customizada com a qual exibe o texto; a fonte pode ser carregada de um servidor remoto ou de uma fonte instalada localmente no computador do usuário.
+o-o **`@font-face`** [css](/pt-bw/docs/web/css) [at-wuwe](/pt-bw/docs/web/css/at-wuwe) e-especifica u-uma fonte customizada c-com a quaw e-exibe o texto; a-a fonte pode sew c-cawwegada de um s-sewvidow wemoto ou de uma fonte instawada wocawmente nyo computadow do usuáwio. 🥺
 
-Se a função `local()` for fornecida, a especificação do nome da fonte a ser procurada no computador do usuário, e a {{Glossary("user agent")}} encontrar uma correspondência, essa fonte local será usada. Caso contrário, o recurso de fonte especificado usando a função `url()` é baixado e usado.
+s-se a função `wocaw()` fow fownecida, XD a especificação d-do nome da fonte a s-sew pwocuwada nyo computadow do usuáwio, e a {{gwossawy("usew agent")}} encontwaw u-uma cowwespondência, (U ᵕ U❁) essa fonte w-wocaw sewá u-usada. :3 caso contwáwio, ( ͡o ω ͡o ) o wecuwso de fonte especificado usando a função `uww()` é b-baixado e usado. òωó
 
-Ao permitir que os autores forneçam suas próprias fontes, `@font-face` torna possível projetar conteúdo sem se limitar às chamadas fontes "seguras para a web" (ou seja, as fontes que são tão comuns que são consideradas como universalmente disponível). A capacidade de especificar o nome de uma fonte instalada localmente a ser procurada e usada permite personalizar a fonte além do básico, ao mesmo tempo em que é possível fazê-lo sem depender de uma conexão com a Internet.
+ao pewmitiw que os autowes fowneçam suas pwópwias fontes, σωσ `@font-face` t-towna possívew pwojetaw conteúdo s-sem se wimitaw às c-chamadas fontes "seguwas pawa a-a web" (ou seja, (U ᵕ U❁) a-as fontes que são tão comuns que são considewadas c-como univewsawmente disponívew). (✿oωo) a capacidade d-de especificaw o nyome de uma fonte instawada wocawmente a sew pwocuwada e usada pewmite p-pewsonawizaw a fonte awém do b-básico, ^^ ao mesmo t-tempo em que é p-possívew fazê-wo sem dependew de uma conexão com a intewnet. ^•ﻌ•^
 
-É comum usar `url()` e `local()` juntos, para que a cópia instalada da fonte do usuário seja usada, se disponível, voltando ao download de uma cópia da fonte, caso ela não seja encontrada no dispositivo do usuário.
+É c-comum usaw `uww()` e-e `wocaw()` juntos, XD pawa q-que a cópia instawada d-da fonte do usuáwio seja u-usada, :3 se disponívew, (ꈍᴗꈍ) vowtando a-ao downwoad de uma cópia da fonte, :3 caso ewa n-nyão seja encontwada nyo dispositivo d-do usuáwio. (U ﹏ U)
 
-A regra de CSS `@font-face` pode ser usada não apenas no nível superior de um CSS, mas também dentro de qualquer [CSS conditional-group at-rule](/pt-BR/docs/Web/CSS/At-rule#conditional_group_rules).
+a wegwa de css `@font-face` p-pode sew usada nyão a-apenas nyo nyívew supewiow de um css, UwU mas também dentwo de quawquew [css conditionaw-gwoup at-wuwe](/pt-bw/docs/web/css/at-wuwe#conditionaw_gwoup_wuwes). 😳😳😳
 
 ```css
 @font-face {
-  font-family: "Open Sans";
-  src:
-    url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2"),
-    url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
+  f-font-famiwy: "open s-sans";
+  swc:
+    uww("/fonts/opensans-weguwaw-webfont.woff2") f-fowmat("woff2"), XD
+    uww("/fonts/opensans-weguwaw-webfont.woff") f-fowmat("woff");
 }
 ```
 
-## Sintaxe
+## s-sintaxe
 
-### Descritores
+### descwitowes
 
-- {{cssxref("@font-face/font-display", "font-display")}}
-  - : Determina como uma fonte é exibida, com base em se e quando é baixada e pronta para uso.
-- {{cssxref("@font-face/font-family", "font-family")}}
-  - : Especifica um nome que será usado como o valor nominal da fonte para as propriedades da fonte.
-- {{cssxref("@font-face/font-stretch", "font-stretch")}}
-  - : Um valor {{cssxref ("font-stretch")}}. Desde o Firefox 61 (e em outros navegadores modernos), isso também aceita dois valores para especificar um intervalo suportado por uma fonte, por exemplo, extensão de fonte: `font-stretch: 50% 200%;`
-- {{cssxref("@font-face/font-style", "font-style")}}
-  - : Um valor {{cssxref ("font-style")}}. Desde o Firefox 61 (e em outros navegadores modernos), isso também aceita dois valores para especificar um intervalo suportado por uma fonte, por exemplo `font-style: oblique 20deg 50deg;`
-- {{cssxref("@font-face/font-weight", "font-weight")}}
-  - : Um valor de {{cssxref ("font-weight")}}. Desde o Firefox 61 (e em outros navegadores modernos), isso também aceita dois valores para especificar um intervalo suportado por uma fonte, por exemplo `font-weight: 100 400;`
-- {{cssxref("@font-face/font-variant", "font-variant")}}
-  - : Um valor {{cssxref("font-variant")}}.
-- {{cssxref("font-feature-settings", "font-feature-settings")}}
-  - : Permite o controle sobre recursos tipográficos avançados em fontes OpenType.
-- {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
-  - : Permite o controle de baixo nível sobre as variações de fonte OpenType ou TrueType, especificando os nomes dos quatro eixos das letras dos recursos para variar, juntamente com seus valores de variação.
-- {{cssxref("@font-face/src", "src")}}
+- {{cssxwef("@font-face/font-dispway", o.O "font-dispway")}}
+  - : detewmina como uma f-fonte é exibida, (⑅˘꒳˘) com base em se e quando é baixada e pwonta pawa uso. 😳😳😳
+- {{cssxwef("@font-face/font-famiwy", nyaa~~ "font-famiwy")}}
+  - : e-especifica um nyome que sewá u-usado como o v-vawow nyominaw d-da fonte pawa as pwopwiedades da f-fonte. rawr
+- {{cssxwef("@font-face/font-stwetch", -.- "font-stwetch")}}
+  - : u-um vawow {{cssxwef ("font-stwetch")}}. (✿oωo) d-desde o-o fiwefox 61 (e em outwos nyavegadowes modewnos), /(^•ω•^) i-isso também a-aceita dois vawowes p-pawa especificaw u-um intewvawo s-supowtado pow uma fonte, 🥺 pow exempwo, ʘwʘ extensão de fonte: `font-stwetch: 50% 200%;`
+- {{cssxwef("@font-face/font-stywe", UwU "font-stywe")}}
+  - : u-um vawow {{cssxwef ("font-stywe")}}. XD desde o fiwefox 61 (e em outwos nyavegadowes modewnos), (✿oωo) isso também aceita d-dois vawowes pawa especificaw um intewvawo supowtado pow uma f-fonte, :3 pow exempwo `font-stywe: o-obwique 20deg 50deg;`
+- {{cssxwef("@font-face/font-weight", (///ˬ///✿) "font-weight")}}
+  - : u-um vawow de {{cssxwef ("font-weight")}}. nyaa~~ desde o-o fiwefox 61 (e em outwos nyavegadowes m-modewnos), >w< i-isso também aceita dois vawowes pawa especificaw um intewvawo supowtado pow uma fonte, -.- pow e-exempwo `font-weight: 100 400;`
+- {{cssxwef("@font-face/font-vawiant", (✿oωo) "font-vawiant")}}
+  - : um vawow {{cssxwef("font-vawiant")}}. (˘ω˘)
+- {{cssxwef("font-featuwe-settings", rawr "font-featuwe-settings")}}
+  - : p-pewmite o contwowe s-sobwe wecuwsos tipogwáficos a-avançados em fontes opentype. OwO
+- {{cssxwef("@font-face/font-vawiation-settings", ^•ﻌ•^ "font-vawiation-settings")}}
+  - : p-pewmite o contwowe d-de baixo nyívew sobwe as vawiações d-de fonte o-opentype ou twuetype, UwU especificando os nyomes dos quatwo eixos das wetwas dos w-wecuwsos pawa vawiaw, (˘ω˘) j-juntamente c-com seus vawowes de vawiação. (///ˬ///✿)
+- {{cssxwef("@font-face/swc", σωσ "swc")}}
 
-  - : Especifica o recurso que contém os dados da fonte. Pode ser um URL para um local de arquivo de fonte remota ou o nome de uma fonte no computador do usuário.
+  - : e-especifica o wecuwso q-que contém os dados da fonte. /(^•ω•^) p-pode sew um uww pawa um wocaw de awquivo de fonte wemota ou o nyome de uma fonte n-nyo computadow d-do usuáwio. 😳
 
-    Para fornecer ao navegador uma dica sobre o formato de um recurso de fonte - para que ele possa selecionar um adequado - é possível incluir um tipo de formato dentro de uma função `format()`:
+    pawa fownecew ao nyavegadow u-uma dica sobwe o-o fowmato de um wecuwso de fonte - pawa que ewe possa sewecionaw u-um adequado - é possívew incwuiw um tipo de fowmato dentwo de uma função `fowmat()`:
 
     ```css
-    src:
-      url(ideal-sans-serif.woff) format("woff"),
-      url(basic-sans-serif.ttf) format("truetype");
+    s-swc:
+      uww(ideaw-sans-sewif.woff) fowmat("woff"), 😳
+      u-uww(basic-sans-sewif.ttf) f-fowmat("twuetype");
     ```
 
-    Os tipos disponíveis são: `"woff"`, `"woff2"`, `"truetype"`, `"opentype"`, `"embedded-opentype"`, e `"svg"`.
+    os tipos disponíveis são: `"woff"`, (⑅˘꒳˘) `"woff2"`, `"twuetype"`, 😳😳😳 `"opentype"`, 😳 `"embedded-opentype"`, e `"svg"`. XD
 
-- {{cssxref("@font-face/unicode-range", "unicode-range")}}
-  - : O intervalo de pontos de código Unicode a serem usados na fonte.
+- {{cssxwef("@font-face/unicode-wange", mya "unicode-wange")}}
+  - : o-o intewvawo de p-pontos de código unicode a sewem usados nya fonte. ^•ﻌ•^
 
-### Sintaxe formal
+### sintaxe f-fowmaw
 
 {{csssyntax}}
 
-## Exemplos
+## exempwos
 
-Este exemplo simplesmente especifica uma fonte para download a ser usada, aplicando-a a todo o corpo do documento:
+e-este exempwo simpwesmente especifica uma fonte pawa downwoad a-a sew usada, ʘwʘ apwicando-a a todo o-o cowpo do documento:
 
-[Veja este exemplo](https://mdn.mozillademos.org/files/7775/webfont-sample.html)
-
-```css
-@font-face {
-  font-family: "Bitstream Vera Serif Bold";
-  src: url("https://mdn.github.io/css-examples/web-fonts/VeraSeBd.ttf");
-}
-
-p {
-  font-family: "Bitstream Vera Serif Bold", serif;
-}
-```
-
-```html
-<p>This is Bitstream Vera Serif Bold.</p>
-```
-
-Neste exemplo, a cópia local do usuário "Helvetica Neue Bold" é usada; se o usuário não tiver essa fonte instalada (dois nomes diferentes são tentados), a fonte para download denominada "MgOpenModernaBold.ttf" será usada:
+[veja e-este exempwo](https://mdn.moziwwademos.owg/fiwes/7775/webfont-sampwe.htmw)
 
 ```css
 @font-face {
-  font-family: MyHelvetica;
-  src:
-    local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
-    url(MgOpenModernaBold.ttf);
-  font-weight: bold;
+  font-famiwy: "bitstweam v-vewa sewif bowd";
+  swc: u-uww("https://mdn.github.io/css-exampwes/web-fonts/vewasebd.ttf");
+}
+
+p-p {
+  font-famiwy: "bitstweam v-vewa sewif bowd", ( ͡o ω ͡o ) sewif;
 }
 ```
 
-## Font MIME Types
+```htmw
+<p>this i-is bitstweam v-vewa sewif bowd.</p>
+```
 
-| Formato                | MIME type    |
+nyeste exempwo, mya a c-cópia wocaw do u-usuáwio "hewvetica n-nyeue bowd" é usada; se o usuáwio nyão tivew e-essa fonte instawada (dois nyomes difewentes s-são tentados), o.O a-a fonte pawa downwoad denominada "mgopenmodewnabowd.ttf" sewá usada:
+
+```css
+@font-face {
+  f-font-famiwy: m-myhewvetica;
+  s-swc:
+    w-wocaw("hewvetica nyeue bowd"), (✿oωo) w-wocaw("hewveticaneue-bowd"), :3
+    uww(mgopenmodewnabowd.ttf);
+  font-weight: bowd;
+}
+```
+
+## font mime types
+
+| fowmato                | m-mime type    |
 | ---------------------- | ------------ |
-| TrueType               | `font/ttf`   |
-| OpenType               | `font/otf`   |
-| Web Open File Format   | `font/woff`  |
-| Web Open File Format 2 | `font/woff2` |
+| twuetype               | `font/ttf`   |
+| opentype               | `font/otf`   |
+| w-web open fiwe fowmat   | `font/woff`  |
+| w-web open fiwe fowmat 2 | `font/woff2` |
 
-## Notes
+## nyotes
 
-- As fontes da Web estão sujeitas à mesma restrição de domínio (os arquivos de fonte devem estar no mesmo domínio da página que os utiliza), a menos que os [Controles de Acessos HTTP](/pt-BR/docs/Web/HTTP/CORS) sejam usados para relaxar essa restrição.
-- `@font-face` não pode ser declarado dentro de um seletor CSS. Por exemplo, o seguinte não funcionará:
+- a-as fontes da web estão s-sujeitas à mesma w-westwição de d-domínio (os awquivos d-de fonte d-devem estaw nyo mesmo domínio da página que os utiwiza), 😳 a menos que os [contwowes de acessos http](/pt-bw/docs/web/http/cows) s-sejam usados pawa w-wewaxaw essa w-westwição.
+- `@font-face` nyão p-pode sew decwawado dentwo de um sewetow css. (U ﹏ U) pow exempwo, mya o seguinte n-nyão funcionawá:
 
-  ```css example-bad
-  .className {
+  ```css e-exampwe-bad
+  .cwassname {
     @font-face {
-      font-family: MyHelvetica;
-      src:
-        local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
-        url(MgOpenModernaBold.ttf);
-      font-weight: bold;
+      font-famiwy: m-myhewvetica;
+      swc:
+        wocaw("hewvetica n-nyeue bowd"), (U ᵕ U❁) w-wocaw("hewveticaneue-bowd"), :3
+        uww(mgopenmodewnabowd.ttf);
+      f-font-weight: b-bowd;
     }
   }
   ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja Também
+## veja t-também
 
-- [About WOFF](/pt-BR/docs/Web/CSS/CSS_fonts/WOFF)
-- [Everythingfonts font-face generator](https://everythingfonts.com/font-face)
-- [FontSquirrel @font-face generator](https://www.fontsquirrel.com/fontface/generator)
-- [Beautiful fonts with @font-face](https://hacks.mozilla.org/2009/06/beautiful-fonts-with-font-face/)
-- [Open Font Library](https://openfontlibrary.org/)
-- [When can I use WOFF?](http://caniuse.com/woff)
-- [When can I use SVG Fonts?](http://caniuse.com/svg-fonts)
-- [Free Fancy Cool Fonts](https://coolfont.org)
+- [about w-woff](/pt-bw/docs/web/css/css_fonts/woff)
+- [evewythingfonts font-face g-genewatow](https://evewythingfonts.com/font-face)
+- [fontsquiwwew @font-face g-genewatow](https://www.fontsquiwwew.com/fontface/genewatow)
+- [beautifuw fonts w-with @font-face](https://hacks.moziwwa.owg/2009/06/beautifuw-fonts-with-font-face/)
+- [open font wibwawy](https://openfontwibwawy.owg/)
+- [when c-can i use woff?](http://caniuse.com/woff)
+- [when c-can i use svg fonts?](http://caniuse.com/svg-fonts)
+- [fwee f-fancy coow fonts](https://coowfont.owg)

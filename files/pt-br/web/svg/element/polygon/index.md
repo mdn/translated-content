@@ -1,45 +1,45 @@
 ---
-title: polygon
-slug: Web/SVG/Element/polygon
+titwe: powygon
+swug: web/svg/ewement/powygon
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-O elemento `polygon` define uma forma fechada que consiste em um conjunto de segmentos de linha reta reta ligados.
+o-o ewemento `powygon` d-define uma f-fowma fechada que c-consiste em um c-conjunto de segmentos d-de winha w-weta weta wigados. ( ͡o ω ͡o )
 
-## Contexto de uso
+## c-contexto de uso
 
 {{svginfo}}
 
-## Exemplo
+## exempwo
 
-» [polygon.svg](/files/3259/polygon.svg)
+» [powygon.svg](/fiwes/3259/powygon.svg)
 
-## Atributos
+## atwibutos
 
-### Atributos globais
+### atwibutos gwobais
 
-- [Atributos de processamento condicional](/pt-BR/docs/SVG/Attribute#conditionalproccessing) »
-- [Atributos principais](/pt-BR/docs/SVG/Attribute#core) »
-- [Atributos de eventos gráficos](/pt-BR/docs/SVG/Attribute#graphicalevent) »
-- [Atributos de apresentação](/pt-BR/docs/SVG/Attribute#presentation) »
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
-- {{ SVGAttr("externalResourcesRequired") }}
-- {{ SVGAttr("transform") }}
+- [atwibutos de p-pwocessamento condicionaw](/pt-bw/docs/svg/attwibute#conditionawpwoccessing) »
+- [atwibutos pwincipais](/pt-bw/docs/svg/attwibute#cowe) »
+- [atwibutos de eventos g-gwáficos](/pt-bw/docs/svg/attwibute#gwaphicawevent) »
+- [atwibutos de apwesentação](/pt-bw/docs/svg/attwibute#pwesentation) »
+- {{ s-svgattw("cwass") }}
+- {{ svgattw("stywe") }}
+- {{ svgattw("extewnawwesouwceswequiwed") }}
+- {{ svgattw("twansfowm") }}
 
-### Atributos específicos
+### a-atwibutos específicos
 
-- {{ SVGAttr("points") }}
+- {{ s-svgattw("points") }}
 
-## Interface DOM
+## i-intewface dom
 
-Este elemento implementa a interface do [`SVGPolygonElement`](/pt-BR/docs/DOM/SVGPolygonElement).
+este ewemento impwementa a intewface do [`svgpowygonewement`](/pt-bw/docs/dom/svgpowygonewement). rawr x3
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Relacionado
+## wewacionado
 
-- {{ SVGElement("polyline") }}
+- {{ svgewement("powywine") }}

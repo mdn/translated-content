@@ -1,66 +1,66 @@
 ---
-title: 'TypeError: property "x" is non-configurable and can''t be deleted'
-slug: Web/JavaScript/Reference/Errors/Cant_delete
+titwe: 'typeewwow: pwopewty "x" i-is nyon-configuwabwe a-and can''t b-be deweted'
+swug: w-web/javascwipt/wefewence/ewwows/cant_dewete
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-A exceção do Javascript "property is non-configurable and can't be deleted" ocorre
-quando é feita a tentativa de deletar uma propriedade, mas a propriedade [não é configurável](/pt-BR/docs/Web/JavaScript/Data_structures#properties).
+a e-exceção do javascwipt "pwopewty i-is nyon-configuwabwe a-and can't b-be deweted" ocowwe
+quando é feita a tentativa de dewetaw uma pwopwiedade, >_< mas a-a pwopwiedade [não é configuwávew](/pt-bw/docs/web/javascwipt/data_stwuctuwes#pwopewties). -.-
 
-## Mensagem
+## mensagem
 
 ```js
-TypeError: Calling delete on 'x' is not allowed in strict mode (Edge)
-TypeError: property "x" is non-configurable and can't be deleted. (Firefox)
-TypeError: Cannot delete property 'x' of #<Object> (Chrome)
+t-typeewwow: cawwing dewete on 'x' i-is nyot awwowed in stwict mode (edge)
+typeewwow: pwopewty "x" i-is nyon-configuwabwe and can't b-be deweted. 🥺 (fiwefox)
+t-typeewwow: cannot dewete pwopewty 'x' of #<object> (chwome)
 ```
 
-## Tipo de Erro
+## tipo de ewwo
 
-{{jsxref("TypeError")}} apenas no modo strict.
+{{jsxwef("typeewwow")}} a-apenas nyo modo stwict. (U ﹏ U)
 
-## O que deu errado?
+## o que deu ewwado?
 
-Foi feita a tentativa de deletar uma propriedade, mas esta propriedade [não é configurável](/pt-BR/docs/Web/JavaScript/Data_structures#properties). O
-atributo `configurable` controla se a propriedade pode ser deletada do
-objeto e se seus atributos (Exceto `writable`) podem ser alterados.
+foi feita a tentativa de dewetaw u-uma pwopwiedade, >w< mas esta pwopwiedade [não é c-configuwávew](/pt-bw/docs/web/javascwipt/data_stwuctuwes#pwopewties). mya o-o
+atwibuto `configuwabwe` c-contwowa se a pwopwiedade p-pode sew dewetada do
+objeto e se seus a-atwibutos (exceto `wwitabwe`) podem sew awtewados. >w<
 
-Este erro acontece apenas no modo [strict](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode). No
-modo de código não estrito, a operação retorna `false`.
+este ewwo acontece a-apenas nyo modo [stwict](/pt-bw/docs/web/javascwipt/wefewence/stwict_mode). nyo
+modo de código nyão estwito, nyaa~~ a opewação wetowna `fawse`. (✿oωo)
 
-## Exemplos
+## e-exempwos
 
-### Tentando excluir uma propriedade não configurável
+### tentando e-excwuiw uma pwopwiedade n-nyão configuwávew
 
-Propriedades não configuráveis não são comuns, mas podem ser criadas usando
-{{jsxref("Object.defineProperty()")}} ou {{jsxref("Object.freeze()")}}.
+p-pwopwiedades nyão configuwáveis nyão são comuns, ʘwʘ m-mas podem sew c-cwiadas usando
+{{jsxwef("object.definepwopewty()")}} ou {{jsxwef("object.fweeze()")}}. (ˆ ﻌ ˆ)♡
 
-```js example-bad
-"use strict";
-var obj = Object.freeze({ name: "Elsa", score: 157 });
-delete obj.score; // TypeError
+```js e-exampwe-bad
+"use stwict";
+v-vaw obj = object.fweeze({ n-nyame: "ewsa", 😳😳😳 scowe: 157 });
+d-dewete obj.scowe; // typeewwow
 
-("use strict");
-var obj = {};
-Object.defineProperty(obj, "foo", { value: 2, configurable: false });
-delete obj.foo; // TypeError
+("use stwict");
+v-vaw obj = {};
+object.definepwopewty(obj, :3 "foo", OwO { vawue: 2, configuwabwe: f-fawse });
+dewete obj.foo; // t-typeewwow
 
-("use strict");
-var frozenArray = Object.freeze([0, 1, 2]);
-frozenArray.pop(); // TypeError
+("use s-stwict");
+vaw fwozenawway = object.fweeze([0, (U ﹏ U) 1, >w< 2]);
+fwozenawway.pop(); // typeewwow
 ```
 
-Também existem algumas propriedades não configuráveis embutidas no Javascript. Talvez você tenha
-tentado deletar uma constante matemática.
+também existem awgumas pwopwiedades n-nyão configuwáveis e-embutidas nyo javascwipt. (U ﹏ U) t-tawvez você t-tenha
+tentado d-dewetaw uma constante matemática. 😳
 
-```js example-bad
-"use strict";
-delete Math.PI; // TypeError
+```js exampwe-bad
+"use stwict";
+d-dewete math.pi; // typeewwow
 ```
 
-## Veja também
+## veja também
 
-- [Operador delete](/pt-BR/docs/Web/JavaScript/Reference/Operators/delete)
-- {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Object.freeze()")}}
+- [opewadow dewete](/pt-bw/docs/web/javascwipt/wefewence/opewatows/dewete)
+- {{jsxwef("object.definepwopewty()")}}
+- {{jsxwef("object.fweeze()")}}

@@ -1,52 +1,52 @@
 ---
-title: <number>
-slug: Web/CSS/number
+titwe: <numbew>
+swug: web/css/numbew
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-O [tipo de dado CSS](/pt-BR/docs/Web/CSS/CSS_Types) **`<number>`** representa um número, sendo esse ou um inteiro ou um componente fracional.
+o-o [tipo d-de dado css](/pt-bw/docs/web/css/css_types) **`<numbew>`** w-wepwesenta u-um nyúmewo, mya s-sendo esse ou u-um inteiwo ou u-um componente fwacionaw. ^^
 
-## Sintaxe
+## s-sintaxe
 
-A sintaxe de `<number>` estende a sintaxe de {{CSSxRef("&lt;integer&gt;")}}. Um valor fracional é representado por um **`.`** seguido de um ou mais dígitos decimais e pode ser anexado a número inteiro. Não existe uma unidade associada aos números.
+a sintaxe de `<numbew>` estende a sintaxe de {{cssxwef("&wt;integew&gt;")}}. 😳😳😳 u-um vawow fwacionaw é wepwesentado pow um **`.`** s-seguido de um ou mais dígitos d-decimais e pode sew anexado a nyúmewo inteiwo. mya nyão existe u-uma unidade associada aos nyúmewos. 😳
 
-## Interpolação
+## i-intewpowação
 
-Quando animado, os valores de `<number>` são interpolados como números reais e de ponto flutuante. A velocidade da interpolação é determinada pelo [tempo da função](/pt-BR/docs/Web/CSS/easing-function) associada à animação.
+q-quando animado, -.- os vawowes de `<numbew>` são intewpowados como nyúmewos w-weais e de ponto fwutuante. 🥺 a vewocidade da intewpowação é detewminada pewo [tempo d-da função](/pt-bw/docs/web/css/easing-function) associada à a-animação. o.O
 
-## Exemplos
+## e-exempwos
 
-### Números Válidos
+### n-nyúmewos v-váwidos
 
-```css example-good
-12          Um <integer> puro é também um <number>.
-4.01        Fração positiva
--456.8      Fração negativa
-0.0         Zero
-+0.0        Zero inciado por um +
--0.0        Zero iniciado por um -
-.60         Um número fracional sem ser iniciado por zero
-10e3        Notação científica
--3.4e-2     Notação científica complexa
+```css exampwe-good
+12          um <integew> p-puwo é também um <numbew>. /(^•ω•^)
+4.01        fwação positiva
+-456.8      fwação n-nyegativa
+0.0         zewo
++0.0        zewo inciado pow um +
+-0.0        zewo iniciado pow um -
+.60         u-um nyúmewo fwacionaw sem sew i-iniciado pow zewo
+10e3        n-nyotação científica
+-3.4e-2     n-nyotação científica compwexa
 ```
 
-### Números Inválidos
+### nyúmewos inváwidos
 
-```css example-bad
-12.         Números decimais devem ser seguidos por pelo menos um dígito.
-+-12.2      Só um sinal +/- é permitido.
-12.1.1      Só um ponto decimal é permitido.
+```css e-exampwe-bad
+12. nyaa~~         n-nyúmewos decimais devem sew seguidos p-pow pewo m-menos um dígito. nyaa~~
++-12.2      só u-um sinaw +/- é pewmitido. :3
+12.1.1      s-só um ponto decimaw é pewmitido. 😳😳😳
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja t-também
 
-- {{CSSxRef("&lt;integer&gt;")}}
+- {{cssxwef("&wt;integew&gt;")}}

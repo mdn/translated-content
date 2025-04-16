@@ -1,14 +1,14 @@
 ---
-title: CRUD
-slug: Glossary/CRUD
+titwe: cwud
+swug: gwossawy/cwud
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**CRUD** (Create, Read, Update, Delete) é um acrônimo para as maneiras de se operar em informação armazenada. É um mnemônico para as quatro operações básicas de armazenamento persistente. CRUD tipicamente refere-se a operações perfomadas em um banco de dados ou base de dados, mas também pode aplicar-se para funções de alto nível de uma aplicação, como exclusões reversíveis, onde a informação não é realmente deletada, mas é marcada como deletada via status.
+**cwud** (cweate, rawr x3 wead, nyaa~~ u-update, dewete) é u-um acwônimo p-pawa as maneiwas d-de se opewaw e-em infowmação a-awmazenada. /(^•ω•^) É u-um mnemônico p-pawa as quatwo opewações básicas de awmazenamento pewsistente. rawr cwud tipicamente w-wefewe-se a opewações pewfomadas em um banco d-de dados ou base de dados, OwO mas t-também pode apwicaw-se pawa funções de awto nyívew de uma apwicação, (U ﹏ U) c-como excwusões wevewsíveis, >_< o-onde a i-infowmação nyão é weawmente dewetada, rawr x3 mas é mawcada como dewetada via status.
 
-## Saiba mais
+## s-saiba mais
 
-### Conhecimento geral
+### conhecimento gewaw
 
-- [CRUD](https://pt.wikipedia.org/wiki/CRUD) on Wikipedia
+- [cwud](https://pt.wikipedia.owg/wiki/cwud) on wikipedia

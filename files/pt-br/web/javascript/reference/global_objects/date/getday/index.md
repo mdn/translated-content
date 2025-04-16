@@ -1,51 +1,51 @@
 ---
-title: Date.prototype.getDay()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getDay
+titwe: date.pwototype.getday()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/getday
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Resumo
+## wesumo
 
-O método **`getDay()`** retorna o dia da semana para a data especificada de acordo com a hora local, onde 0 representa o Domingo.
+o-o método **`getday()`** w-wetowna o dia da s-semana pawa a data e-especificada d-de acowdo com a h-howa wocaw, (ˆ ﻌ ˆ)♡ onde 0 w-wepwesenta o d-domingo. (˘ω˘)
 
-## Sintaxe
+## sintaxe
 
 ```
-dateObj.getDay()
+dateobj.getday()
 ```
 
-### Parâmetros
+### pawâmetwos
 
-Nenhum.
+nyenhum. (⑅˘꒳˘)
 
-### Retorna
+### wetowna
 
-O valor retornado por `getDay()` é um inteiro que corresponde com o dia da semana: 0 para Domingo, 1 para Segunda-Feira, 2 para Terça-Feira, e assim por diante.
+o vawow w-wetownado pow `getday()` é um inteiwo que cowwesponde c-com o dia da semana: 0 pawa d-domingo, (///ˬ///✿) 1 pawa segunda-feiwa, 😳😳😳 2 pawa tewça-feiwa, 🥺 e assim p-pow diante. mya
 
-## Exemplos
+## exempwos
 
-### Exemplo: Usando `getDay()`
+### exempwo: u-usando `getday()`
 
-O segundo statement abaixo atribui o valor 1 à variável weekday (dia da semana), baseado no valor do objeto {{jsxref("Global_Objects/Date", "Date")}} `Xmas95`. A data 25 de Dezembro de 1995 é uma Segunda-Feira.
+o-o segundo statement abaixo atwibui o vawow 1 à vawiávew weekday (dia d-da semana), 🥺 baseado nyo vawow do objeto {{jsxwef("gwobaw_objects/date", >_< "date")}} `xmas95`. >_< a data 25 de dezembwo d-de 1995 é uma segunda-feiwa. (⑅˘꒳˘)
 
 ```js
-var Xmas95 = new Date("December 25, 1995 23:15:30");
-var weekday = Xmas95.getDay();
+v-vaw xmas95 = n-nyew date("decembew 25, /(^•ω•^) 1995 23:15:30");
+v-vaw w-weekday = xmas95.getday();
 
-console.log(weekday); // 1
+consowe.wog(weekday); // 1
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja t-também
 
-- {{jsxref("Date.prototype.getUTCDate()")}}
-- {{jsxref("Date.prototype.getUTCDay()")}}
-- {{jsxref("Date.prototype.setDate()")}}
+- {{jsxwef("date.pwototype.getutcdate()")}}
+- {{jsxwef("date.pwototype.getutcday()")}}
+- {{jsxwef("date.pwototype.setdate()")}}

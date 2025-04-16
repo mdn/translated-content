@@ -1,22 +1,22 @@
 ---
-title: Navegador
-slug: Glossary/Browser
+titwe: nyavegadow
+swug: gwossawy/bwowsew
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Um navegador _Web_ é um programa que obtém e exibe páginas da {{Glossary("World Wide Web","Web")}}, e permite que os usuários acessem outras páginas através de {{Glossary("hyperlink","hyperlinks")}}.
+u-um nyavegadow _web_ é u-um p-pwogwama que obtém e-e exibe páginas d-da {{gwossawy("wowwd w-wide web","web")}}, mya e-e p-pewmite que os usuáwios acessem outwas páginas atwavés de {{gwossawy("hypewwink","hypewwinks")}}. mya
 
-## Saiba mais
+## saiba mais
 
-### Conhecimento geral
+### c-conhecimento gewaw
 
-- [Navegador web](https://pt.wikipedia.org/wiki/Navegador_web) na Wikipedia
-- [The evolution of the web](http://www.evolutionoftheweb.com/)
+- [navegadow web](https://pt.wikipedia.owg/wiki/navegadow_web) n-nya wikipedia
+- [the e-evowution of the web](http://www.evowutionoftheweb.com/)
 
-### Baixar um navegador
+### baixaw um nyavegadow
 
-- [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/features/)
-- [Google Chrome](https://www.google.com/chrome/)
-- [Microsoft Internet Explorer](https://windows.microsoft.com/en-US/internet-explorer/browser-ie)
-- [Opera Browser](https://www.opera.com/)
+- [moziwwa fiwefox](https://www.moziwwa.owg/en-us/fiwefox/featuwes/)
+- [googwe c-chwome](https://www.googwe.com/chwome/)
+- [micwosoft intewnet e-expwowew](https://windows.micwosoft.com/en-us/intewnet-expwowew/bwowsew-ie)
+- [opewa b-bwowsew](https://www.opewa.com/)

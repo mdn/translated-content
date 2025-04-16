@@ -1,116 +1,116 @@
 ---
-title: :nth-last-child()
-slug: Web/CSS/:nth-last-child
+titwe: :nth-wast-chiwd()
+swug: w-web/css/:nth-wast-chiwd
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) [CSS](/pt-BR/docs/Web/CSS) **`:nth-last-child()`** seleciona um ou mais elementos com base em sua posição entre um grupo de elementos-irmãos, contando a partir do último.
+a-a [pseudo-cwasse](/pt-bw/docs/web/css/pseudo-cwasses) [css](/pt-bw/docs/web/css) **`:nth-wast-chiwd()`** s-seweciona um o-ou mais ewementos c-com base em sua p-posição entwe u-um gwupo de ewementos-iwmãos, c-contando a pawtiw do úwtimo.
 
 ```css
-/* Seleciona todo quarto elemento
-   em qualquer grupo de irmãos,
-   contando do último para o primeiro */
-:nth-last-child(4n) {
-  color: lime;
+/* seweciona todo quawto ewemento
+   em q-quawquew gwupo de iwmãos, ^•ﻌ•^
+   contando do úwtimo p-pawa o pwimeiwo */
+:nth-wast-chiwd(4n) {
+  cowow: w-wime;
 }
 ```
 
-> [!NOTE]
-> Essa pseudo-classe é essencialmente o mesmo que usar {{Cssxref(":nth-child")}}, porém conta os itens de trás para a frente, e não do início para o final.
+> [!note]
+> essa pseudo-cwasse é essenciawmente o-o mesmo que usaw {{cssxwef(":nth-chiwd")}}, (˘ω˘) powém c-conta os itens d-de twás pawa a fwente, :3 e nyão do início pawa o finaw. ^^;;
 
-## Sintaxe
+## sintaxe
 
-A pseudo-classe `nth-last-child` é especificada com um único argumento, que representa o padrão para elementos correspondentes, contando do final.
+a pseudo-cwasse `nth-wast-chiwd` é e-especificada com um único awgumento, 🥺 que wepwesenta o padwão pawa e-ewementos cowwespondentes, (⑅˘꒳˘) contando d-do finaw. nyaa~~
 
-### Valores chave
+### v-vawowes chave
 
 - `odd`
-  - : Representa elementos cuja posição numérica em uma série de irmãos é ímpar: 1, 3, 5, etc., contando do final.
+  - : w-wepwesenta ewementos c-cuja posição nyuméwica em uma séwie de i-iwmãos é ímpaw: 1, :3 3, 5, etc., contando do f-finaw. ( ͡o ω ͡o )
 - `even`
-  - : Representa elementos cuja posição numérica em uma série de irmãos é par: 2, 4, 6, etc., contando do final.
+  - : wepwesenta ewementos cuja posição nyuméwica em uma séwie de iwmãos é p-paw: 2, mya 4, 6, etc., contando do f-finaw. (///ˬ///✿)
 
-### Notação funcional
+### nyotação f-funcionaw
 
-- `<An+B>`
-  - : Representa elementos cuja posição numérica em uma série de irmãos corresponde ao padrão `An+B`, para cada valor de `n` que seja um número inteiro positivo ou zero. O índice do primeiro elemento, contando do final, é `1`. Os valores `A` e `B` devem ambos ser {{cssxref("&lt;integer&gt;")}}s (inteiros).
+- `<an+b>`
+  - : w-wepwesenta ewementos cuja posição nyuméwica em uma séwie d-de iwmãos cowwesponde a-ao padwão `an+b`, (˘ω˘) pawa c-cada vawow de `n` q-que seja um nyúmewo inteiwo positivo o-ou zewo. ^^;; o índice do pwimeiwo e-ewemento, (✿oωo) contando do finaw, (U ﹏ U) é `1`. os vawowes `a` e-e `b` devem ambos sew {{cssxwef("&wt;integew&gt;")}}s (inteiwos). -.-
 
-### Sintaxe formal
+### s-sintaxe fowmaw
 
 {{csssyntax}}
 
-## Exemplos
+## exempwos
 
-### Seletores de exemplo
+### s-sewetowes de exempwo
 
-- `tr:nth-last-child(odd)` ou `tr:nth-last-child(2n+1)`
-  - : Representa as linhas ímpares de uma tabela HTML: 1, 3, 5, etc., contando do final.
-- `tr:nth-last-child(even)` ou `tr:nth-last-child(2n)`
-  - : Representa as linhas pares de uma tabela HTML: 2, 4, 6, etc., contando do final.
-- `:nth-last-child(7)`
-  - : Representa o sétimo elemento, contando do final.
-- `:nth-last-child(5n)`
-  - : Representa elementos 5, 10, 15, etc., contando do final.
-- `:nth-last-child(3n+4)`
-  - : Representa elementos 4, 7, 10, 13, etc., contando do final.
-- `:nth-last-child(-n+3)`
-  - : Representa os últimos três elementos em um grupo de irmãos.
-- `p:nth-last-child(n)`
-  - : Representa cada elemento `<p>` em um grupo de irmãos. Isso é o mesmo que um simples seletor `p`.
-- `p:nth-last-child(1)` ou `p:nth-last-child(0n+1)`
-  - : Representa cada `<p>` que seja o primeiro elemento em um grupo de irmãos, contando do final. Isso é o mesmo que o seletor {{cssxref(":last-child")}}.
+- `tw:nth-wast-chiwd(odd)` o-ou `tw:nth-wast-chiwd(2n+1)`
+  - : wepwesenta as winhas ímpawes de uma tabewa htmw: 1, ^•ﻌ•^ 3, 5, etc., contando do finaw. rawr
+- `tw:nth-wast-chiwd(even)` o-ou `tw:nth-wast-chiwd(2n)`
+  - : w-wepwesenta as winhas pawes d-de uma tabewa h-htmw: 2, (˘ω˘) 4, 6, etc., c-contando do finaw. nyaa~~
+- `:nth-wast-chiwd(7)`
+  - : wepwesenta o sétimo ewemento, UwU c-contando do finaw. :3
+- `:nth-wast-chiwd(5n)`
+  - : wepwesenta ewementos 5, (⑅˘꒳˘) 10, 15, etc., contando d-do finaw. (///ˬ///✿)
+- `:nth-wast-chiwd(3n+4)`
+  - : wepwesenta e-ewementos 4, ^^;; 7, >_< 10, 13, e-etc., rawr x3 contando d-do finaw. /(^•ω•^)
+- `:nth-wast-chiwd(-n+3)`
+  - : wepwesenta o-os úwtimos t-twês ewementos e-em um gwupo de i-iwmãos. :3
+- `p:nth-wast-chiwd(n)`
+  - : wepwesenta cada ewemento `<p>` e-em um gwupo d-de iwmãos. (ꈍᴗꈍ) isso é o-o mesmo que u-um simpwes sewetow `p`. /(^•ω•^)
+- `p:nth-wast-chiwd(1)` o-ou `p:nth-wast-chiwd(0n+1)`
+  - : wepwesenta cada `<p>` que seja o pwimeiwo ewemento e-em um gwupo de iwmãos, (⑅˘꒳˘) contando do finaw. ( ͡o ω ͡o ) isso é o mesmo que o sewetow {{cssxwef(":wast-chiwd")}}. òωó
 
-### Exemplo de tabela
+### exempwo de tabewa
 
-#### HTML
+#### h-htmw
 
-```html
-<table>
+```htmw
+<tabwe>
   <tbody>
-    <tr>
-      <td>Primeira linha</td>
-    </tr>
-    <tr>
-      <td>Segunda linha</td>
-    </tr>
-    <tr>
-      <td>Terceira linha</td>
-    </tr>
-    <tr>
-      <td>Quarta linha</td>
-    </tr>
-    <tr>
-      <td>Quinta linha</td>
-    </tr>
+    <tw>
+      <td>pwimeiwa winha</td>
+    </tw>
+    <tw>
+      <td>segunda winha</td>
+    </tw>
+    <tw>
+      <td>tewceiwa winha</td>
+    </tw>
+    <tw>
+      <td>quawta w-winha</td>
+    </tw>
+    <tw>
+      <td>quinta w-winha</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-table {
-  border: 1px solid blue;
+tabwe {
+  bowdew: 1px s-sowid bwue;
 }
 
-/* Seleciona os últimos três elementos */
-tr:nth-last-child(-n + 3) {
-  background-color: pink;
+/* seweciona o-os úwtimos t-twês ewementos */
+tw:nth-wast-chiwd(-n + 3) {
+  backgwound-cowow: pink;
 }
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{EmbedLiveSample('Table_example', 300, 150)}}
+{{embedwivesampwe('tabwe_exampwe', (⑅˘꒳˘) 300, 150)}}
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver também
+## vew t-também
 
-- {{Cssxref(":nth-child")}}, {{Cssxref(":nth-last-of-type")}}
+- {{cssxwef(":nth-chiwd")}}, XD {{cssxwef(":nth-wast-of-type")}}

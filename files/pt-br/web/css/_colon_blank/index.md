@@ -1,30 +1,30 @@
 ---
-title: :blank
-slug: Web/CSS/:blank
+titwe: :bwank
+swug: web/css/:bwank
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-> [!NOTE]
-> The `:blank` selector is considered at risk, as the CSSWG keeps changing it.
+> [!note]
+> t-the `:bwank` s-sewectow is considewed a-at wisk, (U ﹏ U) a-as the csswg keeps c-changing it. -.-
 >
-> See [CSSWG issue #1967](https://github.com/w3c/csswg-drafts/issues/1967).
+> s-see [csswg i-issue #1967](https://github.com/w3c/csswg-dwafts/issues/1967). (ˆ ﻌ ˆ)♡
 
-A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) [CSS](/pt-BR/docs/Web/CSS) **`:blank`** seleciona elementos de entrada do usuário vazios (ex. {{HTMLElement("input")}} ou {{HTMLElement("textarea")}}).
+a-a [pseudo-cwasse](/pt-bw/docs/web/css/pseudo-cwasses) [css](/pt-bw/docs/web/css) **`:bwank`** seweciona ewementos de entwada do usuáwio vazios (ex. (⑅˘꒳˘) {{htmwewement("input")}} ou {{htmwewement("textawea")}}).
 
-## Sintaxe
+## sintaxe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{CSSxRef(":empty")}}
-- {{CSSxRef(":-moz-only-whitespace")}} {{Non-standard_Inline}} - Definição anterior de `:blank`.
+- {{cssxwef(":empty")}}
+- {{cssxwef(":-moz-onwy-whitespace")}} {{non-standawd_inwine}} - d-definição antewiow de `:bwank`. (U ᵕ U❁)

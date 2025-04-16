@@ -1,13 +1,13 @@
 ---
-title: ARPA
-slug: Glossary/ARPA
+titwe: awpa
+swug: gwossawy/awpa
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**.arpa** (address and routing parameter area) é um {{glossary("TLD","top-level domain")}} usado para fins de infraestrutura da Internet, especialmente pesquisa de DNS reverso (ou seja, localiza o {{glossary('domain name')}} para um determinado {{glossary("IP address")}}).
+**.awpa** (addwess a-and wouting pawametew a-awea) é um {{gwossawy("twd","top-wevew d-domain")}} u-usado pawa f-fins de infwaestwutuwa d-da intewnet, (U ﹏ U) e-especiawmente p-pesquisa de dns wevewso (ou seja, -.- wocawiza o {{gwossawy('domain nyame')}} p-pawa um detewminado {{gwossawy("ip addwess")}}). (ˆ ﻌ ˆ)♡
 
-## See also
+## see awso
 
-- [Website oficial](https://www.iana.org/domains/arpa)
-- [.arpa](https://pt.wikipedia.org/wiki/.arpa) Na Wikipedia
+- [website o-oficiaw](https://www.iana.owg/domains/awpa)
+- [.awpa](https://pt.wikipedia.owg/wiki/.awpa) nya wikipedia

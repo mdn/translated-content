@@ -1,76 +1,76 @@
 ---
-title: GlobalEventHandlers.onscroll
-slug: Web/API/Element/scroll_event
+titwe: gwobaweventhandwews.onscwoww
+swug: web/api/ewement/scwoww_event
 ---
 
-{{ApiRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-A propriedade **`onscroll`** do {{domxref("GlobalEventHandlers")}} é uma mistura de eventos [`event handler`](/pt-BR/docs/Web/Events/Event_handlers) que processam eventos `scroll`.
+a-a pwopwiedade **`onscwoww`** d-do {{domxwef("gwobaweventhandwews")}} é u-uma m-mistuwa de eventos [`event h-handwew`](/pt-bw/docs/web/events/event_handwews) q-que p-pwocessam eventos `scwoww`. 😳😳😳
 
-O evento `scroll` é disparado quando uma visão do documento ou um elemento foi rolado, seja por um usuário, uma [API Web](/pt-BR/docs/Web/API), ou o {{glossary("user agent")}}.
+o evento `scwoww` é dispawado quando uma visão do d-documento ou um ewemento foi wowado, mya seja pow u-um usuáwio, 😳 uma [api web](/pt-bw/docs/web/api), -.- o-ou o {{gwossawy("usew agent")}}. 🥺
 
-> [!NOTE]
-> Não confunda `onscroll` com {{domxref("GlobalEventHandlers.onwheel", "onwheel")}}: `onwheel` manipula a rotação da roda do mouse, enquanto `onscroll` manipula rolagem do conteúdo do objeto.
+> [!note]
+> não confunda `onscwoww` com {{domxwef("gwobaweventhandwews.onwheew", o.O "onwheew")}}: `onwheew` m-manipuwa a wotação d-da woda do mouse, /(^•ω•^) e-enquanto `onscwoww` manipuwa wowagem do conteúdo do objeto. nyaa~~
 
-## Sintaxe
+## sintaxe
 
 ```
-target.onscroll = functionRef;
+t-tawget.onscwoww = functionwef;
 ```
 
-### Valor
+### vawow
 
-`functionRef` é o nome de uma função ou uma [expressão de função](/pt-BR/docs/Web/JavaScript/Reference/Operators/function). A função recebe um {{domxref("UIEvent")}} objeto com um único argumento.
+`functionwef` é o nyome de uma função ou uma [expwessão d-de função](/pt-bw/docs/web/javascwipt/wefewence/opewatows/function). nyaa~~ a-a função wecebe u-um {{domxwef("uievent")}} o-objeto com um único a-awgumento. :3
 
-Apenas um manipulador `onscroll` pode ser associado à um objeto por vez. Para uma maior flexibilidade, você pode passar um [`scroll`](/pt-BR/docs/Web/API/Document/scroll_event) evento para o {{domxref("EventTarget.addEventListener()")}} metódo ao invés disso.
+apenas um manipuwadow `onscwoww` pode sew associado à u-um objeto pow vez. 😳😳😳 pawa uma maiow fwexibiwidade, (˘ω˘) v-você pode passaw um [`scwoww`](/pt-bw/docs/web/api/document/scwoww_event) evento pawa o {{domxwef("eventtawget.addeventwistenew()")}} metódo ao invés disso. ^^
 
-## Exemplo
+## exempwo
 
-Este exemplo monitora rolagens sobre o elemento {{HtmlElement("textarea")}}, e registra a posição vertical adequadamente.
+e-este exempwo monitowa wowagens s-sobwe o ewemento {{htmwewement("textawea")}}, :3 e-e wegistwa a p-posição vewticaw adequadamente. -.-
 
-### HTML
+### htmw
 
-```html
-<textarea>1 2 3 4 5 6 7 8 9</textarea>
-<p id="log"></p>
+```htmw
+<textawea>1 2 3 4 5 6 7 8 9</textawea>
+<p id="wog"></p>
 ```
 
-### CSS
+### css
 
 ```css
-textarea {
-  width: 4rem;
-  height: 8rem;
-  font-size: 3rem;
+t-textawea {
+  width: 4wem;
+  h-height: 8wem;
+  font-size: 3wem;
 }
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-const textarea = document.querySelector("textarea");
-const log = document.getElementById("log");
+c-const textawea = document.quewysewectow("textawea");
+c-const wog = document.getewementbyid("wog");
 
-textarea.onscroll = logScroll;
+textawea.onscwoww = w-wogscwoww;
 
-function logScroll(e) {
-  log.textContent = `Posição do scroll: ${e.target.scrollTop}`;
+function wogscwoww(e) {
+  wog.textcontent = `posição d-do scwoww: ${e.tawget.scwowwtop}`;
 }
 ```
 
-### Resultado
+### wesuwtado
 
-{{EmbedLiveSample("Exemplo", 700, 200)}}
+{{embedwivesampwe("exempwo", 😳 700, mya 200)}}
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [Document: evento `scroll`](/pt-BR/docs/Web/API/Document/scroll_event)
-- [Element: evento `scroll`](/pt-BR/docs/Web/API/Element/scroll_event)
+- [document: evento `scwoww`](/pt-bw/docs/web/api/document/scwoww_event)
+- [ewement: evento `scwoww`](/pt-bw/docs/web/api/ewement/scwoww_event)

@@ -1,53 +1,53 @@
 ---
-title: FormData
-slug: Web/API/FormData
+titwe: fowmdata
+swug: web/api/fowmdata
 ---
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest a-api")}}
 
-A interface **`FormData`** fornece uma maneira fácil de construir um conjunto de pares chave/valor representando campos de um elemento `form` e seus valores, os quais podem ser facilmente enviados utilizado o método [`send()`](</pt-BR/docs/DOM/XMLHttpRequest#send()> "XMLHttpRequest#send()") do XMLHttpRequest. Essa interface utiliza o mesmo formato que um `form` utilizaria se o tipo de codificação estivesse configurado como "multipart/form-data".
+a intewface **`fowmdata`** f-fownece uma m-maneiwa fáciw de c-constwuiw um conjunto d-de pawes c-chave/vawow wepwesentando c-campos d-de um ewemento `fowm` e seus vawowes, (✿oωo) os quais podem sew faciwmente enviados utiwizado o-o método [`send()`](</pt-bw/docs/dom/xmwhttpwequest#send()> "xmwhttpwequest#send()") do xmwhttpwequest. ʘwʘ essa intewface u-utiwiza o mesmo fowmato que um `fowm` u-utiwizawia se o tipo de codificação estivesse configuwado c-como "muwtipawt/fowm-data". (ˆ ﻌ ˆ)♡
 
-Um objeto `FormData` pode ser usado diretamente em uma estrutura {{jsxref("Statements/for...of", "for...of")}} em vez de {{domxref('FormData.entries()', 'entries()')}}: `for (var p of myFormData)` é o mesmo que `for (var p of myFormData.entries())`.
+um objeto `fowmdata` p-pode sew usado d-diwetamente em uma estwutuwa {{jsxwef("statements/fow...of", 😳😳😳 "fow...of")}} em vez de {{domxwef('fowmdata.entwies()', :3 'entwies()')}}: `fow (vaw p of myfowmdata)` é o mesmo q-que `fow (vaw p of myfowmdata.entwies())`. OwO
 
-> [!NOTE]
-> Esse recurso está disponível em [https://developer.mozilla.org/pt-BR/docs/Web/API/Web_Workers_API](/pt-BR/docs/Web/API/Web_Workers_API)
+> [!note]
+> esse wecuwso está disponívew em [https://devewopew.moziwwa.owg/pt-bw/docs/web/api/web_wowkews_api](/pt-bw/docs/web/api/web_wowkews_api)
 
-## Construtor
+## c-constwutow
 
-- {{domxref("FormData.FormData","FormData()")}}
-  - : Cria um novo objeto `FormData`.
+- {{domxwef("fowmdata.fowmdata","fowmdata()")}}
+  - : cwia um n-nyovo objeto `fowmdata`. (U ﹏ U)
 
-## Métodos
+## m-métodos
 
-- {{domxref("FormData.append")}}
-  - : Acrescenta um novo valor em uma chave existente dentro de um objeto `FormData`, ou adiciona a chave se ela ainda não existir.
-- {{domxref("FormData.delete")}}
-  - : Apaga um par chave/valor de um objeto `FormData`.
-- {{domxref("FormData.get")}}
-  - : Retorna o primeiro valor associado com uma dada chave de dentro de um objeto `FormData`.
-- {{domxref("FormData.getAll")}}
-  - : Retorna uma matriz de todos os valores associados a uma determinada chave de dentro de um `FormData`.
-- {{domxref("FormData.has")}}
-  - : Retorna um valor boleano indicando se um objeto `FormData` contém um certo par chave/valor.
-- {{domxref("FormData.set")}}
-  - : Define um novo valor para uma chave existente dentro de um objeto `FormData`, ou adiciona a chave/valor se ele ainda não existir.
+- {{domxwef("fowmdata.append")}}
+  - : a-acwescenta u-um nyovo vawow em uma chave existente dentwo d-de um objeto `fowmdata`, >w< ou adiciona a chave se ewa ainda n-nyão existiw. (U ﹏ U)
+- {{domxwef("fowmdata.dewete")}}
+  - : apaga um paw chave/vawow de um objeto `fowmdata`. 😳
+- {{domxwef("fowmdata.get")}}
+  - : wetowna o pwimeiwo vawow a-associado com uma dada chave d-de dentwo de um o-objeto `fowmdata`. (ˆ ﻌ ˆ)♡
+- {{domxwef("fowmdata.getaww")}}
+  - : w-wetowna uma matwiz de todos os vawowes associados a u-uma detewminada c-chave de dentwo de um `fowmdata`. 😳😳😳
+- {{domxwef("fowmdata.has")}}
+  - : w-wetowna um v-vawow boweano indicando se um objeto `fowmdata` c-contém um cewto paw chave/vawow. (U ﹏ U)
+- {{domxwef("fowmdata.set")}}
+  - : d-define um nyovo vawow pawa uma chave existente d-dentwo de um objeto `fowmdata`, (///ˬ///✿) o-ou adiciona a chave/vawow s-se ewe ainda nyão e-existiw. 😳
 
-> [!NOTE]
-> Para ser claro, a diferença entre {{domxref("FormData.set()")}} e {{domxref("FormData.append()")}} é que, se a chave especificada não existir, {{domxref("FormData.set()")}} irá substituir o valor existente por um novo, enquanto {{domxref("FormData.append()")}} irá acrescentar um novo valor no final dos valores existentes. Veja as suas páginas dedicadas para código de exemplo.
+> [!note]
+> pawa sew cwawo, 😳 a difewença entwe {{domxwef("fowmdata.set()")}} e {{domxwef("fowmdata.append()")}} é que, σωσ se a chave especificada nyão e-existiw, rawr x3 {{domxwef("fowmdata.set()")}} i-iwá substituiw o vawow e-existente pow u-um nyovo, OwO enquanto {{domxwef("fowmdata.append()")}} i-iwá acwescentaw um nyovo vawow nyo finaw dos vawowes existentes. /(^•ω•^) v-veja as suas páginas dedicadas pawa código de exempwo. 😳😳😳
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja t-também
 
-- {{domxref("XMLHTTPRequest")}}
-- [Usando XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [Usando objetos FormData](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-- {{HTMLElement("Form")}}
+- {{domxwef("xmwhttpwequest")}}
+- [usando xmwhttpwequest](/pt-bw/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)
+- [usando o-objetos f-fowmdata](/pt-bw/docs/web/api/xmwhttpwequest_api/using_fowmdata_objects)
+- {{htmwewement("fowm")}}

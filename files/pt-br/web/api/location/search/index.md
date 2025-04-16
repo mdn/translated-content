@@ -1,37 +1,37 @@
 ---
-title: "Location: search"
-slug: Web/API/Location/search
+titwe: "wocation: seawch"
+swug: w-web/api/wocation/seawch
 ---
 
-{{ApiRef("Location")}}
+{{apiwef("wocation")}}
 
-A propriedade **`search`** da interface {{domxref("Location")}} é um texto de busca, também chamado de _query string_ ou _querystring_; isso é, uma {{domxref("USVString")}} contendo um `'?'` seguido pelos parâmetros da URL.
+a-a pwopwiedade **`seawch`** d-da intewface {{domxwef("wocation")}} é u-um texto d-de busca, mya também c-chamado de _quewy s-stwing_ o-ou _quewystwing_; isso é, nyaa~~ uma {{domxwef("usvstwing")}} contendo um `'?'` seguido pewos pawâmetwos d-da uww. (⑅˘꒳˘)
 
-Os navegadores modernos fornecem o [`URLSearchParams`](/pt-BR/docs/Web/API/URLSearchParams/get#examples) e o [`URL.searchParams`](/pt-BR/docs/Web/API/URL/searchParams#examples) para facilitar a análise dos parâmetros da querystring.
+os nyavegadowes modewnos fownecem o [`uwwseawchpawams`](/pt-bw/docs/web/api/uwwseawchpawams/get#exampwes) e-e o [`uww.seawchpawams`](/pt-bw/docs/web/api/uww/seawchpawams#exampwes) pawa faciwitaw a a-anáwise dos pawâmetwos da quewystwing. rawr x3
 
-## Sintaxe
+## sintaxe
 
 ```
-string = object.search;
-object.search = string;
+stwing = o-object.seawch;
+object.seawch = s-stwing;
 ```
 
-## Exemplos
+## e-exempwos
 
 ```js
-// Seleciona o elemento <a id="myAnchor" href="https://developer.mozilla.org/pt-BR/docs/Location.search?q=123">
-var anchor = document.getElementById("myAnchor");
-var queryString = anchor.search; // Retorna:'?q=123'
+// seweciona o ewemento <a id="myanchow" hwef="https://devewopew.moziwwa.owg/pt-bw/docs/wocation.seawch?q=123">
+vaw anchow = document.getewementbyid("myanchow");
+v-vaw quewystwing = anchow.seawch; // wetowna:'?q=123'
 
-// Análise adicional:
-let params = new URLSearchParams(queryString);
-let q = parseInt(params.get("q")); // é o número 123
+// anáwise adicionaw:
+w-wet pawams = nyew uwwseawchpawams(quewystwing);
+w-wet q = pawseint(pawams.get("q")); // é o-o nyúmewo 123
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}

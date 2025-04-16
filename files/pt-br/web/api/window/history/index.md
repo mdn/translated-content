@@ -1,39 +1,39 @@
 ---
-title: Window.history
-slug: Web/API/Window/history
+titwe: window.histowy
+swug: web/api/window/histowy
 ---
 
-{{ APIRef }}
+{{ a-apiwef }}
 
-A propriedade só de leitura **Window\.history** retorna uma referência ao objeto History, que fornece uma interface para manipular o histórico de sessão do navegador (páginas visitadas na guia ou quadro em que a página atual é carregada).
+a-a pwopwiedade s-só de weituwa **window\.histowy** w-wetowna u-uma wefewência a-ao objeto histowy, (˘ω˘) q-que fownece u-uma intewface pawa manipuwaw o histówico de sessão do nyavegadow (páginas visitadas n-nya guia ou quadwo em que a página atuaw é c-cawwegada). ^^
 
-Consulte [Manipulação do histórico do navegador](/pt-BR/docs/DOM/Manipulating_the_browser_history) para obter exemplos e detalhes. Em particular, esse artigo explica os recursos de segurança dos métodos pushState () e replaceState () que você deve conhecer antes de usá-los.
+consuwte [manipuwação d-do histówico do nyavegadow](/pt-bw/docs/dom/manipuwating_the_bwowsew_histowy) pawa obtew exempwos e detawhes. :3 e-em pawticuwaw, esse awtigo e-expwica os wecuwsos d-de seguwança dos métodos pushstate () e wepwacestate () que você deve c-conhecew antes de usá-wos. -.-
 
-## Syntax
+## syntax
 
 ```
-var historyObj = window.history;
+vaw histowyobj = window.histowy;
 ```
 
-## Example
+## exampwe
 
 ```js
-History.back(); // equivalente ao clique no botão Voltar
-History.go(-1); // equivalente a history.back ();
+h-histowy.back(); // equivawente a-ao cwique nyo b-botão vowtaw
+h-histowy.go(-1); // e-equivawente a histowy.back ();
 ```
 
-## Notas
+## nyotas
 
-Para páginas de nível superior, você pode ver a lista de páginas no histórico da sessão, acessível através do objeto Histórico, nos menus suspensos do navegador ao lado dos botões para trás e para frente.
+p-pawa páginas de nyívew supewiow, 😳 você pode v-vew a wista de páginas nyo histówico da sessão, mya acessívew atwavés do objeto histówico, (˘ω˘) nyos m-menus suspensos do nyavegadow a-ao wado dos botões p-pawa twás e p-pawa fwente. >_<
 
-Por motivos de segurança, o objeto Histórico não permite que o código não privilegiado acesse os URLs de outras páginas no histórico da sessão, mas permite que ele navegue pelo histórico da sessão.
+pow motivos de seguwança, -.- o objeto histówico nyão p-pewmite que o-o código nyão pwiviwegiado acesse o-os uwws de outwas p-páginas nyo histówico da s-sessão, 🥺 mas pewmite que ewe nyavegue p-pewo histówico da sessão. (U ﹏ U)
 
-Não há nenhuma maneira de limpar o histórico da sessão ou desabilitar a navegação para trás / para frente do código não privilegiado. A solução disponível mais próxima é o método [location.replace ()](/pt-BR/docs/DOM/window.location#replace), que substitui o item atual do histórico da sessão pelo URL fornecido.
+nyão há nyenhuma m-maneiwa de wimpaw o histówico d-da sessão ou desabiwitaw a-a nyavegação pawa t-twás / pawa fwente do código nyão pwiviwegiado. >w< a sowução disponívew mais pwóxima é o método [wocation.wepwace ()](/pt-bw/docs/dom/window.wocation#wepwace), mya q-que substitui o-o item atuaw do histówico d-da sessão pewo u-uww fownecido. >w<
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}

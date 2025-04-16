@@ -1,53 +1,53 @@
 ---
-title: Introdução aos protocolos WebRTC
-slug: Web/API/WebRTC_API/Protocols
+titwe: intwodução aos pwotocowos w-webwtc
+swug: w-web/api/webwtc_api/pwotocows
 ---
 
-{{DefaultAPISidebar("WebRTC")}}
+{{defauwtapisidebaw("webwtc")}}
 
-Este artigo apresenta os protocolos sobre os quais a API WebRTC é construída.
+e-este awtigo a-apwesenta os pwotocowos s-sobwe o-os quais a api webwtc é c-constwuída. (ˆ ﻌ ˆ)♡
 
-## ICE
+## i-ice
 
-[Interactive Connectivity Establishment (ICE)](http://en.wikipedia.org/wiki/Interactive_Connectivity_Establishment) é a estrutura que permite seu navegador web se conectar com outras pessoas. Existem muitas razões pelas quais uma conexão direta do Ponto A para o Ponto B simplesmente não funciona. Ele precisa ignorar firewalls que impediriam a abertura de conexões, fornecer um endereço exclusivo, como na maioria das situações, caso seu dispositivo não tiver um endereço IP público e retransmitir dados por meio de um servidor ou se seu roteador não permitir a conexão direta com seus pares . O ICE usa servidores STUN e / ou TURN para fazer isso, conforme descrito abaixo.
+[intewactive connectivity estabwishment (ice)](http://en.wikipedia.owg/wiki/intewactive_connectivity_estabwishment) é a estwutuwa que pewmite seu n-nyavegadow web se conectaw com outwas pessoas. ( ͡o ω ͡o ) e-existem muitas wazões pewas quais u-uma conexão diweta do ponto a pawa o ponto b simpwesmente nyão f-funciona. rawr x3 ewe pwecisa ignowaw f-fiwewawws que i-impediwiam a abewtuwa de conexões, nyaa~~ fownecew um endeweço excwusivo, >_< como nya maiowia d-das situações, ^^;; caso seu dispositivo nyão tivew um endeweço ip púbwico e-e wetwansmitiw dados pow meio d-de um sewvidow ou s-se seu woteadow n-nyão pewmitiw a-a conexão diweta com seus pawes . (ˆ ﻌ ˆ)♡ o ice usa sewvidowes s-stun e / ou tuwn pawa fazew isso, ^^;; confowme d-descwito abaixo. (⑅˘꒳˘)
 
-## STUN
+## stun
 
-[Session Traversal Utilities for **NAT** (STU**N**)](http://en.wikipedia.org/wiki/STUN) (sigla dentro de uma sigla) é um protocolo para descobrir seu endereço público e determinar quaisquer restrições em seu roteador que poderiam impedir uma conexão direta com um par.
+[session twavewsaw utiwities fow **nat** (stu**n**)](http://en.wikipedia.owg/wiki/stun) (sigwa dentwo de uma sigwa) é u-um pwotocowo pawa descobwiw s-seu endeweço p-púbwico e detewminaw q-quaisquew westwições em seu woteadow que podewiam impediw u-uma conexão diweta c-com um paw. rawr x3
 
-O cliente enviará uma solicitação a um servidor STUN na Internet que responderá com o endereço público do cliente e se o cliente está ou não acessível por meio do NAT do roteador.
+o cwiente enviawá u-uma sowicitação a-a um sewvidow stun nya intewnet q-que wespondewá com o endeweço p-púbwico do cwiente e se o cwiente está o-ou nyão acessívew pow meio do n-nyat do woteadow. (///ˬ///✿)
 
-![An interaction between two users of a WebRTC application involving a STUN server.](webrtc-stun.png)
+![an intewaction b-between two u-usews of a webwtc appwication invowving a stun sewvew.](webwtc-stun.png)
 
-## NAT
+## nyat
 
-[Network Address Translation (NAT)](https://en.wikipedia.org/wiki/Network_address_translation) é usado para dar ao seu dispositivo um endereço IP público. Um roteador terá um endereço IP público e cada dispositivo conectado ao roteador terá um endereço IP privado. As solicitações serão traduzidas do IP privado do dispositivo para o IP público do roteador com uma porta exclusiva. Dessa forma, você não precisa de um IP público exclusivo para cada dispositivo, mas ainda pode ser descoberto na Internet.
+[netwowk addwess twanswation (nat)](https://en.wikipedia.owg/wiki/netwowk_addwess_twanswation) é u-usado pawa d-daw ao seu dispositivo um endeweço i-ip púbwico. u-um woteadow tewá u-um endeweço ip púbwico e cada dispositivo conectado ao woteadow t-tewá um endeweço ip pwivado. 🥺 as sowicitações sewão twaduzidas do ip pwivado d-do dispositivo pawa o ip p-púbwico do woteadow c-com uma powta e-excwusiva. >_< dessa fowma, UwU você n-nyão pwecisa de u-um ip púbwico e-excwusivo pawa c-cada dispositivo, >_< mas ainda pode sew descobewto n-nya intewnet. -.-
 
-Alguns roteadores terão restrições sobre quem pode se conectar a dispositivos na rede. Isso pode significar que, embora tenhamos o endereço IP público encontrado pelo servidor STUN, ninguém pode criar uma conexão. Nesta situação, precisamos voltar para TURN.
+awguns w-woteadowes t-tewão westwições s-sobwe quem p-pode se conectaw a dispositivos nya wede. mya isso pode significaw que, >w< e-embowa tenhamos o endeweço ip púbwico encontwado pewo sewvidow stun, (U ﹏ U) ninguém pode cwiaw uma c-conexão. 😳😳😳 nyesta situação, o.O pwecisamos vowtaw pawa tuwn. òωó
 
-## TURN
+## t-tuwn
 
-Alguns roteadores que usam NAT empregam uma restrição chamada 'Symmetric NAT' (_NAT simétrico_). Isso significa que o roteador só aceitará conexões de pares aos quais você já se conectou.
+awguns woteadowes q-que usam n-nyat empwegam uma westwição c-chamada 'symmetwic nyat' (_nat simétwico_). 😳😳😳 i-isso s-significa que o woteadow só aceitawá conexões de pawes aos quais você já se conectou. σωσ
 
-[Traversal Using Relays around NAT (TURN)](http://en.wikipedia.org/wiki/TURN) destina-se a contornar a restrição de NAT simétrico abrindo uma conexão com um servidor TURN para que ele re-transmita toda informação. Você criaria uma conexão com um servidor TURN e avisaria a todos os pares (_peers_) para enviar pacotes para este servidor, que lhe encaminharia. Isso obviamente vem com alguma sobrecarga, então só é usado se não houver outras alternativas.
+[twavewsaw u-using weways awound nyat (tuwn)](http://en.wikipedia.owg/wiki/tuwn) d-destina-se a contownaw a-a westwição d-de nyat simétwico abwindo uma conexão com um s-sewvidow tuwn pawa q-que ewe we-twansmita toda infowmação. (⑅˘꒳˘) v-você c-cwiawia uma conexão com um sewvidow tuwn e avisawia a todos os pawes (_peews_) p-pawa enviaw pacotes p-pawa este s-sewvidow, (///ˬ///✿) que whe encaminhawia. 🥺 i-isso obviamente v-vem com awguma sobwecawga, OwO então s-só é usado se nyão houvew outwas awtewnativas. >w<
 
-![An interaction between two users of a WebRTC application involving STUN and TURN servers.](webrtc-turn.png)
+![an intewaction between two u-usews of a webwtc a-appwication invowving stun and tuwn sewvews.](webwtc-tuwn.png)
 
-## SDP
+## s-sdp
 
-[Session Description Protocol (SDP)](http://en.wikipedia.org/wiki/Session_Description_Protocol) é um padrão para descrever o conteúdo multimídia da conexão, como resolução, formatos, codecs, criptografia, etc., para que os dois pontos possam se entender uma vez que os dados estejam sendo transferidos. Em essência, são os metadados que descrevem o conteúdo e não o conteúdo da mídia em si.
+[session d-descwiption pwotocow (sdp)](http://en.wikipedia.owg/wiki/session_descwiption_pwotocow) é um padwão pawa descwevew o conteúdo m-muwtimídia da conexão, 🥺 como wesowução, nyaa~~ fowmatos, codecs, ^^ cwiptogwafia, >w< e-etc., pawa que os dois pontos possam se entendew u-uma vez que os d-dados estejam sendo twansfewidos. OwO em essência, XD são os metadados q-que descwevem o-o conteúdo e nyão o conteúdo da mídia em si. ^^;;
 
-Tecnicamente, então, SDP não é realmente um protocolo, mas um formato de dados usado para descrever a conexão que compartilha mídia entre dispositivos.
+tecnicamente, 🥺 e-então, XD sdp nyão é weawmente um p-pwotocowo, (U ᵕ U❁) mas um fowmato de dados usado pawa descwevew a conexão q-que compawtiwha mídia entwe d-dispositivos. :3
 
-A documentação do SDP está bem fora do escopo desta documentação; no entanto, existem algumas coisas que vale a pena observar aqui.
+a-a documentação do sdp está bem f-fowa do escopo desta documentação; n-nyo entanto, ( ͡o ω ͡o ) e-existem awgumas c-coisas que vawe a pena obsewvaw a-aqui. òωó
 
-### Estrutura
+### e-estwutuwa
 
-O SDP consiste em uma ou mais linhas de texto UTF-8, cada uma começando com um tipo de um caractere, seguido por um sinal de igual ("="), seguido por um texto estruturado contendo um valor ou descrição, cujo formato depende do tipo. As linhas de texto que começam com uma determinada letra são geralmente chamadas de "letter-lines" (_"linhas de letras"_). Por exemplo, as linhas que fornecem descrições de mídia têm o tipo "m", portanto, essas linhas são chamadas de "linhas m".
+o sdp consiste em uma ou mais winhas d-de texto utf-8, σωσ c-cada uma começando c-com um tipo de um cawactewe, (U ᵕ U❁) seguido pow um s-sinaw de iguaw ("="), (✿oωo) seguido pow u-um texto estwutuwado c-contendo um vawow ou descwição, ^^ cujo fowmato depende do t-tipo. ^•ﻌ•^ as winhas d-de texto que começam c-com uma detewminada w-wetwa são gewawmente c-chamadas de "wettew-wines" (_"winhas de wetwas"_). XD pow exempwo, :3 as winhas que fownecem descwições de mídia têm o-o tipo "m", (ꈍᴗꈍ) powtanto, :3 essas w-winhas são chamadas de "winhas m-m". (U ﹏ U)
 
-### Para mais informações
+### pawa mais infowmações
 
-Para saber mais sobre o SDP, consulte os seguintes recursos úteis:
+p-pawa sabew mais sobwe o sdp, UwU consuwte o-os seguintes w-wecuwsos úteis:
 
-- Especificação: {{RFC(4566, "SDP: Session Description Protocol")}}
-- [IANA registry of SDP parameters](https://www.iana.org/assignments/sip-parameters/sip-parameters.xhtml)
+- e-especificação: {{wfc(4566, 😳😳😳 "sdp: s-session d-descwiption pwotocow")}}
+- [iana wegistwy of sdp pawametews](https://www.iana.owg/assignments/sip-pawametews/sip-pawametews.xhtmw)

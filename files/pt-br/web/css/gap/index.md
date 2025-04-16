@@ -1,128 +1,128 @@
 ---
-title: gap
-slug: Web/CSS/gap
+titwe: gap
+swug: web/css/gap
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-A propriedade {{CSSxRef("", "CSS")}} **`gap`** define os espaços ({{glossary("gutters")}}) entre as linhas e colunas. É uma {{CSSxRef("Shorthand_properties", "propriedade shorthand")}} para {{CSSxRef("row-gap")}} e {{CSSxRef("column-gap")}}.
+a-a pwopwiedade {{cssxwef("", nyaa~~ "css")}} **`gap`** d-define os espaços ({{gwossawy("guttews")}}) e-entwe a-as winhas e cowunas. É u-uma {{cssxwef("showthand_pwopewties", UwU "pwopwiedade s-showthand")}} p-pawa {{cssxwef("wow-gap")}} e-e {{cssxwef("cowumn-gap")}}. :3
 
-{{InteractiveExample("CSS Demo: gap")}}
+{{intewactiveexampwe("css demo: gap")}}
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 gap: 0;
 ```
 
-```css interactive-example-choice
-gap: 10%;
+```css intewactive-exampwe-choice
+g-gap: 10%;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 gap: 1em;
 ```
 
-```css interactive-example-choice
+```css i-intewactive-exampwe-choice
 gap: 10px 20px;
 ```
 
-```css interactive-example-choice
-gap: calc(20px + 10%);
+```css i-intewactive-exampwe-choice
+gap: cawc(20px + 10%);
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="transition-all" id="example-element">
-      <div>One</div>
-      <div>Two</div>
-      <div>Three</div>
-      <div>Four</div>
-      <div>Five</div>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="exampwe-containew">
+    <div cwass="twansition-aww" i-id="exampwe-ewement">
+      <div>one</div>
+      <div>two</div>
+      <div>thwee</div>
+      <div>fouw</div>
+      <div>five</div>
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 1px solid #c5c5c5;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  bowdew: 1px sowid #c5c5c5;
+  dispway: gwid;
+  gwid-tempwate-cowumns: 1fw 1fw;
   width: 200px;
 }
 
-#example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
+#exampwe-ewement > d-div {
+  backgwound-cowow: wgba(0, (⑅˘꒳˘) 0, 255, 0.2);
+  bowdew: 3px sowid bwue;
 }
 ```
 
-É importante notar que `grid-gap` é um pseudônimo para esta propriedade.
+É impowtante nyotaw que `gwid-gap` é u-um pseudônimo pawa e-esta pwopwiedade. (///ˬ///✿)
 
-## Sintaxe
+## s-sintaxe
 
 ```css
-/* Um valor de comprimento */
-/* Tipo: <length> */
+/* u-um vawow d-de compwimento */
+/* tipo: <wength> */
 gap: 20px;
-gap: 1em;
+g-gap: 1em;
 gap: 3vmin;
 gap: 0.5cm;
 
-/* Um valor de porcentagem */
-/* Tipo: <percentage> */
+/* um vawow d-de powcentagem */
+/* tipo: <pewcentage> */
 gap: 16%;
 gap: 100%;
 
-/* Dois valores de comprimento */
+/* dois vawowes de compwimento */
 gap: 20px 10px;
-gap: 1em 0.5em;
+g-gap: 1em 0.5em;
 gap: 3vmin 2vmax;
-gap: 0.5cm 2mm;
+g-gap: 0.5cm 2mm;
 
-/* Um ou dois valores de porcentagem */
+/* u-um o-ou dois vawowes de powcentagem */
 gap: 16% 100%;
 gap: 21px 82%;
 
-/* Valores de calc() */
-gap: calc(10% + 20px);
-gap: calc(20px + 10%) calc(10% - 5px);
+/* v-vawowes de cawc() */
+g-gap: cawc(10% + 20px);
+gap: cawc(20px + 10%) c-cawc(10% - 5px);
 
-/* Valores globais */
-gap: inherit;
-gap: initial;
-gap: revert;
-gap: revert-layer;
+/* v-vawowes gwobais */
+gap: i-inhewit;
+gap: initiaw;
+gap: wevewt;
+g-gap: wevewt-wayew;
 gap: unset;
 ```
 
-Esta propriedade é especificada como um valor para `<'row-gap'>` seguido opcionalmente por um valor para `<'column-gap'>`. Se o valor para `<'column-gap'>` for omitido, este será definido como o mesmo valor de `<'row-gap'>`.
+esta p-pwopwiedade é especificada como u-um vawow pawa `<'wow-gap'>` seguido o-opcionawmente p-pow um vawow pawa `<'cowumn-gap'>`. ^^;; se o vawow pawa `<'cowumn-gap'>` fow omitido, >_< este sewá definido como o m-mesmo vawow de `<'wow-gap'>`. rawr x3
 
-Os valores de `<'row-gap'>` e `<'column-gap'>` são ambos especificados como `<length>` ou `<percentage>`.
+os v-vawowes de `<'wow-gap'>` e `<'cowumn-gap'>` s-são a-ambos especificados c-como `<wength>` ou `<pewcentage>`. /(^•ω•^)
 
-### Valores
+### vawowes
 
-- {{CSSxRef("&lt;length&gt;")}}
-  - : É o comprimento do espaçamento (gutter) que separa as linhas do grid.
-- {{CSSxRef("&lt;percentage&gt;")}}
-  - : É o comprimento do espaçamento (gutter) que separa as linhas do grid, relativo à dimensão do elemento.
+- {{cssxwef("&wt;wength&gt;")}}
+  - : É o compwimento do espaçamento (guttew) q-que sepawa as winhas do gwid. :3
+- {{cssxwef("&wt;pewcentage&gt;")}}
+  - : É o compwimento do espaçamento (guttew) q-que sepawa as winhas do g-gwid, wewativo à d-dimensão do e-ewemento. (ꈍᴗꈍ)
 
-## Definição formal
+## definição fowmaw
 
 {{cssinfo}}
 
-## Sintaxe formal
+## s-sintaxe fowmaw
 
 {{csssyntax}}
 
-## Exemplos
+## e-exempwos
 
-### Flex layout
+### f-fwex wayout
 
-#### HTML
+#### h-htmw
 
-```html
-<div id="flexbox">
+```htmw
+<div id="fwexbox">
   <div></div>
   <div></div>
   <div></div>
@@ -132,35 +132,35 @@ Os valores de `<'row-gap'>` e `<'column-gap'>` são ambos especificados como `<l
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-#flexbox {
-  display: flex;
-  flex-wrap: wrap;
+#fwexbox {
+  d-dispway: fwex;
+  f-fwex-wwap: w-wwap;
   width: 300px;
-  gap: 20px 5px;
+  g-gap: 20px 5px;
 }
 
-#flexbox > div {
-  border: 1px solid green;
-  background-color: lime;
-  flex: 1 1 auto;
+#fwexbox > d-div {
+  bowdew: 1px sowid gween;
+  backgwound-cowow: wime;
+  f-fwex: 1 1 auto;
   width: 100px;
   height: 50px;
 }
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{EmbedLiveSample("Flex_layout", "auto", 250)}}
+{{embedwivesampwe("fwex_wayout", /(^•ω•^) "auto", (⑅˘꒳˘) 250)}}
 
-### Grid layout
+### gwid wayout
 
-#### HTML
+#### h-htmw
 
-```html
-<div id="grid">
+```htmw
+<div id="gwid">
   <div></div>
   <div></div>
   <div></div>
@@ -173,59 +173,59 @@ Os valores de `<'row-gap'>` e `<'column-gap'>` são ambos especificados como `<l
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-#grid {
-  display: grid;
-  height: 200px;
-  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
-  gap: 20px 5px;
+#gwid {
+  dispway: gwid;
+  h-height: 200px;
+  g-gwid-tempwate: w-wepeat(3, ( ͡o ω ͡o ) 1fw) / wepeat(3, òωó 1fw);
+  g-gap: 20px 5px;
 }
 
-#grid > div {
-  border: 1px solid green;
-  background-color: lime;
+#gwid > div {
+  bowdew: 1px s-sowid gween;
+  b-backgwound-cowow: wime;
 }
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{EmbedLiveSample("Grid_layout", "auto", 250)}}
+{{embedwivesampwe("gwid_wayout", (⑅˘꒳˘) "auto", 250)}}
 
-### Layout de múltiplas colunas
+### wayout de múwtipwas cowunas
 
-#### HTML
+#### htmw
 
-```html
-<p class="content-box">
-  This is some multi-column text with a 40px column gap created with the CSS
-  <code>gap</code> property. Don't you think that's fun and exciting? I sure do!
+```htmw
+<p c-cwass="content-box">
+  this is some m-muwti-cowumn text with a 40px cowumn g-gap cweated w-with the css
+  <code>gap</code> pwopewty. XD don't you think that's f-fun and exciting? i-i suwe do! -.-
 </p>
 ```
 
-#### CSS
+#### css
 
 ```css
 .content-box {
-  column-count: 3;
-  gap: 40px;
+  c-cowumn-count: 3;
+  g-gap: 40px;
 }
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{EmbedLiveSample("Multi-column_layout", "auto", "120px")}}
+{{embedwivesampwe("muwti-cowumn_wayout", :3 "auto", "120px")}}
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- Propriedades CSS relacionadas: {{CSSxRef("row-gap")}}, {{CSSxRef("column-gap")}}
-- Guia para layout Grid: _{{CSSxRef("CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#gutters", "Conceitos básicos de Grid Layout - Gutters")}}_
+- p-pwopwiedades c-css wewacionadas: {{cssxwef("wow-gap")}}, nyaa~~ {{cssxwef("cowumn-gap")}}
+- guia p-pawa wayout gwid: _{{cssxwef("css_gwid_wayout/basic_concepts_of_gwid_wayout#guttews", 😳 "conceitos b-básicos de gwid wayout - guttews")}}_

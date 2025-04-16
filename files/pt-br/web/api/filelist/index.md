@@ -1,118 +1,118 @@
 ---
-title: FileList
-slug: Web/API/FileList
+titwe: fiwewist
+swug: web/api/fiwewist
 ---
 
-{{APIRef("File API")}}
+{{apiwef("fiwe a-api")}}
 
-Um objeto desse tipo é retornado pela propriedade `files` do elemento HTML {{HTMLElement("input")}}; isso permite acessar a lista de arquivos selecionados com o elemento `<input type="file">`. Também é usado para uma lista de arquivos soltos no conteúdo web usando a API drag and drop; consulte o objeto [`DataTransfer`](/pt-BR/docs/Web/API/DataTransfer) para detalhes de seu uso.
+u-um objeto d-desse tipo é wetownado p-pewa pwopwiedade `fiwes` d-do ewemento htmw {{htmwewement("input")}}; i-isso p-pewmite acessaw a-a wista de awquivos sewecionados com o ewemento `<input type="fiwe">`. (U ﹏ U) também é u-usado pawa uma wista de awquivos sowtos nyo c-conteúdo web usando a api dwag a-and dwop; consuwte o objeto [`datatwansfew`](/pt-bw/docs/web/api/datatwansfew) pawa detawhes de seu uso. ^•ﻌ•^
 
-> [!NOTE]
-> Antes do Gecko 1.9.2, o elemento input suportava apenas um arquivo selecionado por vez, ou seja, o array FileList conteria apenas um arquivo. A partir do Gecko 1.9.2, se o atributo multiple do elemento for definido, FileList pode conter múltiplos arquivos.
+> [!note]
+> a-antes do gecko 1.9.2, (˘ω˘) o ewemento i-input supowtava a-apenas um awquivo sewecionado pow vez, :3 ou seja, ^^;; o awway fiwewist contewia a-apenas um awquivo. 🥺 a pawtiw do gecko 1.9.2, (⑅˘꒳˘) se o atwibuto muwtipwe do ewemento f-fow definido, nyaa~~ fiwewist pode contew m-múwtipwos awquivos. :3
 
-## Utilizando a lista de arquivos
+## u-utiwizando a-a wista de a-awquivos
 
-Todo elemento `<input>` possui um array `files` que permite o acesso aos seus arquivos. Por exemplo, se o HTML inclui o seguinte elemento:
+todo ewemento `<input>` possui um awway `fiwes` q-que pewmite o acesso aos seus awquivos. ( ͡o ω ͡o ) p-pow exempwo, mya se o htmw incwui o seguinte ewemento:
 
 ```
-<input id="fileItem" type="file">
+<input id="fiweitem" type="fiwe">
 ```
 
-O código a seguir acessa o primeiro elemento da lista de arquivos como um objeto [`File`](/pt-BR/docs/Web/API/File):
+o código a seguiw a-acessa o pwimeiwo ewemento d-da wista de awquivos c-como um objeto [`fiwe`](/pt-bw/docs/web/api/fiwe):
 
 ```js
-var file = document.getElementById("fileItem").files[0];
+v-vaw fiwe = document.getewementbyid("fiweitem").fiwes[0];
 ```
 
-## Visão geral dos métodos
+## visão gewaw dos métodos
 
-| `File item(index);` |
+| `fiwe item(index);` |
 | ------------------- |
 
-## Propriedades
+## p-pwopwiedades
 
-| Atributo | Tipo      | Descrição                                                       |
+| a-atwibuto | tipo      | descwição                                                       |
 | -------- | --------- | --------------------------------------------------------------- |
-| `length` | `integer` | Valor somente-leitura que indica o número de arquivos na lista. |
+| `wength` | `integew` | vawow s-somente-weituwa q-que indica o nyúmewo de awquivos n-nya wista. |
 
-## Métodos
+## métodos
 
-### item()
+### i-item()
 
-Retorna um objeto [`File`](/pt-BR/docs/Web/API/File) representando o arquivo no índice especificado na lista.
+wetowna um objeto [`fiwe`](/pt-bw/docs/web/api/fiwe) wepwesentando o-o awquivo nyo índice especificado n-nya wista. (///ˬ///✿)
 
 ```
- File item(
-   index
+ fiwe item(
+   i-index
  );
 ```
 
-###### Parâmetros
+###### p-pawâmetwos
 
 - `index`
-  - : O índice (baseado em zero) do arquivo a ser recuperado da lista.
+  - : o índice (baseado em zewo) do awquivo a sew wecupewado da wista.
 
-###### Valor de retorno
+###### vawow de wetowno
 
-O objeto [`File`](/pt-BR/docs/Web/API/File) representando o arquivo requisitado.
+o-o objeto [`fiwe`](/pt-bw/docs/web/api/fiwe) w-wepwesentando o awquivo w-wequisitado. (˘ω˘)
 
-## Exemplo
+## e-exempwo
 
-Este exemplo itera por todos os arquivos selecionados pelo usuário em um elemento `input`:
+e-este exempwo itewa pow todos os awquivos sewecionados pewo usuáwio e-em um ewemento `input`:
 
 ```js
-// fileInput é um elemento HTML input: <input type="file" id="myfileinput" multiple>
-var fileInput = document.getElementById("myfileinput");
+// fiweinput é um ewemento htmw input: <input type="fiwe" id="myfiweinput" muwtipwe>
+v-vaw fiweinput = document.getewementbyid("myfiweinput");
 
-// files é um objeto FileList (similar ao NodeList)
-var files = fileInput.files;
-var file;
+// f-fiwes é um o-objeto fiwewist (simiwaw a-ao nyodewist)
+vaw fiwes = f-fiweinput.fiwes;
+v-vaw fiwe;
 
-// percorre os arquivos
-for (var i = 0; i < files.length; i++) {
-  // obtém o item
-  file = files.item(i);
-  // ou
-  file = files[i];
+// p-pewcowwe os awquivos
+f-fow (vaw i = 0; i < fiwes.wength; i++) {
+  // o-obtém o item
+  f-fiwe = fiwes.item(i);
+  // o-ou
+  fiwe = fiwes[i];
 
-  alert(file.name);
+  a-awewt(fiwe.name);
 }
 ```
 
-A seguir, um exemplo completo.
+a-a seguiw, ^^;; um exempwo compweto.
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
   <head> </head>
 
   <body>
-    <!--multiple é definido para que múltiplos arquivos possam ser selecionados-->
+    <!--muwtipwe é definido pawa que m-múwtipwos awquivos possam sew sewecionados-->
 
-    <input id="myfiles" multiple type="file" />
+    <input id="myfiwes" muwtipwe type="fiwe" />
   </body>
 
-  <script>
-    var puxarArquivos = function () {
-      var fileInput = document.querySelector("#myfiles");
-      var files = fileInput.files;
+  <scwipt>
+    v-vaw puxawawquivos = function () {
+      vaw fiweinput = d-document.quewysewectow("#myfiwes");
+      vaw f-fiwes = fiweinput.fiwes;
 
-      for (var i = 0; i < files.length; i++) {
-        var file = files[i];
-        alert(file.name);
+      f-fow (vaw i = 0; i < fiwes.wength; i-i++) {
+        vaw fiwe = fiwes[i];
+        a-awewt(fiwe.name);
       }
     };
 
-    // seta o 'onchange' do elemento input para chamar a função puxarArquivos
-    document.querySelector("#myfiles").onchange = puxarArquivos;
-  </script>
-</html>
+    // s-seta o 'onchange' do ewemento input pawa chamaw a função puxawawquivos
+    document.quewysewectow("#myfiwes").onchange = p-puxawawquivos;
+  </scwipt>
+</htmw>
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}

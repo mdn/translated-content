@@ -1,118 +1,118 @@
 ---
-title: Guia JavaScript
-slug: Web/JavaScript/Guide
+titwe: guia javascwipt
+swug: w-web/javascwipt/guide
 ---
 
-{{jsSidebar("JavaScript Guide")}}
+{{jssidebaw("javascwipt g-guide")}}
 
-O Guia JavaScript mostra como usar [JavaScript](/pt-BR/docs/Web/JavaScript) e dá uma visão geral da linguagem. Se você quer começar com JavaScript ou programação em geral, consulte os artigos na [área de aprendizagem](/pt-BR/docs/Learn/JavaScript). Se você precisar de informações mais aprofundadas sobre algum recurso da linguagem, consulte a [referência JavaScript](/pt-BR/docs/Web/JavaScript/Reference).
+o guia j-javascwipt mostwa c-como usaw [javascwipt](/pt-bw/docs/web/javascwipt) e-e dá uma v-visão gewaw d-da winguagem. :3 se v-você quew começaw com javascwipt ou pwogwamação em gewaw, 😳😳😳 consuwte os awtigos n-nya [áwea de apwendizagem](/pt-bw/docs/weawn/javascwipt). se v-você pwecisaw de infowmações m-mais apwofundadas sobwe awgum wecuwso da winguagem, (˘ω˘) consuwte a [wefewência j-javascwipt](/pt-bw/docs/web/javascwipt/wefewence). ^^
 
-## Capítulos
+## capítuwos
 
-Este guia está dividido em vários capítulos:
+e-este guia está d-dividido em váwios capítuwos:
 
-- [Introdução](/pt-BR/docs/Web/JavaScript/Guide/Introduction)
+- [intwodução](/pt-bw/docs/web/javascwipt/guide/intwoduction)
 
-  [Sobre este guia](/pt-BR/docs/Web/JavaScript/Guide/Introduction#onde_encontrar_informações_sobre_javascript)
-  [Sobre JavaScript](/pt-BR/docs/Web/JavaScript/Guide/Introduction#o_que_é_javascript)
-  [JavaScript e Java](/pt-BR/docs/Web/JavaScript/Guide/Introduction#javascript_and_java)
-  [ECMAScript](/pt-BR/docs/Web/JavaScript/Guide/Introduction#javascript_and_the_ecmascript_specification)
-  [Ferramentas](/pt-BR/docs/Web/JavaScript/Guide/Introduction#getting_started_with_javascript)
-  [Olá Mundo](/pt-BR/docs/Web/JavaScript/Guide/Introduction#hello_world)
+  [sobwe este guia](/pt-bw/docs/web/javascwipt/guide/intwoduction#onde_encontwaw_infowmações_sobwe_javascwipt)
+  [sobwe javascwipt](/pt-bw/docs/web/javascwipt/guide/intwoduction#o_que_é_javascwipt)
+  [javascwipt e-e java](/pt-bw/docs/web/javascwipt/guide/intwoduction#javascwipt_and_java)
+  [ecmascwipt](/pt-bw/docs/web/javascwipt/guide/intwoduction#javascwipt_and_the_ecmascwipt_specification)
+  [fewwamentas](/pt-bw/docs/web/javascwipt/guide/intwoduction#getting_stawted_with_javascwipt)
+  [owá mundo](/pt-bw/docs/web/javascwipt/guide/intwoduction#hewwo_wowwd)
 
-- [Sintaxe e tipos](/pt-BR/docs/Web/JavaScript/Guide/Grammar_and_types)
+- [sintaxe e tipos](/pt-bw/docs/web/javascwipt/guide/gwammaw_and_types)
 
-  [Sintaxe básica e comentários](/pt-BR/docs/Web/JavaScript/Guide/Grammar_and_types#basics)
-  [Declarações](/pt-BR/docs/Web/JavaScript/Guide/Grammar_and_types#declarations)
-  [Escopo de variável](/pt-BR/docs/Web/JavaScript/Guide/Grammar_and_types#variable_scope)
-  [Hoisting](/pt-BR/docs/Web/JavaScript/Guide/Grammar_and_types#variable_hoisting)
-  [Estruturas de dados e Tipos](/pt-BR/docs/Web/JavaScript/Guide/Grammar_and_types#data_structures_and_types)
-  [Literais](/pt-BR/docs/Web/JavaScript/Guide/Grammar_and_types#literals)
+  [sintaxe básica e comentáwios](/pt-bw/docs/web/javascwipt/guide/gwammaw_and_types#basics)
+  [decwawações](/pt-bw/docs/web/javascwipt/guide/gwammaw_and_types#decwawations)
+  [escopo d-de vawiávew](/pt-bw/docs/web/javascwipt/guide/gwammaw_and_types#vawiabwe_scope)
+  [hoisting](/pt-bw/docs/web/javascwipt/guide/gwammaw_and_types#vawiabwe_hoisting)
+  [estwutuwas de d-dados e tipos](/pt-bw/docs/web/javascwipt/guide/gwammaw_and_types#data_stwuctuwes_and_types)
+  [witewais](/pt-bw/docs/web/javascwipt/guide/gwammaw_and_types#witewaws)
 
-- [Controle de fluxo e manipulação de erro](/pt-BR/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
+- [contwowe d-de fwuxo e m-manipuwação de e-ewwo](/pt-bw/docs/web/javascwipt/guide/contwow_fwow_and_ewwow_handwing)
 
-  [`if...else`](/pt-BR/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#if...else_statement)
-  [`switch`](/pt-BR/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#switch_statement)
-  [`try`/`catch`/`throw`](/pt-BR/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#exception_handling_statements)
-  [Objetos de erro](/pt-BR/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#utilizing_error_objects)
-  [Promises](/pt-BR/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#promises)
+  [`if...ewse`](/pt-bw/docs/web/javascwipt/guide/contwow_fwow_and_ewwow_handwing#if...ewse_statement)
+  [`switch`](/pt-bw/docs/web/javascwipt/guide/contwow_fwow_and_ewwow_handwing#switch_statement)
+  [`twy`/`catch`/`thwow`](/pt-bw/docs/web/javascwipt/guide/contwow_fwow_and_ewwow_handwing#exception_handwing_statements)
+  [objetos de ewwo](/pt-bw/docs/web/javascwipt/guide/contwow_fwow_and_ewwow_handwing#utiwizing_ewwow_objects)
+  [pwomises](/pt-bw/docs/web/javascwipt/guide/contwow_fwow_and_ewwow_handwing#pwomises)
 
-- [Laços e iteração](/pt-BR/docs/Web/JavaScript/Guide/Loops_and_iteration)
+- [waços e itewação](/pt-bw/docs/web/javascwipt/guide/woops_and_itewation)
 
-  `for while do...while break/continue for..in for..of`
+  `fow w-whiwe do...whiwe bweak/continue fow..in fow..of`
 
-- [Funções](/pt-BR/docs/Web/JavaScript/Guide/Functions)
+- [funções](/pt-bw/docs/web/javascwipt/guide/functions)
 
-  [Definição de funções](/pt-BR/docs/Web/JavaScript/Guide/Functions#defining_functions)
-  [Chamando funções](/pt-BR/docs/Web/JavaScript/Guide/Functions#calling_functions)
-  [Escopo da função](/pt-BR/docs/Web/JavaScript/Guide/Functions#function_scope)
-  [Closures](/pt-BR/docs/Web/JavaScript/Guide/Functions#closures)
-  [Argumentos](/pt-BR/docs/Web/JavaScript/Guide/Functions#using_the_arguments_object) & [parâmetros](/pt-BR/docs/Web/JavaScript/Guide/Functions#function_parameters)
-  [Funções de seta](/pt-BR/docs/Web/JavaScript/Guide/Functions#arrow_functions)
+  [definição d-de funções](/pt-bw/docs/web/javascwipt/guide/functions#defining_functions)
+  [chamando funções](/pt-bw/docs/web/javascwipt/guide/functions#cawwing_functions)
+  [escopo da função](/pt-bw/docs/web/javascwipt/guide/functions#function_scope)
+  [cwosuwes](/pt-bw/docs/web/javascwipt/guide/functions#cwosuwes)
+  [awgumentos](/pt-bw/docs/web/javascwipt/guide/functions#using_the_awguments_object) & [pawâmetwos](/pt-bw/docs/web/javascwipt/guide/functions#function_pawametews)
+  [funções de seta](/pt-bw/docs/web/javascwipt/guide/functions#awwow_functions)
 
-- [Expressões e operadores](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators)
+- [expwessões e opewadowes](/pt-bw/docs/web/javascwipt/guide/expwessions_and_opewatows)
 
-  [Atribuição](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators) & [comparações](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators#comparison_operators)
-  [Operadores aritméticos](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators#arithmetic_operators)
-  [Operadores lógicos](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators#bitwise_operators) & [bit a bit](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators#logical_operators)
-  [Operador condicional (Ternário)](</pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#Conditional_(ternary)_operator>)
+  [atwibuição](/pt-bw/docs/web/javascwipt/guide/expwessions_and_opewatows#assignment_opewatows) & [compawações](/pt-bw/docs/web/javascwipt/guide/expwessions_and_opewatows#compawison_opewatows)
+  [opewadowes awitméticos](/pt-bw/docs/web/javascwipt/guide/expwessions_and_opewatows#awithmetic_opewatows)
+  [opewadowes wógicos](/pt-bw/docs/web/javascwipt/guide/expwessions_and_opewatows#bitwise_opewatows) & [bit a-a bit](/pt-bw/docs/web/javascwipt/guide/expwessions_and_opewatows#wogicaw_opewatows)
+  [opewadow condicionaw (tewnáwio)](</pt-bw/docs/web/javascwipt/guide/expwessions_and_opewatows#conditionaw_(tewnawy)_opewatow>)
 
-- [Números e datas](/pt-BR/docs/Web/JavaScript/Guide/Numbers_and_dates)
-  [Números](/pt-BR/docs/Web/JavaScript/Guide/Numbers_and_dates#numbers)
+- [númewos e d-datas](/pt-bw/docs/web/javascwipt/guide/numbews_and_dates)
+  [númewos](/pt-bw/docs/web/javascwipt/guide/numbews_and_dates#numbews)
 
-  [Objeto de números](/pt-BR/docs/Web/JavaScript/Guide/Numbers_and_dates#number_object)
-  [Objeto Math](/pt-BR/docs/Web/JavaScript/Guide/Numbers_and_dates#math_object)
-  [Objeto Data](/pt-BR/docs/Web/JavaScript/Guide/Numbers_and_dates#date_object)
+  [objeto d-de nyúmewos](/pt-bw/docs/web/javascwipt/guide/numbews_and_dates#numbew_object)
+  [objeto m-math](/pt-bw/docs/web/javascwipt/guide/numbews_and_dates#math_object)
+  [objeto data](/pt-bw/docs/web/javascwipt/guide/numbews_and_dates#date_object)
 
-- [Formatação de texto](/pt-BR/docs/Web/JavaScript/Guide/Text_formatting)
+- [fowmatação de texto](/pt-bw/docs/web/javascwipt/guide/text_fowmatting)
 
-  [Strings](/pt-BR/docs/Web/JavaScript/Guide/Text_formatting#string_literals)
-  [Objetos de strings](/pt-BR/docs/Web/JavaScript/Guide/Text_formatting#string_objects)
-  [Modelos de strings](/pt-BR/docs/Web/JavaScript/Guide/Text_formatting#multi-line_template_strings)
-  [Internacionalização](/pt-BR/docs/Web/JavaScript/Guide/Text_formatting#internationalization)
+  [stwings](/pt-bw/docs/web/javascwipt/guide/text_fowmatting#stwing_witewaws)
+  [objetos de stwings](/pt-bw/docs/web/javascwipt/guide/text_fowmatting#stwing_objects)
+  [modewos de s-stwings](/pt-bw/docs/web/javascwipt/guide/text_fowmatting#muwti-wine_tempwate_stwings)
+  [intewnacionawização](/pt-bw/docs/web/javascwipt/guide/text_fowmatting#intewnationawization)
 
-- [Expressões Regular](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions)
+- [expwessões w-weguwaw](/pt-bw/docs/web/javascwipt/guide/weguwaw_expwessions)
 
-  [Criando uma expressão regular](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions#criando_expressao_regular)
-  [Padrão de escrita de uma expressão regular](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions#escrita_expressao_regular)
-  [Trabalhando com expressões regular](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions#trabalhando_expressao_regular)
+  [cwiando uma expwessão w-weguwaw](/pt-bw/docs/web/javascwipt/guide/weguwaw_expwessions#cwiando_expwessao_weguwaw)
+  [padwão d-de escwita de uma expwessão w-weguwaw](/pt-bw/docs/web/javascwipt/guide/weguwaw_expwessions#escwita_expwessao_weguwaw)
+  [twabawhando com e-expwessões weguwaw](/pt-bw/docs/web/javascwipt/guide/weguwaw_expwessions#twabawhando_expwessao_weguwaw)
 
-- [Coleções Indexadas](/pt-BR/docs/Web/JavaScript/Guide/Indexed_collections)
+- [coweções indexadas](/pt-bw/docs/web/javascwipt/guide/indexed_cowwections)
 
-  [Arrays](/pt-BR/docs/Web/JavaScript/Guide/Indexed_collections#array_object)
-  [Arrays digitados](/pt-BR/docs/Web/JavaScript/Guide/Indexed_collections#typed_arrays)
+  [awways](/pt-bw/docs/web/javascwipt/guide/indexed_cowwections#awway_object)
+  [awways digitados](/pt-bw/docs/web/javascwipt/guide/indexed_cowwections#typed_awways)
 
-- [Coleções Chaveadas](/pt-BR/docs/Web/JavaScript/Guide/Keyed_collections)
+- [coweções c-chaveadas](/pt-bw/docs/web/javascwipt/guide/keyed_cowwections)
 
-  [Maps](/pt-BR/docs/Web/JavaScript/Guide/Keyed_collections#map_object)
-  [WeakMaps](/pt-BR/docs/Web/JavaScript/Guide/Keyed_collections#weakmap_object)
-  [Set](/pt-BR/docs/Web/JavaScript/Guide/Keyed_collections#set_object)
-  [WeakSet](/pt-BR/docs/Web/JavaScript/Guide/Keyed_collections#weakset_object)
+  [maps](/pt-bw/docs/web/javascwipt/guide/keyed_cowwections#map_object)
+  [weakmaps](/pt-bw/docs/web/javascwipt/guide/keyed_cowwections#weakmap_object)
+  [set](/pt-bw/docs/web/javascwipt/guide/keyed_cowwections#set_object)
+  [weakset](/pt-bw/docs/web/javascwipt/guide/keyed_cowwections#weakset_object)
 
-- [Trabalhando com objetos](/pt-BR/docs/Web/JavaScript/Guide/Working_with_objects)
+- [twabawhando com o-objetos](/pt-bw/docs/web/javascwipt/guide/wowking_with_objects)
 
-  [Objetos e propriedades](/pt-BR/docs/Web/JavaScript/Guide/Working_with_objects#objects_and_properties)
-  [Criando Objetos](/pt-BR/docs/Web/JavaScript/Guide/Working_with_objects#creating_new_objects)
-  [Definindo Métodos](/pt-BR/docs/Web/JavaScript/Guide/Working_with_objects#defining_methods)
-  [Getter e setter](/pt-BR/docs/Web/JavaScript/Guide/Working_with_objects#defining_getters_and_setters)
+  [objetos e p-pwopwiedades](/pt-bw/docs/web/javascwipt/guide/wowking_with_objects#objects_and_pwopewties)
+  [cwiando o-objetos](/pt-bw/docs/web/javascwipt/guide/wowking_with_objects#cweating_new_objects)
+  [definindo métodos](/pt-bw/docs/web/javascwipt/guide/wowking_with_objects#defining_methods)
+  [gettew e settew](/pt-bw/docs/web/javascwipt/guide/wowking_with_objects#defining_gettews_and_settews)
 
-- [Detalhes do modelo de objetos](/pt-BR/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [detawhes do modewo de objetos](/pt-bw/docs/confwicting/web/javascwipt/inhewitance_and_the_pwototype_chain)
 
-  [POO baseada na prototipagem](/pt-BR/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain#class-based_vs._prototype-based_languages)
-  [Criando hierarquias de objetos](/pt-BR/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain#creating_the_hierarchy)
-  [Herança](/pt-BR/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain#property_inheritance_revisited)
+  [poo baseada nya pwototipagem](/pt-bw/docs/confwicting/web/javascwipt/inhewitance_and_the_pwototype_chain#cwass-based_vs._pwototype-based_wanguages)
+  [cwiando hiewawquias d-de objetos](/pt-bw/docs/confwicting/web/javascwipt/inhewitance_and_the_pwototype_chain#cweating_the_hiewawchy)
+  [hewança](/pt-bw/docs/confwicting/web/javascwipt/inhewitance_and_the_pwototype_chain#pwopewty_inhewitance_wevisited)
 
-- [Iteradores e geradores](/pt-BR/docs/Web/JavaScript/Guide/Iterators_and_generators)
+- [itewadowes e-e gewadowes](/pt-bw/docs/web/javascwipt/guide/itewatows_and_genewatows)
 
-  [Iterators](/pt-BR/docs/Web/JavaScript/Guide/Iterators_and_generators#iterators)
-  [Iterables](/pt-BR/docs/Web/JavaScript/Guide/Iterators_and_generators#iterables)
-  [Generators](/pt-BR/docs/Web/JavaScript/Guide/Iterators_and_generators#generators)
+  [itewatows](/pt-bw/docs/web/javascwipt/guide/itewatows_and_genewatows#itewatows)
+  [itewabwes](/pt-bw/docs/web/javascwipt/guide/itewatows_and_genewatows#itewabwes)
+  [genewatows](/pt-bw/docs/web/javascwipt/guide/itewatows_and_genewatows#genewatows)
 
-- [Meta programação](/pt-BR/docs/Web/JavaScript/Guide/Meta_programming)
+- [meta pwogwamação](/pt-bw/docs/web/javascwipt/guide/meta_pwogwamming)
 
-  [`Proxy`](/pt-BR/docs/Web/JavaScript/Guide/Meta_programming#proxies)
-  [Handlers e traps](/pt-BR/docs/Web/JavaScript/Guide/Meta_programming#handlers_and_traps)
-  [Proxy revogável](/pt-BR/docs/Web/JavaScript/Guide/Meta_programming#revocable_proxy)
-  [`Refletor`](/pt-BR/docs/Web/JavaScript/Guide/Meta_programming#reflection)
+  [`pwoxy`](/pt-bw/docs/web/javascwipt/guide/meta_pwogwamming#pwoxies)
+  [handwews e-e twaps](/pt-bw/docs/web/javascwipt/guide/meta_pwogwamming#handwews_and_twaps)
+  [pwoxy w-wevogávew](/pt-bw/docs/web/javascwipt/guide/meta_pwogwamming#wevocabwe_pwoxy)
+  [`wefwetow`](/pt-bw/docs/web/javascwipt/guide/meta_pwogwamming#wefwection)
 
-{{Next("Web/JavaScript/Guide/Introduction")}}
+{{next("web/javascwipt/guide/intwoduction")}}

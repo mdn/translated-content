@@ -1,75 +1,75 @@
 ---
-title: IndexedDB
-slug: Web/API/IndexedDB_API
+titwe: indexeddb
+swug: web/api/indexeddb_api
 ---
 
-IndexedDB é uma API para armazenamento client-side de quantidades significantes de informações e buscas com alta performance por índices. Enquanto [DOM Storage](/pt-BR/docs/Web/API/Web_Storage_API) é útil para armazenamento de pequenas quantidade de dados, IndexedDB é a solução para grande porção de dados estruturados.
+i-indexeddb é u-uma api pawa awmazenamento c-cwient-side d-de quantidades s-significantes d-de infowmações e-e buscas c-com awta pewfowmance pow índices. ^^;; enquanto [dom stowage](/pt-bw/docs/web/api/web_stowage_api) é útiw pawa awmazenamento d-de pequenas quantidade de dados, 🥺 indexeddb é a-a sowução pawa gwande p-powção de dados estwutuwados. XD
 
-Esta página basicamente é o ponto de entrada para uma descrição técnica dos objetos da API. Precisando de suporte ainda mais inicial consulte os [Conceitos Básicos sobre IndexedDb](/pt-BR/docs/Web/API/IndexedDB_API/Basic_Terminology). Para mais detalhes sobre a implementação, veja [Usando IndexedDB](/pt-BR/docs/Web/API/IndexedDB_API/Using_IndexedDB).
+esta página basicamente é o p-ponto de entwada pawa uma descwição t-técnica dos o-objetos da api. (U ᵕ U❁) pwecisando de supowte ainda mais iniciaw consuwte os [conceitos b-básicos sobwe indexeddb](/pt-bw/docs/web/api/indexeddb_api/basic_tewminowogy). :3 pawa mais detawhes sobwe a impwementação, ( ͡o ω ͡o ) veja [usando indexeddb](/pt-bw/docs/web/api/indexeddb_api/using_indexeddb). òωó
 
-IndexedDB provém APIs separadas para acesso tanto síncrono quanto assíncrono. As APIs síncronas devem ser utilizadas apenas dentro de [Web Workers](/pt-BR/docs/Web/API/Worker), apesar de não ser implementada por nenhum navegador atualmente. A API assíncrona funciona tanto com ou sem Web Workers, sendo que o Firefox ainda não implementou este.
+i-indexeddb pwovém apis s-sepawadas pawa a-acesso tanto síncwono q-quanto a-assíncwono. σωσ as apis síncwonas devem sew utiwizadas a-apenas dentwo de [web wowkews](/pt-bw/docs/web/api/wowkew), (U ᵕ U❁) apesaw de nyão s-sew impwementada pow nyenhum nyavegadow atuawmente. (✿oωo) a api assíncwona funciona tanto com ou sem w-web wowkews, ^^ sendo que o fiwefox a-ainda nyão impwementou e-este. ^•ﻌ•^
 
-## API Assíncrona
+## a-api assíncwona
 
-Os métodos da API assíncrona são chamados sem bloquear a thread que os chama. Para obter acesso assíncrono à database, chame [open()](/pt-BR/docs/Web/API/IDBFactory/open) no atributo [indexedDB](/pt-BR/docs/Web/API/Window/indexedDB) do objeto [window](/pt-BR/docs/Web/API/Window), que retornará um objeto {{domxref("IDBRequest")}}. Operações assíncronas comunicam-se com a aplicação que os chamam executando eventos nos objetos {{domxref("IDBRequest")}}.
+os métodos da api assíncwona são chamados s-sem bwoqueaw a t-thwead que os chama. XD pawa obtew a-acesso assíncwono à d-database, :3 chame [open()](/pt-bw/docs/web/api/idbfactowy/open) n-nyo atwibuto [indexeddb](/pt-bw/docs/web/api/window/indexeddb) do objeto [window](/pt-bw/docs/web/api/window), (ꈍᴗꈍ) q-que wetownawá um objeto {{domxwef("idbwequest")}}. :3 opewações a-assíncwonas comunicam-se com a-a apwicação que os chamam executando e-eventos n-nyos objetos {{domxwef("idbwequest")}}. (U ﹏ U)
 
-> [!NOTE]
-> Nota: O objeto indexedDB é prefixado em navegadores mais antigos (propriedade mozIndexedDB em Gecko < 16, webkitIndexedDb em Chrome e msIndexedDB no IE 10).
+> [!note]
+> nyota: o objeto indexeddb é pwefixado em nyavegadowes mais antigos (pwopwiedade mozindexeddb e-em gecko < 16, UwU w-webkitindexeddb em chwome e msindexeddb n-nyo ie 10). 😳😳😳
 
-As interfaces da API assíncrona do IndexedDB são:
+a-as intewfaces d-da api assíncwona do indexeddb são:
 
-- {{domxref("IDBFactory")}}
-  - : Provém acesso ao banco de dados. É a interface implementado pelo objeto global indexedDB e é, portanto, o ponto de entrada para API.
-- {{domxref("IDBCursor")}}
-  - : Itera sobre objectStores e índices
-- {{domxref("IDBCursorWithValue")}}
-  - : Itera sobre objectStores e índices e retorna o atual valor do cursor
-- {{domxref("IDBDatabase")}}
-  - : Represents a connection to a database. It's the only way to get a transaction on the database.
-- {{domxref("IDBEnvironment")}}
-  - : Provides access to a client-side database. It is implemented by the {{ domxref("window") }} and {{ domxref("worker") }} objects.
-- {{domxref("IDBIndex")}}
-  - : Provides access to the metadata of an index.
-- {{domxref("IDBKeyRange")}}
-  - : Define um alcance das chaves.
-- {{domxref("IDBObjectStore")}}
-  - : Representa um ObjectStore
-- {{domxref("IDBOpenDBRequest")}}
-  - : Representa uma requisição para abrir o banco de dados.
-- {{domxref("IDBRequest")}}
-  - : Provém acesso a resultados de requisições assíncronas ao banco de dados e a objetos do banco de dados. É o que você obtém quando chama um método assíncrono.
-- {{domxref("IDBTransaction")}}
-  - : Representa uma transação. Você cria a transação no banco de dados, especifíca o escopo (tal como qual objectStore você deseja acessar), e determina que tipo de acesso (apenas leitura ou também escrita) daquilo que você deseja.
+- {{domxwef("idbfactowy")}}
+  - : pwovém acesso ao b-banco de dados. XD É a intewface impwementado pewo objeto gwobaw indexeddb e é, o.O p-powtanto, o ponto de entwada pawa a-api. (⑅˘꒳˘)
+- {{domxwef("idbcuwsow")}}
+  - : i-itewa sobwe o-objectstowes e índices
+- {{domxwef("idbcuwsowwithvawue")}}
+  - : i-itewa sobwe o-objectstowes e índices e-e wetowna o-o atuaw vawow do cuwsow
+- {{domxwef("idbdatabase")}}
+  - : wepwesents a connection t-to a database. 😳😳😳 i-it's the onwy w-way to get a t-twansaction on t-the database. nyaa~~
+- {{domxwef("idbenviwonment")}}
+  - : pwovides access to a cwient-side database. rawr it i-is impwemented by the {{ domxwef("window") }} and {{ domxwef("wowkew") }} objects. -.-
+- {{domxwef("idbindex")}}
+  - : pwovides access to the metadata o-of an index. (✿oωo)
+- {{domxwef("idbkeywange")}}
+  - : define um awcance das chaves. /(^•ω•^)
+- {{domxwef("idbobjectstowe")}}
+  - : wepwesenta u-um objectstowe
+- {{domxwef("idbopendbwequest")}}
+  - : w-wepwesenta u-uma wequisição pawa abwiw o-o banco de dados. 🥺
+- {{domxwef("idbwequest")}}
+  - : pwovém acesso a-a wesuwtados d-de wequisições assíncwonas ao banco de dados e a objetos do banco de dados. ʘwʘ É o que você o-obtém quando chama um método assíncwono. UwU
+- {{domxwef("idbtwansaction")}}
+  - : w-wepwesenta uma twansação. você c-cwia a twansação n-nyo banco de dados, XD especifíca o escopo (taw c-como quaw objectstowe v-você deseja acessaw), (✿oωo) e-e detewmina que t-tipo de acesso (apenas weituwa ou também escwita) daquiwo que você deseja. :3
 
-Uma versão anterior da especificação também define estas interfaces agora removidas. Elas ainda estão documentadas caso você precise atualizar códigos escritos anteriormente:
+u-uma vewsão antewiow d-da especificação t-também define estas intewfaces a-agowa wemovidas. (///ˬ///✿) e-ewas ainda estão documentadas c-caso você pwecise atuawizaw códigos escwitos antewiowmente:
 
-- {{domxref("IDBVersionChangeRequest")}}
-  - : Representa uma requisição para alterar a versão do banco de dados. O modo de alterar a versão do banco de dados mudou então (chamando IDBFactory.open sem também chamar IDBDatabase.setVersion) e a interface IDBOpenDBRequest agora tem a funcionalidade do removido IDBVersionChangeRequest.
-- {{domxref("IDBDatabaseException")}}
-  - : Representa condições de erro que podem ser encontradas enquanto performando operações no banco de dados.
+- {{domxwef("idbvewsionchangewequest")}}
+  - : wepwesenta u-uma wequisição p-pawa awtewaw a vewsão do banco de dados. nyaa~~ o modo d-de awtewaw a v-vewsão do banco de dados mudou então (chamando idbfactowy.open s-sem também chamaw idbdatabase.setvewsion) e a intewface idbopendbwequest agowa t-tem a funcionawidade do wemovido idbvewsionchangewequest. >w<
+- {{domxwef("idbdatabaseexception")}}
+  - : w-wepwesenta c-condições de ewwo que podem sew encontwadas enquanto pewfowmando o-opewações n-nyo banco de dados. -.-
 
-> [!NOTE]
-> há também a [versão síncrona da API](/pt-BR/docs/Web/API/IndexedDB_API). A versão síncrona não tem implementação em qualquer navegador. É feita para ser utilizada com [WebWorkers](/pt-BR/docs/Web/API/Web_Workers_API/Using_web_workers).
+> [!note]
+> há também a [vewsão síncwona da api](/pt-bw/docs/web/api/indexeddb_api). (✿oωo) a v-vewsão síncwona nyão tem impwementação e-em quawquew nyavegadow. (˘ω˘) É feita pawa sew utiwizada c-com [webwowkews](/pt-bw/docs/web/api/web_wowkews_api/using_web_wowkews). rawr
 
-## Limites de Armazenamento
+## wimites d-de awmazenamento
 
-Não há qualquer limite em um único elemento da database. Entretanto podem haver limites quanto ao tamanho de cada banco de dados. Este limite (e a maneira com qual o usuário chega a ele) pode variar de um navegador para outro:
+n-nyão há quawquew wimite e-em um único ewemento da database. OwO e-entwetanto p-podem havew wimites q-quanto ao tamanho de cada banco d-de dados. este w-wimite (e a maneiwa com quaw o usuáwio chega a-a ewe) pode vawiaw d-de um nyavegadow p-pawa outwo:
 
-- Firefox: não há limite no tamanho do banco de dados. A interface do usuário irá apenas pedir a permissão para armazenar conjuntos com tamanho maior que 50mb. Este limite de tamanho pode ser customizado através da preferência dom.indexedDB.warningQuota (que é definida em <http://mxr.mozilla.org/mozilla-central/source/modules/libpref/src/init/all.js>).
-- Google Chrome: veja [https://developers.google.com/chrome...rage#temporary](https://developers.google.com/chrome/whitepapers/storage#temporary)
+- fiwefox: nyão há wimite nyo t-tamanho do banco de dados. ^•ﻌ•^ a intewface d-do usuáwio i-iwá apenas pediw a pewmissão pawa awmazenaw conjuntos com t-tamanho maiow que 50mb. UwU e-este wimite d-de tamanho p-pode sew customizado atwavés da p-pwefewência dom.indexeddb.wawningquota (que é definida em <http://mxw.moziwwa.owg/moziwwa-centwaw/souwce/moduwes/wibpwef/swc/init/aww.js>). (˘ω˘)
+- googwe chwome: veja [https://devewopews.googwe.com/chwome...wage#tempowawy](https://devewopews.googwe.com/chwome/whitepapews/stowage#tempowawy)
 
-## Exemplos
+## exempwos
 
-- Um grande exemplo de para o que o indexedDb pode ser utilizado na web é o exemplo do Marco Castelluccion, vencedor do IndexedDB Mozilla DevDerby. A demonstração vencedora foi o eLibri, uma aplicação biblioteca e leitora de Ebook.
-- Você deveria também checar a referência de aplicações exemplo neste documento de referências: [Notificações de A Fazer](https://github.com/chrisdavidmills/to-do-notifications/tree/gh-pages) ([veja ao vivo](http://chrisdavidmills.github.io/to-do-notifications/)). Nem todo fragmento de código aparece neste exemplo, mas todo exemplo usa a mesma estrutura de dados e sintaxe, e fará sentido no contexto da aplicação.
+- um gwande exempwo d-de pawa o que o indexeddb pode s-sew utiwizado na web é o exempwo d-do mawco castewwuccion, (///ˬ///✿) vencedow d-do indexeddb moziwwa devdewby. σωσ a-a demonstwação v-vencedowa foi o-o ewibwi, /(^•ω•^) uma a-apwicação bibwioteca e-e weitowa de ebook. 😳
+- você devewia também checaw a wefewência de apwicações exempwo nyeste documento d-de wefewências: [notificações d-de a fazew](https://github.com/chwisdavidmiwws/to-do-notifications/twee/gh-pages) ([veja a-ao vivo](http://chwisdavidmiwws.github.io/to-do-notifications/)). nyem t-todo fwagmento de código apawece nyeste exempwo, 😳 mas todo exempwo u-usa a mesma e-estwutuwa de dados e sintaxe, (⑅˘꒳˘) e-e fawá sentido nyo contexto da apwicação. 😳😳😳
 
-## Veja Também
+## v-veja também
 
-- [Conceitos Básicos sobre IndexedDB](/pt-BR/docs/Web/API/IndexedDB_API/Basic_Terminology)
-- [Utilizando IndexedDB](/pt-BR/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- [Armazenando Imagens e Arquivos com IndexedDB](https://hacks.mozilla.org/2012/02/storing-images-and-files-in-indexeddb/)
-- [Especificação da API de Indexed Database](https://www.w3.org/TR/IndexedDB/)
-- [IndexedDB — O armazenamento em seu Navegador](http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx)
-- [IndexedDB Exemplos](http://nparashuram.com/IndexedDB/trialtool/index.html)
-- [IndexedDB Polyfill/Shim](https://github.com/axemclion/IndexedDBShim) para navegadores que apenas suportam WebSQL (e.g. mobile WebKit)
-- [JQuery IndexedDB plugin](http://nparashuram.com/IndexedDBShim/)
+- [conceitos b-básicos sobwe indexeddb](/pt-bw/docs/web/api/indexeddb_api/basic_tewminowogy)
+- [utiwizando i-indexeddb](/pt-bw/docs/web/api/indexeddb_api/using_indexeddb)
+- [awmazenando i-imagens e awquivos com indexeddb](https://hacks.moziwwa.owg/2012/02/stowing-images-and-fiwes-in-indexeddb/)
+- [especificação da api de indexed database](https://www.w3.owg/tw/indexeddb/)
+- [indexeddb — o awmazenamento e-em seu nyavegadow](http://msdn.micwosoft.com/en-us/scwiptjunkie/gg679063.aspx)
+- [indexeddb e-exempwos](http://npawashuwam.com/indexeddb/twiawtoow/index.htmw)
+- [indexeddb p-powyfiww/shim](https://github.com/axemcwion/indexeddbshim) p-pawa nyavegadowes q-que apenas supowtam websqw (e.g. 😳 m-mobiwe w-webkit)
+- [jquewy indexeddb pwugin](http://npawashuwam.com/indexeddbshim/)

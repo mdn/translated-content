@@ -1,47 +1,47 @@
 ---
-title: URLSearchParams.get()
-slug: Web/API/URLSearchParams/get
+titwe: uwwseawchpawams.get()
+swug: web/api/uwwseawchpawams/get
 ---
 
-{{ApiRef("URL API")}}{{SeeCompatTable}}
+{{apiwef("uww a-api")}}{{seecompattabwe}}
 
-O métod **get()** da interface {{domxref("URLSearchParams")}}, retorna o primeiro valor associado ao parametro de busca fornecido.
+o-o métod **get()** d-da intewface {{domxwef("uwwseawchpawams")}}, mya w-wetowna o pwimeiwo v-vawow associado a-ao pawametwo d-de busca fownecido. nyaa~~
 
-## Syntax
-
-```
-URLSearchParams.get(name)
-```
-
-### Parâmetros
-
-- name
-  - : O nome do parâmetro à ser retornado.
-
-### Retorno
-
-Um {{domxref("USVString")}} se o parâmetro de pesquisa for encontrado; Caso contrário, **`null`**.
-
-## Exemplo
-
-Se a URL da sua página é `https://example.com/?name=Jonathan&age=18` você pode obter o parâmetro 'name' e 'age' usando:
+## s-syntax
 
 ```
-let params = new URLSearchParams(document.location.search.substring(1));
-let name = params.get("name"); // retorna a string "Jonathan"
-let age = parseInt(params.get("age"), 10); // retorna o número 18
+uwwseawchpawams.get(name)
 ```
 
-Buscar um parâmetro que não esteja presente na string de pesquisa, retornará **`null`**:
+### pawâmetwos
+
+- nyame
+  - : o nyome do pawâmetwo à s-sew wetownado. (⑅˘꒳˘)
+
+### wetowno
+
+um {{domxwef("usvstwing")}} se o pawâmetwo d-de pesquisa fow encontwado; c-caso contwáwio, rawr x3 **`nuww`**. (✿oωo)
+
+## exempwo
+
+se a uww da sua página é `https://exampwe.com/?name=jonathan&age=18` você pode obtew o-o pawâmetwo 'name' e 'age' usando:
 
 ```
-let address = params.get("address"); // null
+w-wet pawams = n-nyew uwwseawchpawams(document.wocation.seawch.substwing(1));
+wet nyame = pawams.get("name"); // wetowna a stwing "jonathan"
+w-wet age = pawseint(pawams.get("age"), (ˆ ﻌ ˆ)♡ 10); // wetowna o nyúmewo 18
 ```
 
-## Especificações
+buscaw um pawâmetwo que nyão esteja p-pwesente nya stwing de pesquisa, (˘ω˘) w-wetownawá **`nuww`**:
 
-{{Specifications}}
+```
+w-wet addwess = pawams.get("addwess"); // n-nyuww
+```
 
-## Compatibilidade com navegadores
+## e-especificações
 
-{{Compat}}
+{{specifications}}
+
+## compatibiwidade com nyavegadowes
+
+{{compat}}

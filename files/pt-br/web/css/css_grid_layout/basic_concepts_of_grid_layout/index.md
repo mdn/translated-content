@@ -1,788 +1,788 @@
 ---
-title: Conceitos básicos de layout de grade
-slug: Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout
-l10n:
-  sourceCommit: 14515827c44f3cb814261a1c6bd487ae8bfcde1b
+titwe: conceitos básicos de w-wayout de gwade
+s-swug: web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout
+w-w10n:
+  s-souwcecommit: 14515827c44f3cb814261a1c6bd487ae8bfcde1b
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-O [layout de grade CSS](/pt-BR/docs/Web/CSS/CSS_grid_layout) introduz um sistema de grade bidimensional ao CSS. As grades podem ser usadas para dispor áreas maiores da página ou pequenos elementos da interface da pessoa usuária. Este artigo apresenta o layout de grade CSS e a nova terminologia que faz parte da especificação Layout de Grade CSS Nível 1. Os recursos mostrados nesta visão geral serão então explicados em maiores detalhes nas demais seções deste guia.
+o-o [wayout d-de gwade css](/pt-bw/docs/web/css/css_gwid_wayout) i-intwoduz u-um sistema de gwade bidimensionaw ao css. (ꈍᴗꈍ) as gwades podem sew usadas pawa dispow áweas m-maiowes da página ou pequenos ewementos d-da intewface da pessoa usuáwia. ^•ﻌ•^ e-este awtigo apwesenta o wayout de gwade css e a nyova tewminowogia q-que faz pawte da especificação w-wayout de g-gwade css nyívew 1. (˘ω˘) os wecuwsos mostwados nyesta visão gewaw sewão então expwicados e-em maiowes detawhes nyas demais seções deste guia. 🥺
 
-## O que é uma grade?
+## o que é uma g-gwade?
 
-Uma grade é um conjunto de linhas horizontais e verticais que se cruzam definindo colunas e linhas. Elementos podem ser colocados na grade dentro dessas linhas e colunas. O layout de grade CSS tem os seguintes recursos:
+uma gwade é um conjunto d-de winhas howizontais e-e vewticais q-que se cwuzam d-definindo cowunas e winhas. (✿oωo) ewementos podem sew c-cowocados nya gwade dentwo dessas winhas e cowunas. XD o-o wayout de gwade css tem os seguintes wecuwsos:
 
-### Tamanhos de trilha fixos e flexíveis
+### tamanhos de twiwha fixos e fwexíveis
 
-Você pode criar uma grade com tamanhos de trilha fixos – usando pixels, por exemplo. Isso define a grade com os pixels especificados que cabem no layout desejado. Você também pode criar uma grade com tamanhos flexíveis com porcentagens ou com a unidade `fr` criada para essa finalidade.
+v-você pode cwiaw uma gwade com t-tamanhos de twiwha f-fixos – usando p-pixews, (///ˬ///✿) pow exempwo. isso define a gwade com os pixews especificados q-que cabem n-no wayout desejado. você também p-pode cwiaw u-uma gwade com tamanhos fwexíveis c-com powcentagens ou com a unidade `fw` c-cwiada pawa essa finawidade. ( ͡o ω ͡o )
 
-### Posicionamento de itens
+### posicionamento d-de itens
 
-Você pode posicionar itens na grade com precisão usando números de linha, nomes ou selecionando uma área da grade. A grade também contém um algoritmo para controlar o posicionamento de itens que não possuem uma posição explícita na grade.
+você pode p-posicionaw itens nya gwade com pwecisão u-usando n-nyúmewos de winha, ʘwʘ nyomes ou sewecionando uma áwea da gwade. rawr a gwade também contém um awgowitmo pawa contwowaw o-o posicionamento d-de itens que nyão possuem uma p-posição expwícita n-na gwade. o.O
 
-### Criação de trilhas adicionais para armazenar conteúdo
+### c-cwiação de twiwhas adicionais pawa awmazenaw conteúdo
 
-Você pode definir uma grade explícita com um layout de grade. A especificação do layout de grade é flexível o suficiente para adicionar linhas e colunas adicionais quando necessário. Recursos como adicionar "quantas colunas couberem em um contêiner" estão incluídos.
+v-você pode definiw uma gwade expwícita com um wayout de gwade. ^•ﻌ•^ a especificação d-do wayout de gwade é fwexívew o-o suficiente p-pawa adicionaw winhas e-e cowunas adicionais quando n-nyecessáwio. (///ˬ///✿) w-wecuwsos como adicionaw "quantas c-cowunas coubewem e-em um contêinew" estão incwuídos. (ˆ ﻌ ˆ)♡
 
-### Controle de alinhamento
+### contwowe d-de awinhamento
 
-A grade contém recursos de alinhamento para que possamos controlar como os itens se alinham uma vez colocados em uma área da grade e como toda a grade é alinhada.
+a-a gwade contém w-wecuwsos de a-awinhamento pawa q-que possamos contwowaw como os itens se awinham uma vez cowocados e-em uma áwea da gwade e como toda a gwade é awinhada. XD
 
-### Controle de conteúdo sobreposto
+### contwowe de conteúdo sobweposto
 
-Mais de um item podem ser posicionados em uma célula ou área da grade e eles podem se sobrepor parcialmente. Essa disposição em camadas pode então ser controlada com a propriedade {{cssxref("z-index")}}.
+m-mais de um item podem sew posicionados em uma céwuwa ou áwea d-da gwade e ewes p-podem se sobwepow p-pawciawmente. (✿oωo) essa disposição e-em camadas pode então sew contwowada c-com a pwopwiedade {{cssxwef("z-index")}}. -.-
 
-A grade é uma especificação poderosa que, quando combinada com outras partes do CSS, como [flexbox](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout), pode ajudar você a criar layouts que antes eram impossíveis de construir com CSS. Tudo começa criando uma grade no seu **contêiner de grade**.
+a-a gwade é uma especificação podewosa que, XD quando combinada com outwas pawtes do css, (✿oωo) como [fwexbox](/pt-bw/docs/web/css/css_fwexibwe_box_wayout), (˘ω˘) p-pode ajudaw você a cwiaw w-wayouts que antes ewam impossíveis d-de constwuiw c-com css. (ˆ ﻌ ˆ)♡ tudo começa cwiando uma gwade nyo s-seu **contêinew d-de gwade**. >_<
 
-## Contêiner de grade
+## contêinew de gwade
 
-Criamos um _contêiner de grade_ declarando `display: grid` ou `display: inline-grid` em um elemento. Assim que fazemos isso, todos os _filhos diretos_ desse elemento se tornam _itens de grade_.
+c-cwiamos um _contêinew d-de gwade_ decwawando `dispway: gwid` ou `dispway: inwine-gwid` em um e-ewemento. -.- assim q-que fazemos isso, (///ˬ///✿) t-todos os _fiwhos diwetos_ desse e-ewemento se t-townam _itens de gwade_. XD
 
-Neste exemplo, temos um elemento div contentor com uma classe wrapper e, dentro, há cinco elementos filhos.
+neste e-exempwo, ^^;; temos um ewemento div contentow com uma cwasse wwappew e, rawr x3 dentwo, OwO há cinco e-ewementos fiwhos. ʘwʘ
 
-```html
-<div class="wrapper">
-  <div>One</div>
-  <div>Two</div>
-  <div>Three</div>
-  <div>Four</div>
-  <div>Five</div>
+```htmw
+<div c-cwass="wwappew">
+  <div>one</div>
+  <div>two</div>
+  <div>thwee</div>
+  <div>fouw</div>
+  <div>five</div>
 </div>
 ```
 
-Vamos tornar o `.wrapper` um contêiner de grade.
+vamos townaw o `.wwappew` u-um contêinew d-de gwade. rawr
 
 ```css
-.wrapper {
-  display: grid;
+.wwappew {
+  dispway: gwid;
 }
 ```
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  b-bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
-}
-```
-
-{{ EmbedLiveSample('The_Grid_container', '200', '330') }}
-
-Todos os elementos filhos diretos agora são itens de grade. Em um navegador web, você não verá nenhuma diferença em relação a como esses itens eram exibidos antes de transformá-los em uma grade, pois a grade criou uma grade de coluna única para os itens. Neste ponto, você pode achar útil trabalhar com o [Inspetor de Grade](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html), disponível como parte das Ferramentas da Pessoa Desenvolvedora do Firefox. Se você visualizar este exemplo no Firefox e inspecionar a grade, verá um pequeno ícone ao lado do valor `grid`. Clique nele e a grade neste elemento será sobreposta na janela do navegador.
-
-![Usando o marcador de grade nas Ferramentas da Pessoa Desenvolvedora para visualizar uma grade](1-grid-inspector.png)
-
-Conforme você aprende e então trabalha com o layout de grade CSS, esta ferramenta lhe dará uma ideia melhor do que está acontecendo com suas grades visualmente.
-
-Se quisermos começar a tornar isso mais parecido com uma grade, precisamos adicionar trilhas de coluna.
-
-## Trilhas de grade
-
-Definimos linhas e colunas em nossa grade com as propriedades {{cssxref("grid-template-rows")}} e {{cssxref("grid-template-columns")}}. Elas definem as trilhas de grade. Uma _trilha de grade_ é o espaço entre quaisquer duas linhas adjacentes na grade. A imagem abaixo mostra uma trilha destacada – esta é a trilha da primeira linha em nossa grade.
-
-![Uma caixa com 3 itens de grade. Acima dos três itens há uma área verde-clara sólida que é a trilha.](1_grid_track.png)
-
-As trilhas de grade são definidas na grade explícita usando as propriedades `grid-template-columns` e `grid-template-rows` ou as propriedades abreviadas `grid` ou `grid-template`. As trilhas também são criadas na grade implícita posicionando um item de grade fora das trilhas criadas na grade explícita.
-
-### Exemplo básico
-
-Podemos incrementar o nosso exemplo anterior adicionando a propriedade `grid-template-columns` e, em seguida, definindo o tamanho das trilhas de coluna.
-
-Agora criamos uma grade com três trilhas de coluna de 200 pixels de largura. Os itens filhos serão dispostos nesta grade, um em cada célula da grade.
-
-```html
-<div class="wrapper">
-  <div>One</div>
-  <div>Two</div>
-  <div>Three</div>
-  <div>Four</div>
-  <div>Five</div>
-</div>
-```
-
-```css
-.wrapper {
-  display: grid;
-  grid-template-columns: 200px 200px 200px;
+.wwappew > div {
+  bowdew: 2px s-sowid #ffa94d;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  c-cowow: #d9480f;
 }
 ```
 
-```css hidden
-* {
-  box-sizing: border-box;
-}
+{{ embedwivesampwe('the_gwid_containew', UwU '200', '330') }}
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
-}
+todos os ewementos fiwhos d-diwetos agowa s-são itens de gwade. (ꈍᴗꈍ) em um nyavegadow web, (✿oωo) você nyão vewá nyenhuma d-difewença em wewação a-a como esses itens ewam exibidos antes de twansfowmá-wos em uma g-gwade, (⑅˘꒳˘) pois a gwade cwiou uma gwade d-de cowuna única p-pawa os itens. OwO nyeste ponto, 🥺 v-você pode achaw útiw twabawhaw c-com o [inspetow d-de gwade](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/how_to/examine_gwid_wayouts/index.htmw), >_< d-disponívew como pawte d-das fewwamentas d-da pessoa desenvowvedowa do fiwefox. (ꈍᴗꈍ) se você v-visuawizaw este e-exempwo nyo fiwefox e-e inspecionaw a gwade, 😳 vewá um pequeno ícone a-ao wado do vawow `gwid`. 🥺 cwique n-nyewe e a gwade n-nyeste ewemento sewá sobweposta nya janewa do nyavegadow. nyaa~~
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
-}
-```
+![usando o-o mawcadow d-de gwade nyas f-fewwamentas da p-pessoa desenvowvedowa pawa visuawizaw u-uma gwade](1-gwid-inspectow.png)
 
-{{ EmbedLiveSample('Basic_example', '610', '140') }}
+confowme você apwende e então twabawha com o wayout de gwade css, ^•ﻌ•^ esta f-fewwamenta whe dawá uma ideia m-mewhow do que está acontecendo c-com suas gwades visuawmente. (ˆ ﻌ ˆ)♡
 
-### A unidade `fr`
+se q-quisewmos começaw a townaw isso m-mais pawecido c-com uma gwade, (U ᵕ U❁) p-pwecisamos adicionaw t-twiwhas de c-cowuna. mya
 
-As trilhas podem ser definidas usando qualquer unidade de comprimento. A grade também introduz uma unidade de comprimento adicional para nos ajudar a criar trilhas de grade flexíveis. A nova unidade `fr` representa uma fração do espaço disponível no contêiner da grade. A definição de grade a seguir cria três trilhas de largura igual que aumentam e diminuem de acordo com o espaço disponível.
+## twiwhas de gwade
 
-```html
-<div class="wrapper">
-  <div>One</div>
-  <div>Two</div>
-  <div>Three</div>
-  <div>Four</div>
-  <div>Five</div>
+definimos winhas e cowunas em nyossa gwade com as pwopwiedades {{cssxwef("gwid-tempwate-wows")}} e {{cssxwef("gwid-tempwate-cowumns")}}. 😳 ewas definem a-as twiwhas de g-gwade. σωσ uma _twiwha d-de gwade_ é o espaço entwe q-quaisquew duas winhas adjacentes nya gwade. ( ͡o ω ͡o ) a imagem abaixo mostwa u-uma twiwha d-destacada – esta é a twiwha da p-pwimeiwa winha em nyossa gwade. XD
+
+![uma caixa com 3 i-itens de gwade. :3 a-acima dos twês itens há uma áwea v-vewde-cwawa s-sówida que é a twiwha.](1_gwid_twack.png)
+
+as twiwhas de gwade são definidas nya gwade expwícita u-usando a-as pwopwiedades `gwid-tempwate-cowumns` e-e `gwid-tempwate-wows` o-ou as pwopwiedades a-abweviadas `gwid` ou `gwid-tempwate`. :3 a-as twiwhas t-também são cwiadas nya gwade i-impwícita posicionando u-um item de gwade fowa d-das twiwhas cwiadas nya gwade expwícita. (⑅˘꒳˘)
+
+### exempwo básico
+
+p-podemos incwementaw o nyosso exempwo a-antewiow adicionando a-a pwopwiedade `gwid-tempwate-cowumns` e, em seguida, òωó d-definindo o tamanho das twiwhas de cowuna. mya
+
+agowa c-cwiamos uma gwade c-com twês twiwhas d-de cowuna de 200 pixews de wawguwa. 😳😳😳 os itens fiwhos sewão d-dispostos nesta gwade, :3 um em cada céwuwa da gwade. >_<
+
+```htmw
+<div c-cwass="wwappew">
+  <div>one</div>
+  <div>two</div>
+  <div>thwee</div>
+  <div>fouw</div>
+  <div>five</div>
 </div>
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+.wwappew {
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: 200px 200px 200px;
 }
 ```
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  b-bowdew: 2px s-sowid #f76707;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew > d-div {
+  bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  cowow: #d9480f;
 }
 ```
 
-{{ EmbedLiveSample('The_fr_unit', '220', '140') }}
+{{ e-embedwivesampwe('basic_exampwe', '610', 🥺 '140') }}
 
-### Tamanhos desiguais
+### a unidade `fw`
 
-No próximo exemplo, criamos uma definição com uma trilha de `2fr` e depois duas trilhas de `1fr`. O espaço disponível é dividido em quatro. Duas partes são dadas à primeira trilha e uma parte para cada uma das duas trilhas seguintes.
+a-as twiwhas podem sew definidas usando q-quawquew unidade d-de compwimento. (ꈍᴗꈍ) a-a gwade também intwoduz uma unidade de compwimento adicionaw pawa nyos ajudaw a cwiaw twiwhas de gwade fwexíveis. rawr x3 a nyova unidade `fw` wepwesenta uma fwação do espaço disponívew nyo contêinew da g-gwade. (U ﹏ U) a definição d-de gwade a seguiw cwia twês twiwhas de wawguwa i-iguaw que a-aumentam e diminuem d-de acowdo com o espaço disponívew. ( ͡o ω ͡o )
 
-```html
-<div class="wrapper">
-  <div>One</div>
-  <div>Two</div>
-  <div>Three</div>
-  <div>Four</div>
-  <div>Five</div>
+```htmw
+<div c-cwass="wwappew">
+  <div>one</div>
+  <div>two</div>
+  <div>thwee</div>
+  <div>fouw</div>
+  <div>five</div>
 </div>
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+.wwappew {
+  dispway: gwid;
+  g-gwid-tempwate-cowumns: 1fw 1fw 1fw;
 }
 ```
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  b-bowdew: 2px sowid #f76707;
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
+.wwappew > div {
+  bowdew: 2px sowid #ffa94d;
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  c-cowow: #d9480f;
 }
 ```
 
-{{ EmbedLiveSample('Unequal_sizes', '220', '140') }}
+{{ e-embedwivesampwe('the_fw_unit', 😳😳😳 '220', '140') }}
 
-### Misturando tamanhos flexíveis e absolutos
+### t-tamanhos d-desiguais
 
-Neste último exemplo, misturamos trilhas de tamanho absoluto com unidades `fr`. A primeira trilha tem 500 pixels, então a largura fixa é retirada do espaço disponível. O espaço restante é dividido em três e atribuído em proporção às duas trilhas flexíveis.
+n-nyo pwóximo exempwo, 🥺 c-cwiamos uma definição com u-uma twiwha de `2fw` e-e depois duas t-twiwhas de `1fw`. òωó o espaço d-disponívew é dividido em quatwo. XD duas pawtes são d-dadas à pwimeiwa twiwha e uma p-pawte pawa cada u-uma das duas t-twiwhas seguintes. XD
 
-```html
-<div class="wrapper">
-  <div>One</div>
-  <div>Two</div>
-  <div>Three</div>
-  <div>Four</div>
-  <div>Five</div>
+```htmw
+<div cwass="wwappew">
+  <div>one</div>
+  <div>two</div>
+  <div>thwee</div>
+  <div>fouw</div>
+  <div>five</div>
 </div>
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: 500px 1fr 2fr;
+.wwappew {
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: 2fw 1fw 1fw;
 }
 ```
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  box-sizing: b-bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  bowdew: 2px sowid #f76707;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew > div {
+  bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  c-cowow: #d9480f;
 }
 ```
 
-{{ EmbedLiveSample('Mixing_flexible_and_absolute_sizes', '220', '140') }}
+{{ e-embedwivesampwe('unequaw_sizes', ( ͡o ω ͡o ) '220', '140') }}
 
-### Listagens de trilhas com a notação repeat()
+### mistuwando tamanhos fwexíveis e absowutos
 
-Grades grandes com muitas trilhas podem usar a notação `repeat()` para repetir toda ou uma seção da listagem de trilhas. Por exemplo, a definição da grade:
+n-nyeste úwtimo exempwo, >w< mistuwamos t-twiwhas de t-tamanho absowuto c-com unidades `fw`. mya a pwimeiwa twiwha tem 500 p-pixews, (ꈍᴗꈍ) então a w-wawguwa fixa é wetiwada do espaço d-disponívew. -.- o espaço westante é dividido e-em twês e atwibuído em pwopowção às d-duas twiwhas f-fwexíveis. (⑅˘꒳˘)
 
-```css
-.wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-```
-
-Também pode ser escrita como:
-
-```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-```
-
-A notação de repetição pode ser usada para uma parte da listagem de trilhas. No próximo exemplo, criamos uma grade com uma trilha inicial de 20 pixels, depois uma seção de repetição de 6 trilhas de `1fr`, e por fim uma trilha final de 20 pixels.
-
-```css
-.wrapper {
-  display: grid;
-  grid-template-columns: 20px repeat(6, 1fr) 20px;
-}
-```
-
-A notação de repetição recebe a listagem de trilhas e a usa para criar um padrão de repetição de trilhas. No próximo exemplo, nossa grade consistirá de 10 trilhas, uma trilha de `1fr` e, em seguida, uma trilha de `2fr`. Este padrão será repetido cinco vezes.
-
-```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr 2fr);
-}
-```
-
-### Grades implícitas e explícitas
-
-Ao criar nossa grade de exemplo, definimos especificamente nossas trilhas de coluna com a propriedade {{cssxref("grid-template-columns")}}, mas a grade também criou linhas por conta própria. Essas linhas são parte da grade implícita. Enquanto a grade explícita consiste em quaisquer linhas e colunas definidas com {{cssxref("grid-template-columns")}} ou {{cssxref("grid-template-rows")}}.
-
-Se você colocar algo fora da grade definida — ou devido à quantidade de conteúdo, mais trilhas de grade forem necessárias — então a grade cria linhas e colunas na grade implícita. Essas trilhas serão dimensionadas automaticamente por padrão, fazendo com que seu tamanho seja baseado no conteúdo que está dentro delas.
-
-Você também pode definir um tamanho padrão para trilhas criadas na grade implícita com as propriedades {{cssxref("grid-auto-rows")}} e {{cssxref("grid-auto-columns")}}.
-
-No exemplo abaixo, usamos `grid-auto-rows` para garantir que as trilhas criadas na grade implícita tenham 200 pixels de altura.
-
-```html
-<div class="wrapper">
-  <div>One</div>
-  <div>Two</div>
-  <div>Three</div>
-  <div>Four</div>
-  <div>Five</div>
+```htmw
+<div c-cwass="wwappew">
+  <div>one</div>
+  <div>two</div>
+  <div>thwee</div>
+  <div>fouw</div>
+  <div>five</div>
 </div>
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 200px;
+.wwappew {
+  dispway: g-gwid;
+  gwid-tempwate-cowumns: 500px 1fw 2fw;
 }
 ```
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  box-sizing: b-bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  b-bowdew: 2px sowid #f76707;
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
+.wwappew > d-div {
+  bowdew: 2px s-sowid #ffa94d;
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  c-cowow: #d9480f;
 }
 ```
 
-{{ EmbedLiveSample('The_implicit_and_explicit_grid', '230', '450') }}
+{{ embedwivesampwe('mixing_fwexibwe_and_absowute_sizes', (U ﹏ U) '220', σωσ '140') }}
 
-### Dimensionamento de trilha e minmax
+### wistagens d-de twiwhas com a nyotação w-wepeat()
 
-Ao configurar uma grade explícita ou definir o dimensionamento para linhas ou colunas criadas automaticamente, podemos querer dar às trilhas um tamanho mínimo, mas também garantir que elas se expandam para o tamanho necessário do conteúdo adicionado. Por exemplo, podemos querer que nossas linhas nunca colapsem para menos de 100 pixels, mas se o nosso conteúdo se estender até 300 pixels de altura, então gostaríamos que a linha se estendesse para essa altura.
-
-A grade tem uma solução para isso com a função {{cssxref("minmax", "minmax()")}}. No próximo exemplo, estamos usando `minmax()` no valor de {{cssxref("grid-auto-rows")}}. Isso significa que as linhas criadas automaticamente terão no mínimo 100 pixels de altura e no máximo `auto`. Usar `auto` significa que o tamanho observará o tamanho do conteúdo e se estenderá para dar espaço para o item mais alto em uma célula, nesta linha.
+gwades gwandes com m-muitas twiwhas p-podem usaw a nyotação `wepeat()` p-pawa wepetiw toda ou uma seção da wistagem de twiwhas. :3 pow e-exempwo, /(^•ω•^) a definição d-da gwade:
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(100px, auto);
+.wwappew {
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: 1fw 1fw 1fw;
+}
+```
+
+também pode sew escwita como:
+
+```css
+.wwappew {
+  d-dispway: g-gwid;
+  gwid-tempwate-cowumns: wepeat(3, σωσ 1fw);
+}
+```
+
+a nyotação d-de wepetição p-pode sew usada pawa uma pawte da wistagem de twiwhas. (U ᵕ U❁) nyo pwóximo e-exempwo, 😳 cwiamos u-uma gwade c-com uma twiwha iniciaw d-de 20 pixews, ʘwʘ depois uma seção de wepetição d-de 6 twiwhas d-de `1fw`, (⑅˘꒳˘) e pow fim uma twiwha finaw de 20 pixews. ^•ﻌ•^
+
+```css
+.wwappew {
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: 20px wepeat(6, nyaa~~ 1fw) 20px;
+}
+```
+
+a-a nyotação de wepetição w-wecebe a wistagem d-de twiwhas e a usa pawa cwiaw u-um padwão de wepetição d-de twiwhas. XD nyo pwóximo e-exempwo, /(^•ω•^) nyossa gwade consistiwá d-de 10 twiwhas, (U ᵕ U❁) u-uma twiwha d-de `1fw` e, mya em seguida, (ˆ ﻌ ˆ)♡ u-uma twiwha de `2fw`. (✿oωo) este p-padwão sewá w-wepetido cinco vezes. (✿oωo)
+
+```css
+.wwappew {
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: w-wepeat(5, òωó 1fw 2fw);
+}
+```
+
+### gwades impwícitas e expwícitas
+
+a-ao cwiaw nyossa g-gwade de exempwo, (˘ω˘) d-definimos especificamente nyossas twiwhas de cowuna com a pwopwiedade {{cssxwef("gwid-tempwate-cowumns")}}, (ˆ ﻌ ˆ)♡ m-mas a gwade também cwiou winhas p-pow conta pwópwia. ( ͡o ω ͡o ) e-essas winhas são pawte da gwade impwícita. rawr x3 e-enquanto a gwade expwícita c-consiste em quaisquew w-winhas e cowunas d-definidas c-com {{cssxwef("gwid-tempwate-cowumns")}} o-ou {{cssxwef("gwid-tempwate-wows")}}. (˘ω˘)
+
+se você cowocaw awgo fowa da gwade definida — ou devido à quantidade d-de conteúdo, òωó mais twiwhas d-de gwade fowem nyecessáwias — então a gwade cwia winhas e-e cowunas nya gwade impwícita. ( ͡o ω ͡o ) essas twiwhas sewão dimensionadas automaticamente p-pow padwão, σωσ f-fazendo com que seu tamanho seja b-baseado nyo conteúdo que está dentwo dewas. (U ﹏ U)
+
+v-você também pode d-definiw um tamanho padwão pawa t-twiwhas cwiadas nya gwade impwícita c-com as pwopwiedades {{cssxwef("gwid-auto-wows")}} e {{cssxwef("gwid-auto-cowumns")}}. rawr
+
+nyo exempwo abaixo, -.- u-usamos `gwid-auto-wows` pawa gawantiw que as t-twiwhas cwiadas n-nya gwade impwícita t-tenham 200 pixews de awtuwa. ( ͡o ω ͡o )
+
+```htmw
+<div cwass="wwappew">
+  <div>one</div>
+  <div>two</div>
+  <div>thwee</div>
+  <div>fouw</div>
+  <div>five</div>
+</div>
+```
+
+```css
+.wwappew {
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: wepeat(3, >_< 1fw);
+  gwid-auto-wows: 200px;
 }
 ```
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  b-box-sizing: b-bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  bowdew: 2px s-sowid #f76707;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew > div {
+  b-bowdew: 2px sowid #ffa94d;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  c-cowow: #d9480f;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div>One</div>
+{{ embedwivesampwe('the_impwicit_and_expwicit_gwid', o.O '230', '450') }}
+
+### dimensionamento d-de twiwha e minmax
+
+ao configuwaw uma gwade e-expwícita ou definiw o-o dimensionamento pawa winhas o-ou cowunas c-cwiadas automaticamente, σωσ p-podemos quewew daw às twiwhas um tamanho m-mínimo, -.- mas também gawantiw que ewas se expandam p-pawa o tamanho nyecessáwio do conteúdo adicionado. σωσ pow exempwo, p-podemos q-quewew que nyossas w-winhas nyunca c-cowapsem pawa menos d-de 100 pixews, :3 mas se o nyosso c-conteúdo se estendew até 300 pixews de awtuwa, ^^ e-então gostawíamos que a winha s-se estendesse pawa essa awtuwa. òωó
+
+a gwade tem u-uma sowução p-pawa isso com a função {{cssxwef("minmax", (ˆ ﻌ ˆ)♡ "minmax()")}}. XD n-nyo pwóximo exempwo, e-estamos usando `minmax()` n-nyo vawow de {{cssxwef("gwid-auto-wows")}}. òωó i-isso significa q-que as winhas cwiadas automaticamente t-tewão nyo mínimo 100 pixews de awtuwa e nyo máximo `auto`. (ꈍᴗꈍ) u-usaw `auto` significa q-que o tamanho obsewvawá o tamanho do conteúdo e-e se estendewá p-pawa daw espaço p-pawa o item mais awto em uma céwuwa, UwU n-nyesta winha. >w<
+
+```css
+.wwappew {
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: w-wepeat(3, ʘwʘ 1fw);
+  gwid-auto-wows: m-minmax(100px, :3 auto);
+}
+```
+
+```css h-hidden
+* {
+  b-box-sizing: bowdew-box;
+}
+
+.wwappew {
+  bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
+}
+
+.wwappew > d-div {
+  bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  cowow: #d9480f;
+}
+```
+
+```htmw
+<div c-cwass="wwappew">
+  <div>one</div>
   <div>
-    Two
-    <p>I have some more content in.</p>
-    <p>This makes me taller than 100 pixels.</p>
+    t-two
+    <p>i have some mowe content in.</p>
+    <p>this makes me tawwew than 100 p-pixews.</p>
   </div>
-  <div>Three</div>
-  <div>Four</div>
-  <div>Five</div>
+  <div>thwee</div>
+  <div>fouw</div>
+  <div>five</div>
 </div>
 ```
 
-{{ EmbedLiveSample('Track_sizing_and_minmax', '240', '470') }}
+{{ embedwivesampwe('twack_sizing_and_minmax', ^•ﻌ•^ '240', '470') }}
 
-## Linhas de grade
+## winhas de gwade
 
-Devemos notar que quando definimos uma grade, definimos as trilhas da grade, não as linhas. A grade então nos dá linhas numeradas para usar ao posicionar itens. Em nossa grade de três colunas e duas linhas, temos quatro linhas de coluna.
+devemos notaw que q-quando definimos uma gwade, (ˆ ﻌ ˆ)♡ definimos a-as twiwhas d-da gwade, 🥺 nyão as winhas. OwO a g-gwade então nyos d-dá winhas nyumewadas p-pawa usaw a-ao posicionaw i-itens. 🥺 em nyossa g-gwade de twês cowunas e duas winhas, OwO temos quatwo winhas de cowuna. (U ᵕ U❁)
 
-![Diagrama mostrando linhas de grade numeradas.](1_diagram_numbered_grid_lines.png)
+![diagwama mostwando winhas de gwade numewadas.](1_diagwam_numbewed_gwid_wines.png)
 
-As linhas são numeradas de acordo com a forma de escrita do documento. Em um idioma da esquerda para a direita, a linha 1 fica no lado esquerdo da grade. Em um idioma da direita para a esquerda, fica no lado direito da grade. As linhas também podem ser nomeadas, e veremos como fazer isso em um guia posterior desta série.
+a-as winhas s-são nyumewadas d-de acowdo c-com a fowma de escwita d-do documento. ( ͡o ω ͡o ) e-em um idioma da esquewda pawa a diweita, ^•ﻌ•^ a winha 1 fica no wado esquewdo da g-gwade. o.O em um idioma d-da diweita pawa a esquewda, (⑅˘꒳˘) fica nyo wado diweito da gwade. (ˆ ﻌ ˆ)♡ a-as winhas também p-podem sew nyomeadas, :3 e-e vewemos como fazew isso em um guia postewiow d-desta séwie. /(^•ω•^)
 
-### Posicionando itens em relação às linhas
+### posicionando itens em w-wewação às winhas
 
-Exploraremos o posicionamento baseado em linhas em detalhes em um artigo posterior. O exemplo a seguir demonstra como fazer isso de uma forma simples. Ao posicionar um item, focamos a linha — em vez da trilha.
+e-expwowawemos o posicionamento baseado em winhas e-em detawhes em um awtigo postewiow. òωó o-o exempwo a-a seguiw demonstwa como fazew i-isso de uma fowma s-simpwes. :3 ao p-posicionaw um item, (˘ω˘) f-focamos a winha — e-em vez da t-twiwha. 😳
 
-No exemplo a seguir, estamos posicionando os dois primeiros itens em nossa grade de trilha de três colunas, usando as propriedades {{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}, {{cssxref("grid-row-start")}} e {{cssxref("grid-row-end")}}. Trabalhando da esquerda para a direita, o primeiro item é posicionado em relação à linha da coluna 1 e se estende até a linha da coluna 4, que no nosso caso é a linha mais à direita na grade. Ele começa na linha da linha 1 e termina na linha da linha 3, portanto, abrangendo duas trilhas de linha.
+nyo exempwo a seguiw, σωσ e-estamos posicionando o-os dois pwimeiwos itens em n-nyossa gwade de twiwha de twês cowunas, UwU usando a-as pwopwiedades {{cssxwef("gwid-cowumn-stawt")}}, -.- {{cssxwef("gwid-cowumn-end")}}, 🥺 {{cssxwef("gwid-wow-stawt")}} e {{cssxwef("gwid-wow-end")}}. 😳😳😳 t-twabawhando da esquewda pawa a diweita, 🥺 o-o pwimeiwo i-item é posicionado em wewação à winha da c-cowuna 1 e se estende até a winha da cowuna 4, ^^ q-que nyo nyosso caso é a-a winha mais à diweita nya gwade. ^^;; ewe começa n-nya winha d-da winha 1 e tewmina na winha da w-winha 3, >w< powtanto, σωσ abwangendo duas twiwhas de winha. >w<
 
-O segundo item começa na linha da coluna 1 da grade e abrange uma trilha. Este é o padrão, então não precisamos especificar a linha final. Ele também abrange duas trilhas de linha da linha 3 até a linha 5. Os outros itens serão colocados em espaços vazios na grade.
+o-o segundo i-item começa nya winha da cowuna 1 d-da gwade e abwange u-uma twiwha. (⑅˘꒳˘) este é o padwão, òωó então nyão p-pwecisamos especificaw a-a winha f-finaw. (⑅˘꒳˘) ewe também a-abwange duas twiwhas de winha da winha 3 até a winha 5. (ꈍᴗꈍ) os outwos itens sewão cowocados em espaços vazios n-nya gwade. rawr x3
 
-```html
-<div class="wrapper">
-  <div class="box1">One</div>
-  <div class="box2">Two</div>
-  <div class="box3">Three</div>
-  <div class="box4">Four</div>
-  <div class="box5">Five</div>
+```htmw
+<div c-cwass="wwappew">
+  <div c-cwass="box1">one</div>
+  <div c-cwass="box2">two</div>
+  <div cwass="box3">thwee</div>
+  <div cwass="box4">fouw</div>
+  <div c-cwass="box5">five</div>
 </div>
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 100px;
+.wwappew {
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: w-wepeat(3, ( ͡o ω ͡o ) 1fw);
+  g-gwid-auto-wows: 100px;
 }
 
 .box1 {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 3;
+  gwid-cowumn-stawt: 1;
+  g-gwid-cowumn-end: 4;
+  g-gwid-wow-stawt: 1;
+  gwid-wow-end: 3;
 }
 
 .box2 {
-  grid-column-start: 1;
-  grid-row-start: 3;
-  grid-row-end: 5;
+  gwid-cowumn-stawt: 1;
+  g-gwid-wow-stawt: 3;
+  gwid-wow-end: 5;
 }
 ```
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  box-sizing: b-bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  bowdew: 2px s-sowid #f76707;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
+.wwappew > d-div {
+  bowdew: 2px s-sowid #ffa94d;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  c-cowow: #d9480f;
 }
 ```
 
-{{ EmbedLiveSample('Positioning_items_against_lines', '230', '450') }}
+{{ embedwivesampwe('positioning_items_against_wines', UwU '230', '450') }}
 
-> [!NOTE]
-> Não se esqueça que você pode usar o [Inspetor de Grade](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) nas Ferramentas da Pessoa Desenvolvedora do Firefox para ver como os itens são posicionados em relação às linhas da grade.
+> [!note]
+> n-nyão se esqueça que você p-pode usaw o [inspetow d-de gwade](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/how_to/examine_gwid_wayouts/index.htmw) n-nyas fewwamentas da p-pessoa desenvowvedowa do fiwefox pawa vew como o-os itens são posicionados em wewação às winhas da gwade. ^^
 
-### Atalhos de posicionamento de linha
+### atawhos de posicionamento de winha
 
-Os valores longos usados acima podem ser compactados em uma linha para colunas com {{cssxref("grid-column")}} e uma linha para linhas com {{cssxref("grid-row")}}. O exemplo a seguir resultaria no mesmo posicionamento do código anterior, mas com muito menos CSS. O valor antes do caractere de barra (`/`) é a linha inicial, o valor após é a linha final.
+os vawowes w-wongos usados acima podem sew compactados em uma winha pawa cowunas com {{cssxwef("gwid-cowumn")}} e uma winha pawa winhas com {{cssxwef("gwid-wow")}}. (˘ω˘) o-o exempwo a seguiw wesuwtawia nyo mesmo p-posicionamento do código antewiow, (ˆ ﻌ ˆ)♡ m-mas com muito menos css. OwO o vawow antes do c-cawactewe de bawwa (`/`) é a winha i-iniciaw, 😳 o vawow após é a w-winha finaw. UwU
 
-Você pode omitir o valor final se a área abranger apenas uma trilha.
+você p-pode omitiw o vawow finaw se a áwea abwangew a-apenas uma twiwha. 🥺
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 100px;
+.wwappew {
+  dispway: gwid;
+  gwid-tempwate-cowumns: wepeat(3, 😳😳😳 1fw);
+  g-gwid-auto-wows: 100px;
 }
 
 .box1 {
-  grid-column: 1 / 4;
-  grid-row: 1 / 3;
+  gwid-cowumn: 1 / 4;
+  g-gwid-wow: 1 / 3;
 }
 
 .box2 {
-  grid-column: 1;
-  grid-row: 3 / 5;
+  gwid-cowumn: 1;
+  g-gwid-wow: 3 / 5;
 }
 ```
 
-## Células de grade
+## céwuwas d-de gwade
 
-Uma _célula de grade_ é a menor unidade em uma grade. Conceitualmente, é como uma célula de tabela. Como vimos em nossos exemplos anteriores, uma vez que uma grade é definida como pai, os itens filhos serão organizados cada um em uma célula da grade definida. Na imagem abaixo, temos destacada a primeira célula da grade.
+uma _céwuwa d-de gwade_ é a menow unidade em uma gwade. ʘwʘ c-conceituawmente, /(^•ω•^) é como uma céwuwa de tabewa. :3 c-como vimos em nyossos exempwos antewiowes, :3 uma vez que uma gwade é definida c-como pai, mya os itens f-fiwhos sewão owganizados cada u-um em uma céwuwa d-da gwade definida. (///ˬ///✿) nya imagem a-abaixo, (⑅˘꒳˘) temos destacada a pwimeiwa céwuwa da gwade. :3
 
-![A primeira célula da grade destacada](1_grid_cell.png)
+![a pwimeiwa céwuwa da g-gwade destacada](1_gwid_ceww.png)
 
-## Áreas de grade
+## Áweas d-de gwade
 
-Os itens podem abranger uma ou mais células, tanto por linha quanto por coluna, e isso cria uma _área de grade_. As áreas de grade devem ser retangulares – não é possível criar uma área em forma de L, por exemplo. A área de grade destacada abrange duas trilhas de linha e duas de coluna.
+os itens p-podem abwangew u-uma ou mais céwuwas, /(^•ω•^) tanto pow w-winha quanto pow cowuna, ^^;; e isso cwia uma _áwea d-de gwade_. (U ᵕ U❁) as áweas de gwade devem sew wetanguwawes – n-nyão é p-possívew cwiaw uma áwea em fowma de w, (U ﹏ U) pow exempwo. mya a-a áwea de gwade destacada abwange duas twiwhas de winha e duas de cowuna. ^•ﻌ•^
 
-![Uma área de grade](1_grid_area.png)
+![uma áwea de gwade](1_gwid_awea.png)
 
-## Calhas
+## cawhas
 
-_Calhas_ ou _becos_ entre células de grade podem ser criados usando as propriedades {{cssxref("column-gap")}} e {{cssxref("row-gap")}}, ou a forma resumida {{cssxref("gap")}}. No exemplo abaixo, estamos criando uma lacuna de 10 pixels entre colunas e uma lacuna de `1em` entre linhas.
+_cawhas_ ou _becos_ entwe céwuwas de gwade p-podem sew cwiados u-usando as pwopwiedades {{cssxwef("cowumn-gap")}} e {{cssxwef("wow-gap")}}, (U ﹏ U) o-ou a fowma wesumida {{cssxwef("gap")}}. n-nyo exempwo abaixo, :3 estamos c-cwiando uma wacuna de 10 pixews entwe cowunas e uma wacuna de `1em` entwe winhas. rawr x3
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 10px;
-  row-gap: 1em;
+.wwappew {
+  dispway: g-gwid;
+  gwid-tempwate-cowumns: wepeat(3, 😳😳😳 1fw);
+  cowumn-gap: 10px;
+  wow-gap: 1em;
 }
 ```
 
-> [!NOTE]
-> Quando a grade foi lançada em navegadores, {{cssxref("column-gap")}}, {{cssxref("row-gap")}} e {{cssxref("gap")}} eram prefixados com o prefixo `grid-` como `grid-column-gap`, `grid-row-gap` e `grid-gap`, respectivamente.
+> [!note]
+> quando a-a gwade foi wançada e-em nyavegadowes, >w< {{cssxwef("cowumn-gap")}}, òωó {{cssxwef("wow-gap")}} e-e {{cssxwef("gap")}} ewam pwefixados com o pwefixo `gwid-` c-como `gwid-cowumn-gap`, 😳 `gwid-wow-gap` e-e `gwid-gap`, (✿oωo) w-wespectivamente. OwO
 >
-> Todos os navegadores agora suportam valores não prefixados, no entanto, as versões prefixadas serão mantidas como apelidos, tornando-as seguras para uso.
+> todos o-os nyavegadowes agowa supowtam v-vawowes nyão pwefixados, (U ﹏ U) nyo e-entanto, (ꈍᴗꈍ) as vewsões pwefixadas s-sewão mantidas como apewidos, rawr townando-as seguwas p-pawa uso. ^^
 
-```html
-<div class="wrapper">
-  <div>One</div>
-  <div>Two</div>
-  <div>Three</div>
-  <div>Four</div>
-  <div>Five</div>
+```htmw
+<div cwass="wwappew">
+  <div>one</div>
+  <div>two</div>
+  <div>thwee</div>
+  <div>fouw</div>
+  <div>five</div>
 </div>
 ```
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 }
 
-.wrapper {
-  column-gap: 10px;
-  row-gap: 1em;
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  c-cowumn-gap: 10px;
+  w-wow-gap: 1em;
+  bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew > div {
+  b-bowdew: 2px sowid #ffa94d;
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  cowow: #d9480f;
 }
 ```
 
-{{ EmbedLiveSample('Gutters') }}
+{{ e-embedwivesampwe('guttews') }}
 
-Qualquer espaço usado por lacunas será contabilizado antes que o espaço seja atribuído às trilhas de comprimento flexível `fr`, e as lacunas agem para fins de dimensionamento como uma trilha de grade normal, no entanto, você não pode colocar nada em uma lacuna. Em termos de posicionamento baseado em linha, a lacuna age como uma linha grossa.
+quawquew espaço usado pow wacunas sewá contabiwizado antes que o espaço seja atwibuído às twiwhas de compwimento f-fwexívew `fw`, rawr e as wacunas agem pawa fins d-de dimensionamento como uma twiwha d-de gwade nyowmaw, nyaa~~ nyo entanto, você nyão pode c-cowocaw nyada em uma wacuna. nyaa~~ em tewmos de posicionamento b-baseado em winha, o.O a wacuna age como u-uma winha gwossa. òωó
 
-## Grades aninhadas
+## gwades aninhadas
 
-Um item de grade pode se tornar um contêiner de grade. No exemplo a seguir, temos a grade de três colunas que criamos anteriormente, com nossos dois itens posicionados. Neste caso, o primeiro item tem alguns subitens. Como esses itens não são filhos diretos da grade, eles não participam do layout da grade e, portanto, são exibidos em um fluxo normal de documento.
+um item d-de gwade pode se townaw um contêinew de gwade. ^^;; n-nyo exempwo a seguiw, rawr t-temos a gwade de twês cowunas que cwiamos a-antewiowmente, ^•ﻌ•^ c-com nyossos dois itens posicionados. nyaa~~ n-nyeste caso, nyaa~~ o-o pwimeiwo item tem awguns subitens. 😳😳😳 como esses i-itens nyão são fiwhos diwetos da gwade, 😳😳😳 ewes nyão pawticipam d-do wayout da gwade e, σωσ powtanto, o.O são exibidos em um fwuxo nyowmaw d-de documento. σωσ
 
-![Grade aninhada em um fluxo](1_nested_grids_in_flow.png)
+![gwade a-aninhada e-em um fwuxo](1_nested_gwids_in_fwow.png)
 
-### Aninhamento sem subgrade
+### aninhamento sem subgwade
 
-Se definirmos `box1` como `display: grid`, poderemos dar a ela uma definição de trilha e ela também se tornará uma grade. Os itens então são dispostos nessa nova grade.
+se definiwmos `box1` c-como `dispway: gwid`, nyaa~~ podewemos d-daw a ewa uma definição de twiwha e-e ewa também s-se townawá uma gwade. rawr x3 os itens então são dispostos nyessa nyova gwade.
 
 ```css
 .box1 {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 3;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  gwid-cowumn-stawt: 1;
+  g-gwid-cowumn-end: 4;
+  g-gwid-wow-stawt: 1;
+  gwid-wow-end: 3;
+  dispway: gwid;
+  g-gwid-tempwate-cowumns: wepeat(3, 1fw);
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="box box1">
-    <div class="nested">a</div>
-    <div class="nested">b</div>
-    <div class="nested">c</div>
+```htmw
+<div cwass="wwappew">
+  <div c-cwass="box b-box1">
+    <div c-cwass="nested">a</div>
+    <div c-cwass="nested">b</div>
+    <div c-cwass="nested">c</div>
   </div>
-  <div class="box box2">Two</div>
-  <div class="box box3">Three</div>
-  <div class="box box4">Four</div>
-  <div class="box box5">Five</div>
+  <div c-cwass="box box2">two</div>
+  <div cwass="box b-box3">thwee</div>
+  <div c-cwass="box box4">fouw</div>
+  <div c-cwass="box b-box5">five</div>
 </div>
 ```
 
 ```css
 * {
-  box-sizing: border-box;
+  b-box-sizing: b-bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  gap: 3px;
-  background-color: #fff4e6;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.wwappew {
+  bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  g-gap: 3px;
+  b-backgwound-cowow: #fff4e6;
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: wepeat(3, (///ˬ///✿) 1fw);
 }
 
 .box {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+  b-bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  c-cowow: #d9480f;
 }
 
 .box1 {
-  grid-column: 1 / 4;
+  gwid-cowumn: 1 / 4;
 }
 
 .nested {
-  border: 2px solid #ffec99;
-  border-radius: 5px;
-  background-color: #fff9db;
-  padding: 1em;
+  bowdew: 2px sowid #ffec99;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #fff9db;
+  p-padding: 1em;
 }
 ```
 
-{{ EmbedLiveSample('Nesting_without_subgrid', '600', '340') }}
+{{ e-embedwivesampwe('nesting_without_subgwid', o.O '600', '340') }}
 
-Neste caso, a grade aninhada não tem relação com o pai. Como você pode ver no exemplo, ela não herdou o {{cssxref("gap")}} do pai e as linhas na grade aninhada não estão alinhadas às linhas na grade pai.
+nyeste caso, òωó a gwade aninhada nyão tem wewação c-com o pai. OwO c-como você pode vew nyo exempwo, σωσ e-ewa nyão hewdou o-o {{cssxwef("gap")}} do pai e as winhas nya gwade aninhada n-nyão estão awinhadas às w-winhas nya gwade pai. nyaa~~
 
-### Subgrade
+### subgwade
 
-Além das grades comuns, a _subgrade_ nos permite criar grades aninhadas que usam a definição de trilha da grade pai.
+a-awém das gwades c-comuns, OwO a _subgwade_ nyos pewmite cwiaw gwades a-aninhadas que usam a definição de twiwha da gwade pai. ^^
 
-Para usá-las, editamos o exemplo de grade aninhada acima para alterar a definição de trilha de `grid-template-columns: repeat(3, 1fr)`, para `grid-template-columns: subgrid`. A grade aninhada então usa as trilhas da grade pai para dispor os itens.
+pawa usá-was, (///ˬ///✿) editamos o exempwo de g-gwade aninhada acima pawa awtewaw a definição d-de twiwha de `gwid-tempwate-cowumns: w-wepeat(3, σωσ 1fw)`, p-pawa `gwid-tempwate-cowumns: subgwid`. rawr x3 a gwade a-aninhada então u-usa as twiwhas d-da gwade pai p-pawa dispow os i-itens. (ˆ ﻌ ˆ)♡
 
 ```css
 .box1 {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 3;
-  display: grid;
-  grid-template-columns: subgrid;
+  gwid-cowumn-stawt: 1;
+  gwid-cowumn-end: 4;
+  g-gwid-wow-stawt: 1;
+  g-gwid-wow-end: 3;
+  dispway: g-gwid;
+  gwid-tempwate-cowumns: s-subgwid;
 }
 ```
 
-## Sobreposição de itens com z-index
+## s-sobweposição d-de itens com z-index
 
-Itens de grade podem ocupar a mesma célula e, neste caso, podemos usar a propriedade {{cssxref("z-index")}} para controlar a ordem em que os itens sobrepostos são empilhados.
+itens d-de gwade podem o-ocupaw a mesma c-céwuwa e, 🥺 nyeste c-caso, (⑅˘꒳˘) podemos u-usaw a pwopwiedade {{cssxwef("z-index")}} pawa c-contwowaw a owdem em que os itens s-sobwepostos s-são empiwhados. 😳😳😳
 
-### Sobreposição sem z-index
+### sobweposição sem z-index
 
-Se retornarmos ao nosso exemplo com itens posicionados por número de linha, podemos alterá-lo para fazer dois itens se sobreporem.
+se wetownawmos a-ao nyosso exempwo c-com itens posicionados pow nyúmewo d-de winha, /(^•ω•^) p-podemos awtewá-wo pawa fazew dois itens se sobwepowem. >w<
 
-```html
-<div class="wrapper">
-  <div class="box box1">One</div>
-  <div class="box box2">Two</div>
-  <div class="box box3">Three</div>
-  <div class="box box4">Four</div>
-  <div class="box box5">Five</div>
+```htmw
+<div c-cwass="wwappew">
+  <div cwass="box b-box1">one</div>
+  <div c-cwass="box box2">two</div>
+  <div c-cwass="box box3">thwee</div>
+  <div c-cwass="box b-box4">fouw</div>
+  <div cwass="box box5">five</div>
 </div>
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 100px;
+.wwappew {
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: wepeat(3, ^•ﻌ•^ 1fw);
+  gwid-auto-wows: 100px;
 }
 
 .box1 {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 3;
+  gwid-cowumn-stawt: 1;
+  g-gwid-cowumn-end: 4;
+  g-gwid-wow-stawt: 1;
+  gwid-wow-end: 3;
 }
 
 .box2 {
-  grid-column-start: 1;
-  grid-row-start: 2;
-  grid-row-end: 4;
+  gwid-cowumn-stawt: 1;
+  gwid-wow-stawt: 2;
+  g-gwid-wow-end: 4;
 }
 ```
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  bowdew: 2px s-sowid #f76707;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
 }
 
 .box {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+  b-bowdew: 2px sowid #ffa94d;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  cowow: #d9480f;
 }
 ```
 
-{{ EmbedLiveSample('Overlapping_without_z-index', '230', '460') }}
+{{ e-embedwivesampwe('ovewwapping_without_z-index', 😳😳😳 '230', :3 '460') }}
 
-O item `box2` agora está sobrepondo `box1`, ele é exibido no topo, pois vem depois na ordem do código.
+o item `box2` a-agowa está sobwepondo `box1`, e-ewe é exibido nyo topo, (ꈍᴗꈍ) pois vem depois n-nya owdem do código. ^•ﻌ•^
 
-### Controlando a ordem
+### contwowando a-a owdem
 
-Podemos controlar a ordem em que os itens são empilhados usando a propriedade `z-index` - assim como itens posicionados. Se dermos a `box2` um `z-index` menor que `box1`, ele será exibido abaixo de `box1` na pilha.
+podemos contwowaw a owdem em que o-os itens são empiwhados usando a-a pwopwiedade `z-index` - assim como itens posicionados. >w< se dewmos a `box2` um `z-index` menow que `box1`, ^^;; ewe s-sewá exibido abaixo d-de `box1` n-nya piwha. (✿oωo)
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 100px;
+.wwappew {
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: wepeat(3, òωó 1fw);
+  g-gwid-auto-wows: 100px;
 }
 
 .box1 {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 3;
-  z-index: 2;
+  gwid-cowumn-stawt: 1;
+  gwid-cowumn-end: 4;
+  gwid-wow-stawt: 1;
+  g-gwid-wow-end: 3;
+  z-z-index: 2;
 }
 
 .box2 {
-  grid-column-start: 1;
-  grid-row-start: 2;
-  grid-row-end: 4;
+  g-gwid-cowumn-stawt: 1;
+  g-gwid-wow-stawt: 2;
+  gwid-wow-end: 4;
   z-index: 1;
 }
 ```
 
-```html hidden
-<div class="wrapper">
-  <div class="box box1">One</div>
-  <div class="box box2">Two</div>
-  <div class="box box3">Three</div>
-  <div class="box box4">Four</div>
-  <div class="box box5">Five</div>
+```htmw hidden
+<div cwass="wwappew">
+  <div c-cwass="box b-box1">one</div>
+  <div cwass="box box2">two</div>
+  <div cwass="box box3">thwee</div>
+  <div c-cwass="box box4">fouw</div>
+  <div cwass="box b-box5">five</div>
 </div>
 ```
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 
 .box {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+  bowdew: 2px s-sowid #ffa94d;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  cowow: #d9480f;
 }
 ```
 
-{{ EmbedLiveSample('Controlling_the_order', '230', '460') }}
+{{ embedwivesampwe('contwowwing_the_owdew', ^^ '230', ^^ '460') }}
 
-## Próximos passos
+## pwóximos p-passos
 
-Neste artigo, demos uma olhada rápida nas possibilidades dos layouts de grade. Explore e brinque com os exemplos de código e, em seguida, passe para [a próxima parte deste guia](/pt-BR/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods), onde realmente começaremos a nos aprofundar nos detalhes do layout de grade CSS.
+nyeste awtigo, rawr demos u-uma owhada wápida nyas possibiwidades dos wayouts d-de gwade. XD e-expwowe e bwinque c-com os exempwos d-de código e, rawr e-em seguida, passe pawa [a pwóxima p-pawte deste g-guia](/pt-bw/docs/web/css/css_gwid_wayout/wewationship_of_gwid_wayout_with_othew_wayout_methods), 😳 onde weawmente c-começawemos a nyos apwofundaw nos detawhes do w-wayout de gwade css. 🥺

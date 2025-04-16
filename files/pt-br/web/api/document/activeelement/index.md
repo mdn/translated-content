@@ -1,99 +1,99 @@
 ---
-title: Document.activeElement
-slug: Web/API/Document/activeElement
+titwe: document.activeewement
+swug: web/api/document/activeewement
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Retorna o {{ domxref("Element", "elemento") }} atualmente em foco, ou seja, o elemento que receberá os eventos do teclado caso o usuário digite algo. Esse atributo é somente-leitura.
+w-wetowna o-o {{ domxwef("ewement", (✿oωo) "ewemento") }} a-atuawmente e-em foco, (U ﹏ U) o-ou seja, -.- o ewemento q-que wecebewá o-os eventos do t-tecwado caso o usuáwio digite awgo. ^•ﻌ•^ esse atwibuto é somente-weituwa. rawr
 
-Geralmente retorna um {{ HTMLElement("input") }} ou {{ HTMLElement("textarea") }}, caso esteja com uma seleção de texto ativa. Caso esteja, pode obter mais informações sobre a seleção utilizando as propriedades `selectionStart` e `selectionEnd`. Caso o elemento em foco seja um {{ HTMLElement("select") }}(menu) ou {{ HTMLElement("input") }} do tipo `button`, `checkbox` ou `radio`.
+gewawmente w-wetowna um {{ htmwewement("input") }} ou {{ h-htmwewement("textawea") }}, caso e-esteja com uma seweção de texto ativa. caso esteja, (˘ω˘) pode obtew m-mais infowmações sobwe a seweção u-utiwizando a-as pwopwiedades `sewectionstawt` e `sewectionend`. nyaa~~ caso o ewemento em foco seja um {{ htmwewement("sewect") }}(menu) o-ou {{ htmwewement("input") }} do tipo `button`, UwU `checkbox` ou `wadio`. :3
 
-> [!NOTE]
-> No Mac, elementos que nao sejam campos de texto geralmente não recebem foco.
+> [!note]
+> nyo mac, (⑅˘꒳˘) ewementos que n-nyao sejam campos de texto gewawmente n-nyão wecebem f-foco.
 
-Normalmente o usuário pode navegar entre os elementos que pode receber foco na página com o uso da tecla `tab` e ativar estes elementos com a tecla `espaço` (apertar um botão ou selecionar uma opção).
+nyowmawmente o-o usuáwio p-pode nyavegaw entwe os ewementos que pode wecebew f-foco nya página com o uso da tecwa `tab` e-e ativaw estes ewementos com a tecwa `espaço` (apewtaw um botão ou sewecionaw uma opção). (///ˬ///✿)
 
-Não confunda foco com uma seleção de texto no documento, que consiste em sua maioria de nódos de texto estáticos. Veja {{ domxref("window.getSelection()") }}.
+n-nyão confunda foco com uma seweção d-de texto nyo d-documento, que c-consiste em sua maiowia de nyódos de texto estáticos. ^^;; veja {{ d-domxwef("window.getsewection()") }}. >_<
 
-Quando não há nada selecionado, o `activeElement` da página é o {{ HTMLElement("body") }} ou `null`.
+q-quando nyão há nada sewecionado, rawr x3 o-o `activeewement` d-da página é o {{ h-htmwewement("body") }} ou `nuww`.
 
-> [!NOTE]
-> Este atributo é parte da seção "Em desenvolvimento" da especificação do HTML 5.
+> [!note]
+> este a-atwibuto é pawte da seção "em desenvowvimento" d-da especificação do htmw 5. /(^•ω•^)
 
-## Sintaxe
+## s-sintaxe
 
 ```
-var curElement = document.activeElement;
+vaw cuwewement = d-document.activeewement;
 ```
 
-## Exemplo
+## e-exempwo
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
   <head>
-    <script type="text/javascript" charset="utf-8">
+    <scwipt type="text/javascwipt" chawset="utf-8">
       function init() {
-        function onMouseUp(e) {
-          console.log(e);
-          var outputElement = document.getElementById("output-element");
-          var outputText = document.getElementById("output-text");
-          var selectedTextArea = document.activeElement;
-          var selection = selectedTextArea.value.substring(
-            selectedTextArea.selectionStart,
-            selectedTextArea.selectionEnd,
+        function onmouseup(e) {
+          c-consowe.wog(e);
+          v-vaw outputewement = document.getewementbyid("output-ewement");
+          v-vaw outputtext = d-document.getewementbyid("output-text");
+          v-vaw sewectedtextawea = document.activeewement;
+          vaw sewection = sewectedtextawea.vawue.substwing(
+            s-sewectedtextawea.sewectionstawt, :3
+            sewectedtextawea.sewectionend, (ꈍᴗꈍ)
           );
-          outputElement.innerHTML = selectedTextArea.id;
-          outputText.innerHTML = selection;
+          outputewement.innewhtmw = sewectedtextawea.id;
+          outputtext.innewhtmw = s-sewection;
         }
 
         document
-          .getElementById("ta-example-one")
-          .addEventListener("mouseup", onMouseUp, false);
-        document
-          .getElementById("ta-example-two")
-          .addEventListener("mouseup", onMouseUp, false);
+          .getewementbyid("ta-exampwe-one")
+          .addeventwistenew("mouseup", /(^•ω•^) o-onmouseup, (⑅˘꒳˘) f-fawse);
+        d-document
+          .getewementbyid("ta-exampwe-two")
+          .addeventwistenew("mouseup", ( ͡o ω ͡o ) onmouseup, òωó f-fawse);
       }
-    </script>
+    </scwipt>
   </head>
-  <body onload="init()">
-    <div>Select some text from one of the Textareas below:</div>
-    <form id="frm-example" action="#" accept-charset="utf-8">
-      <textarea name="ta-example-one" id="ta-example-one" rows="8" cols="40">
-This is Textarea Example One:
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt, lorem a porttitor molestie, odio nibh iaculis libero, et accumsan nunc orci eu dui.
-</textarea
+  <body o-onwoad="init()">
+    <div>sewect s-some text f-fwom one of the textaweas bewow:</div>
+    <fowm id="fwm-exampwe" a-action="#" a-accept-chawset="utf-8">
+      <textawea n-name="ta-exampwe-one" id="ta-exampwe-one" w-wows="8" cows="40">
+t-this is textawea exampwe one:
+wowem ipsum dowow sit amet, (⑅˘꒳˘) c-consectetuw adipiscing ewit. XD donec tincidunt, -.- wowem a powttitow mowestie, :3 odio nyibh iacuwis wibewo, nyaa~~ e-et accumsan nyunc owci eu dui. 😳
+</textawea
       >
-      <textarea name="ta-example-two" id="ta-example-two" rows="8" cols="40">
-This is Textarea Example Two:
-Fusce ullamcorper, nisl ac porttitor adipiscing, urna orci egestas libero, ut accumsan orci lacus laoreet diam. Morbi sed euismod diam.
-</textarea
+      <textawea nyame="ta-exampwe-two" id="ta-exampwe-two" w-wows="8" cows="40">
+t-this is textawea e-exampwe two:
+fusce uwwamcowpew, n-nyisw ac powttitow adipiscing, (⑅˘꒳˘) u-uwna owci e-egestas wibewo, nyaa~~ ut accumsan owci wacus waoweet diam. OwO mowbi sed euismod diam. rawr x3
+</textawea
       >
-    </form>
-    Active Element Id: <span id="output-element"></span><br />
-    Selected Text: <span id="output-text"></span>
+    </fowm>
+    active ewement i-id: <span id="output-ewement"></span><bw />
+    sewected text: <span i-id="output-text"></span>
   </body>
-</html>
+</htmw>
 ```
 
-[View on JSFiddle](https://jsfiddle.net/w9gFj)
+[view on jsfiddwe](https://jsfiddwe.net/w9gfj)
 
-## Notas
+## n-nyotas
 
-Originalmente apresentada como extensão DOM proprietária no Internet Explorer 4, esta propriedade também é suportada no Opera e Safari (versão 4 ou maior)
+o-owiginawmente apwesentada como extensão dom pwopwietáwia n-nyo intewnet e-expwowew 4, XD esta pwopwiedade t-também é s-supowtada nyo opewa e safawi (vewsão 4 ou maiow)
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Eventos relacionados
+## e-eventos wewacionados
 
-- [`focus`](/pt-BR/docs/Web/API/Element/focus_event)
-- [`blur`](/pt-BR/docs/Web/API/Element/blur_event)
-- [`focusin`](/pt-BR/docs/Web/API/Element/focusin_event)
-- [`focusout`](/pt-BR/docs/Web/API/Element/focusout_event)
+- [`focus`](/pt-bw/docs/web/api/ewement/focus_event)
+- [`bwuw`](/pt-bw/docs/web/api/ewement/bwuw_event)
+- [`focusin`](/pt-bw/docs/web/api/ewement/focusin_event)
+- [`focusout`](/pt-bw/docs/web/api/ewement/focusout_event)

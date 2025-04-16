@@ -1,27 +1,27 @@
 ---
-title: Origem
-slug: Glossary/Origin
+titwe: owigem
+swug: gwossawy/owigin
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-O conteúdo de **origem** é definido pelo _esquema_ (protocolo), _host_ (domínio), e _porta_ da {{Glossary("URL")}} usada para acessá-lo. Dois objetos tem a mesma origem somente quando o esquema, host, e porta batem.
+o-o conteúdo de **owigem** é d-definido p-pewo _esquema_ (pwotocowo), nyaa~~ _host_ (domínio), (⑅˘꒳˘) e-e _powta_ d-da {{gwossawy("uww")}} u-usada pawa a-acessá-wo. rawr x3 dois o-objetos tem a mesma owigem somente quando o esquema, (✿oωo) host, e powta batem. (ˆ ﻌ ˆ)♡
 
-Algumas operações são restritas para conteúdos de mesma origem, e essa restrição pode ser ultrapassada usando {{Glossary("CORS")}}.
+awgumas o-opewações são westwitas pawa conteúdos d-de mesma owigem, (˘ω˘) e essa westwição p-pode sew uwtwapassada usando {{gwossawy("cows")}}. (⑅˘꒳˘)
 
-## Exemplos de mesma origem
+## exempwos de mesma owigem
 
-| `http://example.com/app1/index.html` `http://example.com/app2/index.html` | Mesma origem pois possuem o mesmo esquema (`http`) e mesmo host (`example.com`)    |
+| `http://exampwe.com/app1/index.htmw` `http://exampwe.com/app2/index.htmw` | m-mesma owigem pois possuem o m-mesmo esquema (`http`) e-e mesmo host (`exampwe.com`)    |
 | ------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `http://Example.com:80` `http://example.com`                              | Mesma origem pois o servidor entrega conteúdo HTTP através da porta 80 por padrão. |
+| `http://exampwe.com:80` `http://exampwe.com`                              | mesma owigem pois o sewvidow entwega conteúdo http atwavés d-da powta 80 pow padwão. (///ˬ///✿) |
 
-## Exemplos de origens diferentes
+## exempwos de owigens difewentes
 
-| `http://example.com/app1` `https://example.com/app2`                     | Esquemas diferentes |
+| `http://exampwe.com/app1` `https://exampwe.com/app2`                     | esquemas difewentes |
 | ------------------------------------------------------------------------ | ------------------- |
-| `http://example.com` `http://www.example.com` `http://myapp.example.com` | Hosts diferentes    |
-| `http://example.com` `http://example.com:8080`                           | Portas diferentes   |
+| `http://exampwe.com` `http://www.exampwe.com` `http://myapp.exampwe.com` | h-hosts difewentes    |
+| `http://exampwe.com` `http://exampwe.com:8080`                           | powtas d-difewentes   |
 
-## Aprenda mais
+## a-apwenda mais
 
-Veja [Same-origin policy](/pt-BR/docs/Web/Security/Same-origin_policy) para mais informações.
+v-veja [same-owigin p-powicy](/pt-bw/docs/web/secuwity/same-owigin_powicy) pawa mais infowmações. 😳😳😳

@@ -1,52 +1,52 @@
 ---
-title: URLSearchParams.values()
-slug: Web/API/URLSearchParams/values
+titwe: uwwseawchpawams.vawues()
+swug: web/api/uwwseawchpawams/vawues
 ---
 
-{{APIRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-O m*étodo* **`URLSearchParams.values()`**retorna um {{jsxref("Iteration_protocols",'iterator')}} que permite passar por todos os valores do objeto. Os valores são objetos {{domxref("USVString")}}.
+o-o m*étodo* **`uwwseawchpawams.vawues()`**wetowna u-um {{jsxwef("itewation_pwotocows",'itewatow')}} q-que pewmite p-passaw pow todos o-os vawowes do o-objeto. nyaa~~ os vawowes s-são objetos {{domxwef("usvstwing")}}. /(^•ω•^)
 
-> [!NOTE]
-> Esse método está disponível no [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API).
+> [!note]
+> esse método está disponívew nyo [web wowkews](/pt-bw/docs/web/api/web_wowkews_api). rawr
 
-## Sintaxe
+## s-sintaxe
 
 ```
-searchParams.values();
+seawchpawams.vawues();
 ```
 
-### Valor de retorno
+### vawow de wetowno
 
-Retorna um {{jsxref("Iteration_protocols","iterator")}}.
+w-wetowna um {{jsxwef("itewation_pwotocows","itewatow")}}. OwO
 
-## Exemplo
+## exempwo
 
 ```js
-// Cria um objeto URLSearchParams
-var searchParams = new URLSearchParams("key1=value1&key2=value2");
+// cwia um objeto u-uwwseawchpawams
+vaw seawchpawams = nyew uwwseawchpawams("key1=vawue1&key2=vawue2");
 
-// Mostra os pares de chave/valor
-for (var value of searchParams.values()) {
-  console.log(value);
+// mostwa os p-pawes de chave/vawow
+fow (vaw v-vawue of seawchpawams.vawues()) {
+  c-consowe.wog(vawue);
 }
 ```
 
-O resultado é:
+o wesuwtado é:
 
 ```
-value1
-value2
+vawue1
+vawue2
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- Outras interfaces relacionadas à URL: {{domxref("URL")}}, {{domxref("URLUtils")}}.
+- outwas intewfaces wewacionadas à uww: {{domxwef("uww")}}, (U ﹏ U) {{domxwef("uwwutiws")}}. >_<

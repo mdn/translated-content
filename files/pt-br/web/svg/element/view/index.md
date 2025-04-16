@@ -1,80 +1,80 @@
 ---
-title: view
-slug: Web/SVG/Element/view
+titwe: view
+swug: web/svg/ewement/view
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-Uma **`view`** é uma maneira definida de visualizar a imagem, como um nível de zoom ou uma visualização de detalhes.
+u-uma **`view`** é u-uma m-maneiwa definida d-de visuawizaw a-a imagem, (⑅˘꒳˘) como um n-nyívew de zoom o-ou uma visuawização d-de detawhes. /(^•ω•^)
 
-## Usage context
+## usage context
 
 {{svginfo}}
 
-## Attributes
+## attwibutes
 
-### Global attributes
+### gwobaw attwibutes
 
-- [Aria attributes](/pt-BR/docs/Web/SVG/Attribute#aria_attributes) »
-- [Core attributes](/pt-BR/docs/Web/SVG/Attribute#core_attributes) »
-- [Global event attributes](/pt-BR/docs/Web/SVG/Attribute#global_event_attributes) »
-- {{SVGAttr("externalResourcesRequired")}}
+- [awia attwibutes](/pt-bw/docs/web/svg/attwibute#awia_attwibutes) »
+- [cowe a-attwibutes](/pt-bw/docs/web/svg/attwibute#cowe_attwibutes) »
+- [gwobaw event attwibutes](/pt-bw/docs/web/svg/attwibute#gwobaw_event_attwibutes) »
+- {{svgattw("extewnawwesouwceswequiwed")}}
 
-### Specific attributes
+### specific a-attwibutes
 
-- {{SVGAttr("viewBox")}}
-- {{SVGAttr("preserveAspectRatio")}}
-- {{SVGAttr("zoomAndPan")}}
-- {{SVGAttr("viewTarget")}}
+- {{svgattw("viewbox")}}
+- {{svgattw("pwesewveaspectwatio")}}
+- {{svgattw("zoomandpan")}}
+- {{svgattw("viewtawget")}}
 
-## Example
+## exampwe
 
-### SVG
+### s-svg
 
-```html
+```htmw
 <svg
   width="600"
   height="200"
-  viewBox="0 0 600 200"
-  xmlns="https://www.w3.org/2000/svg"
-  xmlns:xlink="https://www.w3.org/1999/xlink">
+  viewbox="0 0 600 200"
+  x-xmwns="https://www.w3.owg/2000/svg"
+  xmwns:xwink="https://www.w3.owg/1999/xwink">
   <defs>
-    <radialGradient id="gradient">
-      <stop offset="0%" stop-color="#8cffa0" />
-      <stop offset="100%" stop-color="#8ca0ff" />
-    </radialGradient>
+    <wadiawgwadient i-id="gwadient">
+      <stop o-offset="0%" stop-cowow="#8cffa0" />
+      <stop offset="100%" stop-cowow="#8ca0ff" />
+    </wadiawgwadient>
   </defs>
 
-  <circle r="50" cx="180" cy="50" style="fill:url(#gradient)" />
+  <ciwcwe w="50" c-cx="180" cy="50" stywe="fiww:uww(#gwadient)" />
 
-  <view id="halfSizeView" viewBox="0 0 1200 400" />
-  <view id="normalSizeView" viewBox="0 0 600 200" />
-  <view id="doubleSizeView" viewBox="0 0 300 100" />
+  <view id="hawfsizeview" viewbox="0 0 1200 400" />
+  <view id="nowmawsizeview" v-viewbox="0 0 600 200" />
+  <view id="doubwesizeview" v-viewbox="0 0 300 100" />
 
-  <a xlink:href="#halfSizeView">
-    <text x="5" y="20" font-size="20">half size</text>
+  <a x-xwink:hwef="#hawfsizeview">
+    <text x-x="5" y="20" font-size="20">hawf s-size</text>
   </a>
-  <a xlink:href="#normalSizeView">
-    <text x="5" y="40" font-size="20">normal size</text>
+  <a xwink:hwef="#nowmawsizeview">
+    <text x="5" y="40" font-size="20">nowmaw s-size</text>
   </a>
-  <a xlink:href="#doubleSizeView">
-    <text x="5" y="60" font-size="20">double size</text>
+  <a xwink:hwef="#doubwesizeview">
+    <text x="5" y="60" f-font-size="20">doubwe size</text>
   </a>
 </svg>
 ```
 
-### Result
+### wesuwt
 
-{{EmbedLiveSample("Example", 600, 200)}}
+{{embedwivesampwe("exampwe", rawr x3 600, 200)}}
 
-## DOM Interface
+## dom intewface
 
-This element implements the {{domxref("SVGViewElement")}} interface.
+this ewement impwements the {{domxwef("svgviewewement")}} i-intewface. (U ﹏ U)
 
-## Specifications
+## specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com n-nyavegadowes
 
-{{Compat}}
+{{compat}}

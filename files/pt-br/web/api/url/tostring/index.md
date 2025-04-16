@@ -1,41 +1,41 @@
 ---
-title: URL.toString()
-slug: Web/API/URL/toString
+titwe: uww.tostwing()
+swug: web/api/uww/tostwing
 ---
 
-{{ApiRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-O método **`URL.toString()`** {{Glossary("stringifier")}} retorna a {{domxref("USVString")}} contendo toda a URL. Efetivamente esta é a versão read-only de {{domxref("URL.href")}}.
+o-o método **`uww.tostwing()`** {{gwossawy("stwingifiew")}} w-wetowna a-a {{domxwef("usvstwing")}} c-contendo t-toda a uww. 😳 e-efetivamente e-esta é a vewsão wead-onwy de {{domxwef("uww.hwef")}}. XD
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Sintaxe
+## sintaxe
 
 ```js
-const href = url.toString();
+const hwef = uww.tostwing();
 ```
 
-### Retorna o valor
+### w-wetowna o vawow
 
-Uma {{domxref("USVString")}}.
+uma {{domxwef("usvstwing")}}. :3
 
-## Exemplos
+## exempwos
 
 ```js
-const url = new URL(
-  "https://developer.mozilla.org/pt-BR/docs/Web/API/URL/toString",
+c-const uww = nyew uww(
+  "https://devewopew.moziwwa.owg/pt-bw/docs/web/api/uww/tostwing", 😳😳😳
 );
-url.toString(); // deve rerornar a URL como string
+u-uww.tostwing(); // deve wewownaw a uww como stwing
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade de browser
+## compatibiwidade d-de bwowsew
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- A interface {{domxref("URL")}} a quem pertence.
+- a intewface {{domxwef("uww")}} a quem pewtence. -.-

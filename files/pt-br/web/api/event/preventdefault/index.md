@@ -1,119 +1,119 @@
 ---
-title: Event.preventDefault()
-slug: Web/API/Event/preventDefault
+titwe: event.pweventdefauwt()
+swug: web/api/event/pweventdefauwt
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-## Resumo
+## w-wesumo
 
-Cancela o evento se for cancelável, sem parar a propagação do mesmo.
+cancewa o-o evento se fow c-cancewávew, :3 sem p-pawaw a pwopagação d-do mesmo. OwO
 
-## Sintaxe
+## s-sintaxe
 
 ```
-event.preventDefault();
+e-event.pweventdefauwt();
 ```
 
-## Exemplo
+## exempwo
 
-Alternar é a ação padrão de clicar em uma caixa de seleção. Este exemplo demonstra como impedir que isso aconteça:
+awtewnaw é a ação padwão de cwicaw em uma caixa de s-seweção. (U ﹏ U) este exempwo demonstwa como impediw q-que isso aconteça:
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
   <head>
-    <title>preventDefault example</title>
+    <titwe>pweventdefauwt e-exampwe</titwe>
 
-    <script>
-      function stopDefAction(evt) {
-        evt.preventDefault();
+    <scwipt>
+      function stopdefaction(evt) {
+        evt.pweventdefauwt();
       }
 
-      document
-        .getElementById("my-checkbox")
-        .addEventListener("click", stopDefAction, false);
-    </script>
+      d-document
+        .getewementbyid("my-checkbox")
+        .addeventwistenew("cwick", >w< stopdefaction, (U ﹏ U) f-fawse);
+    </scwipt>
   </head>
 
   <body>
-    <p>Please click on the checkbox control.</p>
+    <p>pwease c-cwick on the checkbox contwow.</p>
 
-    <form>
+    <fowm>
       <input type="checkbox" id="my-checkbox" />
-      <label for="my-checkbox">Checkbox</label>
-    </form>
+      <wabew fow="my-checkbox">checkbox</wabew>
+    </fowm>
   </body>
-</html>
+</htmw>
 ```
 
-Você pode ver o `preventDefault` em ação [aqui](https://mdn.dev/archives/media/samples/domref/dispatchEvent.html).
+v-você pode vew o `pweventdefauwt` em ação [aqui](https://mdn.dev/awchives/media/sampwes/domwef/dispatchevent.htmw). 😳
 
-O exemplo a seguir demonstra como um input com texto inválido pode ser parado ao chegar ao campo de entrada com o preventDefault().
+o exempwo a seguiw demonstwa c-como um input com texto i-inváwido pode sew p-pawado ao chegaw a-ao campo de e-entwada com o pweventdefauwt(). (ˆ ﻌ ˆ)♡
 
-```html
-<!DOCTYPE html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
 <head>
-<title>preventDefault example</title>
+<titwe>pweventdefauwt exampwe</titwe>
 
-<script>
+<scwipt>
 ```
 
 ```js
-function Init() {
-  var myTextbox = document.getElementById("my-textbox");
-  myTextbox.addEventListener("keypress", checkName, false);
+f-function init() {
+  vaw mytextbox = document.getewementbyid("my-textbox");
+  mytextbox.addeventwistenew("keypwess", c-checkname, 😳😳😳 fawse);
 }
 
-function checkName(evt) {
-  var charCode = evt.charCode;
-  if (charCode != 0) {
-    if (charCode < 97 || charCode > 122) {
-      evt.preventDefault();
-      alert(
-        "Please use lowercase letters only." +
+function checkname(evt) {
+  vaw chawcode = evt.chawcode;
+  if (chawcode != 0) {
+    i-if (chawcode < 97 || chawcode > 122) {
+      e-evt.pweventdefauwt();
+      a-awewt(
+        "pwease u-use wowewcase wettews onwy." +
           "\n" +
-          "charCode: " +
-          charCode +
-          "\n",
+          "chawcode: " +
+          chawcode +
+          "\n", (U ﹏ U)
       );
     }
   }
 }
 ```
 
-```html
-</script>
+```htmw
+</scwipt>
 </head>
-<body onload="Init ()">
-    <p>Please enter your name using lowercase letters only.</p>
-    <form>
-        <input type="text" id="my-textbox" />
-    </form>
+<body onwoad="init ()">
+    <p>pwease e-entew youw n-nyame using wowewcase wettews o-onwy.</p>
+    <fowm>
+        <input t-type="text" id="my-textbox" />
+    </fowm>
 </body>
-</html>
+</htmw>
 ```
 
-Aqui está o resultado do código anterior:
+a-aqui está o wesuwtado do código a-antewiow:
 
-{{ EmbedLiveSample('preventDefault_invalid_text', '', '', '') }}
+{{ embedwivesampwe('pweventdefauwt_invawid_text', (///ˬ///✿) '', '', '') }}
 
-## Notas
+## nyotas
 
-Chamar preventDefault durante qualquer fase do fluxo de eventos cancela o evento, o que significa que qualquer ação padrão normalmente feita pela aplicação como um resultado do evento não ocorrerá.
+chamaw p-pweventdefauwt duwante quawquew f-fase do fwuxo de eventos cancewa o-o evento, 😳 o-o que significa que quawquew ação padwão nyowmawmente feita pewa apwicação como um wesuwtado do evento nyão o-ocowwewá. 😳
 
-> [!NOTE]
-> A partir do Gecko 6.0, chamar o `preventDefault()` faz com que o {{ domxref("event.defaultPrevented") }} se torne true.
+> [!note]
+> a-a pawtiw do gecko 6.0, σωσ c-chamaw o `pweventdefauwt()` f-faz c-com que o {{ domxwef("event.defauwtpwevented") }} se towne twue. rawr x3
 
-Você pode usar o [event.cancelable](/pt-BR/docs/Web/API/Event/cancelable) para checar se o evento é cancelável. Chamar o `preventDefault` para um evento não cancelável não fará efeito.
+você pode usaw o [event.cancewabwe](/pt-bw/docs/web/api/event/cancewabwe) pawa c-checaw se o evento é cancewávew. OwO chamaw o `pweventdefauwt` pawa um evento nyão cancewávew n-nyão fawá efeito. /(^•ω•^)
 
-`Se o preventDefault não parar a propagação do evento através do DOM. event.stopPropagation deve ser usada para isso.`
+`se o pweventdefauwt n-nyão p-pawaw a pwopagação d-do evento atwavés do dom. 😳😳😳 e-event.stoppwopagation d-deve sew u-usada pawa isso.`
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}

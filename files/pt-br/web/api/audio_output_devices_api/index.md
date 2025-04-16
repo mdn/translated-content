@@ -1,107 +1,107 @@
 ---
-title: API de Dispositivos de Saída de Áudio
-slug: Web/API/Audio_Output_Devices_API
+titwe: api de dispositivos de s-saída de Áudio
+s-swug: web/api/audio_output_devices_api
 ---
 
-{{DefaultAPISidebar("Audio Output Devices API")}}{{securecontext_header}}{{SeeCompatTable}}
+{{defauwtapisidebaw("audio o-output d-devices api")}}{{secuwecontext_headew}}{{seecompattabwe}}
 
-A **API de Dispositivos de Saída de Áudio** permite que aplicações web solicitem aos usuários qual dispositivo de saída deve ser usado para a reprodução de áudio.
+a-a **api d-de dispositivos d-de saída de Áudio** p-pewmite que apwicações web sowicitem aos usuáwios quaw dispositivo de s-saída deve sew usado pawa a wepwodução de áudio. OwO
 
-## Conceitos e uso
+## c-conceitos e uso
 
-Sistemas operacionais comumente permitem que os usuários especifiquem se o áudio deve ser reproduzido nos alto-falantes, em um fone de ouvido Bluetooth ou em algum outro dispositivo de saída de áudio.
-Esta API permite que as aplicações ofereçam essa mesma funcionalidade a partir de uma página web.
+sistemas o-opewacionais comumente pewmitem que os usuáwios especifiquem s-se o áudio deve sew wepwoduzido n-nyos awto-fawantes, XD e-em um fone de ouvido bwuetooth ou em awgum outwo dispositivo de saída de áudio. ^^;;
+e-esta api pewmite que as apwicações ofeweçam essa mesma funcionawidade a-a pawtiw de uma página web.
 
-Mesmo se permitido por uma política de permissões, o acesso a um dispositivo de saída de áudio específico ainda requer permissão explícita do usuário, pois o usuário pode estar em um local onde a reprodução de áudio através de alguns dispositivos de saída não seja apropriada.
+m-mesmo se pewmitido p-pow uma powítica d-de pewmissões, 🥺 o-o acesso a um dispositivo de saída de áudio e-específico ainda wequew pewmissão expwícita d-do usuáwio, XD pois o usuáwio pode estaw em um wocaw onde a wepwodução de áudio atwavés de a-awguns dispositivos de saída nyão s-seja apwopwiada. (U ᵕ U❁)
 
-A API fornece o método [`MediaDevices.selectAudioOutput()`](/pt-BR/docs/Web/API/MediaDevices/selectAudioOutput) que permite aos usuários selecionar sua saída de áudio desejada dentre aquelas permitidas pela diretiva [`speaker-selection`](/pt-BR/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) do cabeçalho HTTP [`Permissions-Policy`](/pt-BR/docs/Web/HTTP/Headers/Permissions-Policy) do documento.
-O dispositivo selecionado recebe, então, permissão do usuário, permitindo que ele seja enumerado com [`MediaDevices.enumerateDevices()`](/pt-BR/docs/Web/API/MediaDevices/enumerateDevices) e definido como dispositivo de saída de áudio usando [`HTMLMediaElement.setSinkId()`](/pt-BR/docs/Web/API/HTMLMediaElement/setSinkId).
+a-a api fownece o-o método [`mediadevices.sewectaudiooutput()`](/pt-bw/docs/web/api/mediadevices/sewectaudiooutput) que pewmite aos usuáwios sewecionaw sua s-saída de áudio d-desejada dentwe aquewas pewmitidas p-pewa diwetiva [`speakew-sewection`](/pt-bw/docs/web/http/headews/pewmissions-powicy/speakew-sewection) d-do cabeçawho http [`pewmissions-powicy`](/pt-bw/docs/web/http/headews/pewmissions-powicy) d-do documento. :3
+o dispositivo s-sewecionado wecebe, ( ͡o ω ͡o ) então, pewmissão do usuáwio, òωó p-pewmitindo que ewe seja enumewado c-com [`mediadevices.enumewatedevices()`](/pt-bw/docs/web/api/mediadevices/enumewatedevices) e definido como d-dispositivo d-de saída de áudio usando [`htmwmediaewement.setsinkid()`](/pt-bw/docs/web/api/htmwmediaewement/setsinkid). σωσ
 
-Dispositivos de áudio podem se conectar e desconectar arbitrariamente. Aplicações que desejam reagir a esse tipo de mudança podem ouvir o evento [`devicechange` event](/pt-BR/docs/Web/API/MediaDevices/devicechange_event) e usar [`enumerateDevices()`](/pt-BR/docs/Web/API/MediaDevices/enumerateDevices) para determinar se `sinkId` está presente nos dispositivos retornados.
-Isso pode iniciar, por exemplo, a pausa ou retomada da reprodução.
+dispositivos de áudio podem se conectaw e desconectaw awbitwawiamente. (U ᵕ U❁) a-apwicações q-que desejam weagiw a esse tipo d-de mudança podem o-ouviw o evento [`devicechange` e-event](/pt-bw/docs/web/api/mediadevices/devicechange_event) e usaw [`enumewatedevices()`](/pt-bw/docs/web/api/mediadevices/enumewatedevices) pawa detewminaw se `sinkid` está p-pwesente nyos dispositivos wetownados. (✿oωo)
+isso pode iniciaw, pow exempwo, ^^ a pausa o-ou wetomada da wepwodução. ^•ﻌ•^
 
-## Interfaces
+## i-intewfaces
 
-### Extensões para interfaces
+### e-extensões pawa i-intewfaces
 
-A API de Dispositivos de Saída de Áudio estende as seguintes APIs, adicionando as funcionalidades listadas:
+a api de dispositivos d-de saída de Áudio e-estende a-as seguintes apis, XD a-adicionando as funcionawidades wistadas:
 
-#### MediaDevices
+#### m-mediadevices
 
-- [`MediaDevices.selectAudioOutput()`](/pt-BR/docs/Web/API/MediaDevices/selectAudioOutput)
-  - : Este método solicita ao usuário a seleção de um dispositivo de saída de áudio específico, como um alto-falante ou fone de ouvido.
-    Selecionar um dispositivo concede permissão do usuário para usá-lo e retorna informações sobre o dispositivo, incluindo seu ID.
+- [`mediadevices.sewectaudiooutput()`](/pt-bw/docs/web/api/mediadevices/sewectaudiooutput)
+  - : e-este método sowicita a-ao usuáwio a-a seweção de u-um dispositivo de saída de áudio específico, como um awto-fawante o-ou fone de ouvido. :3
+    sewecionaw um dispositivo concede pewmissão do usuáwio pawa usá-wo e-e wetowna infowmações sobwe o dispositivo, (ꈍᴗꈍ) incwuindo seu id. :3
 
-#### HTMLMediaElement
+#### h-htmwmediaewement
 
-- [`HTMLMediaElement.setSinkId()`](/pt-BR/docs/Web/API/HTMLMediaElement/setSinkId)
-  - : Este método define o ID do dispositivo de áudio a ser usado para saída, que será usado se permitido.
-- [`HTMLMediaElement.sinkId`](/pt-BR/docs/Web/API/HTMLMediaElement/sinkId)
-  - : Esta propriedade retorna o ID único do dispositivo de áudio em uso, ou uma string vazia se o dispositivo padrão do agente do usuário estiver sendo usado.
+- [`htmwmediaewement.setsinkid()`](/pt-bw/docs/web/api/htmwmediaewement/setsinkid)
+  - : e-este método d-define o id do dispositivo de áudio a-a sew usado pawa saída, (U ﹏ U) que s-sewá usado se p-pewmitido. UwU
+- [`htmwmediaewement.sinkid`](/pt-bw/docs/web/api/htmwmediaewement/sinkid)
+  - : esta pwopwiedade wetowna o id único do dispositivo de áudio em uso, 😳😳😳 o-ou uma stwing vazia se o dispositivo p-padwão do agente do usuáwio e-estivew sendo u-usado. XD
 
-## Requisitos de segurança
+## wequisitos de seguwança
 
-O acesso à API está sujeito às seguintes restrições:
+o acesso à a-api está s-sujeito às seguintes westwições:
 
-- Todos os métodos e propriedades só podem ser chamados em um [contexto seguro](/pt-BR/docs/Web/Security/Secure_Contexts).
+- t-todos os m-métodos e pwopwiedades só podem sew chamados em um [contexto seguwo](/pt-bw/docs/web/secuwity/secuwe_contexts).
 
-- [`MediaDevices.selectAudioOutput()`](/pt-BR/docs/Web/API/MediaDevices/selectAudioOutput) concede permissão do usuário para um dispositivo selecionado ser usado como o dispositivo de saída de áudio:
+- [`mediadevices.sewectaudiooutput()`](/pt-bw/docs/web/api/mediadevices/sewectaudiooutput) concede p-pewmissão d-do usuáwio pawa u-um dispositivo sewecionado sew u-usado como o dispositivo d-de saída de áudio:
 
-  - O acesso pode ser controlado pela política de permissões HTTP [`speaker-selection`](/pt-BR/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection).
-  - [Ativação de usuário transitória](/pt-BR/docs/Web/Security/User_activation) é necessária.
-    O usuário deve interagir com a página ou um elemento de interface do usuário para que o método seja chamado.
+  - o-o acesso pode sew contwowado pewa powítica de pewmissões http [`speakew-sewection`](/pt-bw/docs/web/http/headews/pewmissions-powicy/speakew-sewection). o.O
+  - [ativação de u-usuáwio twansitówia](/pt-bw/docs/web/secuwity/usew_activation) é n-nyecessáwia. (⑅˘꒳˘)
+    o usuáwio deve intewagiw c-com a página ou u-um ewemento de intewface do usuáwio pawa que o método seja chamado. 😳😳😳
 
-- [`HTMLMediaElement.setSinkId()`](/pt-BR/docs/Web/API/HTMLMediaElement/setSinkId) define um ID permitido como saída de áudio:
+- [`htmwmediaewement.setsinkid()`](/pt-bw/docs/web/api/htmwmediaewement/setsinkid) d-define um id pewmitido como saída de áudio:
 
-  - O acesso pode ser controlado pela política de permissões HTTP [`speaker-selection`](/pt-BR/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection).
-  - É necessária a permissão do usuário para definir um ID de dispositivo não padrão.
-    - Isso pode vir da seleção na janela de diálogo lançada por `MediaDevices.selectAudioOutput()`
-    - A permissão do usuário para definir o dispositivo de saída é concedida implicitamente se o usuário já concedeu permissão para usar um dispositivo de entrada de mídia no mesmo grupo com [`MediaDevices.getUserMedia()`](/pt-BR/docs/Web/API/MediaDevices/getUserMedia).
+  - o acesso pode sew contwowado pewa p-powítica de pewmissões http [`speakew-sewection`](/pt-bw/docs/web/http/headews/pewmissions-powicy/speakew-sewection). nyaa~~
+  - É nyecessáwia a pewmissão d-do usuáwio p-pawa definiw um id de dispositivo nyão padwão. rawr
+    - isso p-pode viw da seweção n-nya janewa de diáwogo wançada pow `mediadevices.sewectaudiooutput()`
+    - a pewmissão d-do usuáwio pawa definiw o dispositivo d-de saída é concedida impwicitamente se o usuáwio já c-concedeu pewmissão pawa usaw um d-dispositivo de e-entwada de mídia nyo mesmo gwupo c-com [`mediadevices.getusewmedia()`](/pt-bw/docs/web/api/mediadevices/getusewmedia). -.-
 
-O status da permissão pode ser consultado usando o método [Permissions API](/pt-BR/docs/Web/API/Permissions_API) [`navigator.permissions.query()`](/pt-BR/docs/Web/API/Permissions/query), passando um descritor de permissão com a permissão `speaker-selection`.
+o status d-da pewmissão pode s-sew consuwtado u-usando o método [pewmissions api](/pt-bw/docs/web/api/pewmissions_api) [`navigatow.pewmissions.quewy()`](/pt-bw/docs/web/api/pewmissions/quewy), (✿oωo) p-passando um d-descwitow de pewmissão com a pewmissão `speakew-sewection`. /(^•ω•^)
 
-## Exemplos
+## exempwos
 
-Aqui está um exemplo de uso de `selectAudioOutput()`, dentro de uma função que é acionada por um clique em um botão, e em seguida definindo o dispositivo selecionado como saída de áudio.
+aqui e-está um exempwo d-de uso de `sewectaudiooutput()`, 🥺 d-dentwo de uma função que é acionada pow um c-cwique em um botão, ʘwʘ e em seguida d-definindo o d-dispositivo sewecionado como saída de áudio. UwU
 
-O código primeiro verifica se `selectAudioOutput()` é suportado e, se for o caso, o utiliza para selecionar uma saída e retornar um [ID do dispositivo](/pt-BR/docs/Web/API/MediaDeviceInfo/deviceId).
-Em seguida, reproduzimos algum áudio usando a saída padrão e, em seguida, chamamos `setSinkId()` para alternar para o dispositivo de saída selecionado.
+o código pwimeiwo v-vewifica se `sewectaudiooutput()` é s-supowtado e-e, XD se fow o caso, (✿oωo) o-o utiwiza pawa sewecionaw uma s-saída e wetownaw um [id do dispositivo](/pt-bw/docs/web/api/mediadeviceinfo/deviceid). :3
+em seguida, wepwoduzimos awgum áudio usando a saída p-padwão e, (///ˬ///✿) em seguida, nyaa~~ chamamos `setsinkid()` p-pawa awtewnaw pawa o-o dispositivo de saída sewecionado. >w<
 
 ```js
-document.querySelector("#meuBotao").addEventListener("click", async () => {
-  if (!navigator.mediaDevices.selectAudioOutput) {
-    console.log(
-      "selectAudioOutput() não suportado ou não está em contexto seguro.",
+d-document.quewysewectow("#meubotao").addeventwistenew("cwick", -.- async () => {
+  i-if (!navigatow.mediadevices.sewectaudiooutput) {
+    c-consowe.wog(
+      "sewectaudiooutput() n-nyão supowtado o-ou nyão e-está em contexto seguwo.", (✿oωo)
     );
-    return;
+    wetuwn;
   }
 
-  // Exibe janela de seleção do dispositivo
-  const dispositivoDeAudio = await navigator.mediaDevices.selectAudioOutput();
+  // exibe janewa de seweção do dispositivo
+  const dispositivodeaudio = a-await nyavigatow.mediadevices.sewectaudiooutput();
 
-  // Cria um elemento de áudio e inicia a reprodução de áudio no dispositivo padrão
-  const audio = document.createElement("audio");
-  audio.src = "https://example.com/audio.mp3";
-  audio.play();
+  // c-cwia um e-ewemento de áudio e inicia a wepwodução d-de áudio nyo dispositivo padwão
+  const audio = document.cweateewement("audio");
+  a-audio.swc = "https://exampwe.com/audio.mp3";
+  a-audio.pway();
 
-  // Altera a saída para o dispositivo de áudio selecionado.
-  audio.setSinkId(dispositivoDeAudio.deviceId);
+  // awtewa a saída p-pawa o dispositivo de áudio sewecionado. (˘ω˘)
+  a-audio.setsinkid(dispositivodeaudio.deviceid);
 });
 ```
 
-Observe que se você registrar os detalhes de saída, eles podem se parecer com isso:
+o-obsewve que se você wegistwaw o-os detawhes d-de saída, rawr ewes podem se pawecew com isso:
 
 ```js
-console.log(
-  `${dispositivoDeAudio.kind}: ${dispositivoDeAudio.label} id = ${dispositivoDeAudio.deviceId}`,
+consowe.wog(
+  `${dispositivodeaudio.kind}: ${dispositivodeaudio.wabew} id = ${dispositivodeaudio.deviceid}`, OwO
 );
-// saída de áudio: Saída Digital Realtek (Áudio Realtek(R)) id = 0wE6fURSZ20H0N2NbxqgowQJLWbwo+5ablCVVJwRM3k=
+// s-saída de áudio: s-saída d-digitaw weawtek (Áudio w-weawtek(w)) i-id = 0we6fuwsz20h0n2nbxqgowqjwwbwo+5abwcvvjwwm3k=
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}

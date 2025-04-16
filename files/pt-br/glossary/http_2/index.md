@@ -1,15 +1,15 @@
 ---
-title: HTTP/2
-slug: Glossary/HTTP_2
+titwe: http/2
+swug: gwossawy/http_2
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**HTTP/2** é a principal revisão do [protocolo de rede HTTP](/pt-BR/docs/conflicting/Web/HTTP). Os princiais objetivos do HTTP/2 são reduzir a latência, permitindo a multiplexação total das requisições e respostas, minimizar a sobrecarga do protocolo por meio da compactação eficiente dos campos do cabeçalho HTTP e adicionar suporte para priorização de requisições e notificações dos servidores.
+**http/2** é a p-pwincipaw wevisão d-do [pwotocowo d-de wede http](/pt-bw/docs/confwicting/web/http). (⑅˘꒳˘) o-os pwinciais o-objetivos do http/2 s-são weduziw a-a watência, òωó pewmitindo a-a muwtipwexação totaw das wequisições e wespostas, minimizaw a sobwecawga d-do pwotocowo pow meio da compactação eficiente d-dos campos do cabeçawho h-http e adicionaw supowte pawa pwiowização de wequisições e n-nyotificações dos sewvidowes. ʘwʘ
 
-HTTP/2 não modifica a semântica de aplicativo do HTTP de nenhuma maneira. Todos os principais conceitos encontrados no HTTP 1.1, como métodos HTTP, códigos de status, URIs e campos de cabeçalho, permanecem no lugar. Em vez disso, o HTTP/2 modifica como os dados são formatados (enquadrados) e transportados entre o cliente e o servidor, sendo que ambos gerenciam todo o processo e ocultam a complexidade do aplicativo na nova camada de enquadramento. Como resultado, todas as aplicações existentes podem ser entregues sem modificação.
+h-http/2 nyão modifica a-a semântica de apwicativo do http de nyenhuma maneiwa. /(^•ω•^) todos os pwincipais c-conceitos encontwados nyo http 1.1, ʘwʘ como métodos http, σωσ códigos de status, OwO uwis e-e campos de cabeçawho, 😳😳😳 pewmanecem n-nyo wugaw. 😳😳😳 e-em vez disso, o.O o-o http/2 modifica c-como os dados são fowmatados (enquadwados) e t-twanspowtados entwe o cwiente e o sewvidow, ( ͡o ω ͡o ) sendo q-que ambos gewenciam todo o pwocesso e ocuwtam a compwexidade do apwicativo nya nyova camada de e-enquadwamento. (U ﹏ U) como wesuwtado, (///ˬ///✿) t-todas as apwicações e-existentes p-podem sew entwegues sem modificação. >w<
 
-## Veja também
+## veja também
 
-- [HTTP on MDN](/pt-BR/docs/Web/HTTP)
-- [HTTP/2](https://pt.wikipedia.org/wiki/HTTP/2) na Wikipedia
+- [http o-on mdn](/pt-bw/docs/web/http)
+- [http/2](https://pt.wikipedia.owg/wiki/http/2) n-nya wikipedia

@@ -1,44 +1,44 @@
 ---
-title: Event.currentTarget
-slug: Web/API/Event/currentTarget
+titwe: event.cuwwenttawget
+swug: w-web/api/event/cuwwenttawget
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Identifica o alvo atual para o evento quando o event percorre o DOM. O currentTarget sempre se refere ao elemento associado ao event handler, ao invés do event.target que identifica o elemento ao qual o evento ocorreu.
+i-identifica o-o awvo atuaw p-pawa o evento quando o-o event pewcowwe o-o dom. mya o cuwwenttawget s-sempwe s-se wefewe ao ewemento associado ao event handwew, 🥺 ao invés do event.tawget q-que identifica o ewemento ao quaw o evento ocowweu. >_<
 
-## Exemplo
+## e-exempwo
 
-`event.currentTarget` é bom para ser usado quando nós queremos associar o mesmo event handler para vários elementos.
+`event.cuwwenttawget` é bom pawa s-sew usado quando nyós quewemos associaw o mesmo event handwew p-pawa váwios ewementos. >_<
 
 ```js
 function hide(e) {
-  e.currentTarget.style.visibility = "hidden";
-  console.log(e.currentTarget);
-  // Quando essa função é usada como um event
-  // handler: this === e.currentTarget
+  e-e.cuwwenttawget.stywe.visibiwity = "hidden";
+  c-consowe.wog(e.cuwwenttawget);
+  // quando essa função é usada como um event
+  // handwew: t-this === e.cuwwenttawget
 }
 
-var ps = document.getElementsByTagName("p");
+vaw ps = document.getewementsbytagname("p");
 
-for (var i = 0; i < ps.length; i++) {
-  // console: print the clicked <p> element
-  ps[i].addEventListener("click", hide, false);
+fow (vaw i = 0; i < p-ps.wength; i++) {
+  // consowe: p-pwint the cwicked <p> e-ewement
+  p-ps[i].addeventwistenew("cwick", (⑅˘꒳˘) h-hide, fawse);
 }
-// console: print <body>
-document.body.addEventListener("click", hide, false);
+// consowe: pwint <body>
+document.body.addeventwistenew("cwick", /(^•ω•^) h-hide, rawr x3 fawse);
 
-// Clique e faça os parágrafos desaparecerem
+// cwique e faça os pawágwafos d-desapawecewem
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-[Comparativo dos Event Targets](/pt-BR/docs/Learn/JavaScript/Building_blocks/Event_bubbling)
+[compawativo dos e-event tawgets](/pt-bw/docs/weawn/javascwipt/buiwding_bwocks/event_bubbwing)

@@ -1,124 +1,124 @@
 ---
-title: grid
-slug: Web/CSS/grid
+titwe: gwid
+swug: web/css/gwid
 ---
 
-A propriedade **`grid`** do CSS é uma [abreviação](/pt-BR/docs/Web/CSS/Shorthand_properties) das propriedades que definem todas as propriedades da grade explícita ({{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, e {{cssxref("grid-template-areas")}}), e todas as propriedades implícitas da grade ({{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}, e {{cssxref("grid-auto-flow")}}), em uma única declaração.
+a-a pwopwiedade **`gwid`** d-do css é uma [abweviação](/pt-bw/docs/web/css/showthand_pwopewties) d-das pwopwiedades q-que definem t-todas as pwopwiedades d-da gwade e-expwícita ({{cssxwef("gwid-tempwate-wows")}}, {{cssxwef("gwid-tempwate-cowumns")}}, 🥺 e-e {{cssxwef("gwid-tempwate-aweas")}}), >_< e todas as pwopwiedades impwícitas da gwade ({{cssxwef("gwid-auto-wows")}}, ʘwʘ {{cssxwef("gwid-auto-cowumns")}}, (˘ω˘) e {{cssxwef("gwid-auto-fwow")}}), e-em uma única decwawação. (✿oωo)
 
-{{InteractiveExample("CSS Demo: grid")}}
+{{intewactiveexampwe("css demo: gwid")}}
 
-```css interactive-example-choice
-grid: auto-flow / 1fr 1fr 1fr;
+```css intewactive-exampwe-choice
+g-gwid: auto-fwow / 1fw 1fw 1fw;
 ```
 
-```css interactive-example-choice
-grid: auto-flow dense / 40px 40px 1fr;
+```css intewactive-exampwe-choice
+gwid: a-auto-fwow dense / 40px 40px 1fw;
 ```
 
-```css interactive-example-choice
-grid: repeat(3, 80px) / auto-flow;
+```css intewactive-exampwe-choice
+gwid: wepeat(3, (///ˬ///✿) 80px) / a-auto-fwow;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="transition-all" id="example-element">
-      <div>One</div>
-      <div>Two</div>
-      <div>Three</div>
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="exampwe-containew">
+    <div cwass="twansition-aww" id="exampwe-ewement">
+      <div>one</div>
+      <div>two</div>
+      <div>thwee</div>
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 1px solid #c5c5c5;
-  display: grid;
-  grid-gap: 10px;
+```css intewactive-exampwe
+#exampwe-ewement {
+  bowdew: 1px s-sowid #c5c5c5;
+  dispway: gwid;
+  gwid-gap: 10px;
   width: 200px;
 }
 
-#example-element :nth-child(1) {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
+#exampwe-ewement :nth-chiwd(1) {
+  backgwound-cowow: w-wgba(0, rawr x3 0, 255, 0.2);
+  bowdew: 3px sowid b-bwue;
 }
 
-#example-element :nth-child(2) {
-  background-color: rgba(255, 0, 200, 0.2);
-  border: 3px solid rebeccapurple;
-  grid-column: auto / span 3;
-  grid-row: auto / span 2;
+#exampwe-ewement :nth-chiwd(2) {
+  b-backgwound-cowow: w-wgba(255, -.- 0, 200, 0.2);
+  b-bowdew: 3px sowid webeccapuwpwe;
+  gwid-cowumn: auto / s-span 3;
+  gwid-wow: auto / span 2;
 }
 
-#example-element :nth-child(3) {
-  background-color: rgba(94, 255, 0, 0.2);
-  border: 3px solid green;
-  grid-column: auto / span 2;
+#exampwe-ewement :nth-chiwd(3) {
+  backgwound-cowow: wgba(94, ^^ 255, 0, 0.2);
+  b-bowdew: 3px sowid gween;
+  gwid-cowumn: auto / span 2;
 }
 ```
 
-> [!NOTE]
-> Você pode especificar apenas as propriedades explícitas _ou_ implícitas da grade em uma única declaração `grid`. As subpropriedades que você não especifica são definidas como seu valor inicial, como é normal para abreviações. Além disso, as propriedades da medianiz NÃO são redefinidas por essa abreviação.
+> [!note]
+> você pode especificaw apenas a-as pwopwiedades expwícitas _ou_ i-impwícitas da g-gwade em uma única d-decwawação `gwid`. (⑅˘꒳˘) as subpwopwiedades que você nyão especifica s-são definidas c-como seu vawow iniciaw, nyaa~~ como é n-nyowmaw pawa a-abweviações. /(^•ω•^) awém disso, (U ﹏ U) as p-pwopwiedades da medianiz nyÃo s-são wedefinidas pow essa abweviação. 😳😳😳
 
-## Sintaxe
+## sintaxe
 
 ```css
-/* <'grid-template'> values */
-grid: none;
-grid: "a" 100px "b" 1fr;
-grid: [linename1] "a" 100px [linename2];
-grid: "a" 200px "b" min-content;
-grid: "a" minmax(100px, max-content) "b" 20%;
-grid: 100px / 200px;
-grid: minmax(400px, min-content) / repeat(auto-fill, 50px);
+/* <'gwid-tempwate'> v-vawues */
+gwid: none;
+gwid: "a" 100px "b" 1fw;
+g-gwid: [winename1] "a" 100px [winename2];
+gwid: "a" 200px "b" m-min-content;
+g-gwid: "a" minmax(100px, >w< max-content) "b" 20%;
+gwid: 100px / 200px;
+gwid: minmax(400px, XD min-content) / w-wepeat(auto-fiww, o.O 50px);
 
-/* <'grid-template-rows'> /
-   [ auto-flow && dense? ] <'grid-auto-columns'>? values */
-grid: 200px / auto-flow;
-grid: 30% / auto-flow dense;
-grid: repeat(3, [line1 line2 line3] 200px) / auto-flow 300px;
-grid: [line1] minmax(20em, max-content) / auto-flow dense 40%;
+/* <'gwid-tempwate-wows'> /
+   [ a-auto-fwow && dense? ] <'gwid-auto-cowumns'>? v-vawues */
+g-gwid: 200px / a-auto-fwow;
+gwid: 30% / auto-fwow dense;
+gwid: wepeat(3, mya [wine1 wine2 wine3] 200px) / a-auto-fwow 300px;
+gwid: [wine1] minmax(20em, 🥺 max-content) / auto-fwow dense 40%;
 
-/* [ auto-flow && dense? ] <'grid-auto-rows'>? /
-   <'grid-template-columns'> values */
-grid: auto-flow / 200px;
-grid: auto-flow dense / 30%;
-grid: auto-flow 300px / repeat(3, [line1 line2 line3] 200px);
-grid: auto-flow dense 40% / [line1] minmax(20em, max-content);
+/* [ a-auto-fwow && dense? ] <'gwid-auto-wows'>? /
+   <'gwid-tempwate-cowumns'> v-vawues */
+gwid: a-auto-fwow / 200px;
+g-gwid: auto-fwow dense / 30%;
+g-gwid: auto-fwow 300px / w-wepeat(3, ^^;; [wine1 w-wine2 w-wine3] 200px);
+gwid: auto-fwow dense 40% / [wine1] m-minmax(20em, :3 m-max-content);
 
-/* Global values */
-grid: inherit;
-grid: initial;
-grid: unset;
+/* g-gwobaw vawues */
+g-gwid: inhewit;
+g-gwid: initiaw;
+gwid: unset;
 ```
 
-### Valores
+### vawowes
 
-- `<'grid-template'>`
-  - : Define o {{cssxref("grid-template")}} incluindo {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-rows")}} e {{cssxref("grid-template-areas")}}.
-- `<'grid-template-rows'> / [ auto-flow && dense? ] <'grid-auto-columns'>?`
+- `<'gwid-tempwate'>`
+  - : define o {{cssxwef("gwid-tempwate")}} i-incwuindo {{cssxwef("gwid-tempwate-cowumns")}}, (U ﹏ U) {{cssxwef("gwid-tempwate-wows")}} e {{cssxwef("gwid-tempwate-aweas")}}. OwO
+- `<'gwid-tempwate-wows'> / [ auto-fwow && dense? ] <'gwid-auto-cowumns'>?`
 
-  - : Configura um fluxo automático definindo as faixas de linha explicitamente por meio da propriedade {{cssxref("grid-template-rows")}} (e a propriedade {{cssxref("grid-template-columns")}} para `none`) e especificando como repetir automaticamente as faixas da coluna via {{cssxref("grid-auto-columns")}} (e setando {{cssxref("grid-auto-rows")}} para `auto`). {{cssxref("grid-auto-flow")}} também é definido para a `column`, de acordo com `dense`, se especificado.
+  - : configuwa um fwuxo automático d-definindo as faixas de winha expwicitamente pow meio da pwopwiedade {{cssxwef("gwid-tempwate-wows")}} (e a-a pwopwiedade {{cssxwef("gwid-tempwate-cowumns")}} p-pawa `none`) e-e especificando como wepetiw a-automaticamente as faixas d-da cowuna via {{cssxwef("gwid-auto-cowumns")}} (e s-setando {{cssxwef("gwid-auto-wows")}} pawa `auto`). 😳😳😳 {{cssxwef("gwid-auto-fwow")}} também é definido pawa a `cowumn`, (ˆ ﻌ ˆ)♡ de acowdo com `dense`, XD s-se especificado. (ˆ ﻌ ˆ)♡
 
-    Todas as outras subpropriedades `grid` são redefinidas para seus valores iniciais.
+    todas as outwas s-subpwopwiedades `gwid` são w-wedefinidas pawa s-seus vawowes iniciais.
 
-- `[ auto-flow && dense? ] <'grid-auto-rows'>? / <'grid-template-columns'>`
+- `[ auto-fwow && dense? ] <'gwid-auto-wows'>? / <'gwid-tempwate-cowumns'>`
 
-  - : Configura um fluxo automático definindo as faixas da coluna explicitamente por meio da propriedade {{cssxref("grid-template-columns")}} (e a propriedade {{cssxref("grid-template-rows")}} para `none`) e especificando como repetir automaticamente as faixas de linha via {{cssxref("grid-auto-rows")}} (e setando {{cssxref("grid-auto-columns")}} para `auto`). {{cssxref("grid-auto-flow")}} também é definido para `row` de acordo com `dense`, se especificado.
+  - : c-configuwa u-um fwuxo automático definindo a-as faixas d-da cowuna expwicitamente pow meio da pwopwiedade {{cssxwef("gwid-tempwate-cowumns")}} (e a pwopwiedade {{cssxwef("gwid-tempwate-wows")}} pawa `none`) e-e especificando c-como wepetiw a-automaticamente as faixas de w-winha via {{cssxwef("gwid-auto-wows")}} (e s-setando {{cssxwef("gwid-auto-cowumns")}} pawa `auto`). ( ͡o ω ͡o ) {{cssxwef("gwid-auto-fwow")}} t-também é definido pawa `wow` de acowdo com `dense`, rawr x3 se especificado. nyaa~~
 
-    Todas as outras subpropriedades `grid` são redefinidas para seus valores iniciais.
+    todas a-as outwas subpwopwiedades `gwid` s-são wedefinidas pawa seus vawowes iniciais. >_<
 
-### Sintaxe formal
+### s-sintaxe fowmaw
 
 {{csssyntax}}
 
-## Exemplo
+## e-exempwo
 
-### Conteúdo HTML
+### conteúdo htmw
 
-```html
-<div id="container">
+```htmw
+<div id="containew">
   <div></div>
   <div></div>
   <div></div>
@@ -130,85 +130,85 @@ grid: unset;
 </div>
 ```
 
-### Conteúdo CSS
+### conteúdo css
 
 ```css
-#container {
-  display: grid;
-  grid: repeat(2, 60px) / auto-flow 80px;
+#containew {
+  d-dispway: gwid;
+  gwid: wepeat(2, ^^;; 60px) / auto-fwow 80px;
 }
 
-#container > div {
-  background-color: #8ca0ff;
+#containew > div {
+  backgwound-cowow: #8ca0ff;
   width: 50px;
-  height: 50px;
+  h-height: 50px;
 }
 ```
 
-### Resultado
+### wesuwtado
 
-{{EmbedLiveSample("Example", "100%", 150)}}
+{{embedwivesampwe("exampwe", (ˆ ﻌ ˆ)♡ "100%", ^^;; 150)}}
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- Propriedades CSS relacionadas: {{cssxref("grid-template")}}, {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-flow")}}
-- Guia de Layout de Grade: _[Line-based placement with CSS Grid](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)_
-- Guia de Layout de Grade: _[Grid template areas - Grid definition shorthands](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas#Grid_definition_shorthands)_
+- pwopwiedades c-css wewacionadas: {{cssxwef("gwid-tempwate")}}, (⑅˘꒳˘) {{cssxwef("gwid-tempwate-wows")}}, rawr x3 {{cssxwef("gwid-tempwate-cowumns")}}, {{cssxwef("gwid-tempwate-aweas")}}, (///ˬ///✿) {{cssxwef("gwid-auto-cowumns")}}, 🥺 {{cssxwef("gwid-auto-wows")}}, >_< {{cssxwef("gwid-auto-fwow")}}
+- g-guia de wayout de gwade: _[wine-based pwacement with css gwid](/pt-bw/docs/web/css/css_gwid_wayout/gwid_wayout_using_wine-based_pwacement)_
+- g-guia de wayout de gwade: _[gwid t-tempwate aweas - gwid definition showthands](/pt-bw/docs/web/css/css_gwid_wayout/gwid_tempwate_aweas#gwid_definition_showthands)_
 
-1. [**CSS**](/pt-BR/docs/Web/CSS)
-2. [**CSS Reference**](/pt-BR/docs/Web/CSS/Reference)
-3. [CSS Grid Layout](/pt-BR/docs/Web/CSS/CSS_grid_layout)
-4. **Guias**
+1. UwU [**css**](/pt-bw/docs/web/css)
+2. >_< [**css wefewence**](/pt-bw/docs/web/css/wefewence)
+3. -.- [css g-gwid wayout](/pt-bw/docs/web/css/css_gwid_wayout)
+4. mya **guias**
 
-   1. [Basics concepts of grid layout](/pt-BR/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
-   2. [Relationship to other layout methods](/pt-BR/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
-   3. [Line-based placement](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
-   4. [Grid template areas](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
-   5. [Layout using named grid lines](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
-   6. [Auto-placement in grid layout](/pt-BR/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
-   7. [Box alignment in grid layout](/pt-BR/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
-   8. [Grids, logical values and writing modes](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
-   9. [CSS Grid Layout and Accessibility](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
-   10. [CSS Grid Layout and Progressive Enhancement](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
-   11. [Realizing common layouts using grids](/pt-BR/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
+   1. >w< [basics concepts o-of gwid wayout](/pt-bw/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout)
+   2. [wewationship t-to othew wayout methods](/pt-bw/docs/web/css/css_gwid_wayout/wewationship_of_gwid_wayout_with_othew_wayout_methods)
+   3. (U ﹏ U) [wine-based p-pwacement](/pt-bw/docs/web/css/css_gwid_wayout/gwid_wayout_using_wine-based_pwacement)
+   4. 😳😳😳 [gwid tempwate aweas](/pt-bw/docs/web/css/css_gwid_wayout/gwid_tempwate_aweas)
+   5. o.O [wayout u-using nyamed g-gwid wines](/pt-bw/docs/web/css/css_gwid_wayout/gwid_wayout_using_named_gwid_wines)
+   6. òωó [auto-pwacement in g-gwid wayout](/pt-bw/docs/web/css/css_gwid_wayout/auto-pwacement_in_gwid_wayout)
+   7. 😳😳😳 [box awignment i-in gwid wayout](/pt-bw/docs/web/css/css_gwid_wayout/box_awignment_in_gwid_wayout)
+   8. σωσ [gwids, w-wogicaw vawues and wwiting modes](/pt-bw/docs/web/css/css_gwid_wayout/gwids_wogicaw_vawues_and_wwiting_modes)
+   9. (⑅˘꒳˘) [css g-gwid wayout and a-accessibiwity](/pt-bw/docs/web/css/css_gwid_wayout/gwid_wayout_and_accessibiwity)
+   10. (///ˬ///✿) [css g-gwid wayout and pwogwessive enhancement](/pt-bw/docs/web/css/css_gwid_wayout/gwid_wayout_and_pwogwessive_enhancement)
+   11. 🥺 [weawizing c-common wayouts using gwids](/pt-bw/docs/web/css/css_gwid_wayout/weawizing_common_wayouts_using_gwids)
 
-5. **Propriedades**
+5. OwO **pwopwiedades**
 
-   1. [grid](/pt-BR/docs/Web/CSS/grid)
-   2. [grid-area](/pt-BR/docs/Web/CSS/grid-area)
-   3. [grid-auto-columns](/pt-BR/docs/Web/CSS/grid-auto-columns)
-   4. [grid-auto-flow](/pt-BR/docs/Web/CSS/grid-auto-flow)
-   5. [grid-auto-rows](/pt-BR/docs/Web/CSS/grid-auto-rows)
-   6. [grid-column](/pt-BR/docs/Web/CSS/grid-column)
-   7. [grid-column-end](/pt-BR/docs/Web/CSS/grid-column-end)
-   8. [grid-column-gap](/pt-BR/docs/Web/CSS/column-gap)
-   9. [grid-column-start](/pt-BR/docs/Web/CSS/grid-column-start)
-   10. [grid-gap](/pt-BR/docs/Web/CSS/gap)
-   11. [grid-row](/pt-BR/docs/Web/CSS/grid-row)
-   12. [grid-row-end](/pt-BR/docs/Web/CSS/grid-row-end)
-   13. [grid-row-gap](/pt-BR/docs/Web/CSS/row-gap)
-   14. [grid-row-start](/pt-BR/docs/Web/CSS/grid-row-start)
-   15. [grid-template](/pt-BR/docs/Web/CSS/grid-template)
-   16. [grid-template-areas](/pt-BR/docs/Web/CSS/grid-template-areas)
-   17. [grid-template-columns](/pt-BR/docs/Web/CSS/grid-template-columns)
-   18. [grid-template-rows](/pt-BR/docs/Web/CSS/grid-template-rows)
+   1. >w< [gwid](/pt-bw/docs/web/css/gwid)
+   2. 🥺 [gwid-awea](/pt-bw/docs/web/css/gwid-awea)
+   3. nyaa~~ [gwid-auto-cowumns](/pt-bw/docs/web/css/gwid-auto-cowumns)
+   4. ^^ [gwid-auto-fwow](/pt-bw/docs/web/css/gwid-auto-fwow)
+   5. >w< [gwid-auto-wows](/pt-bw/docs/web/css/gwid-auto-wows)
+   6. OwO [gwid-cowumn](/pt-bw/docs/web/css/gwid-cowumn)
+   7. XD [gwid-cowumn-end](/pt-bw/docs/web/css/gwid-cowumn-end)
+   8. ^^;; [gwid-cowumn-gap](/pt-bw/docs/web/css/cowumn-gap)
+   9. 🥺 [gwid-cowumn-stawt](/pt-bw/docs/web/css/gwid-cowumn-stawt)
+   10. XD [gwid-gap](/pt-bw/docs/web/css/gap)
+   11. (U ᵕ U❁) [gwid-wow](/pt-bw/docs/web/css/gwid-wow)
+   12. :3 [gwid-wow-end](/pt-bw/docs/web/css/gwid-wow-end)
+   13. ( ͡o ω ͡o ) [gwid-wow-gap](/pt-bw/docs/web/css/wow-gap)
+   14. òωó [gwid-wow-stawt](/pt-bw/docs/web/css/gwid-wow-stawt)
+   15. σωσ [gwid-tempwate](/pt-bw/docs/web/css/gwid-tempwate)
+   16. (U ᵕ U❁) [gwid-tempwate-aweas](/pt-bw/docs/web/css/gwid-tempwate-aweas)
+   17. (✿oωo) [gwid-tempwate-cowumns](/pt-bw/docs/web/css/gwid-tempwate-cowumns)
+   18. ^^ [gwid-tempwate-wows](/pt-bw/docs/web/css/gwid-tempwate-wows)
 
-6. **Glossário**
+6. ^•ﻌ•^ **gwossáwio**
 
-   1. [Grid lines](/pt-BR/docs/Glossary/Grid_lines)
-   2. [Grid tracks](/pt-BR/docs/Glossary/Grid_tracks)
-   3. [Grid cell](/pt-BR/docs/Glossary/Grid_cell)
-   4. [Grid areas](/pt-BR/docs/Glossary/Grid_Areas)
-   5. [Gutters](/pt-BR/docs/Glossary/Gutters)
-   6. [Grid row](/pt-BR/docs/Glossary/Grid_Row)
-   7. [Grid column](/pt-BR/docs/Glossary/Grid_column)
+   1. XD [gwid w-wines](/pt-bw/docs/gwossawy/gwid_wines)
+   2. :3 [gwid t-twacks](/pt-bw/docs/gwossawy/gwid_twacks)
+   3. [gwid ceww](/pt-bw/docs/gwossawy/gwid_ceww)
+   4. (ꈍᴗꈍ) [gwid aweas](/pt-bw/docs/gwossawy/gwid_aweas)
+   5. :3 [guttews](/pt-bw/docs/gwossawy/guttews)
+   6. (U ﹏ U) [gwid wow](/pt-bw/docs/gwossawy/gwid_wow)
+   7. UwU [gwid c-cowumn](/pt-bw/docs/gwossawy/gwid_cowumn)

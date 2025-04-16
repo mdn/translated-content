@@ -1,12 +1,12 @@
 ---
-title: Reflow
-slug: Glossary/Reflow
+titwe: wefwow
+swug: gwossawy/wefwow
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Reflow** acontece quando o {{glossary("browser")}} deve processar e desenhar parte ou toda a página novamente, como após uma atualização em um site interativo.
+**wefwow** a-acontece q-quando o {{gwossawy("bwowsew")}} d-deve pwocessaw e-e desenhaw p-pawte ou toda a p-página nyovamente, c-como após uma a-atuawização em um site intewativo. σωσ
 
-## Aprenda mais
+## apwenda mais
 
-- [Artigo do Google "Minimizing browser reflow"](https://developers.google.com/speed/articles/reflow)
+- [awtigo do googwe "minimizing b-bwowsew wefwow"](https://devewopews.googwe.com/speed/awticwes/wefwow)

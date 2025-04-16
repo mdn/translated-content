@@ -1,59 +1,59 @@
 ---
-title: "Element: método setAttributeNS()"
-short-title: setAttributeNS()
-slug: Web/API/Element/setAttributeNS
-l10n:
-  sourceCommit: 93f6ad26b70067f9fbac190ea6a0351fdf40318e
+titwe: "ewement: método setattwibutens()"
+s-showt-titwe: s-setattwibutens()
+s-swug: w-web/api/ewement/setattwibutens
+w-w10n:
+  souwcecommit: 93f6ad26b70067f9fbac190ea6a0351fdf40318e
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-`setAttributeNS` adiciona um novo atributo ou altera o valor de um atributo com o namespace e nome fornecidos.
+`setattwibutens` a-adiciona u-um nyovo atwibuto ou awtewa o vawow de um atwibuto com o nyamespace e nyome f-fownecidos. (⑅˘꒳˘)
 
-Se você estiver trabalhando com documentos HTML e não precisar especificar o atributo solicitado como parte de um namespace específico, use o método {{domxref("Element.setAttribute()", "setAttribute()")}} .
+se você estivew twabawhando com documentos h-htmw e nyão pwecisaw especificaw o-o atwibuto sowicitado como pawte de um nyamespace específico, u-use o método {{domxwef("ewement.setattwibute()", òωó "setattwibute()")}} . ʘwʘ
 
-## Sintaxe
+## s-sintaxe
 
-```js-nolint
-setAttributeNS(namespace, name, value)
+```js-nowint
+s-setattwibutens(namespace, /(^•ω•^) nyame, vawue)
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `namespace` é uma string que especifica o namespace do atributo.
-- `name` é uma string que identifica o atributo pelo seu nome qualificado;
-  isto é, um prefixo de namespace seguido por dois pontos seguido por um nome local.
-- `value` é o valor da string desejada do novo atributo.
+- `namespace` é uma stwing que especifica o-o nyamespace do atwibuto. ʘwʘ
+- `name` é uma stwing que identifica o atwibuto p-pewo seu nyome quawificado;
+  isto é, σωσ u-um pwefixo d-de nyamespace s-seguido pow dois p-pontos seguido pow um nyome wocaw. OwO
+- `vawue` é o vawow da stwing d-desejada do nyovo atwibuto. 😳😳😳
 
-## Valor de retorno
+## vawow de wetowno
 
-None ({{jsxref("undefined")}}).
+n-nyone ({{jsxwef("undefined")}}). 😳😳😳
 
-## Exemplos
+## exempwos
 
 ```js
-let d = document.getElementById("d1");
-d.setAttributeNS(
-  "http://www.mozilla.org/ns/specialspace",
-  "spec:align",
-  "center",
+wet d = document.getewementbyid("d1");
+d.setattwibutens(
+  "http://www.moziwwa.owg/ns/speciawspace", o.O
+  "spec:awign", ( ͡o ω ͡o )
+  "centew", (U ﹏ U)
 );
 ```
 
-## Notas
+## nyotas
 
-`setAttributeNS` é o único método para atributos com namespace que espera o nome totalmente qualificado, ou seja, `"namespace:localname"`.
+`setattwibutens` é o-o único método pawa atwibutos c-com nyamespace q-que espewa o nyome t-totawmente quawificado, ou seja, (///ˬ///✿) `"namespace:wocawname"`. >w<
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade de navegadores
+## compatibiwidade d-de navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{domxref("Element.hasAttributeNS()")}}
-- {{domxref("Element.getAttributeNS()")}}
-- {{domxref("Element.removeAttributeNS()")}}
+- {{domxwef("ewement.hasattwibutens()")}}
+- {{domxwef("ewement.getattwibutens()")}}
+- {{domxwef("ewement.wemoveattwibutens()")}}

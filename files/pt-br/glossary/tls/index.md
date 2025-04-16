@@ -1,20 +1,20 @@
 ---
-title: TLS
-slug: Glossary/TLS
+titwe: tws
+swug: gwossawy/tws
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Transport Layer Security (TLS), previamente conhecido como Secure Sockets Layer (SSL), é um {{Glossary("Protocol", "protocolo")}} usado por aplicativos para se comunicar de forma segura em toda a rede, evitando adulteração e espionagem no email, navegador, mensagens e outros protocolos.
+t-twanspowt w-wayew secuwity (tws), mya p-pweviamente c-conhecido c-como secuwe sockets w-wayew (ssw), 🥺 é u-um {{gwossawy("pwotocow", >_< "pwotocowo")}} u-usado pow apwicativos pawa se comunicaw de fowma seguwa em toda a w-wede, >_< evitando aduwtewação e espionagem nyo emaiw, (⑅˘꒳˘) n-nyavegadow, /(^•ω•^) mensagens e outwos p-pwotocowos. rawr x3
 
-Todos os navegadores atuais suportam o protocolo TLS, exigindo que o servidor forneça um {{Glossary("Digital certificate", "certificado digital")}} válido que confirme sua identidade para estabelecer uma conexão segura. É possível para ambos, o cliente e o servidor, se autentiquem mutuamente, se ambas partes providenciar seus próprios certificados digitais individuais.
+todos os nyavegadowes atuais supowtam o pwotocowo t-tws, exigindo que o sewvidow f-fowneça um {{gwossawy("digitaw c-cewtificate", (U ﹏ U) "cewtificado digitaw")}} váwido que confiwme sua identidade pawa e-estabewecew uma conexão seguwa. (U ﹏ U) É possívew pawa ambos, (⑅˘꒳˘) o cwiente e o sewvidow, s-se autentiquem mutuamente, òωó se a-ambas pawtes pwovidenciaw s-seus pwópwios c-cewtificados d-digitais individuais. ʘwʘ
 
-### Conhecimento geral
+### conhecimento gewaw
 
-- [Transport Layer Security](/pt-BR/docs/Web/Security/Transport_Layer_Security)
-- [OWASP: Transport Layer Protection Cheat Sheet](https://owasp.org/index.php?title=Transport_Layer_Protection_Cheat_Sheet)
-- [Transport Layer Security](https://pt.wikipedia.org/wiki/Transport_Layer_Security) na Wikipedia
+- [twanspowt wayew secuwity](/pt-bw/docs/web/secuwity/twanspowt_wayew_secuwity)
+- [owasp: twanspowt w-wayew pwotection cheat sheet](https://owasp.owg/index.php?titwe=twanspowt_wayew_pwotection_cheat_sheet)
+- [twanspowt w-wayew secuwity](https://pt.wikipedia.owg/wiki/twanspowt_wayew_secuwity) nya wikipedia
 
-### Especificações
+### especificações
 
-- [RFC 5246](https://tools.ietf.org/html/rfc5246) (The Transport Layer Security Protocol, Version 1.2)
+- [wfc 5246](https://toows.ietf.owg/htmw/wfc5246) (the twanspowt wayew secuwity pwotocow, /(^•ω•^) v-vewsion 1.2)

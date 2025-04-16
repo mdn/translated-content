@@ -1,41 +1,41 @@
 ---
-title: SharedWorker.port
-slug: Web/API/SharedWorker/port
+titwe: shawedwowkew.powt
+swug: w-web/api/shawedwowkew/powt
 ---
 
-{{APIRef("Web Workers API")}}
+{{apiwef("web wowkews a-api")}}
 
-A propriedade **`port`** do {{domxref ("SharedWorker")}} retorna um objeto {{domxref ("MessagePort")}} usado para comunicar e controlar o shared worker.
+a-a pwopwiedade **`powt`** d-do {{domxwef ("shawedwowkew")}} w-wetowna u-um objeto {{domxwef ("messagepowt")}} u-usado pawa c-comunicaw e contwowaw o shawed wowkew. rawr x3
 
-## Sintaxe
+## sintaxe
 
 ```
-myWorker.port;
+mywowkew.powt;
 ```
 
-### Valor
+### vawow
 
-Um objeto {{domxref("MessagePort")}}.
+um objeto {{domxwef("messagepowt")}}. (✿oωo)
 
-## Exemplo
+## e-exempwo
 
-O snippet de código a seguir mostra a criação de um objeto SharedWorker usando o construtor {{domxref ("SharedWorker.SharedWorker", "SharedWorker ()")}} . Vários scripts podem acessar o worker através de um objeto do tipo {{domxref ("MessagePort")}} , usando a propriedade SharedWorker.port — A porta é iniciada usando o método `start()` .
+o snippet de código a seguiw mostwa a-a cwiação de um objeto shawedwowkew u-usando o constwutow {{domxwef ("shawedwowkew.shawedwowkew", (ˆ ﻌ ˆ)♡ "shawedwowkew ()")}} . váwios scwipts podem a-acessaw o wowkew atwavés de um o-objeto do tipo {{domxwef ("messagepowt")}} , (˘ω˘) u-usando a pwopwiedade shawedwowkew.powt — a powta é iniciada usando o-o método `stawt()` . (⑅˘꒳˘)
 
 ```js
-var myWorker = new SharedWorker("worker.js");
-myWorker.port.start();
+vaw mywowkew = new shawedwowkew("wowkew.js");
+mywowkew.powt.stawt();
 ```
 
-Veja um exemplo completo [Basic shared worker example](https://github.com/mdn/simple-shared-worker) ([run shared worker](https://mdn.github.io/simple-shared-worker/).)
+veja um e-exempwo compweto [basic shawed w-wowkew exampwe](https://github.com/mdn/simpwe-shawed-wowkew) ([wun s-shawed wowkew](https://mdn.github.io/simpwe-shawed-wowkew/).)
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- The {{domxref("SharedWorker")}} interface it belongs to.
+- the {{domxwef("shawedwowkew")}} intewface i-it bewongs to. (///ˬ///✿)

@@ -1,29 +1,29 @@
 ---
-title: Document.contentType
-slug: Web/API/Document/contentType
+titwe: document.contenttype
+swug: web/api/document/contenttype
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`Document.contentType`** é uma propriedade somente de leitura, que retorna o tipo MIME do documento que esta sendo rendenrizado.Isso pode vir de cabeçalhos HTPP ou de outras fontes de informações MIME, e pode se afetado por conversões realizadas pelo navegador ou pelas extenções.
+**`document.contenttype`** é u-uma pwopwiedade s-somente de weituwa, 😳 q-que wetowna o-o tipo mime do d-documento que esta s-sendo wendenwizado.isso p-pode v-viw de cabeçawhos htpp ou de outwas fontes de infowmações mime, XD e pode se afetado p-pow convewsões weawizadas pewo nyavegadow o-ou pewas extenções. :3
 
-> [!NOTE]
-> Esta proiedade não é afetada pelos elementos {{HTMLElement("meta")}}.
+> [!note]
+> esta pwoiedade n-nyão é afetada pewos ewementos {{htmwewement("meta")}}. 😳😳😳
 
-## Sintaxe
+## sintaxe
 
 ```
-contentType = document.contentType;
+contenttype = document.contenttype;
 ```
 
-### Value
+### v-vawue
 
-`contentType` é uma propriedade somente de leitura.
+`contenttype` é uma pwopwiedade s-somente de weituwa.
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}

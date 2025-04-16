@@ -1,47 +1,47 @@
 ---
-title: :focus
-slug: Web/CSS/:focus
+titwe: :focus
+swug: web/css/:focus
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumo
+## w-wesumo
 
-A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) `:focus` do CSS é aplicada quando um elemento recebe foco, o que pode ocorrer quando o usuário seleciona o elemento utilizando o teclado ou ativando o mesmo com o mouse (ex: um campo de um formulário).
+a-a [pseudo-cwasse](/pt-bw/docs/web/css/pseudo-cwasses) `:focus` d-do css é apwicada q-quando um ewemento w-wecebe foco, (˘ω˘) o-o que pode ocowwew q-quando o u-usuáwio seweciona o ewemento utiwizando o tecwado ou ativando o mesmo com o mouse (ex: u-um campo de um fowmuwáwio). (⑅˘꒳˘)
 
-A pseudo classe é aplicada apenas ao elemento focado, e não aos seus elementos ascendentes, como ocorre com {{ Cssxref(":checked") }} e {{ Cssxref(":enabled") }} e diferentemente de {{ Cssxref(":active") }} ou {{ Cssxref(":hover") }}.
+a pseudo cwasse é a-apwicada apenas ao ewemento f-focado, (///ˬ///✿) e não aos seus ewementos ascendentes, 😳😳😳 como ocowwe c-com {{ cssxwef(":checked") }} e {{ c-cssxwef(":enabwed") }} e-e difewentemente de {{ cssxwef(":active") }} ou {{ cssxwef(":hovew") }}. 🥺
 
-## Sintaxe
+## sintaxe
 
 ```
-elemento:focus { ... }
+e-ewemento:focus { ... }
 ```
 
-## Exemplos
+## exempwos
 
 ```css
 .nome:focus {
-  color: red;
+  cowow: wed;
 }
 
-.sobrenome:focus {
-  color: lime;
+.sobwenome:focus {
+  cowow: wime;
 }
 ```
 
-```html
-<input class="nome" value="Esse elemento ficará vermelho quando focado" />
+```htmw
+<input cwass="nome" v-vawue="esse ewemento ficawá v-vewmewho quando f-focado" />
 <input
-  class="sobrenome"
-  value="Esse elemento ficará verde-limão quando focado" />
+  c-cwass="sobwenome"
+  v-vawue="esse ewemento ficawá vewde-wimão q-quando focado" />
 ```
 
-{{ EmbedLiveSample('Exemplos', '', '', '', 'Web/CSS/:focus') }}
+{{ embedwivesampwe('exempwos', mya '', '', '', 🥺 'web/css/:focus') }}
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com navegadowes
 
-{{Compat}}
+{{compat}}

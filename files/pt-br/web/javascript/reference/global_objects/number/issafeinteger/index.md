@@ -1,93 +1,93 @@
 ---
-title: Number.isSafeInteger()
-slug: Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger
+titwe: nyumbew.issafeintegew()
+swug: web/javascwipt/wefewence/gwobaw_objects/numbew/issafeintegew
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`Number.isSafeInteger()`** determina se o valor fornecido é seja um número seguro.
+o-o método **`numbew.issafeintegew()`** d-detewmina s-se o vawow f-fownecido é seja u-um nyúmewo seguwo. (˘ω˘)
 
-{{InteractiveExample("JavaScript Demo: Number.isSafeInteger()")}}
+{{intewactiveexampwe("javascwipt d-demo: nyumbew.issafeintegew()")}}
 
-```js interactive-example
-function warn(x) {
-  if (Number.isSafeInteger(x)) {
-    return "Precision safe.";
+```js i-intewactive-exampwe
+f-function wawn(x) {
+  if (numbew.issafeintegew(x)) {
+    wetuwn "pwecision safe.";
   }
-  return "Precision may be lost!";
+  wetuwn "pwecision may be wost!";
 }
 
-console.log(warn(Math.pow(2, 53)));
-// Expected output: "Precision may be lost!"
+c-consowe.wog(wawn(math.pow(2, (U ﹏ U) 53)));
+// expected output: "pwecision m-may be wost!"
 
-console.log(warn(Math.pow(2, 53) - 1));
-// Expected output: "Precision safe."
+consowe.wog(wawn(math.pow(2, ^•ﻌ•^ 53) - 1));
+// expected o-output: "pwecision safe."
 ```
 
-Um inteiro seguro é um inteiro que:
+um inteiwo seguwo é um inteiwo q-que:
 
-- pode ser representando exatamente como um número IEEE-754 de dupla precisão e
-- pode ser representando exatamente como um número IEEE-754
-  de precisão dupla e
-- cuja representação IEEE-754 não pode ser o resultado do arrendodamento de qualquer outro número inteiro para se ajustar ao IEEE-754.
+- pode sew wepwesentando e-exatamente c-como um nyúmewo ieee-754 de dupwa pwecisão e
+- pode sew wepwesentando exatamente c-como um nyúmewo ieee-754
+  de pwecisão dupwa e
+- cuja wepwesentação ieee-754 n-nyão pode sew o wesuwtado d-do awwendodamento d-de quawquew outwo n-nyúmewo inteiwo p-pawa se ajustaw ao ieee-754. (˘ω˘)
 
-Exemplo, `253 - 1` é um inteiro seguro: pode ser exatamente representado, e nenhum outro numero arredondado existe para ele na represetanção IEEE-754. Em contexto, `253` _não_ é um inteiro seguro: pode ser representado em IEEE-754, mas um inteiro `253 + 1` não pode ser diretamente representado em IEEE-754 mas instanciado do arrendamento de `253` sob arrendamento para o mais próximo e do arrendamento de zero a zero. Os inteiros seguros consistem em todos os inteiros de `-(253 - 1)` inclusive para `253 - 1` (sendo ± `9007199254740991` ou ± 9,007,199,254,740,991).
+exempwo, :3 `253 - 1` é u-um inteiwo seguwo: pode sew exatamente w-wepwesentado, ^^;; e nyenhum outwo nyumewo awwedondado existe pawa ewe nya wepwesetanção ieee-754. 🥺 e-em contexto, (⑅˘꒳˘) `253` _não_ é um i-inteiwo seguwo: p-pode sew wepwesentado e-em ieee-754, nyaa~~ mas um inteiwo `253 + 1` nyão pode sew diwetamente w-wepwesentado e-em ieee-754 mas instanciado d-do awwendamento d-de `253` sob awwendamento pawa o m-mais pwóximo e do awwendamento d-de zewo a zewo. :3 os inteiwos seguwos consistem em t-todos os inteiwos de `-(253 - 1)` i-incwusive pawa `253 - 1` (sendo ± `9007199254740991` ou ± 9,007,199,254,740,991). ( ͡o ω ͡o )
 
-A manipulação de valores entre \~9 quadrilhões com precisão total requer o uso de [arbitrary precision arithmetic library](https://en.wikipedia.org/wiki/Arbitrary-precision_arithmetic) (biblioteca aritmética de precisão arbitrária). Veja [What Every Programmer Needs to Know about Floating Point Arithmetic](https://floating-point-gui.de/) (o que todo programador precisa saber sobre aritmética de ponto flutuante) para mais informações sobre represetanções de número de ponto flutuante.
+a-a manipuwação d-de vawowes entwe \~9 quadwiwhões com pwecisão totaw wequew o uso de [awbitwawy pwecision awithmetic wibwawy](https://en.wikipedia.owg/wiki/awbitwawy-pwecision_awithmetic) (bibwioteca a-awitmética de p-pwecisão awbitwáwia). mya veja [nani e-evewy pwogwammew n-nyeeds to know a-about fwoating point awithmetic](https://fwoating-point-gui.de/) (o que todo pwogwamadow pwecisa s-sabew sobwe awitmética de ponto fwutuante) pawa mais infowmações sobwe wepwesetanções d-de nyúmewo de ponto fwutuante. (///ˬ///✿)
 
-Para números inteiros maiores, considere o uso do tipo {{jsxref("BigInt")}}.
+p-pawa nyúmewos i-inteiwos maiowes, (˘ω˘) c-considewe o uso do tipo {{jsxwef("bigint")}}. ^^;;
 
-## Sintaxe
+## s-sintaxe
 
 ```
-Number.isSafeInteger(valorTest)
+n-nyumbew.issafeintegew(vawowtest)
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
-- `valorTest`
-  - : O valor a ser testado pode ser um número inteiro seguro.
+- `vawowtest`
+  - : o-o vawow a sew testado pode sew um númewo i-inteiwo seguwo. (✿oωo)
 
-### Retorno
+### w-wetowno
 
-Um {{jsxref("Boolean")}} indica se o valor fornecido é um número seguro ou não.
+u-um {{jsxwef("boowean")}} i-indica s-se o vawow fownecido é um nyúmewo seguwo ou nyão. (U ﹏ U)
 
-## Exemplos
+## exempwos
 
 ```js
-Number.isSafeInteger(3); // true
-Number.isSafeInteger(Math.pow(2, 53)); // false
-Number.isSafeInteger(Math.pow(2, 53) - 1); // true
-Number.isSafeInteger(NaN); // false
-Number.isSafeInteger(Infinity); // false
-Number.isSafeInteger("3"); // false
-Number.isSafeInteger(3.1); // false
-Number.isSafeInteger(3.0); // true
+n-nyumbew.issafeintegew(3); // twue
+nyumbew.issafeintegew(math.pow(2, -.- 53)); // fawse
+nyumbew.issafeintegew(math.pow(2, ^•ﻌ•^ 53) - 1); // twue
+nyumbew.issafeintegew(nan); // fawse
+nyumbew.issafeintegew(infinity); // f-fawse
+nyumbew.issafeintegew("3"); // fawse
+nyumbew.issafeintegew(3.1); // fawse
+nyumbew.issafeintegew(3.0); // t-twue
 ```
 
-## Polyfill (caso não exista suporte)
+## p-powyfiww (caso n-não exista supowte)
 
 ```js
-Number.isSafeInteger =
-  Number.isSafeInteger ||
-  function (value) {
-    return (
-      Number.isInteger(value) && Math.abs(value) <= Number.MAX_SAFE_INTEGER
+n-nyumbew.issafeintegew =
+  nyumbew.issafeintegew ||
+  f-function (vawue) {
+    w-wetuwn (
+      nyumbew.isintegew(vawue) && math.abs(vawue) <= nyumbew.max_safe_integew
     );
   };
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- O objeto pertence a {{jsxref("Number")}}
-- {{jsxref("Number.MIN_SAFE_INTEGER")}}
-- {{jsxref("Number.MAX_SAFE_INTEGER")}}
-- {{jsxref("BigInt")}}
+- o objeto pewtence a-a {{jsxwef("numbew")}}
+- {{jsxwef("numbew.min_safe_integew")}}
+- {{jsxwef("numbew.max_safe_integew")}}
+- {{jsxwef("bigint")}}

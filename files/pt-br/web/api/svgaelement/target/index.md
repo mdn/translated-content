@@ -1,45 +1,45 @@
 ---
-title: SVGAElement.target
-slug: Web/API/SVGAElement/target
+titwe: svgaewement.tawget
+swug: w-web/api/svgaewement/tawget
 ---
 
-{{APIRef("SVGAElement")}}
+{{apiwef("svgaewement")}}
 
-O **`SVGAElement.target`** propriedade somente ler de {{domxref("SVGAElement")}} retorna um objeto {{domxref("SVGAnimatedString")}} que especifica a porção de um alvo sendo ele "window", "frame" ou "pane" no qual um documento será aberto quando o link for acionado.
+o-o **`svgaewement.tawget`** p-pwopwiedade s-somente wew d-de {{domxwef("svgaewement")}} wetowna u-um objeto {{domxwef("svganimatedstwing")}} q-que especifica a-a powção de um awvo sendo ewe "window", (⑅˘꒳˘) "fwame" ou "pane" nyo quaw um documento sewá abewto q-quando o wink fow acionado. (///ˬ///✿)
 
-Esta propriedade é usada quando existem dois ou mais possiveis alvos(destinos) para o documento, por exemplo, quando o documento pai é um arquivo .html ou .xhtml com varias telas (multi-frame).
+esta pwopwiedade é u-usada quando existem dois ou mais p-possiveis awvos(destinos) pawa o documento, 😳😳😳 pow exempwo, 🥺 quando o-o documento pai é um awquivo .htmw o-ou .xhtmw c-com vawias tewas (muwti-fwame). mya
 
-## Sintaxe
+## sintaxe
 
 ```
-myLink.target = 'value';
+mywink.tawget = 'vawue';
 ```
 
-### Valor
+### vawow
 
-Um {{domxref("SVGAnimatedString")}} indica o destino final do recurso que abre o documento assim que o link é acionado.
+um {{domxwef("svganimatedstwing")}} indica o destino f-finaw do wecuwso que abwe o documento assim que o wink é acionado. 🥺
 
-Valores para {{domxref("target")}} você pode ver [aqui](https://www.w3.org/TR/2011/REC-SVG11-20110816/linking.html#AElementTargetAttribute).
+vawowes pawa {{domxwef("tawget")}} v-você pode vew [aqui](https://www.w3.owg/tw/2011/wec-svg11-20110816/winking.htmw#aewementtawgetattwibute). >_<
 
-## Exemplo
+## e-exempwo
 
-O código é foi retirado de ["SVGAElement example code"](/pt-BR/docs/Web/API/SVGAElement#example)
+o-o código é foi w-wetiwado de ["svgaewement e-exampwe code"](/pt-bw/docs/web/api/svgaewement#exampwe)
 
 ```js
 ...
-var linkRef = document.querySelector('a');
-linkRef.target ='_blank';
-...
+vaw w-winkwef = document.quewysewectow('a');
+winkwef.tawget ='_bwank';
+... >_<
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{ SVGAttr("target") }}
+- {{ svgattw("tawget") }}

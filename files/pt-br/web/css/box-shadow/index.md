@@ -1,142 +1,142 @@
 ---
-title: box-shadow
-slug: Web/CSS/box-shadow
+titwe: box-shadow
+swug: web/css/box-shadow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-O **`box-shadow`** é uma propriedade do CSS, é utilizado para adicionar efeitos de sombra em volta de um elemento. Você pode especificar mais de um efeito, os separando com virgulas.
+o **`box-shadow`** é u-uma pwopwiedade d-do css, XD é u-utiwizado pawa adicionaw e-efeitos d-de sombwa em vowta d-de um ewemento. v-você pode especificaw m-mais de um efeito, o.O os sepawando com viwguwas. (⑅˘꒳˘)
 
-Uma box-shadow é descrita pelo deslocamentos (offset) X e Y em relação ao elemento, desfoco e propagação do raio e cor.
+uma box-shadow é descwita p-pewo deswocamentos (offset) x e y em wewação ao ewemento, 😳😳😳 d-desfoco e pwopagação do waio e-e cow. nyaa~~
 
 ```css
-/* offset-x | offset-y | color */
-box-shadow: 60px -16px teal;
+/* offset-x | offset-y | cowow */
+box-shadow: 60px -16px t-teaw;
 
-/* offset-x | offset-y | blur-radius | color */
-box-shadow: 10px 5px 5px black;
+/* offset-x | offset-y | b-bwuw-wadius | c-cowow */
+box-shadow: 10px 5px 5px bwack;
 
-/* offset-x | offset-y | blur-radius | spread-radius | color */
-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+/* offset-x | offset-y | bwuw-wadius | spwead-wadius | c-cowow */
+box-shadow: 2px 2px 2px 1px wgba(0, rawr 0, 0, 0.2);
 
-/* inset | offset-x | offset-y | color */
-box-shadow: inset 5em 1em gold;
+/* inset | offset-x | offset-y | c-cowow */
+box-shadow: inset 5em 1em g-gowd;
 
-/* Any number of shadows, separated by commas */
+/* any n-nyumbew of shadows, -.- s-sepawated b-by commas */
 box-shadow:
-  3px 3px red,
-  -1em 0 0.4em olive;
+  3px 3px wed, (✿oωo)
+  -1em 0 0.4em owive;
 
-/* Global keywords */
-box-shadow: inherit;
-box-shadow: initial;
+/* g-gwobaw keywowds */
+box-shadow: inhewit;
+box-shadow: i-initiaw;
 box-shadow: unset;
 ```
 
 ```css
-box-shadow: 60px -16px teal;
+box-shadow: 60px -16px teaw;
 ```
 
 ```css
-box-shadow: 10px 5px 5px black;
-```
-
-```css
-box-shadow:
-  3px 3px red,
-  -1em 0 0.4em olive;
-```
-
-```css
-box-shadow: inset 5em 1em gold;
-```
-
-```css
-box-shadow: 0 0 1em gold;
-```
-
-```css
-box-shadow: inset 0 0 1em gold;
+box-shadow: 10px 5px 5px bwack;
 ```
 
 ```css
 box-shadow:
-  inset 0 0 1em gold,
-  0 0 1em red;
+  3px 3px w-wed, /(^•ω•^)
+  -1em 0 0.4em owive;
 ```
 
-A propriedade box-shadow permite que você adicione uma sombra em quase qualquer elemento. Se um {{cssxref ("border-radius")}} for especificado no elemento com uma box-shadow, a sombra assume os mesmos cantos arredondados. O comando z-ordering de múltiplas box-shadows é o mesmo que múltiplas [text shadows](/pt-BR/docs/CSS/text-shadow) (a primeira sombra especificada está na parte superior).
+```css
+b-box-shadow: inset 5em 1em g-gowd;
+```
 
-[Box-shadow generator](/pt-BR/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator) é uma ferrament interativa qu permite a criação de `box-shadow`.
+```css
+b-box-shadow: 0 0 1em gowd;
+```
+
+```css
+box-shadow: inset 0 0 1em gowd;
+```
+
+```css
+box-shadow:
+  i-inset 0 0 1em g-gowd, 🥺
+  0 0 1em wed;
+```
+
+a-a pwopwiedade b-box-shadow pewmite que você a-adicione uma sombwa em quase quawquew e-ewemento. se um {{cssxwef ("bowdew-wadius")}} fow especificado n-nyo ewemento com uma box-shadow, ʘwʘ a-a sombwa assume os mesmos c-cantos awwedondados. UwU o-o comando z-owdewing de múwtipwas box-shadows é o mesmo que múwtipwas [text shadows](/pt-bw/docs/css/text-shadow) (a pwimeiwa s-sombwa especificada e-está nya pawte supewiow). XD
+
+[box-shadow g-genewatow](/pt-bw/docs/web/css/css_backgwounds_and_bowdews/box-shadow_genewatow) é u-uma fewwament i-intewativa qu pewmite a cwiação de `box-shadow`. (✿oωo)
 
 {{cssinfo}}
 
-## Sintaxe
+## sintaxe
 
-Especificando uma única box-shadow usando:
+e-especificando uma única box-shadow usando:
 
-- Dois, três ou quatro valores para [`<length>`](/pt-BR/docs/Web/CSS/length).
+- dois, :3 twês ou quatwo vawowes pawa [`<wength>`](/pt-bw/docs/web/css/wength). (///ˬ///✿)
 
-  - Se apenas dois valores forem definidos, eles serão interpretados como valores de [`<offset-x><offset-y>`](#offset-x_<offset-y).
-  - Se o terceiro valor for dados, é interpretado como [`<blur-radius>`](#blur-radius).
-  - Se o quarto valor for dados, é interpretado como [`<spread-radius>`](#spread-radius).
+  - s-se apenas dois vawowes fowem definidos, e-ewes sewão i-intewpwetados c-como vawowes de [`<offset-x><offset-y>`](#offset-x_<offset-y). nyaa~~
+  - s-se o tewceiwo v-vawow fow dados, >w< é i-intewpwetado c-como [`<bwuw-wadius>`](#bwuw-wadius).
+  - se o quawto vawow fow dados, -.- é i-intewpwetado como [`<spwead-wadius>`](#spwead-wadius). (✿oωo)
 
-- Opcionalmente, o atributo [`inset`](#inset).
-- Opcionalmente, o valor [`<color>`](#color).
+- o-opcionawmente, (˘ω˘) o-o atwibuto [`inset`](#inset). rawr
+- o-opcionawmente, OwO o-o vawow [`<cowow>`](#cowow). ^•ﻌ•^
 
-Para especificar mais de uma sombra, separe-as com virgula.
+pawa especificaw mais de uma sombwa, UwU sepawe-as c-com viwguwa. (˘ω˘)
 
-### Valores
+### vawowes
 
 - `inset`
-  - : Se não for especificado, a sombra ganha o efeito de como se a caixa fosse aumentada acima do conteúdo).
-    A presença da palavra-chave `inset` muda a sombra para dentro da moldura (como se o conteúdo estivesse pressionado dentro da caixa). As sombras de inserção são desenhadas dentro da borda (mesmo as transparentes), acima do plano de fundo, mas abaixo do conteúdo.
+  - : se nyão fow especificado, (///ˬ///✿) a sombwa ganha o efeito de como se a c-caixa fosse aumentada acima do conteúdo). σωσ
+    a pwesença da pawavwa-chave `inset` muda a sombwa p-pawa dentwo da m-mowduwa (como se o-o conteúdo estivesse pwessionado d-dentwo da caixa). as sombwas d-de insewção são d-desenhadas dentwo da bowda (mesmo as twanspawentes), /(^•ω•^) acima do pwano de fundo, mas abaixo do c-conteúdo. 😳
 - `<offset-x>` `<offset-y>`
 
-  - : Existem dois valores {{cssxref("&lt;length&gt;")}} para configurar o desvio (offset) da sombra:
+  - : existem d-dois vawowes {{cssxwef("&wt;wength&gt;")}} pawa configuwaw o-o desvio (offset) d-da sombwa:
 
-    - `<offset-x>` especifica a distância horizontal. Valores negativos colocarão a sombra à esquerda do elemento.
-    - `<offset-y>` especifca a distância vertical. Valores negativos colocam a sombra acima do elemento.
+    - `<offset-x>` especifica a distância howizontaw. 😳 v-vawowes nyegativos c-cowocawão a sombwa à e-esquewda do ewemento. (⑅˘꒳˘)
+    - `<offset-y>` e-especifca a distância vewticaw. 😳😳😳 vawowes nyegativos cowocam a sombwa acima d-do ewemento. 😳
 
-    Consulte {{cssxref("&lt;length&gt;")}} para as unidades disponíveis.
+    c-consuwte {{cssxwef("&wt;wength&gt;")}} p-pawa as unidades disponíveis.
 
-    Se ambos os valores forem `0`, a sombra será posicionada atrás do elemento (e poderá gerar um efeito de desfocagem caso `<blur-radius>` e/ou `<spread-radius>` estiverem configurados).
+    s-se ambos os vawowes f-fowem `0`, XD a sombwa sewá posicionada a-atwás do ewemento (e podewá gewaw um efeito de desfocagem caso `<bwuw-wadius>` e-e/ou `<spwead-wadius>` e-estivewem configuwados). mya
 
-- `<blur-radius>`
+- `<bwuw-wadius>`
 
-  - : Este é um terceiro valor para {{cssxref("&lt;length&gt;")}}. Quanto maior for este valor, maior o efeito de desfocagem, desta forma a sombra se tornará maior e mais clara. Valores negativos não são permitidos. Se não for especificado, o valor padrão é `0` (os limites da sombra serão retos). A especificação não inclui um algoritmo exato de como o raio de esmaecimento deve ser calculado, no entanto, descreve o seguinte:
+  - : este é um tewceiwo vawow p-pawa {{cssxwef("&wt;wength&gt;")}}. ^•ﻌ•^ q-quanto maiow fow este vawow, ʘwʘ maiow o efeito de desfocagem, ( ͡o ω ͡o ) desta f-fowma a sombwa se townawá maiow e mais cwawa. mya vawowes nyegativos nyão são p-pewmitidos. o.O se nyão fow especificado, (✿oωo) o vawow p-padwão é `0` (os w-wimites da sombwa sewão wetos). :3 a especificação nyão incwui u-um awgowitmo e-exato de como o waio de esmaecimento deve sew cawcuwado, 😳 nyo entanto, (U ﹏ U) d-descweve o seguinte:
 
-    > ...para uma sombra com bordas longas e retas, deverá ser criada uma transição de cor do comprimento da distância de desfocagem que é perpendicular e centralizada com as bordas da sombra, e isto deve variar da cor total da sombra do seu ponto central até totalmente transparente no ponto final fora dela.
+    > ...pawa u-uma sombwa com bowdas wongas e wetas, mya devewá sew cwiada u-uma twansição de cow do compwimento d-da distância d-de desfocagem que é pewpendicuwaw e-e centwawizada com as b-bowdas da sombwa, (U ᵕ U❁) e-e isto deve vawiaw d-da cow totaw da sombwa do s-seu ponto centwaw a-até totawmente twanspawente nyo ponto finaw fowa d-dewa.
 
-- `<spread-radius>`
-  - : Este é um quarto valor de {{cssxref("&lt;length&gt;")}}. Valores positivos farão com que a sombra expanda e cresça maior, valores negativos farão com que a sombra encolha. Se não for especificado, o valor padrão é `0` (a sombra terá o mesmo tamanho do elemento)
-- `<color>`
-  - : Consulte {{cssxref("&lt;color&gt;")}} para possiveis palavras-chave e notações. Se não for especificada, a cor que será utilizada vai depender do navegador - geralmente é o valor da propriedade {{cssxref("color")}}, mas tenha em mente que o Safari atualmente imprime uma sombra transparente neste caso.
+- `<spwead-wadius>`
+  - : e-este é um q-quawto vawow de {{cssxwef("&wt;wength&gt;")}}. :3 vawowes positivos fawão com que a-a sombwa expanda e cwesça maiow, mya v-vawowes nyegativos f-fawão com que a sombwa encowha. OwO se nyão fow especificado, (ˆ ﻌ ˆ)♡ o-o vawow padwão é `0` (a s-sombwa t-tewá o mesmo t-tamanho do ewemento)
+- `<cowow>`
+  - : consuwte {{cssxwef("&wt;cowow&gt;")}} p-pawa possiveis pawavwas-chave e notações. ʘwʘ se nyão fow especificada, o.O a cow que sewá u-utiwizada vai dependew do navegadow - g-gewawmente é o vawow d-da pwopwiedade {{cssxwef("cowow")}}, UwU mas tenha em m-mente que o safawi atuawmente i-impwime uma sombwa t-twanspawente n-nyeste caso. rawr x3
 
-### Interpolação
+### i-intewpowação
 
-Each shadow in the list (treating `none` as a 0-length list) is interpolated via the color (as color) component, and x, y, blur, and (when appropriate) spread (as length) components. For each shadow, if both input shadows are or are not `inset`, then the interpolated shadow must match the input shadows in that regard. If any pair of input shadows has one `inset` and the other not `inset`, the entire shadow list is uninterpolable. If the lists of shadows have different lengths, then the shorter list is padded at the end with shadows whose color is `transparent`, all lengths are `0`, and whose `inset` (or not) matches the longer list.
+e-each shadow in the wist (tweating `none` as a 0-wength wist) is intewpowated via the cowow (as cowow) component, 🥺 a-and x, :3 y, bwuw, (ꈍᴗꈍ) a-and (when appwopwiate) s-spwead (as wength) components. 🥺 f-fow each shadow, (✿oωo) if both input shadows awe ow awe nyot `inset`, (U ﹏ U) t-then the i-intewpowated shadow must match t-the input shadows in that wegawd. :3 if any paiw of i-input shadows h-has one `inset` and the othew nyot `inset`, ^^;; t-the e-entiwe shadow wist is unintewpowabwe. rawr if the wists of shadows have diffewent wengths, 😳😳😳 t-then the showtew w-wist is padded a-at the end w-with shadows whose c-cowow is `twanspawent`, (✿oωo) aww w-wengths awe `0`, OwO a-and whose `inset` (ow nyot) matches t-the wongew w-wist. ʘwʘ
 
-### Formal syntax
+### fowmaw syntax
 
 {{csssyntax}}
 
-## Live examples
+## w-wive exampwes
 
-- [box-shadow test](http://www.elektronotdienst-nuernberg.de/bugs/box-shadow_inset.html)
-- [box-shadow tutorial and examples](http://markusstange.wordpress.com/2009/02/15/fun-with-box-shadows/)
-- [Box Shadow CSS Generator](https://cssgenerator.org/box-shadow-css-generator.html)
+- [box-shadow test](http://www.ewektwonotdienst-nuewnbewg.de/bugs/box-shadow_inset.htmw)
+- [box-shadow t-tutowiaw and exampwes](http://mawkusstange.wowdpwess.com/2009/02/15/fun-with-box-shadows/)
+- [box shadow css genewatow](https://cssgenewatow.owg/box-shadow-css-genewatow.htmw)
 
-## Specifications
+## s-specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- The {{cssxref("&lt;color&gt;")}} data type
-- Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}
-- [Applying color to HTML elements using CSS](/pt-BR/docs/Web/CSS/CSS_colors/Applying_color)
+- the {{cssxwef("&wt;cowow&gt;")}} d-data t-type
+- othew cowow-wewated p-pwopewties: {{cssxwef("cowow")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("backgwound-cowow")}}, (U ﹏ U) {{cssxwef("bowdew-cowow")}}, UwU {{cssxwef("outwine-cowow")}}, XD {{cssxwef("text-decowation-cowow")}}, ʘwʘ {{cssxwef("text-emphasis-cowow")}}, rawr x3 {{cssxwef("cawet-cowow")}}, ^^;; and {{cssxwef("cowumn-wuwe-cowow")}}
+- [appwying cowow to htmw ewements using css](/pt-bw/docs/web/css/css_cowows/appwying_cowow)

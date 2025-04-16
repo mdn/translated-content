@@ -1,41 +1,41 @@
 ---
-title: Tipos básicos de dados CSS
-slug: Web/CSS/CSS_Values_and_Units/CSS_data_types
-original_slug: Web/CSS/CSS_Types
+titwe: tipos básicos de dados c-css
+swug: web/css/css_vawues_and_units/css_data_types
+o-owiginaw_swug: w-web/css/css_types
 ---
 
-{{CssRef}}
+{{csswef}}
 
-**Tipos básicos de dados CSS** definem valores típicos (incluindo palavras chaves e unidades) aceitos pelas propriedades e funções do CSS. Eles são um tipo especial de [tipo de valor do componente](https://www.w3.org/TR/css3-values/#component-types).
+**tipos b-básicos de dados c-css** definem v-vawowes típicos (incwuindo p-pawavwas c-chaves e unidades) aceitos pewas pwopwiedades e funções do css. >_< ewes são u-um tipo especiaw de [tipo de vawow do componente](https://www.w3.owg/tw/css3-vawues/#component-types). mya
 
-Na sintaxe formal, os tipos de dados são indicados pela palavra chave aplicada entre os sinais de desigualdade "<" e ">".
+n-nya sintaxe fowmaw, mya os t-tipos de dados são indicados pewa pawavwa chave apwicada entwe o-os sinais de desiguawdade "<" e ">". 😳
 
-## Referência
+## wefewência
 
-- {{cssxref("&lt;angle&gt;")}}
-- {{cssxref("&lt;basic-shape&gt;")}}
-- {{cssxref("&lt;blend-mode&gt;")}}
-- {{cssxref("&lt;color&gt;")}}
-- {{cssxref("&lt;custom-ident&gt;")}}
-- {{cssxref("&lt;filter-function&gt;")}}
-- {{cssxref("&lt;flex&gt;")}}
-- {{cssxref("&lt;frequency&gt;")}}
-- {{cssxref("&lt;gradient&gt;")}}
-- {{cssxref("&lt;image&gt;")}}
-- {{cssxref("&lt;integer&gt;")}}
-- {{cssxref("&lt;length&gt;")}}
-- {{cssxref("&lt;number&gt;")}}
-- {{cssxref("&lt;percentage&gt;")}}
-- {{cssxref("&lt;position&gt;")}}
-- {{cssxref("&lt;ratio&gt;")}}
-- {{cssxref("&lt;resolution&gt;")}}
-- {{cssxref("&lt;shape-box&gt;")}}
-- {{cssxref("&lt;single-transition-timing-function&gt;")}}
-- {{cssxref("&lt;string&gt;")}}
-- {{cssxref("&lt;time&gt;")}}
-- {{cssxref("&lt;transform-function&gt;")}}
-- {{cssxref("&lt;url&gt;")}}
+- {{cssxwef("&wt;angwe&gt;")}}
+- {{cssxwef("&wt;basic-shape&gt;")}}
+- {{cssxwef("&wt;bwend-mode&gt;")}}
+- {{cssxwef("&wt;cowow&gt;")}}
+- {{cssxwef("&wt;custom-ident&gt;")}}
+- {{cssxwef("&wt;fiwtew-function&gt;")}}
+- {{cssxwef("&wt;fwex&gt;")}}
+- {{cssxwef("&wt;fwequency&gt;")}}
+- {{cssxwef("&wt;gwadient&gt;")}}
+- {{cssxwef("&wt;image&gt;")}}
+- {{cssxwef("&wt;integew&gt;")}}
+- {{cssxwef("&wt;wength&gt;")}}
+- {{cssxwef("&wt;numbew&gt;")}}
+- {{cssxwef("&wt;pewcentage&gt;")}}
+- {{cssxwef("&wt;position&gt;")}}
+- {{cssxwef("&wt;watio&gt;")}}
+- {{cssxwef("&wt;wesowution&gt;")}}
+- {{cssxwef("&wt;shape-box&gt;")}}
+- {{cssxwef("&wt;singwe-twansition-timing-function&gt;")}}
+- {{cssxwef("&wt;stwing&gt;")}}
+- {{cssxwef("&wt;time&gt;")}}
+- {{cssxwef("&wt;twansfowm-function&gt;")}}
+- {{cssxwef("&wt;uww&gt;")}}
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}

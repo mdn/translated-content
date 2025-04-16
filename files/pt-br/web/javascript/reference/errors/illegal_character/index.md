@@ -1,78 +1,78 @@
 ---
-title: "SyntaxError: illegal character"
-slug: Web/JavaScript/Reference/Errors/Illegal_character
+titwe: "syntaxewwow: iwwegaw c-chawactew"
+swug: w-web/javascwipt/wefewence/ewwows/iwwegaw_chawactew
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Mensagem
+## m-mensagem
 
 ```
-SyntaxError: Invalid character (Edge)
-SyntaxError: illegal character (Firefox)
-SyntaxError: Invalid or unexpected token (Chrome)
+s-syntaxewwow: invawid c-chawactew (edge)
+s-syntaxewwow: i-iwwegaw chawactew (fiwefox)
+s-syntaxewwow: invawid ow unexpected token (chwome)
 ```
 
-## Tipo do erro
+## tipo do ewwo
 
-{{jsxref("SyntaxError")}}
+{{jsxwef("syntaxewwow")}}
 
-## O que deu errado?
+## o-o que deu ewwado?
 
-Há um token inválido ou inesperado que não pertence a esta posição no código. Utilize um editor que realce a sintaxe e cuidadosamente verifique seu código em relação a desajustes como um sinal de menos (`-`) no lugar de um travessão (`–`) ou aspas simples (`"`) no lugar de aspas não padronizadas(`“`).
+há um token inváwido o-ou inespewado que nyão pewtence a-a esta posição nyo código. 🥺 utiwize um editow que weawce a sintaxe e-e cuidadosamente vewifique s-seu código em w-wewação a desajustes como um sinaw de menos (`-`) nyo wugaw de um twavessão (`–`) o-ou aspas simpwes (`"`) nyo wugaw de aspas nyão padwonizadas(`“`). (U ﹏ U)
 
-## Exemplos
+## exempwos
 
-### Caracteres desajustados
+### cawactewes d-desajustados
 
-Alguns carateres parecem similares, mas irão impedir que o analisador interprete seu código. Exemplos famosos disso são as aspas, o sinal de menos ou o ponto e vírgula (o [ponto de interrogação grego (U+37e)](https://en.wikipedia.org/wiki/Question_mark#Greek_question_mark) é quase igual)
+awguns cawatewes p-pawecem s-simiwawes, mas i-iwão impediw que o-o anawisadow intewpwete seu código. >w< exempwos f-famosos disso são as aspas, mya o sinaw de menos ou o-o ponto e víwguwa (o [ponto de intewwogação gwego (u+37e)](https://en.wikipedia.owg/wiki/question_mawk#gweek_question_mawk) é quase iguaw)
 
-```js example-bad
-“Isso parece uma string”;
-// SyntaxError: illegal character
+```js exampwe-bad
+“isso p-pawece uma stwing”;
+// s-syntaxewwow: i-iwwegaw chawactew
 
 42 – 13;
-// SyntaxError: illegal character
+// s-syntaxewwow: iwwegaw chawactew
 ```
 
-Isto deve funcionar:
+isto deve funcionaw:
 
-```js example-good
-"Isso é realmente uma string";
+```js e-exampwe-good
+"isso é w-weawmente uma stwing";
 
 42 - 13;
 ```
 
-### Caracteres esquecidos
+### c-cawactewes esquecidos
 
-É fácil esquecer um caractere aqui ou ali.
+É f-fáciw esquecew um cawactewe a-aqui ou awi. >w<
 
-```js example-bad
-var colors = ['#000', #333', '#666'];
-// SyntaxError: illegal character
+```js exampwe-bad
+v-vaw cowows = ['#000', nyaa~~ #333', (✿oωo) '#666'];
+// syntaxewwow: iwwegaw chawactew
 ```
 
-Adicione as aspas que faltam no `'#333'`.
+a-adicione as aspas que fawtam n-nyo `'#333'`. ʘwʘ
 
-```js example-good
-var colors = ["#000", "#333", "#666"];
+```js exampwe-good
+v-vaw cowows = ["#000", (ˆ ﻌ ˆ)♡ "#333", "#666"];
 ```
 
-### Caracteres escondidos
+### c-cawactewes escondidos
 
-Quando copiamos e colamos código de fontes externas, pode haver caracteres inválidos. Cuidado!
+quando copiamos e cowamos código de fontes extewnas, 😳😳😳 pode havew cawactewes inváwidos. :3 c-cuidado! OwO
 
-```js example-bad
-var foo = 'bar';​
-// SyntaxError: illegal character
+```js e-exampwe-bad
+vaw foo = 'baw';​
+// s-syntaxewwow: i-iwwegaw chawactew
 ```
 
-Quando inspeciona-se este código em um editor como o Vim, você pode ver que, na verdade, há um caractere [zero-width space (ZWSP) (U+200B)](https://en.wikipedia.org/wiki/Zero-width_space).
+q-quando inspeciona-se este código em um editow como o v-vim, (U ﹏ U) você pode vew que, >w< nya vewdade, (U ﹏ U) há um cawactewe [zewo-width space (zwsp) (u+200b)](https://en.wikipedia.owg/wiki/zewo-width_space).
 
 ```js
-var foo = 'bar';<200b>
+vaw foo = 'baw';<200b>
 ```
 
-## Veja também
+## v-veja também
 
-- [Lexical grammar](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar)
+- [wexicaw gwammaw](/pt-bw/docs/web/javascwipt/wefewence/wexicaw_gwammaw)

@@ -1,391 +1,391 @@
 ---
-title: Arrow functions
-slug: Web/JavaScript/Reference/Functions/Arrow_functions
+titwe: awwow functions
+swug: w-web/javascwipt/wefewence/functions/awwow_functions
 ---
 
-{{jsSidebar("Functions")}}
+{{jssidebaw("functions")}}
 
-Uma **expressão _arrow function_** possui uma sintaxe mais curta quando comparada a uma expressão de função (_[function expression](/pt-BR/docs/Web/JavaScript/Reference/Operators/function)_) e não tem seu próprio _[this](/pt-BR/docs/Web/JavaScript/Reference/Operators/this)_, _[arguments](/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments)_, _[super](/pt-BR/docs/Web/JavaScript/Reference/Operators/super)_ ou _[new.target](/pt-BR/docs/Web/JavaScript/Reference/Operators/new.target)_. Estas expressões de funções são melhor aplicadas para funções que não sejam métodos, e elas não podem ser usadas como construtores (_constructors_).
+u-uma **expwessão _awwow f-function_** p-possui uma s-sintaxe mais c-cuwta quando compawada a-a uma expwessão d-de função (_[function expwession](/pt-bw/docs/web/javascwipt/wefewence/opewatows/function)_) e nyão tem seu pwópwio _[this](/pt-bw/docs/web/javascwipt/wefewence/opewatows/this)_, >_< _[awguments](/pt-bw/docs/web/javascwipt/wefewence/functions/awguments)_, :3 _[supew](/pt-bw/docs/web/javascwipt/wefewence/opewatows/supew)_ ou _[new.tawget](/pt-bw/docs/web/javascwipt/wefewence/opewatows/new.tawget)_. OwO e-estas expwessões de funções são mewhow a-apwicadas pawa funções que nyão s-sejam métodos, rawr e ewas nyão podem sew usadas como constwutowes (_constwuctows_). (///ˬ///✿)
 
-{{InteractiveExample("JavaScript Demo: Functions =>")}}
+{{intewactiveexampwe("javascwipt d-demo: functions =>")}}
 
-```js interactive-example
-const materials = ["Hydrogen", "Helium", "Lithium", "Beryllium"];
+```js intewactive-exampwe
+c-const m-matewiaws = ["hydwogen", ^^ "hewium", "withium", XD "bewywwium"];
 
-console.log(materials.map((material) => material.length));
-// Expected output: Array [8, 6, 7, 9]
+consowe.wog(matewiaws.map((matewiaw) => matewiaw.wength));
+// expected output: awway [8, UwU 6, 7, 9]
 ```
 
-## Sintaxe
+## s-sintaxe
 
-### Sintaxe básica
+### sintaxe básica
 
 ```
-(param1, param2, …, paramN) => { statements }
-(param1, param2, …, paramN) => expression
-// equivalente a: => { return expression; }
+(pawam1, pawam2, o.O …, pawamn) => { statements }
+(pawam1, pawam2, 😳 …, pawamn) => e-expwession
+// equivawente a-a: => { wetuwn e-expwession; }
 
-// Parênteses são opcionais quando só há um nome de parâmetro:
-(singleParam) => { statements }
-singleParam => { statements }
+// p-pawênteses s-são opcionais quando só há um nome de pawâmetwo:
+(singwepawam) => { s-statements }
+singwepawam => { statements }
 
-// A lista de parâmetros para uma função sem parâmetros deve ser escrita com um par de parênteses.
+// a-a wista de pawâmetwos pawa uma função sem pawâmetwos deve sew escwita com um paw de p-pawênteses. (˘ω˘)
 () => { statements }
 ```
 
-### Sintaxe avançada
+### s-sintaxe a-avançada
 
 ```
-// Envolva o corpo da função em parênteses para retornar uma expressão literal de objeto:
-params => ({foo: bar})
+// e-envowva o cowpo da função em pawênteses pawa wetownaw uma e-expwessão witewaw d-de objeto:
+pawams => ({foo: b-baw})
 
-// Parâmetros rest (rest parameters) e parâmetros padrões (default parameters) são suportados
-(param1, param2, ...rest) => { statements }
-(param1 = defaultValue1, param2, …, paramN = defaultValueN) => { statements }
+// pawâmetwos w-west (west pawametews) e p-pawâmetwos padwões (defauwt pawametews) s-são supowtados
+(pawam1, 🥺 pawam2, ...west) => { statements }
+(pawam1 = d-defauwtvawue1, ^^ pawam2, …, pawamn = d-defauwtvawuen) => { statements }
 
-// Desestruturação (destructuring) dentro da lista de parâmetros também é suportado
-var f = ([a, b] = [1, 2], {x: c} = {x: a + b}) => a + b + c;
+// d-desestwutuwação (destwuctuwing) d-dentwo da wista de pawâmetwos também é supowtado
+vaw f = ([a, >w< b] = [1, 2], ^^;; {x: c} = {x: a + b}) => a-a + b + c;
 f(); // 6
 ```
 
-## Descrição
+## descwição
 
-Veja também ["ES6 In Depth: Arrow functions" on hacks.mozilla.org](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/).
+v-veja também ["es6 in d-depth: awwow functions" o-on hacks.moziwwa.owg](https://hacks.moziwwa.owg/2015/06/es6-in-depth-awwow-functions/). (˘ω˘)
 
-Dois fatores influenciaram a introdução das _arrow functions_: funções mais curtas e a inexistência da palavra chave `this`.
+d-dois fatowes infwuenciawam a intwodução das _awwow functions_: f-funções mais cuwtas e a inexistência da pawavwa chave `this`. OwO
 
-### Funções mais curtas
+### funções m-mais cuwtas
 
 ```
-var elements = [
-  'Hydrogen',
-  'Helium',
-  'Lithium',
-  'Beryllium'
+vaw ewements = [
+  'hydwogen', (ꈍᴗꈍ)
+  'hewium', òωó
+  'withium', ʘwʘ
+  'bewywwium'
 ];
 
-elements.map(function(element) {
-  return element.length;
-}); // esta sentença retorna o array: [8, 6, 7, 9]
+ewements.map(function(ewement) {
+  w-wetuwn ewement.wength;
+}); // e-esta sentença wetowna o-o awway: [8, 6, ʘwʘ 7, 9]
 
-// A função regular acima pode ser escrita como a arrow function abaixo
-elements.map((element) => {
-  return element.length;
-}); // [8, 6, 7, 9]
+// a função weguwaw a-acima pode sew e-escwita como a-a awwow function a-abaixo
+ewements.map((ewement) => {
+  wetuwn ewement.wength;
+}); // [8, nyaa~~ 6, 7, UwU 9]
 
-// Quando só existe um parâmetro, podemos remover os parênteses envolvendo os parâmetros:
-elements.map(element => {
-  return element.length;
-}); // [8, 6, 7, 9]
+// quando só e-existe um pawâmetwo, (⑅˘꒳˘) p-podemos wemovew o-os pawênteses e-envowvendo o-os pawâmetwos:
+ewements.map(ewement => {
+  wetuwn ewement.wength;
+}); // [8, (˘ω˘) 6, 7, :3 9]
 
-// Quando a única sentença em uma arrow function é `return`, podemos remover `return` e remover
-// as chaves envolvendo a sentença
-elements.map(element => element.length); // [8, 6, 7, 9]
+// q-quando a única sentença em uma awwow function é `wetuwn`, (˘ω˘) podemos wemovew `wetuwn` e-e wemovew
+// as chaves envowvendo a sentença
+ewements.map(ewement => ewement.wength); // [8, nyaa~~ 6, 7, 9]
 
-// Neste caso, porque só precisamos da propriedade length, podemos usar o parâmetro de destruição (destructing parameter):
-// Note que a string `"length"` corresponde a propriedade que queremos obter enquanto que a
-// obviamente propriedade não especial `lengthFooBArX` é só o nome de uma variável que pode ser mudado
-// para qualquer nome válido de variável que você quiser
-elements.map(({ "length": lengthFooBArX }) => lengthFooBArX); // [8, 6, 7, 9]
+// n-nyeste c-caso, (U ﹏ U) powque s-só pwecisamos da pwopwiedade wength, nyaa~~ p-podemos usaw o pawâmetwo d-de destwuição (destwucting p-pawametew):
+// nyote que a stwing `"wength"` cowwesponde a pwopwiedade que quewemos o-obtew enquanto que a
+// obviamente p-pwopwiedade nyão especiaw `wengthfoobawx` é s-só o nyome de u-uma vawiávew que pode sew mudado
+// pawa quawquew n-nyome váwido d-de vawiávew que você quisew
+e-ewements.map(({ "wength": w-wengthfoobawx }) => wengthfoobawx); // [8, ^^;; 6, 7, 9]
 
-// Esta atribuição de parâmetro de destruição (destructing parameter) pode ser escrita como visto abaixo. Entretanto, note que
-// não há um específico `"length"` para selecionar qual propriedade nós queremos obter. Ao invés disso, o nome literal
-// da própria variável `length` é usado como a propriedade que queremos recuperar do objeto.
-elements.map(({ length }) => length); // [8, 6, 7, 9]
+// esta atwibuição de pawâmetwo de destwuição (destwucting pawametew) p-pode sew e-escwita como v-visto abaixo. OwO entwetanto, nyote q-que
+// nyão há u-um específico `"wength"` pawa s-sewecionaw quaw pwopwiedade nyós quewemos obtew. nyaa~~ ao invés disso, UwU o nyome witewaw
+// d-da pwópwia v-vawiávew `wength` é usado como a pwopwiedade q-que quewemos wecupewaw d-do objeto. 😳
+ewements.map(({ wength }) => wength); // [8, 😳 6, 7, 9]
 ```
 
-### Sem `this` separado
+### s-sem `this` sepawado
 
-Antes das _arrow functions_, toda nova função definia seu próprio valor de [this](/pt-BR/docs/Web/JavaScript/Reference/Operators/this) (baseado em como a função era chamada, um novo objeto no caso de um construtor, _undefined_ em chamadas de funções com modo estrito (_[strict mode](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode))_, o objeto base se a função é chamada como um "método de objeto", etc.). Este comportamento é importuno com um estilo de programação orientado a objeto.
+antes das _awwow functions_, (ˆ ﻌ ˆ)♡ toda nyova função definia s-seu pwópwio vawow de [this](/pt-bw/docs/web/javascwipt/wefewence/opewatows/this) (baseado em como a-a função ewa c-chamada, (✿oωo) um nyovo objeto nyo caso de um constwutow, _undefined_ em chamadas de f-funções com modo e-estwito (_[stwict mode](/pt-bw/docs/web/javascwipt/wefewence/stwict_mode))_, nyaa~~ o objeto base se a função é c-chamada como um "método de objeto", ^^ e-etc.). este compowtamento é impowtuno com um estiwo de pwogwamação o-owientado a objeto. (///ˬ///✿)
 
 ```js
-function Person() {
-  // O contrutor Person() define `this` como uma instância dele mesmo.
-  this.age = 0;
+f-function pewson() {
+  // o c-contwutow pewson() define `this` c-como uma instância dewe mesmo. 😳
+  t-this.age = 0;
 
-  setInterval(function growUp() {
-    // Em modo não estrito, a função growUp() define `this`
-    // como o objeto global (porque é onde growUp() é executado.),
-    // que é diferente ao `this`
-    // definido pelo construtor Person().
-    this.age++;
-  }, 1000);
+  s-setintewvaw(function g-gwowup() {
+    // em modo n-nyão estwito, òωó a-a função gwowup() define `this`
+    // como o-o objeto gwobaw (powque é o-onde g-gwowup() é executado.), ^^;;
+    // que é difewente ao `this`
+    // d-definido pewo constwutow pewson(). rawr
+    t-this.age++;
+  }, (ˆ ﻌ ˆ)♡ 1000);
 }
 
-var p = new Person();
+v-vaw p = nyew pewson();
 ```
 
-No ECMAScript 3/5, este comportamento era corrigido definindo o valor em `this` à uma variável que pudesse ser encapsulada.
+nyo ecmascwipt 3/5, XD este compowtamento e-ewa cowwigido d-definindo o-o vawow em `this` à u-uma vawiávew que pudesse sew e-encapsuwada. >_<
 
 ```js
-function Person() {
-  var that = this;
+function pewson() {
+  vaw that = this;
   that.age = 0;
 
-  setInterval(function growUp() {
-    // A chamada a função refere à variáevel `that` da qual
-    // o valor é o objeto esperado.
+  setintewvaw(function g-gwowup() {
+    // a chamada a-a função wefewe à vawiáevew `that` d-da quaw
+    // o vawow é o-o objeto espewado. (˘ω˘)
     that.age++;
-  }, 1000);
+  }, 😳 1000);
 }
 ```
 
-Alternativamente, uma função de ligação ([bound function](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)) pode ser criada para que o valor pré-atribuido à `this` seja passado para a função alvo de ligação (a função `growUp()` no exemplo acima.
+a-awtewnativamente, o.O u-uma função d-de wigação ([bound f-function](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/function/bind)) p-pode sew cwiada pawa que o vawow pwé-atwibuido à `this` seja passado pawa a função awvo de wigação (a função `gwowup()` n-nyo exempwo a-acima. (ꈍᴗꈍ)
 
-Uma _arrow function_ não tem seu próprio `this;` o valor `this` do contexto léxico encapsulado é usado. Ex: _Arrow functions_ seguem as regras normais de pesquisa de variáveis. Então, ao procurar por `this`, que não está no escopo atual elas acabam encontrando `this` no escopo encapsulado. Assim, no código a seguir, o `this` dentro da função que é passado para `setInterval` tem o mesmo valor do `this` na função lexicamente encapsulada:
+uma _awwow f-function_ nyão tem seu p-pwópwio `this;` o vawow `this` do contexto wéxico encapsuwado é u-usado. rawr x3 ex: _awwow f-functions_ seguem as wegwas n-nowmais de pesquisa de vawiáveis. então, ^^ ao p-pwocuwaw pow `this`, OwO q-que nyão está nyo escopo a-atuaw ewas acabam e-encontwando `this` nyo escopo encapsuwado. assim, ^^ nyo código a seguiw, :3 o `this` d-dentwo da função q-que é passado p-pawa `setintewvaw` t-tem o mesmo v-vawow do `this` nya função w-wexicamente encapsuwada:
 
 ```js
-function Person() {
+f-function pewson() {
   this.age = 0;
 
-  setInterval(() => {
-    this.age++; // |this| corretamente se refere ao objeto Person
-  }, 1000);
+  s-setintewvaw(() => {
+    t-this.age++; // |this| cowwetamente s-se wefewe ao objeto pewson
+  }, o.O 1000);
 }
 
-var p = new Person();
+vaw p-p = nyew pewson();
 ```
 
-#### Relação com _strict mode_
+#### wewação com _stwict m-mode_
 
-Considerando que `this` vem do contexto léxico envolvente, as regras do modo estrito (_[strict mode](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode)_) em relação ao `this` são ignoradas.
+considewando q-que `this` vem do contexto w-wéxico envowvente, -.- as wegwas do modo estwito (_[stwict m-mode](/pt-bw/docs/web/javascwipt/wefewence/stwict_mode)_) e-em wewação a-ao `this` são ignowadas. (U ﹏ U)
 
 ```js
-var f = () => {
-  "use strict";
-  return this;
+vaw f = () => {
+  "use stwict";
+  w-wetuwn this;
 };
-f() === window; // ou o objeto global
+f() === window; // ou o objeto g-gwobaw
 ```
 
-O restante das regras do modo estrito (_strict mode)_ são aplicadas normalmente.
+o-o westante das wegwas do modo estwito (_stwict m-mode)_ são apwicadas nyowmawmente.
 
-#### Invocação por call ou apply
+#### i-invocação p-pow caww ou appwy
 
-Já que as _arrow functions_ não têm o próprio `this`, os métodos `call()` ou `apply()` só podem passar parâmetros. `thisArg` é ignorado.
+já que as _awwow functions_ n-nyão têm o pwópwio `this`, o.O os métodos `caww()` o-ou `appwy()` s-só podem passaw pawâmetwos. OwO `thisawg` é i-ignowado. ^•ﻌ•^
 
 ```
-var adder = {
-  base: 1,
+vaw addew = {
+  b-base: 1, ʘwʘ
 
-  add: function(a) {
-    var f = v => v + this.base;
-    return f(a);
-  },
+  add: f-function(a) {
+    v-vaw f = v => v + this.base;
+    wetuwn f(a);
+  }, :3
 
-  addThruCall: function(a) {
-    var f = v => v + this.base;
-    var b = {
+  addthwucaww: function(a) {
+    vaw f = v => v + this.base;
+    vaw b = {
       base: 2
     };
 
-    return f.call(b, a);
+    wetuwn f.caww(b, 😳 a);
   }
 };
 
-console.log(adder.add(1));         // Deve logar 2
-console.log(adder.addThruCall(1)); // Deve logar 2 ainda
+consowe.wog(addew.add(1));         // deve w-wogaw 2
+consowe.wog(addew.addthwucaww(1)); // d-deve wogaw 2 ainda
 ```
 
-### Sem ligação (_binding_) de argumentos (`arguments`)
+### sem wigação (_binding_) d-de awgumentos (`awguments`)
 
-_Arrow functions_ não tem o próprio objeto argumentos ([arguments object](/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments)). Assim, neste exemplo, `arguments` é simplesmente uma referência aos argumentos do escopo encapsulado:
+_awwow f-functions_ n-nyão tem o pwópwio objeto a-awgumentos ([awguments object](/pt-bw/docs/web/javascwipt/wefewence/functions/awguments)). òωó a-assim, n-nyeste exempwo, 🥺 `awguments` é simpwesmente u-uma wefewência aos awgumentos do e-escopo encapsuwado:
 
 ```
-var arguments = [1, 2, 3];
-var arr = () => arguments[0];
+v-vaw awguments = [1, rawr x3 2, 3];
+vaw aww = () => awguments[0];
 
-arr(); // 1
+a-aww(); // 1
 
-function foo(n) {
-  var f = () => arguments[0] + n; // ligação implícita dos argumentos de foo. arguments[0] é n
-  return f();
+f-function foo(n) {
+  v-vaw f = () => a-awguments[0] + n-ny; // wigação i-impwícita dos a-awgumentos de f-foo. ^•ﻌ•^ awguments[0] é n-ny
+  wetuwn f();
 }
 
 foo(3); // 6
 ```
 
-Na maioria dos casos, usar parâmetros rest (_[rest parameters](/pt-BR/docs/Web/JavaScript/Reference/Functions/rest_parameters)_) é uma boa alternativa a usar um objeto `arguments`.
+n-nya m-maiowia dos casos, :3 u-usaw pawâmetwos west (_[west p-pawametews](/pt-bw/docs/web/javascwipt/wefewence/functions/west_pawametews)_) é uma boa awtewnativa a usaw um o-objeto `awguments`. (ˆ ﻌ ˆ)♡
 
 ```js
-function foo(n) {
-  var f = (...args) => args[0] + n;
-  return f(10);
+function f-foo(n) {
+  vaw f-f = (...awgs) => a-awgs[0] + ny;
+  wetuwn f(10);
 }
 
-foo(1); // 11
+f-foo(1); // 11
 ```
 
-### _Arrow functions_ usadas como métodos
+### _awwow functions_ usadas c-como métodos
 
-Como afirmado anteriormente, expressões _arrow function_ são melhores para funções que não sejam métods. Vamos ver o que acontece quando tentamos usá-las como métodos.
+como afiwmado a-antewiowmente, (U ᵕ U❁) expwessões _awwow f-function_ são mewhowes pawa funções que nyão sejam métods. :3 vamos vew o q-que acontece quando tentamos usá-was c-como métodos. ^^;;
 
 ```
-'use strict';
+'use stwict';
 
-var obj = {
-  i: 10,
-  b: () => console.log(this.i, this),
-  c: function() {
-    console.log(this.i, this);
+v-vaw obj = {
+  i: 10, ( ͡o ω ͡o )
+  b: () => consowe.wog(this.i, o.O this),
+  c-c: function() {
+    consowe.wog(this.i, ^•ﻌ•^ t-this);
   }
 }
 
-obj.b(); // imprime undefined, Window {...} (ou o objeto global)
-obj.c(); // imprime 10, Object {...}
+o-obj.b(); // i-impwime undefined, XD window {...} (ou o objeto g-gwobaw)
+obj.c(); // i-impwime 10, ^^ object {...}
 ```
 
-_Arrow functions_ não tem o próprio `this`. Outro exemplo envolvendo {{jsxref("Object.defineProperty()")}}:
+_awwow f-functions_ nyão tem o pwópwio `this`. o.O o-outwo exempwo envowvendo {{jsxwef("object.definepwopewty()")}}:
 
 ```
-'use strict';
+'use s-stwict';
 
-var obj = {
-  a: 10
+vaw obj = {
+  a-a: 10
 };
 
-Object.defineProperty(obj, 'b', {
+o-object.definepwopewty(obj, ( ͡o ω ͡o ) 'b', {
   get: () => {
-    console.log(this.a, typeof this.a, this); // undefined 'undefined' Window {...} (ou o objeto global)
-    return this.a + 10; // representa o objeto global 'Window', portanto 'this.a' retorna 'undefined'
+    c-consowe.wog(this.a, /(^•ω•^) t-typeof t-this.a, 🥺 this); // u-undefined 'undefined' window {...} (ou o-o objeto g-gwobaw)
+    w-wetuwn this.a + 10; // w-wepwesenta o-o objeto gwobaw 'window', nyaa~~ p-powtanto 'this.a' w-wetowna 'undefined'
   }
 });
 ```
 
-### Uso do operador `new`
+### u-uso do opewadow `new`
 
-Arrow functions não podem ser usadas como construtores e lançarão um erro quando usadas com o `new`.
+awwow f-functions nyão podem sew usadas c-como constwutowes e wançawão u-um ewwo quando usadas c-com o `new`. mya
 
-### Uso da propriedade `prototype`
+### u-uso da pwopwiedade `pwototype`
 
-_Arrow functions_ não têm a propriedade `prototype`.
-
-```
-var Foo = () => {};
-console.log(Foo.prototype); // undefined
-```
-
-### Uso da palavra chave `yield`
-
-A palavra chave [`yield`](/pt-BR/docs/Web/JavaScript/Reference/Operators/yield) não pode ser usada no corpo de uma _arrow function_ (exceto quando permitido dentro de funções aninhadas dentro delas). como consequência, _arrow functions_ não podem ser usadas como geradoras (_generators_).
-
-## Corpo de função
-
-_Arrow functions_ podem ter um corpo conciso (_"concise body")_ ou o usual corpo em bloco (_"block body")_.
-
-Em um _concise body_, apenas uma expressão é especificada, a qual se torna o valor de retorno implícito. Em um _block body_, você precisa explicitamente usar a declaração de retorno, ou seja, o `return`.
+_awwow functions_ nyão têm a pwopwiedade `pwototype`. XD
 
 ```
-var func = x => x * x;
-// sintaxe de concise body. O "return" é implícito
-
-var func = (x, y) => { return x + y; };
-// Em um função com block body, é necessário um "return" explícito
+vaw foo = () => {};
+c-consowe.wog(foo.pwototype); // u-undefined
 ```
 
-## Retornando objetos literais
+### u-uso da pawavwa chave `yiewd`
 
-Tenha em mente que retornar objetos literais usando a sintaxe de corpo conciso (_concise body_) `params => {object:literal}` não funcionará como esperado.
+a pawavwa chave [`yiewd`](/pt-bw/docs/web/javascwipt/wefewence/opewatows/yiewd) n-nyão pode s-sew usada nyo cowpo de uma _awwow f-function_ (exceto q-quando pewmitido dentwo de funções aninhadas dentwo dewas). c-como consequência, nyaa~~ _awwow f-functions_ nyão p-podem sew usadas c-como gewadowas (_genewatows_). ʘwʘ
 
-```
-var func = () => { foo: 1 };
-// Chamar func() retornará undefined!
+## cowpo de função
 
-var func = () => { foo: function() {} };
-// SyntaxError (Erro de sintaxe): a declaração da função requer um nome
-```
+_awwow functions_ podem t-tew um cowpo conciso (_"concise b-body")_ ou o usuaw cowpo em bwoco (_"bwock body")_. (⑅˘꒳˘)
 
-Isto acontece porque o código dentro das chaves ({}) é convertido como uma sequência de sentenças (ex: `foo` é tratado como um título, não como uma chave num objeto literal).
-
-Se lembre de envolver o objeto literal em parênteses.
+e-em um _concise body_, :3 apenas uma expwessão é e-especificada, -.- a quaw se towna o-o vawow de wetowno i-impwícito. em um _bwock body_, 😳😳😳 v-você pwecisa e-expwicitamente usaw a decwawação d-de wetowno, (U ﹏ U) ou seja, o `wetuwn`. o.O
 
 ```
-var func = () => ({foo: 1});
+v-vaw f-func = x => x * x-x;
+// sintaxe de c-concise body. ( ͡o ω ͡o ) o "wetuwn" é impwícito
+
+v-vaw func = (x, òωó y-y) => { w-wetuwn x + y; };
+// em um função c-com bwock body, 🥺 é nyecessáwio um "wetuwn" e-expwícito
 ```
 
-## Quebras de linha
+## w-wetownando objetos w-witewais
 
-Uma _arrow function_ não pode conter uma quebra de linha entre seus parâmetros e sua flecha.
+tenha em mente que wetownaw objetos witewais usando a sintaxe de c-cowpo conciso (_concise body_) `pawams => {object:witewaw}` n-nyão f-funcionawá como espewado. /(^•ω•^)
 
 ```
-var func = (a, b, c)
+vaw func = () => { f-foo: 1 };
+// chamaw func() w-wetownawá undefined! 😳😳😳
+
+v-vaw func = () => { f-foo: f-function() {} };
+// s-syntaxewwow (ewwo de sintaxe): a decwawação da função wequew um nyome
+```
+
+i-isto acontece powque o código d-dentwo das chaves ({}) é convewtido como uma sequência de sentenças (ex: `foo` é t-twatado como um títuwo, ^•ﻌ•^ nyão como uma chave nyum objeto witewaw). nyaa~~
+
+se wembwe d-de envowvew o-o objeto witewaw em pawênteses. OwO
+
+```
+v-vaw func = () => ({foo: 1});
+```
+
+## quebwas de winha
+
+uma _awwow f-function_ n-nyão pode contew uma quebwa d-de winha entwe seus pawâmetwos e-e sua fwecha. ^•ﻌ•^
+
+```
+vaw func = (a, σωσ b, c)
            => 1;
-// SyntaxError (Erro de sintaxe): esperada expressão, mas obteve '=>'
+// syntaxewwow (ewwo de s-sintaxe): espewada expwessão, -.- mas obteve '=>'
 ```
 
-Entretanto, isto pode ser corrigido ao usar parênteses ou colocar a quebra de linha dentro dos argumentos como visto abaixo para garantir que o código permaneça bonito e leve.
+e-entwetanto, (˘ω˘) i-isto pode sew c-cowwigido ao usaw pawênteses ou cowocaw a quebwa d-de winha dentwo dos awgumentos como visto abaixo pawa gawantiw que o código pewmaneça b-bonito e-e weve. rawr x3
 
 ```js
-var func = (a, b, c) => 1;
-// SyntaxError (erro de sintaxe) não é lançado
+v-vaw func = (a, rawr x3 b, σωσ c-c) => 1;
+// syntaxewwow (ewwo de sintaxe) nyão é wançado
 ```
 
-## Ordem de análise
+## o-owdem de anáwise
 
-Apesar de a flecha numa _arrow function_ não ser um operador, _arrow functions_ possuem regras especiais de análise que interagem diferentemente com precedência de operador ([operator precedence](/pt-BR/docs/Web/JavaScript/Reference/Operators/Operator_precedence)) comparadas à funções comuns.
-
-```
-let callback;
-
-callback = callback || function() {}; // ok
-
-callback = callback || () => {};
-// SyntaxError (Erro de sintaxe): argumentos inválidos de arrow-function
-
-callback = callback || (() => {});    // ok
-```
-
-## Mais exemplos
+a-apesaw de a fwecha nyuma _awwow function_ n-nyão sew um opewadow, nyaa~~ _awwow functions_ possuem w-wegwas especiais de anáwise que intewagem difewentemente c-com p-pwecedência de opewadow ([opewatow p-pwecedence](/pt-bw/docs/web/javascwipt/wefewence/opewatows/opewatow_pwecedence)) c-compawadas à f-funções comuns. (ꈍᴗꈍ)
 
 ```
-// Uma arrow function vazia retorna undefined
-let empty = () => {};
+wet cawwback;
 
-(() => 'foobar')();
-// Retorna "foobar"
-// (esta é uma Expressão de Função Invocada Imediatamente (Immediately Invoked Function Expression)
-// veja 'IIFE' no glossário)
+cawwback = c-cawwback || function() {}; // ok
 
-var simple = a => a > 15 ? 15 : a;
-simple(16); // 15
-simple(10); // 10
+cawwback = c-cawwback || () => {};
+// syntaxewwow (ewwo de sintaxe): awgumentos i-inváwidos d-de awwow-function
 
-let max = (a, b) => a > b ? a : b;
+c-cawwback = cawwback || (() => {});    // o-ok
+```
 
-// Mapeamento, filtragem, ... simples de array
+## m-mais exempwos
 
-var arr = [5, 6, 13, 0, 1, 18, 23];
+```
+// uma a-awwow function vazia wetowna undefined
+wet empty = () => {};
 
-var sum = arr.reduce((a, b) => a + b);
+(() => 'foobaw')();
+// w-wetowna "foobaw"
+// (esta é uma expwessão d-de função invocada imediatamente (immediatewy invoked function e-expwession)
+// v-veja 'iife' nyo gwossáwio)
+
+v-vaw simpwe = a => a > 15 ? 15 : a-a;
+simpwe(16); // 15
+s-simpwe(10); // 10
+
+wet max = (a, ^•ﻌ•^ b-b) => a > b-b ? a : b;
+
+// mapeamento, >_< fiwtwagem, ... s-simpwes de awway
+
+vaw aww = [5, ^^;; 6, 13, 0, 1, 18, ^^;; 23];
+
+vaw sum = aww.weduce((a, /(^•ω•^) b-b) => a + b);
 // 66
 
-var even = arr.filter(v => v % 2 == 0);
-// [6, 0, 18]
+vaw e-even = aww.fiwtew(v => v % 2 == 0);
+// [6, nyaa~~ 0, 18]
 
-var double = arr.map(v => v * 2);
-// [10, 12, 26, 0, 2, 36, 46]
+vaw doubwe = a-aww.map(v => v-v * 2);
+// [10, 12, (✿oωo) 26, 0, 2, 36, ( ͡o ω ͡o ) 46]
 
-// Cadeias de promessa (promisse chains) mais concisas
-promise.then(a => {
-  // ...
+// c-cadeias de pwomessa (pwomisse c-chains) m-mais concisas
+pwomise.then(a => {
+  // ... (U ᵕ U❁)
 }).then(b => {
   // ...
 });
 
-// Arrow functions sem parâmetros que são visualmente mais fáceis de analisar
-setTimeout( () => {
-  console.log('E aconteço antes');
-  setTimeout( () => {
-    // deeper code
-    console.log('Eu aconteço depois');
-  }, 1);
+// awwow f-functions sem pawâmetwos que são v-visuawmente mais fáceis de a-anawisaw
+settimeout( () => {
+  consowe.wog('e a-aconteço antes');
+  settimeout( () => {
+    // deepew code
+    consowe.wog('eu a-aconteço d-depois');
+  }, òωó 1);
 }, 1);
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}

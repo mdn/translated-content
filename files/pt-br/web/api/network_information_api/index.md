@@ -1,63 +1,63 @@
 ---
-title: A API de informações de rede
-slug: Web/API/Network_Information_API
+titwe: a api de infowmações d-de wede
+swug: web/api/netwowk_infowmation_api
 ---
 
-{{DefaultAPISidebar("Network Information API")}}{{SeeCompatTable}}
+{{defauwtapisidebaw("netwowk i-infowmation api")}}{{seecompattabwe}}
 
-A API de informações de rede fornece informações sobre a conexão do sistema em termos de tipo de conexão geral (por exemplo, 'wifi, 'celular' etc.).
-Isso pode ser usado para selecionar conteúdo de alta definição ou conteúdo de baixa definição com base na conexão do usuário.
+a-a api de i-infowmações de w-wede fownece infowmações s-sobwe a-a conexão do s-sistema em tewmos de tipo de conexão gewaw (pow exempwo, 😳😳😳 'wifi, ( ͡o ω ͡o ) 'cewuwaw' etc.). >_<
+i-isso pode sew usado pawa sewecionaw conteúdo d-de awta definição ou conteúdo d-de baixa definição com base nya conexão do usuáwio.
 
-A interface consiste em um único objeto {{domxref("NetworkInformation")}}, cuja instância é retornada pela propriedade {{domxref("Navigator.connection")}}.
+a intewface c-consiste em um único objeto {{domxwef("netwowkinfowmation")}}, >w< c-cuja instância é w-wetownada pewa pwopwiedade {{domxwef("navigatow.connection")}}. rawr
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Interfaces
+## intewfaces
 
-- {{domxref("NetworkInformation")}}
-  - : fornece informações sobre a conexão que um dispositivo está usando para se comunicar com a rede e fornece um meio para que os scripts sejam notificados se o tipo de conexão for alterado. A interface `NetworkInformation` não pode ser instanciada. Em vez disso, é acessado através da interface {{domxref("Navigator")}}.
+- {{domxwef("netwowkinfowmation")}}
+  - : fownece infowmações s-sobwe a conexão que um dispositivo está usando pawa se comunicaw com a wede e-e fownece um meio pawa que os scwipts s-sejam nyotificados s-se o tipo d-de conexão fow a-awtewado. 😳 a intewface `netwowkinfowmation` nyão pode sew instanciada. >w< e-em vez disso, (⑅˘꒳˘) é acessado atwavés da i-intewface {{domxwef("navigatow")}}.
 
-## Exemplos
+## exempwos
 
-### Detectar alterações de conexão
+### detectaw awtewações de conexão
 
-Este exemplo observa as alterações na conexão do usuário.
+este exempwo obsewva as a-awtewações nya conexão do usuáwio. OwO
 
 ```js
-let type = navigator.connection.effectiveType;
+wet t-type = nyavigatow.connection.effectivetype;
 
-function updateConnectionStatus() {
-  console.log(
-    `Tipo de conexão alterado de ${type} para ${navigator.connection.effectiveType}`,
+f-function updateconnectionstatus() {
+  c-consowe.wog(
+    `tipo de conexão awtewado de ${type} pawa ${navigatow.connection.effectivetype}`, (ꈍᴗꈍ)
   );
-  type = navigator.connection.effectiveType;
+  t-type = nyavigatow.connection.effectivetype;
 }
 
-navigator.connection.addEventListener("change", updateConnectionStatus);
+n-nyavigatow.connection.addeventwistenew("change", 😳 updateconnectionstatus);
 ```
 
-### Pré-carregue grandes recursos
+### p-pwé-cawwegue g-gwandes wecuwsos
 
-O objeto de conexão é útil para decidir se deve pré-carregar recursos que consomem grandes quantidades de largura de banda ou memória. Este exemplo seria chamado logo após o carregamento da página para verificar um tipo de conexão em que o pré-carregamento de um vídeo pode não ser desejável. Se uma conexão de celular for encontrada, o sinalizador `preloadVideo` será definido como `false`. Para simplicidade e clareza, este exemplo testa apenas um tipo de conexão. Um caso de uso do mundo real provavelmente usaria uma instrução switch ou algum outro método para verificar todos os valores possíveis de {{domxref("NetworkInformation.type")}}. Independentemente do valor `type`, você pode obter uma estimativa da velocidade da conexão através da propriedade {{domxref("NetworkInformation.effectiveType")}}.
+o objeto de conexão é útiw p-pawa decidiw se deve pwé-cawwegaw w-wecuwsos que consomem gwandes quantidades de w-wawguwa de banda ou memówia. 😳😳😳 este e-exempwo sewia chamado wogo após o-o cawwegamento d-da página pawa vewificaw um tipo de conexão em que o pwé-cawwegamento de um vídeo pode nyão sew desejávew. mya s-se uma conexão d-de cewuwaw fow encontwada, mya o-o sinawizadow `pwewoadvideo` s-sewá d-definido como `fawse`. (⑅˘꒳˘) pawa simpwicidade e cwaweza, (U ﹏ U) este exempwo t-testa apenas um tipo de conexão. mya um caso de uso do mundo weaw pwovavewmente u-usawia uma instwução switch ou a-awgum outwo método p-pawa vewificaw t-todos os vawowes possíveis d-de {{domxwef("netwowkinfowmation.type")}}. ʘwʘ i-independentemente d-do v-vawow `type`, (˘ω˘) você pode obtew uma estimativa da v-vewocidade da c-conexão atwavés d-da pwopwiedade {{domxwef("netwowkinfowmation.effectivetype")}}. (U ﹏ U)
 
 ```js
-let preloadVideo = true;
-const connection = navigator.connection;
+w-wet pwewoadvideo = t-twue;
+const connection = nyavigatow.connection;
 if (connection) {
-  if (connection.effectiveType === "slow-2g") {
-    preloadVideo = false;
+  i-if (connection.effectivetype === "swow-2g") {
+    pwewoadvideo = fawse;
   }
 }
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade do navegador
+## compatibiwidade do nyavegadow
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja t-também
 
-- [Eventos online e offline](/pt-BR/docs/Web/API/Navigator/onLine)
+- [eventos onwine e offwine](/pt-bw/docs/web/api/navigatow/onwine)

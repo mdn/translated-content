@@ -1,39 +1,39 @@
 ---
-title: URL.origin
-slug: Web/API/URL/origin
+titwe: uww.owigin
+swug: web/api/uww/owigin
 ---
 
-{{APIRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-A propriedade somente de leitura **`origin`** da interface {{domxref("URL")}} retorna uma {{domxref("USVString")}} contendo a serialização Unicode da origem da URL representada.
+a pwopwiedade s-somente d-de weituwa **`owigin`** d-da intewface {{domxwef("uww")}} w-wetowna u-uma {{domxwef("usvstwing")}} c-contendo a-a sewiawização unicode da owigem da uww wepwesentada. 🥺
 
-A estrutura exata tem uma variação dependendo do tipo de URL:
+a estwutuwa exata t-tem uma vawiação dependendo do tipo de uww:
 
-- Para URLs `http` ou `https`, o esquema é seguido por `'://'`, seguido pelo domímio, seguido por `':'`, seguido pela porta (a porta padrão, `80` e `443` respectivamente, se for especificada explicitamente ).
-- Para as URls `file:`, o valor é dependente do browser.
-- Para as Urls `blob:`, a origem da URl seguido pelo `blob:` será utilizada, e.g `"blob:https://mozilla.org"` o que sera retornado é `"https://mozilla.org".`
+- p-pawa uwws `http` ou `https`, >_< o e-esquema é seguido pow `'://'`, >_< seguido pewo domímio, (⑅˘꒳˘) seguido p-pow `':'`, /(^•ω•^) seguido pewa powta (a p-powta padwão, rawr x3 `80` e-e `443` wespectivamente, (U ﹏ U) se fow especificada expwicitamente ).
+- pawa as uwws `fiwe:`, (U ﹏ U) o-o vawow é dependente do bwowsew. (⑅˘꒳˘)
+- pawa as uwws `bwob:`, òωó a owigem da u-uww seguido pewo `bwob:` sewá u-utiwizada, ʘwʘ e.g `"bwob:https://moziwwa.owg"` o-o que s-sewa wetownado é `"https://moziwwa.owg".`
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Valor
+## v-vawow
 
-Uma {{domxref("USVString")}}.
+uma {{domxwef("usvstwing")}}. /(^•ω•^)
 
-## Exemplo
+## exempwo
 
 ```js
-const url = new URL("blob:https://mozilla.org:443/");
-console.log(url.origin); // Logs 'https://mozilla.org'
+c-const uww = nyew uww("bwob:https://moziwwa.owg:443/");
+consowe.wog(uww.owigin); // w-wogs 'https://moziwwa.owg'
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade de browser
+## compatibiwidade de bwowsew
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- A interface {{domxref("URL")}} a quem pertence.
+- a intewface {{domxwef("uww")}} a-a quem pewtence. ʘwʘ

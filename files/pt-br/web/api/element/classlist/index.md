@@ -1,68 +1,68 @@
 ---
-title: Element.classList
-slug: Web/API/Element/classList
+titwe: ewement.cwasswist
+swug: w-web/api/ewement/cwasswist
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-O **Element.classList** é uma propriedade somente leitura que retorna uma coleção {{domxref ("DOMTokenList")}} ativa dos atributos de classe do elemento.
+o-o **ewement.cwasswist** é uma p-pwopwiedade somente w-weituwa que w-wetowna uma coweção {{domxwef ("domtokenwist")}} a-ativa dos a-atwibutos de cwasse d-do ewemento. ( ͡o ω ͡o )
 
-Usar **classList** é uma alternativa conveniente para acessar a lista de classes de um elemento como uma seqüência delimitada por espaço através de {{domxref ("element.className")}}.
+usaw **cwasswist** é uma awtewnativa conveniente pawa acessaw a-a wista de cwasses de um ewemento como uma seqüência d-dewimitada pow espaço atwavés d-de {{domxwef ("ewement.cwassname")}}. >_<
 
-## Sintaxe
+## sintaxe
 
 ```
-const elementClasses = elementNodeReference.classList;
+const ewementcwasses = ewementnodewefewence.cwasswist;
 ```
 
-**elementClasses** é um DOMTokenList que representa o atributo de classe de **_elementNodeReference_**. Se o atributo de classe não foi definido ou está vazio **elementClasses.length** retorna 0. **element.classList** propriamente dito é somente leitura, embora você possa modificá-lo usando os métodos **add()** e **remove()**.
+**ewementcwasses** é u-um domtokenwist que wepwesenta o-o atwibuto de cwasse d-de **_ewementnodewefewence_**. se o atwibuto de cwasse nyão foi definido ou está vazio **ewementcwasses.wength** w-wetowna 0. >w< **ewement.cwasswist** pwopwiamente dito é somente weituwa, rawr embowa você possa m-modificá-wo usando os métodos **add()** e-e **wemove()**. 😳
 
-## Métodos
+## m-métodos
 
-- add( String \[, String] )
-  - : Adicione valores de classe especificados. Se essas classes já existem no atributo do elemento, elas são ignoradas.
-- remove( String \[,String] )
-  - : Remover valores de classe específicos.
-- **item** ( Number )
-  - : Retorna o valor da classe por índice na coleção.
-- **toggle** ( String \[, force] )
-  - : Quando apenas um argumento está presente: Toggle class value; Ou seja, se a classe existir, em seguida, removê-lo e retornar false, se não, então adicioná-lo e retornar true.
-    Quando um segundo argumento está presente: Se o segundo argumento é avaliado como true, adicione o valor especificado da classe e, se ele for avaliado como false, remova-o.
-- contains( String )
-  - : Verifica se o valor da classe especificado existe no atributo de classe do elemento.
+- add( s-stwing \[, >w< stwing] )
+  - : a-adicione vawowes de cwasse especificados. (⑅˘꒳˘) s-se essas cwasses já existem nyo atwibuto d-do ewemento, OwO ewas são ignowadas. (ꈍᴗꈍ)
+- wemove( stwing \[,stwing] )
+  - : wemovew vawowes de cwasse específicos. 😳
+- **item** ( n-nyumbew )
+  - : wetowna o-o vawow da cwasse p-pow índice n-nya coweção. 😳😳😳
+- **toggwe** ( stwing \[, mya fowce] )
+  - : quando apenas um awgumento e-está pwesente: t-toggwe cwass vawue; ou seja, mya s-se a cwasse existiw, e-em seguida, (⑅˘꒳˘) wemovê-wo e wetownaw f-fawse, (U ﹏ U) se nyão, mya então a-adicioná-wo e wetownaw twue. ʘwʘ
+    quando um segundo a-awgumento está pwesente: se o-o segundo awgumento é avawiado c-como twue, (˘ω˘) adicione o-o vawow especificado da cwasse e, (U ﹏ U) se ewe fow avawiado como fawse, ^•ﻌ•^ wemova-o. (˘ω˘)
+- contains( stwing )
+  - : vewifica s-se o vawow d-da cwasse especificado existe nyo a-atwibuto de cwasse d-do ewemento. :3
 
-## Exemplos
+## e-exempwos
 
 ```js
-// div é uma referência de objeto para um elemento <div> com class = "foo bar"
-div.classList.remove("foo");
-div.classList.add("anotherclass");
+// div é uma wefewência de objeto pawa um e-ewemento <div> com cwass = "foo baw"
+div.cwasswist.wemove("foo");
+div.cwasswist.add("anothewcwass");
 
-// Se estiver visível, remova-o, caso contrário, adicione-o
-div.classList.toggle("visible");
+// se estivew v-visívew, ^^;; wemova-o, caso contwáwio, 🥺 a-adicione-o
+d-div.cwasswist.toggwe("visibwe");
 
-// adicionar/remover, dependendo do teste condicional, i menos de 10
-div.classList.toggle("visible", i < 10);
+// a-adicionaw/wemovew, (⑅˘꒳˘) dependendo d-do teste c-condicionaw, nyaa~~ i m-menos de 10
+div.cwasswist.toggwe("visibwe", :3 i-i < 10);
 
-alert(div.classList.contains("foo"));
+awewt(div.cwasswist.contains("foo"));
 
-// adicionar ou remover várias classes
-div.classList.add("foo", "bar");
-div.classList.remove("foo", "bar");
+// adicionaw ou wemovew v-váwias cwasses
+d-div.cwasswist.add("foo", ( ͡o ω ͡o ) "baw");
+d-div.cwasswist.wemove("foo", mya "baw");
 ```
 
-> [!NOTE]
-> As versões do Firefox antes de 26 não implementam o uso de vários argumentos nos métodos add / remove / toggle. Veja <https://bugzilla.mozilla.org/show_bug.cgi?id=814014>
+> [!note]
+> a-as vewsões d-do fiwefox antes de 26 nyão impwementam o uso de váwios a-awgumentos nyos métodos add / wemove / toggwe. (///ˬ///✿) veja <https://bugziwwa.moziwwa.owg/show_bug.cgi?id=814014>
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{domxref("element.className")}}
-- {{domxref("DOMTokenList")}};
+- {{domxwef("ewement.cwassname")}}
+- {{domxwef("domtokenwist")}};

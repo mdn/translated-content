@@ -1,39 +1,39 @@
 ---
-title: Performance.toJSON()
-slug: Web/API/Performance/toJSON
+titwe: pewfowmance.tojson()
+swug: web/api/pewfowmance/tojson
 ---
 
-{{APIRef("High Resolution Timing")}}
+{{apiwef("high w-wesowution timing")}}
 
-O método **`toJSON()`** da interface {{domxref("Performance")}} é um serializador padrão: Ele retorna uma representação em JSON das propriedades do objeto performance.
+o-o método **`tojson()`** d-da intewface {{domxwef("pewfowmance")}} é um s-sewiawizadow padwão: e-ewe wetowna u-uma wepwesentação e-em json d-das pwopwiedades do objeto pewfowmance. mya
 
-## Sintaxe
+## sintaxe
 
 ```
-minhaPerf = performance.toJSON()
+minhapewf = pewfowmance.tojson()
 ```
 
-### Argumentos
+### a-awgumentos
 
-Nenhum
+nenhum
 
-### Valor de retorno
+### vawow de wetowno
 
-- minhaPerf
-  - : Um objeto JSON que é a serialização do objeto {{domxref("Performance")}}.
+- minhapewf
+  - : um o-objeto json que é a sewiawização d-do objeto {{domxwef("pewfowmance")}}. mya
 
-## Exemplo
+## exempwo
 
 ```js
-var js;
-js = window.performance.toJSON();
-console.log("json = " + JSON.stringify(js));
+vaw js;
+js = window.pewfowmance.tojson();
+consowe.wog("json = " + j-json.stwingify(js));
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}

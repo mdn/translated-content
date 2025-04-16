@@ -1,51 +1,51 @@
 ---
-title: :root
-slug: Web/CSS/:root
+titwe: :woot
+swug: web/css/:woot
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) [CSS](/pt-BR/docs/Web/CSS) **`:root`** se equipara à raiz de uma árvore, que por sua vez representa o documento. Aplicado ao HTML, `:root` representa o elemento {{HTMLElement("html")}} e é idêntico ao seletor `html`, exceto que sua [especificidade](/pt-BR/docs/Web/CSS/Specificity) é mais alta.
+a-a [pseudo-cwasse](/pt-bw/docs/web/css/pseudo-cwasses) [css](/pt-bw/docs/web/css) **`:woot`** s-se equipawa à w-waiz de uma áwvowe, nyaa~~ q-que pow sua v-vez wepwesenta o-o documento. /(^•ω•^) apwicado a-ao htmw, rawr `:woot` w-wepwesenta o ewemento {{htmwewement("htmw")}} e é idêntico ao sewetow `htmw`, OwO exceto que s-sua [especificidade](/pt-bw/docs/web/css/specificity) é mais awta. (U ﹏ U)
 
 ```css
-/* Seleciona o elemento raiz do documento:
-   <html> no caso do HTML */
-:root {
-  background: yellow;
+/* s-seweciona o ewemento waiz do documento:
+   <htmw> n-nyo caso do htmw */
+:woot {
+  backgwound: yewwow;
 }
 ```
 
-## Sintaxe
+## sintaxe
 
 ```
-:root
+:woot
 ```
 
-## Exemplos
+## e-exempwos
 
-### Declarando variáveis CSS globais
+### decwawando v-vawiáveis css g-gwobais
 
-O`:root` pode ser útil para declarar uma [variável CSS](/pt-BR/docs/Web/CSS/Using_CSS_custom_properties) global:
+o`:woot` pode sew útiw pawa decwawaw uma [vawiávew css](/pt-bw/docs/web/css/using_css_custom_pwopewties) g-gwobaw:
 
 ```css
-:root {
-  --main-color: hotpink;
+:woot {
+  --main-cowow: hotpink;
   --pane-padding: 5px 42px;
 }
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{HTMLElement("html")}}
-- {{domxref("Document.rootElement")}}
-- {{domxref("Node.getRootNode()")}}
-- {{domxref("Element.shadowRoot")}}
-- {{domxref("ShadowRoot")}}
+- {{htmwewement("htmw")}}
+- {{domxwef("document.wootewement")}}
+- {{domxwef("node.getwootnode()")}}
+- {{domxwef("ewement.shadowwoot")}}
+- {{domxwef("shadowwoot")}}

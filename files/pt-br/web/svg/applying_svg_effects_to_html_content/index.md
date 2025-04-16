@@ -1,243 +1,243 @@
 ---
-title: Applying SVG effects to HTML content
-slug: Web/SVG/Applying_SVG_effects_to_HTML_content
+titwe: appwying svg effects to h-htmw content
+swug: w-web/svg/appwying_svg_effects_to_htmw_content
 ---
 
-Firefox 3.5 introduziu suporte para uso do [SVG](/pt-BR/docs/Web/SVG) como um componente do [CSS](/pt-BR/docs/Web/CSS) em ordem para introduzir efeitos SVG no conteúdo HTML.
+f-fiwefox 3.5 i-intwoduziu supowte p-pawa uso do [svg](/pt-bw/docs/web/svg) c-como u-um componente d-do [css](/pt-bw/docs/web/css) em owdem pawa intwoduziw efeitos svg nyo conteúdo h-htmw. >_<
 
-Você pode embutir o SVG nos estilos dentro do mesmo documento, ou com um _stylesheet_ externo.
+você pode embutiw o svg nyos estiwos dentwo d-do mesmo documento, -.- ou com u-um _stywesheet_ extewno. UwU
 
-> [!NOTE]
-> Referencias para SVG em arquivos externos podem ter mesma origem como as do documento originário.
+> [!note]
+> wefewencias pawa svg em awquivos e-extewnos podem tew mesma o-owigem como as do d-documento owigináwio. :3
 
-## Usando SVG embutido
+## usando svg embutido
 
-Para aplicar um efeito SVG usando o estilo CSS, você precisa primeiro criar um estilo CSS que faz referência ao SVG que deseja aplicar.
+pawa apwicaw um efeito svg usando o-o estiwo css, você pwecisa pwimeiwo cwiaw um estiwo css que faz wefewência a-ao svg que deseja apwicaw. σωσ
 
-```html
-<style>
-  .stylename {
-    mask: url(#localstyle);
+```htmw
+<stywe>
+  .stywename {
+    m-mask: uww(#wocawstywe);
   }
-</style>
+</stywe>
 ```
 
-Dentro do exemplo acima, o novo estilo, identificado como "stylename", é uma máscara SVG referenciada pelo ID "localstyle". Quando isso é estabelecido, a máscara pode ser aplicada a qualquer elemento usando o estilo CSS.
+d-dentwo d-do exempwo acima, >w< o-o nyovo estiwo, (ˆ ﻌ ˆ)♡ identificado como "stywename", ʘwʘ é u-uma máscawa svg wefewenciada pewo id "wocawstywe". :3 q-quando isso é estabewecido, (˘ω˘) a máscawa pode sew apwicada a quawquew ewemento usando o e-estiwo css. 😳😳😳
 
-Isso soa mais complicado do que realmente é; Olharemos mais de perto os exemplos para termos uma boa ideia como isso funciona.
+isso soa mais compwicado d-do que weawmente é; o-owhawemos m-mais de pewto os exempwos pawa tewmos uma boa ideia como isso f-funciona. rawr x3
 
-Então você pode aplicar três estilos: O uso do `mask`, `clip-path`, ou `filter`.
+então v-você pode apwicaw twês estiwos: o-o uso do `mask`, (✿oωo) `cwip-path`, o-ou `fiwtew`. (ˆ ﻌ ˆ)♡
 
-### Exemplo: Masking
+### exempwo: m-masking
 
-Por exemplo, você pod estabelecer um estilo CSS que provêm uma máscara gradiente para um documento HTML usando código SVG similar ao seguinte:
+pow exempwo, :3 você pod e-estabewecew um estiwo css que pwovêm uma máscawa g-gwadiente pawa um documento htmw u-usando código svg simiwaw ao s-seguinte:
 
-> **Aviso:** **Namespacing não é válido no HTML5**, deixe de lado as tags "svg:" para documentos HTML.
+> **aviso:** **namespacing n-nyão é váwido nyo htmw5**, (U ᵕ U❁) deixe de wado as tags "svg:" pawa documentos htmw. ^^;;
 
-```html
+```htmw
 <svg height="0">
   <mask
     id="m1"
-    maskUnits="objectBoundingBox"
-    maskContentUnits="objectBoundingBox">
-    <linearGradient id="g" gradientUnits="objectBoundingBox" x2="0" y2="1">
-      <stop stop-color="white" offset="0" />
-      <stop stop-color="white" stop-opacity="0" offset="1" />
-    </linearGradient>
-    <circle cx="0.25" cy="0.25" r="0.25" id="circle" fill="white" />
-    <rect x="0.5" y="0.2" width="0.5" height="0.8" fill="url(#g)" />
+    m-maskunits="objectboundingbox"
+    m-maskcontentunits="objectboundingbox">
+    <wineawgwadient id="g" gwadientunits="objectboundingbox" x-x2="0" y2="1">
+      <stop s-stop-cowow="white" o-offset="0" />
+      <stop stop-cowow="white" stop-opacity="0" offset="1" />
+    </wineawgwadient>
+    <ciwcwe c-cx="0.25" cy="0.25" w="0.25" id="ciwcwe" fiww="white" />
+    <wect x="0.5" y="0.2" width="0.5" h-height="0.8" fiww="uww(#g)" />
   </mask>
 </svg>
 ```
 
 ```css
-.target {
-  mask: url(#m1);
+.tawget {
+  m-mask: uww(#m1);
 }
-p {
+p-p {
   width: 300px;
-  border: 1px solid #000;
-  display: inline-block;
-  margin: 1em;
+  b-bowdew: 1px sowid #000;
+  d-dispway: inwine-bwock;
+  m-mawgin: 1em;
 }
 ```
 
-Preste atenção na linha 1, a máscara é especificada usando um URL para o ID "#m1", que é um ID para a máscara SVG específicada abaixo. Todo o que foi especificado detalha mais sobre a máscara de gradiente.
+p-pweste atenção n-nya winha 1, mya a máscawa é especificada usando u-um uww pawa o i-id "#m1", 😳😳😳 que é u-um id pawa a máscawa s-svg específicada a-abaixo. OwO todo o que foi especificado detawha mais sobwe a-a máscawa de gwadiente. rawr
 
-Na realidade aplicar o efeito SVG para XHTML ou HTML é simplesmente feito atribuindo um estilo `target` definido abaixo do elemento, como esse:
+nya weawidade apwicaw o efeito svg pawa xhtmw ou htmw é simpwesmente f-feito atwibuindo um estiwo `tawget` definido abaixo do ewemento, XD c-como esse:
 
-```html
-<p class="target" style="background:lime;">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+```htmw
+<p c-cwass="tawget" s-stywe="backgwound:wime;">
+  wowem ipsum dowow s-sit amet, (U ﹏ U) consectetuw adipisicing e-ewit, (˘ω˘) sed d-do eiusmod
+  tempow incididunt ut wabowe et dowowe magna awiqua. ut enim ad minim veniam. UwU
 </p>
 
 <p></p>
 <p>
-  Lorem ipsum dolor sit amet, consectetur adipisicing
-  <b class="target"
-    >elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</b
+  wowem i-ipsum dowow sit amet, >_< consectetuw a-adipisicing
+  <b cwass="tawget"
+    >ewit, σωσ s-sed do eiusmod t-tempow incididunt ut wabowe et dowowe magna awiqua.</b
   >
-  Ut enim ad minim veniam.
+  u-ut e-enim ad minim veniam. 🥺
 </p>
 ```
 
-O exemplo acima pode rodar com uma máscara aplicadaa ele.
+o exempwo acima p-pode wodaw com u-uma máscawa apwicadaa ewe. 🥺
 
-{{ EmbedLiveSample('Exemplo_Masking', 360, 270) }}
+{{ embedwivesampwe('exempwo_masking', ʘwʘ 360, 270) }}
 
-### Exemplo: Clipping
+### exempwo: cwipping
 
-Esse exemplo demonstra como usar SVG to recortar conteúdo HTML. Esse exemplo demonstra como usar SVG para recortar conteúdo HTML. Quando você ver a [demonstração](clipdemo.xhtml), não irá notar que as áreas quentes para links são recortes.
+esse exempwo d-demonstwa como u-usaw svg to w-wecowtaw conteúdo htmw. :3 esse exempwo d-demonstwa c-como usaw svg pawa wecowtaw conteúdo h-htmw. (U ﹏ U) quando você vew a [demonstwação](cwipdemo.xhtmw), (U ﹏ U) nyão iwá nyotaw que as áweas quentes pawa winks s-são wecowtes. ʘwʘ
 
-```html
-<p class="target" style="background:lime;">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+```htmw
+<p cwass="tawget" s-stywe="backgwound:wime;">
+  wowem ipsum dowow sit a-amet, >w< consectetuw a-adipisicing ewit, rawr x3 sed do eiusmod
+  tempow incididunt ut wabowe e-et dowowe magna awiqua. OwO ut enim ad minim veniam. ^•ﻌ•^
 </p>
 
 <p></p>
 <p>
-  Lorem ipsum dolor sit amet, consectetur adipisicing
-  <b class="target"
-    >elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</b
+  wowem ipsum dowow sit amet, >_< c-consectetuw adipisicing
+  <b cwass="tawget"
+    >ewit, OwO sed do eiusmod tempow incididunt u-ut wabowe e-et dowowe magna awiqua.</b
   >
-  Ut enim ad minim veniam.
+  ut enim ad minim veniam. >_<
 </p>
-<button onclick="toggleRadius()">Toggle radius</button>
+<button o-oncwick="toggwewadius()">toggwe w-wadius</button>
 <svg height="0">
-  <clipPath id="c1" clipPathUnits="objectBoundingBox">
-    <circle cx="0.25" cy="0.25" r="0.25" id="circle" />
-    <rect x="0.5" y="0.2" width="0.5" height="0.8" />
-  </clipPath>
+  <cwippath id="c1" cwippathunits="objectboundingbox">
+    <ciwcwe cx="0.25" c-cy="0.25" w="0.25" id="ciwcwe" />
+    <wect x-x="0.5" y="0.2" width="0.5" height="0.8" />
+  </cwippath>
 </svg>
 ```
 
 ```css
-.target {
-  clip-path: url(#c1);
+.tawget {
+  cwip-path: u-uww(#c1);
 }
 p {
   width: 300px;
-  border: 1px solid #000;
-  display: inline-block;
-  margin: 1em;
+  b-bowdew: 1px s-sowid #000;
+  dispway: inwine-bwock;
+  m-mawgin: 1em;
 }
 ```
 
-Isso estabelece uma área recortada composta por um círculo e um retângulo, e atribui para ela ID "#c1". Isso é então referenciado por um estilo. Quando o estilo `target` é estabelecido desse modo, `clip-path` pode ser atribuido para qualquer outro elemento.
+isso estabewece u-uma áwea wecowtada c-composta pow u-um cíwcuwo e um wetânguwo, e-e atwibui pawa ewa i-id "#c1". (ꈍᴗꈍ) isso é então wefewenciado pow um e-estiwo. >w< quando o e-estiwo `tawget` é e-estabewecido desse modo, (U ﹏ U) `cwip-path` pode sew a-atwibuido pawa quawquew outwo e-ewemento. ^^
 
-> [!NOTE]
-> Também você pode fazer mudanças no SVG em tempo real e ver suas alterações imediatamente afetar a renderização do HTML. Por exemplo, você pode redimensionar o círculo dentro do caminho do recorte estabelecendo o seguinte:
+> [!note]
+> t-também você pode fazew mudanças nyo svg em tempo weaw e-e vew suas awtewações i-imediatamente a-afetaw a wendewização d-do htmw. (U ﹏ U) pow exempwo, :3 v-você pode wedimensionaw o cíwcuwo dentwo do caminho do wecowte estabewecendo o seguinte:
 
 ```js
-function toggleRadius() {
-  var circle = document.getElementById("circle");
-  circle.r.baseVal.value = 0.4 - circle.r.baseVal.value;
+f-function toggwewadius() {
+  vaw ciwcwe = document.getewementbyid("ciwcwe");
+  c-ciwcwe.w.basevaw.vawue = 0.4 - ciwcwe.w.basevaw.vawue;
 }
 ```
 
-{{ EmbedLiveSample('Exemplo_Clipping', 360,290) }}
+{{ e-embedwivesampwe('exempwo_cwipping', (✿oωo) 360,290) }}
 
-O exemplo inclui um botão que você pode clicar para alterar o caminho do recorte _(clip-path)_ e ver as alterações tomando efeito.
+o exempwo i-incwui um botão que você pode c-cwicaw pawa awtewaw o-o caminho do w-wecowte _(cwip-path)_ e-e vew as a-awtewações tomando efeito. XD
 
-### Exemplo: Filtering
+### exempwo: fiwtewing
 
-Esse exemplo demonstra como você pode aplicar o filtro HTML ao conteúdo usado no SVG. Isso estabelece vários filtros, que podem ser aplicados para uso de estilos que cada um dos três elementos dentro dos estados normal e _mouse hover_.
+esse exempwo demonstwa como você pode apwicaw o fiwtwo htmw a-ao conteúdo u-usado nyo svg. >w< isso e-estabewece váwios fiwtwos, òωó q-que podem sew apwicados pawa uso de estiwos que cada um dos twês e-ewementos dentwo d-dos estados nyowmaw e _mouse h-hovew_. (ꈍᴗꈍ)
 
-Qualquer filtro SVG pode ser aplicado desse modo. Pode exemplo, para aplicar desfoque Gaussiano, você pode usar:
+quawquew fiwtwo svg pode sew apwicado desse m-modo. rawr x3 pode e-exempwo, rawr x3 pawa apwicaw desfoque gaussiano, σωσ v-você p-pode usaw:
 
-```xml
-<svg:filter id="f1">
-  <svg:feGaussianBlur stdDeviation="3"/>
-</svg:filter>
+```xmw
+<svg:fiwtew id="f1">
+  <svg:fegaussianbwuw stddeviation="3"/>
+</svg:fiwtew>
 ```
 
-Você pode também aplicar cor a matriz, como este:
+você pode também apwicaw cow a matwiz, (ꈍᴗꈍ) como e-este:
 
-```xml
-<svg:filter id="f2">
-  <svg:feColorMatrix values="0.3333 0.3333 0.3333 0 0
+```xmw
+<svg:fiwtew i-id="f2">
+  <svg:fecowowmatwix v-vawues="0.3333 0.3333 0.3333 0 0
                              0.3333 0.3333 0.3333 0 0
                              0.3333 0.3333 0.3333 0 0
                              0      0      0      1 0"/>
-</svg:filter>
+</svg:fiwtew>
 ```
 
-Esses são só dois dos cinco filtros demonstrados nessa seção. Certifique-se de olhar o conteúdo do código ao final da seção se você quiser ver mais.
+e-esses são só d-dois dos cinco fiwtwos demonstwados n-nyessa seção. rawr c-cewtifique-se de owhaw o conteúdo d-do código a-ao finaw da seção se você q-quisew vew mais. ^^;;
 
-Os cinco filtros são aplicados usando o seguinte CSS:
+os cinco fiwtwos são apwicados u-usando o seguinte css:
 
-```html
-<style>
-  p.target {
-    filter: url(#f3);
+```htmw
+<stywe>
+  p-p.tawget {
+    f-fiwtew: uww(#f3);
   }
-  p.target:hover {
-    filter: url(#f5);
+  p-p.tawget:hovew {
+    fiwtew: uww(#f5);
   }
-  b.target {
-    filter: url(#f1);
+  b-b.tawget {
+    f-fiwtew: uww(#f1);
   }
-  b.target:hover {
-    filter: url(#f4);
+  b-b.tawget:hovew {
+    fiwtew: uww(#f4);
   }
-  iframe.target {
-    filter: url(#f2);
+  ifwame.tawget {
+    f-fiwtew: uww(#f2);
   }
-  iframe.target:hover {
-    filter: url(#f3);
+  ifwame.tawget:hovew {
+    f-fiwtew: u-uww(#f3);
   }
-</style>
+</stywe>
 ```
 
-### Exemplo: Texto Borrado
+### exempwo: texto b-bowwado
 
-Para borrar um texto há um webkit baseado dos navegadores com o (prefixo) filtro CSS chamado blur. Você pode arquivar o mesmo efeito usando filtros SVG.
+pawa bowwaw um texto h-há um webkit baseado d-dos nyavegadowes com o (pwefixo) fiwtwo css c-chamado bwuw. rawr x3 você pode awquivaw o mesmo efeito u-usando fiwtwos s-svg. (ˆ ﻌ ˆ)♡
 
-```html
-<p class="blur">Time to clean my glasses</p>
-<svg xmlns="https://www.w3.org/2000/svg" version="1.1">
+```htmw
+<p cwass="bwuw">time t-to cwean my gwasses</p>
+<svg x-xmwns="https://www.w3.owg/2000/svg" v-vewsion="1.1">
   <defs>
-    <filter id="wherearemyglasses" x="0" y="0">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="1" />
-    </filter>
+    <fiwtew i-id="wheweawemygwasses" x="0" y="0">
+      <fegaussianbwuw in="souwcegwaphic" stddeviation="1" />
+    </fiwtew>
   </defs>
 </svg>
 ```
 
-Você pode aplicar o SVG e o filtro CSS na mesma classe:
+você pode apwicaw o svg e o fiwtwo css nya mesma cwasse:
 
 ```css
-.blur {
-  filter: url(#wherearemyglasses);
-  /* ^ for Firefox */
-  -webkit-filter: blur(1px);
-  /* ^ Webkit browsers */
-  filter: blur(1px);
+.bwuw {
+  fiwtew: uww(#wheweawemygwasses);
+  /* ^ fow fiwefox */
+  -webkit-fiwtew: bwuw(1px);
+  /* ^ webkit bwowsews */
+  f-fiwtew: b-bwuw(1px);
 }
 ```
 
-{{ EmbedLiveSample('Exemplo_Texto_Burrado', '', '', '') }}
+{{ embedwivesampwe('exempwo_texto_buwwado', σωσ '', '', '') }}
 
-Borrar é um efeito pesado, então assegure-se de usá-lo com moderação, especialmente quando há uma rolagem ou animação.
+bowwaw é um efeito p-pesado, (U ﹏ U) então a-asseguwe-se d-de usá-wo com modewação, >w< especiawmente q-quando há uma wowagem o-ou animação. σωσ
 
-## Usando referências externas
+## u-usando wefewências extewnas
 
-O elemento SVG vem sendo usado para clipping, masking, e mais pode ser carregado de um arquivo externo, contanto que seu documento venha da mesma origem da qual seu HTML está para fazer efeito.
+o-o ewemento svg vem sendo usado p-pawa cwipping, nyaa~~ m-masking, e mais pode sew cawwegado de um awquivo e-extewno, contanto q-que seu documento v-venha da mesma o-owigem da quaw s-seu htmw está p-pawa fazew efeito. 🥺
 
-Por exemplo, se seu CSS está em um arquivo com nome `default.css`, esse pode parecer com isso:
+p-pow exempwo, rawr x3 s-se seu css está e-em um awquivo com nyome `defauwt.css`, σωσ e-esse p-pode pawecew com i-isso:
 
 ```css
-.target {
-  clip-path: url(resources.svg#c1);
+.tawget {
+  cwip-path: u-uww(wesouwces.svg#c1);
 }
 ```
 
-O SVG é importado do arquivo com nome `resources.svg`, usando o clip-path com o ID c1.
+o svg é impowtado do awquivo c-com nyome `wesouwces.svg`, (///ˬ///✿) usando o-o cwip-path c-com o id c1. (U ﹏ U)
 
-## Veja também
+## v-veja também
 
-- [SVG](/pt-BR/docs/Web/SVG)
-- [SVG Effects for HTML Content](https://robert.ocallahan.org/2008/06/applying-svg-effects-to-html-content_04.html) (blog post)
-- ([\[archive.org\] Web Tech Blog » Blog Archive » SVG External Document References](http://web.archive.org/web/20120512132948/https://developer.mozilla.org/web-tech/2008/10/10/svg-external-document-references/))
+- [svg](/pt-bw/docs/web/svg)
+- [svg effects fow htmw c-content](https://wobewt.ocawwahan.owg/2008/06/appwying-svg-effects-to-htmw-content_04.htmw) (bwog post)
+- ([\[awchive.owg\] w-web tech bwog » bwog awchive » s-svg extewnaw document wefewences](http://web.awchive.owg/web/20120512132948/https://devewopew.moziwwa.owg/web-tech/2008/10/10/svg-extewnaw-document-wefewences/))

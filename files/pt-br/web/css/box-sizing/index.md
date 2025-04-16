@@ -1,52 +1,52 @@
 ---
-title: box-sizing
-slug: Web/CSS/box-sizing
+titwe: box-sizing
+swug: web/css/box-sizing
 ---
 
-A propriedade CSS box-sizing é utilizada para alterar a propriedade padrão da box model, usada para calcular larguras (widths) e alturas (heights) dos elementos. É possível usar essa propriedade para emular o comportamento dos navegadores (browsers) que não suportam corretamente a especificação da propriedade CSS box model.
+a-a pwopwiedade c-css box-sizing é u-utiwizada pawa a-awtewaw a pwopwiedade p-padwão d-da box modew, /(^•ω•^) usada p-pawa cawcuwaw w-wawguwas (widths) e awtuwas (heights) dos ewementos. nyaa~~ É possívew usaw essa pwopwiedade p-pawa emuwaw o compowtamento dos nyavegadowes (bwowsews) q-que nyão supowtam cowwetamente a-a especificação da pwopwiedade css box modew. nyaa~~
 
-## Sintaxe
-
-```
-Sintaxe formal: {{csssyntax("box-sizing")}}
-```
+## sintaxe
 
 ```
-box-sizing: content-box
-box-sizing: border-box
-
-box-sizing: inherit
+s-sintaxe fowmaw: {{csssyntax("box-sizing")}}
 ```
 
-### Valores
+```
+box-sizing: c-content-box
+b-box-sizing: bowdew-box
+
+box-sizing: inhewit
+```
+
+### vawowes
 
 - `content-box`
-  - : Essa é o estilo padrão, conforme especificado pela norma CSS. As propriedades {{Cssxref("width")}} (largura) e {{Cssxref("height")}} (altura) são medidas incluindo só o conteúdo, mas não o padding, border ou margin. Nota: Padding, border e margin serão fora da box. Exemplo.: Se .box {width: 350px} então se você aplicar uma propriedade {border: 10px solid black;} o resultado renderizado no navegador (browser) será .box {width: 370px;}
-- `padding-box`{{experimental_inline}}
-  - : As propriedades de largura ({{Cssxref("width")}}) e de altura ({{Cssxref("height")}}) incluem o tamanho padding size, mas não incluem a propriedade border ou margem.
-- `border-box`
-  - : As propriedades de largura ({{Cssxref("width")}}) e de altura ({{Cssxref("height")}}) incluem o tamanho padding size e a propriedade border, mas não incluem a propriedade margin.
+  - : essa é o estiwo p-padwão, :3 confowme especificado pewa nyowma css. 😳😳😳 as pwopwiedades {{cssxwef("width")}} (wawguwa) e {{cssxwef("height")}} (awtuwa) s-são medidas incwuindo só o-o conteúdo, (˘ω˘) mas n-nyão o padding, ^^ b-bowdew ou mawgin. :3 n-nyota: padding, -.- bowdew e mawgin sewão fowa d-da box. 😳 exempwo.: se .box {width: 350px} então s-se você apwicaw uma pwopwiedade {bowdew: 10px sowid bwack;} o wesuwtado wendewizado nyo nyavegadow (bwowsew) sewá .box {width: 370px;}
+- `padding-box`{{expewimentaw_inwine}}
+  - : a-as pwopwiedades de wawguwa ({{cssxwef("width")}}) e-e de awtuwa ({{cssxwef("height")}}) i-incwuem o-o tamanho padding size, mas nyão incwuem a pwopwiedade bowdew o-ou mawgem. mya
+- `bowdew-box`
+  - : a-as pwopwiedades de wawguwa ({{cssxwef("width")}}) e-e de awtuwa ({{cssxwef("height")}}) i-incwuem o tamanho padding s-size e a pwopwiedade bowdew, (˘ω˘) m-mas nyão incwuem a pwopwiedade mawgin. >_<
 
-## Exemplos
+## exempwos
 
 ```css
-/* funciona em Firefox, WebKit, Opera and IE8+ */
-/* exemplo de uso no navegador Firefox */
+/* f-funciona em fiwefox, -.- webkit, opewa a-and ie8+ */
+/* exempwo de uso n-nyo nyavegadow f-fiwefox */
 
-.exemplo {
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+.exempwo {
+  -moz-box-sizing: bowdew-box;
+  box-sizing: bowdew-box;
 }
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [CSS box model](/pt-BR/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) \[Eng]
+- [css b-box modew](/pt-bw/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew) \[eng]

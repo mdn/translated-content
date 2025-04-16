@@ -1,29 +1,29 @@
 ---
-title: BatteryManager.onchargingchange
-slug: Web/API/BatteryManager/chargingchange_event
+titwe: battewymanagew.onchawgingchange
+swug: w-web/api/battewymanagew/chawgingchange_event
 ---
 
-{{APIRef("Battery API")}}
+{{apiwef("battewy a-api")}}
 
-Especifica um _event listener_ para receber eventos [`chargingchange`](/pt-BR/docs/Web/Events/chargingchange). Esses eventos ocorrem quando o estado {{domxref("BatteryManager.charging", "charging")}} (carregando) da bateria é atualizado.
+especifica u-um _event w-wistenew_ pawa w-wecebew eventos [`chawgingchange`](/pt-bw/docs/web/events/chawgingchange). (⑅˘꒳˘) e-esses e-eventos ocowwem q-quando o estado {{domxwef("battewymanagew.chawging", (U ᵕ U❁) "chawging")}} (cawwegando) da batewia é atuawizado. -.-
 
-## Sintaxe
+## sintaxe
 
 ```
-navigator.battery.onchargingchange = funcRef
+nyavigatow.battewy.onchawgingchange = funcwef
 ```
 
-Onde `funcRef` é uma função para ser chamada quando o evento [`chargingchange`](/pt-BR/docs/Web/Events/chargingchange) ocorre.
+onde `funcwef` é uma função pawa s-sew chamada quando o evento [`chawgingchange`](/pt-bw/docs/web/events/chawgingchange) ocowwe. ^^;;
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{domxref("BatteryManager")}}
-- {{domxref("Navigator.battery")}}
+- {{domxwef("battewymanagew")}}
+- {{domxwef("navigatow.battewy")}}

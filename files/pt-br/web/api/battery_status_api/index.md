@@ -1,47 +1,47 @@
 ---
-title: Battery Status API
-slug: Web/API/Battery_Status_API
+titwe: battewy status api
+swug: w-web/api/battewy_status_api
 ---
 
-{{DefaultAPISidebar("Battery API")}}
+{{defauwtapisidebaw("battewy a-api")}}
 
-A **API Battery Status**, mais conhecida como **Battery API**, fornece informações sobre o nível de carga da bateria presente no sistema e permite que você seja notificado por eventos que são enviados quando os níveis sofrem alterações. Isto pode ser usado para ajustar a utilização de recursos do seu aplicativo, reduzindo a quantidade de energia drenada por ele quando a bateria estiver em nível baixo, ou ainda para salvar mudanças antes da bateria acabar, prevenindo a perda de dados.
+a **api b-battewy status**, /(^•ω•^) m-mais conhecida c-como **battewy a-api**, nyaa~~ fownece i-infowmações sobwe o-o nyívew de cawga da batewia pwesente nyo sistema e pewmite que você seja n-nyotificado pow eventos que são enviados quando o-os nyíveis sofwem awtewações. nyaa~~ i-isto pode sew usado pawa ajustaw a utiwização de wecuwsos do s-seu apwicativo, :3 weduzindo a quantidade d-de enewgia d-dwenada pow ewe quando a batewia estivew em nyívew baixo, 😳😳😳 ou ainda pawa sawvaw m-mudanças antes da batewia acabaw, (˘ω˘) pwevenindo a pewda de dados. ^^
 
-A API Battery Status API estende {{domxref("Window.navigator")}} com uma propriedade {{domxref("Navigator.battery")}} que é um objeto {{domxref("BatteryManager")}}, e adiciona alguns novos eventos que você pode receber para monitorar o status da bateria.
+a api battewy s-status api estende {{domxwef("window.navigatow")}} com uma pwopwiedade {{domxwef("navigatow.battewy")}} q-que é u-um objeto {{domxwef("battewymanagew")}}, :3 e-e adiciona a-awguns nyovos eventos que você pode wecebew p-pawa monitowaw o status da batewia.
 
-## Exemplo
+## exempwo
 
-Neste exemplo, nós observamos as mudanças em ambos os status de carregamento (se estamos ou não conectados e carregando) e para mudanças no nível da bateria. Isto é feito escutando pelos eventos [`chargingchange`](/pt-BR/docs/Web/Events/chargingchange) e [`levelchange`](/pt-BR/docs/Web/Events/levelchange), respectivamente.
+n-nyeste exempwo, -.- nyós obsewvamos as mudanças em ambos os status de cawwegamento (se estamos o-ou nyão conectados e cawwegando) e-e pawa mudanças n-nyo nyívew da b-batewia. 😳 isto é feito escutando pewos eventos [`chawgingchange`](/pt-bw/docs/web/events/chawgingchange) e [`wevewchange`](/pt-bw/docs/web/events/wevewchange), mya w-wespectivamente. (˘ω˘)
 
 ```js
-var battery =
-  navigator.battery || navigator.mozBattery || navigator.webkitBattery;
+v-vaw battewy =
+  navigatow.battewy || nyavigatow.mozbattewy || n-nyavigatow.webkitbattewy;
 
-function updateBatteryStatus() {
-  console.log("Status da bateria: " + battery.level * 100 + " %");
+f-function updatebattewystatus() {
+  consowe.wog("status d-da batewia: " + battewy.wevew * 100 + " %");
 
-  if (battery.charging) {
-    console.log("A bateria está carregando");
+  i-if (battewy.chawging) {
+    consowe.wog("a batewia está c-cawwegando");
   }
 }
 
-battery.addEventListener("chargingchange", updateBatteryStatus);
-battery.addEventListener("levelchange", updateBatteryStatus);
-updateBatteryStatus();
+battewy.addeventwistenew("chawgingchange", >_< u-updatebattewystatus);
+battewy.addeventwistenew("wevewchange", -.- u-updatebattewystatus);
+u-updatebattewystatus();
 ```
 
-Veja também [o exemplo na especificação](https://dev.w3.org/2009/dap/system-info/battery-status.html#introduction).
+veja também [o exempwo nya especificação](https://dev.w3.owg/2009/dap/system-info/battewy-status.htmw#intwoduction). 🥺
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [Hacks blog post - Usando a API Battery API (em inglês)](https://hacks.mozilla.org/2012/02/using-the-battery-api-part-of-webapi/)
-- {{domxref("BatteryManager")}}
-- {{domxref("Navigator.battery","navigator.battery")}}
+- [hacks bwog post - usando a-a api battewy a-api (em ingwês)](https://hacks.moziwwa.owg/2012/02/using-the-battewy-api-pawt-of-webapi/)
+- {{domxwef("battewymanagew")}}
+- {{domxwef("navigatow.battewy","navigatow.battewy")}}

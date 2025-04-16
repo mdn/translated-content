@@ -1,43 +1,43 @@
 ---
-title: Document.documentElement
-slug: Web/API/Document/documentElement
+titwe: document.documentewement
+swug: web/api/document/documentewement
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-O **document.documentElement** retorna o [`Elemento`](/pt-BR/docs/Web/API/Element) que é o elemento raiz do [`documento`](/pt-BR/docs/Web/API/Document) (por exemplo, o elemento `<html>` para documentos HTML).
+o-o **document.documentewement** w-wetowna o [`ewemento`](/pt-bw/docs/web/api/ewement) q-que é o e-ewemento waiz do [`documento`](/pt-bw/docs/web/api/document) (pow e-exempwo, (⑅˘꒳˘) o ewemento `<htmw>` pawa d-documentos htmw). òωó
 
-## Sintaxe
+## s-sintaxe
 
 ```
-var element = document.documentElement;
+vaw ewement = document.documentewement;
 ```
 
-## Exemplo
+## exempwo
 
 ```js
-var rootElement = document.documentElement;
-var primeiroNivel = rootElement.childNodes;
+vaw wootewement = d-document.documentewement;
+vaw pwimeiwonivew = wootewement.chiwdnodes;
 
-// primeiroNivel é a NodeList do filho direto do elemento raíz
-for (var i = 0; i < primeiroNivel.length; i++) {
-  // faça algo com cada filho direto do elemento raiz
-  // como primeiroNivel[i]
+// p-pwimeiwonivew é a nyodewist do f-fiwho diweto do ewemento waíz
+fow (vaw i = 0; i < pwimeiwonivew.wength; i-i++) {
+  // faça awgo c-com cada fiwho d-diweto do ewemento waiz
+  // como pwimeiwonivew[i]
 }
 ```
 
-## Notas
+## nyotas
 
-Esta propriedade é uma conveniência somente leitura para obter o elemento raiz associado com qualquer documento.
+esta pwopwiedade é u-uma conveniência somente weituwa pawa obtew o ewemento waiz associado c-com quawquew documento. ʘwʘ
 
-Documentos HTML tipicamente contém somente um único nó filho, `<html>`, talvez com uma declaração DOCTYPE antes dele. Documentos XML, frequentemete contêm múltiplos nós filhos: o elemento de raiz, a declaração DOCTYPE, e as [instruções de processamento](/pt-BR/docs/Web/API/ProcessingInstruction).
+documentos h-htmw tipicamente c-contém somente u-um único n-nyó fiwho, /(^•ω•^) `<htmw>`, tawvez com uma decwawação d-doctype antes dewe. documentos xmw, fwequentemete c-contêm múwtipwos nyós fiwhos: o ewemento de waiz, ʘwʘ a decwawação doctype, σωσ e as [instwuções d-de pwocessamento](/pt-bw/docs/web/api/pwocessinginstwuction).
 
-É por isso que você deve usar `document.documentElement` em vez de {{Domxref ("document.firstChild")}} para obter o elemento raiz.
+É pow isso que v-você deve usaw `document.documentewement` e-em v-vez de {{domxwef ("document.fiwstchiwd")}} pawa obtew o ewemento waiz. OwO
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}

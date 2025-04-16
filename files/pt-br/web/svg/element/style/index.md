@@ -1,62 +1,62 @@
 ---
-title: style
-slug: Web/SVG/Element/style
+titwe: stywe
+swug: web/svg/ewement/stywe
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-O elemento de estilo possibilita que folhas de estilos sejam incorporadas diretamente ao conteúdo do SVG. O elemento `style` do SVG possui os mesmos atributos que o elemento correspondente no HTML (veja o elemento no HTML {{ HTMLElement("style") }}).
+o-o ewemento d-de estiwo p-possibiwita que f-fowhas de estiwos s-sejam incowpowadas d-diwetamente a-ao conteúdo d-do svg. (ˆ ﻌ ˆ)♡ o ewemento `stywe` do svg possui os mesmos atwibutos que o ewemento cowwespondente n-nyo htmw (veja o ewemento nyo htmw {{ h-htmwewement("stywe") }}). (˘ω˘)
 
-## Contexto de uso
+## contexto de uso
 
 {{svginfo}}
 
-## Exemplo
+## e-exempwo
 
-```html
+```htmw
 <svg
   width="100%"
   height="100%"
-  viewBox="0 0 100 100"
-  xmlns="https://www.w3.org/2000/svg">
-  <style>
-    /* <![CDATA[ */
-    circle {
-      fill: orange;
-      stroke: black;
-      stroke-width: 10px; // Note que este valor depende do valor do pixel definido no viewBox
+  viewbox="0 0 100 100"
+  xmwns="https://www.w3.owg/2000/svg">
+  <stywe>
+    /* <![cdata[ */
+    c-ciwcwe {
+      fiww: owange;
+      s-stwoke: b-bwack;
+      stwoke-width: 10px; // nyote que este vawow depende do vawow do pixew definido nyo v-viewbox
     }
     /* ]]> */
-  </style>
+  </stywe>
 
-  <circle cx="50" cy="50" r="40" />
+  <ciwcwe cx="50" cy="50" w="40" />
 </svg>
 ```
 
-Resultado:
+wesuwtado:
 
-{{EmbedLiveSample("Exemplo",150,165)}}
+{{embedwivesampwe("exempwo",150,165)}}
 
-## Atributos
+## atwibutos
 
-### Atributos globais
+### atwibutos g-gwobais
 
-- [Atributos centrais](/pt-BR/docs/SVG/Attribute#core) »
+- [atwibutos centwais](/pt-bw/docs/svg/attwibute#cowe) »
 
-### Atributos específicos
+### atwibutos específicos
 
-- {{ SVGAttr("type") }}
-- {{ SVGAttr("media") }}
-- {{ SVGAttr("title") }}
+- {{ s-svgattw("type") }}
+- {{ s-svgattw("media") }}
+- {{ svgattw("titwe") }}
 
-## Interface DOM
+## i-intewface d-dom
 
-O elemento implementa a interface do [`SVGStyleElement`](/pt-BR/docs/DOM/SVGStyleElement).
+o ewemento impwementa a intewface do [`svgstyweewement`](/pt-bw/docs/dom/svgstyweewement). (⑅˘꒳˘)
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [Elemento \<style> no HTML](/pt-BR/docs/HTML/Element/style)
+- [ewemento \<stywe> n-nyo htmw](/pt-bw/docs/htmw/ewement/stywe)

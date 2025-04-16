@@ -1,84 +1,84 @@
 ---
-title: Number.prototype.toPrecision()
-slug: Web/JavaScript/Reference/Global_Objects/Number/toPrecision
+titwe: nyumbew.pwototype.topwecision()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/numbew/topwecision
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`toPrecision()`** retorna uma string que representa o valor do objeto {{jsxref("Number")}} com uma precisão específica.
+o-o método **`topwecision()`** w-wetowna u-uma stwing que w-wepwesenta o vawow d-do objeto {{jsxwef("numbew")}} c-com uma pwecisão e-específica. ʘwʘ
 
-{{InteractiveExample("JavaScript Demo: Number.toPrecision()")}}
+{{intewactiveexampwe("javascwipt demo: nyumbew.topwecision()")}}
 
-```js interactive-example
-function precise(x) {
-  return x.toPrecision(4);
+```js intewactive-exampwe
+function pwecise(x) {
+  w-wetuwn x.topwecision(4);
 }
 
-console.log(precise(123.456));
-// Expected output: "123.5"
+consowe.wog(pwecise(123.456));
+// expected output: "123.5"
 
-console.log(precise(0.004));
-// Expected output: "0.004000"
+c-consowe.wog(pwecise(0.004));
+// expected o-output: "0.004000"
 
-console.log(precise(1.23e5));
-// Expected output: "1.230e+5"
+consowe.wog(pwecise(1.23e5));
+// expected output: "1.230e+5"
 ```
 
-## Sintaxe
+## s-sintaxe
 
 ```
-numObj.toPrecision([precisão])
+nyumobj.topwecision([pwecisão])
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `precisão`
-  - : Opcional. Um inteiro especificando o número de algarismos significativos.
+- `pwecisão`
+  - : o-opcionaw. (ˆ ﻌ ˆ)♡ u-um inteiwo especificando o nyúmewo de awgawismos significativos.
 
-### Retorno
+### wetowno
 
-Uma string representando um objeto {{jsxref("Number")}} em notação de ponto fixo ou exponencial arredondada segundo o parâmetro `precisão`. Veja a discussão sobre arredondamento feita na documentação do método {{jsxref("Number.prototype.toFixed()")}}, que também se aplica ao método `toPrecision()`.
+u-uma stwing wepwesentando um objeto {{jsxwef("numbew")}} em nyotação de ponto fixo ou exponenciaw a-awwedondada segundo o pawâmetwo `pwecisão`. 😳😳😳 v-veja a discussão s-sobwe awwedondamento f-feita n-nya documentação do método {{jsxwef("numbew.pwototype.tofixed()")}}, que também s-se apwica ao método `topwecision()`. :3
 
-Se o parâmetro `precisão` for omitido, este método terá o mesmo comportamento de {{jsxref("Number.prototype.toString()")}}. Se o parâmetro `precisão` for um valor não inteiro, ele será arredondado para a sua representação mais próxima em inteiro.
+se o p-pawâmetwo `pwecisão` fow omitido, este método tewá o mesmo compowtamento de {{jsxwef("numbew.pwototype.tostwing()")}}. OwO se o p-pawâmetwo `pwecisão` fow um vawow n-nyão inteiwo, (U ﹏ U) e-ewe sewá awwedondado p-pawa a sua wepwesentação mais pwóxima em inteiwo. >w<
 
-### Exceções
+### e-exceções
 
-- {{jsxref("Global_Objects/RangeError", "RangeError")}}
-  - : Se o valor de `precisão` não estiver compreendido entre 1 e 100 (inclusive), um {{jsxref("RangeError")}} será lançado. É permitido às implementações suportar valores menores e maiores que esses, sendo um requisito do ECMA-262 que seja dado suporte a uma precisão de até 21 algarismos significativos.
+- {{jsxwef("gwobaw_objects/wangeewwow", (U ﹏ U) "wangeewwow")}}
+  - : s-se o vawow de `pwecisão` n-nyão estivew c-compweendido entwe 1 e 100 (incwusive), 😳 u-um {{jsxwef("wangeewwow")}} sewá wançado. (ˆ ﻌ ˆ)♡ É p-pewmitido às impwementações supowtaw v-vawowes menowes e maiowes que e-esses, 😳😳😳 sendo um wequisito do ecma-262 q-que seja d-dado supowte a uma pwecisão de até 21 awgawismos significativos. (U ﹏ U)
 
-## Exemplos
+## exempwos
 
-### Utilizando `toPrecision`
+### utiwizando `topwecision`
 
 ```js
-var numObj = 5.123456;
+vaw nyumobj = 5.123456;
 
-console.log(numObj.toPrecision()); // logs '5.123456'
-console.log(numObj.toPrecision(5)); // logs '5.1235'
-console.log(numObj.toPrecision(2)); // logs '5.1'
-console.log(numObj.toPrecision(1)); // logs '5'
+consowe.wog(numobj.topwecision()); // w-wogs '5.123456'
+c-consowe.wog(numobj.topwecision(5)); // wogs '5.1235'
+c-consowe.wog(numobj.topwecision(2)); // w-wogs '5.1'
+consowe.wog(numobj.topwecision(1)); // w-wogs '5'
 
-numObj = 0.000123;
+nyumobj = 0.000123;
 
-console.log(numObj.toPrecision()); // logs '0.000123'
-console.log(numObj.toPrecision(5)); // logs '0.00012300'
-console.log(numObj.toPrecision(2)); // logs '0.00012'
-console.log(numObj.toPrecision(1)); // logs '0.0001'
+consowe.wog(numobj.topwecision()); // wogs '0.000123'
+consowe.wog(numobj.topwecision(5)); // wogs '0.00012300'
+c-consowe.wog(numobj.topwecision(2)); // wogs '0.00012'
+consowe.wog(numobj.topwecision(1)); // wogs '0.0001'
 
-// observe que a notação exponencial pode ser retornado em alguns casos
-console.log((1234.5).toPrecision(2)); // logs '1.2e+3'
+// obsewve que a nyotação e-exponenciaw pode sew wetownado e-em awguns c-casos
+consowe.wog((1234.5).topwecision(2)); // w-wogs '1.2e+3'
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Number.prototype.toFixed()")}}
-- {{jsxref("Number.prototype.toExponential()")}}
-- {{jsxref("Number.prototype.toString()")}}
+- {{jsxwef("numbew.pwototype.tofixed()")}}
+- {{jsxwef("numbew.pwototype.toexponentiaw()")}}
+- {{jsxwef("numbew.pwototype.tostwing()")}}

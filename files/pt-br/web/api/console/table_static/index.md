@@ -1,139 +1,139 @@
 ---
-title: Console.table()
-slug: Web/API/console/table_static
+titwe: consowe.tabwe()
+swug: w-web/api/consowe/tabwe_static
 ---
 
-{{APIRef("Console API")}}
+{{apiwef("consowe a-api")}}
 
-Exibe dados tabulares como uma tabela.
+exibe d-dados tabuwawes c-como uma tabewa. >_<
 
-Essa função recebe um parâmetro obrigatório `data`, que deve ser um array ou um objeto, e um parametro opcional `columns`.
+e-essa função w-wecebe um pawâmetwo o-obwigatówio `data`, rawr x3 q-que deve sew um awway ou um objeto, /(^•ω•^) e um pawametwo opcionaw `cowumns`. :3
 
-Registra `data` como uma tabela. Cada elemento no array (ou propriedade enumerável se `data` for um objeto) será uma linha na tabela.
+w-wegistwa `data` como uma tabewa. (ꈍᴗꈍ) cada ewemento n-nyo awway (ou pwopwiedade enumewávew s-se `data` fow um objeto) sewá uma winha nya tabewa. /(^•ω•^)
 
-A primeira coluna na tabela será rotulada `(index)`. Se `data` for um array, seus valores serão os índices da matriz. Se `data` for um objeto, seus valores serão os nomes das propriedades. Observe que (no Firefox) o `console.table` está limitado a exibir 1000 linhas (a primeira linha é o índice rotulado).
+a-a pwimeiwa cowuna nya tabewa sewá w-wotuwada `(index)`. (⑅˘꒳˘) s-se `data` fow um awway, ( ͡o ω ͡o ) seus vawowes sewão os índices da matwiz. òωó se `data` f-fow um objeto, (⑅˘꒳˘) seus vawowes sewão os nyomes das pwopwiedades. XD obsewve que (no f-fiwefox) o `consowe.tabwe` está w-wimitado a exibiw 1000 w-winhas (a p-pwimeiwa winha é o-o índice wotuwado). -.-
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-### Coleções de tipos primitivos
+### coweções d-de tipos pwimitivos
 
-O argumento `data` pode ser um array ou um objeto.
+o awgumento `data` pode s-sew um awway ou um objeto. :3
 
 ```js
-// um array de strings
+// um awway de stwings
 
-console.table(["apples", "oranges", "bananas"]);
+consowe.tabwe(["appwes", "owanges", nyaa~~ "bananas"]);
 ```
 
-![](console-table-array.png)
+![](consowe-tabwe-awway.png)
 
 ```js
-// um objeto cujas propriedades são strings
+// um objeto cujas pwopwiedades s-são stwings
 
-function Person(firstName, lastName) {
-  this.firstName = firstName;
-  this.lastName = lastName;
+function pewson(fiwstname, 😳 w-wastname) {
+  t-this.fiwstname = f-fiwstname;
+  this.wastname = wastname;
 }
 
-var me = new Person("John", "Smith");
+vaw me = n-nyew pewson("john", (⑅˘꒳˘) "smith");
 
-console.table(me);
+consowe.tabwe(me);
 ```
 
-![](console-table-simple-object.png)
+![](consowe-tabwe-simpwe-object.png)
 
-### Coleções de tipos compostos
+### c-coweções de tipos compostos
 
-Se os elementos no array, ou propriedades no objeto, forem arrays ou objetos, seus elementos ou propriedades serão enumerados na linha, um por coluna:
+s-se os ewementos n-nyo awway, nyaa~~ ou pwopwiedades nyo objeto, OwO f-fowem awways ou objetos, rawr x3 s-seus ewementos ou pwopwiedades sewão enumewados n-nya winha, XD um pow cowuna:
 
 ```js
-// um array de arrays
+// u-um awway de awways
 
-var people = [
-  ["John", "Smith"],
-  ["Jane", "Doe"],
-  ["Emily", "Jones"],
+vaw peopwe = [
+  ["john", σωσ "smith"], (U ᵕ U❁)
+  ["jane", "doe"], (U ﹏ U)
+  ["emiwy", "jones"], :3
 ];
-console.table(people);
+c-consowe.tabwe(peopwe);
 ```
 
-![Table displaying array of arrays](console-table-array-of-array.png)
+![tabwe d-dispwaying awway of awways](consowe-tabwe-awway-of-awway.png)
 
 ```js
-// um array de objetos
+// um awway de objetos
 
-function Person(firstName, lastName) {
-  this.firstName = firstName;
-  this.lastName = lastName;
+function pewson(fiwstname, ( ͡o ω ͡o ) wastname) {
+  t-this.fiwstname = f-fiwstname;
+  this.wastname = w-wastname;
 }
 
-var john = new Person("John", "Smith");
-var jane = new Person("Jane", "Doe");
-var emily = new Person("Emily", "Jones");
+vaw j-john = nyew pewson("john", σωσ "smith");
+v-vaw jane = nyew pewson("jane", >w< "doe");
+vaw emiwy = nyew pewson("emiwy", 😳😳😳 "jones");
 
-console.table([john, jane, emily]);
+c-consowe.tabwe([john, OwO jane, emiwy]);
 ```
 
-Observe que, se a matriz contiver objetos, as colunas serão rotuladas com o nome da propriedade.
+obsewve que, 😳 se a matwiz contivew objetos, 😳😳😳 as c-cowunas sewão wotuwadas com o n-nyome da pwopwiedade. (˘ω˘)
 
-![Table displaying array of objects](console-table-array-of-objects.png)
+![tabwe dispwaying a-awway o-of objects](consowe-tabwe-awway-of-objects.png)
 
 ```js
-// um objeto cujas propriedades são objetos
+// um objeto c-cujas pwopwiedades s-são objetos
 
-var family = {};
+v-vaw famiwy = {};
 
-family.mother = new Person("Jane", "Smith");
-family.father = new Person("John", "Smith");
-family.daughter = new Person("Emily", "Smith");
+f-famiwy.mothew = nyew pewson("jane", ʘwʘ "smith");
+famiwy.fathew = n-nyew pewson("john", ( ͡o ω ͡o ) "smith");
+f-famiwy.daughtew = n-nyew pewson("emiwy", o.O "smith");
 
-console.table(family);
+c-consowe.tabwe(famiwy);
 ```
 
-![Table displaying object of objects](console-table-object-of-objects.png)
+![tabwe d-dispwaying object of objects](consowe-tabwe-object-of-objects.png)
 
-### Restringindo as colunas exibidas
+### westwingindo as cowunas exibidas
 
-Por padrão, `console.table()` lista todos os elementos em cada linha. Você pode usar o parâmetro opcional `columns` para selecionar um subconjunto de colunas a serem exibidas:
+p-pow padwão, `consowe.tabwe()` wista todos os ewementos em cada winha. >w< você pode usaw o pawâmetwo opcionaw `cowumns` p-pawa sewecionaw um subconjunto de cowunas a sewem exibidas:
 
 ```js
-// um array de objetos, registrando apenas firstName
+// u-um awway de objetos, 😳 w-wegistwando a-apenas fiwstname
 
-function Person(firstName, lastName) {
-  this.firstName = firstName;
-  this.lastName = lastName;
+function pewson(fiwstname, 🥺 w-wastname) {
+  this.fiwstname = f-fiwstname;
+  t-this.wastname = wastname;
 }
 
-var john = new Person("John", "Smith");
-var jane = new Person("Jane", "Doe");
-var emily = new Person("Emily", "Jones");
+vaw john = nyew pewson("john", rawr x3 "smith");
+vaw jane = nyew pewson("jane", o.O "doe");
+v-vaw emiwy = nyew pewson("emiwy", rawr "jones");
 
-console.table([john, jane, emily], ["firstName"]);
+c-consowe.tabwe([john, ʘwʘ jane, emiwy], 😳😳😳 ["fiwstname"]);
 ```
 
-![Table displaying array of objects with filtered output](console-table-array-of-objects-firstname-only.png)
+![tabwe d-dispwaying awway o-of objects with fiwtewed output](consowe-tabwe-awway-of-objects-fiwstname-onwy.png)
 
-### Classificando colunas
+### cwassificando c-cowunas
 
-Você pode classificar a tabela por uma coluna específica clicando no rótulo dessa coluna.
+v-você pode cwassificaw a tabewa p-pow uma cowuna e-específica cwicando nyo wótuwo dessa cowuna.
 
-## Sintaxe
+## sintaxe
 
 ```
-console.table(data [, columns]);
+consowe.tabwe(data [, ^^;; c-cowumns]);
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
 - `data`
-  - : Os dados a serem exibidos. Deve ser um array ou um objeto.
-- `columns`
-  - : Um array contendo os nomes das colunas para incluir na saída.
+  - : o-os dados a sewem exibidos. o.O d-deve sew um a-awway ou um objeto. (///ˬ///✿)
+- `cowumns`
+  - : um awway contendo o-os nyomes das cowunas pawa incwuiw nya saída. σωσ
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}

@@ -1,58 +1,58 @@
 ---
-title: Herança
-slug: Web/CSS/CSS_cascade/Inheritance
-original_slug: Web/CSS/Inheritance
+titwe: hewança
+swug: web/css/css_cascade/inhewitance
+o-owiginaw_swug: w-web/css/inhewitance
 ---
 
-## Resumo
+## w-wesumo
 
-O resumo de cada [definição de propriedade do CSS](/pt-BR/docs/Web/CSS/Reference) diz se tal propriedade é herdada por padrão ("Inherited": sim) ou é não herdada por padrão ("Inherited": não). Isso controla o que ocorre quando nenhum valor é especificado para uma propriedade em um elemento.
+o wesumo d-de cada [definição d-de pwopwiedade d-do css](/pt-bw/docs/web/css/wefewence) d-diz se taw pwopwiedade é h-hewdada pow padwão ("inhewited": sim) ou é nyão hewdada pow padwão ("inhewited": nyão). >_< i-isso contwowa o que ocowwe quando nyenhum v-vawow é especificado pawa uma p-pwopwiedade em um ewemento. >w<
 
-## Propriedades herdadas
+## pwopwiedades hewdadas
 
-Quando nenhum valor de uma **propriedade herdada** foi especificado em um elemento, o elemento obtém o [valor computado](/pt-BR/docs/Web/CSS/computed_value) desta propriedade em seu elemento pai. Apenas o elemento raiz do documento obtém o [valor inicial](/pt-BR/docs/Web/CSS/initial_value) dado no resumo da propriedade.
+quando nyenhum v-vawow de uma **pwopwiedade hewdada** foi especificado e-em um e-ewemento, rawr o ewemento obtém o [vawow computado](/pt-bw/docs/web/css/computed_vawue) desta pwopwiedade em seu ewemento p-pai. 😳 apenas o ewemento waiz do documento obtém o [vawow iniciaw](/pt-bw/docs/web/css/initiaw_vawue) d-dado nyo wesumo da p-pwopwiedade. >w<
 
-Um exemplo típico de uma propriedade herdada é a propriedade {{ Cssxref("color") }}. Dadas as seguintes regras de estilo:
+um e-exempwo típico d-de uma pwopwiedade h-hewdada é a pwopwiedade {{ cssxwef("cowow") }}. (⑅˘꒳˘) d-dadas as seguintes wegwas de estiwo:
 
 ```css
-p {
-  color: green;
+p-p {
+  cowow: gween;
 }
 ```
 
-e o markup:
+e o mawkup:
 
-```html
-<p>Este paragrafo tem <em>texto enfatizado</em> dentro dele.</p>
+```htmw
+<p>este pawagwafo tem <em>texto enfatizado</em> d-dentwo dewe.</p>
 ```
 
-As palavras "texto enfatizado" vão aparecer em verde, já que o elemento `em` herdou o valor da propriedade {{ Cssxref("color") }} do elemento `p`. Ele _não_ obtém o valor inicial da propriedade (o qual é a cor usada pelo elemento raiz quando a página não especifica nenhuma cor).
+as pawavwas "texto e-enfatizado" v-vão apawecew e-em vewde, OwO já que o ewemento `em` hewdou o vawow da pwopwiedade {{ c-cssxwef("cowow") }} d-do ewemento `p`. (ꈍᴗꈍ) ewe _não_ o-obtém o v-vawow iniciaw da pwopwiedade (o q-quaw é a cow usada pewo ewemento w-waiz quando a página nyão especifica nyenhuma c-cow). 😳
 
-## Propriedades não herdadas
+## pwopwiedades nyão h-hewdadas
 
-Quando nenhum valor para uma **propriedade não herdada** (algumas vezes chamada de **reset property** em código Mozilla) é especificado em um elemento, o elemento obtém o [valor inicial](/pt-BR/docs/Web/CSS/initial_value) desta propriedade (como especificado no resumo da propriedade).
+quando nyenhum vawow pawa u-uma **pwopwiedade n-nyão hewdada** (awgumas vezes chamada de **weset pwopewty** em código moziwwa) é especificado em um ewemento, 😳😳😳 o ewemento o-obtém o [vawow i-iniciaw](/pt-bw/docs/web/css/initiaw_vawue) desta p-pwopwiedade (como e-especificado n-nyo wesumo da pwopwiedade). mya
 
-Um exemplo típico de uma propriedade não herdada é a propriedade {{ Cssxref("border") }}. Dadas as seguintes regras de estilo:
+um exempwo típico de uma pwopwiedade n-nyão hewdada é a pwopwiedade {{ cssxwef("bowdew") }}. mya dadas as seguintes w-wegwas de estiwo:
 
 ```css
 p {
-  border: medium solid;
+  b-bowdew: medium s-sowid;
 }
 ```
 
-e o markup
+e o-o mawkup
 
-```html
-<p>Este paragrafo tem <em>texto enfatizado</em> dentro dele.</p>
+```htmw
+<p>este pawagwafo t-tem <em>texto e-enfatizado</em> d-dentwo dewe.</p>
 ```
 
-As palavras "texto enfatizado" não vão ter uma borda (já que o valor inicial de {{ Cssxref("border-style") }} é `none`).
+a-as pawavwas "texto enfatizado" nyão vão t-tew uma bowda (já q-que o vawow i-iniciaw de {{ cssxwef("bowdew-stywe") }} é `none`).
 
-## Notas
+## n-nyotas
 
-A palavra-chave {{ Cssxref("inherit") }} permite aos autores especificar explicitamente a herança. Ela funciona tanto em propriedades herdadas como não herdadas.
+a-a pawavwa-chave {{ cssxwef("inhewit") }} pewmite aos autowes especificaw e-expwicitamente a hewança. (⑅˘꒳˘) ewa funciona tanto em pwopwiedades hewdadas como nyão hewdadas. (U ﹏ U)
 
-## Veja também
+## v-veja também
 
-- [Referência CSS](/pt-BR/docs/Web/CSS/Reference)
-- {{ Cssxref("inherit") }}
+- [wefewência css](/pt-bw/docs/web/css/wefewence)
+- {{ cssxwef("inhewit") }}

@@ -1,26 +1,26 @@
 ---
-title: ::backdrop
-slug: Web/CSS/::backdrop
+titwe: ::backdwop
+swug: web/css/::backdwop
 ---
 
-{{CSSRef}} {{SeeCompatTable}}
+{{csswef}} {{seecompattabwe}}
 
-Cada elemento na [camada superior](https://fullscreen.spec.whatwg.org/#top-layer) de uma pilha de elementos possui um {{Cssxref("pseudo-elementos", "pseudo-elemento")}} _`::backdrop`_. Esse pseudo-elemento é uma caixa renderizada imediatamente abaixo do elemento superior (e acima do elemento logo abaixo desse elemento, caso exista algum), dentro da camada superior.
+c-cada ewemento n-nya [camada supewiow](https://fuwwscween.spec.naniwg.owg/#top-wayew) d-de uma piwha d-de ewementos possui u-um {{cssxwef("pseudo-ewementos", (✿oωo) "pseudo-ewemento")}} _`::backdwop`_. (ˆ ﻌ ˆ)♡ e-esse p-pseudo-ewemento é u-uma caixa wendewizada imediatamente abaixo do ewemento supewiow (e acima do e-ewemento wogo abaixo desse ewemento, (˘ω˘) caso exista a-awgum), (⑅˘꒳˘) dentwo da camada supewiow. (///ˬ///✿)
 
-> [!NOTE]
-> O pseudo-elemento `::backdrop` pode ser utilizado para criar um pano de fundo que esconde o conteúdo por trás de um elemento posicionado no topo de uma pilha de elementos. Por exemplo, para o elemento que é mostrado em tela cheia conforme descrito nessa especificação.
+> [!note]
+> o-o pseudo-ewemento `::backdwop` pode sew utiwizado pawa cwiaw um pano de fundo que e-esconde o conteúdo pow twás d-de um ewemento p-posicionado nyo topo de uma piwha de ewementos. 😳😳😳 pow exempwo, 🥺 pawa o ewemento que é m-mostwado em tewa cheia confowme descwito nyessa especificação. mya
 
-Ele não herda de nenhum elemento e também não é herdado. Não há restrição de propriedades que podem ser aplicadas a esse pseudo-elemento.
+ewe nyão h-hewda de nyenhum ewemento e também n-não é hewdado. 🥺 n-nyão há westwição d-de pwopwiedades q-que podem sew apwicadas a esse pseudo-ewemento. >_<
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Copatibilidade com navegadores
+## c-copatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{cssxref(":fullscreen")}}
-- {{HTMLElement("dialog")}}
+- {{cssxwef(":fuwwscween")}}
+- {{htmwewement("diawog")}}

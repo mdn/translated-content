@@ -1,110 +1,110 @@
 ---
-title: background-attachment
-slug: Web/CSS/background-attachment
+titwe: backgwound-attachment
+swug: web/css/backgwound-attachment
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumo
+## w-wesumo
 
-Se um {{cssxref("background-image")}} é especificado, a propriedade [CSS](/pt-BR/docs/Web/CSS) **`background-attachment`** determina se aquela posição da imagem é fixa com o viewport, ou se irá rolar juntamente com o seu bloco.
+s-se um {{cssxwef("backgwound-image")}} é e-especificado, rawr x3 a-a pwopwiedade [css](/pt-bw/docs/web/css) **`backgwound-attachment`** d-detewmina s-se aquewa p-posição da imagem é f-fixa com o viewpowt, /(^•ω•^) ou se iwá wowaw juntamente com o seu bwoco. :3
 
 {{cssinfo}}
 
-## Sintaxe
+## s-sintaxe
 
 ```css
-background-attachment: scroll;
-background-attachment: fixed;
-background-attachment: local;
+backgwound-attachment: scwoww;
+backgwound-attachment: f-fixed;
+backgwound-attachment: wocaw;
 
-background-attachment: inherit;
+b-backgwound-attachment: inhewit;
 ```
 
-### Valores
+### vawowes
 
 - `fixed`
-  - : Essa chave significa que o background é fixo em relação ao viewport. Mesmo que um elemento tenha um mecanismo de rolar, o background 'fixed' não movimenta com o elemento.
-- `local`
-  - : Essa chave significa que o background é fixo em relação ao conteúdo do elemento: ise ele tem um mecanismo de rolar, o background rola com o conteúdo do elemento, e a área pintada e o posicionamento do background são relativos à área de rolagem do elemento ao invés da borda de fronteira deles.
-- `scroll`
-  - : Essa chave significa que o background é fixo em relação ao elemento em si e não rola com seu conteúdo. (É efetivamente ligado à borda do elemento.)
+  - : essa chave significa que o-o backgwound é fixo em wewação a-ao viewpowt. (ꈍᴗꈍ) m-mesmo que um ewemento tenha um mecanismo de wowaw, /(^•ω•^) o backgwound 'fixed' nyão movimenta c-com o ewemento. (⑅˘꒳˘)
+- `wocaw`
+  - : essa chave significa que o backgwound é fixo em wewação a-ao conteúdo do ewemento: ise e-ewe tem um mecanismo d-de wowaw, ( ͡o ω ͡o ) o-o backgwound wowa c-com o conteúdo do ewemento, òωó e a áwea pintada e-e o posicionamento do backgwound são wewativos à áwea d-de wowagem do ewemento ao invés da bowda de fwonteiwa dewes. (⑅˘꒳˘)
+- `scwoww`
+  - : essa chave s-significa que o backgwound é f-fixo em wewação a-ao ewemento e-em si e nyão wowa com seu conteúdo. XD (É efetivamente wigado à b-bowda do ewemento.)
 
-### Formal syntax
+### f-fowmaw syntax
 
 {{csssyntax}}
 
-## Exemplos
+## e-exempwos
 
-### Exemplo simples
+### e-exempwo simpwes
 
-#### CSS
+#### css
 
 ```css
-p {
-  background-image: url("star-solid.gif");
-  background-attachment: fixed;
+p-p {
+  backgwound-image: u-uww("staw-sowid.gif");
+  backgwound-attachment: fixed;
 }
 ```
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <p>
-  There were doors all round the hall, but they were all locked; and when Alice
-  had been all the way down one side and up the other, trying every door, she
-  walked sadly down the middle, wondering how she was ever to get out again.
+  thewe w-wewe doows aww wound the haww, -.- but t-they wewe aww w-wocked; and when awice
+  had been aww the way down one side and up the othew, :3 twying evewy doow, nyaa~~ she
+  wawked sadwy d-down the middwe, w-wondewing how she was evew t-to get out again. 😳
 </p>
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-{{EmbedLiveSample("Exemplo_simples")}}
+{{embedwivesampwe("exempwo_simpwes")}}
 
-### Suporte de múltiplas imagem de background
+### s-supowte de múwtipwas imagem de backgwound
 
-Essa propriedade suporta múltiplas imagens de background. Você pode especificar `<attachment>` para cada background, separado por vírgulas. Cada imagem é combinada com o correspondente tipo de anexo, do primeiro especificado ao último.
+essa pwopwiedade s-supowta múwtipwas imagens de backgwound. (⑅˘꒳˘) você pode especificaw `<attachment>` pawa cada b-backgwound, nyaa~~ sepawado pow víwguwas. OwO c-cada imagem é c-combinada com o-o cowwespondente tipo de anexo, rawr x3 d-do pwimeiwo especificado a-ao úwtimo. XD
 
-#### CSS
+#### c-css
 
 ```css
-p {
-  background-image: url("star-solid.gif"), url("star-transparent.gif");
-  background-attachment: fixed, scroll;
-  background-repeat: no-repeat, repeat-y;
+p-p {
+  backgwound-image: uww("staw-sowid.gif"), σωσ uww("staw-twanspawent.gif");
+  b-backgwound-attachment: f-fixed, (U ᵕ U❁) s-scwoww;
+  backgwound-wepeat: n-no-wepeat, (U ﹏ U) wepeat-y;
 }
 ```
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <p>
-  There were doors all round the hall, but they were all locked; and when Alice
-  had been all the way down one side and up the other, trying every door, she
-  walked sadly down the middle, wondering how she was ever to get out again.
-  Suddenly she came upon a little three-legged table, all made of solid glass;
-  there was nothing on it except a tiny golden key, and Alice's first thought
-  was that it might belong to one of the doors of the hall; but, alas! either
-  the locks were too large, or the key was too small, but at any rate it would
-  not open any of them. However, on the second time round, she came upon a low
-  curtain she had not noticed before, and behind it was a little door about
-  fifteen inches high: she tried the little golden key in the lock, and to her
-  great delight it fitted!
+  thewe wewe doows aww wound the haww, :3 but they w-wewe aww wocked; and when awice
+  had been aww the way down one side and up the othew, ( ͡o ω ͡o ) twying e-evewy doow, she
+  wawked sadwy down the middwe, σωσ wondewing how s-she was evew to g-get out again. >w<
+  s-suddenwy she came upon a wittwe t-thwee-wegged tabwe, 😳😳😳 aww made of s-sowid gwass;
+  t-thewe was nyothing on it except a tiny gowden key, OwO and awice's fiwst thought
+  was that it might b-bewong to one of the doows of the h-haww; but, awas! 😳 eithew
+  the w-wocks wewe too w-wawge, 😳😳😳 ow the key was too smow, (˘ω˘) but at any wate i-it wouwd
+  nyot o-open any of them. ʘwʘ howevew, ( ͡o ω ͡o ) on the s-second time wound, o.O s-she came upon a wow
+  cuwtain she had nyot nyoticed befowe, >w< and behind it was a-a wittwe doow a-about
+  fifteen i-inches high: she twied the wittwe g-gowden key in t-the wock, 😳 and to hew
+  gweat dewight i-it fitted! 🥺
 </p>
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{EmbedLiveSample("Multiple_background_image_support")}}
+{{embedwivesampwe("muwtipwe_backgwound_image_suppowt")}}
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [Multiple backgrounds](/pt-BR/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
+- [muwtipwe b-backgwounds](/pt-bw/docs/web/css/css_backgwounds_and_bowdews/using_muwtipwe_backgwounds)

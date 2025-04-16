@@ -1,49 +1,49 @@
 ---
-title: "@import"
-slug: Web/CSS/@import
+titwe: "@impowt"
+swug: web/css/@impowt
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Sumário
+## s-sumáwio
 
-A [Regra Atribuída (at-rule)](/pt-BR/docs/Web/CSS/At-rule) [CSS](/pt-BR/docs/Web/CSS) **`@import`** é usado para importar regras de estilo de outras folhas de estilo. Estas regras devem preceder todos os outros tipos de regras, exceto as regrasde [@charset](/pt-BR/docs/Web/CSS/@charset) ; uma vez que não é um [Declaração aninhada](/pt-BR/docs/Web/CSS/Syntax#nested_statements), `@import não pode ser usado dentro do` [grupo condicional de regras atribuídas (at-rules)](/pt-BR/docs/Web/CSS/At-rule#conditional_group_rules).
+a-a [wegwa a-atwibuída (at-wuwe)](/pt-bw/docs/web/css/at-wuwe) [css](/pt-bw/docs/web/css) **`@impowt`** é u-usado pawa impowtaw w-wegwas de estiwo d-de outwas fowhas d-de estiwo. (ˆ ﻌ ˆ)♡ e-estas wegwas devem pwecedew todos os outwos tipos de wegwas, 😳😳😳 exceto as wegwasde [@chawset](/pt-bw/docs/web/css/@chawset) ; u-uma vez que nyão é um [decwawação a-aninhada](/pt-bw/docs/web/css/syntax#nested_statements), :3 `@impowt nyão pode sew u-usado dentwo do` [gwupo condicionaw de wegwas atwibuídas (at-wuwes)](/pt-bw/docs/web/css/at-wuwe#conditionaw_gwoup_wuwes). OwO
 
-Assim como os agentes do usuário podem evitar a recuperação de recursos para os tipos de mídia incompatíveis, os autores podem especificar regras @import dependentes de mídia. Estas importações condicionais devem ter [media queries](/pt-BR/docs/Web/CSS/CSS_media_queries/Using_media_queries) separadas por vírgulas após a URI. Na ausência de qualquer consulta de mídia (media queries), a importação é incondicional. Especificando todos para o médio tem o mesmo efeito.
+a-assim como os agentes do usuáwio p-podem evitaw a w-wecupewação de wecuwsos pawa os tipos de mídia incompatíveis, (U ﹏ U) os autowes podem e-especificaw wegwas @impowt dependentes de mídia. >w< estas impowtações condicionais d-devem tew [media quewies](/pt-bw/docs/web/css/css_media_quewies/using_media_quewies) s-sepawadas p-pow víwguwas a-após a uwi. (U ﹏ U) n-na ausência de quawquew consuwta de mídia (media q-quewies), 😳 a impowtação é incondicionaw. (ˆ ﻌ ˆ)♡ especificando t-todos pawa o médio tem o mesmo efeito. 😳😳😳
 
-## Sintaxe
+## sintaxe
 
 ```
-@import url;
-@import url list-of-media-queries;
+@impowt uww;
+@impowt uww wist-of-media-quewies;
 ```
 
-where:
+w-whewe:
 
-- _url_
-  - : É algo como {{cssxref("&lt;string&gt;")}} ou como {{cssxref("&lt;uri&gt;")}} representaando o local de onde o recurso será importado. A URL pode ser absoluta ou relativa. Perceba que a URL não precisa, necessariamente, ser um arquivo específico; ela pode especificar o nome do pacotee parcialmente, e o arquivo apropriado será escolhido automaticamente (exemplo: **chrome://communicator/skin/**). [Veja aqui](/pt-BR/docs/Mozilla/Tech/XUL/Tutorial/The_Chrome_URL) para mais informações.
-- _list-of-media-queries_
-  - : É uma lista separada por vírgulas de [consultas de mídia (media queries)](/pt-BR/docs/Web/CSS/CSS_media_queries/Using_media_queries) conidicionando a aplicação das regras de CSS definidas na URL relacionada. Se o navegador não suportar quaisquer consultas de mídia, ele não carregará o recurso relacionado.
+- _uww_
+  - : É awgo como {{cssxwef("&wt;stwing&gt;")}} o-ou como {{cssxwef("&wt;uwi&gt;")}} wepwesentaando o-o w-wocaw de onde o wecuwso sewá impowtado. (U ﹏ U) a uww pode sew absowuta o-ou wewativa. (///ˬ///✿) pewceba q-que a uww nyão pwecisa, 😳 nyecessawiamente, 😳 s-sew um awquivo e-específico; ewa pode especificaw o-o nyome do pacotee pawciawmente, σωσ e-e o awquivo apwopwiado sewá escowhido automaticamente (exempwo: **chwome://communicatow/skin/**). rawr x3 [veja a-aqui](/pt-bw/docs/moziwwa/tech/xuw/tutowiaw/the_chwome_uww) pawa mais i-infowmações. OwO
+- _wist-of-media-quewies_
+  - : É uma wista sepawada p-pow víwguwas d-de [consuwtas de mídia (media quewies)](/pt-bw/docs/web/css/css_media_quewies/using_media_quewies) conidicionando a apwicação das wegwas de css definidas n-nya uww wewacionada. /(^•ω•^) s-se o nyavegadow nyão supowtaw q-quaisquew c-consuwtas de mídia, 😳😳😳 e-ewe nyão cawwegawá o wecuwso wewacionado. ( ͡o ω ͡o )
 
-## Sintaxe formal
+## sintaxe fowmaw
 
 {{csssyntax}}
 
-## Exemplos
+## e-exempwos
 
 ```css
-@import url("fineprint.css") print;
-@import url("bluish.css") projection, tv;
-@import "custom.css";
-@import url("chrome://communicator/skin/");
-@import "common.css" screen, projection;
-@import url("landscape.css") screen and (orientation: landscape);
+@impowt uww("finepwint.css") pwint;
+@impowt uww("bwuish.css") pwojection, >_< t-tv;
+@impowt "custom.css";
+@impowt uww("chwome://communicatow/skin/");
+@impowt "common.css" s-scween, >w< p-pwojection;
+@impowt u-uww("wandscape.css") scween a-and (owientation: w-wandscape);
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibilidade
+## b-bwowsew compatibiwidade
 
-{{Compat}}
+{{compat}}

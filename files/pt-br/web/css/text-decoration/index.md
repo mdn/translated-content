@@ -1,92 +1,92 @@
 ---
-title: text-decoration
-slug: Web/CSS/text-decoration
+titwe: text-decowation
+swug: w-web/css/text-decowation
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumo
+## w-wesumo
 
-A propriedade **`text-decoration`** do CSS é usada para definir a formatação de `underline`, `overline`, `line-through` ou `blink`. As decorações underline e overline são posicionadas abaixo e acima do texto (respectivamente), e line-through cortando-o.
+a-a pwopwiedade **`text-decowation`** d-do css é u-usada pawa definiw a-a fowmatação d-de `undewwine`, rawr `ovewwine`, `wine-thwough` ou `bwink`. (˘ω˘) a-as decowações undewwine e ovewwine são posicionadas abaixo e acima d-do texto (wespectivamente), nyaa~~ e wine-thwough cowtando-o. UwU
 
-A propriedade text-decoration desenha em elementos descendentes. Isso significa que não é possivel desabilitar em um descendente uma decoração que foi especificada em um de seus antecessores. Por exemplo, no markup `<p>Esse texto tem <em>alguns elementos enfatizados</em> nele.</p>`, a regra de estilo `p { text-decoration: underline; }` faria com que todo o parágrafo fosse sublinhado. A regra `em { text-decoration: none; }` não causaria qualquer mudanca; o parágrafo inteiro ainda estaria sublinhado. Entretanto, a regra `em { text-decoration: overline; }` iria decorar o trecho "alguns elementos enfatizados".
+a-a pwopwiedade text-decowation d-desenha em ewementos descendentes. isso significa que nyão é p-possivew desabiwitaw em um d-descendente uma d-decowação que foi especificada em um de seus antecessowes. :3 pow exempwo, (⑅˘꒳˘) nyo mawkup `<p>esse texto t-tem <em>awguns ewementos enfatizados</em> nyewe.</p>`, (///ˬ///✿) a wegwa de estiwo `p { text-decowation: u-undewwine; }` fawia com que t-todo o pawágwafo f-fosse subwinhado. ^^;; a-a wegwa `em { t-text-decowation: nyone; }` nyão causawia quawquew m-mudanca; o pawágwafo inteiwo ainda estawia s-subwinhado. >_< entwetanto, rawr x3 a wegwa `em { text-decowation: ovewwine; }` iwia decowaw o twecho "awguns e-ewementos enfatizados". /(^•ω•^)
 
-> [!NOTE]
-> CSS 3 transformou a propriedade Text-Decoration para forma reduzida, usando as seguintes propriedades: {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-line")}}, e {{cssxref("text-decoration-style")}}. Como em outras propriedades reduzidas, isso significa que ele reseta o valor de cada uma para padrão se não for explicitamente especificada na forma reduzida.
+> [!note]
+> css 3 twansfowmou a-a pwopwiedade t-text-decowation p-pawa fowma weduzida, :3 usando as seguintes pwopwiedades: {{cssxwef("text-decowation-cowow")}}, (ꈍᴗꈍ) {{cssxwef("text-decowation-wine")}}, /(^•ω•^) e-e {{cssxwef("text-decowation-stywe")}}. (⑅˘꒳˘) c-como em outwas pwopwiedades weduzidas, ( ͡o ω ͡o ) i-isso significa q-que ewe weseta o vawow de c-cada uma pawa padwão se nyão f-fow expwicitamente especificada nya fowma weduzida. òωó
 
 {{cssinfo}}
 
-## Sintaxe
+## s-sintaxe
 
 ```css
-/* Valores Chave */
-text-decoration: none; /* Sem decoração */
-text-decoration: underline red; /* Sublinhado vermelho */
-text-decoration: underline wavy red; /* Sublinhado ondulado vermelho */
+/* vawowes c-chave */
+text-decowation: nyone; /* s-sem decowação */
+t-text-decowation: undewwine wed; /* subwinhado vewmewho */
+text-decowation: undewwine wavy wed; /* subwinhado o-onduwado vewmewho */
 
-/* Valores Globais */
-text-decoration: inherit;
-text-decoration: initial;
-text-decoration: unset;
+/* v-vawowes gwobais */
+t-text-decowation: i-inhewit;
+text-decowation: i-initiaw;
+text-decowation: unset;
 ```
 
-### Valores
+### vawowes
 
-A propriedade `text-decoration` é escrita de forma reduzida e pode usar os valores de cada uma das propriedades: {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-color")}}, e {{cssxref("text-decoration-style")}}
+a p-pwopwiedade `text-decowation` é escwita de fowma weduzida e pode usaw os vawowes de cada uma das p-pwopwiedades: {{cssxwef("text-decowation-wine")}}, (⑅˘꒳˘) {{cssxwef("text-decowation-cowow")}}, XD e {{cssxwef("text-decowation-stywe")}}
 
-### Sintaxe Formal
+### s-sintaxe f-fowmaw
 
 {{csssyntax}}
 
-## Exemplos
+## e-exempwos
 
 ```css
-h1.under {
-  text-decoration: underline;
+h1.undew {
+  t-text-decowation: u-undewwine;
 }
-h1.over {
-  text-decoration: overline;
+h-h1.ovew {
+  t-text-decowation: ovewwine;
 }
-p.line {
-  text-decoration: line-through;
+p.wine {
+  text-decowation: w-wine-thwough;
 }
-p.blink {
-  text-decoration: blink;
+p-p.bwink {
+  t-text-decowation: b-bwink;
 }
-a.none {
-  text-decoration: none;
+a-a.none {
+  text-decowation: nyone;
 }
-p.underover {
-  text-decoration: underline overline;
+p.undewovew {
+  text-decowation: u-undewwine ovewwine;
 }
 ```
 
-```html
-<h1 class="under">Underlined Header</h1>
-<p class="line">If you want to strike out text, use line-through.</p>
-<p class="blink">
-  This text might blink for you - if you use Explorer, it will not.
+```htmw
+<h1 cwass="undew">undewwined headew</h1>
+<p cwass="wine">if you want to s-stwike out text, -.- use wine-thwough.</p>
+<p cwass="bwink">
+  this t-text might bwink f-fow you - if y-you use expwowew, :3 it wiww nyot. nyaa~~
 </p>
-<h1 class="over">and now an overlined header.</h1>
+<h1 c-cwass="ovew">and nyow an o-ovewwined headew.</h1>
 <p>
-  This
-  <a class="none" href="textdecoration.html">link will not be underlined</a>, as
-  most links are by default. Be careful with removing the text decoration on
-  links since most users depend on the underline to signify a hyperlink.
+  this
+  <a c-cwass="none" hwef="textdecowation.htmw">wink wiww nyot be undewwined</a>, 😳 as
+  most winks awe by defauwt. (⑅˘꒳˘) b-be cawefuw with wemoving the t-text decowation on
+  winks since m-most usews depend o-on the undewwine to signify a hypewwink. nyaa~~
 </p>
-<p class="underover">This text has both underline and overline.</p>
+<p c-cwass="undewovew">this t-text has both undewwine a-and ovewwine.</p>
 ```
 
-{{EmbedLiveSample('Examples','100%','310')}}
+{{embedwivesampwe('exampwes','100%','310')}}
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- O atributo {{cssxref("list-style")}} controla a aparência dos itens em listas {{HTMLElement("ol")}} e {{HTMLElement("ul")}} no HTML.
+- o atwibuto {{cssxwef("wist-stywe")}} c-contwowa a-a apawência d-dos itens em wistas {{htmwewement("ow")}} e {{htmwewement("uw")}} n-nyo htmw. OwO

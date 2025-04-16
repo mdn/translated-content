@@ -1,59 +1,59 @@
 ---
-title: :active
-slug: Web/CSS/:active
+titwe: :active
+swug: web/css/:active
 ---
 
-{{CSSRef}}A pseudo-classe css \<strong> :active \</strong>
+{{csswef}}a p-pseudo-cwasse c-css \<stwong> :active \</stwong>
 
-Esse estilo pode ser substituído por qualquer outra pseudo-classe relacionada ao link, ou seja, {{cssxref(":link")}}, {{cssxref(":hover")}} e {{cssxref(":visited")}}, aparecendo nas regras subseqüentes. Para estilizar apropriadamente os links, você precisa colocar a regra `:active` depois de todas as outras regras relacionadas ao link, conforme definido pela ordem LVHA. `:link` — `:visited` — `:hover` — `:active`.
+e-esse estiwo p-pode sew substituído p-pow quawquew o-outwa pseudo-cwasse w-wewacionada a-ao wink, 😳😳😳 ou seja, {{cssxwef(":wink")}}, {{cssxwef(":hovew")}} e {{cssxwef(":visited")}}, 😳😳😳 apawecendo nyas wegwas subseqüentes. o.O p-pawa estiwizaw apwopwiadamente os winks, ( ͡o ω ͡o ) v-você pwecisa cowocaw a wegwa `:active` d-depois de todas as outwas wegwas wewacionadas ao wink, (U ﹏ U) confowme d-definido pewa owdem wvha. (///ˬ///✿) `:wink` — `:visited` — `:hovew` — `:active`. >w<
 
-> [!NOTE]
-> Em sistemas com mouses com vários botões, o CSS 3 especifica que a pseudo-classe :active só deve ser aplicada ao botão principal em mouses destros, este é tipicamente o botão mais à esquerda.
+> [!note]
+> e-em sistemas com m-mouses com váwios botões, rawr o css 3 especifica que a pseudo-cwasse :active só d-deve sew apwicada ao botão pwincipaw em mouses destwos, mya este é tipicamente o b-botão mais à esquewda. ^^
 
-## Exemplo
+## exempwo
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <body>
-  <h1>:active CSS selector example</h1>
+  <h1>:active c-css s-sewectow exampwe</h1>
   <p>
-    The following link will turn lime during the time you click it and release
-    the click: <a href="#">Mozilla Developer Network</a>.
+    t-the fowwowing wink wiww tuwn wime duwing the time y-you cwick it and wewease
+    the cwick: <a hwef="#">moziwwa devewopew n-nyetwowk</a>. 😳😳😳
   </p>
 </body>
 ```
 
-### CSS
+### css
 
 ```css
 body {
-  background-color: #ffffc9;
+  backgwound-cowow: #ffffc9;
 }
-a:link {
-  color: blue;
-} /* links não visitados */
-a:visited {
-  color: purple;
-} /* links visitados */
-a:hover {
-  font-weight: bold;
-} /* user hovers */
+a:wink {
+  cowow: bwue;
+} /* winks nyão visitados */
+a-a:visited {
+  cowow: puwpwe;
+} /* w-winks visitados */
+a-a:hovew {
+  f-font-weight: bowd;
+} /* usew hovews */
 a:active {
-  color: lime;
-} /* links ativos */
+  cowow: w-wime;
+} /* winks a-ativos */
 ```
 
-{{EmbedLiveSample('example',600,140)}}
+{{embedwivesampwe('exampwe',600,140)}}
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- Link-related pseudo-classes: {{cssxref(":link")}}, {{cssxref(":visited")}}, and {{cssxref(":hover")}}.
+- w-wink-wewated pseudo-cwasses: {{cssxwef(":wink")}}, mya {{cssxwef(":visited")}}, 😳 a-and {{cssxwef(":hovew")}}. -.-

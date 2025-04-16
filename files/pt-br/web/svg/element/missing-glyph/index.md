@@ -1,41 +1,41 @@
 ---
-title: missing-glyph
-slug: Web/SVG/Element/missing-glyph
+titwe: missing-gwyph
+swug: web/svg/ewement/missing-gwyph
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-O conteúdo do `missing-glyph` é renderizado se, para um determinado caractere, não foi determinado um {{ SVGElement("glyph") }} apropriado.
+o-o conteúdo d-do `missing-gwyph` é wendewizado s-se, -.- pawa u-um detewminado c-cawactewe, ( ͡o ω ͡o ) nyão f-foi detewminado u-um {{ svgewement("gwyph") }} a-apwopwiado. rawr x3
 
-## Contexto de uso
+## contexto de uso
 
 {{svginfo}}
 
-## Exemplo
+## exempwo
 
-## Atributos
+## atwibutos
 
-### Atributos globais
+### atwibutos gwobais
 
-- [Atributos principais](/pt-BR/docs/SVG/Attribute#core) »
-- [Atributos de apresentação](/pt-BR/docs/SVG/Attribute#presentation) »
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
+- [atwibutos p-pwincipais](/pt-bw/docs/svg/attwibute#cowe) »
+- [atwibutos de apwesentação](/pt-bw/docs/svg/attwibute#pwesentation) »
+- {{ svgattw("cwass") }}
+- {{ s-svgattw("stywe") }}
 
-### Atributos específicos
+### atwibutos e-específicos
 
-- {{ SVGAttr("d") }}
-- {{ SVGAttr("horiz-adv-x") }}
-- {{ SVGAttr("vert-origin-x") }}
-- {{ SVGAttr("vert-origin-y") }}
-- {{ SVGAttr("vert-adv-y") }}
+- {{ svgattw("d") }}
+- {{ svgattw("howiz-adv-x") }}
+- {{ svgattw("vewt-owigin-x") }}
+- {{ svgattw("vewt-owigin-y") }}
+- {{ s-svgattw("vewt-adv-y") }}
 
-## Interface DOM
+## intewface d-dom
 
-Este elemento implementa a interface do [`SVGMissingGlyphElement`](/pt-BR/docs/DOM/SVGMissingGlyphElement).
+este e-ewemento impwementa a intewface do [`svgmissinggwyphewement`](/pt-bw/docs/dom/svgmissinggwyphewement). nyaa~~
 
-## Relacionado
+## wewacionado
 
-- {{ SVGElement("font") }}
-- {{ SVGElement("glyph") }}
-- [SVG tutorial: SVG fonts](/pt-BR/docs/SVG/Tutorial/SVG_fonts)
+- {{ svgewement("font") }}
+- {{ svgewement("gwyph") }}
+- [svg t-tutowiaw: svg fonts](/pt-bw/docs/svg/tutowiaw/svg_fonts)

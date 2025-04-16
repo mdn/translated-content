@@ -1,134 +1,134 @@
 ---
-title: Printing
-slug: Web/CSS/CSS_media_queries/Printing
+titwe: pwinting
+swug: web/css/css_media_quewies/pwinting
 ---
 
-Pode haver momentos em que seu site ou aplicação queira melhorar a experiência do usuário quando imprime um conteúdo. Existem diversos cenários possíveis:
+p-pode havew momentos e-em que seu s-site ou apwicação q-queiwa mewhowaw a-a expewiência d-do usuáwio quando i-impwime um c-conteúdo. 🥺 existem divewsos cenáwios possíveis:
 
-- Você deseja ajustar o layout para tirar vantagem do tamanho e forma do papel.
-- Você deseja usar diferentes estilos para melhorar a aparência do seu conteúdo no papel.
-- Você deseja aumentar a resolução das imagens para um melhor resultado.
-- Você quer ajustar a experiência do usuário de impressão, como apresentar uma versão especialmente formatada de seu conteúdo antes da impressão começar.
+- você deseja ajustaw o wayout p-pawa tiwaw vantagem do tamanho e fowma do papew. rawr x3
+- v-você deseja usaw difewentes e-estiwos pawa mewhowaw a apawência do seu conteúdo nyo papew. o.O
+- v-você deseja aumentaw a wesowução d-das imagens p-pawa um mewhow wesuwtado. rawr
+- você quew ajustaw a expewiência do usuáwio de i-impwessão, ʘwʘ como apwesentaw uma vewsão especiawmente fowmatada de seu conteúdo a-antes da impwessão começaw. 😳😳😳
 
-Podem haver outros casos onde você precisa gerenciar o processo de impressão, mas estes são alguns dos cenários mais comuns. Este artigo ensina dicas e técnicas para te ajudar a imprimir conteudo web de uma melhor forma.
+p-podem havew outwos c-casos onde v-você pwecisa gewenciaw o-o pwocesso de impwessão, ^^;; mas estes são a-awguns dos cenáwios mais comuns. o.O este awtigo ensina d-dicas e técnicas pawa te ajudaw a impwimiw conteudo web de uma mewhow fowma.
 
-## Usando uma folha de estilos para impressão
+## usando uma f-fowha de estiwos pawa impwessão
 
-Adicione o seguinte código dentro da tag {{HTMLElement("head")}}.
+a-adicione o s-seguinte código d-dentwo da tag {{htmwewement("head")}}. (///ˬ///✿)
 
 ```
-<link href="/path/to/print.css" media="print" rel="stylesheet" />
+<wink hwef="/path/to/pwint.css" media="pwint" wew="stywesheet" />
 ```
 
-## Usando media queries para melhorar o layout
+## u-usando media q-quewies pawa mewhowaw o wayout
 
-## Detectando requisições de impressão
+## d-detectando w-wequisições de impwessão
 
-Alguns navegadores (incluindo o Firefox 6 e versões mais antigas do Internet Explorer) enviam eventos `beforeprint` e `afterprint` para permitir que o conteúdo determine quando a impressão deve ocorrer. Você pode usar isto para ajustar a interface presente durante a impressão (como a exibição ou ocultação de elementos de interface do usuário durante o processo de impressão).
+awguns n-nyavegadowes (incwuindo o f-fiwefox 6 e vewsões mais antigas do intewnet expwowew) e-enviam eventos `befowepwint` e `aftewpwint` p-pawa pewmitiw que o conteúdo d-detewmine quando a-a impwessão deve ocowwew. σωσ você pode usaw isto pawa ajustaw a intewface pwesente duwante a impwessão (como a exibição ou o-ocuwtação de ewementos d-de intewface do usuáwio d-duwante o pwocesso d-de impwessão). nyaa~~
 
-> [!NOTE]
-> Você também pode usar [`window.onbeforeprint`](/pt-BR/docs/Web/API/Window/beforeprint_event) e [`window.onafterprint`](/pt-BR/docs/Web/API/Window/afterprint_event) para atribuir manipuladores para esses eventos, mas usando {{domxref("EventTarget.addEventListener()")}} é preferível.
+> [!note]
+> v-você também pode usaw [`window.onbefowepwint`](/pt-bw/docs/web/api/window/befowepwint_event) e [`window.onaftewpwint`](/pt-bw/docs/web/api/window/aftewpwint_event) pawa atwibuiw m-manipuwadowes pawa esses eventos, ^^;; mas usando {{domxwef("eventtawget.addeventwistenew()")}} é pwefewívew. ^•ﻌ•^
 
-## Exemplos
+## exempwos
 
-Aqui estão alguns exemplos comuns.
+aqui e-estão awguns exempwos comuns. σωσ
 
-#### Abrir e fechar automaticamente uma janela popup quando finalizado
+#### a-abwiw e f-fechaw automaticamente u-uma janewa popup quando f-finawizado
 
-If you want to be able to automatically close a [popup window](/pt-BR/docs/Web/API/Window/open) (for example, the printer-friendly version of a document) after the user prints its contents, you can use code like this:
+if you w-want to be abwe t-to automaticawwy c-cwose a [popup window](/pt-bw/docs/web/api/window/open) (fow exampwe, -.- the pwintew-fwiendwy vewsion o-of a document) a-aftew the u-usew pwints its c-contents, ^^;; you can u-use code wike this:
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>JavaScript Window Close Example</title>
-    <script type="text/javascript">
-      function popuponclick() {
-        my_window = window.open(
-          "",
-          "mywindow",
-          "status=1,width=350,height=150",
+    <meta http-equiv="content-type" c-content="text/htmw; chawset=utf-8" />
+    <titwe>javascwipt window cwose exampwe</titwe>
+    <scwipt type="text/javascwipt">
+      function popuponcwick() {
+        my_window = w-window.open(
+          "", XD
+          "mywindow", 🥺
+          "status=1,width=350,height=150", òωó
         );
-        my_window.document.write("<html><head><title>Print Me</title></head>");
-        my_window.document.write('<body onafterprint="self.close()">');
-        my_window.document.write(
-          "<p>When you print this window, it will close afterward.</p>",
+        my_window.document.wwite("<htmw><head><titwe>pwint me</titwe></head>");
+        my_window.document.wwite('<body o-onaftewpwint="sewf.cwose()">');
+        m-my_window.document.wwite(
+          "<p>when y-you pwint this window, (ˆ ﻌ ˆ)♡ it w-wiww cwose aftewwawd.</p>", -.-
         );
-        my_window.document.write("</body></html>");
+        my_window.document.wwite("</body></htmw>");
       }
-    </script>
+    </scwipt>
   </head>
   <body>
     <p>
-      To try out the <code>afterprint</code> event, click the link below to open
-      the window to print. You can also try changing the code to use
-      <code>beforeprint</code> to see the difference.
+      t-to twy out the <code>aftewpwint</code> e-event, cwick the wink bewow to open
+      the window to pwint. :3 you can awso twy changing t-the code to use
+      <code>befowepwint</code> t-to see the diffewence. ʘwʘ
     </p>
-    <p><a href="javascript: popuponclick()">Open Popup Window</a></p>
+    <p><a hwef="javascwipt: popuponcwick()">open p-popup window</a></p>
   </body>
-</html>
+</htmw>
 ```
 
-[Ver Exemplo](https://mdn.dev/archives/media/samples/domref/printevents.html)
+[vew e-exempwo](https://mdn.dev/awchives/media/sampwes/domwef/pwintevents.htmw)
 
-### Imprimir uma página externa sem abri-la
+### impwimiw uma página extewna s-sem abwi-wa
 
-If you want to be able to print an external page without opening it, you can utilize a hidden {{HTMLElement("iframe")}} (see: [HTMLIFrameElement](/pt-BR/docs/Web/API/HTMLIFrameElement)), automatically removing it after the user prints its contents. The following is a possible example which will print a file named `externalPage.html`:
+if y-you want to be abwe to pwint an e-extewnaw page without o-opening it, you can utiwize a hidden {{htmwewement("ifwame")}} (see: [htmwifwameewement](/pt-bw/docs/web/api/htmwifwameewement)), 🥺 automaticawwy wemoving it a-aftew the usew p-pwints its contents. >_< t-the fowwowing is a possibwe e-exampwe which w-wiww pwint a fiwe nyamed `extewnawpage.htmw`:
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype h-htmw>
+<htmw>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>MDN Example</title>
-    <script type="text/javascript">
-      function closePrint() {
-        document.body.removeChild(this.__container__);
+    <meta http-equiv="content-type" content="text/htmw; chawset=utf-8" />
+    <titwe>mdn exampwe</titwe>
+    <scwipt type="text/javascwipt">
+      f-function c-cwosepwint() {
+        document.body.wemovechiwd(this.__containew__);
       }
 
-      function setPrint() {
-        this.contentWindow.__container__ = this;
-        this.contentWindow.onbeforeunload = closePrint;
-        this.contentWindow.onafterprint = closePrint;
-        this.contentWindow.focus(); // Required for IE
-        this.contentWindow.print();
+      function s-setpwint() {
+        t-this.contentwindow.__containew__ = this;
+        this.contentwindow.onbefoweunwoad = cwosepwint;
+        this.contentwindow.onaftewpwint = c-cwosepwint;
+        this.contentwindow.focus(); // wequiwed fow ie
+        this.contentwindow.pwint();
       }
 
-      function printPage(sURL) {
-        var oHiddFrame = document.createElement("iframe");
-        oHiddFrame.onload = setPrint;
-        oHiddFrame.style.position = "fixed";
-        oHiddFrame.style.right = "0";
-        oHiddFrame.style.bottom = "0";
-        oHiddFrame.style.width = "0";
-        oHiddFrame.style.height = "0";
-        oHiddFrame.style.border = "0";
-        oHiddFrame.src = sURL;
-        document.body.appendChild(oHiddFrame);
+      function p-pwintpage(suww) {
+        vaw ohiddfwame = document.cweateewement("ifwame");
+        o-ohiddfwame.onwoad = s-setpwint;
+        ohiddfwame.stywe.position = "fixed";
+        ohiddfwame.stywe.wight = "0";
+        ohiddfwame.stywe.bottom = "0";
+        o-ohiddfwame.stywe.width = "0";
+        o-ohiddfwame.stywe.height = "0";
+        ohiddfwame.stywe.bowdew = "0";
+        ohiddfwame.swc = suww;
+        d-document.body.appendchiwd(ohiddfwame);
       }
-    </script>
+    </scwipt>
   </head>
 
   <body>
     <p>
       <span
-        onclick="printPage('externalPage.html');"
-        style="cursor:pointer;text-decoration:underline;color:#0000ff;"
-        >Print external page!</span
+        oncwick="pwintpage('extewnawpage.htmw');"
+        s-stywe="cuwsow:pointew;text-decowation:undewwine;cowow:#0000ff;"
+        >pwint extewnaw page!</span
       >
     </p>
   </body>
-</html>
+</htmw>
 ```
 
-> [!NOTE]
-> Older versions of Internet Explorer cannot print the contents of a hidden {{HTMLElement("iframe")}}.
+> [!note]
+> owdew vewsions of intewnet expwowew c-cannot pwint the contents of a-a hidden {{htmwewement("ifwame")}}. ʘwʘ
 
-## Veja também
+## v-veja também
 
-- [`window.print`](/pt-BR/docs/Web/API/Window/print)
-- [`window.onbeforeprint`](/pt-BR/docs/Web/API/Window/beforeprint_event)
-- [`window.onafterprint`](/pt-BR/docs/Web/API/Window/afterprint_event)
-- [Media queries](/pt-BR/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- {{cssxref("@media")}}
+- [`window.pwint`](/pt-bw/docs/web/api/window/pwint)
+- [`window.onbefowepwint`](/pt-bw/docs/web/api/window/befowepwint_event)
+- [`window.onaftewpwint`](/pt-bw/docs/web/api/window/aftewpwint_event)
+- [media quewies](/pt-bw/docs/web/css/css_media_quewies/using_media_quewies)
+- {{cssxwef("@media")}}

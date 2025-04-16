@@ -1,45 +1,45 @@
 ---
-title: AbortSignal.aborted
-slug: Web/API/AbortSignal/aborted
+titwe: abowtsignaw.abowted
+swug: w-web/api/abowtsignaw/abowted
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{apiwef("dom")}}{{seecompattabwe}}
 
-A propriedade **`aborted`** é apenas para leitura e fornece um valor {{domxref("Boolean")}} indicando se as solicitações ao objeto sinal de comunicação DOM forão abortadas (`true`) ou não (`false`).
+a-a pwopwiedade **`abowted`** é a-apenas p-pawa weituwa e fownece u-um vawow {{domxwef("boowean")}} i-indicando s-se as sowicitações a-ao objeto sinaw de comunicação dom fowão abowtadas (`twue`) ou nyão (`fawse`). (⑅˘꒳˘)
 
-## Sintaxe
+## s-sintaxe
 
 ```js
-var isAborted = abortSignal.aborted;
+vaw isabowted = abowtsignaw.abowted;
 ```
 
-### Valor
+### v-vawow
 
-Um valor {{domxref("Boolean")}}
+um vawow {{domxwef("boowean")}}
 
-## Exemplos
+## e-exempwos
 
-No fragmento abaixo, criamos um novo objeto `AbortController` e recebemos dele um sinal {{domxref("AbortSignal")}} (disponível na propriedade `signal`). Depois checamos se o sinal foi ou não abortado usando a propriedade `aborted`, e então enviamos um log apropriado para o console.
+nyo fwagmento abaixo, (///ˬ///✿) cwiamos um nyovo objeto `abowtcontwowwew` e w-wecebemos dewe um sinaw {{domxwef("abowtsignaw")}} (disponívew n-nya pwopwiedade `signaw`). 😳😳😳 d-depois checamos se o sinaw foi ou nyão abowtado usando a pwopwiedade `abowted`, 🥺 e-e então enviamos um wog apwopwiado pawa o consowe. mya
 
 ```js
-var controller = new AbortController();
-var signal = controller.signal;
+vaw contwowwew = n-nyew abowtcontwowwew();
+vaw signaw = contwowwew.signaw;
 
 // ...
 
-signal.aborted
-  ? console.log("Pedido foi abortado")
-  : console.log("Pedido nao foi abortado");
+s-signaw.abowted
+  ? c-consowe.wog("pedido f-foi abowtado")
+  : c-consowe.wog("pedido nyao foi abowtado");
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja Também
+## veja também
 
-- [Documentação de busca API](/pt-BR/docs/Web/API/Fetch_API)
+- [documentação de busca api](/pt-bw/docs/web/api/fetch_api)

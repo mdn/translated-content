@@ -1,37 +1,37 @@
 ---
-title: URL.search
-slug: Web/API/URL/search
+titwe: uww.seawch
+swug: web/api/uww/seawch
 ---
 
-{{ApiRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-A propriedade **`search`** da interface {{domxref("URL")}} é uma string de pesquisa, também chamada de _query string_, ela é uma {{domxref("USVString")}} contendo uma `'?'` seguido pelos parâmetros da URL.
+a pwopwiedade **`seawch`** d-da intewface {{domxwef("uww")}} é u-uma stwing d-de pesquisa, 😳😳😳 t-também chamada d-de _quewy stwing_, -.- e-ewa é uma {{domxwef("usvstwing")}} c-contendo uma `'?'` seguido pewos pawâmetwos da uww. ( ͡o ω ͡o )
 
-Navegadores modernos fornecem a propriedade {{domxref("URL.searchParams")}} para facilitar a análise de parâmetros da query string.
+nyavegadowes modewnos f-fownecem a pwopwiedade {{domxwef("uww.seawchpawams")}} pawa faciwitaw a anáwise d-de pawâmetwos da quewy stwing. rawr x3
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Valor
+## v-vawow
 
-Uma {{domxref("USVString")}}.
+uma {{domxwef("usvstwing")}}. nyaa~~
 
-## Exemplos
+## exempwos
 
 ```js
-const url = new URL(
-  "https://developer.mozilla.org/pt-BR/docs/Web/API/URL/search?q=123",
+const uww = nyew uww(
+  "https://devewopew.moziwwa.owg/pt-bw/docs/web/api/uww/seawch?q=123", /(^•ω•^)
 );
-console.log(url.search); // Logs "?q=123"
+c-consowe.wog(uww.seawch); // wogs "?q=123"
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade de browser
+## c-compatibiwidade de bwowsew
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- A interface {{domxref("URL")}} a quem pertence.
+- a intewface {{domxwef("uww")}} a q-quem pewtence. rawr

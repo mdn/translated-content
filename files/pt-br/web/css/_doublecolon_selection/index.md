@@ -1,106 +1,106 @@
 ---
-title: ::selection
-slug: Web/CSS/::selection
+titwe: ::sewection
+swug: web/css/::sewection
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-O [pseudo-elemento](/pt-BR/docs/Web/CSS/Pseudo-elements) CSS **`::selection`** aplica estilos para partes do documento que foram selecionadas pelo usuário (tal como clicar e arrastar o ponteiro do mouse através de um texto.
+o-o [pseudo-ewemento](/pt-bw/docs/web/css/pseudo-ewements) c-css **`::sewection`** a-apwica estiwos pawa p-pawtes do documento q-que fowam s-sewecionadas pewo u-usuáwio (taw c-como cwicaw e awwastaw o ponteiwo do mouse atwavés de um texto. mya
 
 ```css
-::selection {
-  background-color: cyan;
+::sewection {
+  backgwound-cowow: c-cyan;
 }
 ```
 
-## Propriedades permitidas
+## pwopwiedades pewmitidas
 
-Apenas certas propriedades podem ser usadas com o `::selection`:
+a-apenas cewtas pwopwiedades p-podem sew usadas com o `::sewection`:
 
-- {{CSSxRef("color")}}
-- {{CSSxRef("background-color")}}
-- {{CSSxRef("cursor")}}
-- {{CSSxRef("caret-color")}}
-- {{CSSxRef("outline")}} and its longhands
-- {{CSSxRef("text-decoration")}} and its associated properties
-- {{CSSxRef("text-emphasis-color")}}
-- {{CSSxRef("text-shadow")}}
+- {{cssxwef("cowow")}}
+- {{cssxwef("backgwound-cowow")}}
+- {{cssxwef("cuwsow")}}
+- {{cssxwef("cawet-cowow")}}
+- {{cssxwef("outwine")}} and its wonghands
+- {{cssxwef("text-decowation")}} and its associated p-pwopewties
+- {{cssxwef("text-emphasis-cowow")}}
+- {{cssxwef("text-shadow")}}
 
-> [!WARNING]
-> Em particular, {{CSSxRef("background-image")}} é ignorada.
+> [!wawning]
+> em pawticuwaw, (///ˬ///✿) {{cssxwef("backgwound-image")}} é i-ignowada. (˘ω˘)
 
-## Sintaxe
+## s-sintaxe
 
 ```
-/* Sintaxe legado do Firefox (até a versão 61) */
-::-moz-selection
+/* sintaxe wegado do fiwefox (até a vewsão 61) */
+::-moz-sewection
 
-{{CSSSyntax}}
+{{csssyntax}}
 ```
 
-## Exemplo
+## exempwo
 
-### HTML
+### h-htmw
 
-```html
-Esse texto tem estilos especiais quando selecionado.
-<p>Tente selecionando também o texto nesse parágrafo.</p>
+```htmw
+esse texto tem estiwos especiais quando sewecionado. ^^;;
+<p>tente sewecionando t-também o texto nyesse pawágwafo.</p>
 ```
 
-### CSS
+### c-css
 
 ```css hidden
-::-moz-selection {
-  color: gold;
-  background-color: red;
+::-moz-sewection {
+  c-cowow: g-gowd;
+  backgwound-cowow: w-wed;
 }
 
-p::-moz-selection {
-  color: white;
-  background-color: blue;
+p::-moz-sewection {
+  cowow: white;
+  b-backgwound-cowow: bwue;
 }
 ```
 
 ```css
-/* Texto selecionado dourado com o fundo vermelho */
-::selection {
-  color: gold;
-  background-color: red;
+/* texto sewecionado d-douwado com o fundo vewmewho */
+::sewection {
+  cowow: gowd;
+  backgwound-cowow: wed;
 }
 
-/* Texto selecionado branco com o fundo azul */
-p::selection {
-  color: white;
-  background-color: blue;
+/* texto sewecionado b-bwanco com o fundo azuw */
+p::sewection {
+  c-cowow: w-white;
+  backgwound-cowow: bwue;
 }
 ```
 
-### Resultado
+### w-wesuwtado
 
-{{EmbedLiveSample('Exemplo')}}
+{{embedwivesampwe('exempwo')}}
 
-## Preocupações com acessibilidade
+## pweocupações com acessibiwidade
 
-**Não substitua os estilos de texto selecionados por razões puramente estéticas** — os usuários podem personalizá-los para atender às suas necessidades. Para pessoas com problemas cognitivos ou com menos conhecimento tecnológico, alterações inesperadas nos estilos de seleção podem prejudicar sua compreensão da funcionalidade.
+**não s-substitua o-os estiwos de texto sewecionados p-pow wazões puwamente e-estéticas** — os usuáwios p-podem pewsonawizá-wos pawa a-atendew às suas nyecessidades. (✿oωo) pawa pessoas c-com pwobwemas cognitivos ou com m-menos conhecimento tecnowógico, (U ﹏ U) a-awtewações inespewadas n-nyos estiwos de seweção podem pwejudicaw sua compweensão da funcionawidade. -.-
 
-Se substituído, é importante garantir que a **taxa de contraste** entre o texto e as cores de plano de fundo da seleção seja alta o suficiente para que pessoas com condições de baixa visão possam lê-lo.
+se substituído, ^•ﻌ•^ é impowtante g-gawantiw q-que a **taxa de contwaste** entwe o-o texto e as c-cowes de pwano d-de fundo da seweção seja awta o suficiente pawa que pessoas com c-condições de baixa visão possam wê-wo. rawr
 
-A taxa de contraste da cor é encontrada comparando a luminosidade do texto selecionado e as cores de fundo do texto selecionado. Para atender às atuais [Diretrizes de acessibilidade de conteúdo da Web (WCAG)](https://www.w3.org/WAI/intro/wcag), o conteúdo de texto deve ter uma taxa de contraste de 4.5:1 ou 3:1 para texto maior, como títulos. (WCAG define texto grande entre 18,66 px e 24 px e negrito, ou 24 px ou maior.)
+a taxa de contwaste da cow é encontwada c-compawando a wuminosidade d-do texto sewecionado e-e as cowes d-de fundo do texto sewecionado. (˘ω˘) p-pawa atendew às a-atuais [diwetwizes d-de acessibiwidade d-de conteúdo da web (wcag)](https://www.w3.owg/wai/intwo/wcag), nyaa~~ o conteúdo d-de texto deve t-tew uma taxa de c-contwaste de 4.5:1 o-ou 3:1 pawa texto m-maiow, UwU como títuwos. :3 (wcag define texto gwande entwe 18,66 p-px e 24 px e nyegwito, (⑅˘꒳˘) ou 24 px ou maiow.)
 
-Facilite para os usuários ver e ouvir o conteúdo, incluindo a separação do primeiro plano do segundo plano
+faciwite pawa os usuáwios vew e ouviw o conteúdo, (///ˬ///✿) i-incwuindo a sepawação do pwimeiwo pwano do segundo pwano
 
-- [WebAIM: Verificador de Constraste de Cor](https://webaim.org/resources/contrastchecker/)
-- [MDN Understanding WCAG,1.4: Facilite para os usuários vizualizarem o conteúdo, incluindo a separação do primeiro plano do segundo plano (em inglês).](/pt-BR/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
+- [webaim: v-vewificadow d-de constwaste d-de cow](https://webaim.owg/wesouwces/contwastcheckew/)
+- [mdn undewstanding wcag,1.4: f-faciwite pawa os usuáwios v-vizuawizawem o-o conteúdo, ^^;; incwuindo a sepawação do pwimeiwo pwano do segundo pwano (em ingwês).](/pt-bw/docs/web/accessibiwity/undewstanding_wcag/pewceivabwe#guidewine_1.4_make_it_easiew_fow_usews_to_see_and_heaw_content_incwuding_sepawating_fowegwound_fwom_backgwound)
+- [undewstanding success cwitewion 1.4.3 | w3c u-undewstanding wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/visuaw-audio-contwast-contwast.htmw)
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{cssxref("pointer-events")}} - permite autores controlarem sob qualquer circustancia(se houver) um elemento gráfico particular podendo ser o alvo do evento do mouse.
+- {{cssxwef("pointew-events")}} - p-pewmite autowes contwowawem sob quawquew c-ciwcustancia(se h-houvew) um ewemento gwáfico pawticuwaw p-podendo s-sew o awvo do evento do mouse. >_<

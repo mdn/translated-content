@@ -1,118 +1,118 @@
 ---
-title: class
-slug: Web/SVG/Attribute/class
+titwe: cwass
+swug: web/svg/attwibute/cwass
 ---
 
-« [Página inicial da referência de atributos do SVG](/pt-BR/docs/SVG/Attribute)
+« [página iniciaw d-da wefewência d-de atwibutos d-do svg](/pt-bw/docs/svg/attwibute)
 
-Atribui um nome de classe ou um conjunto de nomes de classe a um elemento. Você pode atribuir o mesmo nome ou nomes de classe para qualquer número de elementos. Se você especificar vários nomes de classe, estes devem ser separados por caracteres de espaço em branco.
+a-atwibui um n-nyome de cwasse o-ou um conjunto d-de nyomes de cwasse a-a um ewemento. 😳 você pode atwibuiw o mesmo nyome ou nyomes de cwasse pawa quawquew n-nyúmewo de ewementos. >w< se você especificaw v-váwios nyomes de cwasse, (⑅˘꒳˘) estes d-devem sew sepawados pow cawactewes de espaço em bwanco. OwO
 
-O nome de classe de um elemento tem duas funções principais:
+o n-nyome de cwasse de um ewemento tem d-duas funções p-pwincipais:
 
-- Como um seletor de folha de estilo, para a utilização quando um autor quiser atribuir informações de estilo a um conjunto de elementos.
-- Para utilizações gerais do navegador.
+- como um sewetow de fowha de estiwo, (ꈍᴗꈍ) pawa a utiwização quando u-um autow quisew atwibuiw infowmações de estiwo a um conjunto de ewementos. 😳
+- pawa u-utiwizações gewais do nyavegadow. 😳😳😳
 
-A classe pode ser utilizada pra estilizar o conteúdo do SVG com CSS.
+a-a cwasse p-pode sew utiwizada p-pwa estiwizaw o-o conteúdo do svg com css. mya
 
-## Utilização
+## utiwização
 
-| Categorias          | Nenhuma                                                                                        |
+| c-categowias          | nyenhuma                                                                                        |
 | ------------------- | ---------------------------------------------------------------------------------------------- |
-| Valor               | [\<list-of-class-names>](/pt-BR/docs/SVG/Content_type#list-of-ts)                              |
-| Animável            | Sim                                                                                            |
-| Documento normativo | [SVG 1.1 (2ª Edição): O atributo class](https://www.w3.org/TR/SVG/styling.html#ClassAttribute) |
+| vawow               | [\<wist-of-cwass-names>](/pt-bw/docs/svg/content_type#wist-of-ts)                              |
+| animávew            | s-sim                                                                                            |
+| documento nyowmativo | [svg 1.1 (2ª edição): o atwibuto cwass](https://www.w3.owg/tw/svg/stywing.htmw#cwassattwibute) |
 
-<!-- TODO: page macro not supported:  page("/pt-BR/SVG/Content_type","List-of-Ts")  -->
+<!-- t-todo: page macwo nyot s-suppowted:  page("/pt-bw/svg/content_type","wist-of-ts")  -->
 
-## Exemplo
+## e-exempwo
 
-```html
-<html>
+```htmw
+<htmw>
   <body>
     <svg
-      width="120"
+      w-width="120"
       height="220"
-      viewPort="0 0 120 120"
-      version="1.1"
-      xmlns="https://www.w3.org/2000/svg">
-      <style type="text/css">
-          <![CDATA[
+      viewpowt="0 0 120 120"
+      vewsion="1.1"
+      x-xmwns="https://www.w3.owg/2000/svg">
+      <stywe t-type="text/css">
+          <![cdata[
 
-            rect.rectClass {
-               stroke: #000066;
-               fill:   #00cc00;
+            wect.wectcwass {
+               s-stwoke: #000066;
+               f-fiww:   #00cc00;
             }
-           circle.circleClass {
-           stroke: #006600;
-           fill:   #cc0000;
+           ciwcwe.ciwcwecwass {
+           s-stwoke: #006600;
+           fiww:   #cc0000;
         }
 
           ]]>
-      </style>
+      </stywe>
 
-      <rect class="rectClass" x="10" y="10" width="100" height="100" />
-      <circle class="circleClass" cx="40" cy="50" r="26" />
+      <wect c-cwass="wectcwass" x="10" y="10" width="100" h-height="100" />
+      <ciwcwe cwass="ciwcwecwass" c-cx="40" cy="50" w="26" />
     </svg>
   </body>
-</html>
+</htmw>
 ```
 
-## Elementos
+## e-ewementos
 
-Os seguintes elementos podem utilizar o atributo `class`:
+o-os seguintes ewementos podem utiwizaw o atwibuto `cwass`:
 
-- {{ SVGElement("a") }}
-- {{ SVGElement("altGlyph") }}
-- {{ SVGElement("circle") }}
-- {{ SVGElement("clipPath") }}
-- {{ SVGElement("defs") }}
-- {{ SVGElement("desc") }}
-- {{ SVGElement("ellipse") }}
-- {{ SVGElement("feBlend") }}
-- {{ SVGElement("feColorMatrix") }}
-- {{ SVGElement("feComponentTransfer") }}
-- {{ SVGElement("feComposite") }}
-- {{ SVGElement("feConvolveMatrix") }}
-- {{ SVGElement("feDiffuseLighting") }}
-- {{ SVGElement("feDisplacementMap") }}
-- {{ SVGElement("feFlood") }}
-- {{ SVGElement("feGaussianBlur") }}
-- {{ SVGElement("feImage") }}
-- {{ SVGElement("feMerge") }}
-- {{ SVGElement("feMorphology") }}
-- {{ SVGElement("feOffset") }}
-- {{ SVGElement("feSpecularLighting") }}
-- {{ SVGElement("feTile") }}
-- {{ SVGElement("feTurbulence") }}
-- {{ SVGElement("filter") }}
-- {{ SVGElement("font") }}
-- {{ SVGElement("foreignObject") }}
-- {{ SVGElement("g") }}
-- {{ SVGElement("glyph") }}
-- {{ SVGElement("glyphRef") }}
-- {{ SVGElement("image") }}
-- {{ SVGElement("line") }}
-- {{ SVGElement("linearGradient") }}
-- {{ SVGElement("marker") }}
-- {{ SVGElement("mask") }}
-- {{ SVGElement("missing-glyph") }}
-- {{ SVGElement("path") }}
-- {{ SVGElement("pattern") }}
-- {{ SVGElement("polygon") }}
-- {{ SVGElement("polyline") }}
-- {{ SVGElement("radialGradient") }}
-- {{ SVGElement("rect") }}
-- {{ SVGElement("stop") }}
-- {{ SVGElement("svg") }}
-- {{ SVGElement("switch") }}
-- {{ SVGElement("symbol") }}
-- {{ SVGElement("text") }}
-- {{ SVGElement("textPath") }}
-- {{ SVGElement("title") }}
-- {{ SVGElement("tref") }}
-- {{ SVGElement("tspan") }}
-- {{ SVGElement("use") }}
+- {{ svgewement("a") }}
+- {{ svgewement("awtgwyph") }}
+- {{ svgewement("ciwcwe") }}
+- {{ svgewement("cwippath") }}
+- {{ s-svgewement("defs") }}
+- {{ s-svgewement("desc") }}
+- {{ svgewement("ewwipse") }}
+- {{ s-svgewement("febwend") }}
+- {{ s-svgewement("fecowowmatwix") }}
+- {{ s-svgewement("fecomponenttwansfew") }}
+- {{ svgewement("fecomposite") }}
+- {{ svgewement("feconvowvematwix") }}
+- {{ svgewement("fediffusewighting") }}
+- {{ s-svgewement("fedispwacementmap") }}
+- {{ svgewement("fefwood") }}
+- {{ svgewement("fegaussianbwuw") }}
+- {{ svgewement("feimage") }}
+- {{ svgewement("femewge") }}
+- {{ svgewement("femowphowogy") }}
+- {{ s-svgewement("feoffset") }}
+- {{ svgewement("fespecuwawwighting") }}
+- {{ s-svgewement("fetiwe") }}
+- {{ s-svgewement("fetuwbuwence") }}
+- {{ s-svgewement("fiwtew") }}
+- {{ svgewement("font") }}
+- {{ s-svgewement("foweignobject") }}
+- {{ s-svgewement("g") }}
+- {{ s-svgewement("gwyph") }}
+- {{ s-svgewement("gwyphwef") }}
+- {{ svgewement("image") }}
+- {{ svgewement("wine") }}
+- {{ s-svgewement("wineawgwadient") }}
+- {{ s-svgewement("mawkew") }}
+- {{ s-svgewement("mask") }}
+- {{ s-svgewement("missing-gwyph") }}
+- {{ s-svgewement("path") }}
+- {{ svgewement("pattewn") }}
+- {{ svgewement("powygon") }}
+- {{ svgewement("powywine") }}
+- {{ s-svgewement("wadiawgwadient") }}
+- {{ svgewement("wect") }}
+- {{ svgewement("stop") }}
+- {{ svgewement("svg") }}
+- {{ svgewement("switch") }}
+- {{ svgewement("symbow") }}
+- {{ s-svgewement("text") }}
+- {{ svgewement("textpath") }}
+- {{ svgewement("titwe") }}
+- {{ svgewement("twef") }}
+- {{ s-svgewement("tspan") }}
+- {{ svgewement("use") }}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}

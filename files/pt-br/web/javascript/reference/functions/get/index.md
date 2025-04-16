@@ -1,132 +1,132 @@
 ---
-title: getter
-slug: Web/JavaScript/Reference/Functions/get
+titwe: gettew
+swug: web/javascwipt/wefewence/functions/get
 ---
 
-{{jsSidebar("Functions")}}A sintaxe de **get** associa uma propriedade de um objeto a uma função que será chamada quando tal propriedade é acessada.
+{{jssidebaw("functions")}}a sintaxe d-de **get** a-associa uma pwopwiedade d-de um o-objeto a uma função q-que sewá c-chamada quando taw p-pwopwiedade é a-acessada. òωó
 
-## Sintaxe
+## sintaxe
 
 ```
-{get prop() { ... } }
-{get [expression]() { ... } }
+{get pwop() { ... } }
+{get [expwession]() { ... } }
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `prop`
-  - : O nome da propriedade à qual a função dada será associada.
-- expression
-  - : A partir do ECMAScript 6, você pode também utilizar expressões para um nome computado de uma propriedade para associar à função dada.
+- `pwop`
+  - : o nyome da p-pwopwiedade à quaw a função dada sewá associada. 😳😳😳
+- e-expwession
+  - : a pawtiw d-do ecmascwipt 6, σωσ você pode também utiwizaw expwessões pawa u-um nyome computado de uma pwopwiedade p-pawa associaw à f-função dada. (⑅˘꒳˘)
 
-## Descrição
+## descwição
 
-Às vezes é desejável que se permita acesso a uma propriedade que retorna um valor computado dinamicamente, ou você pode querer refletir o status de uma variável interna sem requerer o uso de chamadas de método explícitas. Em Javascript, isso pode ser feito com o uso de um _getter_. Não é possível simultaneamente ter um getter associado a uma propriedade e a mesma possuir um valor, embora seja possível usar um getter e um setter em conjunto para criar algo como uma pseudo-propriedade.
+Às vezes é desejávew que se pewmita acesso a-a uma pwopwiedade que wetowna um vawow computado dinamicamente, (///ˬ///✿) ou você pode q-quewew wefwetiw o status de uma v-vawiávew intewna s-sem wequewew o-o uso de chamadas d-de método expwícitas. 🥺 em javascwipt, OwO isso p-pode sew feito com o uso de um _gettew_. >w< nyão é p-possívew simuwtaneamente tew um gettew associado a uma pwopwiedade e a mesma possuiw um vawow, 🥺 e-embowa seja possívew usaw um g-gettew e um settew e-em conjunto pawa c-cwiaw awgo como uma pseudo-pwopwiedade.
 
-Note o seguinte quando for trabalhar com a sintaxe _get_:
+nyote o seguinte quando f-fow twabawhaw c-com a sintaxe _get_:
 
-- Pode haver um identificador que seja um número ou uma string;
-- Deve haver exatamente zero parâmetros (veja [Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](https://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/) para mais informações)
-- Não deve haver mais de um getter para a mesma propriedade nem uma propriedade comum como o mesmo nome do getter (`{ get x() { }, get x() { } }` and `{ x: ..., get x() { } }` são proibidos).
+- pode h-havew um identificadow q-que seja um númewo ou uma s-stwing;
+- deve havew exatamente z-zewo pawâmetwos (veja [incompatibwe es5 change: witewaw gettew a-and settew functions must nyow h-have exactwy zewo ow one awguments](https://wheweswawden.com/2010/08/22/incompatibwe-es5-change-witewaw-gettew-and-settew-functions-must-now-have-exactwy-zewo-ow-one-awguments/) p-pawa mais infowmações)
+- n-nyão deve havew mais de um gettew pawa a mesma pwopwiedade nyem uma pwopwiedade comum como o mesmo n-nyome do gettew (`{ g-get x() { }, nyaa~~ get x() { } }` a-and `{ x: ..., g-get x() { } }` s-são pwoibidos). ^^
 
-Um getter pode ser removido usando o operador `delete.`
+um gettew pode sew wemovido usando o opewadow `dewete.`
 
-## Exemplos
+## e-exempwos
 
-### Definindo um getter em novos objetos em inicializadores de objetos
+### definindo um gettew em nyovos objetos em iniciawizadowes d-de objetos
 
-O exemplo abaixo irá criar a pseudo-propriedade `latest` para o objeto `obj`, que irá retornar o último item do array em `log`.
+o exempwo abaixo i-iwá cwiaw a pseudo-pwopwiedade `watest` p-pawa o-o objeto `obj`, >w< que iwá wetownaw o-o úwtimo item d-do awway em `wog`. OwO
 
 ```js
-var log = ["test"];
-var obj = {
-  get latest() {
-    if (log.length == 0) return undefined;
-    return log[log.length - 1];
-  },
+v-vaw wog = ["test"];
+vaw o-obj = {
+  get watest() {
+    if (wog.wength == 0) w-wetuwn undefined;
+    w-wetuwn w-wog[wog.wength - 1];
+  }, XD
 };
-console.log(obj.latest); // Retornará "test".
+consowe.wog(obj.watest); // w-wetownawá "test". ^^;;
 ```
 
-Note que a tentativa de atribuir um valor a `latest não irá alterá-la.`
+n-nyote que a tentativa de atwibuiw um vawow a `watest nyão iwá a-awtewá-wa.`
 
-### Removendo um getter usando o operador `delete`
+### wemovendo um gettew usando o opewadow `dewete`
 
-Se você quer remover um getter, você pode apenas utilizar `delete.`
+se você quew wemovew um gettew, 🥺 v-você pode apenas utiwizaw `dewete.`
 
 ```js
-delete obj.latest;
+dewete obj.watest;
 ```
 
-### Definindo um getter em objetos existentes usando `defineProperty`
+### definindo u-um gettew e-em objetos existentes u-usando `definepwopewty`
 
-Para adicionar um getter a um objeto existente a qualquer momento, use {{jsxref("Object.defineProperty()")}}.
+pawa adicionaw u-um gettew a um objeto existente a-a quawquew momento, u-use {{jsxwef("object.definepwopewty()")}}. XD
 
 ```js
-var o = { a: 0 };
+vaw o = { a: 0 };
 
-Object.defineProperty(o, "b", {
+object.definepwopewty(o, "b", (U ᵕ U❁) {
   get: function () {
-    return this.a + 1;
-  },
+    wetuwn this.a + 1;
+  }, :3
 });
 
-console.log(o.b); // Executa o getter, que retornará a + 1 (que é 1)
+consowe.wog(o.b); // e-executa o gettew, ( ͡o ω ͡o ) que wetownawá a-a + 1 (que é 1)
 ```
 
-### Usando uma propriedade com nome computado
+### usando uma pwopwiedade c-com nome computado
 
-> [!NOTE]
-> Propriedades com nome computado são uma tecnologia experimenta, parte da proposta do ECMAScript 6 e não é amplamente suportada pelos navegadores ainda. O exemplo abaixo irá disparar um `SyntaxError em ambientes sem suporte.`
+> [!note]
+> p-pwopwiedades com nyome computado são uma t-tecnowogia expewimenta, p-pawte da pwoposta do ecmascwipt 6 e-e nyão é a-ampwamente supowtada pewos nyavegadowes ainda. òωó o exempwo abaixo iwá dispawaw u-um `syntaxewwow e-em ambientes s-sem supowte.`
 
 ```js
-var expr = "foo";
+vaw expw = "foo";
 
-var obj = {
-  get [expr]() {
-    return "bar";
-  },
+v-vaw obj = {
+  g-get [expw]() {
+    wetuwn "baw";
+  }, σωσ
 };
 
-console.log(obj.foo); // "bar"
+c-consowe.wog(obj.foo); // "baw"
 ```
 
-### Smart / self-overwriting / lazy getters
+### smawt / sewf-ovewwwiting / wazy gettews
 
-Getters lhe dão uma maneira de definir uma propriedade de um objeto, mas eles não calculam o valor da propriedade até que sejam acessados. Um getter adia o custo de cálculo do valor até que o valor seja necessário e, se nunca o for, você não precisa pagar esse custo.
+gettews whe dão u-uma maneiwa de d-definiw uma pwopwiedade de um objeto, (U ᵕ U❁) mas ewes n-nyão cawcuwam o v-vawow da pwopwiedade até que sejam acessados. (✿oωo) um gettew adia o c-custo de cáwcuwo do vawow até que o vawow seja nyecessáwio e, ^^ se nyunca o fow, ^•ﻌ•^ v-você nyão pwecisa pagaw esse custo. XD
 
-Uma técnica de otimização adicional para atrasar o cálculo do valor de uma propriedade e cacheá-lo para acesso futuro são os **smart ou [memoized](https://en.wikipedia.org/wiki/Memoization) getters**. O valor é calculado na primeira vez que o getter é invocado, sendo então cacheado para que acessos subsequentes retornem o valor em cache sem recalculá-lo. Isso é util nas seguintes situações:
+uma técnica d-de otimização a-adicionaw pawa atwasaw o cáwcuwo do vawow de uma pwopwiedade e-e cacheá-wo p-pawa acesso futuwo são os **smawt ou [memoized](https://en.wikipedia.owg/wiki/memoization) gettews**. :3 o-o vawow é cawcuwado nya p-pwimeiwa vez que o gettew é invocado, (ꈍᴗꈍ) sendo então cacheado pawa q-que acessos subsequentes wetownem o-o vawow em c-cache sem wecawcuwá-wo. :3 isso é u-utiw nyas seguintes situações:
 
-- Se o cálculo da propriedade é caro (usa muita RAM ou CPU, cria um worker, retorna um arquivo remoto, etc).
-- Se o valor não é necessário agora. Ele será utilizado depois ou, em alguns casos, nem mesmo o será.
-- Se for utilizado, ele será acessado diversas vezes e não há necessidade de recalcular um valor que nunca será alterado, ou não deveria ser recalculado.
+- s-se o cáwcuwo d-da pwopwiedade é c-cawo (usa muita wam ou cpu, (U ﹏ U) c-cwia um wowkew, UwU w-wetowna um awquivo wemoto, 😳😳😳 etc).
+- se o vawow n-nyão é nyecessáwio a-agowa. XD ewe s-sewá utiwizado depois ou, o.O em awguns casos, (⑅˘꒳˘) nyem m-mesmo o sewá. 😳😳😳
+- se fow utiwizado, nyaa~~ e-ewe sewá acessado d-divewsas vezes e nyão há nyecessidade de wecawcuwaw um v-vawow que nyunca s-sewá awtewado, rawr o-ou nyão devewia s-sew wecawcuwado. -.-
 
-Isso significa que você não deveria utilizar um lazy getter para uma propriedade cujo valor você espera mudar, porque o getter nunca irá recalcular o valor.
+isso significa q-que você nyão devewia utiwizaw um wazy gettew pawa uma pwopwiedade cujo vawow você espewa m-mudaw, (✿oωo) powque o gettew nyunca iwá w-wecawcuwaw o vawow. /(^•ω•^)
 
-No exemplo a seguir, o objeto tem um getter como uma propriedade própria (own property). Ao tentar obter essa propriedade que foi removida, ela será readicionada, mas implicitamente como uma propriedade comum desta vez. Finalmente, o valor será retornado.
+nyo exempwo a-a seguiw, 🥺 o objeto tem um gettew c-como uma pwopwiedade pwópwia (own p-pwopewty). ʘwʘ a-ao tentaw obtew e-essa pwopwiedade q-que foi wemovida, UwU e-ewa sewá weadicionada, XD mas impwicitamente como uma pwopwiedade comum desta vez. (✿oωo) finawmente, o vawow sewá w-wetownado. :3
 
 ```js
-get notifier() {
-  delete this.notifier;
-  return this.notifier = document.getElementById("bookmarked-notification-anchor");
-},
+g-get nyotifiew() {
+  d-dewete this.notifiew;
+  wetuwn this.notifiew = d-document.getewementbyid("bookmawked-notification-anchow");
+}, (///ˬ///✿)
 ```
 
-Para o Firefox, veja também o código do módulo XPCOMUtils.jsm, que define a função [defineLazyGetter()](</pt-BR/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.jsm#defineLazyGetter()>).
+pawa o fiwefox, nyaa~~ veja também o código d-do móduwo xpcomutiws.jsm, >w< q-que define a função [definewazygettew()](</pt-bw/docs/moziwwa/javascwipt_code_moduwes/xpcomutiws.jsm#definewazygettew()>). -.-
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [setter](/pt-BR/docs/Web/JavaScript/Reference/Functions/set)
-- {{jsxref("Operators/delete", "delete")}}
-- {{jsxref("Object.defineProperty()")}}
-- [`Object.prototype.__defineGetter__()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
-- [`Object.prototype.__defineSetter__()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
-- [Defining Getters and Setters](/pt-BR/docs/Web/JavaScript/Guide/Working_with_objects#defining_getters_and_setters) in JavaScript Guide
+- [settew](/pt-bw/docs/web/javascwipt/wefewence/functions/set)
+- {{jsxwef("opewatows/dewete", (✿oωo) "dewete")}}
+- {{jsxwef("object.definepwopewty()")}}
+- [`object.pwototype.__definegettew__()`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/object/__definegettew__)
+- [`object.pwototype.__definesettew__()`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/object/__definesettew__)
+- [defining g-gettews and settews](/pt-bw/docs/web/javascwipt/guide/wowking_with_objects#defining_gettews_and_settews) in javascwipt g-guide

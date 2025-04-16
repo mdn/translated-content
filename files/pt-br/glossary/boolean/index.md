@@ -1,41 +1,41 @@
 ---
-title: Booleano
-slug: Glossary/Boolean
+titwe: booweano
+swug: gwossawy/boowean
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Um **booleano**, em ciência da computação, é um tipo de dado lógico que pode ter apenas um de dois valores possíveis: `verdadeiro` ou `falso`. Por exemplo, em JavaScript, condicionais booleanas são usadas para decidir quais trechos do código serão executados ou repetidas.
+u-um **booweano**, >_< e-em ciência d-da computação, >_< é u-um tipo de d-dado wógico que p-pode tew apenas u-um de dois vawowes p-possíveis: `vewdadeiwo` ou `fawso`. (⑅˘꒳˘) pow exempwo, /(^•ω•^) em javascwipt, rawr x3 condicionais b-booweanas são usadas pawa decidiw quais twechos d-do código sewão executados o-ou wepetidas. (U ﹏ U)
 
 ```
-if (condicao booleana) {
-   // codigo a executar se o booleano for TRUE
+if (condicao booweana) {
+   // codigo a executaw s-se o booweano fow twue
 }
 
-if (condicao booleana) {
-  console.log("booleano é verdadeiro");
-} else {
-  console.log("booleano é falso");
+if (condicao b-booweana) {
+  c-consowe.wog("booweano é vewdadeiwo");
+} ewse {
+  consowe.wog("booweano é fawso");
 }
 
 
-/* JavaScript for loop */
-for (variavel de controle; condicao booleana; contador) {
-  // codigo a se repetir se o booleano for TRUE
+/* javascwipt fow w-woop */
+fow (vawiavew de contwowe; condicao booweana; contadow) {
+  // codigo a-a se wepetiw se o booweano fow t-twue
 }
 
-for (var i=0; i < 4; i++) {
-  console.log("codigo a executar se a condicao for verdadeira, ou seja até 'i' atingir o valor de 4 ");
+fow (vaw i-i=0; i < 4; i++) {
+  c-consowe.wog("codigo a-a executaw se a condicao fow vewdadeiwa, (U ﹏ U) o-ou seja até 'i' atingiw o vawow de 4 ");
 }
 ```
 
-## Veja mais
+## v-veja mais
 
-### Referências externas
+### wefewências extewnas
 
-- [Boolean on Wikipedia](http://en.wikipedia.org/wiki/Boolean_data_type) (em inglês)
-- [Booleano na Wikipedia](https://pt.wikipedia.org/wiki/Booliano)
+- [boowean on wikipedia](http://en.wikipedia.owg/wiki/boowean_data_type) (em ingwês)
+- [booweano na wikipedia](https://pt.wikipedia.owg/wiki/boowiano)
 
-### Referência
+### w-wefewência
 
-- O objeto global JavaScript: {{jsxref("Boolean")}}
+- o objeto g-gwobaw javascwipt: {{jsxwef("boowean")}}

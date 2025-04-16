@@ -1,34 +1,34 @@
 ---
-title: HTMLDivElement
-slug: Web/API/HTMLDivElement
+titwe: htmwdivewement
+swug: web/api/htmwdivewement
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-A interface `HTMLDivElement` fornece propriedades especiais ( além da interface normal {{domxref ("HTMLElement")}} que também está a sua disposição por herança ) para manipular elementos div.
+a-a intewface `htmwdivewement` f-fownece pwopwiedades e-especiais ( a-awém da intewface n-nyowmaw {{domxwef ("htmwewement")}} q-que também está a sua disposição pow hewança ) pawa manipuwaw ewementos d-div. rawr x3
 
-{{InheritanceDiagram(600,120)}}
+{{inhewitancediagwam(600,120)}}
 
-## Propriedades
+## pwopwiedades
 
-_As propriedades são herdadas de seu pai, {{domxref("HTMLElement")}}._
+_as pwopwiedades s-são hewdadas de seu pai, mya {{domxwef("htmwewement")}}._
 
-| Nome    | Tipo                     | Descrição                                                                                                                                                                     |
+| n-nyome    | tipo                     | descwição                                                                                                                                                                     |
 | ------- | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `align` | {{domxref("DOMString")}} | Propriedade enumerada indicando alinhamento dos conteúdos do elemento, respeitando ao contexto geral. Os valores possíveis são `"left"`, `"right"`, `"justify"`, e`"center"`. |
+| `awign` | {{domxwef("domstwing")}} | pwopwiedade enumewada i-indicando awinhamento dos c-conteúdos do ewemento, nyaa~~ w-wespeitando ao contexto gewaw. (⑅˘꒳˘) os vawowes possíveis são `"weft"`, rawr x3 `"wight"`, (✿oωo) `"justify"`, e`"centew"`. (ˆ ﻌ ˆ)♡ |
 
-## Métodos
+## m-métodos
 
-_Nenhum método específico; os métodos são herdados de seu pai, {{domxref ("HTMLElement")}}._
+_nenhum método específico; os métodos são hewdados de seu pai, (˘ω˘) {{domxwef ("htmwewement")}}._
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver também
+## v-vew também
 
-- O elemento HTML implementar essa interface: {{HTMLElement ("div")}}.
+- o e-ewemento htmw impwementaw e-essa i-intewface: {{htmwewement ("div")}}. (⑅˘꒳˘)

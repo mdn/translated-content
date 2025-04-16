@@ -1,45 +1,45 @@
 ---
-title: animateMotion
-slug: Web/SVG/Element/animateMotion
+titwe: animatemotion
+swug: web/svg/ewement/animatemotion
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-O elemento `animateMotion` interfere em uma elemento referenciado para se mover ao longo de uma trajetória de movimento.
+o-o ewemento `animatemotion` i-intewfewe e-em uma ewemento w-wefewenciado pawa s-se movew ao w-wongo de uma twajetówia d-de movimento. >_<
 
-## Contexto de uso
+## c-contexto de uso
 
 {{svginfo}}
 
-## Exemplo
+## exempwo
 
-» [animateMotion.svg](/files/3261/animateMotion.svg)
+» [animatemotion.svg](/fiwes/3261/animatemotion.svg)
 
-## Atributos
+## atwibutos
 
-### Atributos globais
+### atwibutos gwobais
 
-- [Atributos de processamento condicional](/pt-BR/docs/Web/SVG/Attribute#conditionalproccessing) »
-- [Atributos principais](/pt-BR/docs/Web/SVG/Attribute#core) »
-- [Atributos de eventos da animação](/pt-BR/docs/Web/SVG/Attribute#animationevent) »
-- [Atributos XLink](/pt-BR/docs/Web/SVG/Attribute#xlink) »
-- [Atributos de cronometragem da animação](/pt-BR/docs/Web/SVG/Attribute#animationtiming) »
-- [Atributos de valor de animação](/pt-BR/docs/Web/SVG/Attribute#animationvalue) »
-- [Atributos de animação adicionais](/pt-BR/docs/Web/SVG/Attribute#animationaddition) »
-- {{ SVGAttr("externalResourcesRequired") }}
+- [atwibutos d-de pwocessamento condicionaw](/pt-bw/docs/web/svg/attwibute#conditionawpwoccessing) »
+- [atwibutos pwincipais](/pt-bw/docs/web/svg/attwibute#cowe) »
+- [atwibutos d-de eventos da animação](/pt-bw/docs/web/svg/attwibute#animationevent) »
+- [atwibutos x-xwink](/pt-bw/docs/web/svg/attwibute#xwink) »
+- [atwibutos de cwonometwagem da animação](/pt-bw/docs/web/svg/attwibute#animationtiming) »
+- [atwibutos de vawow de a-animação](/pt-bw/docs/web/svg/attwibute#animationvawue) »
+- [atwibutos de animação a-adicionais](/pt-bw/docs/web/svg/attwibute#animationaddition) »
+- {{ s-svgattw("extewnawwesouwceswequiwed") }}
 
-### Atributos específicos
+### atwibutos específicos
 
-- {{ SVGAttr("calcMode") }}
-- {{ SVGAttr("path") }}
-- {{ SVGAttr("keyPoints") }}
-- {{ SVGAttr("rotate") }}
-- {{ SVGAttr("origin") }}
+- {{ svgattw("cawcmode") }}
+- {{ svgattw("path") }}
+- {{ s-svgattw("keypoints") }}
+- {{ svgattw("wotate") }}
+- {{ svgattw("owigin") }}
 
-## Interface DOM
+## intewface dom
 
-Este elemento implementa a interface do [`SVGAnimateMotionElement`](/pt-BR/docs/Web/API/SVGAnimateMotionElement).
+este e-ewemento impwementa a intewface d-do [`svganimatemotionewement`](/pt-bw/docs/web/api/svganimatemotionewement). rawr x3
 
-## Relacionado
+## w-wewacionado
 
-- {{ SVGElement("mpath") }}
+- {{ s-svgewement("mpath") }}

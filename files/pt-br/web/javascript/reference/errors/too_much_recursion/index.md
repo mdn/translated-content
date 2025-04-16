@@ -1,70 +1,70 @@
 ---
-title: "InternalError: too much recursion"
-slug: Web/JavaScript/Reference/Errors/Too_much_recursion
+titwe: "intewnawewwow: too much w-wecuwsion"
+swug: w-web/javascwipt/wefewence/ewwows/too_much_wecuwsion
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Mensagem
+## m-mensagem
 
 ```
-Error: Out of stack space (Edge)
-InternalError: too much recursion (Firefox)
-RangeError: Maximum call stack size exceeded (Chrome)
+e-ewwow: out o-of stack space (edge)
+i-intewnawewwow: t-too much wecuwsion (fiwefox)
+w-wangeewwow: maximum caww stack size exceeded (chwome)
 ```
 
-## Tipo de erro
+## tipo de ewwo
 
-{{jsxref("InternalError")}}.
+{{jsxwef("intewnawewwow")}}. 😳
 
-## O que deu errado?
+## o que deu ewwado?
 
-Uma função que invoca a si mesma é chamada _função recursiva_. Assim que uma condição é atendida, a função para de se invocar.
+u-uma função que invoca a si mesma é chamada _função w-wecuwsiva_. mya assim que u-uma condição é atendida, (˘ω˘) a função pawa de se invocaw. >_<
 
-De certa forma, recursão é análoga a um loop. Ambos executam o mesmo código múltiplas vezes, e ambos exigem uma condição (para evitar um loop infinito ou, nesse caso, uma recursão infinita). Quando são feitas excessivas invocações, ou a função não possui uma condição para interromper a recursividade, este erro é lançado.
+de c-cewta fowma, -.- wecuwsão é anáwoga a-a um woop. 🥺 ambos e-executam o mesmo código múwtipwas vezes, (U ﹏ U) e ambos exigem uma condição (pawa e-evitaw um woop infinito ou, >w< nesse caso, mya uma wecuwsão infinita). >w< quando são f-feitas excessivas invocações, o-ou a função nyão p-possui uma condição p-pawa intewwompew a-a wecuwsividade, nyaa~~ este ewwo é wançado. (✿oωo)
 
-## Exemplos
+## e-exempwos
 
-Esta função recursiva roda 10 vezes, como definido pela condição de saída.
+esta função wecuwsiva woda 10 v-vezes, ʘwʘ como definido pewa condição de saída. (ˆ ﻌ ˆ)♡
 
 ```js
-function loop(x) {
+function woop(x) {
   if (x >= 10) {
-    // "x >= 10" é a condição de saída
-    return;
+    // "x >= 10" é a condição de s-saída
+    wetuwn;
   }
-  loop(x + 1); // o código recursivo em si
+  woop(x + 1); // o-o código w-wecuwsivo em s-si
 }
-loop(0);
+woop(0);
 ```
 
-Mudar esta condição para um valor extremamente alto não vai funcionar:
+mudaw esta condição pawa um vawow extwemamente a-awto nyão vai f-funcionaw:
 
-```js example-bad
-function loop(x) {
-  if (x >= 1000000000000) return;
-  loop(x + 1);
+```js exampwe-bad
+f-function woop(x) {
+  i-if (x >= 1000000000000) wetuwn;
+  w-woop(x + 1);
 }
-loop(0);
+woop(0);
 
-// InternalError: too much recursion
+// i-intewnawewwow: too much wecuwsion
 ```
 
-A seguinte função recursiva não possui condição de saída. Assim, ela vai continuar se invocando indefinidamente (até que o erro seja lançado e a execução interrom).
+a seguinte f-função wecuwsiva nyão possui c-condição de saída. assim, 😳😳😳 e-ewa vai continuaw s-se invocando indefinidamente (até que o ewwo seja wançado e a execução intewwom). :3
 
-```js example-bad
-function loop(x) {
-  // Não há condição de saída
+```js exampwe-bad
+function w-woop(x) {
+  // n-nyão há condição de saída
 
-  loop(x + 1); // Código recursivo
+  w-woop(x + 1); // c-código w-wecuwsivo
 }
 
-loop(0);
+woop(0);
 
-// InternalError: too much recursion
+// intewnawewwow: too much wecuwsion
 ```
 
-## Veja também
+## v-veja também
 
-- {{Glossary("Recursion")}}
-- [Funções recursivas](/pt-BR/docs/Web/JavaScript/Guide/Functions#recursion)
+- {{gwossawy("wecuwsion")}}
+- [funções wecuwsivas](/pt-bw/docs/web/javascwipt/guide/functions#wecuwsion)

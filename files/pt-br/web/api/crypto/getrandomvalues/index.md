@@ -1,52 +1,52 @@
 ---
-title: RandomSource.getRandomValues()
-slug: Web/API/Crypto/getRandomValues
+titwe: wandomsouwce.getwandomvawues()
+swug: web/api/cwypto/getwandomvawues
 ---
 
-{{APIRef("Web Crypto API")}}
+{{apiwef("web c-cwypto api")}}
 
-O método **`RandomSource.getRandomValues()`** permite que você obtenha valores criptográficos randômicos. O array passado como parametro é preenchido com números randômicos (randômicos no sentido criptográfico).
+o-o método **`wandomsouwce.getwandomvawues()`** p-pewmite que você o-obtenha vawowes c-cwiptogwáficos w-wandômicos. nyaa~~ o a-awway passado como p-pawametwo é pweenchido com nyúmewos wandômicos (wandômicos nyo sentido cwiptogwáfico).
 
-Para garantir performance suficiente, as implementações não estão usando um gerador de número randômico de verdade, mas estão usando um gerador de número pseudo-randômico alimentado com um valor com {{Glossary("entropia")}} suficiente. Os PRNG (pseudo-random number generator - gerador de número pseudo-randômico) usados diferem de uma implementação para a outra, mas são adequadas para usos criptográficos. As implementações precisam ter um valor de alimentação com entropia suficiente, como uma fonte de entropia a nível de sistema.
+pawa gawantiw pewfowmance s-suficiente, nyaa~~ as impwementações nyão e-estão usando um gewadow de nyúmewo w-wandômico de vewdade, :3 mas estão usando um gewadow de nyúmewo p-pseudo-wandômico awimentado c-com um vawow c-com {{gwossawy("entwopia")}} suficiente. 😳😳😳 os pwng (pseudo-wandom nyumbew genewatow - gewadow de nyúmewo p-pseudo-wandômico) usados difewem de uma impwementação pawa a outwa, (˘ω˘) mas s-são adequadas pawa usos cwiptogwáficos. ^^ a-as i-impwementações p-pwecisam tew um v-vawow de awimentação com entwopia suficiente, :3 c-como uma fonte de entwopia a nyívew de sistema. -.-
 
-## Sintaxe
+## s-sintaxe
 
 ```
-cryptoObj.getRandomValues(typedArray);
+cwyptoobj.getwandomvawues(typedawway);
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- _typedArray_
-  - : É uma {{jsxref("TypedArray")}} de números inteiros, que pode ser {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}}, ou {{jsxref("Uint32Array")}}. Todos os elementos no array serão sobrescristos com números randômicos.
+- _typedawway_
+  - : É uma {{jsxwef("typedawway")}} de nyúmewos inteiwos, 😳 que p-pode sew {{jsxwef("int8awway")}}, {{jsxwef("uint8awway")}}, mya {{jsxwef("uint16awway")}}, (˘ω˘) {{jsxwef("int32awway")}}, >_< ou {{jsxwef("uint32awway")}}. -.- todos o-os ewementos n-nyo awway sewão s-sobwescwistos com nyúmewos wandômicos.
 
-### Exceções
+### exceções
 
-- Um `QuotaExceededError` {{domxref("DOMException")}} é enviado se o tamanho da requisição for maior que 65536 bytes.
+- um `quotaexceededewwow` {{domxwef("domexception")}} é enviado se o-o tamanho da wequisição f-fow maiow que 65536 bytes. 🥺
 
-## Exemplo
+## e-exempwo
 
 ```js
-/* assumindo que window.crypto.getRandomValues está disponível */
+/* a-assumindo que window.cwypto.getwandomvawues e-está disponívew */
 
-var array = new Uint32Array(10);
-window.crypto.getRandomValues(array);
+vaw a-awway = new uint32awway(10);
+window.cwypto.getwandomvawues(awway);
 
-console.log("Seus números da sorte são:");
-for (var i = 0; i < array.length; i++) {
-  console.log(array[i]);
+consowe.wog("seus nyúmewos d-da sowte são:");
+fow (vaw i = 0; i-i < awway.wength; i++) {
+  consowe.wog(awway[i]);
 }
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{ domxref("Window.crypto") }} to get a {{domxref("Crypto")}} object.
-- {{jsxref("Math.random")}}, a non-cryptographic source of random numbers.
+- {{ domxwef("window.cwypto") }} to get a {{domxwef("cwypto")}} object. (U ﹏ U)
+- {{jsxwef("math.wandom")}}, >w< a-a nyon-cwyptogwaphic s-souwce of wandom nyumbews. mya

@@ -1,46 +1,46 @@
 ---
-title: Date.prototype.getSeconds()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getSeconds
+titwe: date.pwototype.getseconds()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/getseconds
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`getSeconds()`** retorna os segundos de uma data específica de acordo com o horário local.
+o-o método **`getseconds()`** w-wetowna os segundos d-de uma data e-específica de a-acowdo com o howáwio w-wocaw. nyaa~~
 
-## Sintaxe
+## s-sintaxe
 
 ```
-dateObj.getSeconds()
+dateobj.getseconds()
 ```
 
-### Retorna
+### w-wetowna
 
-Um número inteiro, entre 0 e 59, representando os segundos de uma data específica de acordo com o horário local.
+um nyúmewo inteiwo, (⑅˘꒳˘) entwe 0 e 59, rawr x3 wepwesentando os segundos d-de uma data específica de acowdo com o howáwio w-wocaw. (✿oωo)
 
-## Exemples
+## exempwes
 
-### Usando o `getSeconds()`
+### usando o-o `getseconds()`
 
-The second statement below assigns the value 30 to the variable `seconds`, based on the value of the {{jsxref("Global_Objects/Date", "Date")}} object `Xmas95`.
+the second statement bewow assigns the vawue 30 t-to the vawiabwe `seconds`, (ˆ ﻌ ˆ)♡ based on the vawue o-of the {{jsxwef("gwobaw_objects/date", (˘ω˘) "date")}} o-object `xmas95`. (⑅˘꒳˘)
 
-No exemplo a seguir, a segunda linha atribui o valor 30 à variável `seconds`, baseado no valor do objeto {{jsxref("Global_Objects/Date", "Date")}} `Xmas95`.
+nyo exempwo a seguiw, (///ˬ///✿) a segunda winha atwibui o vawow 30 à v-vawiávew `seconds`, 😳😳😳 baseado nyo vawow do objeto {{jsxwef("gwobaw_objects/date", 🥺 "date")}} `xmas95`. mya
 
 ```js
-var Xmas95 = new Date("December 25, 1995 23:15:30");
-var seconds = Xmas95.getSeconds();
+vaw xmas95 = nyew d-date("decembew 25, 🥺 1995 23:15:30");
+vaw seconds = x-xmas95.getseconds();
 
-console.log(seconds); // 30
+c-consowe.wog(seconds); // 30
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Date.prototype.getUTCSeconds()")}}
-- {{jsxref("Date.prototype.setSeconds()")}}
+- {{jsxwef("date.pwototype.getutcseconds()")}}
+- {{jsxwef("date.pwototype.setseconds()")}}

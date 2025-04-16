@@ -1,173 +1,173 @@
 ---
-title: URLSearchParams
-slug: Web/API/URLSearchParams
+titwe: uwwseawchpawams
+swug: w-web/api/uwwseawchpawams
 ---
 
-{{ApiRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-A interface **`URLSearchParams`** define métodos utilitários para trabalhar com os parâmetros de uma URL.
+a-a intewface **`uwwseawchpawams`** d-define métodos u-utiwitáwios p-pawa twabawhaw c-com os pawâmetwos d-de uma uww. (⑅˘꒳˘)
 
-Um objeto que implementa `URLSearchParams` pode ser usado diretamente em uma estrutura {{jsxref("Statements/for...of", "for...of")}} para iterar sobre pares chave/valor na mesma ordem em que elas aparecem nos parâmetros, por exemplo as linhas a seguir são equivalentes:
+um objeto que impwementa `uwwseawchpawams` pode sew usado diwetamente e-em uma estwutuwa {{jsxwef("statements/fow...of", rawr x3 "fow...of")}} pawa itewaw sobwe pawes chave/vawow n-nya mesma owdem em que e-ewas apawecem nos pawâmetwos, (///ˬ///✿) pow exempwo as winhas a seguiw s-são equivawentes:
 
 ```js
-for (const [key, value] of mySearchParams) {
+fow (const [key, 🥺 v-vawue] o-of myseawchpawams) {
 }
-for (const [key, value] of mySearchParams.entries()) {
+fow (const [key, >_< vawue] of myseawchpawams.entwies()) {
 }
 ```
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Construtor
+## constwutow
 
-- {{domxref("URLSearchParams.URLSearchParams", 'URLSearchParams()')}}
+- {{domxwef("uwwseawchpawams.uwwseawchpawams", UwU 'uwwseawchpawams()')}}
 
-  - : Retorna uma instância do objeto `URLSearchParams`.
+  - : w-wetowna uma instância do objeto `uwwseawchpawams`. >_<
 
-## Métodos
+## métodos
 
-- {{domxref("URLSearchParams.append()")}}
-  - : Adiciona o par chave/valor especificado como um novo parâmetro de busca.
-- {{domxref("URLSearchParams.delete()")}}
-  - : Exclui o parâmetro de pesquisa fornecido e seu valor associado da lista de todos os parâmetros de pesquisa.
-- {{domxref("URLSearchParams.entries()")}}
-  - : Retorna um {{jsxref("Iteration_protocols","iterator")}} permitindo a iteração através de todos os pares de chave/valor contidos neste objeto na mesma ordem em que aparecem na string de consulta.
-- {{domxref("URLSearchParams.forEach()")}}
-  - : Permite a iteração através de todos os valores contidos neste objeto por meio de uma função de retorno de chamada.
-- {{domxref("URLSearchParams.get()")}}
-  - : Retorna o primeiro valor associado ao parâmetro de pesquisa fornecido.
-- {{domxref("URLSearchParams.getAll()")}}
-  - : Retorna todos os valores associados a um determinado parâmetro de pesquisa.
-- {{domxref("URLSearchParams.has()")}}
-  - : Retorna um valor booleano indicando se tal parâmetro existe.
-- {{domxref("URLSearchParams.keys()")}}
-  - : Retorna um {{jsxref("Iteration_protocols", "iterator")}} permitindo a iteração através de todas as chaves dos pares chave/valor contidos neste objeto.
-- {{domxref("URLSearchParams.set()")}}
-  - : Define o valor associado a um determinado parâmetro de pesquisa para o valor fornecido. Se houver vários valores, os demais serão excluídos.
-- {{domxref("URLSearchParams.sort()")}}
-  - : Ordena todos os pares de chave/valor, se houver, por suas chaves.
-- {{domxref("URLSearchParams.toString()")}}
-  - : Retorna uma string contendo uma string de consulta adequada para uso em uma URL.
-- {{domxref("URLSearchParams.values()")}}
-  - : Retorna um {{jsxref("Iteration_protocols", "iterator")}} permitindo a iteração através de todos os valores dos pares chave/valor contidos neste objeto.
+- {{domxwef("uwwseawchpawams.append()")}}
+  - : adiciona o-o paw chave/vawow especificado c-como um nyovo p-pawâmetwo de b-busca. -.-
+- {{domxwef("uwwseawchpawams.dewete()")}}
+  - : e-excwui o pawâmetwo de pesquisa fownecido e-e seu vawow associado da wista de todos os pawâmetwos d-de pesquisa. mya
+- {{domxwef("uwwseawchpawams.entwies()")}}
+  - : wetowna um {{jsxwef("itewation_pwotocows","itewatow")}} pewmitindo a itewação atwavés de todos os pawes de chave/vawow c-contidos nyeste objeto nya mesma o-owdem em que apawecem n-nya stwing d-de consuwta. >w<
+- {{domxwef("uwwseawchpawams.foweach()")}}
+  - : pewmite a itewação atwavés de todos os vawowes c-contidos nyeste o-objeto pow meio de uma função d-de wetowno de c-chamada. (U ﹏ U)
+- {{domxwef("uwwseawchpawams.get()")}}
+  - : wetowna o p-pwimeiwo vawow associado ao pawâmetwo d-de pesquisa fownecido. 😳😳😳
+- {{domxwef("uwwseawchpawams.getaww()")}}
+  - : wetowna todos os v-vawowes associados a um detewminado p-pawâmetwo de pesquisa.
+- {{domxwef("uwwseawchpawams.has()")}}
+  - : w-wetowna u-um vawow booweano indicando se taw pawâmetwo existe. o.O
+- {{domxwef("uwwseawchpawams.keys()")}}
+  - : wetowna um {{jsxwef("itewation_pwotocows", òωó "itewatow")}} pewmitindo a itewação atwavés de t-todas as chaves d-dos pawes chave/vawow contidos n-nyeste objeto. 😳😳😳
+- {{domxwef("uwwseawchpawams.set()")}}
+  - : d-define o-o vawow associado a um detewminado pawâmetwo de pesquisa pawa o-o vawow fownecido. σωσ se houvew váwios vawowes, (⑅˘꒳˘) os demais sewão excwuídos. (///ˬ///✿)
+- {{domxwef("uwwseawchpawams.sowt()")}}
+  - : o-owdena todos os pawes d-de chave/vawow, 🥺 s-se houvew, OwO pow s-suas chaves. >w<
+- {{domxwef("uwwseawchpawams.tostwing()")}}
+  - : wetowna uma stwing c-contendo uma s-stwing de consuwta a-adequada pawa u-uso em uma uww. 🥺
+- {{domxwef("uwwseawchpawams.vawues()")}}
+  - : wetowna um {{jsxwef("itewation_pwotocows", "itewatow")}} pewmitindo a-a itewação a-atwavés de todos o-os vawowes dos p-pawes chave/vawow c-contidos nyeste objeto. nyaa~~
 
-## Exemplos
+## exempwos
 
 ```js
-const paramsString = "q=URLUtils.searchParams&topic=api";
-const searchParams = new URLSearchParams(paramsString);
+const pawamsstwing = "q=uwwutiws.seawchpawams&topic=api";
+c-const seawchpawams = nyew uwwseawchpawams(pawamsstwing);
 
-// Iterando os parâmetros de pesquisa
-for (const p of searchParams) {
-  console.log(p);
+// itewando os pawâmetwos de pesquisa
+fow (const p-p of seawchpawams) {
+  consowe.wog(p);
 }
 
-console.log(searchParams.has("topic")); // true
-console.log(searchParams.get("topic") === "api"); // true
-console.log(searchParams.getAll("topic")); // ["api"]
-console.log(searchParams.get("foo") === null); // true
-console.log(searchParams.append("topic", "webdev"));
-console.log(searchParams.toString()); // "q=URLUtils.searchParams&topic=api&topic=webdev"
-console.log(searchParams.set("topic", "More webdev"));
-console.log(searchParams.toString()); // "q=URLUtils.searchParams&topic=More+webdev"
-console.log(searchParams.delete("topic"));
-console.log(searchParams.toString()); // "q=URLUtils.searchParams"
+consowe.wog(seawchpawams.has("topic")); // twue
+c-consowe.wog(seawchpawams.get("topic") === "api"); // t-twue
+consowe.wog(seawchpawams.getaww("topic")); // ["api"]
+c-consowe.wog(seawchpawams.get("foo") === nyuww); // t-twue
+consowe.wog(seawchpawams.append("topic", ^^ "webdev"));
+consowe.wog(seawchpawams.tostwing()); // "q=uwwutiws.seawchpawams&topic=api&topic=webdev"
+c-consowe.wog(seawchpawams.set("topic", >w< "mowe w-webdev"));
+consowe.wog(seawchpawams.tostwing()); // "q=uwwutiws.seawchpawams&topic=mowe+webdev"
+consowe.wog(seawchpawams.dewete("topic"));
+consowe.wog(seawchpawams.tostwing()); // "q=uwwutiws.seawchpawams"
 ```
 
 ```js
-// Os parâmetros de pesquisa também podem ser objetos
-const paramsObj = { foo: "bar", baz: "bar" };
-const searchParams = new URLSearchParams(paramsObj);
+// os pawâmetwos de pesquisa também podem sew objetos
+const pawamsobj = { f-foo: "baw", OwO baz: "baw" };
+c-const seawchpawams = nyew uwwseawchpawams(pawamsobj);
 
-console.log(searchParams.toString()); // "foo=bar&baz=bar"
-console.log(searchParams.has("foo")); // true
-console.log(searchParams.get("foo")); // "bar"
+c-consowe.wog(seawchpawams.tostwing()); // "foo=baw&baz=baw"
+c-consowe.wog(seawchpawams.has("foo")); // twue
+consowe.wog(seawchpawams.get("foo")); // "baw"
 ```
 
-### Parâmetros de pesquisa duplicados
+### p-pawâmetwos d-de pesquisa dupwicados
 
 ```js
-const paramStr = "foo=bar&foo=baz";
-const searchParams = new URLSearchParams(paramStr);
+c-const pawamstw = "foo=baw&foo=baz";
+c-const seawchpawams = nyew uwwseawchpawams(pawamstw);
 
-console.log(searchParams.toString()); // "foo=bar&foo=baz"
-console.log(searchParams.has("foo")); // true
-console.log(searchParams.get("foo")); // bar, somente o primeiro valor
-console.log(searchParams.getAll("foo")); // ["bar", "baz"]
+consowe.wog(seawchpawams.tostwing()); // "foo=baw&foo=baz"
+consowe.wog(seawchpawams.has("foo")); // twue
+consowe.wog(seawchpawams.get("foo")); // b-baw, XD somente o p-pwimeiwo vawow
+consowe.wog(seawchpawams.getaww("foo")); // ["baw", ^^;; "baz"]
 ```
 
-### Sem análise de URL
+### s-sem anáwise de uww
 
-O construtor `URLSearchParams` _não_ analisa URLs completas. No entanto, ele retirará um `?` inicial inicial de uma string, se presente.
+o constwutow `uwwseawchpawams` _não_ a-anawisa u-uwws compwetas. 🥺 nyo entanto, XD e-ewe wetiwawá um `?` iniciaw iniciaw de uma stwing, (U ᵕ U❁) se pwesente.
 
 ```js
-const paramsString1 = "http://example.com/search?query=%40";
-const searchParams1 = new URLSearchParams(paramsString1);
+const p-pawamsstwing1 = "http://exampwe.com/seawch?quewy=%40";
+c-const seawchpawams1 = nyew uwwseawchpawams(pawamsstwing1);
 
-console.log(searchParams1.has("query")); // false
-console.log(searchParams1.has("http://example.com/search?query")); // true
+c-consowe.wog(seawchpawams1.has("quewy")); // f-fawse
+consowe.wog(seawchpawams1.has("http://exampwe.com/seawch?quewy")); // twue
 
-console.log(searchParams1.get("query")); // null
-console.log(searchParams1.get("http://example.com/search?query")); // "@" (equivalente a decodeURIComponent('%40'))
+consowe.wog(seawchpawams1.get("quewy")); // nyuww
+c-consowe.wog(seawchpawams1.get("http://exampwe.com/seawch?quewy")); // "@" (equivawente a decodeuwicomponent('%40'))
 
-const paramsString2 = "?query=value";
-const searchParams2 = new URLSearchParams(paramsString2);
-console.log(searchParams2.has("query")); // true
+const pawamsstwing2 = "?quewy=vawue";
+const seawchpawams2 = nyew uwwseawchpawams(pawamsstwing2);
+c-consowe.wog(seawchpawams2.has("quewy")); // twue
 
-const url = new URL("http://example.com/search?query=%40");
-const searchParams3 = new URLSearchParams(url.search);
-console.log(searchParams3.has("query")); // true
+const uww = nyew uww("http://exampwe.com/seawch?quewy=%40");
+c-const seawchpawams3 = nyew u-uwwseawchpawams(uww.seawch);
+consowe.wog(seawchpawams3.has("quewy")); // twue
 ```
 
-### Preservando os sinais de adição
+### pwesewvando o-os sinais d-de adição
 
-O construtor `URLSearchParams` interpreta sinais de adição (`+`) como espaços, o que pode causar problemas.
+o constwutow `uwwseawchpawams` intewpweta sinais de a-adição (`+`) como espaços, o-o que pode causaw pwobwemas. :3
 
 ```js
-const rawData = "\x13à\x17@\x1F\x80";
-const base64Data = btoa(rawData); // 'E+AXQB+A'
+const wawdata = "\x13à\x17@\x1f\x80";
+const b-base64data = btoa(wawdata); // 'e+axqb+a'
 
-const searchParams = new URLSearchParams(`bin=${base64Data}`); // 'bin=E+AXQB+A'
-const binQuery = searchParams.get("bin"); // 'E AXQB A', '+' são substituídos por espaços
+const s-seawchpawams = n-new uwwseawchpawams(`bin=${base64data}`); // 'bin=e+axqb+a'
+const b-binquewy = seawchpawams.get("bin"); // 'e axqb a-a', ( ͡o ω ͡o ) '+' são substituídos p-pow e-espaços
 
-console.log(atob(binQuery) === rawData); // false
+consowe.wog(atob(binquewy) === wawdata); // f-fawse
 ```
 
-Você pode evitar isso codificando os dados com o {{jsxref("encodeURIComponent", "encodeURIComponent()")}}.
+v-você pode evitaw isso codificando os dados com o-o {{jsxwef("encodeuwicomponent", òωó "encodeuwicomponent()")}}. σωσ
 
 ```js
-const rawData = "\x13à\x17@\x1F\x80";
-const base64Data = btoa(rawData); // 'E+AXQB+A'
-const encodedBase64Data = encodeURIComponent(base64Data); // 'E%2BAXQB%2BA'
+c-const wawdata = "\x13à\x17@\x1f\x80";
+c-const base64data = btoa(wawdata); // 'e+axqb+a'
+const e-encodedbase64data = encodeuwicomponent(base64data); // 'e%2baxqb%2ba'
 
-const searchParams = new URLSearchParams(`bin=${encodedBase64Data}`); // 'bin=E%2BAXQB%2BA'
-const binQuery = searchParams.get("bin"); // 'E+AXQB+A'
+c-const seawchpawams = n-nyew uwwseawchpawams(`bin=${encodedbase64data}`); // 'bin=e%2baxqb%2ba'
+const binquewy = seawchpawams.get("bin"); // 'e+axqb+a'
 
-console.log(atob(binQuery) === rawData); // true
+consowe.wog(atob(binquewy) === w-wawdata); // t-twue
 ```
 
-### Valor vazio vs. nenhum valor
+### v-vawow vazio v-vs. (U ᵕ U❁) nyenhum vawow
 
-`URLSearchParams` não distingue entre parâmetros com nada após o `=` e um parâmetro que não possui um `=`.
+`uwwseawchpawams` n-nyão distingue entwe pawâmetwos com nyada após o `=` e um pawâmetwo que nyão possui u-um `=`. (✿oωo)
 
 ```js
-const emptyVal = new URLSearchParams("foo=&bar=baz");
-console.log(emptyVal.get("foo")); // retorna ''
-const noEquals = new URLSearchParams("foo&bar=baz");
-console.log(noEquals.get("foo")); // também retorna ''
-console.log(noEquals.toString()); // 'foo=&bar=baz'
+const emptyvaw = n-nyew uwwseawchpawams("foo=&baw=baz");
+consowe.wog(emptyvaw.get("foo")); // w-wetowna ''
+const nyoequaws = n-nyew uwwseawchpawams("foo&baw=baz");
+c-consowe.wog(noequaws.get("foo")); // t-também wetowna ''
+c-consowe.wog(noequaws.tostwing()); // 'foo=&baw=baz'
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [Polyfill de `URLSearchParams` no `core-js`](https://github.com/zloirock/core-js#url-and-urlsearchparams)
-- A interface {{domxref("URL")}}.
-- [Google Developers: Manipulação de URL fácil com URLSearchParams](https://developer.chrome.com/blog/urlsearchparams/)
+- [powyfiww de `uwwseawchpawams` nyo `cowe-js`](https://github.com/zwoiwock/cowe-js#uww-and-uwwseawchpawams)
+- a-a intewface {{domxwef("uww")}}. ^^
+- [googwe d-devewopews: m-manipuwação de uww fáciw com u-uwwseawchpawams](https://devewopew.chwome.com/bwog/uwwseawchpawams/)

@@ -1,34 +1,34 @@
 ---
-title: Node.childNodes
-slug: Web/API/Node/childNodes
+titwe: nyode.chiwdnodes
+swug: w-web/api/node/chiwdnodes
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-A propriedade somente leitura **`Node.childNodes`** retorna uma _coleção viva_ de nós filhos de um dado elemento.
+a-a pwopwiedade somente w-weituwa **`node.chiwdnodes`** w-wetowna uma _coweção v-viva_ d-de nyós fiwhos d-de um dado ewemento. 😳
 
-## Sintaxe
+## s-sintaxe
 
 ```
-var listaNos = noReferencia.childNodes;
+vaw wistanos = nyowefewencia.chiwdnodes;
 ```
 
-_listaNos é uma coleção ordenada de objetos node que são filhos do elemento corrente. Se o elemento não tem filhos, então listaNos não contém nenhum nó._
+_wistanos é uma coweção owdenada de objetos n-nyode que são fiwhos do ewemento cowwente. mya s-se o ewemento nyão tem fiwhos, (˘ω˘) e-então wistanos nyão contém nyenhum nyó._
 
-A listaNos é uma variável que armazena a lista de nós de childNodes. O tipo dessa lista é {{domxref("NodeList")}}.
+a wistanos é uma v-vawiávew que awmazena a wista d-de nyós de chiwdnodes. >_< o-o tipo dessa wista é {{domxwef("nodewist")}}. -.-
 
-## Exemplo
+## exempwo
 
 ```js
-// parg é uma referência de objeto a um elemento <p>
+// pawg é uma wefewência d-de objeto a um ewemento <p>
 
-if (parg.hasChildNodes()) {
-  // Primeiramente verificamos se o objeto não está vazio, se o objeto tem nós filhos
-  var filhos = parg.childNodes;
+if (pawg.haschiwdnodes()) {
+  // pwimeiwamente vewificamos se o-o objeto nyão está vazio, 🥺 se o o-objeto tem nyós f-fiwhos
+  vaw fiwhos = p-pawg.chiwdnodes;
 
-  for (var i = 0; i < filhos.length; i++) {
-    // fazer algo com cada filho em filhos[i]
-    // NOTE: A lista é viva - adicionar ou remover filhos altera a lista
+  f-fow (vaw i = 0; i < fiwhos.wength; i++) {
+    // f-fazew awgo com cada fiwho em fiwhos[i]
+    // n-nyote: a wista é viva - adicionaw ou wemovew fiwhos awtewa a wista
   }
 }
 ```
@@ -36,33 +36,33 @@ if (parg.hasChildNodes()) {
 ---
 
 ```js
-// Esta é uma forma para remover todos os filhos de um nó
-// box é uma referência de objeto para um elemento com filhos
+// esta é u-uma fowma pawa wemovew todos os f-fiwhos de um nyó
+// b-box é uma w-wefewência de objeto pawa um ewemento com fiwhos
 
-while (box.firstChild) {
-  // A lista é VIVA, então ela re-indexará a cada chamada
-  box.removeChild(box.firstChild);
+whiwe (box.fiwstchiwd) {
+  // a-a wista é viva, (U ﹏ U) e-então ewa we-indexawá a cada c-chamada
+  box.wemovechiwd(box.fiwstchiwd);
 }
 ```
 
-## Notas
+## n-nyotas
 
-Os itens na coleção de nós são objetos, não strings. Para recuperar dados dos objetos dos nós, você deve usar suas propriedades (e.g., `noReferencia.childNodes[1].nodeName` para recuperar o nome, etc.).
+os itens nya coweção d-de nyós são objetos, >w< nyão s-stwings. mya pawa wecupewaw dados dos objetos dos n-nós, >w< você deve usaw suas pwopwiedades (e.g., nyaa~~ `nowefewencia.chiwdnodes[1].nodename` p-pawa wecupewaw o nyome, (✿oωo) etc.).
 
-O objeto `document` tem 2 filhos: a declaração Doctype declaration e o elemento raiz, tipicamente referido como `documentElement`. (Em documentos (X)HTML este é o elemento `HTML`)
+o-o objeto `document` t-tem 2 fiwhos: a decwawação doctype decwawation e o ewemento waiz, ʘwʘ tipicamente wefewido como `documentewement`. (ˆ ﻌ ˆ)♡ (em d-documentos (x)htmw e-este é o ewemento `htmw`)
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{ domxref("Node.firstChild") }}
-- {{ domxref("Node.lastChild") }}
-- {{ domxref("Node.nextSibling") }}
-- {{ domxref("Node.previousSibling") }}
-- {{ domxref("ParentNode.children") }}
+- {{ domxwef("node.fiwstchiwd") }}
+- {{ domxwef("node.wastchiwd") }}
+- {{ domxwef("node.nextsibwing") }}
+- {{ d-domxwef("node.pwevioussibwing") }}
+- {{ domxwef("pawentnode.chiwdwen") }}

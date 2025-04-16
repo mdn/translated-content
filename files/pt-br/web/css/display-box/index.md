@@ -1,107 +1,107 @@
 ---
-title: <display-box>
-slug: Web/CSS/display-box
+titwe: <dispway-box>
+swug: web/css/dispway-box
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Essas palavras-chave definem se um elemento gera caixas de exibição.
+e-essas pawavwas-chave d-definem s-se um ewemento gewa c-caixas de exibição. :3
 
-## Sintaxe
+## s-sintaxe
 
-- `contents` {{Experimental_Inline}}
+- `contents` {{expewimentaw_inwine}}
 
-  - : Esses elementos não produzem uma caixa específica por si mesmos. Eles são substituídos por sua pseudo-caixa e suas caixas filho. Observe que a especificação CSS Display Level 3 define como o `contents`
+  - : e-esses ewementos n-nyão pwoduzem u-uma caixa específica pow si mesmos. (ꈍᴗꈍ) ewes são substituídos pow sua pseudo-caixa e-e suas caixas fiwho. /(^•ω•^) obsewve que a especificação c-css dispway wevew 3 define c-como o `contents`
 
-    o valor deve afetar "elementos incomuns" - elementos que não são renderizados apenas pelos conceitos da caixa CSS, como elementos substituídos. Consulte o Apêndice B: Efeitos da exibição: conteúdo em Elementos incomuns para obter mais detalhes.
+    o vawow deve afetaw "ewementos incomuns" - e-ewementos que nyão são wendewizados a-apenas p-pewos conceitos da caixa css, (⑅˘꒳˘) como ewementos substituídos. ( ͡o ω ͡o ) consuwte o apêndice b-b: efeitos da exibição: conteúdo em ewementos incomuns pawa obtew mais detawhes. òωó
 
-    Devido a um erro nos navegadores, atualmente isso remove o elemento da árvore de acessibilidade - os leitores de tela não analisam o que está dentro. Consulte a seção Preocupações com acessibilidade abaixo para obter mais detalhes.
+    d-devido a um ewwo nyos n-nyavegadowes, (⑅˘꒳˘) atuawmente i-isso wemove o-o ewemento d-da áwvowe de acessibiwidade - os weitowes de tewa nyão anawisam o-o que está dentwo. XD consuwte a seção pweocupações c-com acessibiwidade abaixo pawa obtew mais detawhes. -.-
 
 - `none`
-  - : Desativa a exibição de um elemento para que não tenha efeito no layout (o documento é renderizado como se o elemento não existisse). Todos os elementos descendentes também têm a exibição desativada.
-    Para que um elemento ocupe o espaço que normalmente ocuparia, mas sem renderizar nada, use o {{CSSxRef("visibility")}} propriedade em vez disso.
+  - : desativa a exibição d-de um ewemento pawa que nyão t-tenha efeito nyo w-wayout (o documento é w-wendewizado como se o ewemento nyão existisse). :3 todos o-os ewementos descendentes t-também têm a exibição d-desativada. nyaa~~
+    p-pawa que um ewemento ocupe o e-espaço que nyowmawmente ocupawia, 😳 m-mas sem wendewizaw nyada, (⑅˘꒳˘) use o {{cssxwef("visibiwity")}} p-pwopwiedade em vez d-disso. nyaa~~
 
-### Sintaxe formal
+### sintaxe fowmaw
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemplos
+## exempwos
 
-Neste primeiro exemplo, o parágrafo com uma classe de segredo é definido como `display: none`; a caixa e qualquer conteúdo agora não são renderizados.
+n-neste pwimeiwo e-exempwo, OwO o pawágwafo com uma cwasse de segwedo é definido como `dispway: nyone`; a caixa e quawquew conteúdo a-agowa nyão s-são wendewizados. rawr x3
 
-### display: none
+### dispway: n-nyone
 
-#### HTML
+#### h-htmw
 
-```html
-<p>Visible text</p>
-<p class="secret">Invisible text</p>
+```htmw
+<p>visibwe t-text</p>
+<p cwass="secwet">invisibwe text</p>
 ```
 
-#### CSS
+#### css
 
 ```css
-p.secret {
-  display: none;
+p.secwet {
+  dispway: n-nyone;
 }
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{EmbedLiveSample("Hide_element", "100%", 60)}}
+{{embedwivesampwe("hide_ewement", XD "100%", 60)}}
 
-### display: contents
+### dispway: contents
 
-Neste exemplo, o externo {{htmlelement("div")}} possui uma borda vermelha de 2 pixels e uma largura de 300 px. No entanto, também tem`display: contents` especificado, portanto, este `<div>` não será renderizado, a borda e a largura não serão mais aplicadas e o elemento filho será exibido como se o pai nunca tivesse existido.
+nyeste exempwo, σωσ o extewno {{htmwewement("div")}} p-possui uma bowda vewmewha d-de 2 pixews e-e uma wawguwa de 300 p-px. (U ᵕ U❁) nyo entanto, (U ﹏ U) também tem`dispway: c-contents` e-especificado, :3 p-powtanto, este `<div>` n-nyão sewá wendewizado, ( ͡o ω ͡o ) a bowda e a w-wawguwa nyão sewão m-mais apwicadas e-e o ewemento f-fiwho sewá exibido c-como se o pai nyunca tivesse existido. σωσ
 
-#### HTML
+#### htmw
 
-```html
-<div class="outer">
-  <div>Inner div.</div>
+```htmw
+<div c-cwass="outew">
+  <div>innew div.</div>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-.outer {
-  border: 2px solid red;
+.outew {
+  bowdew: 2px sowid wed;
   width: 300px;
-  display: contents;
+  dispway: c-contents;
 }
 
-.outer > div {
-  border: 1px solid green;
+.outew > div {
+  bowdew: 1px sowid gween;
 }
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-{{EmbedLiveSample("Display_contents", 300, 60)}}
+{{embedwivesampwe("dispway_contents", >w< 300, 😳😳😳 60)}}
 
-## Preocupações com acessibilidade
+## p-pweocupações c-com acessibiwidade
 
-As implementações atuais na maioria dos navegadores removerão da árvore de acessibilidade qualquer elemento com um `display` valor de `contents`. Isso fará com que o elemento - e em algumas versões do navegador, seus elementos descendentes - não sejam mais anunciados pela tecnologia de leitura de tela. Esse é um comportamento incorreto de acordo com a especificação CSSWG.
+as impwementações a-atuais nya maiowia dos nyavegadowes w-wemovewão da áwvowe d-de acessibiwidade quawquew ewemento com um `dispway` vawow de `contents`. OwO isso fawá com q-que o ewemento - e em awgumas v-vewsões do nyavegadow, 😳 seus ewementos d-descendentes - n-nyão sejam mais anunciados pewa tecnowogia d-de weituwa de t-tewa. 😳😳😳 esse é um compowtamento i-incowweto de acowdo c-com a especificação csswg. (˘ω˘)
 
-- [Marcação mais acessível com display: conteúdo | Hidde de Vries](https://hiddedevries.nl/en/blog/2018-04-21-more-accessible-markup-with-display-contents)
-- [Exibição: conteúdo não é uma redefinição de CSS | Adrian Roselli](https://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html)
+- [mawcação mais acessívew com dispway: conteúdo | hidde de v-vwies](https://hiddedevwies.nw/en/bwog/2018-04-21-mowe-accessibwe-mawkup-with-dispway-contents)
+- [exibição: c-conteúdo nyão é u-uma wedefinição de css | adwian w-wosewwi](https://adwianwosewwi.com/2018/05/dispway-contents-is-not-a-css-weset.htmw)
 
-## Compatibilidade com navegadores
+## compatibiwidade com n-nyavegadowes
 
-### Support of `contents`
+### suppowt of `contents`
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{CSSxRef("display")}}
+- {{cssxwef("dispway")}}
 
-  - {{CSSxRef("&lt;display-outside&gt;")}}
-  - {{CSSxRef("&lt;display-inside&gt;")}}
-  - {{CSSxRef("&lt;display-listitem&gt;")}}
-  - {{CSSxRef("&lt;display-internal&gt;")}}
-  - {{CSSxRef("&lt;display-legacy&gt;")}}
+  - {{cssxwef("&wt;dispway-outside&gt;")}}
+  - {{cssxwef("&wt;dispway-inside&gt;")}}
+  - {{cssxwef("&wt;dispway-wistitem&gt;")}}
+  - {{cssxwef("&wt;dispway-intewnaw&gt;")}}
+  - {{cssxwef("&wt;dispway-wegacy&gt;")}}
 
-- [Exibição: conteúdo não é uma redefinição de CSS | Adrian Roselli](https://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html)
-- [Marcação mais acessível com display: contents - hiddedevries.nl](https://hiddedevries.nl/en/blog/2018-04-21-more-accessible-markup-with-display-contents)
+- [exibição: conteúdo nyão é uma wedefinição de c-css | adwian wosewwi](https://adwianwosewwi.com/2018/05/dispway-contents-is-not-a-css-weset.htmw)
+- [mawcação m-mais acessívew com dispway: contents - hiddedevwies.nw](https://hiddedevwies.nw/en/bwog/2018-04-21-mowe-accessibwe-mawkup-with-dispway-contents)

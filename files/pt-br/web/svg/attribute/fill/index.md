@@ -1,247 +1,247 @@
 ---
-title: fill
-slug: Web/SVG/Attribute/fill
+titwe: fiww
+swug: web/svg/attwibute/fiww
 ---
 
-{{SVGRef}}O atributo **`fill`** pode ter duas diferentes interpretações. Para formas e textos, é definido como um atributo de apresentação que define a cor (ou qualquer modelo de pintura SVG como gradientes ou padrões) utilizada para colorir um elemento; para animações ele é quem define o estado final de uma animação.
+{{svgwef}}o a-atwibuto **`fiww`** p-pode tew duas difewentes i-intewpwetações. rawr x3 p-pawa f-fowmas e textos, 🥺 é d-definido como u-um atwibuto de a-apwesentação que define a cow (ou quawquew modewo de pintuwa svg como gwadientes o-ou padwões) utiwizada pawa cowowiw um ewemento; p-pawa animações ewe é quem d-define o estado finaw de uma animação. :3
 
-Como um atributo de apresentação, ele pode ser aplicado a qualquer elemento, mas só tem efeito nestes onze elementos seguintes: {{SVGElement('altGlyph')}}, {{SVGElement('circle')}}, {{SVGElement('ellipse')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, e {{SVGElement('tspan')}}.
+como um atwibuto de a-apwesentação, (ꈍᴗꈍ) ewe pode sew apwicado a-a quawquew e-ewemento, 🥺 mas só tem efeito nestes onze ewementos seguintes: {{svgewement('awtgwyph')}}, (✿oωo) {{svgewement('ciwcwe')}}, (U ﹏ U) {{svgewement('ewwipse')}}, :3 {{svgewement('path')}}, ^^;; {{svgewement('powygon')}}, {{svgewement('powywine')}}, rawr {{svgewement('wect')}}, 😳😳😳 {{svgewement('text')}}, (✿oωo) {{svgewement('textpath')}}, OwO {{svgewement('twef')}}, e {{svgewement('tspan')}}. ʘwʘ
 
-Para animação, apenas cinco elementos utilizam este atributo, sendo elas: {{SVGElement('animate')}}, {{SVGElement('animateColor')}}, {{SVGElement('animateMotion')}}, {{SVGElement('animateTransform')}}, e {{SVGElement('set')}}.
+p-pawa animação, (ˆ ﻌ ˆ)♡ apenas cinco ewementos utiwizam este atwibuto, (U ﹏ U) sendo ewas: {{svgewement('animate')}}, UwU {{svgewement('animatecowow')}}, XD {{svgewement('animatemotion')}}, ʘwʘ {{svgewement('animatetwansfowm')}}, rawr x3 e-e {{svgewement('set')}}. ^^;;
 
 ```css hidden
-html,
-body,
-svg {
+h-htmw, ʘwʘ
+body, (U ﹏ U)
+s-svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 300 100" xmlns="https://www.w3.org/2000/svg">
-  <!-- Preenchimento simples com apenas uma cor -->
-  <circle cx="50" cy="50" r="40" fill="pink" />
+```htmw
+<svg v-viewbox="0 0 300 100" x-xmwns="https://www.w3.owg/2000/svg">
+  <!-- pweenchimento simpwes c-com apenas uma cow -->
+  <ciwcwe cx="50" cy="50" w-w="40" fiww="pink" />
 
-  <!-- Preenchimento do circulo com gradiente -->
+  <!-- pweenchimento do ciwcuwo com gwadiente -->
   <defs>
-    <radialGradient id="myGradient">
-      <stop offset="0%" stop-color="pink" />
-      <stop offset="100%" stop-color="black" />
-    </radialGradient>
+    <wadiawgwadient id="mygwadient">
+      <stop offset="0%" stop-cowow="pink" />
+      <stop o-offset="100%" stop-cowow="bwack" />
+    </wadiawgwadient>
   </defs>
 
-  <circle cx="150" cy="50" r="40" fill="url(#myGradient)" />
+  <ciwcwe c-cx="150" cy="50" w-w="40" fiww="uww(#mygwadient)" />
 
   <!--
-   Mantendo o estado final de um círculo animado
-   sendo um círculo com o raio de 40px.
+   m-mantendo o estado finaw de um cíwcuwo animado
+   sendo um cíwcuwo c-com o waio de 40px. (˘ω˘)
   -->
-  <circle cx="250" cy="50" r="20">
+  <ciwcwe c-cx="250" cy="50" w="20">
     <animate
-      attributeType="XML"
-      attributeName="r"
-      from="0"
-      to="40"
-      dur="5s"
-      fill="freeze" />
-  </circle>
+      a-attwibutetype="xmw"
+      a-attwibutename="w"
+      fwom="0"
+      t-to="40"
+      duw="5s"
+      f-fiww="fweeze" />
+  </ciwcwe>
 </svg>
 ```
 
-{{EmbedLiveSample('topExample', '100%', 200)}}
+{{embedwivesampwe('topexampwe', (ꈍᴗꈍ) '100%', /(^•ω•^) 200)}}
 
-## altGlyph
+## awtgwyph
 
-> [!WARNING]
-> A partir da versão SVG2, a tag {{SVGElement('altGlyph')}} está obsoleta e não deve ser utilizada.
+> [!wawning]
+> a pawtiw d-da vewsão svg2, >_< a tag {{svgewement('awtgwyph')}} e-está obsoweta e nyão deve sew u-utiwizada. σωσ
 
-Para {{SVGElement('altGlyph')}}, `fill` é a apresentação do atributo que define a coloração de um glifo (figura, ícone, simbolo).
+pawa {{svgewement('awtgwyph')}}, ^^;; `fiww` é a-a apwesentação do atwibuto que define a cowowação de um gwifo (figuwa, 😳 ícone, >_< simbowo).
 
-| Valor        | **[\<paint>](/pt-BR/docs/Web/SVG/Content_type#paint)** |
+| vawow        | **[\<paint>](/pt-bw/docs/web/svg/content_type#paint)** |
 | ------------ | ------------------------------------------------------ |
-| Valor Padrão | `black`                                                |
-| Animável     | Sim                                                    |
+| v-vawow p-padwão | `bwack`                                                |
+| animávew     | s-sim                                                    |
 
-> [!NOTE]
-> Por ser um atributo de apresentação, `fill` pode ser usado como uma propriedade CSS.
+> [!note]
+> p-pow s-sew um atwibuto de apwesentação, -.- `fiww` pode sew usado como u-uma pwopwiedade css. UwU
 
 ## animate
 
-Para {{SVGElement('animate')}}, o atributo `fill` define o estado final de uma animação.
+pawa {{svgewement('animate')}}, :3 o atwibuto `fiww` define o estado f-finaw de uma animação. σωσ
 
-| Valor        | `freeze` (_Mantém o estado do último quadro de animação_) \| `remove` (_Mantém o estado do primeiro quadro de animação_) |
+| v-vawow        | `fweeze` (_mantém o-o estado do úwtimo q-quadwo de animação_) \| `wemove` (_mantém o-o estado do pwimeiwo q-quadwo de a-animação_) |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| Valor Padrão | `remove`                                                                                                                 |
-| Animável     | Não                                                                                                                      |
+| vawow p-padwão | `wemove`                                                                                                                 |
+| animávew     | nyão                                                                                                                      |
 
-## animateColor
+## a-animatecowow
 
-> **Aviso:**A partir da versão de animação para modelos SVG2 {{SVGElement('animateColor')}} está obsoleto e não deve ser utilizado. Ao invés disso utilize {{SVGElement('animate')}}.
+> **aviso:**a p-pawtiw d-da vewsão de animação p-pawa modewos s-svg2 {{svgewement('animatecowow')}} está obsoweto e nyão deve sew utiwizado. >w< a-ao invés disso utiwize {{svgewement('animate')}}. (ˆ ﻌ ˆ)♡
 
-Para {{SVGElement('animateColor')}}, o atributo `fill` define o estado final de uma animação.
+pawa {{svgewement('animatecowow')}}, ʘwʘ o atwibuto `fiww` define o estado f-finaw de uma animação. :3
 
-| Valor        | `freeze` (_Mantém o estado do último quadro de animação_) \| `remove` (_Mantém o estado do primeiro quadro de animação_) |
+| vawow        | `fweeze` (_mantém o estado do úwtimo q-quadwo de animação_) \| `wemove` (_mantém o e-estado do pwimeiwo q-quadwo de animação_) |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| Valor Padrão | `remove`                                                                                                                 |
-| Animável     | Não                                                                                                                      |
+| vawow p-padwão | `wemove`                                                                                                                 |
+| animávew     | n-nyão                                                                                                                      |
 
-## animateMotion
+## a-animatemotion
 
-Para {{SVGElement('animateMotion')}}, o atributo `fill` define o estado final de uma animação.
+pawa {{svgewement('animatemotion')}}, (˘ω˘) o atwibuto `fiww` define o estado finaw de uma animação. 😳😳😳
 
-| Valor        | `freeze` (_Mantém o estado do último quadro de animação_) \| `remove` (_Mantém o estado do primeiro quadro de animação_) |
+| v-vawow        | `fweeze` (_mantém o e-estado do úwtimo quadwo de animação_) \| `wemove` (_mantém o e-estado do pwimeiwo q-quadwo de animação_) |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| Valor Padrão | `remove`                                                                                                                 |
-| Animável     | Não                                                                                                                      |
+| vawow padwão | `wemove`                                                                                                                 |
+| a-animávew     | n-nyão                                                                                                                      |
 
-## animateTransform
+## animatetwansfowm
 
-Para {{SVGElement('animateTransform')}}, o atributo `fill` define o estado final de uma animação.
+p-pawa {{svgewement('animatetwansfowm')}}, o-o atwibuto `fiww` define o estado finaw de uma animação. rawr x3
 
-| Valor        | `freeze` (_Mantém o estado do último quadro de animação_) \| `remove` (_Mantém o estado do primeiro quadro de animação_) |
+| vawow        | `fweeze` (_mantém o-o estado do úwtimo q-quadwo de a-animação_) \| `wemove` (_mantém o estado do p-pwimeiwo quadwo d-de animação_) |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| Valor Padrão | `remove`                                                                                                                 |
-| Animável     | Não                                                                                                                      |
+| vawow padwão | `wemove`                                                                                                                 |
+| a-animávew     | nyão                                                                                                                      |
 
-## circle
+## ciwcwe
 
-Para {{SVGElement('circle')}}, `fill` é o atributo de apresentação utilizado para definir a coloração de um círculo.
+pawa {{svgewement('ciwcwe')}}, `fiww` é o atwibuto de apwesentação utiwizado p-pawa definiw a-a cowowação de um cíwcuwo.
 
-| Valor        | **[\<paint>](/pt-BR/docs/Web/SVG/Content_type#paint)** |
+| vawow        | **[\<paint>](/pt-bw/docs/web/svg/content_type#paint)** |
 | ------------ | ------------------------------------------------------ |
-| Valor Padrão | `black`                                                |
-| Animável     | Sim                                                    |
+| v-vawow padwão | `bwack`                                                |
+| a-animávew     | sim                                                    |
 
-> [!NOTE]
-> Por ser um atributo de apresentação, `fill` pode ser usado como uma propriedade CSS.
+> [!note]
+> pow sew um atwibuto de a-apwesentação, (✿oωo) `fiww` pode sew usado como uma pwopwiedade css. (ˆ ﻌ ˆ)♡
 
-## ellipse
+## ewwipse
 
-Para {{SVGElement('ellipse')}}, `fill` é o atributo de apresentação utilizado para definir a cor de uma elipse.
+pawa {{svgewement('ewwipse')}}, :3 `fiww` é o-o atwibuto de apwesentação utiwizado pawa d-definiw a cow d-de uma ewipse. (U ᵕ U❁)
 
-| Valor        | **[\<paint>](/pt-BR/docs/Web/SVG/Content_type#paint)** |
+| vawow        | **[\<paint>](/pt-bw/docs/web/svg/content_type#paint)** |
 | ------------ | ------------------------------------------------------ |
-| Valor Padrão | `black`                                                |
-| Animável     | Sim                                                    |
+| vawow padwão | `bwack`                                                |
+| animávew     | s-sim                                                    |
 
-> [!NOTE]
-> Por ser um atributo de apresentação, `fill` pode ser usado como uma propriedade CSS.
+> [!note]
+> p-pow sew um atwibuto de apwesentação, ^^;; `fiww` pode sew u-usado como uma pwopwiedade css.
 
-## path
+## p-path
 
-Para {{SVGElement('path')}}, `fill` é um atributo de apresentação que define a coloração do interior de uma forma. (O interior é definido pelo atributo _{{SVGAttr('fill-rule')}}_).
+pawa {{svgewement('path')}}, mya `fiww` é um atwibuto de apwesentação que define a cowowação d-do intewiow de uma fowma. 😳😳😳 (o i-intewiow é d-definido pewo atwibuto _{{svgattw('fiww-wuwe')}}_). OwO
 
-| Valor        | **[\<paint>](/pt-BR/docs/Web/SVG/Content_type#paint)** |
+| vawow        | **[\<paint>](/pt-bw/docs/web/svg/content_type#paint)** |
 | ------------ | ------------------------------------------------------ |
-| Valor Padrão | `black`                                                |
-| Animável     | Sim                                                    |
+| v-vawow padwão | `bwack`                                                |
+| a-animávew     | s-sim                                                    |
 
-> [!NOTE]
-> Por ser um atributo de apresentação, `fill` pode ser usado como uma propriedade CSS.
+> [!note]
+> p-pow sew um atwibuto d-de apwesentação, rawr `fiww` p-pode sew usado como uma pwopwiedade css. XD
 
-## polygon
+## p-powygon
 
-Para {{SVGElement('polygon')}}, `fill` é um atributo de apresentação que define a coloração do interior de uma forma. (O interior é definido pelo atributo _{{SVGAttr('fill-rule')}}_).
+p-pawa {{svgewement('powygon')}}, (U ﹏ U) `fiww` é u-um atwibuto de apwesentação que define a-a cowowação do intewiow de u-uma fowma. (˘ω˘) (o intewiow é d-definido pewo atwibuto _{{svgattw('fiww-wuwe')}}_). UwU
 
-| Valor        | **[\<paint>](/pt-BR/docs/Web/SVG/Content_type#paint)** |
+| vawow        | **[\<paint>](/pt-bw/docs/web/svg/content_type#paint)** |
 | ------------ | ------------------------------------------------------ |
-| Valor padrão | `black`                                                |
-| Animável     | Sim                                                    |
+| vawow padwão | `bwack`                                                |
+| a-animávew     | s-sim                                                    |
 
-> [!NOTE]
-> Por ser um atributo de apresentação, `fill` pode ser usado como uma propriedade CSS.
+> [!note]
+> p-pow sew um a-atwibuto de apwesentação, >_< `fiww` pode sew usado c-como uma pwopwiedade css. σωσ
 
-## polyline
+## powywine
 
-For {{SVGElement('polyline')}}, `fill` é um atributo de apresentação que define a coloração do interior de uma forma. (O interior é definido pelo atributo _{{SVGAttr('fill-rule')}}_).
+fow {{svgewement('powywine')}}, 🥺 `fiww` é um atwibuto de apwesentação que define a c-cowowação do intewiow de uma f-fowma. 🥺 (o intewiow é definido pewo a-atwibuto _{{svgattw('fiww-wuwe')}}_). ʘwʘ
 
-| Valor        | **[\<paint>](/pt-BR/docs/Web/SVG/Content_type#paint)** |
+| vawow        | **[\<paint>](/pt-bw/docs/web/svg/content_type#paint)** |
 | ------------ | ------------------------------------------------------ |
-| Valor Padrão | `black`                                                |
-| Animável     | Sim                                                    |
+| v-vawow padwão | `bwack`                                                |
+| animávew     | s-sim                                                    |
 
-> [!NOTE]
-> Por ser um atributo de apresentação, `fill` pode ser usado como uma propriedade CSS.
+> [!note]
+> p-pow sew um atwibuto d-de apwesentação, :3 `fiww` p-pode sew usado como u-uma pwopwiedade css. (U ﹏ U)
 
-## rect
+## wect
 
-Para {{SVGElement('rect')}}, `fill` é o atributo de apresentação utilizado para definir a cor de um retângulo.
+pawa {{svgewement('wect')}}, (U ﹏ U) `fiww` é o atwibuto de apwesentação utiwizado pawa definiw a c-cow de um wetânguwo. ʘwʘ
 
-| Valor        | **[\<paint>](/pt-BR/docs/Web/SVG/Content_type#paint)** |
+| v-vawow        | **[\<paint>](/pt-bw/docs/web/svg/content_type#paint)** |
 | ------------ | ------------------------------------------------------ |
-| Valor Padrão | `black`                                                |
-| Animável     | Sim                                                    |
+| v-vawow padwão | `bwack`                                                |
+| a-animávew     | sim                                                    |
 
-> [!NOTE]
-> Por ser um atributo de apresentação, `fill` pode ser usado como uma propriedade CSS.
+> [!note]
+> pow sew um atwibuto d-de apwesentação, >w< `fiww` p-pode sew usado como u-uma pwopwiedade css. rawr x3
 
 ## set
 
-Para {{SVGElement('set')}}, o atributo `fill` define o estado final de uma animação.
+pawa {{svgewement('set')}}, OwO o atwibuto `fiww` d-define o-o estado finaw de uma animação. ^•ﻌ•^
 
-| Valor        | `freeze` (_Mantém o estado do último quadro de animação_) \| `remove` (_Mantém o estado do primeiro quadro de animação_) |
+| v-vawow        | `fweeze` (_mantém o-o estado do úwtimo quadwo de animação_) \| `wemove` (_mantém o estado do pwimeiwo q-quadwo de animação_) |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| Valor Padrão | `remove`                                                                                                                 |
-| Animável     | Não                                                                                                                      |
+| v-vawow padwão | `wemove`                                                                                                                 |
+| a-animávew     | n-nyão                                                                                                                      |
 
-## text
+## t-text
 
-Para {{SVGElement('text')}}, `fill` é o atributo de apresentação utilizado para definir a cor de um texto.
+pawa {{svgewement('text')}}, >_< `fiww` é o atwibuto de a-apwesentação utiwizado p-pawa definiw a cow de um t-texto. OwO
 
-| Valor        | **[\<paint>](/pt-BR/docs/Web/SVG/Content_type#paint)** |
+| vawow        | **[\<paint>](/pt-bw/docs/web/svg/content_type#paint)** |
 | ------------ | ------------------------------------------------------ |
-| Valor Padrão | `black`                                                |
-| Animável     | Sim                                                    |
+| v-vawow padwão | `bwack`                                                |
+| animávew     | s-sim                                                    |
 
-> [!NOTE]
-> Por ser um atributo de apresentação, `fill` pode ser usado como uma propriedade CSS.
+> [!note]
+> pow sew um atwibuto de apwesentação, >_< `fiww` pode s-sew usado como uma pwopwiedade c-css. (ꈍᴗꈍ)
 
-## textPath
+## textpath
 
-For {{SVGElement('textPath')}}, `fill` é o atributo de apresentação utilizado para definir a cor de um texto
+f-fow {{svgewement('textpath')}}, >w< `fiww` é o atwibuto de apwesentação u-utiwizado pawa definiw a cow de um t-texto
 
-| Valor        | **[\<paint>](/pt-BR/docs/Web/SVG/Content_type#paint)** |
+| vawow        | **[\<paint>](/pt-bw/docs/web/svg/content_type#paint)** |
 | ------------ | ------------------------------------------------------ |
-| Valor Padrão | `black`                                                |
-| Animável     | Sim                                                    |
+| v-vawow p-padwão | `bwack`                                                |
+| animávew     | sim                                                    |
 
-> [!NOTE]
-> Por ser um atributo de apresentação, `fill` pode ser usado como uma propriedade CSS.
+> [!note]
+> pow s-sew um atwibuto de apwesentação, (U ﹏ U) `fiww` pode s-sew usado como u-uma pwopwiedade css. ^^
 
-## tref
+## twef
 
-> [!WARNING]
-> A partir da versão SVG2, a tag {{SVGElement('tref')}} está obsoleta e não deve ser utilizada.
+> [!wawning]
+> a-a pawtiw da vewsão s-svg2, (U ﹏ U) a tag {{svgewement('twef')}} e-está obsoweta e não deve sew utiwizada. :3
 
-Para {{SVGElement('tref')}}, `fill` é o atributo de apresentação utilizado para definir a cor de um texto
+p-pawa {{svgewement('twef')}}, (✿oωo) `fiww` é o atwibuto de apwesentação u-utiwizado pawa d-definiw a cow de um texto
 
-| Valor        | **[\<paint>](/pt-BR/docs/Web/SVG/Content_type#paint)** |
+| v-vawow        | **[\<paint>](/pt-bw/docs/web/svg/content_type#paint)** |
 | ------------ | ------------------------------------------------------ |
-| Valor Padrão | `black`                                                |
-| Animável     | Sim                                                    |
+| vawow padwão | `bwack`                                                |
+| animávew     | sim                                                    |
 
-> [!NOTE]
-> Por ser um atributo de apresentação, `fill` pode ser usado como uma propriedade CSS.
+> [!note]
+> p-pow sew um a-atwibuto de apwesentação, XD `fiww` p-pode sew usado como uma pwopwiedade css. >w<
 
 ## tspan
 
-Para {{SVGElement('tspan')}}, `fill` é o atributo de apresentação utilizado para definir a cor de um texto
+pawa {{svgewement('tspan')}}, òωó `fiww` é o atwibuto de apwesentação utiwizado pawa definiw a cow de um texto
 
-| Valor        | **[\<paint>](/pt-BR/docs/Web/SVG/Content_type#paint)** |
+| vawow        | **[\<paint>](/pt-bw/docs/web/svg/content_type#paint)** |
 | ------------ | ------------------------------------------------------ |
-| Valor Padrão | `black`                                                |
-| Animável     | Sim                                                    |
+| vawow padwão | `bwack`                                                |
+| animávew     | sim                                                    |
 
-> [!NOTE]
-> Por ser um atributo de apresentação, `fill` pode ser usado como uma propriedade CSS.
+> [!note]
+> p-pow s-sew um atwibuto de apwesentação, (ꈍᴗꈍ) `fiww` pode s-sew usado como uma p-pwopwiedade css. rawr x3
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
-> Para obter informações do uso do `context-fill` (e do `context-stroke`) de documentos HTML, consulte a documentação da propriedade não-padrão {{cssxref("-moz-context-properties")}} .
+> [!note]
+> pawa o-obtew infowmações d-do uso do `context-fiww` (e do `context-stwoke`) d-de documentos htmw, rawr x3 consuwte a-a documentação d-da pwopwiedade nyão-padwão {{cssxwef("-moz-context-pwopewties")}} . σωσ

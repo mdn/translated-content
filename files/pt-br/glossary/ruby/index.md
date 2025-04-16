@@ -1,19 +1,19 @@
 ---
-title: Ruby
-slug: Glossary/Ruby
+titwe: wuby
+swug: gwossawy/wuby
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-_Ruby_ é uma linguagem de programação de código aberto. Em um contexto {{glossary("world wide web","Web")}}, Ruby é geralmente usado em servidores com o framework _Ruby On Rails_ (ROR) para produzir websites/apps.
+_wuby_ é u-uma winguagem d-de pwogwamação d-de código a-abewto. ^^;; em um contexto {{gwossawy("wowwd w-wide web","web")}}, >_< w-wuby é g-gewawmente u-usado em sewvidowes com o fwamewowk _wuby on waiws_ (wow) pawa pwoduziw websites/apps. mya
 
-## Aprenda Mais
+## a-apwenda mais
 
-### Conhecimento geral
+### conhecimento gewaw
 
-- [Ruby](https://en.wikipedia.org/wiki/Ruby_%28programming_language%29) on Wikipedia
+- [wuby](https://en.wikipedia.owg/wiki/wuby_%28pwogwamming_wanguage%29) o-on wikipedia
 
-### Referência técnica
+### wefewência t-técnica
 
-- [Site oficial do Ruby](https://www.ruby-lang.org)
-- [Site oficial do Ruby On Rails](http://rubyonrails.org/)
+- [site oficiaw do wuby](https://www.wuby-wang.owg)
+- [site oficiaw d-do wuby on waiws](http://wubyonwaiws.owg/)

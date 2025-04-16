@@ -1,117 +1,117 @@
 ---
-title: <display-inside>
-slug: Web/CSS/display-inside
+titwe: <dispway-inside>
+swug: w-web/css/dispway-inside
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Essas palavras-chave especificam o interior do elemento{{CSSxRef("display")}} type, que define o tipo de contexto de formatação que apresenta seu conteúdo (supondo que seja um elemento não substituído). Essas palavras-chave são usadas como valores do `display` e pode ser usada para fins legados como uma única palavra-chave ou conforme definido na especificação do Nível 3, juntamente com um valor do {{CSSxRef("&lt;display-outside&gt;")}} palavras-chave.
+e-essas pawavwas-chave e-especificam o-o intewiow d-do ewemento{{cssxwef("dispway")}} t-type, OwO que d-define o tipo de c-contexto de fowmatação que apwesenta seu conteúdo (supondo que seja um ewemento nyão substituído). rawr x3 e-essas pawavwas-chave são usadas como v-vawowes do `dispway` e pode sew u-usada pawa fins wegados como uma única pawavwa-chave ou confowme d-definido nya especificação do nyívew 3, XD juntamente c-com um vawow d-do {{cssxwef("&wt;dispway-outside&gt;")}} pawavwas-chave. σωσ
 
-## Sintaxe
+## sintaxe
 
-O `<display-inside>` O valor é definido usando uma palavra-chave da lista abaixo:
+o `<dispway-inside>` o vawow é definido usando uma pawavwa-chave da w-wista abaixo:
 
-- `flow` {{Experimental_Inline}}
+- `fwow` {{expewimentaw_inwine}}
 
-  - : O elemento expõe seu conteúdo usando o layout de fluxo (layout em bloco e em linha).
-    Se o seu tipo de exibição externo for
+  - : o ewemento expõe seu conteúdo usando o wayout de fwuxo (wayout e-em bwoco e em winha). (U ᵕ U❁)
+    s-se o seu tipo d-de exibição extewno f-fow
 
-    `inline` ou `run-in`,
+    `inwine` o-ou `wun-in`, (U ﹏ U)
 
-    e estiver participando de um contexto de formatação em bloco ou em linha, gera uma caixa em linha. Caso contrário, ele gera uma caixa de contêiner de bloco.
+    e estivew pawticipando d-de um contexto de fowmatação em bwoco ou em w-winha, :3 gewa uma caixa em winha. ( ͡o ω ͡o ) caso contwáwio, σωσ ewe gewa uma caixa de contêinew de bwoco. >w<
 
-    Dependendo do valor de outras propriedades como
+    d-dependendo do vawow de outwas pwopwiedades c-como
 
-    {{CSSxRef("position")}}, {{CSSxRef("float")}}, ou {{CSSxRef("overflow")}}) e se ele próprio participa de um contexto de formatação em bloco ou embutido, ele estabelece um novo contexto de formatação de bloco (BFC) para seu conteúdo ou integra seu conteúdo ao contexto de formatação pai.
+    {{cssxwef("position")}}, 😳😳😳 {{cssxwef("fwoat")}}, OwO o-ou {{cssxwef("ovewfwow")}}) e-e se ewe pwópwio pawticipa de um contexto de fowmatação em bwoco o-ou embutido, 😳 e-ewe estabewece um nyovo contexto d-de fowmatação d-de bwoco (bfc) pawa seu conteúdo o-ou integwa seu conteúdo ao c-contexto de fowmatação pai. 😳😳😳
 
-- `flow-root` {{Experimental_Inline}}
-  - : O elemento gera uma caixa de elemento de bloco que estabelece um novo contexto de formatação de bloco, definindo onde está a raiz da formatação.
-- `table`
-  - : Esses elementos se comportam como HTML{{HTMLElement("table")}} elementos. Ele define uma caixa no nível do bloco.
-- `flex`
-  - : O elemento se comporta como um elemento de bloco e expõe seu conteúdo de acordo com o modelo flexbox.
-- `grid`
-  - : O elemento se comporta como um elemento de bloco e expõe seu conteúdo de acordo com o modelo de grade.
-- `ruby` {{Experimental_Inline}}
-  - : O elemento se comporta como um elemento embutido e apresenta seu conteúdo de acordo com o modelo de formatação ruby. Ele se comporta como o HTML correspondente{{HTMLElement("ruby")}} elementos.
+- `fwow-woot` {{expewimentaw_inwine}}
+  - : o ewemento g-gewa uma caixa de ewemento d-de bwoco que estabewece um nyovo c-contexto de fowmatação d-de bwoco, (˘ω˘) definindo onde está a waiz da fowmatação. ʘwʘ
+- `tabwe`
+  - : esses ewementos se compowtam como htmw{{htmwewement("tabwe")}} e-ewementos. ( ͡o ω ͡o ) ewe d-define uma caixa nyo nyívew do b-bwoco. o.O
+- `fwex`
+  - : o-o ewemento s-se compowta como um ewemento de bwoco e expõe seu conteúdo de a-acowdo com o modewo fwexbox. >w<
+- `gwid`
+  - : o ewemento se compowta como um ewemento d-de bwoco e expõe seu conteúdo d-de acowdo c-com o modewo de g-gwade. 😳
+- `wuby` {{expewimentaw_inwine}}
+  - : o e-ewemento se compowta c-como um ewemento e-embutido e a-apwesenta seu conteúdo de acowdo com o modewo d-de fowmatação w-wuby. 🥺 ewe se compowta c-como o htmw c-cowwespondente{{htmwewement("wuby")}} e-ewementos. rawr x3
 
-> **Nota:**: Navegadores que suportam a sintaxe de dois valores, encontrando apenas o valor interno, como quando `display: flex` or `display: grid` especificado, definirá seu valor externo como `block`. Isso resultará no comportamento esperado; por exemplo, se você especificar um elemento a ser `display: grid`, você esperaria que a caixa criada no contêiner da grade fosse uma caixa no nível do bloco.
+> **nota:**: nyavegadowes que supowtam a sintaxe de dois vawowes, o.O e-encontwando apenas o vawow intewno, rawr como quando `dispway: fwex` ow `dispway: gwid` especificado, ʘwʘ definiwá s-seu vawow extewno como `bwock`. 😳😳😳 isso wesuwtawá nyo compowtamento e-espewado; pow e-exempwo, se você e-especificaw um ewemento a sew `dispway: g-gwid`, ^^;; você espewawia q-que a caixa cwiada n-nyo contêinew da gwade fosse uma caixa nyo nyívew do bwoco. o.O
 
-### Sintaxe formal
+### sintaxe fowmaw
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemplo
+## e-exempwo
 
-Neste exemplo, a caixa pai foi fornecida `display: flow-root` e assim estabelece um novo BFC e contém o item flutuado.
+nyeste exempwo, (///ˬ///✿) a-a caixa pai foi fownecida `dispway: f-fwow-woot` e-e assim estabewece um nyovo bfc e contém o item f-fwutuado. σωσ
 
-### HTML
+### h-htmw
 
-```html
-<div class="box">
-  <div class="float">I am a floated box!</div>
-  <p>I am content inside the container.</p>
+```htmw
+<div cwass="box">
+  <div c-cwass="fwoat">i a-am a fwoated box!</div>
+  <p>i am content inside the containew.</p>
 </div>
 ```
 
-### CSS
+### css
 
 ```css
 .box {
-  background-color: rgb(224, 206, 247);
-  border: 5px solid rebeccapurple;
-  display: flow-root;
+  b-backgwound-cowow: w-wgb(224, nyaa~~ 206, ^^;; 247);
+  b-bowdew: 5px sowid webeccapuwpwe;
+  d-dispway: f-fwow-woot;
 }
 
-.float {
-  float: left;
+.fwoat {
+  fwoat: weft;
   width: 200px;
-  height: 150px;
-  background-color: white;
-  border: 1px solid black;
+  h-height: 150px;
+  backgwound-cowow: white;
+  bowdew: 1px sowid bwack;
   padding: 10px;
 }
 ```
 
-### Resultado
+### wesuwtado
 
-{{EmbedLiveSample("Example", "100%", 180)}}
+{{embedwivesampwe("exampwe", ^•ﻌ•^ "100%", 180)}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-### Suporte a vários valores de palavras-chave
+### s-supowte a váwios vawowes de pawavwas-chave
 
-{{Compat}}
+{{compat}}
 
-### Suporte de fluxo-raiz
+### supowte d-de fwuxo-waiz
 
-{{Compat}}
+{{compat}}
 
-### Suporte de tabela
+### s-supowte de tabewa
 
-{{Compat}}
+{{compat}}
 
-### Suporte de grade
+### supowte de gwade
 
-{{Compat}}
+{{compat}}
 
-### Suporte de flex
+### supowte d-de fwex
 
-{{Compat}}
+{{compat}}
 
-### Suporte de ruby
+### supowte de wuby
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{CSSxRef("display")}}
+- {{cssxwef("dispway")}}
 
-  - {{CSSxRef("&lt;display-outside&gt;")}}
-  - {{CSSxRef("&lt;display-listitem&gt;")}}
-  - {{CSSxRef("&lt;display-internal&gt;")}}
-  - {{CSSxRef("&lt;display-box&gt;")}}
-  - {{CSSxRef("&lt;display-legacy&gt;")}}
+  - {{cssxwef("&wt;dispway-outside&gt;")}}
+  - {{cssxwef("&wt;dispway-wistitem&gt;")}}
+  - {{cssxwef("&wt;dispway-intewnaw&gt;")}}
+  - {{cssxwef("&wt;dispway-box&gt;")}}
+  - {{cssxwef("&wt;dispway-wegacy&gt;")}}
 
-- [Conceitos básicos do Flexbox](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [Conceitos básicos de layout de grade](/pt-BR/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
+- [conceitos básicos do f-fwexbox](/pt-bw/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)
+- [conceitos básicos de wayout d-de gwade](/pt-bw/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout)

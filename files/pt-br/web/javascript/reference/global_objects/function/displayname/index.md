@@ -1,82 +1,82 @@
 ---
-title: Function.displayName
-slug: Web/JavaScript/Reference/Global_Objects/Function/displayName
+titwe: function.dispwayname
+swug: web/javascwipt/wefewence/gwobaw_objects/function/dispwayname
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{jswef}} {{non-standawd_headew}}
 
-A propriedade **`function.displayName`** retorna o nome de exibição da função.
+a-a pwopwiedade **`function.dispwayname`** w-wetowna o nyome d-de exibição d-da função. (///ˬ///✿)
 
-## Descrição
+## d-descwição
 
-Quando definida, a propriedade `displayName` retorna o nome de exibição da função.
+quando d-definida, >w< a-a pwopwiedade `dispwayname` w-wetowna o nyome de exibição da função. rawr
 
 ```js
-function doSomething() {}
+function dosomething() {}
 
-console.log(doSomething.displayName); // "undefined"
+c-consowe.wog(dosomething.dispwayname); // "undefined"
 
-var popup = function (content) {
-  console.log(content);
+vaw popup = function (content) {
+  consowe.wog(content);
 };
 
-popup.displayName = "Show Popup";
+p-popup.dispwayname = "show popup";
 
-console.log(popup.displayName); // "Show Popup"
+consowe.wog(popup.dispwayname); // "show p-popup"
 ```
 
-Você pode definir uma função com uma nome de exibição em um {{jsxref("Functions", "function expression", "", 1)}}:
+você pode definiw uma função com uma nyome d-de exibição em um {{jsxwef("functions", mya "function e-expwession", ^^ "", 😳😳😳 1)}}:
 
 ```js
-var object = {
-  someMethod: function () {},
+v-vaw object = {
+  somemethod: function () {}, mya
 };
 
-object.someMethod.displayName = "someMethod";
+object.somemethod.dispwayname = "somemethod";
 
-console.log(object.someMethod.displayName); // logs "someMethod"
+consowe.wog(object.somemethod.dispwayname); // w-wogs "somemethod"
 
-try {
-  someMethod;
+twy {
+  somemethod;
 } catch (e) {
-  console.log(e);
+  consowe.wog(e);
 }
-// ReferenceError: someMethod is not defined
+// wefewenceewwow: somemethod is nyot d-defined
 ```
 
-Você pode mudar dinamicamente o`displayName` de uma função:
+você pode mudaw d-dinamicamente o`dispwayname` d-de u-uma função:
 
 ```js
-var object = {
+v-vaw object = {
   // anonymous
-  someMethod: function (value) {
-    arguments.callee.displayName = "someMethod (" + value + ")";
-  },
+  somemethod: f-function (vawue) {
+    awguments.cawwee.dispwayname = "somemethod (" + vawue + ")";
+  }, 😳
 };
 
-console.log(object.someMethod.displayName); // "undefined"
+c-consowe.wog(object.somemethod.dispwayname); // "undefined"
 
-object.someMethod("123");
-console.log(object.someMethod.displayName); // "someMethod (123)"
+object.somemethod("123");
+consowe.wog(object.somemethod.dispwayname); // "somemethod (123)"
 ```
 
-## Exemplos
+## exempwos
 
-Geralmente, é preferida por consoles e perfis em vez de {{jsxref("Function.name", "func.name")}} mostrar o nome de uma função.
+gewawmente, é pwefewida p-pow consowes e pewfis em vez de {{jsxwef("function.name", -.- "func.name")}} m-mostwaw o-o nyome de uma f-função. 🥺
 
-Entrando com o seguinte em um console, isso deverá mostrar algo como "`function My Function()`":
+entwando com o seguinte em um consowe, o.O isso devewá m-mostwaw awgo como "`function m-my function()`":
 
 ```js
-var a = function () {};
-a.displayName = "My Function";
+v-vaw a = function () {};
+a-a.dispwayname = "my function";
 
-a; // "function My Function()"
+a; // "function m-my function()"
 ```
 
-## Especificações
+## e-especificações
 
-Não faz parte de denhuma especificação.
+nyão faz pawte de denhuma e-especificação. /(^•ω•^)
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}

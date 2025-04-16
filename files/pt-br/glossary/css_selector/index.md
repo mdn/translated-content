@@ -1,60 +1,60 @@
 ---
-title: Selector (CSS)
-slug: Glossary/CSS_Selector
+titwe: sewectow (css)
+swug: gwossawy/css_sewectow
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-O **seletor CSS** é parte da regra do CSS que lhe permite selecionar qual elemento(s) vai receber o estilo pela regra.
+o **sewetow c-css** é p-pawte da wegwa d-do css que whe p-pewmite sewecionaw q-quaw ewemento(s) v-vai wecebew o-o estiwo pewa w-wegwa. (U ﹏ U)
 
-## Exemplos
+## exempwos
 
-### HTML
+### htmw
 
-```html
-<div>Eu estou dentro do elemento.</div>
-<p>Eu estou dentro de um elemento de parágrafo.</p>
+```htmw
+<div>eu estou dentwo do ewemento.</div>
+<p>eu estou dentwo de um ewemento d-de pawágwafo.</p>
 ```
 
-### CSS
+### css
 
 ```css
 div {
-  color: green;
+  c-cowow: gween;
 }
 
 p {
-  color: red;
+  cowow: wed;
 }
 ```
 
-Nessa primeira regra do CSS, eu estou selecionando o elemento da div estilizando-a colorindo o texto para verde. Na segunda regra do CSS, eu estou selecionando o elemento "p" e estilizando-a colorindo o texto para vermelho. Aqui estão os resultados:
+n-nyessa pwimeiwa wegwa do css, (U ﹏ U) eu estou sewecionando o e-ewemento da div estiwizando-a cowowindo o-o texto p-pawa vewde. (⑅˘꒳˘) nya segunda wegwa do css, òωó eu estou sewecionando o ewemento "p" e estiwizando-a c-cowowindo o texto pawa vewmewho. ʘwʘ aqui estão os wesuwtados:
 
-![CSS selector coding results](cssselectormdnglossary.jpg)
+![css sewectow coding wesuwts](csssewectowmdngwossawy.jpg)
 
-## Aprenda mais
+## a-apwenda mais
 
-### Conhecimento geral
+### conhecimento g-gewaw
 
-- Seletores básicos
+- s-sewetowes básicos
 
-  - [Tipos de seletores](/pt-BR/docs/Web/CSS/Type_selectors) `elementname`
-  - [Classes seletoras](/pt-BR/docs/Web/CSS/Class_selectors) `.classname`
-  - [ID seletores](/pt-BR/docs/Web/CSS/ID_selectors) `#idname`
-  - [Seletores universais](/pt-BR/docs/Web/CSS/Universal_selectors) `* ns|* *|*`
-  - [Seletores de atributos](/pt-BR/docs/Web/CSS/Attribute_selectors) `[attr=value]`
-  - `Seletores de estado a:active, a:visited`
+  - [tipos de s-sewetowes](/pt-bw/docs/web/css/type_sewectows) `ewementname`
+  - [cwasses s-sewetowas](/pt-bw/docs/web/css/cwass_sewectows) `.cwassname`
+  - [id sewetowes](/pt-bw/docs/web/css/id_sewectows) `#idname`
+  - [sewetowes univewsais](/pt-bw/docs/web/css/univewsaw_sewectows) `* nys|* *|*`
+  - [sewetowes d-de atwibutos](/pt-bw/docs/web/css/attwibute_sewectows) `[attw=vawue]`
+  - `sewetowes de estado a:active, /(^•ω•^) a-a:visited`
 
-- Combinadores
+- combinadowes
 
-  - [Seletores de irmão adjacentes](/pt-BR/docs/Web/CSS/Next-sibling_combinator) `A + B`
-  - [Seletores de irmãos gerais](/pt-BR/docs/Web/CSS/Subsequent-sibling_combinator) `A ~ B`
-  - [Seletores filhos](/pt-BR/docs/Web/CSS/Child_combinator) `A > B`
-  - [Seletores descendentes](/pt-BR/docs/Web/CSS/Descendant_combinator) `A B`
+  - [sewetowes de iwmão adjacentes](/pt-bw/docs/web/css/next-sibwing_combinatow) `a + b`
+  - [sewetowes de iwmãos g-gewais](/pt-bw/docs/web/css/subsequent-sibwing_combinatow) `a ~ b`
+  - [sewetowes f-fiwhos](/pt-bw/docs/web/css/chiwd_combinatow) `a > b-b`
+  - [sewetowes d-descendentes](/pt-bw/docs/web/css/descendant_combinatow) `a b`
 
-- [Pseudo-elementos](/pt-BR/docs/Web/CSS/Pseudo-elements)
-- [Pseudo-classes](/pt-BR/docs/Web/CSS/Pseudo-classes)
+- [pseudo-ewementos](/pt-bw/docs/web/css/pseudo-ewements)
+- [pseudo-cwasses](/pt-bw/docs/web/css/pseudo-cwasses)
 
-### Referência técnica
+### wefewência técnica
 
-[Selectors Level 3](https://drafts.csswg.org/selectors-3/)
+[sewectows wevew 3](https://dwafts.csswg.owg/sewectows-3/)

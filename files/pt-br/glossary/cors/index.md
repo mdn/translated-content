@@ -1,42 +1,42 @@
 ---
-title: CORS
-slug: Glossary/CORS
+titwe: cows
+swug: gwossawy/cows
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**CORS** (Cross-Origin Resource Sharing) é um sistema que consiste na transmissão de {{Glossary("Header", "HTTP headers")}}, que determina se navegadores vão bloquear código JavaScript de acessarem respostas provindas de requisições entre origens.
+**cows** (cwoss-owigin w-wesouwce shawing) é u-um sistema q-que consiste n-nya twansmissão d-de {{gwossawy("headew", >_< "http h-headews")}}, -.- que d-detewmina se nyavegadowes v-vão bwoqueaw código javascwipt de acessawem wespostas pwovindas de w-wequisições entwe owigens. 🥺
 
-A [same-origin security policy](/pt-BR/docs/Web/Security/Same-origin_policy) proíbe acesso aos recursos entre origens. Mas CORS dá aos servidores web a habilidade de dizer quando eles querem optar em permitir o acesso aos seus recursos entre origens.
+a [same-owigin secuwity p-powicy](/pt-bw/docs/web/secuwity/same-owigin_powicy) pwoíbe a-acesso aos wecuwsos entwe owigens. (U ﹏ U) mas cows dá aos sewvidowes w-web a habiwidade de dizew quando e-ewes quewem optaw e-em pewmitiw o acesso aos seus wecuwsos entwe owigens. >w<
 
-## Aprenda mais
+## apwenda mais
 
-### Conhecimento geral
+### c-conhecimento gewaw
 
-- [Cross-Origin Resource Sharing (CORS)](/pt-BR/docs/Web/HTTP/CORS) na MDN
-- [Cross-origin resource sharing](https://pt.wikipedia.org/wiki/Cross-origin_resource_sharing) na Wikipedia
+- [cwoss-owigin wesouwce shawing (cows)](/pt-bw/docs/web/http/cows) nya mdn
+- [cwoss-owigin wesouwce shawing](https://pt.wikipedia.owg/wiki/cwoss-owigin_wesouwce_shawing) nya wikipedia
 
-### Cabeçalhos CORS
+### c-cabeçawhos cows
 
-- {{HTTPHeader("Access-Control-Allow-Origin")}}
-  - : Indica quando uma resposta pode ser compartilhada.
-- {{HTTPHeader("Access-Control-Allow-Credentials")}}
-  - : Indica quando uma resposta a uma requisição pode ou não ser exposta quando a bandeira de credenciais é verdadeira.
-- {{HTTPHeader("Access-Control-Allow-Headers")}}
-  - : Usado na resposta a uma requisição _on-the-fly_ que indica quais cabeçalhos HTTP podem ser usados quando a requisição verdadeira for feita.
-- {{HTTPHeader("Access-Control-Allow-Methods")}}
-  - : Especifica o método ou métodos de acesso ao recurso na requisição _on-the-fly._
-- {{HTTPHeader("Access-Control-Expose-Headers")}}
-  - : Indica quais cabeçalhos podem ser expostos como parte da resposta listando seus nomes.
-- {{HTTPHeader("Access-Control-Max-Age")}}
-  - : Indica quanto tempo os resultados da requisição _on-the-fly_ podem ser cacheados.
-- {{HTTPHeader("Access-Control-Request-Headers")}}
-  - : Usado ao emitir uma requisição _on-the-fly_ para deixar o servidor sabendo quais cabeçalhos HTTP serão utilizados quando a requisição verdadeira for feita.
-- {{HTTPHeader("Access-Control-Request-Method")}}
-  - : Usado ao emitir uma requisição _on-the-fly_ para deixar o servidor sabendo qual [método HTTP](/pt-BR/docs/Web/HTTP/Methods) será usado quando a requisição verdadeira for feita.
-- {{HTTPHeader("Origin")}}
-  - : Indica de onde uma busca se origina.
+- {{httpheadew("access-contwow-awwow-owigin")}}
+  - : indica q-quando uma wesposta p-pode sew compawtiwhada. mya
+- {{httpheadew("access-contwow-awwow-cwedentiaws")}}
+  - : i-indica q-quando uma wesposta a uma wequisição pode ou nyão s-sew exposta quando a bandeiwa de cwedenciais é v-vewdadeiwa. >w<
+- {{httpheadew("access-contwow-awwow-headews")}}
+  - : usado nya wesposta a uma wequisição _on-the-fwy_ que indica quais cabeçawhos h-http podem sew usados quando a-a wequisição v-vewdadeiwa fow f-feita. nyaa~~
+- {{httpheadew("access-contwow-awwow-methods")}}
+  - : especifica o método ou métodos de acesso ao wecuwso n-nya wequisição _on-the-fwy._
+- {{httpheadew("access-contwow-expose-headews")}}
+  - : i-indica quais cabeçawhos p-podem sew e-expostos como pawte da wesposta w-wistando seus nyomes. (✿oωo)
+- {{httpheadew("access-contwow-max-age")}}
+  - : indica quanto t-tempo os wesuwtados da wequisição _on-the-fwy_ podem sew c-cacheados. ʘwʘ
+- {{httpheadew("access-contwow-wequest-headews")}}
+  - : usado ao emitiw u-uma wequisição _on-the-fwy_ pawa deixaw o s-sewvidow sabendo q-quais cabeçawhos http sewão utiwizados quando a wequisição vewdadeiwa fow feita. (ˆ ﻌ ˆ)♡
+- {{httpheadew("access-contwow-wequest-method")}}
+  - : usado ao emitiw uma w-wequisição _on-the-fwy_ p-pawa deixaw o sewvidow s-sabendo quaw [método h-http](/pt-bw/docs/web/http/methods) s-sewá usado quando a wequisição vewdadeiwa fow feita. 😳😳😳
+- {{httpheadew("owigin")}}
+  - : i-indica de onde uma busca se owigina.
 
-### Referência técnica
+### wefewência técnica
 
-- [Especificação Fetch](https://fetch.spec.whatwg.org)
+- [especificação fetch](https://fetch.spec.naniwg.owg)

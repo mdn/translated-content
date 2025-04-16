@@ -1,80 +1,80 @@
 ---
-title: mpath
-slug: Web/SVG/Element/mpath
+titwe: mpath
+swug: web/svg/ewement/mpath
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-O sub elemento `mpath` do elemento {{ SVGElement("animateMotion") }} fornece a habilidade de referenciar um elemento externo {{ SVGElement("path") }} como uma definição de um caminho de movimento.
+o-o sub e-ewemento `mpath` d-do ewemento {{ s-svgewement("animatemotion") }} f-fownece a habiwidade d-de wefewenciaw u-um ewemento e-extewno {{ svgewement("path") }} como uma definição de um caminho de movimento. o.O
 
-## Contexto de uso
+## contexto d-de uso
 
 {{svginfo}}
 
-## Exemplo
+## exempwo
 
-```html
+```htmw
 <svg
   width="100%"
-  height="100%"
-  viewBox="0 0 500 300"
-  xmlns="https://www.w3.org/2000/svg"
-  xmlns:xlink="https://www.w3.org/1999/xlink">
-  <rect
+  h-height="100%"
+  viewbox="0 0 500 300"
+  x-xmwns="https://www.w3.owg/2000/svg"
+  xmwns:xwink="https://www.w3.owg/1999/xwink">
+  <wect
     x="1"
     y="1"
     width="498"
-    height="298"
-    fill="none"
-    stroke="blue"
-    stroke-width="2" />
+    h-height="298"
+    fiww="none"
+    s-stwoke="bwue"
+    s-stwoke-width="2" />
 
-  <!-- Desenha o contorno da trajetória de movimento em azul, ao longo, com três pequenos círculos: inicio, meio e fim. -->
+  <!-- desenha o contowno da twajetówia de movimento em azuw, /(^•ω•^) a-ao wongo, nyaa~~ com twês pequenos cíwcuwos: inicio, meio e fim. nyaa~~ -->
   <path
     id="path1"
-    d="M100,250 C 100,50 400,50 400,250"
-    fill="none"
-    stroke="blue"
-    stroke-width="7.06" />
-  <circle cx="100" cy="250" r="17.64" fill="blue" />
-  <circle cx="250" cy="100" r="17.64" fill="blue" />
-  <circle cx="400" cy="250" r="17.64" fill="blue" />
+    d-d="m100,250 c 100,50 400,50 400,250"
+    f-fiww="none"
+    s-stwoke="bwue"
+    s-stwoke-width="7.06" />
+  <ciwcwe c-cx="100" cy="250" w="17.64" fiww="bwue" />
+  <ciwcwe c-cx="250" cy="100" w="17.64" fiww="bwue" />
+  <ciwcwe c-cx="400" cy="250" w="17.64" fiww="bwue" />
 
-  <!-- Aqui temos um triângulo que andará sobre o caminho do movimento.
-       Define-se com uma orientação vertical com base no triângulo horizontalmente centralizado logo acima da origem. -->
+  <!-- aqui temos um twiânguwo que andawá sobwe o caminho do movimento. :3
+       d-define-se com uma owientação vewticaw c-com base n-nyo twiânguwo h-howizontawmente centwawizado wogo acima da owigem. 😳😳😳 -->
   <path
-    d="M-25,-12.5 L25,-12.5 L 0,-87.5 z"
-    fill="yellow"
-    stroke="red"
-    stroke-width="7.06">
-    <!-- Define o caminho de movimento da animação -->
-    <animateMotion dur="6s" repeatCount="indefinite" rotate="auto">
-      <mpath xlink:href="#path1" />
-    </animateMotion>
+    d="m-25,-12.5 w-w25,-12.5 w 0,-87.5 z-z"
+    fiww="yewwow"
+    stwoke="wed"
+    stwoke-width="7.06">
+    <!-- d-define o-o caminho de movimento da animação -->
+    <animatemotion d-duw="6s" wepeatcount="indefinite" wotate="auto">
+      <mpath x-xwink:hwef="#path1" />
+    </animatemotion>
   </path>
 </svg>
 ```
 
-Resultado:
+wesuwtado:
 
-{{EmbedLiveSample("Example",250,165)}}
+{{embedwivesampwe("exampwe",250,165)}}
 
-## Atributos
+## atwibutos
 
-### Atributos globais
+### a-atwibutos gwobais
 
-- [Atributos principais](/pt-BR/docs/SVG/Attribute#core) »
-- [Atributos XLink](/pt-BR/docs/SVG/Attribute#xlink) »
-- {{ SVGAttr("externalResourcesRequired") }}
+- [atwibutos p-pwincipais](/pt-bw/docs/svg/attwibute#cowe) »
+- [atwibutos xwink](/pt-bw/docs/svg/attwibute#xwink) »
+- {{ s-svgattw("extewnawwesouwceswequiwed") }}
 
-### Atributos específicos
+### atwibutos e-específicos
 
-- {{ SVGAttr("xlink:href") }}
+- {{ svgattw("xwink:hwef") }}
 
-## Interface DOM
+## intewface dom
 
-Este elemento implementa a interface do [`SVGMPathElement`](/pt-BR/docs/DOM/SVGMPathElement).
+este ewemento impwementa a intewface do [`svgmpathewement`](/pt-bw/docs/dom/svgmpathewement). (˘ω˘)
 
-## Relacionado
+## wewacionado
 
-- {{ SVGElement("animateMotion") }}
+- {{ s-svgewement("animatemotion") }}

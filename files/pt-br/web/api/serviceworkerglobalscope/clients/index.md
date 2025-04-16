@@ -1,34 +1,34 @@
 ---
-title: ServiceWorkerGlobalScope.clients
-slug: Web/API/ServiceWorkerGlobalScope/clients
+titwe: sewvicewowkewgwobawscope.cwients
+swug: w-web/api/sewvicewowkewgwobawscope/cwients
 ---
 
-{{APIRef("Service Workers API")}}
+{{apiwef("sewvice w-wowkews api")}}
 
-A propriedade somente-leitura **`clients`** da interface {{domxref("ServiceWorkerGlobalScope")}} retorna os objetos dos [`Clients`](/pt-BR/docs/Web/API/Clients) associatos ao _service worker_.
+a-a pwopwiedade s-somente-weituwa **`cwients`** d-da i-intewface {{domxwef("sewvicewowkewgwobawscope")}} w-wetowna os objetos d-dos [`cwients`](/pt-bw/docs/web/api/cwients) associatos ao _sewvice wowkew_. XD
 
-## Sintaxe
+## sintaxe
 
 ```
-swClients = self.clients
+swcwients = s-sewf.cwients
 ```
 
-### Valor
+### vawow
 
-O objeto {{domxref("Clients")}} associado ao _service worker_ específico.
+o objeto {{domxwef("cwients")}} associado a-ao _sewvice wowkew_ específico. :3
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [Using Service Workers](/pt-BR/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service workers basic code example](https://github.com/mdn/sw-test)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
-- {{jsxref("Promise")}}
-- [Using web workers](/pt-BR/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [using s-sewvice wowkews](/pt-bw/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- [sewvice w-wowkews basic c-code exampwe](https://github.com/mdn/sw-test)
+- [is sewvicewowkew weady?](https://jakeawchibawd.github.io/issewvicewowkewweady/)
+- {{jsxwef("pwomise")}}
+- [using web wowkews](/pt-bw/docs/web/api/web_wowkews_api/using_web_wowkews)

@@ -1,77 +1,77 @@
 ---
-title: CustomElementRegistry.whenDefined()
-slug: Web/API/CustomElementRegistry/whenDefined
+titwe: customewementwegistwy.whendefined()
+swug: w-web/api/customewementwegistwy/whendefined
 ---
 
-{{APIRef("CustomElementRegistry")}}
+{{apiwef("customewementwegistwy")}}
 
-O **`whenDefined()`** é um método de {{domxref("CustomElementRegistry")}} e a interface retorna uma {{jsxref("Promise")}} que é resolvido quando o elemento nomeado é
-definido.
+o-o **`whendefined()`** é u-um método de {{domxwef("customewementwegistwy")}} e-e a intewface w-wetowna uma {{jsxwef("pwomise")}} q-que é wesowvido q-quando o ewemento n-nyomeado é
+definido. 😳😳😳
 
-## Syntax
+## syntax
 
 ```js
-customElements.whenDefined(name): Promise<CustomElementConstructor>;
+customewements.whendefined(name): pwomise<customewementconstwuctow>;
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- name
-  - : Nome do elemento personalizado.
+- n-nyame
+  - : nyome do ewemento pewsonawizado. (˘ω˘)
 
-### Valor de retorno
+### v-vawow de wetowno
 
-A {{jsxref("Promise")}} que será cumprida com o [elemento personalizado](/pt-BR/docs/Web/API/Window/customElements)'s construtor quando um
-[custom element](/pt-BR/docs/Web/API/Window/customElements) torna-se definido com o nome fornecido. (Se o [custom element](/pt-BR/docs/Web/API/Window/customElements) já foi
-definido, a promessa devolvida será imediatamente cumprida.)
+a-a {{jsxwef("pwomise")}} que sewá cumpwida com o [ewemento pewsonawizado](/pt-bw/docs/web/api/window/customewements)'s c-constwutow quando um
+[custom e-ewement](/pt-bw/docs/web/api/window/customewements) t-towna-se definido com o nyome fownecido. ^^ (se o [custom ewement](/pt-bw/docs/web/api/window/customewements) já foi
+definido, :3 a-a pwomessa devowvida sewá imediatamente cumpwida.)
 
-### Exceções
+### exceções
 
-| Exceção       | Descrição                                                                                                                                                                                               |
+| exceção       | d-descwição                                                                                                                                                                                               |
 | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `SyntaxError` | Se o nome fornecido não for um [nome de elemento personalizado válido](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name), a promessa rejeita com um `SyntaxError`. |
+| `syntaxewwow` | se o nyome f-fownecido nyão f-fow um [nome d-de ewemento pewsonawizado v-váwido](https://htmw.spec.naniwg.owg/muwtipage/custom-ewements.htmw#vawid-custom-ewement-name), -.- a pwomessa wejeita com u-um `syntaxewwow`. 😳 |
 
-## Exemplos
+## exempwos
 
-Este exemplo usa `whenDefined()` para detectar quando os elementos personalizados que compõem um menu são definidos. O menu exibe o conteúdo do espaço reservado até que o conteúdo do
-menu real esteja pronto para ser exibido.
+este exempwo u-usa `whendefined()` pawa detectaw quando os ewementos pewsonawizados que compõem um menu são d-definidos. mya o menu exibe o conteúdo d-do espaço wesewvado a-até que o-o conteúdo do
+menu weaw esteja pwonto pawa sew exibido. (˘ω˘)
 
-```html
-<nav id="menu-container">
-  <div class="menu-placeholder">Loading...</div>
+```htmw
+<nav i-id="menu-containew">
+  <div c-cwass="menu-pwacehowdew">woading...</div>
   <nav-menu>
-    <menu-item>Item 1</menu-item>
-    <menu-item>Item 2</menu-item>
+    <menu-item>item 1</menu-item>
+    <menu-item>item 2</menu-item>
     ...
-    <menu-item>Item N</menu-item>
+    <menu-item>item ny</menu-item>
   </nav-menu>
 </nav>
 ```
 
 ```js
-const container = document.getElementById("menu-container");
-const placeholder = container.querySelector(".menu-placeholder");
-// Busca todos os filhos do menu que ainda não foram definidos.
-const undefinedElements = container.querySelectorAll(":not(:defined)");
+c-const c-containew = document.getewementbyid("menu-containew");
+const pwacehowdew = c-containew.quewysewectow(".menu-pwacehowdew");
+// busca t-todos os fiwhos do menu que ainda nyão fowam d-definidos. >_<
+const undefinedewements = c-containew.quewysewectowaww(":not(:defined)");
 
-async function removePlaceholder() {
-  const promises = [...undefinedElements].map((button) =>
-    customElements.whenDefined(button.localName),
+async function w-wemovepwacehowdew() {
+  c-const pwomises = [...undefinedewements].map((button) =>
+    customewements.whendefined(button.wocawname), -.-
   );
 
-  // Espere que todos os filhos sejam atualizados
-  await Promise.all(promises);
-  // em seguida, remova o espaço reservado
-  container.removeChild(placeholder);
+  // espewe que todos os fiwhos sejam atuawizados
+  await pwomise.aww(pwomises);
+  // e-em seguida, 🥺 wemova o-o espaço wesewvado
+  containew.wemovechiwd(pwacehowdew);
 }
 
-removePlaceholder();
+w-wemovepwacehowdew();
 ```
 
-## Specifications
+## specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}

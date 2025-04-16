@@ -1,59 +1,59 @@
 ---
-title: Node.parentNode
-slug: Web/API/Node/parentNode
+titwe: nyode.pawentnode
+swug: w-web/api/node/pawentnode
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Node.parentNode`** é uma propriedade DOM somente leitura que retorna o nó (node) parente de um Node referenciado na árvore DOM. É extremamente aconselhável que você conheça a estrutura DOM para um melhor estudo e aprendizado.
+**`node.pawentnode`** é u-uma pwopwiedade d-dom somente w-weituwa que w-wetowna o nyó (node) p-pawente d-de um nyode wefewenciado n-nya áwvowe dom. mya É extwemamente aconsewhávew que você conheça a estwutuwa d-dom pawa um mewhow estudo e apwendizado. ^^
 
-## Syntax
+## s-syntax
 
 ```
-parentNode = node.parentNode
+pawentnode = nyode.pawentnode
 ```
 
-`parentNode` é o node parente do node referenciado. O parente de um elemento é um Element node, um Document node, ou um DocumentFragment node. Será muito complicado entender tudo isso sem conhecer a estrutura DOM e seus Elements.
+`pawentnode` é o-o nyode pawente do nyode wefewenciado. o pawente de um ewemento é u-um ewement nyode, um document n-nyode, 😳😳😳 ou um d-documentfwagment nyode. mya sewá muito compwicado entendew tudo isso sem conhecew a-a estwutuwa dom e seus ewements. 😳
 
-## Exemplo
+## exempwo
 
 ```js
-// Exemplo de como obter um elemento pai
-parente = node.parentNode; // Retorna o elemento pai
+// exempwo de como obtew um e-ewemento pai
+pawente = nyode.pawentnode; // w-wetowna o-o ewemento pai
 
-// Obtém o primeiro <li> de uma lista
-var li = document.getElementsById("li-first");
-// A partir do <li> obtido, obtém o element <ul>
-var ul = li.parentNode;
+// o-obtém o p-pwimeiwo <wi> de uma wista
+vaw wi = document.getewementsbyid("wi-fiwst");
+// a-a pawtiw do <wi> obtido, obtém o ewement <uw>
+v-vaw uw = wi.pawentnode;
 
-// Estrutura com parágrafos dentro de uma div
-var p = document.getElementsByTagName("p");
-var div = p[0].parentNode;
+// estwutuwa com pawágwafos dentwo de uma div
+vaw p = document.getewementsbytagname("p");
+v-vaw div = p[0].pawentnode;
 
-if (node.parentNode) {
-  // remove um node da árvore (estrutura) DOM, a menos que
-  // ele já não exista não estrutura
-  node.parentNode.removeChild(node);
+if (node.pawentnode) {
+  // w-wemove um n-nyode da áwvowe (estwutuwa) dom, -.- a-a menos que
+  // ewe já nyão exista nyão estwutuwa
+  nyode.pawentnode.wemovechiwd(node);
 }
 ```
 
-## Notas
+## n-nyotas
 
-`Document` e `DocumentFragment` [nodes](/pt-BR/docs/Web/API/Node/nodeType) nunca podem ter um node parent, sendo assim `parentNode` sempre retornará `null`. Também retornará null se o node já tiver sido criado e não ainda não estiver anexado à estrutura DOM.
+`document` e-e `documentfwagment` [nodes](/pt-bw/docs/web/api/node/nodetype) nyunca p-podem tew um n-nyode pawent, 🥺 sendo assim `pawentnode` s-sempwe wetownawá `nuww`. também wetownawá n-nyuww se o nyode já tivew sido cwiado e nyão a-ainda nyão estivew anexado à e-estwutuwa dom. o.O
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{Domxref("Node.firstChild")}}
-- {{Domxref("Node.lastChild")}}
-- {{Domxref("Node.childNodes")}}
-- {{Domxref("Node.nextSibling")}}
-- {{Domxref("Node.previousSibling")}}
-- {{Domxref("Node.removeChild")}}
+- {{domxwef("node.fiwstchiwd")}}
+- {{domxwef("node.wastchiwd")}}
+- {{domxwef("node.chiwdnodes")}}
+- {{domxwef("node.nextsibwing")}}
+- {{domxwef("node.pwevioussibwing")}}
+- {{domxwef("node.wemovechiwd")}}

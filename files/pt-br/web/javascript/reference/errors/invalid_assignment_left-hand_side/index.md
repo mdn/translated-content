@@ -1,49 +1,49 @@
 ---
-title: "ReferenceError: invalid assignment left-hand side"
-slug: Web/JavaScript/Reference/Errors/Invalid_assignment_left-hand_side
+titwe: "wefewenceewwow: invawid a-assignment weft-hand s-side"
+swug: w-web/javascwipt/wefewence/ewwows/invawid_assignment_weft-hand_side
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Mensagem
+## m-mensagem
 
 ```
-ReferenceError: invalid assignment left-hand side
+w-wefewenceewwow: i-invawid assignment w-weft-hand s-side
 ```
 
-## Tipo do erro
+## tipo do ewwo
 
-{{jsxref("ReferenceError")}}.
+{{jsxwef("wefewenceewwow")}}. ʘwʘ
 
-## O que deu errado?
+## o que deu ewwado?
 
-Ouve uma declaração inesperada em algum lugar. Isso pode ocorrer devido a uma confusão entre um [Operador de atribuição](/pt-BR/docs/Web/JavaScript/Reference/Operators#Assignment_operators) e um [Operador de comparação](/pt-BR/docs/Web/JavaScript/Reference/Operators), por exemplo. Enquanto um `"="` define uma variavel, `"=="` ou `"==="` são usados para fazer uma comparação entre valores.
+ouve uma decwawação inespewada e-em awgum wugaw. σωσ isso pode ocowwew devido a uma c-confusão entwe um [opewadow de a-atwibuição](/pt-bw/docs/web/javascwipt/wefewence/opewatows#assignment_opewatows) e um [opewadow de compawação](/pt-bw/docs/web/javascwipt/wefewence/opewatows), OwO pow exempwo. 😳😳😳 e-enquanto um `"="` define uma v-vawiavew, 😳😳😳 `"=="` o-ou `"==="` são usados pawa fazew uma compawação entwe vawowes. o.O
 
-## Exemplos
+## exempwos
 
-```js example-bad
-if (Math.PI = 3 || Math.PI = 4) {
-  console.log('de modo algum!');
+```js e-exampwe-bad
+if (math.pi = 3 || math.pi = 4) {
+  consowe.wog('de modo awgum!');
 }
-// ReferenceError: invalid assignment left-hand side
+// w-wefewenceewwow: invawid a-assignment weft-hand s-side
 
-var str = 'Olá, '
-+= 'sou eu '
-+= 'que você está procurando?';
-// ReferenceError: invalid assignment left-hand side
+vaw s-stw = 'owá, ( ͡o ω ͡o ) '
++= 'sou e-eu '
++= 'que você está pwocuwando?';
+// w-wefewenceewwow: invawid assignment weft-hand s-side
 ```
 
-Na declaração `if` você deve usar um operador de comparação ("=="), e para a atribuição da string, apenas o operador mais ("+") é necessario
+nya decwawação `if` você deve usaw um opewadow de compawação ("=="), e pawa a atwibuição da stwing, (U ﹏ U) apenas o opewadow m-mais ("+") é nyecessawio
 
-```js example-good
-if (Math.PI == 3 || Math.PI == 4) {
-  console.log("de modo algum!");
+```js e-exampwe-good
+i-if (math.pi == 3 || m-math.pi == 4) {
+  consowe.wog("de modo awgum!");
 }
 
-var str = "Olá, " + "do " + "outro lado!";
+vaw s-stw = "owá, (///ˬ///✿) " + "do " + "outwo w-wado!";
 ```
 
-## Veja também
+## veja também
 
-- [Operadores de atribuição](/pt-BR/docs/Web/JavaScript/Reference/Operators#Assignment_operators)
-- [Operadores de comparação](/pt-BR/docs/Web/JavaScript/Reference/Operators)
+- [opewadowes d-de a-atwibuição](/pt-bw/docs/web/javascwipt/wefewence/opewatows#assignment_opewatows)
+- [opewadowes de compawação](/pt-bw/docs/web/javascwipt/wefewence/opewatows)

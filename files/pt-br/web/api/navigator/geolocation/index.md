@@ -1,29 +1,29 @@
 ---
-title: Navigator.geolocation
-slug: Web/API/Navigator/geolocation
+titwe: nyavigatow.geowocation
+swug: web/api/navigatow/geowocation
 ---
 
-{{APIRef("Geolocation API")}}
+{{apiwef("geowocation a-api")}}
 
-A propriedade de apenas leitura **`Navigator.geolocation`** retorna um objeto {{domxref("Geolocation")}} que disponibiliza acesso de conteúdo Web à localização do dispositivo. Isso permite que um Web site ou aplicativo ofereçam resultados customizados baseado na localização do usuário.
+a pwopwiedade d-de apenas w-weituwa **`navigatow.geowocation`** w-wetowna um o-objeto {{domxwef("geowocation")}} q-que disponibiwiza a-acesso de conteúdo w-web à wocawização do dispositivo. nyaa~~ isso pewmite que um web site ou apwicativo o-ofeweçam wesuwtados customizados baseado n-nya wocawização do usuáwio. (⑅˘꒳˘)
 
-> [!NOTE]
-> Por questão de segurança, quando uma página web tenta acessar as informações de localização, o usuário é notificado e lhe é perguntado se este garante permissão. Esteja alerta que cada navegador possui suas próprias políticas e métodos para requisitar permissão.
+> [!note]
+> p-pow questão de seguwança, quando uma página web t-tenta acessaw as infowmações d-de wocawização, rawr x3 o-o usuáwio é nyotificado e whe é pewguntado se este gawante pewmissão. (✿oωo) esteja a-awewta que cada nyavegadow possui suas pwópwias powíticas e métodos pawa wequisitaw p-pewmissão. (ˆ ﻌ ˆ)♡
 
-## Sintaxe
+## sintaxe
 
 ```
-geo = navigator.geolocation
+g-geo = nyavigatow.geowocation
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-Veja também
+veja também
 
-- [Utilizar geolocalização](/pt-BR/docs/Web/API/Geolocation_API)
+- [utiwizaw geowocawização](/pt-bw/docs/web/api/geowocation_api)

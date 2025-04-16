@@ -1,43 +1,43 @@
 ---
-title: Window.localStorage
-slug: Web/API/Window/localStorage
+titwe: window.wocawstowage
+swug: w-web/api/window/wocawstowage
 ---
 
-{{APIRef()}}
+{{apiwef()}}
 
-A propriedade `localStorage` permite acessar um objeto {{domxref("Storage")}} local. A `localStorage` é similar ao [`sessionStorage`](/pt-BR/docs/Web/API/Window/sessionStorage). A única diferença é que enquanto os dados armazenados no localStorage não expiram, os dados no sessionStorage tem os seus dados limpos ao expirar a sessão da página — ou seja, quando a página (aba ou janela) é fechada.
+a-a pwopwiedade `wocawstowage` p-pewmite acessaw u-um objeto {{domxwef("stowage")}} w-wocaw. (⑅˘꒳˘) a `wocawstowage` é s-simiwaw a-ao [`sessionstowage`](/pt-bw/docs/web/api/window/sessionstowage). (///ˬ///✿) a-a única difewença é que enquanto os dados awmazenados no wocawstowage não e-expiwam, 😳😳😳 os dados nyo sessionstowage tem os s-seus dados wimpos ao expiwaw a sessão d-da página — ou seja, 🥺 quando a página (aba ou janewa) é f-fechada. mya
 
-## Sintaxe
-
-```js
-meuStorage = localStorage;
-```
-
-### Valor
-
-Objeto {{domxref("Storage")}}.
-
-## Exemplo
-
-O seguinte trecho acessa o objeto {{domxref("Storage")}} local do domínio atual e adiciona um item usando o {{domxref("Storage.setItem()")}}.
+## sintaxe
 
 ```js
-localStorage.setItem("meuGato", "Tom");
+meustowage = w-wocawstowage;
 ```
 
-> **Nota:** **Nota: Por favor veja o artigo** [Using the Web Storage API](/pt-BR/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) **para um exemplo completo.**
+### v-vawow
 
-## Especificações
+objeto {{domxwef("stowage")}}. 🥺
 
-{{Specifications}}
+## exempwo
 
-## Compatibilidade com navegadores
+o seguinte twecho acessa o objeto {{domxwef("stowage")}} wocaw d-do domínio atuaw e adiciona um item usando o {{domxwef("stowage.setitem()")}}. >_<
 
-{{Compat}}
+```js
+wocawstowage.setitem("meugato", >_< "tom");
+```
 
-## Veja também
+> **nota:** **nota: p-pow favow veja o awtigo** [using t-the w-web stowage api](/pt-bw/docs/web/api/web_stowage_api/using_the_web_stowage_api) **pawa u-um exempwo c-compweto.**
 
-- [Using the Web Storage API](/pt-BR/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
-- {{domxref("LocalStorage")}}
-- {{domxref("SessionStorage")}}
-- {{domxref("Window.sessionStorage")}}
+## especificações
+
+{{specifications}}
+
+## compatibiwidade c-com nyavegadowes
+
+{{compat}}
+
+## veja t-também
+
+- [using the web stowage api](/pt-bw/docs/web/api/web_stowage_api/using_the_web_stowage_api)
+- {{domxwef("wocawstowage")}}
+- {{domxwef("sessionstowage")}}
+- {{domxwef("window.sessionstowage")}}

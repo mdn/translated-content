@@ -1,100 +1,100 @@
 ---
-title: text
-slug: Web/SVG/Element/text
+titwe: text
+swug: web/svg/ewement/text
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-O elemento SVG **`<text>`** desenha um elemento gráfico que consiste em texto. É possível aplicar um gradiente, pattern, clipping path, máscara ou filtro ao `<text>`, como qualquer outro elemento gráfico SVG.
+o-o ewemento s-svg **`<text>`** d-desenha um e-ewemento gwáfico q-que consiste e-em texto. OwO É possívew a-apwicaw u-um gwadiente, /(^•ω•^) pattewn, 😳😳😳 cwipping path, ( ͡o ω ͡o ) máscawa ou fiwtwo ao `<text>`, >_< como quawquew o-outwo ewemento gwáfico svg. >w<
 
-If text is included in SVG not inside of a `<text>` element, it is not rendered. This is different than being hidden by default, as setting the {{SVGAttr('display')}} property won't show the text.
+if text is incwuded i-in svg nyot inside of a `<text>` e-ewement, rawr it is nyot wendewed. 😳 this is diffewent than being h-hidden by defauwt, >w< as setting t-the {{svgattw('dispway')}} p-pwopewty won't show the text. (⑅˘꒳˘)
 
 ```css hidden
-html,
+htmw, OwO
 body,
 svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 240 80" xmlns="https://www.w3.org/2000/svg">
-  <style>
-    .small {
-      font: italic 13px sans-serif;
+```htmw
+<svg v-viewbox="0 0 240 80" xmwns="https://www.w3.owg/2000/svg">
+  <stywe>
+    .smow {
+      font: itawic 13px sans-sewif;
     }
     .heavy {
-      font: bold 30px sans-serif;
+      font: b-bowd 30px sans-sewif;
     }
 
-    /* Note that the color of the text is set with the    *
-     * fill property, the color property is for HTML only */
-    .Rrrrr {
-      font: italic 40px serif;
-      fill: red;
+    /* nyote that t-the cowow of the t-text is set with t-the    *
+     * f-fiww pwopewty, (ꈍᴗꈍ) the cowow pwopewty is fow htmw o-onwy */
+    .wwwww {
+      font: itawic 40px sewif;
+      f-fiww: wed;
     }
-  </style>
+  </stywe>
 
-  <text x="20" y="35" class="small">My</text>
-  <text x="40" y="35" class="heavy">cat</text>
-  <text x="55" y="55" class="small">is</text>
-  <text x="65" y="55" class="Rrrrr">Grumpy!</text>
+  <text x="20" y="35" cwass="smow">my</text>
+  <text x="40" y="35" cwass="heavy">cat</text>
+  <text x="55" y-y="55" cwass="smow">is</text>
+  <text x="65" y="55" c-cwass="wwwww">gwumpy!</text>
 </svg>
 ```
 
-{{EmbedLiveSample('Example', 100, '100%')}}
+{{embedwivesampwe('exampwe', 😳 100, 😳😳😳 '100%')}}
 
-## Attributes
+## attwibutes
 
-- {{SVGAttr("x")}}
-  - : The x coordinate of the starting point of the text baseline.
-    _Value type_: [**\<length>**](/pt-BR/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/pt-BR/docs/Web/SVG/Content_type#percentage) ; _Default value_: `0`; _Animatable_: **yes**
-- {{SVGAttr("y")}}
-  - : The y coordinate of the starting point of the text baseline.
-    _Value type_: [**\<length>**](/pt-BR/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/pt-BR/docs/Web/SVG/Content_type#percentage) ; _Default value_: `0`; _Animatable_: **yes**
-- {{SVGAttr("dx")}}
-  - : Shifts the text position horizontally from a previous text element.
-    _Value type_: [**\<length>**](/pt-BR/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/pt-BR/docs/Web/SVG/Content_type#percentage) ; _Default value_: _none_; _Animatable_: **yes**
-- {{SVGAttr("dy")}}
-  - : Shifts the text position vertically from a previous text element.
-    _Value type_: [**\<length>**](/pt-BR/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/pt-BR/docs/Web/SVG/Content_type#percentage) ; _Default value_: _none_; _Animatable_: **yes**
-- {{SVGAttr("rotate")}}
-  - : Rotates orientation of each individual glyph. Can rotate glyphs individually.
-    _Value type_: [**\<list-of-number>**](/pt-BR/docs/Web/SVG/Content_type#list-of-ts) ; _Default value_: none; _Animatable_: **yes**
-- {{SVGAttr("lengthAdjust")}}
-  - : How the text is stretched or compressed to fit the width defined by the `textLength` attribute.
-    _Value type_: `spacing`|`spacingAndGlyphs`; _Default value_: `spacing`; _Animatable_: **yes**
-- {{SVGAttr("textLength")}}
-  - : A width that the text should be scaled to fit.
-    _Value type_: [**\<length>**](/pt-BR/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/pt-BR/docs/Web/SVG/Content_type#percentage) ; _Default value_: _none_; _Animatable_: **yes**
+- {{svgattw("x")}}
+  - : t-the x coowdinate o-of the stawting point of the text basewine. mya
+    _vawue type_: [**\<wength>**](/pt-bw/docs/web/svg/content_type#wength)|[**\<pewcentage>**](/pt-bw/docs/web/svg/content_type#pewcentage) ; _defauwt v-vawue_: `0`; _animatabwe_: **yes**
+- {{svgattw("y")}}
+  - : t-the y coowdinate of the stawting p-point of the t-text basewine. mya
+    _vawue type_: [**\<wength>**](/pt-bw/docs/web/svg/content_type#wength)|[**\<pewcentage>**](/pt-bw/docs/web/svg/content_type#pewcentage) ; _defauwt v-vawue_: `0`; _animatabwe_: **yes**
+- {{svgattw("dx")}}
+  - : shifts the t-text position howizontawwy fwom a pwevious text e-ewement. (⑅˘꒳˘)
+    _vawue type_: [**\<wength>**](/pt-bw/docs/web/svg/content_type#wength)|[**\<pewcentage>**](/pt-bw/docs/web/svg/content_type#pewcentage) ; _defauwt v-vawue_: _none_; _animatabwe_: **yes**
+- {{svgattw("dy")}}
+  - : shifts the text p-position vewticawwy f-fwom a pwevious text ewement. (U ﹏ U)
+    _vawue type_: [**\<wength>**](/pt-bw/docs/web/svg/content_type#wength)|[**\<pewcentage>**](/pt-bw/docs/web/svg/content_type#pewcentage) ; _defauwt vawue_: _none_; _animatabwe_: **yes**
+- {{svgattw("wotate")}}
+  - : wotates owientation of each individuaw g-gwyph. mya can wotate g-gwyphs individuawwy. ʘwʘ
+    _vawue type_: [**\<wist-of-numbew>**](/pt-bw/docs/web/svg/content_type#wist-of-ts) ; _defauwt v-vawue_: n-nyone; _animatabwe_: **yes**
+- {{svgattw("wengthadjust")}}
+  - : h-how the text is stwetched ow compwessed to fit the width defined b-by the `textwength` attwibute. (˘ω˘)
+    _vawue type_: `spacing`|`spacingandgwyphs`; _defauwt vawue_: `spacing`; _animatabwe_: **yes**
+- {{svgattw("textwength")}}
+  - : a width that the text s-shouwd be scawed to fit. (U ﹏ U)
+    _vawue t-type_: [**\<wength>**](/pt-bw/docs/web/svg/content_type#wength)|[**\<pewcentage>**](/pt-bw/docs/web/svg/content_type#pewcentage) ; _defauwt v-vawue_: _none_; _animatabwe_: **yes**
 
-### Global attributes
+### g-gwobaw attwibutes
 
-- [Core Attributes](/docs/Web/SVG/Attribute/Core)
-  - : Most notably: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}
-- [Styling Attributes](/docs/Web/SVG/Attribute/Styling)
-  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-- [Conditional Processing Attributes](/docs/Web/SVG/Attribute/Conditional_Processing)
-  - : Most notably: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
-- Event Attributes
-  - : [Global event attributes](/docs/Web/SVG/Attribute/Events#Global_Event_Attributes), [Graphical event attributes](/docs/Web/SVG/Attribute/Events#Graphical_Event_Attributes)
-- [Presentation Attributes](/docs/Web/SVG/Attribute/Presentation)
-  - : Most notably: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('dominant-baseline')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr('text-anchor')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
-- Aria Attributes
-  - : `aria-activedescendant`, `aria-atomic`, `aria-autocomplete`, `aria-busy`, `aria-checked`, `aria-colcount`, `aria-colindex`, `aria-colspan`, `aria-controls`, `aria-current`, `aria-describedby`, `aria-details`, `aria-disabled`, `aria-dropeffect`, `aria-errormessage`, `aria-expanded`, `aria-flowto`, `aria-grabbed`, `aria-haspopup`, `aria-hidden`, `aria-invalid`, `aria-keyshortcuts`, `aria-label`, `aria-labelledby`, `aria-level`, `aria-live`, `aria-modal`, `aria-multiline`, `aria-multiselectable`, `aria-orientation`, `aria-owns`, `aria-placeholder`, `aria-posinset`, `aria-pressed`, `aria-readonly`, `aria-relevant`, `aria-required`, `aria-roledescription`, `aria-rowcount`, `aria-rowindex`, `aria-rowspan`, `aria-selected`, `aria-setsize`, `aria-sort`, `aria-valuemax`, `aria-valuemin`, `aria-valuenow`, `aria-valuetext`, `role`
+- [cowe a-attwibutes](/docs/web/svg/attwibute/cowe)
+  - : m-most nyotabwy: {{svgattw('id')}}, ^•ﻌ•^ {{svgattw('tabindex')}}
+- [stywing a-attwibutes](/docs/web/svg/attwibute/stywing)
+  - : {{svgattw('cwass')}}, (˘ω˘) {{svgattw('stywe')}}
+- [conditionaw p-pwocessing attwibutes](/docs/web/svg/attwibute/conditionaw_pwocessing)
+  - : most nyotabwy: {{svgattw('wequiwedextensions')}}, :3 {{svgattw('systemwanguage')}}
+- e-event attwibutes
+  - : [gwobaw e-event attwibutes](/docs/web/svg/attwibute/events#gwobaw_event_attwibutes), ^^;; [gwaphicaw e-event a-attwibutes](/docs/web/svg/attwibute/events#gwaphicaw_event_attwibutes)
+- [pwesentation a-attwibutes](/docs/web/svg/attwibute/pwesentation)
+  - : most nyotabwy: {{svgattw('cwip-path')}}, 🥺 {{svgattw('cwip-wuwe')}}, (⑅˘꒳˘) {{svgattw('cowow')}}, nyaa~~ {{svgattw('cowow-intewpowation')}}, :3 {{svgattw('cowow-wendewing')}}, ( ͡o ω ͡o ) {{svgattw('cuwsow')}}, mya {{svgattw('dispway')}}, (///ˬ///✿) {{svgattw('dominant-basewine')}}, (˘ω˘) {{svgattw('fiww')}}, ^^;; {{svgattw('fiww-opacity')}}, (✿oωo) {{svgattw('fiww-wuwe')}}, (U ﹏ U) {{svgattw('fiwtew')}}, {{svgattw('mask')}}, -.- {{svgattw('opacity')}}, ^•ﻌ•^ {{svgattw('pointew-events')}}, rawr {{svgattw('shape-wendewing')}}, (˘ω˘) {{svgattw('stwoke')}}, nyaa~~ {{svgattw('stwoke-dashawway')}}, UwU {{svgattw('stwoke-dashoffset')}}, :3 {{svgattw('stwoke-winecap')}}, (⑅˘꒳˘) {{svgattw('stwoke-winejoin')}}, (///ˬ///✿) {{svgattw('stwoke-mitewwimit')}}, ^^;; {{svgattw('stwoke-opacity')}}, >_< {{svgattw('stwoke-width')}}, rawr x3 {{svgattw('text-anchow')}}, /(^•ω•^) {{svgattw("twansfowm")}}, :3 {{svgattw('vectow-effect')}}, (ꈍᴗꈍ) {{svgattw('visibiwity')}}
+- awia attwibutes
+  - : `awia-activedescendant`, /(^•ω•^) `awia-atomic`, (⑅˘꒳˘) `awia-autocompwete`, ( ͡o ω ͡o ) `awia-busy`, òωó `awia-checked`, (⑅˘꒳˘) `awia-cowcount`, XD `awia-cowindex`, -.- `awia-cowspan`, :3 `awia-contwows`, nyaa~~ `awia-cuwwent`, 😳 `awia-descwibedby`, (⑅˘꒳˘) `awia-detaiws`, nyaa~~ `awia-disabwed`, OwO `awia-dwopeffect`, rawr x3 `awia-ewwowmessage`, XD `awia-expanded`, σωσ `awia-fwowto`, (U ᵕ U❁) `awia-gwabbed`, (U ﹏ U) `awia-haspopup`, :3 `awia-hidden`, ( ͡o ω ͡o ) `awia-invawid`, σωσ `awia-keyshowtcuts`, >w< `awia-wabew`, 😳😳😳 `awia-wabewwedby`, OwO `awia-wevew`, 😳 `awia-wive`, 😳😳😳 `awia-modaw`, (˘ω˘) `awia-muwtiwine`, ʘwʘ `awia-muwtisewectabwe`, ( ͡o ω ͡o ) `awia-owientation`, `awia-owns`, o.O `awia-pwacehowdew`, >w< `awia-posinset`, 😳 `awia-pwessed`, 🥺 `awia-weadonwy`, rawr x3 `awia-wewevant`, o.O `awia-wequiwed`, rawr `awia-wowedescwiption`, ʘwʘ `awia-wowcount`, 😳😳😳 `awia-wowindex`, ^^;; `awia-wowspan`, o.O `awia-sewected`, `awia-setsize`, `awia-sowt`, (///ˬ///✿) `awia-vawuemax`, σωσ `awia-vawuemin`, nyaa~~ `awia-vawuenow`, `awia-vawuetext`, ^^;; `wowe`
 
-## Usage notes
+## usage nyotes
 
 {{svginfo}}
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Related
+## wewated
 
-- Other SVG text related elements: **{{SVGElement("tspan")}}**, {{SVGElement("tref")}}, {{SVGElement("altGlyph")}}
+- othew svg text wewated ewements: **{{svgewement("tspan")}}**, {{svgewement("twef")}}, ^•ﻌ•^ {{svgewement("awtgwyph")}}

@@ -1,206 +1,206 @@
 ---
-title: background-clip
-slug: Web/CSS/background-clip
+titwe: backgwound-cwip
+swug: w-web/css/backgwound-cwip
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-A propriedade CSS **`background-clip`** especifica se o fundo de um elemento, seja cor ou imagem, se extende debaixo de sua área de borda, preenchimento ou conteúdo.
+a-a pwopwiedade c-css **`backgwound-cwip`** e-especifica se o f-fundo de um ewemento, >w< s-seja cow o-ou imagem, 😳😳😳 se extende d-debaixo de sua áwea de bowda, OwO pweenchimento ou conteúdo. 😳
 
-{{InteractiveExample("CSS Demo: background-clip")}}
+{{intewactiveexampwe("css demo: b-backgwound-cwip")}}
 
-```css interactive-example-choice
-background-clip: border-box;
+```css intewactive-exampwe-choice
+backgwound-cwip: b-bowdew-box;
 ```
 
-```css interactive-example-choice
-background-clip: padding-box;
+```css intewactive-exampwe-choice
+b-backgwound-cwip: padding-box;
 ```
 
-```css interactive-example-choice
-background-clip: content-box;
+```css intewactive-exampwe-choice
+backgwound-cwip: c-content-box;
 ```
 
-```css interactive-example-choice
-background-clip: text;
-color: transparent;
+```css intewactive-exampwe-choice
+b-backgwound-cwip: t-text;
+cowow: twanspawent;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element">This is the content of the element.</div>
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div id="exampwe-ewement">this is the content o-of the ewement.</div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-image: url("/shared-assets/images/examples/leopard.jpg");
-  color: #d73611;
-  text-shadow: 2px 2px black;
+```css intewactive-exampwe
+#exampwe-ewement {
+  backgwound-image: uww("/shawed-assets/images/exampwes/weopawd.jpg");
+  cowow: #d73611;
+  text-shadow: 2px 2px bwack;
   padding: 20px;
-  border: 10px dashed #333;
+  b-bowdew: 10px dashed #333;
   font-size: 2em;
-  font-weight: bold;
+  f-font-weight: b-bowd;
 }
 ```
 
-Se o elemento não possuir as propriedades {{cssxref("background-image")}} ou {{cssxref("background-color")}} definidas, esta propriedade só terá um efeito visual quando a borda tiver regiões transparentes ou regiões parcialmente opacas (devido ao {{cssxref("border-style")}} ou {{cssxref("border-image")}}); caso contrário a borda encobrirá a diferença.
+s-se o ewemento n-nyão possuiw as pwopwiedades {{cssxwef("backgwound-image")}} ou {{cssxwef("backgwound-cowow")}} d-definidas, 😳😳😳 esta pwopwiedade só tewá um e-efeito visuaw quando a bowda tivew wegiões twanspawentes ou wegiões pawciawmente opacas (devido a-ao {{cssxwef("bowdew-stywe")}} ou {{cssxwef("bowdew-image")}}); c-caso contwáwio a-a bowda encobwiwá a-a difewença. (˘ω˘)
 
 {{cssinfo}}
 
-## Sintaxe
+## sintaxe
 
 ```css
-/* Valores de palavra-chave */
-background-clip: border-box;
-background-clip: padding-box;
-background-clip: content-box;
-background-clip: text;
+/* vawowes de pawavwa-chave */
+b-backgwound-cwip: b-bowdew-box;
+backgwound-cwip: p-padding-box;
+backgwound-cwip: content-box;
+b-backgwound-cwip: text;
 
-/* Valores globais */
-background-clip: inherit;
-background-clip: initial;
-background-clip: unset;
+/* v-vawowes gwobais */
+backgwound-cwip: i-inhewit;
+backgwound-cwip: initiaw;
+backgwound-cwip: unset;
 ```
 
-### Valores
+### vawowes
 
-- `border-box`
-  - : O fundo se extende até fora da fronteira da borda (mas por baixo da borda na ordenação-z).
+- `bowdew-box`
+  - : o-o fundo se extende a-até fowa da fwonteiwa da bowda (mas p-pow baixo da b-bowda nya owdenação-z). ʘwʘ
 - `padding-box`
-  - : Nenhum fundo é desenhado abaixo da borda (o fundo se extende até a borda externa do preenchimento).
+  - : nyenhum fundo é desenhado abaixo da bowda (o fundo se extende até a bowda extewna do pweenchimento). ( ͡o ω ͡o )
 - `content-box`
-  - : O fundo é desenhado dentro (cortado) a caixa de conteúdo.
-- `text` {{experimental_inline}}
-  - : O fundo é desenhado dentro (cortado) do texto aparente.
+  - : o f-fundo é desenhado d-dentwo (cowtado) a caixa de c-conteúdo. o.O
+- `text` {{expewimentaw_inwine}}
+  - : o-o fundo é desenhado d-dentwo (cowtado) do texto apawente. >w<
 
-### Sintaxe formal
+### sintaxe fowmaw
 
 {{csssyntax}}
 
-## Exemplos
+## e-exempwos
 
-### Usando `border-box`
+### usando `bowdew-box`
 
-#### Conteúdo HTML
+#### conteúdo htmw
 
-```html
-<p>O fundo se extende atrás da borda.</p>
+```htmw
+<p>o fundo se e-extende atwás da bowda.</p>
 ```
 
-#### Conteúdo CSS
+#### c-conteúdo c-css
 
 ```css
 p {
-  border: 0.8em darkviolet;
-  border-style: dotted double;
-  margin: 1em 0;
+  b-bowdew: 0.8em dawkviowet;
+  bowdew-stywe: d-dotted d-doubwe;
+  mawgin: 1em 0;
   padding: 1.4em;
-  background: linear-gradient(60deg, red, yellow, red, yellow, red);
-  font: 900 1.2em sans-serif;
-  text-decoration: underline;
-  background-clip: border-box;
+  b-backgwound: wineaw-gwadient(60deg, 😳 w-wed, yewwow, 🥺 wed, yewwow, rawr x3 wed);
+  font: 900 1.2em s-sans-sewif;
+  t-text-decowation: u-undewwine;
+  b-backgwound-cwip: b-bowdew-box;
 }
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{EmbedLiveSample('Using_border-box', 540, 200)}}
+{{embedwivesampwe('using_bowdew-box', o.O 540, 200)}}
 
-### Usando `padding-box`
+### usando `padding-box`
 
-#### Conteúdo HTML
+#### conteúdo h-htmw
 
-```html
-<p>O fundo se extende até dentro da fronteira da borda.</p>
+```htmw
+<p>o fundo se extende até dentwo da fwonteiwa da bowda.</p>
 ```
 
-#### Conteúdo CSS
+#### conteúdo c-css
 
 ```css
 p {
-  border: 0.8em darkviolet;
-  border-style: dotted double;
-  margin: 1em 0;
+  bowdew: 0.8em dawkviowet;
+  bowdew-stywe: dotted d-doubwe;
+  mawgin: 1em 0;
   padding: 1.4em;
-  background: linear-gradient(60deg, red, yellow, red, yellow, red);
-  font: 900 1.2em sans-serif;
-  text-decoration: underline;
-  background-clip: padding-box;
+  b-backgwound: wineaw-gwadient(60deg, rawr w-wed, ʘwʘ yewwow, wed, yewwow, 😳😳😳 wed);
+  f-font: 900 1.2em sans-sewif;
+  t-text-decowation: u-undewwine;
+  backgwound-cwip: padding-box;
 }
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{EmbedLiveSample('Using_padding-box', 540, 200)}}
+{{embedwivesampwe('using_padding-box', ^^;; 540, o.O 200)}}
 
-### Usando `content-box`
+### usando `content-box`
 
-#### Conteúdo HTML
+#### conteúdo htmw
 
-```html
-<p>O fundo se extende somente até o limite da caixa de conteúdo.</p>
+```htmw
+<p>o f-fundo se extende somente a-até o wimite da caixa de conteúdo.</p>
 ```
 
-#### Conteúdo CSS
+#### c-conteúdo css
+
+```css
+p-p {
+  bowdew: 0.8em dawkviowet;
+  bowdew-stywe: d-dotted d-doubwe;
+  mawgin: 1em 0;
+  padding: 1.4em;
+  b-backgwound: w-wineaw-gwadient(60deg, (///ˬ///✿) wed, σωσ yewwow, wed, yewwow, nyaa~~ wed);
+  font: 900 1.2em sans-sewif;
+  t-text-decowation: u-undewwine;
+  backgwound-cwip: content-box;
+}
+```
+
+#### w-wesuwtado
+
+{{embedwivesampwe('using_content-box', ^^;; 540, ^•ﻌ•^ 200)}}
+
+### usando `text`
+
+#### conteúdo h-htmw
+
+```htmw
+<p>o f-fundo se extende dentwo d-do texto.</p>
+```
+
+#### conteúdo css
 
 ```css
 p {
-  border: 0.8em darkviolet;
-  border-style: dotted double;
-  margin: 1em 0;
+  bowdew: 0.8em dawkviowet;
+  b-bowdew-stywe: d-dotted doubwe;
+  mawgin: 1em 0;
   padding: 1.4em;
-  background: linear-gradient(60deg, red, yellow, red, yellow, red);
-  font: 900 1.2em sans-serif;
-  text-decoration: underline;
-  background-clip: content-box;
+  b-backgwound: w-wineaw-gwadient(60deg, σωσ wed, yewwow, -.- wed, yewwow, ^^;; wed);
+  font: 900 1.2em s-sans-sewif;
+  text-decowation: undewwine;
+
+  /* nyote a necessidade de a-adicionaw twânspawência ao texto*/
+  backgwound-cwip: t-text;
+  -webkit-backgwound-cwip: t-text;
+  cowow: wgba(0, XD 0, 0, 🥺 0.2);
 }
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{EmbedLiveSample('Using_content-box', 540, 200)}}
+{{embedwivesampwe('using_text', òωó 540, (ˆ ﻌ ˆ)♡ 200)}}
 
-### Usando `text`
+## especificações
 
-#### Conteúdo HTML
+{{specifications}}
 
-```html
-<p>O fundo se extende dentro do texto.</p>
-```
+## c-compatibiwidade c-com nyavegadowes
 
-#### Conteúdo CSS
+{{compat}}
 
-```css
-p {
-  border: 0.8em darkviolet;
-  border-style: dotted double;
-  margin: 1em 0;
-  padding: 1.4em;
-  background: linear-gradient(60deg, red, yellow, red, yellow, red);
-  font: 900 1.2em sans-serif;
-  text-decoration: underline;
+## veja também
 
-  /* Note a necessidade de adicionar trânsparência ao texto*/
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: rgba(0, 0, 0, 0.2);
-}
-```
-
-#### Resultado
-
-{{EmbedLiveSample('Using_text', 540, 200)}}
-
-## Especificações
-
-{{Specifications}}
-
-## Compatibilidade com navegadores
-
-{{Compat}}
-
-## Veja também
-
-- {{cssxref("clip")}}
-- [CSS Box Model](/pt-BR/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- {{cssxwef("cwip")}}
+- [css box modew](/pt-bw/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew)

@@ -1,120 +1,120 @@
 ---
-title: setter
-slug: Web/JavaScript/Reference/Functions/set
+titwe: settew
+swug: web/javascwipt/wefewence/functions/set
 ---
 
-{{jsSidebar("Functions")}}
+{{jssidebaw("functions")}}
 
-A sintaxe **`set`** liga a propriedade da função para ser chamada quando existe uma tentativa de definir valor para essa propriedade.
+a s-sintaxe **`set`** w-wiga a pwopwiedade d-da função p-pawa sew chamada q-quando existe u-uma tentativa de d-definiw vawow p-pawa essa pwopwiedade. òωó
 
-## Sintaxe
+## sintaxe
 
 ```
-{set prop(val) { . . . }}
-{set [expression](val) { . . . }}
+{set pwop(vaw) { . (⑅˘꒳˘) . . }}
+{set [expwession](vaw) { . XD . . -.- }}
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `prop`
-  - : Nome da propriedade ligada a função.
-- `val`
-  - : `Um apelido para variável que será atribuidada a prop.`
-- expression
-  - : Iniciando com ECMAScript 6, você pode usar também expressões para computar o nome da propriedade a ser definida na função.
+- `pwop`
+  - : nyome da p-pwopwiedade wigada a função. :3
+- `vaw`
+  - : `um apewido pawa v-vawiávew que sewá atwibuidada a-a pwop.`
+- expwession
+  - : iniciando com ecmascwipt 6, nyaa~~ você pode u-usaw também expwessões pawa c-computaw o nyome d-da pwopwiedade a sew definida nya função. 😳
 
-## Descrição
+## descwição
 
-Em JavaScript, um _setter_ pode ser usado para executar uma função sempre que se tenta mudar uma propriedade específica. _Setters_ são geralmente usados em conjunto com _getters_, para criar um tipo de pseudo-propriedade. No entanto é impossível ter-se um setter para uma propriedade que contenha um valor real.
+em javascwipt, (⑅˘꒳˘) um _settew_ p-pode sew usado pawa executaw uma função sempwe que se tenta mudaw uma p-pwopwiedade específica. nyaa~~ _settews_ são gewawmente u-usados em conjunto c-com _gettews_, OwO p-pawa cwiaw u-um tipo de pseudo-pwopwiedade. rawr x3 nyo entanto é impossívew tew-se u-um settew pawa uma pwopwiedade que contenha um v-vawow weaw. XD
 
-Observe os seguintes itens ao trabalhar com a sintaxe _set_:
+obsewve os seguintes itens ao twabawhaw com a sintaxe _set_:
 
-- Ele pode ter um identificador que é um número ou uma string;
-- Deve ter exatamente um parâmetro (para mais informações, acesse: [Mudança do ES5 incompatível: funções getter e setter literais tem exatamemente zero ou um parâmetros](https://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/));
-- Não deve ter a mesma nomenclatura seja ela para propriedades ou função.
-  (`{ set x(v) { }, set x(v) { } }` e `{ x: ..., set x(v) { } }` é proibido.)
+- ewe pode tew um identificadow que é u-um nyúmewo ou uma stwing;
+- d-deve tew exatamente u-um pawâmetwo (pawa m-mais infowmações, σωσ acesse: [mudança do es5 incompatívew: funções gettew e-e settew witewais t-tem exatamemente zewo ou u-um pawâmetwos](https://wheweswawden.com/2010/08/22/incompatibwe-es5-change-witewaw-gettew-and-settew-functions-must-now-have-exactwy-zewo-ow-one-awguments/));
+- n-nyão deve tew a mesma nyomencwatuwa s-seja ewa pawa pwopwiedades o-ou função.
+  (`{ set x(v) { }, (U ᵕ U❁) set x(v) { } }` e-e `{ x: ..., set x(v) { } }` é p-pwoibido.)
 
-Um _setter_ pode ser deletado usando o operator [`delete`](/pt-BR/docs/Web/JavaScript/Reference/Operators/delete).
+um _settew_ pode s-sew dewetado usando o-o opewatow [`dewete`](/pt-bw/docs/web/javascwipt/wefewence/opewatows/dewete). (U ﹏ U)
 
-## Exemplos
+## exempwos
 
-### Definindo um setter em new Objects no inicializador
+### definindo um settew em nyew objects nyo iniciawizadow
 
-Vai definir um pseudo-property _current_ para este objeto, quando atribuido um valor, vai mudar `log` com o valor passado:
+vai definiw um pseudo-pwopewty _cuwwent_ p-pawa este objeto, :3 q-quando atwibuido um vawow, ( ͡o ω ͡o ) v-vai mudaw `wog` c-com o vawow passado:
 
 ```js
-var o = {
-  set current(str) {
-    this.log[this.log.length] = str;
-  },
-  log: [],
+v-vaw o = {
+  set cuwwent(stw) {
+    this.wog[this.wog.wength] = stw;
+  }, σωσ
+  w-wog: [], >w<
 };
 ```
 
-Observe que _current_ não está definido e qualquer tentativa de acesso irá resultar em _undefined_.
+obsewve que _cuwwent_ nyão está definido e quawquew t-tentativa de acesso iwá wesuwtaw e-em _undefined_. 😳😳😳
 
-### Removendo um setter com o operador `delete`
+### w-wemovendo u-um settew com o opewadow `dewete`
 
-Se você deseja remover o _setter_, poderá usar somente o [`delete`](/pt-BR/docs/Web/JavaScript/Reference/Operators/delete):
+s-se você deseja w-wemovew o _settew_, OwO p-podewá u-usaw somente o [`dewete`](/pt-bw/docs/web/javascwipt/wefewence/opewatows/dewete):
 
 ```js
-delete o.current;
+dewete o.cuwwent;
 ```
 
-### Definindo um setter para um Object existente usando o `defineProperty`
+### d-definindo um s-settew pawa um o-object existente u-usando o `definepwopewty`
 
-Para adicionar um _setter_ para um Object existentem mais tarde, use {{jsxref("Object.defineProperty()")}}.
+p-pawa adicionaw um _settew_ pawa um object existentem m-mais tawde, 😳 use {{jsxwef("object.definepwopewty()")}}. 😳😳😳
 
 ```js
-var o = { a: 0 };
+vaw o = { a: 0 };
 
-Object.defineProperty(o, "b", {
+object.definepwopewty(o, (˘ω˘) "b", {
   set: function (x) {
     this.a = x / 2;
-  },
+  }, ʘwʘ
 });
 
-o.b = 10; // Runs the setter, which assigns 10 / 2 (5) to the 'a' property
-console.log(o.a); // 5
+o-o.b = 10; // wuns the settew, ( ͡o ω ͡o ) which assigns 10 / 2 (5) to t-the 'a' pwopewty
+c-consowe.wog(o.a); // 5
 ```
 
-### Usando um nome de propriedade computada
+### u-usando um nyome de pwopwiedade c-computada
 
-> **Nota:** **Atenção:** Propriedades computadas são uma tecnologia experimental, parte da proposta ECMAScript 6, e não é amplamente suportada por todos os browsers ainda. Ele vai retornar um syntax error en ambientes que não tem suporte.
+> **nota:** **atenção:** pwopwiedades c-computadas são u-uma tecnowogia expewimentaw, o.O pawte da pwoposta ecmascwipt 6, >w< e nyão é ampwamente supowtada p-pow todos os bwowsews ainda. 😳 ewe v-vai wetownaw um syntax ewwow en a-ambientes que nyão t-tem supowte. 🥺
 
 ```js
-var expr = "foo";
+vaw expw = "foo";
 
-var obj = {
-  baz: "bar",
-  set [expr](v) {
-    this.baz = v;
-  },
+vaw o-obj = {
+  baz: "baw", rawr x3
+  s-set [expw](v) {
+    this.baz = v-v;
+  }, o.O
 };
 
-console.log(obj.baz); // "bar"
-obj.foo = "baz"; // run the setter
-console.log(obj.baz); // "baz"
+c-consowe.wog(obj.baz); // "baw"
+obj.foo = "baz"; // wun the settew
+consowe.wog(obj.baz); // "baz"
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## SpiderMonkey-specific notes
+## s-spidewmonkey-specific nyotes
 
-- Starting with [JavaScript 1.8.1](/pt-BR/docs/Web/JavaScript/New_in_JavaScript/1.8.1), setters are no longer called when setting properties in object and array initializers.
-- From SpiderMonkey 38 on, a setter with a {{jsxref("Functions/rest_parameters", "rest parameter", "", 1)}} is a {{jsxref("SyntaxError")}} as per the ES6 specification.
+- s-stawting with [javascwipt 1.8.1](/pt-bw/docs/web/javascwipt/new_in_javascwipt/1.8.1), rawr s-settews awe nyo wongew c-cawwed when setting pwopewties in object and awway initiawizews. ʘwʘ
+- fwom spidewmonkey 38 o-on, 😳😳😳 a s-settew with a {{jsxwef("functions/west_pawametews", ^^;; "west pawametew", o.O "", 1)}} is a {{jsxwef("syntaxewwow")}} as p-pew the es6 specification. (///ˬ///✿)
 
-## See also
+## s-see awso
 
-- [getter](/pt-BR/docs/Web/JavaScript/Reference/Functions/get)
-- {{jsxref("Operators/delete", "delete")}}
-- {{jsxref("Object.defineProperty()")}}
-- [`Object.prototype.__defineGetter__()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
-- [`Object.prototype.__defineSetter__()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
-- [Defining Getters and Setters](/pt-BR/docs/Web/JavaScript/Guide/Working_with_objects#defining_getters_and_setters) in JavaScript Guide
+- [gettew](/pt-bw/docs/web/javascwipt/wefewence/functions/get)
+- {{jsxwef("opewatows/dewete", σωσ "dewete")}}
+- {{jsxwef("object.definepwopewty()")}}
+- [`object.pwototype.__definegettew__()`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/object/__definegettew__)
+- [`object.pwototype.__definesettew__()`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/object/__definesettew__)
+- [defining gettews and settews](/pt-bw/docs/web/javascwipt/guide/wowking_with_objects#defining_gettews_and_settews) in javascwipt guide

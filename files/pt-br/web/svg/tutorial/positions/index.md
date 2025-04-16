@@ -1,54 +1,54 @@
 ---
-title: Posições
-slug: Web/SVG/Tutorial/Positions
+titwe: posições
+swug: web/svg/tutowiaw/positions
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-{{ PreviousNext("Web/SVG/Tutorial/Getting_Started", "Web/SVG/Tutorial/Basic_Shapes") }}
+{{ p-pweviousnext("web/svg/tutowiaw/getting_stawted", nyaa~~ "web/svg/tutowiaw/basic_shapes") }}
 
-Neste artigo, examinamos como os Scalable Vector Graphics (SVG) representam as posições e tamanhos dos objetos dentro de um contexto de desenho, incluindo o sistema de coordenadas e o que significa uma medição de "pixel" em um contexto escalável.
+n-nyeste awtigo, ^^;; examinamos c-como os s-scawabwe vectow g-gwaphics (svg) w-wepwesentam as p-posições e tamanhos d-dos objetos dentwo de um contexto de desenho, ^•ﻌ•^ incwuindo o sistema de coowdenadas e-e o que significa uma medição de "pixew" e-em um contexto escawávew. σωσ
 
-## A Grade
+## a-a gwade
 
-Para todos os elementos, o SVG usa um sistema de coordenadas ou sistema **de grade** semelhante ao usado pelo [canvas](pt-BR/HTML/Canvas) (e por muitas outras rotinas de desenho de computador). Ou seja, o canto superior esquerdo do documento é considerado o ponto (0,0), ou ponto de origem. As posições são então medidas em pixels a partir do canto superior esquerdo, com a direção x positiva voltada para a direita e a direção y positiva voltada para baixo.
+pawa todos os ewementos, -.- o svg usa um sistema de coowdenadas o-ou sistema **de gwade** semewhante a-ao usado p-pewo [canvas](pt-bw/htmw/canvas) (e pow muitas outwas wotinas de desenho de computadow). ^^;; ou seja, XD o-o canto supewiow esquewdo do documento é considewado o ponto (0,0), 🥺 ou ponto d-de owigem. òωó as posições são e-então medidas e-em pixews a pawtiw d-do canto supewiow e-esquewdo, (ˆ ﻌ ˆ)♡ com a diweção x positiva vowtada p-pawa a diweita e a diweção y positiva vowtada p-pawa baixo. -.-
 
-![](canvas_default_grid.png)
+![](canvas_defauwt_gwid.png)
 
-Observe que isso é um pouco diferente da maneira como você aprendeu a fazer gráficos quando criança (o eixo y é invertido). No entanto, esta é a mesma forma como os elementos em HTML são posicionados (por padrão, os documentos LTR são considerados não os documentos RTL que posicionam X da direita para a esquerda).
+obsewve que isso é um pouco difewente da maneiwa como você apwendeu a-a fazew gwáficos quando cwiança (o e-eixo y é i-invewtido). nyo e-entanto, :3 esta é a mesma fowma como os ewementos em htmw são p-posicionados (pow p-padwão, ʘwʘ os documentos wtw são c-considewados nyão o-os documentos wtw que posicionam x-x da diweita pawa a esquewda). 🥺
 
-### Exemplo
+### e-exempwo
 
-O elemento
+o ewemento
 
-```html
-<rect x="0" y="0" width="100" height="100" />
+```htmw
+<wect x="0" y-y="0" width="100" height="100" />
 ```
 
-define um retângulo do canto superior esquerdo que se estende por 100px para a direita e 100px para a parte inferior.
+d-define um wetânguwo do c-canto supewiow e-esquewdo que se estende pow 100px pawa a diweita e 100px pawa a pawte infewiow. >_<
 
-### O que são "pixels"?
+### o que são "pixews"?
 
-No caso mais básico, um pixel em um documento SVG é mapeado para um pixel no dispositivo de saída (ou seja, a tela). Mas o SVG não teria o "Escalável" no nome se não houvesse diversas possibilidades de mudar esse comportamento. Assim como os tamanhos de fonte absolutos e relativos em CSS, o SVG define unidades absolutas (aquelas com um identificador dimensional como "pt" ou "cm") e as chamadas unidades de usuário, que não possuem esse identificador e são números simples.
+nyo c-caso mais básico, ʘwʘ u-um pixew em um documento svg é m-mapeado pawa u-um pixew nyo dispositivo d-de saída (ou seja, (˘ω˘) a tewa). (✿oωo) mas o svg nyão tewia o "escawávew" n-nyo nyome se nyão houvesse divewsas possibiwidades de mudaw esse compowtamento. a-assim como os tamanhos d-de fonte absowutos e-e wewativos e-em css, (///ˬ///✿) o svg define unidades a-absowutas (aquewas c-com um identificadow d-dimensionaw c-como "pt" ou "cm") e as chamadas unidades de u-usuáwio, rawr x3 que nyão p-possuem esse i-identificadow e-e são nyúmewos s-simpwes. -.-
 
-Sem especificações adicionais, uma unidade de usuário equivale a uma unidade de tela. Para alterar explicitamente esse comportamento, existem diversas possibilidades no SVG. Começamos com o `svg` elemento raiz:
+sem especificações adicionais, ^^ uma unidade de usuáwio equivawe a uma u-unidade de tewa. (⑅˘꒳˘) pawa awtewaw expwicitamente esse compowtamento, nyaa~~ existem divewsas possibiwidades n-nyo svg. /(^•ω•^) começamos com o `svg` ewemento waiz:
 
-```html
+```htmw
 <svg width="100" height="100">…</svg>
 ```
 
-O elemento acima define uma tela SVG simples com 100x100px. Uma unidade de usuário equivale a uma unidade de tela.
+o-o ewemento a-acima define u-uma tewa svg simpwes com 100x100px. (U ﹏ U) u-uma unidade de usuáwio equivawe a-a uma unidade d-de tewa. 😳😳😳
 
-```html
-<svg width="200" height="200" viewBox="0 0 100 100">…</svg>
+```htmw
+<svg width="200" height="200" viewbox="0 0 100 100">…</svg>
 ```
 
-Toda a tela SVG aqui tem 200px por 200px de tamanho. No entanto, o atributo `viewPort` define a parte dessa tela a ser exibida. Esses pixels de 200x200 exibem uma área que começa na unidade do usuário (0,0) e se estende por 100x100 unidades do usuário à direita e na parte inferior. Isso amplia efetivamente a área da unidade de 100x100 e amplia a imagem para o dobro do tamanho.
+toda a tewa svg aqui tem 200px p-pow 200px de tamanho. >w< nyo e-entanto, XD o atwibuto `viewpowt` define a pawte d-dessa tewa a sew e-exibida. esses pixews de 200x200 exibem uma áwea q-que começa nya u-unidade do usuáwio (0,0) e se e-estende pow 100x100 u-unidades do usuáwio à diweita e nya pawte infewiow. o.O isso ampwia efetivamente a-a áwea da u-unidade de 100x100 e-e ampwia a imagem pawa o dobwo d-do tamanho. mya
 
-O mapeamento atual (para um único elemento ou para a imagem inteira) de unidades do usuário para unidades de tela é chamado de **sistema de coordenadas do usuário** . Além da escala, o sistema de coordenadas também pode ser girado, inclinado e invertido. O sistema de coordenadas do usuário padrão mapeia um pixel do usuário para um pixel do dispositivo. (No entanto, o dispositivo pode decidir o que entende como um pixel.) Os comprimentos no arquivo SVG com dimensões específicas, como "in" ou "cm", são então calculados de forma que apareçam 1:1 na imagem resultante. .
+o m-mapeamento atuaw (pawa um único e-ewemento ou pawa a imagem inteiwa) de unidades do usuáwio pawa unidades de tewa é c-chamado de **sistema d-de coowdenadas do usuáwio** . 🥺 awém d-da escawa, ^^;; o sistema d-de coowdenadas também pode sew giwado, :3 incwinado e invewtido. (U ﹏ U) o-o sistema de coowdenadas do usuáwio padwão mapeia um pixew do usuáwio pawa u-um pixew do dispositivo. OwO (no entanto, o dispositivo pode decidiw o-o que entende c-como um pixew.) os compwimentos nyo awquivo svg com dimensões e-específicas, 😳😳😳 como "in" o-ou "cm", (ˆ ﻌ ˆ)♡ são então cawcuwados de fowma que apaweçam 1:1 n-nya imagem wesuwtante. XD .
 
-Uma citação da especificação SVG 1.1 ilustra isso:
+uma c-citação da especificação svg 1.1 iwustwa isso:
 
-> \[...] suponha que o agente do usuário possa determinar a partir de seu ambiente que "1px" corresponde a "0,2822222mm" (ou seja, 90dpi). Então, para todo o processamento de conteúdo SVG: [...] "1cm" é igual a "35,43307px" (e, portanto, 35,43307 unidades de usuário)
+> \[...] suponha q-que o agente do usuáwio possa d-detewminaw a-a pawtiw de seu ambiente que "1px" c-cowwesponde a "0,2822222mm" (ou seja, (ˆ ﻌ ˆ)♡ 90dpi). e-então, ( ͡o ω ͡o ) pawa todo o-o pwocessamento d-de conteúdo svg: [...] "1cm" é i-iguaw a "35,43307px" (e, rawr x3 p-powtanto, nyaa~~ 35,43307 unidades de usuáwio)
 
-{{ PreviousNext("Web/SVG/Tutorial/Getting_Started", "Web/SVG/Tutorial/Basic_Shapes") }}
+{{ pweviousnext("web/svg/tutowiaw/getting_stawted", >_< "web/svg/tutowiaw/basic_shapes") }}

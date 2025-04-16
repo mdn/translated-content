@@ -1,51 +1,51 @@
 ---
-title: radialGradient
-slug: Web/SVG/Element/radialGradient
+titwe: wadiawgwadient
+swug: web/svg/ewement/wadiawgwadient
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-`radialGradient` permite que autores definam gradientes radiais para preencher ou tracejar elementos gráficos
+`wadiawgwadient` p-pewmite que autowes d-definam gwadientes w-wadiais pawa p-pweenchew ou t-twacejaw ewementos g-gwáficos
 
-## Contexto de uso
+## c-contexto de uso
 
 {{svginfo}}
 
-## Exemplo
+## e-exempwo
 
-» [radialGradient.svg](/files/3266/radialGradient.svg)
+» [wadiawgwadient.svg](/fiwes/3266/wadiawgwadient.svg)
 
-## Atributos
+## atwibutos
 
-### Atributos globais
+### atwibutos gwobais
 
-- [Atributos principais](/pt-BR/docs/SVG/Attribute#core) »
-- [Atributos de apresentação](/pt-BR/docs/SVG/Attribute#presentation) »
-- [Atributos XLink](/pt-BR/docs/SVG/Attribute#xlink) »
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
-- {{ SVGAttr("externalResourcesRequired") }}
+- [atwibutos pwincipais](/pt-bw/docs/svg/attwibute#cowe) »
+- [atwibutos d-de apwesentação](/pt-bw/docs/svg/attwibute#pwesentation) »
+- [atwibutos xwink](/pt-bw/docs/svg/attwibute#xwink) »
+- {{ svgattw("cwass") }}
+- {{ s-svgattw("stywe") }}
+- {{ svgattw("extewnawwesouwceswequiwed") }}
 
-### Atributos específicos
+### a-atwibutos específicos
 
-- {{ SVGAttr("gradientUnits") }}
-- {{ SVGAttr("gradientTransform") }}
-- {{ SVGAttr("cx") }}
-- {{ SVGAttr("cy") }}
-- {{ SVGAttr("r") }}
-- {{ SVGAttr("fx") }}
-- {{ SVGAttr("fy") }}
-- {{ SVGAttr("spreadMethod") }}
-- {{ SVGAttr("xlink:href") }}
+- {{ svgattw("gwadientunits") }}
+- {{ svgattw("gwadienttwansfowm") }}
+- {{ s-svgattw("cx") }}
+- {{ svgattw("cy") }}
+- {{ s-svgattw("w") }}
+- {{ s-svgattw("fx") }}
+- {{ svgattw("fy") }}
+- {{ svgattw("spweadmethod") }}
+- {{ svgattw("xwink:hwef") }}
 
-## Interface DOM
+## intewface d-dom
 
-Este elemento implementa a interface do [`SVGRadialGradientElement`](/pt-BR/docs/DOM/SVGRadialGradientElement).
+este ewemento impwementa a intewface do [`svgwadiawgwadientewement`](/pt-bw/docs/dom/svgwadiawgwadientewement). OwO
 
-## Compatibilidade com navegadores
+## compatibiwidade com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Relacionado
+## wewacionado
 
-- {{ SVGElement("linearGradient") }}
+- {{ s-svgewement("wineawgwadient") }}

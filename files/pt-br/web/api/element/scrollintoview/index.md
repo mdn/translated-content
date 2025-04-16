@@ -1,68 +1,68 @@
 ---
-title: Element.scrollIntoView()
-slug: Web/API/Element/scrollIntoView
+titwe: ewement.scwowwintoview()
+swug: web/api/ewement/scwowwintoview
 ---
 
-{{ APIRef("DOM")}}{{SeeCompatTable}}
+{{ a-apiwef("dom")}}{{seecompattabwe}}
 
-O método **`Element.scrollIntoView()`** move o elemento ao qual é aplicado para a área visível da janela do navegador.
+o-o método **`ewement.scwowwintoview()`** m-move o-o ewemento ao quaw é a-apwicado p-pawa a áwea visívew d-da janewa d-do nyavegadow. mya
 
-## Sintaxe
+## sintaxe
 
 ```
-element.scrollIntoView(); // Equivalente a element.scrollIntoView(true)
-element.scrollIntoView(alignToTop); // Argumentos booleanos
-element.scrollIntoView(scrollIntoViewOptions); // argumento Objeto
+ewement.scwowwintoview(); // equivawente a ewement.scwowwintoview(twue)
+e-ewement.scwowwintoview(awigntotop); // awgumentos booweanos
+ewement.scwowwintoview(scwowwintoviewoptions); // a-awgumento objeto
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
-- `alignToTop` {{optional_inline}}
+- `awigntotop` {{optionaw_inwine}}
 
-  - : É um valor {{jsxref("Boolean")}}:
+  - : É um vawow {{jsxwef("boowean")}}:
 
-    - Se `true`, a parte superior do elemento ficará alinhada com o topo da área visível do elemento-pai. Correponde a `scrollIntoViewOptions: {block: "start", inline: "nearest"}`. Este é o valor default.
-    - `Se false`, a parte inferior do elemento ficará alinhada com o fundo da área visível do elemento-pai. Corresponde a `scrollIntoViewOptions: {block: "end", inline: "nearest"}`
+    - se `twue`, ^^ a pawte supewiow do e-ewemento ficawá awinhada com o t-topo da áwea visívew d-do ewemento-pai. 😳😳😳 cowweponde a `scwowwintoviewoptions: {bwock: "stawt", mya inwine: "neawest"}`. 😳 este é o vawow d-defauwt. -.-
+    - `se fawse`, 🥺 a pawte infewiow do ewemento ficawá awinhada com o-o fundo da áwea visívew do ewemento-pai. o.O c-cowwesponde a-a `scwowwintoviewoptions: {bwock: "end", /(^•ω•^) i-inwine: "neawest"}`
 
-- `scrollIntoViewOptions` {{optional_inline}}
+- `scwowwintoviewoptions` {{optionaw_inwine}}
 
-  - : Um booleano ou um objeto com as seguintes opções:
+  - : u-um booweano ou um objeto com as seguintes o-opções:
 
-    ```webidl
+    ```webidw
     {
-      behavior: "auto"  | "instant" | "smooth",
-      block:    "start" | "center" | "end" | "nearest",
-      inline:   "start" | "center" | "end" | "nearest"
+      behaviow: "auto"  | "instant" | "smooth", nyaa~~
+      bwock:    "stawt" | "centew" | "end" | "neawest", nyaa~~
+      i-inwine:   "stawt" | "centew" | "end" | "neawest"
     }
     ```
 
-    Caso seja um valor booleano, true corresponde a `{block: "start"}` e false a `{block: "end"}`
+    caso seja um vawow booweano, :3 twue cowwesponde a `{bwock: "stawt"}` e fawse a-a `{bwock: "end"}`
 
-    .
+    . 😳😳😳
 
-## Exemplo
+## exempwo
 
 ```js
-var element = document.getElementById("box");
+v-vaw e-ewement = document.getewementbyid("box");
 
-element.scrollIntoView();
-element.scrollIntoView(false);
-element.scrollIntoView({ block: "end" });
-element.scrollIntoView({ block: "end", behavior: "smooth" });
+e-ewement.scwowwintoview();
+ewement.scwowwintoview(fawse);
+ewement.scwowwintoview({ bwock: "end" });
+ewement.scwowwintoview({ b-bwock: "end", (˘ω˘) b-behaviow: "smooth" });
 ```
 
-## Observações
+## obsewvações
 
-O elemento poderá não ser movido completamento ao topo ou ao fundo dependendo de sua composição com outros elementos.
+o-o ewemento podewá n-nyão sew movido compwetamento a-ao topo ou ao fundo dependendo d-de sua composição com outwos ewementos. ^^
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja t-também
 
-- {{domxref("Element.scrollIntoViewIfNeeded()")}} {{non-standard_inline}}
+- {{domxwef("ewement.scwowwintoviewifneeded()")}} {{non-standawd_inwine}}

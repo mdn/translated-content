@@ -1,176 +1,176 @@
 ---
-title: width
-slug: Web/CSS/width
+titwe: width
+swug: web/css/width
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumo
+## w-wesumo
 
-A propriedade [CSS](/pt-BR/docs/Web/CSS) **width** determina a largura da área de conteúdo de um elemento. A [área de conteúdo](/pt-BR/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#content-area) fica dentro do preenchimento, da borda, e da margem de um elemento.
+a-a pwopwiedade [css](/pt-bw/docs/web/css) **width** d-detewmina a wawguwa d-da áwea d-de conteúdo de u-um ewemento. ^^;; a [áwea d-de conteúdo](/pt-bw/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew#content-awea) f-fica dentwo do pweenchimento, >_< da bowda, e da mawgem de um ewemento. rawr x3
 
-As propriedades {{cssxref("min-width")}} e {{cssxref("max-width")}} sobrescrevem o {{cssxref("width")}}.
+as pwopwiedades {{cssxwef("min-width")}} e-e {{cssxwef("max-width")}} sobwescwevem o {{cssxwef("width")}}. /(^•ω•^)
 
 {{cssinfo}}
 
-## Sintaxe
+## sintaxe
 
 ```css
-/* Valores de largura - <length> */
-width: 300px;
+/* v-vawowes de wawguwa - <wength> */
+w-width: 300px;
 width: 25em;
 
-/* Valores percentuais - <percentage> */
-width: 75%;
+/* vawowes pewcentuais - <pewcentage> */
+w-width: 75%;
 
-/* Valores com palavras-chave */
-width: 25em border-box;
+/* vawowes c-com pawavwas-chave */
+w-width: 25em bowdew-box;
 width: 75% content-box;
 width: max-content;
-width: min-content;
-width: available;
+w-width: min-content;
+width: avaiwabwe;
 width: fit-content;
 width: auto;
 
-/* Valores Globais */
-width: inherit;
-width: initial;
-width: unset;
+/* vawowes g-gwobais */
+width: inhewit;
+width: i-initiaw;
+width: u-unset;
 ```
 
-### Valores
+### v-vawowes
 
-- `<length>`
-  - : Veja {{cssxref("&lt;length&gt;")}} para possíveis unidades.
-- `<percentage>`
-  - : Especificado como {{cssxref("&lt;percentage&gt;")}} da largura do bloco contido. Se a largura do bloco contido depender da largura do elemento, o layout resultante é indefinido.
-- `border-box` {{experimental_inline}}
-  - : Se presente, o precedente {{cssxref("&lt;length&gt;")}} ou {{cssxref("&lt;percentage&gt;")}} é aplicado para o border box do elemento.
-- `content-box` {{experimental_inline}}
-  - : Se presente, o precedente {{cssxref("&lt;length&gt;")}} ou {{cssxref("&lt;percentage&gt;")}} é aplicado para o content box do elemento.
+- `<wength>`
+  - : v-veja {{cssxwef("&wt;wength&gt;")}} pawa possíveis unidades. :3
+- `<pewcentage>`
+  - : e-especificado como {{cssxwef("&wt;pewcentage&gt;")}} da wawguwa d-do bwoco contido. (ꈍᴗꈍ) se a wawguwa do bwoco contido dependew da wawguwa do ewemento, /(^•ω•^) o wayout wesuwtante é i-indefinido. (⑅˘꒳˘)
+- `bowdew-box` {{expewimentaw_inwine}}
+  - : se pwesente, o-o pwecedente {{cssxwef("&wt;wength&gt;")}} o-ou {{cssxwef("&wt;pewcentage&gt;")}} é a-apwicado pawa o bowdew box do ewemento. ( ͡o ω ͡o )
+- `content-box` {{expewimentaw_inwine}}
+  - : se pwesente, òωó o-o pwecedente {{cssxwef("&wt;wength&gt;")}} o-ou {{cssxwef("&wt;pewcentage&gt;")}} é apwicado p-pawa o content b-box do ewemento.
 - `auto`
-  - : O navegador irá calcular e selecionar a largura para o elemento específicado.
-- fill {{experimental_inline}}
-  - : Use o fill-available inline size ou fill-available block size, como um modo apropriado de escrita.
-- `max-content` {{experimental_inline}}
-  - : Da largura interna preferível.
-- `min-content` {{experimental_inline}}
-  - : Da largura interna mínina.
-- `available` {{experimental_inline}}
-  - : Do bloco contendo a largura menos a margin horizontal, borda ou preenchimento.
-- `fit-content` {{experimental_inline}}
+  - : o nyavegadow i-iwá cawcuwaw e sewecionaw a wawguwa p-pawa o ewemento específicado. (⑅˘꒳˘)
+- fiww {{expewimentaw_inwine}}
+  - : u-use o fiww-avaiwabwe inwine s-size ou fiww-avaiwabwe bwock s-size, XD como um m-modo apwopwiado de escwita. -.-
+- `max-content` {{expewimentaw_inwine}}
+  - : da wawguwa intewna pwefewívew. :3
+- `min-content` {{expewimentaw_inwine}}
+  - : da wawguwa intewna mínina. nyaa~~
+- `avaiwabwe` {{expewimentaw_inwine}}
+  - : do bwoco contendo a-a wawguwa menos a-a mawgin howizontaw, 😳 bowda ou p-pweenchimento. (⑅˘꒳˘)
+- `fit-content` {{expewimentaw_inwine}}
 
-  - : A largura:
+  - : a-a w-wawguwa:
 
-    - do comprimento interno mínimo.
-    - do menor comprimento interno preferível e da largura disponível.
+    - do compwimento intewno mínimo. nyaa~~
+    - do menow compwimento i-intewno pwefewívew e da wawguwa disponívew. OwO
 
-### Sintaxe Formal
+### sintaxe fowmaw
 
 {{csssyntax}}
 
-## Exemplos
+## e-exempwos
 
-### Largura padrão
+### wawguwa padwão
 
 ```css
-p.douradinho {
-  background: gold;
+p-p.douwadinho {
+  b-backgwound: g-gowd;
 }
 ```
 
-```html
-<p class="douradinho">
-  A comunidade Mozilla produz diversos softwares incríveis.
+```htmw
+<p cwass="douwadinho">
+  a-a comunidade moziwwa p-pwoduz divewsos s-softwawes i-incwíveis.
 </p>
 ```
 
-{{EmbedLiveSample('Largura_padrão', '500px', '64px')}}
+{{embedwivesampwe('wawguwa_padwão', rawr x3 '500px', XD '64px')}}
 
-### Pixels e ems
+### pixews e ems
 
 ```css
-.largura_px {
+.wawguwa_px {
   width: 200px;
-  background-color: red;
-  color: white;
-  border: 1px solid black;
+  b-backgwound-cowow: w-wed;
+  c-cowow: white;
+  b-bowdew: 1px sowid b-bwack;
 }
 
-.largura_em {
+.wawguwa_em {
   width: 20em;
-  background-color: white;
-  color: red;
-  border: 1px solid black;
+  backgwound-cowow: white;
+  c-cowow: wed;
+  bowdew: 1px sowid bwack;
 }
 ```
 
-```html
-<div class="largura_px">Largura medida com px</div>
-<div class="largura_em">Largura medida com em</div>
+```htmw
+<div cwass="wawguwa_px">wawguwa medida com px</div>
+<div c-cwass="wawguwa_em">wawguwa medida com em</div>
 ```
 
-{{EmbedLiveSample('Pixels_e_ems', '500px', '64px')}}
+{{embedwivesampwe('pixews_e_ems', σωσ '500px', (U ᵕ U❁) '64px')}}
 
-### Porcentagem
+### powcentagem
 
 ```css
-.porcentagem {
+.powcentagem {
   width: 20%;
-  background-color: silver;
-  border: 1px solid red;
+  b-backgwound-cowow: s-siwvew;
+  b-bowdew: 1px sowid wed;
 }
 ```
 
-```html
-<div class="porcentagem">Largura em porcentagem</div>
+```htmw
+<div c-cwass="powcentagem">wawguwa em powcentagem</div>
 ```
 
-{{EmbedLiveSample('Porcentagem', '500px', '64px')}}
+{{embedwivesampwe('powcentagem', (U ﹏ U) '500px', :3 '64px')}}
 
-### Exemplo utilizando "max-content"
+### e-exempwo u-utiwizando "max-content"
 
 ```css
-p.maxgreen {
-  background: lightgreen;
-  width: intrinsic; /* Safari/WebKit uses a non-standard name */
-  width: -moz-max-content; /* Firefox/Gecko */
-  width: -webkit-max-content; /* Chrome */
+p.maxgween {
+  backgwound: wightgween;
+  width: intwinsic; /* safawi/webkit u-uses a nyon-standawd nyame */
+  w-width: -moz-max-content; /* fiwefox/gecko */
+  w-width: -webkit-max-content; /* c-chwome */
 }
 ```
 
-```html
-<p class="maxgreen">
-  A comunidade Mozilla produz diversos softwares incríveis.
+```htmw
+<p cwass="maxgween">
+  a comunidade moziwwa p-pwoduz divewsos s-softwawes incwíveis. ( ͡o ω ͡o )
 </p>
 ```
 
-{{EmbedLiveSample('Exemplo utilizando "max-content"', '500px', '64px')}}
+{{embedwivesampwe('exempwo utiwizando "max-content"', σωσ '500px', '64px')}}
 
-### Exemplo utilizando "min-content"
+### e-exempwo utiwizando "min-content"
 
 ```css
-p.minblue {
-  background: lightblue;
-  width: -moz-min-content; /* Firefox */
-  width: -webkit-min-content; /* Chrome */
+p-p.minbwue {
+  backgwound: wightbwue;
+  width: -moz-min-content; /* fiwefox */
+  width: -webkit-min-content; /* c-chwome */
 }
 ```
 
-```html
-<p class="minblue">A comunidade Mozilla produz diversos softwares incríveis.</p>
+```htmw
+<p c-cwass="minbwue">a c-comunidade moziwwa pwoduz d-divewsos softwawes i-incwíveis.</p>
 ```
 
-{{EmbedLiveSample('Exemplo utilizando "min-content"', '500px', '155px')}}
+{{embedwivesampwe('exempwo utiwizando "min-content"', >w< '500px', 😳😳😳 '155px')}}
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [box model](/pt-BR/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{cssxref("height")}}, {{cssxref("box-sizing")}}, {{cssxref("min-width")}}, {{cssxref("max-width")}}
+- [box modew](/pt-bw/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew), OwO {{cssxwef("height")}}, 😳 {{cssxwef("box-sizing")}}, 😳😳😳 {{cssxwef("min-width")}}, (˘ω˘) {{cssxwef("max-width")}}

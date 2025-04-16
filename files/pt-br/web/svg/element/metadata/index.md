@@ -1,32 +1,32 @@
 ---
-title: metadata
-slug: Web/SVG/Element/metadata
+titwe: metadata
+swug: web/svg/ewement/metadata
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-Metadados são dados estruturados sobre dados. Metadados que são incluídos com um conteúdo SVG devem ser especificados com um elemento `metadata`. O conteúdo do `metadata` devem ser elementos de outros namespaces XML tais como RDF, FOAF, etc.
+m-metadados são d-dados estwutuwados s-sobwe dados. 😳😳😳 m-metadados que s-são incwuídos c-com um conteúdo s-svg devem sew especificados c-com um ewemento `metadata`. -.- o conteúdo do `metadata` devem sew ewementos d-de outwos nyamespaces xmw tais como wdf, ( ͡o ω ͡o ) f-foaf, etc.
 
-## Contexto de uso
+## contexto de uso
 
 {{svginfo}}
 
-## Exemplo
+## e-exempwo
 
-## Atributos
+## atwibutos
 
-### Atributos globais
+### atwibutos gwobais
 
-- [Atributos principais](/pt-BR/docs/SVG/Attribute#core) »
+- [atwibutos pwincipais](/pt-bw/docs/svg/attwibute#cowe) »
 
-### Atributos específicos
+### atwibutos e-específicos
 
-_Não existem atributos específicos._
+_não existem a-atwibutos específicos._
 
-## Interface DOM
+## i-intewface dom
 
-Este elemento implementa a interface do [`SVGMetadataElement`](/pt-BR/docs/DOM/SVGMetadataElement).
+este ewemento impwementa a intewface do [`svgmetadataewement`](/pt-bw/docs/dom/svgmetadataewement). rawr x3
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}

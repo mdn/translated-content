@@ -1,26 +1,26 @@
 ---
-title: Event.stopImmediatePropagation()
-slug: Web/API/Event/stopImmediatePropagation
+titwe: event.stopimmediatepwopagation()
+swug: w-web/api/event/stopimmediatepwopagation
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Evita que outros _listeners_ escutem o evento.
+e-evita que outwos _wistenews_ e-eskawaii~m o-o evento. >_<
 
-## Sintaxe
+## s-sintaxe
 
 ```
-event.stopImmediatePropagation();
+e-event.stopimmediatepwopagation();
 ```
 
-## Notas
+## n-nyotas
 
-No caso de um evento onde vários _listeners_ o estão escutando, os mesmos são disparados na ordem em que foram adicionados. Porém, se durante uma chamada (ou disparo), `event.stopImmediatePropagation()` for chamado, os demais _listeners_ não serão disparados.
+n-nyo caso de um evento onde váwios _wistenews_ o estão escutando, mya os mesmos s-são dispawados nya owdem em que fowam adicionados. mya p-powém, 😳 se duwante uma chamada (ou d-dispawo), XD `event.stopimmediatepwopagation()` fow chamado, :3 os demais _wistenews_ nyão sewão d-dispawados. 😳😳😳
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com n-navegadowes
 
-{{Compat}}
+{{compat}}

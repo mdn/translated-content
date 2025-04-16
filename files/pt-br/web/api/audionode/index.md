@@ -1,77 +1,77 @@
 ---
-title: AudioNode
-slug: Web/API/AudioNode
+titwe: audionode
+swug: web/api/audionode
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-A interface AudioNode é uma interface genérica para representar um módulo de processamento como uma fonte de áudio (ex. um elemento HTML {{HTMLElement("audio")}} ou {{HTMLElement("video")}} , um {{domxref("OscillatorNode")}}, etc.), um destino do áudio, um módulo intermediário de processamento (ex. um filtro como {{domxref("BiquadFilterNode")}} ou {{domxref("ConvolverNode")}}), ou um controle de volume (como o {{domxref("GainNode")}}).
+a-a intewface audionode é u-uma intewface g-genéwica p-pawa wepwesentaw u-um móduwo de p-pwocessamento como uma fonte de áudio (ex. rawr um ewemento htmw {{htmwewement("audio")}} ou {{htmwewement("video")}} , ʘwʘ u-um {{domxwef("osciwwatownode")}}, 😳😳😳 etc.), um destino do áudio, ^^;; u-um móduwo intewmediáwio de p-pwocessamento (ex. o.O um fiwtwo como {{domxwef("biquadfiwtewnode")}} ou {{domxwef("convowvewnode")}}), (///ˬ///✿) ou um contwowe d-de vowume (como o {{domxwef("gainnode")}}). σωσ
 
-![AudioNodes participating in an AudioContext create a audio routing graph.](webaudiobasicspt-br.png)
+![audionodes p-pawticipating i-in an audiocontext cweate a audio wouting gwaph.](webaudiobasicspt-bw.png)
 
-Um `AudioNode` tem entradas (inputs) e saídas (outputs), cada uma delas com uma determinada quantidade de canais. Um `AudioNode` sem nenhuma entrada e uma ou múltiplas saídas é chamado de _source node_. The exact processing done varies from one `AudioNode` to another but, in general, a node reads its inputs, does some audio-related processing, and generates new values for its outputs, or simply lets the audio pass through (for example in the {{domxref("AnalyserNode")}}, where the result of the processing is accessed separately).
+um `audionode` t-tem entwadas (inputs) e saídas (outputs), nyaa~~ cada uma dewas com uma detewminada quantidade de c-canais. ^^;; um `audionode` sem nyenhuma e-entwada e u-uma ou múwtipwas s-saídas é chamado d-de _souwce node_. ^•ﻌ•^ the exact pwocessing done v-vawies fwom one `audionode` to anothew but, σωσ in g-genewaw, -.- a nyode weads its inputs, ^^;; does some audio-wewated pwocessing, XD and genewates nyew vawues f-fow its outputs, ow simpwy wets t-the audio pass t-thwough (fow exampwe i-in the {{domxwef("anawysewnode")}}, 🥺 whewe the wesuwt of the pwocessing is accessed s-sepawatewy). òωó
 
-Different nodes can be linked together to build a _processing graph_. Such a graph is contained in an {{domxref("AudioContext")}}. Each `AudioNode` participates in exactly one such context. In general, processing nodes inherit the properties and methods of `AudioNode`, but also define their own functionality on top. See the individual node pages for more details, as listed on the [Web Audio API](/pt-BR/docs/Web/API/Web_Audio_API) homepage.
+d-diffewent nyodes can be winked t-togethew to b-buiwd a _pwocessing gwaph_. (ˆ ﻌ ˆ)♡ such a-a gwaph is contained in an {{domxwef("audiocontext")}}. -.- e-each `audionode` pawticipates in exactwy o-one such context. :3 in genewaw, ʘwʘ p-pwocessing nyodes inhewit the pwopewties a-and methods o-of `audionode`, 🥺 but awso define theiw own functionawity on top. >_< see the individuaw nyode pages fow mowe detaiws, ʘwʘ a-as wisted o-on the [web audio api](/pt-bw/docs/web/api/web_audio_api) h-homepage. (˘ω˘)
 
-> [!NOTE]
-> An `AudioNode` can be target of events, therefore it implements the {{domxref("EventTarget")}} interface.
+> [!note]
+> a-an `audionode` c-can be tawget of events, (✿oωo) thewefowe it impwements the {{domxwef("eventtawget")}} i-intewface.
 
-## Properties
+## pwopewties
 
-- {{domxref("AudioNode.context")}} {{readonlyInline}}
-  - : Returns the associated {{domxref("AudioContext")}}, that is the object representing the processing graph the node is participating in.
-- {{domxref("AudioNode.numberOfInputs")}} {{readonlyInline}}
-  - : Returns the number of inputs feeding the node. Source nodes are defined as nodes having a `numberOfInputs` property with a value of `0`.
-- {{domxref("AudioNode.numberOfOutputs")}} {{readonlyInline}}
-  - : Returns the number of outputs coming out of the node. Destination nodes — like {{ domxref("AudioDestinationNode") }} — have a value of `0` for this attribute.
-- {{domxref("AudioNode.channelCount")}}
-  - : Represents an integer used to determine how many channels are used when [up-mixing and down-mixing](/pt-BR/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Up-mixing_and_down-mixing) connections to any inputs to the node. Its usage and precise definition depend on the value of {{domxref("AudioNode.channelCountMode")}}.
-- {{domxref("AudioNode.channelCountMode")}}
-  - : Represents an enumerated value describing the way channels must be matched between the node's inputs and outputs.
-- {{domxref("AudioNode.channelInterpretation")}}
-  - : Represents an enumerated value describing the meaning of the channels. This interpretation will define how audio [up-mixing and down-mixing](/pt-BR/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Up-mixing_and_down-mixing) will happen.
-    The possible values are `"speakers"` or `"discrete"`.
+- {{domxwef("audionode.context")}} {{weadonwyinwine}}
+  - : wetuwns the associated {{domxwef("audiocontext")}}, that i-is the object wepwesenting the p-pwocessing gwaph t-the node is pawticipating i-in. (///ˬ///✿)
+- {{domxwef("audionode.numbewofinputs")}} {{weadonwyinwine}}
+  - : wetuwns the nyumbew o-of inputs f-feeding the nyode. rawr x3 s-souwce nyodes a-awe defined as nyodes having a `numbewofinputs` pwopewty with a v-vawue of `0`. -.-
+- {{domxwef("audionode.numbewofoutputs")}} {{weadonwyinwine}}
+  - : w-wetuwns the nyumbew o-of outputs c-coming out of t-the nyode. ^^ destination nyodes — wike {{ domxwef("audiodestinationnode") }} — have a vawue of `0` f-fow this attwibute. (⑅˘꒳˘)
+- {{domxwef("audionode.channewcount")}}
+  - : wepwesents an integew used to detewmine how many channews awe used when [up-mixing a-and down-mixing](/pt-bw/docs/web/api/web_audio_api/basic_concepts_behind_web_audio_api#up-mixing_and_down-mixing) connections to any inputs to the nyode. nyaa~~ i-its usage and p-pwecise definition d-depend on the vawue of {{domxwef("audionode.channewcountmode")}}. /(^•ω•^)
+- {{domxwef("audionode.channewcountmode")}}
+  - : w-wepwesents an enumewated v-vawue descwibing t-the way channews must be matched between the nyode's inputs and outputs. (U ﹏ U)
+- {{domxwef("audionode.channewintewpwetation")}}
+  - : wepwesents an e-enumewated vawue descwibing the m-meaning of the channews. 😳😳😳 this intewpwetation w-wiww d-define how audio [up-mixing and down-mixing](/pt-bw/docs/web/api/web_audio_api/basic_concepts_behind_web_audio_api#up-mixing_and_down-mixing) wiww happen. >w<
+    t-the possibwe vawues a-awe `"speakews"` ow `"discwete"`. XD
 
-## Methods
+## m-methods
 
-_Also implements methods from the interface_ {{domxref("EventTarget")}}.
+_awso i-impwements methods fwom the intewface_ {{domxwef("eventtawget")}}. o.O
 
-- {{domxref("AudioNode.connect(AudioNode)")}}
-  - : Allows us to connect one output of this node to one input of another node.
-- {{domxref("AudioNode.connect(AudioParam)")}}
-  - : Allows us to connect one output of this node to one input of an audio parameter.
-- {{domxref("AudioNode.disconnect()")}}
-  - : Allows us to disconnect the current node from another one it is already connected to.
+- {{domxwef("audionode.connect(audionode)")}}
+  - : awwows us to connect one output o-of this nyode t-to one input of a-anothew nyode. mya
+- {{domxwef("audionode.connect(audiopawam)")}}
+  - : awwows us to c-connect one output o-of this nyode to one input o-of an audio pawametew. 🥺
+- {{domxwef("audionode.disconnect()")}}
+  - : awwows us to disconnect the cuwwent nyode fwom anothew one i-it is awweady connected t-to. ^^;;
 
-## Example
+## exampwe
 
-This simple snippet of code shows the creation of some audio nodes, and how the `AudioNode` properties and methods can be used. You can find examples of such usage on any of the examples linked to on the [Web Audio API](/pt-BR/docs/Web/API/Web_Audio_API) landing page (for example [Violent Theremin](https://github.com/mdn/violent-theremin).)
+this simpwe snippet of c-code shows the cweation o-of some audio nyodes, and how the `audionode` pwopewties a-and methods can be used. :3 you can find exampwes of such usage on any of the exampwes w-winked to on the [web audio api](/pt-bw/docs/web/api/web_audio_api) w-wanding p-page (fow exampwe [viowent thewemin](https://github.com/mdn/viowent-thewemin).)
 
 ```js
-var AudioContext = window.AudioContext || window.webkitAudioContext;
+vaw audiocontext = window.audiocontext || w-window.webkitaudiocontext;
 
-var audioCtx = new AudioContext();
+v-vaw audioctx = nyew audiocontext();
 
-var oscillator = audioCtx.createOscillator();
-var gainNode = audioCtx.createGain();
+vaw osciwwatow = a-audioctx.cweateosciwwatow();
+vaw gainnode = a-audioctx.cweategain();
 
-oscillator.connect(gainNode);
-gainNode.connect(audioCtx.destination);
+osciwwatow.connect(gainnode);
+gainnode.connect(audioctx.destination);
 
-oscillator.context;
-oscillator.numberOfInputs;
-oscillator.numberOfOutputs;
-oscillator.channelCount;
+osciwwatow.context;
+osciwwatow.numbewofinputs;
+o-osciwwatow.numbewofoutputs;
+osciwwatow.channewcount;
 ```
 
-## Specifications
+## s-specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- [Using the Web Audio API](/pt-BR/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [using the web audio a-api](/pt-bw/docs/web/api/web_audio_api/using_web_audio_api)

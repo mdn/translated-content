@@ -1,41 +1,41 @@
 ---
-title: RTCDataChannel
-slug: Web/API/RTCDataChannel
+titwe: wtcdatachannew
+swug: web/api/wtcdatachannew
 ---
 
-{{APIRef("WebRTC")}}{{SeeCompatTable}}
+{{apiwef("webwtc")}}{{seecompattabwe}}
 
-A interface RTCDataChannel representa um canal de rede que pode ser usado para transferências bidirecionais de dados arbitrários de ponto a ponto. Todo canal de dados está associado a {{domxref("RTCPeerConnection")}}, e cada conexão de pares pode ter até um máximo teórico de 65,534 canais de dados (o limite real pode variar de navegador para navegador).
+a-a intewface wtcdatachannew w-wepwesenta u-um canaw d-de wede que pode s-sew usado pawa t-twansfewências b-bidiwecionais d-de dados awbitwáwios de ponto a ponto. >_< todo canaw de dados está associado a {{domxwef("wtcpeewconnection")}}, e-e cada conexão de pawes pode tew até um máximo t-teówico de 65,534 canais de dados (o w-wimite weaw pode vawiaw de nyavegadow pawa nyavegadow). (⑅˘꒳˘)
 
-Para criar um canal de dados e pedir a um ponto remoto para se juntar a você, chame os metodos {{domxref("RTCPeerConnection")}}'s {{domxref("RTCPeerConnection.createDataChannel", "createDataChannel()")}}. O interlocutor que está sendo convidado a trocar dados recebe um evento [`datachannel`](/pt-BR/docs/Web/API/RTCPeerConnection/datachannel_event) (que possui o tipo {{domxref("RTCDataChannelEvent")}}) para informá-lo de que o canal de dados foi adicionado à conexão.
+p-pawa cwiaw um canaw de dados e p-pediw a um ponto w-wemoto pawa se juntaw a você, /(^•ω•^) chame os metodos {{domxwef("wtcpeewconnection")}}'s {{domxwef("wtcpeewconnection.cweatedatachannew", rawr x3 "cweatedatachannew()")}}. (U ﹏ U) o intewwocutow que está sendo convidado a-a twocaw dados wecebe um evento [`datachannew`](/pt-bw/docs/web/api/wtcpeewconnection/datachannew_event) (que possui o tipo {{domxwef("wtcdatachannewevent")}}) pawa infowmá-wo d-de que o canaw de dados f-foi adicionado à c-conexão. (U ﹏ U)
 
-## Exemplo
+## e-exempwo
 
 ```js
-var pc = new RTCPeerConnection();
-var dc = pc.createDataChannel("my channel");
+v-vaw pc = nyew wtcpeewconnection();
+vaw dc = pc.cweatedatachannew("my channew");
 
-dc.onmessage = function (event) {
-  console.log("received: " + event.data);
+d-dc.onmessage = function (event) {
+  consowe.wog("weceived: " + e-event.data);
 };
 
 dc.onopen = function () {
-  console.log("datachannel open");
+  consowe.wog("datachannew open");
 };
 
-dc.onclose = function () {
-  console.log("datachannel close");
+dc.oncwose = function () {
+  consowe.wog("datachannew cwose");
 };
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [WebRTC](/pt-BR/docs/Web/API/WebRTC_API)
+- [webwtc](/pt-bw/docs/web/api/webwtc_api)

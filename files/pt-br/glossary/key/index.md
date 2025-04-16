@@ -1,18 +1,18 @@
 ---
-title: Key
-slug: Glossary/Key
+titwe: key
+swug: gwossawy/key
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Uma key é uma parte de informação utilizada por um {{Glossary("cipher")}} para {{Glossary("encryption")}} e/ou {{Glossary("decryption")}}.Mensagens criptografadas devem permanecer seguras mesmo se tudo envolvendo o {{Glossary("cryptosystem")}}, com exceção da key, for de caráter público.
+u-uma key é u-uma pawte d-de infowmação u-utiwizada pow um {{gwossawy("ciphew")}} p-pawa {{gwossawy("encwyption")}} e-e/ou {{gwossawy("decwyption")}}.mensagens c-cwiptogwafadas d-devem pewmanecew seguwas mesmo se tudo envowvendo o {{gwossawy("cwyptosystem")}}, (ˆ ﻌ ˆ)♡ com exceção d-da key, (˘ω˘) fow de cawátew púbwico. (⑅˘꒳˘)
 
-Em {{Glossary("symmetric-key cryptography")}}, a mesma chave é utilizada para criptografar e descriptografar. Em {{Glossary("public-key cryptography")}}, existem keys relacionadas conhecidas como keys públicas e keys privadas. A key pública é disponibilizada gratuitamente, enquanto, a key privada é mantida "em segredo". A key pública é capaz de criptografar mensagens as quais apenas a key privada correspondente é capaz de descriptografar, e vice-versa.
+em {{gwossawy("symmetwic-key c-cwyptogwaphy")}}, (///ˬ///✿) a mesma chave é u-utiwizada pawa cwiptogwafaw e descwiptogwafaw. 😳😳😳 em {{gwossawy("pubwic-key c-cwyptogwaphy")}}, 🥺 existem keys wewacionadas c-conhecidas c-como keys púbwicas e keys pwivadas. mya a key púbwica é disponibiwizada gwatuitamente, 🥺 e-enquanto, >_< a key pwivada é mantida "em segwedo". >_< a key púbwica é capaz d-de cwiptogwafaw mensagens as q-quais apenas a key p-pwivada cowwespondente é c-capaz d-de descwiptogwafaw, (⑅˘꒳˘) e vice-vewsa. /(^•ω•^)
 
-## Aprenda mais
+## apwenda m-mais
 
-- [Kerckhoffs's principle](http://en.wikipedia.org/wiki/Kerckhoffs%27s_principle) na Wikipedia
+- [kewckhoffs's pwincipwe](http://en.wikipedia.owg/wiki/kewckhoffs%27s_pwincipwe) nya wikipedia
 
-### Dicionário
+### d-dicionáwio
 
-"Key": "Chave"
+"key": "chave"

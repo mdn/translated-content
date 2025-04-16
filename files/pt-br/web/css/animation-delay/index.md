@@ -1,58 +1,58 @@
 ---
-title: animation-delay
-slug: Web/CSS/animation-delay
+titwe: animation-deway
+swug: w-web/css/animation-deway
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-A propriedade CSS **`animation-delay`** especifíca quando uma animação deve começar. Você pode começar a animação no futuro, imediatamente ou desde o início, ou imediatamente e parcialmente através do ciclo de animação.
+a-a pwopwiedade c-css **`animation-deway`** e-especifíca quando u-uma animação d-deve começaw. 😳 v-você pode começaw a-a animação nyo futuwo, σωσ imediatamente ou desde o início, rawr x3 ou imediatamente e-e pawciawmente atwavés do cicwo de animação. OwO
 
 ```css
-/* Uma animação */
-animation-delay: 3s;
-animation-delay: 0s;
-animation-delay: -1500ms;
+/* u-uma animação */
+animation-deway: 3s;
+a-animation-deway: 0s;
+animation-deway: -1500ms;
 
-/* Várias animações */
-animation-delay: 2.1s, 480ms;
+/* váwias animações */
+animation-deway: 2.1s, /(^•ω•^) 480ms;
 ```
 
-Muitas vezes é conveniente usar a propriedade abreviada {{cssxref("animation")}} para definir todas as propriedades de animação de uma só vez.
+m-muitas vezes é conveniente usaw a-a pwopwiedade a-abweviada {{cssxwef("animation")}} pawa definiw todas as pwopwiedades de animação de uma só vez.
 
 {{cssinfo}}
 
-## Sintaxe
+## s-sintaxe
 
-### Valores
+### vawowes
 
-- `{{cssxref("&lt;time&gt;")}}`
+- `{{cssxwef("&wt;time&gt;")}}`
 
-  - : O deslocamento do tempo, a partir do momento em que a animação é aplicada ao elemento, no qual a animação deve começar. Isso pode ser especificado em segundos (`s`) ou milesegundos or milliseconds (`ms`). A unidade é necessaria.
+  - : o deswocamento do tempo, 😳😳😳 a pawtiw do momento em q-que a animação é apwicada ao e-ewemento, ( ͡o ω ͡o ) nyo q-quaw a animação d-deve começaw. >_< i-isso pode sew especificado em segundos (`s`) ou m-miwesegundos ow miwwiseconds (`ms`). a unidade é n-nyecessawia. >w<
 
-    Um valor positivo indica que a animação deve começar após o período de especificação ter decorrido. O valor de `0s`, que é o padrão, incida que a animação deve começar desde que foi aplicada.
+    um vawow positivo indica que a animação deve começaw após o pewíodo de e-especificação tew decowwido. rawr o-o vawow de `0s`, 😳 q-que é o padwão, >w< i-incida que a animação deve começaw desde que foi apwicada. (⑅˘꒳˘)
 
-    Um valor negativo faz com que a animação comece imediatamente, mas parcialmente através do seu ciclo. Por exemplo, se você específicar `-1s` como tempo da animation-delay , a animação vai começar imediatamente, mas começará 1 segundo na sequência de animação. Se você específicar um valor negativo para a animation-delay, mas o valor inicial é implícito, o valor inicial é retirado do momento em que a animação é aplicada ao elemento.
+    u-um vawow nyegativo f-faz com que a animação c-comece imediatamente, OwO m-mas pawciawmente atwavés d-do seu cicwo. (ꈍᴗꈍ) pow exempwo, 😳 se v-você específicaw `-1s` como tempo da animation-deway , 😳😳😳 a-a animação vai começaw i-imediatamente, mya mas começawá 1 s-segundo nya sequência d-de animação. mya se você específicaw um vawow nyegativo pawa a animation-deway, (⑅˘꒳˘) mas o vawow iniciaw é i-impwícito, (U ﹏ U) o vawow i-iniciaw é wetiwado do momento e-em que a animação é a-apwicada a-ao ewemento. mya
 
-> [!NOTE]
-> Quando você especifica vários valores separados por vírgula em uma propriedade `animation-*` , eles serão atribuídos às animações especificadas na propriedade {{cssxref("animation-name")}} em diferentes modos, dependendo de quantos existam. Para mais informações veja [Setting multiple animation property values](/pt-BR/docs/Web/CSS/CSS_animations/Using_CSS_animations#setting_multiple_animation_property_values).
+> [!note]
+> quando você especifica váwios vawowes s-sepawados pow víwguwa em uma pwopwiedade `animation-*` , ʘwʘ ewes sewão atwibuídos às animações e-especificadas nya pwopwiedade {{cssxwef("animation-name")}} e-em difewentes m-modos, (˘ω˘) dependendo d-de quantos existam. (U ﹏ U) pawa mais i-infowmações v-veja [setting muwtipwe a-animation p-pwopewty vawues](/pt-bw/docs/web/css/css_animations/using_css_animations#setting_muwtipwe_animation_pwopewty_vawues). ^•ﻌ•^
 
-### Sintaxe formal
+### sintaxe fowmaw
 
 {{csssyntax}}
 
-## Exemplos
+## e-exempwos
 
-Veja [CSS animations](/pt-BR/docs/Web/CSS/CSS_animations/Using_CSS_animations) para exemplos.
+v-veja [css a-animations](/pt-bw/docs/web/css/css_animations/using_css_animations) p-pawa exempwos. (˘ω˘)
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com os browsers
+## compatibiwidade com os bwowsews
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [Using CSS animations](/pt-BR/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- JavaScript {{domxref("AnimationEvent")}} API
+- [using c-css animations](/pt-bw/docs/web/css/css_animations/using_css_animations)
+- javascwipt {{domxwef("animationevent")}} api

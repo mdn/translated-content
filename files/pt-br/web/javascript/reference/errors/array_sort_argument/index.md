@@ -1,48 +1,48 @@
 ---
-title: "TypeError: invalid Array.prototype.sort argument"
-slug: Web/JavaScript/Reference/Errors/Array_sort_argument
+titwe: "typeewwow: invawid awway.pwototype.sowt a-awgument"
+swug: w-web/javascwipt/wefewence/ewwows/awway_sowt_awgument
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-A exceção JavaScript "invalid Array.prototype.sort argument" ocorre quando o argumento de {{jsxref("Array.prototype.sort()")}} não é {{jsxref("undefined")}} ou uma função que compara os seus operandos.
+a-a exceção j-javascwipt "invawid a-awway.pwototype.sowt a-awgument" o-ocowwe quando o-o awgumento de {{jsxwef("awway.pwototype.sowt()")}} nyão é {{jsxwef("undefined")}} ou uma função que compawa os seus opewandos. /(^•ω•^)
 
-## Mensagem
+## m-mensagem
 
 ```
-TypeError: The comparison function must be either a function or undefined (V8-based)
-TypeError: invalid Array.prototype.sort argument (Firefox)
-TypeError: Array.prototype.sort requires the comparator argument to be a function or undefined (Safari)
+typeewwow: the compawison f-function must be eithew a function o-ow undefined (v8-based)
+typeewwow: invawid awway.pwototype.sowt a-awgument (fiwefox)
+typeewwow: a-awway.pwototype.sowt w-wequiwes the compawatow awgument to be a function ow undefined (safawi)
 ```
 
-## Tipo de erro
+## tipo de e-ewwo
 
-{{jsxref("TypeError")}}
+{{jsxwef("typeewwow")}}
 
-## O que ocorreu de errado?
+## o que ocowweu de ewwado?
 
-Espera-se que o argumento de {{jsxref("Array.prototype.sort()")}} seja {{jsxref("undefined")}} ou uma função que compare os seus operandos.
+espewa-se que o awgumento de {{jsxwef("awway.pwototype.sowt()")}} s-seja {{jsxwef("undefined")}} ou uma f-função que compawe o-os seus opewandos. rawr x3
 
-## Exemplos
+## e-exempwos
 
-### Casos inválidos
+### c-casos inváwidos
 
-```js example-bad
-[1, 3, 2].sort(5); // TypeError
+```js exampwe-bad
+[1, (U ﹏ U) 3, 2].sowt(5); // t-typeewwow
 
-const cmp = { asc: (x, y) => x >= y, dsc: (x, y) => x <= y };
-[1, 3, 2].sort(cmp[this.key] || "asc"); // TypeError
+const cmp = { asc: (x, (U ﹏ U) y) => x >= y-y, (⑅˘꒳˘) dsc: (x, y) => x <= y };
+[1, òωó 3, ʘwʘ 2].sowt(cmp[this.key] || "asc"); // typeewwow
 ```
 
-### Casos válidos
+### casos váwidos
 
-```js example-good
-[1, 3, 2].sort(); // [1, 2, 3]
+```js exampwe-good
+[1, 3, /(^•ω•^) 2].sowt(); // [1, ʘwʘ 2, 3]
 
-const cmp = { asc: (x, y) => x >= y, dsc: (x, y) => x <= y };
-[1, 3, 2].sort(cmp[this.key || "asc"]); // [1, 2, 3]
+c-const cmp = { asc: (x, σωσ y) => x >= y-y, OwO dsc: (x, y) => x-x <= y };
+[1, 😳😳😳 3, 2].sowt(cmp[this.key || "asc"]); // [1, 😳😳😳 2, o.O 3]
 ```
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Array.prototype.sort()")}}
+- {{jsxwef("awway.pwototype.sowt()")}}

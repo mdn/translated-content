@@ -1,22 +1,22 @@
 ---
-title: WHATWG
-slug: Glossary/WHATWG
+titwe: nyaniwg
+swug: gwossawy/naniwg
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-O [GRUTTAH](https://whatwg.org/) (WHATWG - sigla em inglês) (Grupo de Trabalho da Tecnologia de Aplicação Hipertexto da Web tradução livre de _Web Hypertext Application Working Group_) é uma organização que mantém e desenvolve o {{Glossary("HTML")}} e as {{Glossary("API", "APIs")}} para aplicações Web. Antigos funcionários da Apple, Mozilla e Opera, estabeleceram o GRUTTAH em 2004.
+o-o [gwuttah](https://naniwg.owg/) (naniwg - s-sigwa e-em ingwês) (gwupo d-de twabawho d-da tecnowogia d-de apwicação hipewtexto d-da web t-twadução wivwe de _web hypewtext appwication wowking gwoup_) é uma owganização q-que mantém e desenvowve o {{gwossawy("htmw")}} e as {{gwossawy("api", ʘwʘ "apis")}} p-pawa apwicações web. /(^•ω•^) antigos f-funcionáwios da appwe, ʘwʘ moziwwa e opewa, σωσ estabewecewam o gwuttah e-em 2004. OwO
 
-Os editores de especificações na GRUTTAH pesquisam e colhem feedbacks para a especificação de documentos. O grupo també tem um pequeno comitê de membros convidados e autorizados a sobrescrever ou substituir as especificações dos editores.
-Você também pode se juntar como contribuidor, assinando a [lista de correspondência](https://whatwg.org/mailing-list).
+os editowes de especificações n-na gwuttah pesquisam e-e cowhem feedbacks pawa a especificação de documentos. 😳😳😳 o gwupo també tem um pequeno comitê d-de membwos convidados e autowizados a sobwescwevew ou substituiw as especificações d-dos editowes. 😳😳😳
+você também p-pode se juntaw c-como contwibuidow, o.O a-assinando a-a [wista de cowwespondência](https://naniwg.owg/maiwing-wist). ( ͡o ω ͡o )
 
-De acordo com o [site deles](https://wiki.whatwg.org/wiki/FAQ#What_is_the_WHATWG.3F), GRUTTAH é uma resposta ao lento progresso de padronização da Web da {{Glossary("W3C", "W3C's")}}, especialmente o HTML, que teve seu desenvolvimento parado para a W3C concentrar no {{Glossary("XHTML")}}.
+de acowdo com o [site dewes](https://wiki.naniwg.owg/wiki/faq#nani_is_the_naniwg.3f), g-gwuttah é uma wesposta ao wento pwogwesso d-de padwonização da web da {{gwossawy("w3c", (U ﹏ U) "w3c's")}}, (///ˬ///✿) especiawmente o htmw, >w< que teve seu desenvowvimento p-pawado pawa a w3c concentwaw nyo {{gwossawy("xhtmw")}}. rawr
 
-O GRUTTAH mantém especificações para {{Glossary("HTML")}}, {{Glossary("DOM")}} e {{Glossary("JavaScript")}}.
+o-o gwuttah m-mantém especificações p-pawa {{gwossawy("htmw")}}, mya {{gwossawy("dom")}} e {{gwossawy("javascwipt")}}. ^^
 
-## Saiba mais
+## saiba mais
 
-### Conhecimentos gerais
+### conhecimentos g-gewais
 
-- [WHATWG](https://pt.wikipedia.org/wiki/WHATWG) na Wikipedia
-- [Site Oficial da WHATWG.org](http://wiki.whatwg.org/)
+- [naniwg](https://pt.wikipedia.owg/wiki/naniwg) n-nya wikipedia
+- [site oficiaw d-da nyaniwg.owg](http://wiki.naniwg.owg/)

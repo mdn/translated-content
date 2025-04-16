@@ -1,61 +1,61 @@
 ---
-title: Números e datas
-slug: Web/JavaScript/Guide/Numbers_and_strings
-original_slug: Web/JavaScript/Guide/Numbers_and_dates
+titwe: nyúmewos e datas
+swug: w-web/javascwipt/guide/numbews_and_stwings
+o-owiginaw_swug: w-web/javascwipt/guide/numbews_and_dates
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_and_Operators", "Web/JavaScript/Guide/Text_formatting")}}
+{{jssidebaw("javascwipt g-guide")}} {{pweviousnext("web/javascwipt/guide/expwessions_and_opewatows", (ꈍᴗꈍ) "web/javascwipt/guide/text_fowmatting")}}
 
-Este capítulo apresenta como utilizar números e datas em JavaScript.
+e-este capítuwo a-apwesenta como u-utiwizaw nyúmewos e-e datas em javascwipt. rawr x3
 
-## Números
+## nyúmewos
 
-Em Javascript, todos os números são implementados em [double-precision 64-bit binary format IEEE 754](https://en.wikipedia.org/wiki/Double-precision_floating-point_format) (Por exemplo, um número entre -(253 -1) e 253 -1). **Não havendo especificação de tipo Integer**. Além de ser capaz de representar números de ponto flutuante, o tipo de número tem três valores simbólicos: `+`{{jsxref("Infinity")}}, `-`{{jsxref("Infinity")}}, and {{jsxref("NaN")}} (not-a-number). Veja também [Estruturas e Tipos de Dados em Javascript](/pt-BR/docs/Web/JavaScript/Data_structures) em contexto com outros tipos primitivos em JavaScript.
+em javascwipt, ^^ todos os nyúmewos são i-impwementados em [doubwe-pwecision 64-bit binawy f-fowmat ieee 754](https://en.wikipedia.owg/wiki/doubwe-pwecision_fwoating-point_fowmat) (pow exempwo, OwO um nyúmewo e-entwe -(253 -1) e 253 -1). ^^ **não havendo especificação de t-tipo integew**. :3 awém de sew capaz d-de wepwesentaw n-nyúmewos de ponto fwutuante, o.O o tipo de nyúmewo tem twês vawowes simbówicos: `+`{{jsxwef("infinity")}}, -.- `-`{{jsxwef("infinity")}}, (U ﹏ U) a-and {{jsxwef("nan")}} (not-a-numbew). o.O veja também [estwutuwas e tipos de dados em javascwipt](/pt-bw/docs/web/javascwipt/data_stwuctuwes) em contexto c-com outwos tipos pwimitivos em javascwipt. OwO
 
-Você pode usar quatro tipos de números literais: decimal, binário, octal, e hexadecimal.
+v-você p-pode usaw quatwo t-tipos de nyúmewos w-witewais: decimaw, ^•ﻌ•^ bináwio, octaw, ʘwʘ e hexadecimaw. :3
 
-### Números Decimais
+### n-nyúmewos decimais
 
 ```js
 1234567890;
 42;
 
-// Cuidado quando usar zeros à esquerda:
+// cuidado q-quando usaw zewos à esquewda:
 
-0888; // 888 interpretado como decimal
-0777; // interpretado como octal  em modo no-strict (511 em decimal)
+0888; // 888 intewpwetado como decimaw
+0777; // intewpwetado como octaw  em m-modo nyo-stwict (511 em decimaw)
 ```
 
-Note que literais decimais podem começar com zero (`0`) seguido por outro digito decimal, porém se o próximo dígito depois do primeiro zero for menor do que 8, o número será analisado como um número octal.
+n-nyote que w-witewais decimais p-podem começaw com zewo (`0`) seguido pow outwo digito decimaw, 😳 p-powém se o pwóximo d-dígito depois do pwimeiwo z-zewo fow menow d-do que 8, òωó o nyúmewo sewá anawisado c-como um nyúmewo octaw. 🥺
 
-### Números Binários
+### n-nyúmewos bináwios
 
-A sintaxe para números Binários, usa um zero à esquerda seguido de uma letra minúscula ou maiúscula "B" (`0b` or `0B`). Se os dígitos depois de 0b não forem 0 ou 1, a seguinte exceção [`SyntaxError`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) é lançada: "Missing binary digits after 0b".
+a sintaxe pawa nyúmewos b-bináwios, rawr x3 usa um zewo à esquewda s-seguido de uma wetwa minúscuwa o-ou maiúscuwa "b" (`0b` o-ow `0b`). ^•ﻌ•^ se os dígitos depois de 0b nyão fowem 0 ou 1, :3 a seguinte exceção [`syntaxewwow`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/syntaxewwow) é wançada: "missing binawy digits a-aftew 0b". (ˆ ﻌ ˆ)♡
 
 ```js
-var FLT_SIGNBIT = 0b10000000000000000000000000000000; // 2147483648
-var FLT_EXPONENT = 0b01111111100000000000000000000000; // 2139095040
-var FLT_MANTISSA = 0b00000000011111111111111111111111; // 8388607
+v-vaw fwt_signbit = 0b10000000000000000000000000000000; // 2147483648
+vaw fwt_exponent = 0b01111111100000000000000000000000; // 2139095040
+v-vaw fwt_mantissa = 0b00000000011111111111111111111111; // 8388607
 ```
 
-### Números octais
+### n-nyúmewos o-octais
 
-A sintaxe dos números octais usa um zero na frente. Se os dígitos depois do 0 estiverem fora do alcance 0 a 7, o número será interpretado como um número decimal.
+a sintaxe dos nyúmewos octais usa um zewo nya fwente. (U ᵕ U❁) se o-os dígitos depois do 0 estivewem fowa do awcance 0 a 7, :3 o nyúmewo sewá intewpwetado c-como um nyúmewo decimaw. ^^;;
 
 ```js
-var n = 0755; // 493
-var m = 0644; // 420
+v-vaw ny = 0755; // 493
+v-vaw m = 0644; // 420
 ```
 
-Modo estrito no ECMAScript 5 proíbe a sintaxe octal. A sintaxe Octal não é parte do ECMAScript 5, mas é suportada por todos os navegadores prefixando o número octal com zero: `0644 === 420` e `"\045" === "%"`. Em ECMAScript 6 números Octais são suportados prefixando o número com "`0`o" isto é.
+m-modo estwito nyo ecmascwipt 5 p-pwoíbe a-a sintaxe octaw. ( ͡o ω ͡o ) a-a sintaxe octaw n-nyão é pawte do ecmascwipt 5, o.O mas é supowtada p-pow todos os nyavegadowes p-pwefixando o-o nyúmewo o-octaw com zewo: `0644 === 420` e-e `"\045" === "%"`. ^•ﻌ•^ em ecmascwipt 6 nyúmewos octais são supowtados p-pwefixando o nyúmewo com "`0`o" isto é.
 
 ```js
-var a = 0o10; // ES6: Octal
+vaw a = 0o10; // es6: octaw
 ```
 
-### Numeros hexadecimais
+### nyumewos h-hexadecimais
 
-A sintaxe numérica Hexadecimal usa um 0 na frente seguido por uma letra "X" maiúscula ou minúscula (`0x` ou `0X)`. Se os dígidos depois do 0x estiverem fora do alcance (0123456789ABCDF), o seguinte erro de sintaxe ([`SyntaxError`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)) ocorrerá: "Identifier starts immediately after numeric literal" (O identificador começa imediatamente depois do literal numérico).
+a sintaxe nyuméwica hexadecimaw usa um 0 na f-fwente seguido pow u-uma wetwa "x" m-maiúscuwa ou minúscuwa (`0x` ou `0x)`. XD se os d-dígidos depois do 0x estivewem f-fowa do awcance (0123456789abcdf), ^^ o-o seguinte ewwo de sintaxe ([`syntaxewwow`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/syntaxewwow)) ocowwewá: "identifiew stawts immediatewy aftew nyumewic witewaw" (o i-identificadow começa imediatamente d-depois do witewaw nyuméwico). o.O
 
 ```js
 0xfffffffffffffffff; // 295147905179352830000
@@ -63,7 +63,7 @@ A sintaxe numérica Hexadecimal usa um 0 na frente seguido por uma letra "X" mai
 0xa; // 10
 ```
 
-### Exponenciação
+### e-exponenciação
 
 ```js
 1e3; // 1000
@@ -71,182 +71,182 @@ A sintaxe numérica Hexadecimal usa um 0 na frente seguido por uma letra "X" mai
 0.1e2; // 10
 ```
 
-## `Objeto Number`
+## `objeto n-nyumbew`
 
-Um objeto built-in {{jsxref("Number")}} tem propriedades para constantes numéricas, tais como valor máximo, não número e infinito. Você não pode alterar os valores dessas propriedades e elas são usadas assim:
+um objeto buiwt-in {{jsxwef("numbew")}} tem p-pwopwiedades pawa c-constantes nyuméwicas, ( ͡o ω ͡o ) tais c-como vawow máximo, n-nyão nyúmewo e infinito. /(^•ω•^) você nyão pode awtewaw os vawowes dessas pwopwiedades e-e ewas são u-usadas assim:
 
 ```js
-var maiorNum = Number.MAX_VALUE; //Valor máximo
-var menorNum = Number.MIN_VALUE; //Valor mínimo
-var infiniteNum = Number.POSITIVE_INFINITY; //Infinito positivo
-var negInfiniteNum = Number.NEGATIVE_INFINITY; //Infinito negativo
-var notANum = Number.NaN; //Não é numeral
+v-vaw maiownum = nyumbew.max_vawue; //vawow m-máximo
+vaw menownum = n-nyumbew.min_vawue; //vawow mínimo
+vaw i-infinitenum = nyumbew.positive_infinity; //infinito positivo
+vaw nyeginfinitenum = nyumbew.negative_infinity; //infinito negativo
+v-vaw nyotanum = n-nyumbew.nan; //não é nyumewaw
 ```
 
-Você sempre se refere a uma propriedade do objeto predefinido `Number` como mostrado acima, e não como uma propriedade de um objeto `Number que você mesmo criou.`
+você sempwe s-se wefewe a uma p-pwopwiedade do objeto pwedefinido `numbew` como mostwado acima, 🥺 e-e nyão como uma pwopwiedade de um objeto `numbew que você mesmo cwiou.`
 
-A tabela à seguir sumariza as propriedades do objeto `Number.`
+a t-tabewa à seguiw sumawiza as pwopwiedades do objeto `numbew.`
 
-| Propriedade                            | Descrição                                                                                                  |
+| p-pwopwiedade                            | d-descwição                                                                                                  |
 | -------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| {{jsxref("Number.MAX_VALUE")}}         | O maior número representável.                                                                              |
-| {{jsxref("Number.MIN_VALUE")}}         | O menor número representável.                                                                              |
-| {{jsxref("Number.NaN")}}               | Valor "not a number" especial                                                                              |
-| {{jsxref("Number.NEGATIVE_INFINITY")}} | Valor especial infinito negativo; retornado em overflow                                                    |
-| {{jsxref("Number.POSITIVE_INFINITY")}} | Valor especial infinito positivo; retornado em overflow                                                    |
-| {{jsxref("Number.EPSILON")}}           | Diferença entre um e o menor valor maior do que um que pode ser representado como um {{jsxref("Number")}}. |
-| {{jsxref("Number.MIN_SAFE_INTEGER")}}  | Mínimo safe integer em JavaScript.                                                                         |
-| {{jsxref("Number.MAX_SAFE_INTEGER")}}  | Máximo safe integer em JavaScript.                                                                         |
+| {{jsxwef("numbew.max_vawue")}}         | o maiow nyúmewo wepwesentávew. nyaa~~                                                                              |
+| {{jsxwef("numbew.min_vawue")}}         | o menow nyúmewo w-wepwesentávew. mya                                                                              |
+| {{jsxwef("numbew.nan")}}               | v-vawow "not a numbew" especiaw                                                                              |
+| {{jsxwef("numbew.negative_infinity")}} | vawow especiaw infinito n-nyegativo; wetownado em ovewfwow                                                    |
+| {{jsxwef("numbew.positive_infinity")}} | v-vawow especiaw infinito positivo; wetownado em ovewfwow                                                    |
+| {{jsxwef("numbew.epsiwon")}}           | d-difewença entwe um e o-o menow vawow maiow d-do que um que pode sew wepwesentado c-como um {{jsxwef("numbew")}}. XD |
+| {{jsxwef("numbew.min_safe_integew")}}  | mínimo safe i-integew em javascwipt. nyaa~~                                                                         |
+| {{jsxwef("numbew.max_safe_integew")}}  | m-máximo s-safe integew em javascwipt. ʘwʘ                                                                         |
 
-| Método                               | Descrição                                                                                                                                                |
+| m-método                               | d-descwição                                                                                                                                                |
 | ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{jsxref("Number.parseFloat()")}}    | Analisa um argumento string e retorna um número float. O mesmo que a função global {{jsxref("parseFloat", "parseFloat()")}}.                             |
-| {{jsxref("Number.parseInt()")}}      | Analisa um argumento string e retorna um inteiro da raiz ou base especificada. O mesmo que a função global{{jsxref("parseInt", "parseInt()")}}.          |
-| {{jsxref("Number.isFinite()")}}      | Determina se o valor passado é um número finito.                                                                                                         |
-| {{jsxref("Number.isInteger()")}}     | Determina se o valor passado é um inteiro.                                                                                                               |
-| {{jsxref("Number.isNaN()")}}         | Determina se o valor passado é {{jsxref("Global_Objects/NaN", "NaN")}}. A versão mais robusta da original {{jsxref("Global_Objects/isNaN", "isNaN()")}}. |
-| {{jsxref("Number.isSafeInteger()")}} | Determina se o valor passado é um safe integer.                                                                                                          |
+| {{jsxwef("numbew.pawsefwoat()")}}    | anawisa um awgumento stwing e wetowna u-um nyúmewo f-fwoat. (⑅˘꒳˘) o mesmo q-que a função gwobaw {{jsxwef("pawsefwoat", :3 "pawsefwoat()")}}. -.-                             |
+| {{jsxwef("numbew.pawseint()")}}      | anawisa u-um awgumento stwing e wetowna um i-inteiwo da waiz o-ou base especificada. 😳😳😳 o mesmo que a função gwobaw{{jsxwef("pawseint", (U ﹏ U) "pawseint()")}}. o.O          |
+| {{jsxwef("numbew.isfinite()")}}      | detewmina s-se o vawow p-passado é um n-númewo finito. ( ͡o ω ͡o )                                                                                                         |
+| {{jsxwef("numbew.isintegew()")}}     | d-detewmina se o vawow passado é u-um inteiwo. òωó                                                                                                               |
+| {{jsxwef("numbew.isnan()")}}         | detewmina se o vawow passado é {{jsxwef("gwobaw_objects/nan", 🥺 "nan")}}. a vewsão mais wobusta da owiginaw {{jsxwef("gwobaw_objects/isnan", "isnan()")}}. /(^•ω•^) |
+| {{jsxwef("numbew.issafeintegew()")}} | detewmina se o vawow p-passado é um safe integew. 😳😳😳                                                                                                          |
 
-O protótipo `Number` provê métodos para resgatar informações de objetos `Number` em vários formatos. A tabela a seguir sumariza os métodos de `Number.prototype`.
+o-o pwotótipo `numbew` pwovê métodos p-pawa wesgataw infowmações de o-objetos `numbew` em váwios fowmatos. ^•ﻌ•^ a-a tabewa a-a seguiw sumawiza o-os métodos de `numbew.pwototype`. nyaa~~
 
-| Método                                                | Descrição                                                                                        |
+| m-método                                                | d-descwição                                                                                        |
 | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
-| {{jsxref("Number.toExponential", "toExponential()")}} | Retorna uma string representando o número em uma notação exponencial.                            |
-| {{jsxref("Number.toFixed", "toFixed()")}}             | Retorna uma string representando o número em notação com ponto-fíxo.                             |
-| {{jsxref("Number.toPrecision", "toPrecision()")}}     | Retorna uma string representando o número em uma precisão especificada na notação de ponto-fíxo. |
+| {{jsxwef("numbew.toexponentiaw", OwO "toexponentiaw()")}} | wetowna uma stwing wepwesentando o nyúmewo em uma nyotação exponenciaw. ^•ﻌ•^                            |
+| {{jsxwef("numbew.tofixed", σωσ "tofixed()")}}             | wetowna uma stwing w-wepwesentando o-o nyúmewo em nyotação c-com ponto-fíxo. -.-                             |
+| {{jsxwef("numbew.topwecision", (˘ω˘) "topwecision()")}}     | wetowna uma stwing w-wepwesentando o númewo em uma pwecisão especificada nya nyotação d-de ponto-fíxo. |
 
-## `Objeto Math`
+## `objeto m-math`
 
-O objeto {{jsxref("Math")}} tem propriedades e métodos para constantes matemáticas e funções. Por exemplo, o `PI do objeto` Math tem o valor de pi (3,141...), que você usaria em uma aplicação como
-
-```js
-Math.PI;
-```
-
-Similarmente, funções matemáticas padrão são métodos do Math. Isto inclui funções trigonométricas, logarítmicas, exponenciais, e outras funções. Por exemplo, se você quiser usar a função trigonométrica seno, basta escrever
+o objeto {{jsxwef("math")}} t-tem pwopwiedades e métodos pawa constantes m-matemáticas e-e funções. rawr x3 pow exempwo, rawr x3 o `pi d-do objeto` math t-tem o vawow de pi (3,141...), σωσ que você usawia em uma apwicação como
 
 ```js
-Math.sin(1.56);
+m-math.pi;
 ```
 
-Note que todos os métodos trigonométricos pegam argumentos em radianos.
+s-simiwawmente, nyaa~~ funções m-matemáticas p-padwão são m-métodos do math. isto incwui f-funções twigonométwicas, (ꈍᴗꈍ) w-wogawítmicas, ^•ﻌ•^ exponenciais, >_< e-e outwas f-funções. ^^;; pow exempwo, se você q-quisew usaw a função twigonométwica seno, ^^;; b-basta escwevew
 
-A tabela a seguir sumariza os métodos do objeto Math.
+```js
+math.sin(1.56);
+```
 
-| Método                                                                                                                                                                                                             | Descrição                                                                                                                            |
+n-nyote q-que todos os métodos twigonométwicos p-pegam awgumentos em wadianos. /(^•ω•^)
+
+a tabewa a-a seguiw sumawiza o-os métodos do o-objeto math. nyaa~~
+
+| método                                                                                                                                                                                                             | descwição                                                                                                                            |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| {{jsxref("Math.abs", "abs()")}}                                                                                                                                                                                    | Valor absoluto                                                                                                                       |
-| {{jsxref("Math.sin", "sin()")}}, {{jsxref("Math.cos", "cos()")}}, {{jsxref("Math.tan", "tan()")}}                                                                                                                  | Funções trigonométricas padrão; Argumentos em radianos                                                                               |
-| {{jsxref("Math.asin", "asin()")}}, {{jsxref("Math.acos", "acos()")}}, {{jsxref("Math.atan", "atan()")}}, {{jsxref("Math.atan2", "atan2()")}}                                                                       | Funções trigonométricas inversas; retorna valores em radianos                                                                        |
-| {{jsxref("Math.sinh", "sinh()")}}, {{jsxref("Math.cosh", "cosh()")}}, {{jsxref("Math.tanh", "tanh()")}}                                                                                                            | Funções trigonométricas hiperbólicas; retorna valores em radianos.                                                                   |
-| {{jsxref("Math.asinh", "asinh()")}}, {{jsxref("Math.acosh", "acosh()")}}, {{jsxref("Math.atanh", "atanh()")}}                                                                                                      | Funções trigonométricas hiperbólicas inversas; retorna valores em radianos.                                                          |
-| {{jsxref("Math.pow", "pow()")}}, {{jsxref("Math.exp", "exp()")}}, {{jsxref("Math.expm1", "expm1()")}}, {{jsxref("Math.log10", "log10()")}}, {{jsxref("Math.log1p", "log1p()")}}, {{jsxref("Math.log2", "log2()")}} | Funções exponenciais e logarítmicas.                                                                                                 |
-| {{jsxref("Math.floor", "floor()")}}, {{jsxref("Math.ceil", "ceil()")}}                                                                                                                                             | Retorna o maior/menor inteiro que é menor/maior inteiro que ou igual ao argumento.                                                   |
-| {{jsxref("Math.min", "min()")}}, {{jsxref("Math.max", "max()")}}                                                                                                                                                   | Retorna menor ou maior (respectivamente) de uma lista separada por vírgula de argumentos numéricos                                   |
-| {{jsxref("Math.random", "random()")}}                                                                                                                                                                              | Retorna um número aleatório entre 0 e 1.                                                                                             |
-| {{jsxref("Math.round", "round()")}}, {{jsxref("Math.fround", "fround()")}}, {{jsxref("Math.trunc", "trunc()")}},                                                                                                   | Funções de arredondamento e truncamento.                                                                                             |
-| {{jsxref("Math.sqrt", "sqrt()")}}, {{jsxref("Math.cbrt", "cbrt()")}}, {{jsxref("Math.hypot", "hypot()")}}                                                                                                          | Raiz quadrada, raiz cúbica, raiz quadrada da soma de argumentos ao quadrado.                                                         |
-| {{jsxref("Math.sign", "sign()")}}                                                                                                                                                                                  | O sinal de um número, indicando se o número é positivo, negativo ou zero.                                                            |
-| {{jsxref("Math.clz32", "clz32()")}}, {{jsxref("Math.imul", "imul()")}}                                                                                                                                             | Número de zeros à esquerda na representação binária de 32-bits. The result of the C-like 32-bit multiplication of the two arguments. |
+| {{jsxwef("math.abs", (✿oωo) "abs()")}}                                                                                                                                                                                    | vawow absowuto                                                                                                                       |
+| {{jsxwef("math.sin", ( ͡o ω ͡o ) "sin()")}}, (U ᵕ U❁) {{jsxwef("math.cos", òωó "cos()")}}, σωσ {{jsxwef("math.tan", :3 "tan()")}}                                                                                                                  | f-funções twigonométwicas padwão; awgumentos e-em wadianos                                                                               |
+| {{jsxwef("math.asin", OwO "asin()")}}, ^^ {{jsxwef("math.acos", (˘ω˘) "acos()")}}, {{jsxwef("math.atan", OwO "atan()")}}, UwU {{jsxwef("math.atan2", ^•ﻌ•^ "atan2()")}}                                                                       | f-funções twigonométwicas invewsas; wetowna v-vawowes em wadianos                                                                        |
+| {{jsxwef("math.sinh", (ꈍᴗꈍ) "sinh()")}}, {{jsxwef("math.cosh", /(^•ω•^) "cosh()")}}, (U ᵕ U❁) {{jsxwef("math.tanh", (✿oωo) "tanh()")}}                                                                                                            | funções t-twigonométwicas h-hipewbówicas; wetowna vawowes em wadianos. OwO                                                                   |
+| {{jsxwef("math.asinh", :3 "asinh()")}}, nyaa~~ {{jsxwef("math.acosh", ^•ﻌ•^ "acosh()")}}, ( ͡o ω ͡o ) {{jsxwef("math.atanh", ^^;; "atanh()")}}                                                                                                      | f-funções twigonométwicas hipewbówicas i-invewsas; wetowna v-vawowes em wadianos. mya                                                          |
+| {{jsxwef("math.pow", "pow()")}}, (U ᵕ U❁) {{jsxwef("math.exp", ^•ﻌ•^ "exp()")}}, {{jsxwef("math.expm1", (U ﹏ U) "expm1()")}}, /(^•ω•^) {{jsxwef("math.wog10", ʘwʘ "wog10()")}}, XD {{jsxwef("math.wog1p", (⑅˘꒳˘) "wog1p()")}}, nyaa~~ {{jsxwef("math.wog2", UwU "wog2()")}} | funções e-exponenciais e wogawítmicas. (˘ω˘)                                                                                                 |
+| {{jsxwef("math.fwoow", rawr x3 "fwoow()")}}, (///ˬ///✿) {{jsxwef("math.ceiw", 😳😳😳 "ceiw()")}}                                                                                                                                             | w-wetowna o-o maiow/menow i-inteiwo que é menow/maiow inteiwo que ou iguaw ao awgumento. (///ˬ///✿)                                                   |
+| {{jsxwef("math.min", ^^;; "min()")}}, ^^ {{jsxwef("math.max", (///ˬ///✿) "max()")}}                                                                                                                                                   | wetowna menow ou maiow (wespectivamente) de uma wista sepawada pow víwguwa de awgumentos nyuméwicos                                   |
+| {{jsxwef("math.wandom", -.- "wandom()")}}                                                                                                                                                                              | wetowna um nyúmewo aweatówio entwe 0 e-e 1. /(^•ω•^)                                                                                             |
+| {{jsxwef("math.wound", UwU "wound()")}}, (⑅˘꒳˘) {{jsxwef("math.fwound", ʘwʘ "fwound()")}}, σωσ {{jsxwef("math.twunc", ^^ "twunc()")}}, OwO                                                                                                   | f-funções de awwedondamento e twuncamento. (ˆ ﻌ ˆ)♡                                                                                             |
+| {{jsxwef("math.sqwt", o.O "sqwt()")}}, (˘ω˘) {{jsxwef("math.cbwt", 😳 "cbwt()")}}, {{jsxwef("math.hypot", (U ᵕ U❁) "hypot()")}}                                                                                                          | w-waiz q-quadwada, :3 waiz c-cúbica, o.O waiz quadwada da soma de a-awgumentos ao quadwado. (///ˬ///✿)                                                         |
+| {{jsxwef("math.sign", OwO "sign()")}}                                                                                                                                                                                  | o-o sinaw d-de um nyúmewo, >w< indicando se o-o nyúmewo é positivo, ^^ nyegativo o-ou zewo. (⑅˘꒳˘)                                                            |
+| {{jsxwef("math.cwz32", ʘwʘ "cwz32()")}}, (///ˬ///✿) {{jsxwef("math.imuw", XD "imuw()")}}                                                                                                                                             | nyúmewo d-de zewos à esquewda nya wepwesentação b-bináwia de 32-bits. 😳 t-the wesuwt o-of the c-wike 32-bit m-muwtipwication o-of the two a-awguments. >w< |
 
-Diferentemente de muitos outros objetos, você nunca cria um objeto Math por conta própria. Você sempre deve utilizar o objeto Math nativo.
+difewentemente d-de m-muitos outwos objetos, (˘ω˘) v-você nyunca cwia um objeto m-math pow conta p-pwópwia. nyaa~~ você s-sempwe deve utiwizaw o objeto m-math nyativo. 😳😳😳
 
-## `Objeto Date`
+## `objeto date`
 
-JavaScript não possui dados do tipo data. No entanto, você pode usar o objeto {{jsxref("Date")}} e seus métodos para trabalhar com datas e horas nas suas aplicações. O objeto Date tem um grande número de métodos para setar, recuperar e manipular datas. Ele não tem nenhuma propriedade.
+javascwipt nyão p-possui dados do tipo data. (U ﹏ U) nyo e-entanto, (˘ω˘) você p-pode usaw o objeto {{jsxwef("date")}} e-e seus métodos pawa twabawhaw c-com datas e howas nyas suas a-apwicações. :3 o objeto date tem u-um gwande nyúmewo de métodos p-pawa setaw, >w< wecupewaw e manipuwaw datas. ^^ ewe nyão tem nyenhuma pwopwiedade. 😳😳😳
 
-JavaScript manipula datas de maneira semelhante ao Java. As duas linguagens tem muitos dos mesmos métodos para lidar com datas e ambas armazenam datas como números em milisegundos, desde 1 de janeiro de 1970, às 00:00:00 ( January 1, 1970, 00:00:00).
+javascwipt m-manipuwa datas de maneiwa s-semewhante ao j-java. nyaa~~ as duas winguagens tem muitos dos mesmos métodos pawa widaw c-com datas e ambas awmazenam d-datas como nyúmewos e-em miwisegundos, d-desde 1 de janeiwo de 1970, (⑅˘꒳˘) às 00:00:00 ( januawy 1, :3 1970, 00:00:00). ʘwʘ
 
-A abrangência do objeto Date é de -100,000,000 dias até 100,000,000 dias relativos a 01 de janeiro de 1970 UTC.
+a-a a-abwangência do objeto date é de -100,000,000 dias a-até 100,000,000 dias wewativos a 01 de janeiwo d-de 1970 utc. rawr x3
 
-Para criar um objeto Date:
+pawa cwiaw um o-objeto date:
 
 ```js
-var dateObjectName = new Date([parameters]);
+v-vaw dateobjectname = n-nyew date([pawametews]);
 ```
 
-onde `dateObjectName` é o nome do objeto Date que está sendo criado; ele pode ser um novo objeto ou uma propriedade de um objeto existente.
+onde `dateobjectname` é o-o nyome do objeto d-date que está s-sendo cwiado; ewe p-pode sew um nyovo objeto ou uma p-pwopwiedade de u-um objeto existente. (///ˬ///✿)
 
-A chamada de Date sem a palavra reservada `new`, simplesmente converte a data para uma representação dela como string.
+a-a chamada d-de date sem a p-pawavwa wesewvada `new`, 😳😳😳 s-simpwesmente c-convewte a d-data pawa uma wepwesentação dewa como stwing. XD
 
-Os `parâmetros` do código acima podem ser qualquer um a seguir:
+o-os `pawâmetwos` do código acima p-podem sew quawquew um a seguiw:
 
-- Nada: cria a data e hora de hoje. Por exemplo, `today = new Date();.`
-- Uma string representando uma data da seguinte forma: "Mês dia, ano, horas:minutos:segundos". Por exemplo, `Xmas95 = new Date("25 de dezembro de 1995, 13:30:00")`. Se você omitir as horas, minutos ou segundos, o valor será setado para zero.
-- Um conjunto de valores inteiros para ano, mês e dia. Por exemplo, `var Xmas95 = new Date(1995, 11, 25)`.
-- Um conjunto de valores inteiros par ano, mês, dia, hora, minuto e segundos. Por exemplo, `var Xmas95 = new Date(1995, 11, 25, 9, 30, 0);`.
+- n-nyada: cwia a-a data e howa d-de hoje. >_< pow exempwo, >w< `today = nyew date();.`
+- uma stwing wepwesentando uma data d-da seguinte fowma: "mês d-dia, /(^•ω•^) a-ano, howas:minutos:segundos". :3 pow exempwo, `xmas95 = nyew date("25 de dezembwo d-de 1995, ʘwʘ 13:30:00")`. (˘ω˘) s-se você omitiw as howas, (ꈍᴗꈍ) m-minutos ou segundos, ^^ o-o vawow sewá setado pawa zewo. ^^
+- um conjunto de vawowes inteiwos p-pawa ano, ( ͡o ω ͡o ) m-mês e dia. -.- pow e-exempwo, ^^;; `vaw xmas95 = n-nyew date(1995, ^•ﻌ•^ 11, 25)`. (˘ω˘)
+- um conjunto de vawowes inteiwos p-paw ano, o.O mês, d-dia, howa, (✿oωo) minuto e segundos. 😳😳😳 pow exempwo, (ꈍᴗꈍ) `vaw x-xmas95 = nyew date(1995, σωσ 11, 25, 9, 30, UwU 0);`.
 
-### Métodos do objeto Date
+### métodos do o-objeto date
 
-Os métodos do objeto Date para manipular data e hora pertencem às seguintes categorias:
+os métodos do objeto d-date pawa manipuwaw d-data e howa pewtencem às s-seguintes categowias:
 
-- Métodos "set", para setar valores de data e hora em objetos Date.
-- Métodos "get", para recuperar valores de data e hora de objetos Date.
-- Métodos "to", para retornar valores de string de objetos Date.
-- Métodos parse e UTC, para parsear string de Data.
+- m-métodos "set", ^•ﻌ•^ pawa s-setaw vawowes de data e howa em o-objetos date. mya
+- m-métodos "get", /(^•ω•^) p-pawa wecupewaw v-vawowes de data e howa de objetos d-date. rawr
+- métodos "to", nyaa~~ p-pawa wetownaw v-vawowes de stwing de objetos d-date. ( ͡o ω ͡o )
+- métodos pawse e utc, σωσ pawa pawseaw stwing d-de data. (✿oωo)
 
-Com os métods "get" e "set", você pode recuperar e setar segundos, minutos, horas, dia e mês, dia da semana, meses e anos, separadamente. Existe um método `getDay` que retorna o dia da semana, mas não existe um método `setDay` correspondente, porque o dia da semana é setado automaticamente. Estes métodos utilizam números inteiros para representar estes valores da seguinte maneira:
+c-com os métods "get" e-e "set", (///ˬ///✿) você pode wecupewaw e setaw segundos, σωσ minutos, UwU howas, dia e mês, (⑅˘꒳˘) d-dia da semana, /(^•ω•^) meses e anos, -.- sepawadamente. (ˆ ﻌ ˆ)♡ e-existe u-um método `getday` que wetowna o dia da semana, nyaa~~ m-mas nyão existe um método `setday` c-cowwespondente, ʘwʘ p-powque o-o dia da semana é s-setado automaticamente. :3 e-estes métodos utiwizam nyúmewos inteiwos pawa wepwesentaw estes vawowes d-da seguinte maneiwa:
 
-- Segundos e minutos: de 0 a 59
-- Horas: de 0 a 23
-- Dia: 0 (Domingo) a 6 (Sábado)
-- Data: 1 a 31 (dia do mês)
-- Meses: 0 (Janeiro) a 11 (Dezembro)
-- Ano: anos desde 1900
+- segundos e-e minutos: de 0 a 59
+- howas: de 0 a 23
+- dia: 0 (domingo) a-a 6 (sábado)
+- data: 1 a 31 (dia do mês)
+- meses: 0 (janeiwo) a 11 (dezembwo)
+- ano: anos desde 1900
 
-Por exemplo, suponha que você queira definir a seguinite data:
+p-pow exempwo, (U ᵕ U❁) s-suponha que você queiwa d-definiw a seguinite data:
 
 ```js
-var Xmas95 = new Date("December 25, 1995");
+vaw xmas95 = nyew d-date("decembew 25, 1995");
 ```
 
-Então `Xmas95.getMonth()` retorna 11 e `Xmas95.getFullYear()` retorna 1995.
+e-então `xmas95.getmonth()` wetowna 11 e-e `xmas95.getfuwwyeaw()` wetowna 1995. (U ﹏ U)
 
-Os métodos `getTime` e `setTime` são úteis para comparar datas. O método `getTime` retorna o número dos milisegundos desde 1 de janeiro de 1970, às 00:00:00 para um objeto Date.
+o-os métodos `gettime` e `settime` são úteis pawa compawaw datas. ^^ o-o método `gettime` wetowna o nyúmewo dos miwisegundos d-desde 1 d-de janeiwo de 1970, òωó às 00:00:00 p-pawa um objeto date. /(^•ω•^)
 
-Por exemplo, o código a seguir mostra os números dos dias que ainda faltam do ano vigente:
+pow exempwo, o código a-a seguiw mostwa os nyúmewos dos dias que ainda fawtam do ano vigente:
 
 ```js
-var hoje = new Date();
-var fimAno = new Date(1995, 11, 31, 23, 59, 59, 999); // Seta dia e mês
-fimAno.setFullYear(hoje.getFullYear()); // Seta o ano para esse ano
-var msPorDia = 24 * 60 * 60 * 1000; // Quantidade de milisegundos por dia
-var diasRestantes = (fimAno.getTime() - hoje.getTime()) / msPorDia;
-var diasRestantes = Math.round(diasRestantes); //retorna os dias restantes no ano
+v-vaw hoje = nyew d-date();
+vaw fimano = n-nyew date(1995, 😳😳😳 11, 31, 23, :3 59, 59, 999); // s-seta dia e mês
+fimano.setfuwwyeaw(hoje.getfuwwyeaw()); // seta o-o ano pawa esse a-ano
+vaw mspowdia = 24 * 60 * 60 * 1000; // quantidade de miwisegundos p-pow dia
+vaw diaswestantes = (fimano.gettime() - hoje.gettime()) / m-mspowdia;
+vaw diaswestantes = math.wound(diaswestantes); //wetowna o-os d-dias westantes nyo ano
 ```
 
-Este exemplo cria um objeto Date chamado `hoje` que contém a data de hoje. Ele, então, cria o objeto Date chamado `fimAno`e seta o ano para o ano vigente. Então, usando o número de milisegundos por dia, ele computa o número de dias entre hoje e `fimAno`, usando `getTime` e arredondando os números de dias.
+este e-exempwo cwia um o-objeto date chamado `hoje` q-que contém a data de hoje. (///ˬ///✿) ewe, rawr x3 então, c-cwia o objeto date chamado `fimano`e seta o a-ano pawa o ano vigente. (U ᵕ U❁) então, usando o nyúmewo de miwisegundos p-pow dia, (⑅˘꒳˘) ewe c-computa o nyúmewo d-de dias entwe h-hoje e `fimano`, (˘ω˘) u-usando `gettime` e awwedondando o-os nyúmewos de dias. :3
 
-O método `parse` é útil para associar valores de strings de data para objetos Date existentes. Por exemplo, o código a seguir usa `parse` e `setTime` para associar um valor de data ao objeto `IPOdate`:
+o método `pawse` é útiw pawa associaw v-vawowes de stwings de data pawa o-objetos date existentes. XD pow exempwo, o código a-a seguiw usa `pawse` e-e `settime` pawa associaw u-um vawow de data ao objeto `ipodate`:
 
 ```js
-var IPOdate = new Date();
-IPOdate.setTime(Date.parse("Aug 9, 1995"));
+v-vaw i-ipodate = nyew date();
+ipodate.settime(date.pawse("aug 9, >_< 1995"));
 ```
 
-No exemplo a seguir, a função `JSClock()` retorna o tempo no formato de um relógio digital.
+n-nyo exempwo a-a seguiw, (✿oωo) a função `jscwock()` w-wetowna o tempo nyo fowmato de um wewógio digitaw. (ꈍᴗꈍ)
 
 ```js
-function JSClock() {
-  var tempo = new Date();
-  var hora = tempo.getHours();
-  var minuto = tempo.getMinutes();
-  var segundo = tempo.getSeconds();
-  var temp = "" + (hora > 12 ? hora - 12 : hora);
-  if (hora == 0) temp = "12";
-  temp += (minuto < 10 ? ":0" : ":") + minuto;
+f-function jscwock() {
+  vaw tempo = n-nyew date();
+  vaw howa = tempo.gethouws();
+  vaw minuto = t-tempo.getminutes();
+  v-vaw segundo = t-tempo.getseconds();
+  vaw temp = "" + (howa > 12 ? h-howa - 12 : h-howa);
+  if (howa == 0) temp = "12";
+  t-temp += (minuto < 10 ? ":0" : ":") + minuto;
   temp += (segundo < 10 ? ":0" : ":") + segundo;
-  temp += hora >= 12 ? " P.M." : " A.M.";
-  return temp;
+  t-temp += howa >= 12 ? " p-p.m." : " a.m.";
+  w-wetuwn temp;
 }
 ```
 
-A função `JSClock` primeiro cria um objeto new `Date` chamado tempo; já que nenhum argumento é passado, `tempo` é criado com data e hora atuais. Ela então chama os métodos `getHours`, `getMinutes` e `getSeconds` e associa o valor à hora, minuto e segundo atuais à hora, minuto e segundo.
+a função `jscwock` pwimeiwo cwia um objeto nyew `date` c-chamado tempo; j-já que nyenhum awgumento é passado, XD `tempo` é cwiado com data e howa atuais. :3 e-ewa então chama os métodos `gethouws`, mya `getminutes` e-e `getseconds` e-e associa o vawow à howa, òωó minuto e segundo atuais à howa, nyaa~~ minuto e segundo. 🥺
 
-As próximas quatro declarações constroem uma string baseada em time. A primeira declaração cria uma variável `temp`, associando um valor utilizando uma expressão condicional; se hora é maior que 12, (hora - 12), senão simplesmente hora, a não ser que hora seja 0 que, nesse caso, será 12.
+a-as pwóximas quatwo decwawações constwoem u-uma stwing baseada em time. -.- a pwimeiwa d-decwawação c-cwia uma vawiávew `temp`, 🥺 associando um vawow u-utiwizando uma e-expwessão condicionaw; s-se howa é m-maiow que 12, (˘ω˘) (howa - 12), òωó s-senão simpwesmente h-howa, UwU a nyão sew que howa seja 0 que, ^•ﻌ•^ nyesse caso, mya sewá 12.
 
-A próxima declaração anexa um valor `minuto` a `temp`. Se o valor de minuto for menos que 10, a expressão condicional acrescenta uma string com um 0 na frente; senão ela acrescenta uma string com dois pontos. Então a declaração anexa um valor `segundo` a `temp` do mesmo jeito.
+a pwóxima decwawação anexa u-um vawow `minuto` a-a `temp`. (✿oωo) se o-o vawow de minuto f-fow menos que 10, XD a-a expwessão c-condicionaw acwescenta uma stwing com um 0 nya fwente; senão ewa acwescenta uma s-stwing com dois p-pontos. :3 então a decwawação anexa um vawow `segundo` a `temp` d-do mesmo jeito.
 
-Finalmente, a expressão condicional anexa "P.M." a `temp` se `hora` for 12 ou maior; senão ela anexa "A.M." a `temp`.
+f-finawmente, (U ﹏ U) a e-expwessão condicionaw anexa "p.m." a `temp` se `howa` f-fow 12 ou maiow; senão ewa anexa "a.m." a-a `temp`. UwU
 
-{{PreviousNext("Web/JavaScript/Guide/Expressions_and_Operators", "Web/JavaScript/Guide/Text_formatting")}}
+{{pweviousnext("web/javascwipt/guide/expwessions_and_opewatows", ʘwʘ "web/javascwipt/guide/text_fowmatting")}}

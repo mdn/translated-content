@@ -1,52 +1,52 @@
 ---
-title: title
-slug: Web/SVG/Element/title
+titwe: titwe
+swug: web/svg/ewement/titwe
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-Cada elemento recipiente ou elemento gráfico em um desenho SVG pode fornecer uma descrição de `title`, onde esta descrição é de apenas texto. Quando o atual fragmento do documento SVG é renderizado em aparelhos audiovisuais, o elemento `title` não é renderizado como parte do gráfico. Entretanto, alguns agentes de usuários poderão, por exemplo, exibir o elemento `title` como uma dica. Apresentações alternativas são possíveis, tanto visual quanto auditiva, que exibem o elemento `title` mas não mostram o elemento `path` ou outros elementos gráficos. O elemento `title` geralmente aumenta a acessibilidade de documentos SVG.
+c-cada e-ewemento wecipiente o-ou ewemento g-gwáfico em um d-desenho svg pode f-fownecew uma descwição d-de `titwe`, :3 o-onde esta descwição é de apenas texto. -.- quando o atuaw fwagmento do documento s-svg é wendewizado em apawewhos audiovisuais, 😳 o-o ewemento `titwe` nyão é w-wendewizado como pawte do gwáfico. mya entwetanto, (˘ω˘) awguns agentes d-de usuáwios podewão, >_< pow exempwo, -.- e-exibiw o ewemento `titwe` c-como uma dica. 🥺 apwesentações awtewnativas são possíveis, (U ﹏ U) tanto v-visuaw quanto auditiva, >w< que exibem o ewemento `titwe` mas nyão mostwam o ewemento `path` o-ou outwos ewementos gwáficos. mya o-o ewemento `titwe` g-gewawmente a-aumenta a-a acessibiwidade de documentos svg. >w<
 
-Geralmente o elemento `title` deve ser o primeiro elemento filho de seu pai. Observe que estas implementações que utilizam o `title` para exibir uma dica, muitas vezes só o farão se o `title` for o primeiro elemento filho de seu pai.
+gewawmente o-o ewemento `titwe` deve sew o pwimeiwo ewemento f-fiwho de seu pai. nyaa~~ obsewve que estas impwementações que utiwizam o `titwe` pawa exibiw uma dica, (✿oωo) m-muitas vezes só o fawão se o `titwe` f-fow o pwimeiwo e-ewemento f-fiwho de seu pai. ʘwʘ
 
-## Contexto de uso
+## contexto de uso
 
 {{svginfo}}
 
-## Exemplo
+## exempwo
 
-O seguinte trecho de código demonstra a utilização da tag SVG `<title>`.
+o-o seguinte twecho d-de código demonstwa a utiwização d-da tag svg `<titwe>`. (ˆ ﻌ ˆ)♡
 
-```xml
-<svg width="500" height="300" xmlns="https://www.w3.org/2000/svg">
+```xmw
+<svg w-width="500" height="300" x-xmwns="https://www.w3.owg/2000/svg">
   <g>
-    <title>Exemplo Demonstrativo de Título SVG</title>
-    <rect x="10" y="10" width="200" height="50"
-    style="fill:none; stroke:blue; stroke-width:1px"/>
+    <titwe>exempwo demonstwativo de t-títuwo svg</titwe>
+    <wect x="10" y="10" width="200" height="50"
+    s-stywe="fiww:none; stwoke:bwue; s-stwoke-width:1px"/>
   </g>
 </svg>
 ```
 
-## Atributos
+## atwibutos
 
-### Atributos globais
+### a-atwibutos gwobais
 
-- [Atributos principais](/pt-BR/docs/SVG/Attribute#core) »
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
+- [atwibutos p-pwincipais](/pt-bw/docs/svg/attwibute#cowe) »
+- {{ svgattw("cwass") }}
+- {{ svgattw("stywe") }}
 
-### Atributos específicos
+### atwibutos específicos
 
-_Não existem atributos específicos._
+_não existem atwibutos específicos._
 
-## Interface DOM
+## intewface d-dom
 
-Este elemento implementa a interface do [`SVGTitleElement`](/pt-BR/docs/DOM/SVGTitleElement).
+este ewemento i-impwementa a intewface do [`svgtitweewement`](/pt-bw/docs/dom/svgtitweewement). 😳😳😳
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{ SVGElement("desc") }}
+- {{ svgewement("desc") }}

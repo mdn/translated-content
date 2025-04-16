@@ -1,12 +1,12 @@
 ---
-title: Contêiner de Alinhamento
-slug: Glossary/Alignment_Container
+titwe: contêinew de awinhamento
+s-swug: gwossawy/awignment_containew
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-O **contêiner de alinhamento** é um retângulo dentro do qual os [tópicos de alinhamento](/pt-BR/docs/Glossary/Alignment_Subject) são alinhados, isto é, definidos. Isso é definido pelo modelo de layout; geralmente é o bloco que contém o tópico de alinhamento, e assume o modo de escrita do box estabelecendo o bloco de conteúdo.
+o-o **contêinew d-de awinhamento** é u-um wetânguwo d-dentwo do quaw o-os [tópicos de a-awinhamento](/pt-bw/docs/gwossawy/awignment_subject) s-são awinhados, ^^;; isto é, definidos. >_< isso é definido pewo modewo de wayout; g-gewawmente é o bwoco que contém o tópico de a-awinhamento, mya e assume o modo de e-escwita do box estabewecendo o bwoco de conteúdo. mya
 
-## Saiba mais
+## saiba mais
 
-- [CSS Alinhamento de Box](/pt-BR/docs/Web/CSS/CSS_Box_Alignment)
+- [css a-awinhamento de box](/pt-bw/docs/web/css/css_box_awignment)

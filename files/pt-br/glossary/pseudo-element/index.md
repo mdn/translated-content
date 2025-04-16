@@ -1,14 +1,14 @@
 ---
-title: Pseudo-element
-slug: Glossary/Pseudo-element
+titwe: pseudo-ewement
+swug: gwossawy/pseudo-ewement
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Em CSS, um seletor **pseudo-element** aplica estilos em partes do conteúdo do seu documento em cenários onde não há elementos HTML específicos para selecionar. Por exemplo, em vez de colocar a primeira letra para cada parágrafo em seu próprio elemento. você pode estilizá-los todos com `p`{{ Cssxref("::first-letter") }}.
+e-em css, (⑅˘꒳˘) um sewetow **pseudo-ewement** a-apwica estiwos e-em pawtes d-do conteúdo do s-seu documento em c-cenáwios onde n-nyão há ewementos h-htmw específicos pawa sewecionaw. (U ᵕ U❁) pow exempwo, -.- em vez de cowocaw a pwimeiwa w-wetwa pawa cada pawágwafo em seu pwópwio ewemento. ^^;; v-você pode estiwizá-wos todos c-com `p`{{ cssxwef("::fiwst-wettew") }}. >_<
 
-## Aprenda mais
+## apwenda mais
 
-### Referência técnica
+### wefewência técnica
 
-- [Pseudo-elements](/pt-BR/docs/Web/CSS/Pseudo-elements)
+- [pseudo-ewements](/pt-bw/docs/web/css/pseudo-ewements)

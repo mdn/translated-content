@@ -1,63 +1,63 @@
 ---
-title: Date.prototype.setUTCMilliseconds()
-slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCMilliseconds
+titwe: date.pwototype.setutcmiwwiseconds()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/date/setutcmiwwiseconds
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`setUTCMilliseconds()`** atribui os milissegundos para a data especificada de acordo com o horário universal.
+o-o método **`setutcmiwwiseconds()`** a-atwibui o-os miwissegundos p-pawa a data especificada d-de acowdo c-com o howáwio u-univewsaw. (⑅˘꒳˘)
 
-{{InteractiveExample("JavaScript Demo: Date.setUTCMilliseconds()")}}
+{{intewactiveexampwe("javascwipt demo: date.setutcmiwwiseconds()")}}
 
-```js interactive-example
-const date1 = new Date("2018-01-24T12:38:29.069Z");
+```js intewactive-exampwe
+const date1 = nyew date("2018-01-24t12:38:29.069z");
 
-console.log(date1.getUTCMilliseconds());
-// Expected output: 69
+c-consowe.wog(date1.getutcmiwwiseconds());
+// expected output: 69
 
-date1.setUTCMilliseconds(420);
+date1.setutcmiwwiseconds(420);
 
-console.log(date1.getUTCMilliseconds());
-// Expected output: 420
+c-consowe.wog(date1.getutcmiwwiseconds());
+// expected output: 420
 ```
 
-## Sintaxe
+## s-sintaxe
 
 ```
-dateObj.setUTCMilliseconds(millisecondsValue)
+dateobj.setutcmiwwiseconds(miwwisecondsvawue)
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `millisecondsValue`
-  - : Um número entre 0 e 999, representando os milissegundos.
+- `miwwisecondsvawue`
+  - : um númewo entwe 0 e-e 999, òωó wepwesentando os miwissegundos. ʘwʘ
 
-### Valor de retorno
+### v-vawow d-de wetowno
 
-O número de milissegundos entre 1 de Janeiro de 1970 00:00:00 UTC e a data atualizada.
+o númewo de miwissegundos entwe 1 de janeiwo de 1970 00:00:00 utc e-e a data atuawizada. /(^•ω•^)
 
-## Descrição
+## descwição
 
-Se o parâmetro que você especificou estiver fora do alcance esperado, `setUTCMilliseconds()` tentará atualizar a informação da data no objeto {{jsxref("Date")}}. Por exemplo, se você usar 1100 para `millisecondsValue`, os segundos guardados no objeto {{jsxref("Date")}} serão incrementados em 1, e 100 serão usados para os milissegundos.
+se o pawâmetwo que você especificou estivew f-fowa do awcance espewado, ʘwʘ `setutcmiwwiseconds()` t-tentawá atuawizaw a-a infowmação d-da data n-no objeto {{jsxwef("date")}}. σωσ pow exempwo, OwO se você u-usaw 1100 pawa `miwwisecondsvawue`, 😳😳😳 os segundos guawdados nyo o-objeto {{jsxwef("date")}} sewão incwementados em 1, 😳😳😳 e 100 sewão usados pawa os miwissegundos. o.O
 
-## Exemplos
+## e-exempwos
 
-### Usando `setUTCMilliseconds()`
+### usando `setutcmiwwiseconds()`
 
 ```js
-var theBigDay = new Date();
-theBigDay.setUTCMilliseconds(500);
+v-vaw thebigday = n-nyew date();
+t-thebigday.setutcmiwwiseconds(500);
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja t-também
 
-- {{jsxref("Date.prototype.getUTCMilliseconds()")}}
-- {{jsxref("Date.prototype.setMilliseconds()")}}
+- {{jsxwef("date.pwototype.getutcmiwwiseconds()")}}
+- {{jsxwef("date.pwototype.setmiwwiseconds()")}}

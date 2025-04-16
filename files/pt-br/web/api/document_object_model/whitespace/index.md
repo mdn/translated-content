@@ -1,213 +1,213 @@
 ---
-title: Whitespace no DOM
-slug: Web/API/Document_Object_Model/Whitespace
+titwe: whitespace nyo dom
+swug: w-web/api/document_object_modew/whitespace
 ---
 
-## O problema
+## o-o pwobwema
 
-A presença de espaço branco no [DOM](/pt-BR/docs/Web/API/Document_Object_Model) pode dificultar a manipulação da árvore de conteúdo de formas imprevisíveis. No Mozilla, todo o espaço branco no conteúdo de texto do documento original é representado no DOM (isso não inclui [whitespace](/pt-BR/docs/Web/API/Document_Object_Model/Whitespace) entre tags). (Isso é necessário internamente para que o editor possa preservar a formatação de documentos e também que `white-space: pre` irá funcionar em [CSS](/pt-BR/docs/Web/CSS)). Isso significa que:
+a-a pwesença de espaço b-bwanco nyo [dom](/pt-bw/docs/web/api/document_object_modew) p-pode dificuwtaw a-a manipuwação d-da áwvowe de c-conteúdo de fowmas impwevisíveis. nyaa~~ nyo moziwwa, >w< todo o espaço bwanco nyo conteúdo d-de texto do documento owiginaw é wepwesentado n-nyo dom (isso nyão incwui [whitespace](/pt-bw/docs/web/api/document_object_modew/whitespace) e-entwe tags). -.- (isso é nyecessáwio intewnamente pawa que o editow p-possa pwesewvaw a fowmatação d-de documentos e-e também que `white-space: pwe` iwá funcionaw em [css](/pt-bw/docs/web/css)). (✿oωo) isso significa q-que:
 
-- haverão alguns nós de texto que contêm somente [whitespace](/pt-BR/docs/Web/API/Document_Object_Model/Whitespace), e
-- alguns nós de texto terão [whitespace](/pt-BR/docs/Web/API/Document_Object_Model/Whitespace) no início ou no final.
+- havewão awguns nyós de texto que contêm somente [whitespace](/pt-bw/docs/web/api/document_object_modew/whitespace), (˘ω˘) e
+- awguns nyós d-de texto tewão [whitespace](/pt-bw/docs/web/api/document_object_modew/whitespace) nyo início o-ou nyo finaw.
 
-Em outras palavras, a árvore do DOM para o documento seguinte irá parecer como a imagem abaixo (usando "\n" para representar novas linhas):
+em o-outwas pawavwas, rawr a-a áwvowe do d-dom pawa o documento seguinte iwá pawecew como a-a imagem abaixo (usando "\n" pawa wepwesentaw nyovas w-winhas):
 
-```html
-<!-- Meu documento -->
-<html>
+```htmw
+<!-- meu documento -->
+<htmw>
   <head>
-    <title>Meu documento</title>
+    <titwe>meu documento</titwe>
   </head>
   <body>
-    <h1>Cabeçalho</h1>
-    <p>Parágrafo</p>
+    <h1>cabeçawho</h1>
+    <p>pawágwafo</p>
   </body>
-</html>
+</htmw>
 ```
 
-![](whitespace_tree.png)
+![](whitespace_twee.png)
 
-Isto pode fazer as coisas um pouco difíceis para qualquer usuário do DOM que quer iterar através do conteúdo, excluindo o [whitespace](/pt-BR/docs/Web/API/Document_Object_Model/Whitespace).
+isto pode fazew as coisas um pouco d-difíceis pawa quawquew usuáwio d-do dom que q-quew itewaw atwavés d-do conteúdo, OwO excwuindo o [whitespace](/pt-bw/docs/web/api/document_object_modew/whitespace). ^•ﻌ•^
 
-## Facilitando as coisas
+## faciwitando as coisas
 
-É possível formatar o código como mostrado abaixo para contornar o problema:
+É p-possívew fowmataw o-o código como mostwado abaixo p-pawa contownaw o-o pwobwema:
 
-```html
-<!-- Impressão bonita convencional
-     com espaços brancos (whitespaces) entre as tags:
+```htmw
+<!-- impwessão b-bonita convencionaw
+     com espaços bwancos (whitespaces) e-entwe as tags:
  -->
 <div>
-  <ul>
-    <li>Posição 1</li>
-    <li>Posição 2</li>
-    <li>Posição 3</li>
-  </ul>
+  <uw>
+    <wi>posição 1</wi>
+    <wi>posição 2</wi>
+    <wi>posição 3</wi>
+  </uw>
 </div>
 
-<!-- Impressão bonita ajustada ao problema:
+<!-- impwessão bonita ajustada ao p-pwobwema:
  -->
 <div>
-  <ul>
-    <li>Posição 1</li>
-    <li>Posição 2</li>
-    <li>Posição 3</li>
-  </ul>
+  <uw>
+    <wi>posição 1</wi>
+    <wi>posição 2</wi>
+    <wi>posição 3</wi>
+  </uw>
 </div>
 ```
 
-O código Javascript abaixo define funções diversas que fazem a manipulação de [whitespace](/pt-BR/docs/Web/API/Document_Object_Model/Whitespace) no DOM mais fácil.
+o código j-javascwipt abaixo define f-funções divewsas q-que fazem a manipuwação de [whitespace](/pt-bw/docs/web/api/document_object_modew/whitespace) nyo dom mais fáciw.
 
 ```js
 /**
- * Em todo, o whitespace é definido como um dos caracteres
- *  "\t" TAB \u0009
- *  "\n" LF  \u000A
- *  "\r" CR  \u000D
- *  " "  SPC \u0020
+ * em todo, UwU o whitespace é definido como um d-dos cawactewes
+ *  "\t" t-tab \u0009
+ *  "\n" wf  \u000a
+ *  "\w" c-cw  \u000d
+ *  " "  s-spc \u0020
  *
- * Isto não usa o "\s" do Javascript porque inclui espaços
- * que não quebram (e alguns outros caracteres).
+ * i-isto nyão usa o "\s" do javascwipt powque incwui espaços
+ * q-que nyão quebwam (e awguns outwos cawactewes). (˘ω˘)
  */
 
 /**
- * Determina se um conteúdo de texto do nó é inteiramente whitespace.
+ * detewmina se um conteúdo de texto d-do nyó é inteiwamente whitespace. (///ˬ///✿)
  *
- * @param nod  Um nó implementando a interface |CharacterData| (por exemplo:
- *             |Text|, |Comment|, ou nó |CDATASection|
- * @return     Verdadeiro se todo conteúdo de texto de |nod| é whitespace,
- *             de outra forma é falso.
+ * @pawam n-nyod  um nyó i-impwementando a i-intewface |chawactewdata| (pow exempwo:
+ *             |text|, σωσ |comment|, /(^•ω•^) o-ou nyó |cdatasection|
+ * @wetuwn     v-vewdadeiwo se todo c-conteúdo de t-texto de |nod| é whitespace, 😳
+ *             de o-outwa fowma é f-fawso. 😳
  */
-function is_all_ws(nod) {
-  // Usa as características do ECMA-262 Edition 3 String e RegExp
-  return !/[^\t\n\r ]/.test(nod.textContent);
+function i-is_aww_ws(nod) {
+  // u-usa as c-cawactewísticas do ecma-262 edition 3 stwing e wegexp
+  wetuwn !/[^\t\n\w ]/.test(nod.textcontent);
 }
 
 /**
- * Determina se um nó deve ser ignorado pela função de iterador.
+ * d-detewmina se um nyó deve sew ignowado pewa função de itewadow. (⑅˘꒳˘)
  *
- * @param nod  Um objeto implementando a interface DOM1 |Node|.
- * @return     verdadeiro se o nó é:
- *                1) Um nó |Text| que é todo whitespace
- *                2) Um nó |Comment|
- *             do contrário é falso.
+ * @pawam nyod  um objeto impwementando a intewface d-dom1 |node|. 😳😳😳
+ * @wetuwn     vewdadeiwo se o nyó é:
+ *                1) um nyó |text| q-que é todo whitespace
+ *                2) u-um n-nyó |comment|
+ *             do contwáwio é f-fawso. 😳
  */
 
-function is_ignorable(nod) {
-  return (
-    nod.nodeType == 8 || // Um nó de comentário
-    (nod.nodeType == 3 && is_all_ws(nod))
-  ); // um nó de texto, todo whitespace
+function is_ignowabwe(nod) {
+  w-wetuwn (
+    n-nyod.nodetype == 8 || // um nyó de comentáwio
+    (nod.nodetype == 3 && is_aww_ws(nod))
+  ); // um nyó de texto, XD todo whitespace
 }
 
 /**
- * Versão de |previousSibling| que pula nós que são inteiramente
- * whitespace ou comentários.  (Normalmente |previousSibling| é uma propriedade
- * de todos os nós do DOM que dá o nó irmão, o nó que é
- * um filho do mesmo parente, que ocorre imediatamente antes do
- * nó de referência.)
+ * v-vewsão de |pwevioussibwing| que puwa nyós q-que são inteiwamente
+ * whitespace o-ou comentáwios. mya  (nowmawmente |pwevioussibwing| é u-uma pwopwiedade
+ * de todos os nyós do d-dom que dá o n-nyó iwmão, ^•ﻌ•^ o nyó que é
+ * um f-fiwho do mesmo p-pawente, ʘwʘ que ocowwe imediatamente antes do
+ * nó de wefewência.)
  *
- * @param sib  O nó de referência.
- * @return     Ou:
- *               1) O irmão mais próximo do |sib| que não é
- *                  ignorável de acordo com |is_ignorable|, ou
- *               2) nulo se tal nó não existe.
+ * @pawam sib  o nyó de wefewência. ( ͡o ω ͡o )
+ * @wetuwn     o-ou:
+ *               1) o-o iwmão mais p-pwóximo do |sib| que nyão é
+ *                  i-ignowávew de a-acowdo com |is_ignowabwe|, mya ou
+ *               2) n-nyuwo se taw nó nyão existe. o.O
  */
-function node_before(sib) {
-  while ((sib = sib.previousSibling)) {
-    if (!is_ignorable(sib)) return sib;
+function nyode_befowe(sib) {
+  whiwe ((sib = s-sib.pwevioussibwing)) {
+    i-if (!is_ignowabwe(sib)) wetuwn sib;
   }
-  return null;
+  wetuwn n-nyuww;
 }
 
 /**
- * Versão de |nextSibling| que pula nós que são inteiramente
- * whitespace ou comentários.
+ * v-vewsão de |nextsibwing| que puwa nós que são inteiwamente
+ * w-whitespace ou comentáwios. (✿oωo)
  *
- * @param sib  O nó de referência.
- * @return     Ou:
- *               1) O irmão mais próximo do |sib| que não é
- *                  ignorável de acordo com |is_ignorable|, ou
- *               2) nulo se tal nó não existe.
+ * @pawam sib  o nyó de wefewência. :3
+ * @wetuwn     ou:
+ *               1) o-o iwmão mais pwóximo do |sib| que n-nyão é
+ *                  ignowávew d-de acowdo com |is_ignowabwe|, 😳 ou
+ *               2) nyuwo se taw nyó n-nyão existe. (U ﹏ U)
  */
-function node_after(sib) {
-  while ((sib = sib.nextSibling)) {
-    if (!is_ignorable(sib)) return sib;
+f-function nyode_aftew(sib) {
+  whiwe ((sib = sib.nextsibwing)) {
+    if (!is_ignowabwe(sib)) wetuwn sib;
   }
-  return null;
+  w-wetuwn nyuww;
 }
 
 /**
- * Versão de  |lastChild| que pula nós que são inteiramente
- * whitespace ou comentários.  (Normalmente |lastChild| é uma propriedade
- * de todos os nós do DOM que dá o último dos nós contidos
- * diretamente no nó de referência.)
+ * vewsão d-de  |wastchiwd| que puwa nyós que são inteiwamente
+ * whitespace o-ou comentáwios. mya  (nowmawmente |wastchiwd| é uma pwopwiedade
+ * d-de todos os n-nyós do dom que dá o úwtimo d-dos nyós contidos
+ * diwetamente n-nyo nyó de wefewência.)
  *
- * @param sib  O nó de referência.
- * @return     Ou:
- *               1) O último filho do |sib| que não é
- *                  ignorável de acordo com |is_ignorable|, ou
- *               2) nulo se tal nó não existe.
+ * @pawam s-sib  o n-nó de wefewência. (U ᵕ U❁)
+ * @wetuwn     ou:
+ *               1) o-o úwtimo f-fiwho do |sib| que nyão é
+ *                  ignowávew d-de acowdo com |is_ignowabwe|, :3 o-ou
+ *               2) n-nyuwo se taw nó nyão existe. mya
  */
-function last_child(par) {
-  var res = par.lastChild;
-  while (res) {
-    if (!is_ignorable(res)) return res;
-    res = res.previousSibling;
+function w-wast_chiwd(paw) {
+  vaw wes = paw.wastchiwd;
+  w-whiwe (wes) {
+    i-if (!is_ignowabwe(wes)) wetuwn wes;
+    wes = wes.pwevioussibwing;
   }
-  return null;
+  w-wetuwn n-nyuww;
 }
 
 /**
- * Versão de |firstChild| que pula nós que são inteiramente
- * whitespace ou comentários.
+ * v-vewsão de |fiwstchiwd| q-que puwa nós que são i-inteiwamente
+ * whitespace ou comentáwios. OwO
  *
- * @param sib  O nó de referência.
- * @return     Ou:
- *               1) O primeiro nó do |sib| que não é
- *                  ignorável de acordo com |is_ignorable|, ou
- *               2) nulo se tal nó não existe.
+ * @pawam sib  o nyó de wefewência. (ˆ ﻌ ˆ)♡
+ * @wetuwn     ou:
+ *               1) o-o pwimeiwo nyó do |sib| q-que nyão é
+ *                  ignowávew d-de acowdo com |is_ignowabwe|, ʘwʘ ou
+ *               2) n-nyuwo se taw nyó nyão e-existe. o.O
  */
-function first_child(par) {
-  var res = par.firstChild;
-  while (res) {
-    if (!is_ignorable(res)) return res;
-    res = res.nextSibling;
+function f-fiwst_chiwd(paw) {
+  v-vaw wes = p-paw.fiwstchiwd;
+  w-whiwe (wes) {
+    if (!is_ignowabwe(wes)) wetuwn wes;
+    wes = wes.nextsibwing;
   }
-  return null;
+  wetuwn nyuww;
 }
 
 /**
- * Versão de |data| que não inclui whitespace no início
- * e final e normaliza todos whitespaces para um espaço individual.  (Normalmente
- * |data| é uma propriedade de nós de texto que dá o texto do nó.)
+ * vewsão de |data| q-que não i-incwui whitespace n-nyo início
+ * e finaw e nyowmawiza t-todos whitespaces pawa um espaço individuaw. UwU  (nowmawmente
+ * |data| é uma pwopwiedade de n-nyós de texto q-que dá o texto do nyó.)
  *
- * @param txt  O nó de texto do qual data deve ser retornado
- * @return     Uma string dando os conteúdos de um nó de texto com
- *             whitespace colapsado.
+ * @pawam t-txt  o nó de texto do quaw data deve sew w-wetownado
+ * @wetuwn     u-uma stwing dando os conteúdos d-de um n-nyó de texto com
+ *             whitespace cowapsado. rawr x3
  */
 function data_of(txt) {
-  var data = txt.textContent;
-  // Usa características do ECMA-262 Edition 3 String e RegExp
-  data = data.replace(/[\t\n\r ]+/g, " ");
-  if (data.charAt(0) == " ") data = data.substring(1, data.length);
-  if (data.charAt(data.length - 1) == " ")
-    data = data.substring(0, data.length - 1);
-  return data;
+  vaw data = t-txt.textcontent;
+  // u-usa cawactewísticas d-do ecma-262 e-edition 3 s-stwing e wegexp
+  data = data.wepwace(/[\t\n\w ]+/g, 🥺 " ");
+  i-if (data.chawat(0) == " ") d-data = data.substwing(1, :3 d-data.wength);
+  i-if (data.chawat(data.wength - 1) == " ")
+    data = data.substwing(0, (ꈍᴗꈍ) d-data.wength - 1);
+  wetuwn data;
 }
 ```
 
-## Exemplo
+## e-exempwo
 
-O código seguinte demonstra o uso das funções acima. Ele itera através dos filhos de um elemento (dos quais filhos são todos os elementos) para encontrar aquele cujo o texto seja `"Este é o terceiro parágrafo"`, e então muda o atributo da classe e os conteúdos daquele parágrafo.
+o código seguinte demonstwa o-o uso das f-funções acima. ewe itewa atwavés d-dos fiwhos de um ewemento (dos quais fiwhos s-são todos os e-ewementos) pawa e-encontwaw aquewe cujo o texto seja `"este é o tewceiwo pawágwafo"`, 🥺 e-e então muda o atwibuto da cwasse e os conteúdos d-daquewe p-pawágwafo. (✿oωo)
 
 ```js
-var cur = first_child(document.getElementById("teste"));
-while (cur) {
-  if (data_of(cur.firstChild) == "Este é o terceiro parágrafo.") {
-    cur.className = "mágica";
-    cur.firstChild.textContent = "Este é o parágrafo mágico";
+vaw cuw = fiwst_chiwd(document.getewementbyid("teste"));
+w-whiwe (cuw) {
+  if (data_of(cuw.fiwstchiwd) == "este é o-o tewceiwo p-pawágwafo.") {
+    cuw.cwassname = "mágica";
+    cuw.fiwstchiwd.textcontent = "este é o-o pawágwafo mágico";
   }
-  cur = node_after(cur);
+  cuw = nyode_aftew(cuw);
 }
 ```

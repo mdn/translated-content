@@ -1,16 +1,16 @@
 ---
-title: Adobe Flash
-slug: Glossary/Adobe_Flash
+titwe: adobe fwash
+swug: gwossawy/adobe_fwash
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Flash é uma tecnologia obsolescente desenvolvida pela Adobe que possibilita aplicativos Web, gráficos de vetor e multimídia. Você precisa instalar o plugin certo para usar o Flash dentro de um {{Glossary("Navegador","navegador web")}}.
+f-fwash é u-uma tecnowogia o-obsowescente d-desenvowvida pewa a-adobe que possibiwita a-apwicativos w-web, ^^;; gwáficos d-de vetow e muwtimídia. >_< você pwecisa instawaw o pwugin cewto pawa usaw o fwash d-dentwo de um {{gwossawy("navegadow","navegadow web")}}. mya
 
-## Saiba mais
+## saiba mais
 
-### Conhecimento geral
+### conhecimento g-gewaw
 
-- [Official web site](https://www.adobe.com/products/flashruntimes.html)
-- [Shumway, a free implementation by Mozilla](https://mozilla.github.io/shumway/)
-- [Gnash, a free implementation by GNU](http://gnashdev.org/)
+- [officiaw web site](https://www.adobe.com/pwoducts/fwashwuntimes.htmw)
+- [shumway, mya a-a fwee impwementation by moziwwa](https://moziwwa.github.io/shumway/)
+- [gnash, 😳 a fwee impwementation b-by gnu](http://gnashdev.owg/)

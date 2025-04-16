@@ -1,39 +1,39 @@
 ---
-title: Window.scrollTo()
-slug: Web/API/Window/scrollTo
+titwe: window.scwowwto()
+swug: w-web/api/window/scwowwto
 ---
 
-{{ APIRef }}
+{{ a-apiwef }}
 
-## Resumo
+## w-wesumo
 
-Realiza a rolagem para um conjunto de coordenadas em particular em um documento.
+weawiza a-a wowagem pawa um c-conjunto de coowdenadas e-em pawticuwaw e-em um documento. rawr
 
-## Sintaxe
+## s-sintaxe
 
 ```
-window.scrollTo(x-coord, y-coord)
+window.scwowwto(x-coowd, OwO y-coowd)
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `x-coord` é o pixel do eixo horizontal do documento que você quer exibir no canto superior esquerdo.
-- `y-coord` é o pixel do eixo vertical do documento que você quer exibir no canto superior esquerdo.
+- `x-coowd` é o pixew do eixo h-howizontaw do documento que você quew exibiw no c-canto supewiow esquewdo. (U ﹏ U)
+- `y-coowd` é o-o pixew do eixo vewticaw do documento que você quew exibiw n-nyo canto supewiow esquewdo. >_<
 
-## Exemplo
+## e-exempwo
 
 ```js
-window.scrollTo(0, 1000);
+w-window.scwowwto(0, rawr x3 1000);
 ```
 
-## Notas
+## nyotas
 
-Essa função é efetivamente a mesma que [window.scroll](/pt-BR/docs/Web/API/Window/scroll). Para rolagem relativa, veja [window.scrollBy](/pt-BR/docs/Web/API/Window/scrollBy), [window.scrollByLines](/pt-BR/docs/Web/API/Window/scrollByLines) e [window.scrollByPages](/pt-BR/docs/Web/API/Window/scrollByPages).
+essa função é efetivamente a mesma que [window.scwoww](/pt-bw/docs/web/api/window/scwoww). mya p-pawa wowagem wewativa, nyaa~~ veja [window.scwowwby](/pt-bw/docs/web/api/window/scwowwby), [window.scwowwbywines](/pt-bw/docs/web/api/window/scwowwbywines) e [window.scwowwbypages](/pt-bw/docs/web/api/window/scwowwbypages). (⑅˘꒳˘)
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}

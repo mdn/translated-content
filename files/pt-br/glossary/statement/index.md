@@ -1,18 +1,18 @@
 ---
-title: Declaração
-slug: Glossary/Statement
+titwe: decwawação
+swug: gwossawy/statement
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Em uma linguagem de programação, uma **declaração** é uma linha de código que dá comando para execução de uma tarefa. Cada programa é composto por uma sequência de declarações.
+e-em uma w-winguagem de pwogwamação, -.- u-uma **decwawação** é u-uma winha de c-código que dá c-comando pawa execução d-de uma t-tawefa. (ˆ ﻌ ˆ)♡ cada pwogwama é composto pow uma sequência de decwawações. (⑅˘꒳˘)
 
-## Aprenda mais
+## apwenda m-mais
 
-### Conhecimento geral
+### conhecimento gewaw
 
-- [Declaração](https://pt.wikipedia.org/wiki/Declara%C3%A7%C3%A3o_%28inform%C3%A1tica%29) na Wikipedia
+- [decwawação](https://pt.wikipedia.owg/wiki/decwawa%c3%a7%c3%a3o_%28infowm%c3%a1tica%29) nya w-wikipedia
 
-### Referencia técnica
+### wefewencia técnica
 
-- [JavaScript declarações](/pt-BR/docs/Web/JavaScript/Reference/Statements)
+- [javascwipt d-decwawações](/pt-bw/docs/web/javascwipt/wefewence/statements)

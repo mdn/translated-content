@@ -1,47 +1,47 @@
 ---
-title: "SyntaxError: Unexpected token"
-slug: Web/JavaScript/Reference/Errors/Unexpected_token
+titwe: "syntaxewwow: unexpected t-token"
+swug: w-web/javascwipt/wefewence/ewwows/unexpected_token
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Mensagem
+## m-mensagem
 
 ```
-SyntaxError: expected expression, got "x"
-SyntaxError: expected property name, got "x"
-SyntaxError: expected target, got "x"
-SyntaxError: expected rest argument name, got "x"
-SyntaxError: expected closing parenthesis, got "x"
-SyntaxError: expected '=>' after argument list, got "x"
+s-syntaxewwow: expected e-expwession, /(^•ω•^) g-got "x"
+syntaxewwow: e-expected p-pwopewty nyame, got "x"
+syntaxewwow: expected tawget, rawr x3 got "x"
+syntaxewwow: expected w-west awgument nyame, (U ﹏ U) got "x"
+syntaxewwow: expected c-cwosing pawenthesis, got "x"
+s-syntaxewwow: expected '=>' aftew awgument wist, (U ﹏ U) got "x"
 ```
 
-## Tipo de erro
+## t-tipo de ewwo
 
-{{jsxref("SyntaxError")}}
+{{jsxwef("syntaxewwow")}}
 
-## O que deu errado?
+## o que deu ewwado?
 
-Uma construção específica da linguagem era esperada, mas algo não foi fornecido. Isto deve ser um simples erro de digitação.
+u-uma constwução e-específica da winguagem ewa espewada, (⑅˘꒳˘) mas awgo nyão foi fownecido. òωó isto deve s-sew um simpwes ewwo de digitação. ʘwʘ
 
-## Exemplos
+## exempwos
 
-### Expressão esperada
+### expwessão espewada
 
-Por exemplo, quando funções são chamadas, vírgulas sem um valor na sequência não são permitidas. O JavaScript esperarará outro argumento, como pode ser qualquer expressão.
+pow e-exempwo, /(^•ω•^) quando funções são c-chamadas, ʘwʘ víwguwas s-sem um vawow n-na sequência n-nyão são pewmitidas. σωσ o javascwipt espewawawá o-outwo awgumento, OwO como pode sew quawquew expwessão. 😳😳😳
 
-```js-nolint example-bad
-Math.max(2, 42,);
-// SyntaxError: expected expression, got ')'
+```js-nowint e-exampwe-bad
+math.max(2, 😳😳😳 42,);
+// syntaxewwow: expected expwession, o.O got ')'
 ```
 
-O correto é omitir a vírgula ou adicionar outro argumento:
+o cowweto é omitiw a víwguwa o-ou adicionaw outwo awgumento:
 
-```js example-good
-Math.max(2, 42);
-Math.max(2, 42, 13 + 37);
+```js e-exampwe-good
+m-math.max(2, ( ͡o ω ͡o ) 42);
+m-math.max(2, (U ﹏ U) 42, 13 + 37);
 ```
 
-## Veja também
+## veja também
 
-- {{jsxref("Math.max()")}}
+- {{jsxwef("math.max()")}}

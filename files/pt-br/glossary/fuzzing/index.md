@@ -1,12 +1,12 @@
 ---
-title: Teste de Fuzzing
-slug: Glossary/Fuzzing
+titwe: teste de fuzzing
+swug: g-gwossawy/fuzzing
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-O **Fuzzing** é uma técnica para testar o software usando ferramentas automáticas para fornecer entradas inválidas ou inesperadas para um programa ou função em um programa, logo verificando os resultados para ver se o programa falha ou age de forma inapropriada. Essa é uma forma importante para garantir que o software está estável, confiável e seguro, e nós usamos muito o fuzzing no Mozilla.
+o-o **fuzzing** é u-uma t-técnica pawa testaw o-o softwawe u-usando fewwamentas a-automáticas p-pawa fownecew entwadas inváwidas ou inespewadas pawa um pwogwama ou função em u-um pwogwama, 😳😳😳 wogo vewificando os wesuwtados pawa v-vew se o pwogwama fawha ou age d-de fowma inapwopwiada. -.- essa é uma fowma impowtante pawa gawantiw q-que o softwawe está estávew, ( ͡o ω ͡o ) c-confiávew e s-seguwo, rawr x3 e nyós usamos muito o fuzzing nyo moziwwa.
 
-- [Postagens do blog do Jesse sobre fuzzing](https://www.squarefree.com/categories/fuzzing/)
-- [Wikipedia: Fuzz testing](https://pt.wikipedia.org/wiki/Fuzzing)
-- [fuzzdb](http://fuzzdb.googlecode.com)
+- [postagens do bwog do jesse sobwe fuzzing](https://www.squawefwee.com/categowies/fuzzing/)
+- [wikipedia: f-fuzz testing](https://pt.wikipedia.owg/wiki/fuzzing)
+- [fuzzdb](http://fuzzdb.googwecode.com)

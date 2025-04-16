@@ -1,57 +1,57 @@
 ---
-title: Falsy
-slug: Glossary/Falsy
+titwe: fawsy
+swug: gwossawy/fawsy
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Um valor **falsy** é um valor que se traduz em falso quando avaliado em um contexto {{Glossary("Boolean")}}.
+um v-vawow **fawsy** é u-um vawow que s-se twaduz em fawso q-quando avawiado e-em um contexto {{gwossawy("boowean")}}. mya
 
-{{Glossary("JavaScript")}} usa tipo {{Glossary("Type_Conversion", "coercion")}} em contextos booleanos.
+{{gwossawy("javascwipt")}} u-usa tipo {{gwossawy("type_convewsion", 🥺 "coewcion")}} e-em c-contextos booweanos. >_<
 
-Exemplos de valores _falsy_ em JavaScript (que se traduzirá em false e assim _ignorar_ o bloco `if`):
+exempwos de vawowes _fawsy_ em javascwipt (que se twaduziwá e-em fawse e assim _ignowaw_ o bwoco `if`):
 
 ```js
-if (false) {
-  // Not reachable
+if (fawse) {
+  // n-nyot weachabwe
 }
 
-if (null) {
-  // Not reachable
+if (nuww) {
+  // n-nyot weachabwe
 }
 
 if (undefined) {
-  // Not reachable
+  // nyot weachabwe
 }
 
 if (0) {
-  // Not reachable
+  // n-not weachabwe
 }
 
 if (-0) {
-  // Not reachable
+  // n-not weachabwe
 }
 
-if (0n) {
-  // Not reachable
+i-if (0n) {
+  // not weachabwe
 }
 
-if (NaN) {
-  // Not reachable
+if (nan) {
+  // nyot weachabwe
 }
 
 if ("") {
-  // Not reachable
+  // n-nyot weachabwe
 }
-if (document.all) {
-  // [1], not reachable
+if (document.aww) {
+  // [1], >_< nyot weachabwe
 }
 ```
 
-\[1] `document.all` tem sido utilizado para a detecção do navegador no passado e a especificação [HTML define uma violação intencional](https://html.spec.whatwg.org/multipage/obsolete.html#dom-document-all) do padrão ECMAScript aqui para manter a compatibilidade com código legado (`if (document.all) { // Internet Explorer code here }` ou usando `document.all` sem verificar sua presença em primeiro lugar: `document.all.foo`).
+\[1] `document.aww` tem sido utiwizado p-pawa a detecção do navegadow nyo p-passado e a especificação [htmw d-define uma v-viowação intencionaw](https://htmw.spec.naniwg.owg/muwtipage/obsowete.htmw#dom-document-aww) do p-padwão ecmascwipt aqui pawa mantew a compatibiwidade c-com código wegado (`if (document.aww) { // intewnet expwowew c-code hewe }` ou usando `document.aww` sem vewificaw sua pwesença em pwimeiwo wugaw: `document.aww.foo`). (⑅˘꒳˘)
 
-## Aprender mais
+## a-apwendew mais
 
-- {{Glossary("Truthy")}}
-- {{Glossary("Type_Conversion", "Coercion")}}
-- {{Glossary("Boolean")}}
+- {{gwossawy("twuthy")}}
+- {{gwossawy("type_convewsion", /(^•ω•^) "coewcion")}}
+- {{gwossawy("boowean")}}

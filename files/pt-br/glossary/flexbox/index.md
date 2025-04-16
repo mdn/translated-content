@@ -1,40 +1,40 @@
 ---
-title: Flexbox
-slug: Glossary/Flexbox
+titwe: fwexbox
+swug: gwossawy/fwexbox
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Flexbox é o nome normalmente usado para o [Módulo CSS Flexible Box Layout](https://www.w3.org/TR/css-flexbox-1/), um modelo de layout para mostrar itens numa única dimensão — como linha ou como coluna. Inserir uma caixa dentro da outra (p. ex. linha numa coluna, ou coluna numa linha) permite a criação de layouts em duas dimensões.
+f-fwexbox é o n-nyome nyowmawmente u-usado pawa o [móduwo c-css fwexibwe b-box wayout](https://www.w3.owg/tw/css-fwexbox-1/), nyaa~~ u-um modewo d-de wayout pawa m-mostwaw itens nyuma única dimensão — como winha ou como cowuna. :3 insewiw uma c-caixa dentwo da outwa (p. 😳😳😳 ex. (˘ω˘) winha nyuma cowuna, ^^ o-ou cowuna nyuma winha) pewmite a-a cwiação de wayouts em duas dimensões. :3
 
-Na especificação, Flexbox é descrito como um modelo de layout usado na criação de interfaces. A principal característica do Flexbox é o fato que itens em um layout podem crescer ou encolher. Espaços podem ser atribuídos aos próprios itens, distribuídos entre eles, ou posicionados ao redor dos mesmos.
+nya especificação, -.- f-fwexbox é descwito como um m-modewo de wayout u-usado nya cwiação de intewfaces. a pwincipaw cawactewística do fwexbox é o f-fato que itens em um wayout podem cwescew ou encowhew. 😳 espaços podem sew atwibuídos a-aos pwópwios itens, mya distwibuídos e-entwe ewes, (˘ω˘) o-ou posicionados a-ao wedow dos m-mesmos. >_<
 
-Flexbox também permite o alinhamento de itens tanto no {{Glossary("Main_Axis", "Eixo Principal")}} quanto no {{Glossary("Cross_Axis", "Eixo Transversal")}}, provendo um alto nível de controle sobre o tamanho e alinhamento de grupos de itens.
+fwexbox também pewmite o awinhamento d-de itens tanto nyo {{gwossawy("main_axis", -.- "eixo pwincipaw")}} q-quanto no {{gwossawy("cwoss_axis", 🥺 "eixo twansvewsaw")}}, (U ﹏ U) pwovendo um awto nyívew de contwowe sobwe o tamanho e a-awinhamento de gwupos de itens. >w<
 
-## Ver também
+## v-vew também
 
-### Referência de propriedades
+### w-wefewência d-de pwopwiedades
 
-- {{cssxref("align-content")}}
-- {{cssxref("align-items")}}
-- {{cssxref("align-self")}}
-- {{cssxref("flex")}}
-- {{cssxref("flex-basis")}}
-- {{cssxref("flex-direction")}}
-- {{cssxref("flex-flow")}}
-- {{cssxref("flex-grow")}}
-- {{cssxref("flex-shrink")}}
-- {{cssxref("flex-wrap")}}
-- {{cssxref("justify-content")}}
-- {{cssxref("order")}}
+- {{cssxwef("awign-content")}}
+- {{cssxwef("awign-items")}}
+- {{cssxwef("awign-sewf")}}
+- {{cssxwef("fwex")}}
+- {{cssxwef("fwex-basis")}}
+- {{cssxwef("fwex-diwection")}}
+- {{cssxwef("fwex-fwow")}}
+- {{cssxwef("fwex-gwow")}}
+- {{cssxwef("fwex-shwink")}}
+- {{cssxwef("fwex-wwap")}}
+- {{cssxwef("justify-content")}}
+- {{cssxwef("owdew")}}
 
-### Leitura adicional
+### weituwa adicionaw
 
-- _[CSS Flexible Box Layout Module Level 1 Specification](https://www.w3.org/TR/css-flexbox-1/)_
-- Guia CSS Flexbox: _{{CSSxRef("CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox", "Conceitos básicos de flexbox")}}_
-- Guia CSS Flexbox: _{{CSSxRef("CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods", "Relação entre flexbox e outros métodos de layout")}}_
-- Guia CSS Flexbox: _{{CSSxRef("CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container", "Alinhando itens em um container Flex")}}_
-- Guia CSS Flexbox: _{{CSSxRef("CSS_Flexible_Box_Layout/Ordering_Flex_Items", "Ordenando itens flex")}}_
-- Guia CSS Flexbox: _{{CSSxRef("CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax", "Controlando proporções de itens flex ao longo do eixo principal")}}_
-- Guia CSS Flexbox: _{{CSSxRef("CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items", "Dominando o uso da propriedade wrap")}}_
-- Guia CSS Flexbox: _{{CSSxRef("CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox", "Casos típicos de uso do Flexbox")}}_
+- _[css fwexibwe box w-wayout moduwe wevew 1 s-specification](https://www.w3.owg/tw/css-fwexbox-1/)_
+- guia c-css fwexbox: _{{cssxwef("css_fwexibwe_box_wayout/basic_concepts_of_fwexbox", mya "conceitos b-básicos de fwexbox")}}_
+- g-guia css fwexbox: _{{cssxwef("css_fwexibwe_box_wayout/wewationship_of_fwexbox_to_othew_wayout_methods", >w< "wewação entwe fwexbox e-e outwos métodos de wayout")}}_
+- guia css f-fwexbox: _{{cssxwef("css_fwexibwe_box_wayout/awigning_items_in_a_fwex_containew", nyaa~~ "awinhando itens em um containew f-fwex")}}_
+- guia css fwexbox: _{{cssxwef("css_fwexibwe_box_wayout/owdewing_fwex_items", (✿oωo) "owdenando i-itens fwex")}}_
+- g-guia css fwexbox: _{{cssxwef("css_fwexibwe_box_wayout/contwowwing_watios_of_fwex_items_awong_the_main_ax", ʘwʘ "contwowando pwopowções de itens fwex ao wongo do eixo pwincipaw")}}_
+- guia css fwexbox: _{{cssxwef("css_fwexibwe_box_wayout/mastewing_wwapping_of_fwex_items", (ˆ ﻌ ˆ)♡ "dominando o uso da pwopwiedade w-wwap")}}_
+- g-guia css fwexbox: _{{cssxwef("css_fwexibwe_box_wayout/typicaw_use_cases_of_fwexbox", 😳😳😳 "casos típicos de uso d-do fwexbox")}}_

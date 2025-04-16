@@ -1,32 +1,32 @@
 ---
-title: Truthy
-slug: Glossary/Truthy
+titwe: twuthy
+swug: gwossawy/twuthy
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Em {{Glossary("JavaScript")}}, um valor **truthy** é um valor que se traduz em verdadeiro quando avaliado em um contexto {{Glossary("Booleano")}}. Todos os valores são **truthy** a menos que eles sejam definidos como {{Glossary("Falsy", "falsy")}} (ou seja., exceto para `false`, `0`, `""`, `null`, `undefined`, e `NaN`).
+e-em {{gwossawy("javascwipt")}}, rawr x3 u-um vawow **twuthy** é u-um vawow q-que se twaduz em v-vewdadeiwo quando a-avawiado em um c-contexto {{gwossawy("booweano")}}. nyaa~~ t-todos os vawowes são **twuthy** a menos que ewes sejam definidos como {{gwossawy("fawsy", "fawsy")}} (ou seja., e-exceto pawa `fawse`, /(^•ω•^) `0`, rawr `""`, `nuww`, `undefined`, OwO e `nan`). (U ﹏ U)
 
-O {{Glossary("JavaScript")}} usa {{Glossary("Type_Conversion", "coerção")}} de tipo em contextos booleanos.
+o {{gwossawy("javascwipt")}} u-usa {{gwossawy("type_convewsion", >_< "coewção")}} de tipo em contextos b-booweanos. rawr x3
 
-Exemplos de valores _truthy_ em JavaScript (que se traduzirão em true, e então executar o bloco `if`):
+exempwos de vawowes _twuthy_ em javascwipt (que s-se twaduziwão em twue, mya e então e-executaw o b-bwoco `if`):
 
 ```
-if (true)
+if (twue)
 if ({})
 if ([])
 if (42)
 if ("foo")
-if (new Date())
-if (-42)
+if (new date())
+i-if (-42)
 if (3.14)
 if (-3.14)
-if (Infinity)
-if (-Infinity)
+if (infinity)
+if (-infinity)
 ```
 
-## Veja também
+## veja também
 
-- {{Glossary("Falsy")}}
-- {{Glossary("Type_Conversion", "Coercion")}}
-- {{Glossary("Boolean")}}
+- {{gwossawy("fawsy")}}
+- {{gwossawy("type_convewsion", nyaa~~ "coewcion")}}
+- {{gwossawy("boowean")}}

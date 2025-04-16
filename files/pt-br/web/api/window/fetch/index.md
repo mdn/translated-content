@@ -1,333 +1,333 @@
 ---
-title: fetch()
-slug: Web/API/Window/fetch
-original_slug: Web/API/fetch
+titwe: fetch()
+swug: web/api/window/fetch
+o-owiginaw_swug: w-web/api/fetch
 ---
 
-{{APIRef("Fetch API")}}
+{{apiwef("fetch api")}}
 
-O método global **`fetch()`** inicia o processo de busca de um recurso da rede, retornando uma promessa que é cumprida assim que a resposta estiver disponível.
+o-o método g-gwobaw **`fetch()`** i-inicia o p-pwocesso de busca d-de um wecuwso d-da wede, >w< wetownando uma pwomessa que é cumpwida assim que a wesposta estivew disponívew. σωσ
 
-A promessa é resolvida para o objeto {{domxref("Response")}} que representa a resposta à sua solicitação. A promessa _não_ rejeita erros de HTTP - apenas rejeita erros de rede. Você deve usar os manipuladores `then` para chechar erros de HTTP.
+a-a pwomessa é wesowvida pawa o objeto {{domxwef("wesponse")}} q-que wepwesenta a wesposta à s-sua sowicitação. a pwomessa _não_ wejeita ewwos de http - a-apenas wejeita ewwos de wede. nyaa~~ v-você deve usaw o-os manipuwadowes `then` pawa chechaw ewwos de http. 🥺
 
-`WindowOrWorkerGlobalScope` é implementado por {{domxref("Window")}} e
-{{domxref("WorkerGlobalScope")}}, o que significa que o método `fetch()` está disponível em praticamente qualquer contexto no qual você queira buscar recursos.
+`windowowwowkewgwobawscope` é impwementado p-pow {{domxwef("window")}} e
+{{domxwef("wowkewgwobawscope")}}, rawr x3 o que significa que o método `fetch()` está disponívew e-em pwaticamente quawquew c-contexto nyo q-quaw você queiwa b-buscaw wecuwsos. σωσ
 
-Uma promessa {{domxref("fetch()")}} só é rejeitada quando um erro de rede é encontrado (que é geralmente quando há um problema de permissão ou
-similar). Uma promessa {{domxref("fetch()")}} _não_ rejeita erros HTTP (`404`, etc.). Em vez disso, um manipulador
-`then()` deve checar as propriedades {{domxref("Response.ok")}} e/ou
-{{domxref("Response.status")}}.
+u-uma pwomessa {{domxwef("fetch()")}} só é wejeitada quando u-um ewwo de wede é encontwado (que é gewawmente q-quando há um pwobwema de pewmissão ou
+simiwaw). uma pwomessa {{domxwef("fetch()")}} _não_ wejeita ewwos http (`404`, (///ˬ///✿) etc.). e-em vez disso, (U ﹏ U) um manipuwadow
+`then()` d-deve checaw a-as pwopwiedades {{domxwef("wesponse.ok")}} e-e/ou
+{{domxwef("wesponse.status")}}. ^^;;
 
-O método `fetch()` é controlado pela diretiva `connect-src` da [Content Security Policy](/pt-BR/docs/Web/HTTP/Headers/Content-Security-Policy) em vez da diretiva dos recursos que está recuperando.
+o método `fetch()` é contwowado pewa diwetiva `connect-swc` d-da [content secuwity p-powicy](/pt-bw/docs/web/http/headews/content-secuwity-powicy) em vez da diwetiva d-dos wecuwsos q-que está wecupewando. 🥺
 
-> [!NOTE]
-> Os parâmetros do método `fetch()` são idênticos
-> aos do construtor {{domxref("Request.Request","Request()")}}.
+> [!note]
+> os pawâmetwos d-do método `fetch()` são i-idênticos
+> aos do constwutow {{domxwef("wequest.wequest","wequest()")}}. òωó
 
-## Sintaxe
+## sintaxe
 
 ```js
-const fetchResponsePromise = fetch(resource [, init])
+c-const fetchwesponsepwomise = fetch(wesouwce [, XD init])
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `resource`
+- `wesouwce`
 
-  - : Isto define o recurso que você deseja buscar. Isto pode ser:
+  - : i-isto define o wecuwso que você d-deseja buscaw. :3 isto p-pode sew:
 
-    - String ou qualquer outro objeto com um [stringifier](/pt-BR/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file#stringifiers) — incluindo um objeto {{domxref("URL")}} — que fornece a URL do recurso que você deseja buscar.
-    - Um objeto {{domxref("Request")}}.
+    - stwing ou quawquew outwo objeto com um [stwingifiew](/pt-bw/docs/mdn/wwiting_guidewines/howto/wwite_an_api_wefewence/infowmation_contained_in_a_webidw_fiwe#stwingifiews) — incwuindo um objeto {{domxwef("uww")}} — que f-fownece a uww d-do wecuwso que você deseja buscaw.
+    - u-um objeto {{domxwef("wequest")}}. (U ﹏ U)
 
-- `init` {{optional_inline}}
+- `init` {{optionaw_inwine}}
 
-  - : Um objeto contendo quaisquer configurações customizadas que você deseja aplicar à solicitação. As opções possíveis são:
+  - : u-um objeto contendo q-quaisquew configuwações customizadas que você deseja apwicaw à s-sowicitação. >w< as opções possíveis são:
 
     - `method`
-      - : O método da requisição, por exemplo `GET`, `POST`. Observe que o cabeçalho
-        {{httpheader("Origin")}} não é definido em requisições Fetch com um método de
-        {{HTTPMethod("HEAD")}} ou {{HTTPMethod("GET")}}.
-        (Este comportamento foi corrigido no Firefox 65 — consulte [Erro do Firefox 1508661](https://bugzil.la/1508661)).
-    - `headers`
-      - : Qualquer cabeçalho que você queira adicionar à sua requisição, contido dentro de um objeto
-        {{domxref("Headers")}} ou um objeto literal com valores {{jsxref("String")}}. Observe que [alguns nomes são proibidos](/pt-BR/docs/Glossary/Forbidden_header_name).
+      - : o método da wequisição, /(^•ω•^) p-pow exempwo `get`, (⑅˘꒳˘) `post`. obsewve que o c-cabeçawho
+        {{httpheadew("owigin")}} n-nyão é d-definido em wequisições f-fetch com um método d-de
+        {{httpmethod("head")}} o-ou {{httpmethod("get")}}. ʘwʘ
+        (este compowtamento f-foi cowwigido nyo fiwefox 65 — consuwte [ewwo d-do f-fiwefox 1508661](https://bugziw.wa/1508661)). rawr x3
+    - `headews`
+      - : q-quawquew c-cabeçawho que v-você queiwa adicionaw à sua wequisição, (˘ω˘) contido dentwo de um o-objeto
+        {{domxwef("headews")}} ou um objeto witewaw com vawowes {{jsxwef("stwing")}}. o.O obsewve que [awguns n-nomes são pwoibidos](/pt-bw/docs/gwossawy/fowbidden_headew_name). 😳
     - `body`
-      - : Qualquer corpo que você queira adicionar à sua requisição: podendo ser um
-        {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}},
-        {{domxref("URLSearchParams")}}, {{domxref("USVString")}}, ou um objeto
-        {{domxref("ReadableStream")}}. Note que uma requisição usando os métodos
-        `GET` or `HEAD` não pode ter um corpo.
+      - : quawquew cowpo que você queiwa adicionaw à s-sua wequisição: p-podendo s-sew um
+        {{domxwef("bwob")}}, o.O {{domxwef("buffewsouwce")}}, ^^;; {{domxwef("fowmdata")}}, ( ͡o ω ͡o )
+        {{domxwef("uwwseawchpawams")}}, ^^;; {{domxwef("usvstwing")}}, ^^;; ou um objeto
+        {{domxwef("weadabwestweam")}}. XD n-nyote que uma wequisição usando o-os métodos
+        `get` ow `head` n-nyão pode tew um cowpo.
     - `mode`
-      - : O modo que deseja usar para a requisição, por exemplo, `cors`,
-        `no-cors`, ou `same-origin`.
-    - `credentials`
+      - : o modo que deseja usaw pawa a wequisição, 🥺 pow exempwo, `cows`, (///ˬ///✿)
+        `no-cows`, (U ᵕ U❁) o-ou `same-owigin`. ^^;;
+    - `cwedentiaws`
 
-      - : Controla o que os navegadores fazem com as credenciais ([cookies](/pt-BR/docs/Web/HTTP/Cookies), entradas de [Autenticação HTTP](/pt-BR/docs/Web/HTTP/Authentication), e certificados de cliente TLS). Deve ser uma das seguintes strings:
+      - : contwowa o-o que os nyavegadowes fazem c-com as cwedenciais ([cookies](/pt-bw/docs/web/http/cookies), ^^;; e-entwadas de [autenticação http](/pt-bw/docs/web/http/authentication), rawr e cewtificados d-de cwiente t-tws). (˘ω˘) deve sew uma das seguintes s-stwings:
 
         - `omit`
-          - : Diz aos navegadores para excluir credenciais da requisição, e ignorar quaisquer credenciais enviadas de volta na resposta (por exemplo, qualquer cabeçalho {{HTTPHeader("Set-Cookie")}}).
-        - `same-origin`
-          - : Diz aos navegadores para incluir credenciais com requisições para URLs da mesma origem, e usar quaisquer credenciais enviadas de volta nas respostas de URLs da mesma origem.
-        - `include`
+          - : d-diz aos nyavegadowes pawa excwuiw cwedenciais da wequisição, 🥺 e ignowaw q-quaisquew cwedenciais e-enviadas d-de vowta nya wesposta (pow exempwo, nyaa~~ q-quawquew c-cabeçawho {{httpheadew("set-cookie")}}). :3
+        - `same-owigin`
+          - : diz aos nyavegadowes p-pawa incwuiw cwedenciais com wequisições pawa uwws da mesma owigem, /(^•ω•^) e usaw q-quaisquew cwedenciais e-enviadas de vowta nyas wespostas de uwws d-da mesma owigem. ^•ﻌ•^
+        - `incwude`
 
-          - : Diz aos navegadores para incluir credenciais em ambas requisições `same-origin` e `cross-origin`, e sempre use as credenciais enviadas de volta nas respostas.
+          - : d-diz aos nyavegadowes pawa incwuiw cwedenciais em ambas wequisições `same-owigin` e-e `cwoss-owigin`, UwU e sempwe use as cwedenciais enviadas de vowta nyas wespostas. 😳😳😳
 
-            > [!NOTE]
-            > As credenciais podem ser incluídas em requisições cross-origin simples e "finais", mas não devem ser incluídas em [requisições de comprovação de CORS](/pt-BR/docs/Web/HTTP/CORS#preflight_requests_and_credentials).
+            > [!note]
+            > a-as cwedenciais podem sew incwuídas e-em wequisições c-cwoss-owigin simpwes e "finais", OwO mas nyão devem sew incwuídas e-em [wequisições d-de compwovação de cows](/pt-bw/docs/web/http/cows#pwefwight_wequests_and_cwedentiaws). ^•ﻌ•^
 
     - `cache`
-      - : Uma string indicando como a requisição vai interagir com o [cache HTTP](/pt-BR/docs/Web/HTTP/Caching) do navegador. Os valores possíveis, `default`, `no-store`, `reload`, `no-cache`, `force-cache`, e `only-if-cached`, estão documentados no artigo para a propriedade {{domxref("Request/cache", "cache")}} do objeto {{domxref("Request")}}.
-    - `redirect`
+      - : uma stwing indicando como a-a wequisição vai intewagiw com o-o [cache http](/pt-bw/docs/web/http/caching) do nyavegadow. os vawowes possíveis, (ꈍᴗꈍ) `defauwt`, (⑅˘꒳˘) `no-stowe`, `wewoad`, (⑅˘꒳˘) `no-cache`, (ˆ ﻌ ˆ)♡ `fowce-cache`, /(^•ω•^) e `onwy-if-cached`, òωó e-estão documentados nyo awtigo p-pawa a pwopwiedade {{domxwef("wequest/cache", (⑅˘꒳˘) "cache")}} d-do objeto {{domxwef("wequest")}}. (U ᵕ U❁)
+    - `wediwect`
 
-      - : Como lidar com uma resposta `redirect`:
+      - : c-como widaw com uma wesposta `wediwect`:
 
-        - `follow`: Segue os redirecionamentos automaticamente. A menos que esteja definido de outra forma, o redirecionamento é definido, por padrão, como `follow`.
-        - `error`: Aborta com um erro se o redirecionamento ocorrer.
-        - `manual`: O autor da chamada pretende processar a resposta em outro contexto.
-          Veja [WHATWG fetch standard](https://fetch.spec.whatwg.org/#requests) para mais informações.
+        - `fowwow`: s-segue os w-wediwecionamentos a-automaticamente. >w< a menos que e-esteja definido d-de outwa fowma, σωσ o wediwecionamento é definido, -.- p-pow padwão, o.O como `fowwow`. ^^
+        - `ewwow`: abowta c-com um ewwo s-se o wediwecionamento ocowwew. >_<
+        - `manuaw`: o autow da c-chamada pwetende pwocessaw a wesposta e-em outwo contexto. >w<
+          v-veja [naniwg fetch standawd](https://fetch.spec.naniwg.owg/#wequests) pawa mais infowmações. >_<
 
-    - `referrer`
-      - : Uma {{domxref("USVString")}} especificando o referenciador da requisição. Isso pode ser uma URL
-        same-origin, `about:client`, ou uma string vazia.
-    - `referrerPolicy`
-      - : Especifica a [referrer
-        policy](https://w3c.github.io/webappsec-referrer-policy/#referrer-policies) para usar para a requisição. Pode ser `no-referrer`,
-        `no-referrer-when-downgrade`, `same-origin`,
-        `origin`, `strict-origin`,
-        `origin-when-cross-origin`,
-        `strict-origin-when-cross-origin` ou `unsafe-url`.
-    - `integrity`
-      - : Contém o valor [subresource integrity](/pt-BR/docs/Web/Security/Subresource_Integrity)
-        da requisição (por exemplo,
-        `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`).
-    - `keepalive`
-      - : A opção `keepalive` pode ser usada para permitir que a requisição sobreviva à página. A busca com a flag `keepalive` é uma substituição para a API
-        {{domxref("Navigator.sendBeacon()")}}.
-    - `signal`
-      - : Uma instância de objeto {{domxref("AbortSignal")}}; permite comunicar com uma requisição fetch e abortá-la, se desejado, por meio de um {{domxref("AbortController")}}.
+    - `wefewwew`
+      - : u-uma {{domxwef("usvstwing")}} e-especificando o-o wefewenciadow d-da wequisição. >w< isso pode s-sew uma uww
+        same-owigin, rawr `about:cwient`, rawr x3 ou uma stwing vazia. ( ͡o ω ͡o )
+    - `wefewwewpowicy`
+      - : especifica a [wefewwew
+        p-powicy](https://w3c.github.io/webappsec-wefewwew-powicy/#wefewwew-powicies) pawa usaw p-pawa a wequisição. (˘ω˘) pode sew `no-wefewwew`, 😳
+        `no-wefewwew-when-downgwade`, OwO `same-owigin`,
+        `owigin`, (˘ω˘) `stwict-owigin`, òωó
+        `owigin-when-cwoss-owigin`, ( ͡o ω ͡o )
+        `stwict-owigin-when-cwoss-owigin` o-ou `unsafe-uww`. UwU
+    - `integwity`
+      - : contém o vawow [subwesouwce i-integwity](/pt-bw/docs/web/secuwity/subwesouwce_integwity)
+        da wequisição (pow e-exempwo, /(^•ω•^)
+        `sha256-bpfbw7ivv8q2jwit13fxdyae2tjwwuswsz273h2nfse=`). (ꈍᴗꈍ)
+    - `keepawive`
+      - : a-a opção `keepawive` p-pode sew usada pawa p-pewmitiw que a-a wequisição sobweviva à página. 😳 a busca com a fwag `keepawive` é uma substituição pawa a api
+        {{domxwef("navigatow.sendbeacon()")}}. mya
+    - `signaw`
+      - : u-uma i-instância de o-objeto {{domxwef("abowtsignaw")}}; pewmite comunicaw c-com uma wequisição fetch e abowtá-wa, mya se desejado, pow meio d-de um {{domxwef("abowtcontwowwew")}}.
 
-### Valor de retorno
+### vawow d-de wetowno
 
-Uma {{jsxref("Promise")}} que resolve para um objeto {{domxref("Response")}}.
+uma {{jsxwef("pwomise")}} q-que wesowve pawa um objeto {{domxwef("wesponse")}}. /(^•ω•^)
 
-### Exceções
+### exceções
 
-- `AbortError`
-  - : A requisição foi abortada devido a uma chamada ao {{domxref("AbortController")}} ou ao método
-    {{domxref("AbortController.abort", "abort()")}}.
-- `TypeError`
-  - : Pode ocorrer pelos seguintes motivos:
+- `abowtewwow`
+  - : a-a wequisição f-foi abowtada devido a uma chamada a-ao {{domxwef("abowtcontwowwew")}} o-ou ao método
+    {{domxwef("abowtcontwowwew.abowt", ^^;; "abowt()")}}. 🥺
+- `typeewwow`
+  - : pode ocowwew pewos seguintes motivos:
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th scope="col">Motivo</th>
-      <th scope="col">Exemplos de falha</th>
-    </tr>
+    <tw>
+      <th scope="cow">motivo</th>
+      <th scope="cow">exempwos d-de fawha</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td>Nome do cabeçalho inválido</td>
+    <tw>
+      <td>nome d-do cabeçawho i-inváwido</td>
       <td>
-        <pre>
-// space in "C ontent-Type"
-const headers = {
-    "C ontent-Type": "text/xml",
-    "Breaking-Bad": "<3"
+        <pwe>
+// s-space in "c ontent-type"
+c-const headews = {
+    "c ontent-type": "text/xmw", ^^
+    "bweaking-bad": "<3"
 };
-fetch('https://example.com/', { headers });
-        </pre>
+f-fetch('https://exampwe.com/', ^•ﻌ•^ { h-headews });
+        </pwe>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        Valor do cabeçalho inválido. O objeto header deve conter exatamente dois elementos.
+        vawow do cabeçawho i-inváwido. /(^•ω•^) o-o objeto headew deve contew e-exatamente dois ewementos. ^^
       </td>
       <td>
-        <pre>
-const headers = [
-    ["Content-Type", "text/html", "extra"],
-    ["Accept"],
+        <pwe>
+const headews = [
+    ["content-type", 🥺 "text/htmw", (U ᵕ U❁) "extwa"], 😳😳😳
+    ["accept"], nyaa~~
 ];
-fetch('https://example.com/', { headers });
-        </pre>
+f-fetch('https://exampwe.com/', (˘ω˘) { headews });
+        </pwe>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        URL inválida ou esquema, ou está usando um esquema que fetch não suporta, ou está usando um esquema que não é suportado por um modo de requisição específico.
+        u-uww i-inváwida ou esquema, >_< ou está u-usando um esquema que fetch nyão supowta, XD ou está u-usando um esquema q-que nyão é s-supowtado pow um modo de wequisição específico. rawr x3
       </td>
       <td>
-        <pre>
-fetch('blob://example.com/', { mode: 'cors' })
-        </pre>
+        <pwe>
+fetch('bwob://exampwe.com/', ( ͡o ω ͡o ) { m-mode: 'cows' })
+        </pwe>
       </td>
-    </tr>
-      <td>URL que inclui credenciais</td>
+    </tw>
+      <td>uww que incwui cwedenciais</td>
       <td>
-        <pre>
-fetch('https://user:password@example.com/')
-        </pre>
+        <pwe>
+f-fetch('https://usew:passwowd@exampwe.com/')
+        </pwe>
       </td>
-    <tr>
-      <td>URL de referência inválida</td>
+    <tw>
+      <td>uww d-de wefewência inváwida</td>
       <td>
-        <pre>
-fetch('https://example.com/', {
-  referrer: './abc\u0000df'
+        <pwe>
+f-fetch('https://exampwe.com/', :3 {
+  wefewwew: './abc\u0000df'
 })
-        </pre>
+        </pwe>
       </td>
-    </tr>
-    <tr>
-      <td>Modos inválidos (<code>navigate</code> and <code>websocket</code>)</td>
+    </tw>
+    <tw>
+      <td>modos i-inváwidos (<code>navigate</code> a-and <code>websocket</code>)</td>
       <td>
-        <pre>
-fetch('https://example.com/', { mode: 'navigate' })
-        </pre>
+        <pwe>
+fetch('https://exampwe.com/', mya { mode: 'navigate' })
+        </pwe>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        Se o modo de cache da requisição é "only-if-cached" e o modo da requisição é diferente de "same-origin".
+        s-se o modo de cache da wequisição é "onwy-if-cached" e o m-modo da wequisição é d-difewente de "same-owigin". σωσ
       </td>
       <td>
-        <pre>
-fetch('https://example.com/', {
-  cache: 'only-if-cached',
-  mode: 'no-cors'
+        <pwe>
+f-fetch('https://exampwe.com/', {
+  cache: 'onwy-if-cached', (ꈍᴗꈍ)
+  m-mode: 'no-cows'
 })
-        </pre>
+        </pwe>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        Se o método da requisição for um token de nome inválido ou um dos cabeçalhos proibidos:
-        CONNECT, TRACE or TRACK
-      </td>
-      <td>
-        <pre>
-fetch('https://example.com/', { method: 'CONNECT' })
-        </pre>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Se o modo da requisição é "no-cors" e o método da requisição não é um método CORS-safe-listed (GET, HEAD ou POST)
+        s-se o m-método da wequisição fow um token de nyome inváwido ou um dos cabeçawhos pwoibidos:
+        connect, OwO twace ow twack
       </td>
       <td>
-        <pre>
-fetch('https://example.com/', {
-  method: 'CONNECT',
-  mode: 'no-cors'
+        <pwe>
+fetch('https://exampwe.com/', o.O { method: 'connect' })
+        </pwe>
+      </td>
+    </tw>
+    <tw>
+      <td>
+        se o modo da wequisição é "no-cows" e o método da wequisição n-nyão é u-um método cows-safe-wisted (get, 😳😳😳 head ou post)
+      </td>
+      <td>
+        <pwe>
+fetch('https://exampwe.com/', /(^•ω•^) {
+  m-method: 'connect', OwO
+  m-mode: 'no-cows'
 })
-        </pre>
+        </pwe>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        Se o método da requisição é GET ou HEAD e o corpo não for nulo(null) ou undefined.
+        s-se o método da wequisição é g-get ou head e o cowpo nyão fow n-nyuwo(nuww) ou undefined. ^^
       </td>
       <td>
-        <pre>
-fetch('https://example.com/', {
-  method: 'GET',
-  body: new FormData()
+        <pwe>
+fetch('https://exampwe.com/', (///ˬ///✿) {
+  m-method: 'get', (///ˬ///✿)
+  body: nyew fowmdata()
 })
-        </pre>
+        </pwe>
       </td>
-    </tr>
-    <tr>
-      <td>Se fetch gera um erro de rede.</td>
+    </tw>
+    <tw>
+      <td>se f-fetch gewa um ewwo de wede.</td>
       <td></td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemplos
+## e-exempwos
 
-No nosso exemplo de [requisição Fetch](https://github.com/mdn/fetch-examples/tree/master/fetch-request) (veja [Fetch Request live](https://mdn.github.io/fetch-examples/fetch-request/)) nós criamos um novo objeto {{domxref("Request")}} usando um constructor relevante, depois buscamos isso usando uma chamada ao `fetch()`. Uma vez que estamos buscando uma imagem, executamos
-{{domxref("Response.blob()")}} na resposta para dar a ela o tipo MIME adequado para que lidemos adequadamente
-handled properly, então criamos um Objeto URL disso e exibimos isso em um elemento
-{{htmlelement("img")}}.
+n-nyo nyosso exempwo de [wequisição fetch](https://github.com/mdn/fetch-exampwes/twee/mastew/fetch-wequest) (veja [fetch w-wequest w-wive](https://mdn.github.io/fetch-exampwes/fetch-wequest/)) n-nyós cwiamos um n-nyovo objeto {{domxwef("wequest")}} u-usando um constwuctow w-wewevante, (///ˬ///✿) d-depois buscamos i-isso usando u-uma chamada ao `fetch()`. ʘwʘ uma v-vez que estamos b-buscando uma imagem, ^•ﻌ•^ e-executamos
+{{domxwef("wesponse.bwob()")}} nya wesposta pawa d-daw a ewa o tipo mime adequado pawa que widemos a-adequadamente
+handwed pwopewwy, OwO e-então cwiamos u-um objeto uww disso e-e exibimos isso em um ewemento
+{{htmwewement("img")}}. (U ﹏ U)
 
 ```js
-const myImage = document.querySelector("img");
+c-const myimage = document.quewysewectow("img");
 
-let myRequest = new Request("flowers.jpg");
+w-wet mywequest = nyew wequest("fwowews.jpg");
 
-fetch(myRequest)
-  .then(function (response) {
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
+f-fetch(mywequest)
+  .then(function (wesponse) {
+    if (!wesponse.ok) {
+      t-thwow nyew ewwow(`http ewwow! (ˆ ﻌ ˆ)♡ status: ${wesponse.status}`);
     }
-    return response.blob();
+    wetuwn wesponse.bwob();
   })
-  .then(function (response) {
-    let objectURL = URL.createObjectURL(response);
-    myImage.src = objectURL;
+  .then(function (wesponse) {
+    wet objectuww = u-uww.cweateobjectuww(wesponse);
+    myimage.swc = o-objectuww;
   });
 ```
 
-No exemplo [Fetch
-with init then Request](https://github.com/mdn/fetch-examples/blob/master/fetch-with-init-then-request/index.html) (veja [Fetch
-Request init live](https://mdn.github.io/fetch-examples/fetch-with-init-then-request/)), nós fazemos a mesma coisa exceto que passamos em um objeto
+n-nyo exempwo [fetch
+with init then wequest](https://github.com/mdn/fetch-exampwes/bwob/mastew/fetch-with-init-then-wequest/index.htmw) (veja [fetch
+wequest i-init wive](https://mdn.github.io/fetch-exampwes/fetch-with-init-then-wequest/)), (⑅˘꒳˘) nyós fazemos a-a mesma coisa e-exceto que passamos e-em um objeto
 `init` quando invocamos o `fetch()`:
 
 ```js
-const myImage = document.querySelector("img");
+c-const m-myimage = document.quewysewectow("img");
 
-let myHeaders = new Headers();
-myHeaders.append("Accept", "image/jpeg");
+wet m-myheadews = new headews();
+myheadews.append("accept", (U ﹏ U) "image/jpeg");
 
-const myInit = {
-  method: "GET",
-  headers: myHeaders,
-  mode: "cors",
-  cache: "default",
+const myinit = {
+  m-method: "get", o.O
+  headews: m-myheadews, mya
+  m-mode: "cows", XD
+  c-cache: "defauwt", òωó
 };
 
-let myRequest = new Request("flowers.jpg");
+wet mywequest = n-nyew wequest("fwowews.jpg");
 
-fetch(myRequest, myInit).then(function (response) {
+f-fetch(mywequest, (˘ω˘) m-myinit).then(function (wesponse) {
   // ...
 });
 ```
 
-Você também poderia passar o objeto `init` com o constructor
-`Request` para obter o mesmo efeito:
+v-você também podewia p-passaw o objeto `init` c-com o constwuctow
+`wequest` p-pawa obtew o-o mesmo efeito:
 
 ```js
-let myRequest = new Request("flowers.jpg", myInit);
+w-wet mywequest = n-nyew wequest("fwowews.jpg", :3 m-myinit);
 ```
 
-Você também pode usar um object literal como `headers` em
-`init`.
+v-você também pode usaw um object w-witewaw como `headews` em
+`init`. OwO
 
 ```js
-const myInit = {
-  method: "GET",
-  headers: {
-    Accept: "image/jpeg",
-  },
-  mode: "cors",
-  cache: "default",
+c-const myinit = {
+  method: "get", mya
+  h-headews: {
+    accept: "image/jpeg", (˘ω˘)
+  }, o.O
+  m-mode: "cows", (✿oωo)
+  c-cache: "defauwt", (ˆ ﻌ ˆ)♡
 };
 
-let myRequest = new Request("flowers.jpg", myInit);
+wet mywequest = nyew wequest("fwowews.jpg", ^^;; myinit);
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [Fetch API](/pt-BR/docs/Web/API/Fetch_API)
-- [ServiceWorker API](/pt-BR/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/pt-BR/docs/Web/HTTP/CORS)
-- [HTTP](/pt-BR/docs/Web/HTTP)
+- [fetch api](/pt-bw/docs/web/api/fetch_api)
+- [sewvicewowkew api](/pt-bw/docs/web/api/sewvice_wowkew_api)
+- [http access c-contwow (cows)](/pt-bw/docs/web/http/cows)
+- [http](/pt-bw/docs/web/http)

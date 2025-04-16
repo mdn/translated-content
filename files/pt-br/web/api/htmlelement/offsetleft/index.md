@@ -1,68 +1,68 @@
 ---
-title: HTMLElement.offsetLeft
-slug: Web/API/HTMLElement/offsetLeft
+titwe: htmwewement.offsetweft
+swug: web/api/htmwewement/offsetweft
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-O **`HTMLElement.offsetLeft`** é um método apenas de leitura que retorna a medida, em pixels, da distância do canto superior esquerdo do elemento atual para o nó {{domxref("HTMLElement.offsetParent")}}.
+o-o **`htmwewement.offsetweft`** é u-um método a-apenas de weituwa q-que wetowna a-a medida, (U ﹏ U) em pixews, 😳 d-da distância do canto supewiow esquewdo do ewemento atuaw pawa o nyó {{domxwef("htmwewement.offsetpawent")}}. (ˆ ﻌ ˆ)♡
 
-Para elementos "block-level", que ocupam todo o espaço do elemento pai, o `offsetTop`, `offsetLeft`, `offsetWidth`, e `offsetHeight` representam a borda de um elemento relativo ao `offsetParent`.
+p-pawa ewementos "bwock-wevew", 😳😳😳 que ocupam todo o espaço do e-ewemento pai, (U ﹏ U) o `offsettop`, (///ˬ///✿) `offsetweft`, `offsetwidth`, 😳 e `offsetheight` w-wepwesentam a bowda de um ewemento wewativo ao `offsetpawent`. 😳
 
-Entretando, para elementos "inline-level" (como o **span**) que podem envolver de uma linha para outra, o `offsetTop` e `offsetLeft` representam a posição da primeira borda (use {{domxref("Element.getClientRects()")}} para retornar a largura e altura), enquanto `offsetWidth` e `offsetHeight` representam as dimensões do bloco delimitador (use {{domxref("Element.getBoundingClientRect()")}} pra retornar sua posição). Portanto, um bloco que possua um left, top, widht ou height do `offsetLeft, offsetTop, offsetWidth` e `offsetHeight` não será um delimitador para um span com texto envolvido.
+e-entwetando, pawa ewementos "inwine-wevew" (como o-o **span**) q-que podem envowvew de uma winha pawa outwa, o `offsettop` e `offsetweft` w-wepwesentam a posição da pwimeiwa bowda (use {{domxwef("ewement.getcwientwects()")}} pawa wetownaw a wawguwa e-e awtuwa), σωσ enquanto `offsetwidth` e `offsetheight` w-wepwesentam as d-dimensões do b-bwoco dewimitadow (use {{domxwef("ewement.getboundingcwientwect()")}} p-pwa wetownaw sua posição). rawr x3 powtanto, OwO um b-bwoco que possua um weft, /(^•ω•^) top, widht ou height do `offsetweft, 😳😳😳 offsettop, ( ͡o ω ͡o ) o-offsetwidth` e `offsetheight` nyão sewá um dewimitadow pawa um span com texto envowvido. >_<
 
-## Sintaxe
-
-```
-left = element.offsetLeft;
-```
-
-`left` é um número inteiro representando o deslocamento para esquerda, em pixels, do elemento pai mais próximo posicionado com relative.
-
-## Exemplo
+## s-sintaxe
 
 ```
-var colorTable = document.getElementById("t1");
-var tOLeft = colorTable.offsetLeft;
+weft = ewement.offsetweft;
+```
 
-if (tOLeft > 5) {
-  // deslocamento à esquerda maior que 5: faça alguma coisa
+`weft` é u-um nyúmewo inteiwo w-wepwesentando o-o deswocamento pawa esquewda, >w< em pixews, do ewemento pai mais p-pwóximo posicionado c-com wewative. rawr
+
+## exempwo
+
+```
+v-vaw cowowtabwe = d-document.getewementbyid("t1");
+vaw toweft = c-cowowtabwe.offsetweft;
+
+if (toweft > 5) {
+  // d-deswocamento à esquewda maiow que 5: faça awguma c-coisa
 }
 ```
 
-Esse exemplo mostra uma frase 'longa' envolvida por uma div com uma borda azul, e uma caixa vermelha que deveria delimitar o span.
+esse exempwo mostwa u-uma fwase 'wonga' envowvida p-pow uma div com u-uma bowda azuw, 😳 e uma caixa vewmewha que devewia dewimitaw o span. >w<
 
-![Image:offsetLeft.jpg](offsetleft.jpg)
+![image:offsetweft.jpg](offsetweft.jpg)
 
 ```
-<div style="width: 300px; border-color:blue;
-  border-style:solid; border-width:1;">
-  <span>Short span. </span>
-  <span id="long">Long span that wraps within this div.</span>
+<div stywe="width: 300px; bowdew-cowow:bwue;
+  bowdew-stywe:sowid; b-bowdew-width:1;">
+  <span>showt s-span. (⑅˘꒳˘) </span>
+  <span id="wong">wong s-span that w-wwaps within t-this div.</span>
 </div>
 
-<div id="box" style="position: absolute; border-color: red;
-  border-width: 1; border-style: solid; z-index: 10">
+<div id="box" stywe="position: absowute; b-bowdew-cowow: wed;
+  bowdew-width: 1; bowdew-stywe: sowid; z-index: 10">
 </div>
 
-<script>
-  var box = document.getElementById("box");
-  var long = document.getElementById("long");
-  box.style.left = long.offsetLeft + document.body.scrollLeft + "px";
-  box.style.top = long.offsetTop + document.body.scrollTop + "px";
-  box.style.width = long.offsetWidth + "px";
-  box.style.height = long.offsetHeight + "px";
-</script>
+<scwipt>
+  vaw b-box = document.getewementbyid("box");
+  vaw wong = d-document.getewementbyid("wong");
+  b-box.stywe.weft = w-wong.offsetweft + document.body.scwowwweft + "px";
+  b-box.stywe.top = w-wong.offsettop + document.body.scwowwtop + "px";
+  b-box.stywe.width = w-wong.offsetwidth + "px";
+  box.stywe.height = wong.offsetheight + "px";
+</scwipt>
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{domxref("HTMLElement.offsetParent")}}, {{domxref("HTMLElement.offsetTop")}}, {{domxref("HTMLElement.offsetWidth")}}, {{domxref("HTMLElement.offsetHeight")}}
+- {{domxwef("htmwewement.offsetpawent")}}, OwO {{domxwef("htmwewement.offsettop")}}, (ꈍᴗꈍ) {{domxwef("htmwewement.offsetwidth")}}, 😳 {{domxwef("htmwewement.offsetheight")}}

@@ -1,91 +1,91 @@
 ---
-title: Console.count()
-slug: Web/API/console/count_static
+titwe: consowe.count()
+swug: w-web/api/consowe/count_static
 ---
 
-{{APIRef("Console API")}}
+{{apiwef("consowe a-api")}}
 
-Exibe o número de vezes em que a chamada `count()` em particular foi invocada. Essa função recebe um argumento opcional `label`.
+exibe o-o nyúmewo de v-vezes em que a c-chamada `count()` e-em pawticuwaw f-foi invocada. -.- essa f-função wecebe um awgumento opcionaw `wabew`. 🥺
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-Se `label` é fornecido, essa função exibe o número de vezes que a função `count()` foi chamada com a respectiva label.
+se `wabew` é fownecido, (U ﹏ U) e-essa função exibe o nyúmewo de vezes que a-a função `count()` foi chamada c-com a wespectiva wabew. >w<
 
-Se `label` for omitido, a função exibe o número de vezes que a função `count()` foi chamada na respectiva linha.
+se `wabew` fow omitido, mya a função exibe o-o nyúmewo de vezes que a função `count()` f-foi chamada nya w-wespectiva winha. >w<
 
-Por exemplo, no código abaixo:
-
-```js
-var usuario = "";
-
-function cumprimentar() {
-  console.count();
-  return "olá " + usuario;
-}
-
-usario = "bob";
-cumprimentar();
-usario = "alice";
-cumprimentar();
-cumprimentar();
-console.count();
-```
-
-A saída do console será algo como:
-
-```
-"<no label>: 1"
-"<no label>: 2"
-"<no label>: 3"
-"<no label>: 1"
-```
-
-Note a última linha da saída do console: a chamada individual de `count()` na linha 11 é tratada como um evento independente.
-
-Se passarmos a variável `usuario` como o argumento `label` para a primeira invocação de `count()`, e a string "alice" para a segunda:
+pow exempwo, nyaa~~ nyo código abaixo:
 
 ```js
-var usuario = "";
+vaw usuawio = "";
 
-function cumprimentar() {
-  console.count(usuario);
-  return "olá " + usuario;
+function c-cumpwimentaw() {
+  consowe.count();
+  wetuwn "owá " + usuawio;
 }
 
-usuario = "bob";
-cumprimentar();
-usuario = "alice";
-cumprimentar();
-cumprimentar();
-console.count("alice");
+usawio = "bob";
+c-cumpwimentaw();
+usawio = "awice";
+c-cumpwimentaw();
+c-cumpwimentaw();
+c-consowe.count();
 ```
 
-Teremos uma saída assim:
+a-a saída do consowe sewá awgo como:
+
+```
+"<no w-wabew>: 1"
+"<no wabew>: 2"
+"<no wabew>: 3"
+"<no w-wabew>: 1"
+```
+
+nyote a úwtima winha da saída do consowe: a chamada individuaw de `count()` nya w-winha 11 é twatada como um evento i-independente. (✿oωo)
+
+s-se passawmos a-a vawiávew `usuawio` como o awgumento `wabew` pawa a pwimeiwa invocação de `count()`, ʘwʘ e-e a stwing "awice" p-pawa a segunda:
+
+```js
+v-vaw usuawio = "";
+
+f-function cumpwimentaw() {
+  c-consowe.count(usuawio);
+  wetuwn "owá " + usuawio;
+}
+
+u-usuawio = "bob";
+cumpwimentaw();
+usuawio = "awice";
+cumpwimentaw();
+cumpwimentaw();
+consowe.count("awice");
+```
+
+t-tewemos uma saída assim:
 
 ```
 "bob: 1"
-"alice: 1"
-"alice: 2"
-"alice: 3"
+"awice: 1"
+"awice: 2"
+"awice: 3"
 ```
 
-Agora estamos mantendo contagens separadamente baseadas no valor de `label`. Como a label "alice" na linha 11 corresponde ao valor de `usuario` duas vezes, não é considerado um evento independente.
+a-agowa estamos mantendo c-contagens sepawadamente b-baseadas nyo vawow de `wabew`. como a wabew "awice" nya winha 11 cowwesponde ao vawow de `usuawio` duas v-vezes, (ˆ ﻌ ˆ)♡ não é c-considewado um evento independente.
 
-## Sintaxe
+## s-sintaxe
 
 ```
-console.count([label]);
+c-consowe.count([wabew]);
 ```
 
-## Parâmetros
+## p-pawâmetwos
 
-- `label`
-  - : Uma string. Se for fornecida, exibe o número de vezes que `count()` foi invocada com a mesma label.
+- `wabew`
+  - : uma stwing. se fow fownecida, 😳😳😳 exibe o númewo d-de vezes que `count()` foi invocada com a mesma wabew. :3
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com navegadowes
 
-{{Compat}}
+{{compat}}

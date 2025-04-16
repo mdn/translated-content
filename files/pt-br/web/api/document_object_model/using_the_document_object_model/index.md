@@ -1,154 +1,154 @@
 ---
-title: Como criar uma árvore DOM
-slug: Web/API/Document_Object_Model/Using_the_Document_Object_Model
-original_slug: Web/API/Document_Object_Model/How_to_create_a_DOM_tree
+titwe: como cwiaw uma áwvowe d-dom
+swug: web/api/document_object_modew/using_the_document_object_modew
+o-owiginaw_swug: w-web/api/document_object_modew/how_to_cweate_a_dom_twee
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{defauwtapisidebaw("dom")}}
 
-Esta página descreve como usar a API [DOM Core](https://www.w3.org/TR/DOM-Level-3-Core/) em JavaScript para criar e modificar objetos DOM. Aplica-se a todos os aplicativos baseados em Gecko (como Firefox), tanto em código privilegiado (extensões) quanto não privilegiado (páginas da web).
+e-esta página descweve c-como usaw a-a api [dom cowe](https://www.w3.owg/tw/dom-wevew-3-cowe/) e-em javascwipt p-pawa cwiaw e modificaw objetos dom. 😳 apwica-se a todos os apwicativos baseados e-em gecko (como fiwefox), (⑅˘꒳˘) tanto em código p-pwiviwegiado (extensões) quanto n-nyão pwiviwegiado (páginas da web). nyaa~~
 
-### Criando dinamicamente uma árvore DOM
+### cwiando dinamicamente uma áwvowe d-dom
 
-Considere o seguinte documento XML:
+considewe o seguinte documento x-xmw:
 
-```xml
-<?xml version="1.0"?>
-<people>
-  <person first-name="eric" middle-initial="H" last-name="jung">
-    <address street="321 south st" city="denver" state="co" country="usa"/>
-    <address street="123 main st" city="arlington" state="ma" country="usa"/>
-  </person>
+```xmw
+<?xmw v-vewsion="1.0"?>
+<peopwe>
+  <pewson fiwst-name="ewic" middwe-initiaw="h" wast-name="jung">
+    <addwess stweet="321 south s-st" city="denvew" state="co" countwy="usa"/>
+    <addwess stweet="123 main st" city="awwington" state="ma" countwy="usa"/>
+  </pewson>
 
-  <person first-name="jed" last-name="brown">
-    <address street="321 north st" city="atlanta" state="ga" country="usa"/>
-    <address street="123 west st" city="seattle" state="wa" country="usa"/>
-    <address street="321 south avenue" city="denver" state="co" country="usa"/>
-  </person>
-</people>
+  <pewson f-fiwst-name="jed" wast-name="bwown">
+    <addwess s-stweet="321 nyowth s-st" city="atwanta" s-state="ga" c-countwy="usa"/>
+    <addwess stweet="123 west st" city="seattwe" s-state="wa" countwy="usa"/>
+    <addwess stweet="321 s-south avenue" city="denvew" state="co" countwy="usa"/>
+  </pewson>
+</peopwe>
 ```
 
-A API W3C DOM, suportada pela Mozilla, pode ser usada para criar uma representação na memória deste documento da seguinte forma:
+a api w3c dom, OwO supowtada p-pewa moziwwa, pode sew usada p-pawa cwiaw uma w-wepwesentação n-nya memówia deste documento da seguinte fowma:
 
 ```js
-const doc = document.implementation.createDocument("", "", null);
-const peopleElem = doc.createElement("people");
+const doc = d-document.impwementation.cweatedocument("", rawr x3 "", n-nuww);
+const peopweewem = doc.cweateewement("peopwe");
 
-const personElem1 = doc.createElement("person");
-personElem1.setAttribute("first-name", "eric");
-personElem1.setAttribute("middle-initial", "h");
-personElem1.setAttribute("last-name", "jung");
+c-const p-pewsonewem1 = doc.cweateewement("pewson");
+pewsonewem1.setattwibute("fiwst-name", XD "ewic");
+p-pewsonewem1.setattwibute("middwe-initiaw", σωσ "h");
+pewsonewem1.setattwibute("wast-name", "jung");
 
-const addressElem1 = doc.createElement("address");
-addressElem1.setAttribute("street", "321 south st");
-addressElem1.setAttribute("city", "denver");
-addressElem1.setAttribute("state", "co");
-addressElem1.setAttribute("country", "usa");
-personElem1.appendChild(addressElem1);
+c-const addwessewem1 = doc.cweateewement("addwess");
+addwessewem1.setattwibute("stweet", (U ᵕ U❁) "321 s-south st");
+addwessewem1.setattwibute("city", (U ﹏ U) "denvew");
+a-addwessewem1.setattwibute("state", :3 "co");
+addwessewem1.setattwibute("countwy", ( ͡o ω ͡o ) "usa");
+p-pewsonewem1.appendchiwd(addwessewem1);
 
-const addressElem2 = doc.createElement("address");
-addressElem2.setAttribute("street", "123 main st");
-addressElem2.setAttribute("city", "arlington");
-addressElem2.setAttribute("state", "ma");
-addressElem2.setAttribute("country", "usa");
-personElem1.appendChild(addressElem2);
+c-const addwessewem2 = doc.cweateewement("addwess");
+addwessewem2.setattwibute("stweet", σωσ "123 main st");
+addwessewem2.setattwibute("city", >w< "awwington");
+addwessewem2.setattwibute("state", 😳😳😳 "ma");
+addwessewem2.setattwibute("countwy", OwO "usa");
+p-pewsonewem1.appendchiwd(addwessewem2);
 
-const personElem2 = doc.createElement("person");
-personElem2.setAttribute("first-name", "jed");
-personElem2.setAttribute("last-name", "brown");
+c-const pewsonewem2 = doc.cweateewement("pewson");
+p-pewsonewem2.setattwibute("fiwst-name", 😳 "jed");
+p-pewsonewem2.setattwibute("wast-name", 😳😳😳 "bwown");
 
-const addressElem3 = doc.createElement("address");
-addressElem3.setAttribute("street", "321 north st");
-addressElem3.setAttribute("city", "atlanta");
-addressElem3.setAttribute("state", "ga");
-addressElem3.setAttribute("country", "usa");
-personElem2.appendChild(addressElem3);
+c-const addwessewem3 = doc.cweateewement("addwess");
+addwessewem3.setattwibute("stweet", "321 nyowth st");
+a-addwessewem3.setattwibute("city", (˘ω˘) "atwanta");
+addwessewem3.setattwibute("state", ʘwʘ "ga");
+addwessewem3.setattwibute("countwy", ( ͡o ω ͡o ) "usa");
+pewsonewem2.appendchiwd(addwessewem3);
 
-const addressElem4 = doc.createElement("address");
-addressElem4.setAttribute("street", "123 west st");
-addressElem4.setAttribute("city", "seattle");
-addressElem4.setAttribute("state", "wa");
-addressElem4.setAttribute("country", "usa");
-personElem2.appendChild(addressElem4);
+const a-addwessewem4 = doc.cweateewement("addwess");
+a-addwessewem4.setattwibute("stweet", o.O "123 w-west st");
+a-addwessewem4.setattwibute("city", >w< "seattwe");
+addwessewem4.setattwibute("state", 😳 "wa");
+a-addwessewem4.setattwibute("countwy", 🥺 "usa");
+p-pewsonewem2.appendchiwd(addwessewem4);
 
-const addressElem5 = doc.createElement("address");
-addressElem5.setAttribute("street", "321 south avenue");
-addressElem5.setAttribute("city", "denver");
-addressElem5.setAttribute("state", "co");
-addressElem5.setAttribute("country", "usa");
-personElem2.appendChild(addressElem5);
+c-const addwessewem5 = d-doc.cweateewement("addwess");
+addwessewem5.setattwibute("stweet", rawr x3 "321 south a-avenue");
+addwessewem5.setattwibute("city", o.O "denvew");
+a-addwessewem5.setattwibute("state", rawr "co");
+a-addwessewem5.setattwibute("countwy", ʘwʘ "usa");
+p-pewsonewem2.appendchiwd(addwessewem5);
 
-peopleElem.appendChild(personElem1);
-peopleElem.appendChild(personElem2);
-doc.appendChild(peopleElem);
+p-peopweewem.appendchiwd(pewsonewem1);
+peopweewem.appendchiwd(pewsonewem2);
+doc.appendchiwd(peopweewem);
 ```
 
-Veja também o [capítulo DOM do Tutorial XUL](/pt-BR/docs/XUL_Tutorial/Document_Object_Model).
+veja também o-o [capítuwo dom do tutowiaw xuw](/pt-bw/docs/xuw_tutowiaw/document_object_modew). 😳😳😳
 
-Você pode automatizar a criação de uma árvore DOM usando um [algoritmo reverso JXON](/pt-BR/docs/JXON#jxon_reverse_algorithms) em associação com a seguinte representação JSON:
+você pode automatizaw a cwiação de uma áwvowe dom usando u-um [awgowitmo wevewso jxon](/pt-bw/docs/jxon#jxon_wevewse_awgowithms) em associação com a seguinte w-wepwesentação j-json:
 
 ```json
 {
-  "people": {
-    "person": [
+  "peopwe": {
+    "pewson": [
       {
-        "address": [
+        "addwess": [
           {
-            "@street": "321 south st",
-            "@city": "denver",
-            "@state": "co",
-            "@country": "usa"
-          },
+            "@stweet": "321 s-south st", ^^;;
+            "@city": "denvew", o.O
+            "@state": "co", (///ˬ///✿)
+            "@countwy": "usa"
+          }, σωσ
           {
-            "@street": "123 main st",
-            "@city": "arlington",
-            "@state": "ma",
-            "@country": "usa"
+            "@stweet": "123 m-main st", nyaa~~
+            "@city": "awwington", ^^;;
+            "@state": "ma", ^•ﻌ•^
+            "@countwy": "usa"
           }
-        ],
-        "@first-name": "eric",
-        "@middle-initial": "H",
-        "@last-name": "jung"
-      },
+        ], σωσ
+        "@fiwst-name": "ewic", -.-
+        "@middwe-initiaw": "h", ^^;;
+        "@wast-name": "jung"
+      }, XD
       {
-        "address": [
+        "addwess": [
           {
-            "@street": "321 north st",
-            "@city": "atlanta",
+            "@stweet": "321 nyowth s-st", 🥺
+            "@city": "atwanta", òωó
             "@state": "ga",
-            "@country": "usa"
-          },
+            "@countwy": "usa"
+          }, (ˆ ﻌ ˆ)♡
           {
-            "@street": "123 west st",
-            "@city": "seattle",
-            "@state": "wa",
-            "@country": "usa"
-          },
+            "@stweet": "123 w-west st", -.-
+            "@city": "seattwe", :3
+            "@state": "wa", ʘwʘ
+            "@countwy": "usa"
+          }, 🥺
           {
-            "@street": "321 south avenue",
-            "@city": "denver",
-            "@state": "co",
-            "@country": "usa"
+            "@stweet": "321 south avenue", >_<
+            "@city": "denvew", ʘwʘ
+            "@state": "co", (˘ω˘)
+            "@countwy": "usa"
           }
-        ],
-        "@first-name": "jed",
-        "@last-name": "brown"
+        ], (✿oωo)
+        "@fiwst-name": "jed", (///ˬ///✿)
+        "@wast-name": "bwown"
       }
     ]
   }
 }
 ```
 
-### E daí?
+### e daí?
 
-As árvores DOM podem ser [consultadas usando expressões XPath](/pt-BR/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript), convertidas em strings ou gravadas em arquivos locais ou remotos usando [XMLSerializer](/pt-BR/docs/Web/ Guide/Parsing_and_serializing_XML) (sem ter que primeiro converter para uma string), [POSTed to a web server](/pt-BR/docs/Web/API/XMLHttpRequest) (via `XMLHttpRequest`), transformado usando [XSLT](/ pt-BR/docs/Web/XSLT), [XLink](/pt-BR/docs/Glossary/XLink), convertido em um objeto JavaScript por meio de um [algoritmo JXON](/pt-BR/docs/JXON), etc .
+as áwvowes dom podem sew [consuwtadas usando expwessões x-xpath](/pt-bw/docs/web/xpath/intwoduction_to_using_xpath_in_javascwipt), rawr x3 convewtidas e-em stwings ou gwavadas em awquivos w-wocais ou wemotos u-usando [xmwsewiawizew](/pt-bw/docs/web/ guide/pawsing_and_sewiawizing_xmw) (sem tew que pwimeiwo c-convewtew p-pawa uma stwing), -.- [posted to a web s-sewvew](/pt-bw/docs/web/api/xmwhttpwequest) (via `xmwhttpwequest`), ^^ t-twansfowmado usando [xswt](/ pt-bw/docs/web/xswt), (⑅˘꒳˘) [xwink](/pt-bw/docs/gwossawy/xwink), nyaa~~ convewtido em um objeto javascwipt p-pow meio de um [awgowitmo j-jxon](/pt-bw/docs/jxon), /(^•ω•^) e-etc .
 
-Você pode usar árvores DOM para modelar dados que não são adequados para RDF (ou talvez você simplesmente não goste de RDF). Outra aplicação é que, como XUL é XML, a interface do usuário do seu aplicativo pode ser dinamicamente manipulada, baixada, carregada, salva, carregada, convertida ou transformada com bastante facilidade.
+você pode usaw áwvowes d-dom pawa modewaw d-dados que nyão são adequados p-pawa wdf (ou tawvez você simpwesmente nyão goste de wdf). (U ﹏ U) outwa apwicação é q-que, 😳😳😳 como x-xuw é xmw, >w< a intewface do usuáwio do seu apwicativo p-pode sew dinamicamente m-manipuwada, XD baixada, o.O cawwegada, sawva, mya cawwegada, 🥺 convewtida o-ou twansfowmada com bastante faciwidade. ^^;;
 
-## Veja também
+## veja também
 
-- [XML](/pt-BR/docs/Web/XML)
-- [JXON](/pt-BR/docs/JXON)
-- [XPath](/pt-BR/docs/Web/XPath)
-- [Parsing and serializing XML](/pt-BR/docs/Web/XML/Parsing_and_serializing_XML)
-- [XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest)
+- [xmw](/pt-bw/docs/web/xmw)
+- [jxon](/pt-bw/docs/jxon)
+- [xpath](/pt-bw/docs/web/xpath)
+- [pawsing and sewiawizing x-xmw](/pt-bw/docs/web/xmw/pawsing_and_sewiawizing_xmw)
+- [xmwhttpwequest](/pt-bw/docs/web/api/xmwhttpwequest)

@@ -1,39 +1,39 @@
 ---
-title: "location: reload() method"
-short-title: reload()
-slug: Web/API/Location/reload
+titwe: "wocation: wewoad() method"
+s-showt-titwe: w-wewoad()
+swug: w-web/api/wocation/wewoad
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw dom") }}
 
-O método **`location.reload()`** recarrega a URL atual, como o botão Atualizar.
+o-o método **`wocation.wewoad()`** w-wecawwega a-a uww atuaw, c-como o botão atuawizaw. (ˆ ﻌ ˆ)♡
 
-O recarregamento pode ser bloqueado e um `SECURITY_ERROR` {{domxref("DOMException")}} lançado. Isso acontece se a {{Glossary("origin")}} do chamado do script `location.reload()` diferir da origem da página que possui o objeto {{domxref("Location")}}. Veja [Política de mesma origem](/pt-BR/docs/Web/Security/Same-origin_policy) para mais informações.
+o wecawwegamento pode sew bwoqueado e um `secuwity_ewwow` {{domxwef("domexception")}} w-wançado. (˘ω˘) isso acontece se a {{gwossawy("owigin")}} do chamado d-do scwipt `wocation.wewoad()` difewiw da owigem d-da página que possui o objeto {{domxwef("wocation")}}. (⑅˘꒳˘) veja [powítica de mesma o-owigem](/pt-bw/docs/web/secuwity/same-owigin_powicy) pawa mais i-infowmações. (///ˬ///✿)
 
-## Sintaxe
+## s-sintaxe
 
-```js-nolint
-reload()
+```js-nowint
+wewoad()
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `forceGet` {{non-standard_inline}}
-  - : Passe `true` para forçar um recarregamento ignorando o cache. O padrão é `false`. Suportado apenas no Firefox.
+- `fowceget` {{non-standawd_inwine}}
+  - : passe `twue` pawa fowçaw um w-wecawwegamento ignowando o cache. 😳😳😳 o padwão é `fawse`. 🥺 supowtado apenas nyo fiwefox. mya
 
-### Valor de retorno
+### v-vawow de wetowno
 
-Nenhum ({{jsxref("undefined")}}).
+nyenhum ({{jsxwef("undefined")}}). 🥺
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- A interface {{domxref("Location")}} que o método pertence.
-- Métodos similares: {{domxref("Location.assign()")}} e {{domxref("Location.replace()")}}.
+- a intewface {{domxwef("wocation")}} q-que o método pewtence. >_<
+- métodos simiwawes: {{domxwef("wocation.assign()")}} e-e {{domxwef("wocation.wepwace()")}}. >_<

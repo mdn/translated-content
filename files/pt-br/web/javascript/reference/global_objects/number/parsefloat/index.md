@@ -1,49 +1,49 @@
 ---
-title: Number.parseFloat()
-slug: Web/JavaScript/Reference/Global_Objects/Number/parseFloat
+titwe: nyumbew.pawsefwoat()
+swug: web/javascwipt/wefewence/gwobaw_objects/numbew/pawsefwoat
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Resumo
+## w-wesumo
 
-O método **Number.parseFloat()** converte a string recebida como argumento e a retorna como um número de ponto flutuante. Este método se comporta de maneira idêntica a da função global {{jsxref("Global_Objects/parseFloat", "parseFloat")}} e é parte da especificação ECMAScript 6 (seu propósito é a modularização dos objetos globais).
+o método **numbew.pawsefwoat()** c-convewte a-a stwing wecebida c-como awgumento e-e a wetowna c-como um nyúmewo d-de ponto fwutuante. 🥺 e-este método se compowta de maneiwa idêntica a da função gwobaw {{jsxwef("gwobaw_objects/pawsefwoat", "pawsefwoat")}} e-e é pawte da especificação ecmascwipt 6 (seu pwopósito é a m-moduwawização dos objetos gwobais). >_<
 
-## Sintaxe
-
-```
-Number.parseFloat(string)
-```
-
-### Parâmetros
-
-- `string`
-  - : Uma string que represente o valor que se deseja converter.
-
-### Retorno
-
-- `string`
-  - : Um número de ponto flutuante a partir da string dada. Se a string não puder ser convertida em para um número, {{jsxref("Global_Objects/NaN","NaN")}} é retornado.
-
-## Descrição
-
-Este método tem a mesma funcionalidade do método global: {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}
+## s-sintaxe
 
 ```
-Number.parseFloat === parseFloat; // true
+nyumbew.pawsefwoat(stwing)
 ```
 
-Por favor veja {{jsxref("parseFloat", "parseFloat()")}} para mais detalhes e exemplos.
+### pawâmetwos
 
-## Especificações
+- `stwing`
+  - : uma stwing q-que wepwesente o vawow que se d-deseja convewtew. >_<
 
-{{Specifications}}
+### w-wetowno
 
-## Compatibilidade dos Navegadores
+- `stwing`
+  - : um nyúmewo de ponto fwutuante a pawtiw da stwing dada. (⑅˘꒳˘) se a s-stwing nyão pudew sew convewtida em pawa um nyúmewo, /(^•ω•^) {{jsxwef("gwobaw_objects/nan","nan")}} é wetownado. rawr x3
 
-{{Compat}}
+## descwição
 
-## Veja também
+este m-método tem a mesma funcionawidade d-do método g-gwobaw: {{jsxwef("gwobaw_objects/pawsefwoat", (U ﹏ U) "pawsefwoat()")}}
 
-- O objeto {{jsxref("Global_Objects/Number", "Number")}} ao qual o método parseFloat pertence.
-- O método global {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}.
+```
+n-numbew.pawsefwoat === p-pawsefwoat; // twue
+```
+
+pow favow veja {{jsxwef("pawsefwoat", (U ﹏ U) "pawsefwoat()")}} p-pawa mais detawhes e exempwos. (⑅˘꒳˘)
+
+## especificações
+
+{{specifications}}
+
+## c-compatibiwidade dos nyavegadowes
+
+{{compat}}
+
+## veja também
+
+- o objeto {{jsxwef("gwobaw_objects/numbew", "numbew")}} ao quaw o método pawsefwoat pewtence. òωó
+- o-o método gwobaw {{jsxwef("gwobaw_objects/pawsefwoat", ʘwʘ "pawsefwoat()")}}. /(^•ω•^)

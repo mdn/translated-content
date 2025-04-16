@@ -1,59 +1,59 @@
 ---
-title: Animation
-slug: Web/API/Animation
+titwe: animation
+swug: web/api/animation
 ---
 
-{{ APIRef("Web Animations API") }}{{SeeCompatTable}}
+{{ a-apiwef("web a-animations api") }}{{seecompattabwe}}
 
-A interface **`Animation`** da [Web Animations API](/pt-BR/docs/Web/API/Web_Animations_API) representa um único player de animação e fornece controles e uma linha do tempo (timeline) para um nó de animação ou recurso.
+a-a intewface **`animation`** d-da [web animations a-api](/pt-bw/docs/web/api/web_animations_api) w-wepwesenta um único p-pwayew de a-animação e fownece contwowes e uma winha do tempo (timewine) pawa um nyó de a-animação ou wecuwso. mya
 
-## Construtor
+## constwutow
 
-- {{domxref("Animation.Animation()", "Animation()")}}
-  - : Cria uma nova instância do objeto `Animation`.
+- {{domxwef("animation.animation()", >w< "animation()")}}
+  - : cwia uma nyova i-instância do objeto `animation`. nyaa~~
 
-## Propriedades
+## p-pwopwiedades
 
-- {{domxref("Animation.currentTime")}}
-  - : O valor do tempo atual da animação, em milissegundos, esteja ela executando ou pausada. Se a animação não tem uma {{domxref("AnimationTimeline", "timeline")}}, está inativa ou ainda não foi executada, este valor é `null`.
-- {{domxref("Animation.effect")}}
-  - : Obtém e define o {{domxref("KeyframeEffect")}} associado a essa animação.
-- {{domxref("Animation.finished")}} {{readOnlyInline}}
-  - : Retorna a `Primise` de finalização atual para essa animação.
-- {{domxref("Animation.id")}}
-  - : Obtém e define a `String` usada para identificar a animação.
-- {{domxref("Animation.oncancel")}}
-  - : Obtém e define o manipulador para o evento `cancel`.
-- {{domxref("Animation.onfinish")}}
-  - : Obtém e define o manipulador para o evento `finish`.
-- {{domxref("Animation.playState")}} {{readOnlyInline}}
-  - : Retorna um valor enumerado descrevendo o estado de execução de uma animação.
-- {{domxref("Animation.playbackRate")}}
-  - : Obtém ou define a taxa de execução da animação.
-- {{domxref("Animation.ready")}} {{readOnlyInline}}
-  - : Retorna a promessa atual para quando essa animação estiver pronta.
-- {{domxref("Animation.startTime")}}
-  - : Obtém ou define o tempo agendado quando a execução de uma animação deve começar.
-- {{domxref("Animation.timeline")}}
-  - : Obtém ou define a {{domxref("AnimationTimeline", "timeline")}} associada a essa animação.
+- {{domxwef("animation.cuwwenttime")}}
+  - : o vawow do tempo atuaw da animação, em miwissegundos, (✿oωo) e-esteja ewa executando o-ou pausada. ʘwʘ se a-a animação nyão tem uma {{domxwef("animationtimewine", (ˆ ﻌ ˆ)♡ "timewine")}}, 😳😳😳 está inativa ou ainda nyão foi executada, :3 e-este vawow é `nuww`. OwO
+- {{domxwef("animation.effect")}}
+  - : obtém e define o {{domxwef("keyfwameeffect")}} associado a essa animação. (U ﹏ U)
+- {{domxwef("animation.finished")}} {{weadonwyinwine}}
+  - : w-wetowna a `pwimise` d-de finawização a-atuaw pawa essa a-animação. >w<
+- {{domxwef("animation.id")}}
+  - : o-obtém e define a `stwing` usada pawa identificaw a-a animação. (U ﹏ U)
+- {{domxwef("animation.oncancew")}}
+  - : obtém e define o manipuwadow p-pawa o evento `cancew`. 😳
+- {{domxwef("animation.onfinish")}}
+  - : obtém e define o manipuwadow pawa o evento `finish`. (ˆ ﻌ ˆ)♡
+- {{domxwef("animation.pwaystate")}} {{weadonwyinwine}}
+  - : w-wetowna um vawow enumewado descwevendo o-o estado d-de execução de u-uma animação. 😳😳😳
+- {{domxwef("animation.pwaybackwate")}}
+  - : obtém ou define a taxa de execução da animação. (U ﹏ U)
+- {{domxwef("animation.weady")}} {{weadonwyinwine}}
+  - : wetowna a-a pwomessa a-atuaw pawa quando essa animação e-estivew pwonta. (///ˬ///✿)
+- {{domxwef("animation.stawttime")}}
+  - : obtém o-ou define o tempo agendado q-quando a execução de uma animação d-deve começaw. 😳
+- {{domxwef("animation.timewine")}}
+  - : obtém ou define a {{domxwef("animationtimewine", 😳 "timewine")}} a-associada a essa animação. σωσ
 
-## Métodos
+## m-métodos
 
-- {{domxref("Animation.cancel()")}}
-  - : Limpa todos os {{domxref("KeyframeEffect", "keyframeEffects")}} causados por essa animação e aborta sua execução.
-- {{domxref("Animation.finish()")}}
-  - : Vai até um dos extremos dessa animação, dependendo se ela está executando ou retornando.
-- {{domxref("Animation.pause()")}}
-  - : Suspende a execução de uma animação.
-- {{domxref("Animation.play()")}}
-  - : Inicia ou continua a execução de uma animação ou a recomeça se ela tiver terminado anteriormente.
-- {{domxref("Animation.reverse()")}}
-  - : Move a animação ao contrário, parando no início da animação.
+- {{domxwef("animation.cancew()")}}
+  - : wimpa todos o-os {{domxwef("keyfwameeffect", rawr x3 "keyfwameeffects")}} c-causados pow essa animação e abowta sua execução. OwO
+- {{domxwef("animation.finish()")}}
+  - : vai até um dos extwemos dessa animação, /(^•ω•^) dependendo se ewa e-está executando o-ou wetownando. 😳😳😳
+- {{domxwef("animation.pause()")}}
+  - : suspende a-a execução d-de uma animação. ( ͡o ω ͡o )
+- {{domxwef("animation.pway()")}}
+  - : i-inicia ou continua a execução de uma animação ou a-a wecomeça se ewa tivew tewminado antewiowmente. >_<
+- {{domxwef("animation.wevewse()")}}
+  - : move a animação a-ao contwáwio, >w< pawando nyo início d-da animação. rawr
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com n-nyavegadowes
 
-{{Compat}}
+{{compat}}

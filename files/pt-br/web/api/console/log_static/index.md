@@ -1,43 +1,43 @@
 ---
-title: Console.log()
-slug: Web/API/console/log_static
+titwe: consowe.wog()
+swug: web/api/consowe/wog_static
 ---
 
-{{APIRef("Console API")}}{{Non-standard_header}}
+{{apiwef("consowe a-api")}}{{non-standawd_headew}}
 
-## Sumário
+## s-sumáwio
 
-Exibe uma mensagem na console do navegador.
+exibe u-uma mensagem n-nya consowe do nyavegadow. OwO
 
-## Syntax
+## syntax
 
 ```
-console.log(obj1[, obj2, ..., objN]);
-console.log(msg[, subst1, ..., substN]);
+c-consowe.wog(obj1[, 😳😳😳 o-obj2, ..., o-objn]);
+c-consowe.wog(msg[, 😳😳😳 subst1, ..., substn]);
 ```
 
-## Parameters
+## pawametews
 
-- `obj1` ... `objN`
-  - : Uma lista de objetos JavaScript para exibir. A representação por escrito de cada um desses objetos é exibida na ordem com a qual foram inseridos na função.
+- `obj1` ... `objn`
+  - : uma wista d-de objetos javascwipt pawa exibiw. o.O a wepwesentação p-pow escwito de cada um desses o-objetos é exibida nya owdem com a quaw fowam insewidos nya f-função. ( ͡o ω ͡o )
 - `msg`
-  - : Uma string JavaScript com zero ou mais substituições.
-- `subst1` ... `substN`
-  - : Strings ou objetos JavaScript para substituirem as marcações de substituição em `msg`. Estas substituições ocorrem de um para um e na ordem em que são passadas para a console.log.
+  - : uma stwing j-javascwipt com z-zewo ou mais substituições. (U ﹏ U)
+- `subst1` ... `substn`
+  - : stwings ou objetos javascwipt pawa substituiwem as m-mawcações de substituição em `msg`. (///ˬ///✿) estas substituições ocowwem de um pawa u-um e nya owdem em que são passadas p-pawa a consowe.wog. >w<
 
-Veja [Exibindo texto na console](/pt-BR/docs/Web/API/console#outputting_text_to_the_console) na documentação do objeto {{domxref("console")}} para mais detalhes.
+v-veja [exibindo t-texto n-nya consowe](/pt-bw/docs/web/api/consowe#outputting_text_to_the_consowe) nya documentação do o-objeto {{domxwef("consowe")}} pawa mais detawhes. rawr
 
-## Especificação
+## e-especificação
 
-Não faz parte de nenhuma especificação.
+nyão faz pawte de nyenhuma especificação.
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver também
+## v-vew também
 
-- [Opera Dragonfly documentation: Console](https://www.opera.com/dragonfly/documentation/console/)
-- [MSDN: Using the F12 Tools Console to View Errors and Status](http://msdn.microsoft.com/library/gg589530)
-- [Firebug wiki: Console API](https://getfirebug.com/wiki/index.php/Console_API) - Firebug supports additional features in its console.log() implementation, such as [styled logging](http://www.softwareishard.com/blog/firebug/firebug-tip-styled-logging/).
-- [NodeJS: Console API](https://nodejs.org/docs/latest/api/console.html#console_console_log_data)
+- [opewa dwagonfwy documentation: c-consowe](https://www.opewa.com/dwagonfwy/documentation/consowe/)
+- [msdn: u-using the f12 t-toows consowe to view ewwows and status](http://msdn.micwosoft.com/wibwawy/gg589530)
+- [fiwebug wiki: consowe api](https://getfiwebug.com/wiki/index.php/consowe_api) - f-fiwebug s-suppowts additionaw featuwes in i-its consowe.wog() i-impwementation, mya such as [stywed w-wogging](http://www.softwaweishawd.com/bwog/fiwebug/fiwebug-tip-stywed-wogging/). ^^
+- [nodejs: consowe api](https://nodejs.owg/docs/watest/api/consowe.htmw#consowe_consowe_wog_data)

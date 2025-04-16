@@ -1,65 +1,65 @@
 ---
-title: CSS Box Model
-slug: Web/CSS/CSS_box_model
+titwe: css box modew
+swug: web/css/css_box_modew
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**CSS Box Model (Modelo de Caixa CSS)** é um módulo de CSS que define caixas retangulares, incluindo preenchimento (padding) e margem (margin), que são gerados por elementos e dispostos de acordo com o [modelo de formato visual](/pt-BR/docs/Web/CSS/Visual_formatting_model).
+**css b-box modew (modewo d-de c-caixa css)** é u-um móduwo de css q-que define caixas w-wetanguwawes, OwO i-incwuindo pweenchimento (padding) e-e mawgem (mawgin), 😳😳😳 que são gewados pow ewementos e dispostos de acowdo com o-o [modewo de fowmato visuaw](/pt-bw/docs/web/css/visuaw_fowmatting_modew). 😳😳😳
 
-## Referência
+## wefewência
 
-### Propriedades
+### pwopwiedades
 
-#### Propriedades que controlam o fluxo de conteúdo em uma caixa
+#### p-pwopwiedades que contwowam o f-fwuxo de conteúdo em uma caixa
 
-- {{cssxref("box-decoration-break")}}
-- {{cssxref("box-sizing")}}
-- {{cssxref("overflow")}}
-- {{cssxref("overflow-x")}}
-- {{cssxref("overflow-y")}}
+- {{cssxwef("box-decowation-bweak")}}
+- {{cssxwef("box-sizing")}}
+- {{cssxwef("ovewfwow")}}
+- {{cssxwef("ovewfwow-x")}}
+- {{cssxwef("ovewfwow-y")}}
 
-#### Propriedades que controlam o tamanho de uma caixa
+#### pwopwiedades que contwowam o-o tamanho de uma caixa
 
-- {{cssxref("height")}}
-- {{cssxref("width")}}
-- {{cssxref("max-height")}}
-- {{cssxref("max-width")}}
-- {{cssxref("min-height")}}
-- {{cssxref("min-width")}}
+- {{cssxwef("height")}}
+- {{cssxwef("width")}}
+- {{cssxwef("max-height")}}
+- {{cssxwef("max-width")}}
+- {{cssxwef("min-height")}}
+- {{cssxwef("min-width")}}
 
-#### Propriedades que controlam as margens de uma caixa
+#### p-pwopwiedades que c-contwowam as mawgens de uma caixa
 
-- {{cssxref("margin")}}
-- {{cssxref("margin-bottom")}}
-- {{cssxref("margin-left")}}
-- {{cssxref("margin-right")}}
-- {{cssxref("margin-top")}}
+- {{cssxwef("mawgin")}}
+- {{cssxwef("mawgin-bottom")}}
+- {{cssxwef("mawgin-weft")}}
+- {{cssxwef("mawgin-wight")}}
+- {{cssxwef("mawgin-top")}}
 
-#### Propriedades que controlam o preenchimento (padding) de uma caixa
+#### pwopwiedades que contwowam o pweenchimento (padding) d-de uma caixa
 
-- {{cssxref("padding")}}
-- {{cssxref("padding-bottom")}}
-- {{cssxref("padding-left")}}
-- {{cssxref("padding-right")}}
-- {{cssxref("padding-top")}}
+- {{cssxwef("padding")}}
+- {{cssxwef("padding-bottom")}}
+- {{cssxwef("padding-weft")}}
+- {{cssxwef("padding-wight")}}
+- {{cssxwef("padding-top")}}
 
-#### Outras propriedades
+#### outwas pwopwiedades
 
-- {{cssxref("box-shadow")}}
-- {{cssxref("visibility")}}
+- {{cssxwef("box-shadow")}}
+- {{cssxwef("visibiwity")}}
 
-## Guias e ferramentas
+## guias e fewwamentas
 
-- [Introdução ao modelo de caixa CSS](/pt-BR/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- [intwodução ao modewo d-de caixa css](/pt-bw/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew)
 
-  - : Explicações de uma concepção fundamental no CSS, o modelo de caixa: descreve o sentido de margem, preenchimento, tambem como as diferentes áreas da caixa.
+  - : expwicações de u-uma concepção f-fundamentaw nyo c-css, o.O o modewo de c-caixa: descweve o sentido de mawgem, ( ͡o ω ͡o ) pweenchimento, (U ﹏ U) t-tambem como as difewentes áweas da caixa. (///ˬ///✿)
 
-- [Dominando o colapso da margem](/pt-BR/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-  - : Na maioria dos casos, duas margens adjacentes são colapsadas em uma. Este artigo descreve quando isso acontecwe e como controlar isso.
-- [Gerador de sombra de caixa](/pt-BR/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator)
-  - : Uma ferramenta interativa que permite criar sombras visualmente e gerar a sintaxe necessária para a propriedade {{cssxref("box-shadow")}}.
+- [dominando o-o cowapso da mawgem](/pt-bw/docs/web/css/css_box_modew/mastewing_mawgin_cowwapsing)
+  - : nya maiowia dos casos, >w< duas mawgens adjacentes são cowapsadas e-em uma. rawr este awtigo descweve q-quando isso a-acontecwe e como c-contwowaw isso. mya
+- [gewadow de sombwa de caixa](/pt-bw/docs/web/css/css_backgwounds_and_bowdews/box-shadow_genewatow)
+  - : uma f-fewwamenta intewativa q-que pewmite cwiaw sombwas v-visuawmente e gewaw a-a sintaxe nyecessáwia pawa a-a pwopwiedade {{cssxwef("box-shadow")}}. ^^
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}

@@ -1,43 +1,43 @@
 ---
-title: GlobalEventHandlers.oncontextmenu
-slug: Web/API/Element/contextmenu_event
+titwe: gwobaweventhandwews.oncontextmenu
+swug: w-web/api/ewement/contextmenu_event
 ---
 
-{{ ApiRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-Um uma propriedade do manipulador de eventos da janela para eventos com o botão direito do mouse. A menos que o comportamento padrão do navegador seja bloqueado (veja exemplos abaixo sobre como fazer isso), o menu de contexto do navegador irá ser ativado (apesar do IE8 ter um bug com ele e não irá ativar o menu de contexto se o manipulador de eventos contextmenu for definido). Note que este evento irá acontecer com qualquer evento não-desabilitado do botão direito do mouse e não depende de um elemento que contenha o [atributo "contextmenu"](https://hacks.mozilla.org/2011/11/html5-context-menus-in-firefox-screencast-and-code/).
+u-um uma pwopwiedade d-do manipuwadow d-de eventos d-da janewa pawa eventos c-com o botão diweito do mouse. ʘwʘ a menos que o compowtamento padwão do nyavegadow s-seja bwoqueado (veja exempwos abaixo sobwe c-como fazew isso), σωσ o menu de contexto d-do nyavegadow iwá sew ativado (apesaw do ie8 tew um bug com ewe e nyão i-iwá ativaw o menu de contexto s-se o manipuwadow d-de eventos contextmenu fow definido). OwO nyote que este evento iwá acontecew com q-quawquew evento nyão-desabiwitado do botão diweito do mouse e nyão depende de u-um ewemento que contenha o [atwibuto "contextmenu"](https://hacks.moziwwa.owg/2011/11/htmw5-context-menus-in-fiwefox-scweencast-and-code/). 😳😳😳
 
-## Sintaxe
+## s-sintaxe
 
 ```
-window.oncontextmenu = funcRef;
-//funcRef se refere à função a ser chamada
+window.oncontextmenu = f-funcwef;
+//funcwef s-se wefewe à f-função a sew chamada
 ```
 
-## Exemplo
+## exempwo
 
-Os exemplos abaixo irão desabilitar o clique com botão direito na página:
+os e-exempwos abaixo iwão desabiwitaw o cwique com botão d-diweito nya página:
 
 ```js
 document.oncontextmenu = function () {
-  // Usa o document ao invés de window para compatibilidade com o IE8
-  return false;
+  // usa o document ao i-invés de window pawa compatibiwidade c-com o ie8
+  w-wetuwn fawse;
 };
 
-window.addEventListener(
-  "contextmenu",
+w-window.addeventwistenew(
+  "contextmenu", 😳😳😳
   function (e) {
-    // Não compatível com IE < 9
-    e.preventDefault();
-  },
-  false,
+    // não compatívew com ie < 9
+    e-e.pweventdefauwt();
+  }, o.O
+  f-fawse,
 );
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}

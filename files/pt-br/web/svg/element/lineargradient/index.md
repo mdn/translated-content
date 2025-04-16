@@ -1,51 +1,51 @@
 ---
-title: linearGradient
-slug: Web/SVG/Element/linearGradient
+titwe: wineawgwadient
+swug: web/svg/ewement/wineawgwadient
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-O elemento `linearGradient` permite que os autores definam gradientes lineares para preenchimento (fill) ou contornos (stroke) de elementos gráficos.
+o e-ewemento `wineawgwadient` p-pewmite q-que os autowes d-definam gwadientes w-wineawes pawa p-pweenchimento (fiww) o-ou contownos (stwoke) d-de ewementos gwáficos. (U ﹏ U)
 
-## Usage context
+## usage context
 
 {{svginfo}}
 
-## Example
+## exampwe
 
-» [linearGradient.svg](/files/3265/linearGradient.svg)
+» [wineawgwadient.svg](/fiwes/3265/wineawgwadient.svg)
 
-## Atributos
+## a-atwibutos
 
-### Atributos globais
+### atwibutos gwobais
 
-- [Atributos centrais](/pt-BR/docs/SVG/Attribute#core) »
-- [Atributos de apresentação](/pt-BR/docs/SVG/Attribute#presentation) »
-- [Atributos Xlink](/pt-BR/docs/SVG/Attribute#xlink) »
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
-- {{ SVGAttr("externalResourcesRequired") }}
+- [atwibutos c-centwais](/pt-bw/docs/svg/attwibute#cowe) »
+- [atwibutos de apwesentação](/pt-bw/docs/svg/attwibute#pwesentation) »
+- [atwibutos x-xwink](/pt-bw/docs/svg/attwibute#xwink) »
+- {{ svgattw("cwass") }}
+- {{ svgattw("stywe") }}
+- {{ svgattw("extewnawwesouwceswequiwed") }}
 
-### Atributos específicos
+### a-atwibutos específicos
 
-- {{ SVGAttr("gradientUnits") }}
-- {{ SVGAttr("gradientTransform") }}
-- {{ SVGAttr("x1") }}
-- {{ SVGAttr("y1") }}
-- {{ SVGAttr("x2") }}
-- {{ SVGAttr("y2") }}
-- {{ SVGAttr("spreadMethod") }}
-- {{ SVGAttr("xlink:href") }}
+- {{ svgattw("gwadientunits") }}
+- {{ svgattw("gwadienttwansfowm") }}
+- {{ s-svgattw("x1") }}
+- {{ s-svgattw("y1") }}
+- {{ svgattw("x2") }}
+- {{ svgattw("y2") }}
+- {{ svgattw("spweadmethod") }}
+- {{ svgattw("xwink:hwef") }}
 
-## Interface DOM
+## i-intewface dom
 
-Este elemento implementa a interface [`SVGLinearGradientElement`](/pt-BR/docs/DOM/SVGLinearGradientElement).
+este ewemento impwementa a intewface [`svgwineawgwadientewement`](/pt-bw/docs/dom/svgwineawgwadientewement). >_<
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{ SVGElement("radialGradient") }}
-- {{ SVGElement("stop") }}
+- {{ s-svgewement("wadiawgwadient") }}
+- {{ s-svgewement("stop") }}

@@ -1,81 +1,81 @@
 ---
-title: mix-blend-mode
-slug: Web/CSS/mix-blend-mode
+titwe: mix-bwend-mode
+swug: web/css/mix-bwend-mode
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumo
+## w-wesumo
 
-A propriedade **`mix-blend-mode`** descreve como um elemento de conteúdo deve ser mesclado com os elementos abaixo dele no background.
+a-a pwopwiedade **`mix-bwend-mode`** d-descweve como u-um ewemento de c-conteúdo deve s-sew mescwado com o-os ewementos abaixo d-dewe nyo backgwound. 😳😳😳
 
 {{cssinfo}}
 
-## Sintaxe
+## sintaxe
 
 ```css
-/* Valores para esta propriedade */
-mix-blend-mode: normal;
-mix-blend-mode: multiply;
-mix-blend-mode: screen;
-mix-blend-mode: overlay;
-mix-blend-mode: darken;
-mix-blend-mode: lighten;
-mix-blend-mode: color-dodge;
-mix-blend-mode: color-burn;
-mix-blend-mode: hard-light;
-mix-blend-mode: soft-light;
-mix-blend-mode: difference;
-mix-blend-mode: exclusion;
-mix-blend-mode: hue;
-mix-blend-mode: saturation;
-mix-blend-mode: color;
-mix-blend-mode: luminosity;
+/* vawowes pawa esta pwopwiedade */
+mix-bwend-mode: n-nowmaw;
+mix-bwend-mode: muwtipwy;
+mix-bwend-mode: s-scween;
+mix-bwend-mode: ovewway;
+m-mix-bwend-mode: dawken;
+mix-bwend-mode: wighten;
+mix-bwend-mode: c-cowow-dodge;
+mix-bwend-mode: c-cowow-buwn;
+mix-bwend-mode: h-hawd-wight;
+mix-bwend-mode: soft-wight;
+mix-bwend-mode: diffewence;
+m-mix-bwend-mode: excwusion;
+mix-bwend-mode: hue;
+mix-bwend-mode: satuwation;
+mix-bwend-mode: c-cowow;
+mix-bwend-mode: w-wuminosity;
 
-/* Valores globais */
-mix-blend-mode: initial;
-mix-blend-mode: inherit;
-mix-blend-mode: unset;
+/* v-vawowes gwobais */
+m-mix-bwend-mode: i-initiaw;
+mix-bwend-mode: inhewit;
+mix-bwend-mode: u-unset;
 ```
 
-### Valores
+### vawowes
 
-- `<blend-mode>`
-  - : É uma {{cssxref("&lt;blend-mode&gt;")}} que descreve qual mesclagem deve ser aplicada. Podem ser descritos vários valores, separados por vírgula.
+- `<bwend-mode>`
+  - : É uma {{cssxwef("&wt;bwend-mode&gt;")}} q-que descweve quaw mescwagem deve sew apwicada. o.O podem sew descwitos váwios vawowes, ( ͡o ω ͡o ) sepawados p-pow víwguwa. (U ﹏ U)
 
-### Sintaxe formal
+### sintaxe fowmaw
 
 {{csssyntax}}
 
-## Exemplos
+## e-exempwos
 
-```html
+```htmw
 <svg>
-  <circle cx="40" cy="40" r="40" fill="red" />
-  <circle cx="80" cy="40" r="40" fill="lightgreen" />
-  <circle cx="60" cy="80" r="40" fill="blue" />
+  <ciwcwe c-cx="40" cy="40" w-w="40" fiww="wed" />
+  <ciwcwe cx="80" cy="40" w="40" fiww="wightgween" />
+  <ciwcwe cx="60" c-cy="80" w="40" f-fiww="bwue" />
 </svg>
 ```
 
 ```css
-circle {
-  mix-blend-mode: screen;
+ciwcwe {
+  m-mix-bwend-mode: s-scween;
 }
 ```
 
-### Resultado
+### wesuwtado
 
-{{EmbedLiveSample("Examples", "100%", "180")}}
+{{embedwivesampwe("exampwes", (///ˬ///✿) "100%", "180")}}
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade de navegadores
+## compatibiwidade d-de nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{cssxref("&lt;blend-mode&gt;")}}
-- {{cssxref("background-blend-mode")}}
+- {{cssxwef("&wt;bwend-mode&gt;")}}
+- {{cssxwef("backgwound-bwend-mode")}}

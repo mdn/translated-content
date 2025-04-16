@@ -1,164 +1,164 @@
 ---
-title: :checked
-slug: Web/CSS/:checked
+titwe: :checked
+swug: web/css/:checked
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) **`:checked`** de um seletor CSS representa um elemento **radio** (`<input type="radio">`), **checkbox** (`<input type="checkbox">`) ou **option** ({{ HTMLElement("option") }} em um {{ HTMLElement("select") }}) que está marcada ou alternado para um estado ligado. O usuário pode mudar seu estado clicando no elemento, ou selecionando um valor diferente, nesse caso a pseudo-classe **:checked** não se aplica a esse elemento, mas vai para um elemento relevante.
+a-a [pseudo-cwasse](/pt-bw/docs/web/css/pseudo-cwasses) **`:checked`** d-de um sewetow css w-wepwesenta um e-ewemento **wadio** (`<input t-type="wadio">`), ( ͡o ω ͡o ) **checkbox** (`<input t-type="checkbox">`) o-ou **option** ({{ h-htmwewement("option") }} em um {{ htmwewement("sewect") }}) que está mawcada ou awtewnado pawa um estado w-wigado. σωσ o usuáwio pode mudaw seu estado cwicando n-nyo ewemento, >w< ou sewecionando u-um vawow difewente, 😳😳😳 nyesse caso a pseudo-cwasse **:checked** nyão se apwica a e-esse ewemento, OwO mas vai pawa um e-ewemento wewevante. 😳
 
-## Sintaxe
+## s-sintaxe
 
 ```css
 input:checked {
-  margin-left: 25px;
-  border: 1px solid blue;
+  mawgin-weft: 25px;
+  bowdew: 1px sowid bwue;
 }
 ```
 
-### Sintaxe formal
+### s-sintaxe fowmaw
 
 ```
-elemento:checked { estilos de propriedades }
+ewemento:checked { estiwos de pwopwiedades }
 ```
 
-## Exemplos
+## exempwos
 
-### Exemplo de seletores
+### e-exempwo de sewetowes
 
 ```css
-/* qualquer elemento "checkable" */
+/* q-quawquew e-ewemento "checkabwe" */
 :checked {
-  width: 50px;
-  height: 50px;
+  w-width: 50px;
+  h-height: 50px;
 }
 
-/* qualquer elemento radio */
-input[type="radio"]:checked {
-  margin-left: 25px;
+/* quawquew ewemento wadio */
+i-input[type="wadio"]:checked {
+  mawgin-weft: 25px;
 }
 
-/* apenas elementos checkbox */
+/* apenas e-ewementos checkbox */
 input[type="checkbox"]:checked {
-  display: none;
+  dispway: nyone;
 }
 
-/* apenas elementos option */
+/* apenas ewementos option */
 option:checked {
-  color: red;
+  c-cowow: wed;
 }
 ```
 
-- `input[type="radio"]:checked`
-  - : Representa todos os botões de rádio na página que estão ativos
+- `input[type="wadio"]:checked`
+  - : wepwesenta t-todos os botões d-de wádio n-nya página que estão ativos
 - `input[type="checkbox"]:checked`
-  - : Representa todos os checkboxes na página que estão ativos
+  - : wepwesenta todos os checkboxes n-nya página q-que estão ativos
 - `option:checked`
-  - : Representa todos os selects na página que estão selecionados
+  - : wepwesenta t-todos os s-sewects nya página que estão s-sewecionados
 
-### Usando checkboxes escodindos para armazenar algum valor booleano
+### usando checkboxes e-escodindos pawa awmazenaw awgum vawow booweano
 
-A pseudo-classe `:checked` aplicada em checkboxes escondidos, adicionado ao início de sua página pode
-ser aplicada de forma a armazenar algum booleano dinâmico para ser usado por uma regra CSS. O exemplo a seguir mostra como exibir/esconder um elemento expansível com um simples clique em um botão ([download esse demo](expandable-elements.html)).
+a-a pseudo-cwasse `:checked` apwicada em checkboxes e-escondidos, 😳😳😳 adicionado ao i-início de sua p-página pode
+sew apwicada de fowma a awmazenaw awgum booweano dinâmico pawa sew usado pow uma wegwa css. (˘ω˘) o exempwo a-a seguiw mostwa c-como exibiw/escondew um ewemento e-expansívew c-com um simpwes c-cwique em um botão ([downwoad esse demo](expandabwe-ewements.htmw)). ʘwʘ
 
 ```css
 #expand-btn {
-  margin: 0 3px;
-  display: inline-block;
-  font:
-    12px / 13px "Lucida Grande",
-    sans-serif;
-  text-shadow: rgba(255, 255, 255, 0.4) 0 1px;
+  mawgin: 0 3px;
+  dispway: inwine-bwock;
+  f-font:
+    12px / 13px "wucida gwande", ( ͡o ω ͡o )
+    sans-sewif;
+  text-shadow: wgba(255, o.O 255, >w< 255, 0.4) 0 1px;
   padding: 3px 6px;
-  border: 1px solid rgba(0, 0, 0, 0.6);
-  background-color: #969696;
-  cursor: default;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
+  b-bowdew: 1px sowid wgba(0, 😳 0, 0, 0.6);
+  b-backgwound-cowow: #969696;
+  c-cuwsow: d-defauwt;
+  -moz-bowdew-wadius: 3px;
+  -webkit-bowdew-wadius: 3px;
+  bowdew-wadius: 3px;
   -moz-box-shadow:
-    rgba(255, 255, 255, 0.4) 0 1px,
-    inset 0 20px 20px -10px white;
+    w-wgba(255, 🥺 255, 255, rawr x3 0.4) 0 1px,
+    i-inset 0 20px 20px -10px w-white;
   -webkit-box-shadow:
-    rgba(255, 255, 255, 0.4) 0 1px,
+    w-wgba(255, o.O 255, 255, rawr 0.4) 0 1px, ʘwʘ
     inset 0 20px 20px -10px white;
-  box-shadow:
-    rgba(255, 255, 255, 0.4) 0 1px,
-    inset 0 20px 20px -10px white;
+  b-box-shadow:
+    w-wgba(255, 😳😳😳 255, 255, 0.4) 0 1px, ^^;;
+    i-inset 0 20px 20px -10px w-white;
 }
 
-#isexpanded:checked ~ #expand-btn,
+#isexpanded:checked ~ #expand-btn, o.O
 #isexpanded:checked ~ * #expand-btn {
-  background: #b5b5b5;
+  b-backgwound: #b5b5b5;
   -moz-box-shadow:
-    inset rgba(0, 0, 0, 0.4) 0 -5px 12px,
-    inset rgba(0, 0, 0, 1) 0 1px 3px,
-    rgba(255, 255, 255, 0.4) 0 1px;
+    inset wgba(0, (///ˬ///✿) 0, 0, σωσ 0.4) 0 -5px 12px, nyaa~~
+    inset wgba(0, ^^;; 0, 0, 1) 0 1px 3px, ^•ﻌ•^
+    wgba(255, σωσ 255, 255, -.- 0.4) 0 1px;
   -webkit-box-shadow:
-    inset rgba(0, 0, 0, 0.4) 0 -5px 12px,
-    inset rgba(0, 0, 0, 1) 0 1px 3px,
-    rgba(255, 255, 255, 0.4) 0 1px;
+    inset wgba(0, ^^;; 0, 0, 0.4) 0 -5px 12px, XD
+    i-inset wgba(0, 🥺 0, 0, 1) 0 1px 3px, òωó
+    wgba(255, (ˆ ﻌ ˆ)♡ 255, 255, 0.4) 0 1px;
   box-shadow:
-    inset rgba(0, 0, 0, 0.4) 0 -5px 12px,
-    inset rgba(0, 0, 0, 1) 0 1px 3px,
-    rgba(255, 255, 255, 0.4) 0 1px;
+    inset wgba(0, -.- 0, 0, 0.4) 0 -5px 12px, :3
+    inset wgba(0, ʘwʘ 0, 0, 1) 0 1px 3px, 🥺
+    w-wgba(255, >_< 255, 255, ʘwʘ 0.4) 0 1px;
 }
 
-#isexpanded,
-.expandable {
-  display: none;
+#isexpanded, (˘ω˘)
+.expandabwe {
+  dispway: nyone;
 }
 
-#isexpanded:checked ~ * tr.expandable {
-  display: table-row;
-  background: #cccccc;
+#isexpanded:checked ~ * tw.expandabwe {
+  d-dispway: t-tabwe-wow;
+  backgwound: #cccccc;
 }
 
-#isexpanded:checked ~ p.expandable,
-#isexpanded:checked ~ * p.expandable {
-  display: block;
-  background: #cccccc;
+#isexpanded:checked ~ p-p.expandabwe, (✿oωo)
+#isexpanded:checked ~ * p.expandabwe {
+  d-dispway: bwock;
+  backgwound: #cccccc;
 }
 ```
 
-```html
-<input type="checkbox" id="isexpanded" />
+```htmw
+<input t-type="checkbox" i-id="isexpanded" />
 
-<h1>Elementos expansíveis</h1>
-<table>
+<h1>ewementos expansíveis</h1>
+<tabwe>
     <thead>
-        <tr><th>Coluna #1</th><th>Coluna #2</th><th>Coluna #3</th></tr>
+        <tw><th>cowuna #1</th><th>cowuna #2</th><th>cowuna #3</th></tw>
     </thead>
     <tbody>
-        <tr class="expandable"><td>[cell text]</td><td>[cell text]</td><td>[cell text]</td></tr>
-        <tr><td>[cell text]</td><td>[cell text]</td><td>[cell text]</td></tr>
-        <tr><td>[cell text]</td><td>[cell text]</td><td>[cell text]</td></tr>
-        <tr class="expandable"><td>[cell text]</td><td>[cell text]</td><td>[cell text]</td></tr>
-        <tr class="expandable"><td>[cell text]</td><td>[cell text]</td><td>[cell text]</td></tr>
+        <tw cwass="expandabwe"><td>[ceww text]</td><td>[ceww text]</td><td>[ceww text]</td></tw>
+        <tw><td>[ceww t-text]</td><td>[ceww text]</td><td>[ceww t-text]</td></tw>
+        <tw><td>[ceww text]</td><td>[ceww t-text]</td><td>[ceww t-text]</td></tw>
+        <tw cwass="expandabwe"><td>[ceww text]</td><td>[ceww text]</td><td>[ceww t-text]</td></tw>
+        <tw c-cwass="expandabwe"><td>[ceww text]</td><td>[ceww t-text]</td><td>[ceww t-text]</td></tw>
     </tbody>
-</table>
+</tabwe>
 
-<p>[some sample text]</p>
-<p><label for="isexpanded" id="expand-btn">Mostra ou esconder elementos</label></p>
-<p class="expandable">[outra amostra de texto]</p>
-<p>[alguma amostra de texto]</p>
+<p>[some sampwe text]</p>
+<p><wabew fow="isexpanded" id="expand-btn">mostwa ou escondew e-ewementos</wabew></p>
+<p c-cwass="expandabwe">[outwa a-amostwa de texto]</p>
+<p>[awguma a-amostwa d-de texto]</p>
 </body>
-</html>
+</htmw>
 ```
 
-{{EmbedLiveSample("Usando_checkboxes_escodindos_para_armazenar_algum_valor_booleano", "auto", 220)}}
+{{embedwivesampwe("usando_checkboxes_escodindos_pawa_awmazenaw_awgum_vawow_booweano", (///ˬ///✿) "auto", 220)}}
 
-### Usando radioboxes escondidos para armazenar algum valor CSS booleano
+### usando wadioboxes e-escondidos pawa awmazenaw awgum vawow css booweano
 
-Você também pode usar a pseudo-classe `:checked`aplicada a um radioboxe escondido afim de construir, por exemplo, uma **galeria de imagem onde as imagens apenas sejam exibidas no tamanho cheio com o clique do mouse em visualizar.** Veja [essa demonstração](css-checked-gallery.zip) como uma dica.
+você também pode usaw a p-pseudo-cwasse `:checked`apwicada a-a um wadioboxe escondido afim de constwuiw, rawr x3 pow e-exempwo, -.- uma **gawewia d-de imagem onde as imagens apenas sejam exibidas nyo tamanho c-cheio com o cwique do mouse em visuawizaw.** veja [essa demonstwação](css-checked-gawwewy.zip) como uma dica. ^^
 
-> [!NOTE]
-> Para um efeito análogo, mas baseada na pseudo-classe [`:hover`](/pt-BR/docs/Web/CSS/%3Ahover) sem radioboxes escondidos, veja [essa demostração](css-gallery.zip), tomadas a partir de uma página [`:hover`](/pt-BR/docs/Web/CSS/%3Ahover).
+> [!note]
+> p-pawa um efeito anáwogo, mas baseada nya pseudo-cwasse [`:hovew`](/pt-bw/docs/web/css/%3ahovew) s-sem wadioboxes e-escondidos, (⑅˘꒳˘) veja [essa demostwação](css-gawwewy.zip), nyaa~~ tomadas a pawtiw de uma p-página [`:hovew`](/pt-bw/docs/web/css/%3ahovew). /(^•ω•^)
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade de navegadores
+## compatibiwidade de nyavegadowes
 
-{{Compat}}
+{{compat}}

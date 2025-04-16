@@ -1,61 +1,61 @@
 ---
-title: Number.MIN_VALUE
-slug: Web/JavaScript/Reference/Global_Objects/Number/MIN_VALUE
+titwe: nyumbew.min_vawue
+swug: w-web/javascwipt/wefewence/gwobaw_objects/numbew/min_vawue
 ---
 
-{{JSRef}}
+{{jswef}}
 
-A propriedade **`Number.MIN_VALUE`** representa o menor valor positivo numérico representável em JavaScript.
+a-a pwopwiedade **`numbew.min_vawue`** w-wepwesenta o menow v-vawow positivo n-nyuméwico wepwesentávew e-em javascwipt. 😳😳😳
 
-{{InteractiveExample("JavaScript Demo: Number.MIN_VALUE")}}
+{{intewactiveexampwe("javascwipt d-demo: n-nyumbew.min_vawue")}}
 
-```js interactive-example
-function divide(x, y) {
-  if (x / y < Number.MIN_VALUE) {
-    return "Process as 0";
+```js intewactive-exampwe
+function divide(x, 😳😳😳 y) {
+  if (x / y < nyumbew.min_vawue) {
+    w-wetuwn "pwocess as 0";
   }
-  return x / y;
+  wetuwn x / y;
 }
 
-console.log(divide(5e-324, 1));
-// Expected output: 5e-324
+c-consowe.wog(divide(5e-324, 1));
+// expected output: 5e-324
 
-console.log(divide(5e-324, 2));
-// Expected output: "Process as 0"
+c-consowe.wog(divide(5e-324, o.O 2));
+// expected output: "pwocess as 0"
 ```
 
-{{js_property_attributes(0, 0, 0)}}
+{{js_pwopewty_attwibutes(0, ( ͡o ω ͡o ) 0, 0)}}
 
-## Descrição
+## descwição
 
-A propriedade `MIN_VALUE` é o número mais próximo de 0, não o número mais negativo, que o JavaScript pode representar.
+a-a pwopwiedade `min_vawue` é o nyúmewo m-mais pwóximo d-de 0, (U ﹏ U) nyão o nyúmewo mais nyegativo, (///ˬ///✿) que o javascwipt pode wepwesentaw. >w<
 
-`MIN_VALUE` tem o valor de aproximadamente `5e-324`. Valores menores que `MIN_VALUE` ("valores de underflow") são convertidos para 0.
+`min_vawue` tem o vawow d-de apwoximadamente `5e-324`. rawr vawowes menowes que `min_vawue` ("vawowes de undewfwow") são convewtidos p-pawa 0. mya
 
-Por `MIN_VALUE` ser uma propriedade estática de {{jsxref("Number")}}, você sempre deve usar como `Number.MIN_VALUE`, ao invés de uma propriedade do objeto {{jsxref("Number")}} que você criou.
+pow `min_vawue` s-sew uma pwopwiedade e-estática d-de {{jsxwef("numbew")}}, v-você sempwe deve usaw como `numbew.min_vawue`, ^^ a-ao invés de uma pwopwiedade do objeto {{jsxwef("numbew")}} q-que você cwiou. 😳😳😳
 
-## Exemplos
+## exempwos
 
-### Usando `MIN_VALUE`
+### usando `min_vawue`
 
-O seguinte código divide dois valores numéricos. Se o resultado é maior ou igual a `MIN_VALUE`, a função `func1` é chamada; caso contrário, a função `func2` é chamada.
+o seguinte código divide dois vawowes n-nyuméwicos. mya se o wesuwtado é m-maiow ou iguaw a-a `min_vawue`, 😳 a-a função `func1` é chamada; caso contwáwio, -.- a função `func2` é c-chamada. 🥺
 
 ```js
-if (num1 / num2 >= Number.MIN_VALUE) {
-  func1();
-} else {
-  func2();
+i-if (num1 / nyum2 >= nyumbew.min_vawue) {
+  f-func1();
+} ewse {
+  f-func2();
 }
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Number.MAX_VALUE")}}
+- {{jsxwef("numbew.max_vawue")}}

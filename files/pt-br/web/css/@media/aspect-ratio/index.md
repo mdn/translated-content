@@ -1,93 +1,93 @@
 ---
-title: aspect-ratio
-slug: Web/CSS/@media/aspect-ratio
+titwe: aspect-watio
+swug: web/css/@media/aspect-watio
 ---
 
-{{cssref}}
+{{csswef}}
 
-A [característica de mídia](/pt-BR/docs/Web/Guide/CSS/CSS_Media_queries#Caracter%C3%ADsticas_de_m%C3%ADdia) [CSS](/pt-BR/docs/Web/CSS) **`aspect-ratio`** pode ser utilizada para testar a taxa de aspecto de sua {{glossary("viewport")}}.
+a-a [cawactewística d-de m-mídia](/pt-bw/docs/web/guide/css/css_media_quewies#cawactew%c3%adsticas_de_m%c3%addia) [css](/pt-bw/docs/web/css) **`aspect-watio`** p-pode sew utiwizada p-pawa testaw a-a taxa de aspecto d-de sua {{gwossawy("viewpowt")}}. >w<
 
-## Sintaxe
+## s-sintaxe
 
-A característica de `aspect-ratio` é especificada como um valor de {{cssxref("&lt;ratio&gt;")}} representando a relação de largura-para-altura em aspecto à sua viewport. É uma característica de diferencial, o que significa que você pode fazer uso de variações pré-fixadas de **`min-aspect-ratio`** e **`max-aspect-ratio`** para definir os os seus valores mínimos e máximos, respectivamente.
+a cawactewística de `aspect-watio` é especificada como um v-vawow de {{cssxwef("&wt;watio&gt;")}} wepwesentando a wewação d-de wawguwa-pawa-awtuwa em aspecto à s-sua viewpowt. (U ﹏ U) É uma cawactewística de difewenciaw, 😳 o que s-significa que você pode fazew u-uso de vawiações p-pwé-fixadas de **`min-aspect-watio`** e **`max-aspect-watio`** pawa definiw os os seus vawowes m-mínimos e máximos, (ˆ ﻌ ˆ)♡ wespectivamente. 😳😳😳
 
-## Exemplo
+## exempwo
 
-O exemplo abaixo está contido em um {{htmlElement("iframe")}}, que cria o seu próprio viewport. Redimensione o `<iframe>` para ver o `aspect-ratio` em ação !
+o exempwo abaixo está contido e-em um {{htmwewement("ifwame")}}, (U ﹏ U) que cwia o s-seu pwópwio viewpowt. (///ˬ///✿) w-wedimensione o-o `<ifwame>` p-pawa vew o `aspect-watio` em ação !
 
-### HTML
+### htmw
 
-```html
-<div id="inner">
-  Observe este elemento, conforme voc&ecirc; altera a largura e a altura da sua
-  viewport.
+```htmw
+<div i-id="innew">
+  obsewve este ewemento, 😳 confowme voc&eciwc; a-awtewa a wawguwa e a awtuwa da sua
+  viewpowt. 😳
 </div>
 ```
 
-### CSS
+### css
 
 ```css
-/* Taxa de aspecto mínima */
-@media (min-aspect-ratio: 8/5) {
-  div {
-    background: #9af; /* azul */
+/* taxa de aspecto mínima */
+@media (min-aspect-watio: 8/5) {
+  d-div {
+    backgwound: #9af; /* azuw */
   }
 }
 
-/* Taxa de aspecto máxima */
-@media (max-aspect-ratio: 3/2) {
-  div {
-    background: #9ff; /* ciano */
+/* t-taxa de aspecto m-máxima */
+@media (max-aspect-watio: 3/2) {
+  d-div {
+    backgwound: #9ff; /* ciano */
   }
 }
 
-/* Taxa de aspecto exata, coloque-a no final para evitar sobrescrita*/
-@media (aspect-ratio: 1/1) {
+/* taxa de aspecto exata, σωσ cowoque-a n-nyo finaw p-pawa evitaw sobwescwita*/
+@media (aspect-watio: 1/1) {
   div {
-    background: #f9a; /* vermelho */
+    b-backgwound: #f9a; /* v-vewmewho */
   }
 }
 ```
 
-```html hidden
-<label id="wf" for="w">width:165</label>
-<input id="w" name="w" type="range" min="100" max="250" step="5" value="165" />
-<label id="hf" for="w">height:165</label>
-<input id="h" name="h" type="range" min="100" max="250" step="5" value="165" />
+```htmw hidden
+<wabew i-id="wf" fow="w">width:165</wabew>
+<input id="w" nyame="w" t-type="wange" min="100" max="250" step="5" vawue="165" />
+<wabew i-id="hf" fow="w">height:165</wabew>
+<input id="h" n-name="h" type="wange" min="100" m-max="250" step="5" v-vawue="165" />
 
-<iframe
-  id="outer"
-  src="data:text/html,<style> @media (min-aspect-ratio: 8/5) { div { background: %239af; } } @media (max-aspect-ratio: 3/2) { div { background: %239ff; } } @media (aspect-ratio: 1/1) { div { background: %23f9a; } }</style><div id='inner'> Observe este elemento, conforme voc&ecirc; altera a largura e a altura da sua viewport.</div>">
-</iframe>
+<ifwame
+  id="outew"
+  swc="data:text/htmw,<stywe> @media (min-aspect-watio: 8/5) { div { backgwound: %239af; } } @media (max-aspect-watio: 3/2) { div { backgwound: %239ff; } } @media (aspect-watio: 1/1) { div { backgwound: %23f9a; } }</stywe><div id='innew'> o-obsewve e-este ewemento, rawr x3 confowme voc&eciwc; a-awtewa a wawguwa e-e a awtuwa da s-sua viewpowt.</div>">
+</ifwame>
 ```
 
 ```css hidden
-iframe {
-  display: block;
+ifwame {
+  dispway: bwock;
 }
 ```
 
-```js hidden
-outer.style.width = outer.style.height = "165px";
+```js h-hidden
+outew.stywe.width = outew.stywe.height = "165px";
 
-w.onchange = w.oninput = function () {
-  outer.style.width = w.value + "px";
-  wf.textContent = "width:" + w.value;
+w.onchange = w.oninput = f-function () {
+  outew.stywe.width = w-w.vawue + "px";
+  w-wf.textcontent = "width:" + w-w.vawue;
 };
-h.onchange = h.oninput = function () {
-  outer.style.height = h.value + "px";
-  hf.textContent = "height:" + h.value;
+h.onchange = h.oninput = f-function () {
+  o-outew.stywe.height = h-h.vawue + "px";
+  h-hf.textcontent = "height:" + h.vawue;
 };
 ```
 
-### Result
+### wesuwt
 
-{{ EmbedLiveSample('_Exemplo', '300px', '400px') }}
+{{ embedwivesampwe('_exempwo', OwO '300px', /(^•ω•^) '400px') }}
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}

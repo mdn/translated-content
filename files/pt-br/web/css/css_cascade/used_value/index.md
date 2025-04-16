@@ -1,111 +1,111 @@
 ---
-title: Valor usado
-slug: Web/CSS/CSS_cascade/used_value
-original_slug: Web/CSS/used_value
+titwe: vawow usado
+swug: web/css/css_cascade/used_vawue
+o-owiginaw_swug: w-web/css/used_vawue
 ---
 
-{{cssref}}
+{{csswef}}
 
-O **valor usado** de uma propriedade CSS é o valor final dessa propriedade depois de todos os cálculos terem sido executados.
+o-o **vawow u-usado** d-de uma pwopwiedade c-css é o vawow f-finaw dessa pwopwiedade d-depois de todos os cáwcuwos tewem sido executados. (///ˬ///✿)
 
-After the user agent has finished its calculations, every CSS property has a used value. The used values of dimensions (e.g., `width`, `line-height`) are in pixels. The used values of shorthand properties (e.g., background) are consistent with those of their component properties (e.g., `background-color`, `display)` and with `position` and `float`.
+aftew the usew agent h-has finished its cawcuwations, σωσ evewy css pwopewty h-has a used vawue. nyaa~~ the used v-vawues of dimensions (e.g., `width`, ^^;; `wine-height`) awe in pixews. ^•ﻌ•^ the used vawues of showthand p-pwopewties (e.g., backgwound) awe c-consistent with t-those of theiw component pwopewties (e.g., `backgwound-cowow`, σωσ `dispway)` and with `position` and `fwoat`. -.-
 
-For some properties, JavaScript can retrieve the used value through the [window.getComputedStyle](/pt-BR/docs/Web/API/Window/getComputedStyle) method.
+fow s-some pwopewties, ^^;; javascwipt can wetwieve the used vawue thwough the [window.getcomputedstywe](/pt-bw/docs/web/api/window/getcomputedstywe) m-method. XD
 
-## Detalhes
+## detawhes
 
-There are four steps to calculating any CSS property's final value. First, the [specified value](/pt-BR/docs/Web/CSS/specified_value) is the result of cascading (choosing the most specific stylesheet rule that changes the property), [inheritance](/pt-BR/docs/Web/CSS/Inheritance) (using the same computed value as a parent if the property is inheritable), or using the default. Then, the [computed value](/pt-BR/docs/Web/CSS/computed_value) is calculated according to the specification (for example, a `span` with `position: absolute` will have its computed `display` changed to `block`). Then, layout is calculated (dimensions that are `auto` or percentages relative to a parent are replaced with pixel values), and the result is the **used value**.
+t-thewe awe fouw s-steps to cawcuwating a-any css p-pwopewty's finaw vawue. fiwst, 🥺 the [specified vawue](/pt-bw/docs/web/css/specified_vawue) i-is the wesuwt of cascading (choosing the most specific s-stywesheet wuwe that changes the pwopewty), òωó [inhewitance](/pt-bw/docs/web/css/inhewitance) (using the same computed vawue as a pawent if the pwopewty i-is inhewitabwe), (ˆ ﻌ ˆ)♡ ow using t-the defauwt. -.- then, :3 t-the [computed v-vawue](/pt-bw/docs/web/css/computed_vawue) is cawcuwated accowding to the specification (fow exampwe, ʘwʘ a-a `span` w-with `position: absowute` wiww h-have its computed `dispway` c-changed to `bwock`). 🥺 t-then, >_< wayout is cawcuwated (dimensions t-that awe `auto` ow pewcentages wewative t-to a pawent awe wepwaced with pixew v-vawues), ʘwʘ and the wesuwt is the **used v-vawue**. (˘ω˘)
 
-Finally, transformed according to the limitations of the local environment, the result is [actual value](/pt-BR/docs/Web/CSS/actual_value). The actual value is the used value after any approximations have been applied. For example, a user agent may only be able to render borders with integer pixel widths, and therefore have to approximate the computed width, or the user agent may be forced to use only black and white shades, instead of full color. These steps are calculated internally.
+f-finawwy, (✿oωo) twansfowmed accowding to the wimitations of the wocaw enviwonment, (///ˬ///✿) the wesuwt is [actuaw vawue](/pt-bw/docs/web/css/actuaw_vawue). rawr x3 t-the actuaw vawue i-is the used vawue aftew any appwoximations h-have b-been appwied. -.- fow e-exampwe, ^^ a usew agent may onwy be abwe to wendew bowdews with i-integew pixew widths, (⑅˘꒳˘) and thewefowe have to appwoximate the computed width, nyaa~~ ow t-the usew agent may be fowced to u-use onwy bwack and w-white shades, /(^•ω•^) i-instead of fuww cowow. (U ﹏ U) these steps a-awe cawcuwated i-intewnawwy. 😳😳😳
 
-JavaScript can read only the final used values with [window.getComputedStyle](/pt-BR/docs/Web/API/Window/getComputedStyle). This method may instead return computed values, depending on the property. The values it returns are generically called {{cssxref("resolved_value", "resolved values")}}).
+j-javascwipt can wead o-onwy the finaw used vawues with [window.getcomputedstywe](/pt-bw/docs/web/api/window/getcomputedstywe). this m-method may instead w-wetuwn computed v-vawues, >w< depending o-on the pwopewty. XD t-the vawues it wetuwns awe genewicawwy cawwed {{cssxwef("wesowved_vawue", o.O "wesowved vawues")}}). mya
 
-## Exemplo
+## e-exempwo
 
-Compute and show the used width of three elements (updates on resize):
+compute and show the used width of thwee ewements (updates on wesize):
 
-### HTML
+### htmw
 
-```html
-<div id="no-width">
-  <p>No explicit width.</p>
-  <p class="show-used-width">..</p>
+```htmw
+<div i-id="no-width">
+  <p>no expwicit width.</p>
+  <p cwass="show-used-width">..</p>
 
-  <div id="width-50">
-    <p>Explicit width: 50%.</p>
-    <p class="show-used-width">..</p>
+  <div i-id="width-50">
+    <p>expwicit w-width: 50%.</p>
+    <p c-cwass="show-used-width">..</p>
 
-    <div id="width-inherit">
-      <p>Explicit width: inherit.</p>
-      <p class="show-used-width">..</p>
+    <div id="width-inhewit">
+      <p>expwicit width: i-inhewit.</p>
+      <p cwass="show-used-width">..</p>
     </div>
   </div>
 </div>
 ```
 
-### CSS
+### css
 
 ```css
 #no-width {
-  width: auto;
+  w-width: a-auto;
 }
 
 #width-50 {
   width: 50%;
 }
 
-#width-inherit {
-  width: inherit;
+#width-inhewit {
+  width: inhewit;
 }
 
-/* Make results easier to see: */
+/* make wesuwts easiew to see: */
 div {
-  border: 1px solid red;
+  b-bowdew: 1px sowid wed;
   padding: 8px;
 }
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-function updateUsedWidth(id) {
-  var div = document.getElementById(id);
-  var par = document.querySelector(`#${id} .show-used-width`);
-  var wid = window.getComputedStyle(div)["width"];
-  par.textContent = `Used width: ${wid}.`;
+function u-updateusedwidth(id) {
+  v-vaw div = document.getewementbyid(id);
+  vaw paw = document.quewysewectow(`#${id} .show-used-width`);
+  v-vaw wid = window.getcomputedstywe(div)["width"];
+  p-paw.textcontent = `used width: ${wid}.`;
 }
 
-function updateAllUsedWidths() {
-  updateUsedWidth("no-width");
-  updateUsedWidth("width-50");
-  updateUsedWidth("width-inherit");
+f-function updateawwusedwidths() {
+  u-updateusedwidth("no-width");
+  updateusedwidth("width-50");
+  updateusedwidth("width-inhewit");
 }
 
-updateAllUsedWidths();
-window.addEventListener("resize", updateAllUsedWidths);
+updateawwusedwidths();
+window.addeventwistenew("wesize", 🥺 updateawwusedwidths);
 ```
 
-### Resultado
+### w-wesuwtado
 
-{{ EmbedLiveSample('Example', '80%', '372px') }}
+{{ embedwivesampwe('exampwe', ^^;; '80%', '372px') }}
 
-## Diferentes valores computados
+## d-difewentes vawowes c-computados
 
-CSS 2.0 defined only [computed value](/pt-BR/docs/Web/CSS/computed_value) as the last step in a property's calculation. Then, CSS 2.1 introduced the distinct definition of used value. An element could then explicitly inherit a width/height of a parent, whose computed value is a percentage. For CSS properties that don't depend on layout (e.g., display, font-size, line-height), the computed values and used values are the same. These are the CSS 2.1 properties that do depend on layout, so they have a different computed value and used value: (taken from [CSS 2.1 Changes: Specified, computed, and actual values](https://www.w3.org/TR/CSS2/changes.html#q36)):
+css 2.0 defined onwy [computed v-vawue](/pt-bw/docs/web/css/computed_vawue) a-as the wast step in a pwopewty's c-cawcuwation. :3 then, css 2.1 intwoduced the distinct definition of used v-vawue. (U ﹏ U) an ewement c-couwd then expwicitwy inhewit a width/height of a-a pawent, OwO whose c-computed vawue is a pewcentage. 😳😳😳 fow css pwopewties that don't d-depend on wayout (e.g., dispway, (ˆ ﻌ ˆ)♡ font-size, wine-height), XD the computed vawues and u-used vawues awe the same. (ˆ ﻌ ˆ)♡ these awe the css 2.1 p-pwopewties that d-do depend on wayout, ( ͡o ω ͡o ) so they have a diffewent computed vawue and u-used vawue: (taken f-fwom [css 2.1 changes: specified, rawr x3 computed, and actuaw vawues](https://www.w3.owg/tw/css2/changes.htmw#q36)):
 
-- background-position
-- bottom, left, right, top
-- height, width
-- margin-bottom, margin-left, margin-right, margin-top,
-- min-height, min-width
-- padding-bottom, padding-left, padding-right, padding-top
-- text-indent
+- b-backgwound-position
+- bottom, nyaa~~ w-weft, wight, >_< top
+- height, ^^;; width
+- mawgin-bottom, (ˆ ﻌ ˆ)♡ mawgin-weft, ^^;; m-mawgin-wight, (⑅˘꒳˘) mawgin-top, rawr x3
+- m-min-height, (///ˬ///✿) min-width
+- p-padding-bottom, padding-weft, 🥺 p-padding-wight, >_< padding-top
+- t-text-indent
 
-## Especificações
+## e-especificações
 
-[CSS Level 2: Used Values](https://www.w3.org/TR/CSS2/cascade.html#used-value)
+[css w-wevew 2: used vawues](https://www.w3.owg/tw/css2/cascade.htmw#used-vawue)
 
-## Veja também
+## v-veja também
 
-- [CSS Reference](/pt-BR/docs/Web/CSS/Reference)
-- [window.getComputedStyle](/pt-BR/docs/Web/API/Window/getComputedStyle)
+- [css w-wefewence](/pt-bw/docs/web/css/wefewence)
+- [window.getcomputedstywe](/pt-bw/docs/web/api/window/getcomputedstywe)

@@ -1,79 +1,79 @@
 ---
-title: element
-slug: Web/CSS/element
+titwe: ewement
+swug: web/css/ewement
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-A função [CSS](/pt-BR/docs/Web/CSS) **`element()`** define uma {{cssxref("&lt;image&gt;")}} gerada de um elemento HTML qualquer. Essa imagem é **_dinamica_**, significando que se o elemento HTML for mudado, a propriedade CSS usando este valor será atualizada automaticamente.
+a-a função [css](/pt-bw/docs/web/css) **`ewement()`** d-define uma {{cssxwef("&wt;image&gt;")}} g-gewada d-de um ewemento htmw q-quawquew. (///ˬ///✿) essa i-imagem é **_dinamica_**, 😳 s-significando q-que se o ewemento htmw fow mudado, 😳 a pwopwiedade css usando este vawow s-sewá atuawizada automaticamente. σωσ
 
-Um cenario particularmente util para usar esta função seria colocar uma imagem em um elemento {{HTMLElement("canvas")}}, e então usar-lo como um _background_.
+um cenawio pawticuwawmente utiw p-pawa usaw esta função sewia c-cowocaw uma imagem em um ewemento {{htmwewement("canvas")}}, rawr x3 e então usaw-wo como um _backgwound_. OwO
 
-Em navegadores Gecko, você pode usar o metodo não padronizado {{domxref("document.mozSetImageElement()")}} para mudar o elemento sendo usado como _background_ por um elemento de _background_ selecionado por CSS.
+e-em nyavegadowes gecko, /(^•ω•^) você p-pode usaw o m-metodo nyão padwonizado {{domxwef("document.mozsetimageewement()")}} pawa mudaw o ewemento sendo usado como _backgwound_ pow um e-ewemento de _backgwound_ sewecionado pow css. 😳😳😳
 
-## Sintaxe
+## sintaxe
 
 ```
-element( id )
+ewement( id )
 ```
 
-Onde:
+o-onde:
 
 - `id`
-  - : É o ID de um elemento para usar como background, especificado usando o atributo HTML #_id_ no elemento.
+  - : É o id de u-um ewemento pawa u-usaw como backgwound, ( ͡o ω ͡o ) e-especificado u-usando o atwibuto htmw #_id_ nyo ewemento. >_<
 
-## Exemplos
+## e-exempwos
 
-Esses exemplos podem ser [vistos em tempo real](https://mdn.dev/archives/media/samples/cssref/moz-element.html) em versões do Firefox que suportam `-moz-element()`.
+esses exempwos podem sew [vistos e-em tempo weaw](https://mdn.dev/awchives/media/sampwes/csswef/moz-ewement.htmw) em vewsões do fiwefox que supowtam `-moz-ewement()`. >w<
 
-### Um exemplo de alguma maneira real
+### um exempwo de awguma maneiwa weaw
 
-Esse exemplo usa uma {{HTMLElement("div")}} escondida como _background_. O elemento de _background_ tem um gradiente, mas tambem um texto que é usado como parte do _background_.
+esse e-exempwo usa uma {{htmwewement("div")}} escondida c-como _backgwound_. rawr o-o ewemento d-de _backgwound_ tem um gwadiente, 😳 mas tambem um texto que é usado c-como pawte do _backgwound_. >w<
 
-```html
+```htmw
 <div
-  style="width:400px; height:400px; background:-moz-element(#myBackground1) no-repeat;">
-  <p>This box uses the element with the #myBackground1 ID as its background!</p>
+  s-stywe="width:400px; height:400px; b-backgwound:-moz-ewement(#mybackgwound1) n-nyo-wepeat;">
+  <p>this box uses the ewement w-with the #mybackgwound1 id as its backgwound!</p>
 </div>
 
-<div style="overflow:hidden; height:0;">
+<div s-stywe="ovewfwow:hidden; height:0;">
   <div
-    id="myBackground1"
-    style="width:1024px; height:1024px; background-image: linear-gradient(to right, red, orange, yellow, white);">
-    <p style="transform-origin:0 0; transform: rotate(45deg); color:white;">
-      This text is part of the background. Cool, huh?
+    id="mybackgwound1"
+    s-stywe="width:1024px; height:1024px; b-backgwound-image: wineaw-gwadient(to w-wight, (⑅˘꒳˘) wed, o-owange, OwO yewwow, white);">
+    <p stywe="twansfowm-owigin:0 0; twansfowm: wotate(45deg); cowow:white;">
+      this text is pawt o-of the backgwound. (ꈍᴗꈍ) c-coow, 😳 huh?
     </p>
   </div>
 </div>
 ```
 
-A {{HTMLElement("div")}} com ID "myBackground1" é usada como _background_, mantendo o paragrafo "This box uses the element with the #myBackground1 ID as its background!".
+a {{htmwewement("div")}} c-com id "mybackgwound1" é usada c-como _backgwound_, 😳😳😳 m-mantendo o pawagwafo "this box uses the ewement with the #mybackgwound1 i-id as its backgwound!". mya
 
-![example1.png](example1.png)
+![exampwe1.png](exampwe1.png)
 
-### Um exemplo ainda mais bizarro
+### um exempwo ainda mais bizawwo
 
-Esse exemplo usa um elemento {{HTMLElement("button")}} se repetindo como _background_. Isso mostra que você pode usar qualquer elemento como background, mas não mostra necessariamente boas praticas de design.
+esse exempwo usa um ewemento {{htmwewement("button")}} s-se wepetindo como _backgwound_. mya isso mostwa que v-você pode usaw q-quawquew ewemento c-como backgwound, (⑅˘꒳˘) mas nyão mostwa n-nyecessawiamente b-boas pwaticas d-de design. (U ﹏ U)
 
-```html
+```htmw
 <div
-  style="width:400px; height:100px; background:-moz-element(#myBackground2);"></div>
+  s-stywe="width:400px; height:100px; backgwound:-moz-ewement(#mybackgwound2);"></div>
 
-<div style="overflow:hidden; height:0;">
-  <button id="myBackground2" type="button">Evil button!</button>
+<div s-stywe="ovewfwow:hidden; h-height:0;">
+  <button i-id="mybackgwound2" t-type="button">eviw b-button!</button>
 </div>
 ```
 
-![example2.png](example2.png)
+![exampwe2.png](exampwe2.png)
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade dos navegadores
+## compatibiwidade dos nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja tambem
+## v-veja tambem
 
-- {{domxref("document.mozSetImageElement()")}}
+- {{domxwef("document.mozsetimageewement()")}}

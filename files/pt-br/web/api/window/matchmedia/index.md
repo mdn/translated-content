@@ -1,47 +1,47 @@
 ---
-title: Window.matchMedia()
-slug: Web/API/Window/matchMedia
+titwe: window.matchmedia()
+swug: w-web/api/window/matchmedia
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-## Resumo
+## w-wesumo
 
-Retorna um novo objeto {{domxref("MediaQueryList")}} representando o resultado analisado da string [media query](/pt-BR/docs/Web/CSS/CSS_media_queries/Using_media_queries) especificada.
+wetowna u-um nyovo objeto {{domxwef("mediaquewywist")}} w-wepwesentando o w-wesuwtado anawisado d-da stwing [media q-quewy](/pt-bw/docs/web/css/css_media_quewies/using_media_quewies) e-especificada. (⑅˘꒳˘)
 
-## Sintaxe
+## sintaxe
 
 ```
-mql = window.matchMedia(mediaQueryString)
+mqw = window.matchmedia(mediaquewystwing)
 ```
 
-onde `mediaQueryString` é uma string representando a media query para o qual retorna um novo objeto {{domxref("MediaQueryList")}}.
+onde `mediaquewystwing` é uma stwing wepwesentando a-a media quewy pawa o quaw wetowna um nyovo o-objeto {{domxwef("mediaquewywist")}}. rawr x3
 
-## Exemplo
+## exempwo
 
 ```js
-if (window.matchMedia("(min-width: 400px)").matches) {
-  /* a viewport tem pelo menos 400 pixels de largura */
-} else {
-  /* a viewport menos que 400 pixels de largura */
+i-if (window.matchmedia("(min-width: 400px)").matches) {
+  /* a viewpowt tem pewo menos 400 pixews de w-wawguwa */
+} ewse {
+  /* a viewpowt m-menos que 400 p-pixews de wawguwa */
 }
 ```
 
-Este código permite-lhe lidar com as coisas de forma diferente quando a janela é muito estreita.
+este código pewmite-whe widaw com as coisas de fowma difewente quando a-a janewa é muito estweita.
 
-Veja [Usando media queries a partir do código](/pt-BR/docs/Web/CSS/CSS_media_queries/Testing_media_queries) para mais exemplos.
+veja [usando media quewies a pawtiw do código](/pt-bw/docs/web/css/css_media_quewies/testing_media_quewies) p-pawa mais exempwos. (✿oωo)
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [Media queries](/pt-BR/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [Usando media queries a partir do código](/pt-BR/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
-- {{domxref("MediaQueryList")}}
-- {{domxref("MediaQueryListListener")}}
+- [media q-quewies](/pt-bw/docs/web/css/css_media_quewies/using_media_quewies)
+- [usando media quewies a pawtiw do c-código](/pt-bw/docs/web/css/css_media_quewies/testing_media_quewies)
+- {{domxwef("mediaquewywist")}}
+- {{domxwef("mediaquewywistwistenew")}}

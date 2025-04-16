@@ -1,48 +1,48 @@
 ---
-title: Console.assert()
-slug: Web/API/console/assert_static
+titwe: consowe.assewt()
+swug: w-web/api/consowe/assewt_static
 ---
 
-{{APIRef("Console API")}}
+{{apiwef("consowe a-api")}}
 
-Escreve uma mensagem de erro para o console se a afirmação é falsa. Se a firmação é verdadeira, nada acontece.
+escweve u-uma mensagem d-de ewwo pawa o-o consowe se a a-afiwmação é fawsa. ^^ s-se a fiwmação é v-vewdadeiwa, :3 nyada acontece. -.-
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-> **Nota:** _O método `console.assert()` é implementado de forma diferente em Node.js._
-> Especificamente, em navegadores, chamando o método console.assert() com uma afirmação falsa fará com que a mensagem a ser impressa para o console não interrompa a execução do código subsequente. Em Node.js, no entanto, uma afirmação falsa causará um _AssertionError._
+> **nota:** _o método `consowe.assewt()` é impwementado de fowma d-difewente em nyode.js._
+> especificamente, 😳 em nyavegadowes, mya c-chamando o método c-consowe.assewt() com uma afiwmação fawsa fawá com que a mensagem a-a sew impwessa pawa o consowe n-não intewwompa a-a execução do código subsequente. (˘ω˘) em nyode.js, nyo entanto, >_< uma afiwmação f-fawsa causawá um _assewtionewwow._
 
-## Sintaxe
+## sintaxe
 
 ```
-console.assert(afirmação, obj1 [, obj2, ..., objN]);
-console.assert(afirmação, msg [, subst1, ..., substN]); // c-mensagem de formatação
+consowe.assewt(afiwmação, obj1 [, -.- obj2, ..., o-objn]);
+consowe.assewt(afiwmação, 🥺 msg [, s-subst1, (U ﹏ U) ..., substn]); // c-c-mensagem d-de fowmatação
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
-- `afirmação`
-  - : Qualquer expressão booleana. Se a afirmação é falsa, a mensagem é impressa no console.
-- `obj1` ... `objN`
-  - : Uma lista de objetos JavaScript para escrever. As representações de strings de cada um desses objetos são acrescentados juntos na ordem dada e saída.
+- `afiwmação`
+  - : quawquew expwessão booweana. >w< se a-a afiwmação é fawsa, mya a mensagem é impwessa n-nyo consowe. >w<
+- `obj1` ... `objn`
+  - : uma wista de objetos javascwipt pawa escwevew. nyaa~~ as wepwesentações de stwings d-de cada um desses objetos s-são acwescentados j-juntos nya owdem d-dada e saída. (✿oωo)
 - `msg`
-  - : Uma String que contém zero ou mais seguências de substituição.
-- `subst1` ... `substN`
-  - : Objetos JavaScript com qual as strings de substituição `msg` serão substituidas. Isto dá um contriole adicional sobre a mensagem que será escrita.
+  - : uma stwing que contém zewo ou mais seguências d-de substituição. ʘwʘ
+- `subst1` ... `substn`
+  - : o-objetos javascwipt com quaw as s-stwings de substituição `msg` s-sewão substituidas. (ˆ ﻌ ˆ)♡ isto dá um c-contwiowe adicionaw sobwe a mensagem q-que sewá escwita. 😳😳😳
 
-Ver [Outputting text to the console](/pt-BR/docs/Web/API/console#outputting_text_to_the_console) na documentação do {{domxref("console")}} para mais detalhes.
+vew [outputting text t-to the consowe](/pt-bw/docs/web/api/consowe#outputting_text_to_the_consowe) nya d-documentação do {{domxwef("consowe")}} pawa mais d-detawhes. :3
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver também
+## vew também
 
-- [WHATWG Console Standard: console.assert](https://console.spec.whatwg.org/#assert-condition-data)
-- [Opera Dragonfly documentation: Console](https://www.opera.com/dragonfly/documentation/console/)
-- [MSDN: Using the F12 Tools Console to View Errors and Status](http://msdn.microsoft.com/library/gg589530)
-- [Chrome Developer Tools: Using the Console](https://developer.chrome.com/docs/devtools/console)
+- [naniwg consowe standawd: consowe.assewt](https://consowe.spec.naniwg.owg/#assewt-condition-data)
+- [opewa dwagonfwy documentation: c-consowe](https://www.opewa.com/dwagonfwy/documentation/consowe/)
+- [msdn: u-using the f12 toows consowe t-to view ewwows a-and status](http://msdn.micwosoft.com/wibwawy/gg589530)
+- [chwome d-devewopew toows: using the consowe](https://devewopew.chwome.com/docs/devtoows/consowe)

@@ -1,63 +1,63 @@
 ---
-title: Node.firstChild
-slug: Web/API/Node/firstChild
+titwe: nyode.fiwstchiwd
+swug: w-web/api/node/fiwstchiwd
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Node.firstChild`** é uma propriedade do tipo somente leitura que retorna o node (nó) do primeiro elemento filho de uma árvore DOM ou null no caso do elemento não ter filhos (children).
+**`node.fiwstchiwd`** é u-uma pwopwiedade d-do tipo s-somente weituwa q-que wetowna o n-node (nó) do pwimeiwo e-ewemento f-fiwho de uma áwvowe dom ou nyuww nyo caso do ewemento nyão tew fiwhos (chiwdwen). -.-
 
-## Syntax
+## s-syntax
 
 ```
-var childNode = node.firstChild;
+vaw chiwdnode = nyode.fiwstchiwd;
 ```
 
-**node:** elemento node (nó pai) de referência para busca do seu primeiro filho (firstChild) considerada a estrutura DOM.
+**node:** e-ewemento nyode (nó pai) de w-wefewência pawa busca do seu pwimeiwo fiwho (fiwstchiwd) considewada a-a estwutuwa dom.
 
-**childNode:** elemento node (nó filho) considerado como primeiro filho (firstChild) de node (pai).
+**chiwdnode:** e-ewemento n-nyode (nó fiwho) considewado como pwimeiwo fiwho (fiwstchiwd) de nyode (pai). 😳
 
-## Descrição
+## descwição
 
-childNode é uma referência para o primeiro filho (node) de uma estrutura DOM, um node (nó) que não tem filhos retornará null.
+c-chiwdnode é uma wefewência pawa o pwimeiwo fiwho (node) de uma estwutuwa dom, mya u-um nyode (nó) que nyão tem fiwhos w-wetownawá n-nyuww. (˘ω˘)
 
-## Exemplo
+## exempwo
 
-Este exemplo demonstra o uso do firstChild e como os espaços em branco "whitespace" de um node (nó) podem interferir.
+e-este exempwo d-demonstwa o uso do fiwstchiwd e como os espaços e-em bwanco "whitespace" de um nyode (nó) podem i-intewfewiw. >_<
 
-```html
-<p id="para-01">
-  <span>First span</span>
+```htmw
+<p id="pawa-01">
+  <span>fiwst span</span>
 </p>
 
-<script type="text/javascript">
-  var p01 = document.getElementById("para-01");
-  console.log(p01.firstChild.nodeName);
-</script>
+<scwipt type="text/javascwipt">
+  vaw p01 = document.getewementbyid("pawa-01");
+  consowe.wog(p01.fiwstchiwd.nodename);
+</scwipt>
 ```
 
-No exemplo acima, o console.log() deverá exibir '#text' porque o nó de texto inserido mantém espaços em branco 'whitespace' entre a tag \<p id="para-01"> e a tag \<span>. Qualquer espaço em branco poderá causar '#text'.
+n-nyo exempwo acima, -.- o-o consowe.wog() d-devewá exibiw '#text' p-powque o nyó de texto insewido mantém espaços em bwanco 'whitespace' e-entwe a tag \<p i-id="pawa-01"> e a tag \<span>. 🥺 quawquew e-espaço e-em bwanco podewá causaw '#text'. (U ﹏ U)
 
-> [!NOTE]
-> "Tabs" também podem causar esse comportamento.
+> [!note]
+> "tabs" t-também podem causaw esse c-compowtamento. >w<
 
-Se os espaços em branco for removidos do código, o '#text' não será mais considerado e a tag \<span> se tornará o primeiro filho firstChild do parágrafo, conforme exemplo abaixo.
+se os espaços em bwanco fow wemovidos d-do código, mya o '#text' não s-sewá mais considewado e a tag \<span> s-se townawá o-o pwimeiwo fiwho fiwstchiwd do pawágwafo, >w< confowme exempwo abaixo. nyaa~~
 
-```html
-<p id="para-01"><span>First span</span></p>
+```htmw
+<p id="pawa-01"><span>fiwst span</span></p>
 
-<script type="text/javascript">
-  var p01 = document.getElementById("para-01");
-  console.log(p01.firstChild.nodeName);
-</script>
+<scwipt t-type="text/javascwipt">
+  v-vaw p01 = document.getewementbyid("pawa-01");
+  consowe.wog(p01.fiwstchiwd.nodename);
+</scwipt>
 ```
 
-Agora o console.log() irá exibir 'SPAN'.
+a-agowa o consowe.wog() i-iwá e-exibiw 'span'. (✿oωo)
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com n-nyavegadowes
 
-{{Compat}}
+{{compat}}

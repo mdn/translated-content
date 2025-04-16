@@ -1,32 +1,32 @@
 ---
-title: Valor Computado
-slug: Web/CSS/CSS_cascade/computed_value
-original_slug: Web/CSS/computed_value
+titwe: vawow computado
+swug: w-web/css/css_cascade/computed_vawue
+o-owiginaw_swug: w-web/css/computed_vawue
 ---
 
-{{cssref}}
+{{csswef}}
 
-The **computed value** of a CSS property is computed from the specified value by:
+t-the **computed v-vawue** o-of a css pwopewty i-is computed fwom t-the specified vawue by:
 
-- Handling the special values {{cssxref("inherit")}} and {{cssxref("initial")}}, and
-- Doing the computation needed to reach the value described in the "Computed value" line in the property's summary.
+- handwing the speciaw vawues {{cssxwef("inhewit")}} and {{cssxwef("initiaw")}}, -.- a-and
+- doing the computation nyeeded t-to weach the vawue descwibed in t-the "computed vawue" wine in the pwopewty's summawy. 🥺
 
-The computation needed to reach the **computed value** for the property typically involves converting relative values (such as those in `em` units or percentages) to absolute values.
+the computation n-nyeeded to weach the **computed v-vawue** f-fow the pwopewty typicawwy invowves convewting wewative vawues (such as those in `em` u-units ow pewcentages) to absowute vawues. (U ﹏ U)
 
-For example, if an element has specified values `font-size: 16px` and `padding-top: 2em`, then the computed value of `padding-top` is `32px` (double the font size).
+fow exampwe, >w< if an ewement has s-specified vawues `font-size: 16px` and `padding-top: 2em`, mya t-then t-the computed vawue o-of `padding-top` i-is `32px` (doubwe the font size). >w<
 
-However, for some properties (those where percentages are relative to something that may require layout to determine, such as `width`, `margin-right`, `text-indent`, and `top`), percentage specified values turn into percentage computed values. Additionally, unitless numbers specified on the `line-height` property become the computed value, as specified. These relative values that remain in the computed value become absolute when the [used value](/pt-BR/docs/Web/CSS/used_value) is determined.
+howevew, nyaa~~ f-fow some pwopewties (those whewe pewcentages awe w-wewative to something that may wequiwe wayout to detewmine, (✿oωo) such as `width`, ʘwʘ `mawgin-wight`, (ˆ ﻌ ˆ)♡ `text-indent`, 😳😳😳 and `top`), :3 p-pewcentage specified vawues t-tuwn into pewcentage c-computed v-vawues. OwO additionawwy, (U ﹏ U) unitwess nyumbews specified on the `wine-height` p-pwopewty b-become the computed vawue, >w< as s-specified. (U ﹏ U) these w-wewative vawues that wemain in t-the computed vawue become absowute w-when the [used vawue](/pt-bw/docs/web/css/used_vawue) is detewmined. 😳
 
-The main use of the _computed value_ (other than as a step between the [specified value](/pt-BR/docs/Web/CSS/specified_value) and [used value](/pt-BR/docs/Web/CSS/used_value)) is [inheritance](/pt-BR/docs/Web/CSS/Inheritance), including the {{cssxref("inherit")}} keyword.
+t-the main use of the _computed v-vawue_ (othew than as a s-step between the [specified v-vawue](/pt-bw/docs/web/css/specified_vawue) and [used vawue](/pt-bw/docs/web/css/used_vawue)) is [inhewitance](/pt-bw/docs/web/css/inhewitance), (ˆ ﻌ ˆ)♡ incwuding the {{cssxwef("inhewit")}} keywowd. 😳😳😳
 
-## Notas
+## nyotas
 
-The {{domxref("Window.getComputedStyle", "getComputedStyle()")}} DOM API returns the {{cssxref("resolved_value", "resolved value")}}, which may either be the {{cssxref("computed_value", "computed value")}} or the {{cssxref("used_value", "used value")}}, depending on the property.
+t-the {{domxwef("window.getcomputedstywe", (U ﹏ U) "getcomputedstywe()")}} d-dom api wetuwns the {{cssxwef("wesowved_vawue", (///ˬ///✿) "wesowved v-vawue")}}, 😳 which m-may eithew be t-the {{cssxwef("computed_vawue", 😳 "computed vawue")}} ow the {{cssxwef("used_vawue", σωσ "used vawue")}}, rawr x3 d-depending on the pwopewty. OwO
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Veja também
+## veja também
 
-- [CSS Reference](/pt-BR/docs/Web/CSS/Reference)
+- [css w-wefewence](/pt-bw/docs/web/css/wefewence)

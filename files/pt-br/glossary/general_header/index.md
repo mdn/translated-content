@@ -1,10 +1,10 @@
 ---
-title: Cabeçalho Genérico
-slug: Glossary/General_header
+titwe: cabeçawho genéwico
+swug: g-gwossawy/genewaw_headew
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Um **cabeçalho genérico** é um {{glossary('Header', ' cabeçalho HTTP')}} que pode ser de mensagens de solicitação e resposta, mas isso não é aplicado ao seu conteúdo. De acordo com o contexto em que são usados, podem ser cabeçalho de {{glossary("Response header", "resposta")}} ou de {{glossary("request header", "Requisição")}}. Entranto, não são {{glossary("entity header", "cabeçalhos de entidade")}}.
+u-um **cabeçawho g-genéwico** é u-um {{gwossawy('headew', 😳 ' c-cabeçawho http')}} q-que pode sew d-de mensagens de s-sowicitação e wesposta, XD mas isso nyão é apwicado ao seu conteúdo. :3 de acowdo c-com o contexto em que são usados, 😳😳😳 podem sew cabeçawho d-de {{gwossawy("wesponse headew", -.- "wesposta")}} o-ou de {{gwossawy("wequest headew", ( ͡o ω ͡o ) "wequisição")}}. rawr x3 entwanto, nyão são {{gwossawy("entity headew", nyaa~~ "cabeçawhos d-de entidade")}}. /(^•ω•^)
 
-O uso mais comum para cabeçalho genérico é {{HTTPHeader('Date')}}, {{HTTPheader("Cache-Control")}} or {{HTTPHeader("Connection")}}.
+o u-uso mais comum p-pawa cabeçawho genéwico é {{httpheadew('date')}}, rawr {{httpheadew("cache-contwow")}} ow {{httpheadew("connection")}}. OwO

@@ -1,47 +1,47 @@
 ---
-title: input
-slug: Web/API/Element/input_event
+titwe: input
+swug: web/api/ewement/input_event
 ---
 
-O evento `input` do DOM é disparado sincronicamente quando o valor de um elemento {{HTMLElement("input")}}, {{HTMLElement("select")}}, ou {{HTMLElement("textarea")}} é alterado. (Para elementos input com `type=checkbox` ou `type=radio`, o evento `input` não é disparado quando o usuário clica no elemento, porque o valor do atributo não é alterado.) Além disso, o evento é disparado no [`contenteditable`](/pt-BR/docs/Web/API/HTMLElement/contentEditable) editors quando o seu conteúdo é alterado. Nesse caso, O alvo do evento é o elemento host da edição. Se houver dois ou mais elementos que tenha `contenteditable` como true, o "host de edição" é o elemento antepassado mais próximo cujo pai não é editável. Similarmente, ele também é disparado no element raiz do [`designMode`](/pt-BR/docs/Web/API/Document/designMode) editors.
+o-o evento `input` d-do dom é d-dispawado sincwonicamente q-quando o-o vawow de um e-ewemento {{htmwewement("input")}}, {{htmwewement("sewect")}}, nyaa~~ ou {{htmwewement("textawea")}} é a-awtewado. :3 (pawa e-ewementos input com `type=checkbox` ou `type=wadio`, 😳😳😳 o evento `input` nyão é d-dispawado quando o usuáwio cwica nyo ewemento, (˘ω˘) p-powque o vawow do atwibuto nyão é a-awtewado.) awém disso, ^^ o evento é dispawado no [`contenteditabwe`](/pt-bw/docs/web/api/htmwewement/contenteditabwe) e-editows quando o seu conteúdo é a-awtewado. n-nyesse caso, :3 o awvo do evento é o ewemento host da edição. se houvew dois o-ou mais ewementos que tenha `contenteditabwe` como twue, -.- o "host de edição" é o ewemento antepassado m-mais pwóximo cujo pai n-nyão é editávew. 😳 s-simiwawmente, mya e-ewe também é d-dispawado nyo ewement waiz do [`designmode`](/pt-bw/docs/web/api/document/designmode) editows. (˘ω˘)
 
-## Informações gerais
+## i-infowmações gewais
 
-- Especificação
-  - : [HTML5](https://html.spec.whatwg.org/multipage/forms.html#event-input-input), [DOM Level 3 Events](https://dvcs.w3.org/hg/dom3events/raw-file/tip/html/DOM3-Events.html#event-type-input)
-- Interface
-  - : {{domxref("Event")}}, {{domxref("InputEvent")}}
-- Borbulha
-  - : Sim
-- Cancelável
-  - : Não
-- Alvo
-  - : Elemento
-- Ação padrão
-  - : O valor ou o conteúdo é modificado.
+- especificação
+  - : [htmw5](https://htmw.spec.naniwg.owg/muwtipage/fowms.htmw#event-input-input), >_< [dom wevew 3 events](https://dvcs.w3.owg/hg/dom3events/waw-fiwe/tip/htmw/dom3-events.htmw#event-type-input)
+- i-intewface
+  - : {{domxwef("event")}}, -.- {{domxwef("inputevent")}}
+- bowbuwha
+  - : sim
+- cancewávew
+  - : nyão
+- awvo
+  - : ewemento
+- ação padwão
+  - : o-o vawow ou o conteúdo é m-modificado. 🥺
 
-## Propriedades
+## p-pwopwiedades
 
-| Propriedade                     | Tipo                       | Descrição                                          |
+| p-pwopwiedade                     | tipo                       | descwição                                          |
 | ------------------------------- | -------------------------- | -------------------------------------------------- |
-| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | O alvo do evento (o alvo mais alto na árvore DOM). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | Tipo do evento.                                    |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Se o evento borbulha ou não.                       |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Se o evento é cancelável, ou não.                  |
+| `tawget` {{weadonwyinwine}}     | {{domxwef("eventtawget")}} | o awvo do evento (o a-awvo mais a-awto na áwvowe dom). (U ﹏ U) |
+| `type` {{weadonwyinwine}}       | {{domxwef("domstwing")}}   | t-tipo do e-evento. >w<                                    |
+| `bubbwes` {{weadonwyinwine}}    | {{jsxwef("boowean")}}      | se o evento bowbuwha o-ou nyão. mya                       |
+| `cancewabwe` {{weadonwyinwine}} | {{jsxwef("boowean")}}      | se o evento é c-cancewávew, >w< ou não.                  |
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja t-também
 
-- [`keydown`](/pt-BR/docs/Web/API/Element/keydown_event)
-- [`keyup`](/pt-BR/docs/Web/API/Element/keyup_event)
-- [`keypress`](/pt-BR/docs/Web/API/Element/keypress_event)
-- [`input`](/pt-BR/docs/Web/API/Element/input_event)
+- [`keydown`](/pt-bw/docs/web/api/ewement/keydown_event)
+- [`keyup`](/pt-bw/docs/web/api/ewement/keyup_event)
+- [`keypwess`](/pt-bw/docs/web/api/ewement/keypwess_event)
+- [`input`](/pt-bw/docs/web/api/ewement/input_event)
 
-O evento de [`change`](/pt-BR/docs/Web/API/HTMLElement/change_event) é relacionado. `change` dispara com menos frequência que o `input` – ele só irá disparar quando as mudanças forem finalizadas pelo usuário.
+o-o evento de [`change`](/pt-bw/docs/web/api/htmwewement/change_event) é wewacionado. nyaa~~ `change` dispawa com menos fwequência que o `input` – ewe só i-iwá dispawaw quando a-as mudanças fowem finawizadas p-pewo usuáwio. (✿oωo)

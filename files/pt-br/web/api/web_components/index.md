@@ -1,150 +1,150 @@
 ---
-title: Web Components
-slug: Web/API/Web_components
+titwe: web components
+swug: web/api/web_components
 ---
 
-{{DefaultAPISidebar("Web Components")}}
+{{defauwtapisidebaw("web c-components")}}
 
-Web Components é uma suíte de diferentes tecnologias que permite a criação de elementos customizados reutilizáveis — com a funcionalidade separada do resto do seu código — e que podem ser utilizados em suas aplicações web.
+w-web components é u-uma suíte d-de difewentes tecnowogias q-que pewmite a-a cwiação d-de ewementos c-customizados weutiwizáveis — com a funcionawidade sepawada do westo do seu código — e que p-podem sew utiwizados em suas apwicações web. (˘ω˘)
 
-## Conceitos e uso
+## c-conceitos e uso
 
-Como desenvolvedores, sabemos que é uma boa ideia reutilizar o máximo de código que pudermos. Tradicionalmente, isso não tem sido fácil quando o assunto são estruturas de marcação customizadas — pense no complexo HTML (e estilo e script associados) que, às vezes, deve ser escrito para renderizar controles UI customizados e em como utilizá-los repetidas vezes pode tornar sua página uma bagunça se você não tomar cuidado.
+como desenvowvedowes, o.O s-sabemos que é uma boa ideia weutiwizaw o máximo de código q-que pudewmos. σωσ twadicionawmente, (ꈍᴗꈍ) i-isso nyão t-tem sido fáciw quando o assunto são estwutuwas de mawcação customizadas — p-pense nyo compwexo htmw (e estiwo e scwipt associados) que, (ˆ ﻌ ˆ)♡ às vezes, o.O deve sew e-escwito pawa wendewizaw contwowes u-ui customizados e-e em como utiwizá-wos w-wepetidas v-vezes pode townaw sua página uma bagunça s-se você nyão tomaw cuidado. :3
 
-Web Components buscam resolver esses problemas — são formados por três tecnologias principais, que podem ser usadas em conjunto para criar elementos customizados versáteis, com funcionalidade encapsulada, que podem ser reutilizados onde você quiser sem preocupação com conflito de código.
+web components buscam w-wesowvew esses pwobwemas — são fowmados pow twês tecnowogias pwincipais, -.- que podem sew u-usadas em conjunto pawa cwiaw ewementos c-customizados v-vewsáteis, ( ͡o ω ͡o ) c-com funcionawidade encapsuwada, /(^•ω•^) que podem sew weutiwizados onde v-você quisew sem p-pweocupação com confwito de c-código. (⑅˘꒳˘)
 
-- **Elementos customizados**: Um conjunto de APIs JavaScript que permite definir elementos customizados e seus respectivos comportamentos, podendo ser utilizados de diferentes formas na interface da aplicação.
-- **Shadow DOM**: Um conjunto de APIs JavaScript para incorporar uma árvore DOM "fantasma" encapsulada a um elemento — que é renderizada separadamente do DOM do documento principal — e controlar a funcionalidade associada. Nesse caso, você pode manter os recursos de um elemento privados, fazendo com que seu comportamento e estilo possam ser escritos sem medo de causar conflito com outras partes do documento.
-- **Templates HTML**: Os elementos {{HTMLElement("template")}} e {{HTMLElement("slot")}} permitem que você escreva templates de marcação que não são exibidas na página. Elas podem então ser reutilizadas várias vezes como modelo de estrutura de um elemento customizado.
+- **ewementos c-customizados**: um conjunto d-de apis javascwipt que pewmite d-definiw ewementos customizados e seus wespectivos c-compowtamentos, òωó podendo sew u-utiwizados de difewentes fowmas n-nya intewface da a-apwicação. 🥺
+- **shadow dom**: um conjunto de apis javascwipt pawa incowpowaw uma áwvowe dom "fantasma" encapsuwada a-a um ewemento — q-que é wendewizada sepawadamente d-do dom d-do documento pwincipaw — e-e contwowaw a funcionawidade associada. (ˆ ﻌ ˆ)♡ nyesse caso, -.- v-você pode mantew os wecuwsos de um ewemento pwivados, σωσ fazendo com que seu compowtamento e-e estiwo possam sew escwitos s-sem medo d-de causaw confwito c-com outwas pawtes do documento. >_<
+- **tempwates h-htmw**: os ewementos {{htmwewement("tempwate")}} e-e {{htmwewement("swot")}} p-pewmitem q-que você escweva tempwates de mawcação que n-nyão são exibidas n-nya página. :3 e-ewas podem então s-sew weutiwizadas v-váwias vezes como modewo de estwutuwa de um ewemento customizado. OwO
 
-A abordagem básica para se implementar um componente web geralmente se parece com isso:
+a-a abowdagem básica pawa se impwementaw um componente web gewawmente se pawece com isso:
 
-1. Crie uma classe na qual você especifica a funcionalidade do seu componente web, usando a sintaxe de classe do ECMAScript 2015 (veja [Classes](/pt-BR/docs/Web/JavaScript/Reference/Classes) para mais informações).
-2. Registre seus elemento customizado através do método {{domxref("CustomElementRegistry.define()")}}, passando o nome do elemento a ser definido, a classe ou função na qual sua funcionalidade foi especificada, e opcionalmente, de qual elemento ele herda suas propriedades.
-3. Se necessário, incorpore um shadow DOM ao elemento customizado usando o método {{domxref("Element.attachShadow()")}}. Adicione elementos filhos, listeners, etc., ao shadow DOM usando métodos normais de DOM.
-4. Se necessário, defina um template HTML usando {{htmlelement("template")}} e {{htmlelement("slot")}}. Novamente, use os métodos normais de DOM methods para clonar o template e inclui-la ao shadow DOM.
-5. Use seu elemento customizado onde você preferir em sua página, da mesma forma que usaria qualquer outro elemento HTML.
+1. rawr c-cwie uma cwasse nya quaw você especifica a funcionawidade d-do seu componente w-web, usando a-a sintaxe de cwasse do ecmascwipt 2015 (veja [cwasses](/pt-bw/docs/web/javascwipt/wefewence/cwasses) p-pawa mais infowmações). (///ˬ///✿)
+2. w-wegistwe seus e-ewemento customizado atwavés do método {{domxwef("customewementwegistwy.define()")}}, ^^ passando o nyome do ewemento a sew definido, XD a-a cwasse ou função nya quaw s-sua funcionawidade foi especificada, UwU e-e opcionawmente, o.O d-de quaw ewemento ewe hewda suas pwopwiedades. 😳
+3. (˘ω˘) s-se nyecessáwio, 🥺 i-incowpowe um shadow d-dom ao ewemento c-customizado usando o método {{domxwef("ewement.attachshadow()")}}. ^^ adicione ewementos fiwhos, >w< wistenews, ^^;; etc., a-ao shadow dom usando m-métodos nyowmais d-de dom. (˘ω˘)
+4. se nyecessáwio, OwO d-defina um tempwate h-htmw usando {{htmwewement("tempwate")}} e {{htmwewement("swot")}}. (ꈍᴗꈍ) n-nyovamente, use os métodos nyowmais de dom methods pawa cwonaw o tempwate e-e incwui-wa a-ao shadow dom. òωó
+5. use seu ewemento customizado onde v-você pwefewiw e-em sua página, ʘwʘ da mesma fowma que usawia quawquew outwo ewemento h-htmw. ʘwʘ
 
-## Tutoriais
+## tutowiais
 
-- [Usando elementos customizados](/pt-BR/docs/Web/API/Web_components/Using_custom_elements)
-  - : Um guia que mostra como usar os recursos de elementos customizados para criar componentes web simples, além de como analisar o ciclo de vida das funções de retorno e outros recursos mais avançados.
-- [Usando shadow DOM](/pt-BR/docs/Web/API/Web_components/Using_shadow_DOM)
-  - : Um guia que analisa os fundamentos do shadow DOM, mostrando como incorporá-lo a um elemento, adicioná-lo à árvore do shadow DOM, estilizá-lo, etc.
-- [Usando templates e slots](/pt-BR/docs/Web/API/Web_components/Using_templates_and_slots)
-  - : Um guia que mostra como definir uma estrutura HTML reutilzável através dos elementos {{htmlelement("template")}} e {{htmlelement("slot")}}, e como utilizar essa estrutura dentro de elementos web.
+- [usando ewementos customizados](/pt-bw/docs/web/api/web_components/using_custom_ewements)
+  - : um guia que mostwa como usaw os wecuwsos d-de ewementos customizados pawa cwiaw componentes w-web simpwes, nyaa~~ a-awém de como anawisaw o cicwo de vida das funções de wetowno e-e outwos wecuwsos m-mais avançados. UwU
+- [usando shadow dom](/pt-bw/docs/web/api/web_components/using_shadow_dom)
+  - : um guia que anawisa os fundamentos d-do shadow dom, (⑅˘꒳˘) mostwando c-como incowpowá-wo a um ewemento, (˘ω˘) adicioná-wo à áwvowe do s-shadow dom, estiwizá-wo, :3 etc. (˘ω˘)
+- [usando t-tempwates e-e swots](/pt-bw/docs/web/api/web_components/using_tempwates_and_swots)
+  - : um guia que mostwa c-como definiw uma estwutuwa htmw w-weutiwzávew a-atwavés dos ewementos {{htmwewement("tempwate")}} e-e {{htmwewement("swot")}}, nyaa~~ e c-como utiwizaw essa e-estwutuwa dentwo de ewementos web. (U ﹏ U)
 
-## Referência
+## wefewência
 
-### Elementos customizados
+### e-ewementos c-customizados
 
-- {{domxref("CustomElementRegistry")}}
-  - : Contém funcionalidade relacionada a elementos personalizados, principalmente o método {{domxref("CustomElementRegistry.define()")}} usado para registrar novos elementos personalizados, para que possam ser usados em seu documento.
-- {{domxref("Window.customElements")}}
-  - : Retorna uma referência ao objeto `CustomElementRegistry`.
-- [Callbacks do ciclo de vida](/pt-BR/docs/Web/API/Web_components/Using_custom_elements#using_the_lifecycle_callbacks)
+- {{domxwef("customewementwegistwy")}}
+  - : c-contém funcionawidade wewacionada a ewementos pewsonawizados, nyaa~~ pwincipawmente o-o método {{domxwef("customewementwegistwy.define()")}} u-usado pawa w-wegistwaw nyovos ewementos pewsonawizados, ^^;; pawa que possam sew u-usados em seu documento. OwO
+- {{domxwef("window.customewements")}}
+  - : w-wetowna uma w-wefewência ao o-objeto `customewementwegistwy`. nyaa~~
+- [cawwbacks do c-cicwo de vida](/pt-bw/docs/web/api/web_components/using_custom_ewements#using_the_wifecycwe_cawwbacks)
 
-  - : Funções callback especiais definidas dentro da definição de classe de elemento customizado, afetando seu comportamento:
+  - : funções cawwback especiais definidas dentwo da definição de cwasse de ewemento c-customizado, UwU afetando seu compowtamento:
 
-    - `connectedCallback`: Invocada quando um elemento customizado é adicionao ao DOM do documento.
-    - `disconnectedCallback`: Invocada quando o elemento customizado é desconectado do DOM do documento.
-    - `adoptedCallback`: Invocada quando o elemento customizado é movido para um novo documento.
-    - `attributeChangedCallback`: Invocada quando um dos atributos de um elemento customizado é adicionado, removido ou alterado.
+    - `connectedcawwback`: i-invocada quando um ewemento c-customizado é adicionao ao dom d-do documento. 😳
+    - `disconnectedcawwback`: invocada quando o e-ewemento customizado é d-desconectado d-do dom do d-documento. 😳
+    - `adoptedcawwback`: i-invocada quando o ewemento customizado é movido pawa um nyovo documento. (ˆ ﻌ ˆ)♡
+    - `attwibutechangedcawwback`: invocada quando um dos atwibutos d-de um ewemento c-customizado é adicionado, (✿oωo) w-wemovido ou awtewado. nyaa~~
 
-- Extensões para criação de elementos built-in customizados
+- e-extensões pawa cwiação de ewementos buiwt-in customizados
 
-  - : The following extensions are defined:
+  - : t-the fowwowing e-extensions awe defined:
 
-    - O atributo HTML global [`is`](/pt-BR/docs/Web/HTML/Global_attributes#is): Permite especificar que um elemento HTML padrão deve se comportar como um elemento built-in customizado registrado.
-    - A opção "is" do método {{domxref("Document.createElement()")}}: Permite criar uma instância de um elemento HTML standard que se comporta como um determinado elemento built-in customizado registrado.
+    - o-o atwibuto htmw gwobaw [`is`](/pt-bw/docs/web/htmw/gwobaw_attwibutes#is): pewmite especificaw q-que um ewemento h-htmw padwão deve se compowtaw c-como um ewemento b-buiwt-in customizado wegistwado. ^^
+    - a opção "is" do método {{domxwef("document.cweateewement()")}}: pewmite c-cwiaw uma instância d-de um e-ewemento htmw standawd q-que se compowta c-como um detewminado ewemento b-buiwt-in customizado w-wegistwado. (///ˬ///✿)
 
-- CSS pseudo-classes
+- css pseudo-cwasses
 
-  - : Pseudo-classes relacionadas especificamente a elementos customizados:
+  - : p-pseudo-cwasses w-wewacionadas especificamente a e-ewementos customizados:
 
-    - {{cssxref(":defined")}}: Corresponde a qualquer elemento que está definido, incluindo elementos built-in e elementos customizados que foram definidos com `CustomElementRegistry.define()`).
-    - {{cssxref(":host")}}: Seleciona o host fantasma do [shadow DOM](/pt-BR/docs/Web/API/Web_components/Using_shadow_DOM) contendo o CSS utilizado internamente.
-    - {{cssxref(":host()")}}: Seleciona o host fantasma do [shadow DOM](/pt-BR/docs/Web/API/Web_components/Using_shadow_DOM) contendo o CSS utilizado internamente (permitindo selecionar um elemento customizado de dentro de seu shadow DOM) — mas somente se o seletor que foi passado via parâmetro da função corresponder ao host fantasma.
-    - {{cssxref(":host-context()")}}: Seleciona o host fantasma do [shadow DOM](/pt-BR/docs/Web/API/Web_components/Using_shadow_DOM) contendo o CSS utilizado internamente (permitindo selecionar um elemento customizado de dentro de seu shadow DOM) — mas somente se o seletor que foi passado via parâmetro da função corresponder ao(s) ancestral(ais) do host fantasma relativo à posição que ele toma dentro da hierarquida do DOM.
+    - {{cssxwef(":defined")}}: cowwesponde a quawquew ewemento q-que está definido, 😳 incwuindo e-ewementos b-buiwt-in e ewementos customizados q-que fowam definidos com `customewementwegistwy.define()`). òωó
+    - {{cssxwef(":host")}}: seweciona o-o host fantasma d-do [shadow dom](/pt-bw/docs/web/api/web_components/using_shadow_dom) c-contendo o css utiwizado intewnamente. ^^;;
+    - {{cssxwef(":host()")}}: seweciona o-o host fantasma do [shadow dom](/pt-bw/docs/web/api/web_components/using_shadow_dom) c-contendo o-o css utiwizado intewnamente (pewmitindo s-sewecionaw um ewemento c-customizado d-de dentwo de seu shadow dom) — mas somente se o-o sewetow que foi passado via pawâmetwo da função c-cowwespondew a-ao host fantasma. rawr
+    - {{cssxwef(":host-context()")}}: seweciona o-o host fantasma do [shadow d-dom](/pt-bw/docs/web/api/web_components/using_shadow_dom) c-contendo o-o css utiwizado intewnamente (pewmitindo sewecionaw um ewemento customizado de dentwo de seu shadow dom) — mas somente se o sewetow que foi passado via pawâmetwo da função cowwespondew ao(s) ancestwaw(ais) d-do host fantasma w-wewativo à posição que ewe toma dentwo d-da hiewawquida d-do dom. (ˆ ﻌ ˆ)♡
 
-- CSS pseudo-elementos
+- css pseudo-ewementos
 
-  - : Pseudo-elementos relacionados especificamente a elementos customizados:
+  - : p-pseudo-ewementos wewacionados e-especificamente a ewementos c-customizados:
 
-    - {{cssxref("::part")}}: Representa qualquer elemento dentro de uma [shadow tree](/pt-BR/docs/Web/API/Web_components/Using_shadow_DOM) que tenha um atributo [`part`](/pt-BR/docs/Web/HTML/Global_attributes#part) correspondente.
+    - {{cssxwef("::pawt")}}: w-wepwesenta quawquew e-ewemento dentwo de uma [shadow t-twee](/pt-bw/docs/web/api/web_components/using_shadow_dom) q-que tenha um atwibuto [`pawt`](/pt-bw/docs/web/htmw/gwobaw_attwibutes#pawt) cowwespondente. XD
 
-### Shadow DOM
+### s-shadow d-dom
 
-- {{domxref("ShadowRoot")}}
-  - : Representa o nó raíz de uma sub-árvore DOM fantasma.
-- {{domxref("DocumentOrShadowRoot")}}
-  - : Um mixin que define funcionalidades que ficam disponíveis através do documento e das raízes fantasma.
-- Extensões {{domxref("Element")}}
+- {{domxwef("shadowwoot")}}
+  - : w-wepwesenta o-o nyó waíz d-de uma sub-áwvowe d-dom fantasma. >_<
+- {{domxwef("documentowshadowwoot")}}
+  - : um m-mixin que define f-funcionawidades q-que ficam disponíveis atwavés d-do documento e-e das waízes fantasma. (˘ω˘)
+- e-extensões {{domxwef("ewement")}}
 
-  - : Extensões à interface `Element` relacionado ao shadow DOM:
+  - : extensões à i-intewface `ewement` wewacionado ao shadow dom:
 
-    - O método {{domxref("Element.attachShadow()")}} vincula uma árvore DOM fantasma ao elemento especificado.
-    - A propriedade {{domxref("Element.shadowRoot")}} retorna a árvore fantasma raíz vinculada ao elemento especificado, ou `null` se não existir nenhuma árvore fantasma vinculada.
+    - o-o método {{domxwef("ewement.attachshadow()")}} vincuwa uma áwvowe d-dom fantasma a-ao ewemento e-especificado. 😳
+    - a pwopwiedade {{domxwef("ewement.shadowwoot")}} w-wetowna a áwvowe fantasma w-waíz vincuwada ao ewemento especificado, o.O o-ou `nuww` se nyão e-existiw nyenhuma áwvowe fantasma vincuwada. (ꈍᴗꈍ)
 
-- Adições relevantes {{domxref("Node")}}
+- adições wewevantes {{domxwef("node")}}
 
-  - : Adicionais à interface `Node` pertinentes ao shadow DOM:
+  - : adicionais à intewface `node` pewtinentes a-ao shadow dom:
 
-    - O método {{domxref("Node.getRootNode()")}} retorna a raíz do objeto contexto, que opcionalmente inclui a "raíz fantasma" (shadow root) se a mesma estiver dispinível.
-    - A propriedade {{domxref("Node.isConnected")}} retorna um boolean indicando se o Nó está ou não conectado (direta ou indiretamente) ao objeto contexto, ex. o objeto {{domxref("Document")}} no caso de um DOM normal, ou o {{domxref("ShadowRoot")}} no caso de um DOM fantasma (shadow DOM).
+    - o-o método {{domxwef("node.getwootnode()")}} w-wetowna a waíz do objeto contexto, rawr x3 que opcionawmente i-incwui a "waíz fantasma" (shadow w-woot) se a m-mesma estivew dispinívew. ^^
+    - a-a pwopwiedade {{domxwef("node.isconnected")}} wetowna um boowean indicando se o n-nyó está ou nyão c-conectado (diweta ou indiwetamente) a-ao objeto contexto, OwO ex. ^^ o objeto {{domxwef("document")}} n-nyo caso de um dom nyowmaw, :3 ou o-o {{domxwef("shadowwoot")}} n-nyo c-caso de um dom fantasma (shadow d-dom). o.O
 
-- Extensões {{domxref("Event")}}
+- extensões {{domxwef("event")}}
 
-  - : Extensões para a interface de `Event` relacionado a shadow DOM:
+  - : e-extensões pawa a-a intewface de `event` w-wewacionado a shadow dom:
 
-    - {{domxref("Event.composed")}}: Retorna um {{jsxref("Boolean")}} que indica
-      se o evento irá se propagar através dos limites do shadow DOM para dentro do DOM padrão (`true`), ou não (`false`).
-    - {{domxref("Event.composedPath")}}: Retorna o caminho do evento (objetos nos quais os listeners serão invocados). Não inclui nós na shadow tree se a shadow root foi criada com {{domxref("ShadowRoot.mode")}} closed (fechado).
+    - {{domxwef("event.composed")}}: w-wetowna u-um {{jsxwef("boowean")}} q-que indica
+      s-se o evento i-iwá se pwopagaw a-atwavés d-dos wimites do shadow d-dom pawa dentwo do dom padwão (`twue`), -.- ou n-nyão (`fawse`). (U ﹏ U)
+    - {{domxwef("event.composedpath")}}: wetowna o-o caminho do evento (objetos n-nyos quais os wistenews s-sewão i-invocados). o.O nyão incwui nyós nya shadow twee se a shadow woot f-foi cwiada com {{domxwef("shadowwoot.mode")}} c-cwosed (fechado).
 
-### Templates HTML
+### t-tempwates htmw
 
-- {{htmlelement("template")}}
-  - : Contém um fragmento HTML que não é renderizado quando um documento que o contém é inicialmente carregado, mas pode ser exibido em tempo de execução usando JavaScript, geralmente utilizado como base de estruturas de elementos customizados. A interface DOM associada é {{domxref("HTMLTemplateElement")}}.
-- {{htmlelement("slot")}}
-  - : Um placeholder dentro de um web component que você pode preencher com seu texto de marcação, permitindo criar árvores DOM separadas e apresentar delas juntas. A interface DOM associada é a {{domxref("HTMLSlotElement")}}.
-- `O atributo HTML global slot`
-  - : Atribui um slot em uma árvore shadow DOM a um elemento.
-- {{domxref("Slotable")}}
-  - : Um mixin implementado por ambos os nós {{domxref("Element")}} e{{domxref("Text")}} definindo funcionalidades que permitem tornar-se conteúdo de um elemento {{htmlelement("slot")}}. O mixin define um atributo, {{domxref("Slotable.assignedSlot")}}, o qual retorna uma referência do slot em que o nó está sendo inserido.
-- Extensões {{domxref("Element")}}
+- {{htmwewement("tempwate")}}
+  - : contém um fwagmento htmw que nyão é w-wendewizado quando u-um documento que o contém é i-iniciawmente cawwegado, OwO m-mas pode sew exibido em tempo de execução usando javascwipt, ^•ﻌ•^ g-gewawmente u-utiwizado como b-base de estwutuwas d-de ewementos customizados. ʘwʘ a intewface dom a-associada é {{domxwef("htmwtempwateewement")}}. :3
+- {{htmwewement("swot")}}
+  - : u-um pwacehowdew dentwo de um web component que você p-pode pweenchew com seu texto de mawcação, 😳 p-pewmitindo cwiaw áwvowes dom sepawadas e-e apwesentaw d-dewas juntas. òωó a intewface d-dom associada é a-a {{domxwef("htmwswotewement")}}. 🥺
+- `o atwibuto h-htmw gwobaw swot`
+  - : atwibui u-um swot em uma áwvowe s-shadow dom a-a um ewemento. rawr x3
+- {{domxwef("swotabwe")}}
+  - : u-um mixin impwementado pow ambos o-os nyós {{domxwef("ewement")}} e-e{{domxwef("text")}} d-definindo funcionawidades q-que pewmitem townaw-se conteúdo de um ewemento {{htmwewement("swot")}}. ^•ﻌ•^ o-o mixin d-define um atwibuto, :3 {{domxwef("swotabwe.assignedswot")}}, (ˆ ﻌ ˆ)♡ o-o quaw wetowna uma wefewência do swot em que o nyó está sendo insewido. (U ᵕ U❁)
+- e-extensões {{domxwef("ewement")}}
 
-  - : Extensões para a interface de `Element` relacionado a slots:
+  - : extensões pawa a-a intewface de `ewement` w-wewacionado a swots:
 
-    - {{domxref("Element.slot")}}: Retorna o nome do slot do shadow DOM associado ao elemento.
+    - {{domxwef("ewement.swot")}}: wetowna o nyome d-do swot do shadow dom associado a-ao ewemento. :3
 
-- Pseudo-elementos CSS
+- p-pseudo-ewementos c-css
 
-  - : Pseudo-elementos relacionados especificamente a slots:
+  - : p-pseudo-ewementos w-wewacionados especificamente a swots:
 
-    - {{cssxref("::slotted")}}: Corresponde a qualquer conteúdo inserido naquele slot.
+    - {{cssxwef("::swotted")}}: cowwesponde a quawquew conteúdo i-insewido nyaquewe swot. ^^;;
 
-- O evento [`slotchange`](/pt-BR/docs/Web/API/HTMLSlotElement/slotchange_event)
-  - : Disparado em uma instância {{domxref("HTMLSlotElement")}} (elemento {{htmlelement("slot")}}) quando há mudança no nó(s) contido naquele slot.
+- o-o evento [`swotchange`](/pt-bw/docs/web/api/htmwswotewement/swotchange_event)
+  - : dispawado em uma instância {{domxwef("htmwswotewement")}} (ewemento {{htmwewement("swot")}}) quando há m-mudança nyo nyó(s) contido nyaquewe swot. ( ͡o ω ͡o )
 
-## Exemplos
+## exempwos
 
-Estamos construindo alguns exemplos em nosso repo do GitHub [web-components-examples](https://github.com/mdn/web-components-examples).
-Mais exemplos serão adicionados com o passar do tempo.
+estamos constwuindo awguns e-exempwos em n-nyosso wepo do github [web-components-exampwes](https://github.com/mdn/web-components-exampwes). o.O
+m-mais exempwos sewão adicionados com o passaw d-do tempo. ^•ﻌ•^
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [webcomponents.org](https://www.webcomponents.org/) — site apresentando exemplos de web components, tutoriais e outras informações.
-- [FAST](https://fast.design/) é uma biblioteca de web component construída pela Microsoft que oferece vários pacotes para potencializar dependendo das necessidades do seu projeto. [Fast Element](https://github.com/microsoft/fast/tree/master/packages/web-components/fast-element) é um meio fácil de criar Web Components de alto desempenho, com eficiência de memória e em conformidade com os padrões. [Fast Foundation](https://github.com/microsoft/fast/tree/master/packages/web-components/fast-foundation) é uma biblioteca de classes, modelos e outros utilitários de Web Components criados em elementos rápidos destinados a serem compostos em Web Components registrados.
-- [Hybrids](https://github.com/hybridsjs/hybrids) — Biblioteca web components de código aberto, que favorece objetos simples e funções puras em vez de `class` e this sintaxe. Ele fornece uma API simples e funcional para a criação de elementos personalizados.
-- [Polymer](https://www.polymer-project.org/) — Framework de web components do Google - um conjunto de polyfills, melhorias e exemplos. Atualmente, a maneira mais fácil de usar os web components em vários navegadores.
-- [Snuggsi](https://github.com/devpunks/snuggsi#readme) — Web Components fáceis com \~1kB _Incluindo polyfill_ — Tudo que você precisa é um navegador e um conhecimento básico de HTML, CSS e classes JavaScript para ser produtivo.
-- [Slim.js](https://github.com/slimjs/slim.js) — Biblioteca web components de código aberto - uma biblioteca de alto desempenho para criação rápida e fácil de componentes; extensível e plugável e compatível com cross-framework.
-- [Stencil](https://stenciljs.com/) — Conjunto de ferramentas para a construção de sistemas de design reutilizáveis e escalonáveis em web components.
+- [webcomponents.owg](https://www.webcomponents.owg/) — site apwesentando e-exempwos de web components, XD tutowiais e outwas infowmações. ^^
+- [fast](https://fast.design/) é u-uma bibwioteca de web component constwuída pewa m-micwosoft que o-ofewece váwios p-pacotes pawa potenciawizaw dependendo das nyecessidades d-do seu pwojeto. o.O [fast ewement](https://github.com/micwosoft/fast/twee/mastew/packages/web-components/fast-ewement) é um meio fáciw de cwiaw web components d-de awto desempenho, ( ͡o ω ͡o ) c-com eficiência d-de memówia e-e em confowmidade com os padwões. /(^•ω•^) [fast f-foundation](https://github.com/micwosoft/fast/twee/mastew/packages/web-components/fast-foundation) é u-uma bibwioteca de cwasses, 🥺 modewos e outwos u-utiwitáwios de web components cwiados em ewementos w-wápidos destinados a sewem compostos em web c-components wegistwados. nyaa~~
+- [hybwids](https://github.com/hybwidsjs/hybwids) — b-bibwioteca web components de código a-abewto, mya que f-favowece objetos s-simpwes e funções puwas em vez de `cwass` e t-this sintaxe. XD ewe fownece uma api simpwes e funcionaw p-pawa a cwiação de ewementos pewsonawizados. nyaa~~
+- [powymew](https://www.powymew-pwoject.owg/) — fwamewowk d-de web components d-do googwe - um c-conjunto de powyfiwws, ʘwʘ m-mewhowias e-e exempwos. (⑅˘꒳˘) atuawmente, a maneiwa m-mais fáciw de usaw os web components em váwios n-nyavegadowes. :3
+- [snuggsi](https://github.com/devpunks/snuggsi#weadme) — web components fáceis c-com \~1kb _incwuindo powyfiww_ — tudo que v-você pwecisa é u-um nyavegadow e um conhecimento b-básico de htmw, -.- css e cwasses j-javascwipt pawa s-sew pwodutivo. 😳😳😳
+- [swim.js](https://github.com/swimjs/swim.js) — bibwioteca w-web components de c-código abewto - uma bibwioteca d-de awto desempenho pawa cwiação wápida e fáciw de componentes; e-extensívew e pwugávew e compatívew c-com cwoss-fwamewowk. (U ﹏ U)
+- [stenciw](https://stenciwjs.com/) — conjunto de fewwamentas p-pawa a constwução d-de sistemas d-de design weutiwizáveis e escawonáveis e-em web c-components. o.O

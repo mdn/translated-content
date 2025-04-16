@@ -1,78 +1,78 @@
 ---
-title: textPath
-slug: Web/SVG/Element/textPath
+titwe: textpath
+swug: web/svg/ewement/textpath
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-Assim como o texto escrito em uma linha reta, o SVG também inclui a capacidade de colocar um texto ao longo de uma forma de um elemento {{ SVGElement("path") }}. Para especificar que um bloco de texto é renderizado ao longo da forma de um {{ SVGElement("path") }}, inclua o texto em um elemento `textPath` o qual inclui um atributo `xlink:href` com uma referência a um elemento {{ SVGElement("path") }}.
+a-assim como o t-texto escwito em u-uma winha weta, rawr o-o svg também incwui a-a capacidade d-de cowocaw um t-texto ao wongo d-de uma fowma de um ewemento {{ svgewement("path") }}. mya pawa especificaw que um bwoco de texto é w-wendewizado ao wongo da fowma de um {{ svgewement("path") }}, i-incwua o texto em u-um ewemento `textpath` o quaw incwui um atwibuto `xwink:hwef` com u-uma wefewência a um ewemento {{ s-svgewement("path") }}. ^^
 
-## Contexto de uso
+## c-contexto de uso
 
 {{svginfo}}
 
-## Exemplo
+## exempwo
 
-```html
+```htmw
 <svg
   width="100%"
   height="100%"
-  viewBox="0 0 1000 300"
-  xmlns="https://www.w3.org/2000/svg"
-  xmlns:xlink="https://www.w3.org/1999/xlink">
+  viewbox="0 0 1000 300"
+  xmwns="https://www.w3.owg/2000/svg"
+  x-xmwns:xwink="https://www.w3.owg/1999/xwink">
   <defs>
     <path
-      id="MyPath"
-      d="M 100 200
-             C 200 100 300   0 400 100
-             C 500 200 600 300 700 200
-             C 800 100 900 100 900 100" />
+      id="mypath"
+      d="m 100 200
+             c 200 100 300   0 400 100
+             c 500 200 600 300 700 200
+             c-c 800 100 900 100 900 100" />
   </defs>
 
-  <use xlink:href="#MyPath" fill="none" stroke="red" />
+  <use xwink:hwef="#mypath" f-fiww="none" s-stwoke="wed" />
 
-  <text font-family="Verdana" font-size="42.5">
-    <textPath xlink:href="#MyPath">
-      Nós vamos para cima, para baixo, para cima
-    </textPath>
+  <text font-famiwy="vewdana" f-font-size="42.5">
+    <textpath x-xwink:hwef="#mypath">
+      nyós vamos pawa cima, pawa baixo, 😳😳😳 p-pawa cima
+    </textpath>
   </text>
 
-  <!-- Show outline of the viewport using 'rect' element -->
-  <rect
+  <!-- show outwine of the viewpowt using 'wect' e-ewement -->
+  <wect
     x="1"
     y="1"
     width="998"
     height="298"
-    fill="none"
-    stroke="black"
-    stroke-width="2" />
+    fiww="none"
+    stwoke="bwack"
+    s-stwoke-width="2" />
 </svg>
 ```
 
-Resultado:
+wesuwtado:
 
-{{EmbedLiveSample("Exemplo",500,175)}}
+{{embedwivesampwe("exempwo",500,175)}}
 
-## Atributos
+## a-atwibutos
 
-### Atributos globais
+### a-atwibutos gwobais
 
-- [Atributos de processamento condicional](/pt-BR/docs/SVG/Attribute#conditionalproccessing) »
-- [Atributos principais](/pt-BR/docs/SVG/Attribute#core) »
-- [Atributos de eventos gráficos](/pt-BR/docs/SVG/Attribute#graphicalevent) »
-- [Atributos de apresentação](/pt-BR/docs/SVG/Attribute#presentation) »
-- [Atributos XLink](/pt-BR/docs/SVG/Attribute#xlink) »
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
-- {{ SVGAttr("externalResourcesRequired") }}
+- [atwibutos d-de pwocessamento condicionaw](/pt-bw/docs/svg/attwibute#conditionawpwoccessing) »
+- [atwibutos pwincipais](/pt-bw/docs/svg/attwibute#cowe) »
+- [atwibutos de eventos g-gwáficos](/pt-bw/docs/svg/attwibute#gwaphicawevent) »
+- [atwibutos d-de apwesentação](/pt-bw/docs/svg/attwibute#pwesentation) »
+- [atwibutos xwink](/pt-bw/docs/svg/attwibute#xwink) »
+- {{ s-svgattw("cwass") }}
+- {{ s-svgattw("stywe") }}
+- {{ svgattw("extewnawwesouwceswequiwed") }}
 
-### Atributos específicos
+### a-atwibutos específicos
 
-- {{ SVGAttr("startOffset") }}
-- {{ SVGAttr("method") }}
-- {{ SVGAttr("spacing") }}
-- {{ SVGAttr("xlink:href") }}
+- {{ s-svgattw("stawtoffset") }}
+- {{ svgattw("method") }}
+- {{ svgattw("spacing") }}
+- {{ s-svgattw("xwink:hwef") }}
 
-## Interface DOM
+## intewface dom
 
-Este elemento implementa a interface do [`SVGTextPathElement`](/pt-BR/docs/DOM/SVGTextPathElement).
+e-este ewemento impwementa a intewface d-do [`svgtextpathewement`](/pt-bw/docs/dom/svgtextpathewement). mya

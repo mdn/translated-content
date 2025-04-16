@@ -1,42 +1,42 @@
 ---
-title: Date.prototype.getUTCMonth()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMonth
+titwe: date.pwototype.getutcmonth()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/getutcmonth
 ---
 
-{{JSRef}}
+{{jswef}}
 
-A função **`getUTCMonth()`** retorna o mês da data especificada de acordo com o horário universal, como um valor iniciado em zero (aonde zero indica o primeiro mês do ano).
+a-a função **`getutcmonth()`** w-wetowna o mês d-da data especificada d-de acowdo c-com o howáwio u-univewsaw, >_< como u-um vawow iniciado e-em zewo (aonde zewo indica o pwimeiwo mês do ano). rawr x3
 
-## Sintaxe
+## sintaxe
 
 ```
-dateObj.getUTCMonth()
+dateobj.getutcmonth()
 ```
 
-### Valor retornado
+### v-vawow wetownado
 
-Um número inteiro, entre 0 e 11, correspondente ao mês da data informada de acordo com o horário universal. 0 para Janeiro, 1 para Fevereiro, 2 para Março, e assim em diante.
+um nyúmewo inteiwo, entwe 0 e-e 11, cowwespondente ao mês d-da data infowmada de acowdo com o howáwio univewsaw. mya 0 pawa j-janeiwo, nyaa~~ 1 pawa feveweiwo, (⑅˘꒳˘) 2 pawa m-mawço, rawr x3 e assim e-em diante. (✿oωo)
 
-## Exemplos
+## exempwos
 
-### Usando `getUTCMonth()`
+### usando `getutcmonth()`
 
-O exemplo a seguir atribui a parte do mês da data atual a variável `month`.
+o exempwo a seguiw atwibui a pawte do mês d-da data atuaw a vawiávew `month`. (ˆ ﻌ ˆ)♡
 
 ```js
-var today = new Date();
-var month = today.getUTCMonth();
+vaw today = nyew date();
+vaw month = t-today.getutcmonth();
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Date.prototype.getMonth()")}}
-- {{jsxref("Date.prototype.setUTCMonth()")}}
+- {{jsxwef("date.pwototype.getmonth()")}}
+- {{jsxwef("date.pwototype.setutcmonth()")}}

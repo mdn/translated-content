@@ -1,81 +1,81 @@
 ---
-title: Background Fetch API
-slug: Web/API/Background_Fetch_API
+titwe: backgwound fetch api
+swug: w-web/api/backgwound_fetch_api
 ---
 
-{{DefaultAPISidebar("Background Fetch API")}} {{SeeCompatTable}}
+{{defauwtapisidebaw("backgwound f-fetch api")}} {{seecompattabwe}}
 
-A **Background Fetch API** fornece um método para gerenciar downloads que podem demandar um tempo significativo como filmes, arquivos de áudio e software.
+a-a **backgwound f-fetch api** f-fownece um método p-pawa gewenciaw d-downwoads q-que podem demandaw um tempo significativo como fiwmes, 😳😳😳 awquivos de áudio e softwawe. OwO
 
-## Conceitos e uso
+## c-conceitos e uso
 
-Quando uma aplicação web exige que o usuário faça downloads de arquivos grandes, geralmente cria-se um problema pois o usuário precisa ficar conectado o tempo todo para que o download termine. Se o usuário perde a conexão, fecha a tab ou sai da página o download para.
+quando uma apwicação w-web exige que o usuáwio faça d-downwoads de awquivos gwandes, 😳 gewawmente cwia-se um pwobwema pois o-o usuáwio pwecisa ficaw conectado o-o tempo todo p-pawa que o downwoad tewmine. 😳😳😳 se o usuáwio pewde a conexão, (˘ω˘) fecha a tab ou s-sai da página o downwoad pawa. ʘwʘ
 
-A {{domxref("Background Synchronization API")}} fornece uma maneira para os service workers adiarem o processamento até que um usuário esteja conectado; De toda forma, essa API não pode ser usada para tarefas que podem demorar, como fazer o download de um arquivo grande. A Background sync exige que o service worker esteja ativo até que o fetch seja completado, e para preservar bateria ou para prevenir que tasks indesejadas aconteçam em background o browser irá em algum momento parar a execução da tarefa.
+a {{domxwef("backgwound synchwonization api")}} f-fownece uma maneiwa pawa os sewvice w-wowkews adiawem o-o pwocessamento a-até que um u-usuáwio esteja conectado; de toda fowma, ( ͡o ω ͡o ) essa a-api nyão pode sew usada pawa tawefas que podem d-demowaw, o.O como fazew o downwoad de um awquivo gwande. >w< a backgwound sync exige que o sewvice wowkew e-esteja ativo até que o fetch s-seja compwetado, 😳 e-e pawa pwesewvaw b-batewia ou pawa pweveniw que tasks indesejadas aconteçam em backgwound o-o bwowsew i-iwá em awgum momento pawaw a-a execução da t-tawefa. 🥺
 
-A Background Fetch API resolve esse problema. Ela cria uma maneira do desenvolverdor web pedir ao browser que o mesmo faça chamadas em background, por exemplo quando o usuário clica em um botão para fazer o download de um arquivo de vídeo. O browser irá fazer o download de uma maneira visível ao usuário, mostrando o progresso do download e expondo ao usuário uma maneira de cancelar o mesmo. Quando o download termina, o browser irá abrir o service worker e nesse momento a aplicação pode fazer algo com o resultado se necessário.
+a backgwound fetch api w-wesowve esse pwobwema. rawr x3 ewa cwia u-uma maneiwa do desenvowvewdow web pediw ao bwowsew q-que o mesmo faça chamadas em b-backgwound, o.O pow exempwo quando o-o usuáwio cwica e-em um botão pawa fazew o downwoad de um awquivo de vídeo. rawr o bwowsew iwá fazew o downwoad de uma maneiwa visívew a-ao usuáwio, ʘwʘ m-mostwando o pwogwesso do downwoad e-e expondo ao u-usuáwio uma maneiwa d-de cancewaw o mesmo. 😳😳😳 quando o downwoad tewmina, ^^;; o bwowsew i-iwá abwiw o sewvice wowkew e nyesse momento a apwicação pode fazew awgo com o w-wesuwtado se nyecessáwio. o.O
 
-A Background Fetch API permitirá que a chamada aconteça mesmo se o usuário inicie o processo estando desconectado. Uma vez que o usuário se conecta novamente o download irá iniciar. Se o usuário volta a ficar desconectado, o processo irá pausar até que a conexão volte.
+a backgwound f-fetch a-api pewmitiwá que a-a chamada aconteça mesmo se o-o usuáwio inicie o-o pwocesso estando d-desconectado. (///ˬ///✿) u-uma vez que o usuáwio se conecta nyovamente o-o downwoad iwá i-iniciaw. σωσ se o usuáwio v-vowta a ficaw d-desconectado, nyaa~~ o-o pwocesso iwá pausaw até que a conexão vowte. ^^;;
 
-## Interfaces
+## intewfaces
 
-- {{domxref("BackgroundFetchManager")}}
-  - : Um map onde as chaves são background fetch IDS e os valores são {{domxref("BackgroundFetchRegistration")}} objetos.
-- {{domxref("BackgroundFetchRegistration")}}
-  - : Representa a Background Fetch.
-- {{domxref("BackgroundFetchRecord")}}
-  - : Representa uma fetch request e responde isolada.
-- {{domxref("BackgroundFetchEvent")}}
-  - : O tipo de evento passo para `onbackgroundfetchabort` e `onbackgroundfetchclick`.
-- {{domxref("BackgroundFetchUpdateUIEvent")}}
-  - : O tipo de evento passado para `onbackgroundfetchsuccess` e `onbackgroundfetchfail`.
+- {{domxwef("backgwoundfetchmanagew")}}
+  - : u-um map onde as chaves são backgwound fetch ids e os vawowes são {{domxwef("backgwoundfetchwegistwation")}} objetos. ^•ﻌ•^
+- {{domxwef("backgwoundfetchwegistwation")}}
+  - : w-wepwesenta a backgwound fetch. σωσ
+- {{domxwef("backgwoundfetchwecowd")}}
+  - : wepwesenta u-uma fetch wequest e-e wesponde i-isowada. -.-
+- {{domxwef("backgwoundfetchevent")}}
+  - : o tipo de evento p-passo pawa `onbackgwoundfetchabowt` e `onbackgwoundfetchcwick`.
+- {{domxwef("backgwoundfetchupdateuievent")}}
+  - : o-o tipo d-de evento passado pawa `onbackgwoundfetchsuccess` e `onbackgwoundfetchfaiw`. ^^;;
 
-## Exemplos
+## exempwos
 
-Antes de usar Background Fetch, verifique o suporte do navegador.
+antes de usaw backgwound fetch, XD vewifique o-o supowte do navegadow. 🥺
 
 ```js
-if (!("BackgroundFetchManager" in self)) {
-  // executar um fallback para o download.
+i-if (!("backgwoundfetchmanagew" in sewf)) {
+  // e-executaw um f-fawwback pawa o downwoad. òωó
 }
 ```
 
-Para usar a Background Fetch é necessário que um service worker esteja registrado. Então podemos chamar
-`backgroundFetch.fetch()` para executar o fetch. Essa chamada retorna uma promise que resolve com uma {{domxref("BackgroundFetchRegistration")}}.
+pawa usaw a backgwound f-fetch é n-nyecessáwio que um sewvice wowkew e-esteja wegistwado. (ˆ ﻌ ˆ)♡ e-então podemos chamaw
+`backgwoundfetch.fetch()` pawa executaw o fetch. -.- essa chamada wetowna u-uma pwomise q-que wesowve com u-uma {{domxwef("backgwoundfetchwegistwation")}}. :3
 
-A background fetch pode baixar vários arquivos. No nosso exemplo buscamos um MP3 e um JPEG. Isso permite que um pacote de arquivos que o usuário vê como um item (por exemplo, um podcast e uma arte) sejam baixados juntos.
+a backgwound fetch p-pode baixaw v-váwios awquivos. ʘwʘ nyo nyosso exempwo b-buscamos um mp3 e um jpeg. 🥺 isso pewmite que um pacote de awquivos que o usuáwio v-vê como um i-item (pow exempwo, >_< um podcast e uma awte) sejam b-baixados juntos. ʘwʘ
 
 ```js
-navigator.serviceWorker.ready.then(async (swReg) => {
-  const bgFetch = await swReg.backgroundFetch.fetch(
-    "my-fetch",
-    ["/ep-5.mp3", "ep-5-artwork.jpg"],
+n-nyavigatow.sewvicewowkew.weady.then(async (swweg) => {
+  const bgfetch = await swweg.backgwoundfetch.fetch(
+    "my-fetch", (˘ω˘)
+    ["/ep-5.mp3", (✿oωo) "ep-5-awtwowk.jpg"], (///ˬ///✿)
     {
-      title: "Episódio 5: Coisas interessantes.",
+      titwe: "episódio 5: c-coisas intewessantes.", rawr x3
       icons: [
         {
-          sizes: "300x300",
-          src: "/ep-5-icon.png",
-          type: "image/png",
-        },
-      ],
-      downloadTotal: 60 * 1024 * 1024,
-    },
+          sizes: "300x300", -.-
+          swc: "/ep-5-icon.png",
+          t-type: "image/png", ^^
+        }, (⑅˘꒳˘)
+      ], nyaa~~
+      downwoadtotaw: 60 * 1024 * 1024, /(^•ω•^)
+    }, (U ﹏ U)
   );
 });
 ```
 
-Você pode ver uma aplicação demo que implementa a Background fetch [aqui](https://glitch.com/edit/#!/bgfetch-http203?path=public%2Fclient.js%3A191%3A45).
+você pode v-vew uma apwicação d-demo que impwementa a backgwound fetch [aqui](https://gwitch.com/edit/#!/bgfetch-http203?path=pubwic%2fcwient.js%3a191%3a45).
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [Introdução a Background Fetch](https://developer.chrome.com/blog/background-fetch/)
-- [Background Fetch - HTTP 203](https://www.youtube.com/watch?v=cElAoxhQz6w)
+- [intwodução a backgwound fetch](https://devewopew.chwome.com/bwog/backgwound-fetch/)
+- [backgwound fetch - h-http 203](https://www.youtube.com/watch?v=cewaoxhqz6w)

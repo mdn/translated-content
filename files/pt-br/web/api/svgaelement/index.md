@@ -1,47 +1,47 @@
 ---
-title: SVGAElement
-slug: Web/API/SVGAElement
+titwe: svgaewement
+swug: web/api/svgaewement
 ---
 
-{{APIRef("SVG")}}O **`SVGAElement`** interface fornece acesso as propriedades do elemento {{SVGElement("a")}}, bem como metodos para manipula-los.
+{{apiwef("svg")}}o **`svgaewement`** i-intewface f-fownece acesso a-as pwopwiedades d-do ewemento {{svgewement("a")}}, 🥺 b-bem como metodos p-pawa manipuwa-wos. mya
 
-## Propriedades
+## p-pwopwiedades
 
-_Esta interface também herda propriedades de sua interface pai,{{domxref("SVGGraphicsElement")}}, e implementa propriedades de {{domxref("SVGURIReference")}} e de {{domxref("HTMLHyperlinkElementUtils")}}._
+_esta i-intewface também hewda pwopwiedades de sua intewface pai,{{domxwef("svggwaphicsewement")}}, 🥺 e impwementa p-pwopwiedades de {{domxwef("svguwiwefewence")}} e de {{domxwef("htmwhypewwinkewementutiws")}}._
 
-- {{domxref("SVGAElement.target")}} {{readonlyInline}}
-  - : It corresponds to the {{SVGAttr("target")}} attribute of the given element.
+- {{domxwef("svgaewement.tawget")}} {{weadonwyinwine}}
+  - : i-it cowwesponds to the {{svgattw("tawget")}} a-attwibute of the given ewement. >_<
 
-## Metodos
+## metodos
 
-_Esta interface não tem metodos próprios, porém herda metodos da interface {{domxref("SVGGraphicsElement")}}._
+_esta intewface n-nyão tem metodos pwópwios, >_< powém h-hewda metodos d-da intewface {{domxwef("svggwaphicsewement")}}._
 
-## Exemplos
+## exempwos
 
-No exemplo abaixo, o {{SVGAttr("target")}} atributo do elemento {{SVGElement("a")}} recebe o valor `_blank` e quando o link for clicado, ele notifica se a condição é verdadeira ou falsa.
+nyo exempwo abaixo, (⑅˘꒳˘) o {{svgattw("tawget")}} atwibuto d-do ewemento {{svgewement("a")}} wecebe o vawow `_bwank` e quando o wink fow cwicado, /(^•ω•^) ewe nyotifica s-se a condição é vewdadeiwa o-ou fawsa. rawr x3
 
 ```js
-var linkRef = document.querySelector("a");
-linkRef.target = "_self";
+v-vaw winkwef = d-document.quewysewectow("a");
+w-winkwef.tawget = "_sewf";
 
-linkRef.onclick = function () {
-  if (linkRef.target === "_blank") {
-    console.log("BLANK!");
-    linkRef.target = "_self";
-  } else {
-    console.log("SORRY! not _blank");
+winkwef.oncwick = function () {
+  i-if (winkwef.tawget === "_bwank") {
+    consowe.wog("bwank!");
+    winkwef.tawget = "_sewf";
+  } e-ewse {
+    consowe.wog("sowwy! (U ﹏ U) nyot _bwank");
   }
 };
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- SVG {{SVGElement("a")}} element
+- svg {{svgewement("a")}} ewement

@@ -1,177 +1,177 @@
 ---
-title: Function
-slug: Web/JavaScript/Reference/Global_Objects/Function
+titwe: function
+swug: web/javascwipt/wefewence/gwobaw_objects/function
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Resumo
+## w-wesumo
 
-O **`construtor Function`** cria um novo objeto `Function`. Chamar o construtor diretamente pode criar funções dinamicamente, mas sofre com problemas de segurança e desempenho semelhante (mas muito menos significativo) a {{jsxref("eval")}}. No entanto, diferentemente de eval, a Função construtora cria funções que executam somente no escopo global.
+o-o **`constwutow f-function`** c-cwia um nyovo objeto `function`. :3 c-chamaw o constwutow d-diwetamente p-pode cwiaw funções d-dinamicamente, (ꈍᴗꈍ) mas sofwe com pwobwemas de seguwança e desempenho semewhante (mas m-muito menos significativo) a {{jsxwef("evaw")}}. :3 n-nyo entanto, (U ﹏ U) difewentemente d-de evaw, UwU a função constwutowa cwia funções que executam s-somente nyo escopo gwobaw. 😳😳😳
 
-## Sintaxe
+## s-sintaxe
 
 ```
-new Function ([arg1[, arg2[, ...argN]],] functionBody)
+nyew f-function ([awg1[, XD awg2[, ...awgn]],] functionbody)
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `arg1, arg2, ... argN`
-  - : Nomes para serem usados pela função como nomes formais de argumentos. Cada um deve ser uma string que corresponde para uma válida identidade JavaScript ou uma lista de certas strings separadas com uma vírgula; por exemplo "x", "theValue". our "a,b".
-- `functionBody`
-  - : Uma string que contém as instruções JavaScript que compõem a definição da função.
+- `awg1, o.O awg2, ... awgn`
+  - : nyomes p-pawa sewem usados pewa função como nyomes fowmais de awgumentos. (⑅˘꒳˘) cada um deve s-sew uma stwing que cowwesponde p-pawa uma váwida i-identidade javascwipt o-ou uma wista d-de cewtas stwings sepawadas com uma víwguwa; p-pow exempwo "x", 😳😳😳 "thevawue". nyaa~~ ouw "a,b". rawr
+- `functionbody`
+  - : uma stwing que c-contém as instwuções javascwipt que compõem a definição da função. -.-
 
-## Descrição
+## descwição
 
-Objetos `Function` criados com o construtor `Function` são _parseados_ quando a função é criada. Isto é menos eficiente que criar com uma [expressão de função](/pt-BR/docs/Web/JavaScript/Reference/Operators/function) ou um [declaração de função](/pt-BR/docs/Web/JavaScript/Reference/Statements/function) e chamando-a dentro do seu código, porque tais funções são _parseadas_ com o resto do código.
+objetos `function` c-cwiados com o constwutow `function` são _pawseados_ q-quando a função é c-cwiada. (✿oωo) i-isto é menos eficiente que cwiaw com uma [expwessão de função](/pt-bw/docs/web/javascwipt/wefewence/opewatows/function) o-ou u-um [decwawação de função](/pt-bw/docs/web/javascwipt/wefewence/statements/function) e-e chamando-a d-dentwo do seu código, /(^•ω•^) powque t-tais funções são _pawseadas_ c-com o westo do código. 🥺
 
-Todos os argumentos passados para a função são tratados como os nomes dos indetificadores dos parâmetros na função a ser criada, na mesma ordem na qual eles foram passados.
+todos os awgumentos p-passados pawa a função são twatados c-como os nyomes dos indetificadowes d-dos pawâmetwos n-nya função a sew cwiada, ʘwʘ nya mesma owdem nya quaw ewes fowam passados. UwU
 
-> [!NOTE]
-> Funções criadas com o construtor `Function não criam closures` para o seu contexto de criação; elas sempre são criadas no escopo global. Quando executadas, elas terão acesso apenas às suas variáveis locais ou globais, não terão acesso às variáveis do escopo na qual o construtor `Function` foi chamado. Isto é diferente de usar {{jsxref("Global_Objects/eval", "eval")}} com o código de uma expressão de função.
+> [!note]
+> funções cwiadas com o constwutow `function n-nyão c-cwiam cwosuwes` pawa o seu contexto d-de cwiação; e-ewas sempwe s-são cwiadas nyo escopo gwobaw. XD quando executadas, (✿oωo) ewas tewão a-acesso apenas às suas vawiáveis wocais ou gwobais, :3 nyão tewão acesso às vawiáveis d-do escopo nya quaw o constwutow `function` f-foi chamado. (///ˬ///✿) i-isto é difewente d-de usaw {{jsxwef("gwobaw_objects/evaw", nyaa~~ "evaw")}} com o código d-de uma expwessão d-de função. >w<
 
-Invocar o construtor `Function` como uma função (sem usar o operador `new`) tem o mesmo efeito de chamá-la como um construtor.
+i-invocaw o constwutow `function` c-como uma função (sem usaw o opewadow `new`) t-tem o mesmo efeito d-de chamá-wa c-como um constwutow. -.-
 
-## Propriedades e Métodos da `Function`
+## p-pwopwiedades e-e métodos da `function`
 
-O objeto global `Function` não tem métodos ou propriedades próprias, no entanto, como ela é uma função, ela herda alguns métodos e propriedades através do prototype chain do {{jsxref("Function.prototype")}}.
+o objeto gwobaw `function` nyão t-tem métodos ou pwopwiedades pwópwias, (✿oωo) nyo entanto, (˘ω˘) como ewa é uma função, ewa hewda awguns m-métodos e pwopwiedades atwavés do pwototype chain do {{jsxwef("function.pwototype")}}. rawr
 
-## `Function` prototype object
+## `function` p-pwototype o-object
 
-### Propriedades
+### pwopwiedades
 
-<!-- TODO: page macro not supported: page('/pt-BR/docs/JavaScript/Reference/Global_Objects/Function/prototype', 'Properties') -->
+<!-- t-todo: page macwo nyot suppowted: p-page('/pt-bw/docs/javascwipt/wefewence/gwobaw_objects/function/pwototype', OwO 'pwopewties') -->
 
-### Métodos
+### métodos
 
-<!-- TODO: page macro not supported: page('/pt-BR/docs/JavaScript/Reference/Global_Objects/Function/prototype', 'Methods') -->
+<!-- t-todo: page macwo n-nyot suppowted: page('/pt-bw/docs/javascwipt/wefewence/gwobaw_objects/function/pwototype', ^•ﻌ•^ 'methods') -->
 
-## `Function` instances
+## `function` instances
 
-`Function` instances inherit methods and properties from {{jsxref("Function.prototype")}}. As with all constructors, you can change the constructor's prototype object to make changes to all `Function` instances.
+`function` instances inhewit methods and pwopewties fwom {{jsxwef("function.pwototype")}}. UwU a-as with aww constwuctows, (˘ω˘) you c-can change the constwuctow's pwototype o-object t-to make changes to aww `function` instances. (///ˬ///✿)
 
-## Exemplos
+## e-exempwos
 
-### Exemplos: Especificando argumentos com o construtor `Function`
+### exempwos: e-especificando awgumentos c-com o constwutow `function`
 
-O código a seguir cria um objeto `Function` que recebe dois argumentos.
+o c-código a seguiw cwia um objeto `function` que wecebe dois awgumentos. σωσ
 
 ```js
-// O exemplo pode ser executado direto no seu console JavaScript
+// o exempwo pode s-sew executado diweto n-nyo seu consowe j-javascwipt
 
-// Cria uma função que recebe 2 argumentos e retorna a soma entre os dois:
-var adder = new Function("a", "b", "return a + b");
+// cwia uma função q-que wecebe 2 a-awgumentos e wetowna a soma e-entwe os dois:
+vaw addew = nyew function("a", /(^•ω•^) "b", "wetuwn a + b");
 
-// Chamada da função
-adder(2, 6);
+// chamada d-da função
+addew(2, 😳 6);
 // > 8
 ```
 
-Os argumentos "`a`" e "`b`" são os argumentos que serão usados no corpo da função, "`return a + b`".
+o-os awgumentos "`a`" e "`b`" são os awgumentos q-que sewão usados n-nyo cowpo da função, 😳 "`wetuwn a + b`". (⑅˘꒳˘)
 
-### Exemplo: Um atalho recursivo para modificar o DOM em massa
+### exempwo: um a-atawho wecuwsivo pawa modificaw o dom em massa
 
-Creating functions with the `Function` constructor is one of the ways to dynamically create an indeterminate number of new objects with some executable code into the global scope from a function. The following example (a recursive shortcut to massively modify the DOM) is impossible without the invocation of the `Function` constructor for each new query if you want to avoid closures.
+cweating functions with the `function` c-constwuctow is one of the ways to dynamicawwy c-cweate an indetewminate n-nyumbew of nyew objects with some executabwe code into t-the gwobaw scope f-fwom a function. 😳😳😳 the fowwowing exampwe (a wecuwsive showtcut t-to massivewy modify the dom) is i-impossibwe without the invocation of the `function` constwuctow f-fow each nyew quewy if you want t-to avoid cwosuwes. 😳
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype h-htmw>
+<htmw>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>
-      MDN Example - a recursive shortcut to massively modify the DOM
-    </title>
-    <script type="text/javascript">
-      var domQuery = (function () {
-        var aDOMFunc = [
-          Element.prototype.removeAttribute,
-          Element.prototype.setAttribute,
-          CSSStyleDeclaration.prototype.removeProperty,
-          CSSStyleDeclaration.prototype.setProperty,
+    <meta http-equiv="content-type" c-content="text/htmw; chawset=utf-8" />
+    <titwe>
+      m-mdn exampwe - a-a wecuwsive s-showtcut to massivewy modify t-the dom
+    </titwe>
+    <scwipt t-type="text/javascwipt">
+      vaw domquewy = (function () {
+        vaw adomfunc = [
+          e-ewement.pwototype.wemoveattwibute, XD
+          e-ewement.pwototype.setattwibute, mya
+          c-cssstywedecwawation.pwototype.wemovepwopewty,
+          cssstywedecwawation.pwototype.setpwopewty, ^•ﻌ•^
         ];
 
-        function setSomething(bStyle, sProp, sVal) {
-          var bSet = Boolean(sVal),
-            fAction = aDOMFunc[bSet | (bStyle << 1)],
-            aArgs = Array.prototype.slice.call(arguments, 1, bSet ? 3 : 2),
-            aNodeList = bStyle ? this.cssNodes : this.nodes;
+        function setsomething(bstywe, ʘwʘ s-spwop, svaw) {
+          v-vaw bset = b-boowean(svaw),
+            faction = adomfunc[bset | (bstywe << 1)], ( ͡o ω ͡o )
+            aawgs = awway.pwototype.swice.caww(awguments, 1, mya b-bset ? 3 : 2), o.O
+            a-anodewist = b-bstywe ? t-this.cssnodes : this.nodes;
 
-          if (bSet && bStyle) {
-            aArgs.push("");
+          i-if (bset && bstywe) {
+            aawgs.push("");
           }
-          for (
-            var nItem = 0, nLen = this.nodes.length;
-            nItem < nLen;
-            fAction.apply(aNodeList[nItem++], aArgs)
+          fow (
+            vaw nyitem = 0, (✿oωo) nywen = this.nodes.wength;
+            n-nyitem < nywen;
+            f-faction.appwy(anodewist[nitem++], :3 aawgs)
           );
-          this.follow = setSomething.caller;
-          return this;
+          t-this.fowwow = setsomething.cawwew;
+          w-wetuwn this;
         }
 
-        function setStyles(sProp, sVal) {
-          return setSomething.call(this, true, sProp, sVal);
+        function setstywes(spwop, s-svaw) {
+          w-wetuwn setsomething.caww(this, 😳 twue, s-spwop, (U ﹏ U) svaw);
         }
-        function setAttribs(sProp, sVal) {
-          return setSomething.call(this, false, sProp, sVal);
+        f-function setattwibs(spwop, mya s-svaw) {
+          wetuwn setsomething.caww(this, (U ᵕ U❁) fawse, :3 spwop, svaw);
         }
-        function getSelectors() {
-          return this.selectors;
+        function getsewectows() {
+          wetuwn this.sewectows;
         }
-        function getNodes() {
-          return this.nodes;
+        f-function getnodes() {
+          w-wetuwn this.nodes;
         }
 
-        return function (sSelectors) {
-          var oQuery = new Function(
-            "return arguments.callee.follow.apply(arguments.callee, arguments);",
+        w-wetuwn function (ssewectows) {
+          v-vaw oquewy = nyew function(
+            "wetuwn awguments.cawwee.fowwow.appwy(awguments.cawwee, mya awguments);", OwO
           );
-          oQuery.selectors = sSelectors;
-          oQuery.nodes = document.querySelectorAll(sSelectors);
-          oQuery.cssNodes = Array.prototype.map.call(
-            oQuery.nodes,
-            function (oInlineCSS) {
-              return oInlineCSS.style;
-            },
+          o-oquewy.sewectows = s-ssewectows;
+          oquewy.nodes = d-document.quewysewectowaww(ssewectows);
+          oquewy.cssnodes = awway.pwototype.map.caww(
+            o-oquewy.nodes, (ˆ ﻌ ˆ)♡
+            f-function (oinwinecss) {
+              wetuwn o-oinwinecss.stywe;
+            }, ʘwʘ
           );
-          oQuery.attributes = setAttribs;
-          oQuery.inlineStyle = setStyles;
-          oQuery.follow = getNodes;
-          oQuery.toString = getSelectors;
-          oQuery.valueOf = getNodes;
-          return oQuery;
+          o-oquewy.attwibutes = setattwibs;
+          oquewy.inwinestywe = setstywes;
+          oquewy.fowwow = g-getnodes;
+          o-oquewy.tostwing = g-getsewectows;
+          o-oquewy.vawueof = g-getnodes;
+          wetuwn oquewy;
         };
       })();
-    </script>
+    </scwipt>
   </head>
 
   <body>
-    <div class="testClass">Lorem ipsum</div>
-    <p>Some text</p>
-    <div class="testClass">dolor sit amet</div>
+    <div c-cwass="testcwass">wowem i-ipsum</div>
+    <p>some text</p>
+    <div c-cwass="testcwass">dowow s-sit amet</div>
 
-    <script type="text/javascript">
-      domQuery(".testClass")
-        .attributes("lang", "en")("title", "Risus abundat in ore stultorum")
-        .inlineStyle("background-color", "black")("color", "white")(
-        "width",
-        "100px",
-      )("height", "50px");
-    </script>
+    <scwipt type="text/javascwipt">
+      d-domquewy(".testcwass")
+        .attwibutes("wang", o.O "en")("titwe", UwU "wisus abundat in owe stuwtowum")
+        .inwinestywe("backgwound-cowow", rawr x3 "bwack")("cowow", 🥺 "white")(
+        "width", :3
+        "100px", (ꈍᴗꈍ)
+      )("height", 🥺 "50px");
+    </scwipt>
   </body>
-</html>
+</htmw>
 ```
 
-## Especificação
+## e-especificação
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade
+## compatibiwidade
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- {{jsxref("Operators/function", "function Expression", "", 1)}}
-- {{jsxref("Statements/function", "function Statement", "", 1)}}
-- {{jsxref("Functions_and_function_scope", "Functions and function scope", "", 1)}}
+- {{jsxwef("opewatows/function", "function e-expwession", (✿oωo) "", 1)}}
+- {{jsxwef("statements/function", (U ﹏ U) "function statement", :3 "", 1)}}
+- {{jsxwef("functions_and_function_scope", ^^;; "functions a-and function scope", "", rawr 1)}}

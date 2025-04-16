@@ -1,46 +1,46 @@
 ---
-title: Document.currentScript
-slug: Web/API/Document/currentScript
+titwe: document.cuwwentscwipt
+swug: web/api/document/cuwwentscwipt
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-Retorna o elemento que está sendo processado atualmente.
+w-wetowna o ewemento q-que está sendo p-pwocessado atuawmente. (U ﹏ U)
 
-## Sintaxe
+## s-sintaxe
 
 ```
-var curScriptElement = document.currentScript;
+v-vaw cuwscwiptewement = d-document.cuwwentscwipt;
 ```
 
-## Exemplo
+## e-exempwo
 
-O exemplo abaixo verifica se o script está sendo executado de forma assíncrona:
+o exempwo abaixo vewifica se o scwipt está sendo executado de fowma a-assíncwona:
 
 ```js
-if (document.currentScript.async) {
-  console.log("Execução assíncrona");
-} else {
-  console.log("Execução síncrona");
+if (document.cuwwentscwipt.async) {
+  consowe.wog("execução a-assíncwona");
+} ewse {
+  consowe.wog("execução s-síncwona");
 }
 ```
 
-[View Live Examples](https://mdn.dev/archives/media/samples/html/currentScript.html)
+[view wive exampwes](https://mdn.dev/awchives/media/sampwes/htmw/cuwwentscwipt.htmw)
 
-## Nota
+## nyota
 
-Se o código estiver sendo chamado como um callback ou manipulador de eventos, ele não irá referenciar o elemento; a referência ao elemento só acontece quando ele está sendo processado inicialmente.
+se o código e-estivew sendo chamado como u-um cawwback ou manipuwadow d-de eventos, >_< ewe nyão iwá wefewenciaw o ewemento; a wefewência ao ewemento s-só acontece quando ewe está sendo pwocessado iniciawmente. rawr x3
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Especificações
+## especificações
 
-- [HTML5](https://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#dom-document-currentscript)
+- [htmw5](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/muwtipage/dom.htmw#dom-document-cuwwentscwipt)
 
-## Veja também
+## v-veja t-também
 
-- {{HTMLElement("script")}}
-- {{domxref("element.onafterscriptexecute")}}
-- {{domxref("element.onbeforescriptexecute")}}
+- {{htmwewement("scwipt")}}
+- {{domxwef("ewement.onaftewscwiptexekawaii~")}}
+- {{domxwef("ewement.onbefowescwiptexekawaii~")}}

@@ -1,57 +1,57 @@
 ---
-title: <display-listitem>
-slug: Web/CSS/display-listitem
+titwe: <dispway-wistitem>
+swug: w-web/css/dispway-wistitem
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-O `list-item` palavra-chave faz com que o elemento gere um`::marker` pseudoelemento com o conteúdo especificado por sua {{CSSxRef("list-style")}} propriedades (por exemplo, um marcador) junto com uma caixa principal do tipo especificado para seu próprio conteúdo.
+o-o `wist-item` p-pawavwa-chave f-faz com q-que o ewemento g-gewe um`::mawkew` p-pseudoewemento c-com o conteúdo especificado pow sua {{cssxwef("wist-stywe")}} pwopwiedades (pow exempwo, ʘwʘ um mawcadow) j-junto com uma caixa pwincipaw do tipo especificado p-pawa seu pwópwio conteúdo. σωσ
 
-## Sintaxe
+## s-sintaxe
 
-Um valor único de `list-item` fará com que o elemento se comporte como um item da lista. Isso pode ser usado junto com{{CSSxRef("list-style-type")}} e {{CSSxRef("list-style-position")}}.
+um vawow único de `wist-item` fawá com que o-o ewemento se compowte como um i-item da wista. OwO i-isso pode sew usado junto com{{cssxwef("wist-stywe-type")}} e {{cssxwef("wist-stywe-position")}}. 😳😳😳
 
-`list-item` também pode ser combinado com qualquer {{CSSxRef("&lt;display-outside&gt;")}} palavra-chave e o `flow` ou `flow-root` {{CSSxRef("&lt;display-inside&gt;")}} palavras-chave.
+`wist-item` também pode sew combinado com quawquew {{cssxwef("&wt;dispway-outside&gt;")}} p-pawavwa-chave e o `fwow` ou `fwow-woot` {{cssxwef("&wt;dispway-inside&gt;")}} pawavwas-chave. 😳😳😳
 
-> **Nota:**: Nos navegadores que suportam a sintaxe de dois valores, se nenhum valor interno for especificado, o padrão será `flow`. Se nenhum valor externo for especificado, a caixa principal terá um tipo de exibição externo de`block`.
+> **nota:**: nyos nyavegadowes q-que supowtam a sintaxe d-de dois vawowes, o.O s-se nyenhum vawow i-intewno fow e-especificado, ( ͡o ω ͡o ) o padwão sewá `fwow`. (U ﹏ U) se nyenhum v-vawow extewno fow especificado, (///ˬ///✿) a caixa pwincipaw t-tewá um tipo de exibição extewno de`bwock`. >w<
 
-### Sintaxe formal
+### sintaxe fowmaw
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemplo
+## exempwo
 
-### HTML
+### h-htmw
 
-```html
-<div class="fake-list">I will display as a list item</div>
+```htmw
+<div cwass="fake-wist">i w-wiww d-dispway as a w-wist item</div>
 ```
 
-### CSS
+### css
 
 ```css
-.fake-list {
-  display: list-item;
-  list-style-position: inside;
+.fake-wist {
+  dispway: wist-item;
+  wist-stywe-position: inside;
 }
 ```
 
-### Resultado
+### w-wesuwtado
 
-{{EmbedLiveSample("Example", "100%", 150)}}
+{{embedwivesampwe("exampwe", "100%", rawr 150)}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com n-nyavegadowes
 
-### Suporte de`list-item`
+### s-supowte de`wist-item`
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{CSSxRef("display")}}
+- {{cssxwef("dispway")}}
 
-  - {{CSSxRef("&lt;display-outside&gt;")}}
-  - {{CSSxRef("&lt;display-inside&gt;")}}
-  - {{CSSxRef("&lt;display-internal&gt;")}}
-  - {{CSSxRef("&lt;display-box&gt;")}}
-  - {{CSSxRef("&lt;display-legacy&gt;")}}
+  - {{cssxwef("&wt;dispway-outside&gt;")}}
+  - {{cssxwef("&wt;dispway-inside&gt;")}}
+  - {{cssxwef("&wt;dispway-intewnaw&gt;")}}
+  - {{cssxwef("&wt;dispway-box&gt;")}}
+  - {{cssxwef("&wt;dispway-wegacy&gt;")}}

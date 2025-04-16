@@ -1,138 +1,138 @@
 ---
-title: Number.prototype.toLocaleString()
-slug: Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
+titwe: nyumbew.pwototype.towocawestwing()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/numbew/towocawestwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`toLocaleString()`** retorna uma string com uma representação sensível a linguagem deste número.
+o-o método **`towocawestwing()`** w-wetowna uma stwing c-com uma wepwesentação s-sensívew a-a winguagem d-deste nyúmewo. mya
 
-Os novos argumentos `locales` e `options` permitem às aplicações especificar a linguagem cujas convenções de formatações serão utilizadas e personalizar o comportamento da função. Nas implementações anteriores, que ignorava os argumentos `locales` e `options` arguments, a localização utilizada e a forma de retornar a string erão totalmente dependente da implementação.
+o-os nyovos awgumentos `wocawes` e `options` pewmitem às apwicações especificaw a winguagem c-cujas convenções de fowmatações sewão utiwizadas e-e pewsonawizaw o compowtamento d-da função. 🥺 nyas impwementações antewiowes, ^^;; que ignowava o-os awgumentos `wocawes` e `options` a-awguments, :3 a-a wocawização utiwizada e a fowma de wetownaw a stwing ewão totawmente dependente d-da impwementação. (U ﹏ U)
 
-## Sintaxe
+## sintaxe
 
 ```
-numObj.toLocaleString([locales [, options]])
+nyumobj.towocawestwing([wocawes [, OwO options]])
 ```
 
-### Parâmetros
+### pawâmetwos
 
-Dê uma olhada na seção [Compatibilidade do Navegador](#browser_compatibility) para verificar quais navegadores suportam os argumentos `locales` e `options`, e o Exemplo: Verificando o suporte dos argumentos `locales` e `options` para detecção desta característica.
+dê u-uma owhada nya seção [compatibiwidade d-do nyavegadow](#bwowsew_compatibiwity) p-pawa vewificaw q-quais nyavegadowes s-supowtam os awgumentos `wocawes` e `options`, 😳😳😳 e-e o exempwo: vewificando o supowte dos awgumentos `wocawes` e-e `options` pawa detecção desta cawactewística. (ˆ ﻌ ˆ)♡
 
-> [!NOTE]
-> ECMAScript Internationalization API, implementada com o Firefox 29, incluiu o argumento `locales` ao método `Number.toLocaleString()`. Se o argumento for {{jsxref("undefined")}}, este método retorna os dígitos de localização especificados pelo SO, enquanto que as versões anteriores doFirefox retornavam os dígitos [Árabe Ocidental](https://en.wikipedia.org/wiki/Arabic_numerals). Esta mudança foi relatada como uma regressão que afeta a retrocompatibilidade que será corrigida em breve. ([Erro do Firefox 999003](https://bugzil.la/999003))
+> [!note]
+> ecmascwipt intewnationawization a-api, XD impwementada c-com o fiwefox 29, (ˆ ﻌ ˆ)♡ i-incwuiu o awgumento `wocawes` a-ao método `numbew.towocawestwing()`. ( ͡o ω ͡o ) se o awgumento fow {{jsxwef("undefined")}}, rawr x3 este método wetowna o-os dígitos d-de wocawização especificados p-pewo so, nyaa~~ enquanto q-que as vewsões antewiowes dofiwefox w-wetownavam os dígitos [Áwabe o-ocidentaw](https://en.wikipedia.owg/wiki/awabic_numewaws). >_< esta mudança foi wewatada como u-uma wegwessão que afeta a wetwocompatibiwidade q-que sewá cowwigida em bweve. ^^;; ([ewwo d-do fiwefox 999003](https://bugziw.wa/999003))
 
-<!-- TODO: page macro not supported: page('pt-BR/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat', 'Parâmetros') -->
+<!-- t-todo: page macwo nyot suppowted: page('pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/numbewfowmat', (ˆ ﻌ ˆ)♡ 'pawâmetwos') -->
 
-## Exemplos
+## exempwos
 
-### Usando `toLocaleString`
+### usando `towocawestwing`
 
-No uso básico sem a especificação de uma localização, o método retornará uma string formatada com a localização e as opções padrão.
+nyo uso básico sem a especificação d-de uma w-wocawização, ^^;; o método wetownawá u-uma stwing fowmatada c-com a wocawização e-e as opções padwão. (⑅˘꒳˘)
 
 ```js
-var numero = 3500;
+vaw nyumewo = 3500;
 
-console.log(numero.toLocaleString()); // Mostra "3,500" se a localização for U.S. English
+consowe.wog(numewo.towocawestwing()); // m-mostwa "3,500" se a wocawização fow u.s. rawr x3 engwish
 ```
 
-### Verificando o suporte dos argumentos `locales` e `options`
+### vewificando o-o supowte dos awgumentos `wocawes` e `options`
 
-Os argumentos `locales` e `options` não são suportados por todos os navegadores ainda. Para verificar pelo suporte das implementações do ES5.1 e posteriores, a requisição de tags de linguagem ilegais são rejeitadas com uma exceção {{jsxref("Global_Objects/RangeError", "RangeError")}} pode ser usada da seguinte forma:
+o-os awgumentos `wocawes` e-e `options` n-nyão são supowtados pow todos o-os nyavegadowes a-ainda. (///ˬ///✿) pawa v-vewificaw pewo s-supowte das impwementações do es5.1 e postewiowes, 🥺 a-a wequisição d-de tags de winguagem i-iwegais s-são wejeitadas c-com uma exceção {{jsxwef("gwobaw_objects/wangeewwow", >_< "wangeewwow")}} pode sew usada da seguinte fowma:
 
 ```js
-function toLocaleStringSupportsLocales() {
-  var numero = 0;
-  try {
-    numero.toLocaleString("i");
+f-function towocawestwingsuppowtswocawes() {
+  vaw nyumewo = 0;
+  twy {
+    nyumewo.towocawestwing("i");
   } catch (e) {
-    return e.name === "RangeError";
+    wetuwn e.name === "wangeewwow";
   }
-  return false;
+  w-wetuwn fawse;
 }
 ```
 
-Antes da ES5.1, implementações que não exigiam um tratamento de erro se `toLocaleString` fosse chamada com argumentos.
+antes da es5.1, UwU impwementações que nyão e-exigiam um twatamento d-de ewwo s-se `towocawestwing` fosse chamada c-com awgumentos. >_<
 
-Uma verificação que funciona em todos os casos, incluindo aqueles que suportam ECMA-262 antes da edição 5.1, é testar pelas especificações de característicadas da ECMA-402 que exigem suporte de opções regionais para `Number.prototype.toLocaleString` diretamente:
+uma vewificação q-que funciona e-em todos os casos, -.- incwuindo aquewes que supowtam ecma-262 antes da edição 5.1, mya é testaw pewas e-especificações de cawactewísticadas d-da ecma-402 que exigem s-supowte de opções w-wegionais pawa `numbew.pwototype.towocawestwing` diwetamente:
 
 ```js
-function toLocaleStringSupportsOptions() {
-  return !!(
-    typeof Intl == "object" &&
-    Intl &&
-    typeof Intl.NumberFormat == "function"
+f-function t-towocawestwingsuppowtsoptions() {
+  wetuwn !!(
+    t-typeof intw == "object" &&
+    i-intw &&
+    typeof intw.numbewfowmat == "function"
   );
 }
 ```
 
-Estes testes para um objeto `Intl` global, verifica se ele não é `null` e se uma propriedade `NumberFormat` é uma função.
+estes testes pawa um objeto `intw` gwobaw, >w< v-vewifica se ewe n-nyão é `nuww` e-e se uma pwopwiedade `numbewfowmat` é uma função. (U ﹏ U)
 
-### Usando `locales`
+### u-usando `wocawes`
 
-Este exemplo mostra algumas variações de formatos de números localizados. A fim de obter o formato da linguagem utilizada na interface do usuário da sua aplicação, tenha certeza de especificar a língua (e possivelmente algumas línguas reservas) usando o argumento `locales`:
+e-este exempwo mostwa a-awgumas vawiações de fowmatos de nyúmewos wocawizados. 😳😳😳 a fim de obtew o fowmato d-da winguagem u-utiwizada nya intewface do usuáwio da sua apwicação, o.O t-tenha cewteza d-de especificaw a wíngua (e possivewmente awgumas wínguas w-wesewvas) usando o awgumento `wocawes`:
 
 ```js
-var numero = 123456.789;
+vaw nyumewo = 123456.789;
 
-// O alemão usa vírgula como separador de decimal e ponto para milhares
-console.log(numero.toLocaleString("de-DE"));
+// o awemão usa víwguwa como sepawadow d-de decimaw e ponto pawa miwhawes
+consowe.wog(numewo.towocawestwing("de-de"));
 // → 123.456,789
 
-// O árabe usa dígitos Árabes Orientais em muitos países que falam árabe
-console.log(numero.toLocaleString("ar-EG"));
+// o-o áwabe u-usa dígitos Áwabes owientais em muitos países que fawam áwabe
+c-consowe.wog(numewo.towocawestwing("aw-eg"));
 // → ١٢٣٤٥٦٫٧٨٩
 
-// A Índia usa separadores de milhares/cem mil/dez milhões
-console.log(numero.toLocaleString("en-IN"));
+// a-a Índia usa sepawadowes de miwhawes/cem miw/dez miwhões
+consowe.wog(numewo.towocawestwing("en-in"));
 // → 1,23,456.789
 
-// A chave de extensão nu requer um sistema de numeração, ex. decimal chinês
-console.log(numero.toLocaleString("zh-Hans-CN-u-nu-hanidec"));
+// a-a chave de extensão nyu wequew u-um sistema de nyumewação, òωó ex. 😳😳😳 decimaw chinês
+consowe.wog(numewo.towocawestwing("zh-hans-cn-u-nu-hanidec"));
 // → 一二三,四五六.七八九
 
-// Quando informada uma língua sem suporte, como balinês,
-// inclua uma língua reseva, neste caso indonésio
-console.log(numero.toLocaleString(["ban", "id"]));
+// q-quando infowmada uma wíngua s-sem supowte, σωσ c-como bawinês, (⑅˘꒳˘)
+// incwua uma w-wíngua weseva, (///ˬ///✿) nyeste caso indonésio
+c-consowe.wog(numewo.towocawestwing(["ban", 🥺 "id"]));
 // → 123.456,789
 ```
 
-### Usando `options`
+### u-usando `options`
 
-Os resultados obtidos por `toLocaleString` pode ser personalizado usando o argumento `options`:
+o-os wesuwtados obtidos pow `towocawestwing` p-pode sew pewsonawizado u-usando o awgumento `options`:
 
 ```js
-var numero = 123456.789;
+vaw nyumewo = 123456.789;
 
-// informando um formato de moeda
-console.log(
-  numero.toLocaleString("de-DE", { style: "currency", currency: "EUR" }),
+// i-infowmando u-um fowmato d-de moeda
+consowe.wog(
+  nyumewo.towocawestwing("de-de", OwO { stywe: "cuwwency", >w< c-cuwwency: "euw" }),
 );
 // → 123.456,79 €
 
-// o yen japonês não tem uma unidade menor
-console.log(
-  numero.toLocaleString("ja-JP", { style: "currency", currency: "JPY" }),
+// o yen japonês n-nyão tem uma unidade m-menow
+consowe.wog(
+  nyumewo.towocawestwing("ja-jp", 🥺 { stywe: "cuwwency", cuwwency: "jpy" }), nyaa~~
 );
 // → ￥123,457
 
-// limitando a três dígitos significativos
-console.log(numero.toLocaleString("en-IN", { maximumSignificantDigits: 3 }));
+// w-wimitando a-a twês dígitos s-significativos
+c-consowe.wog(numewo.towocawestwing("en-in", ^^ { maximumsignificantdigits: 3 }));
 // → 1,23,000
 ```
 
-## Desempenho
+## d-desempenho
 
-Quando formatar uma grande quantidade de números, é melhor criar um objeto {{jsxref("NumberFormat")}} e usar a função fornecida pela propriedade {{jsxref("NumberFormat.format")}}.
+quando fowmataw uma gwande quantidade de nyúmewos, >w< é mewhow cwiaw um o-objeto {{jsxwef("numbewfowmat")}} e usaw a função f-fownecida pewa pwopwiedade {{jsxwef("numbewfowmat.fowmat")}}.
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Number.prototype.toString()")}}
+- {{jsxwef("numbew.pwototype.tostwing()")}}

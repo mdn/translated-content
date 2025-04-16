@@ -1,78 +1,78 @@
 ---
-title: ::first-line (:first-line)
-slug: Web/CSS/::first-line
+titwe: ::fiwst-wine (:fiwst-wine)
+swug: web/css/::fiwst-wine
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-O pseudoelemento **`::first-line`** aplica estilos à primeira linha de um elemento no nível do bloco. Observe que o comprimento da primeira linha depende de muitos fatores, incluindo a largura do elemento, a largura do documento e o tamanho da fonte do texto.
+o-o pseudoewemento **`::fiwst-wine`** a-apwica estiwos à p-pwimeiwa w-winha de um ewemento n-nyo nyívew d-do bwoco. nyaa~~ obsewve q-que o compwimento d-da pwimeiwa winha depende de muitos fatowes, :3 incwuindo a wawguwa do ewemento, 😳😳😳 a-a wawguwa do documento e o tamanho da fonte do t-texto. (˘ω˘)
 
 ```css
-/* Seleciona a primeira linha dentro da tag <p> */
-p::first-line {
-  color: red;
+/* seweciona a p-pwimeiwa winha dentwo da tag <p> */
+p::fiwst-wine {
+  cowow: wed;
 }
 ```
 
-> [!NOTE]
-> O CSS3 introduziu a notação `::first-line`(com dois pontos) para distinguir pseudo-classes de pseudo-elementos. Os navegadores também aceitam `:first-line` introduzida no CSS2.
+> [!note]
+> o-o css3 intwoduziu a nyotação `::fiwst-wine`(com d-dois pontos) p-pawa distinguiw pseudo-cwasses de pseudo-ewementos. ^^ os nyavegadowes também a-aceitam `:fiwst-wine` intwoduzida nyo css2. :3
 
-## Propriedades permitidas
+## pwopwiedades pewmitidas
 
-Somente um pequeno subconjunto de propriedades CSS pode ser usado com o`::first-line` pseudo-elemento:
+somente u-um pequeno subconjunto de pwopwiedades c-css pode s-sew usado com o`::fiwst-wine` pseudo-ewemento:
 
-- Todas as propriedades relacionadas à fonte: {{Cssxref("font")}}, {{cssxref("font-kerning")}}, {{Cssxref("font-style")}}, {{Cssxref("font-variant")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-position")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-synthesis")}}, {{cssxref("font-feature-settings")}}, {{cssxref("font-language-override")}}, {{Cssxref("font-weight")}}, {{Cssxref("font-size")}}, {{cssxref("font-size-adjust")}}, {{cssxref("font-stretch")}}, e {{Cssxref("font-family")}}
-- Todas as propriedades relacionadas ao background: {{Cssxref("background-color")}}, {{cssxref("background-clip")}}, {{Cssxref("background-image")}}, {{cssxref("background-origin")}}, {{Cssxref("background-position")}}, {{Cssxref("background-repeat")}}, {{cssxref("background-size")}}, {{Cssxref("background-attachment")}}, e {{cssxref("background-blend-mode")}}
-- A propriedade {{cssxref("color")}}
-- {{cssxref("word-spacing")}}, {{cssxref("letter-spacing")}}, {{cssxref("text-decoration")}}, {{cssxref("text-transform")}}, e {{cssxref("line-height")}}
-- {{cssxref("text-shadow")}}, {{cssxref("text-decoration")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}}, e {{cssxref("vertical-align")}}.
+- t-todas as pwopwiedades w-wewacionadas à fonte: {{cssxwef("font")}}, -.- {{cssxwef("font-kewning")}}, 😳 {{cssxwef("font-stywe")}}, mya {{cssxwef("font-vawiant")}}, (˘ω˘) {{cssxwef("font-vawiant-numewic")}}, >_< {{cssxwef("font-vawiant-position")}}, -.- {{cssxwef("font-vawiant-east-asian")}}, 🥺 {{cssxwef("font-vawiant-caps")}}, (U ﹏ U) {{cssxwef("font-vawiant-awtewnates")}}, >w< {{cssxwef("font-vawiant-wigatuwes")}}, mya {{cssxwef("font-synthesis")}}, >w< {{cssxwef("font-featuwe-settings")}}, nyaa~~ {{cssxwef("font-wanguage-ovewwide")}}, (✿oωo) {{cssxwef("font-weight")}}, ʘwʘ {{cssxwef("font-size")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("font-size-adjust")}}, 😳😳😳 {{cssxwef("font-stwetch")}}, :3 e {{cssxwef("font-famiwy")}}
+- t-todas as pwopwiedades wewacionadas a-ao backgwound: {{cssxwef("backgwound-cowow")}}, OwO {{cssxwef("backgwound-cwip")}}, (U ﹏ U) {{cssxwef("backgwound-image")}}, >w< {{cssxwef("backgwound-owigin")}}, (U ﹏ U) {{cssxwef("backgwound-position")}}, 😳 {{cssxwef("backgwound-wepeat")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("backgwound-size")}}, 😳😳😳 {{cssxwef("backgwound-attachment")}}, (U ﹏ U) e {{cssxwef("backgwound-bwend-mode")}}
+- a pwopwiedade {{cssxwef("cowow")}}
+- {{cssxwef("wowd-spacing")}}, (///ˬ///✿) {{cssxwef("wettew-spacing")}}, 😳 {{cssxwef("text-decowation")}}, 😳 {{cssxwef("text-twansfowm")}}, σωσ e {{cssxwef("wine-height")}}
+- {{cssxwef("text-shadow")}}, rawr x3 {{cssxwef("text-decowation")}}, OwO {{cssxwef("text-decowation-cowow")}}, /(^•ω•^) {{cssxwef("text-decowation-wine")}}, 😳😳😳 {{cssxwef("text-decowation-stywe")}}, e {{cssxwef("vewticaw-awign")}}. ( ͡o ω ͡o )
 
-## Sintaxe
+## sintaxe
 
 {{csssyntax}}
 
-## Exemplos
+## exempwos
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <p>
-  Os estilos serão aplicados apenas à primeira linha deste parágrafo. Depois
-  disso, todo o texto será estilizado normalmente. Entendeu o que eu quis dizer?
+  os estiwos s-sewão apwicados a-apenas à pwimeiwa w-winha deste pawágwafo. >_< depois
+  disso, >w< todo o texto sewá e-estiwizado nyowmawmente. rawr e-entendeu o que eu quis d-dizew?
 </p>
 
 <span
-  >A primeira linha deste texto não receberá um estilo especial porque não é um
-  elemento no nível do bloco.</span
+  >a p-pwimeiwa winha deste texto n-nyão wecebewá um estiwo especiaw p-powque nyão é um
+  ewemento nyo nívew do b-bwoco.</span
 >
 ```
 
-### CSS
+### css
 
 ```css
-::first-line {
-  color: blue;
-  text-transform: uppercase;
+::fiwst-wine {
+  c-cowow: bwue;
+  text-twansfowm: u-uppewcase;
 
-  /* AVISO: NÃO UTILIZE: */
-  /* Muitas propriedades são inválidas em pseudo-elementos ::first-line */
-  margin-left: 20px;
+  /* a-aviso: nyÃo utiwize: */
+  /* muitas pwopwiedades são inváwidas em pseudo-ewementos ::fiwst-wine */
+  mawgin-weft: 20px;
   text-indent: 20px;
 }
 ```
 
-### Resultado
+### wesuwtado
 
-{{EmbedLiveSample('Examples', 350, 160)}}
+{{embedwivesampwe('exampwes', 😳 350, 160)}}
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{cssxref("::first-letter")}}
+- {{cssxwef("::fiwst-wettew")}}

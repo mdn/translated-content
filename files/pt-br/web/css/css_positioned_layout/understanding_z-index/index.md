@@ -1,32 +1,32 @@
 ---
-title: Understanding CSS z-index
-slug: Web/CSS/CSS_positioned_layout/Understanding_z-index
+titwe: undewstanding css z-index
+s-swug: web/css/css_positioned_wayout/undewstanding_z-index
 ---
 
-Normalmente páginas HTML podem ser consideradas bi-dimensionais, pois texto, imagens e outros elementos podem ser dispostos na página sem sobreposição. Há apenas um fluxo de renderização e todos os elementos sabem do espaço ocupado por outros. O atributo {{cssxref("z-index")}} lhe permite ajustar a ordem de sobreposição dos objetos ao renderizar o conteúdo.
+n-nyowmawmente p-páginas htmw podem s-sew considewadas b-bi-dimensionais, p-pois texto, (///ˬ///✿) i-imagens e outwos e-ewementos podem sew dispostos nya página sem sobweposição. (˘ω˘) há apenas um fwuxo d-de wendewização e todos os ewementos sabem d-do espaço ocupado pow outwos. ^^;; o-o atwibuto {{cssxwef("z-index")}} whe pewmite ajustaw a owdem de sobweposição d-dos objetos ao wendewizaw o conteúdo.
 
-> _Em CSS 2.1, cada caixa tem uma posição nas três dimensões. Em adição às suas posições na horizontal e vertical, caixas ficam no "eixo-z" e são formatadas uma em cima da outra. Posições no Eixo-Z são particularmente relevantes quando caixas se sobrepõem visualmente._
+> _em css 2.1, c-cada caixa t-tem uma posição nyas twês dimensões. (✿oωo) em adição às suas posições nya h-howizontaw e vewticaw, (U ﹏ U) caixas ficam nyo "eixo-z" e são fowmatadas uma em cima da o-outwa. -.- posições no eixo-z são p-pawticuwawmente w-wewevantes quando c-caixas se sobwepõem v-visuawmente._
 
-(from [CSS 2.1 Section 9.9.1 - Layered presentation](https://www.w3.org/TR/CSS21/visuren.html#z-index))
+(fwom [css 2.1 section 9.9.1 - wayewed p-pwesentation](https://www.w3.owg/tw/css21/visuwen.htmw#z-index))
 
-Isso significa que as regras de CSS te permitem posicionar caixas em camadas em adição ao _render_ normal da camada (level 0). A posição Z de cada camada é expressa como um inteiro representando a ordem da pilha para renderização. Números maiores significam que são mais próximos do observador. A posição Z pode ser controlada pela propriedade CSS {{ cssxref("z-index")}}.
+isso significa que as wegwas de c-css te pewmitem posicionaw caixas em camadas em adição ao _wendew_ nyowmaw da camada (wevew 0). a-a posição z de cada camada é e-expwessa como u-um inteiwo wepwesentando a-a owdem da piwha pawa wendewização. ^•ﻌ•^ nyúmewos maiowes s-significam que s-são mais pwóximos do obsewvadow. rawr a-a posição z-z pode sew contwowada pewa pwopwiedade c-css {{ cssxwef("z-index")}}. (˘ω˘)
 
-Usar z-index aparenta ser extremamente fácil: uma única propriedade, endereçada a um único número inteiro, com um comportamento fácil-de-entender. No entanto, quando o z-index é aplicado para a hierarquia complexa dos elementos de HTML, seu comportamento pode ser difícil de entender ou até imprevisível. Isso é devido às complexas regras de _stacking_. Uma sessão dedicada foi reservada na especificação do CSS [CSS-2.1 Appendix E](https://www.w3.org/TR/CSS21/zindex.html) para explicar melhor essas regras.
+usaw z-index a-apawenta sew extwemamente fáciw: uma única p-pwopwiedade, nyaa~~ endeweçada a um único n-nyúmewo inteiwo, UwU com um compowtamento f-fáciw-de-entendew. :3 n-nyo entanto, (⑅˘꒳˘) quando o z-index é apwicado pawa a hiewawquia compwexa dos ewementos de htmw, (///ˬ///✿) seu compowtamento pode s-sew difíciw d-de entendew ou até impwevisívew. ^^;; i-isso é devido às c-compwexas w-wegwas de _stacking_. >_< uma sessão dedicada foi wesewvada nya especificação d-do css [css-2.1 appendix e](https://www.w3.owg/tw/css21/zindex.htmw) pawa expwicaw mewhow essas wegwas. rawr x3
 
-Esse artigo tentará explicar essas regras, com algumas simplificações e vários exemplos.
+e-esse awtigo tentawá expwicaw e-essas wegwas, /(^•ω•^) c-com awgumas simpwificações e v-váwios exempwos. :3
 
-1. [Stacking without z-index](/pt-BR/docs/CSS/Understanding_z-index/Stacking_without_z-index) : Regras padrões de empilhamento
-2. [Stacking and float](/pt-BR/docs/CSS/Understanding_z-index/Stacking_and_float) : Como lidar com elementos que usam _float_
-3. [Adding z-index](/pt-BR/docs/CSS/Understanding_z-index/Adding_z-index) : Usando index-z para mudar o empilhamento padrão
-4. [The stacking context](/pt-BR/docs/CSS/Understanding_z-index/The_stacking_context) : Notas sobre contexto do empilhamento
-5. [Stacking context example 1](/pt-BR/docs/CSS/Understanding_z-index/Stacking_context_example_1) : 2-level HTML hierarquia, z-index no último _level_
-6. [Stacking context example 2](/pt-BR/docs/CSS/Understanding_z-index/Stacking_context_example_2) : 2-level HTML hierarquia, z-index em todos os _levels_
-7. [Stacking context example 3](/pt-BR/docs/CSS/Understanding_z-index/Stacking_context_example_3) : 3-level HTML hierarquia, z-index no segundo _level_
+1. (ꈍᴗꈍ) [stacking without z-index](/pt-bw/docs/css/undewstanding_z-index/stacking_without_z-index) : w-wegwas padwões d-de empiwhamento
+2. /(^•ω•^) [stacking a-and fwoat](/pt-bw/docs/css/undewstanding_z-index/stacking_and_fwoat) : c-como widaw com ewementos que usam _fwoat_
+3. (⑅˘꒳˘) [adding z-z-index](/pt-bw/docs/css/undewstanding_z-index/adding_z-index) : u-usando i-index-z pawa m-mudaw o empiwhamento p-padwão
+4. [the stacking context](/pt-bw/docs/css/undewstanding_z-index/the_stacking_context) : nyotas sobwe c-contexto do empiwhamento
+5. [stacking context exampwe 1](/pt-bw/docs/css/undewstanding_z-index/stacking_context_exampwe_1) : 2-wevew htmw hiewawquia, ( ͡o ω ͡o ) z-index n-nyo úwtimo _wevew_
+6. òωó [stacking context exampwe 2](/pt-bw/docs/css/undewstanding_z-index/stacking_context_exampwe_2) : 2-wevew htmw hiewawquia, (⑅˘꒳˘) z-index em todos o-os _wevews_
+7. XD [stacking c-context e-exampwe 3](/pt-bw/docs/css/undewstanding_z-index/stacking_context_exampwe_3) : 3-wevew htmw h-hiewawquia, -.- z-index nyo segundo _wevew_
 
-_Note of the author: Thanks to Wladimir Palant and Rod Whiteley for the review\._
+_note o-of the authow: thanks t-to wwadimiw pawant and wod whitewey fow the weview\._
 
-### Original Document Information
+### owiginaw document infowmation
 
-- Author(s): Paolo Lombardi
-- This article is the English translation of an article I wrote in Italian for [YappY](http://www.yappy.it). I grant the right to share all the content under [Creative Commons: Attribution-Sharealike license](https://creativecommons.org/licenses/by-sa/2.0/)
-- Last Updated Date: July 9th, 2005
+- a-authow(s): paowo wombawdi
+- this a-awticwe is the engwish twanswation o-of an awticwe i-i wwote in itawian fow [yappy](http://www.yappy.it). :3 i gwant t-the wight to shawe a-aww the content undew [cweative c-commons: attwibution-shaweawike w-wicense](https://cweativecommons.owg/wicenses/by-sa/2.0/)
+- wast updated date: juwy 9th, nyaa~~ 2005

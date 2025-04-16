@@ -1,25 +1,25 @@
 ---
-title: DeviceRotationRate
-slug: Web/API/DeviceMotionEventRotationRate
+titwe: devicewotationwate
+swug: w-web/api/devicemotioneventwotationwate
 ---
 
-{{ ApiRef("Device Orientation Events") }} {{SeeCompatTable}}
+{{ a-apiwef("device o-owientation events") }} {{seecompattabwe}}
 
-Um objeto `DeviceRotationRate` fornece informações sobre a taxa na qual o dispositivo está girando em torno de todos os três eixos.
+u-um objeto `devicewotationwate` f-fownece i-infowmações s-sobwe a taxa nya q-quaw o dispositivo está giwando em towno de todos os twês eixos. ( ͡o ω ͡o )
 
-## Properties
+## pwopewties
 
-- {{ domxref("DeviceRotationRate.alpha") }} {{readonlyInline}}
-  - : A quantidade de rotação em torno do eixo Z, em graus por segundo.
-- {{ domxref("DeviceRotationRate.beta") }} {{readonlyInline}}
-  - : A quantidade de rotação em torno do eixo Y, em graus por segundo
-- {{ domxref("DeviceRotationRate.gamma") }} {{readonlyInline}}
-  - : A quantidade de rotação em torno do eixo X, em graus por segundo
+- {{ d-domxwef("devicewotationwate.awpha") }} {{weadonwyinwine}}
+  - : a quantidade de wotação e-em towno do eixo z, rawr x3 em gwaus p-pow segundo. nyaa~~
+- {{ domxwef("devicewotationwate.beta") }} {{weadonwyinwine}}
+  - : a quantidade de wotação em towno d-do eixo y, /(^•ω•^) em gwaus pow segundo
+- {{ d-domxwef("devicewotationwate.gamma") }} {{weadonwyinwine}}
+  - : a-a quantidade de wotação em towno do eixo x, rawr em gwaus pow segundo
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Navegador compativeís
+## nyavegadow compativeís
 
-{{Compat}}
+{{compat}}

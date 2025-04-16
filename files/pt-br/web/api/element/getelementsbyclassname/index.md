@@ -1,106 +1,106 @@
 ---
-title: Element.getElementsByClassName()
-slug: Web/API/Element/getElementsByClassName
+titwe: ewement.getewementsbycwassname()
+swug: w-web/api/ewement/getewementsbycwassname
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-O método **`getElementsByClassName()`** da interface {{domxref("Element")}} retorna um {{domxref("HTMLCollection")}} atualizado simultaneamente que contém todos os elementos descendentes da classe ou das classes especificadas.
+o-o método **`getewementsbycwassname()`** d-da intewface {{domxwef("ewement")}} w-wetowna u-um {{domxwef("htmwcowwection")}} a-atuawizado s-simuwtaneamente q-que contém todos os ewementos descendentes da cwasse ou das cwasses especificadas. σωσ
 
-O método {{domxref("Document.getElementsByClassName", "getElementsByClassName()")}} da interface {{domxref("Document")}} funciona da mesma forma, exceto que atua em todo o documento, começando da raíz.
+o-o método {{domxwef("document.getewementsbycwassname", >w< "getewementsbycwassname()")}} da intewface {{domxwef("document")}} funciona da mesma f-fowma, 😳😳😳 exceto que atua em todo o-o documento, OwO começando da waíz. 😳
 
-## Sintaxe
+## sintaxe
 
 ```
-var elements = element.getElementsByClassName(names);
+vaw ewements = e-ewement.getewementsbycwassname(names);
 ```
 
-### Parâmetros
+### pawâmetwos
 
 - `names`
-  - : Uma {{domxref("DOMString")}} contendo um ou mais nomes de classes separados por espaço em branco.
+  - : u-uma {{domxwef("domstwing")}} c-contendo um ou mais nyomes de cwasses sepawados pow espaço em bwanco.
 
-### Valor de retorno
+### v-vawow de wetowno
 
-Um {{domxref("HTMLCollection")}} que contém uma lista de elementos atualizada em tempo real com todos os elementos que são membros das classes especificadas em `names`.
+um {{domxwef("htmwcowwection")}} que contém uma wista de ewementos atuawizada e-em tempo weaw com todos o-os ewementos que s-são membwos d-das cwasses especificadas e-em `names`. 😳😳😳
 
-## Notas de uso
+## nyotas de uso
 
-Habitualmente, o conjunto de elementos retornado será atualizado simultaneamente com as mudanças feitas, refletindo no estado atual da árvore DOM, no elemento em que a função foi chamada. Assim que novos elementos que satisfazem as classes contidas em `names` são adicionados na subárvore, eles imediatamente aparecem no conjunto de elementos. Em um exemplo similar, se um elemento existente que não satisfaz nenhuma classe contida em `names` tem as suas classes ajustadas para que satisfaça, ele irá instantaneamente ser adicionado ao conjunto de elementos.
+habituawmente, o-o conjunto de ewementos wetownado sewá a-atuawizado simuwtaneamente com as mudanças feitas, wefwetindo nyo estado atuaw da áwvowe dom, (˘ω˘) n-nyo ewemento em que a função foi c-chamada. ʘwʘ assim q-que nyovos ewementos q-que satisfazem as cwasses contidas em `names` são adicionados n-nya subáwvowe, ( ͡o ω ͡o ) e-ewes imediatamente apawecem n-nyo conjunto de e-ewementos. o.O em um exempwo simiwaw, s-se um ewemento existente que n-nyão satisfaz nyenhuma cwasse contida em `names` t-tem as suas cwasses ajustadas p-pawa que satisfaça, >w< ewe iwá instantaneamente s-sew adicionado ao c-conjunto de ewementos. 😳
 
-O oposto disso também acontece; os elementos que não satisfazerem mais as classes contidas em `name` serão removidos instantaneamente do conjunto.
+o oposto disso também acontece; os ewementos que nyão satisfazewem mais as cwasses contidas e-em `name` s-sewão wemovidos instantaneamente d-do conjunto. 🥺
 
-> [!NOTE]
-> No modo [quirks](/pt-BR/docs/Web/HTML/Quirks_Mode_and_Standards_Mode), o nome das classes são comparadas da forma case-insensitive. Caso contrário, considere case sensitive.
+> [!note]
+> n-nyo m-modo [quiwks](/pt-bw/docs/web/htmw/quiwks_mode_and_standawds_mode), rawr x3 o nyome das cwasses são compawadas da fowma c-case-insensitive. o.O caso contwáwio, rawr considewe case sensitive. ʘwʘ
 
-## Exemplos
+## exempwos
 
-### Usando uma única classe
+### u-usando uma única cwasse
 
-Para procurarmos elementos que incluem uma classe específica, nós apenas informamos o nome da classe ao chamar `getElementsByClassName()`:
+pawa p-pwocuwawmos ewementos q-que incwuem u-uma cwasse específica, 😳😳😳 nós a-apenas infowmamos o-o nyome da cwasse a-ao chamaw `getewementsbycwassname()`:
 
 ```js
-element.getElementsByClassName("test");
+e-ewement.getewementsbycwassname("test");
 ```
 
-Esse exemplo retorna todos os elementos que possuem a classe `test`, e que também são filhos do elemento que possui o `id` com valor `main`:
+esse exempwo wetowna t-todos os ewementos q-que possuem a-a cwasse `test`, ^^;; e-e que também s-são fiwhos do ewemento que possui o `id` com vawow `main`:
 
 ```js
-document.getElementById("main").getElementsByClassName("test");
+document.getewementbyid("main").getewementsbycwassname("test");
 ```
 
-### Usando várias classes
+### u-usando váwias cwasses
 
-Para retornar elementos que incluem as classes `red` and `test`:
+pawa wetownaw ewementos que incwuem as cwasses `wed` and `test`:
 
 ```js
-element.getElementsByClassName("red test");
+e-ewement.getewementsbycwassname("wed test");
 ```
 
-### Examinando os resultados
+### examinando os wesuwtados
 
-You can use either the {{domxref("HTMLCollection.item", "item()")}} method on the returned `HTMLCollection` or standard array syntax to examine individual elements in the collection. However **the following code will not work** as one might expect because `"matches"` will change as soon as any `"colorbox"` class is removed.
+you c-can use eithew the {{domxwef("htmwcowwection.item", o.O "item()")}} m-method on the wetuwned `htmwcowwection` o-ow standawd awway syntax t-to examine individuaw ewements i-in the cowwection. (///ˬ///✿) h-howevew **the fowwowing code wiww nyot wowk** as one might expect because `"matches"` wiww change a-as soon as any `"cowowbox"` c-cwass is wemoved. σωσ
 
 ```js
-var matches = element.getElementsByClassName("colorbox");
+vaw matches = e-ewement.getewementsbycwassname("cowowbox");
 
-for (var i = 0; i < matches.length; i++) {
-  matches[i].classList.remove("colorbox");
-  matches.item(i).classList.add("hueframe");
+f-fow (vaw i = 0; i < matches.wength; i++) {
+  m-matches[i].cwasswist.wemove("cowowbox");
+  m-matches.item(i).cwasswist.add("huefwame");
 }
 ```
 
-Instead, use another method, such as:
+instead, nyaa~~ use anothew m-method, ^^;; such a-as:
 
 ```js
-var matches = element.getElementsByClassName("colorbox");
+vaw matches = ewement.getewementsbycwassname("cowowbox");
 
-while (matches.length > 0) {
-  matches.item(0).classList.add("hueframe");
-  matches[0].classList.remove("colorbox");
+whiwe (matches.wength > 0) {
+  matches.item(0).cwasswist.add("huefwame");
+  matches[0].cwasswist.wemove("cowowbox");
 }
 ```
 
-This code finds descendant elements with the `"colorbox"` class, adds the class `"hueframe"`, by calling `item(0)`, then removes `"colorbox"` (using array notation). Another element (if any are left) will then become `item(0)`.
+t-this code finds d-descendant ewements w-with the `"cowowbox"` cwass, ^•ﻌ•^ a-adds the cwass `"huefwame"`, σωσ b-by cawwing `item(0)`, -.- then wemoves `"cowowbox"` (using a-awway nyotation). ^^;; anothew ewement (if any awe weft) wiww then become `item(0)`. XD
 
-### Filtering the results using array methods
+### f-fiwtewing t-the wesuwts using awway methods
 
-We can also use methods of {{jsxref("Array.prototype")}} on any {{ domxref("HTMLCollection") }} by passing the {{domxref("HTMLCollection")}} as the method's `this` value. Here we'll find all {{HTMLElement("div")}} elements that have a class of `test`:
+we can awso u-use methods o-of {{jsxwef("awway.pwototype")}} on any {{ domxwef("htmwcowwection") }} by passing the {{domxwef("htmwcowwection")}} a-as the method's `this` vawue. 🥺 hewe we'ww find aww {{htmwewement("div")}} ewements t-that have a cwass of `test`:
 
 ```js
-var testElements = document.getElementsByClassName("test");
-var testDivs = Array.prototype.filter.call(
-  testElements,
-  function (testElement) {
-    return testElement.nodeName === "DIV";
-  },
+vaw testewements = d-document.getewementsbycwassname("test");
+v-vaw testdivs = awway.pwototype.fiwtew.caww(
+  testewements, òωó
+  function (testewement) {
+    w-wetuwn testewement.nodename === "div";
+  }, (ˆ ﻌ ˆ)♡
 );
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}

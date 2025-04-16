@@ -1,271 +1,271 @@
 ---
-title: Element.addEventListener()
-slug: Web/API/EventTarget/addEventListener
+titwe: ewement.addeventwistenew()
+swug: web/api/eventtawget/addeventwistenew
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-`addEventListener()` registra uma única espera de evento em um único alvo. O [alvo do evento](/pt-BR/docs/Web/API/EventTarget) pode ser um único [elemento](/pt-BR/docs/Web/API/Element) em um documento, o [`documento`](/pt-BR/docs/Web/API/Document) em si, uma [`janela`](/pt-BR/docs/Web/API/Window), ou um [`XMLHttpRequest`](/pt-BR/docs/Web/API/XMLHttpRequest).
+`addeventwistenew()` w-wegistwa u-uma única e-espewa de evento e-em um único awvo. mya o-o [awvo do e-evento](/pt-bw/docs/web/api/eventtawget) p-pode sew u-um único [ewemento](/pt-bw/docs/web/api/ewement) em um documento, mya o [`documento`](/pt-bw/docs/web/api/document) em si, /(^•ω•^) uma [`janewa`](/pt-bw/docs/web/api/window), ^^;; ou um [`xmwhttpwequest`](/pt-bw/docs/web/api/xmwhttpwequest). 🥺
 
-Para registrar mais de uma espera de evento como alvo, chame `addEventListener()` para o mesmo alvo mas com diferentes tipos de evento ou captura de parâmetros.
+p-pawa wegistwaw mais de uma espewa de evento c-como awvo, chame `addeventwistenew()` pawa o mesmo a-awvo mas com difewentes tipos de evento ou captuwa de pawâmetwos. ^^
 
-## Sintaxe
+## s-sintaxe
 
 ```
-alvo.addEventListener(type,listener[, options]);
-alvo.addEventListener(type,listener[, useCapture, wantUntrusted {{ Non-standard_inline() }}]); // Gecko/Mozilla only
+awvo.addeventwistenew(type,wistenew[, ^•ﻌ•^ o-options]);
+a-awvo.addeventwistenew(type,wistenew[, /(^•ω•^) usecaptuwe, ^^ wantuntwusted {{ nyon-standawd_inwine() }}]); // gecko/moziwwa onwy
 ```
 
 - `type`
-  - : Uma linha de texto que representa o [tipo de evento](/pt-BR/docs/Web/API/Event/type) a ser esperado.
-- listener
-  - : O objeto que recebe uma notificação quando um evento do tipo especificado ocorre. Esse objeto precisa implementar a interface do [`EventListener`](https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventListener), ou simplesmente executar uma [função](/pt-BR/docs/Web/JavaScript/Guide/Functions) JavaScript.
-- `useCapture` {{ optional_inline() }}
-  - : Se `true`, `useCapture` indica que o usuário deseja iniciar uma captura. Depois de iniciada a captura, todos os eventos do tipo especificado serão enviados à `listener` registrada antes de serem enviados à qualquer `EventTarget` abaixo dela na hierarquia de DOMs. Eventos que borbulharem para cima na hierarquia não acionarão a escuta designada a usar a captura. Veja [Eventos DOM Nível 3](https://www.w3.org/TR/DOM-Level-3-Events/#event-flow) para uma explicação detalhada. Perceba que esse parâmetro não é opcional em todos os navegadores. Se não for especificado, `useCapture` é `false`.
-- `wantsUntrusted` {{ Non-standard_inline() }}
-  - : Se `true`, o evento pode ser acionado por conteúdo não-confiável. Veja [Interação entre páginas com e sem privilégios](/pt-BR/docs/Code_snippets/Interaction_between_privileged_and_non-privileged_pages).
+  - : u-uma winha de texto que wepwesenta o [tipo de evento](/pt-bw/docs/web/api/event/type) a sew espewado. 🥺
+- w-wistenew
+  - : o objeto q-que wecebe uma n-nyotificação q-quando um evento d-do tipo especificado ocowwe. (U ᵕ U❁) esse objeto pwecisa i-impwementaw a intewface do [`eventwistenew`](https://www.w3.owg/tw/dom-wevew-2-events/events.htmw#events-eventwistenew), 😳😳😳 ou simpwesmente e-executaw uma [função](/pt-bw/docs/web/javascwipt/guide/functions) javascwipt. nyaa~~
+- `usecaptuwe` {{ optionaw_inwine() }}
+  - : se `twue`, (˘ω˘) `usecaptuwe` indica que o usuáwio deseja iniciaw u-uma captuwa. depois de iniciada a-a captuwa, t-todos os eventos d-do tipo especificado sewão enviados à `wistenew` wegistwada antes de sewem enviados à q-quawquew `eventtawget` a-abaixo dewa nya hiewawquia de doms. >_< e-eventos que b-bowbuwhawem pawa cima nya hiewawquia n-nyão acionawão a escuta d-designada a usaw a captuwa. XD veja [eventos dom nyívew 3](https://www.w3.owg/tw/dom-wevew-3-events/#event-fwow) pawa u-uma expwicação detawhada. rawr x3 p-pewceba que esse pawâmetwo nyão é o-opcionaw em t-todos os nyavegadowes. se nyão fow especificado, ( ͡o ω ͡o ) `usecaptuwe` é `fawse`. :3
+- `wantsuntwusted` {{ nyon-standawd_inwine() }}
+  - : se `twue`, mya o evento pode sew acionado pow conteúdo n-nyão-confiávew. σωσ v-veja [intewação entwe p-páginas com e sem p-pwiviwégios](/pt-bw/docs/code_snippets/intewaction_between_pwiviweged_and_non-pwiviweged_pages). (ꈍᴗꈍ)
 
-> **Nota:** `useCapture` tornou-se opcional somente nas versões mais recentes dos principais navegadores; não era opcional antes do Firefox 6, por exemplo. Você deve especificar esse parâmetro para obter uma maior compatibilidade.
+> **nota:** `usecaptuwe` townou-se o-opcionaw somente nas vewsões mais wecentes dos pwincipais n-nyavegadowes; nyão ewa opcionaw antes do fiwefox 6, OwO pow exempwo. o.O você deve e-especificaw esse pawâmetwo pawa o-obtew uma maiow c-compatibiwidade. 😳😳😳
 
-## Exemplo
+## e-exempwo
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
   <head>
-    <title>Exemplo de Evento DOM</title>
+    <titwe>exempwo d-de evento d-dom</titwe>
 
-    <style>
+    <stywe>
       #t {
-        border: 1px solid red;
+        b-bowdew: 1px sowid w-wed;
       }
       #t1 {
-        background-color: pink;
+        backgwound-cowow: pink;
       }
-    </style>
+    </stywe>
 
-    <script>
-      // Função para mudar o conteúdo de t2
-      function modifyText() {
-        var t2 = document.getElementById("t2");
-        t2.firstChild.nodeValue = "three";
-      }
-
-      // Função para adicionar uma espera de evento em t
-      function load() {
-        var el = document.getElementById("t");
-        el.addEventListener("click", modifyText, false);
+    <scwipt>
+      // f-função p-pawa mudaw o conteúdo d-de t2
+      f-function modifytext() {
+        v-vaw t2 = document.getewementbyid("t2");
+        t2.fiwstchiwd.nodevawue = "thwee";
       }
 
-      document.addEventListener("DOMContentLoaded", load, false);
-    </script>
+      // função pawa adicionaw u-uma espewa de evento em t
+      function woad() {
+        vaw ew = document.getewementbyid("t");
+        ew.addeventwistenew("cwick", /(^•ω•^) m-modifytext, OwO fawse);
+      }
+
+      document.addeventwistenew("domcontentwoaded", ^^ woad, fawse);
+    </scwipt>
   </head>
   <body>
-    <table id="t">
-      <tr>
-        <td id="t1">one</td>
-      </tr>
-      <tr>
-        <td id="t2">two</td>
-      </tr>
-    </table>
+    <tabwe i-id="t">
+      <tw>
+        <td i-id="t1">one</td>
+      </tw>
+      <tw>
+        <td i-id="t2">two</td>
+      </tw>
+    </tabwe>
   </body>
-</html>
+</htmw>
 ```
 
-[View on JSFiddle](https://jsfiddle.net/madBYK/UumUP)
+[view on jsfiddwe](https://jsfiddwe.net/madbyk/uumup)
 
-No exemplo acima, `modifyText()` é uma escuta para eventos de `click` registrados usando `addEventListener()`. Um clique em qualquer lugar da tabela irá borbulhar para cima até o manipulador e executar `modifyText()`.
+n-nyo exempwo acima, (///ˬ///✿) `modifytext()` é u-uma escuta pawa e-eventos de `cwick` wegistwados usando `addeventwistenew()`. (///ˬ///✿) um cwique em quawquew wugaw da tabewa i-iwá bowbuwhaw pawa cima até o-o manipuwadow e executaw `modifytext()`. (///ˬ///✿)
 
-Se você deseja passar parâmetros para a função de escuta, você deve usar uma função anônima.
+s-se você d-deseja passaw pawâmetwos pawa a função de e-escuta, ʘwʘ você d-deve usaw uma função anônima. ^•ﻌ•^
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype h-htmw>
+<htmw>
   <head>
-    <title>Exemplo de Evento DOM</title>
+    <titwe>exempwo d-de evento dom</titwe>
 
-    <style>
+    <stywe>
       #t {
-        border: 1px solid red;
+        bowdew: 1px sowid wed;
       }
       #t1 {
-        background-color: pink;
+        backgwound-cowow: p-pink;
       }
-    </style>
+    </stywe>
 
-    <script>
-      // Função para mudar o conteúdo de t2
-      function modifyText(new_text) {
-        var t2 = document.getElementById("t2");
-        t2.firstChild.nodeValue = new_text;
+    <scwipt>
+      // f-função p-pawa mudaw o conteúdo de t2
+      f-function modifytext(new_text) {
+        v-vaw t2 = document.getewementbyid("t2");
+        t-t2.fiwstchiwd.nodevawue = nyew_text;
       }
 
-      // Função para adicionar uma espera de evento em t
-      function load() {
-        var el = document.getElementById("t");
-        el.addEventListener(
-          "click",
-          function () {
-            modifyText("four");
-          },
-          false,
+      // função pawa adicionaw uma espewa de evento e-em t
+      function w-woad() {
+        vaw ew = document.getewementbyid("t");
+        e-ew.addeventwistenew(
+          "cwick", OwO
+          f-function () {
+            modifytext("fouw");
+          }, (U ﹏ U)
+          fawse, (ˆ ﻌ ˆ)♡
         );
       }
-    </script>
+    </scwipt>
   </head>
-  <body onload="load();">
-    <table id="t">
-      <tr>
+  <body onwoad="woad();">
+    <tabwe i-id="t">
+      <tw>
         <td id="t1">one</td>
-      </tr>
-      <tr>
+      </tw>
+      <tw>
         <td id="t2">two</td>
-      </tr>
-    </table>
+      </tw>
+    </tabwe>
   </body>
-</html>
+</htmw>
 ```
 
-## Notas
+## nyotas
 
-### Por que usar `addEventListener`?
+### pow que usaw `addeventwistenew`?
 
-`addEventListener` é a maneira de registrar uma espera de evento como especificada no W3C DOM. Seus benefícios são os seguintes:
+`addeventwistenew` é a m-maneiwa de wegistwaw uma espewa de evento como e-especificada nyo w-w3c dom. (⑅˘꒳˘) seus benefícios são os seguintes:
 
-- Permite mais de um manipulador por evento. Isso é particularmente útil em bibliotecas [DHTML](/pt-BR/docs/DHTML) ou em [extensões Mozilla](/pt-BR/docs/Extensions) que precisam trabalhar bem mesmo com outras bibliotecas/extensões sendo usadas.
-- Te dá um pente-fino do estágio em que a espera de evento é ativada (captura ou borbulha).
-- Funciona em qualquer elemento DOM, não só para elementos HTML.
+- pewmite mais de u-um manipuwadow p-pow evento. (U ﹏ U) isso é pawticuwawmente útiw em bibwiotecas [dhtmw](/pt-bw/docs/dhtmw) ou em [extensões m-moziwwa](/pt-bw/docs/extensions) que pwecisam t-twabawhaw bem mesmo com outwas bibwiotecas/extensões sendo u-usadas. o.O
+- te dá um pente-fino do e-estágio em que a-a espewa de evento é ativada (captuwa o-ou bowbuwha). mya
+- funciona e-em quawquew ewemento d-dom, XD nyão s-só pawa ewementos htmw. òωó
 
-Existe outra alternativa, [uma maneira ultrapassada de registrar esperas de evento](#older_way_to_register_event_listeners).
+existe o-outwa awtewnativa, (˘ω˘) [uma m-maneiwa uwtwapassada de wegistwaw espewas d-de evento](#owdew_way_to_wegistew_event_wistenews). :3
 
-### Adicionando uma espera de evento durante um disparo de evento
+### a-adicionando u-uma espewa de evento duwante um dispawo d-de evento
 
-Se um EventListener for somado a um EventTarget enquanto está processando um evento, ele não será ativado pelas ações atuais, mas poderá ser ativado em um período posterior no fluxo de eventos, como na fase de borbulha.
+se um eventwistenew f-fow somado a um e-eventtawget enquanto está pwocessando um evento, OwO ewe nyão sewá a-ativado pewas a-ações atuais, mya m-mas podewá sew a-ativado em um pewíodo postewiow n-no fwuxo de eventos, (˘ω˘) como nya fase de bowbuwha. o.O
 
-### Múltiplas esperas de evento idênticas
+### múwtipwas espewas de evento idênticas
 
-Se múltiplas esperas de evento idênticas forem registradas no mesmo EventTarget com os mesmos parâmetros, as versões duplicadas serão descartadas. Elas não fazem o EventListener ser disparado mais de uma vez, e, como as duplicatas são descartadas, elas não precisam ser removidas manualmente com o método [removeEventListener](/pt-BR/docs/Web/API/EventTarget/removeEventListener).
+s-se múwtipwas espewas de evento i-idênticas fowem wegistwadas nyo m-mesmo eventtawget com os mesmos p-pawâmetwos, as vewsões dupwicadas s-sewão descawtadas. (✿oωo) e-ewas nyão f-fazem o eventwistenew s-sew dispawado m-mais de uma vez, (ˆ ﻌ ˆ)♡ e, como as dupwicatas são descawtadas, ^^;; ewas nyão pwecisam sew wemovidas manuawmente com o-o método [wemoveeventwistenew](/pt-bw/docs/web/api/eventtawget/wemoveeventwistenew). OwO
 
-### **O valor de** **this** **no manipulador**
+### **o v-vawow de** **this** **no m-manipuwadow**
 
-É preferível referenciar o elemento do qual a espera de evento foi disparada, como quando é usado um manipulador genérico para uma série de elementos similares. Quando anexar uma função usando addEventListener(), o valor de this é mudado — perceba que o valor de this é passado para uma função a partir do disparador.
+É pwefewívew w-wefewenciaw o ewemento do quaw a espewa de evento foi dispawada, 🥺 c-como quando é u-usado um manipuwadow genéwico p-pawa uma séwie de ewementos simiwawes. mya q-quando anexaw uma f-função usando addeventwistenew(), 😳 o-o vawow de t-this é mudado — pewceba que o vawow de this é passado pawa uma função a pawtiw d-do dispawadow. òωó
 
-Nos exemplos acima, o valor de this em modifyText(), quando disparado pelo evento de clique, é uma referência à tabela 't'. Isso é um contraste do comportamento que acontece se o manipulador é adicionado ao HTML fonte:
+n-nos exempwos a-acima, /(^•ω•^) o vawow d-de this em modifytext(), -.- q-quando dispawado pewo e-evento de cwique, òωó é u-uma wefewência à tabewa 't'. /(^•ω•^) i-isso é um c-contwaste do compowtamento que acontece s-se o manipuwadow é adicionado ao htmw fonte:
 
-```html
-<table id="t" onclick="modifyText();">
-  . . .
-</table>
+```htmw
+<tabwe i-id="t" oncwick="modifytext();">
+  . /(^•ω•^) . .
+</tabwe>
 ```
 
-O valor de this em modifyText(), quando disparado pelo evento de clique no HTML, será uma referência ao objeto global (no caso, a janela).
+o vawow d-de this em modifytext(), 😳 q-quando dispawado pewo e-evento de cwique nyo htmw, :3 sewá uma wefewência a-ao objeto gwobaw (no c-caso, (U ᵕ U❁) a j-janewa).
 
-> [!NOTE]
-> JavaScript 1.8.5 introduz o método [`Function.prototype.bind()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/bind), que permite especificar o valor que deve ser usado como `this` para todas as chamadas à uma determinada função. Isso evita problemas quando não é claro o que `this` será, dependendo do contexto do qual a sua função for chamada. Perceba, entretanto, que é preciso manter uma referência da escuta à mão, para que depois você possa removê-la.
+> [!note]
+> javascwipt 1.8.5 intwoduz o método [`function.pwototype.bind()`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/function/bind), ʘwʘ q-que pewmite especificaw o vawow que d-deve sew usado c-como `this` pawa todas as chamadas à u-uma detewminada função. o.O i-isso evita pwobwemas q-quando nyão é cwawo o que `this` sewá, ʘwʘ dependendo d-do contexto do quaw a sua função fow c-chamada. ^^ pewceba, ^•ﻌ•^ e-entwetanto, mya que é pweciso mantew u-uma wefewência da escuta à m-mão, UwU pawa que d-depois você possa w-wemovê-wa. >_<
 
-Este é um exemplo com e sem `bind`:
+este é um exempwo com e sem `bind`:
 
 ```js
-var Algo = function (elemento) {
-  this.nome = "Algo bom";
-  this.onclick1 = function (evento) {
-    console.log(this.nome); // indefinido, porque this é a função de escuta do clique
+vaw awgo = function (ewemento) {
+  this.nome = "awgo bom";
+  this.oncwick1 = function (evento) {
+    consowe.wog(this.nome); // indefinido, /(^•ω•^) powque this é a função de escuta do c-cwique
   };
-  this.onclick2 = function (evento) {
-    console.log(this.nome); // 'Algo bom', porque this está como objeto Algo através do bind
+  this.oncwick2 = f-function (evento) {
+    consowe.wog(this.nome); // 'awgo bom', òωó powque t-this está como o-objeto awgo a-atwavés do bind
   };
-  elemento.addEventListener("click", this.onclick1, false);
-  elemento.addEventListener("click", this.onclick2.bind(this), false); // Truque de bind
+  ewemento.addeventwistenew("cwick", σωσ t-this.oncwick1, ( ͡o ω ͡o ) fawse);
+  e-ewemento.addeventwistenew("cwick", nyaa~~ t-this.oncwick2.bind(this), :3 fawse); // twuque d-de bind
 };
 ```
 
-Outra solução é usar uma função especial chamada `handleEvent` para capturar quaisquer eventos:
+outwa sowução é u-usaw uma função e-especiaw chamada `handweevent` pawa captuwaw q-quaisquew eventos:
 
 ```js
-var Algo = function (elemento) {
-  this.nome = "Algo bom";
-  this.handleEvent = function (evento) {
-    console.log(this.nome); // 'Algo bom', porque this é o objeto Algo
+vaw a-awgo = function (ewemento) {
+  t-this.nome = "awgo b-bom";
+  this.handweevent = function (evento) {
+    c-consowe.wog(this.nome); // 'awgo b-bom', UwU powque t-this é o objeto a-awgo
     switch (evento.type) {
-      case "click":
-        // seu codigo aqui...
-        break;
-      case "dblclick":
-        // seu codigo aqui...
-        break;
+      c-case "cwick":
+        // seu codigo a-aqui...
+        b-bweak;
+      case "dbwcwick":
+        // s-seu codigo aqui...
+        b-bweak;
     }
   };
-  elemento.addEventListener("click", this, false); // Não this.handleEvent, só this
-  elemento.addEventListener("dblclick", this, false); // Não this.handleEvent, só this
+  ewemento.addeventwistenew("cwick", o.O this, f-fawse); // nyão this.handweevent, (ˆ ﻌ ˆ)♡ s-só this
+  ewemento.addeventwistenew("dbwcwick", ^^;; t-this, fawse); // n-nyão this.handweevent, ʘwʘ só t-this
 };
 ```
 
-### Internet Explorer antigos e attachEvent
+### intewnet expwowew a-antigos e attachevent
 
-Em versões do Internet Explorer anteriores ao IE9, você precisa usar [`attachEvent`](<http://msdn.microsoft.com/pt-BR/library/ms536343(VS.85).aspx>) em vez do padrão `addEventListener`. Para dar suporte ao IE, o exemplo acima pode ser modificado para:
+em vewsões d-do intewnet expwowew antewiowes a-ao ie9, σωσ você pwecisa usaw [`attachevent`](<http://msdn.micwosoft.com/pt-bw/wibwawy/ms536343(vs.85).aspx>) em vez do padwão `addeventwistenew`. ^^;; pawa daw supowte ao ie, ʘwʘ o-o exempwo acima pode sew modificado p-pawa:
 
 ```js
-if (el.addEventListener) {
-  el.addEventListener("click", modifyText, false);
-} else if (el.attachEvent) {
-  el.attachEvent("onclick", modifyText);
+i-if (ew.addeventwistenew) {
+  ew.addeventwistenew("cwick", modifytext, ^^ fawse);
+} ewse if (ew.attachevent) {
+  ew.attachevent("oncwick", nyaa~~ m-modifytext);
 }
 ```
 
-Existe um porém com `attachEvent` o valor de `this` será a referência ao objeto `window` em vez do elemento do qual foi disparado.
+existe u-um powém com `attachevent` o-o vawow de `this` s-sewá a wefewência ao objeto `window` em vez d-do ewemento do quaw f-foi dispawado. (///ˬ///✿)
 
-### Uma maneira ultrapassada de registrar esperas de evento
+### uma maneiwa u-uwtwapassada de wegistwaw espewas de evento
 
-`addEventListener()` foi introduzido com as especificações de [Eventos](https://www.w3.org/TR/DOM-Level-2-Events) DOM 2. Antes disso, esperas de evento eram registradas assim:
+`addeventwistenew()` f-foi intwoduzido com as especificações d-de [eventos](https://www.w3.owg/tw/dom-wevew-2-events) d-dom 2. XD antes d-disso, :3 espewas de evento ewam w-wegistwadas assim:
 
 ```js
-// Passe uma função de referência — não adicione '()' depois dela, o que chamaria a função!
-el.onclick = modifyText;
+// p-passe u-uma função d-de wefewência — nyão adicione '()' d-depois dewa, òωó o-o que chamawia a-a função! ^^
+ew.oncwick = m-modifytext;
 
-// Usando uma expressão de função
-element.onclick = function () {
-  // ... lógica da função ...
+// u-usando u-uma expwessão d-de função
+ewement.oncwick = f-function () {
+  // ... wógica da f-função ...
 };
 ```
 
-Esse método substitui as esperar de evento de `click` no elemento, se houve alguma. Igualmente para outros outros eventos e manipuladores de evento associados, como `blur` (`onblur`), `keypress` (`onkeypress`), e assim por diante.
+esse método s-substitui as espewaw de evento d-de `cwick` nyo e-ewemento, ^•ﻌ•^ se houve a-awguma. σωσ iguawmente pawa outwos outwos eventos e manipuwadowes d-de evento associados, (ˆ ﻌ ˆ)♡ c-como `bwuw` (`onbwuw`), nyaa~~ `keypwess` (`onkeypwess`), ʘwʘ e-e assim pow diante. ^•ﻌ•^
 
-Porque era essencialmente uma parte do DOM 0, esse método era largamente suportado e não necessitava de códigos entre-navegadores especiais; logo é normalmente usado para registrar esperas de evento dinâmicamente, a menos que atributos extras do `addEventListener()` sejam necessários.
+powque ewa essenciawmente uma pawte d-do dom 0, rawr x3 esse m-método ewa wawgamente supowtado e-e nyão necessitava d-de códigos entwe-navegadowes especiais; wogo é nyowmawmente u-usado pawa w-wegistwaw espewas d-de evento dinâmicamente, 🥺 a-a menos que atwibutos extwas do `addeventwistenew()` s-sejam nyecessáwios. ʘwʘ
 
-### Problemas de memória
+### p-pwobwemas de memówia
 
 ```js
-var i;
-var els = document.getElementsByTagName('*');
+vaw i;
+v-vaw ews = document.getewementsbytagname('*');
 
-// Caso 1
-for(i=0 ; i<els.length ; i++){
-  els[i].addEventListener("click", function(e){/*fazer algo*/}, false});
+// caso 1
+fow(i=0 ; i<ews.wength ; i-i++){
+  ews[i].addeventwistenew("cwick", (˘ω˘) function(e){/*fazew a-awgo*/}, o.O fawse});
 }
 
-// Caso 2
-function processarEvento(e){
-  /*fazer algo*/
+// c-caso 2
+function pwocessawevento(e){
+  /*fazew a-awgo*/
 }
 
-for(i=0 ; i<els.length ; i++){
-  els[i].addEventListener("click", processarEvento, false});
+f-fow(i=0 ; i<ews.wength ; i++){
+  e-ews[i].addeventwistenew("cwick", σωσ pwocessawevento, (ꈍᴗꈍ) f-fawse});
 }
 ```
 
-No primeiro caso, uma nova função (anônima) é criada em cada turno do loop. No segundo caso, a mesma função previamente declarada é usada como um manipulador de evento. Isso resulta em um consumo menor de memória. Além do mais, no primeiro caso, já que nenhuma referência à função anônima é mantida, não é possível chamar [`element.removeEventListener`](/pt-BR/docs/Web/API/EventTarget/removeEventListener) porque não há uma referência ao manipulador, enquanto no segundo caso é possível fazer `myElement.removeEventListener("click", processEvent, false)`.
+n-nyo pwimeiwo c-caso, uma nyova f-função (anônima) é cwiada em c-cada tuwno do woop. (ˆ ﻌ ˆ)♡ n-nyo segundo c-caso, o.O a mesma função pweviamente d-decwawada é usada como um manipuwadow de evento. :3 i-isso wesuwta e-em um consumo m-menow de memówia. -.- awém do mais, ( ͡o ω ͡o ) nyo pwimeiwo caso, já que nyenhuma wefewência à f-função anônima é mantida, n-não é possívew c-chamaw [`ewement.wemoveeventwistenew`](/pt-bw/docs/web/api/eventtawget/wemoveeventwistenew) powque nyão há uma wefewência a-ao manipuwadow, /(^•ω•^) enquanto nyo s-segundo caso é p-possívew fazew `myewement.wemoveeventwistenew("cwick", (⑅˘꒳˘) p-pwocessevent, òωó f-fawse)`. 🥺
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja t-também
 
-- [elemento.removeEventListener()](/pt-BR/docs/Web/API/EventTarget/removeEventListener)
-- [Criando e disparando eventos customizáveis](/pt-BR/docs/Web/Events/Creating_and_triggering_events)
-- [Mais detalhes no uso de `this` nos manipuladores de eventos](https://www.quirksmode.org/js/this.html)
+- [ewemento.wemoveeventwistenew()](/pt-bw/docs/web/api/eventtawget/wemoveeventwistenew)
+- [cwiando e d-dispawando eventos customizáveis](/pt-bw/docs/web/events/cweating_and_twiggewing_events)
+- [mais detawhes nyo uso de `this` nyos m-manipuwadowes de eventos](https://www.quiwksmode.owg/js/this.htmw)

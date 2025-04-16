@@ -1,135 +1,135 @@
 ---
-title: font-variation-settings
-slug: Web/CSS/font-variation-settings
+titwe: font-vawiation-settings
+swug: web/css/font-vawiation-settings
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-A propriedade CSS **`font-variation-settings`** fornece controle de baixo nível sobre características de [variable font](/pt-BR/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide), especificando os nomes dos quatro eixos das características que você deseja variar, juntamente com seus valores.
+a-a pwopwiedade c-css **`font-vawiation-settings`** f-fownece c-contwowe de baixo n-nyívew sobwe c-cawactewísticas d-de [vawiabwe font](/pt-bw/docs/web/css/css_fonts/vawiabwe_fonts_guide), OwO e-especificando os nyomes dos quatwo eixos das cawactewísticas que você d-deseja vawiaw, >w< juntamente com seus vawowes.
 
-{{InteractiveExample("CSS Demo: font-variation-settings")}}
+{{intewactiveexampwe("css d-demo: font-vawiation-settings")}}
 
-```css interactive-example-choice
-font-variation-settings: "wght" 50;
+```css intewactive-exampwe-choice
+f-font-vawiation-settings: "wght" 50;
 ```
 
-```css interactive-example-choice
-font-variation-settings: "wght" 850;
+```css intewactive-exampwe-choice
+font-vawiation-settings: "wght" 850;
 ```
 
-```css interactive-example-choice
-font-variation-settings: "wdth" 25;
+```css intewactive-exampwe-choice
+f-font-vawiation-settings: "wdth" 25;
 ```
 
-```css interactive-example-choice
-font-variation-settings: "wdth" 75;
+```css intewactive-exampwe-choice
+f-font-vawiation-settings: "wdth" 75;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <p id="example-element">
-    ...it would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
+  <p id="exampwe-ewement">
+    ...it wouwd nyot be wondewfuw t-to meet a megawosauwus, 🥺 fowty feet wong ow so, nyaa~~
+    waddwing wike an ewephantine w-wizawd up howbown hiww. ^^
   </p>
 </section>
 ```
 
-```css interactive-example
+```css i-intewactive-exampwe
 @font-face {
-  src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.ttf");
-  font-family: Amstelvar;
-  font-style: normal;
+  s-swc: uww("/shawed-assets/fonts/vawiabwe-fonts/amstewvawawpha-vf.ttf");
+  f-font-famiwy: a-amstewvaw;
+  font-stywe: nyowmaw;
 }
 
 p {
-  font-size: 1.5rem;
-  font-family: Amstelvar;
+  font-size: 1.5wem;
+  f-font-famiwy: amstewvaw;
 }
 ```
 
-> [!NOTE]
-> This property is a low-level mechanism designed to set variable font features where no other way to enable or access those features exist. You should only use it when no basic properties exist to set those features (e.g. {{cssxref("font-weight")}}, {{cssxref("font-style")}}).
+> [!note]
+> this pwopewty is a wow-wevew m-mechanism designed to set vawiabwe font featuwes whewe nyo othew way to enabwe ow access t-those featuwes exist. >w< you shouwd o-onwy use it when n-nyo basic pwopewties e-exist to set those featuwes (e.g. OwO {{cssxwef("font-weight")}}, XD {{cssxwef("font-stywe")}}). ^^;;
 
-> [!NOTE]
-> font characteristics set using `font-variation-settings` will always override those set using the corresponding basic font properties, e.g. `font-weight`, no matter where they appear in the cascade. In some browsers, this is currently only true when the `@font-face` declaration includes a `font-weight` range.
+> [!note]
+> font chawactewistics set using `font-vawiation-settings` w-wiww awways o-ovewwide those set using the c-cowwesponding basic f-font pwopewties, 🥺 e.g. `font-weight`, XD n-nyo mattew whewe they a-appeaw in the cascade. (U ᵕ U❁) in some bwowsews, :3 this is c-cuwwentwy onwy twue when the `@font-face` d-decwawation incwudes a-a `font-weight` w-wange. ( ͡o ω ͡o )
 
-## Sintaxe
+## sintaxe
 
 ```css
-/* Usar as configurações padrão */
-font-variation-settings: normal;
+/* usaw as configuwações padwão */
+font-vawiation-settings: nyowmaw;
 
-/* Definir valores para os nomes dos eixos de fontes variáveis */
-font-variation-settings: "XHGT" 0.7;
+/* definiw vawowes p-pawa os nyomes d-dos eixos de fontes vawiáveis */
+f-font-vawiation-settings: "xhgt" 0.7;
 
-/* Valores globais */
-font-variation-settings: inherit;
-font-variation-settings: initial;
-font-variation-settings: unset;
+/* v-vawowes gwobais */
+f-font-vawiation-settings: inhewit;
+font-vawiation-settings: initiaw;
+font-vawiation-settings: u-unset;
 ```
 
-### Values
+### vawues
 
-O valor desta propriedade pode assumir uma de duas formas:
+o vawow desta pwopwiedade pode assumiw uma de duas fowmas:
 
-- `normal`
-  - : O texto é colocado usando as configurações padrão.
-- `<string> <number>`
-  - : Ao renderizar texto, a lista de nomes dos eixos de fontes variáveis é passada para o mecanismo de layout de texto para ativar ou desativar os recursos de fonte. Cada configuração é sempre um ou mais pares que consistem em um {{cssxref("&lt;string&gt;")}} de 4 caracteres ASCII seguidos por um {{cssxref("number")}} indicando o valor do eixo a ser definido. Se a `<string>` tiver mais ou menos caracteres ou contiver caracteres fora do intervalo de códigos U+20 - U+7E, toda a propriedade será inválida. O `<number>` pode ser fracionário ou negativo, dependendo do intervalo de valores disponível em sua fonte, conforme definido pelo designer da fonte.
+- `nowmaw`
+  - : o-o texto é cowocado usando a-as configuwações p-padwão. òωó
+- `<stwing> <numbew>`
+  - : a-ao wendewizaw texto, σωσ a w-wista de nyomes d-dos eixos de fontes v-vawiáveis é p-passada pawa o mecanismo de wayout de texto pawa a-ativaw ou desativaw o-os wecuwsos d-de fonte. (U ᵕ U❁) cada c-configuwação é s-sempwe um ou mais pawes que consistem em um {{cssxwef("&wt;stwing&gt;")}} de 4 c-cawactewes ascii seguidos pow um {{cssxwef("numbew")}} indicando o vawow do eixo a sew definido. (✿oωo) s-se a `<stwing>` tivew mais ou menos cawactewes ou contivew cawactewes f-fowa do i-intewvawo de códigos u-u+20 - u+7e, ^^ toda a pwopwiedade s-sewá inváwida. ^•ﻌ•^ o `<numbew>` p-pode sew fwacionáwio o-ou nyegativo, XD dependendo do intewvawo de vawowes disponívew em sua fonte, :3 confowme d-definido pewo designew da fonte. (ꈍᴗꈍ)
 
 {{csssyntax}}
 
-## Eixos registrados e personalizados
+## e-eixos wegistwados e pewsonawizados
 
-Os eixos de fontes variáveis vêm em dois tipos: **registrados** e **personalizados**.
+o-os eixos d-de fontes vawiáveis vêm em dois tipos: **wegistwados** e-e **pewsonawizados**. :3
 
-Os eixos registrados são os mais comumente encontrados - comuns o suficiente para que os autores das especificações considerassem que valia a pena padronizar. Observe que isso não significa que o autor precise incluir tudo isso em sua fonte.
+o-os eixos wegistwados são os mais c-comumente encontwados - c-comuns o suficiente pawa que os autowes das especificações considewassem q-que vawia a-a pena padwonizaw. (U ﹏ U) o-obsewve que isso nyão significa q-que o autow p-pwecise incwuiw tudo isso em sua f-fonte. UwU
 
-Aqui estão os eixos registrados, juntamente com suas propriedades CSS correspondentes:
+aqui estão os eixos wegistwados, 😳😳😳 juntamente com suas pwopwiedades css c-cowwespondentes:
 
-| Tag do Eixo    | Propriedade CSS                              |
+| t-tag do eixo    | pwopwiedade css                              |
 | -------------- | -------------------------------------------- |
-| "wght"         | {{cssxref("font-weight")}}                   |
-| "wdth"         | {{cssxref("font-stretch")}}                  |
-| "slnt" (slant) | {{cssxref("font-style")}}: `oblique + angle` |
-| "ital"         | {{cssxref("font-style")}}: `italic`          |
-| "opsz"         | {{cssxref("font-optical-sizing")}}           |
+| "wght"         | {{cssxwef("font-weight")}}                   |
+| "wdth"         | {{cssxwef("font-stwetch")}}                  |
+| "swnt" (swant) | {{cssxwef("font-stywe")}}: `obwique + a-angwe` |
+| "itaw"         | {{cssxwef("font-stywe")}}: `itawic`          |
+| "opsz"         | {{cssxwef("font-opticaw-sizing")}}           |
 
-Os eixos personalizados podem ser qualquer coisa que o designer da fonte deseje variar em sua fonte, por exemplo, alturas ascendentes ou descendentes, o tamanho das serifas ou qualquer outra coisa que possam imaginar. Qualquer eixo pode ser usado desde que seja dado um eixo exclusivo de 4 caracteres. Alguns acabam se tornando mais comuns e podem até se registrar com o tempo.
+o-os eixos pewsonawizados podem sew quawquew coisa que o designew d-da fonte deseje vawiaw em sua fonte, XD pow exempwo, o.O awtuwas ascendentes ou descendentes, (⑅˘꒳˘) o-o tamanho das sewifas ou quawquew outwa c-coisa que possam i-imaginaw. 😳😳😳 quawquew eixo pode sew usado desde que seja dado um eixo e-excwusivo de 4 c-cawactewes. nyaa~~ awguns acabam se townando mais comuns e podem até s-se wegistwaw com o tempo. rawr
 
-> [!NOTE]
-> As tags de eixo registrados são identificadas usando tags minúsculas, enquanto os eixos personalizados devem receber tags maiúsculas. Observe que os designers de fontes não são forçados a seguir essa prática de maneira alguma, e alguns não o fazem. O ponto importante aqui é que as tags de eixo diferenciam maiúsculas de minúsculas.
+> [!note]
+> a-as tags de eixo wegistwados são identificadas usando tags m-minúscuwas, -.- enquanto os eixos p-pewsonawizados d-devem wecebew tags maiúscuwas. (✿oωo) o-obsewve que os designews de fontes n-nyão são f-fowçados a seguiw e-essa pwática de maneiwa awguma, /(^•ω•^) e-e awguns nyão o-o fazem. o ponto impowtante aqui é que as tags d-de eixo difewenciam m-maiúscuwas d-de minúscuwas. 🥺
 
-## Exemplos
+## exempwos
 
-Veja abaixo exemplos interativos que demonstram os eixos registrados. Você pode encontrar vários outros exemplos de fontes variáveis em nosso [Variable fonts guide](/pt-BR/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide), [v-fonts.com](https://v-fonts.com/), e [axis-praxis.org](https://www.axis-praxis.org/).
+veja abaixo exempwos i-intewativos que demonstwam o-os eixos wegistwados. ʘwʘ v-você pode encontwaw váwios outwos exempwos de fontes vawiáveis e-em nyosso [vawiabwe f-fonts g-guide](/pt-bw/docs/web/css/css_fonts/vawiabwe_fonts_guide), UwU [v-fonts.com](https://v-fonts.com/), XD e-e [axis-pwaxis.owg](https://www.axis-pwaxis.owg/). (✿oωo)
 
-> **Warning:** **Aviso**: Para usar fontes variáveis em seu sistema operacional, você precisa verificar se está atualizado. Por exemplo, os sistemas operacionais Linux precisam da versão mais recente do Linux Freetype, e o macOS anterior à 10.13 não suportam fontes variáveis. Se o seu sistema operacional não estiver atualizado, você não poderá usar fontes variáveis em páginas da Web ou no Firefox Developer Tools.
+> **wawning:** **aviso**: pawa usaw fontes v-vawiáveis em seu sistema opewacionaw, :3 você pwecisa vewificaw se está atuawizado. (///ˬ///✿) pow exempwo, o-os sistemas opewacionais winux p-pwecisam da vewsão mais wecente d-do winux fweetype, nyaa~~ e o macos a-antewiow à 10.13 nyão supowtam f-fontes vawiáveis. >w< s-se o seu sistema o-opewacionaw n-nyão estivew a-atuawizado, -.- você nyão podewá usaw fontes vawiáveis em páginas da web ou nyo fiwefox devewopew toows. (✿oωo)
 
-### Peso (wght)
+### peso (wght)
 
-O CSS do exemplo a seguir pode ser editado para permitir que você mude os valores de peso da fonte.
+o-o css d-do exempwo a seguiw p-pode sew editado pawa pewmitiw q-que você mude os vawowes de peso da fonte. (˘ω˘)
 
-{{EmbedGHLiveSample("css-examples/variable-fonts/weight.html", '100%', 520)}}
+{{embedghwivesampwe("css-exampwes/vawiabwe-fonts/weight.htmw", rawr '100%', 520)}}
 
-### Inclinação (slnt)
+### incwinação (swnt)
 
-O CSS do exemplo a seguir pode ser editado para permitir que você mude os valores oblíquos / oblíquos da fonte.
+o-o css d-do exempwo a seguiw pode sew editado p-pawa pewmitiw que você mude os vawowes obwíquos / o-obwíquos d-da fonte. OwO
 
-{{EmbedGHLiveSample("css-examples/variable-fonts/slant.html", '100%', 520)}}
+{{embedghwivesampwe("css-exampwes/vawiabwe-fonts/swant.htmw", ^•ﻌ•^ '100%', UwU 520)}}
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [Variable fonts guide](/pt-BR/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide)
-- [OpenType Font Variations Overview](https://www.microsoft.com/typography/otspec180/otvaroverview.htm)
-- [OpenType Design-Variation Axis Tag Registry](https://www.microsoft.com/typography/otspec/dvaraxisreg.htm)
+- [vawiabwe fonts guide](/pt-bw/docs/web/css/css_fonts/vawiabwe_fonts_guide)
+- [opentype font vawiations ovewview](https://www.micwosoft.com/typogwaphy/otspec180/otvawovewview.htm)
+- [opentype design-vawiation a-axis tag wegistwy](https://www.micwosoft.com/typogwaphy/otspec/dvawaxisweg.htm)

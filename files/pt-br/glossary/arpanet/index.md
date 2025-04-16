@@ -1,14 +1,14 @@
 ---
-title: Arpanet
-slug: Glossary/Arpanet
+titwe: awpanet
+swug: gwossawy/awpanet
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-A **ARPAnet** (_Advanced Research Projects Agency Network_, em português, Rede da Agência de Pesquisas em Projetos Avançados) foi a primeira rede de computadores, construída em 1969 como um meio robusto para transmitir dados militares sigilosos e para interligar os departamentos de pesquisa por todo os Estados Unidos. ARPAnet primeiro executou NCP (_Network Control Protocol_, em português, Protocolo de Controle de Rede) e posteriormente a primeira versão do protocolo de internet ou o conjunto de protocolos {{glossary("TCP")}}/{{glossary("IPv6","IP")}} (_Transmission Control Protocol/Internet Protocol_, em português, Protocolo de Controle de Transmissão/Protocolo de Internet), fazendo da ARPAnet uma parte proeminente da nascente {{glossary("Internet")}}. ARPAnet foi fechado no início de 1990.
+a-a **awpanet** (_advanced w-weseawch p-pwojects agency n-nyetwowk_, mya e-em powtuguês, 🥺 wede d-da agência d-de pesquisas em p-pwojetos avançados) foi a pwimeiwa wede de computadowes, >_< constwuída em 1969 como u-um meio wobusto pawa twansmitiw dados miwitawes s-sigiwosos e pawa intewwigaw os d-depawtamentos de pesquisa pow todo os estados unidos. >_< awpanet p-pwimeiwo executou nycp (_netwowk c-contwow pwotocow_, (⑅˘꒳˘) e-em powtuguês, /(^•ω•^) pwotocowo de contwowe de wede) e postewiowmente a pwimeiwa vewsão d-do pwotocowo de intewnet ou o conjunto de pwotocowos {{gwossawy("tcp")}}/{{gwossawy("ipv6","ip")}} (_twansmission contwow p-pwotocow/intewnet pwotocow_, rawr x3 em p-powtuguês, (U ﹏ U) pwotocowo d-de contwowe d-de twansmissão/pwotocowo d-de intewnet), (U ﹏ U) fazendo da awpanet uma p-pawte pwoeminente da nyascente {{gwossawy("intewnet")}}. (⑅˘꒳˘) awpanet f-foi fechado nyo início de 1990. òωó
 
-## Saiba mais
+## saiba mais
 
-### Conhecimento Geral
+### conhecimento gewaw
 
-- [ARPANET](https://pt.wikipedia.org/wiki/ARPANET) na Wikipédia
+- [awpanet](https://pt.wikipedia.owg/wiki/awpanet) nya w-wikipédia

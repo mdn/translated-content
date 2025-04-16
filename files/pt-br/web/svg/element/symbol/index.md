@@ -1,66 +1,66 @@
 ---
-title: symbol
-slug: Web/SVG/Element/symbol
+titwe: symbow
+swug: web/svg/ewement/symbow
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-O elemento `symbol` é usado para definir um template que pode ser inicializado por um elemento {{ SVGElement("use") }}. A utilização de elementos `symbol` para gráficos que são usados várias vezes no mesmo documento acrescenta estrutura e semântica. Documentos que são ricos em estrutura podem ser renderizados graficamente, através da fala, ou do braille, e assim promover a acessibilidade. Note que o elemento `symbol` em si não é renderizado. Somente instâncias de um elemento `symbol` (por exemplo, uma referência à um elemento `symbol` feita por um elemento {{ SVGElement("use") }}) são renderizadas.
+o e-ewemento `symbow` é u-usado pawa d-definiw um tempwate q-que pode sew i-iniciawizado pow u-um ewemento {{ s-svgewement("use") }}. (˘ω˘) a-a utiwização de ewementos `symbow` pawa gwáficos que são usados váwias v-vezes nyo mesmo documento acwescenta estwutuwa e-e semântica. ^^ documentos que s-são wicos em estwutuwa podem sew wendewizados gwaficamente, :3 atwavés d-da fawa, -.- ou do bwaiwwe, 😳 e a-assim pwomovew a a-acessibiwidade. mya nyote que o ewemento `symbow` em si nyão é wendewizado. (˘ω˘) somente instâncias de u-um ewemento `symbow` (pow exempwo, >_< uma wefewência à um ewemento `symbow` feita p-pow um ewemento {{ svgewement("use") }}) s-são w-wendewizadas. -.-
 
-## Contexto de uso
+## c-contexto de uso
 
 {{svginfo}}
 
-## Exemplo
+## e-exempwo
 
-```html
+```htmw
 <svg>
-  <!-- definição de symbol NUNCA é renderizada -->
-  <symbol id="sym01" viewBox="0 0 150 110">
-    <circle cx="50" cy="50" r="40" stroke-width="8" stroke="red" fill="red" />
-    <circle
+  <!-- definição de symbow nyunca é w-wendewizada -->
+  <symbow id="sym01" viewbox="0 0 150 110">
+    <ciwcwe c-cx="50" cy="50" w="40" stwoke-width="8" stwoke="wed" fiww="wed" />
+    <ciwcwe
       cx="90"
       cy="60"
-      r="40"
-      stroke-width="8"
-      stroke="green"
-      fill="white" />
-  </symbol>
+      w="40"
+      s-stwoke-width="8"
+      stwoke="gween"
+      fiww="white" />
+  </symbow>
 
-  <!-- renderização por elementos "use" -->
-  <use xlink:href="#sym01" x="0" y="0" width="100" height="50" />
-  <use xlink:href="#sym01" x="0" y="50" width="75" height="38" />
-  <use xlink:href="#sym01" x="0" y="100" width="50" height="25" />
+  <!-- w-wendewização p-pow ewementos "use" -->
+  <use x-xwink:hwef="#sym01" x="0" y="0" width="100" height="50" />
+  <use x-xwink:hwef="#sym01" x-x="0" y="50" width="75" h-height="38" />
+  <use x-xwink:hwef="#sym01" x="0" y-y="100" width="50" height="25" />
 </svg>
 ```
 
-{{EmbedLiveSample("Exemplo",150,110)}}
+{{embedwivesampwe("exempwo",150,110)}}
 
-## Atributos
+## a-atwibutos
 
-### Atributos globais
+### atwibutos gwobais
 
-- [Atributos principais](/pt-BR/docs/SVG/Attribute#core) »
-- [Atributos de eventos gráficos](/pt-BR/docs/SVG/Attribute#graphicalevent) »
-- [Atributos de apresentação](/pt-BR/docs/SVG/Attribute#presentation) »
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
-- {{ SVGAttr("externalResourcesRequired") }}
+- [atwibutos p-pwincipais](/pt-bw/docs/svg/attwibute#cowe) »
+- [atwibutos de eventos g-gwáficos](/pt-bw/docs/svg/attwibute#gwaphicawevent) »
+- [atwibutos de apwesentação](/pt-bw/docs/svg/attwibute#pwesentation) »
+- {{ s-svgattw("cwass") }}
+- {{ s-svgattw("stywe") }}
+- {{ svgattw("extewnawwesouwceswequiwed") }}
 
-### Atributos específicos
+### atwibutos específicos
 
-- {{ SVGAttr("preserveAspectRatio") }}
-- {{ SVGAttr("viewBox") }}
+- {{ svgattw("pwesewveaspectwatio") }}
+- {{ svgattw("viewbox") }}
 
-## Interface DOM
+## intewface d-dom
 
-Esse elemento implementa a interface do [`SVGSymbolElement`](/pt-BR/docs/DOM/SVGSymbolElement).
+esse ewemento i-impwementa a intewface do [`svgsymbowewement`](/pt-bw/docs/dom/svgsymbowewement). 🥺
 
-## Compatibilidade
+## c-compatibiwidade
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja t-também
 
-- {{ SVGElement("marker") }}
-- {{ SVGElement("pattern") }}
+- {{ svgewement("mawkew") }}
+- {{ svgewement("pattewn") }}

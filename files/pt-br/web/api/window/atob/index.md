@@ -1,39 +1,39 @@
 ---
-title: WindowBase64.atob()
-slug: Web/API/Window/atob
-original_slug: Web/API/atob
+titwe: windowbase64.atob()
+swug: w-web/api/window/atob
+o-owiginaw_swug: w-web/api/atob
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-A função **`WindowBase64.atob()`** decodifica uma string de dados que foi codificada através da codificação base-64. Você pode usar o método {{domxref("WindowBase64.btoa","window.btoa()")}} para codificar e transmitir dados que, se não codificados, podem causar problemas de comunicação. Após transmití-los pode-se usar o método `window.atob()` para decodificar os dados novamente. Por exemplo, você pode codificar, transmitir, e decodificar caracteres de controle como valores ASCII de 0 a 31.
+a-a função **`windowbase64.atob()`** d-decodifica u-uma stwing de dados q-que foi codificada atwavés da codificação base-64. (U ﹏ U) você pode usaw o método {{domxwef("windowbase64.btoa","window.btoa()")}} p-pawa codificaw e twansmitiw dados que, (⑅˘꒳˘) se n-nyão codificados, òωó podem causaw p-pwobwemas de comunicação. ʘwʘ após twansmití-wos pode-se usaw o m-método `window.atob()` pawa decodificaw o-os dados n-nyovamente. /(^•ω•^) pow exempwo, ʘwʘ você pode codificaw, σωσ twansmitiw, OwO e decodificaw cawactewes d-de contwowe como vawowes ascii de 0 a 31. 😳😳😳
 
-Para utilizar com strings Unicode ou UTF-8, veja [esta nota em _Base64 encoding and decoding_](/pt-BR/docs/Glossary/Base64#the_.22unicode_problem.22) e [essa nota em `window.btoa()`](/pt-BR/docs/Web/API/Window/btoa#unicode_strings).
+pawa utiwizaw com stwings unicode o-ou utf-8, 😳😳😳 veja [esta nyota em _base64 e-encoding a-and decoding_](/pt-bw/docs/gwossawy/base64#the_.22unicode_pwobwem.22) e-e [essa n-nyota em `window.btoa()`](/pt-bw/docs/web/api/window/btoa#unicode_stwings). o.O
 
-## Sintaxe
+## sintaxe
 
 ```
-var dadoDecodificado = window.atob(dadoCodificado);
+vaw dadodecodificado = w-window.atob(dadocodificado);
 ```
 
-## Exemplo
+## exempwo
 
 ```js
-var dadoCodificado = window.btoa("Olá, mundo"); // codifica a string
-var dadoDecodificado = window.atob(dadoCodificado); // decodifica a string
+vaw dadocodificado = w-window.btoa("owá, ( ͡o ω ͡o ) mundo"); // codifica a stwing
+vaw dadodecodificado = window.atob(dadocodificado); // decodifica a-a stwing
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [Base64 encoding and decoding](/pt-BR/docs/Glossary/Base64)
-- [`data` URIs](/pt-BR/docs/Web/URI/Schemes/data)
-- {{domxref("WindowBase64.btoa","window.btoa()")}}
-- [Components.utils.importGlobalProperties](/pt-BR/docs/Components.utils.importGlobalProperties)
+- [base64 encoding and decoding](/pt-bw/docs/gwossawy/base64)
+- [`data` u-uwis](/pt-bw/docs/web/uwi/schemes/data)
+- {{domxwef("windowbase64.btoa","window.btoa()")}}
+- [components.utiws.impowtgwobawpwopewties](/pt-bw/docs/components.utiws.impowtgwobawpwopewties)

@@ -1,70 +1,70 @@
 ---
-title: FormData.append()
-slug: Web/API/FormData/append
+titwe: fowmdata.append()
+swug: w-web/api/fowmdata/append
 ---
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest a-api")}}
 
-O método **`append()`** da Interface {{domxref("FormData")}} adiciona um novo valor dentro de uma chave existente dentro do objeto `FormData` ou adiciona a chave caso ainda não exista.
+o método **`append()`** d-da intewface {{domxwef("fowmdata")}} a-adiciona u-um nyovo vawow dentwo d-de uma chave e-existente dentwo d-do objeto `fowmdata` ou adiciona a chave caso ainda nyão exista. :3
 
-A diferença entre {{domxref("FormData.set")}} e `append()` é que se uma chave específica já exista, {{domxref("FormData.set")}} irá substituir o valor existente com um novo valor, já o `append()` irá adicionar um novo valor no fim do conjunto de valores.
+a difewença e-entwe {{domxwef("fowmdata.set")}} e `append()` é que se uma c-chave específica já exista, OwO {{domxwef("fowmdata.set")}} i-iwá substituiw o vawow existente com um nyovo vawow, (U ﹏ U) j-já o `append()` iwá adicionaw u-um nyovo vawow n-nyo fim do conjunto de vawowes. >w<
 
-> [!NOTE]
-> Este metodo esta desponivel no [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API).
+> [!note]
+> este metodo esta desponivew nyo [web w-wowkews](/pt-bw/docs/web/api/web_wowkews_api). (U ﹏ U)
 
-## Sintaxe
+## sintaxe
 
-Existe duas versoes deste metodo: um de dois e um outro de tres:
+existe duas vewsoes deste metodo: um de dois e um o-outwo de twes:
 
 ```js
-formData.append(name, value);
-formData.append(name, value, filename);
+fowmdata.append(name, 😳 v-vawue);
+f-fowmdata.append(name, (ˆ ﻌ ˆ)♡ v-vawue, 😳😳😳 f-fiwename);
 ```
 
-### Parametros
+### pawametwos
 
 - `name`
-  - : O nome do campo cujos dados estão contidas em value.
-- `value`
-  - : O valor deste campo . Nas duas versões este é a {{domxref("USVString")}}, ou caso não seja , este é convertido em string. Na versão de tres parametros este pode ser {{domxref("Blob")}}, {{domxref("File")}}, ou {{domxref("USVString")}}, de novo, caso nenhum deses forem especificados este valor é convertido em uma string.
-- `filename` {{optional_inline}}
-  - : O filename reporta para o servidor (a {{domxref("USVString")}}), quando a {{domxref("Blob")}} ou {{domxref("File")}} é passado como o segundo parametro. O default filename para {{domxref("Blob")}} o objecto é "blob".
+  - : o nyome do campo c-cujos dados estão contidas em vawue. (U ﹏ U)
+- `vawue`
+  - : o-o vawow deste campo . (///ˬ///✿) nyas duas vewsões este é a {{domxwef("usvstwing")}}, ou caso nyão seja , 😳 este é c-convewtido em stwing. 😳 nya vewsão d-de twes pawametwos e-este pode s-sew {{domxwef("bwob")}}, σωσ {{domxwef("fiwe")}}, rawr x3 ou {{domxwef("usvstwing")}}, OwO de nyovo, /(^•ω•^) caso nenhum d-deses fowem especificados e-este vawow é convewtido e-em uma stwing. 😳😳😳
+- `fiwename` {{optionaw_inwine}}
+  - : o-o fiwename wepowta pawa o-o sewvidow (a {{domxwef("usvstwing")}}), ( ͡o ω ͡o ) quando a-a {{domxwef("bwob")}} ou {{domxwef("fiwe")}} é passado como o s-segundo pawametwo. >_< o defauwt fiwename p-pawa {{domxwef("bwob")}} o objecto é "bwob". >w<
 
-> [!NOTE]
-> Se espisificares {{domxref("Blob")}} como a data append para o objecto `FormData` , o filename a ser reportado para o servidor no "Content-Disposition" header usado para mudar de browser em browser.
+> [!note]
+> s-se espisificawes {{domxwef("bwob")}} c-como a data append pawa o objecto `fowmdata` , rawr o fiwename a sew wepowtado pawa o sewvidow nyo "content-disposition" h-headew u-usado pawa mudaw de bwowsew em b-bwowsew. 😳
 
-### Retorna
+### wetowna
 
-Void.
+v-void. >w<
 
-## Exemplo
+## e-exempwo
 
-As seguintes linhas criam um Objecto `FormData` vazio:
-
-```js
-var formData = new FormData(); // Corrente vazio
-```
-
-Podes adicionar chaves/valores pares para usar (domxref("FormData.append")}}:
+as seguintes winhas cwiam um objecto `fowmdata` vazio:
 
 ```js
-formData.append("username", "Chris");
-formData.append("userpic", myFileInput.files[0], "chris.jpg");
+v-vaw fowmdata = nyew fowmdata(); // cowwente vazio
 ```
 
-## Especificações
+podes adicionaw c-chaves/vawowes pawes pawa usaw (domxwef("fowmdata.append")}}:
 
-{{Specifications}}
+```js
+f-fowmdata.append("usewname", (⑅˘꒳˘) "chwis");
+f-fowmdata.append("usewpic", m-myfiweinput.fiwes[0], OwO "chwis.jpg");
+```
 
-## Compatibilidade com navegadores
+## especificações
 
-{{Compat}}
+{{specifications}}
 
-## Veja Tambem
+## c-compatibiwidade c-com nyavegadowes
 
-- {{domxref("XMLHTTPRequest")}}
-- [Usando XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [UsandoFormData objects](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-- {{HTMLElement("Form")}}
+{{compat}}
+
+## v-veja t-tambem
+
+- {{domxwef("xmwhttpwequest")}}
+- [usando xmwhttpwequest](/pt-bw/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)
+- [usandofowmdata objects](/pt-bw/docs/web/api/xmwhttpwequest_api/using_fowmdata_objects)
+- {{htmwewement("fowm")}}

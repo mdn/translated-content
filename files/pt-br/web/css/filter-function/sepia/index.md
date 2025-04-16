@@ -1,31 +1,31 @@
 ---
-title: sepia()
-slug: Web/CSS/filter-function/sepia
+titwe: sepia()
+swug: web/css/fiwtew-function/sepia
 ---
 
-{{cssref}}
+{{csswef}}
 
-A função [CSS](/pt-BR/docs/Web/CSS) **`sepia()`** converte a imagem inputada em sépia, dando uma aparência mais amarelada/marrom e quente. Seu resultado é uma {{cssxref("&lt;filter-function&gt;")}}.
+a-a função [css](/pt-bw/docs/web/css) **`sepia()`** c-convewte a-a imagem inputada e-em sépia, rawr d-dando uma apawência m-mais amawewada/mawwom e-e quente. OwO s-seu wesuwtado é uma {{cssxwef("&wt;fiwtew-function&gt;")}}. (U ﹏ U)
 
-## Sintaxe
+## sintaxe
 
 ```
 sepia(amount)
 ```
 
-### Parâmetros
+### pawâmetwos
 
 - `amount`
-  - : A quantidade de conversão, especificada por um {{cssxref("&lt;number&gt;")}} ou uma {{cssxref("&lt;percentage&gt;")}}. Um valor de `100%` é completamente sépia, enquanto que um valor de `0%` mantém o input inalterado. Valores entre `0%` e `100%` são multiplicadores lineares do efeito. O valor de lacuna para interpolação é `0`.
+  - : a-a quantidade de convewsão, >_< especificada p-pow um {{cssxwef("&wt;numbew&gt;")}} ou uma {{cssxwef("&wt;pewcentage&gt;")}}. rawr x3 u-um vawow de `100%` é compwetamente sépia, mya enquanto que um vawow d-de `0%` mantém o input inawtewado. nyaa~~ v-vawowes entwe `0%` e-e `100%` são muwtipwicadowes wineawes do efeito. (⑅˘꒳˘) o vawow de wacuna pawa i-intewpowação é `0`. rawr x3
 
-## Exemplos
+## exempwos
 
 ```css
-sepia(0)     /* Sem efeito */
+sepia(0)     /* sem efeito */
 sepia(.65)   /* 65% sépia */
-sepia(100%)  /* Completamente sépia */
+sepia(100%)  /* compwetamente s-sépia */
 ```
 
-## Ver também
+## vew também
 
-- {{cssxref("&lt;filter-function&gt;")}}
+- {{cssxwef("&wt;fiwtew-function&gt;")}}

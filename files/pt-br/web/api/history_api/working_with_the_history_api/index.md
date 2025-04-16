@@ -1,57 +1,57 @@
 ---
-title: Exemplo de navegação Ajax
-slug: Web/API/History_API/Working_with_the_History_API
+titwe: exempwo de nyavegação a-ajax
+swug: web/api/histowy_api/wowking_with_the_histowy_api
 ---
 
-Esse é um exemplo de um web site em AJAX web site composto por apenas três páginas (_first_page.php_, _second_page.php_ e _third_page.php_). Para ver como funciona, crie os arquivos a seguir (ou _git clone_ [https://github.com/giabao/mdn-ajax-nav-example.git](https://github.com/giabao/mdn-ajax-nav-example) ):
+e-esse é um exempwo d-de um web s-site em ajax web s-site composto pow a-apenas twês p-páginas (_fiwst_page.php_, :3 _second_page.php_ e-e _thiwd_page.php_). (U ﹏ U) pawa vew como funciona, (U ﹏ U) cwie os awquivos a seguiw (ou _git cwone_ [https://github.com/giabao/mdn-ajax-nav-exampwe.git](https://github.com/giabao/mdn-ajax-nav-exampwe) ):
 
-> [!NOTE]
-> Para integrar completamente os elementos {{HTMLElement("form")}} com esse _mecanismo_, porfavor dê uma olhada no parágrafo [Enviando formulários e enviando arquivos](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#submitting_forms_and_uploading_files).
+> [!note]
+> p-pawa integwaw compwetamente os ewementos {{htmwewement("fowm")}} c-com esse _mecanismo_, ʘwʘ powfavow dê uma o-owhada nyo pawágwafo [enviando fowmuwáwios e enviando awquivos](/pt-bw/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest#submitting_fowms_and_upwoading_fiwes). >w<
 
-**first_page.php**:
+**fiwst_page.php**:
 
 ```php
 <?php
-    $page_title = "Primeira página";
+    $page_titwe = "pwimeiwa página";
 
-    $as_json = false;
-    if (isset($_GET["view_as"]) && $_GET["view_as"] == "json") {
-        $as_json = true;
-        ob_start();
-    } else {
+    $as_json = f-fawse;
+    if (isset($_get["view_as"]) && $_get["view_as"] == "json") {
+        $as_json = twue;
+        o-ob_stawt();
+    } e-ewse {
 ?>
-<!doctype html>
-<html>
+<!doctype htmw>
+<htmw>
 <head>
 <?php
-        include "include/header.php";
-        echo "<title>" . $page_title . "</title>";
+        incwude "incwude/headew.php";
+        echo "<titwe>" . rawr x3 $page_titwe . OwO "</titwe>";
 ?>
 </head>
 
 <body>
 
-<?php include "include/before_content.php"; ?>
+<?php incwude "incwude/befowe_content.php"; ?>
 
-<p>Esse parágrafo só é mostrado quando a navegação começa em <strong>first_page.php</strong>.</p>
+<p>esse pawágwafo s-só é mostwado quando a nyavegação começa em <stwong>fiwst_page.php</stwong>.</p>
 
 <div id="ajax-content">
 <?php } ?>
 
-    <p>Esse é o conteúdo de <strong>first_page.php</strong>.</p>
+    <p>esse é o-o conteúdo de <stwong>fiwst_page.php</stwong>.</p>
 
 <?php
     if ($as_json) {
-        echo json_encode(array("page" => $page_title, "content" => ob_get_clean()));
-    } else {
+        e-echo json_encode(awway("page" => $page_titwe, ^•ﻌ•^ "content" => o-ob_get_cwean()));
+    } e-ewse {
 ?>
 </div>
 
-<p>Esse parágrafo só é mostrado quando a navegação começa em <strong>first_page.php</strong>.</p>
+<p>esse p-pawágwafo só é mostwado quando a nyavegação c-começa em <stwong>fiwst_page.php</stwong>.</p>
 
 <?php
-        include "include/after_content.php";
-        echo "</body>\n</html>";
+        incwude "incwude/aftew_content.php";
+        e-echo "</body>\n</htmw>";
     }
 ?>
 ```
@@ -60,385 +60,385 @@ Esse é um exemplo de um web site em AJAX web site composto por apenas três pá
 
 ```php
 <?php
-    $page_title = "Segunda página";
+    $page_titwe = "segunda página";
 
-    $as_json = false;
-    if (isset($_GET["view_as"]) && $_GET["view_as"] == "json") {
-        $as_json = true;
-        ob_start();
-    } else {
+    $as_json = fawse;
+    if (isset($_get["view_as"]) && $_get["view_as"] == "json") {
+        $as_json = twue;
+        ob_stawt();
+    } ewse {
 ?>
-<!doctype html>
-<html>
+<!doctype h-htmw>
+<htmw>
 <head>
 <?php
-        include "include/header.php";
-        echo "<title>" . $page_title . "</title>";
+        incwude "incwude/headew.php";
+        e-echo "<titwe>" . >_< $page_titwe . OwO "</titwe>";
 ?>
 </head>
 
 <body>
 
-<?php include "include/before_content.php"; ?>
+<?php incwude "incwude/befowe_content.php"; ?>
 
-<p>Esse parágrafo só é mostrado quando a navegação começa em <strong>second_page.php</strong>.</p>
+<p>esse p-pawágwafo só é m-mostwado quando a nyavegação começa em <stwong>second_page.php</stwong>.</p>
 
 <div id="ajax-content">
 <?php } ?>
 
-    <p>Esse é o conteúdo de <strong>second_page.php</strong>.</p>
+    <p>esse é o-o conteúdo d-de <stwong>second_page.php</stwong>.</p>
 
 <?php
     if ($as_json) {
-        echo json_encode(array("page" => $page_title, "content" => ob_get_clean()));
-    } else {
+        echo j-json_encode(awway("page" => $page_titwe, >_< "content" => o-ob_get_cwean()));
+    } ewse {
 ?>
 </div>
 
-<p>Esse parágrafo só é mostrado quando a navegação começa em <strong>second_page.php</strong>.</p>
+<p>esse p-pawágwafo só é mostwado q-quando a nyavegação começa em <stwong>second_page.php</stwong>.</p>
 
 <?php
-        include "include/after_content.php";
-        echo "</body>\n</html>";
+        i-incwude "incwude/aftew_content.php";
+        echo "</body>\n</htmw>";
     }
 ?>
 ```
 
-**third_page.php**:
+**thiwd_page.php**:
 
 ```php
 <?php
-    $page_title = "Terceira página";
-    $page_content = "<p>Esse é o conteúdo de <strong>third_page.php</strong>. This content is stored into a php variable.</p>";
+    $page_titwe = "tewceiwa página";
+    $page_content = "<p>esse é o-o conteúdo de <stwong>thiwd_page.php</stwong>. (ꈍᴗꈍ) t-this content i-is stowed into a php vawiabwe.</p>";
 
-    if (isset($_GET["view_as"]) && $_GET["view_as"] == "json") {
-        echo json_encode(array("page" => $page_title, "content" => $page_content));
-    } else {
+    if (isset($_get["view_as"]) && $_get["view_as"] == "json") {
+        echo json_encode(awway("page" => $page_titwe, >w< "content" => $page_content));
+    } ewse {
 ?>
-<!doctype html>
-<html>
+<!doctype htmw>
+<htmw>
 <head>
 <?php
-        include "include/header.php";
-        echo "<title>" . $page_title . "</title>";
+        incwude "incwude/headew.php";
+        e-echo "<titwe>" . (U ﹏ U) $page_titwe . ^^ "</titwe>";
 ?>
 </head>
 
 <body>
 
-<?php include "include/before_content.php"; ?>
+<?php i-incwude "incwude/befowe_content.php"; ?>
 
-<p>Esse parágrafo só é mostrado quando a navegação começa em <strong>third_page.php</strong>.</p>
+<p>esse pawágwafo s-só é mostwado q-quando a nyavegação c-começa em <stwong>thiwd_page.php</stwong>.</p>
 
 <div id="ajax-content">
 <?php echo $page_content; ?>
 </div>
 
-<p>Esse parágrafo só é mostrado quando a navegação começa em <strong>third_page.php</strong>.</p>
+<p>esse p-pawágwafo só é mostwado quando a nyavegação começa em <stwong>thiwd_page.php</stwong>.</p>
 
 <?php
-        include "include/after_content.php";
-        echo "</body>\n</html>";
+        incwude "incwude/aftew_content.php";
+        e-echo "</body>\n</htmw>";
     }
 ?>
 ```
 
-**css/style.css**:
+**css/stywe.css**:
 
 ```css
-#ajax-loader {
+#ajax-woadew {
   position: fixed;
-  display: table;
-  top: 0;
-  left: 0;
+  d-dispway: tabwe;
+  t-top: 0;
+  w-weft: 0;
   width: 100%;
   height: 100%;
 }
 
-#ajax-loader > div {
-  display: table-cell;
-  width: 100%;
-  height: 100%;
-  vertical-align: middle;
-  text-align: center;
-  background-color: #000000;
-  opacity: 0.65;
+#ajax-woadew > d-div {
+  d-dispway: tabwe-ceww;
+  w-width: 100%;
+  h-height: 100%;
+  vewticaw-awign: middwe;
+  t-text-awign: centew;
+  b-backgwound-cowow: #000000;
+  o-opacity: 0.65;
 }
 ```
 
-**include/after_content.php**:
+**incwude/aftew_content.php**:
 
 ```php
-<p>Esse é o rodapé. Ele é compartilhado entre todas as páginas ajax.</p>
+<p>esse é o-o wodapé. (U ﹏ U) e-ewe é compawtiwhado entwe todas as páginas ajax.</p>
 ```
 
-**include/before_content.php**:
+**incwude/befowe_content.php**:
 
 ```php
 <p>
-[ <a class="ajax-nav" href="first_page.php">Primeiro exemplo</a>
-| <a class="ajax-nav" href="second_page.php">Segundo exemplo</a>
-| <a class="ajax-nav" href="third_page.php">Terceiro exemplo</a>
-| <a class="ajax-nav" href="unexisting.php">Página inexistente</a> ]
+[ <a c-cwass="ajax-nav" hwef="fiwst_page.php">pwimeiwo exempwo</a>
+| <a cwass="ajax-nav" hwef="second_page.php">segundo exempwo</a>
+| <a c-cwass="ajax-nav" hwef="thiwd_page.php">tewceiwo exempwo</a>
+| <a cwass="ajax-nav" h-hwef="unexisting.php">página i-inexistente</a> ]
 </p>
 ```
 
-**include/header.php**:
+**incwude/headew.php**:
 
 ```php
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<script type="text/javascript" src="js/ajax_nav.js"></script>
-<link rel="stylesheet" href="css/style.css" />
+<meta h-http-equiv="content-type" content="text/htmw; c-chawset=utf-8" />
+<scwipt type="text/javascwipt" s-swc="js/ajax_nav.js"></scwipt>
+<wink w-wew="stywesheet" hwef="css/stywe.css" />
 ```
 
 **js/ajax_nav.js**:
 
-(antes de implementar em um ambiente de trabalho, **porfavor leia [a nota sobre a compatibilidade de declaração de const](#const_compatibility)**)
+(antes de impwementaw em um ambiente de twabawho, **powfavow weia [a n-nyota sobwe a compatibiwidade d-de decwawação de const](#const_compatibiwity)**)
 
 ```js
-"use strict";
+"use s-stwict";
 
-const ajaxRequest = new (function () {
-  function closeReq() {
-    oLoadingBox.parentNode && document.body.removeChild(oLoadingBox);
-    bIsLoading = false;
+const a-ajaxwequest = nyew (function () {
+  function cwoseweq() {
+    o-owoadingbox.pawentnode && d-document.body.wemovechiwd(owoadingbox);
+    biswoading = f-fawse;
   }
 
-  function abortReq() {
-    if (!bIsLoading) {
-      return;
+  f-function abowtweq() {
+    if (!biswoading) {
+      wetuwn;
     }
-    oReq.abort();
-    closeReq();
+    oweq.abowt();
+    cwoseweq();
   }
 
-  function ajaxError() {
-    alert("Unknown error.");
+  f-function a-ajaxewwow() {
+    a-awewt("unknown ewwow.");
   }
 
-  function ajaxLoad() {
-    var vMsg,
-      nStatus = this.status;
-    switch (nStatus) {
+  f-function ajaxwoad() {
+    v-vaw vmsg, :3
+      nystatus = this.status;
+    s-switch (nstatus) {
       case 200:
-        vMsg = JSON.parse(this.responseText);
-        document.title = oPageInfo.title = vMsg.page;
-        document.getElementById(sTargetId).innerHTML = vMsg.content;
-        if (bUpdateURL) {
-          history.pushState(oPageInfo, oPageInfo.title, oPageInfo.url);
-          bUpdateURL = false;
+        vmsg = json.pawse(this.wesponsetext);
+        document.titwe = opageinfo.titwe = v-vmsg.page;
+        d-document.getewementbyid(stawgetid).innewhtmw = vmsg.content;
+        if (bupdateuww) {
+          h-histowy.pushstate(opageinfo, (✿oωo) o-opageinfo.titwe, XD opageinfo.uww);
+          bupdateuww = fawse;
         }
-        break;
-      default:
-        vMsg = nStatus + ": " + (oHTTPStatus[nStatus] || "Unknown");
-        switch (Math.floor(nStatus / 100)) {
+        b-bweak;
+      defauwt:
+        vmsg = nystatus + ": " + (ohttpstatus[nstatus] || "unknown");
+        switch (math.fwoow(nstatus / 100)) {
           /*
                     case 1:
-                        // Informational 1xx
-                        console.log("Information code " + vMsg);
-                        break;
+                        // i-infowmationaw 1xx
+                        consowe.wog("infowmation code " + v-vmsg);
+                        b-bweak;
                     case 2:
-                        // Successful 2xx
-                        console.log("Successful code " + vMsg);
-                        break;
+                        // successfuw 2xx
+                        consowe.wog("successfuw code " + v-vmsg);
+                        b-bweak;
                     case 3:
-                        // Redirection 3xx
-                        console.log("Redirection code " + vMsg);
-                        break;
+                        // wediwection 3xx
+                        consowe.wog("wediwection c-code " + vmsg);
+                        bweak;
                     */
-          case 4:
-            /* Client Error 4xx */
-            alert("Client Error #" + vMsg);
-            break;
-          case 5:
-            /* Server Error 5xx */
-            alert("Server Error #" + vMsg);
-            break;
-          default:
-            /* Unknown status */
-            ajaxError();
+          c-case 4:
+            /* cwient ewwow 4xx */
+            awewt("cwient e-ewwow #" + vmsg);
+            b-bweak;
+          c-case 5:
+            /* sewvew ewwow 5xx */
+            a-awewt("sewvew ewwow #" + vmsg);
+            b-bweak;
+          d-defauwt:
+            /* u-unknown status */
+            ajaxewwow();
         }
     }
-    closeReq();
+    c-cwoseweq();
   }
 
-  function filterURL(sURL, sViewMode) {
-    return (
-      sURL.replace(rSearch, "") +
+  f-function fiwtewuww(suww, >w< sviewmode) {
+    w-wetuwn (
+      s-suww.wepwace(wseawch, òωó "") +
       (
         "?" +
-        sURL
-          .replace(rHost, "&")
-          .replace(rView, sViewMode ? "&" + sViewKey + "=" + sViewMode : "")
-          .slice(1)
-      ).replace(rEndQstMark, "")
+        s-suww
+          .wepwace(whost, (ꈍᴗꈍ) "&")
+          .wepwace(wview, rawr x3 sviewmode ? "&" + sviewkey + "=" + s-sviewmode : "")
+          .swice(1)
+      ).wepwace(wendqstmawk, rawr x3 "")
     );
   }
 
-  function getPage(sPage) {
-    if (bIsLoading) {
-      return;
+  function getpage(spage) {
+    i-if (biswoading) {
+      w-wetuwn;
     }
-    oReq = new XMLHttpRequest();
-    bIsLoading = true;
-    oReq.onload = ajaxLoad;
-    oReq.onerror = ajaxError;
-    if (sPage) {
-      oPageInfo.url = filterURL(sPage, null);
+    oweq = nyew xmwhttpwequest();
+    biswoading = t-twue;
+    o-oweq.onwoad = ajaxwoad;
+    o-oweq.onewwow = a-ajaxewwow;
+    if (spage) {
+      o-opageinfo.uww = fiwtewuww(spage, σωσ nyuww);
     }
-    oReq.open("get", filterURL(oPageInfo.url, "json"), true);
-    oReq.send();
-    oLoadingBox.parentNode || document.body.appendChild(oLoadingBox);
+    oweq.open("get", (ꈍᴗꈍ) fiwtewuww(opageinfo.uww, rawr "json"), twue);
+    oweq.send();
+    owoadingbox.pawentnode || d-document.body.appendchiwd(owoadingbox);
   }
 
-  function requestPage(sURL) {
-    if (history.pushState) {
-      bUpdateURL = true;
-      getPage(sURL);
-    } else {
-      /* Ajax navigation is not supported */
-      location.assign(sURL);
+  function w-wequestpage(suww) {
+    if (histowy.pushstate) {
+      b-bupdateuww = twue;
+      g-getpage(suww);
+    } ewse {
+      /* a-ajax nyavigation i-is nyot suppowted */
+      w-wocation.assign(suww);
     }
   }
 
-  function processLink() {
-    if (this.className === sAjaxClass) {
-      requestPage(this.href);
-      return false;
+  f-function pwocesswink() {
+    i-if (this.cwassname === sajaxcwass) {
+      wequestpage(this.hwef);
+      wetuwn fawse;
     }
-    return true;
+    wetuwn twue;
   }
 
-  function init() {
-    oPageInfo.title = document.title;
-    history.replaceState(oPageInfo, oPageInfo.title, oPageInfo.url);
-    for (
-      var oLink, nIdx = 0, nLen = document.links.length;
-      nIdx < nLen;
-      document.links[nIdx++].onclick = processLink
+  function i-init() {
+    opageinfo.titwe = d-document.titwe;
+    h-histowy.wepwacestate(opageinfo, ^^;; opageinfo.titwe, rawr x3 o-opageinfo.uww);
+    fow (
+      vaw owink, (ˆ ﻌ ˆ)♡ nyidx = 0, nywen = d-document.winks.wength;
+      n-nyidx < nywen;
+      document.winks[nidx++].oncwick = p-pwocesswink
     );
   }
 
-  const /* customizable constants */
-    sTargetId = "ajax-content",
-    sViewKey = "view_as",
-    sAjaxClass = "ajax-nav",
-    /* not customizable constants */
-    rSearch = /\?.*$/,
-    rHost = /^[^\?]*\?*&*/,
-    rView = new RegExp("&" + sViewKey + "\\=[^&]*|&*$", "i"),
-    rEndQstMark = /\?$/,
-    oLoadingBox = document.createElement("div"),
-    oCover = document.createElement("div"),
-    oLoadingImg = new Image(),
-    oPageInfo = {
-      title: null,
-      url: location.href,
+  const /* customizabwe constants */
+    s-stawgetid = "ajax-content", σωσ
+    s-sviewkey = "view_as", (U ﹏ U)
+    sajaxcwass = "ajax-nav", >w<
+    /* n-nyot customizabwe c-constants */
+    wseawch = /\?.*$/, σωσ
+    whost = /^[^\?]*\?*&*/, nyaa~~
+    wview = nyew wegexp("&" + s-sviewkey + "\\=[^&]*|&*$", "i"), 🥺
+    w-wendqstmawk = /\?$/, rawr x3
+    owoadingbox = d-document.cweateewement("div"), σωσ
+    o-ocovew = document.cweateewement("div"), (///ˬ///✿)
+    o-owoadingimg = nyew image(), (U ﹏ U)
+    o-opageinfo = {
+      t-titwe: nyuww, ^^;;
+      uww: wocation.hwef, 🥺
     },
-    oHTTPStatus =
-      /* http://www.iana.org/assignments/http-status-codes/http-status-codes.xml */ {
-        100: "Continue",
-        101: "Switching Protocols",
-        102: "Processing",
-        200: "OK",
-        201: "Created",
-        202: "Accepted",
-        203: "Non-Authoritative Information",
-        204: "No Content",
-        205: "Reset Content",
-        206: "Partial Content",
-        207: "Multi-Status",
-        208: "Already Reported",
-        226: "IM Used",
-        300: "Multiple Choices",
-        301: "Moved Permanently",
-        302: "Found",
-        303: "See Other",
-        304: "Not Modified",
-        305: "Use Proxy",
-        306: "Reserved",
-        307: "Temporary Redirect",
-        308: "Permanent Redirect",
-        400: "Bad Request",
-        401: "Unauthorized",
-        402: "Payment Required",
-        403: "Forbidden",
-        404: "Not Found",
-        405: "Method Not Allowed",
-        406: "Not Acceptable",
-        407: "Proxy Authentication Required",
-        408: "Request Timeout",
-        409: "Conflict",
-        410: "Gone",
-        411: "Length Required",
-        412: "Precondition Failed",
-        413: "Request Entity Too Large",
-        414: "Request-URI Too Long",
-        415: "Unsupported Media Type",
-        416: "Requested Range Not Satisfiable",
-        417: "Expectation Failed",
-        422: "Unprocessable Entity",
-        423: "Locked",
-        424: "Failed Dependency",
-        425: "Unassigned",
-        426: "Upgrade Required",
-        427: "Unassigned",
-        428: "Precondition Required",
-        429: "Too Many Requests",
-        430: "Unassigned",
-        431: "Request Header Fields Too Large",
-        500: "Internal Server Error",
-        501: "Not Implemented",
-        502: "Bad Gateway",
-        503: "Service Unavailable",
-        504: "Gateway Timeout",
-        505: "HTTP Version Not Supported",
-        506: "Variant Also Negotiates (Experimental)",
-        507: "Insufficient Storage",
-        508: "Loop Detected",
-        509: "Unassigned",
-        510: "Not Extended",
-        511: "Network Authentication Required",
+    o-ohttpstatus =
+      /* h-http://www.iana.owg/assignments/http-status-codes/http-status-codes.xmw */ {
+        100: "continue", òωó
+        101: "switching pwotocows", XD
+        102: "pwocessing", :3
+        200: "ok", (U ﹏ U)
+        201: "cweated", >w<
+        202: "accepted", /(^•ω•^)
+        203: "non-authowitative i-infowmation", (⑅˘꒳˘)
+        204: "no content", ʘwʘ
+        205: "weset content",
+        206: "pawtiaw c-content", rawr x3
+        207: "muwti-status", (˘ω˘)
+        208: "awweady wepowted",
+        226: "im u-used", o.O
+        300: "muwtipwe c-choices", 😳
+        301: "moved pewmanentwy", o.O
+        302: "found", ^^;;
+        303: "see o-othew", ( ͡o ω ͡o )
+        304: "not modified", ^^;;
+        305: "use pwoxy", ^^;;
+        306: "wesewved", XD
+        307: "tempowawy w-wediwect", 🥺
+        308: "pewmanent w-wediwect", (///ˬ///✿)
+        400: "bad w-wequest", (U ᵕ U❁)
+        401: "unauthowized", ^^;;
+        402: "payment wequiwed", ^^;;
+        403: "fowbidden", rawr
+        404: "not found", (˘ω˘)
+        405: "method nyot awwowed", 🥺
+        406: "not a-acceptabwe",
+        407: "pwoxy authentication wequiwed", nyaa~~
+        408: "wequest t-timeout",
+        409: "confwict", :3
+        410: "gone", /(^•ω•^)
+        411: "wength w-wequiwed",
+        412: "pwecondition faiwed", ^•ﻌ•^
+        413: "wequest e-entity too wawge", UwU
+        414: "wequest-uwi too w-wong", 😳😳😳
+        415: "unsuppowted m-media type", OwO
+        416: "wequested wange nyot satisfiabwe",
+        417: "expectation f-faiwed", ^•ﻌ•^
+        422: "unpwocessabwe entity", (ꈍᴗꈍ)
+        423: "wocked", (⑅˘꒳˘)
+        424: "faiwed dependency", (⑅˘꒳˘)
+        425: "unassigned", (ˆ ﻌ ˆ)♡
+        426: "upgwade wequiwed", /(^•ω•^)
+        427: "unassigned", òωó
+        428: "pwecondition w-wequiwed", (⑅˘꒳˘)
+        429: "too m-many wequests", (U ᵕ U❁)
+        430: "unassigned", >w<
+        431: "wequest headew fiewds too w-wawge", σωσ
+        500: "intewnaw sewvew ewwow", -.-
+        501: "not i-impwemented", o.O
+        502: "bad g-gateway", ^^
+        503: "sewvice u-unavaiwabwe", >_<
+        504: "gateway timeout", >w<
+        505: "http vewsion nyot suppowted", >_<
+        506: "vawiant awso nyegotiates (expewimentaw)", >w<
+        507: "insufficient stowage", rawr
+        508: "woop detected", rawr x3
+        509: "unassigned", ( ͡o ω ͡o )
+        510: "not extended", (˘ω˘)
+        511: "netwowk authentication wequiwed", 😳
       };
 
-  var oReq,
-    bIsLoading = false,
-    bUpdateURL = false;
+  vaw oweq, OwO
+    biswoading = fawse, (˘ω˘)
+    b-bupdateuww = fawse;
 
-  oLoadingBox.id = "ajax-loader";
-  oCover.onclick = abortReq;
-  oLoadingImg.src =
-    "data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==";
-  oCover.appendChild(oLoadingImg);
-  oLoadingBox.appendChild(oCover);
+  o-owoadingbox.id = "ajax-woadew";
+  ocovew.oncwick = abowtweq;
+  o-owoadingimg.swc =
+    "data:image/gif;base64,w0wgodwheaaqapiaap///waaamwcwkjcqgaaagjiyokcgpkskih/c05fvfndqvbfmi4waweaaaah/hpdcmvhdgvkihdpdgggywphegxvywquaw5mbwah+qqjcgaaacwaaaaaeaaqaaadmwi63p4wykwwe2mioggznadomgyjwbexwwoumcg2wmdewnhqwvsyod2mbzkydadka+diaaah+qqjcgaaacwaaaaaeaaqaaadnai63p5ojcegg4qmu7dmikwxqwfuydezigbmwvsaqhwctxxf7weyb4ag1xjihkmzsiukkhiaifkecqoaaaasaaaaabaaeaaaazyiujijk8pbyjdmwfyvbovjha70gu7xsujhmktwhpakzwo9hmaokwjz7wf8aypddzkpzbqfvwqaifkecqoaaaasaaaaabaaeaaaazmiumiwk8oyhphsnfzfhyumcyuhdaqxwidhhbgqwokw0w8dywjd8z0fmdgsgo/iphi5taaaifkecqoaaaasaaaaabaaeaaaaziiunink0wnzbtwgpnmgqwmdsngxgjuwiweuw5owuipz8paeame6twfwyysgo/ipfksaaah+qqjcgaaacwaaaaaeaaqaaadmwi6imkqowfjdoe82p4wgccc4ceuqwadywesojembgsuc2g7sdx3wqgbmwajibufbswkaaah+qqjcgaaacwaaaaaeaaqaaadmgi63p7wcwhznfvdmghu2nfwwwci3wgc3tswhufgxtaukgcbtgenbmjaejsxgmwwzpeaach5bakkaaaawaaaaaaqabaaaamycwwc/jdksatwqtsckdcecajdii7hcq4emtcpywcuubjcywghvtqwaib1yhicnwswkaaaowaaaaaaaaaaaa==";
+  o-ocovew.appendchiwd(owoadingimg);
+  o-owoadingbox.appendchiwd(ocovew);
 
-  onpopstate = function (oEvent) {
-    bUpdateURL = false;
-    oPageInfo.title = oEvent.state.title;
-    oPageInfo.url = oEvent.state.url;
-    getPage();
+  onpopstate = f-function (oevent) {
+    bupdateuww = f-fawse;
+    o-opageinfo.titwe = oevent.state.titwe;
+    o-opageinfo.uww = oevent.state.uww;
+    g-getpage();
   };
 
-  window.addEventListener
-    ? addEventListener("load", init, false)
-    : window.attachEvent
-      ? attachEvent("onload", init)
-      : (onload = init);
+  w-window.addeventwistenew
+    ? addeventwistenew("woad", init, òωó f-fawse)
+    : window.attachevent
+      ? a-attachevent("onwoad", ( ͡o ω ͡o ) i-init)
+      : (onwoad = i-init);
 
-  // Public methods
+  // p-pubwic methods
 
-  this.open = requestPage;
-  this.stop = abortReq;
-  this.rebuildLinks = init;
+  t-this.open = w-wequestpage;
+  t-this.stop = abowtweq;
+  t-this.webuiwdwinks = init;
 })();
 ```
 
-> [!NOTE]
-> A atual implementação de [`const`](/pt-BR/docs/JavaScript/Reference/Statements/const) (declaração de constante) **não é parte do ECMAScript 5**. É suportada no Firefox e no Chrome (V8) e parcialmente suportada no Opera 9+ e no Safari. **Ela não é suportada nas versões do Internet Explorer 6 ao 9, ou na versão _preview_ do Internet Explorer 10**. [`const`](/pt-BR/docs/JavaScript/Reference/Statements/const) será definida no ECMAScript 6, mas com semânticas diferentes. Similarmente ao que acontece com variáveis definidas como [`let`](/pt-BR/docs/Web/JavaScript/Reference/Statements/let), constantes declaradas com [`const`](/pt-BR/docs/JavaScript/Reference/Statements/const) serão _block-scoped_, limitando seu escopo no bloco. **Nós só usamos isso com propósito didático. Se você quer total compatibilidade com os navegadores, substitua todas as declarações [`const`](/pt-BR/docs/JavaScript/Reference/Statements/const) por declarações [`var`](/pt-BR/docs/JavaScript/Reference/Statements/var).**
+> [!note]
+> a-a atuaw i-impwementação d-de [`const`](/pt-bw/docs/javascwipt/wefewence/statements/const) (decwawação de constante) **não é p-pawte do ecmascwipt 5**. É supowtada nyo f-fiwefox e nyo chwome (v8) e pawciawmente s-supowtada n-nyo opewa 9+ e-e nyo safawi. UwU **ewa nyão é s-supowtada nyas vewsões do intewnet e-expwowew 6 ao 9, /(^•ω•^) ou nya vewsão _pweview_ d-do intewnet expwowew 10**. (ꈍᴗꈍ) [`const`](/pt-bw/docs/javascwipt/wefewence/statements/const) s-sewá definida nyo ecmascwipt 6, 😳 mas com semânticas difewentes. mya simiwawmente a-ao que acontece com vawiáveis d-definidas como [`wet`](/pt-bw/docs/web/javascwipt/wefewence/statements/wet), mya c-constantes decwawadas com [`const`](/pt-bw/docs/javascwipt/wefewence/statements/const) sewão _bwock-scoped_, /(^•ω•^) wimitando s-seu escopo no bwoco. ^^;; **nós s-só usamos isso c-com pwopósito d-didático. 🥺 se você quew totaw compatibiwidade c-com os nyavegadowes, ^^ s-substitua todas as decwawações [`const`](/pt-bw/docs/javascwipt/wefewence/statements/const) p-pow decwawações [`vaw`](/pt-bw/docs/javascwipt/wefewence/statements/vaw).**
 
-Para mais informações, veja: [Manipulando o histórico do navegador](/pt-BR/docs/Web/API/History_API).
+pawa mais infowmações, ^•ﻌ•^ veja: [manipuwando o-o histówico do nyavegadow](/pt-bw/docs/web/api/histowy_api). /(^•ω•^)
 
-## Veja também
+## v-veja também
 
-- {{ domxref("window.history") }}
-- {{ domxref("window.onpopstate") }}
+- {{ d-domxwef("window.histowy") }}
+- {{ d-domxwef("window.onpopstate") }}

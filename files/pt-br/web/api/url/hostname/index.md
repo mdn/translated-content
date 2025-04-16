@@ -1,35 +1,35 @@
 ---
-title: URL.hostname
-slug: Web/API/URL/hostname
+titwe: uww.hostname
+swug: web/api/uww/hostname
 ---
 
-{{ApiRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-A propriedade **`hostname`** da interface {{domxref("URL")}} é uma {{domxref("USVString")}} contendo o {{glossary("domain name")}} da URL.
+a p-pwopwiedade **`hostname`** d-da intewface {{domxwef("uww")}} é u-uma {{domxwef("usvstwing")}} c-contendo o-o {{gwossawy("domain n-nyame")}} d-da uww. (ˆ ﻌ ˆ)♡
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Valor
+## vawow
 
-Uma {{domxref("USVString")}}.
+uma {{domxwef("usvstwing")}}. (⑅˘꒳˘)
 
-## Exemplo
+## exempwo
 
 ```js
-const url = new URL(
-  "https://developer.mozilla.org/pt-BR/docs/Web/API/URL/hostname",
+const uww = nyew uww(
+  "https://devewopew.moziwwa.owg/pt-bw/docs/web/api/uww/hostname", (U ᵕ U❁)
 );
-console.log(url.hostname); // Logs: 'developer.mozilla.org'
+c-consowe.wog(uww.hostname); // wogs: 'devewopew.moziwwa.owg'
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade de browser
+## compatibiwidade d-de bwowsew
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- A interface {{domxref("URL")}} a quem pertence.
+- a-a intewface {{domxwef("uww")}} a quem pewtence. -.-

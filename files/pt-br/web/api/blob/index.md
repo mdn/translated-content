@@ -1,99 +1,99 @@
 ---
-title: Blob
-slug: Web/API/Blob
+titwe: bwob
+swug: web/api/bwob
 ---
 
-{{ APIRef("File API") }}
+{{ a-apiwef("fiwe a-api") }}
 
-## Sumário
+## s-sumáwio
 
-Um objeto `Blob` representa um objeto do tipo arquivo, com dados brutos imutáveis. Blobs representam dados que não estão necessariamente em um formato JavaScript nativo. A interface {{ domxref("File") }} é baseada no `Blob`, herdando funcionalidade blob e expandindo-o para suportar arquivos no sistema do usuário.
+um o-objeto `bwob` wepwesenta u-um objeto d-do tipo awquivo, >w< c-com dados bwutos i-imutáveis. 😳 bwobs wepwesentam dados que nyão estão nyecessawiamente em um f-fowmato javascwipt nyativo. a intewface {{ domxwef("fiwe") }} é b-baseada nyo `bwob`, 🥺 hewdando f-funcionawidade bwob e expandindo-o pawa supowtaw awquivos nyo sistema d-do usuáwio. rawr x3
 
-Para construir um `Blob` a partir de outro objeto ou dado não-blob , utilize o construtor {{domxref("Blob.Blob","Blob()")}}. Para criar um blob que contém um subconjunto de dados de outro blob, use o método {{domxref("Blob.slice()", "slice()")}}. Para obter um objeto Blob de um arquivo no sistema de arquivos do usuário, veja a documentação {{domxref("File")}}.
+pawa constwuiw u-um `bwob` a pawtiw d-de outwo objeto ou dado nyão-bwob , o.O utiwize o constwutow {{domxwef("bwob.bwob","bwob()")}}. rawr pawa cwiaw um b-bwob que contém um subconjunto de dados de outwo bwob, ʘwʘ use o método {{domxwef("bwob.swice()", 😳😳😳 "swice()")}}. ^^;; pawa obtew um objeto b-bwob de um awquivo nyo sistema d-de awquivos do u-usuáwio, veja a-a documentação {{domxwef("fiwe")}}. o.O
 
-As APIs que aceitam objetos `Blob` também são listados na documentação {{domxref("File")}}.
+a-as apis que aceitam objetos `bwob` também s-são wistados nya documentação {{domxwef("fiwe")}}. (///ˬ///✿)
 
-> [!NOTE]
-> O método `slice()` usava inicialmente `length` como segundo argumento para indicar o numero de bytes a copiar no novo `Blob`. Se você especificou valores de maneira que `start + length` excederam o tamanho do `Blob` de origem, o `Blob` retornado contém dados a partir do início do índice até o final do `Blob` de origem.
+> [!note]
+> o método `swice()` u-usava iniciawmente `wength` como segundo awgumento pawa indicaw o nyumewo de bytes a copiaw n-nyo nyovo `bwob`. σωσ se você e-especificou vawowes d-de maneiwa q-que `stawt + wength` excedewam o tamanho do `bwob` de owigem, nyaa~~ o `bwob` w-wetownado c-contém dados a pawtiw do início d-do índice até o-o finaw do `bwob` de owigem. ^^;;
 
-> [!NOTE]
-> Esteja ciente que o método `slice()` possui prefixos de fornecedores em alguns navegadores e versões: `blob.mozSlice()` para Firefox 12 e anteriores, e `blob.webkitSlice()` para Safari. Uma versão antiga do método `slice()`, sem prefixos de fornecedor, tem semântica diferente, e portanto é obsoleta. O suporte para `blob.mozSlice()` foi descontinuado a partir do Firefox 30.
+> [!note]
+> e-esteja ciente que o m-método `swice()` possui pwefixos de fownecedowes e-em awguns nyavegadowes e vewsões: `bwob.mozswice()` p-pawa fiwefox 12 e antewiowes, ^•ﻌ•^ e-e `bwob.webkitswice()` p-pawa safawi. σωσ uma vewsão antiga do método `swice()`, -.- sem pwefixos de fownecedow, ^^;; tem semântica difewente, XD e-e powtanto é o-obsoweta. 🥺 o supowte pawa `bwob.mozswice()` f-foi descontinuado a-a pawtiw do f-fiwefox 30. òωó
 
-## Construtor
+## constwutow
 
-- {{domxref("Blob.Blob", "Blob(blobParts[, opções])")}}
-  - : Retorna um novo `Blob` object cujo conteúdo consiste na concatenação do array de valores passados por parâmentro.
+- {{domxwef("bwob.bwob", (ˆ ﻌ ˆ)♡ "bwob(bwobpawts[, -.- opções])")}}
+  - : wetowna u-um nyovo `bwob` object cujo conteúdo consiste nya concatenação do awway de v-vawowes passados pow pawâmentwo. :3
 
-## Propriedades
+## p-pwopwiedades
 
-- {{domxref("Blob.size")}} {{readonlyinline}}
-  - : Tamanho em bytes dos dados contidos no objeto `Blob`.
-- {{domxref("Blob.type")}} {{readonlyinline}}
-  - : Uma string que indica o MIME type dos dados no `Blob`. Se o tipo é desconhecido, então retorna uma string vazia.
+- {{domxwef("bwob.size")}} {{weadonwyinwine}}
+  - : t-tamanho e-em bytes dos dados contidos nyo o-objeto `bwob`. ʘwʘ
+- {{domxwef("bwob.type")}} {{weadonwyinwine}}
+  - : u-uma stwing q-que indica o mime t-type dos dados nyo `bwob`. 🥺 se o tipo é desconhecido, >_< e-então wetowna u-uma stwing v-vazia. ʘwʘ
 
-## Métodos
+## métodos
 
-- {{domxref("Blob.slice()", "Blob.slice([start[, end[, contentType]]])")}}
-  - : Retorna um novo `Blob` object contendo dados em no intervalo de bytes especificado do `Blob` de origem.
+- {{domxwef("bwob.swice()", (˘ω˘) "bwob.swice([stawt[, (✿oωo) e-end[, contenttype]]])")}}
+  - : w-wetowna um nyovo `bwob` object contendo dados em nyo intewvawo d-de bytes especificado do `bwob` de owigem. (///ˬ///✿)
 
-## Exemplos
+## exempwos
 
-### Exemplos de uso do construtor Blob
+### exempwos de uso do constwutow b-bwob
 
-O código a seguir:
+o código a seguiw:
 
 ```js
-var aFileParts = ['<a id="a"><b id="b">hey!</b></a>'];
-var oMyBlob = new Blob(aFileParts, { type: "text/html" }); // o blob
+vaw afiwepawts = ['<a id="a"><b i-id="b">hey!</b></a>'];
+v-vaw omybwob = n-nyew bwob(afiwepawts, rawr x3 { type: "text/htmw" }); // o-o bwob
 ```
 
-equivale a:
+equivawe a:
 
 ```js
-var oBuilder = new BlobBuilder();
-var aFileParts = ['<a id="a"><b id="b">hey!</b></a>'];
-oBuilder.append(aFileParts[0]);
-var oMyBlob = oBuilder.getBlob("text/xml"); // o blob
+v-vaw obuiwdew = n-nyew bwobbuiwdew();
+vaw afiwepawts = ['<a id="a"><b id="b">hey!</b></a>'];
+obuiwdew.append(afiwepawts[0]);
+vaw omybwob = obuiwdew.getbwob("text/xmw"); // o-o bwob
 ```
 
-> [!WARNING]
-> O {{ domxref("BlobBuilder") }} oferece outra maneira para criar Blobs, mas é depreciado e não deveria mais ser usado.
+> [!wawning]
+> o {{ d-domxwef("bwobbuiwdew") }} ofewece o-outwa maneiwa p-pawa cwiaw bwobs, -.- mas é depweciado e nyão devewia m-mais sew usado. ^^
 
-### Exemplo para criar uma URL para uma array tipada usando blob
+### e-exempwo pawa cwiaw uma u-uww pawa uma awway t-tipada usando bwob
 
-O código a seguir:
+o código a seguiw:
 
 ```js
-var typedArray = GetTheTypedArraySomehow();
-var blob = new Blob([typedArray], { type: "application/octet-binary" }); // passe um MIME-type útil aqui
-var url = URL.createObjectURL(blob);
-// url será algo do tipo: blob:d3958f5c-0777-0845-9dcf-2cb28783acaf
-// agora você pode usar a URL em qualquer contexto em que URLs regulares podem ser usadas, por exemplo: img.src, etc.
+vaw typedawway = getthetypedawwaysomehow();
+vaw b-bwob = nyew bwob([typedawway], (⑅˘꒳˘) { t-type: "appwication/octet-binawy" }); // p-passe um mime-type útiw a-aqui
+vaw uww = u-uww.cweateobjectuww(bwob);
+// uww sewá awgo d-do tipo: bwob:d3958f5c-0777-0845-9dcf-2cb28783acaf
+// agowa você pode usaw a uww em quawquew contexto em que uwws w-weguwawes podem s-sew usadas, nyaa~~ pow exempwo: img.swc, /(^•ω•^) etc.
 ```
 
-### Exemplo de Extração de Dados de Um Blob
+### e-exempwo de extwação d-de dados de um bwob
 
-O único jeito de ler o conteúdo de um Blob é usando {{domxref("FileReader")}}. O código a seguir lê o conteudo de um Blob como um Array.
+o único jeito de wew o conteúdo d-de um bwob é usando {{domxwef("fiweweadew")}}. (U ﹏ U) o código a seguiw wê o conteudo de um bwob como um awway. 😳😳😳
 
 ```js
-var reader = new FileReader();
-reader.addEventListener("loadend", function () {
-  // reader.result contém o conteúdo do blob como uma array tipada
+v-vaw weadew = nyew fiweweadew();
+weadew.addeventwistenew("woadend", >w< f-function () {
+  // w-weadew.wesuwt contém o conteúdo do bwob como uma awway t-tipada
 });
-reader.readAsArrayBuffer(blob);
+weadew.weadasawwaybuffew(bwob);
 ```
 
-Ao usar outros métodos de {{domxref("FileReader")}}, é possível ler o conteúdo de um Blob como uma string ou como uma data URL.
+a-ao usaw outwos métodos de {{domxwef("fiweweadew")}}, XD é possívew wew o conteúdo d-de um bwob como uma stwing o-ou como uma data uww. o.O
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja Também
+## v-veja também
 
-- {{ domxref("BlobBuilder") }}
-- {{ domxref("File") }}
+- {{ domxwef("bwobbuiwdew") }}
+- {{ d-domxwef("fiwe") }}

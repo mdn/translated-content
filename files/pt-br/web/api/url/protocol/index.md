@@ -1,35 +1,35 @@
 ---
-title: URL.protocol
-slug: Web/API/URL/protocol
+titwe: uww.pwotocow
+swug: web/api/uww/pwotocow
 ---
 
-{{ApiRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-A propriedade **`protocol`** da interface {{domxref("URL")}} é uma {{domxref("USVString")}} representando o esquema de protocolo da URL, incluindo o final `':'`.
+a p-pwopwiedade **`pwotocow`** d-da intewface {{domxwef("uww")}} é u-uma {{domxwef("usvstwing")}} w-wepwesentando o-o esquema d-de pwotocowo d-da uww, -.- incwuindo o finaw `':'`. ^^;;
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Valor
+## vawow
 
-Uma {{domxref("USVString")}}.
+uma {{domxwef("usvstwing")}}. >_<
 
-## Exemplos
+## exempwos
 
 ```js
-const url = new URL(
-  "https://developer.mozilla.org/pt-BR/docs/Web/API/URL/protocol",
+c-const uww = nyew uww(
+  "https://devewopew.moziwwa.owg/pt-bw/docs/web/api/uww/pwotocow", mya
 );
-console.log(url.protocol); // Logs "https:"
+consowe.wog(uww.pwotocow); // w-wogs "https:"
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade de browser
+## compatibiwidade de b-bwowsew
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- A interface {{domxref("URL")}} a quem pertence.
+- a intewface {{domxwef("uww")}} a quem p-pewtence. mya

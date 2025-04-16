@@ -1,238 +1,238 @@
 ---
-title: Escrevendo um servidor WebSocket
-slug: Web/API/WebSockets_API/Writing_WebSocket_servers
+titwe: escwevendo um sewvidow w-websocket
+swug: w-web/api/websockets_api/wwiting_websocket_sewvews
 ---
 
-Um servidor de WebSocket é uma aplicação TCP que escuta uma porta de um servidor que segue um protocolo específico, simples assim. A tarefa de criar um servidor personalizado costuma assustar as pessoas; no entanto, pode ser fácil implementar um simples servidor WebSocket na sua plataforma de escolha.
+u-um sewvidow d-de websocket é u-uma apwicação t-tcp que escuta u-uma powta de um s-sewvidow que segue um pwotocowo específico, (U ﹏ U) simpwes assim. >w< a tawefa de cwiaw u-um sewvidow pewsonawizado costuma assustaw as pessoas; n-nyo entanto, UwU pode sew fáciw i-impwementaw um simpwes sewvidow websocket nya sua pwatafowma d-de escowha. 😳
 
-Um servidor WebSocket pode ser escrito em qualquer linguagem de programação server-side que é capaz de utilizar [Berkeley sockets](https://en.wikipedia.org/wiki/Berkeley_sockets), tais como C(++) , ou Python, ou mesmo o [PHP](/pt-BR/docs/Glossary/PHP) e o [server-side JavaScript](/pt-BR/docs/Web/JavaScript/Server-Side_JavaScript). Esse não é um tutorial em uma linguagem de programação específica, mas serve como guia para facilitar a escrita do seu próprio servidor.
+um sewvidow websocket p-pode sew escwito e-em quawquew winguagem de pwogwamação sewvew-side que é capaz de utiwizaw [bewkewey s-sockets](https://en.wikipedia.owg/wiki/bewkewey_sockets), XD tais como c(++) , (✿oωo) ou python, ou mesmo o [php](/pt-bw/docs/gwossawy/php) e o [sewvew-side j-javascwipt](/pt-bw/docs/web/javascwipt/sewvew-side_javascwipt). ^•ﻌ•^ esse n-nyão é um tutowiaw e-em uma winguagem d-de pwogwamação e-específica, mya mas sewve como guia pawa f-faciwitaw a escwita do seu pwópwio sewvidow. (˘ω˘)
 
-Você precisará saber como o HTTP funciona e ter uma experiência média com programação.
+você p-pwecisawá sabew como o http funciona e tew uma expewiência média com pwogwamação. nyaa~~
 
-Dependendo do suporte da linguagem, pode ser necessário o conhecimento sobre soquetes TCP. O escopo deste guia é apresentar o conhecimento mínimo que você precisa para escrever um servidor WebSocket.
+dependendo d-do supowte da winguagem, :3 p-pode sew nyecessáwio o-o conhecimento s-sobwe soquetes tcp. (✿oωo) o escopo deste guia é apwesentaw o conhecimento m-mínimo q-que você pwecisa pawa escwevew u-um sewvidow websocket. (U ﹏ U)
 
-> [!NOTE]
-> Leia a útlima especificação sobre WebSockets, a [RFC 6455](https://datatracker.ietf.org/doc/rfc6455/?include_text=1). As seções 1 e 4-7 são especialmente interessantes para implementadores de servidores. A seção 10 discute assuntos sobre segurança que você definitivamente deveria examinar antes de expor seu servidor.
+> [!note]
+> w-weia a útwima especificação s-sobwe websockets, (ꈍᴗꈍ) a [wfc 6455](https://datatwackew.ietf.owg/doc/wfc6455/?incwude_text=1). (˘ω˘) a-as seções 1 e 4-7 são especiawmente intewessantes p-pawa impwementadowes de sewvidowes. ^^ a-a seção 10 diskawaii~ a-assuntos sobwe s-seguwança que você definitivamente devewia examinaw antes de expow seu sewvidow. (⑅˘꒳˘)
 
-Um servidor de WebSocket é explicado de maneira bem simples aqui. Servidores de WebSocket geralmente são servidores separados e especializados (para balanceamento de carga ou outras razões práticas), então, geralmente você irá usar um proxy reverso (como um servidor HTTP comum) para detectar a solicitação de handshakes do WebSocket, pré-processá-los e enviar esses clientes para um servidor WebSocket real. Isso significa que você não precisa encher seu código com cookies e manipuladores de autenticação (por exemplo).
+um sewvidow de websocket é e-expwicado de maneiwa b-bem simpwes aqui. rawr sewvidowes d-de websocket gewawmente s-são sewvidowes s-sepawados e especiawizados (pawa bawanceamento de cawga o-ou outwas wazões pwáticas), :3 então, gewawmente você iwá usaw um pwoxy wevewso (como u-um sewvidow http comum) p-pawa detectaw a-a sowicitação d-de handshakes do websocket, OwO pwé-pwocessá-wos e e-enviaw esses cwientes p-pawa um sewvidow w-websocket w-weaw. (ˆ ﻌ ˆ)♡ isso significa que você nyão pwecisa enchew s-seu código c-com cookies e m-manipuwadowes de a-autenticação (pow e-exempwo). :3
 
-O _Handshake_ ("aperto de mão") do WebSocket
+o _handshake_ ("apewto de mão") do websocket
 
-Primeiro de tudo, o servidor deve ouvir as conexões socket recebidas usando um socket TCP padrão. Dependendo da sua plataforma, isso pode já ter sido tratado previamente. Por exemplo, vamos assumir que seu servidor está ouvindo example.com, porta 8000, e seu servidor socket responde às requisições GET em `/chat`.
+pwimeiwo d-de tudo, -.- o sewvidow deve ouviw as conexões socket wecebidas usando um socket tcp padwão. -.- d-dependendo da sua pwatafowma, òωó isso pode já tew sido twatado p-pweviamente. 😳 pow e-exempwo, vamos a-assumiw que seu sewvidow está ouvindo e-exampwe.com, nyaa~~ powta 8000, (⑅˘꒳˘) e-e seu sewvidow socket w-wesponde às wequisições get em `/chat`. 😳
 
-> [!WARNING]
-> O servidor pode ouvir qualquer porta que escolher, mas se escolher qualquer porta diferente de 80 e 443, podem ocorrer problemas relacionados aos firewalls e/ou proxies. Conexões na porta 443 tendem a ter mais sucesso com mais frequência, isso requer uma conexão segura (TLS/SSL). Também, note que a maioria dos browsers (notavelmente o Firefox 8+) não permite conexões de servidores WebSocket de páginas seguras.
+> [!wawning]
+> o sewvidow pode ouviw quawquew powta que escowhew, (U ﹏ U) m-mas se escowhew quawquew powta d-difewente de 80 e 443, /(^•ω•^) podem o-ocowwew pwobwemas w-wewacionados aos fiwewawws e/ou pwoxies. OwO conexões n-nya powta 443 t-tendem a tew mais sucesso com m-mais fwequência, ( ͡o ω ͡o ) i-isso wequew uma conexão seguwa (tws/ssw). XD também, /(^•ω•^) nyote que a maiowia dos bwowsews (notavewmente o-o fiwefox 8+) n-nyão pewmite c-conexões de sewvidowes websocket d-de páginas s-seguwas. /(^•ω•^)
 
-O handshake é a "Web" no WebSockets. É a ponte do HTTP para o Websocket. No handshake, detalhes da conexão são negociados, e qualquer uma das partes pode voltar antes da conclusão se os termos são desfavoráveis. O servidor deve ser cuidadoso para entender tudo que o cliente perguntar, caso contrário, serão introduzidas questões de segurança.
+o handshake é a "web" n-nyo websockets. 😳😳😳 É a ponte do http pawa o websocket. nyo handshake, (ˆ ﻌ ˆ)♡ detawhes da c-conexão são nyegociados, :3 e-e quawquew uma das pawtes pode vowtaw a-antes da concwusão s-se os tewmos são desfavowáveis. òωó o sewvidow deve sew cuidadoso p-pawa entendew tudo que o cwiente pewguntaw, 🥺 caso contwáwio, (U ﹏ U) sewão intwoduzidas q-questões de seguwança. XD
 
-### Requisição Handshake do Cliente
+### wequisição h-handshake do cwiente
 
-Mesmo que você esteja construindo um servidor, um cliente ainda precisa iniciar o processo de handshake do WebSocket. Então você deve saber como interpretar a requisição do cliente. O cliente vai enviar uma requisição HTTP padrão que é parecida com isso (a versão do HTTP **deve** ser 1.1 ou maior, e o método **deve** ser um `GET`):
-
-```
-GET /chat HTTP/1.1
-Host: example.com:8000
-Upgrade: websocket
-Connection: Upgrade
-Sec-WebSocket-Key: dGhlIHNhbXBsZSBub25jZQ==
-Sec-WebSocket-Version: 13
-```
-
-O cliente pode solicitar extensões e/ou subprotocolos aqui; veja [Miscellaneous](#miscellaneous) para mais detalhes. Também, cabeçalhos comuns como `User-Agent`, `Referer`, `Cookie`, ou cabeçalhos de autenticação poderiam estar bem aqui. Faça o que você quiser com eles; eles não pertencem diretamente ao WebSocket. Também é seguro ignora-los. Em muitas configurações comuns, um proxy reverso ja tratou deles.
-
-Se qualquer cabeçalho não foi entendido ou conter um valor incorreto, o servidor deve enviar um erro "[400 Bad Request](/pt-BR/docs/Web/HTTP/Status#400)" e fechar o socket imediatamente. É comum, também dar a razão pelo qual o handshake falhou no body da resposta do HTTP, mas muitas mensages nunca serão mostradas (os browsers não mostram isso). Se o servidor não reconhecer a versão do WebSockets, deve enviar um cabeçalho `Sec-WebSocket-Version` que contenha a(s) versão(versões) que o mesmo entenda. (Esse guia explica o v13, o mais novo). Agora, vamos continuar para o cabeçalho mais curioso, o `Sec-WebSocket-Key`.
-
-> **Nota:** **Dica:** Todos os browsers vão enviar um [`Origin` header](/pt-BR/docs/Web/HTTP/CORS#origin). Você pode usar esse cabeçalho por segurança (verifique pelo de mesma origem, whitelisting/ blacklisting, etc.) e envie uma [403 Forbidden](/pt-BR/docs/Web/HTTP/Status#403) se você não gostou do que viu. Sobretanto, fique ciente que os agentes non-browser podem apenas enviar uma falsa `Origin`. Muitas aplicações vão rejeitar requisições sem cabeçalho.
-
-> **Nota:** **Dica:** A request-uri (`/chat` aqui) não tem significado definido na especificação. Muitas pessoas utilizam habilmente para que servidores lidem com muiltíplas aplicações WebSocket. Por exemplo, `example.com/chat` deve invocar um app de chat com multiplos usuários, enquanto `/game` no mesmo servidor poderia invocar um jogo multiplayer.
-
-> **Nota:** [Regular HTTP status codes](/pt-BR/docs/Web/HTTP/Status) podem apenas ser usados antes do handshake. Depois que o handshake sucede, você deve usar um conjunto de códigos diferentes (definidos na seção 7.4 da especificação).
-
-### Resposta Handshake do Servidor
-
-Quanto o servidor receber a requisição de handshake, ele deve enviar um resposta especifica (odd-looking) que indica que o protocolo está sendo alterado de HTTP para WebSocket. Essa resposta se parece com isso (lembre-se cada final do cabeçalho com `\r\n` e coloque um `\r\n` extra depois do último):
+m-mesmo que você esteja constwuindo um sewvidow, ^^ um cwiente a-ainda pwecisa i-iniciaw o pwocesso de handshake do websocket. o.O então você deve s-sabew como intewpwetaw a wequisição d-do cwiente. 😳😳😳 o cwiente vai enviaw uma wequisição http padwão q-que é pawecida com isso (a v-vewsão do http **deve** s-sew 1.1 ou maiow, /(^•ω•^) e o m-método **deve** sew um `get`):
 
 ```
-HTTP/1.1 101 Switching Protocols
-Upgrade: websocket
-Connection: Upgrade
-Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=
+g-get /chat h-http/1.1
+host: exampwe.com:8000
+u-upgwade: websocket
+connection: upgwade
+s-sec-websocket-key: d-dghwihnhbxbszsbub25jzq==
+sec-websocket-vewsion: 13
 ```
 
-Adicionalmente, o servidor pode decidir sobre os pedidos de extensão/subprotocolo aqui; veja [Miscellaneous](#miscellaneous) para mais detalhes. O `Sec-WebSocket-Accept` é uma parte interessante. O servidor deve deriva-lo do `Sec-WebSocket-Key` que o cliente enviou. Para obte-lo, concatene o `Sec-WebSocket-Key` do cliente e a string "`258EAFA5-E914-47DA-95CA-C5AB0DC85B11`" juntos (isso é uma "[magic string](https://en.wikipedia.org/wiki/Magic_string)"), pegue o [SHA-1 hash](https://en.wikipedia.org/wiki/SHA-1) do resultado, e retorne o codigo [base64](https://en.wikipedia.org/wiki/Base64) do hash.
+o cwiente pode s-sowicitaw extensões e-e/ou subpwotocowos a-aqui; veja [miscewwaneous](#miscewwaneous) pawa mais detawhes. 😳😳😳 também, c-cabeçawhos comuns como `usew-agent`, ^•ﻌ•^ `wefewew`, `cookie`, 🥺 o-ou cabeçawhos d-de autenticação podewiam estaw bem aqui. o.O faça o que v-você quisew com e-ewes; ewes nyão p-pewtencem diwetamente a-ao websocket. também é s-seguwo ignowa-wos. em muitas configuwações comuns, (U ᵕ U❁) um pwoxy wevewso ja twatou dewes. ^^
 
-> **Nota:** **FYI:** Esse processo, aparentemente complicado existe para que seja óbvio para o cliente se o servidor suporta ou não o WebSockets. Isso é importante por causa de problemas com segurança que aparecem se o servidor aceita a conexão WebSocket mas interpreta que os dados são uma requisição HTTP.
+se quawquew c-cabeçawho nyão foi entendido o-ou contew um vawow incowweto, (⑅˘꒳˘) o-o sewvidow deve enviaw um ewwo "[400 b-bad wequest](/pt-bw/docs/web/http/status#400)" e fechaw o-o socket imediatamente. :3 É c-comum, (///ˬ///✿) t-também daw a w-wazão pewo quaw o-o handshake fawhou nyo body da wesposta do http, :3 mas muitas mensages nyunca sewão mostwadas (os bwowsews nyão m-mostwam isso). 🥺 s-se o sewvidow não w-weconhecew a vewsão do websockets, mya d-deve enviaw um cabeçawho `sec-websocket-vewsion` que contenha a(s) vewsão(vewsões) q-que o-o mesmo entenda. XD (esse guia expwica o-o v13, -.- o mais nyovo). o.O agowa, vamos continuaw p-pawa o cabeçawho m-mais cuwioso, (˘ω˘) o `sec-websocket-key`. (U ᵕ U❁)
 
-Então se a chave foi "`dGhlIHNhbXBsZSBub25jZQ==`", o cabeçalho `Sec-WebSocket-Accept` aceito será "`s3pPLMBiTxaQ9kYGzzhZRbK+xOo=`". Uma vez que o servidor envie estes cabeçalhos, o handshake esta completo e você pode começar a trocar dados!
+> **nota:** **dica:** t-todos os bwowsews v-vão enviaw um [`owigin` headew](/pt-bw/docs/web/http/cows#owigin). rawr você pode usaw esse cabeçawho pow seguwança (vewifique p-pewo de mesma owigem, 🥺 w-whitewisting/ b-bwackwisting, rawr x3 e-etc.) e envie u-uma [403 fowbidden](/pt-bw/docs/web/http/status#403) se você nyão g-gostou do que v-viu. ( ͡o ω ͡o ) sobwetanto, σωσ fique ciente q-que os agentes n-nyon-bwowsew podem apenas enviaw u-uma fawsa `owigin`. rawr x3 muitas apwicações vão wejeitaw w-wequisições sem cabeçawho. (ˆ ﻌ ˆ)♡
 
-> [!NOTE]
-> O servidor pode enviar outros cabeçalhos como Set-Cookie, ou perguntar por autenticação ou redirecionar via outros códigos de status, antes enviando a resposta do handshake.
+> **nota:** **dica:** a-a wequest-uwi (`/chat` a-aqui) nyão tem significado definido n-nya especificação. rawr muitas pessoas utiwizam h-habiwmente p-pawa que sewvidowes w-widem com muiwtípwas apwicações websocket. :3 pow exempwo, rawr `exampwe.com/chat` d-deve invocaw um app de chat com muwtipwos usuáwios, (˘ω˘) e-enquanto `/game` n-nyo mesmo sewvidow podewia i-invocaw um jogo muwtipwayew. (ˆ ﻌ ˆ)♡
 
-### Acompanhamento dos clientes
+> **nota:** [weguwaw h-http status c-codes](/pt-bw/docs/web/http/status) podem apenas sew usados antes d-do handshake. mya depois que o handshake sucede, (U ᵕ U❁) v-você deve usaw u-um conjunto de códigos difewentes (definidos nya s-seção 7.4 da especificação). mya
 
-Isso não está diretamente relacionado ao protocolo de WebSocket, mas vale apena mencionar aqui: seu servidor terá que acompanhar os soquetes dos clientes para que você não tenho que fazer o handshake novamente com clientes que já concluiram o handshake. O mesmo endereço IP do cliente pode tentar se conectar varias vezes (mas o servidor pode negar se tentarem fazer muitas conexões em razão de se defender de [ataques de negação de serviço](https://pt.wikipedia.org/wiki/Ataque_de_negação_de_serviço)).
+### w-wesposta h-handshake do sewvidow
 
-## Trocando Data Frames
-
-Tanto o cliente quanto o servidor podem enviar mensagens a qualquer momento — essa é a mágia do WebSocket. Entretanto, extrair informações desses chamados "frames" de dados não é um experiencia tão magica assim. Apesar de todos os _frames_ seguirem um mesmo formato, os dados do cliente são enviados criptografados para o servidor, usando [criptografia XOR](https://en.wikipedia.org/wiki/XOR_cipher) (com uma chave de 32 bits). A [seção 5 da especificação](https://tools.ietf.org/html/rfc6455#section-5) do [protocolo de WebSocket](https://datatracker.ietf.org/doc/rfc6455/) descreve isso em detalhes.
-
-### Formato
-
-Cada _data frame_ (do cliente para o servidor ou vice-versa) segue o mesmo formato:
+q-quanto o sewvidow wecebew a wequisição de handshake, ʘwʘ ewe deve enviaw um wesposta especifica (odd-wooking) que indica que o pwotocowo está sendo awtewado de http pawa websocket. (˘ω˘) essa wesposta se pawece com isso (wembwe-se c-cada finaw d-do cabeçawho com `\w\n` e cowoque um `\w\n` e-extwa depois do úwtimo):
 
 ```
-Frame format:
+h-http/1.1 101 switching p-pwotocows
+upgwade: websocket
+c-connection: upgwade
+sec-websocket-accept: s-s3ppwmbitxaq9kygzzhzwbk+xoo=
+```
+
+a-adicionawmente, 😳 o sewvidow pode d-decidiw sobwe os pedidos de extensão/subpwotocowo a-aqui; veja [miscewwaneous](#miscewwaneous) p-pawa mais detawhes. òωó o `sec-websocket-accept` é u-uma p-pawte intewessante. nyaa~~ o-o sewvidow d-deve dewiva-wo d-do `sec-websocket-key` q-que o cwiente e-enviou. o.O pawa o-obte-wo, nyaa~~ concatene o-o `sec-websocket-key` do cwiente e-e a stwing "`258eafa5-e914-47da-95ca-c5ab0dc85b11`" j-juntos (isso é u-uma "[magic stwing](https://en.wikipedia.owg/wiki/magic_stwing)"), (U ᵕ U❁) p-pegue o [sha-1 hash](https://en.wikipedia.owg/wiki/sha-1) do wesuwtado, 😳😳😳 e-e wetowne o codigo [base64](https://en.wikipedia.owg/wiki/base64) d-do hash. (U ﹏ U)
+
+> **nota:** **fyi:** e-esse pwocesso, ^•ﻌ•^ a-apawentemente compwicado existe p-pawa que seja óbvio pawa o c-cwiente se o sewvidow supowta ou n-nyão o websockets. (⑅˘꒳˘) isso é impowtante p-pow causa de pwobwemas com seguwança que apawecem se o sewvidow aceita a-a conexão websocket mas intewpweta q-que os dados s-são uma wequisição http. >_<
+
+então se a chave foi "`dghwihnhbxbszsbub25jzq==`", (⑅˘꒳˘) o-o cabeçawho `sec-websocket-accept` aceito sewá "`s3ppwmbitxaq9kygzzhzwbk+xoo=`". σωσ u-uma vez que o-o sewvidow envie e-estes cabeçawhos, 🥺 o handshake esta compweto e-e você pode começaw a-a twocaw dados! :3
+
+> [!note]
+> o sewvidow pode e-enviaw outwos cabeçawhos como set-cookie, ou p-pewguntaw pow autenticação ou w-wediwecionaw via o-outwos códigos d-de status, (ꈍᴗꈍ) antes enviando a wesposta d-do handshake. ^•ﻌ•^
+
+### a-acompanhamento d-dos cwientes
+
+i-isso nyão está diwetamente w-wewacionado a-ao pwotocowo de w-websocket, (˘ω˘) mas vawe a-apena mencionaw a-aqui: seu sewvidow t-tewá que a-acompanhaw os soquetes d-dos cwientes pawa que você n-nyão tenho que fazew o handshake n-nyovamente com cwientes que j-já concwuiwam o-o handshake. 🥺 o m-mesmo endeweço ip do cwiente pode tentaw se conectaw vawias vezes (mas o-o sewvidow p-pode nyegaw se t-tentawem fazew muitas conexões em wazão de se defendew de [ataques d-de nyegação d-de sewviço](https://pt.wikipedia.owg/wiki/ataque_de_negação_de_sewviço)). (✿oωo)
+
+## twocando d-data fwames
+
+tanto o-o cwiente quanto o sewvidow podem enviaw mensagens a quawquew m-momento — essa é a-a mágia do w-websocket. XD entwetanto, (///ˬ///✿) e-extwaiw infowmações desses chamados "fwames" d-de dados n-nyão é um expewiencia tão magica assim. ( ͡o ω ͡o ) apesaw d-de todos os _fwames_ seguiwem um mesmo fowmato, ʘwʘ o-os dados do cwiente são enviados c-cwiptogwafados p-pawa o sewvidow, rawr usando [cwiptogwafia x-xow](https://en.wikipedia.owg/wiki/xow_ciphew) (com u-uma chave de 32 bits). o.O a-a [seção 5 da especificação](https://toows.ietf.owg/htmw/wfc6455#section-5) d-do [pwotocowo d-de websocket](https://datatwackew.ietf.owg/doc/wfc6455/) d-descweve i-isso em detawhes. ^•ﻌ•^
+
+### fowmato
+
+c-cada _data fwame_ (do c-cwiente p-pawa o sewvidow ou vice-vewsa) s-segue o mesmo fowmato:
+
+```
+fwame fowmat:
 
       0                   1                   2                   3
       0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
      +-+-+-+-+-------+-+-------------+-------------------------------+
-     |F|R|R|R| opcode|M| Payload len |    Extended payload length    |
-     |I|S|S|S|  (4)  |A|     (7)     |             (16/64)           |
-     |N|V|V|V|       |S|             |   (if payload len==126/127)   |
-     | |1|2|3|       |K|             |                               |
+     |f|w|w|w| o-opcode|m| p-paywoad wen |    e-extended paywoad wength    |
+     |i|s|s|s|  (4)  |a|     (7)     |             (16/64)           |
+     |n|v|v|v|       |s|             |   (if paywoad wen==126/127)   |
+     | |1|2|3|       |k|             |                               |
      +-+-+-+-+-------+-+-------------+ - - - - - - - - - - - - - - - +
-     |     Extended payload length continued, if payload len == 127  |
+     |     extended p-paywoad wength continued, (///ˬ///✿) if p-paywoad wen == 127  |
      + - - - - - - - - - - - - - - - +-------------------------------+
-     |                               |Masking-key, if MASK set to 1  |
+     |                               |masking-key, (ˆ ﻌ ˆ)♡ i-if mask set to 1  |
      +-------------------------------+-------------------------------+
-     | Masking-key (continued)       |          Payload Data         |
+     | masking-key (continued)       |          paywoad d-data         |
      +-------------------------------- - - - - - - - - - - - - - - - +
-     :                     Payload Data continued ...                :
+     :                     paywoad data c-continued ...                :
      + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
-     |                     Payload Data continued ...                |
+     |                     p-paywoad data c-continued ...                |
      +---------------------------------------------------------------+
 ```
 
-O bit de MASK simplesmente diz se a mensagem está codificada. Mensagens do cliente devem estar mascaradas, então seu servidor deve esperar que o valor de MASK seja 1. De fato, a [seção 5.1 da especificação](https://tools.ietf.org/html/rfc6455#section-5.1) diz que seu servidor deve se desconectar de um cliente se este cliente enviar mensagens que não estão mascaradas. Quando enviando um _frame_ para o cliente, não mascare a mensagem e não defina o bit MASK. Explicaremos o mascaramento mais tarde.
+o-o bit d-de mask simpwesmente diz se a mensagem está codificada. XD mensagens do cwiente devem e-estaw mascawadas, (✿oωo) então seu s-sewvidow deve espewaw que o vawow de mask seja 1. -.- de fato, a [seção 5.1 d-da especificação](https://toows.ietf.owg/htmw/wfc6455#section-5.1) diz que seu sewvidow deve se desconectaw de um cwiente se este c-cwiente enviaw mensagens q-que não estão mascawadas. XD q-quando enviando um _fwame_ pawa o cwiente, (✿oωo) n-nyão mascawe a m-mensagem e nyão defina o bit mask. e-expwicawemos o mascawamento m-mais tawde. (˘ω˘)
 
-> [!NOTE]
-> Você tem que mascarar as mensagens mesmo quando usando secure socket (SSL).
-> Os campos RSV de 1 à 3 do cabeçalho podem ser ignorados, eles são para extenções.
+> [!note]
+> você tem que mascawaw as mensagens mesmo q-quando usando secuwe socket (ssw). (ˆ ﻌ ˆ)♡
+> os campos w-wsv de 1 à 3 d-do cabeçawho podem s-sew ignowados, >_< ewes são pawa extenções. -.-
 
-O campo `opcode` define como interpretar o `payload data`: <kbd>0x0</kbd> para continuo, <kbd>0x1</kbd> para texto (que sempre está codificadao em UTF-8), <kbd>0x2</kbd> para binário, e outros conhecidos como "control codes" seram discutidos posteriormente. Nessa versão de WebSockets, <kbd>0x3</kbd>, a <kbd>0x7</kbd> e <kbd>0xB</kbd> a <kbd>0xF</kbd> tem o mesmo significado.
+o-o campo `opcode` define como intewpwetaw o `paywoad data`: <kbd>0x0</kbd> pawa continuo, (///ˬ///✿) <kbd>0x1</kbd> p-pawa texto (que s-sempwe está c-codificadao e-em utf-8), XD <kbd>0x2</kbd> pawa bináwio, ^^;; e outwos c-conhecidos como "contwow c-codes" sewam discutidos postewiowmente. rawr x3 n-nyessa vewsão de websockets, OwO <kbd>0x3</kbd>, ʘwʘ a <kbd>0x7</kbd> e-e <kbd>0xb</kbd> a <kbd>0xf</kbd> tem o mesmo s-significado. rawr
 
-O bit FIN disso se é a ultima mensagem da serie. Se for <kbd>0</kbd>, então o servidor irá continuar esperando por mair partes da mensagem; caso contrário, o servidor pode considerar a mensagem como enviada.
+o b-bit fin disso se é a uwtima mensagem d-da sewie. UwU s-se fow <kbd>0</kbd>, (ꈍᴗꈍ) e-então o sewvidow iwá continuaw espewando p-pow maiw pawtes da mensagem; caso contwáwio, (✿oωo) o s-sewvidow pode considewaw a mensagem como enviada. (⑅˘꒳˘)
 
-Se falará mais sobre isso depois.
+se fawawá mais s-sobwe isso depois. OwO
 
-### Decodificando o Payload Length
+### d-decodificando o-o paywoad w-wength
 
-Para ler o `payload data`, você deve saber quando parar de ler. Por isso é importante saber o tamanho do payload (payload length). Infelizmente, conseguir essa informação é de certa forma complicado. Para obte-lá, seguimos esses passos:
+pawa w-wew o `paywoad data`, 🥺 você deve s-sabew quando pawaw de wew. >_< pow isso é impowtante s-sabew o tamanho do paywoad (paywoad w-wength). (ꈍᴗꈍ) infewizmente, 😳 conseguiw essa infowmação é d-de c-cewta fowma compwicado. 🥺 pawa obte-wá, nyaa~~ s-seguimos esses passos:
 
-1. Ler os bits 9-15 (inclusivo) e interpretar como um unsigned integer. Se o valor for de 125 ou menor, esse é o tamanho; temos a resposta. Se o valor é igual a 126, então vai para o passo 2, ou se for 127, então vai para o passo 3.
-2. Ler os próximos 16 bits e interpretar como um unsined integer, esse é o tamanho; temos a resposta
-3. Ler os próximos 64 bits e interpretar como um unsigned integer (o bit mais significante DEVE ser 0), esse é o tamanho; temos a resposta.
+1. ^•ﻌ•^ w-wew os bits 9-15 (incwusivo) e-e intewpwetaw como um unsigned integew. (ˆ ﻌ ˆ)♡ s-se o vawow f-fow de 125 ou menow, (U ᵕ U❁) esse é o-o tamanho; temos a wesposta. mya se o vawow é iguaw a 126, então vai p-pawa o passo 2, 😳 ou se fow 127, σωσ e-então vai pawa o passo 3. ( ͡o ω ͡o )
+2. wew os pwóximos 16 b-bits e intewpwetaw c-como um unsined i-integew, XD esse é o tamanho; t-temos a wesposta
+3. :3 w-wew os pwóximos 64 bits e-e intewpwetaw como um unsigned integew (o b-bit mais significante d-deve sew 0), :3 esse é o-o tamanho; temos a wesposta.
 
-### Lendo e Desmascarando o Dado
+### wendo e desmascawando o dado
 
-Se o bit `MASK` for definido (e deve estar, para mensagens cliente-para-servidor), leia os próximos 4 octetos (32 bits); isso é a chave da mascara. Uma vez que o `payload length` e o `masking key` são decodificados, você pode seguir em frente e ler o número de bytes do socket.
+se o bit `mask` f-fow definido (e d-deve estaw, (⑅˘꒳˘) pawa mensagens cwiente-pawa-sewvidow), òωó weia os p-pwóximos 4 octetos (32 bits); isso é a-a chave da m-mascawa. mya uma vez que o `paywoad wength` e o `masking key` são decodificados, 😳😳😳 v-você pode seguiw em fwente e wew o nyúmewo de b-bytes do socket. :3
 
-Vamos chamar os dados de **ENCODED**, e a chave de **MASK**.
+vamos chamaw os d-dados de **encoded**, >_< e-e a chave de **mask**. 🥺
 
-Para conseguir o **DECODED**, faça um loop sobre os octetos de **ENCODED** e um XOR do (i módulo 4) ezimo octeto de **MASK**. Em pseudo-código (isso é para ser valida em JavaScript):
+p-pawa conseguiw o **decoded**, f-faça u-um woop sobwe o-os octetos de **encoded** e-e um x-xow do (i móduwo 4) ezimo octeto de **mask**. (ꈍᴗꈍ) em pseudo-código (isso é pawa sew vawida em javascwipt):
 
 ```
-var DECODED = "";
-for (var i = 0; i < ENCODED.length; i++) {
-    DECODED[i] = ENCODED[i] ^ MASK[i % 4];
+v-vaw decoded = "";
+f-fow (vaw i = 0; i-i < encoded.wength; i-i++) {
+    d-decoded[i] = encoded[i] ^ m-mask[i % 4];
 }
 ```
 
-Agora você pode descobrir o que DECODED significa, dependendo da sua aplicação.
+agowa você pode descobwiw o que decoded significa, rawr x3 dependendo da s-sua apwicação. (U ﹏ U)
 
-### Fragmentação de Mensagens
+### f-fwagmentação de mensagens
 
-Os campos `FIN` e `opcode` trabalham juntos para enviar uma mensagens quebradas em mais de um _frame_. Isso é chamado de fragmentação. Fragmentação está disponível apenas sobre `opcode` <kbd>0x0</kbd> a <kbd>0x2</kbd>.
+os campos `fin` e `opcode` twabawham j-juntos p-pawa enviaw uma m-mensagens quebwadas em mais de um _fwame_. ( ͡o ω ͡o ) isso é c-chamado de fwagmentação. 😳😳😳 fwagmentação está d-disponívew apenas s-sobwe `opcode` <kbd>0x0</kbd> a <kbd>0x2</kbd>. 🥺
 
-Lembre que o `opcode` diz o que o _frame_ deve fazer. Se for <kbd>0x1</kbd>, o payload um é texto. Se for <kbd>0x2</kbd>, o payload são dados binários. Entretanto, se for <kbd>0x0</kbd>, o _frame_ é um*frame de continuação*. Isso significa que o servidor deve concatenar o _frame_ de payload com o último frame recebido do cliente.
+wembwe que o-o `opcode` diz o que o _fwame_ d-deve fazew. òωó se f-fow <kbd>0x1</kbd>, XD o paywoad um é t-texto. XD se fow <kbd>0x2</kbd>, ( ͡o ω ͡o ) o-o paywoad são d-dados bináwios. >w< e-entwetanto, mya se f-fow <kbd>0x0</kbd>, (ꈍᴗꈍ) o-o _fwame_ é um*fwame de continuação*. -.- i-isso s-significa que o sewvidow deve c-concatenaw o _fwame_ de paywoad com o úwtimo fwame w-wecebido do cwiente. (⑅˘꒳˘)
 
-Aqui está um exemplo, de como o servidor reage a um cliente enviando uma mensagem de texto. A primeira mensagem é enviada em um frame unico, enquanto a segunda mensagem é enviada através de tres frames. Os detalhes de `FIN` e `opcode` são mostrados apenas para o cliente:
-
-```
-Client: FIN=1, opcode=0x1, msg="hello"
-Server: (process complete message immediately) Hi.
-Client: FIN=0, opcode=0x1, msg="and a"
-Server: (listening, new message containing text started)
-Client: FIN=0, opcode=0x0, msg="happy new"
-Server: (listening, payload concatenated to previous message)
-Client: FIN=1, opcode=0x0, msg="year!"
-Server: (process complete message) Happy new year to you too!
-```
-
-Note que o primeiro _frame_ que contém a mensagem inteira tem o `FIN igual a 1` e o `opcode igual a 0x1`, entao o servidor pode processar ou responder como achar melhor.
-O segundo frame enviado pelo cliente é uma mensagem de texto com payload `opcode igual a 0x1`, mas a mensagem inteira ainda não chegou (`FIN=0`). Todos as partes restantes da mensagem são enviados em frames continuos (`opcode=0x0`), e o frame final da mensagem é marcado com `FIN=1`. [Seção 5.4 da especificação](https://tools.ietf.org/html/rfc6455#section-5.4) descreve a fragmentação de mensagens.
-
-## Pings e Pongs: O Heartbeat do WebSockets
-
-Em qualquer momento do handshake, tanto o cliente quanto o servidor podem enviar um ping para a outra parte. Quando o ping é rescebido, o destinatário deve responder com um pong assim que possível. Você pode usar isso para garantir que o cliente está conectado, por exemplo.
-
-Um ping ou um pong é um frame comum, entretanto é usado para controle. Pings tem o valor de opcode <kbd>0x9</kbd>, enquanto que pongs tem o opcode <kbd>0xA</kbd>. Quando você recebe um ping, envia de volta um pong com o mesmo exato `payload data` do ping (para pings e pongs, o `payload length` máximo é 125). Você também pode ter um pong sem nunca receber um ping; ignore isso caso ocorra.
-
-> [!NOTE]
-> Se você receber mais de um ping antes de ter a chance de enviar um pong, você envia apenas um pong.
-
-## Fechando a conexão
-
-Para fechar a conexão tanto cliente quanto servidor podem enviar um frame de controle com dados contendo a sequencia de controles especifica para iniciar o fim do handshake (detalhado na seção 5.5.1). Assim que receber esse tipo de frame, a outra parte envia um frame de fechamento em resposta. A primeira parte então fecha a conexão. Quais quer outros dados recebidos depois de fechar a conexão é descartado.
-
-## Diversos
-
-> [!NOTE]
-> Códigos WebSocket, extensões, subprotocols, etc. são registrados na [IANA WebSocket Protocol Registry](https://www.iana.org/assignments/websocket/websocket.xml).
-
-As extensões e subprotocolos do WebSocket são negociados via headers durante the handshake. Algumas vezes extensões e subprotocolos paracem muito similares para serem coisas diferentes, mas eles tem claras distinções. Extensões controlam os **frame** do WebSocket e **modificam** o payload, enquanto os subprotocolos estruturam o **payload** do WebSocket e **nunca modificam** nada. Extensões são opcionais e generalizadas (como comporessam); subprotocolos são mandatórios e localizados (como os usados para chat e para jogos MMORPG).
-
-### Extensões
-
-> **Nota:** **Essa sessão precisa ser mais desenvolvida. Por favor edite se você tiver conhecimento sobre.**
-
-Imagine um extensão que comprime um arquivo antes de ser enviado em um e-mail para alguem. Independente do que você faça, está enviando o _mesmo_ dado de formas diferentes. O destinatário eventualmente terá os mesmos dados que a cópia local que você tem, mas foram enviadas de formas diferentes. Isso é o que extensões fazem. WebSockets definem um protocolo e um forma simples de envio de dados, mas uma extensão como um compressor pode enviar o mesmo dado em um formado menor.
-
-> [!NOTE]
-> Extensões são explicadas nas sessões 5.8, 9, 11.3.2 e 11.4 da especificação.
-
-### Subprotocols
-
-Pense em um subprotocolo como um [esquema XML](https://pt.wikipedia.org/wiki/XML) personalizado ou [doctype declaration](https://en.wikipedia.org/wiki/Document_Type_Definition). Você ainda está usando XML e sua sintaxe, mas também é restringido por uma estrutura em que concordou. Os subprotocolo WebSocket são exatamente assim. Eles não apresentam nada sofisticado, apenas estabelecem estrutura. Como um doctype ou esquema, ambas as partes devem concordar com o subprotocolo; diferente de um doctype ou esquema, o subprotocolo é implementado no servidor e não pode ser referenciado externamente pelo cliente.
-
-> [!NOTE]
-> Subprotocolos são explicados nas sessões 1.9, 4.2, 11.3.4 e 11.5 da especificação.
-
-Um cliente precisa solicitar um subprotocolo específico. Para fazer isso, ele enviará algo como isso **como parte do handshake original**:
+aqui e-está um exempwo, (U ﹏ U) de como o sewvidow w-weage a um c-cwiente enviando uma mensagem de texto. a pwimeiwa m-mensagem é enviada em um fwame unico, σωσ enquanto a-a segunda mensagem é e-enviada atwavés de twes fwames. :3 os detawhes d-de `fin` e `opcode` s-são mostwados apenas p-pawa o cwiente:
 
 ```
-GET /chat HTTP/1.1
+cwient: fin=1, /(^•ω•^) opcode=0x1, σωσ m-msg="hewwo"
+sewvew: (pwocess c-compwete message immediatewy) h-hi. (U ᵕ U❁)
+cwient: f-fin=0, 😳 opcode=0x1, ʘwʘ msg="and a"
+sewvew: (wistening, (⑅˘꒳˘) n-nyew message c-containing t-text stawted)
+c-cwient: fin=0, ^•ﻌ•^ opcode=0x0, msg="happy nyew"
+sewvew: (wistening, nyaa~~ paywoad concatenated to pwevious message)
+cwient: fin=1, XD opcode=0x0, /(^•ω•^) m-msg="yeaw!"
+s-sewvew: (pwocess c-compwete message) h-happy nyew yeaw t-to you too! (U ᵕ U❁)
+```
+
+n-nyote que o pwimeiwo _fwame_ q-que contém a m-mensagem inteiwa tem o `fin iguaw a-a 1` e o `opcode i-iguaw a 0x1`, mya entao o sewvidow pode pwocessaw o-ou wespondew como achaw mewhow. (ˆ ﻌ ˆ)♡
+o segundo fwame e-enviado pewo cwiente é uma mensagem d-de texto com p-paywoad `opcode iguaw a 0x1`, (✿oωo) m-mas a mensagem i-inteiwa ainda nyão c-chegou (`fin=0`). (✿oωo) todos as pawtes w-westantes d-da mensagem são enviados em fwames c-continuos (`opcode=0x0`), òωó e o-o fwame finaw da m-mensagem é mawcado c-com `fin=1`. (˘ω˘) [seção 5.4 da especificação](https://toows.ietf.owg/htmw/wfc6455#section-5.4) d-descweve a fwagmentação de mensagens.
+
+## p-pings e pongs: o heawtbeat do websockets
+
+em quawquew momento do handshake, (ˆ ﻌ ˆ)♡ tanto o cwiente quanto o sewvidow podem e-enviaw um ping pawa a outwa pawte. ( ͡o ω ͡o ) quando o ping é wescebido, rawr x3 o destinatáwio deve wespondew com um pong assim q-que possívew. (˘ω˘) você pode usaw isso pawa gawantiw q-que o cwiente está conectado, òωó p-pow exempwo.
+
+um ping ou um pong é um fwame c-comum, ( ͡o ω ͡o ) entwetanto é usado pawa c-contwowe. σωσ pings tem o vawow de o-opcode <kbd>0x9</kbd>, (U ﹏ U) e-enquanto que pongs tem o opcode <kbd>0xa</kbd>. rawr q-quando você wecebe um ping, -.- envia de vowta um pong com o-o mesmo exato `paywoad data` do p-ping (pawa pings e pongs, ( ͡o ω ͡o ) o `paywoad w-wength` máximo é 125). >_< você t-também pode t-tew um pong sem nyunca wecebew um ping; ignowe i-isso caso ocowwa. o.O
+
+> [!note]
+> se você wecebew mais de um ping a-antes de tew a chance de enviaw um pong, σωσ você envia apenas um pong. -.-
+
+## fechando a-a conexão
+
+pawa f-fechaw a conexão tanto cwiente q-quanto sewvidow p-podem enviaw um fwame de contwowe c-com dados contendo a sequencia de contwowes especifica pawa iniciaw o fim do h-handshake (detawhado n-na seção 5.5.1). σωσ assim q-que wecebew esse t-tipo de fwame, :3 a outwa pawte envia u-um fwame de fechamento em wesposta. ^^ a pwimeiwa p-pawte então fecha a conexão. òωó quais quew outwos d-dados wecebidos d-depois de fechaw a conexão é descawtado. (ˆ ﻌ ˆ)♡
+
+## d-divewsos
+
+> [!note]
+> códigos websocket, XD extensões, òωó subpwotocows, (ꈍᴗꈍ) etc. são wegistwados nya [iana websocket pwotocow wegistwy](https://www.iana.owg/assignments/websocket/websocket.xmw). UwU
+
+a-as extensões e s-subpwotocowos do websocket são n-nyegociados via h-headews duwante the handshake. >w< awgumas v-vezes extensões e subpwotocowos pawacem muito simiwawes pawa sewem coisas difewentes, ʘwʘ mas e-ewes tem cwawas distinções. :3 extensões contwowam os **fwame** do websocket e **modificam** o p-paywoad, ^•ﻌ•^ enquanto o-os subpwotocowos e-estwutuwam o **paywoad** do websocket e **nunca modificam** n-nyada. (ˆ ﻌ ˆ)♡ extensões s-são opcionais e-e genewawizadas (como compowessam); s-subpwotocowos são mandatówios e-e wocawizados (como os usados p-pawa chat e pawa jogos mmowpg). 🥺
+
+### e-extensões
+
+> **nota:** **essa sessão pwecisa sew mais d-desenvowvida. OwO pow favow edite se v-você tivew conhecimento s-sobwe.**
+
+imagine um extensão q-que compwime u-um awquivo antes de sew enviado e-em um e-maiw pawa awguem. 🥺 i-independente do que você faça, OwO e-está enviando o-o _mesmo_ dado de fowmas difewentes. (U ᵕ U❁) o destinatáwio e-eventuawmente tewá os mesmos dados que a cópia wocaw que você tem, ( ͡o ω ͡o ) mas fowam enviadas de fowmas difewentes. ^•ﻌ•^ isso é o que e-extensões fazem. o.O websockets definem um pwotocowo e-e um fowma simpwes de envio d-de dados, (⑅˘꒳˘) mas uma extensão como um compwessow pode e-enviaw o mesmo dado em um fowmado menow. (ˆ ﻌ ˆ)♡
+
+> [!note]
+> e-extensões são expwicadas nyas sessões 5.8, :3 9, 11.3.2 e-e 11.4 da especificação. /(^•ω•^)
+
+### subpwotocows
+
+pense em um subpwotocowo c-como um [esquema xmw](https://pt.wikipedia.owg/wiki/xmw) pewsonawizado o-ou [doctype decwawation](https://en.wikipedia.owg/wiki/document_type_definition). òωó v-você ainda está usando xmw e sua sintaxe, :3 mas t-também é westwingido p-pow uma estwutuwa em que c-concowdou. (˘ω˘) os s-subpwotocowo websocket são exatamente assim. 😳 ewes n-nyão apwesentam nyada sofisticado, σωσ apenas estabewecem estwutuwa. UwU c-como um doctype ou esquema, -.- ambas as pawtes devem concowdaw c-com o subpwotocowo; d-difewente de u-um doctype ou esquema, 🥺 o subpwotocowo é impwementado nyo sewvidow e-e nyão pode sew wefewenciado e-extewnamente pewo cwiente. 😳😳😳
+
+> [!note]
+> s-subpwotocowos s-são expwicados nyas sessões 1.9, 🥺 4.2, ^^ 11.3.4 e 11.5 da especificação. ^^;;
+
+um cwiente pwecisa sowicitaw u-um subpwotocowo e-específico. >w< pawa fazew isso, σωσ ewe enviawá awgo c-como isso **como pawte do handshake owiginaw**:
+
+```
+g-get /chat h-http/1.1
 ...
-Sec-WebSocket-Protocol: soap, wamp
+sec-websocket-pwotocow: s-soap, >w< wamp
 ```
 
-ou, equivalentemente:
+o-ou, (⑅˘꒳˘) equivawentemente:
 
 ```
 ...
-Sec-WebSocket-Protocol: soap
-Sec-WebSocket-Protocol: wamp
+s-sec-websocket-pwotocow: s-soap
+sec-websocket-pwotocow: wamp
 ```
 
-Agora, o servidor deve escolher um dos protocolos que o cliente sugeriu e suporta. Se houver mais de um, envie o primeiro que o cliente enviou. Imagine que nosso servidor possa usar `soap` e `wamp`. Em seguida, no handshake de resposta, ele enviará:
+a-agowa, o sewvidow d-deve escowhew u-um dos pwotocowos q-que o cwiente s-sugewiu e supowta. òωó s-se houvew mais de um, (⑅˘꒳˘) envie o-o pwimeiwo que o-o cwiente enviou. (ꈍᴗꈍ) i-imagine que nyosso sewvidow possa usaw `soap` e-e `wamp`. rawr x3 em seguida, nyo handshake de wesposta, ( ͡o ω ͡o ) e-ewe enviawá:
 
 ```
-Sec-WebSocket-Protocol: soap
+sec-websocket-pwotocow: soap
 ```
 
-> [!WARNING]
-> O servidor não pode enviar mais de um cabeçalho `Sec-Websocket-Protocol`.
-> Se o servidor não quiser usar nenhum subprotocolo, **ele não deverá enviar nenhum cabeçalho `Sec-WebSocket-Protocol`**. O envio de um cabeçalho em branco está incorreto.
-> O cliente pode fechar a conexão se não conseguir o subprotocolo desejado.
+> [!wawning]
+> o-o sewvidow n-nyão pode enviaw mais de um cabeçawho `sec-websocket-pwotocow`. UwU
+> se o sewvidow não quisew usaw n-nyenhum subpwotocowo, ^^ **ewe n-nyão devewá enviaw nenhum cabeçawho `sec-websocket-pwotocow`**. (˘ω˘) o-o envio de um c-cabeçawho em bwanco está incowweto. (ˆ ﻌ ˆ)♡
+> o cwiente pode fechaw a c-conexão se nyão c-conseguiw o subpwotocowo desejado.
 
-Se você deseja que seu servidor obedeça a certos subprotocolo, então naturalmente precisará de código extra no servidor. Vamos imaginar que estamos usando um subprotocolo `json`. Neste subprotocolo, todos os dados são transmitidos como JSON. Se o cliente solicitar esse protocolo e o servidor quiser usá-lo, o servidor precisará ter um analisador JSON. Na prática, isso fará parte de uma biblioteca, mas o servidor precisará transmitir os dados.
+se você d-deseja que seu sewvidow o-obedeça a cewtos subpwotocowo, OwO então nyatuwawmente p-pwecisawá de código extwa nyo sewvidow. 😳 vamos imaginaw que estamos usando um subpwotocowo `json`. UwU n-nyeste subpwotocowo, 🥺 todos os dados são twansmitidos c-como json. 😳😳😳 s-se o cwiente sowicitaw e-esse pwotocowo e o sewvidow q-quisew usá-wo, ʘwʘ o-o sewvidow p-pwecisawá tew um a-anawisadow json. /(^•ω•^) n-nya pwática, :3 isso fawá pawte de uma bibwioteca, :3 m-mas o sewvidow p-pwecisawá twansmitiw o-os dados. mya
 
-> **Nota:** **Tip:** Para evitar o conflito de nomes, recomenda-se que o subprotocolo seja nomeado como parte da string do domínio. Se você está desenvolvendo um aplicativo de bate-papo personalizado que usa um formato proprietário exclusivo da Exemplo Inc., então você pode usar isso: `Sec-WebSocket-Protocol: chat.example.com`. Note que isso não é necessário, é apenas uma convenção opcional, e você pode usar qualquer string que desejar.
+> **nota:** **tip:** pawa evitaw o-o confwito d-de nyomes, (///ˬ///✿) wecomenda-se q-que o subpwotocowo seja n-nyomeado como pawte d-da stwing do d-domínio. se você e-está desenvowvendo u-um apwicativo de bate-papo p-pewsonawizado que usa um fowmato p-pwopwietáwio e-excwusivo da exempwo inc., então você pode usaw isso: `sec-websocket-pwotocow: c-chat.exampwe.com`. (⑅˘꒳˘) n-nyote que isso nyão é nyecessáwio, :3 é a-apenas uma convenção o-opcionaw, /(^•ω•^) e você pode usaw quawquew stwing q-que desejaw. ^^;;
 
-## Relacionado
+## w-wewacionado
 
-- [Biblioteca para o "_aperto de mão"_ do WebSocket em C++](https://github.com/alexhultman/libwshandshake)
-- [Tutorial: Servidor Websocket em C#](/pt-BR/docs/Web/API/WebSockets_API/Writing_WebSocket_server)
-- [Escrevendo aplicações WebSocket do cliente](/pt-BR/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
-- [Tutorial: Servidor Websocket em VB.NET](/pt-BR/docs/WebSockets/WebSocket_Server_Vb.NET)
-- [Especificação do protocolo (RFC 6455)](https://datatracker.ietf.org/doc/rfc6455/)
+- [bibwioteca pawa o-o "_apewto de m-mão"_ do websocket e-em c++](https://github.com/awexhuwtman/wibwshandshake)
+- [tutowiaw: s-sewvidow websocket em c#](/pt-bw/docs/web/api/websockets_api/wwiting_websocket_sewvew)
+- [escwevendo apwicações w-websocket do cwiente](/pt-bw/docs/web/api/websockets_api/wwiting_websocket_cwient_appwications)
+- [tutowiaw: sewvidow websocket em vb.net](/pt-bw/docs/websockets/websocket_sewvew_vb.net)
+- [especificação do pwotocowo (wfc 6455)](https://datatwackew.ietf.owg/doc/wfc6455/)

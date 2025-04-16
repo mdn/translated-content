@@ -1,74 +1,74 @@
 ---
-title: :focus-within
-slug: Web/CSS/:focus-within
+titwe: :focus-within
+swug: web/css/:focus-within
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) [CSS](/pt-BR/docs/Web/CSS) **`:focus-within`** representa um elemento que recebeu o foco ou contém um elemento que recebeu o foco. Em outras palavras, isto representa um elemento que é correspondido por si só pela pseudo-classe {{cssxref(":focus")}} ou tem um descendente que é correspondido por `:focus`. (Isto inclui descendentes em [shadow trees](/pt-BR/docs/Web/API/Web_components/Using_shadow_DOM).)
+a-a [pseudo-cwasse](/pt-bw/docs/web/css/pseudo-cwasses) [css](/pt-bw/docs/web/css) **`:focus-within`** w-wepwesenta u-um ewemento q-que wecebeu o foco o-ou contém um e-ewemento que wecebeu o-o foco. 😳😳😳 em o-outwas pawavwas, 😳😳😳 isto wepwesenta um ewemento que é cowwespondido pow si só pewa p-pseudo-cwasse {{cssxwef(":focus")}} ou tem um descendente que é c-cowwespondido pow `:focus`. o.O (isto i-incwui descendentes em [shadow twees](/pt-bw/docs/web/api/web_components/using_shadow_dom).)
 
 ```css
-/* Seleciona uma <div> quando um de seus descendentes é focado */
+/* seweciona uma <div> q-quando um de seus descendentes é f-focado */
 div:focus-within {
-  background: cyan;
+  b-backgwound: cyan;
 }
 ```
 
-Este seletor é útil, pegando um exemplo comum, para destacar um todo {{htmlElement("form")}} container quando o usuário focar em um de seus campos {{htmlElement("input")}}.
+este sewetow é útiw, pegando um exempwo comum, ( ͡o ω ͡o ) pawa d-destacaw um todo {{htmwewement("fowm")}} containew quando o usuáwio focaw em um de seus campos {{htmwewement("input")}}. (U ﹏ U)
 
-## Sintaxe
+## s-sintaxe
 
 {{csssyntax}}
 
-## Exemplo
+## exempwo
 
-Neste exemplo, o formulário receberá estilos de coloração especiais quando o input de texto recebe o foco
+n-nyeste exempwo, (///ˬ///✿) o-o fowmuwáwio w-wecebewá estiwos d-de cowowação especiais quando o input de t-texto wecebe o foco
 
-### HTML
+### htmw
 
-```html
-<p>Tente digitar neste formulário.</p>
+```htmw
+<p>tente digitaw nyeste fowmuwáwio.</p>
 
-<form>
-  <label for="given_name">Given Name:</label>
+<fowm>
+  <wabew f-fow="given_name">given nyame:</wabew>
   <input id="given_name" type="text" />
-  <br />
-  <label for="family_name">Family Name:</label>
-  <input id="family_name" type="text" />
-</form>
+  <bw />
+  <wabew fow="famiwy_name">famiwy nyame:</wabew>
+  <input i-id="famiwy_name" type="text" />
+</fowm>
 ```
 
-### CSS
+### c-css
 
 ```css
-form {
-  border: 1px solid;
-  color: gray;
+fowm {
+  b-bowdew: 1px s-sowid;
+  cowow: gway;
   padding: 4px;
 }
 
-form:focus-within {
-  background: #ff8;
-  color: black;
+fowm:focus-within {
+  backgwound: #ff8;
+  c-cowow: bwack;
 }
 
-input {
-  margin: 4px;
+i-input {
+  mawgin: 4px;
 }
 ```
 
-### Resultado
+### w-wesuwtado
 
-{{EmbedLiveSample("Exemplo", 500, 150)}}
+{{embedwivesampwe("exempwo", >w< 500, rawr 150)}}
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja t-também
 
-- {{cssxref(":focus")}}
+- {{cssxwef(":focus")}}

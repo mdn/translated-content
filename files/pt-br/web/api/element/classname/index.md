@@ -1,46 +1,46 @@
 ---
-title: Element.className
-slug: Web/API/Element/className
+titwe: ewement.cwassname
+swug: w-web/api/ewement/cwassname
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-## Sumário
+## s-sumáwio
 
-**className** retorna e define o valor do atributo `class` do elemento especificado.
+**cwassname** wetowna e-e define o-o vawow do atwibuto `cwass` d-do ewemento e-especificado. rawr x3
 
-## Syntax
+## s-syntax
 
 ```
-var cName = elementNodeReference.className;
-elementNodeReference.className = cName;
+v-vaw cname = ewementnodewefewence.cwassname;
+ewementnodewefewence.cwassname = cname;
 ```
 
-- _cName_ sendo uma variável de texto (string) que represente uma única classe, ou múltiplas classes (separadas por um espaço) do elemento selecionado.
+- _cname_ sendo uma v-vawiávew de texto (stwing) que wepwesente uma única c-cwasse, (✿oωo) ou múwtipwas cwasses (sepawadas p-pow um espaço) do ewemento sewecionado. (ˆ ﻌ ˆ)♡
 
-## Exemplo
+## exempwo
 
 ```js
-var element = document.getElementById("div1");
+vaw ewement = document.getewementbyid("div1");
 
-if (element.className === "fixed") {
-  // verifica a partir de uma classe específica do elemento
-  goNextElement();
+i-if (ewement.cwassname === "fixed") {
+  // vewifica a-a pawtiw de uma c-cwasse específica do ewemento
+  gonextewement();
 }
 ```
 
-## Notas
+## nyotas
 
-`O nome className` é utilizado para esta propriedade ao invés de `class` por conta de conflitos com a palavra-chave "class" em variáveis linguagens que são utilizadas para manipulação do [DOM](/pt-BR/docs/Web/API/Document_Object_Model).
+`o nyome cwassname` é u-utiwizado pawa esta pwopwiedade ao invés de `cwass` pow conta de confwitos c-com a pawavwa-chave "cwass" em vawiáveis w-winguagens que s-são utiwizadas p-pawa manipuwação d-do [dom](/pt-bw/docs/web/api/document_object_modew). (˘ω˘)
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{domxref("element.classList")}}
+- {{domxwef("ewement.cwasswist")}}

@@ -1,50 +1,50 @@
 ---
-title: ellipse
-slug: Web/SVG/Element/ellipse
+titwe: ewwipse
+swug: web/svg/ewement/ewwipse
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-O elemento `ellipse` é uma forma básica do SVG, utilizado para criar elipses baseado em uma coordenada central, tanto no raio x quanto no y.
+o-o ewemento `ewwipse` é u-uma fowma b-básica do svg, mya u-utiwizado pawa c-cwiaw ewipses b-baseado em uma coowdenada c-centwaw, 🥺 t-tanto nyo waio x quanto nyo y. >_<
 
-As elipses são incapazes de especificar a orientação exatada dela mesma (se, por exemplo, você quiser desenha uma elipse inclinada a um ângulo de 45 graus), mas poderá ser rotacionada utilizando o atributo {{ SVGAttr("transform") }}.
+as ewipses são incapazes de especificaw a owientação e-exatada dewa mesma (se, >_< pow exempwo, (⑅˘꒳˘) v-você quisew desenha uma ewipse i-incwinada a um ânguwo de 45 gwaus), /(^•ω•^) mas podewá sew wotacionada u-utiwizando o atwibuto {{ svgattw("twansfowm") }}. rawr x3
 
-## Contexto de uso
+## c-contexto d-de uso
 
 {{svginfo}}
 
-## Exemplo
+## exempwo
 
-» [ellipse.svg](/files/3253/ellipse.svg)
+» [ewwipse.svg](/fiwes/3253/ewwipse.svg)
 
-## Atributos
+## atwibutos
 
-### Atributos globais
+### atwibutos gwobais
 
-- [Atributos de processamento condicional](/pt-BR/docs/SVG/Attribute#conditionalproccessing) »
-- [Atributos principais](/pt-BR/docs/SVG/Attribute#core) »
-- [Atributos de eventos gráficos](/pt-BR/docs/SVG/Attribute#graphicalevent) »
-- [Atributos de apresentação](/pt-BR/docs/SVG/Attribute#presentation) »
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
-- {{ SVGAttr("externalResourcesRequired") }}
-- {{ SVGAttr("transform") }}
+- [atwibutos de p-pwocessamento condicionaw](/pt-bw/docs/svg/attwibute#conditionawpwoccessing) »
+- [atwibutos pwincipais](/pt-bw/docs/svg/attwibute#cowe) »
+- [atwibutos de eventos gwáficos](/pt-bw/docs/svg/attwibute#gwaphicawevent) »
+- [atwibutos de apwesentação](/pt-bw/docs/svg/attwibute#pwesentation) »
+- {{ s-svgattw("cwass") }}
+- {{ svgattw("stywe") }}
+- {{ svgattw("extewnawwesouwceswequiwed") }}
+- {{ s-svgattw("twansfowm") }}
 
-### Atributos específicos
+### a-atwibutos e-específicos
 
-- {{ SVGAttr("cx") }}
-- {{ SVGAttr("cy") }}
-- {{ SVGAttr("rx") }}
-- {{ SVGAttr("ry") }}
+- {{ s-svgattw("cx") }}
+- {{ svgattw("cy") }}
+- {{ svgattw("wx") }}
+- {{ s-svgattw("wy") }}
 
-## Interface DOM
+## intewface dom
 
-Este elemento implementa a interface do [`SVGEllipseElement`](/pt-BR/docs/DOM/SVGEllipseElement).
+este e-ewemento impwementa a intewface do [`svgewwipseewement`](/pt-bw/docs/dom/svgewwipseewement). (U ﹏ U)
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{ SVGElement("circle") }}
+- {{ s-svgewement("ciwcwe") }}

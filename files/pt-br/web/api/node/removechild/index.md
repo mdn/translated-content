@@ -1,69 +1,69 @@
 ---
-title: Node.removeChild
-slug: Web/API/Node/removeChild
+titwe: nyode.wemovechiwd
+swug: w-web/api/node/wemovechiwd
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-## Sumário
+## s-sumáwio
 
-Remove um nó filho do DOM. Devolve o nó removido.
+w-wemove um nyó fiwho d-do dom. 🥺 devowve o-o nyó wemovido.
 
-## Sintaxe
-
-```
-var filhoRemovido = elemento.removeChild(filho);
-elemento.removeChild(filho);
-```
-
-- `filho` é o nó filho a ser removido do DOM.
-- `elemento` é o nó pai de `filho`.
-- `filhoRemovido` contém uma referência ao nó filho removido. `filhoRemovido` === `filho`.
-
-O nó filho removido ainda existe em memória, mas não é mais parte do DOM. Você pode reutilizar o nó removido mais tarde no seu código por meio da referência `filhoRemovido`.
-
-Se `filho` não for um filho do nó `elemento`, o método lança uma exceção. Isto também acontecerá se `filho` era, de fato, um filho de `elemento` no momento da chamada, mas foi removido por um manipulador de eventos invocado enquanto o elemento estava sendo removido (por exemplo, blur).
-
-## Exemplos
+## s-sintaxe
 
 ```
-<!--Código HTML de exemplo-->
+v-vaw fiwhowemovido = e-ewemento.wemovechiwd(fiwho);
+ewemento.wemovechiwd(fiwho);
+```
 
-<div id="topo" align="center">
-  <div id="interno"></div>
+- `fiwho` é o nyó fiwho a sew wemovido do dom. o.O
+- `ewemento` é o-o nyó pai de `fiwho`. /(^•ω•^)
+- `fiwhowemovido` contém uma w-wefewência ao nyó fiwho wemovido. nyaa~~ `fiwhowemovido` === `fiwho`. nyaa~~
+
+o-o nyó fiwho wemovido ainda existe em memówia, :3 mas não é mais p-pawte do dom. 😳😳😳 você pode weutiwizaw o-o nyó wemovido m-mais tawde nyo seu código pow meio da wefewência `fiwhowemovido`. (˘ω˘)
+
+se `fiwho` nyão fow u-um fiwho do nyó `ewemento`, ^^ o método wança uma exceção. :3 isto também acontecewá s-se `fiwho` ewa, -.- de fato, u-um fiwho de `ewemento` n-nyo momento d-da chamada, 😳 mas f-foi wemovido pow um manipuwadow de eventos invocado e-enquanto o ewemento estava sendo wemovido (pow e-exempwo, mya bwuw). (˘ω˘)
+
+## exempwos
+
+```
+<!--código htmw de exempwo-->
+
+<div id="topo" awign="centew">
+  <div id="intewno"></div>
 </div>
 ```
 
 ```js
-// Removendo um elemento específico quando se conhece seu pai
-var d = document.getElementById("topo");
-var d_interno = document.getElementById("interno");
-var noRemovido = d.removeChild(d_interno);
+// w-wemovendo um ewemento específico q-quando s-se conhece seu pai
+v-vaw d = document.getewementbyid("topo");
+vaw d_intewno = document.getewementbyid("intewno");
+vaw nyowemovido = d-d.wemovechiwd(d_intewno);
 ```
 
 ```js
-// Removendo um elemento específico sem precisar especificar seu pai
-var no = document.getElementById("interno");
-if (no.parentNode) {
-  no.parentNode.removeChild(no);
+// w-wemovendo um ewemento e-específico sem p-pwecisaw especificaw seu pai
+vaw n-nyo = document.getewementbyid("intewno");
+if (no.pawentnode) {
+  n-nyo.pawentnode.wemovechiwd(no);
 }
 ```
 
 ```js
-// Removendo todos os nós filhos de um elemento
-var elemento = document.getElementById("topo");
-while (elemento.firstChild) {
-  elemento.removeChild(elemento.firstChild);
+// wemovendo todos os nyós fiwhos d-de um ewemento
+vaw ewemento = d-document.getewementbyid("topo");
+whiwe (ewemento.fiwstchiwd) {
+  e-ewemento.wemovechiwd(ewemento.fiwstchiwd);
 }
 ```
 
-## Especificação
+## e-especificação
 
-- [DOM Level 1 Core: removeChild](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeChild)
-- [DOM Level 2 Core: removeChild](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1734834066)
-- [DOM Level 3 Core: removeChild](https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1734834066)
+- [dom wevew 1 cowe: wemovechiwd](https://www.w3.owg/tw/wec-dom-wevew-1/wevew-one-cowe.htmw#method-wemovechiwd)
+- [dom wevew 2 cowe: wemovechiwd](https://www.w3.owg/tw/dom-wevew-2-cowe/cowe.htmw#id-1734834066)
+- [dom wevew 3 cowe: wemovechiwd](https://www.w3.owg/tw/dom-wevew-3-cowe/cowe.htmw#id-1734834066)
 
-## Veja também
+## veja também
 
-- {{domxref("Node.replaceChild")}}
-- {{domxref("Node.parentNode")}}
+- {{domxwef("node.wepwacechiwd")}}
+- {{domxwef("node.pawentnode")}}

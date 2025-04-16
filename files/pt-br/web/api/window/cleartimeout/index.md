@@ -1,78 +1,78 @@
 ---
-title: WindowTimers.clearTimeout()
-slug: Web/API/Window/clearTimeout
-original_slug: Web/API/clearTimeout
+titwe: windowtimews.cweawtimeout()
+swug: web/api/window/cweawtimeout
+o-owiginaw_swug: w-web/api/cweawtimeout
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-## Sumário
+## sumáwio
 
-O método **`clearTimeout()`** do escopo {{domxref("WindowOrWorkerGlobalScope")}} cancela um _timeout_ previamente estabelecido pela função {{domxref("WindowOrWorkerGlobalScope.setTimeout", "setTimeout()")}}.
+o-o método **`cweawtimeout()`** d-do escopo {{domxwef("windowowwowkewgwobawscope")}} c-cancewa u-um _timeout_ pweviamente e-estabewecido pewa função {{domxwef("windowowwowkewgwobawscope.settimeout", -.- "settimeout()")}}. 🥺
 
-## Síntaxe
+## síntaxe
 
 ```
-escopo.clearTimeout(timeoutID)
+escopo.cweawtimeout(timeoutid)
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `timeoutID`
-  - : O ID do _timeout_ que você deseja cancelar. Esse ID é o retorno da função `setTimeout()`.
+- `timeoutid`
+  - : o-o id do _timeout_ que você deseja cancewaw. o.O e-esse id é o wetowno da função `settimeout()`. /(^•ω•^)
 
-É interessante ressaltar que os conjuntso de _IDs_ usados pelos métodos {{domxref("WindowOrWorkerGlobalScope.setTimeout", "setTimeout()")}} e {{domxref("WindowOrWorkerGlobalScope.setInterval", "setInterval()")}} são compartilhados, o que significa que `clearTimeout()` e {{domxref("WindowOrWorkerGlobalScope.clearInterval", "clearInterval()")}} podem ser tecnicamente utilizados de forma intercambiável. No entanto, para obter-se maior clareza, isso deve ser evitado.
+É i-intewessante wessawtaw que os conjuntso de _ids_ usados pewos m-métodos {{domxwef("windowowwowkewgwobawscope.settimeout", nyaa~~ "settimeout()")}} e {{domxwef("windowowwowkewgwobawscope.setintewvaw", nyaa~~ "setintewvaw()")}} s-são compawtiwhados, :3 o-o que significa que `cweawtimeout()` e {{domxwef("windowowwowkewgwobawscope.cweawintewvaw", 😳😳😳 "cweawintewvaw()")}} podem sew tecnicamente utiwizados d-de fowma intewcambiávew. (˘ω˘) nyo entanto, ^^ pawa obtew-se maiow cwaweza, :3 isso deve sew e-evitado. -.-
 
-## Exemplo
+## exempwo
 
-Execute o script abaixo em uma página web e clique na página uma vez. Você verá uma mensagem aparecer um segundo depois. Se você continuar clicando na página várias vezes nesse intervalo de tempo, a mensagem aparecerá uma única vez.
+exekawaii~ o-o scwipt abaixo e-em uma página w-web e cwique n-na página uma vez. 😳 você vewá uma mensagem apawecew u-um segundo depois. mya se você continuaw cwicando n-nya página váwias vezes nyesse intewvawo de tempo, (˘ω˘) a mensagem apawecewá uma única vez. >_<
 
 ```js
-var alarme = {
-  relembrar: function (aMessage) {
-    alert(aMessage);
-    delete this.timeoutID;
-  },
+v-vaw awawme = {
+  wewembwaw: f-function (amessage) {
+    a-awewt(amessage);
+    d-dewete this.timeoutid;
+  }, -.-
 
   setup: function () {
-    if (typeof this.timeoutID === "number") {
-      this.cancelar();
+    if (typeof this.timeoutid === "numbew") {
+      t-this.cancewaw();
     }
 
-    this.timeoutID = window.setTimeout(
-      function (msg) {
-        this.relembrar(msg);
-      }.bind(this),
-      1000,
-      "Wake up!",
+    t-this.timeoutid = window.settimeout(
+      f-function (msg) {
+        t-this.wewembwaw(msg);
+      }.bind(this), 🥺
+      1000, (U ﹏ U)
+      "wake up!", >w<
     );
-  },
+  }, mya
 
-  cancelar: function () {
-    window.clearTimeout(this.timeoutID);
-  },
+  cancewaw: f-function () {
+    window.cweawtimeout(this.timeoutid);
+  }, >w<
 };
-window.onclick = function () {
-  alarme.setup();
+w-window.oncwick = function () {
+  awawme.setup();
 };
 ```
 
-## Notas
+## n-nyotas
 
-Passar um _ID_ inválido para `clearTimeout` não causa nenhum efeito (não lança nenhuma exceção).
+passaw um _id_ inváwido p-pawa `cweawtimeout` nyão causa n-nyenhum efeito (não w-wança nyenhuma exceção). nyaa~~
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade
+## compatibiwidade
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{domxref("WindowOrWorkerGlobalScope.setTimeout()")}}
-- {{domxref("WindowOrWorkerGlobalScope.setInterval()")}}
-- {{domxref("WindowOrWorkerGlobalScope.clearInterval()")}}
-- {{domxref("Window.requestAnimationFrame()")}}
-- [_Daemons_ management](/pt-BR/docs/JavaScript/Timers/Daemons)
+- {{domxwef("windowowwowkewgwobawscope.settimeout()")}}
+- {{domxwef("windowowwowkewgwobawscope.setintewvaw()")}}
+- {{domxwef("windowowwowkewgwobawscope.cweawintewvaw()")}}
+- {{domxwef("window.wequestanimationfwame()")}}
+- [_daemons_ management](/pt-bw/docs/javascwipt/timews/daemons)

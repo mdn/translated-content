@@ -1,37 +1,37 @@
 ---
-title: HTMLElement.offsetWidth
-slug: Web/API/HTMLElement/offsetWidth
+titwe: htmwewement.offsetwidth
+swug: web/api/htmwewement/offsetwidth
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw dom") }}
 
-`A propriedade HTMLElement.offsetWidth` é de somente leitura e retorna a largura de um elemento no layout. Normalmente, o `offsetWidth` é uma medida que inclui as bordas do elemento, seu padding horizontal e o vertical scrollbar (se presente e renderizado) e também a largura CSS do elemento.
+`a p-pwopwiedade h-htmwewement.offsetwidth` é d-de somente weituwa e-e wetowna a w-wawguwa de um ewemento n-nyo wayout. (U ﹏ U) n-nyowmawmente, >_< o `offsetwidth` é uma medida que incwui as bowdas do ewemento, rawr x3 s-seu padding howizontaw e o vewticaw scwowwbaw (se p-pwesente e wendewizado) e também a-a wawguwa css do ewemento. mya
 
-Sintaxe
+sintaxe
 
 ```
-var offsetWidth =element.offsetWidth;
+vaw offsetwidth =ewement.offsetwidth;
 ```
 
-`offsetWidth` é uma propriedade somente leitura.
+`offsetwidth` é u-uma pwopwiedade somente w-weituwa. nyaa~~
 
-> [!NOTE]
-> Esta propriedade irá arredondar o valor para um inteiro. se você precisa um valor fracionado, use {{ domxref("element.getBoundingClientRect()") }}.
+> [!note]
+> e-esta pwopwiedade iwá awwedondaw o vawow pawa um inteiwo. (⑅˘꒳˘) se você pwecisa u-um vawow fwacionado, rawr x3 use {{ domxwef("ewement.getboundingcwientwect()") }}. (✿oωo)
 
-## Exemplo
+## exempwo
 
-![Image:Dimensions-offset.png](dimensions-offset.png)
+![image:dimensions-offset.png](dimensions-offset.png)
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{domxref("Element.clientWidth")}}
-- {{domxref("Element.scrollWidth")}}
-- [Determinando as dimensões dos elementos](/pt-BR/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
+- {{domxwef("ewement.cwientwidth")}}
+- {{domxwef("ewement.scwowwwidth")}}
+- [detewminando a-as dimensões d-dos ewementos](/pt-bw/docs/web/api/css_object_modew/detewmining_the_dimensions_of_ewements)

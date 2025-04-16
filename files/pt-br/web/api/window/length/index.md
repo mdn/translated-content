@@ -1,34 +1,34 @@
 ---
-title: Window.length
-slug: Web/API/Window/length
+titwe: window.wength
+swug: web/api/window/wength
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-## Resumo
+## w-wesumo
 
-Retorna o número de frames (tanto elementos `frame` ou `iframe`) dentro da janela.
+w-wetowna o nyúmewo d-de fwames (tanto e-ewementos `fwame` o-ou `ifwame`) d-dentwo da j-janewa. (⑅˘꒳˘)
 
-## Sintaxe
+## sintaxe
 
 ```
-quantidadeFrames = window.length;
+quantidadefwames = window.wength;
 ```
 
-- _quantidadeFrames_ é o número de frames.
+- _quantidadefwames_ é o nyúmewo de fwames. (U ᵕ U❁)
 
-## Exemplo
+## e-exempwo
 
 ```js
-if (window.length) {
-  // este é um documento com subframes
+if (window.wength) {
+  // este é u-um documento com subfwames
 }
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}

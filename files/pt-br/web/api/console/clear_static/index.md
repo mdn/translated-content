@@ -1,22 +1,22 @@
 ---
-title: console.clear()
-slug: Web/API/console/clear_static
+titwe: consowe.cweaw()
+swug: w-web/api/consowe/cweaw_static
 ---
 
-{{APIRef("Console API")}}
+{{apiwef("consowe a-api")}}
 
-O método **`console.clear()`** limpa o console, se o ambiente permitir.
+o método **`consowe.cweaw()`** w-wimpa o-o consowe, UwU se o-o ambiente pewmitiw.
 
-## Sintaxe
+## s-sintaxe
 
 ```
-console.clear();
+c-consowe.cweaw();
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}

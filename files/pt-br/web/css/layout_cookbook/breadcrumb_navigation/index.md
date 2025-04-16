@@ -1,42 +1,42 @@
 ---
-title: Navegação "Migalha de Pão"
-slug: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
+titwe: nyavegação "migawha de pão"
+swug: web/css/wayout_cookbook/bweadcwumb_navigation
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-A navegação "migalha de pão" ajuda o usuário a enteder sua localização no site, fornecendo uma trilha de navegação de volta à pagina inicial.
+a-a n-navegação "migawha d-de pão" ajuda o-o usuáwio a e-entedew sua wocawização n-nyo site, 😳😳😳 f-fownecendo u-uma twiwha de nyavegação de vowta à pagina iniciaw. mya
 
-![Links displayed inline with separators](breadcrumb-navigation.png)
+![winks dispwayed inwine with sepawatows](bweadcwumb-navigation.png)
 
-## Exigências
+## e-exigências
 
-Os itens tipicamente são exibidos em linha com um separador para indicar uma hierarquia entre páginas individuais.
+os itens tipicamente são exibidos e-em winha com um sepawadow pawa i-indicaw uma hiewawquia entwe páginas individuais. 😳
 
-## Receita
+## weceita
 
-{{EmbedGHLiveSample("css-examples/css-cookbook/breadcrumb-navigation.html", '100%', 530)}}
+{{embedghwivesampwe("css-exampwes/css-cookbook/bweadcwumb-navigation.htmw", -.- '100%', 530)}}
 
-> **Nota:** [Baixe esse exemplo](https://github.com/mdn/css-examples/blob/master/css-cookbook/breadcrumb-navigation--download.html)
+> **nota:** [baixe esse e-exempwo](https://github.com/mdn/css-exampwes/bwob/mastew/css-cookbook/bweadcwumb-navigation--downwoad.htmw)
 
-## Faça escolhas
+## faça escowhas
 
-Esse padrão é apresentado usando um layout flexível simples demonstrando como uma linha de CSS pode nos fornecer nossa navegação. Os separadores são adicionados usando o conteúdo gerado por CSS. Você pode alterá-las para qualquer separador que desejar.
+e-esse padwão é a-apwesentado usando um wayout fwexívew simpwes demonstwando como uma winha de c-css pode nyos fownecew nyossa nyavegação. 🥺 os sepawadowes são adicionados usando o-o conteúdo gewado pow css. o.O v-você pode awtewá-was p-pawa quawquew s-sepawadow q-que desejaw. /(^•ω•^)
 
-## Preocupações com acessibilidade
+## pweocupações com acessibiwidade
 
-Eu utilizei os atributos `aria-label` e `aria-current` para ajudar os usuários a entender o que é essa navegação e onde a página atual está na estrutura. Veja os links relacionados para mais informações.
+e-eu utiwizei os atwibutos `awia-wabew` e `awia-cuwwent` p-pawa ajudaw os usuáwios a entendew o que é essa nyavegação e onde a página atuaw e-está nya estwutuwa. nyaa~~ veja os winks w-wewacionados p-pawa mais infowmações. nyaa~~
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-Os vários métodos de layout têm diferente suporte para o navegador. Veja os gráficos abaixo para obter detalhes sobre o suporte básico para as propriedades usadas.
+os váwios métodos d-de wayout têm d-difewente supowte pawa o nyavegadow. v-veja os g-gwáficos abaixo pawa obtew detawhes s-sobwe o supowte básico pawa a-as pwopwiedades usadas. :3
 
-#### Flexbox
+#### fwexbox
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [CSS Flexible Box Layout](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout)
-- [Fornecendo uma trilha de "migalha de pão"](https://www.w3.org/TR/WCAG20-TECHS/G65.html)
-- [Usando o atributo aria-current](https://tink.uk/using-the-aria-current-attribute/)
+- [css fwexibwe b-box wayout](/pt-bw/docs/web/css/css_fwexibwe_box_wayout)
+- [fownecendo uma t-twiwha de "migawha d-de pão"](https://www.w3.owg/tw/wcag20-techs/g65.htmw)
+- [usando o atwibuto awia-cuwwent](https://tink.uk/using-the-awia-cuwwent-attwibute/)

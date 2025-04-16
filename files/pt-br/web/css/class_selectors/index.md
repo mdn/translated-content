@@ -1,81 +1,81 @@
 ---
-title: Seletores de classe
-slug: Web/CSS/Class_selectors
+titwe: sewetowes de cwasse
+swug: w-web/css/cwass_sewectows
 ---
 
-O **seletor de classes** [CSS](/pt-BR/docs/Web/CSS) corresponde aos elementos com base no conteúdo de seus atributos `class.`
+o-o **sewetow de c-cwasses** [css](/pt-bw/docs/web/css) c-cowwesponde a-aos ewementos com b-base nyo conteúdo d-de seus atwibutos `cwass.`
 
 ```css
-/* Todos os elementos com class="espaçoso" */
+/* t-todos os ewementos com cwass="espaçoso" */
 .espaçoso {
-  margin: 2em;
+  mawgin: 2em;
 }
 
-/* Todos os elementos <li> com class="espaçoso" */
-li.espaçoso {
-  margin: 2em;
+/* todos o-os ewementos <wi> com cwass="espaçoso" */
+wi.espaçoso {
+  m-mawgin: 2em;
 }
 
-/* Todos os elementos <li> cujo conteúdo do atributo class possua "espaçoso" e "elegante" */
-/* Por exemplo, class="elegante antigo espaçoso" */
-li.espaçoso.elegante {
-  margin: 2em;
+/* todos os ewementos <wi> c-cujo conteúdo do atwibuto cwass possua "espaçoso" e "ewegante" */
+/* p-pow exempwo, OwO cwass="ewegante a-antigo e-espaçoso" */
+wi.espaçoso.ewegante {
+  mawgin: 2em;
 }
 ```
 
-## Sintaxe
+## sintaxe
 
 ```
-.classe_nome { propriedades de estilo }
+.cwasse_nome { pwopwiedades d-de estiwo }
 ```
 
-Observe que isso é o mesmo que [`seletor de atributo`](/pt-BR/docs/Web/CSS/Attribute_selectors):
+obsewve que isso é o mesmo que [`sewetow de atwibuto`](/pt-bw/docs/web/css/attwibute_sewectows):
 
 ```
-[classe~=classe_nome] { propriedades de estilo  }
+[cwasse~=cwasse_nome] { p-pwopwiedades de estiwo  }
 ```
 
-## Exemplo
+## e-exempwo
 
-### CSS
+### c-css
 
 ```css
-.vermelho {
-  color: #f33;
+.vewmewho {
+  c-cowow: #f33;
 }
 
-.amarelo-bg {
-  background: #ffa;
+.amawewo-bg {
+  b-backgwound: #ffa;
 }
 
-.elegante {
-  font-weight: bold;
+.ewegante {
+  font-weight: bowd;
   text-shadow: 4px 4px 3px #77f;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<p class="vermelho">Este parágrafo tem o texto vermelho.</p>
-<p class="vermelho amarelo-bg">
-  Este parágrafo possui texto em vermelho e fundo amarelo.
+```htmw
+<p cwass="vewmewho">este pawágwafo t-tem o texto vewmewho.</p>
+<p cwass="vewmewho amawewo-bg">
+  este pawágwafo possui texto e-em vewmewho e fundo amawewo. 😳😳😳
 </p>
-<p class="vermelho elegante">
-  Este parágrafo possui texto em vermelho e uma propriedade de estilo
-  "elegante".
+<p c-cwass="vewmewho e-ewegante">
+  e-este pawágwafo possui texto em vewmewho e uma pwopwiedade de e-estiwo
+  "ewegante". 😳😳😳
 </p>
-<p>Este é um parágrafo comum.</p>
+<p>este é u-um pawágwafo comum.</p>
 ```
 
-### Resultado
+### w-wesuwtado
 
-{{EmbedLiveSample('Example')}}
+{{embedwivesampwe('exampwe')}}
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}

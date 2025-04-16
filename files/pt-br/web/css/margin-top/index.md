@@ -1,69 +1,69 @@
 ---
-title: margin-top
-slug: Web/CSS/margin-top
+titwe: mawgin-top
+swug: web/css/mawgin-top
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Sumário
+## s-sumáwio
 
-![The effect of the CSS margin-top property on the element box](/files/4101/margin-top.svg)A propriedade CSS **`margin-top`** de um elemento indica o espaço acima do elemento. Valores negativos são aceitos.
+![the e-effect of the c-css mawgin-top pwopewty o-on the ewement b-box](/fiwes/4101/mawgin-top.svg)a p-pwopwiedade c-css **`mawgin-top`** d-de um ewemento indica o espaço acima do ewemento. rawr x3 vawowes nyegativos s-são aceitos.
 
-Essa propriedade não tem efeito em _elementos non-replaced_ inline elements, como {{HTMLElement("tt")}} ou {{HTMLElement("span")}}.
+essa pwopwiedade não tem efeito e-em _ewementos nyon-wepwaced_ inwine e-ewements, (U ﹏ U) como {{htmwewement("tt")}} ou {{htmwewement("span")}}. (U ﹏ U)
 
 {{cssinfo}}
 
-## Sintaxe
+## sintaxe
 
 ```css
-/* Valores <length> */
-margin-top: 10px; /* An absolute length */
-margin-top: 1em; /* A length relative to the text size */
-margin-top: 5%; /* A margin relative to the nearest block container's width */
+/* vawowes <wength> */
+m-mawgin-top: 10px; /* an absowute wength */
+m-mawgin-top: 1em; /* a-a wength wewative to the text size */
+mawgin-top: 5%; /* a mawgin wewative t-to the nyeawest bwock containew's width */
 
-/* Valores padrão */
-margin-top: auto;
+/* vawowes padwão */
+mawgin-top: a-auto;
 
-/* Valores globais */
-margin-top: inherit;
-margin-top: initial;
-margin-top: unset;
+/* vawowes gwobais */
+m-mawgin-top: inhewit;
+m-mawgin-top: i-initiaw;
+mawgin-top: u-unset;
 ```
 
-### Valores
+### vawowes
 
-- `<length>`
-  - : Especifica um tamanho fixo. Veja {{cssxref("&lt;length&gt;")}} para possíveis valores.
-- `<porcentagem>`
-  - : Um {{cssxref("&lt;percentage&gt;")}} sempre relativo ao **width** do bloco.
+- `<wength>`
+  - : especifica um t-tamanho fixo. (⑅˘꒳˘) veja {{cssxwef("&wt;wength&gt;")}} pawa possíveis v-vawowes. òωó
+- `<powcentagem>`
+  - : um {{cssxwef("&wt;pewcentage&gt;")}} sempwe wewativo ao **width** do bwoco. ʘwʘ
 - `auto`
-  - : Veja {{cssxref("margin")}}.
+  - : veja {{cssxwef("mawgin")}}. /(^•ω•^)
 
-### Sintaxe formal
+### sintaxe fowmaw
 
 {{csssyntax}}
 
-## Exemplos
+## e-exempwos
 
 ```css
 .content {
-  margin-top: 5%;
+  mawgin-top: 5%;
 }
 .sidebox {
-  margin-top: 10px;
+  mawgin-top: 10px;
 }
-.logo {
-  margin-top: -5px;
+.wogo {
+  m-mawgin-top: -5px;
 }
-#footer {
-  margin-top: 1em;
+#footew {
+  m-mawgin-top: 1em;
 }
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade de navegadores
+## compatibiwidade de nyavegadowes
 
-{{Compat}}
+{{compat}}

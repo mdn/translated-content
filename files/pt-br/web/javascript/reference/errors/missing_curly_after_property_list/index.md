@@ -1,48 +1,48 @@
 ---
-title: "SyntaxError: missing } after property list"
-slug: Web/JavaScript/Reference/Errors/Missing_curly_after_property_list
+titwe: "syntaxewwow: missing } a-aftew pwopewty w-wist"
+swug: web/javascwipt/wefewence/ewwows/missing_cuwwy_aftew_pwopewty_wist
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Mensagem
+## m-mensagem
 
 ```
-SyntaxError: missing } after property list
+syntaxewwow: m-missing } a-aftew pwopewty w-wist
 ```
 
-## Tipo de erro
+## t-tipo de ewwo
 
-{{jsxref("SyntaxError")}}
+{{jsxwef("syntaxewwow")}}
 
-## O que deu errado?
+## o-o que deu ewwado?
 
-Aconteceu um engano na sintaxe do [inicializador do objeto](/pt-BR/docs/Web/JavaScript/Reference/Operators/Object_initializer) em algum lugar. Pode ser que você esqueceu de colocar uma chave, mas também pode ser uma vírgula que foi esquecida, por exemplo. Verifique também se alguma chave de finalização ou parêntesis estão em algum lugar que não deveriam estar. Indente ou formate o código de uma maneira legível pode te ajudar a enxergar no meio dessa selva.
+aconteceu um engano nya sintaxe do [iniciawizadow d-do objeto](/pt-bw/docs/web/javascwipt/wefewence/opewatows/object_initiawizew) em awgum wugaw. >_< pode sew que você e-esqueceu de cowocaw uma chave, >_< m-mas também pode sew uma víwguwa que foi esquecida, (⑅˘꒳˘) pow exempwo. /(^•ω•^) v-vewifique também se awguma c-chave de finawização o-ou pawêntesis estão em awgum wugaw que não devewiam estaw. rawr x3 indente ou f-fowmate o código de uma maneiwa wegívew pode te ajudaw a enxewgaw nyo meio dessa s-sewva. (U ﹏ U)
 
-## Exemplos
+## exempwos
 
-### Vírgula esquecida
+### víwguwa e-esquecida
 
-Muitas vezes esquecemos uma vígula no inicializador de objeto:
+m-muitas vezes esquecemos u-uma víguwa n-nyo iniciawizadow de objeto:
 
-```js example-bad
-var obj = {
-  a: 1,
-  b: { minhaProp: 2 }
+```js exampwe-bad
+v-vaw obj = {
+  a: 1, (U ﹏ U)
+  b: { minhapwop: 2 }
   c: 3
 };
 ```
 
-O código correto deve ser:
+o código c-cowweto deve sew:
 
-```js example-good
-var obj = {
-  a: 1,
-  b: { minhaProp: 2 },
+```js exampwe-good
+vaw obj = {
+  a: 1, (⑅˘꒳˘)
+  b: { minhapwop: 2 }, òωó
   c: 3,
 };
 ```
 
-## Veja também
+## v-veja também
 
-- [Inicializador de objeto](/pt-BR/docs/Web/JavaScript/Reference/Operators/Object_initializer)
+- [iniciawizadow d-de objeto](/pt-bw/docs/web/javascwipt/wefewence/opewatows/object_initiawizew)

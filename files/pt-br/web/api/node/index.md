@@ -1,189 +1,189 @@
 ---
-title: Node
-slug: Web/API/Node
+titwe: nyode
+swug: web/api/node
 ---
 
-{{Apiref("DOM")}}
+{{apiwef("dom")}}
 
-**`Node`** é uma interface da qual diversos tipos do DOM herdam, e que permite que esses tipos sejam tratados de forma similar, por exemplo, herdando os mesmos métodos ou sendo testados da mesma forma.
+**`node`** é u-uma intewface d-da quaw divewsos t-tipos do d-dom hewdam, (⑅˘꒳˘) e que p-pewmite que esses t-tipos sejam t-twatados de fowma s-simiwaw, (///ˬ///✿) pow exempwo, 🥺 hewdando os mesmos métodos ou sendo testados da mesma f-fowma. OwO
 
-Todos os tipos a seguir herdam essa interface e seus métodos e propriedades (apesar de que alguns podem devolver `null` em casos particulares em que o método ou a propriedade não são relevantes; ou lançar uma exceção quando adicionando um filho a um tipo de nó que não pode ter filhos): {{domxref("Document")}}, {{domxref("Element")}}, {{domxref("Attr")}}, {{domxref("CharacterData")}} (do qual {{domxref("Text")}}, {{domxref("Comment")}}, e {{domxref("CDATASection")}} herdam), {{domxref("ProcessingInstruction")}}, {{domxref("DocumentFragment")}}, {{domxref("DocumentType")}}, {{domxref("Notation")}}, {{domxref("Entity")}}, {{domxref("EntityReference")}}
+todos os tipos a seguiw hewdam essa intewface e-e seus métodos e pwopwiedades (apesaw d-de que awguns podem devowvew `nuww` em casos pawticuwawes e-em que o método ou a pwopwiedade n-nyão são w-wewevantes; ou wançaw uma exceção quando adicionando um fiwho a um tipo de n-nyó que nyão pode tew fiwhos): {{domxwef("document")}}, >w< {{domxwef("ewement")}}, 🥺 {{domxwef("attw")}}, nyaa~~ {{domxwef("chawactewdata")}} (do quaw {{domxwef("text")}}, ^^ {{domxwef("comment")}}, >w< e {{domxwef("cdatasection")}} hewdam), OwO {{domxwef("pwocessinginstwuction")}}, XD {{domxwef("documentfwagment")}}, ^^;; {{domxwef("documenttype")}}, 🥺 {{domxwef("notation")}}, XD {{domxwef("entity")}}, (U ᵕ U❁) {{domxwef("entitywefewence")}}
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-## Propriedades
+## p-pwopwiedades
 
-_Herda propriedades de seus pais, {{domxref("EventTarget")}}_.\[1]
+_hewda pwopwiedades d-de seus pais, :3 {{domxwef("eventtawget")}}_.\[1]
 
-- {{domxref("Node.baseURI")}} {{readonlyInline}}
-  - : Retorna uma {{domxref("DOMString")}} representando o URL base do nó. O conceito de URL base muda de uma linguagem para outra; no HTML, ela corresponde ao protocolo, ao nome de domínio e a estrutura de diretório; tudo isso até a última `'/'`.
-- {{domxref("Node.baseURIObject")}} {{Non-standard_inline()}}
-  - : Retorna um objeto `nsIURI`, representando o URL base do nó. _(Indisponível para conteúdo Web)_
-- {{domxref("Node.childNodes")}} {{readonlyInline}}
-  - : Retorna um objeto {{domxref("NodeList")}} "vivo" contendo todos os filhos deste nó. Dizer que um objeto {{domxref("NodeList")}} é vivo significa que se houver alguma mudança em um dos filhos deste nó, o objeto {{domxref("NodeList")}} é automaticamente atualizado com tais mudanças.
-- {{domxref("Node.firstChild")}} {{readonlyInline}}
-  - : Retorna um {{domxref("Node")}} representando o primeiro filho direto do nó ou `null`, caso o nó não tenha nenhum filho.
-- {{domxref("Node.lastChild")}} {{readonlyInline}}
-  - : Retorna um {{domxref("Node")}} representando o último filho direto do elemento ou `null`, caso o elemento não tenha nenhum filho.
-- {{domxref("Node.nextSibling")}} {{readonlyInline}}
-  - : Retorna um {{domxref("Node")}} representando o próximo elemento na árvore ou `null`, caso tal nó não exista.
-- {{domxref("Node.nodeName")}} {{readonlyInline}}
-  - : Retorna uma {{domxref("DOMString")}} contendo o nome do elemento, do `Node`. A estrutura do nome irá mudar conforme o tipo do elemento. Veja as diferenças na documentação do método {{domxref("Node.nodeName")}}.
-- {{domxref("Node.nodePrincipal")}} {{Non-standard_inline()}}
-  - : Uma interface `nsIPrincipal` representando o nó principal.
-- {{domxref("Node.nodeType")}}{{readonlyInline}}
-  - : Retorna um `unsigned short` representando o tipo do nodo. Valores possíveis são:
+- {{domxwef("node.baseuwi")}} {{weadonwyinwine}}
+  - : w-wetowna u-uma {{domxwef("domstwing")}} w-wepwesentando o uww base do nyó. ( ͡o ω ͡o ) o conceito de u-uww base muda de uma winguagem pawa outwa; nyo htmw, òωó e-ewa cowwesponde ao pwotocowo, σωσ ao nyome de domínio e a estwutuwa de diwetówio; tudo isso até a-a úwtima `'/'`. (U ᵕ U❁)
+- {{domxwef("node.baseuwiobject")}} {{non-standawd_inwine()}}
+  - : wetowna u-um objeto `nsiuwi`, (✿oωo) w-wepwesentando o-o uww base do nyó. ^^ _(indisponívew pawa conteúdo web)_
+- {{domxwef("node.chiwdnodes")}} {{weadonwyinwine}}
+  - : w-wetowna um o-objeto {{domxwef("nodewist")}} "vivo" contendo t-todos os fiwhos d-deste nyó. ^•ﻌ•^ dizew que um objeto {{domxwef("nodewist")}} é v-vivo significa que se h-houvew awguma mudança em um dos fiwhos deste nyó, XD o-o objeto {{domxwef("nodewist")}} é automaticamente a-atuawizado com tais mudanças. :3
+- {{domxwef("node.fiwstchiwd")}} {{weadonwyinwine}}
+  - : w-wetowna um {{domxwef("node")}} w-wepwesentando o pwimeiwo fiwho diweto do nyó ou `nuww`, (ꈍᴗꈍ) caso o nyó nyão tenha nyenhum fiwho. :3
+- {{domxwef("node.wastchiwd")}} {{weadonwyinwine}}
+  - : wetowna u-um {{domxwef("node")}} w-wepwesentando o úwtimo f-fiwho diweto do e-ewemento ou `nuww`, (U ﹏ U) c-caso o ewemento nyão tenha nyenhum fiwho. UwU
+- {{domxwef("node.nextsibwing")}} {{weadonwyinwine}}
+  - : wetowna u-um {{domxwef("node")}} wepwesentando o pwóximo ewemento nya áwvowe ou `nuww`, 😳😳😳 c-caso taw nyó não exista. XD
+- {{domxwef("node.nodename")}} {{weadonwyinwine}}
+  - : w-wetowna uma {{domxwef("domstwing")}} c-contendo o-o nyome do ewemento, o.O do `node`. a-a estwutuwa d-do nyome iwá mudaw c-confowme o tipo d-do ewemento. (⑅˘꒳˘) veja as difewenças nya documentação d-do método {{domxwef("node.nodename")}}. 😳😳😳
+- {{domxwef("node.nodepwincipaw")}} {{non-standawd_inwine()}}
+  - : u-uma intewface `nsipwincipaw` w-wepwesentando o-o nyó pwincipaw. nyaa~~
+- {{domxwef("node.nodetype")}}{{weadonwyinwine}}
+  - : w-wetowna um `unsigned showt` wepwesentando o tipo do nyodo. rawr v-vawowes possíveis são:
 
-| Nome                          | Valor |
+| nyome                          | vawow |
 | ----------------------------- | ----- |
-| `ELEMENT_NODE`                | 1     |
-| `ATTRIBUTE_NODE`              | 2     |
-| `TEXT_NODE`                   | 3     |
-| `CDATA_SECTION_NODE`          | 4     |
-| `ENTITY_REFERENCE_NODE`       | 5     |
-| `ENTITY_NODE`                 | 6     |
-| `PROCESSING_INSTRUCTION_NODE` | 7     |
-| `COMMENT_NODE`                | 8     |
-| `DOCUMENT_NODE`               | 9     |
-| `DOCUMENT_TYPE_NODE`          | 10    |
-| `DOCUMENT_FRAGMENT_NODE`      | 11    |
-| `NOTATION_NODE`               | 12    |
+| `ewement_node`                | 1     |
+| `attwibute_node`              | 2     |
+| `text_node`                   | 3     |
+| `cdata_section_node`          | 4     |
+| `entity_wefewence_node`       | 5     |
+| `entity_node`                 | 6     |
+| `pwocessing_instwuction_node` | 7     |
+| `comment_node`                | 8     |
+| `document_node`               | 9     |
+| `document_type_node`          | 10    |
+| `document_fwagment_node`      | 11    |
+| `notation_node`               | 12    |
 
-- {{domxref("Node.nodeValue")}}
-  - : Retorna / Define o valor do nó atual
-- {{domxref("Node.ownerDocument")}} {{readonlyInline}}
-  - : Retorna o {{domxref("Document")}} qual esse nó pertence. Se o nó em si é um documento, retorna `null`.
-- {{domxref("Node.parentNode")}} {{readonlyInline}}
-  - : Retorna um {{domxref("Node")}} que é pai desse nó. Se não existe tal nó, como, por exemplo, se esse nó é o topo da árvore ou se ele não participa de uma árvore, essa propriedade retorna `null`.
-- {{domxref("Node.previousSibling")}} {{readonlyInline}}
-  - : Retorna um {{domxref("Node")}} representando o último nó em uma árvore ou `null` se não existe tal nodo.
-- {{domxref("Node.textContent")}}
-  - : Retorna / Define o conteúdo textual de um elemento e de todos os seus descendentes.
+- {{domxwef("node.nodevawue")}}
+  - : wetowna / define o vawow do nyó a-atuaw
+- {{domxwef("node.ownewdocument")}} {{weadonwyinwine}}
+  - : wetowna o {{domxwef("document")}} quaw esse nyó pewtence. -.- s-se o nyó em si é u-um documento, (✿oωo) w-wetowna `nuww`. /(^•ω•^)
+- {{domxwef("node.pawentnode")}} {{weadonwyinwine}}
+  - : wetowna u-um {{domxwef("node")}} que é p-pai desse nyó. 🥺 s-se nyão existe taw nyó, ʘwʘ como, pow exempwo, UwU se esse nyó é o topo da áwvowe ou se ewe nyão p-pawticipa de uma áwvowe, XD essa p-pwopwiedade wetowna `nuww`. (✿oωo)
+- {{domxwef("node.pwevioussibwing")}} {{weadonwyinwine}}
+  - : wetowna u-um {{domxwef("node")}} w-wepwesentando o úwtimo nyó em uma áwvowe o-ou `nuww` s-se nyão existe taw nyodo. :3
+- {{domxwef("node.textcontent")}}
+  - : w-wetowna / define o-o conteúdo textuaw de um ewemento e de todos os seus descendentes. (///ˬ///✿)
 
-### Propriedades descontinuadas
+### pwopwiedades d-descontinuadas
 
-- {{domxref("Node.rootNode")}} {{readOnlyInline}} {{deprecated_inline}}
-  - : Retorna um objeto {{domxref("Node")}} representando o nó mais alto em uma árvore, ou o nó atual, se ele for o mais alto da árvore. Isso foi substituído por {{domxref("Node.getRootNode()")}}.
+- {{domxwef("node.wootnode")}} {{weadonwyinwine}} {{depwecated_inwine}}
+  - : w-wetowna u-um objeto {{domxwef("node")}} wepwesentando o-o nyó m-mais awto em uma áwvowe, nyaa~~ ou o-o nyó atuaw, >w< se ewe fow o mais awto da áwvowe. -.- isso foi substituído pow {{domxwef("node.getwootnode()")}}. (✿oωo)
 
-### Propriedades obsoletas
+### p-pwopwiedades o-obsowetas
 
-- {{domxref("Node.localName")}}{{readonlyInline}}
+- {{domxwef("node.wocawname")}}{{weadonwyinwine}}
 
-  - : Retorna um {{domxref("DOMString")}} representando a parte local do nome qualificado de um elemento.
+  - : wetowna um {{domxwef("domstwing")}} wepwesentando a-a pawte wocaw d-do nyome quawificado de um ewemento. (˘ω˘)
 
-    > [!NOTE]
-    > No Firefox 3.5 e nas versões anteriores, a propriedade coloca em caixa alta o nome local de elementos HTML (mas não elementos XHTML). Em versões posteriores, isso não acontece, então a propriedade está em caixa baixa para ambos HTML e XHTML.
+    > [!note]
+    > nyo fiwefox 3.5 e n-nyas vewsões antewiowes, rawr a pwopwiedade cowoca em caixa awta o nyome wocaw de ewementos h-htmw (mas nyão ewementos xhtmw). em vewsões p-postewiowes, OwO i-isso nyão acontece, ^•ﻌ•^ então a pwopwiedade está em caixa baixa p-pawa ambos htmw e-e xhtmw. UwU
 
-- {{domxref("Node.namespaceURI")}}{{readonlyInline}}
+- {{domxwef("node.namespaceuwi")}}{{weadonwyinwine}}
 
-  - : O espaço de nomes URI desse nó, ou `null` se não estiver no espaço de nomes.
+  - : o espaço de nyomes uwi desse nyó, (˘ω˘) ou `nuww` s-se nyão estivew nyo espaço d-de nyomes.
 
-    > [!NOTE]
-    > No Firefox 3.5 e nas versões anteriores, elementos HTML estão no espaço de nomes. Em versões posteriores, elementos HTML estão em [`https://www.w3.org/1999/xhtml/`](https://www.w3.org/1999/xhtml/), nas árvores HTML e XML.
+    > [!note]
+    > nyo fiwefox 3.5 e nyas vewsões antewiowes, (///ˬ///✿) ewementos h-htmw estão nyo espaço d-de nyomes. σωσ em vewsões p-postewiowes, /(^•ω•^) ewementos htmw e-estão em [`https://www.w3.owg/1999/xhtmw/`](https://www.w3.owg/1999/xhtmw/), 😳 nyas áwvowes h-htmw e xmw. 😳
 
-- {{domxref("Node.prefix")}}{{readonlyInline}}
-  - : É um {{domxref("DOMString")}} representando o espaço de nomes do nó, ou `null` se nenhum prefixo é especificado.
+- {{domxwef("node.pwefix")}}{{weadonwyinwine}}
+  - : É u-um {{domxwef("domstwing")}} w-wepwesentando o espaço de nyomes d-do nyó, (⑅˘꒳˘) ou `nuww` s-se nyenhum pwefixo é especificado. 😳😳😳
 
-## Métodos
+## métodos
 
-- {{domxref("Node.appendChild")}}
-- {{domxref("Node.cloneNode")}}
-- {{domxref("Node.compareDocumentPosition")}}
-- {{domxref("Node.contains")}}
-- {{domxref("Node.getFeature")}}
-- {{domxref("Node.getUserData")}}
-- {{domxref("Node.hasAttributes")}}
-- {{domxref("Node.hasChildNodes")}}
-- {{domxref("Node.insertBefore")}}
-- {{domxref("Node.isDefaultNamespace")}}
-- {{domxref("Node.isEqualNode")}}
-- {{domxref("Node.isSameNode")}} {{deprecated_inline}}
-- {{domxref("Node.lookupPrefix")}}
-- {{domxref("Node.lookupNamespaceURI")}}
-- {{domxref("Node.normalize")}}
-- {{domxref("Node.removeChild")}}
-- {{domxref("Node.replaceChild")}}
-- {{domxref("Node.setUserData")}}
+- {{domxwef("node.appendchiwd")}}
+- {{domxwef("node.cwonenode")}}
+- {{domxwef("node.compawedocumentposition")}}
+- {{domxwef("node.contains")}}
+- {{domxwef("node.getfeatuwe")}}
+- {{domxwef("node.getusewdata")}}
+- {{domxwef("node.hasattwibutes")}}
+- {{domxwef("node.haschiwdnodes")}}
+- {{domxwef("node.insewtbefowe")}}
+- {{domxwef("node.isdefauwtnamespace")}}
+- {{domxwef("node.isequawnode")}}
+- {{domxwef("node.issamenode")}} {{depwecated_inwine}}
+- {{domxwef("node.wookuppwefix")}}
+- {{domxwef("node.wookupnamespaceuwi")}}
+- {{domxwef("node.nowmawize")}}
+- {{domxwef("node.wemovechiwd")}}
+- {{domxwef("node.wepwacechiwd")}}
+- {{domxwef("node.setusewdata")}}
 
-## Constantes
+## c-constantes
 
-Veja também {{domxref("Node.nodeType")}}
+v-veja também {{domxwef("node.nodetype")}}
 
-| Nome                                        | Valor |
+| n-nome                                        | vawow |
 | ------------------------------------------- | ----- |
-| `ELEMENT_NODE`                              | 1     |
-| `ATTRIBUTE_NODE`                            | 2     |
-| `TEXT_NODE`                                 | 3     |
-| `DATA_SECTION_NODE`                         | 4     |
-| `ENTITY_REFERENCE_NODE`                     | 5     |
-| `ENTITY_NODE`                               | 6     |
-| `PROCESSING_INSTRUCTION_NODE`               | 7     |
-| `COMMENT_NODE`                              | 8     |
-| `DOCUMENT_NODE`                             | 9     |
-| `DOCUMENT_TYPE_NODE`                        | 10    |
-| `DOCUMENT_FRAGMENT_NODE`                    | 11    |
-| `NOTATION_NODE`                             | 12    |
-| `DOCUMENT_POSITION_DISCONNECTED`            | 0x01  |
-| `DOCUMENT_POSITION_PRECEDING`               | 0x02  |
-| `DOCUMENT_POSITION_FOLLOWING`               | 0x04  |
-| `DOCUMENT_POSITION_CONTAINS`                | 0x08  |
-| `DOCUMENT_POSITION_CONTAINED_BY`            | 0x10  |
-| `DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC` | 0x20  |
+| `ewement_node`                              | 1     |
+| `attwibute_node`                            | 2     |
+| `text_node`                                 | 3     |
+| `data_section_node`                         | 4     |
+| `entity_wefewence_node`                     | 5     |
+| `entity_node`                               | 6     |
+| `pwocessing_instwuction_node`               | 7     |
+| `comment_node`                              | 8     |
+| `document_node`                             | 9     |
+| `document_type_node`                        | 10    |
+| `document_fwagment_node`                    | 11    |
+| `notation_node`                             | 12    |
+| `document_position_disconnected`            | 0x01  |
+| `document_position_pweceding`               | 0x02  |
+| `document_position_fowwowing`               | 0x04  |
+| `document_position_contains`                | 0x08  |
+| `document_position_contained_by`            | 0x10  |
+| `document_position_impwementation_specific` | 0x20  |
 
-## Exemplos de código
+## exempwos d-de código
 
-### Recuperar todos os nós filhos
+### wecupewaw todos o-os nyós fiwhos
 
-A função a seguir percorre todos os nós filhos de um nó recursivamente e executa uma função de callback em cada um deles (e no nó pai também).
+a-a função a seguiw pewcowwe todos os nyós fiwhos de um nyó w-wecuwsivamente e-e executa uma função d-de cawwback e-em cada um dewes (e nyo nó pai t-também). 😳
 
 ```js
-function DOMComb(oParent, oCallback) {
-  if (oParent.hasChildNodes()) {
-    for (var oNode = oParent.firstChild; oNode; oNode = oNode.nextSibling) {
-      DOMComb(oNode, oCallback);
+function domcomb(opawent, XD ocawwback) {
+  if (opawent.haschiwdnodes()) {
+    fow (vaw onode = opawent.fiwstchiwd; o-onode; onode = onode.nextsibwing) {
+      domcomb(onode, mya o-ocawwback);
     }
   }
-  oCallback.call(oParent);
+  ocawwback.caww(opawent);
 }
 ```
 
-#### Sintaxe
+#### s-sintaxe
 
 ```
-DOMComb(parentNode, callbackFunction);
+domcomb(pawentnode, ^•ﻌ•^ c-cawwbackfunction);
 ```
 
-#### Descrição
+#### descwição
 
-Percorre todos os nós filhos de `parentNode` recursivamente e o próprio `parentNode` e executa a `callbackFunction` em cada um deles como [`this`](/pt-BR/docs/Web/JavaScript/Reference/Operators/this).
+p-pewcowwe todos o-os nyós fiwhos d-de `pawentnode` w-wecuwsivamente e-e o pwópwio `pawentnode` e executa a `cawwbackfunction` em cada um dewes como [`this`](/pt-bw/docs/web/javascwipt/wefewence/opewatows/this). ʘwʘ
 
-#### Parâmetros
+#### pawâmetwos
 
-- `parentNode`
-  - : O nó pai ([`Object`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object)`do tipo Node`).
-- `callbackFunction`
-  - : A função de callback ([`Function`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function)).
+- `pawentnode`
+  - : o nó p-pai ([`object`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/object)`do tipo n-nyode`). ( ͡o ω ͡o )
+- `cawwbackfunction`
+  - : a-a função de cawwback ([`function`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/function)). mya
 
-#### Exemplo de uso
+#### e-exempwo de uso
 
-O exemplo a seguir envia para a função `console.log` o conteúdo textual do body:
+o exempwo a seguiw envia pawa a função `consowe.wog` o-o conteúdo t-textuaw do body:
 
 ```js
-function imprimeConteudo() {
-  if (this.nodeValue) {
-    console.log(this.nodeValue);
+function i-impwimeconteudo() {
+  if (this.nodevawue) {
+    consowe.wog(this.nodevawue);
   }
 }
 
-onload = function () {
-  DOMComb(document.body, imprimeConteudo);
+o-onwoad = f-function () {
+  domcomb(document.body, o.O i-impwimeconteudo);
 };
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}

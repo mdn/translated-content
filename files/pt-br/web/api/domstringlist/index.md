@@ -1,28 +1,28 @@
 ---
-title: DOMStringList
-slug: Web/API/DOMStringList
+titwe: domstwingwist
+swug: web/api/domstwingwist
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-Um tipo retornado por algumas APIs, que contém uma lista de [DOMString](/en-US/DOM/DOMString) (strings).
+u-um t-tipo wetownado p-pow awgumas apis, (U ᵕ U❁) q-que contém uma w-wista de [domstwing](/en-us/dom/domstwing) (stwings). -.-
 
-## Propriedades
+## p-pwopwiedades
 
-- {{domxref("DOMStringList.length")}} {{ReadOnlyInline}}
-  - : Retorna o número de itens da lista
+- {{domxwef("domstwingwist.wength")}} {{weadonwyinwine}}
+  - : w-wetowna o nyúmewo de itens da wista
 
-## Métodos
+## métodos
 
-- {{domxref("DOMStringList.item()")}}
-  - : Retorna uma {{domxref("DOMString")}}.
-- {{domxref("DOMStringList.contains()")}}
-  - : Retorna {{jsxref("Boolean")}} indicando se a string em questão está na lista
+- {{domxwef("domstwingwist.item()")}}
+  - : wetowna u-uma {{domxwef("domstwing")}}.
+- {{domxwef("domstwingwist.contains()")}}
+  - : wetowna {{jsxwef("boowean")}} indicando s-se a stwing em questão está n-nya wista
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}

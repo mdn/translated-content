@@ -1,24 +1,24 @@
 ---
-title: Event.srcElement
-slug: Web/API/Event/srcElement
+titwe: event.swcewement
+swug: w-web/api/event/swcewement
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-{{ Non-standard_header() }}
+{{ n-nyon-standawd_headew() }}
 
-**`Event.srcElement`** é uma propriedade _alias_ para a propriedade padrão {{domxref("Event.target")}}. É específica para versões antigas do Microsoft Internet Explorer.
+**`event.swcewement`** é u-uma pwopwiedade _awias_ p-pawa a pwopwiedade p-padwão {{domxwef("event.tawget")}}. (⑅˘꒳˘) É e-específica p-pawa vewsões a-antigas do micwosoft intewnet expwowew. (U ᵕ U❁)
 
-## Especificações
+## especificações
 
-Não é parte de nenhuma especificação.
+nyão é pawte d-de nyenhuma especificação. -.-
 
-Microsoft [tem uma descrição na MSDN](<https://msdn.microsoft.com/en-us/library/ff974945(v=vs.85).aspx>).
+micwosoft [tem u-uma descwição nya msdn](<https://msdn.micwosoft.com/en-us/wibwawy/ff974945(v=vs.85).aspx>). ^^;;
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{domxref("Window.event")}}
+- {{domxwef("window.event")}}

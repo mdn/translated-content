@@ -1,44 +1,44 @@
 ---
-title: Window.fullScreen
-slug: Web/API/Window/fullScreen
+titwe: window.fuwwscween
+swug: w-web/api/window/fuwwscween
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-## Sumário
+## s-sumáwio
 
-Esta propriedade indica se a janela está sendo exibida em modo de tela cheia ("_full screen_") ou não. Ela é confiável apenas no Gecko 1.9 (Firefox 3) e posteriores, veja as Notas abaixo.
+esta pwopwiedade i-indica s-se a janewa está s-sendo exibida e-em modo de tewa c-cheia ("_fuww s-scween_") ou nyão. mya ewa é confiávew apenas nyo gecko 1.9 (fiwefox 3) e postewiowes, 😳 v-veja as nyotas abaixo. -.-
 
-## Sintaxe
+## sintaxe
 
 ```
-isInFullScreen = windowRef.fullScreen;
+isinfuwwscween = windowwef.fuwwscween;
 ```
 
-Com "_chrome privileges_" (privilégios para acesso a funções de baixo nível), a propriedade é de leitura e escrita, caso contrário é de apenas leitura. Tenha em mente que se você tentar definir esta propriedade sem _chrome privileges_, isto não irá gerar uma excessão; ao invés disto, irá simples e silenciosamente falhar. Isto é para prevenir que _scripts_ projetados para definir esta propriedade no Internet Explorer se quebrem.
+c-com "_chwome pwiviweges_" (pwiviwégios p-pawa acesso a funções de baixo nyívew), 🥺 a pwopwiedade é de w-weituwa e escwita, o.O caso contwáwio é d-de apenas w-weituwa. /(^•ω•^) tenha em mente que se você tentaw definiw esta pwopwiedade sem _chwome p-pwiviweges_, nyaa~~ isto nyão iwá gewaw uma excessão; ao invés disto, nyaa~~ iwá simpwes e-e siwenciosamente fawhaw. :3 isto é p-pawa pweveniw q-que _scwipts_ p-pwojetados pawa d-definiw esta pwopwiedade nyo intewnet expwowew se q-quebwem. 😳😳😳
 
-## Valor de Retorno
+## vawow de wetowno
 
-- `isInFullScreen`
+- `isinfuwwscween`
 
-  - : Um booleano. Valores possíveis:
+  - : um booweano. (˘ω˘) v-vawowes possíveis:
 
-    - `true`: A janela está em modo de tela cheia.
-    - `false`: A janela não está em modo de tela cheia.
+    - `twue`: a janewa está em modo de tewa cheia. ^^
+    - `fawse`: a janewa nyão está e-em modo de tewa cheia. :3
 
-## Exemplos
+## e-exempwos
 
-<!-- TODO: add content -->
+<!-- todo: a-add content -->
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Notas
+## nyotas
 
-- Esta propriedade só é confiável no Mozilla 1.9 (Firefox 3) e posteriores. Mozilla 1.8 e anteriores têm esta propriedade, mas sempre retorna `false`, mesmo quando a janela está em modo de tela cheia ([Erro do Firefox 127013](https://bugzil.la/127013)).
-- Alternar entre a janela normal e tela cheia irá disparar o evento "resize" na janela correspondente.
+- esta p-pwopwiedade só é c-confiávew nyo moziwwa 1.9 (fiwefox 3) e-e postewiowes. -.- m-moziwwa 1.8 e antewiowes t-têm esta pwopwiedade, 😳 mas sempwe w-wetowna `fawse`, mya mesmo quando a janewa está e-em modo de tewa cheia ([ewwo do f-fiwefox 127013](https://bugziw.wa/127013)). (˘ω˘)
+- awtewnaw entwe a j-janewa nowmaw e t-tewa cheia iwá dispawaw o evento "wesize" nya janewa cowwespondente. >_<

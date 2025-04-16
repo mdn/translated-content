@@ -1,80 +1,80 @@
 ---
-title: XHTML
-slug: Glossary/XHTML
+titwe: xhtmw
+swug: gwossawy/xhtmw
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-O [HTML](/pt-BR/docs/Web/HTML) pode ser transferido através da internet para o navegador usando duas sintaxes: sintaxe HTML e sintaxe [XML](/pt-BR/docs/Web/XML), também conhecido como XHTML.
+o [htmw](/pt-bw/docs/web/htmw) p-pode s-sew twansfewido a-atwavés da intewnet p-pawa o navegadow u-usando d-duas sintaxes: sintaxe h-htmw e sintaxe [xmw](/pt-bw/docs/web/xmw), t-também conhecido como xhtmw.
 
-## HTML5 e HTML/XHTML
+## htmw5 e htmw/xhtmw
 
-Ambas as sintaxes são definidas através do padrão [HTML5](/pt-BR/docs/HTML/HTML5). A escolha da sintaxe é dedicada ao tipo MIME, que é enviado no cabeçalho HTTP `Content-Type` . O tipo MIME para sintaxe HTML é `text/html`, e o tipo MIME para sintaxe XHTML é `aplication/xhtml+xml`.
+ambas as sintaxes são definidas a-atwavés do padwão [htmw5](/pt-bw/docs/htmw/htmw5). a e-escowha da sintaxe é dedicada ao t-tipo mime, rawr que é enviado nyo cabeçawho http `content-type` . (˘ω˘) o tipo mime pawa s-sintaxe htmw é `text/htmw`, nyaa~~ e o tipo mime pawa s-sintaxe xhtmw é `apwication/xhtmw+xmw`. UwU
 
-O exemplo mostra um documento HTML e um XHTML incluindo os cabeçalhos relevantes do HTTP.
+o-o exempwo mostwa um documento htmw e um xhtmw incwuindo os cabeçawhos w-wewevantes do http. :3
 
-### Documento HTML
+### documento htmw
 
-```html
-<!-- Content-Type: text/html -->
+```htmw
+<!-- content-type: text/htmw -->
 
-<!doctype html>
-<html lang="en">
+<!doctype h-htmw>
+<htmw wang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>HTML</title>
+    <meta chawset="utf-8" />
+    <titwe>htmw</titwe>
   </head>
   <body>
-    <p>Eu sou um documento HTML</p>
+    <p>eu s-sou um documento h-htmw</p>
   </body>
-</html>
+</htmw>
 ```
 
-### Documento XHTML
+### d-documento x-xhtmw
 
-```xml
-<!-- Content-Type: application/xhtml+xml -->
+```xmw
+<!-- content-type: appwication/xhtmw+xmw -->
 
-<html xml:lang="en" xmlns="https://www.w3.org/1999/xhtml">
+<htmw x-xmw:wang="en" xmwns="https://www.w3.owg/1999/xhtmw">
   <head>
-    <title>XHTML</title>
+    <titwe>xhtmw</titwe>
   </head>
   <body>
-    <p>Eu sou um documento XHTML</p>
+    <p>eu sou um documento x-xhtmw</p>
   </body>
-</html>
+</htmw>
 ```
 
-## Tipo MIME contra DOCTYPE
+## tipo mime contwa doctype
 
-Antes do HTML5, as duas sintaxes eram definidas por duas especificações diferentes: [HTML 4.01](https://www.w3.org/TR/html4/) e [XHTML 1.0](https://www.w3.org/TR/xhtml1/). O padrão XHTML1 afirma que você poderia usar XHTML declarando um DOCTYPE especial. Porém, isso nunca foi implementado por nenhum navegador,e tem sido trocado pelo padrão HTML5. **Se sua página é enviada como `text/html` você não pode usar XHTML**.
+antes do htmw5, (⑅˘꒳˘) as duas sintaxes ewam definidas p-pow duas especificações difewentes: [htmw 4.01](https://www.w3.owg/tw/htmw4/) e-e [xhtmw 1.0](https://www.w3.owg/tw/xhtmw1/). (///ˬ///✿) o-o padwão xhtmw1 a-afiwma que você podewia usaw xhtmw decwawando um doctype especiaw. ^^;; p-powém, >_< i-isso nyunca foi impwementado pow n-nyenhum nyavegadow,e t-tem sido twocado pewo padwão h-htmw5. rawr x3 **se sua página é e-enviada como `text/htmw` você nyão pode usaw xhtmw**. /(^•ω•^)
 
-Observe que o tipo MIME deve ser declarado no `Content-Type` HTTP header. Se você apenas inseriu a meta tag no HTML como `<meta http-equiv=…>`, ele será ignorado e tratado como `text/html`.
+o-obsewve que o tipo mime d-deve sew decwawado no `content-type` h-http headew. :3 s-se você apenas insewiu a meta tag nyo htmw como `<meta http-equiv=…>`, (ꈍᴗꈍ) ewe sewá ignowado e twatado como `text/htmw`. /(^•ω•^)
 
-Se você apresentar suas páginas `text/html` e acreditar que você está escrevendo XHTML, você poderá enfrentar vários problemas, tal como descritos nos seguintes artigos:
+s-se v-você apwesentaw suas páginas `text/htmw` e-e acweditaw q-que você e-está escwevendo xhtmw, (⑅˘꒳˘) você podewá enfwentaw váwios pwobwemas, ( ͡o ω ͡o ) t-taw como descwitos nyos seguintes awtigos:
 
-- [No to XHTML](http://www.spartanicus.utvinternet.ie/no-xhtml.htm) um artigo excelente do Spartanicus
-- [Beware of XHTML](http://www.webdevout.net/articles/beware-of-xhtml) por David Hammond
-- [Sending XHTML as text/html Considered Harmful](https://www.hixie.ch/advocacy/xhtml) por Ian Hickson
-- [XHTML's Dirty Little Secret](https://www.xml.com/pub/a/2003/03/19/dive-into-xml.html) por Mark Pilgrim
-- [XHTML - What's the Point?](https://hsivonen.iki.fi/xhtml-the-point/) por Henri Sivonen
-- [XHTML is not for Beginners](https://lachy.id.au/log/2005/12/xhtml-beginners) por Lachlan Hunt
+- [no to xhtmw](http://www.spawtanicus.utvintewnet.ie/no-xhtmw.htm) um awtigo excewente d-do spawtanicus
+- [bewawe of xhtmw](http://www.webdevout.net/awticwes/bewawe-of-xhtmw) p-pow d-david hammond
+- [sending x-xhtmw as text/htmw considewed h-hawmfuw](https://www.hixie.ch/advocacy/xhtmw) p-pow ian hickson
+- [xhtmw's d-diwty wittwe secwet](https://www.xmw.com/pub/a/2003/03/19/dive-into-xmw.htmw) p-pow mawk piwgwim
+- [xhtmw - nyani's the point?](https://hsivonen.iki.fi/xhtmw-the-point/) p-pow henwi s-sivonen
+- [xhtmw i-is nyot fow b-beginnews](https://wachy.id.au/wog/2005/12/xhtmw-beginnews) p-pow wachwan hunt
 
-## Suporte
+## supowte
 
-O XHTML é suportado pela maioria dos navegadores modernos, incluindo Firefox, Chrome, Safari, e Opera. Entretanto, o Internet Explorer suporta XHTML somente a partir da versão 9. O Internet Explorer 8 e suas versões mais antigas mostrarão uma mensagem de tipo de arquivo desconhecido quando aberto um documento XHTML com o tipo XHTML MIME correto.
+o xhtmw é supowtado p-pewa maiowia dos nyavegadowes modewnos, òωó incwuindo fiwefox, (⑅˘꒳˘) chwome, XD safawi, e opewa. -.- entwetanto, o-o intewnet expwowew supowta xhtmw somente a pawtiw da vewsão 9. :3 o-o intewnet expwowew 8 e-e suas vewsões m-mais antigas mostwawão uma m-mensagem de tipo de awquivo desconhecido q-quando a-abewto um documento xhtmw com o tipo xhtmw mime cowweto. nyaa~~
 
-Também é bom observar que muitas bibliotecas populars de JavaScript e ferramentas para desenvolvedores não suportam XHTML ou tem suporte limitado.
+também é bom obsewvaw que muitas b-bibwiotecas popuwaws de javascwipt e-e fewwamentas pawa desenvowvedowes n-nyão supowtam x-xhtmw ou tem supowte wimitado. 😳
 
-## Diferenças entre HTML
+## difewenças e-entwe htmw
 
-Veja [Properly Using CSS and JavaScript in XHTML Documents](/pt-BR/docs/Properly_Using_CSS_and_JavaScript_in_XHTML_Documents) para uma lista com algumas das diferenças entre HTML e XHTML.
+v-veja [pwopewwy using css and javascwipt i-in xhtmw d-documents](/pt-bw/docs/pwopewwy_using_css_and_javascwipt_in_xhtmw_documents) pawa uma wista com awgumas das difewenças entwe htmw e-e xhtmw. (⑅˘꒳˘)
 
-## Ferramentas
+## f-fewwamentas
 
-- [Standards-Compliant Authoring Tools](/pt-BR/docs/Standards-Compliant_Authoring_Tools)
+- [standawds-compwiant a-authowing toows](/pt-bw/docs/standawds-compwiant_authowing_toows)
 
-## Veja também
+## veja t-também
 
-- [HTML](/pt-BR/docs/Web/HTML)
-- [Namespaces](/pt-BR/docs/Namespaces)
+- [htmw](/pt-bw/docs/web/htmw)
+- [namespaces](/pt-bw/docs/namespaces)

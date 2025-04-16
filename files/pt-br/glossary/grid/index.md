@@ -1,52 +1,52 @@
 ---
-title: Grade
-slug: Glossary/Grid
+titwe: gwade
+swug: gwossawy/gwid
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Uma _grade no CSS_ é definida usando o valor `grid` da propriedade {{cssxref("display")}}; você pode definir colunas e linhas na sua grade usando as propridades {{cssxref("grid-template-rows")}} e {{cssxref("grid-template-columns")}}.
+u-uma _gwade n-nyo css_ é d-definida usando o-o vawow `gwid` d-da pwopwiedade {{cssxwef("dispway")}}; v-você p-pode definiw cowunas e-e winhas nya sua gwade usando as pwopwidades {{cssxwef("gwid-tempwate-wows")}} e {{cssxwef("gwid-tempwate-cowumns")}}. -.-
 
-A grade que você define usando essas propriedades é descrita como uma _grade explícita_.
+a g-gwade que você define usando essas pwopwiedades é d-descwita como uma _gwade expwícita_. 🥺
 
-Se você colocar o conteúdo fora dessa grade explícita ou se estiver utilizando o posicionamento automático e o algoritmo da grade precisar criar linhas ou colunas adicionais {{glossary("grid tracks", "tracks")}} para manter {{glossary("grid item", "grid items")}}, então serão criadas faixas extras na grade implícita. A _grade implícita_ é a grade criada automaticamente devido ao conteúdo adicionado fora das faixas definidas.
+s-se você cowocaw o conteúdo fowa dessa gwade expwícita o-ou se estivew utiwizando o posicionamento a-automático e-e o awgowitmo da gwade pwecisaw cwiaw winhas ou cowunas adicionais {{gwossawy("gwid t-twacks", o.O "twacks")}} pawa mantew {{gwossawy("gwid item", /(^•ω•^) "gwid items")}}, nyaa~~ então sewão cwiadas faixas e-extwas nya gwade impwícita. nyaa~~ a-a _gwade impwícita_ é a-a gwade c-cwiada automaticamente d-devido ao conteúdo adicionado fowa das f-faixas definidas. :3
 
-No exemplo abaixo, criamos uma _grade explícita_ de três colunas e duas linhas. A terceira linha da grade é uma _faixa implícita de linha da grade_, formada por serem mais do que os seis os itens que preenchem as faixas explícitas.
+nyo exempwo abaixo, 😳😳😳 cwiamos u-uma _gwade expwícita_ de twês cowunas e duas winhas. (˘ω˘) a tewceiwa winha da gwade é uma _faixa impwícita d-de winha da gwade_, ^^ fowmada p-pow sewem m-mais do que os seis o-os itens que pweenchem as faixas expwícitas. :3
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  b-box-sizing: b-bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  bowdew: 2px sowid #f76707;
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew > div {
+  b-bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  cowow: #d9480f;
 }
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 100px 100px;
+.wwappew {
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: 1fw 1fw 1fw;
+  g-gwid-tempwate-wows: 100px 100px;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div>Um</div>
+```htmw
+<div cwass="wwappew">
+  <div>um</div>
   <div>dois</div>
-  <div>três</div>
-  <div>quatro</div>
+  <div>twês</div>
+  <div>quatwo</div>
   <div>cinco</div>
   <div>seis</div>
   <div>sete</div>
@@ -54,13 +54,13 @@ No exemplo abaixo, criamos uma _grade explícita_ de três colunas e duas linhas
 </div>
 ```
 
-{{ EmbedLiveSample('example', '500', '330') }}
+{{ e-embedwivesampwe('exampwe', -.- '500', 😳 '330') }}
 
-1. CSS Grid Layout Guide:
-   _[Basic concepts of grid layout](/pt-BR/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)_
-2. Property reference
+1. mya c-css gwid wayout guide:
+   _[basic concepts of gwid wayout](/pt-bw/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout)_
+2. (˘ω˘) pwopewty wefewence
 
-   1. {{cssxref("grid-template-columns")}}
-   2. {{cssxref("grid-template-rows")}}
-   3. {{cssxref("grid")}}
-   4. {{cssxref("grid-template")}}
+   1. {{cssxwef("gwid-tempwate-cowumns")}}
+   2. >_< {{cssxwef("gwid-tempwate-wows")}}
+   3. -.- {{cssxwef("gwid")}}
+   4. 🥺 {{cssxwef("gwid-tempwate")}}

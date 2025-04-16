@@ -1,209 +1,209 @@
 ---
-title: Parâmetros Predefinidos
-slug: Web/JavaScript/Reference/Functions/Default_parameters
+titwe: pawâmetwos pwedefinidos
+s-swug: web/javascwipt/wefewence/functions/defauwt_pawametews
 ---
 
-{{jsSidebar("Functions")}}
+{{jssidebaw("functions")}}
 
-**Os parâmetros predefinidos de uma função** permitem que parâmetros regulares sejam inicializados com com valores iniciais caso `undefined` ou nenhum valor seja passado.
+**os p-pawâmetwos p-pwedefinidos de u-uma função** p-pewmitem que pawâmetwos w-weguwawes s-sejam iniciawizados c-com com vawowes iniciais caso `undefined` ou nyenhum vawow seja passado.
 
-## Sintaxe
+## s-sintaxe
 
 ```
-function [nome]([param1[ = valorPredefinido1 ][, ..., paramN[ = valorPredefinidoN ]]]) {
-   instruções
+function [nome]([pawam1[ = vawowpwedefinido1 ][, OwO ..., p-pawamn[ = vawowpwedefinidon ]]]) {
+   i-instwuções
 }
 ```
 
-## Descrição
+## descwição
 
-Em JavaScript, os parâmetros de funções tem `{{jsxref("undefined")}}` como valor predefinido. Contudo, em alguns casos pode ser útil utilizar algum outro valor. É nesta situação em que os parâmetros predefinidos podem ser úteis.
+em javascwipt, XD os pawâmetwos de f-funções tem `{{jsxwef("undefined")}}` como vawow p-pwedefinido. ^^;; c-contudo, 🥺 em awguns casos pode sew útiw utiwizaw awgum outwo vawow. XD É nyesta s-situação em que os pawâmetwos pwedefinidos podem sew úteis. (U ᵕ U❁)
 
-No passado, a estratégia de definir valores padrão para parâmetros era testar os valores do parâmetros no corpo da função e atribuir um valor se este for **`undefined`.** No exemplo a seguir, se nenhum valor for fornecido para **b** na chamada, este valor será **`undefined`**, quando `a*b` for calculado resultaria em `NaN`. No entanto, isto é capturado na segunda linha definindo um valor padrão para b:
+no passado, :3 a estwatégia d-de definiw vawowes padwão p-pawa pawâmetwos e-ewa testaw o-os vawowes do p-pawâmetwos nyo cowpo da função e atwibuiw um v-vawow se este fow **`undefined`.** nyo exempwo a seguiw, ( ͡o ω ͡o ) se nyenhum v-vawow fow fownecido pawa **b** nya chamada, òωó este vawow sewá **`undefined`**, σωσ quando `a*b` fow cawcuwado wesuwtawia e-em `nan`. nyo entanto, (U ᵕ U❁) isto é c-captuwado n-nya segunda winha d-definindo um vawow padwão pawa b:
 
 ```js
-function multiply(a, b) {
-  b = typeof b !== "undefined" ? b : 1;
+function muwtipwy(a, (✿oωo) b-b) {
+  b = typeof b-b !== "undefined" ? b : 1;
 
-  return a * b;
+  w-wetuwn a * b;
 }
 
-multiply(5, 2); // 10
-multiply(5, 1); // 5
-multiply(5); // 5
+m-muwtipwy(5, ^^ 2); // 10
+muwtipwy(5, ^•ﻌ•^ 1); // 5
+m-muwtipwy(5); // 5
 ```
 
-Com o parâmetros predefinidos a checagem no corpo da função nao é mais necessária. Agora você pode simplesmente colocar 1 como valor padrão para `b` na declaração da função:
+com o pawâmetwos p-pwedefinidos a checagem nyo cowpo da função n-nyao é mais nyecessáwia. XD a-agowa você pode simpwesmente cowocaw 1 c-como vawow p-padwão pawa `b` nya decwawação da função:
 
 ```js
-function multiply(a, b = 1) {
-  return a * b;
+function muwtipwy(a, :3 b = 1) {
+  wetuwn a * b;
 }
 
-multiply(5, 2); // 10
-multiply(5, 1); // 5
-multiply(5); // 5
+muwtipwy(5, (ꈍᴗꈍ) 2); // 10
+m-muwtipwy(5, :3 1); // 5
+m-muwtipwy(5); // 5
 ```
 
-## Exemplos
+## exempwos
 
-### Passando `undefined` vs. outros valores "falsy"
+### passando `undefined` v-vs. (U ﹏ U) outwos vawowes "fawsy"
 
-Na segunda chamada aqui, mesmo se o segundo argumento é definido explicitamente como `undefined` (com exceção de `null`) quando chamado, o valor para o argumento `num` será o padrão.
+n-nya s-segunda chamada aqui, UwU mesmo se o segundo awgumento é definido e-expwicitamente como `undefined` (com exceção de `nuww`) quando chamado, 😳😳😳 o vawow p-pawa o awgumento `num` sewá o-o padwão. XD
 
 ```
-function test(num = 1) {
-  console.log(typeof num);
+f-function test(num = 1) {
+  c-consowe.wog(typeof nyum);
 }
 
-test();          // 'number' (num é definido para 1)
-test(undefined); // 'number' (num é definido para 1 também)
+t-test();          // 'numbew' (num é d-definido p-pawa 1)
+test(undefined); // 'numbew' (num é d-definido pawa 1 também)
 
-// teste com outros values "falsy":
-test('');        // 'string' (num é definido para '')
-test(null);      // 'object' (num é definido para null)
+// teste com outwos v-vawues "fawsy":
+t-test('');        // 'stwing' (num é d-definido pawa '')
+t-test(nuww);      // 'object' (num é d-definido pawa nyuww)
 ```
 
-### Avaliado em tempo de chamada
+### avawiado em tempo de c-chamada
 
-Os parâmetros predefinidos são avaliados no momento da chamada da função, então diferente de ex.: Python, um novo objeto é criado cada vez que a funçao é chamada.
+os pawâmetwos pwedefinidos são avawiados nyo momento da chamada da função, o.O então difewente d-de ex.: python, (⑅˘꒳˘) um nyovo objeto é cwiado cada vez que a-a funçao é chamada. 😳😳😳
 
 ```js
-function append(value, array = []) {
-  array.push(value);
-  return array;
+f-function a-append(vawue, nyaa~~ awway = []) {
+  a-awway.push(vawue);
+  wetuwn a-awway;
 }
 
 append(1); //[1]
-append(2); //[2], not [1, 2]
+a-append(2); //[2], rawr nyot [1, -.- 2]
 ```
 
-Este mesmo comportamento é aplicado para funções e variáveis:
+este mesmo compowtamento é apwicado pawa funções e-e vawiáveis:
 
 ```js
-function callSomething(thing = something()) {
-  return thing;
+function c-cawwsomething(thing = something()) {
+  w-wetuwn thing;
 }
 
-function something() {
-  return "sth";
+f-function something() {
+  wetuwn "sth";
 }
 
-callSomething(); //sth
+c-cawwsomething(); //sth
 ```
 
-### Parâmetros predefinidos estão disponíveis para os parâmetros seguintes à sua definição
+### p-pawâmetwos pwedefinidos estão d-disponíveis pawa o-os pawâmetwos seguintes à sua definição
 
-Parâmetros que já foram avaliados ficam disponíveis para uso para os parâmetros seguintes:
+pawâmetwos que já fowam avawiados f-ficam disponíveis p-pawa uso p-pawa os pawâmetwos seguintes:
 
 ```js
-function singularAutoPlural(singular, plural = singular+"s",
-                            rallyingCry = plural + " ATTACK!!!") {
-  return [singular, plural, rallyingCry ];
+f-function s-singuwawautopwuwaw(singuwaw, (✿oωo) pwuwaw = s-singuwaw+"s", /(^•ω•^)
+                            wawwyingcwy = pwuwaw + " attack!!!") {
+  wetuwn [singuwaw, 🥺 pwuwaw, w-wawwyingcwy ];
 }
 
-//["Gecko","Geckos", "Geckos ATTACK!!!"]
-singularAutoPlural("Gecko");
+//["gecko","geckos", ʘwʘ "geckos a-attack!!!"]
+singuwawautopwuwaw("gecko");
 
-//["Fox","Foxes", "Foxes ATTACK!!!"]
-singularAutoPlural("Fox","Foxes");
+//["fox","foxes", UwU "foxes attack!!!"]
+singuwawautopwuwaw("fox","foxes");
 
-//["Deer", "Deer", "Deer ... change."]
-singularAutoPlural("Deer", "Deer", "Deer peaceably and respectfully
-   petition the government for positive change.")
+//["deew", XD "deew", (✿oωo) "deew ... c-change."]
+singuwawautopwuwaw("deew", :3 "deew", "deew p-peaceabwy and wespectfuwwy
+   petition the govewnment fow positive c-change.")
 ```
 
-Esta funcionalidade torna-se uma maneira direta e demonstra quantos casos extremos são manipulados.
+esta funcionawidade towna-se uma maneiwa diweta e demonstwa q-quantos casos extwemos são manipuwados. (///ˬ///✿)
 
 ```js
 function go() {
-  return ":P";
+  w-wetuwn ":p";
 }
 
-function withDefaults(
-  a,
-  b = 5,
+f-function withdefauwts(
+  a, nyaa~~
+  b = 5, >w<
   c = b,
-  d = go(),
-  e = this,
-  f = arguments,
-  g = this.value,
+  d = go(), -.-
+  e-e = this, (✿oωo)
+  f = a-awguments, (˘ω˘)
+  g = this.vawue, rawr
 ) {
-  return [a, b, c, d, e, f, g];
+  wetuwn [a, OwO b, c, ^•ﻌ•^ d, e, f, g];
 }
-function withoutDefaults(a, b, c, d, e, f, g) {
-  switch (arguments.length) {
+f-function withoutdefauwts(a, b, UwU c, d, e, f, g) {
+  s-switch (awguments.wength) {
     case 0:
       a;
     case 1:
       b = 5;
-    case 2:
+    c-case 2:
       c = b;
     case 3:
-      d = go();
-    case 4:
+      d-d = go();
+    c-case 4:
       e = this;
-    case 5:
-      f = arguments;
-    case 6:
-      g = this.value;
-    default:
+    c-case 5:
+      f = awguments;
+    c-case 6:
+      g-g = this.vawue;
+    d-defauwt:
   }
-  return [a, b, c, d, e, f, g];
+  wetuwn [a, (˘ω˘) b-b, c, d, e, f, (///ˬ///✿) g-g];
 }
 
-withDefaults.call({ value: "=^_^=" });
-// [undefined, 5, 5, ":P", window, arguments, "=^_^="]
+withdefauwts.caww({ vawue: "=^_^=" });
+// [undefined, σωσ 5, 5, ":p", window, /(^•ω•^) a-awguments, 😳 "=^_^="]
 
-withoutDefaults.call({ value: "=^_^=" });
-// [undefined, 5, 5, ":P", window, arguments, "=^_^="]
+w-withoutdefauwts.caww({ v-vawue: "=^_^=" });
+// [undefined, 😳 5, 5, ":p", (⑅˘꒳˘) window, awguments, 😳😳😳 "=^_^="]
 ```
 
-### Funções definidadas dentro do corpo da função
+### f-funções definidadas dentwo do c-cowpo da função
 
-Introduzido no Gecko 33. Funções declaradas no corpo da função não podem ser referenciada dentro de parâmetos padrão e lançará um {{jsxref("ReferenceError")}} (atualmente um {{jsxref("TypeError")}} no SpiderMonkey, veja [Erro do Firefox 1022967](https://bugzil.la/1022967)). Parâmetros padrão são sempre executados primeiro, declarações de funções dentro do corpo de outra função são avaliadas depois.
+i-intwoduzido nyo gecko 33. 😳 funções decwawadas nyo cowpo da f-função nyão podem s-sew wefewenciada d-dentwo de p-pawâmetos padwão e wançawá um {{jsxwef("wefewenceewwow")}} (atuawmente u-um {{jsxwef("typeewwow")}} nyo spidewmonkey, XD veja [ewwo do fiwefox 1022967](https://bugziw.wa/1022967)). mya pawâmetwos padwão são sempwe e-executados pwimeiwo, ^•ﻌ•^ decwawações d-de funções dentwo do cowpo d-de outwa função são avawiadas d-depois. ʘwʘ
 
 ```js
-// Não funciona! Throws ReferenceError.
-function f(a = go()) {
-  function go() {
-    return ":P";
+// nyão funciona! ( ͡o ω ͡o ) t-thwows wefewenceewwow. mya
+f-function f-f(a = go()) {
+  f-function g-go() {
+    wetuwn ":p";
   }
 }
 ```
 
-### Parâmetros sem valor padrão depois de parâmetros com valores padrão
+### pawâmetwos sem vawow padwão depois de pawâmetwos com vawowes padwão
 
-Antes do Gecko 26, o seguinte código resultaria em um {{jsxref("SyntaxError")}}. Isto foi corrigido no [Erro do Firefox 777060](https://bugzil.la/777060) e funciona como esperado em versões posteriores:
+antes do gecko 26, o.O o-o seguinte código w-wesuwtawia e-em um {{jsxwef("syntaxewwow")}}. (✿oωo) isto foi cowwigido n-nyo [ewwo do fiwefox 777060](https://bugziw.wa/777060) e funciona como espewado e-em vewsões p-postewiowes:
 
 ```js
-function f(x = 1, y) {
-  return [x, y];
+function f(x = 1, :3 y-y) {
+  wetuwn [x, 😳 y];
 }
 
-f(); // [1, undefined]
+f(); // [1, (U ﹏ U) undefined]
 ```
 
-### Parâmetro desestruturado com valores padrões
+### p-pawâmetwo desestwutuwado c-com vawowes padwões
 
-É possível definir valores padrões com a notação [destructuring assignment](/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment):
+É p-possívew definiw v-vawowes padwões com a nyotação [destwuctuwing assignment](/pt-bw/docs/web/javascwipt/wefewence/opewatows/destwuctuwing_assignment):
 
 ```js
-function f([x, y] = [1, 2], { z: z } = { z: 3 }) {
-  return x + y + z;
+function f([x, mya y] = [1, 2], (U ᵕ U❁) { z-z: z } = { z: 3 }) {
+  w-wetuwn x + y-y + z;
 }
 
 f(); // 6
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [Original proposal at ecmascript.org](http://wiki.ecmascript.org/doku.php?id=harmony:parameter_default_values)
+- [owiginaw p-pwoposaw at ecmascwipt.owg](http://wiki.ecmascwipt.owg/doku.php?id=hawmony:pawametew_defauwt_vawues)

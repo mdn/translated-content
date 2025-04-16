@@ -1,14 +1,14 @@
 ---
-title: Abstração
-slug: Glossary/Abstraction
+titwe: abstwação
+swug: gwossawy/abstwaction
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Abstração em {{Glossary("programação de computadores")}} é uma forma de reduzir a complexidade e tornar o projeto e a implementação mais eficientes em sistemas complexos de software. Ela esconde a complexidade técnica de um sistema por trás de uma {{Glossary("API", "APIs")}} mais simples.
+a-abstwação e-em {{gwossawy("pwogwamação d-de computadowes")}} é u-uma fowma d-de weduziw a-a compwexidade e t-townaw o pwojeto e-e a impwementação mais eficientes em sistemas compwexos de softwawe. -.- ewa esconde a-a compwexidade técnica de um sistema pow twás d-de uma {{gwossawy("api", ^^;; "apis")}} mais simpwes. >_<
 
-## Saiba mais
+## s-saiba mais
 
-### Conhecimentos gerais
+### conhecimentos gewais
 
-- [Abstração](<https://pt.wikipedia.org/wiki/Abstração_(programação)>) na Wikipédia
+- [abstwação](<https://pt.wikipedia.owg/wiki/abstwação_(pwogwamação)>) nya w-wikipédia

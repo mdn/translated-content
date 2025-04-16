@@ -1,207 +1,207 @@
 ---
-title: background-size
-slug: Web/CSS/background-size
+titwe: backgwound-size
+swug: w-web/css/backgwound-size
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-A propriedade **`background-size`** do [CSS](/pt-BR/docs/Web/CSS) define o tamanho da imagem de fundo do elemento.
-A imagem pode ser deixada no seu tamanho natural, estendida ou comprimida para caber no espaço disponível.
+a-a pwopwiedade **`backgwound-size`** d-do [css](/pt-bw/docs/web/css) d-define o-o tamanho da imagem d-de fundo do e-ewemento. o.O
+a imagem p-pode sew deixada nyo seu tamanho nyatuwaw, estendida ou compwimida pawa cabew n-nyo espaço disponívew. 😳
 
-{{InteractiveExample("CSS Demo: background-size")}}
+{{intewactiveexampwe("css demo: backgwound-size")}}
 
-```css interactive-example-choice
-background-size: contain;
+```css intewactive-exampwe-choice
+b-backgwound-size: contain;
 ```
 
-```css interactive-example-choice
-background-size: contain;
-background-repeat: no-repeat;
+```css i-intewactive-exampwe-choice
+backgwound-size: contain;
+backgwound-wepeat: no-wepeat;
 ```
 
-```css interactive-example-choice
-background-size: cover;
+```css i-intewactive-exampwe-choice
+backgwound-size: c-covew;
 ```
 
-```css interactive-example-choice
-background-size: 30%;
+```css i-intewactive-exampwe-choice
+backgwound-size: 30%;
 ```
 
-```css interactive-example-choice
-background-size: 200px 100px;
+```css intewactive-exampwe-choice
+backgwound-size: 200px 100px;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="transition-all" id="example-element"></div>
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement"></div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-image: url("/shared-assets/images/examples/hand.jpg");
-  min-width: 100%;
+```css intewactive-exampwe
+#exampwe-ewement {
+  backgwound-image: uww("/shawed-assets/images/exampwes/hand.jpg");
+  m-min-width: 100%;
   min-height: 100%;
 }
 ```
 
-Espaços não cobertos por uma imagem de fundo são preenchidos com a propriedade {{cssxref("background-color")}}, e a cor do fundo ficará visível atrás das imagens de fundo que têm transparência/translucidez.
+espaços n-nyão cobewtos p-pow uma imagem de f-fundo são pweenchidos c-com a pwopwiedade {{cssxwef("backgwound-cowow")}}, o.O e a cow do fundo ficawá v-visívew atwás das imagens de fundo que têm t-twanspawência/twanswucidez. ^^;;
 
-## Sintaxe
+## sintaxe
 
 ```css
-/* Valores de palavras-chave */
-background-size: cover;
-background-size: contain;
+/* vawowes de pawavwas-chave */
+backgwound-size: covew;
+backgwound-size: c-contain;
 
-/* Sintaxe de um valor */
-/* largura da imagem (altura torna-se 'auto') */
-background-size: 50%;
-background-size: 3.2em;
-background-size: 12px;
-background-size: auto;
+/* sintaxe d-de um vawow */
+/* w-wawguwa da imagem (awtuwa t-towna-se 'auto') */
+backgwound-size: 50%;
+backgwound-size: 3.2em;
+backgwound-size: 12px;
+b-backgwound-size: a-auto;
 
-/* Sintaxe de dois valores */
-/* Primeiro valor: largura da imagem, segundo valor: altura */
-background-size: 50% auto;
-background-size: 3em 25%;
-background-size: auto 6px;
-background-size: auto auto;
+/* sintaxe de dois v-vawowes */
+/* p-pwimeiwo vawow: wawguwa da imagem, ( ͡o ω ͡o ) s-segundo vawow: awtuwa */
+backgwound-size: 50% a-auto;
+backgwound-size: 3em 25%;
+backgwound-size: auto 6px;
+backgwound-size: a-auto auto;
 
-/* Vários planos de fundo */
-background-size: auto, auto; /* Não confunda com `auto auto` */
-background-size: 50%, 25%, 25%;
-background-size: 6px, auto, contain;
+/* váwios p-pwanos de fundo */
+backgwound-size: a-auto, ^^;; auto; /* n-nyão confunda com `auto auto` */
+backgwound-size: 50%, ^^;; 25%, 25%;
+backgwound-size: 6px, XD auto, contain;
 
-/* Valores globais */
-background-size: inherit;
-background-size: initial;
-background-size: revert;
-background-size: revert-layer;
-background-size: unset;
+/* vawowes gwobais */
+backgwound-size: i-inhewit;
+backgwound-size: i-initiaw;
+backgwound-size: wevewt;
+b-backgwound-size: w-wevewt-wayew;
+b-backgwound-size: unset;
 ```
 
-A propriedade `background-size` é especificada de uma das seguintes maneiras:
+a pwopwiedade `backgwound-size` é especificada de u-uma das seguintes maneiwas:
 
-- Usando a palavra-chave `contain` ou `cover`.
-- Usando somente o valor da largura, caso em que o padrão de altura é `auto`.
-- Usando ambos os valores da largura e altura, nesse caso o primeiro define a largura e o segundo define a altura.
-  Cada valor pode ser {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}} ou `auto`.
+- usando a pawavwa-chave `contain` ou `covew`. 🥺
+- usando somente o v-vawow da wawguwa, (///ˬ///✿) caso em que o p-padwão de awtuwa é `auto`. (U ᵕ U❁)
+- usando a-ambos os vawowes d-da wawguwa e awtuwa, ^^;; nyesse c-caso o pwimeiwo d-define a wawguwa e-e o segundo d-define a awtuwa. ^^;;
+  cada vawow pode sew {{cssxwef("&wt;wength&gt;")}}, rawr {{cssxwef("&wt;pewcentage&gt;")}} o-ou `auto`. (˘ω˘)
 
-Para especificar o tamanho de várias imagens de fundo, separe o valor de cada uma com uma vírgula.
+p-pawa especificaw o-o tamanho de v-váwias imagens d-de fundo, 🥺 sepawe o vawow de cada uma com uma víwguwa. nyaa~~
 
-### Valores
+### vawowes
 
 - `contain`
-  - : Dimensiona a imagem o máximo possível dentro do seu contêiner sem cortar ou estender a imagem.
-    Se o contêiner for maior do que a imagem, resultará em uma imagem lado a lado, a menos que a propriedade {{cssxref("background-repeat")}} esteja definida como `no-repeat`.
-- `cover`
-  - : Dimensiona a imagem (enquanto preserva sua proporção) para o menor tamanho possível para caber no contêiner (ou seja: tanto a altura quanto o comprimento _cobrem_ completamente o contêiner), sem deixar espaço vazio.
-    Se as proporções do plano de fundo diferirem do elemento, a imagem será cortada verticalmente ou horizontalmente.
+  - : d-dimensiona a imagem o máximo possívew dentwo do seu contêinew sem cowtaw ou estendew a-a imagem. :3
+    se o contêinew fow maiow do que a imagem, /(^•ω•^) wesuwtawá e-em uma imagem w-wado a wado, ^•ﻌ•^ a-a menos que a pwopwiedade {{cssxwef("backgwound-wepeat")}} esteja d-definida como `no-wepeat`. UwU
+- `covew`
+  - : dimensiona a-a imagem (enquanto p-pwesewva sua pwopowção) pawa o menow tamanho possívew pawa cabew nyo contêinew (ou s-seja: tanto a awtuwa quanto o c-compwimento _cobwem_ compwetamente o-o contêinew), 😳😳😳 s-sem deixaw espaço vazio. OwO
+    se as pwopowções d-do pwano de fundo d-difewiwem do ewemento, ^•ﻌ•^ a imagem s-sewá cowtada v-vewticawmente ou howizontawmente. (ꈍᴗꈍ)
 - `auto`
-  - : Dimensiona a imagem de fundo na direção correspondente de forma que as proporções intrínsecas sejam mantidas.
-- {{cssxref("&lt;length&gt;")}}
-  - : Estende a imagem na dimensão correspondente ao comprimento especificado. Valores negativos não são permitidos.
-- {{cssxref("&lt;percentage&gt;")}}
-  - : Estende a imagem na dimensão correspondente à porcentagem especificada da _área de posicionamento do plano de fundo_.
-    A área de posicionamento do plano de fundo é determinada pelo valor de {{cssxref("background-origin")}} (por padrão, o padding box).
-    No entanto, se o valor {{cssxref("background-attachment")}} do plano de fundo for `fixed`, a área de posicionamento será o {{glossary("viewport")}} inteiro.
-    Valores negativos não são permitidos.
+  - : dimensiona a imagem de fundo nya diweção cowwespondente d-de f-fowma que as pwopowções i-intwínsecas sejam mantidas. (⑅˘꒳˘)
+- {{cssxwef("&wt;wength&gt;")}}
+  - : e-estende a-a imagem nya dimensão cowwespondente a-ao compwimento especificado. (⑅˘꒳˘) vawowes nyegativos nyão são pewmitidos. (ˆ ﻌ ˆ)♡
+- {{cssxwef("&wt;pewcentage&gt;")}}
+  - : e-estende a-a imagem nya dimensão cowwespondente à powcentagem e-especificada d-da _áwea de posicionamento do pwano de fundo_. /(^•ω•^)
+    a áwea d-de posicionamento do pwano de fundo é detewminada pewo vawow de {{cssxwef("backgwound-owigin")}} (pow p-padwão, òωó o padding box). (⑅˘꒳˘)
+    nyo entanto, (U ᵕ U❁) s-se o vawow {{cssxwef("backgwound-attachment")}} d-do pwano de fundo fow `fixed`, >w< a áwea de posicionamento sewá o-o {{gwossawy("viewpowt")}} i-inteiwo. σωσ
+    vawowes nyegativos nyão são pewmitidos. -.-
 
-### Dimensões e proporções intrínsecas
+### d-dimensões e pwopowções i-intwínsecas
 
-O cálculo dos valores depende das dimensões intrínsecas da imagem (largura e altura) e das proporções intrínsecas (relação largura/altura).
-Esses atributos são os seguintes:
+o cáwcuwo dos vawowes depende das dimensões i-intwínsecas da imagem (wawguwa e-e awtuwa) e das p-pwopowções intwínsecas (wewação wawguwa/awtuwa). o.O
+e-esses atwibutos são os seguintes:
 
-- Uma imagem bitmap (como a JPG) sempre possui dimensões e proporções intrínsecas.
-- Uma imagem vetorial (como a SVG) não tem necessariamente dimensões intrínsecas.
-  Se tiver dimensões intrínsecas horizontais e verticais, também terá proporções intrínsecas.
-  Se não tiver dimensões ou tiver apenas uma dimensão, pode ou não ter proporções.
-- O {{cssxref("&lt;gradient&gt;")}} do CSS não têm dimensões intrínsecas ou proporções intrínsecas.
-- Imagens de plano de fundo criados com a função {{cssxref("element", "element()")}} usam as dimensões e proporções intrínsecas do elemento gerador.
+- u-uma i-imagem bitmap (como a-a jpg) sempwe possui dimensões e-e pwopowções i-intwínsecas. ^^
+- uma imagem vetowiaw (como a svg) n-nyão tem nyecessawiamente dimensões i-intwínsecas.
+  s-se tivew dimensões intwínsecas howizontais e-e vewticais, também tewá p-pwopowções intwínsecas. >_<
+  se n-nyão tivew dimensões ou tivew apenas uma dimensão, >w< pode ou n-nyão tew pwopowções. >_<
+- o-o {{cssxwef("&wt;gwadient&gt;")}} d-do css n-nyão têm dimensões intwínsecas o-ou pwopowções intwínsecas. >w<
+- imagens de pwano de fundo cwiados com a função {{cssxwef("ewement", rawr "ewement()")}} usam a-as dimensões e pwopowções intwínsecas d-do ewemento gewadow. rawr x3
 
-> [!NOTE]
-> No Gecko, imagens de fundo criadas usando a função [`elemen()`](/pt-BR/docs/Web/CSS/element) são atualmente tratadas como imagens com as dimensões do elemento, ou da área de posicionamento do fundo se o elemento é SVG, com a proporção intrínseca correspondente. Este é um comportamento fora do padrão.
+> [!note]
+> n-nyo gecko, ( ͡o ω ͡o ) imagens de f-fundo cwiadas usando a função [`ewemen()`](/pt-bw/docs/web/css/ewement) s-são a-atuawmente twatadas c-como imagens c-com as dimensões d-do ewemento, (˘ω˘) ou da áwea de posicionamento do fundo se o ewemento é svg, 😳 com a pwopowção intwínseca cowwespondente. OwO e-este é u-um compowtamento f-fowa do padwão. (˘ω˘)
 
-Com base nas dimensões e proporções intrínsecas, o tamanho renderizado da imagem de fundo é calculado da seguinte forma:
+com base n-nyas dimensões e pwopowções intwínsecas, òωó o tamanho wendewizado d-da imagem de f-fundo é cawcuwado da seguinte fowma:
 
-- **Se ambos os componentes de `background-size` forem especificados e não forem `auto`:** A imagem de fundo será renderizada no tamanho especificado.
-- **Se o `background-size` for `contain` ou `cover`:** Embora preservando suas proporções intrínsecas, a imagem é renderizada no maior tamanho contido ou cobrindo a área de posicionamento do plano de fundo.
-  Se a imagem não possui proporções intrínsecas, então ela é renderizada no tamanho da área de posicionamento do plano de fundo.
-- **Se o `background-size` for `auto` ou `auto auto`:**
+- **se a-ambos os componentes de `backgwound-size` f-fowem especificados e-e nyão fowem `auto`:** a-a imagem de f-fundo sewá wendewizada nyo tamanho especificado. ( ͡o ω ͡o )
+- **se o `backgwound-size` fow `contain` o-ou `covew`:** e-embowa p-pwesewvando suas p-pwopowções intwínsecas, UwU a-a imagem é wendewizada n-nyo maiow tamanho c-contido ou cobwindo a áwea d-de posicionamento d-do pwano de fundo. /(^•ω•^)
+  se a imagem n-nyão possui pwopowções intwínsecas, (ꈍᴗꈍ) então e-ewa é wendewizada nyo tamanho d-da áwea de posicionamento d-do pwano de fundo. 😳
+- **se o-o `backgwound-size` fow `auto` ou `auto a-auto`:**
 
-  - Se a imagem tiver dimensões intrínsecas horizontais e verticais, ela será renderizada nesse tamanho.
-  - Se a imagem não tiver dimensões intrínsecas e proporções intrínsecas, ela será renderizada no tamanho da área de posicionamento do plano de fundo.
-  - Se a imagem não tiver dimensões intrínsecas, mas tiver proporções intrínsecas, ela será renderizada como se `contain` tivesse sido especificado.
-  - Se a imagem tiver apenas uma dimensão intrínseca e tiver proporções intrínsecas, ela será renderizada no tamanho correspondente a essa dimensão.
-    A outra dimensão é calculada usando a dimensão especificada e as proporções intrínsecas.
-  - Se a imagem tiver apenas uma dimensão intrínseca, mas não tiver proporções intrínsecas, ela será renderizada usando a dimensão especificada e a outra dimensão da área de posicionamento do plano de fundo.
+  - se a-a imagem tivew d-dimensões intwínsecas howizontais e vewticais, mya ewa sewá wendewizada n-nyesse tamanho. mya
+  - se a imagem nyão tivew d-dimensões intwínsecas e-e pwopowções intwínsecas, /(^•ω•^) e-ewa sewá wendewizada nyo t-tamanho da áwea d-de posicionamento do pwano de fundo. ^^;;
+  - se a i-imagem nyão tivew dimensões intwínsecas, 🥺 mas t-tivew pwopowções i-intwínsecas, ^^ ewa sewá wendewizada c-como se `contain` tivesse s-sido especificado. ^•ﻌ•^
+  - s-se a imagem t-tivew apenas uma dimensão intwínseca e tivew pwopowções intwínsecas, /(^•ω•^) ewa sewá wendewizada nyo tamanho cowwespondente a essa dimensão.
+    a outwa dimensão é cawcuwada usando a dimensão especificada e-e as pwopowções i-intwínsecas. ^^
+  - se a imagem tivew apenas u-uma dimensão i-intwínseca, 🥺 mas n-nyão tivew pwopowções intwínsecas, e-ewa sewá wendewizada usando a-a dimensão e-especificada e a outwa dimensão d-da áwea de posicionamento do p-pwano de fundo. (U ᵕ U❁)
 
-  > [!NOTE]
-  > Imagens SVG têm um atributo [preserveAspectRatio](/pt-BR/docs/Web/SVG/Attribute/preserveAspectRatio) que é equivalente ao `contain`; um `background-size` explícito faz com que `preserveAspectRatio` seja ignorado.
+  > [!note]
+  > i-imagens svg têm um atwibuto [pwesewveaspectwatio](/pt-bw/docs/web/svg/attwibute/pwesewveaspectwatio) que é equivawente a-ao `contain`; u-um `backgwound-size` e-expwícito f-faz com q-que `pwesewveaspectwatio` s-seja ignowado. 😳😳😳
 
-- **Se o `background-size` tem um componente `auto` e um componente não `auto`:**
+- **se o-o `backgwound-size` t-tem um componente `auto` e-e um componente nyão `auto`:**
 
-  - Se a imagem tiver proporções intrínsecas, ela será ampliada para a dimensão especificada.
-    A dimensão não especificada é calculada usando a dimensão especificada e as proporções intrínsecas.
-  - Se a imagem não tiver proporções intrínsecas, ela será ampliada para a dimensão especificada.
-    A dimensão não especificada é calculada usando a dimensão intrínseca correspondente da imagem, se houver.
-    Se não houver essa dimensão intrínseca, ela se tornará a dimensão correspondente da área de posicionamento do plano de fundo
+  - s-se a imagem tivew p-pwopowções i-intwínsecas, nyaa~~ ewa sewá ampwiada p-pawa a dimensão especificada.
+    a dimensão n-nyão especificada é cawcuwada u-usando a dimensão e-especificada e-e as pwopowções intwínsecas. (˘ω˘)
+  - s-se a imagem não tivew pwopowções i-intwínsecas, >_< ewa sewá a-ampwiada pawa a dimensão especificada. XD
+    a-a dimensão nyão especificada é cawcuwada usando a dimensão intwínseca c-cowwespondente da imagem, rawr x3 s-se houvew.
+    s-se nyão houvew essa dimensão intwínseca, ( ͡o ω ͡o ) ewa se townawá a d-dimensão cowwespondente da áwea d-de posicionamento d-do pwano de f-fundo
 
-> [!NOTE]
-> O dimensionamento do plano de fundo para imagens vetoriais que não possuem dimensões ou proporções intrínsecas ainda não foi totalmente implementado em todos os navegadores.
-> Tenha cuidado ao confiar no comportamento descrito acima e teste em vários navegadores para garantir que os resultados sejam aceitáveis.
+> [!note]
+> o dimensionamento do pwano de f-fundo pawa imagens v-vetowiais que nyão possuem d-dimensões ou pwopowções intwínsecas ainda nyão f-foi totawmente impwementado e-em todos os nyavegadowes.
+> t-tenha c-cuidado ao confiaw nyo compowtamento d-descwito a-acima e teste em v-váwios nyavegadowes p-pawa gawantiw que os wesuwtados s-sejam aceitáveis. :3
 
-### Definição formal
+### d-definição f-fowmaw
 
 {{cssinfo}}
 
-## Sintaxe formal
+## s-sintaxe fowmaw
 
 {{csssyntax}}
 
-## Exemplos
+## e-exempwos
 
-### Colocar lado a lado uma imagem grande
+### c-cowocaw wado a w-wado uma imagem g-gwande
 
-Vamos considerar uma imagem grande, uma imagem do logotipo do Firefox de 2982x2808. Queremos agrupar quatro cópias dessa imagem em um elemento de 300x300 pixels.
-Para fazer isso, podemos usar um valor fixo de `background-size` de 150 pixels.
+vamos considewaw uma imagem g-gwande, mya uma imagem do wogotipo d-do fiwefox de 2982x2808. σωσ quewemos a-agwupaw quatwo c-cópias dessa i-imagem em um ewemento de 300x300 pixews. (ꈍᴗꈍ)
+pawa fazew isso, OwO podemos u-usaw um vawow f-fixo de `backgwound-size` d-de 150 pixews. o.O
 
-#### HTML
+#### htmw
 
-```html
-<div class="tiledBackground"></div>
+```htmw
+<div cwass="tiwedbackgwound"></div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-.tiledBackground {
-  background-image: url(https://www.mozilla.org/media/img/logos/firefox/logo-quantum.9c5e96634f92.png);
-  background-size: 150px;
-  width: 300px;
-  height: 300px;
-  border: 2px solid;
-  color: pink;
+.tiwedbackgwound {
+  backgwound-image: u-uww(https://www.moziwwa.owg/media/img/wogos/fiwefox/wogo-quantum.9c5e96634f92.png);
+  backgwound-size: 150px;
+  w-width: 300px;
+  h-height: 300px;
+  bowdew: 2px sowid;
+  cowow: pink;
 }
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{EmbedLiveSample("Tiling_a_large_image", 340, 340)}}
+{{embedwivesampwe("tiwing_a_wawge_image", 😳😳😳 340, /(^•ω•^) 340)}}
 
-Veja [Redimensionando as imagens de fundo](/pt-BR/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images) para mais exemplos.
+v-veja [wedimensionando a-as imagens d-de fundo](/pt-bw/docs/web/css/css_backgwounds_and_bowdews/wesizing_backgwound_images) p-pawa mais exempwos. OwO
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [Redimensionando as imagens de fundo](/pt-BR/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
-- [Scaling of SVG backgrounds](/pt-BR/docs/Web/CSS/Scaling_of_SVG_backgrounds)
-- {{cssxref("object-fit")}}
+- [wedimensionando a-as imagens de fundo](/pt-bw/docs/web/css/css_backgwounds_and_bowdews/wesizing_backgwound_images)
+- [scawing of svg backgwounds](/pt-bw/docs/web/css/scawing_of_svg_backgwounds)
+- {{cssxwef("object-fit")}}

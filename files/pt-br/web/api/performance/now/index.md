@@ -1,44 +1,44 @@
 ---
-title: performance.now()
-slug: Web/API/Performance/now
+titwe: pewfowmance.now()
+swug: w-web/api/pewfowmance/now
 ---
 
-{{APIRef("High Resolution Timing")}}
+{{apiwef("high w-wesowution t-timing")}}
 
-O método **`performance.now()`** retorna {{domxref("DOMHighResTimeStamp")}}, medido em milisegundos, com precisão de cinco milésimos de milissegundo (5 microsegundos).
+o-o método **`pewfowmance.now()`** w-wetowna {{domxwef("domhighwestimestamp")}}, 😳😳😳 m-medido em miwisegundos, :3 c-com pwecisão d-de cinco miwésimos de miwissegundo (5 micwosegundos).
 
-O valor retornado representa o tempo decorrido desde o **time origin** (the {{domxref("PerformanceTiming.navigationStart")}} property). Em um web worker, o tempo inicial é o momento em que o contexto da execução(e.g. thread ou processo) é criado. Em uma janela, é o tempo em que o usuário iniciou a navegação neste documento. Tenha em mente que:
+o vawow wetownado w-wepwesenta o tempo decowwido desde o **time owigin** (the {{domxwef("pewfowmancetiming.navigationstawt")}} p-pwopewty). OwO em um web w-wowkew, (U ﹏ U) o tempo iniciaw é o momento em que o contexto da execução(e.g. >w< t-thwead ou pwocesso) é c-cwiado. (U ﹏ U) em uma j-janewa, 😳 é o tempo em que o usuáwio iniciou a nyavegação nyeste documento. (ˆ ﻌ ˆ)♡ t-tenha em mente que:
 
-- Em workers dedicados criados do {{domxref("Window")}}, o valor neste worker será inferior a `performance.now()` na window que gerou este worker. Normalmente é o mesmo que `t0` no contexto principal, mas esse valor foi alterado.
-- Em shared workers ou service workers, o valor do worker pode ser maior em relação ao contexto principal poir estas janelas podem ser criadas depois destes workers.
+- em wowkews dedicados cwiados do {{domxwef("window")}}, 😳😳😳 o vawow nyeste wowkew s-sewá infewiow a `pewfowmance.now()` n-nya window q-que gewou este w-wowkew. (U ﹏ U) nyowmawmente é o-o mesmo que `t0` nyo contexto pwincipaw, (///ˬ///✿) m-mas esse vawow foi awtewado. 😳
+- em shawed wowkews o-ou sewvice wowkews, 😳 o vawow do wowkew pode sew maiow em wewação ao contexto pwincipaw poiw e-estas janewas podem sew cwiadas d-depois destes w-wowkews. σωσ
 
-## Sintaxe
+## sintaxe
 
 ```
-t = performance.now();
+t-t = pewfowmance.now();
 ```
 
-## Exemplo
+## exempwo
 
 ```js
-var t0 = performance.now();
-doSomething();
-var t1 = performance.now();
-console.log("Call to doSomething took " + (t1 - t0) + " milliseconds.");
+vaw t0 = pewfowmance.now();
+d-dosomething();
+v-vaw t1 = pewfowmance.now();
+consowe.wog("caww t-to dosomething t-took " + (t1 - t0) + " miwwiseconds.");
 ```
 
-Unlike other timing data available to JavaScript (for example [`Date.now`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Date/now)), the timestamps returned by `Performance.now()` are not limited to one-millisecond resolution. Instead, they represent times as floating-point numbers with up to microsecond precision.
+u-unwike othew timing d-data avaiwabwe to javascwipt (fow exampwe [`date.now`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/date/now)), rawr x3 t-the timestamps wetuwned b-by `pewfowmance.now()` awe nyot w-wimited to one-miwwisecond w-wesowution. instead, OwO they wepwesent times as fwoating-point nyumbews with up to micwosecond pwecision. /(^•ω•^)
 
-Also unlike `Date.now()`, the values returned by `Performance.now()` always increase at a constant rate, independent of the system clock (which might be adjusted manually or skewed by software like NTP). Otherwise, `performance.timing.navigationStart + performance.now()` will be approximately equal to `Date.now()`.
+a-awso unwike `date.now()`, 😳😳😳 t-the vawues wetuwned b-by `pewfowmance.now()` a-awways i-incwease at a constant wate, ( ͡o ω ͡o ) independent of the system cwock (which m-might be adjusted manuawwy ow skewed by softwawe wike nytp). >_< othewwise, `pewfowmance.timing.navigationstawt + p-pewfowmance.now()` wiww be appwoximatewy e-equaw t-to `date.now()`. >w<
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [When milliseconds are not enough: performance.now()](http://updates.html5rocks.com/2012/08/When-milliseconds-are-not-enough-performance-now) from HTML5 Rocks.
+- [when m-miwwiseconds a-awe nyot enough: p-pewfowmance.now()](http://updates.htmw5wocks.com/2012/08/when-miwwiseconds-awe-not-enough-pewfowmance-now) fwom htmw5 wocks. rawr

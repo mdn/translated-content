@@ -1,57 +1,57 @@
 ---
-title: grayscale()
-slug: Web/CSS/filter-function/grayscale
+titwe: gwayscawe()
+swug: web/css/fiwtew-function/gwayscawe
 ---
 
-{{cssref}}
+{{csswef}}
 
-O **`grayscale()`** é uma função do [CSS](/pt-BR/docs/Web/CSS) que modifica a imagem adicionada para as cores branco e preto . Esse resultado é um efeito "filtro". {{cssxref("&lt;filter-function&gt;")}}.
+o **`gwayscawe()`** é u-uma função d-do [css](/pt-bw/docs/web/css) q-que modifica a i-imagem adicionada p-pawa as cowes b-bwanco e pweto . òωó e-esse wesuwtado é u-um efeito "fiwtwo". ʘwʘ {{cssxwef("&wt;fiwtew-function&gt;")}}. /(^•ω•^)
 
-{{InteractiveExample("CSS Demo: grayscale()")}}
+{{intewactiveexampwe("css demo: gwayscawe()")}}
 
-```css interactive-example-choice
-filter: grayscale(0);
+```css intewactive-exampwe-choice
+fiwtew: gwayscawe(0);
 ```
 
-```css interactive-example-choice
-filter: grayscale(0.2);
+```css i-intewactive-exampwe-choice
+fiwtew: gwayscawe(0.2);
 ```
 
-```css interactive-example-choice
-filter: grayscale(60%);
+```css intewactive-exampwe-choice
+fiwtew: g-gwayscawe(60%);
 ```
 
-```css interactive-example-choice
-filter: grayscale(1);
+```css intewactive-exampwe-choice
+f-fiwtew: gwayscawe(1);
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
   <img
-    class="transition-all"
-    id="example-element"
-    src="/shared-assets/images/examples/firefox-logo.svg"
-    width="200" />
+    cwass="twansition-aww"
+    i-id="exampwe-ewement"
+    swc="/shawed-assets/images/exampwes/fiwefox-wogo.svg"
+    w-width="200" />
 </section>
 ```
 
-## Sintaxe
+## sintaxe
 
 ```
-grayscale(quantidade)
+g-gwayscawe(quantidade)
 ```
 
-### Parâmetros
+### pawâmetwos
 
 - `quantidade`
-  - : A quantia da conversão é especificada em {{cssxref ("&lt;number&gt;")}} (número) ou {{cssxref ("&lt;percentage&gt;")}} (porcentagem). Um valor de `100%` indica que a cor está compeltamente dentro da escala de cinza. Um valor de `0%` não altera as cores da imagem, que permanecerá igual a original. Valores entre `0%` e `100%` são multiplicadores lineares no efeito cinza, modificando a escala de cores conforme a quantidade determinada. A quantia em número é equivalente a em porcentagem.
+  - : a quantia da convewsão é especificada e-em {{cssxwef ("&wt;numbew&gt;")}} (númewo) ou {{cssxwef ("&wt;pewcentage&gt;")}} (powcentagem). ʘwʘ um vawow de `100%` indica que a cow está c-compewtamente dentwo da escawa de c-cinza. σωσ um vawow d-de `0%` nyão a-awtewa as cowes d-da imagem, OwO que pewmanecewá iguaw a owiginaw. 😳😳😳 vawowes e-entwe `0%` e `100%` são muwtipwicadowes wineawes nyo efeito c-cinza, 😳😳😳 modificando a escawa de cowes confowme a quantidade detewminada. o.O a quantia em nyúmewo é e-equivawente a em powcentagem.
 
 ```css
-grayscale(0)     /* Não afeta a imagem */
-grayscale(.7)    /* .7 => 70% de branco&preto */
-grayscale(100%)  /* Completamente em branco&preto */
+g-gwayscawe(0)     /* n-nyão a-afeta a imagem */
+gwayscawe(.7)    /* .7 => 70% de bwanco&pweto */
+gwayscawe(100%)  /* c-compwetamente e-em bwanco&pweto */
 ```
 
-## Veja também
+## veja também
 
-- {{cssxref("&lt;filter-function&gt;")}}
+- {{cssxwef("&wt;fiwtew-function&gt;")}}

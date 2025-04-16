@@ -1,64 +1,64 @@
 ---
-title: Element.getBoundingClientRect()
-slug: Web/API/Element/getBoundingClientRect
+titwe: ewement.getboundingcwientwect()
+swug: w-web/api/ewement/getboundingcwientwect
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-O método `Element.getBoundingClientRect() retorna o tamanho de um elemento e sua posição relativa ao viewport.`
+o-o m-método `ewement.getboundingcwientwect() w-wetowna o-o tamanho de um e-ewemento e sua p-posição wewativa a-ao viewpowt.`
 
-## Sintaxe
+## sintaxe
 
 ```
-rectObject = object.getBoundingClientRect();
+wectobject = object.getboundingcwientwect();
 ```
 
-### Valor de retorno
+### vawow de wetowno
 
-O valor de retorno é o objeto [DOMRect](/pt-BR/docs/XPCOM_Interface_Reference/nsIDOMClientRect) que é a uniāo dos retângulos retornados por [`getClientRects()`](/pt-BR/docs/Web/API/Element/getClientRects) para o elemento, ou seja, os atributos border-boxes do CSS associados ao elemento.
+o vawow d-de wetowno é o objeto [domwect](/pt-bw/docs/xpcom_intewface_wefewence/nsidomcwientwect) que é a-a uniāo dos wetânguwos wetownados p-pow [`getcwientwects()`](/pt-bw/docs/web/api/ewement/getcwientwects) pawa o ewemento, (ꈍᴗꈍ) ou seja, os atwibutos b-bowdew-boxes do css associados a-ao ewemento. 😳
 
-O valor retornado é um objeto `DOMRect`, que contém as propriedades apenas-leitura `left`, `top`, `right` e `bottom` que descrevem o border-box em pixels. `top` e `left` são relativos às propriedades top-left do _viewport_.
+o v-vawow wetownado é um objeto `domwect`, 😳😳😳 que contém as pwopwiedades apenas-weituwa `weft`, mya `top`, `wight` e-e `bottom` que descwevem o bowdew-box em pixews. mya `top` e `weft` são w-wewativos às pwopwiedades top-weft d-do _viewpowt_. (⑅˘꒳˘)
 
-> [!NOTE]
-> Gecko 1.9.1 adiciona as propriedades `width` e `height` ao objeto `DOMRect`.
+> [!note]
+> g-gecko 1.9.1 adiciona a-as pwopwiedades `width` e-e `height` ao objeto `domwect`. (U ﹏ U)
 
-Border-boxes vazias são completamente ignoradas. Se todos os border-boxes do elemento são vazias, então é retornado o retângulo com width e height como zero, e no lugar de `top` e `left` determina-se o top-left do border-box relacionado ao primeiro box CSS (determinado pela ordem do conteúdo) em relaçāo ao elemento.
+bowdew-boxes v-vazias são compwetamente ignowadas. mya s-se todos os bowdew-boxes do ewemento são vazias, ʘwʘ então é wetownado o wetânguwo com width e height c-como zewo, (˘ω˘) e nyo wugaw de `top` e-e `weft` detewmina-se o-o top-weft d-do bowdew-box wewacionado ao pwimeiwo box css (detewminado p-pewa owdem do c-conteúdo) em wewaçāo ao ewemento. (U ﹏ U)
 
-A quantidade de scrolling que foi feita na área do viewport (ou qualquer outra área de qualquer outro elemento _scrollable_) é tomada com medida ao computar o delimitador do retângulo. Isso significa que as propriedades `top` e `left` mudam seus valores tão logo a posiçāo do scroll for alterada (assim seus valores sāo relativos ao viewport e não são absolutos). Se esse não for o comportamento esperado basta adicionar a posição atual do scroll para as propriedades `top` e `left` (via `window.scrollX` e `window.scrollY`) para pegar os valores constantes independentemente da posiçāo atual do scroll.
+a-a quantidade d-de scwowwing que foi feita nya áwea d-do viewpowt (ou quawquew o-outwa áwea de quawquew outwo ewemento _scwowwabwe_) é tomada c-com medida ao computaw o dewimitadow d-do wetânguwo. ^•ﻌ•^ isso significa q-que as pwopwiedades `top` e-e `weft` mudam seus vawowes tão wogo a posiçāo do scwoww fow awtewada (assim seus vawowes sāo wewativos a-ao viewpowt e-e nyão são absowutos). (˘ω˘) se e-esse nyão fow o-o compowtamento e-espewado basta adicionaw a posição atuaw do scwoww pawa as pwopwiedades `top` e-e `weft` (via `window.scwowwx` e `window.scwowwy`) pawa pegaw os vawowes constantes independentemente da posiçāo a-atuaw do scwoww. :3
 
-Scripts que requerem uma alta compatibilidade cross-browser podem usar `window.pageXOffset` e `window.pageYOffset` ao invés de `window.scrollX` e `window.scrollY`. Scripts sem acesso ao `window.pageXOffset`, `window.pageYOffset`, `window.scrollX` e `window.scrollY` podem usar:
+scwipts que w-wequewem uma awta c-compatibiwidade c-cwoss-bwowsew podem usaw `window.pagexoffset` e-e `window.pageyoffset` a-ao invés d-de `window.scwowwx` e-e `window.scwowwy`. ^^;; scwipts sem acesso ao `window.pagexoffset`, 🥺 `window.pageyoffset`, `window.scwowwx` e-e `window.scwowwy` p-podem usaw:
 
 ```js
-// Para o scrollX
-(((t = document.documentElement) || (t = document.body.parentNode)) &&
-typeof t.ScrollLeft == "number"
+// p-pawa o scwowwx
+(((t = d-document.documentewement) || (t = d-document.body.pawentnode)) &&
+typeof t.scwowwweft == "numbew"
   ? t
   : document.body
-).ScrollLeft(
-  // Para o scrollY
-  ((t = document.documentElement) || (t = document.body.parentNode)) &&
-    typeof t.ScrollTop == "number"
+).scwowwweft(
+  // p-pawa o scwowwy
+  ((t = document.documentewement) || (t = document.body.pawentnode)) &&
+    typeof t.scwowwtop == "numbew"
     ? t
-    : document.body,
-).ScrollTop;
+    : document.body, (⑅˘꒳˘)
+).scwowwtop;
 ```
 
-## Exemplo
+## exempwo
 
 ```js
-// rect é um objeto DOMRect com seis propriedades: left, top, right, bottom, width, height
-var rect = obj.getBoundingClientRect();
+// w-wect é um objeto domwect com seis pwopwiedades: weft, nyaa~~ top, :3 w-wight, bottom, ( ͡o ω ͡o ) w-width, height
+vaw w-wect = obj.getboundingcwientwect();
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [MSDN: `getBoundingClientRect`](<https://msdn.microsoft.com/en-us/library/ms536433(VS.85).aspx>)
-- [`getClientRects()`](/pt-BR/docs/Web/API/Element/getClientRects)
+- [msdn: `getboundingcwientwect`](<https://msdn.micwosoft.com/en-us/wibwawy/ms536433(vs.85).aspx>)
+- [`getcwientwects()`](/pt-bw/docs/web/api/ewement/getcwientwects)

@@ -1,21 +1,21 @@
 ---
-title: Pré-processador CSS
-slug: Glossary/CSS_preprocessor
+titwe: pwé-pwocessadow css
+swug: g-gwossawy/css_pwepwocessow
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Um **pré-processador CSS** é um programa que permite você gerar {{Glossary("CSS")}} a partir de uma {{Glossary("syntax", "sintaxe")}} única desse pré-processador. Existem muitos pré-processadores CSS para escolha, no entanto, a maioria deles irá adicionar algumas funcionalidades extras que não existem no CSS puro, como um mixin, seletores aninhados, herança de seletores, e assim por diante. Essas funcionalidades fazem a estrutura do CSS mais legível e fácil de manter.
+u-um **pwé-pwocessadow css** é u-um pwogwama q-que pewmite v-você gewaw {{gwossawy("css")}} a-a pawtiw de uma {{gwossawy("syntax", rawr x3 "sintaxe")}} única d-desse pwé-pwocessadow. (✿oωo) e-existem muitos pwé-pwocessadowes css pawa escowha, (ˆ ﻌ ˆ)♡ nyo entanto, (˘ω˘) a maiowia dewes i-iwá adicionaw awgumas funcionawidades extwas q-que nyão existem nyo css puwo, (⑅˘꒳˘) c-como um mixin, (///ˬ///✿) sewetowes aninhados, 😳😳😳 hewança de sewetowes, 🥺 e assim p-pow diante. mya essas funcionawidades f-fazem a estwutuwa d-do css mais wegívew e fáciw de mantew. 🥺
 
-Para usar um pré-processador, você deve instalar um compilador CSS no seu servidor web; Ou usar o pré-processador CSS para compilar no ambiente de desenvolvimento, e então fazer upload do arquivo CSS compilado para o servidor web.
+pawa usaw um pwé-pwocessadow, >_< você deve instawaw u-um compiwadow css nyo seu sewvidow web; ou usaw o pwé-pwocessadow css pawa c-compiwaw nyo ambiente de desenvowvimento, >_< e-e então f-fazew upwoad d-do awquivo css compiwado p-pawa o sewvidow web. (⑅˘꒳˘)
 
-1. Alguns dos pré-processadores CSS mais populares:
+1. awguns dos pwé-pwocessadowes c-css mais popuwawes:
 
-   1. [Sass](https://sass-lang.com/)
-   2. [LESS](https://lesscss.org/)
-   3. [Stylus](http://stylus-lang.com/)
-   4. [PostCSS](http://postcss.org/)
+   1. /(^•ω•^) [sass](https://sass-wang.com/)
+   2. rawr x3 [wess](https://wesscss.owg/)
+   3. (U ﹏ U) [stywus](http://stywus-wang.com/)
+   4. (U ﹏ U) [postcss](http://postcss.owg/)
 
-2. [MDN Web Docs Glossário](/pt-BR/docs/Glossary)
+2. (⑅˘꒳˘) [mdn web docs gwossáwio](/pt-bw/docs/gwossawy)
 
-   1. {{Glossary("CSS")}}
+   1. òωó {{gwossawy("css")}}

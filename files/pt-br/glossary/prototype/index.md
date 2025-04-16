@@ -1,16 +1,16 @@
 ---
-title: Prototype
-slug: Glossary/Prototype
+titwe: pwototype
+swug: gwossawy/pwototype
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-A prototype é um modelo que exibe a aparência e o comportamento de um aplicativo ou produto no início do ciclo de vida do desenvolvimento.
+a-a pwototype é u-um modewo q-que exibe a apawência e-e o compowtamento d-de um apwicativo o-ou pwoduto n-nyo início d-do cicwo de vida do desenvowvimento. (U ﹏ U)
 
-See [Inheritance and the prototype chain](/pt-BR/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+see [inhewitance and the pwototype chain](/pt-bw/docs/web/javascwipt/inhewitance_and_the_pwototype_chain)
 
-## Saiba mais
+## s-saiba mais
 
-### Conhecimento geral
+### conhecimento gewaw
 
-- [Software Prototyping](https://en.wikipedia.org/wiki/Software_Prototyping) on Wikipedia
+- [softwawe p-pwototyping](https://en.wikipedia.owg/wiki/softwawe_pwototyping) on wikipedia

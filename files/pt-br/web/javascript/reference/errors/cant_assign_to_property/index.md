@@ -1,60 +1,60 @@
 ---
-title: 'TypeError: can''t assign to property "x" on "y": not an object'
-slug: Web/JavaScript/Reference/Errors/Cant_assign_to_property
+titwe: 'typeewwow: can''t assign t-to pwopewty "x" o-on "y": nyot a-an object'
+swug: w-web/javascwipt/wefewence/ewwows/cant_assign_to_pwopewty
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-A exceção do modo strict do Javascript "can't assign to property" ocorre quando é feita
-a tentativa de criar uma propriedade em um valor [primitivo](/pt-BR/docs/Glossary/Primitive)
-como um [symbol](/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Symbol), uma [string](/pt-BR/docs/Glossary/String), um [number](/pt-BR/docs/Glossary/Number) ou um [boolean](/pt-BR/docs/Glossary/Boolean).
-Valores [primitivos](/pt-BR/docs/Glossary/Primitive) nâo podem ter nenhuma [propriedade](/pt-BR/docs/Glossary/Property/JavaScript).
+a-a exceção d-do modo stwict d-do javascwipt "can't a-assign to pwopewty" ocowwe quando é feita
+a tentativa de cwiaw uma pwopwiedade e-em um vawow [pwimitivo](/pt-bw/docs/gwossawy/pwimitive)
+como um [symbow](/pt-bw/docs/confwicting/web/javascwipt/wefewence/gwobaw_objects/symbow), 😳😳😳 uma [stwing](/pt-bw/docs/gwossawy/stwing), (˘ω˘) u-um [numbew](/pt-bw/docs/gwossawy/numbew) ou u-um [boowean](/pt-bw/docs/gwossawy/boowean). ^^
+vawowes [pwimitivos](/pt-bw/docs/gwossawy/pwimitive) nyâo podem tew nyenhuma [pwopwiedade](/pt-bw/docs/gwossawy/pwopewty/javascwipt). :3
 
-## Mensagem
+## m-mensagem
 
 ```js
-TypeError: can't assign to property "x" on {y}: not an object (Firefox)
-TypeError: Cannot create property 'x' on {y} (Chrome)
+typeewwow: c-can't assign t-to pwopewty "x" on {y}: nyot an object (fiwefox)
+typeewwow: cannot cweate pwopewty 'x' o-on {y} (chwome)
 ```
 
-## Tipo de Erro
+## tipo de ewwo
 
-{{jsxref("TypeError")}}.
+{{jsxwef("typeewwow")}}. -.-
 
-## O que deu errado?
+## o que deu ewwado?
 
-No {{jsxref("Strict_mode")}}, um {{jsxref("TypeError")}} é gerado quando é feita a tentativa de
-criar uma propriedade em um valor [primitivo](/pt-BR/docs/Glossary/Primitive) como
-um [symbol](/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Symbol), uma [string](/pt-BR/docs/Glossary/String), um [number](/pt-BR/docs/Glossary/Number) ou um [boolean](/pt-BR/docs/Glossary/Boolean).
-Valores [primitivos](/pt-BR/docs/Glossary/Primitive) não podem ter nenhuma [propriedade](/pt-BR/docs/Glossary/Property/JavaScript).
+nyo {{jsxwef("stwict_mode")}}, 😳 um {{jsxwef("typeewwow")}} é g-gewado quando é feita a-a tentativa de
+c-cwiaw uma pwopwiedade e-em um vawow [pwimitivo](/pt-bw/docs/gwossawy/pwimitive) c-como
+um [symbow](/pt-bw/docs/confwicting/web/javascwipt/wefewence/gwobaw_objects/symbow), uma [stwing](/pt-bw/docs/gwossawy/stwing), mya u-um [numbew](/pt-bw/docs/gwossawy/numbew) ou um [boowean](/pt-bw/docs/gwossawy/boowean). (˘ω˘)
+vawowes [pwimitivos](/pt-bw/docs/gwossawy/pwimitive) n-nyão podem tew nyenhuma [pwopwiedade](/pt-bw/docs/gwossawy/pwopewty/javascwipt). >_<
 
-O problema pode ser que um valor inesperado está em um lugar inesperado, ou
-que uma variante de objeto de uma {{jsxref("String")}} ou um {{jsxref("Number")}} é esperado.
+o pwobwema pode sew que um vawow inespewado está em um wugaw i-inespewado, -.- ou
+que uma vawiante d-de objeto de uma {{jsxwef("stwing")}} o-ou um {{jsxwef("numbew")}} é e-espewado. 🥺
 
-## Exemplos
+## exempwos
 
-### Casos inválidos
+### casos inváwidos
 
-```js example-bad
-"use strict";
+```js exampwe-bad
+"use s-stwict";
 
-var foo = "minha string";
-// A linha a seguir não faz nada se não estiver em modo strict.
-foo.bar = {}; // TypeError: can't assign to property "bar" on "my string": not an object
+v-vaw foo = "minha stwing";
+// a-a winha a seguiw n-nyão faz nyada se nyão estivew e-em modo stwict. (U ﹏ U)
+foo.baw = {}; // t-typeewwow: can't assign to pwopewty "baw" on "my s-stwing": nyot an object
 ```
 
-### Corrigindo o problema
+### c-cowwigindo o pwobwema
 
-Corrija o código para evitar que um [primitivo](/pt-BR/docs/Glossary/Primitive) seja usado em tais lugares, ou corrija o problema criando o objeto homólogo {{jsxref("Object")}}.
+cowwija o-o código pawa e-evitaw que um [pwimitivo](/pt-bw/docs/gwossawy/pwimitive) seja usado em tais wugawes, >w< ou cowwija o pwobwema cwiando o objeto homówogo {{jsxwef("object")}}. mya
 
-```js example-good
-"use strict";
+```js e-exampwe-good
+"use s-stwict";
 
-var foo = new String("minha string");
-foo.bar = {};
+vaw foo = nyew s-stwing("minha s-stwing");
+foo.baw = {};
 ```
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Strict_mode")}}
-- [Primitivo](/pt-BR/docs/Glossary/Primitive)
+- {{jsxwef("stwict_mode")}}
+- [pwimitivo](/pt-bw/docs/gwossawy/pwimitive)

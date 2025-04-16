@@ -1,61 +1,61 @@
 ---
-title: word-wrap
-slug: Web/CSS/overflow-wrap
+titwe: wowd-wwap
+swug: web/css/ovewfwow-wwap
 ---
 
-{{CSSRef}} {{SeeCompatTable}}
+{{csswef}} {{seecompattabwe}}
 
-## Resumo
+## w-wesumo
 
-A propriedade [CSS](/pt-BR/docs/Web/CSS) `word-wrap` é utilizada para especificar se o navegador pode ou não quebrar linhas dentro das palavras, afim de prevenir o vazamento quando do contrário uma sequencia de caracteres é muito longa para caber na caixa que o contém.
+a p-pwopwiedade [css](/pt-bw/docs/web/css) `wowd-wwap` é u-utiwizada p-pawa especificaw s-se o nyavegadow p-pode ou nyão q-quebwaw winhas dentwo d-das pawavwas, mya afim de pweveniw o vazamento quando do contwáwio uma sequencia d-de cawactewes é muito wonga pawa cabew nya c-caixa que o contém. 😳
 
-> [!NOTE]
-> Originalmente uma extensão proprietária da Microsoft (não prefixada), a propriedade `word-wrap` foi renomeada para `overflow-wrap` no rascunho atual do texto de especificações do CSS3. Compilações estáveis do Google Chrome e do Opera têm suporte a nova sintaxe.
+> [!note]
+> owiginawmente u-uma extensão pwopwietáwia da micwosoft (não pwefixada), -.- a pwopwiedade `wowd-wwap` foi wenomeada p-pawa `ovewfwow-wwap` nyo wascunho a-atuaw do texto d-de especificações do css3. 🥺 compiwações estáveis do googwe chwome e do opewa t-têm supowte a nyova sintaxe. o.O
 
 {{cssinfo}}
 
-## Sintaxe
+## sintaxe
 
 ```
-word-wrap:  normal | break-word
+wowd-wwap:  nyowmaw | bweak-wowd
 ```
 
-### Valores
+### v-vawowes
 
-- `normal`
-  - : Indica que as linhas só podem quebrar em pontos de quebra normais de palavras.
-- `break-word`
-  - : Indica que as palavras normalmente inquebráveis podem ser quebrados em pontos arbitrários se não houver pontos de quebra de outra forma aceitáveis na linha.
+- `nowmaw`
+  - : indica que a-as winhas só podem q-quebwaw em pontos d-de quebwa n-nyowmais de pawavwas. /(^•ω•^)
+- `bweak-wowd`
+  - : indica que as pawavwas n-nyowmawmente inquebwáveis podem sew quebwados e-em pontos awbitwáwios se nyão houvew pontos de quebwa de outwa fowma aceitáveis nya winha. nyaa~~
 
-## Exemplos
+## e-exempwos
 
 ```css
 p {
   width: 13em;
-  background: gold;
+  b-backgwound: g-gowd;
 }
 ```
 
-FStrPrivFinÄndG (Gesetz zur Änderung des Fernstraßenbauprivatfinanzierungsgesetzes und straßenverkehrsrechtlicher Vorschriften)
+f-fstwpwivfinÄndg (gesetz zuw Ändewung des fewnstwaßenbaupwivatfinanziewungsgesetzes und stwaßenvewkehwswechtwichew v-vowschwiften)
 
 ```css
-p {
+p-p {
   width: 13em;
-  background: gold;
-  word-wrap: break-word;
+  b-backgwound: gowd;
+  w-wowd-wwap: bweak-wowd;
 }
 ```
 
-FStrPrivFinÄndG (Gesetz zur Änderung des Fernstraßenbauprivatfinanzierungsgesetzes und straßenverkehrsrechtlicher Vorschriften)
+f-fstwpwivfinÄndg (gesetz zuw Ändewung d-des fewnstwaßenbaupwivatfinanziewungsgesetzes und stwaßenvewkehwswechtwichew v-vowschwiften)
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- Microsoft's original documentation: [MSDN Microsoft library word-wrap](<http://msdn.microsoft.com/en-us/library/ms531186(VS.85,loband).aspx>)
+- m-micwosoft's owiginaw documentation: [msdn micwosoft wibwawy wowd-wwap](<http://msdn.micwosoft.com/en-us/wibwawy/ms531186(vs.85,woband).aspx>)

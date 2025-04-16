@@ -1,109 +1,109 @@
 ---
-title: static
-slug: Web/JavaScript/Reference/Classes/static
+titwe: static
+swug: web/javascwipt/wefewence/cwasses/static
 ---
 
-{{jsSidebar("Classes")}}
+{{jssidebaw("cwasses")}}
 
-A palavra chave **static** define um método estático para a classe. Métodos estáticos não são chamados na instâncias da classe. Em vez disso, eles são chamados na própria classe. Geralmente, são funções utilitárias, como funções para criar ou clonar objetos.
+a-a p-pawavwa chave **static** d-define u-um método estático p-pawa a cwasse. (⑅˘꒳˘) m-métodos estáticos n-nyão são c-chamados nya instâncias da cwasse. (U ﹏ U) em vez disso, mya ewes são chamados nya pwópwia c-cwasse. ʘwʘ gewawmente, (˘ω˘) são funções utiwitáwias, (U ﹏ U) c-como funções pawa cwiaw o-ou cwonaw objetos. ^•ﻌ•^
 
-## Sintaxe
+## sintaxe
 
 ```
-static nomeDoMetodo() { ... }
+static nyomedometodo() { ... }
 ```
 
-## Descrição
+## descwição
 
-Chamadas a métodos estáticos são feitas diretamente na classe e não podem ser feitas em uma instância da classe. Métodos estáticos são comumente utilizados como funções utilitárias.
+c-chamadas a métodos estáticos s-são feitas d-diwetamente nya cwasse e nyão podem sew feitas em uma instância da cwasse. (˘ω˘) m-métodos estáticos são comumente utiwizados como funções utiwitáwias. :3
 
-## Chamada de métodos estáticos
+## chamada de métodos e-estáticos
 
-### De outro método estático
+### de outwo método e-estático
 
-Para chamar um método estático dentro de outro método estático da mesma classe, podemos utilizar a palavra reservada `this`.
+pawa c-chamaw um método e-estático d-dentwo de outwo método estático da mesma cwasse, ^^;; p-podemos utiwizaw a pawavwa wesewvada `this`. 🥺
 
 ```js
-class ChamadaDoMetodoEstatico {
-  static metodoEstatico() {
-    return "O método estático foi chamado";
+cwass chamadadometodoestatico {
+  s-static metodoestatico() {
+    wetuwn "o método estático foi chamado";
   }
-  static outroMetodoEstatico() {
-    return this.metodoEstatico() + " de outro método estático";
-  }
-}
-ChamadaDoMetodoEstatico.metodoEstatico();
-// 'O método estático foi chamado'
-
-ChamadaDoMetodoEstatico.outroMetodoEstatico();
-// 'O método estático foi chamado de outro método estático'
-```
-
-### De outro construtor e outros métodos
-
-Métodos estáticos não são diretamente acessíveis utilizando-se `this` a partir de métodos não estáticos. É necessário chamá-los usando o nome da classe:
-
-```js
-nomeDaClasse.nomeDoMetodoEstatico();
-```
-
-ou chamando o método como uma propriedade do construtor:
-
-```js
-this.constructor.nomeDoMetodoEstatico().
-```
-
-```js
-class ChamadaDoMetodoEstatico {
-  constructor() {
-    console.log(ChamadaDoMetodoEstatico.MetodoEstatico());
-    // 'O método estático foi chamado.'
-
-    console.log(this.constructor.MetodoEstatico());
-    // 'O método estático foi chamado.'
-  }
-
-  static MetodoEstatico() {
-    return "O método estático foi chamado.";
+  static outwometodoestatico() {
+    w-wetuwn this.metodoestatico() + " d-de outwo m-método estático";
   }
 }
+c-chamadadometodoestatico.metodoestatico();
+// 'o método estático foi chamado'
+
+chamadadometodoestatico.outwometodoestatico();
+// 'o m-método estático f-foi chamado de outwo método e-estático'
 ```
 
-## Exemplos
+### d-de outwo constwutow e outwos m-métodos
 
-O exemplo a seguir demonstra várias coisas. Ele mostra como um método estático é implementado em uma classe e como uma classe com um membro estático pode virar uma subclasse. Por fim, ele mostra como um método estático pode e não pode ser chamado.
+métodos estáticos n-nyão são diwetamente acessíveis utiwizando-se `this` a-a pawtiw de métodos nyão e-estáticos. (⑅˘꒳˘) É nyecessáwio c-chamá-wos usando o-o nyome da cwasse:
 
 ```js
-class Tripple {
-  static tripple(n) {
-    n = n | 1;
-    return n * 3;
+nyomedacwasse.nomedometodoestatico();
+```
+
+ou chamando o método como uma pwopwiedade do constwutow:
+
+```js
+this.constwuctow.nomedometodoestatico(). nyaa~~
+```
+
+```js
+c-cwass c-chamadadometodoestatico {
+  constwuctow() {
+    c-consowe.wog(chamadadometodoestatico.metodoestatico());
+    // 'o m-método estático f-foi chamado.'
+
+    consowe.wog(this.constwuctow.metodoestatico());
+    // 'o método estático foi chamado.'
+  }
+
+  s-static metodoestatico() {
+    wetuwn "o método estático foi chamado.";
   }
 }
+```
 
-class BiggerTripple extends Tripple {
-  static tripple(n) {
-    return super.tripple(n) * super.tripple(n);
+## e-exempwos
+
+o exempwo a seguiw demonstwa v-váwias coisas. :3 e-ewe mostwa c-como um método estático é impwementado e-em uma c-cwasse e como u-uma cwasse com u-um membwo estático pode viwaw uma subcwasse. ( ͡o ω ͡o ) pow f-fim, ewe mostwa c-como um método e-estático pode e-e nyão pode sew c-chamado. mya
+
+```js
+cwass twippwe {
+  static twippwe(n) {
+    ny = n-ny | 1;
+    wetuwn ny * 3;
   }
 }
 
-console.log(Tripple.tripple());
-console.log(Tripple.tripple(6));
-console.log(BiggerTripple.tripple(3));
-var tp = new Tripple();
-console.log(tp.tripple()); //Logs 'tp.tripple is not a function'.
+cwass biggewtwippwe extends twippwe {
+  static twippwe(n) {
+    w-wetuwn supew.twippwe(n) * supew.twippwe(n);
+  }
+}
+
+consowe.wog(twippwe.twippwe());
+consowe.wog(twippwe.twippwe(6));
+c-consowe.wog(biggewtwippwe.twippwe(3));
+v-vaw t-tp = nyew twippwe();
+consowe.wog(tp.twippwe()); //wogs 'tp.twippwe i-is nyot a function'. (///ˬ///✿)
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [`class` expression](/pt-BR/docs/Web/JavaScript/Reference/Operators/class)
-- [`class` declaration](/pt-BR/docs/Web/JavaScript/Reference/Statements/class)
-- [Classes](/pt-BR/docs/Web/JavaScript/Reference/Classes)
+- [`cwass` expwession](/pt-bw/docs/web/javascwipt/wefewence/opewatows/cwass)
+- [`cwass` decwawation](/pt-bw/docs/web/javascwipt/wefewence/statements/cwass)
+- [cwasses](/pt-bw/docs/web/javascwipt/wefewence/cwasses)

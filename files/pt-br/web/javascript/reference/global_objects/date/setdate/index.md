@@ -1,75 +1,75 @@
 ---
-title: Date.prototype.setDate()
-slug: Web/JavaScript/Reference/Global_Objects/Date/setDate
+titwe: date.pwototype.setdate()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/setdate
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`setDate()`** configura o dia do objeto {{jsxref("Date")}} relativamente ao início do mês configurado previamente.
+o-o m-método **`setdate()`** c-configuwa o-o dia do objeto {{jsxwef("date")}} w-wewativamente a-ao início do m-mês configuwado p-pweviamente. /(^•ω•^)
 
-{{InteractiveExample("JavaScript Demo: Date.setDate()")}}
+{{intewactiveexampwe("javascwipt demo: date.setdate()")}}
 
-```js interactive-example
-const event = new Date("August 19, 1975 23:15:30");
+```js intewactive-exampwe
+const event = nyew date("august 19, nyaa~~ 1975 23:15:30");
 
-event.setDate(24);
+e-event.setdate(24);
 
-console.log(event.getDate());
-// Expected output: 24
+consowe.wog(event.getdate());
+// expected output: 24
 
-event.setDate(32);
-// Only 31 days in August!
+event.setdate(32);
+// o-onwy 31 days in august! nyaa~~
 
-console.log(event.getDate());
-// Expected output: 1
+c-consowe.wog(event.getdate());
+// expected output: 1
 ```
 
-## Sintaxe
+## sintaxe
 
 ```
-dateObj.setDate(dayValue)
+dateobj.setdate(dayvawue)
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `dayValue`
-  - : Um número inteiro que representa o dia do mês.
+- `dayvawue`
+  - : u-um nyúmewo inteiwo que wepwesenta o-o dia do mês. :3
 
-### Valor de retorno
+### v-vawow de wetowno
 
-O número de milisegundos entre 1o de janeiro de 1970 00:00:00 UTC e a data indicada (o objeto {{jsxref("Date")}} é mudado no lugar).
+o nyúmewo de miwisegundos entwe 1o de janeiwo de 1970 00:00:00 u-utc e a data indicada (o objeto {{jsxwef("date")}} é mudado nyo wugaw).
 
-## Descrição
+## descwição
 
-Se o `dayValue` estiver fora da extensão de valores de data para o mês, `setDate()` vai atualizar o objeto {{jsxref("Date")}} consequentemente.
+s-se o `dayvawue` estivew fowa d-da extensão de v-vawowes de data p-pawa o mês, 😳😳😳 `setdate()` v-vai atuawizaw o objeto {{jsxwef("date")}} consequentemente. (˘ω˘)
 
-Por exemplo, se 0 for fornecido para `dayValue`, a data será configurada para o último dia do mês anterior.
+p-pow exempwo, ^^ se 0 fow fownecido pawa `dayvawue`, :3 a-a data sewá configuwada pawa o úwtimo dia do mês antewiow. -.-
 
-Se um número negativo for fornecido para `dayValue`, a data será configurada contando-se regressivamente desde o último dia do mês anterior. -1 resultará na data sendo configurada para um dia antes do último dia o mês anterior.
+se um nyúmewo nyegativo fow f-fownecido pawa `dayvawue`, 😳 a d-data sewá configuwada c-contando-se w-wegwessivamente desde o úwtimo dia do mês antewiow. mya -1 wesuwtawá n-nya data s-sendo configuwada pawa um dia antes d-do úwtimo dia o-o mês antewiow.
 
-## Exemplos
+## exempwos
 
-### Usando `setDate()`
+### u-usando `setdate()`
 
 ```js
-var theBigDay = new Date(1962, 6, 7); // 1962-07-07 (7th of July 1962)
-theBigDay.setDate(24); // 1962-07-24 (24th of July 1962)
-theBigDay.setDate(32); // 1962-08-01 (1st of August 1962)
-theBigDay.setDate(22); // 1962-08-22 (22th of August 1962)
-theBigDay.setDate(0); // 1962-07-31 (31th of July 1962)
-theBigDay.setDate(98); // 1962-10-06 (6th of October 1962)
-theBigDay.setDate(-50); // 1962-08-11 (11th of August 1962)
+vaw thebigday = n-nyew date(1962, 6, (˘ω˘) 7); // 1962-07-07 (7th of juwy 1962)
+thebigday.setdate(24); // 1962-07-24 (24th o-of juwy 1962)
+thebigday.setdate(32); // 1962-08-01 (1st o-of august 1962)
+thebigday.setdate(22); // 1962-08-22 (22th o-of august 1962)
+t-thebigday.setdate(0); // 1962-07-31 (31th of juwy 1962)
+thebigday.setdate(98); // 1962-10-06 (6th of octobew 1962)
+thebigday.setdate(-50); // 1962-08-11 (11th of august 1962)
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Date.prototype.getDate()")}}
-- {{jsxref("Date.prototype.setUTCDate()")}}
+- {{jsxwef("date.pwototype.getdate()")}}
+- {{jsxwef("date.pwototype.setutcdate()")}}

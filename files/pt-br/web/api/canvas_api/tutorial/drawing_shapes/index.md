@@ -1,275 +1,275 @@
 ---
-title: Desenhando formas com canvas
-slug: Web/API/Canvas_API/Tutorial/Drawing_shapes
+titwe: desenhando fowmas com c-canvas
+swug: web/api/canvas_api/tutowiaw/dwawing_shapes
 ---
 
-{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}
+{{defauwtapisidebaw("canvas a-api")}} {{pweviousnext("web/api/canvas_api/tutowiaw/basic_usage", (U ﹏ U) "web/api/canvas_api/tutowiaw/appwying_stywes_and_cowows")}}
 
-Agora que criamos nosso [ambiente em canvas](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Basic_usage), podemos entrar nos detalhes de como desenhar no canvas. No final deste artigo, você terá aprendido a desenhar retângulos, triângulos, linhas, arcos e curvas, proporcionando familiaridade com algumas das formas básicas. Trabalhar com caminhos (_shapes_) é essencial ao desenhar objetos na tela e veremos como isso pode ser feito.
+a-agowa que c-cwiamos nyosso [ambiente e-em canvas](/pt-bw/docs/web/api/canvas_api/tutowiaw/basic_usage), σωσ p-podemos e-entwaw nyos d-detawhes de como desenhaw nyo canvas. :3 nyo finaw deste awtigo, /(^•ω•^) você tewá apwendido a-a desenhaw wetânguwos, σωσ twiânguwos, (U ᵕ U❁) winhas, 😳 a-awcos e cuwvas, ʘwʘ pwopowcionando f-famiwiawidade com awgumas das fowmas básicas. (⑅˘꒳˘) twabawhaw com caminhos (_shapes_) é e-essenciaw ao desenhaw objetos n-nya tewa e vewemos c-como isso pode sew feito. ^•ﻌ•^
 
-## A grade
+## a gwade
 
-![](canvas_default_grid.png)Antes que possamos começar a desenhar, precisamos falar sobre a grade de tela ou **espaço de coordenadas**. O modelo HTML na página anterior tinha um elemento canvas de 150 pixels de largura e 150 pixels de altura. À direita, você verá este canvas com a grade padrão sobreposta. Normalmente 1 unidade na grade corresponde a um pixel na tela. A origem desta grade está posicionada no canto superior esquerdo (coordenadas (0,0)). Todos os elementos são colocados em relação a esta origem. Assim, a posição do canto superior esquerdo do quadrado azul, se torna x pixels dos pixels da esquerda e y a partir do topo (coordenadas (x,y)). Mais tarde nesse tutorial vamos ver como podemos traduzir a origem para uma posição diferente, girar a grade e até mesmo escaloná-la. Por enquanto vamos ficar com o padrão.
+![](canvas_defauwt_gwid.png)antes que possamos começaw a-a desenhaw, nyaa~~ pwecisamos fawaw sobwe a gwade de tewa ou **espaço de coowdenadas**. XD o-o modewo htmw na página antewiow t-tinha um e-ewemento canvas d-de 150 pixews de w-wawguwa e 150 pixews de awtuwa. /(^•ω•^) À diweita, (U ᵕ U❁) você v-vewá este canvas com a gwade padwão sobweposta. n-nyowmawmente 1 unidade nya gwade cowwesponde a um pixew nya tewa. mya a owigem desta gwade está p-posicionada nyo canto supewiow e-esquewdo (coowdenadas (0,0)). t-todos os ewementos s-são cowocados em wewação a esta owigem. (ˆ ﻌ ˆ)♡ assim, a posição d-do canto supewiow e-esquewdo do quadwado azuw, (✿oωo) se t-towna x pixews d-dos pixews da esquewda e y a pawtiw d-do topo (coowdenadas (x,y)). (✿oωo) mais tawde nyesse t-tutowiaw vamos vew como podemos twaduziw a owigem p-pawa uma posição difewente, òωó g-giwaw a gwade e até mesmo escawoná-wa. p-pow e-enquanto vamos ficaw com o padwão. (˘ω˘)
 
-## Desenhando retângulos
+## desenhando wetânguwos
 
-Diferente do {{Glossary("SVG")}} , o {{HTMLElement("canvas")}} suporta somente formas primitivas: retângulos. Todas as outras formas são criadas a partir da combinação de um ou mais caminhos (_paths_), lista de pontos conectados por uma linha. Felizmente, temos uma variedade de funções de desenho que tornam possíveis criar formas muito complexas.
+difewente do {{gwossawy("svg")}} , (ˆ ﻌ ˆ)♡ o {{htmwewement("canvas")}} supowta somente fowmas p-pwimitivas: w-wetânguwos. ( ͡o ω ͡o ) todas as outwas fowmas s-são cwiadas a-a pawtiw da combinação d-de um ou mais caminhos (_paths_), wista de pontos conectados p-pow uma winha. rawr x3 fewizmente, (˘ω˘) temos uma vawiedade de funções de desenho q-que townam possíveis cwiaw fowmas m-muito compwexas. òωó
 
-Primeiramente vamos olhar o retângulo. Aqui está listado três funções para desenhar retângulos pelo canvas:
+p-pwimeiwamente v-vamos owhaw o wetânguwo. ( ͡o ω ͡o ) aqui e-está wistado t-twês funções p-pawa desenhaw wetânguwos p-pewo canvas:
 
-- {{domxref("CanvasRenderingContext2D.fillRect", "fillRect(x, y, width, height)")}}
-  - : Desenha um retângulo preenchido.
-- {{domxref("CanvasRenderingContext2D.strokeRect", "strokeRect(x, y, width, height)")}}
-  - : Desenha a borda do retângulo.
-- {{domxref("CanvasRenderingContext2D.clearRect", "clearRect(x, y, width, height)")}}
-  - : Limpa um retângulo específico, tornando-o totalmente transparente.
+- {{domxwef("canvaswendewingcontext2d.fiwwwect", σωσ "fiwwwect(x, (U ﹏ U) y, width, rawr height)")}}
+  - : d-desenha um wetânguwo p-pweenchido. -.-
+- {{domxwef("canvaswendewingcontext2d.stwokewect", ( ͡o ω ͡o ) "stwokewect(x, >_< y-y, o.O width, h-height)")}}
+  - : d-desenha a bowda do wetânguwo. σωσ
+- {{domxwef("canvaswendewingcontext2d.cweawwect", -.- "cweawwect(x, y, σωσ width, height)")}}
+  - : wimpa u-um wetânguwo específico, :3 townando-o totawmente twanspawente. ^^
 
-Cada umas das funções recebem os mesmos parâmetros. `x` e `y` determinam a posição no canvas (em relação a origem) no canto superior esquerdo do retângulo. O `width` (largura) e o `height` (altura) definem o tamanho do retângulo.
+cada umas das funções wecebem o-os mesmos pawâmetwos. òωó `x` e `y` detewminam a posição nyo canvas (em w-wewação a-a owigem) nyo c-canto supewiow esquewdo do wetânguwo. (ˆ ﻌ ˆ)♡ o-o `width` (wawguwa) e o `height` (awtuwa) d-definem o tamanho d-do wetânguwo. XD
 
-Abaixo esta listado a função `draw()` da página anterior, porém utilizando as três funções.
+abaixo esta wistado a função `dwaw()` da página antewiow, powém utiwizando a-as twês funções. òωó
 
-### Exemplo de forma retangular
+### exempwo d-de fowma wetanguwaw
 
-```html hidden
-<html>
-  <body onload="draw();">
-    <canvas id="canvas" width="150" height="150"></canvas>
+```htmw hidden
+<htmw>
+  <body o-onwoad="dwaw();">
+    <canvas i-id="canvas" width="150" height="150"></canvas>
   </body>
-</html>
+</htmw>
 ```
 
 ```js
-function draw() {
-  var canvas = document.getElementById("canvas");
-  if (canvas.getContext) {
-    var ctx = canvas.getContext("2d");
+function dwaw() {
+  v-vaw canvas = d-document.getewementbyid("canvas");
+  if (canvas.getcontext) {
+    v-vaw ctx = canvas.getcontext("2d");
 
-    ctx.fillRect(25, 25, 100, 100);
-    ctx.clearRect(45, 45, 60, 60);
-    ctx.strokeRect(50, 50, 50, 50);
+    c-ctx.fiwwwect(25, (ꈍᴗꈍ) 25, 100, UwU 100);
+    ctx.cweawwect(45, >w< 45, 60, 60);
+    ctx.stwokewect(50, ʘwʘ 50, 50, 50);
   }
 }
 ```
 
-O resultado desse exemplo é mostrado abaixo.
+o wesuwtado desse exempwo é mostwado a-abaixo. :3
 
-{{EmbedLiveSample('Exemplo_de_forma_retangular', 160, 160, "canvas_rect.png")}}
+{{embedwivesampwe('exempwo_de_fowma_wetanguwaw', ^•ﻌ•^ 160, (ˆ ﻌ ˆ)♡ 160, "canvas_wect.png")}}
 
-A função `fillRect()` desenha um grande quadrado preto de 100 pixels. A função `clearRect()` por sua vez apaga um quadrado de 60x60 pixels a partir do centro, por fim, a função `strokeRect()` é chamada para criar uma borda de 50x50 pixels em volta do quadrado apagado.
+a f-função `fiwwwect()` d-desenha um gwande quadwado p-pweto de 100 pixews. 🥺 a-a função `cweawwect()` pow sua vez apaga u-um quadwado de 60x60 pixews a pawtiw do centwo, OwO pow fim, 🥺 a função `stwokewect()` é chamada p-pawa cwiaw uma bowda d-de 50x50 pixews em vowta do quadwado apagado. OwO
 
-Posteriormente veremos duas alternativas à função `clearRect()`, nós também aprenderemos como alterar a cor e o estilo das linhas nas camadas renderizadas.
+p-postewiowmente v-vewemos duas awtewnativas à função `cweawwect()`, (U ᵕ U❁) nyós também a-apwendewemos como awtewaw a cow e o estiwo das winhas nas camadas wendewizadas. ( ͡o ω ͡o )
 
-Ao contrário das funções de _paths_ que veremos na próxima seção, todas as três funções de retângulo desenham imediatamente no canvas.
+a-ao contwáwio das funções de _paths_ que v-vewemos nya pwóxima s-seção, ^•ﻌ•^ todas as twês funções de wetânguwo desenham i-imediatamente nyo c-canvas. o.O
 
-## Desenhando caminhos/regiões (paths)
+## desenhando caminhos/wegiões (paths)
 
-Para criar uma camada usando caminhos (regiões ou _paths_) é necessário alguns passos extras. Primeiro, cria-se a região de desenho. Depois usa-se comandos de desenho para desenhar nesta região. Por fim, você limita a região (path). Uma vez que a região de desenho está criada, você pode traçar ou preencher o caminho para que seja renderizado. Aqui estão as funções utilizadas para isso:
+pawa cwiaw uma camada usando c-caminhos (wegiões ou _paths_) é n-nyecessáwio awguns passos extwas. (⑅˘꒳˘) pwimeiwo, (ˆ ﻌ ˆ)♡ cwia-se a wegião d-de desenho. :3 depois usa-se comandos d-de desenho p-pawa desenhaw nyesta wegião. /(^•ω•^) pow f-fim, òωó você wimita a wegião (path). u-uma vez que a-a wegião de desenho e-está cwiada, :3 você pode t-twaçaw ou pweenchew o-o caminho pawa que seja wendewizado. (˘ω˘) aqui estão a-as funções u-utiwizadas pawa i-isso:
 
-- {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}}
-  - : Cria um novo path. Uma vez criado, futuros comandos de desenho são direcionados do path atual para a construção de um novo path no canvas.
-- [Métodos de Caminhos (Path)](/pt-BR/docs/Web/API/CanvasRenderingContext2D#paths)
-  - : Métodos para manipuliar diferentes paths para objetos.
-- {{domxref("CanvasRenderingContext2D.closePath", "closePath()")}}
-  - : Finaliza o path para futuros comandos de desenho, fazendo com que voltem a ser direcionados ao contexto.
-- {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}}
-  - : Desenha uma borda na camada.
-- {{domxref("CanvasRenderingContext2D.fill", "fill()")}}
-  - : Desenha uma forma sólida através de preenchimento.
+- {{domxwef("canvaswendewingcontext2d.beginpath", 😳 "beginpath()")}}
+  - : cwia um nyovo path. σωσ uma vez cwiado, UwU f-futuwos comandos de desenho s-são diwecionados d-do path atuaw pawa a constwução de um nyovo path nyo canvas. -.-
+- [métodos d-de caminhos (path)](/pt-bw/docs/web/api/canvaswendewingcontext2d#paths)
+  - : m-métodos p-pawa manipuwiaw d-difewentes paths pawa objetos. 🥺
+- {{domxwef("canvaswendewingcontext2d.cwosepath", "cwosepath()")}}
+  - : finawiza o-o path pawa futuwos comandos de desenho, 😳😳😳 fazendo com que vowtem a sew diwecionados ao contexto. 🥺
+- {{domxwef("canvaswendewingcontext2d.stwoke", ^^ "stwoke()")}}
+  - : d-desenha uma bowda nya c-camada. ^^;;
+- {{domxwef("canvaswendewingcontext2d.fiww", >w< "fiww()")}}
+  - : desenha u-uma fowma sówida atwavés de pweenchimento. σωσ
 
-O primeiro passo para criar um caminho é chamar o `beginPath()`. Internamente, caminhos são armazenados como uma lista de sub-caminhos (linhas, arcos, etc.) que juntos formam uma forma (_shape_). Sempre que esse método é chamado, a lista é redefinida e podemos começar a desenhar novas formas.
+o-o pwimeiwo passo pawa c-cwiaw um caminho é c-chamaw o `beginpath()`. >w< i-intewnamente, (⑅˘꒳˘) caminhos s-são awmazenados c-como uma wista de sub-caminhos (winhas, òωó awcos, (⑅˘꒳˘) etc.) que juntos fowmam uma fowma (_shape_). sempwe que esse método é chamado, (ꈍᴗꈍ) a-a wista é w-wedefinida e p-podemos começaw a desenhaw nyovas f-fowmas. rawr x3
 
-> [!NOTE]
-> Quando o caminho atual está vazio, assim como imediatamente depois de chamar `beginPath()`, ou em uma tela recém-criada, o primeiro comando de construção de caminho é sempre tratado como um `moveTo()`, independentemente do que ele seja realmente. Por essa razão, você quase sempre vai precisar definir especificamente sua posição inicial após redefinir um caminho.
+> [!note]
+> quando o caminho atuaw está vazio, assim c-como imediatamente d-depois de chamaw `beginpath()`, ( ͡o ω ͡o ) ou em uma tewa w-wecém-cwiada, UwU o pwimeiwo comando de constwução d-de caminho é s-sempwe twatado como um `moveto()`, ^^ i-independentemente d-do que ewe seja weawmente. (˘ω˘) pow essa wazão, (ˆ ﻌ ˆ)♡ você quase sempwe vai pwecisaw d-definiw especificamente s-sua p-posição iniciaw a-após wedefiniw u-um caminho. OwO
 
-A segunda etapa é chamar os métodos que realmente especificam os caminhos a serem desenhados. Vamos ver isso em breve.
+a segunda etapa é c-chamaw os métodos q-que weawmente especificam o-os caminhos a sewem d-desenhados. 😳 vamos vew isso em b-bweve. UwU
 
-O terceiro, e um passo opcional, é chamar `closePath()`. Este método tenta fechar a forma desenhando uma linha reta do ponto atual para o início. Se a forma (_shape_) já foi fechada ou existe apenas um ponto na lista, esta função não faz nada.
+o tewceiwo, 🥺 e um passo opcionaw, 😳😳😳 é chamaw `cwosepath()`. ʘwʘ e-este método tenta fechaw a f-fowma desenhando u-uma winha weta do ponto atuaw pawa o-o início. /(^•ω•^) se a fowma (_shape_) já foi fechada o-ou existe apenas u-um ponto nya w-wista, :3 esta função nyão faz nyada. :3
 
-> [!NOTE]
-> Quando você chama `fill()`, todas as formas abertas são fechadas automaticamente, assim você não precisa chamar `closePath()`. Isso **não acontece** quando você chamar `stroke()`.
+> [!note]
+> quando você c-chama `fiww()`, mya todas as fowmas abewtas são fechadas a-automaticamente, (///ˬ///✿) a-assim você nyão pwecisa c-chamaw `cwosepath()`. (⑅˘꒳˘) isso **não a-acontece** q-quando você chamaw `stwoke()`.
 
-### Desenhando um triângulo
+### desenhando um twiânguwo
 
-Por exemplo, o código para desenhar um triângulo seria algo parecido com isto:
+pow e-exempwo, :3 o código pawa desenhaw um twiânguwo s-sewia awgo pawecido c-com isto:
 
-```html hidden
-<html>
-  <body onload="draw();">
-    <canvas id="canvas" width="150" height="150"></canvas>
+```htmw hidden
+<htmw>
+  <body onwoad="dwaw();">
+    <canvas i-id="canvas" width="150" h-height="150"></canvas>
   </body>
-</html>
+</htmw>
 ```
 
 ```js
-function draw() {
-  var canvas = document.getElementById("canvas");
-  if (canvas.getContext) {
-    var ctx = canvas.getContext("2d");
+f-function d-dwaw() {
+  vaw canvas = document.getewementbyid("canvas");
+  if (canvas.getcontext) {
+    vaw ctx = canvas.getcontext("2d");
 
-    ctx.beginPath();
-    ctx.moveTo(75, 50);
-    ctx.lineTo(100, 75);
-    ctx.lineTo(100, 25);
-    ctx.fill();
+    ctx.beginpath();
+    ctx.moveto(75, /(^•ω•^) 50);
+    ctx.wineto(100, ^^;; 75);
+    ctx.wineto(100, (U ᵕ U❁) 25);
+    ctx.fiww();
   }
 }
 ```
 
-O resultado se parece com isso:
+o wesuwtado se pawece com isso:
 
-{{EmbedLiveSample('Desenhando_um_triângulo', 160, 160, "triangle.png")}}
+{{embedwivesampwe('desenhando_um_twiânguwo', (U ﹏ U) 160, 160, mya "twiangwe.png")}}
 
-### Desenhando
+### desenhando
 
-Uma função muito útil, que na verdade não desenha nada, mas torna-se parte da lista de caminhos descritos acima, é a função `moveTo()`. Você provavelmente pode imaginar melhor isso como se fosse o levantar uma caneta ou lápis de um ponto em um pedaço de papel e colocá-lo no próximo ponto.
+u-uma função m-muito útiw, ^•ﻌ•^ que nya vewdade nyão desenha nyada, (U ﹏ U) m-mas towna-se p-pawte da wista d-de caminhos descwitos acima, :3 é a-a função `moveto()`. rawr x3 você pwovavewmente p-pode i-imaginaw mewhow isso como se fosse o-o wevantaw uma caneta ou wápis d-de um ponto e-em um pedaço de papew e cowocá-wo nyo pwóximo p-ponto. 😳😳😳
 
-- {{domxref("CanvasRenderingContext2D.moveTo", "moveTo(x, y)")}}
-  - : Move a caneta (_pen_) para as coordenadas especificadas por `x` e `y`.
+- {{domxwef("canvaswendewingcontext2d.moveto", >w< "moveto(x, òωó y-y)")}}
+  - : m-move a caneta (_pen_) p-pawa as coowdenadas e-especificadas p-pow `x` e-e `y`. 😳
 
-Quando o canvas é inicializado ou `beginPath()` é chamado, você normalmente vai querer usar a função `moveTo()` para colocar o ponto inicial em outro lugar. Poderíamos também usar `moveTo()` para desenhar caminhos não conectados. Dê uma olhada no rosto sorridente abaixo. Eu marquei os lugares onde eu usei o método `moveTo()` (as linhas vermelhas).
+quando o c-canvas é iniciawizado o-ou `beginpath()` é chamado, (✿oωo) v-você nyowmawmente v-vai quewew u-usaw a função `moveto()` pawa c-cowocaw o ponto iniciaw em outwo wugaw. OwO podewíamos t-também usaw `moveto()` pawa desenhaw caminhos n-nyão conectados. (U ﹏ U) d-dê uma o-owhada nyo wosto sowwidente abaixo. (ꈍᴗꈍ) e-eu mawquei os wugawes onde eu u-usei o método `moveto()` (as winhas vewmewhas). rawr
 
-Caso queira tentar fazer isso, você pode usar o snippet de código abaixo. Basta colá-lo na função `draw()` que vimos anteriormente.
+c-caso queiwa tentaw fazew isso, ^^ v-você pode usaw o snippet de código abaixo. rawr basta cowá-wo nya função `dwaw()` q-que vimos antewiowmente. nyaa~~
 
-```html hidden
-<html>
-  <body onload="draw();">
-    <canvas id="canvas" width="150" height="150"></canvas>
+```htmw hidden
+<htmw>
+  <body o-onwoad="dwaw();">
+    <canvas i-id="canvas" width="150" height="150"></canvas>
   </body>
-</html>
+</htmw>
 ```
 
 ```js
-function draw() {
-  var canvas = document.getElementById("canvas");
-  if (canvas.getContext) {
-    var ctx = canvas.getContext("2d");
+function d-dwaw() {
+  vaw canvas = document.getewementbyid("canvas");
+  i-if (canvas.getcontext) {
+    v-vaw ctx = c-canvas.getcontext("2d");
 
-    ctx.beginPath();
-    ctx.arc(75, 75, 50, 0, Math.PI * 2, true); // Círculo exterior
-    ctx.moveTo(110, 75);
-    ctx.arc(75, 75, 35, 0, Math.PI, false); // Boca (sentido horário)
-    ctx.moveTo(65, 65);
-    ctx.arc(60, 65, 5, 0, Math.PI * 2, true); // Olho esquerdo
-    ctx.moveTo(95, 65);
-    ctx.arc(90, 65, 5, 0, Math.PI * 2, true); // Olho direito
-    ctx.stroke();
+    ctx.beginpath();
+    ctx.awc(75, nyaa~~ 75, o.O 50, 0, m-math.pi * 2, òωó t-twue); // cíwcuwo extewiow
+    c-ctx.moveto(110, ^^;; 75);
+    ctx.awc(75, rawr 75, 35, 0, math.pi, ^•ﻌ•^ f-fawse); // boca (sentido howáwio)
+    c-ctx.moveto(65, 65);
+    c-ctx.awc(60, nyaa~~ 65, 5, 0, nyaa~~ m-math.pi * 2, twue); // o-owho esquewdo
+    c-ctx.moveto(95, 😳😳😳 65);
+    c-ctx.awc(90, 😳😳😳 65, 5, 0, m-math.pi * 2, σωσ twue); // owho diweito
+    c-ctx.stwoke();
   }
 }
 ```
 
-O resultado aparece como:
+o-o wesuwtado apawece c-como:
 
-{{EmbedLiveSample("Desenhando", 160, 160, "canvas_smiley.png")}}
+{{embedwivesampwe("desenhando", o.O 160, 160, "canvas_smiwey.png")}}
 
-Se você não gosta de ver linhas conectadas, você pode remover as linhas que chamam a função `moveTo()`.
+s-se v-você nyão gosta d-de vew winhas c-conectadas, σωσ você p-pode wemovew as winhas que chamam a-a função `moveto()`.
 
-> [!NOTE]
-> Para aprender mais sobre a função `arc()`, veja sobre [Arcos](#arcos).
+> [!note]
+> pawa apwendew m-mais sobwe a função `awc()`, nyaa~~ v-veja sobwe [awcos](#awcos). rawr x3
 
-### Linhas
+### w-winhas
 
-Para desenhar linhas retas, use o método `lineTo().`
+pawa d-desenhaw winhas wetas, (///ˬ///✿) use o método `wineto().`
 
-- {{domxref("CanvasRenderingContext2D.lineTo", "lineTo(x, y)")}}
-  - : Desenha uma linha do ponto atual a até a posição especificada por `x` e `y`.
+- {{domxwef("canvaswendewingcontext2d.wineto", o.O "wineto(x, y)")}}
+  - : desenha u-uma winha do p-ponto atuaw a a-até a posição especificada pow `x` e `y`. òωó
 
-Esse método recebe dois argumentos, `x` e `y`, que são as coordenadas do ponto final da linha. O ponto inicial é dependente de caminhos previamente desenhados, onde o ponto final do caminho anterior é o ponto inicial para o seguinte, e assim por diante. O ponto inicial também pode ser alterado usando o método `moveTo()`.
+esse método wecebe d-dois awgumentos, OwO `x` e-e `y`, σωσ que são as coowdenadas d-do ponto finaw d-da winha. nyaa~~ o ponto iniciaw é dependente de caminhos pweviamente d-desenhados, OwO o-onde o ponto finaw d-do caminho antewiow é o-o ponto iniciaw pawa o seguinte, ^^ e assim p-pow diante. (///ˬ///✿) o-o ponto iniciaw também pode sew awtewado usando o-o método `moveto()`. σωσ
 
-O exemplo abaixo desenha dois triângulos, um preenchido e um delineado.
+o exempwo abaixo desenha d-dois twiânguwos, rawr x3 um pweenchido e-e um dewineado. (ˆ ﻌ ˆ)♡
 
-```html hidden
-<html>
-  <body onload="draw();">
-    <canvas id="canvas" width="150" height="150"></canvas>
+```htmw h-hidden
+<htmw>
+  <body onwoad="dwaw();">
+    <canvas i-id="canvas" w-width="150" height="150"></canvas>
   </body>
-</html>
+</htmw>
 ```
 
 ```js
-function draw() {
-  var canvas = document.getElementById("canvas");
-  if (canvas.getContext) {
-    var ctx = canvas.getContext("2d");
+f-function dwaw() {
+  vaw c-canvas = document.getewementbyid("canvas");
+  i-if (canvas.getcontext) {
+    v-vaw c-ctx = canvas.getcontext("2d");
 
-    // Filled triangle
-    ctx.beginPath();
-    ctx.moveTo(25, 25);
-    ctx.lineTo(105, 25);
-    ctx.lineTo(25, 105);
-    ctx.fill();
+    // fiwwed twiangwe
+    c-ctx.beginpath();
+    c-ctx.moveto(25, 25);
+    c-ctx.wineto(105, 🥺 25);
+    ctx.wineto(25, (⑅˘꒳˘) 105);
+    c-ctx.fiww();
 
-    // Stroked triangle
-    ctx.beginPath();
-    ctx.moveTo(125, 125);
-    ctx.lineTo(125, 45);
-    ctx.lineTo(45, 125);
-    ctx.closePath();
-    ctx.stroke();
+    // stwoked twiangwe
+    ctx.beginpath();
+    c-ctx.moveto(125, 😳😳😳 125);
+    c-ctx.wineto(125, /(^•ω•^) 45);
+    c-ctx.wineto(45, >w< 125);
+    ctx.cwosepath();
+    ctx.stwoke();
   }
 }
 ```
 
-Isso começa chamando o método `beginPath()` para iniciar um novo _shape path_. Em seguida, usamos o método `moveTo()` para mover o ponto inicial para a posição desejada. Logo abaixo, duas linhas, que compõem os dois lados do triângulo, são desenhadas.
+isso começa chamando o método `beginpath()` p-pawa iniciaw um nyovo _shape path_. ^•ﻌ•^ e-em seguida, u-usamos o método `moveto()` pawa movew o ponto i-iniciaw pawa a posição desejada. 😳😳😳 w-wogo abaixo, :3 d-duas winhas, (ꈍᴗꈍ) que c-compõem os dois w-wados do twiânguwo, ^•ﻌ•^ s-são desenhadas. >w<
 
-{{EmbedLiveSample("Linhas", 160, 160, "canvas_lineto.png")}}
+{{embedwivesampwe("winhas", ^^;; 160, 160, "canvas_wineto.png")}}
 
-Você notará a diferença entre o triângulo preenchido (_filled_) e não prenchido (_stroked_). Isto ocorre, como mencionado acima, porque as formas são automaticamente fechadas quando um caminho é preenchido, mas não quando são não preenchidos. Se deixássemos de fora o `closePath()` para os triângulos não preenchidos, apenas duas linhas teriam sido desenhadas, não um triângulo completo.
+você nyotawá a difewença entwe o twiânguwo pweenchido (_fiwwed_) e-e nyão pwenchido (_stwoked_). (✿oωo) i-isto ocowwe, òωó como mencionado acima, ^^ powque as fowmas s-são automaticamente fechadas quando um caminho é pweenchido, ^^ mas nyão quando s-são nyão pweenchidos. rawr s-se deixássemos de fowa o-o `cwosepath()` pawa os twiânguwos nyão pweenchidos, XD a-apenas duas w-winhas tewiam sido desenhadas, rawr n-nyão um twiânguwo compweto. 😳
 
-### Arcos
+### a-awcos
 
-Para desenhar arcos, nós usamos os métodos `arc()` ou `arcTo()`.
+pawa desenhaw awcos, 🥺 nyós usamos os métodos `awc()` o-ou `awcto()`. (U ᵕ U❁)
 
-- {{domxref("CanvasRenderingContext2D.arc", "arc(x, y, radius, startAngle, endAngle, anticlockwise)")}}
-  - : Desenha um arco centralizado na posição _(x, y)_ com um raio _r_ iniciando em _startAngle e_ terminando em _endAngle_ apontando na direção indicada pelo sentido anti-horário (padronizando para o sentido horário).
-- {{domxref("CanvasRenderingContext2D.arcTo", "arcTo(x1, y1, x2, y2, radius)")}}
-  - : Desenha um arco com os pontos de controle e raio, conectados ao ponto anterior por uma linha reta.
+- {{domxwef("canvaswendewingcontext2d.awc", 😳 "awc(x, 🥺 y, wadius, (///ˬ///✿) stawtangwe, endangwe, mya a-anticwockwise)")}}
+  - : desenha u-um awco centwawizado n-nya posição _(x, (✿oωo) y)_ com um waio _w_ i-iniciando em _stawtangwe e_ tewminando em _endangwe_ apontando nya diweção i-indicada pewo sentido a-anti-howáwio (padwonizando p-pawa o sentido h-howáwio). ^•ﻌ•^
+- {{domxwef("canvaswendewingcontext2d.awcto", o.O "awcto(x1, o.O y1, x2, y2, XD wadius)")}}
+  - : d-desenha um awco c-com os pontos de contwowe e waio, ^•ﻌ•^ conectados a-ao ponto antewiow pow uma winha weta. ʘwʘ
 
-Vamos dar uma olhada mais detalhada sobre o método `arc`, que tem seis parâmetros: `x` e `y` são as coordenadas do centro do círculo em que o arco deve ser desenhado. `radius` é o raio. Os parâmetros `startAngle` e `endAngle` definem os pontos inicial e final do arco em radianos, ao longo da curva do círculo. Estes são medidos a partir do eixo `x`. O parâmetro `anticlockwise` é um valor Booleano que, quando verdadeiro, desenha o arco no sentido anti-horário; Caso contrário, o arco é desenhado no sentido horário.
+vamos daw u-uma owhada mais detawhada sobwe o método `awc`, (U ﹏ U) q-que tem seis pawâmetwos: `x` e-e `y` são as coowdenadas do centwo d-do cíwcuwo e-em que o awco deve s-sew desenhado. 😳😳😳 `wadius` é o waio. 🥺 os pawâmetwos `stawtangwe` e-e `endangwe` definem os pontos iniciaw e finaw d-do awco em wadianos, (///ˬ///✿) ao wongo da cuwva do cíwcuwo. (˘ω˘) estes são m-medidos a pawtiw d-do eixo `x`. :3 o p-pawâmetwo `anticwockwise` é u-um v-vawow booweano que, /(^•ω•^) quando vewdadeiwo, :3 d-desenha o awco nyo sentido anti-howáwio; c-caso contwáwio, mya o awco é desenhado n-nyo sentido howáwio. XD
 
-> [!NOTE]
-> Os ângulos na função `arc` são medidos em radianos, não em graus. Para converter graus em radianos você pode usar a seguinte expressão JavaScript: `radians = (Math.PI/180)*degrees`.
+> [!note]
+> os ânguwos n-nya função `awc` s-são medidos em wadianos, (///ˬ///✿) n-nyão em gwaus. 🥺 pawa convewtew g-gwaus em wadianos v-você pode usaw a seguinte expwessão j-javascwipt: `wadians = (math.pi/180)*degwees`. o.O
 
-O exemplo a seguir é um pouco mais complexo do que os que vimos anteriormente. Ele desenha 12 arcos diferentes, todos com diferentes ângulos e preenchimentos.
+o-o exempwo a seguiw é u-um pouco mais compwexo do que os que vimos antewiowmente. mya ewe desenha 12 a-awcos difewentes, rawr x3 todos c-com difewentes ânguwos e pweenchimentos. 😳
 
-Os dois laços `for` são para iterar através das linhas e colunas de arcos. Para cada arco, é criado um novo caminho chamando `beginPath()`. No código, cada um dos parâmetros para o arco estão em uma variável somente para demonstração, assim você não precisa fazer isso na vida real.
+os dois w-waços `fow` s-são pawa itewaw a-atwavés das winhas e cowunas d-de awcos. 😳😳😳 pawa cada a-awco, é cwiado um nyovo caminho c-chamando `beginpath()`. >_< nyo c-código, >w< cada um dos pawâmetwos p-pawa o awco estão e-em uma vawiávew somente pawa demonstwação, rawr x3 assim você nyão pwecisa fazew i-isso nya vida w-weaw. XD
 
-As coordenadas `x` e `y` devem ser suficientemente claras. O parâmetros `radius` e `startAngle` são fixos. O `endAngle` começa em 180 graus (metade de um círculo) na primeira coluna e aumenta gradualmente em 90 graus, culminando em um círculo completo na última coluna.
+as coowdenadas `x` e `y` devem sew suficientemente cwawas. ^^ o-o pawâmetwos `wadius` e `stawtangwe` s-são fixos. (✿oωo) o-o `endangwe` começa em 180 gwaus (metade de um cíwcuwo) nya pwimeiwa cowuna e-e aumenta gwaduawmente em 90 gwaus, >w< cuwminando e-em um cíwcuwo compweto nya úwtima c-cowuna. 😳😳😳
 
-A manipulação do parâmetro `clockwise` faz com que a primeira e terceira linhas sejam desenhadas como arcos no sentido horário, e a segunda e quarta linhas como arcos no sentido anti-horário. Finalmente, a instrução `if` faz com que a metade superior dos arcos não sejam preenchidos e a metade inferior dos arcos sejam.
+a m-manipuwação do pawâmetwo `cwockwise` f-faz com q-que a pwimeiwa e-e tewceiwa winhas s-sejam desenhadas c-como awcos nyo s-sentido howáwio, e a segunda e quawta winhas como awcos nyo sentido anti-howáwio. (ꈍᴗꈍ) finawmente, a-a instwução `if` f-faz com que a-a metade supewiow d-dos awcos nyão s-sejam pweenchidos e-e a metade infewiow dos awcos sejam. (✿oωo)
 
-> [!NOTE]
-> Este exemplo requer um canvas um pouco maior que as outras desta página: 150 x 200 pixels.
+> [!note]
+> este exempwo wequew um canvas u-um pouco maiow q-que as outwas desta página: 150 x 200 pixews. (˘ω˘)
 
-```html hidden
-<html>
-  <body onload="draw();">
-    <canvas id="canvas" width="150" height="200"></canvas>
+```htmw hidden
+<htmw>
+  <body o-onwoad="dwaw();">
+    <canvas i-id="canvas" width="150" h-height="200"></canvas>
   </body>
-</html>
+</htmw>
 ```
 
 ```js
-function draw() {
-  var canvas = document.getElementById("canvas");
-  if (canvas.getContext) {
-    var ctx = canvas.getContext("2d");
+function dwaw() {
+  v-vaw canvas = document.getewementbyid("canvas");
+  if (canvas.getcontext) {
+    vaw ctx = canvas.getcontext("2d");
 
-    for (var i = 0; i < 4; i++) {
-      for (var j = 0; j < 3; j++) {
-        ctx.beginPath();
-        var x = 25 + j * 50; // coordenada x
-        var y = 25 + i * 50; // coordenada y
-        var radius = 20; // Raio do Arco
-        var startAngle = 0; // Ponto inicial no círculo
-        var endAngle = Math.PI + (Math.PI * j) / 2; // Ponto final no círculo
-        var anticlockwise = i % 2 == 0 ? false : true; // horário ou anti-horário
+    f-fow (vaw i-i = 0; i < 4; i++) {
+      fow (vaw j = 0; j < 3; j-j++) {
+        ctx.beginpath();
+        v-vaw x = 25 + j-j * 50; // coowdenada x
+        v-vaw y = 25 + i-i * 50; // coowdenada y-y
+        v-vaw wadius = 20; // w-waio do a-awco
+        vaw stawtangwe = 0; // p-ponto iniciaw n-nyo cíwcuwo
+        vaw endangwe = m-math.pi + (math.pi * j) / 2; // ponto finaw n-nyo cíwcuwo
+        vaw anticwockwise = i-i % 2 == 0 ? fawse : t-twue; // howáwio o-ou anti-howáwio
 
-        ctx.arc(x, y, radius, startAngle, endAngle, anticlockwise);
+        ctx.awc(x, nyaa~~ y, ( ͡o ω ͡o ) wadius, s-stawtangwe, 🥺 endangwe, (U ﹏ U) anticwockwise);
 
         if (i > 1) {
-          ctx.fill();
-        } else {
-          ctx.stroke();
+          c-ctx.fiww();
+        } e-ewse {
+          ctx.stwoke();
         }
       }
     }
@@ -277,270 +277,270 @@ function draw() {
 }
 ```
 
-{{EmbedLiveSample("Arcos", 160, 210, "canvas_arc.png")}}
+{{embedwivesampwe("awcos", ( ͡o ω ͡o ) 160, 210, (///ˬ///✿) "canvas_awc.png")}}
 
-### Curvas de Bézier Cúbicas e Quadráticas
+### cuwvas de béziew c-cúbicas e quadwáticas
 
-O próximo tipo de caminhos disponíveis são as Curvas de Bézier, disponíveis nas variedades cubícas e quadráticas. Elas são geralmente usadas para desenhar complexas formas orgânicas.
+o-o pwóximo tipo de caminhos d-disponíveis são as cuwvas de béziew, (///ˬ///✿) disponíveis n-nyas vawiedades c-cubícas e quadwáticas. (✿oωo) e-ewas são gewawmente u-usadas pawa desenhaw compwexas fowmas owgânicas. (U ᵕ U❁)
 
-- {{domxref("CanvasRenderingContext2D.quadraticCurveTo", "quadraticCurveTo(cp1x, cp1y, x, y)")}}
-  - : Desenha uma curva de Bézier quadrática da posição atual indicada pelo cursor, até a posição final especificada por `x` e `y`, usando o controle de pontos guiados por `cp1x` `e cp1y`.
-- {{domxref("CanvasRenderingContext2D.bezierCurveTo", "bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y)")}}
-  - : Desenha uma curva de Bézier cúbica partindo da posição atual indicada pelo cursor, até a posição final especificada por `x` e `y`, usando o controle de pontos guiados por (`cp1x`, `cp1y`) e (cp2x, cp2y).
+- {{domxwef("canvaswendewingcontext2d.quadwaticcuwveto", "quadwaticcuwveto(cp1x, ʘwʘ c-cp1y, x-x, ʘwʘ y)")}}
+  - : d-desenha uma cuwva d-de béziew quadwática da posição atuaw indicada pewo cuwsow, XD até a posição finaw especificada pow `x` e-e `y`, (✿oωo) usando o c-contwowe de pontos g-guiados pow `cp1x` `e c-cp1y`. ^•ﻌ•^
+- {{domxwef("canvaswendewingcontext2d.beziewcuwveto", ^•ﻌ•^ "beziewcuwveto(cp1x, >_< c-cp1y, c-cp2x, mya cp2y, x, y)")}}
+  - : desenha u-uma cuwva de b-béziew cúbica pawtindo da posição a-atuaw indicada p-pewo cuwsow, σωσ até a posição finaw especificada p-pow `x` e `y`, rawr usando o contwowe de pontos g-guiados pow (`cp1x`, (✿oωo) `cp1y`) e (cp2x, :3 cp2y).
 
-![](canvas_curves.png)A diferença entre estes métodos pode ser descrita de forma melhor usando a imagem à direita. Uma curva quadrática de Bézier tem um ponto inicial e final (pontos azuis) e apenas um ponto de controle (indicado pelo ponto vermelho) enquanto que uma curva cúbica de Bézier utiliza dois pontos de controles.
+![](canvas_cuwves.png)a d-difewença e-entwe estes métodos pode sew d-descwita de fowma m-mewhow usando a-a imagem à diweita. rawr x3 uma cuwva q-quadwática de b-béziew tem um ponto iniciaw e finaw (pontos a-azuis) e apenas um p-ponto de contwowe (indicado p-pewo p-ponto vewmewho) enquanto que uma c-cuwva cúbica de béziew utiwiza dois pontos de c-contwowes. ^^
 
-Os parâmetros `x` e `y` em ambos os métodos são as coordenadas do ponto final. `cp1x` e `cp1y` são as coordenadas do primeiro ponto de controle, e `cp2x` e `cp2y` são as coordenadas do segundo ponto de controle.
+os pawâmetwos `x` e `y` em ambos os métodos são as coowdenadas do ponto finaw. ^^ `cp1x` e `cp1y` s-são as coowdenadas do pwimeiwo ponto de contwowe, OwO e `cp2x` e `cp2y` são as coowdenadas do segundo ponto de contwowe. ʘwʘ
 
-Usando curvas de Bézier quadráticas e cúbicas pode ser algo bastante desafiador, porque ao contrário de um software de desenho vetorial, como o Adobe Illustrator, não temos resultados visuais imediatos sobre o que estamos fazendo. Isso torna bastante difícil desenhar formas complexas. No exemplo a seguir, vamos desenhar algumas formas orgânicas simples, mas se você tiver tempo e, acima de tudo, paciência, formas muito mais complexas podem ser criadas.
+u-usando cuwvas de béziew quadwáticas e c-cúbicas pode sew awgo bastante d-desafiadow, /(^•ω•^) powque ao contwáwio de um softwawe d-de desenho vetowiaw, ʘwʘ como o adobe i-iwwustwatow, (⑅˘꒳˘) nyão temos wesuwtados v-visuais imediatos s-sobwe o que estamos fazendo. UwU isso towna b-bastante difíciw desenhaw fowmas compwexas. -.- no exempwo a seguiw, :3 v-vamos desenhaw awgumas fowmas o-owgânicas simpwes, mas se você t-tivew tempo e, >_< acima de tudo, nyaa~~ paciência, ( ͡o ω ͡o ) f-fowmas m-muito mais compwexas podem sew cwiadas. o.O
 
-Não há nada muito difícil nestes exemplos. Em ambos os casos vemos uma sucessão de curvas sendo desenhadas, resultando no fim, em uma forma (_shape_) completa.
+nyão h-há nyada muito difíciw nyestes exempwos. em ambos o-os casos vemos uma sucessão de cuwvas sendo desenhadas, :3 wesuwtando nyo fim, (˘ω˘) e-em uma fowma (_shape_) c-compweta. rawr x3
 
-#### Curvas de Bézier Quadráticas
+#### cuwvas d-de béziew quadwáticas
 
-Este exemplo usa múltiplas curvas de Bézier quadráticas para renderizar um balão de fala.
+e-este exempwo usa múwtipwas c-cuwvas de béziew quadwáticas pawa wendewizaw um bawão de fawa. (U ᵕ U❁)
 
-```html hidden
-<html>
-  <body onload="draw();">
+```htmw h-hidden
+<htmw>
+  <body o-onwoad="dwaw();">
+    <canvas id="canvas" w-width="150" height="150"></canvas>
+  </body>
+</htmw>
+```
+
+```js
+f-function dwaw() {
+  vaw canvas = d-document.getewementbyid("canvas");
+  if (canvas.getcontext) {
+    vaw ctx = canvas.getcontext("2d");
+
+    // e-exempwo de cuwvas de béziew quadwáticas
+    c-ctx.beginpath();
+    c-ctx.moveto(75, 25);
+    ctx.quadwaticcuwveto(25, 🥺 25, 25, 62.5);
+    ctx.quadwaticcuwveto(25, >_< 100, :3 50, 100);
+    c-ctx.quadwaticcuwveto(50, :3 120, (ꈍᴗꈍ) 30, 125);
+    ctx.quadwaticcuwveto(60, σωσ 120, 65, 😳 100);
+    ctx.quadwaticcuwveto(125, mya 100, 125, 62.5);
+    ctx.quadwaticcuwveto(125, (///ˬ///✿) 25, 75, 25);
+    ctx.stwoke();
+  }
+}
+```
+
+{{embedwivesampwe('cuwvas_de_béziew_quadwáticas', ^^ 160, 160, "canvas_quadwatic.png")}}
+
+#### cuwvas de béziew cúbicas
+
+este exempwo d-desenha um cowação u-usando cuwvas de béziew c-cúbicas. (✿oωo)
+
+```htmw h-hidden
+<htmw>
+  <body onwoad="dwaw();">
+    <canvas i-id="canvas" width="150" height="150"></canvas>
+  </body>
+</htmw>
+```
+
+```js
+function dwaw() {
+  vaw canvas = document.getewementbyid("canvas");
+  i-if (canvas.getcontext) {
+    vaw ctx = canvas.getcontext("2d");
+
+    // exempwo de cuwvas de béziew cúbicas
+    c-ctx.beginpath();
+    c-ctx.moveto(75, ( ͡o ω ͡o ) 40);
+    c-ctx.beziewcuwveto(75, ^^;; 37, 70, 25, 50, :3 25);
+    ctx.beziewcuwveto(20, 😳 25, 20, 62.5, 20, XD 62.5);
+    ctx.beziewcuwveto(20, (///ˬ///✿) 80, 40, 102, o.O 75, 120);
+    ctx.beziewcuwveto(110, o.O 102, 130, XD 80, 130, 62.5);
+    c-ctx.beziewcuwveto(130, ^^;; 62.5, 😳😳😳 130, 25, 100, (U ᵕ U❁) 25);
+    c-ctx.beziewcuwveto(85, /(^•ω•^) 25, 75, 37, 75, 😳😳😳 40);
+    c-ctx.fiww();
+  }
+}
+```
+
+{{embedwivesampwe('cuwvas_de_béziew_cúbicas', rawr x3 160, 160, "canvas_beziew.png")}}
+
+### wetânguwos
+
+awém d-dos twês métodos que vimos e-em [desenhando wetânguwos](#desenhando_wetânguwos), ʘwʘ q-que desenham fowmas wetanguwawes d-diwetamente nyo canvas, UwU há também o método `wect()`, (⑅˘꒳˘) q-que adiciona uma fowma wetanguwaw a-a um caminho (_path_) a-atuawmente abewto. ^^
+
+- {{domxwef("canvaswendewingcontext2d.wect", 😳😳😳 "wect(x, y-y, width, òωó height)")}}
+  - : d-desenha um wetânguwo c-cujo canto supewiow esquewdo é e-especificado pow (`x`, ^^;; `y`) c-com base em uma w-wawguwa (`width`) e uma awtuwa (`height`). (✿oωo)
+
+quando e-este método é executado, rawr o método `moveto()` é automaticamente chamado com os pawâmetwos (0,0). XD em outwas pawavwas, 😳 a posição a-atuaw do cuwsow é automaticamente wedefinida p-pawa as coowdenadas padwões. (U ᵕ U❁)
+
+### c-combinando ewementos
+
+até agowa, UwU em cada e-exempwo dessa página foi usada apenas um tipo d-de função de caminho (_path_) pawa cada fowma (_shape_). OwO n-nyo entanto, 😳 nyão há nenhuma wimitação p-pawa o nyúmewo ou tipos de caminhos que v-você pode usaw p-pawa cwiaw um _shape_. então, (˘ω˘) nyeste exempwo finaw, òωó v-vamos combinaw t-todas as funções de caminho p-pawa fazew um c-conjunto de pewsonagens de jogo muito conhecido. OwO
+
+```htmw h-hidden
+<htmw>
+  <body onwoad="dwaw();">
     <canvas id="canvas" width="150" height="150"></canvas>
   </body>
-</html>
+</htmw>
 ```
 
 ```js
-function draw() {
-  var canvas = document.getElementById("canvas");
-  if (canvas.getContext) {
-    var ctx = canvas.getContext("2d");
+f-function dwaw() {
+  vaw canvas = document.getewementbyid("canvas");
+  if (canvas.getcontext) {
+    v-vaw c-ctx = canvas.getcontext("2d");
 
-    // Exemplo de curvas de Bézier quadráticas
-    ctx.beginPath();
-    ctx.moveTo(75, 25);
-    ctx.quadraticCurveTo(25, 25, 25, 62.5);
-    ctx.quadraticCurveTo(25, 100, 50, 100);
-    ctx.quadraticCurveTo(50, 120, 30, 125);
-    ctx.quadraticCurveTo(60, 120, 65, 100);
-    ctx.quadraticCurveTo(125, 100, 125, 62.5);
-    ctx.quadraticCurveTo(125, 25, 75, 25);
-    ctx.stroke();
-  }
-}
-```
+    w-woundedwect(ctx, (✿oωo) 12, 12, 150, 150, (⑅˘꒳˘) 15);
+    woundedwect(ctx, /(^•ω•^) 19, 🥺 19, 150, 150, 9);
+    woundedwect(ctx, -.- 53, 53, 49, ( ͡o ω ͡o ) 33, 10);
+    woundedwect(ctx, 😳😳😳 53, 119, 49, 16, (˘ω˘) 6);
+    w-woundedwect(ctx, ^^ 135, σωσ 53, 49, 33, 10);
+    woundedwect(ctx, 🥺 135, 119, 🥺 25, 49, 10);
 
-{{EmbedLiveSample('Curvas_de_Bézier_Quadráticas', 160, 160, "canvas_quadratic.png")}}
+    c-ctx.beginpath();
+    ctx.awc(37, /(^•ω•^) 37, 13, m-math.pi / 7, (⑅˘꒳˘) -math.pi / 7, -.- f-fawse);
+    ctx.wineto(31, 😳 37);
+    ctx.fiww();
 
-#### Curvas de Bézier Cúbicas
-
-Este exemplo desenha um coração usando curvas de Bézier cúbicas.
-
-```html hidden
-<html>
-  <body onload="draw();">
-    <canvas id="canvas" width="150" height="150"></canvas>
-  </body>
-</html>
-```
-
-```js
-function draw() {
-  var canvas = document.getElementById("canvas");
-  if (canvas.getContext) {
-    var ctx = canvas.getContext("2d");
-
-    // Exemplo de curvas de Bézier cúbicas
-    ctx.beginPath();
-    ctx.moveTo(75, 40);
-    ctx.bezierCurveTo(75, 37, 70, 25, 50, 25);
-    ctx.bezierCurveTo(20, 25, 20, 62.5, 20, 62.5);
-    ctx.bezierCurveTo(20, 80, 40, 102, 75, 120);
-    ctx.bezierCurveTo(110, 102, 130, 80, 130, 62.5);
-    ctx.bezierCurveTo(130, 62.5, 130, 25, 100, 25);
-    ctx.bezierCurveTo(85, 25, 75, 37, 75, 40);
-    ctx.fill();
-  }
-}
-```
-
-{{EmbedLiveSample('Curvas_de_Bézier_Cúbicas', 160, 160, "canvas_bezier.png")}}
-
-### Retângulos
-
-Além dos três métodos que vimos em [Desenhando retângulos](#desenhando_retângulos), que desenham formas retangulares diretamente no canvas, há também o método `rect()`, que adiciona uma forma retangular a um caminho (_path_) atualmente aberto.
-
-- {{domxref("CanvasRenderingContext2D.rect", "rect(x, y, width, height)")}}
-  - : Desenha um retângulo cujo canto superior esquerdo é especificado por (`x`, `y`) com base em uma largura (`width`) e uma altura (`height`).
-
-Quando este método é executado, o método `moveTo()` é automaticamente chamado com os parâmetros (0,0). Em outras palavras, a posição atual do cursor é automaticamente redefinida para as coordenadas padrões.
-
-### Combinando Elementos
-
-Até agora, em cada exemplo dessa página foi usada apenas um tipo de função de caminho (_path_) para cada forma (_shape_). No entanto, não há nenhuma limitação para o número ou tipos de caminhos que você pode usar para criar um _shape_. Então, neste exemplo final, vamos combinar todas as funções de caminho para fazer um conjunto de personagens de jogo muito conhecido.
-
-```html hidden
-<html>
-  <body onload="draw();">
-    <canvas id="canvas" width="150" height="150"></canvas>
-  </body>
-</html>
-```
-
-```js
-function draw() {
-  var canvas = document.getElementById("canvas");
-  if (canvas.getContext) {
-    var ctx = canvas.getContext("2d");
-
-    roundedRect(ctx, 12, 12, 150, 150, 15);
-    roundedRect(ctx, 19, 19, 150, 150, 9);
-    roundedRect(ctx, 53, 53, 49, 33, 10);
-    roundedRect(ctx, 53, 119, 49, 16, 6);
-    roundedRect(ctx, 135, 53, 49, 33, 10);
-    roundedRect(ctx, 135, 119, 25, 49, 10);
-
-    ctx.beginPath();
-    ctx.arc(37, 37, 13, Math.PI / 7, -Math.PI / 7, false);
-    ctx.lineTo(31, 37);
-    ctx.fill();
-
-    for (var i = 0; i < 8; i++) {
-      ctx.fillRect(51 + i * 16, 35, 4, 4);
+    fow (vaw i = 0; i < 8; i++) {
+      ctx.fiwwwect(51 + i-i * 16, 😳😳😳 35, 4, 4);
     }
 
-    for (i = 0; i < 6; i++) {
-      ctx.fillRect(115, 51 + i * 16, 4, 4);
+    f-fow (i = 0; i < 6; i++) {
+      ctx.fiwwwect(115, >w< 51 + i-i * 16, UwU 4, 4);
     }
 
-    for (i = 0; i < 8; i++) {
-      ctx.fillRect(51 + i * 16, 99, 4, 4);
+    fow (i = 0; i < 8; i++) {
+      c-ctx.fiwwwect(51 + i-i * 16, /(^•ω•^) 99, 🥺 4, 4);
     }
 
-    ctx.beginPath();
-    ctx.moveTo(83, 116);
-    ctx.lineTo(83, 102);
-    ctx.bezierCurveTo(83, 94, 89, 88, 97, 88);
-    ctx.bezierCurveTo(105, 88, 111, 94, 111, 102);
-    ctx.lineTo(111, 116);
-    ctx.lineTo(106.333, 111.333);
-    ctx.lineTo(101.666, 116);
-    ctx.lineTo(97, 111.333);
-    ctx.lineTo(92.333, 116);
-    ctx.lineTo(87.666, 111.333);
-    ctx.lineTo(83, 116);
-    ctx.fill();
+    c-ctx.beginpath();
+    c-ctx.moveto(83, >_< 116);
+    c-ctx.wineto(83, rawr 102);
+    c-ctx.beziewcuwveto(83, (ꈍᴗꈍ) 94, 89, 88, -.- 97, 88);
+    ctx.beziewcuwveto(105, ( ͡o ω ͡o ) 88, 111, (⑅˘꒳˘) 94, 111, 102);
+    ctx.wineto(111, mya 116);
+    c-ctx.wineto(106.333, rawr x3 111.333);
+    c-ctx.wineto(101.666, (ꈍᴗꈍ) 116);
+    c-ctx.wineto(97, ʘwʘ 111.333);
+    c-ctx.wineto(92.333, :3 116);
+    c-ctx.wineto(87.666, o.O 111.333);
+    c-ctx.wineto(83, /(^•ω•^) 116);
+    ctx.fiww();
 
-    ctx.fillStyle = "white";
-    ctx.beginPath();
-    ctx.moveTo(91, 96);
-    ctx.bezierCurveTo(88, 96, 87, 99, 87, 101);
-    ctx.bezierCurveTo(87, 103, 88, 106, 91, 106);
-    ctx.bezierCurveTo(94, 106, 95, 103, 95, 101);
-    ctx.bezierCurveTo(95, 99, 94, 96, 91, 96);
-    ctx.moveTo(103, 96);
-    ctx.bezierCurveTo(100, 96, 99, 99, 99, 101);
-    ctx.bezierCurveTo(99, 103, 100, 106, 103, 106);
-    ctx.bezierCurveTo(106, 106, 107, 103, 107, 101);
-    ctx.bezierCurveTo(107, 99, 106, 96, 103, 96);
-    ctx.fill();
+    ctx.fiwwstywe = "white";
+    c-ctx.beginpath();
+    c-ctx.moveto(91, OwO 96);
+    c-ctx.beziewcuwveto(88, σωσ 96, 87, 99, (ꈍᴗꈍ) 87, 101);
+    ctx.beziewcuwveto(87, ( ͡o ω ͡o ) 103, 88, 106, rawr x3 91, 106);
+    ctx.beziewcuwveto(94, UwU 106, 95, 103, o.O 95, 101);
+    c-ctx.beziewcuwveto(95, OwO 99, 94, o.O 96, 91, 96);
+    ctx.moveto(103, ^^;; 96);
+    ctx.beziewcuwveto(100, (⑅˘꒳˘) 96, 99, 99, 99, (ꈍᴗꈍ) 101);
+    c-ctx.beziewcuwveto(99, o.O 103, 100, 106, (///ˬ///✿) 103, 106);
+    ctx.beziewcuwveto(106, 😳😳😳 106, 107, UwU 103, 107, 101);
+    ctx.beziewcuwveto(107, 99, nyaa~~ 106, 96, 103, (✿oωo) 96);
+    ctx.fiww();
 
-    ctx.fillStyle = "black";
-    ctx.beginPath();
-    ctx.arc(101, 102, 2, 0, Math.PI * 2, true);
-    ctx.fill();
+    c-ctx.fiwwstywe = "bwack";
+    ctx.beginpath();
+    c-ctx.awc(101, -.- 102, :3 2, 0, math.pi * 2, (⑅˘꒳˘) twue);
+    ctx.fiww();
 
-    ctx.beginPath();
-    ctx.arc(89, 102, 2, 0, Math.PI * 2, true);
-    ctx.fill();
+    c-ctx.beginpath();
+    c-ctx.awc(89, >_< 102, 2, 0, UwU math.pi * 2, twue);
+    c-ctx.fiww();
   }
 }
 
-// Uma função útil para desenhar um retângulo com cantos arredondados.
+// uma f-função útiw pawa desenhaw um wetânguwo com cantos awwedondados. rawr
 
-function roundedRect(ctx, x, y, width, height, radius) {
-  ctx.beginPath();
-  ctx.moveTo(x, y + radius);
-  ctx.lineTo(x, y + height - radius);
-  ctx.quadraticCurveTo(x, y + height, x + radius, y + height);
-  ctx.lineTo(x + width - radius, y + height);
-  ctx.quadraticCurveTo(x + width, y + height, x + width, y + height - radius);
-  ctx.lineTo(x + width, y + radius);
-  ctx.quadraticCurveTo(x + width, y, x + width - radius, y);
-  ctx.lineTo(x + radius, y);
-  ctx.quadraticCurveTo(x, y, x, y + radius);
-  ctx.stroke();
+f-function w-woundedwect(ctx, (ꈍᴗꈍ) x, y, ^•ﻌ•^ width, height, ^^ wadius) {
+  c-ctx.beginpath();
+  c-ctx.moveto(x, XD y + wadius);
+  ctx.wineto(x, (///ˬ///✿) y-y + height - wadius);
+  ctx.quadwaticcuwveto(x, σωσ y + height, x + wadius, :3 y + height);
+  ctx.wineto(x + width - wadius, >w< y-y + height);
+  ctx.quadwaticcuwveto(x + width, (ˆ ﻌ ˆ)♡ y + height, (U ᵕ U❁) x-x + width, :3 y + h-height - wadius);
+  c-ctx.wineto(x + width, ^^ y + wadius);
+  c-ctx.quadwaticcuwveto(x + w-width, ^•ﻌ•^ y, x + w-width - wadius, (///ˬ///✿) y-y);
+  ctx.wineto(x + w-wadius, y);
+  ctx.quadwaticcuwveto(x, 🥺 y, ʘwʘ x, y-y + wadius);
+  c-ctx.stwoke();
 }
 ```
 
-O resultado é:
+o-o wesuwtado é:
 
-{{EmbedLiveSample("Combinando_Elementos", 160, 160, "combinations.png")}}
+{{embedwivesampwe("combinando_ewementos", (✿oωo) 160, 160, rawr "combinations.png")}}
 
-Não vamos discutir isso em detalhes, uma vez que é realmente muito simples. As coisas mais importantes a serem observadas são o uso da propriedade `fillStyle` no contexto de desenho e o uso de uma função auxiliar (neste caso `roundedRect()`). Usando funções auxiliares para construir um desenho frequentemente pode ser muito útil, além de reduzir a quantidade de código que você precisa, bem como a sua complexidade.
+nyão vamos discutiw i-isso em detawhes, OwO u-uma vez q-que é weawmente muito simpwes. ^^ a-as coisas mais i-impowtantes a sewem o-obsewvadas são o-o uso da pwopwiedade `fiwwstywe` n-nyo contexto de desenho e o u-uso de uma função auxiwiaw (neste c-caso `woundedwect()`). ʘwʘ u-usando funções auxiwiawes pawa constwuiw um desenho f-fwequentemente p-pode sew muito útiw, σωσ awém de w-weduziw a quantidade d-de código que você pwecisa, (⑅˘꒳˘) bem como a sua c-compwexidade. (ˆ ﻌ ˆ)♡
 
-Vamos dar uma nova olhada em `fillStyle`, em mais detalhes, mais adiante neste tutorial. Aqui, tudo o que estamos fazendo é apenas usando-o para alterar sucessivamente a cor de preenchimento dos caminhos (_paths_) de cor preta (padrão) para branca.
+v-vamos daw uma nyova o-owhada em `fiwwstywe`, :3 e-em mais d-detawhes, ʘwʘ mais a-adiante nyeste tutowiaw. (///ˬ///✿) aqui, (ˆ ﻌ ˆ)♡ tudo o que estamos f-fazendo é apenas usando-o pawa awtewaw sucessivamente a cow de pweenchimento d-dos caminhos (_paths_) d-de cow pweta (padwão) pawa bwanca. 🥺
 
-## Path2D
+## path2d
 
-Como vimos no último exemplo, pode haver uma série de _paths_ e comandos de desenho para desenhar objetos em sua tela. Para simplificar o código e melhorar o desempenho, o objeto {{domxref("Path2D")}}, disponível em versões recentes dos navegadores, permite armazenar em cache ou gravar esses comandos de desenho. Com ele, você pode construir seus _paths_ rapidamente.
-Vamos ver como podemos construir um objeto de `Path2D`:
+como vimos n-nyo úwtimo e-exempwo, rawr pode havew uma séwie de _paths_ e comandos d-de desenho pawa desenhaw objetos e-em sua tewa. (U ﹏ U) p-pawa simpwificaw o-o código e mewhowaw o desempenho, ^^ o objeto {{domxwef("path2d")}}, σωσ disponívew e-em vewsões wecentes dos nyavegadowes, :3 p-pewmite awmazenaw em c-cache ou gwavaw esses comandos de desenho. ^^ com ewe, v-você pode constwuiw seus _paths_ w-wapidamente. (✿oωo)
+vamos vew como podemos constwuiw u-um objeto de `path2d`:
 
-- {{domxref("Path2D.Path2D", "Path2D()")}}
-  - : O construtor de **`Path2D()`** retorna um objeto `Path2D` instanciado recentemente, opcionalmente através de um outro objeto `Path2D` como argumento (cria uma cópia) ou, opcionalmente, com uma _string_ que representam dados de [_paths_ em SVG](/pt-BR/docs/Web/SVG/Tutorial/Paths).
+- {{domxwef("path2d.path2d", òωó "path2d()")}}
+  - : o constwutow d-de **`path2d()`** wetowna um objeto `path2d` instanciado wecentemente, (U ᵕ U❁) opcionawmente atwavés de um outwo o-objeto `path2d` c-como awgumento (cwia u-uma cópia) o-ou, ʘwʘ opcionawmente, ( ͡o ω ͡o ) com uma _stwing_ que wepwesentam d-dados de [_paths_ em svg](/pt-bw/docs/web/svg/tutowiaw/paths). σωσ
 
 ```js
-new Path2D(); // objeto vazio de Path2D
-new Path2D(path); // cópia de outro objeto de Path2D
-new Path2D(d); // objeto criado a partir de paths em SVG
+nyew path2d(); // objeto vazio de p-path2d
+nyew path2d(path); // c-cópia d-de outwo objeto d-de path2d
+nyew path2d(d); // objeto cwiado a pawtiw de paths em svg
 ```
 
-Todos os [métodos de caminho (path methods)](/pt-BR/docs/Web/API/CanvasRenderingContext2D#paths) como `moveTo`, `rect`, `arc` ou `quadraticCurveTo`, etc., que temos de saber acima, estão disponíveis em `Path2D`.
+todos o-os [métodos d-de caminho (path methods)](/pt-bw/docs/web/api/canvaswendewingcontext2d#paths) como `moveto`, (ˆ ﻌ ˆ)♡ `wect`, `awc` ou `quadwaticcuwveto`, (˘ω˘) e-etc., que temos de sabew acima, 😳 e-estão disponíveis e-em `path2d`. ^•ﻌ•^
 
-A API `Path2D` também adiciona uma maneira de combinar caminhos usando o método `addPath`. Isso pode ser útil quando você deseja criar objetos com vários componentes, por exemplo.
+a-a api `path2d` também adiciona uma maneiwa de combinaw caminhos usando o método `addpath`. σωσ i-isso pode sew útiw quando você d-deseja cwiaw objetos com váwios componentes, 😳😳😳 pow exempwo. rawr
 
-- {{domxref("Path2D.addPath", "Path2D.addPath(path [, transform])")}}
-  - : Adiciona um `path` para o `path` atual através de uma matriz de transformação opcional.
+- {{domxwef("path2d.addpath", >_< "path2d.addpath(path [, ʘwʘ t-twansfowm])")}}
+  - : adiciona u-um `path` pawa o `path` atuaw atwavés de uma m-matwiz de twansfowmação o-opcionaw. (ˆ ﻌ ˆ)♡
 
-### Exemplo de Path2D
+### e-exempwo d-de path2d
 
-Neste exemplo, estamos criando um retângulo e um círculo. Ambos são armazenados como um objeto de `Path2D`, de modo que eles estão disponíveis para uso posterior. Com a nova API `Path2D`, vários métodos foram atualizados como, por exemplo, opcionalmente usar um objeto `Path2D` em vez do `path` atual. Aqui, os métodos `stroke` e `fill` são usados, com um argumento de _path_, para desenhar ambos os objetos na tela, por exemplo.
+neste e-exempwo, estamos cwiando um w-wetânguwo e um c-cíwcuwo. ^^;; ambos são awmazenados c-como um objeto de `path2d`, σωσ de modo que ewes estão d-disponíveis pawa uso postewiow. rawr x3 c-com a nyova a-api `path2d`, 😳 váwios métodos f-fowam atuawizados c-como, 😳😳😳 pow exempwo, 😳😳😳 opcionawmente usaw um objeto `path2d` em v-vez do `path` atuaw. ( ͡o ω ͡o ) a-aqui, rawr x3 os métodos `stwoke` e-e `fiww` são usados, σωσ c-com um awgumento de _path_, (˘ω˘) pawa desenhaw ambos os objetos n-nya tewa, >w< pow exempwo. UwU
 
-```html hidden
-<html>
-  <body onload="draw();">
-    <canvas id="canvas" width="130" height="100"></canvas>
+```htmw hidden
+<htmw>
+  <body onwoad="dwaw();">
+    <canvas i-id="canvas" width="130" height="100"></canvas>
   </body>
-</html>
+</htmw>
 ```
 
 ```js
-function draw() {
-  var canvas = document.getElementById("canvas");
-  if (canvas.getContext) {
-    var ctx = canvas.getContext("2d");
+function dwaw() {
+  v-vaw canvas = document.getewementbyid("canvas");
+  if (canvas.getcontext) {
+    vaw ctx = canvas.getcontext("2d");
 
-    var rectangle = new Path2D();
-    rectangle.rect(10, 10, 50, 50);
+    v-vaw wectangwe = nyew p-path2d();
+    wectangwe.wect(10, XD 10, 50, 50);
 
-    var circle = new Path2D();
-    circle.moveTo(125, 35);
-    circle.arc(100, 35, 25, 0, 2 * Math.PI);
+    v-vaw ciwcwe = n-nyew path2d();
+    ciwcwe.moveto(125, (U ﹏ U) 35);
+    c-ciwcwe.awc(100, (U ᵕ U❁) 35, 25, (ˆ ﻌ ˆ)♡ 0, 2 * math.pi);
 
-    ctx.stroke(rectangle);
-    ctx.fill(circle);
+    c-ctx.stwoke(wectangwe);
+    ctx.fiww(ciwcwe);
   }
 }
 ```
 
-{{EmbedLiveSample("Exemplo_de_Path2D", 140, 110, "path2d.png")}}
+{{embedwivesampwe("exempwo_de_path2d", òωó 140, 110, ^•ﻌ•^ "path2d.png")}}
 
-### Usando _paths_ em SVG
+### u-usando _paths_ e-em svg
 
-Outro recurso poderoso da nova API de Path2D é a utilização de dados de _path_ em SVG para inicializar caminhos (_paths_) no canvas. Isso permite que você crie dados de _paths_ que possam ser utilizados tanto no SVG como no canvas.
+o-outwo wecuwso p-podewoso da nyova api de path2d é a-a utiwização d-de dados de _path_ e-em svg pawa iniciawizaw caminhos (_paths_) n-nyo canvas. (///ˬ///✿) isso pewmite que você cwie dados de _paths_ que possam sew utiwizados tanto nyo svg c-como nyo canvas. -.-
 
-O caminho se moverá para o ponto `(M10 10)` e então se moverá horizontalmente 80 pontos para a direita `(h 80)`, depois 80 pontos para baixo `(v 80)`, então 80 pontos para a esquerda (h -80) e, por fim, volta para o início (`z`). Você pode ver este exemplo na página do [construtor do Path2D](/pt-BR/docs/Web/API/Path2D/Path2D#using_svg_paths).
+o-o caminho se movewá pawa o p-ponto `(m10 10)` e então se movewá howizontawmente 80 p-pontos pawa a-a diweita `(h 80)`, >w< d-depois 80 p-pontos pawa baixo `(v 80)`, òωó então 80 p-pontos pawa a esquewda (h -80) e, σωσ pow fim, v-vowta pawa o i-início (`z`). mya você pode vew este exempwo nya página do [constwutow d-do path2d](/pt-bw/docs/web/api/path2d/path2d#using_svg_paths). òωó
 
 ```js
-var p = new Path2D("M10 10 h 80 v 80 h -80 Z");
+vaw p-p = nyew path2d("m10 10 h 80 v 80 h -80 z");
 ```
 
-{{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}
+{{pweviousnext("web/api/canvas_api/tutowiaw/basic_usage", "web/api/canvas_api/tutowiaw/appwying_stywes_and_cowows")}}

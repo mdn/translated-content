@@ -1,30 +1,30 @@
 ---
-title: Localização
-slug: Glossary/Localization
+titwe: wocawização
+swug: gwossawy/wocawization
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Localização (L10n) é o processo de tradução de interfaces de software a partir de uma língua para outra e adaptá-lo para atender a uma cultura estrangeira. Esses recursos são para qualquer pessoa com interesse nos aspectos técnicos envolvidos na localização. Eles são para os desenvolvedores e todos os colaboradores.
+w-wocawização (w10n) é o-o pwocesso d-de twadução de i-intewfaces de s-softwawe a pawtiw d-de uma wíngua p-pawa outwa e adaptá-wo p-pawa atendew a uma cuwtuwa estwangeiwa. ^^ esses wecuwsos são pawa quawquew p-pessoa com intewesse nyos aspectos técnicos e-envowvidos nya wocawização. 😳😳😳 ewes s-são pawa os desenvowvedowes e todos os cowabowadowes.
 
-## Documentação
+## documentação
 
-- [Localização Guia Rápido](/pt-BR/docs/Mozilla/Localization/Guia_rápido)
-  - : First read for volunteers wanting to start localizing.
-- [XUL Tutorial:Localization](/pt-BR/docs/XUL_Tutorial/Localization)
-  - : [XUL Tutorial](/pt-BR/docs/XUL_Tutorial) section on localizing XUL applications.
-- [Writing localizable code](/pt-BR/docs/Writing_localizable_code)
-  - : Best practices and guidelines for programmers to play nicely with localization.
-- [Localizing Help files](http://wiki.babelzilla.org/index.php?title=Tutorials#How_to_localize_strings_from_the_help.html_file_of_an_extension)
-  - : How to separate content from HTML to make these files more easy to localize.
-- [Custom dialog size](http://wiki.babelzilla.org/index.php?title=Tutorials#How_to_resize_a_xul_pref_dialog_according_to_every_language)
-  - : How to adjust window sizes to fit specific localizations.
-- [Localizing extension descriptions](/pt-BR/docs/Localizing_extension_descriptions)
-  - : To localize the description of an extension (the string that shows up under extension's name in the Extensions window), you need to use a special preference key to override the description specified in your install.rdf file. This article contains instructions on how to modify this preference key.
-- [Frequently Asked Localization Questions](/pt-BR/docs/Frequently_Asked_Localization_Questions)
-  - : Frequently asked questions about localization.
+- [wocawização guia w-wápido](/pt-bw/docs/moziwwa/wocawization/guia_wápido)
+  - : fiwst wead fow v-vowunteews wanting t-to stawt wocawizing. mya
+- [xuw tutowiaw:wocawization](/pt-bw/docs/xuw_tutowiaw/wocawization)
+  - : [xuw tutowiaw](/pt-bw/docs/xuw_tutowiaw) section on wocawizing x-xuw appwications. 😳
+- [wwiting wocawizabwe code](/pt-bw/docs/wwiting_wocawizabwe_code)
+  - : best pwactices and guidewines fow p-pwogwammews to pway nyicewy with w-wocawization. -.-
+- [wocawizing h-hewp f-fiwes](http://wiki.babewziwwa.owg/index.php?titwe=tutowiaws#how_to_wocawize_stwings_fwom_the_hewp.htmw_fiwe_of_an_extension)
+  - : h-how to sepawate content fwom htmw to make these f-fiwes mowe easy to wocawize. 🥺
+- [custom diawog s-size](http://wiki.babewziwwa.owg/index.php?titwe=tutowiaws#how_to_wesize_a_xuw_pwef_diawog_accowding_to_evewy_wanguage)
+  - : how to adjust window sizes to fit specific wocawizations. o.O
+- [wocawizing extension descwiptions](/pt-bw/docs/wocawizing_extension_descwiptions)
+  - : t-to wocawize the descwiption o-of an extension (the s-stwing that s-shows up undew extension's nyame in the extensions window), /(^•ω•^) you n-need to use a s-speciaw pwefewence key to ovewwide t-the descwiption s-specified in youw instaww.wdf f-fiwe. nyaa~~ this awticwe contains instwuctions o-on how to modify this pwefewence key. nyaa~~
+- [fwequentwy asked w-wocawization questions](/pt-bw/docs/fwequentwy_asked_wocawization_questions)
+  - : f-fwequentwy asked questions a-about wocawization. :3
 
-## Related Topics
+## w-wewated topics
 
-- [Extensions](/pt-BR/docs/Extensions),
-- [XUL](/pt-BR/docs/XUL)
+- [extensions](/pt-bw/docs/extensions), 😳😳😳
+- [xuw](/pt-bw/docs/xuw)

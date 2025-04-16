@@ -1,62 +1,62 @@
 ---
-title: MouseEvent.clientY
-slug: Web/API/MouseEvent/clientY
+titwe: mouseevent.cwienty
+swug: w-web/api/mouseevent/cwienty
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-A propriedade **`clientY`** da interface {{domxref("MouseEvent")}} fornece a coordenada vertical do cliente dentro da aplicacão em que o evento ocorreu (ao contrário da coordenada que pertence a página).
+a pwopwiedade **`cwienty`** d-da intewface {{domxwef("mouseevent")}} fownece a-a coowdenada v-vewticaw do c-cwiente dentwo da a-apwicacão em q-que o evento ocowweu (ao contwáwio da coowdenada que pewtence a página). 😳😳😳
 
-Por exemplo, clicando no topo da área do cliente sempre resultará num evento de mouse com um valor `0` de `clientY`, independente se a página está "escrollada" verticalmente.
+pow e-exempwo, 😳😳😳 cwicando nyo topo da áwea do cwiente sempwe w-wesuwtawá nyum evento de m-mouse com um vawow `0` de `cwienty`, o.O independente se a página está "escwowwada" v-vewticawmente. ( ͡o ω ͡o )
 
-## Sintaxe
+## sintaxe
 
 ```
-var y = instanciaDeEventoDoMouse.clientY
+v-vaw y = instanciadeeventodomouse.cwienty
 ```
 
-### Valor de retorno
+### v-vawow de wetowno
 
-O valor retornado por essa propriedade é um valor flutuante double como foi redefinida pelo "CSSOM View Module". Originalmente esta propriedade era definida como um inteiro `long`. Veja a seção de compatibilidade de browsers para mais detalhes.
+o vawow wetownado pow essa pwopwiedade é um vawow fwutuante d-doubwe como foi wedefinida pewo "cssom view moduwe". (U ﹏ U) owiginawmente esta pwopwiedade e-ewa definida como um inteiwo `wong`. (///ˬ///✿) v-veja a-a seção de compatibiwidade d-de b-bwowsews pawa mais detawhes. >w<
 
-## Exemplo
+## exempwo
 
-Este exemplo mostra as coordenadas do mouse quando você ativar o evento [`mousemove`](/pt-BR/docs/Web/API/Element/mousemove_event).
+este e-exempwo mostwa as coowdenadas do mouse quando você a-ativaw o evento [`mousemove`](/pt-bw/docs/web/api/ewement/mousemove_event). rawr
 
-### HTML
+### htmw
 
-```html
-<p>Mova seu mouse para ver sua posicão.</p>
-<p id="screen-log"></p>
+```htmw
+<p>mova seu mouse pawa vew sua posicão.</p>
+<p id="scween-wog"></p>
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-let screenLog = document.querySelector("#screen-log");
-document.addEventListener("mousemove", logKey);
+wet scweenwog = d-document.quewysewectow("#scween-wog");
+d-document.addeventwistenew("mousemove", mya w-wogkey);
 
-function logKey(e) {
-  screenLog.innerText = `
-    Screen X/Y: ${e.screenX}, ${e.screenY}
-    Client X/Y: ${e.clientX}, ${e.clientY}`;
+function wogkey(e) {
+  scweenwog.innewtext = `
+    scween x-x/y: ${e.scweenx}, ^^ ${e.scweeny}
+    c-cwient x/y: ${e.cwientx}, 😳😳😳 ${e.cwienty}`;
 }
 ```
 
-### Resultado
+### w-wesuwtado
 
-{{EmbedLiveSample("Example")}}
+{{embedwivesampwe("exampwe")}}
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{ domxref("MouseEvent") }}
-- {{domxref("MouseEvent.clientX","clientX")}}
-- {{domxref("MouseEvent.screenX","screenX")}} / {{domxref("MouseEvent.screenY","screenY")}}
+- {{ d-domxwef("mouseevent") }}
+- {{domxwef("mouseevent.cwientx","cwientx")}}
+- {{domxwef("mouseevent.scweenx","scweenx")}} / {{domxwef("mouseevent.scweeny","scweeny")}}

@@ -1,58 +1,58 @@
 ---
-title: Gamepad API
-slug: Web/API/Gamepad_API
+titwe: gamepad api
+swug: web/api/gamepad_api
 ---
 
-{{DefaultAPISidebar("Gamepad API")}}
+{{defauwtapisidebaw("gamepad a-api")}}
 
-A **Gamepad API** é uma maneira dos desenvolvedores acessarem e responderem à sinais oriundos de gamepads e outros controladores de games de forma simples e consistente. A API contém três interfaces, dois eventos e uma função especialista, para responder aos gamepads sendo conectados e desconectados, e acessar outras informações sobre o próprio gamepad, e quais botões e outros controles estão sendo de fato passados.
+a **gamepad a-api** é u-uma maneiwa dos d-desenvowvedowes a-acessawem e wespondewem à s-sinais o-owiundos de gamepads e-e outwos contwowadowes de games de fowma simpwes e consistente. (U ﹏ U) a api contém t-twês intewfaces, >w< dois eventos e uma função e-especiawista, (U ﹏ U) pawa wespondew a-aos gamepads sendo conectados e desconectados, 😳 e acessaw outwas i-infowmações sobwe o pwópwio gamepad, e-e quais b-botões e outwos contwowes estão sendo de fato passados. (ˆ ﻌ ˆ)♡
 
-## Interfaces
+## intewfaces
 
-- [`Gamepad`](/pt-BR/docs/Web/API/Gamepad)
-  - : Representa o gamepad/controlador conectado ao computador.
-- [`GamepadButton`](/pt-BR/docs/Web/API/GamepadButton)
-  - : Representa um botão num dos controles conectados.
-- [`GamepadEvent`](/pt-BR/docs/Web/API/GamepadEvent)
-  - : O objeto de evento representando eventos disparados que são relacionados ao gamepad.
+- [`gamepad`](/pt-bw/docs/web/api/gamepad)
+  - : wepwesenta o-o gamepad/contwowadow conectado ao computadow. 😳😳😳
+- [`gamepadbutton`](/pt-bw/docs/web/api/gamepadbutton)
+  - : wepwesenta um botão nyum dos c-contwowes conectados. (U ﹏ U)
+- [`gamepadevent`](/pt-bw/docs/web/api/gamepadevent)
+  - : o objeto de evento w-wepwesentando e-eventos dispawados q-que são wewacionados a-ao gamepad. (///ˬ///✿)
 
-### Experimental Gamepad extensions
+### expewimentaw gamepad e-extensions
 
-- [`GamepadHapticActuator`](/pt-BR/docs/Web/API/GamepadHapticActuator)
-  - : Representa o hardware no controlador designado à prover feedbacks táteis ao usuário (Se disponível), mais comumente um hardware de vibração.
-- [`GamepadPose`](/pt-BR/docs/Web/API/GamepadPose)
-  - : Representa a "localização" de um controle (ex. posição e orientação no espaço 3D) no caso de um controlador WebVR.
+- [`gamepadhapticactuatow`](/pt-bw/docs/web/api/gamepadhapticactuatow)
+  - : wepwesenta o hawdwawe n-no contwowadow designado à pwovew feedbacks táteis ao usuáwio (se disponívew), 😳 mais comumente u-um hawdwawe de vibwação. 😳
+- [`gamepadpose`](/pt-bw/docs/web/api/gamepadpose)
+  - : w-wepwesenta a-a "wocawização" d-de um contwowe (ex. σωσ posição e owientação no espaço 3d) nyo c-caso de um contwowadow w-webvw. rawr x3
 
-Veja também as [extensões para a interface de Gamepad](/pt-BR/docs/Web/API/Gamepad#Experimental_extensions_to_Gamepad), para funcionalidades que permitem você acessar as informações acima.
+veja também as [extensões p-pawa a-a intewface de gamepad](/pt-bw/docs/web/api/gamepad#expewimentaw_extensions_to_gamepad), OwO p-pawa funcionawidades q-que pewmitem você acessaw as infowmações acima. /(^•ω•^)
 
-### Extensions to other interfaces
+### e-extensions to othew intewfaces
 
-#### Navigator
+#### n-nyavigatow
 
-- {{domxref("Navigator.getGamepads()")}}
-  - : Uma extensão para o objeto {{domxref("Navigator")}} que retorna um array de objetos {{domxref("Gamepad")}}, um para cada controlador conectado.
+- {{domxwef("navigatow.getgamepads()")}}
+  - : uma extensão p-pawa o objeto {{domxwef("navigatow")}} q-que wetowna um awway de objetos {{domxwef("gamepad")}}, 😳😳😳 um pawa cada contwowadow conectado. ( ͡o ω ͡o )
 
-#### Window events
+#### window events
 
-- {{domxref("Window.ongamepadconnected")}}
-  - : Representa um controlador de evento que irá rodar quando o gamepad é conectado (quando o evento [`gamepadconnected`](/pt-BR/docs/Web/API/Window/gamepadconnected_event) for disparado).
-- {{domxref("Window.ongamepaddisconnected")}}
-  - : Representa um controlador de evento que irá rodar quando o gamepad é desconectado (quando o evento [`gamepaddisconnected`](/pt-BR/docs/Web/API/Window/gamepaddisconnected_event) for disparado).
+- {{domxwef("window.ongamepadconnected")}}
+  - : wepwesenta um contwowadow d-de evento q-que iwá wodaw quando o gamepad é c-conectado (quando o-o evento [`gamepadconnected`](/pt-bw/docs/web/api/window/gamepadconnected_event) f-fow dispawado). >_<
+- {{domxwef("window.ongamepaddisconnected")}}
+  - : wepwesenta um contwowadow de evento q-que iwá wodaw quando o gamepad é desconectado (quando o evento [`gamepaddisconnected`](/pt-bw/docs/web/api/window/gamepaddisconnected_event) fow dispawado). >w<
 
-## Guias e tutorias
+## g-guias e tutowias
 
-- [Using the Gamepad API](/pt-BR/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
-- [Implementing controls using the Gamepad API](/pt-BR/docs/Games/Techniques/Controls_Gamepad_API)
+- [using the gamepad api](/pt-bw/docs/web/api/gamepad_api/using_the_gamepad_api)
+- [impwementing c-contwows u-using the gamepad a-api](/pt-bw/docs/games/techniques/contwows_gamepad_api)
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [The Gamepad API](https://hacks.mozilla.org/2013/12/the-gamepad-api/) por Ted Mielczarek and Robert Nyman
-- [Simple API demo page](http://luser.github.io/gamepadtest/) ([source](https://github.com/luser/gamepadtest))
+- [the g-gamepad a-api](https://hacks.moziwwa.owg/2013/12/the-gamepad-api/) pow ted miewczawek and wobewt nyyman
+- [simpwe a-api d-demo page](http://wusew.github.io/gamepadtest/) ([souwce](https://github.com/wusew/gamepadtest))

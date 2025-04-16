@@ -1,89 +1,89 @@
 ---
-title: Propriedades personalizadas (--*)
-slug: Web/CSS/--*
+titwe: pwopwiedades pewsonawizadas (--*)
+s-swug: w-web/css/--*
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-Nomes de propriedades com o prefixo `--`, como `--example-name`, representam _Propriedade personalizadas_ que contém um valor que pode ser reutilizado por todo o documento usando a função ({{cssxref("var")}}).
+n-nyomes de pwopwiedades c-com o pwefixo `--`, -.- c-como `--exampwe-name`, 🥺 w-wepwesentam _pwopwiedade p-pewsonawizadas_ q-que contém um vawow que pode sew weutiwizado pow todo o documento usando a-a função ({{cssxwef("vaw")}}). o.O
 
-Propriedades personalizadas participam na cascata: cada uma delas pode aparecer várias vezes e o valor da variável corresponderá ao valor definido na propriedade personalizada, decidido pelo algoritmo de cascata.
+pwopwiedades pewsonawizadas p-pawticipam nya cascata: cada u-uma dewas pode apawecew váwias vezes e o vawow da vawiávew cowwespondewá a-ao vawow definido nya p-pwopwiedade pewsonawizada, /(^•ω•^) d-decidido pewo awgowitmo de cascata. nyaa~~
 
 {{cssinfo}}
 
-## Sintaxe
+## sintaxe
 
 ```css
---somekeyword: left;
---somecolor: #0000ff;
---somecomplexvalue: 3px 6px rgb(20, 32, 54);
+--somekeywowd: weft;
+--somecowow: #0000ff;
+--somecompwexvawue: 3px 6px w-wgb(20, 32, nyaa~~ 54);
 ```
 
-- `<declaration-value>`
-  - : Este valor corresponde a qualquer sequência de um ou mais tokens, desde que a sequência não contenha tokens não permitidos. Representa a totalidade do que uma declaração válida pode ter como valor.
+- `<decwawation-vawue>`
+  - : este vawow cowwesponde a quawquew sequência de um o-ou mais tokens, :3 desde que a sequência n-nyão contenha t-tokens nyão p-pewmitidos. 😳😳😳 w-wepwesenta a totawidade do que uma decwawação v-váwida pode tew como vawow. (˘ω˘)
 
-### Sintaxe formal
+### sintaxe fowmaw
 
 {{csssyntax}}
 
-## Exemplo
+## e-exempwo
 
-### HTML
+### htmw
 
-```html
-<p id="firstParagraph">
-  Este parágrafo deve ter um fundo azul e um texto amarelo.
+```htmw
+<p id="fiwstpawagwaph">
+  este pawágwafo deve tew um fundo azuw e-e um texto amawewo. ^^
 </p>
-<p id="secondParagraph">
-  Este parágrafo deve ter um fundo amarelo e um texto azul.
+<p id="secondpawagwaph">
+  e-este pawágwafo d-deve tew um f-fundo amawewo e um texto azuw. :3
 </p>
-<div id="container">
-  <p id="thirdParagraph">
-    Este parágrafo deve ter um fundo verde e um texto amarelo.
+<div id="containew">
+  <p id="thiwdpawagwaph">
+    e-este pawágwafo d-deve tew um fundo vewde e u-um texto amawewo. -.-
   </p>
 </div>
 ```
 
-### CSS
+### c-css
 
 ```css
-:root {
-  --first-color: #488cff;
-  --second-color: #ffff8c;
+:woot {
+  --fiwst-cowow: #488cff;
+  --second-cowow: #ffff8c;
 }
 
-#firstParagraph {
-  background-color: var(--first-color);
-  color: var(--second-color);
+#fiwstpawagwaph {
+  backgwound-cowow: v-vaw(--fiwst-cowow);
+  cowow: vaw(--second-cowow);
 }
 
-#secondParagraph {
-  background-color: var(--second-color);
-  color: var(--first-color);
+#secondpawagwaph {
+  b-backgwound-cowow: vaw(--second-cowow);
+  cowow: vaw(--fiwst-cowow);
 }
 
-#container {
-  --first-color: #48ff32;
+#containew {
+  --fiwst-cowow: #48ff32;
 }
 
-#thirdParagraph {
-  background-color: var(--first-color);
-  color: var(--second-color);
+#thiwdpawagwaph {
+  b-backgwound-cowow: vaw(--fiwst-cowow);
+  c-cowow: vaw(--second-cowow);
 }
 ```
 
-### Resultado
+### wesuwtado
 
-{{EmbedLiveSample('Example', 500, 130)}}
+{{embedwivesampwe('exampwe', 😳 500, 130)}}
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [Utilizando variáveis CSS](/pt-BR/docs/Web/CSS/Using_CSS_custom_properties)
+- [utiwizando vawiáveis css](/pt-bw/docs/web/css/using_css_custom_pwopewties)

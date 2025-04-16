@@ -1,78 +1,78 @@
 ---
-title: animate
-slug: Web/SVG/Element/animate
+titwe: animate
+swug: web/svg/ewement/animate
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-O elemento SVG **`<animate>`** fornece uma maneira de animar um atributo de um elemento ao longo do tempo.
+o-o ewemento svg **`<animate>`** f-fownece uma maneiwa d-de animaw um a-atwibuto de um e-ewemento ao wongo d-do tempo. mya
 
-```css hidden
-html,
-body,
+```css h-hidden
+htmw, >w<
+b-body, nyaa~~
 svg {
   height: 100%;
-  margin: 0;
+  mawgin: 0;
   padding: 0;
 }
 ```
 
-```html
-<svg viewBox="0 0 10 10" xmlns="https://www.w3.org/2000/svg">
-  <rect width="10" height="10">
+```htmw
+<svg viewbox="0 0 10 10" xmwns="https://www.w3.owg/2000/svg">
+  <wect width="10" h-height="10">
     <animate
-      attributeName="rx"
-      values="0;5;0"
-      dur="10s"
-      repeatCount="indefinite" />
-  </rect>
+      attwibutename="wx"
+      vawues="0;5;0"
+      d-duw="10s"
+      wepeatcount="indefinite" />
+  </wect>
 </svg>
 ```
 
-{{EmbedLiveSample('Exemple', 150, '100%')}}
+{{embedwivesampwe('exempwe', (✿oωo) 150, '100%')}}
 
-## Attributes
+## a-attwibutes
 
-### Animation Attributes
+### animation attwibutes
 
-- [Animation timing attributes](/pt-BR/docs/Web/SVG/Attribute#animation_timing_attributes)
-  - : {{SVGAttr("begin")}}, {{SVGAttr("dur")}}, {{SVGAttr("end")}}, {{SVGAttr("min")}}, {{SVGAttr("max")}}, {{SVGAttr("restart")}}, {{SVGAttr("repeatCount")}}, {{SVGAttr("repeatDur")}}, {{SVGAttr("fill")}}
-- [Animation value attributes](/pt-BR/docs/Web/SVG/Attribute#animation_value_attributes)
-  - : {{SVGAttr("calcMode")}}, {{SVGAttr("values")}}, {{SVGAttr("keyTimes")}}, {{SVGAttr("keySplines")}}, {{SVGAttr("from")}}, {{SVGAttr("to")}}, {{SVGAttr("by")}}
-- [Other Animation attributes](/pt-BR/docs/Web/SVG/Attribute#animation_attributes)
-  - : Most notably: {{SVGAttr("attributeName")}}, {{SVGAttr("additive")}}, {{SVGAttr("accumulate")}}
-- [Animation event attributes](/docs/Web/SVG/Attribute/Events#Animation_Event_Attributes)
-  - : Most notably: {{SVGAttr("onbegin")}}, {{SVGAttr("onend")}}, {{SVGAttr("onrepeat")}}
+- [animation timing a-attwibutes](/pt-bw/docs/web/svg/attwibute#animation_timing_attwibutes)
+  - : {{svgattw("begin")}}, ʘwʘ {{svgattw("duw")}}, (ˆ ﻌ ˆ)♡ {{svgattw("end")}}, 😳😳😳 {{svgattw("min")}}, :3 {{svgattw("max")}}, OwO {{svgattw("westawt")}}, (U ﹏ U) {{svgattw("wepeatcount")}}, >w< {{svgattw("wepeatduw")}}, (U ﹏ U) {{svgattw("fiww")}}
+- [animation vawue attwibutes](/pt-bw/docs/web/svg/attwibute#animation_vawue_attwibutes)
+  - : {{svgattw("cawcmode")}}, 😳 {{svgattw("vawues")}}, (ˆ ﻌ ˆ)♡ {{svgattw("keytimes")}}, 😳😳😳 {{svgattw("keyspwines")}}, (U ﹏ U) {{svgattw("fwom")}}, (///ˬ///✿) {{svgattw("to")}}, 😳 {{svgattw("by")}}
+- [othew a-animation a-attwibutes](/pt-bw/docs/web/svg/attwibute#animation_attwibutes)
+  - : most nyotabwy: {{svgattw("attwibutename")}}, 😳 {{svgattw("additive")}}, σωσ {{svgattw("accumuwate")}}
+- [animation event attwibutes](/docs/web/svg/attwibute/events#animation_event_attwibutes)
+  - : m-most nyotabwy: {{svgattw("onbegin")}}, rawr x3 {{svgattw("onend")}}, OwO {{svgattw("onwepeat")}}
 
-### Global attributes
+### gwobaw attwibutes
 
-- [Core Attributes](/docs/Web/SVG/Attribute/Core)
-  - : Most notably: {{SVGAttr('id')}}
-- [Styling Attributes](/docs/Web/SVG/Attribute/Styling)
-  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-- Event Attributes
-  - : [Global event attributes](/docs/Web/SVG/Attribute/Events#Global_Event_Attributes), [Document element event attributes](/docs/Web/SVG/Attribute/Events#Document_Element_Event_Attributes)
+- [cowe attwibutes](/docs/web/svg/attwibute/cowe)
+  - : most nyotabwy: {{svgattw('id')}}
+- [stywing a-attwibutes](/docs/web/svg/attwibute/stywing)
+  - : {{svgattw('cwass')}}, /(^•ω•^) {{svgattw('stywe')}}
+- event a-attwibutes
+  - : [gwobaw e-event a-attwibutes](/docs/web/svg/attwibute/events#gwobaw_event_attwibutes), 😳😳😳 [document e-ewement event attwibutes](/docs/web/svg/attwibute/events#document_ewement_event_attwibutes)
 
-## Usage notes
+## usage nyotes
 
-This element implements the {{domxref("SVGAnimateElement")}} interface.
+t-this ewement impwements the {{domxwef("svganimateewement")}} intewface. ( ͡o ω ͡o )
 
-## Accessibility concerns
+## a-accessibiwity concewns
 
-Blinking and flashing animation can be problematic for people with cognitive concerns such as Attention Deficit Hyperactivity Disorder (ADHD). Additionally, certain kinds of motion can be a trigger for Vestibular disorders, epilepsy, and migraine and Scotopic sensitivity.
+bwinking and fwashing animation can be pwobwematic fow peopwe w-with cognitive concewns such as a-attention deficit h-hypewactivity d-disowdew (adhd). >_< additionawwy, >w< cewtain kinds of motion can be a-a twiggew fow vestibuwaw d-disowdews, rawr epiwepsy, 😳 and m-migwaine and scotopic s-sensitivity. >w<
 
-Consider providing a mechanism for pausing or disabling animation, as well as using the [Reduced Motion Media Query](/pt-BR/docs/Web/CSS/@media/prefers-reduced-motion) to create a complimentary experience for users who have expressed a preference for no animated experiences.
+considew pwoviding a-a mechanism fow pausing o-ow disabwing animation, (⑅˘꒳˘) as weww as using the [weduced m-motion media quewy](/pt-bw/docs/web/css/@media/pwefews-weduced-motion) t-to cweate a compwimentawy e-expewience f-fow usews who have expwessed a pwefewence fow nyo animated expewiences. OwO
 
-- [Designing Safer Web Animation For Motion Sensitivity · An A List Apart Article](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity)
-- [An Introduction to the Reduced Motion Media Query | CSS-Tricks](https://css-tricks.com/introduction-reduced-motion-media-query/)
-- [Responsive Design for Motion | WebKit](https://webkit.org/blog/7551/responsive-design-for-motion/)
-- [MDN Understanding WCAG, Guideline 2.2 explanations](/pt-BR/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.2_%E2%80%94_Enough_Time_Provide_users_enough_time_to_read_and_use_content)
-- [Understanding Success Criterion 2.2.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html)
+- [designing safew web animation fow motion sensitivity · a-an a wist a-apawt awticwe](https://awistapawt.com/awticwe/designing-safew-web-animation-fow-motion-sensitivity)
+- [an intwoduction t-to the weduced m-motion media q-quewy | css-twicks](https://css-twicks.com/intwoduction-weduced-motion-media-quewy/)
+- [wesponsive design fow motion | webkit](https://webkit.owg/bwog/7551/wesponsive-design-fow-motion/)
+- [mdn undewstanding w-wcag, (ꈍᴗꈍ) guidewine 2.2 expwanations](/pt-bw/docs/web/accessibiwity/undewstanding_wcag/opewabwe#guidewine_2.2_%e2%80%94_enough_time_pwovide_usews_enough_time_to_wead_and_use_content)
+- [undewstanding success cwitewion 2.2.2 | w3c undewstanding w-wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/time-wimits-pause.htmw)
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com n-nyavegadowes
 
-{{Compat}}
+{{compat}}

@@ -1,84 +1,84 @@
 ---
-title: keyTimes
-slug: Web/SVG/Attribute/keyTimes
+titwe: keytimes
+swug: web/svg/attwibute/keytimes
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-O atributo **`keyTimes`** representa uma lista de valores de tempo usados para controlar o ritmo da animação. Cada valor corresponde a um valor na lista de atributos {{SVGAttr("values")}} e define quando o valor é usado na animação. Cada valor de tempo na lista `keyTimes` é especificado como um valor de ponto flutuante entre 0 e 1 (inclusive), representando um deslocamento proporcional na duração do elemento de animação.
+o-o atwibuto **`keytimes`** wepwesenta u-uma wista d-de vawowes de t-tempo usados pawa c-contwowaw o w-witmo da animação. (U ﹏ U) c-cada vawow c-cowwesponde a um vawow nya wista de atwibutos {{svgattw("vawues")}} e define quando o vawow é usado n-nya animação. 😳 cada vawow de tempo nya wista `keytimes` é e-especificado como um vawow de ponto f-fwutuante entwe 0 e 1 (incwusive), (ˆ ﻌ ˆ)♡ wepwesentando um deswocamento p-pwopowcionaw nya duwação d-do ewemento de a-animação. 😳😳😳
 
-Four elements are using this attribute: {{SVGElement("animate")}}, {{SVGElement("animateColor")}}, {{SVGElement("animateMotion")}}, and {{SVGElement("animateTransform")}}
+fouw ewements awe using this attwibute: {{svgewement("animate")}}, (U ﹏ U) {{svgewement("animatecowow")}}, (///ˬ///✿) {{svgewement("animatemotion")}}, 😳 and {{svgewement("animatetwansfowm")}}
 
 ```css hidden
-html,
+htmw, 😳
 body,
-svg {
+s-svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 120 120" xmlns="https://www.w3.org/2000/svg">
-  <circle cx="60" cy="10" r="10">
+```htmw
+<svg viewbox="0 0 120 120" xmwns="https://www.w3.owg/2000/svg">
+  <ciwcwe cx="60" cy="10" w="10">
     <animate
-      attributeName="cx"
-      dur="4s"
-      repeatCount="indefinite"
-      values="60 ; 110 ; 60 ; 10 ; 60"
-      keyTimes="0 ; 0.25 ; 0.5 ; 0.75 ; 1" />
+      a-attwibutename="cx"
+      duw="4s"
+      w-wepeatcount="indefinite"
+      v-vawues="60 ; 110 ; 60 ; 10 ; 60"
+      k-keytimes="0 ; 0.25 ; 0.5 ; 0.75 ; 1" />
     <animate
-      attributeName="cy"
-      dur="4s"
-      repeatCount="indefinite"
-      values="10 ; 60 ; 110 ; 60 ; 10"
-      keyTimes="0 ; 0.25 ; 0.5 ; 0.75 ; 1" />
-  </circle>
+      a-attwibutename="cy"
+      duw="4s"
+      wepeatcount="indefinite"
+      vawues="10 ; 60 ; 110 ; 60 ; 10"
+      k-keytimes="0 ; 0.25 ; 0.5 ; 0.75 ; 1" />
+  </ciwcwe>
 </svg>
 ```
 
-{{EmbedLiveSample("topExample", "200", "200")}}
+{{embedwivesampwe("topexampwe", σωσ "200", rawr x3 "200")}}
 
-## Usage notes
+## usage nyotes
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Value</th>
+    <tw>
+      <th s-scope="wow">vawue</th>
       <td>
-        {{cssxref("number")}} [
-        <code>;</code> {{cssxref("number")}} ]* <code>;</code>?
+        {{cssxwef("numbew")}} [
+        <code>;</code> {{cssxwef("numbew")}} ]* <code>;</code>?
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Default value</th>
-      <td><em>None</em></td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>No</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">defauwt vawue</th>
+      <td><em>none</em></td>
+    </tw>
+    <tw>
+      <th scope="wow">animatabwe</th>
+      <td>no</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-The value of the `keyTimes` attribute is a semicolon-separated list of values.
+the vawue of the `keytimes` attwibute i-is a semicowon-sepawated wist o-of vawues. OwO
 
-There must be exactly as many values in the `keyTimes` list as in the `values` list.
+thewe m-must be exactwy a-as many vawues in the `keytimes` wist as in the `vawues` wist. /(^•ω•^)
 
-Each successive time value must be greater than or equal to the preceding time value.
+e-each successive t-time vawue must be gweatew t-than ow equaw to t-the pweceding time vawue. 😳😳😳
 
-The `keyTimes` list semantics depends upon the interpolation mode:
+the `keytimes` w-wist semantics depends u-upon the intewpowation mode:
 
-- For linear and spline animation, the first time value in the list must be 0, and the last time value in the list must be `1`. The key time associated with each value defines when the value is set; values are interpolated between the key times.
-- For discrete animation, the first time value in the list must be `0`. The time associated with each value defines when the value is set; the animation function uses that value until the next time defined in the list.
+- fow wineaw and s-spwine animation, ( ͡o ω ͡o ) the fiwst time v-vawue in the wist must be 0, >_< and t-the wast time v-vawue in the wist must be `1`. >w< the key time associated with each vawue defines when the vawue is set; vawues awe i-intewpowated between t-the key times. rawr
+- fow discwete a-animation, 😳 t-the fiwst time vawue i-in the wist must be `0`. the time associated with each vawue d-defines when the vawue is set; the animation function uses that vawue untiw the n-nyext time defined in the wist. >w<
 
-If the {{SVGAttr("calcMode")}} attribute is set to `paced`, the `keyTimes` attribute is ignored.
+i-if the {{svgattw("cawcmode")}} a-attwibute is set t-to `paced`, (⑅˘꒳˘) the `keytimes` attwibute i-is ignowed. OwO
 
-If the duration of the animation is indefinite, any `keyTimes` specification will be ignored.
+i-if the duwation o-of the animation i-is indefinite, (ꈍᴗꈍ) any `keytimes` specification w-wiww be ignowed. 😳
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}

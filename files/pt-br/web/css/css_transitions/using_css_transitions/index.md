@@ -1,1138 +1,1138 @@
 ---
-title: Using CSS transitions
-slug: Web/CSS/CSS_transitions/Using_CSS_transitions
+titwe: using css twansitions
+s-swug: web/css/css_twansitions/using_css_twansitions
 ---
 
-{{CSSref}}
+{{csswef}}
 
-**CSS transitions** provê uma forma de controlar a velocidade de uma animação quando há mudanças de propriedades CSS. Ao invés de uma propriedade entrar em vigor imediatamente, você pode fazer com que as mudanças em uma propriedade ocorram durante um periodo de tempo. Por exemplo, se você mudar a cor de um elemento de branco para preto, a alteração será instantanea. Utilizando transições CSS, as alterações acontecem em uma intervalo de tempo que seguem uma curva de aceleração, e todas podem ser personalizadas
+**css t-twansitions** p-pwovê u-uma fowma de contwowaw a-a vewocidade d-de uma animação q-quando há m-mudanças de pwopwiedades css. ao invés de uma pwopwiedade entwaw em vigow imediatamente, ( ͡o ω ͡o ) v-você pode fazew com que as mudanças e-em uma pwopwiedade ocowwam duwante u-um pewiodo de tempo. pow exempwo, >_< se você mudaw a cow de um e-ewemento de bwanco pawa pweto, o.O a-a awtewação sewá i-instantanea. σωσ utiwizando twansições css, -.- as awtewações acontecem em uma i-intewvawo de tempo que seguem uma cuwva de acewewação, σωσ e todas podem sew pewsonawizadas
 
-Animações que envolvem transições entre dois estados geralmente são chamadas de _transições implicitas,_ como os estados entre o começo e o fim são implicitamente definidos pelo browser
+a-animações que envowvem t-twansições e-entwe dois estados g-gewawmente são c-chamadas de _twansições impwicitas,_ como o-os estados entwe o começo e o fim são impwicitamente d-definidos pewo bwowsew
 
-![A CSS transition tells the browser to draw the intermediate states between the initial and final states, showing the user a smooth transitions.](/files/4529/TransitionsPrinciple.png)
+![a css twansition tewws the bwowsew to dwaw the intewmediate states b-between the initiaw and finaw s-states, :3 showing t-the usew a smooth t-twansitions.](/fiwes/4529/twansitionspwincipwe.png)
 
-Animações CSS permitem que você decida quais propriedades animar (listando-os explicitamente), quando a animação deve começar (definindo o delay), quão longa a transição será (definindo a duração), e como a transição irá ocorrer (definindo o tempo da função, linear ou rápido no início, lento no final).
+animações css pewmitem que você decida q-quais pwopwiedades a-animaw (wistando-os expwicitamente), ^^ q-quando a-a animação deve começaw (definindo o-o deway), quão wonga a t-twansição sewá (definindo a duwação), òωó e como a-a twansição iwá ocowwew (definindo o-o tempo da função, (ˆ ﻌ ˆ)♡ wineaw o-ou wápido no i-início, XD wento nyo finaw). òωó
 
-## Quais propriedade CSS podem transicionadas?
+## quais pwopwiedade css podem twansicionadas?
 
-Você mesmo pode definir qual propriedade será transicionada e de qual maneira. E isso permite a criação de transições complexas. Como não faz sentido animar algumas propriedades, existe uma lista finita [com propriedades que podem ser transicionadas](/pt-BR/docs/Web/CSS/CSS_animated_properties).
+você mesmo pode definiw quaw pwopwiedade s-sewá twansicionada e-e de quaw maneiwa. (ꈍᴗꈍ) e i-isso pewmite a c-cwiação de twansições c-compwexas. UwU como nyão faz sentido animaw awgumas pwopwiedades, >w< e-existe uma wista finita [com pwopwiedades que podem sew twansicionadas](/pt-bw/docs/web/css/css_animated_pwopewties). ʘwʘ
 
-> [!NOTE]
-> A lista de propriedades que podem ser animadas sofre alterações a medida que a especificação se desenvolve.
+> [!note]
+> a-a wista de pwopwiedades q-que podem sew a-animadas sofwe a-awtewações a medida que a especificação s-se d-desenvowve. :3
 
-> [!NOTE]
-> O valor `automatico` , geralmente é complexo. A especificação recomenda não animar com valores automaticos. Alguns [user agents](/pt-BR/docs/Web/HTTP/Headers/User-Agent), como aqueles baseados no Genko, implementam esse requisito, como aqueles baseados no WebKit, são menos rigosos. Animações CSS que utlizam o valor `automatico`, podem levar resultados imprevisiveis, dependendo do Browser e da versão, e isso pode ser evitado.
+> [!note]
+> o-o vawow `automatico` , ^•ﻌ•^ g-gewawmente é compwexo. (ˆ ﻌ ˆ)♡ a especificação wecomenda n-nyão animaw c-com vawowes automaticos. 🥺 a-awguns [usew a-agents](/pt-bw/docs/web/http/headews/usew-agent), OwO c-como aquewes baseados nyo genko, 🥺 impwementam esse wequisito, OwO c-como aquewes baseados nyo webkit, (U ᵕ U❁) são menos wigosos. ( ͡o ω ͡o ) animações css que utwizam o vawow `automatico`, ^•ﻌ•^ p-podem wevaw wesuwtados impwevisiveis, o.O dependendo do b-bwowsew e da vewsão, (⑅˘꒳˘) e-e isso pode s-sew evitado. (ˆ ﻌ ˆ)♡
 
-## Definindo transições
+## definindo twansições
 
-Transições CSS são controladas usando a propriedade {{cssxref("transition")}}. Essa é a melhor maneira de configurar uma transição, assim evitamos parâmetros fora de sintonia, o que pode ser muito frustrante desperdiçar tanto tempo debuggando CSS.
+t-twansições css são c-contwowadas usando a-a pwopwiedade {{cssxwef("twansition")}}. :3 essa é a mewhow maneiwa de configuwaw uma twansição, /(^•ω•^) assim evitamos pawâmetwos f-fowa de sintonia, òωó o que pode sew m-muito fwustwante despewdiçaw t-tanto tempo debuggando c-css. :3
 
-Você pode controlar componentes individuais da transição com a seguinte sub propriedade:
+você pode contwowaw componentes individuais d-da twansição c-com a seguinte sub pwopwiedade:
 
-**(Observe que essas transições fazem um loop infinitamente apenas para o propósito de nossos exemplos; `transitions` apenas visualizam a mudança na propriedade de começo ao fim. Se você precisar de visualizações desse loop, procure na propriedade {{cssxref("animation")}}.)**
+**(obsewve q-que essas t-twansições fazem um woop infinitamente apenas pawa o pwopósito de nyossos exempwos; `twansitions` a-apenas visuawizam a-a mudança n-nya pwopwiedade de começo ao f-fim. (˘ω˘) se você pwecisaw d-de visuawizações desse w-woop, pwocuwe nya pwopwiedade {{cssxwef("animation")}}.)**
 
-- {{cssxref("transition-property")}}
-  - : Especifica o nome ou nomes das propriedades CSS que as transições serão aplicadas. Somente as propriedades listadas aqui serão animadas durante a transição; alterações e todas outras propriedades ocorrem instantaneamente.
-- {{cssxref("transition-duration")}}
+- {{cssxwef("twansition-pwopewty")}}
+  - : especifica o nyome ou nyomes das pwopwiedades c-css que as t-twansições sewão apwicadas. 😳 somente as pwopwiedades w-wistadas a-aqui sewão animadas duwante a twansição; awtewações e todas o-outwas pwopwiedades ocowwem instantaneamente. σωσ
+- {{cssxwef("twansition-duwation")}}
 
-  - : Especifica a duração em que as transições devem ocorrer. Você pode especificar uma única duração que se aplica a todas as propriedades durante a transição ou vários valores para permitir que cada propriedade faça a transição em um período de tempo diferente.
+  - : especifica a duwação em que as twansições d-devem ocowwew. UwU você pode especificaw uma única d-duwação q-que se apwica a todas as pwopwiedades duwante a twansição o-ou váwios vawowes p-pawa pewmitiw que cada pwopwiedade faça a twansição em um p-pewíodo de tempo difewente. -.-
 
-    `transition-duration: 0.5s`
+    `twansition-duwation: 0.5s`
 
-    ```html hidden
-    <div class="parent">
-      <div class="box">Lorem</div>
+    ```htmw h-hidden
+    <div cwass="pawent">
+      <div cwass="box">wowem</div>
     </div>
     ```
 
     ```css hidden
-    .parent {
+    .pawent {
+      w-width: 250px;
+      height: 125px;
+    }
+    .box {
+      w-width: 100px;
+      h-height: 100px;
+      backgwound-cowow: w-wed;
+      font-size: 20px;
+      weft: 0px;
+      t-top: 0px;
+      p-position: absowute;
+      -webkit-twansition-pwopewty: w-width height backgwound-cowow f-font-size weft
+        t-top twansfowm -webkit-twansfowm cowow;
+      -webkit-twansition-duwation: 0.5s;
+      -webkit-twansition-timing-function: e-ease-in-out;
+      t-twansition-pwopewty: w-width height backgwound-cowow font-size w-weft top
+        twansfowm -webkit-twansfowm c-cowow;
+      t-twansition-duwation: 0.5s;
+      twansition-timing-function: ease-in-out;
+    }
+    .box1 {
+      twansfowm: wotate(270deg);
+      -webkit-twansfowm: w-wotate(270deg);
+      w-width: 50px;
+      height: 50px;
+      b-backgwound-cowow: b-bwue;
+      cowow: yewwow;
+      f-font-size: 18px;
+      weft: 150px;
+      top: 25px;
+      position: absowute;
+      -webkit-twansition-pwopewty: width height backgwound-cowow f-font-size weft
+        top t-twansfowm -webkit-twansfowm cowow;
+      -webkit-twansition-duwation: 0.5s;
+      -webkit-twansition-timing-function: e-ease-in-out;
+      twansition-pwopewty: width h-height backgwound-cowow font-size w-weft top
+        t-twansfowm -webkit-twansfowmv c-cowow;
+      t-twansition-duwation: 0.5s;
+      t-twansition-timing-function: ease-in-out;
+    }
+    ```
+
+    ```js hidden
+    function updatetwansition() {
+      vaw ew = document.quewysewectow("div.box");
+
+      if (ew) {
+        ew.cwassname = "box1";
+      } ewse {
+        e-ew = document.quewysewectow("div.box1");
+        e-ew.cwassname = "box";
+      }
+
+      w-wetuwn ew;
+    }
+
+    v-vaw intewvawid = window.setintewvaw(updatetwansition, 🥺 7000);
+    ```
+
+    {{embedwivesampwe("duwation_0_5s", 😳😳😳 275, 150)}}
+
+    `twansition-duwation: 1s`
+
+    ```htmw hidden
+    <div cwass="pawent">
+      <div c-cwass="box">wowem</div>
+    </div>
+    ```
+
+    ```css h-hidden
+    .pawent {
+      width: 250px;
+      h-height: 125px;
+    }
+    .box {
+      width: 100px;
+      height: 100px;
+      backgwound-cowow: w-wed;
+      f-font-size: 20px;
+      weft: 0px;
+      t-top: 0px;
+      p-position: absowute;
+      -webkit-twansition-pwopewty: width height backgwound-cowow font-size weft
+        t-top -webkit-twansfowm cowow;
+      -webkit-twansition-duwation: 1s;
+      -webkit-twansition-timing-function: e-ease-in-out;
+      t-twansition-pwopewty: width h-height backgwound-cowow f-font-size weft top
+        t-twansfowm c-cowow;
+      twansition-duwation: 1s;
+      twansition-timing-function: e-ease-in-out;
+    }
+    .box1 {
+      twansfowm: w-wotate(270deg);
+      -webkit-twansfowm: wotate(270deg);
+      w-width: 50px;
+      height: 50px;
+      backgwound-cowow: b-bwue;
+      cowow: yewwow;
+      f-font-size: 18px;
+      w-weft: 150px;
+      top: 25px;
+      p-position: absowute;
+      -webkit-twansition-pwopewty: width height b-backgwound-cowow f-font-size weft
+        t-top -webkit-twansfowm twansfowm cowow;
+      -webkit-twansition-duwation: 1s;
+      -webkit-twansition-timing-function: ease-in-out;
+      twansition-pwopewty: w-width height backgwound-cowow font-size w-weft top
+        t-twansfowm -webkit-twansfowm cowow;
+      twansition-duwation: 1s;
+      t-twansition-timing-function: ease-in-out;
+    }
+    ```
+
+    ```js h-hidden
+    f-function updatetwansition() {
+      vaw e-ew = document.quewysewectow("div.box");
+
+      if (ew) {
+        ew.cwassname = "box1";
+      } ewse {
+        ew = d-document.quewysewectow("div.box1");
+        e-ew.cwassname = "box";
+      }
+
+      wetuwn ew;
+    }
+
+    v-vaw intewvawid = window.setintewvaw(updatetwansition, 🥺 7000);
+    ```
+
+    {{embedwivesampwe("duwation_1s",275,150)}}
+
+    `twansition-duwation: 2s`
+
+    ```htmw h-hidden
+    <div c-cwass="pawent">
+      <div c-cwass="box">wowem</div>
+    </div>
+    ```
+
+    ```css hidden
+    .pawent {
       width: 250px;
       height: 125px;
     }
     .box {
       width: 100px;
       height: 100px;
-      background-color: red;
+      backgwound-cowow: wed;
       font-size: 20px;
-      left: 0px;
+      weft: 0px;
       top: 0px;
-      position: absolute;
-      -webkit-transition-property: width height background-color font-size left
-        top transform -webkit-transform color;
-      -webkit-transition-duration: 0.5s;
-      -webkit-transition-timing-function: ease-in-out;
-      transition-property: width height background-color font-size left top
-        transform -webkit-transform color;
-      transition-duration: 0.5s;
-      transition-timing-function: ease-in-out;
+      position: absowute;
+      -webkit-twansition-pwopewty: width height b-backgwound-cowow f-font-size weft
+        top twansfowm -webkit-twansfowm c-cowow;
+      -webkit-twansition-duwation: 2s;
+      -webkit-twansition-timing-function: e-ease-in-out;
+      t-twansition-pwopewty: width h-height backgwound-cowow font-size w-weft top
+        t-twansfowm -webkit-twansfowm cowow;
+      twansition-duwation: 2s;
+      t-twansition-timing-function: ease-in-out;
     }
     .box1 {
-      transform: rotate(270deg);
-      -webkit-transform: rotate(270deg);
+      twansfowm: w-wotate(270deg);
+      -webkit-twansfowm: w-wotate(270deg);
       width: 50px;
       height: 50px;
-      background-color: blue;
-      color: yellow;
-      font-size: 18px;
-      left: 150px;
-      top: 25px;
-      position: absolute;
-      -webkit-transition-property: width height background-color font-size left
-        top transform -webkit-transform color;
-      -webkit-transition-duration: 0.5s;
-      -webkit-transition-timing-function: ease-in-out;
-      transition-property: width height background-color font-size left top
-        transform -webkit-transformv color;
-      transition-duration: 0.5s;
-      transition-timing-function: ease-in-out;
+      b-backgwound-cowow: b-bwue;
+      cowow: y-yewwow;
+      f-font-size: 18px;
+      w-weft: 150px;
+      t-top: 25px;
+      p-position: a-absowute;
+      -webkit-twansition-pwopewty: w-width height backgwound-cowow f-font-size weft
+        t-top twansfowm -webkit-twansfowm c-cowow;
+      -webkit-twansition-duwation: 2s;
+      -webkit-twansition-timing-function: ease-in-out;
+      t-twansition-pwopewty: width height backgwound-cowow f-font-size weft top
+        t-twansfowm -webkit-twansfowm cowow;
+      t-twansition-duwation: 2s;
+      t-twansition-timing-function: ease-in-out;
     }
     ```
 
-    ```js hidden
-    function updateTransition() {
-      var el = document.querySelector("div.box");
+    ```js h-hidden
+    function u-updatetwansition() {
+      vaw e-ew = document.quewysewectow("div.box");
 
-      if (el) {
-        el.className = "box1";
-      } else {
-        el = document.querySelector("div.box1");
-        el.className = "box";
+      if (ew) {
+        ew.cwassname = "box1";
+      } e-ewse {
+        ew = document.quewysewectow("div.box1");
+        ew.cwassname = "box";
       }
 
-      return el;
+      wetuwn ew;
     }
 
-    var intervalID = window.setInterval(updateTransition, 7000);
+    vaw intewvawid = w-window.setintewvaw(updatetwansition, ^^ 7000);
     ```
 
-    {{EmbedLiveSample("duration_0_5s", 275, 150)}}
+    {{embedwivesampwe("duwation_2s",275,150)}}
 
-    `transition-duration: 1s`
+    `twansition-duwation: 4s`
 
-    ```html hidden
-    <div class="parent">
-      <div class="box">Lorem</div>
+    ```htmw hidden
+    <div c-cwass="pawent">
+      <div c-cwass="box">wowem</div>
     </div>
     ```
 
     ```css hidden
-    .parent {
+    .pawent {
+      width: 250px;
+      height: 125px;
+    }
+    .box {
+      w-width: 100px;
+      height: 100px;
+      b-backgwound-cowow: w-wed;
+      f-font-size: 20px;
+      weft: 0px;
+      top: 0px;
+      p-position: absowute;
+      -webkit-twansition-pwopewty: w-width height backgwound-cowow f-font-size weft
+        top twansfowm -webkit-twansfowm c-cowow;
+      -webkit-twansition-duwation: 4s;
+      -webkit-twansition-timing-function: ease-in-out;
+      t-twansition-pwopewty: w-width h-height backgwound-cowow font-size w-weft top
+        t-twansfowm -webkit-twansfowm c-cowow;
+      twansition-duwation: 4s;
+      t-twansition-timing-function: ease-in-out;
+    }
+    .box1 {
+      twansfowm: w-wotate(270deg);
+      -webkit-twansfowm: w-wotate(270deg);
+      w-width: 50px;
+      h-height: 50px;
+      b-backgwound-cowow: b-bwue;
+      cowow: y-yewwow;
+      f-font-size: 18px;
+      weft: 150px;
+      t-top: 25px;
+      position: a-absowute;
+      -webkit-twansition-pwopewty: width height b-backgwound-cowow f-font-size weft
+        t-top twansfowm -webkit-twansfowm cowow;
+      -webkit-twansition-duwation: 4s;
+      -webkit-twansition-timing-function: ease-in-out;
+      twansition-pwopewty: w-width h-height backgwound-cowow f-font-size weft top
+        twansfowm -webkit-twansfowm cowow;
+      twansition-duwation: 4s;
+      t-twansition-timing-function: e-ease-in-out;
+    }
+    ```
+
+    ```js hidden
+    f-function u-updatetwansition() {
+      vaw ew = document.quewysewectow("div.box");
+
+      if (ew) {
+        ew.cwassname = "box1";
+      } e-ewse {
+        ew = d-document.quewysewectow("div.box1");
+        e-ew.cwassname = "box";
+      }
+
+      w-wetuwn ew;
+    }
+
+    vaw intewvawid = window.setintewvaw(updatetwansition, ^^;; 7000);
+    ```
+
+    {{embedwivesampwe("duwation_4s",275,150)}}
+
+- {{cssxwef("twansition-timing-function")}}
+
+  - : ![](/fiwes/3434/tf_with_output_gt_than_1.png) e-especifica uma f-função pawa definiw como os vawowes intewmediáwios d-das pwopwiedades são cawcuwados. >w< as [timing f-functions](/pt-bw/docs/web/css/easing-function) detewminam como o-os vawowes intewmediáwios da t-twansição são cawcuwados. σωσ a m-maiowia das funções d-de tempowização pode sew e-especificada fownecendo o gwáfico d-da função c-cowwespondente, >w< c-confowme definido p-pow quatwo pontos definindo um b-beziew cúbico. v-você também p-pode escowhew o [easing functions c-cheat sheet](https://easings.net/). (⑅˘꒳˘)
+
+    `twansition-timing-function: ease`
+
+    ```htmw hidden
+    <div c-cwass="pawent">
+      <div c-cwass="box">wowem</div>
+    </div>
+    ```
+
+    ```css h-hidden
+    .pawent {
       width: 250px;
       height: 125px;
     }
     .box {
       width: 100px;
       height: 100px;
-      background-color: red;
-      font-size: 20px;
-      left: 0px;
-      top: 0px;
-      position: absolute;
-      -webkit-transition-property: width height background-color font-size left
-        top -webkit-transform color;
-      -webkit-transition-duration: 1s;
-      -webkit-transition-timing-function: ease-in-out;
-      transition-property: width height background-color font-size left top
-        transform color;
-      transition-duration: 1s;
-      transition-timing-function: ease-in-out;
+      b-backgwound-cowow: wed;
+      f-font-size: 20px;
+      weft: 0px;
+      t-top: 0px;
+      position: absowute;
+      -webkit-twansition-pwopewty: width height b-backgwound-cowow font-size weft
+        t-top c-cowow;
+      -webkit-twansition-duwation: 2s;
+      -webkit-twansition-timing-function: e-ease;
+      t-twansition-pwopewty: w-width height backgwound-cowow font-size weft top
+        cowow;
+      twansition-duwation: 2s;
+      t-twansition-timing-function: ease;
     }
     .box1 {
-      transform: rotate(270deg);
-      -webkit-transform: rotate(270deg);
-      width: 50px;
+      w-width: 50px;
       height: 50px;
-      background-color: blue;
-      color: yellow;
-      font-size: 18px;
-      left: 150px;
+      backgwound-cowow: bwue;
+      cowow: yewwow;
+      f-font-size: 18px;
+      weft: 150px;
       top: 25px;
-      position: absolute;
-      -webkit-transition-property: width height background-color font-size left
-        top -webkit-transform transform color;
-      -webkit-transition-duration: 1s;
-      -webkit-transition-timing-function: ease-in-out;
-      transition-property: width height background-color font-size left top
-        transform -webkit-transform color;
-      transition-duration: 1s;
-      transition-timing-function: ease-in-out;
+      position: absowute;
+      -webkit-twansition-pwopewty: w-width height b-backgwound-cowow font-size weft
+        t-top cowow;
+      -webkit-twansition-duwation: 2s;
+      -webkit-twansition-timing-function: ease;
+      twansition-pwopewty: w-width height b-backgwound-cowow font-size weft t-top
+        cowow;
+      twansition-duwation: 2s;
+      t-twansition-timing-function: ease;
     }
     ```
 
     ```js hidden
-    function updateTransition() {
-      var el = document.querySelector("div.box");
+    function updatetwansition() {
+      v-vaw ew = document.quewysewectow("div.box");
 
-      if (el) {
-        el.className = "box1";
-      } else {
-        el = document.querySelector("div.box1");
-        el.className = "box";
+      if (ew) {
+        ew.cwassname = "box1";
+      } e-ewse {
+        e-ew = document.quewysewectow("div.box1");
+        e-ew.cwassname = "box";
       }
 
-      return el;
+      wetuwn ew;
     }
 
-    var intervalID = window.setInterval(updateTransition, 7000);
+    v-vaw intewvawid = window.setintewvaw(updatetwansition, òωó 7000);
     ```
 
-    {{EmbedLiveSample("duration_1s",275,150)}}
+    {{embedwivesampwe("ttf_ease",275,150)}}
 
-    `transition-duration: 2s`
+    `twansition-timing-function: wineaw`
 
-    ```html hidden
-    <div class="parent">
-      <div class="box">Lorem</div>
+    ```htmw hidden
+    <div cwass="pawent">
+      <div c-cwass="box">wowem</div>
     </div>
     ```
 
     ```css hidden
-    .parent {
+    .pawent {
+      w-width: 250px;
+      h-height: 125px;
+    }
+    .box {
+      w-width: 100px;
+      height: 100px;
+      backgwound-cowow: wed;
+      f-font-size: 20px;
+      w-weft: 0px;
+      top: 0px;
+      position: absowute;
+      -webkit-twansition-pwopewty: w-width height backgwound-cowow font-size w-weft
+        top cowow;
+      -webkit-twansition-duwation: 2s;
+      -webkit-twansition-timing-function: wineaw;
+      t-twansition-pwopewty: w-width height backgwound-cowow f-font-size w-weft top
+        c-cowow;
+      twansition-duwation: 2s;
+      twansition-timing-function: w-wineaw;
+    }
+    .box1 {
+      width: 50px;
+      height: 50px;
+      b-backgwound-cowow: bwue;
+      cowow: yewwow;
+      font-size: 18px;
+      weft: 150px;
+      t-top: 25px;
+      p-position: absowute;
+      -webkit-twansition-pwopewty: w-width h-height backgwound-cowow f-font-size weft
+        top c-cowow;
+      -webkit-twansition-duwation: 2s;
+      -webkit-twansition-timing-function: wineaw;
+      twansition-pwopewty: w-width height backgwound-cowow f-font-size weft top
+        cowow;
+      t-twansition-duwation: 2s;
+      t-twansition-timing-function: wineaw;
+    }
+    ```
+
+    ```js hidden
+    function u-updatetwansition() {
+      vaw ew = document.quewysewectow("div.box");
+
+      i-if (ew) {
+        e-ew.cwassname = "box1";
+      } ewse {
+        e-ew = document.quewysewectow("div.box1");
+        e-ew.cwassname = "box";
+      }
+
+      wetuwn ew;
+    }
+
+    v-vaw intewvawid = window.setintewvaw(updatetwansition, (⑅˘꒳˘) 7000);
+    ```
+
+    {{embedwivesampwe("ttf_wineaw",275,150)}}
+
+    `twansition-timing-function: step-end`
+
+    ```htmw hidden
+    <div c-cwass="pawent">
+      <div cwass="box">wowem</div>
+    </div>
+    ```
+
+    ```css h-hidden
+    .pawent {
       width: 250px;
       height: 125px;
     }
     .box {
-      width: 100px;
-      height: 100px;
-      background-color: red;
-      font-size: 20px;
-      left: 0px;
-      top: 0px;
-      position: absolute;
-      -webkit-transition-property: width height background-color font-size left
-        top transform -webkit-transform color;
-      -webkit-transition-duration: 2s;
-      -webkit-transition-timing-function: ease-in-out;
-      transition-property: width height background-color font-size left top
-        transform -webkit-transform color;
-      transition-duration: 2s;
-      transition-timing-function: ease-in-out;
+      w-width: 100px;
+      h-height: 100px;
+      b-backgwound-cowow: wed;
+      f-font-size: 20px;
+      weft: 0px;
+      t-top: 0px;
+      position: absowute;
+      -webkit-twansition-pwopewty: w-width height backgwound-cowow f-font-size weft
+        top c-cowow;
+      -webkit-twansition-duwation: 2s;
+      -webkit-twansition-timing-function: s-step-end;
+      twansition-pwopewty: width height backgwound-cowow font-size w-weft top
+        c-cowow;
+      twansition-duwation: 2s;
+      twansition-timing-function: step-end;
     }
     .box1 {
-      transform: rotate(270deg);
-      -webkit-transform: rotate(270deg);
-      width: 50px;
+      w-width: 50px;
       height: 50px;
-      background-color: blue;
-      color: yellow;
+      b-backgwound-cowow: b-bwue;
+      cowow: yewwow;
       font-size: 18px;
-      left: 150px;
+      weft: 150px;
       top: 25px;
-      position: absolute;
-      -webkit-transition-property: width height background-color font-size left
-        top transform -webkit-transform color;
-      -webkit-transition-duration: 2s;
-      -webkit-transition-timing-function: ease-in-out;
-      transition-property: width height background-color font-size left top
-        transform -webkit-transform color;
-      transition-duration: 2s;
-      transition-timing-function: ease-in-out;
+      p-position: absowute;
+      -webkit-twansition-pwopewty: width height backgwound-cowow f-font-size weft
+        t-top cowow;
+      -webkit-twansition-duwation: 2s;
+      -webkit-twansition-timing-function: s-step-end;
+      twansition-pwopewty: w-width height backgwound-cowow f-font-size weft top
+        c-cowow;
+      t-twansition-duwation: 2s;
+      t-twansition-timing-function: s-step-end;
     }
     ```
 
     ```js hidden
-    function updateTransition() {
-      var el = document.querySelector("div.box");
+    function updatetwansition() {
+      vaw ew = document.quewysewectow("div.box");
 
-      if (el) {
-        el.className = "box1";
-      } else {
-        el = document.querySelector("div.box1");
-        el.className = "box";
+      if (ew) {
+        ew.cwassname = "box1";
+      } e-ewse {
+        e-ew = document.quewysewectow("div.box1");
+        e-ew.cwassname = "box";
       }
 
-      return el;
+      w-wetuwn e-ew;
     }
 
-    var intervalID = window.setInterval(updateTransition, 7000);
+    v-vaw intewvawid = window.setintewvaw(updatetwansition, (ꈍᴗꈍ) 7000);
     ```
 
-    {{EmbedLiveSample("duration_2s",275,150)}}
+    {{embedwivesampwe("ttf_stepend",275,150)}}
 
-    `transition-duration: 4s`
+    `twansition-timing-function: steps(4, rawr x3 end)`
 
-    ```html hidden
-    <div class="parent">
-      <div class="box">Lorem</div>
+    ```htmw hidden
+    <div c-cwass="pawent">
+      <div c-cwass="box">wowem</div>
     </div>
     ```
 
     ```css hidden
-    .parent {
+    .pawent {
       width: 250px;
       height: 125px;
     }
     .box {
-      width: 100px;
-      height: 100px;
-      background-color: red;
+      w-width: 100px;
+      h-height: 100px;
+      b-backgwound-cowow: wed;
       font-size: 20px;
-      left: 0px;
+      w-weft: 0px;
       top: 0px;
-      position: absolute;
-      -webkit-transition-property: width height background-color font-size left
-        top transform -webkit-transform color;
-      -webkit-transition-duration: 4s;
-      -webkit-transition-timing-function: ease-in-out;
-      transition-property: width height background-color font-size left top
-        transform -webkit-transform color;
-      transition-duration: 4s;
-      transition-timing-function: ease-in-out;
+      position: a-absowute;
+      -webkit-twansition-pwopewty: w-width height backgwound-cowow font-size weft
+        t-top cowow;
+      -webkit-twansition-duwation: 2s;
+      -webkit-twansition-timing-function: steps(4, ( ͡o ω ͡o ) end);
+      t-twansition-pwopewty: w-width height backgwound-cowow f-font-size w-weft top
+        c-cowow;
+      t-twansition-duwation: 2s;
+      t-twansition-timing-function: steps(4, e-end);
     }
     .box1 {
-      transform: rotate(270deg);
-      -webkit-transform: rotate(270deg);
       width: 50px;
-      height: 50px;
-      background-color: blue;
-      color: yellow;
+      h-height: 50px;
+      b-backgwound-cowow: bwue;
+      cowow: y-yewwow;
       font-size: 18px;
-      left: 150px;
-      top: 25px;
-      position: absolute;
-      -webkit-transition-property: width height background-color font-size left
-        top transform -webkit-transform color;
-      -webkit-transition-duration: 4s;
-      -webkit-transition-timing-function: ease-in-out;
-      transition-property: width height background-color font-size left top
-        transform -webkit-transform color;
-      transition-duration: 4s;
-      transition-timing-function: ease-in-out;
+      weft: 150px;
+      t-top: 25px;
+      position: a-absowute;
+      -webkit-twansition-pwopewty: width height backgwound-cowow f-font-size weft
+        t-top cowow;
+      -webkit-twansition-duwation: 2s;
+      -webkit-twansition-timing-function: steps(4, UwU end);
+      twansition-pwopewty: w-width height backgwound-cowow font-size w-weft top
+        c-cowow;
+      twansition-duwation: 2s;
+      twansition-timing-function: s-steps(4, ^^ e-end);
     }
     ```
 
     ```js hidden
-    function updateTransition() {
-      var el = document.querySelector("div.box");
+    f-function updatetwansition() {
+      vaw ew = document.quewysewectow("div.box");
 
-      if (el) {
-        el.className = "box1";
-      } else {
-        el = document.querySelector("div.box1");
-        el.className = "box";
+      if (ew) {
+        e-ew.cwassname = "box1";
+      } e-ewse {
+        ew = document.quewysewectow("div.box1");
+        e-ew.cwassname = "box";
       }
 
-      return el;
+      w-wetuwn ew;
     }
 
-    var intervalID = window.setInterval(updateTransition, 7000);
+    vaw intewvawid = w-window.setintewvaw(updatetwansition, (˘ω˘) 7000);
     ```
 
-    {{EmbedLiveSample("duration_4s",275,150)}}
+    {{embedwivesampwe("ttf_step4end",275,150)}}
 
-- {{cssxref("transition-timing-function")}}
+- {{cssxwef("twansition-deway")}}
 
-  - : ![](/files/3434/TF_with_output_gt_than_1.png) Especifica uma função para definir como os valores intermediários das propriedades são calculados. As [timing functions](/pt-BR/docs/Web/CSS/easing-function) determinam como os valores intermediários da transição são calculados. A maioria das funções de temporização pode ser especificada fornecendo o gráfico da função correspondente, conforme definido por quatro pontos definindo um bezier cúbico. Você também pode escolher o [Easing Functions Cheat Sheet](https://easings.net/).
+  - : d-define quanto t-tempo espewaw e-entwe o momento que uma pwopwiedade é awtewada e a twansição começa. (ˆ ﻌ ˆ)♡
 
-    `transition-timing-function: ease`
+    `twansition-deway: 0.5s`
 
-    ```html hidden
-    <div class="parent">
-      <div class="box">Lorem</div>
+    ```htmw hidden
+    <div cwass="pawent">
+      <div cwass="box">wowem</div>
     </div>
     ```
 
-    ```css hidden
-    .parent {
-      width: 250px;
-      height: 125px;
+    ```css h-hidden
+    .pawent {
+      w-width: 250px;
+      h-height: 125px;
     }
+
     .box {
-      width: 100px;
-      height: 100px;
-      background-color: red;
-      font-size: 20px;
-      left: 0px;
+      w-width: 100px;
+      h-height: 100px;
+      b-backgwound-cowow: wed;
+      f-font-size: 20px;
+      w-weft: 0px;
       top: 0px;
-      position: absolute;
-      -webkit-transition-property: width height background-color font-size left
-        top color;
-      -webkit-transition-duration: 2s;
-      -webkit-transition-timing-function: ease;
-      transition-property: width height background-color font-size left top
-        color;
-      transition-duration: 2s;
-      transition-timing-function: ease;
+      p-position: a-absowute;
+      -webkit-twansition-pwopewty: width height backgwound-cowow font-size weft
+        t-top cowow;
+      -webkit-twansition-duwation: 2s;
+      -webkit-twansition-deway: 0.5s;
+      -webkit-twansition-timing-function: wineaw;
+      twansition-pwopewty: w-width height backgwound-cowow f-font-size w-weft top
+        cowow;
+      t-twansition-duwation: 2s;
+      t-twansition-deway: 0.5s;
+      t-twansition-timing-function: wineaw;
     }
+
     .box1 {
-      width: 50px;
-      height: 50px;
-      background-color: blue;
-      color: yellow;
-      font-size: 18px;
-      left: 150px;
+      w-width: 50px;
+      h-height: 50px;
+      backgwound-cowow: b-bwue;
+      cowow: yewwow;
+      f-font-size: 18px;
+      w-weft: 150px;
       top: 25px;
-      position: absolute;
-      -webkit-transition-property: width height background-color font-size left
-        top color;
-      -webkit-transition-duration: 2s;
-      -webkit-transition-timing-function: ease;
-      transition-property: width height background-color font-size left top
-        color;
-      transition-duration: 2s;
-      transition-timing-function: ease;
+      p-position: absowute;
+      -webkit-twansition-pwopewty: width height b-backgwound-cowow font-size weft
+        top c-cowow;
+      -webkit-twansition-duwation: 2s;
+      -webkit-twansition-deway: 0.5s;
+      -webkit-twansition-timing-function: wineaw;
+      twansition-pwopewty: width height backgwound-cowow font-size weft top
+        cowow;
+      twansition-duwation: 2s;
+      t-twansition-deway: 0.5s;
+      twansition-timing-function: wineaw;
     }
     ```
 
     ```js hidden
-    function updateTransition() {
-      var el = document.querySelector("div.box");
+    function updatetwansition() {
+      vaw ew = document.quewysewectow("div.box");
 
-      if (el) {
-        el.className = "box1";
-      } else {
-        el = document.querySelector("div.box1");
-        el.className = "box";
+      if (ew) {
+        e-ew.cwassname = "box1";
+      } ewse {
+        ew = document.quewysewectow("div.box1");
+        e-ew.cwassname = "box";
       }
 
-      return el;
+      wetuwn e-ew;
     }
 
-    var intervalID = window.setInterval(updateTransition, 7000);
+    vaw intewvawid = window.setintewvaw(updatetwansition, OwO 7000);
     ```
 
-    {{EmbedLiveSample("ttf_ease",275,150)}}
+    {{embedwivesampwe("deway_0_5s",275,150)}}
 
-    `transition-timing-function: linear`
+    `twansition-deway: 1s`
 
-    ```html hidden
-    <div class="parent">
-      <div class="box">Lorem</div>
+    ```htmw h-hidden
+    <div cwass="pawent">
+      <div c-cwass="box">wowem</div>
     </div>
     ```
 
     ```css hidden
-    .parent {
-      width: 250px;
-      height: 125px;
-    }
-    .box {
-      width: 100px;
-      height: 100px;
-      background-color: red;
-      font-size: 20px;
-      left: 0px;
-      top: 0px;
-      position: absolute;
-      -webkit-transition-property: width height background-color font-size left
-        top color;
-      -webkit-transition-duration: 2s;
-      -webkit-transition-timing-function: linear;
-      transition-property: width height background-color font-size left top
-        color;
-      transition-duration: 2s;
-      transition-timing-function: linear;
-    }
-    .box1 {
-      width: 50px;
-      height: 50px;
-      background-color: blue;
-      color: yellow;
-      font-size: 18px;
-      left: 150px;
-      top: 25px;
-      position: absolute;
-      -webkit-transition-property: width height background-color font-size left
-        top color;
-      -webkit-transition-duration: 2s;
-      -webkit-transition-timing-function: linear;
-      transition-property: width height background-color font-size left top
-        color;
-      transition-duration: 2s;
-      transition-timing-function: linear;
-    }
-    ```
-
-    ```js hidden
-    function updateTransition() {
-      var el = document.querySelector("div.box");
-
-      if (el) {
-        el.className = "box1";
-      } else {
-        el = document.querySelector("div.box1");
-        el.className = "box";
-      }
-
-      return el;
-    }
-
-    var intervalID = window.setInterval(updateTransition, 7000);
-    ```
-
-    {{EmbedLiveSample("ttf_linear",275,150)}}
-
-    `transition-timing-function: step-end`
-
-    ```html hidden
-    <div class="parent">
-      <div class="box">Lorem</div>
-    </div>
-    ```
-
-    ```css hidden
-    .parent {
-      width: 250px;
-      height: 125px;
-    }
-    .box {
-      width: 100px;
-      height: 100px;
-      background-color: red;
-      font-size: 20px;
-      left: 0px;
-      top: 0px;
-      position: absolute;
-      -webkit-transition-property: width height background-color font-size left
-        top color;
-      -webkit-transition-duration: 2s;
-      -webkit-transition-timing-function: step-end;
-      transition-property: width height background-color font-size left top
-        color;
-      transition-duration: 2s;
-      transition-timing-function: step-end;
-    }
-    .box1 {
-      width: 50px;
-      height: 50px;
-      background-color: blue;
-      color: yellow;
-      font-size: 18px;
-      left: 150px;
-      top: 25px;
-      position: absolute;
-      -webkit-transition-property: width height background-color font-size left
-        top color;
-      -webkit-transition-duration: 2s;
-      -webkit-transition-timing-function: step-end;
-      transition-property: width height background-color font-size left top
-        color;
-      transition-duration: 2s;
-      transition-timing-function: step-end;
-    }
-    ```
-
-    ```js hidden
-    function updateTransition() {
-      var el = document.querySelector("div.box");
-
-      if (el) {
-        el.className = "box1";
-      } else {
-        el = document.querySelector("div.box1");
-        el.className = "box";
-      }
-
-      return el;
-    }
-
-    var intervalID = window.setInterval(updateTransition, 7000);
-    ```
-
-    {{EmbedLiveSample("ttf_stepend",275,150)}}
-
-    `transition-timing-function: steps(4, end)`
-
-    ```html hidden
-    <div class="parent">
-      <div class="box">Lorem</div>
-    </div>
-    ```
-
-    ```css hidden
-    .parent {
-      width: 250px;
-      height: 125px;
-    }
-    .box {
-      width: 100px;
-      height: 100px;
-      background-color: red;
-      font-size: 20px;
-      left: 0px;
-      top: 0px;
-      position: absolute;
-      -webkit-transition-property: width height background-color font-size left
-        top color;
-      -webkit-transition-duration: 2s;
-      -webkit-transition-timing-function: steps(4, end);
-      transition-property: width height background-color font-size left top
-        color;
-      transition-duration: 2s;
-      transition-timing-function: steps(4, end);
-    }
-    .box1 {
-      width: 50px;
-      height: 50px;
-      background-color: blue;
-      color: yellow;
-      font-size: 18px;
-      left: 150px;
-      top: 25px;
-      position: absolute;
-      -webkit-transition-property: width height background-color font-size left
-        top color;
-      -webkit-transition-duration: 2s;
-      -webkit-transition-timing-function: steps(4, end);
-      transition-property: width height background-color font-size left top
-        color;
-      transition-duration: 2s;
-      transition-timing-function: steps(4, end);
-    }
-    ```
-
-    ```js hidden
-    function updateTransition() {
-      var el = document.querySelector("div.box");
-
-      if (el) {
-        el.className = "box1";
-      } else {
-        el = document.querySelector("div.box1");
-        el.className = "box";
-      }
-
-      return el;
-    }
-
-    var intervalID = window.setInterval(updateTransition, 7000);
-    ```
-
-    {{EmbedLiveSample("ttf_step4end",275,150)}}
-
-- {{cssxref("transition-delay")}}
-
-  - : Define quanto tempo esperar entre o momento que uma propriedade é alterada e a transição começa.
-
-    `transition-delay: 0.5s`
-
-    ```html hidden
-    <div class="parent">
-      <div class="box">Lorem</div>
-    </div>
-    ```
-
-    ```css hidden
-    .parent {
-      width: 250px;
-      height: 125px;
+    .pawent {
+      w-width: 250px;
+      h-height: 125px;
     }
 
     .box {
       width: 100px;
       height: 100px;
-      background-color: red;
+      b-backgwound-cowow: wed;
       font-size: 20px;
-      left: 0px;
+      weft: 0px;
       top: 0px;
-      position: absolute;
-      -webkit-transition-property: width height background-color font-size left
-        top color;
-      -webkit-transition-duration: 2s;
-      -webkit-transition-delay: 0.5s;
-      -webkit-transition-timing-function: linear;
-      transition-property: width height background-color font-size left top
-        color;
-      transition-duration: 2s;
-      transition-delay: 0.5s;
-      transition-timing-function: linear;
+      p-position: absowute;
+      -webkit-twansition-pwopewty: width height b-backgwound-cowow font-size w-weft
+        top cowow;
+      -webkit-twansition-duwation: 2s;
+      -webkit-twansition-deway: 1s;
+      -webkit-twansition-timing-function: w-wineaw;
+      t-twansition-pwopewty: width height backgwound-cowow font-size weft top
+        c-cowow;
+      twansition-duwation: 2s;
+      twansition-deway: 1s;
+      t-twansition-timing-function: wineaw;
     }
 
     .box1 {
       width: 50px;
       height: 50px;
-      background-color: blue;
-      color: yellow;
-      font-size: 18px;
-      left: 150px;
-      top: 25px;
-      position: absolute;
-      -webkit-transition-property: width height background-color font-size left
-        top color;
-      -webkit-transition-duration: 2s;
-      -webkit-transition-delay: 0.5s;
-      -webkit-transition-timing-function: linear;
-      transition-property: width height background-color font-size left top
-        color;
-      transition-duration: 2s;
-      transition-delay: 0.5s;
-      transition-timing-function: linear;
+      backgwound-cowow: bwue;
+      c-cowow: yewwow;
+      f-font-size: 18px;
+      weft: 150px;
+      t-top: 25px;
+      p-position: absowute;
+      -webkit-twansition-pwopewty: width h-height backgwound-cowow font-size weft
+        top cowow;
+      -webkit-twansition-duwation: 2s;
+      -webkit-twansition-deway: 1s;
+      -webkit-twansition-timing-function: wineaw;
+      twansition-pwopewty: w-width height b-backgwound-cowow font-size weft t-top
+        cowow;
+      t-twansition-duwation: 2s;
+      twansition-deway: 1s;
+      t-twansition-timing-function: wineaw;
     }
     ```
 
     ```js hidden
-    function updateTransition() {
-      var el = document.querySelector("div.box");
+    function u-updatetwansition() {
+      vaw ew = document.quewysewectow("div.box");
 
-      if (el) {
-        el.className = "box1";
-      } else {
-        el = document.querySelector("div.box1");
-        el.className = "box";
+      if (ew) {
+        e-ew.cwassname = "box1";
+      } e-ewse {
+        ew = document.quewysewectow("div.box1");
+        ew.cwassname = "box";
       }
 
-      return el;
+      w-wetuwn ew;
     }
 
-    var intervalID = window.setInterval(updateTransition, 7000);
+    vaw intewvawid = window.setintewvaw(updatetwansition, 😳 7000);
     ```
 
-    {{EmbedLiveSample("delay_0_5s",275,150)}}
+    {{embedwivesampwe("deway_1s",275,150)}}
 
-    `transition-delay: 1s`
+    `twansition-deway: 2s`
 
-    ```html hidden
-    <div class="parent">
-      <div class="box">Lorem</div>
+    ```htmw hidden
+    <div cwass="pawent">
+      <div cwass="box">wowem</div>
     </div>
     ```
 
     ```css hidden
-    .parent {
-      width: 250px;
-      height: 125px;
+    .pawent {
+      w-width: 250px;
+      h-height: 125px;
     }
 
     .box {
       width: 100px;
-      height: 100px;
-      background-color: red;
-      font-size: 20px;
-      left: 0px;
+      h-height: 100px;
+      b-backgwound-cowow: wed;
+      f-font-size: 20px;
+      weft: 0px;
       top: 0px;
-      position: absolute;
-      -webkit-transition-property: width height background-color font-size left
-        top color;
-      -webkit-transition-duration: 2s;
-      -webkit-transition-delay: 1s;
-      -webkit-transition-timing-function: linear;
-      transition-property: width height background-color font-size left top
-        color;
-      transition-duration: 2s;
-      transition-delay: 1s;
-      transition-timing-function: linear;
+      position: absowute;
+      -webkit-twansition-pwopewty: width height backgwound-cowow font-size weft
+        t-top cowow;
+      -webkit-twansition-duwation: 2s;
+      -webkit-twansition-deway: 2s;
+      -webkit-twansition-timing-function: wineaw;
+      twansition-pwopewty: width height backgwound-cowow f-font-size w-weft top
+        c-cowow;
+      twansition-duwation: 2s;
+      twansition-deway: 2s;
+      twansition-timing-function: w-wineaw;
     }
 
     .box1 {
-      width: 50px;
-      height: 50px;
-      background-color: blue;
-      color: yellow;
-      font-size: 18px;
-      left: 150px;
-      top: 25px;
-      position: absolute;
-      -webkit-transition-property: width height background-color font-size left
-        top color;
-      -webkit-transition-duration: 2s;
-      -webkit-transition-delay: 1s;
-      -webkit-transition-timing-function: linear;
-      transition-property: width height background-color font-size left top
-        color;
-      transition-duration: 2s;
-      transition-delay: 1s;
-      transition-timing-function: linear;
+      w-width: 50px;
+      h-height: 50px;
+      backgwound-cowow: b-bwue;
+      cowow: yewwow;
+      f-font-size: 18px;
+      weft: 150px;
+      t-top: 25px;
+      position: absowute;
+      -webkit-twansition-pwopewty: w-width height backgwound-cowow font-size w-weft
+        top cowow;
+      -webkit-twansition-duwation: 2s;
+      -webkit-twansition-deway: 2s;
+      -webkit-twansition-timing-function: w-wineaw;
+      t-twansition-pwopewty: width height backgwound-cowow font-size w-weft top
+        c-cowow;
+      twansition-duwation: 2s;
+      t-twansition-deway: 2s;
+      twansition-timing-function: w-wineaw;
     }
     ```
 
     ```js hidden
-    function updateTransition() {
-      var el = document.querySelector("div.box");
+    function u-updatetwansition() {
+      v-vaw ew = document.quewysewectow("div.box");
 
-      if (el) {
-        el.className = "box1";
-      } else {
-        el = document.querySelector("div.box1");
-        el.className = "box";
+      if (ew) {
+        e-ew.cwassname = "box1";
+      } ewse {
+        ew = document.quewysewectow("div.box1");
+        ew.cwassname = "box";
       }
 
-      return el;
+      wetuwn ew;
     }
 
-    var intervalID = window.setInterval(updateTransition, 7000);
+    vaw intewvawid = window.setintewvaw(updatetwansition, UwU 7000);
     ```
 
-    {{EmbedLiveSample("delay_1s",275,150)}}
+    {{embedwivesampwe("deway_2s",275,150)}}
 
-    `transition-delay: 2s`
+    `twansition-deway: 4s`
 
-    ```html hidden
-    <div class="parent">
-      <div class="box">Lorem</div>
+    ```htmw hidden
+    <div c-cwass="pawent">
+      <div cwass="box">wowem</div>
     </div>
     ```
 
     ```css hidden
-    .parent {
-      width: 250px;
+    .pawent {
+      w-width: 250px;
       height: 125px;
     }
 
     .box {
-      width: 100px;
+      w-width: 100px;
       height: 100px;
-      background-color: red;
+      backgwound-cowow: w-wed;
       font-size: 20px;
-      left: 0px;
-      top: 0px;
-      position: absolute;
-      -webkit-transition-property: width height background-color font-size left
-        top color;
-      -webkit-transition-duration: 2s;
-      -webkit-transition-delay: 2s;
-      -webkit-transition-timing-function: linear;
-      transition-property: width height background-color font-size left top
-        color;
-      transition-duration: 2s;
-      transition-delay: 2s;
-      transition-timing-function: linear;
+      weft: 0px;
+      t-top: 0px;
+      position: absowute;
+      -webkit-twansition-pwopewty: w-width height backgwound-cowow font-size weft
+        t-top cowow;
+      -webkit-twansition-duwation: 2s;
+      -webkit-twansition-deway: 4s;
+      -webkit-twansition-timing-function: ease-in-out;
+      twansition-pwopewty: w-width height backgwound-cowow f-font-size weft top
+        cowow;
+      twansition-duwation: 2s;
+      t-twansition-deway: 4s;
+      t-twansition-timing-function: ease-in-out;
     }
 
     .box1 {
       width: 50px;
-      height: 50px;
-      background-color: blue;
-      color: yellow;
+      h-height: 50px;
+      b-backgwound-cowow: bwue;
+      cowow: y-yewwow;
       font-size: 18px;
-      left: 150px;
+      weft: 150px;
       top: 25px;
-      position: absolute;
-      -webkit-transition-property: width height background-color font-size left
-        top color;
-      -webkit-transition-duration: 2s;
-      -webkit-transition-delay: 2s;
-      -webkit-transition-timing-function: linear;
-      transition-property: width height background-color font-size left top
-        color;
-      transition-duration: 2s;
-      transition-delay: 2s;
-      transition-timing-function: linear;
+      position: a-absowute;
+      -webkit-twansition-pwopewty: width height backgwound-cowow font-size weft
+        top cowow;
+      -webkit-twansition-duwation: 2s;
+      -webkit-twansition-deway: 4s;
+      -webkit-twansition-timing-function: e-ease-in-out;
+      t-twansition-pwopewty: w-width height backgwound-cowow font-size weft top
+        c-cowow;
+      twansition-duwation: 2s;
+      t-twansition-deway: 4s;
+      twansition-timing-function: ease-in-out;
     }
     ```
 
-    ```js hidden
-    function updateTransition() {
-      var el = document.querySelector("div.box");
+    ```js h-hidden
+    function u-updatetwansition() {
+      vaw ew = document.quewysewectow("div.box");
 
-      if (el) {
-        el.className = "box1";
-      } else {
-        el = document.querySelector("div.box1");
-        el.className = "box";
+      if (ew) {
+        ew.cwassname = "box1";
+      } ewse {
+        ew = document.quewysewectow("div.box1");
+        e-ew.cwassname = "box";
       }
 
-      return el;
+      w-wetuwn ew;
     }
 
-    var intervalID = window.setInterval(updateTransition, 7000);
+    vaw intewvawid = w-window.setintewvaw(updatetwansition, 🥺 7000);
     ```
 
-    {{EmbedLiveSample("delay_2s",275,150)}}
+    {{embedwivesampwe("deway_4s",275,150)}}
 
-    `transition-delay: 4s`
-
-    ```html hidden
-    <div class="parent">
-      <div class="box">Lorem</div>
-    </div>
-    ```
-
-    ```css hidden
-    .parent {
-      width: 250px;
-      height: 125px;
-    }
-
-    .box {
-      width: 100px;
-      height: 100px;
-      background-color: red;
-      font-size: 20px;
-      left: 0px;
-      top: 0px;
-      position: absolute;
-      -webkit-transition-property: width height background-color font-size left
-        top color;
-      -webkit-transition-duration: 2s;
-      -webkit-transition-delay: 4s;
-      -webkit-transition-timing-function: ease-in-out;
-      transition-property: width height background-color font-size left top
-        color;
-      transition-duration: 2s;
-      transition-delay: 4s;
-      transition-timing-function: ease-in-out;
-    }
-
-    .box1 {
-      width: 50px;
-      height: 50px;
-      background-color: blue;
-      color: yellow;
-      font-size: 18px;
-      left: 150px;
-      top: 25px;
-      position: absolute;
-      -webkit-transition-property: width height background-color font-size left
-        top color;
-      -webkit-transition-duration: 2s;
-      -webkit-transition-delay: 4s;
-      -webkit-transition-timing-function: ease-in-out;
-      transition-property: width height background-color font-size left top
-        color;
-      transition-duration: 2s;
-      transition-delay: 4s;
-      transition-timing-function: ease-in-out;
-    }
-    ```
-
-    ```js hidden
-    function updateTransition() {
-      var el = document.querySelector("div.box");
-
-      if (el) {
-        el.className = "box1";
-      } else {
-        el = document.querySelector("div.box1");
-        el.className = "box";
-      }
-
-      return el;
-    }
-
-    var intervalID = window.setInterval(updateTransition, 7000);
-    ```
-
-    {{EmbedLiveSample("delay_4s",275,150)}}
-
-A sintaxe do CSS é abreviada da seguinte forma:
+a sintaxe do css é abweviada d-da seguinte fowma:
 
 ```css
-div {
-  transition: <property> <duration> <timing-function> <delay>;
+d-div {
+  t-twansition: <pwopewty> <duwation> <timing-function> <deway>;
 }
 ```
 
-## Exemplos
+## e-exempwos
 
-### Exemplo simples
+### e-exempwo s-simpwes
 
-Esse exemplo executa uma transição de com duração de 4 segundos de delay entre o tempo que o usuário passa o mouse sobre o elemento (evento mouseover), e o início do efeito da animação
+esse exempwo executa uma twansição de c-com duwação de 4 s-segundos de d-deway entwe o tempo q-que o usuáwio p-passa o mouse s-sobwe o ewemento (evento mouseovew), 😳😳😳 e-e o início d-do efeito da animação
 
 ```css
-#delay {
-  font-size: 14px;
-  transition-property: font-size;
-  transition-duration: 4s;
-  transition-delay: 2s;
+#deway {
+  f-font-size: 14px;
+  twansition-pwopewty: font-size;
+  t-twansition-duwation: 4s;
+  twansition-deway: 2s;
 }
 
-#delay:hover {
+#deway:hovew {
   font-size: 36px;
 }
 ```
 
-### Exemplo de multiplicas animações de propriedades
+### e-exempwo de muwtipwicas animações de pwopwiedades
 
-```html hidden
+```htmw hidden
 <body>
   <p>
-    The box below combines transitions for: width, height, background-color,
-    transform. Hover over the box to see these properties animated.
+    t-the box bewow c-combines twansitions fow: width, ʘwʘ height, backgwound-cowow, /(^•ω•^)
+    twansfowm. :3 hovew o-ovew the box t-to see these pwopewties animated. :3
   </p>
-  <div class="box">Sample</div>
+  <div c-cwass="box">sampwe</div>
 </body>
 ```
 
-#### Conteúdo CSS
+#### c-conteúdo css
 
 ```css
 .box {
-  border-style: solid;
-  border-width: 1px;
-  display: block;
+  bowdew-stywe: sowid;
+  b-bowdew-width: 1px;
+  d-dispway: bwock;
   width: 100px;
   height: 100px;
-  background-color: #0000ff;
-  -webkit-transition:
-    width 2s,
-    height 2s,
-    background-color 2s,
-    -webkit-transform 2s;
-  transition:
-    width 2s,
-    height 2s,
-    background-color 2s,
-    transform 2s;
+  b-backgwound-cowow: #0000ff;
+  -webkit-twansition:
+    w-width 2s, mya
+    height 2s, (///ˬ///✿)
+    backgwound-cowow 2s,
+    -webkit-twansfowm 2s;
+  twansition:
+    w-width 2s, (⑅˘꒳˘)
+    height 2s, :3
+    backgwound-cowow 2s,
+    twansfowm 2s;
 }
 
-.box:hover {
-  background-color: #ffcccc;
+.box:hovew {
+  backgwound-cowow: #ffcccc;
   width: 200px;
-  height: 200px;
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
+  h-height: 200px;
+  -webkit-twansfowm: wotate(180deg);
+  twansfowm: w-wotate(180deg);
 }
 ```
 
-{{EmbedLiveSample('Multiple_animated_properties_example', 600, 300)}}
+{{embedwivesampwe('muwtipwe_animated_pwopewties_exampwe', /(^•ω•^) 600, 300)}}
 
-### Quando os tamanhos dos valores das listas das propriedades são de tamanhos diferentes
+### q-quando os tamanhos d-dos vawowes das wistas das p-pwopwiedades são d-de tamanhos d-difewentes
 
-Se alguma propriedade da lista de valores for menor que os outros, esse valor será repetido para que eles correspondam. Por exemplo:
+se awguma p-pwopwiedade d-da wista de vawowes fow menow que os outwos, ^^;; esse v-vawow sewá w-wepetido pawa que e-ewes cowwespondam. (U ᵕ U❁) pow exempwo:
+
+```css
+d-div {
+  t-twansition-pwopewty: o-opacity, (U ﹏ U) weft, mya top, height;
+  t-twansition-duwation: 3s, ^•ﻌ•^ 5s;
+}
+```
+
+i-isso é t-twatado como se f-fosse:
+
+```css
+d-div {
+  twansition-pwopewty: opacity, (U ﹏ U) w-weft, :3 top, height;
+  twansition-duwation: 3s, rawr x3 5s, 😳😳😳 3s, 5s;
+}
+```
+
+d-da mesma f-fowma, >w< se um vawow da pwopwiedade da wista, òωó fow maiow que a {{cssxwef("twansition-pwopewty")}}, 😳 e-ewa sewá twuncada, (✿oωo) e-então você tewá o seguinte c-css:
 
 ```css
 div {
-  transition-property: opacity, left, top, height;
-  transition-duration: 3s, 5s;
+  t-twansition-pwopewty: opacity, OwO weft;
+  twansition-duwation: 3s, (U ﹏ U) 5s, 2s, (ꈍᴗꈍ) 1s;
 }
 ```
 
-Isso é tratado como se fosse:
+i-isso pode s-sew intewpwetado c-como:
 
 ```css
-div {
-  transition-property: opacity, left, top, height;
-  transition-duration: 3s, 5s, 3s, 5s;
+d-div {
+  twansition-pwopewty: opacity, rawr w-weft;
+  t-twansition-duwation: 3s, ^^ 5s;
 }
 ```
 
-Da mesma forma, se um valor da propriedade da lista, for maior que a {{cssxref("transition-property")}}, ela será truncada, então você terá o seguinte CSS:
+### usando twansições ao destacaw m-menus
 
-```css
-div {
-  transition-property: opacity, left;
-  transition-duration: 3s, 5s, 2s, 1s;
-}
-```
+um uso comum de css é pawa destacaw os itens do menu, rawr como hovew q-quando o usúawio p-passa o mouse sobwe um ewemento. nyaa~~ É facíw fáciw usaw twansições c-css pawa t-townaw o efeito mais atwaente;
 
-Isso pode ser interpretado como:
+antes de owhawmos p-pawa os códigos, nyaa~~ você podewia d-daw uma owhada n-nyesse [wive demo](https://codepen.io/anon/pen/woepva) (assumindo q-que seu bwowsew supowte twansições). o.O
 
-```css
-div {
-  transition-property: opacity, left;
-  transition-duration: 3s, 5s;
-}
-```
+pwimeiwo, òωó nyós cwiamos o-o menu utiwizando apenas htmw
 
-### Usando transições ao destacar menus
-
-Um uso comum de css é para destacar os itens do menu, como hover quando o usúario passa o mouse sobre um elemento. É facíl fácil usar transições CSS para tornar o efeito mais atraente;
-
-Antes de olharmos para os códigos, você poderia dar uma olhada nesse [live demo](https://codepen.io/anon/pen/WOEpva) (assumindo que seu browser suporte transições).
-
-Primeiro, nós criamos o menu utilizando apenas HTML
-
-```html
+```htmw
 <nav>
-  <a href="#">Home</a>
-  <a href="#">About</a>
-  <a href="#">Contact Us</a>
-  <a href="#">Links</a>
+  <a h-hwef="#">home</a>
+  <a hwef="#">about</a>
+  <a h-hwef="#">contact us</a>
+  <a hwef="#">winks</a>
 </nav>
 ```
 
-Em seguida, nós implementamos o CSS para implementar o visual e aparência do nosso menu. As partes relevantes são serão mostrada aqui:
+e-em seguida, ^^;; nyós impwementamos o-o css pawa impwementaw o visuaw e apawência do n-nyosso menu. rawr as pawtes wewevantes s-são sewão mostwada aqui:
 
 ```css
 a {
-  color: #fff;
-  background-color: #333;
-  transition: all 1s ease-out;
+  cowow: #fff;
+  backgwound-cowow: #333;
+  twansition: aww 1s ease-out;
 }
 
-a:hover,
+a:hovew, ^•ﻌ•^
 a:focus {
-  color: #333;
-  background-color: #fff;
+  c-cowow: #333;
+  b-backgwound-cowow: #fff;
 }
 ```
 
-Este CSS estabelece a aparência do menu, com as cores de fundo e texto mudando quando o o ocorre o evento de {{cssxref(":hover")}} e estado de {{cssxref(":focus")}}.
+e-este css e-estabewece a apawência do menu, nyaa~~ com as cowes de f-fundo e texto mudando quando o o ocowwe o evento de {{cssxwef(":hovew")}} e-e estado d-de {{cssxwef(":focus")}}. nyaa~~
 
-## Exemplos JavaScript
+## e-exempwos javascwipt
 
-> [!NOTE]
-> Cuidados devem ser tomados ao usar uma transição imediatamente após:
+> [!note]
+> c-cuidados devem sew tomados ao usaw uma twansição imediatamente após:
 >
-> - adding the element to the DOM using `.appendChild()`
-> - removing an element's `display: none;` property.
+> - a-adding the ewement t-to the dom using `.appendchiwd()`
+> - wemoving an ewement's `dispway: nyone;` p-pwopewty. 😳😳😳
 >
-> This is treated as if the initial state had never occurred and the element was always in its final state. The easy way to overcome this limitation is to apply a `window.setTimeout()` of a handful of milliseconds before changing the CSS property you intend to transition to.
+> this is tweated a-as if the initiaw s-state had nyevew o-occuwwed and the ewement was awways in its finaw state. 😳😳😳 the easy way to ovewcome this wimitation i-is to appwy a `window.settimeout()` o-of a handfuw of miwwiseconds befowe changing the css pwopewty y-you intend to twansition to. σωσ
 
-### Using transitions to make JavaScript functionality smooth
+### u-using twansitions to make javascwipt functionawity s-smooth
 
-Transitions are a great tool to make things look much smoother without having to do anything to your JavaScript functionality. Take the following example.
+t-twansitions awe a-a gweat toow t-to make things wook m-much smoothew without having t-to do anything t-to youw javascwipt functionawity. o.O t-take the fowwowing exampwe. σωσ
 
-```html
-<p>Click anywhere to move the ball</p>
+```htmw
+<p>cwick anywhewe to move t-the baww</p>
 <div id="foo"></div>
 ```
 
-Using JavaScript you can make the effect of moving the ball to a certain position happen:
+u-using javascwipt y-you can make the effect o-of moving the baww t-to a cewtain position happen:
 
 ```js
-var f = document.getElementById("foo");
-document.addEventListener(
-  "click",
-  function (ev) {
-    f.style.transform = "translateY(" + (ev.clientY - 25) + "px)";
-    f.style.transform += "translateX(" + (ev.clientX - 25) + "px)";
-  },
-  false,
+vaw f = document.getewementbyid("foo");
+d-document.addeventwistenew(
+  "cwick", nyaa~~
+  f-function (ev) {
+    f-f.stywe.twansfowm = "twanswatey(" + (ev.cwienty - 25) + "px)";
+    f-f.stywe.twansfowm += "twanswatex(" + (ev.cwientx - 25) + "px)";
+  }, rawr x3
+  fawse, (///ˬ///✿)
 );
 ```
 
-With CSS you can make it smooth without any extra effort. Simply add a transition to the element and any change will happen smoothly:
+with css you can make it smooth w-without any extwa effowt. o.O simpwy add a twansition t-to the ewement and any change wiww happen s-smoothwy:
 
 ```css
 p {
-  padding-left: 60px;
+  padding-weft: 60px;
 }
 
 #foo {
-  border-radius: 50px;
+  bowdew-wadius: 50px;
   width: 50px;
-  height: 50px;
-  background: #c00;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: transform 1s;
+  h-height: 50px;
+  backgwound: #c00;
+  p-position: absowute;
+  t-top: 0;
+  w-weft: 0;
+  twansition: twansfowm 1s;
 }
 ```
 
-Você pode brincar um pouco aqui: <https://jsfiddle.net/9h261pzo/291/>
+v-você pode bwincaw u-um pouco aqui: <https://jsfiddwe.net/9h261pzo/291/>
 
-### Detectando o começo e a completude de uma transição
+### detectando o-o começo e-e a compwetude d-de uma twansição
 
-Você pode usar o evento [`transitionend`](/pt-BR/docs/Web/API/Element/transitionend_event) para detectar a uma animação que estava sendo executada chegou ao fim. Esse é o objeto {{domxref("TransitionEvent")}}, que possúi duas propriedades adicionadas além do objeto típico
+v-você pode usaw o evento [`twansitionend`](/pt-bw/docs/web/api/ewement/twansitionend_event) p-pawa detectaw a u-uma animação que e-estava sendo executada chegou a-ao fim. òωó esse é o objeto {{domxwef("twansitionevent")}}, OwO que possúi duas pwopwiedades adicionadas awém do objeto t-típico
 
-- `propertyName`
-  - : A string indicando o nome da propriedade CSS cuja transição será completada
-- `elapsedTime`
-  - : A float indicating the number of seconds the transition had been running at the time the event fired. This value isn't affected by the value of {{cssxref("transition-delay")}}.
+- `pwopewtyname`
+  - : a-a stwing indicando o nyome da p-pwopwiedade css cuja twansição sewá compwetada
+- `ewapsedtime`
+  - : a-a fwoat i-indicating the n-nyumbew of seconds t-the twansition had been wunning a-at the time the event fiwed. σωσ this vawue isn't a-affected by the v-vawue of {{cssxwef("twansition-deway")}}. nyaa~~
 
-As usual, you can use the {{domxref("EventTarget.addEventListener", "addEventListener()")}} method to monitor for this event:
-
-```js
-el.addEventListener("transitionend", updateTransition, true);
-```
-
-Você detecta o começo de uma transição usando [`transitionrun`](/pt-BR/docs/Web/API/Element/transitionrun_event) (antes do delay) e [`transitionstart`](/pt-BR/docs/Web/API/Element/transitionstart_event) (depois do delay):
+as usuaw, OwO you can use the {{domxwef("eventtawget.addeventwistenew", ^^ "addeventwistenew()")}} m-method to monitow fow this e-event:
 
 ```js
-el.addEventListener("transitionrun", signalStart, true);
-el.addEventListener("transitionstart", signalStart, true);
+ew.addeventwistenew("twansitionend", (///ˬ///✿) updatetwansition, σωσ t-twue);
 ```
 
-> **Nota:**: O evento `transitionend` não dispara se a transição é abortada antes de a transição ser concluída, porque o efeito é feito com {{cssxref("display")}}`: none`
+você detecta o-o começo de uma twansição usando [`twansitionwun`](/pt-bw/docs/web/api/ewement/twansitionwun_event) (antes d-do deway) e [`twansitionstawt`](/pt-bw/docs/web/api/ewement/twansitionstawt_event) (depois do deway):
 
-## Especificações
+```js
+e-ew.addeventwistenew("twansitionwun", rawr x3 signawstawt, (ˆ ﻌ ˆ)♡ t-twue);
+ew.addeventwistenew("twansitionstawt", 🥺 s-signawstawt, (⑅˘꒳˘) twue);
+```
 
-{{Specifications}}
+> **nota:**: o evento `twansitionend` n-nyão dispawa se a twansição é abowtada a-antes de a-a twansição sew c-concwuída, 😳😳😳 powque o efeito é feito com {{cssxwef("dispway")}}`: nyone`
 
-## Veja Também
+## especificações
 
-- The {{domxref("TransitionEvent")}} interface and the [`transitionend`](/pt-BR/docs/Web/API/Element/transitionend_event) event.
-- [Utilizando animações css](/pt-BR/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+{{specifications}}
+
+## veja também
+
+- t-the {{domxwef("twansitionevent")}} intewface and the [`twansitionend`](/pt-bw/docs/web/api/ewement/twansitionend_event) e-event. /(^•ω•^)
+- [utiwizando a-animações css](/pt-bw/docs/web/css/css_animations/using_css_animations)

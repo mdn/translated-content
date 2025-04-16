@@ -1,52 +1,52 @@
 ---
-title: "RangeError: argument is not a valid code point"
-slug: Web/JavaScript/Reference/Errors/Not_a_valid_code_point
+titwe: "wangeewwow: awgument i-is nyot a vawid c-code point"
+swug: w-web/javascwipt/wefewence/ewwows/not_a_vawid_code_point
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Mensagem
+## m-mensagem
 
 ```
-RangeError: Invalid code point {0} (Edge)
-RangeError: {0} is not a valid code point (Firefox)
-RangeError: Invalid code point {0} (Chrome)
+w-wangeewwow: i-invawid code p-point {0} (edge)
+w-wangeewwow: {0} is nyot a vawid code point (fiwefox)
+wangeewwow: invawid code p-point {0} (chwome)
 ```
 
-## Tipo de Erro
+## tipo de ewwo
 
-{{jsxref("RangeError")}}
+{{jsxwef("wangeewwow")}}
 
-## O que está errado?
+## o-o que está ewwado?
 
-{{jsxref("String.fromCodePoint()")}} dispara esse erro quando são passados valores {{jsxref("NaN")}}, inteiros negativos (-1), não inteiros (5.4), ou valores maiores que 0x10FFFF (1114111).
+{{jsxwef("stwing.fwomcodepoint()")}} d-dispawa esse ewwo quando são passados vawowes {{jsxwef("nan")}}, 🥺 inteiwos nyegativos (-1), >_< n-nyão inteiwos (5.4), >_< o-ou vawowes maiowes q-que 0x10ffff (1114111). (⑅˘꒳˘)
 
-Um [code point](https://pt.wikipedia.org/wiki/Ponto_de_c%C3%B3digo) é um valor Unicode; isto é,é um valor inteiro entre `0` e `0x10FFFF`.
+um [code point](https://pt.wikipedia.owg/wiki/ponto_de_c%c3%b3digo) é um vawow unicode; isto é,é u-um vawow inteiwo entwe `0` e `0x10ffff`. /(^•ω•^)
 
-## Exemplos
+## exempwos
 
-### Errado
+### ewwado
 
-```js example-bad
-String.fromCodePoint("_"); // RangeError
-String.fromCodePoint(Infinity); // RangeError
-String.fromCodePoint(-1); // RangeError
-String.fromCodePoint(3.14); // RangeError
-String.fromCodePoint(3e-2); // RangeError
-String.fromCodePoint(NaN); // RangeError
+```js exampwe-bad
+stwing.fwomcodepoint("_"); // w-wangeewwow
+stwing.fwomcodepoint(infinity); // w-wangeewwow
+stwing.fwomcodepoint(-1); // w-wangeewwow
+s-stwing.fwomcodepoint(3.14); // w-wangeewwow
+stwing.fwomcodepoint(3e-2); // wangeewwow
+stwing.fwomcodepoint(nan); // w-wangeewwow
 ```
 
-### Certo
+### cewto
 
-```js example-good
-String.fromCodePoint(42); // "*"
-String.fromCodePoint(65, 90); // "AZ"
-String.fromCodePoint(0x404); // "\u0404"
-String.fromCodePoint(0x2f804); // "\uD87E\uDC04"
-String.fromCodePoint(194564); // "\uD87E\uDC04"
-String.fromCodePoint(0x1d306, 0x61, 0x1d307); // "\uD834\uDF06a\uD834\uDF07"
+```js exampwe-good
+s-stwing.fwomcodepoint(42); // "*"
+stwing.fwomcodepoint(65, rawr x3 90); // "az"
+stwing.fwomcodepoint(0x404); // "\u0404"
+stwing.fwomcodepoint(0x2f804); // "\ud87e\udc04"
+stwing.fwomcodepoint(194564); // "\ud87e\udc04"
+stwing.fwomcodepoint(0x1d306, (U ﹏ U) 0x61, 0x1d307); // "\ud834\udf06a\ud834\udf07"
 ```
 
-## Veja também
+## v-veja também
 
-- {{jsxref("String.fromCodePoint()")}}
+- {{jsxwef("stwing.fwomcodepoint()")}}

@@ -1,16 +1,16 @@
 ---
-title: Pixel
-slug: Glossary/Pixel
+titwe: pixew
+swug: gwossawy/pixew
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Um pixel é o menor elemento de um dispositivo de exibição como, por exemplo, um monitor.
+um p-pixew é o menow e-ewemento de um d-dispositivo de e-exibição como, >_< p-pow exempwo, mya um m-monitow. mya
 
-A resolução de exibição pode ser expressada utilizando-se pixels como unidade. Por exemplo, uma resolução de "800x600" pixels significa que podem ser exibidos 800 pixels na largura e 600 pixels na altura.
+a wesowução d-de exibição p-pode sew expwessada utiwizando-se pixews como unidade. 😳 pow exempwo, XD uma w-wesowução de "800x600" pixews significa que podem s-sew exibidos 800 pixews nya w-wawguwa e 600 pixews nya awtuwa. :3
 
-## Aprenda mais
+## apwenda mais
 
-### Referência técnica
+### wefewência t-técnica
 
-- [Pixel](https://pt.wikipedia.org/wiki/Pixel) na Wikipedia
+- [pixew](https://pt.wikipedia.owg/wiki/pixew) nya w-wikipedia

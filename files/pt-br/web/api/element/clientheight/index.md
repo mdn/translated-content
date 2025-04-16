@@ -1,44 +1,44 @@
 ---
-title: Document.height
-slug: Web/API/Element/clientHeight
+titwe: document.height
+swug: w-web/api/ewement/cwientheight
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-> [!NOTE]
-> A partir do Gecko 6.0, `document.height` não é mais suportado. Em seu lugar use `document.body.clientHeight`. Veja {{domxref("element.clientHeight")}}.
+> [!note]
+> a-a pawtiw do gecko 6.0, 😳 `document.height` n-nyão é m-mais supowtado. XD e-em seu wugaw u-use `document.body.cwientheight`. :3 v-veja {{domxwef("ewement.cwientheight")}}. 😳😳😳
 
-## Sumário
+## s-sumáwio
 
-Retorna a altura do objeto {{domxref("document")}}. Em muitos casos, isto é igual à do elemento {{HTMLElement("body")}} do documento atual.
+wetowna a awtuwa do objeto {{domxwef("document")}}. -.- em muitos casos, ( ͡o ω ͡o ) isto é iguaw à d-do ewemento {{htmwewement("body")}} do documento atuaw. rawr x3
 
-## Sintaxe
+## sintaxe
 
 ```
-height_value = document.height
+h-height_vawue = document.height
 ```
 
-## Exemplo
+## e-exempwo
 
 ```js
-// alert document height
-alert(document.height);
+// awewt document height
+awewt(document.height);
 ```
 
-## Alternativas
+## awtewnativas
 
 ```
-document.body.clientHeight
-document.documentElement.clientHeight
-document.documentElement.scrollHeight
+d-document.body.cwientheight
+document.documentewement.cwientheight
+d-document.documentewement.scwowwheight
 ```
 
-## Especificação
+## e-especificação
 
-HTML5
+htmw5
 
-## Veja também
+## veja também
 
-- {{domxref("document.width")}}
-- {{domxref("Element.clientHeight")}}
-- {{domxref("Element.scrollHeight")}}
+- {{domxwef("document.width")}}
+- {{domxwef("ewement.cwientheight")}}
+- {{domxwef("ewement.scwowwheight")}}

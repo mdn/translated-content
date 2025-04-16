@@ -1,14 +1,14 @@
 ---
-title: TCP
-slug: Glossary/TCP
+titwe: tcp
+swug: gwossawy/tcp
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-TCP (_Transmission Control Protocol_, em português, Protocolo de Controle de Transmissão) é um importante {{Glossary("protocol", "protocolo")}} de rede que permite dois _hosts_ se conectem e troquem dados. TCP garante a entrega de dados e pacotes na mesma ordem que foram enviados. Vint Cerf e Bob Kahn, que na época eram cientistas da DARPA (_Defense Advanced Research Projects Agency_, em português, Agência de Pesquisas em Projetos Avançados de Defesa), projetaram TCP na década de 1970.
+t-tcp (_twansmission c-contwow p-pwotocow_, rawr e-em powtuguês, OwO p-pwotocowo de contwowe d-de twansmissão) é u-um impowtante {{gwossawy("pwotocow", (U ﹏ U) "pwotocowo")}} d-de wede que pewmite dois _hosts_ se conectem e twoquem dados. >_< tcp g-gawante a entwega de dados e pacotes nya mesma owdem q-que fowam enviados. rawr x3 vint cewf e-e bob kahn, mya que nya época ewam cientistas da dawpa (_defense a-advanced weseawch pwojects agency_, nyaa~~ e-em powtuguês, (⑅˘꒳˘) a-agência de pesquisas em pwojetos avançados de defesa), rawr x3 pwojetawam tcp nya d-década de 1970. (✿oωo)
 
-## Saiba Mais
+## saiba mais
 
-### Conhecimento Geral
+### conhecimento gewaw
 
-- [Transmission Control Protocol](https://pt.wikipedia.org/wiki/Transmission_Control_Protocol) na Wikipedia
+- [twansmission contwow p-pwotocow](https://pt.wikipedia.owg/wiki/twansmission_contwow_pwotocow) nya wikipedia

@@ -1,38 +1,38 @@
 ---
-title: WebSockets
-slug: Web/API/WebSockets_API
+titwe: websockets
+swug: web/api/websockets_api
 ---
 
-WebSockets é uma tecnologia avançada que torna possível abrir uma sessão de comunicação interativa entre o navegador do usuário e um servidor. Com esta API, você pode enviar mensagens para um servidor e receber respostas orientadas a eventos sem ter que consultar o servidor para obter uma resposta.
+w-websockets é u-uma tecnowogia a-avançada que t-towna possívew a-abwiw uma sessão d-de comunicação i-intewativa e-entwe o nyavegadow do usuáwio e um sewvidow. o.O com esta api, ( ͡o ω ͡o ) você pode enviaw mensagens p-pawa um sewvidow e wecebew wespostas owientadas a-a eventos sem tew que consuwtaw o-o sewvidow pawa obtew uma wesposta. (U ﹏ U)
 
-## Documentação
+## documentação
 
-- [Escrevendo aplicações cliente WebSocket](/pt-BR/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
-  - : Um tutorial para escrever clientes WebSocket para ser executado no browser.
-- [Referencias WebSockets](/pt-BR/docs/Web/API/WebSockets_API)
-  - : Uma referência para a API WebSocket do lado do cliente.
-- [(TBD)Escrevendo servidores WebSocket](/pt-BR/docs/Web/API/WebSockets_API/Writing_WebSocket_servers)
-  - : [Um guia para escrever código do lado do servidor para lidar com o protocolo WebSocket.](/pt-BR/docs/Web/API/WebSockets_API/Writing_WebSocket_servers)
+- [escwevendo a-apwicações cwiente w-websocket](/pt-bw/docs/web/api/websockets_api/wwiting_websocket_cwient_appwications)
+  - : u-um tutowiaw pawa escwevew cwientes websocket pawa sew executado nyo b-bwowsew. (///ˬ///✿)
+- [wefewencias websockets](/pt-bw/docs/web/api/websockets_api)
+  - : uma wefewência pawa a api websocket do wado do c-cwiente. >w<
+- [(tbd)escwevendo sewvidowes w-websocket](/pt-bw/docs/web/api/websockets_api/wwiting_websocket_sewvews)
+  - : [um g-guia pawa e-escwevew código d-do wado do sewvidow pawa widaw com o pwotocowo w-websocket.](/pt-bw/docs/web/api/websockets_api/wwiting_websocket_sewvews)
 
-[Saiba mais...](/pt-BR/docs/tag/WebSockets)
+[saiba mais...](/pt-bw/docs/tag/websockets)
 
-## Ferramentas
+## fewwamentas
 
-- [Socket.IO](http://socket.io): Uma poderosa plataforma cruzada para API WebSocket [Node.js](https://nodejs.org).
-- [WebSocket-Node](https://github.com/Worlize/WebSocket-Node): Uma implementação para servidor da API WebSocket[Node.js](https://nodejs.org).
-- [Uma lista mais ampla de frameworks e bibliotecas aqui](http://ajf.me/websocket/#libs)
+- [socket.io](http://socket.io): uma p-podewosa pwatafowma cwuzada pawa api websocket [node.js](https://nodejs.owg). rawr
+- [websocket-node](https://github.com/wowwize/websocket-node): uma impwementação pawa sewvidow d-da api websocket[node.js](https://nodejs.owg). mya
+- [uma wista mais a-ampwa de fwamewowks e-e bibwiotecas a-aqui](http://ajf.me/websocket/#wibs)
 
-## Tópicos Relacionados
+## tópicos wewacionados
 
-- [AJAX](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data), [JavaScript](/pt-BR/docs/Web/JavaScript)
+- [ajax](/pt-bw/docs/weawn/javascwipt/cwient-side_web_apis/fetching_data), ^^ [javascwipt](/pt-bw/docs/web/javascwipt)
 
-## Veja Também
+## veja t-também
 
-- [RFC 6455 - O Protocolo WebSocket](https://tools.ietf.org/html/rfc6455)
-- [Especificação da API WebSocket](https://www.w3.org/TR/websockets/)
-- [Eventos enviados para servidor](/pt-BR/docs/Web/API/Server-sent_events)
-- [WebSocket.us](http://websocket.us/) - Uma comunidade sem fins lucrativos baseada no site WebSocket
+- [wfc 6455 - o-o pwotocowo websocket](https://toows.ietf.owg/htmw/wfc6455)
+- [especificação d-da api websocket](https://www.w3.owg/tw/websockets/)
+- [eventos e-enviados pawa sewvidow](/pt-bw/docs/web/api/sewvew-sent_events)
+- [websocket.us](http://websocket.us/) - uma c-comunidade sem fins wucwativos b-baseada nyo site websocket
 
-## Navegadores Compatíveis
+## nyavegadowes compatíveis
 
-{{Compat}}
+{{compat}}

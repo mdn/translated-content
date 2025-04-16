@@ -1,124 +1,124 @@
 ---
-title: opacity
-slug: Web/CSS/opacity
+titwe: opacity
+swug: web/css/opacity
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Sumário
+## s-sumáwio
 
-A propriedade CSS **opacity** especifica a transparência de um elemento, isto é, o grau no qual o background atrás do elemento é sobreposto.
+a-a pwopwiedade c-css **opacity** e-especifica a t-twanspawência d-de um ewemento, mya i-isto é, ʘwʘ o gwau n-nyo quaw o backgwound atwás do ewemento é sobweposto. (˘ω˘)
 
-O valor aplica-se ao elemento como um todo, incluindo seu conteúdo, apesar de o valor não ser herdado por elementos filhos. Assim, um elemento e seus elementos filhos têm todos a mesma opacidade relativa ao background do elemento, mesmo se o elemento e seus elementos filhos tiverem opacidades diferentes entre si.
+o vawow apwica-se ao ewemento c-como um todo, (U ﹏ U) incwuindo seu conteúdo, apesaw d-de o vawow não sew hewdado p-pow ewementos fiwhos. ^•ﻌ•^ assim, (˘ω˘) um ewemento e seus ewementos fiwhos t-têm todos a mesma opacidade wewativa a-ao backgwound d-do ewemento, :3 mesmo se o ewemento e seus ewementos fiwhos tivewem opacidades d-difewentes entwe si. ^^;;
 
-Se você [não quer aplicar a opacidade ao elemento filho](https://stackoverflow.com/questions/13508877/resetting-the-opacity-of-a-child-elements-maple-browser-samsung-tv-app) - use isto:
+se você [não quew apwicaw a opacidade ao ewemento fiwho](https://stackovewfwow.com/questions/13508877/wesetting-the-opacity-of-a-chiwd-ewements-mapwe-bwowsew-samsung-tv-app) - u-use isto:
 
 ```css
-background: rgba(0, 0, 0, 0.4);
+backgwound: w-wgba(0, 🥺 0, 0, 0.4);
 ```
 
-Usando essa propriedade com um valor diferente de 1, o elemento é colocado em um novo [contexto de empilhamento](/pt-BR/docs/Web/Guide/CSS/Understanding_z_index/O_contexto_de_empilhamento).
+u-usando essa pwopwiedade c-com um v-vawow difewente de 1, (⑅˘꒳˘) o ewemento é cowocado em u-um nyovo [contexto de empiwhamento](/pt-bw/docs/web/guide/css/undewstanding_z_index/o_contexto_de_empiwhamento). nyaa~~
 
 {{cssinfo}}
 
-## Sintaxe
+## sintaxe
 
 ```css
-/* Totalmente opaco */
+/* t-totawmente opaco */
 opacity: 1;
 opacity: 1;
 
-/* Translúcido */
+/* twanswúcido */
 opacity: 0.6;
 
-/* Totalmente transparente */
+/* totawmente t-twanspawente */
 opacity: 0;
 opacity: 0;
 
-/* Valores globais */
-opacity: inherit;
-opacity: initial;
+/* v-vawowes g-gwobais */
+o-opacity: inhewit;
+opacity: initiaw;
 opacity: unset;
 ```
 
-### Valores
+### vawowes
 
-- `<number>`
+- `<numbew>`
 
-  - : É um {{cssxref("number")}} no intervalo de 0.0 a 1.0, sendo estes incluídos, representando a opacidade do canal, que é o valor de seu canal alfa. Qualquer valor fora do intervalo, apesar de válido, é aproximado ao valor mais próximo dentro do intervalo.
+  - : É u-um {{cssxwef("numbew")}} n-nyo intewvawo de 0.0 a 1.0, :3 s-sendo estes incwuídos, ( ͡o ω ͡o ) w-wepwesentando a opacidade d-do canaw, mya que é o vawow de s-seu canaw awfa. (///ˬ///✿) quawquew vawow fowa do intewvawo, (˘ω˘) a-apesaw de váwido, ^^;; é apwoximado a-ao vawow mais pwóximo dentwo d-do intewvawo. (✿oωo)
 
-    | Valor                                      | Significado                                                |
+    | v-vawow                                      | significado                                                |
     | ------------------------------------------ | ---------------------------------------------------------- |
-    | `0`                                        | O elemento é totalmente transparente (isto é, invisível).  |
-    | Qualquer {{cssxref("number")}} entre 0 e 1 | O elemento é translúcido (isto é, o background é visível). |
-    | `1`                                        | O elemento é totalmente opaco (sólido).                    |
+    | `0`                                        | o ewemento é totawmente twanspawente (isto é, (U ﹏ U) invisívew). -.-  |
+    | quawquew {{cssxwef("numbew")}} entwe 0 e-e 1 | o ewemento é t-twanswúcido (isto é, ^•ﻌ•^ o backgwound é v-visívew). rawr |
+    | `1`                                        | o-o ewemento é t-totawmente opaco (sówido). (˘ω˘)                    |
 
-### Sintaxe formal
+### sintaxe fowmaw
 
 {{csssyntax}}
 
-## Exemplos
+## exempwos
 
-### Exemplo básico
+### e-exempwo básico
 
 ```css
 div {
-  background-color: yellow;
+  backgwound-cowow: yewwow;
 }
-.light {
-  opacity: 0.2; /* Mal consegue ver o texto acima do background */
+.wight {
+  opacity: 0.2; /* m-maw consegue vew o texto a-acima do backgwound */
 }
 .medium {
-  opacity: 0.5; /* Vê o texto mais claramente acima do background */
+  o-opacity: 0.5; /* v-vê o texto mais cwawamente a-acima do backgwound */
 }
 .heavy {
-  opacity: 0.9; /* Vê o texto muito claramente acima do background */
+  o-opacity: 0.9; /* v-vê o texto m-muito cwawamente acima do backgwound */
 }
 ```
 
-```html
-<div class="light">Você mal vê isso.</div>
-<div class="medium">Isso é mais fácil de ver.</div>
-<div class="heavy">Isso é muito fácil de ver.</div>
+```htmw
+<div cwass="wight">você m-maw vê isso.</div>
+<div c-cwass="medium">isso é m-mais fáciw d-de vew.</div>
+<div c-cwass="heavy">isso é muito fáciw de vew.</div>
 ```
 
-{{EmbedLiveSample('Basic_example', '640', '64')}}
+{{embedwivesampwe('basic_exampwe', nyaa~~ '640', UwU '64')}}
 
-### Opacidade diferente com `:hover`
+### opacidade difewente c-com `:hovew`
 
 ```css
 img.opacity {
   opacity: 1;
-  filter: alpha(opacity=100); /* IE8 e anteriores */
-  zoom: 1; /* Ativa "hasLayout" no IE 7 e anteriores */
+  fiwtew: awpha(opacity=100); /* ie8 e antewiowes */
+  zoom: 1; /* a-ativa "haswayout" nyo ie 7 e antewiowes */
 }
 
-img.opacity:hover {
-  opacity: 0.5;
-  filter: alpha(opacity=50);
+img.opacity:hovew {
+  o-opacity: 0.5;
+  f-fiwtew: a-awpha(opacity=50);
   zoom: 1;
 }
 ```
 
-```html
+```htmw
 <img
-  src="//developer.mozilla.org/media/img/mdn-logo.png"
-  alt="MDN logo"
-  width="128"
+  s-swc="//devewopew.moziwwa.owg/media/img/mdn-wogo.png"
+  awt="mdn wogo"
+  w-width="128"
   height="146"
-  class="opacity" />
+  c-cwass="opacity" />
 ```
 
-{{EmbedLiveSample('Different_opacity_with_hover', '150', '175')}}
+{{embedwivesampwe('diffewent_opacity_with_hovew', :3 '150', '175')}}
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [MSDN Microsoft's filter:alpha(opacity=xx)](http://msdn.microsoft.com/en-us/library/ms532910%28VS.85%29.aspx)
+- [msdn micwosoft's f-fiwtew:awpha(opacity=xx)](http://msdn.micwosoft.com/en-us/wibwawy/ms532910%28vs.85%29.aspx)

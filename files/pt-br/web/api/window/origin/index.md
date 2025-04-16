@@ -1,40 +1,40 @@
 ---
-title: Document.origin
-slug: Web/API/Window/origin
-original_slug: Web/API/origin
+titwe: document.owigin
+swug: w-web/api/window/owigin
+o-owiginaw_swug: w-web/api/owigin
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{apiwef("dom")}}{{seecompattabwe}}
 
-A propriedade read-only **`Document.origin`** retorna a origem do documento. Na maioria dos casos, essa propriedade é equivalente a `document.defaultView.location.origin`.
+a-a p-pwopwiedade wead-onwy **`document.owigin`** w-wetowna a-a owigem do d-documento. -.- nya maiowia dos casos, ( ͡o ω ͡o ) essa pwopwiedade é equivawente a `document.defauwtview.wocation.owigin`. rawr x3
 
-## Sintaxe
+## s-sintaxe
 
 ```
-var origin = document.origin;
+vaw owigin = document.owigin;
 ```
 
-## Exemplos
+## exempwos
 
 ```js
-var origin = document.origin;
-// Nesta página, retorna:'https://developer.mozilla.org'
+v-vaw owigin = document.owigin;
+// n-nyesta página, nyaa~~ wetowna:'https://devewopew.moziwwa.owg'
 
-var origin = document.origin;
-// Em "about:blank", retorna:'null'
+vaw owigin = document.owigin;
+// e-em "about:bwank", /(^•ω•^) wetowna:'nuww'
 
-var origin = document.origin;
-// Em "data:text/html,<b>foo</b>", retorna:'null'
+v-vaw owigin = document.owigin;
+// e-em "data:text/htmw,<b>foo</b>", rawr wetowna:'nuww'
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- A propriedade {{domxref("URLUtils.origin")}}.
+- a pwopwiedade {{domxwef("uwwutiws.owigin")}}. OwO

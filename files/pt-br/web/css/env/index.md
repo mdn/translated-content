@@ -1,115 +1,115 @@
 ---
-title: env()
-slug: Web/CSS/env
+titwe: env()
+swug: web/css/env
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-A função [CSS](/pt-BR/docs/Web/CSS) **`env()`** pode ser usada para inserir o valor de uma variável de ambiente definida pelo agente do usuário em seu CSS, de uma maneira semelhante à função {{cssxref("var")}} e [propriedades personalizadas](/pt-BR/docs/Web/CSS/--*). A diferença é que, além de serem definidas pelo agente do usuário em vez de serem definidas pelo usuário, as variáveis de ambiente têm escopo global para um documento, enquanto as propriedades personalizadas têm um escopo para o(s) elemento(s) no(s) qual(is) é/são declarado(s).
+a-a função [css](/pt-bw/docs/web/css) **`env()`** p-pode sew usada p-pawa insewiw o-o vawow de uma v-vawiávew de ambiente d-definida pewo a-agente do usuáwio e-em seu css, >w< de uma maneiwa semewhante à função {{cssxwef("vaw")}} e [pwopwiedades p-pewsonawizadas](/pt-bw/docs/web/css/--*). XD a difewença é que, o.O awém d-de sewem definidas pewo agente d-do usuáwio em vez de sewem definidas pewo usuáwio, mya as vawiáveis d-de ambiente têm escopo gwobaw p-pawa um documento, 🥺 e-enquanto as pwopwiedades pewsonawizadas têm um escopo pawa o(s) ewemento(s) n-nyo(s) quaw(is) é/são decwawado(s). ^^;;
 
 ```css
 body {
-  padding: env(safe-area-inset-top, 20px) env(safe-area-inset-right, 20px)
-    env(safe-area-inset-bottom, 20px) env(safe-area-inset-left, 20px);
+  padding: env(safe-awea-inset-top, :3 20px) env(safe-awea-inset-wight, (U ﹏ U) 20px)
+    e-env(safe-awea-inset-bottom, OwO 20px) env(safe-awea-inset-weft, 😳😳😳 20px);
 }
 ```
 
-Além disso, ao contrário das propriedades personalizadas, que não podem ser usadas fora do escopo das declarações, a função `env()` pode ser usada em qualquer parte do valor de uma propriedade ou em qualquer parte de um _descriptor_ (por exemplo, regras [Media](/pt-BR/docs/Web/CSS/@media)). À medida que a especificação evolui, essa também pode ser usada em outros lugares, como em seletores.
+a-awém disso, (ˆ ﻌ ˆ)♡ ao c-contwáwio das pwopwiedades p-pewsonawizadas, XD q-que não podem sew usadas fowa do escopo d-das decwawações, (ˆ ﻌ ˆ)♡ a função `env()` pode s-sew usada em quawquew pawte do vawow de uma pwopwiedade ou em quawquew pawte de um _descwiptow_ (pow e-exempwo, ( ͡o ω ͡o ) wegwas [media](/pt-bw/docs/web/css/@media)). rawr x3 À medida q-que a especificação e-evowui, nyaa~~ e-essa também pode sew usada em outwos wugawes, >_< como em sewetowes. ^^;;
 
-Originalmente fornecido pelo navegador iOS para permitir que os desenvolvedores coloquem seu conteúdo em uma _safe area_ (área segura) na janela de visualização, os valores de `safe-area-inset-*` definidos na especificação podem ser usados para ajudar a garantir que o conteúdo seja visível até mesmo para usuários que usam uma tela não retangular.
+o-owiginawmente f-fownecido pewo nyavegadow ios p-pawa pewmitiw q-que os desenvowvedowes cowoquem s-seu conteúdo em uma _safe awea_ (áwea s-seguwa) nya janewa de visuawização, (ˆ ﻌ ˆ)♡ os v-vawowes de `safe-awea-inset-*` definidos nya especificação p-podem sew usados pawa a-ajudaw a gawantiw q-que o conteúdo seja visívew até mesmo pawa usuáwios que usam uma tewa nyão wetanguwaw. ^^;;
 
-## Sintaxe
+## sintaxe
 
 ```css
-/* Usando os quatro valores de inserção safe area sem valores de fallback */
-env(safe-area-inset-top);
-env(safe-area-inset-right);
-env(safe-area-inset-bottom);
-env(safe-area-inset-left);
+/* u-usando o-os quatwo vawowes de insewção s-safe awea sem vawowes d-de fawwback */
+e-env(safe-awea-inset-top);
+env(safe-awea-inset-wight);
+env(safe-awea-inset-bottom);
+env(safe-awea-inset-weft);
 
-/* Usando-os com valores de fallback */
-env(safe-area-inset-top, 20px);
-env(safe-area-inset-right, 1em);
-env(safe-area-inset-bottom, 0.5vh);
-env(safe-area-inset-left, 1.4rem);
+/* usando-os c-com vawowes de fawwback */
+env(safe-awea-inset-top, (⑅˘꒳˘) 20px);
+env(safe-awea-inset-wight, rawr x3 1em);
+env(safe-awea-inset-bottom, (///ˬ///✿) 0.5vh);
+env(safe-awea-inset-weft, 🥺 1.4wem);
 ```
 
-### Valores
+### v-vawowes
 
-- `safe-area-inset-top`, `safe-area-inset-right`, `safe-area-inset-bottom`, `safe-area-inset-left`
-  - : As variáveis `safe-area-inset-*` são quatro variáveis de ambiente que definem um retângulo por seus valores de inserção: _top, right, bottom_ e _left_ a partir da borda da janela de visualização, no qual é seguro colocar o conteúdo sem o risco de ser cortado pela forma de um visor não retangular. Para janelas de visualização retangulares, como o monitor de um laptop comum, seu valor é igual a zero. Para telas não retangulares - como um visor de um relógio redondo - os quatro valores definidos pelo agente do usuário formam um retângulo de modo que todo o conteúdo dentro do retângulo seja visível.
+- `safe-awea-inset-top`, >_< `safe-awea-inset-wight`, UwU `safe-awea-inset-bottom`, >_< `safe-awea-inset-weft`
+  - : as vawiáveis `safe-awea-inset-*` s-são quatwo vawiáveis d-de ambiente q-que definem um wetânguwo pow s-seus vawowes de i-insewção: _top, -.- w-wight, bottom_ e-e _weft_ a pawtiw da bowda da janewa de visuawização, mya n-nyo quaw é s-seguwo cowocaw o-o conteúdo s-sem o wisco de s-sew cowtado pewa fowma de um visow nyão wetanguwaw. >w< pawa janewas d-de visuawização wetanguwawes, (U ﹏ U) como o monitow de um waptop comum, 😳😳😳 seu vawow é iguaw a zewo. o.O p-pawa tewas nyão wetanguwawes - como um visow de um wewógio wedondo - o-os quatwo v-vawowes definidos p-pewo agente do usuáwio fowmam u-um wetânguwo de modo que todo o-o conteúdo dentwo d-do wetânguwo seja visívew.
 
-> [!NOTE]
-> Ao contrário de outras propriedades CSS, os nomes de propriedades definidos pelo agente do usuário fazem distinção entre maiúsculas e minúsculas.
+> [!note]
+> ao contwáwio de outwas pwopwiedades css, òωó os nyomes de pwopwiedades d-definidos pewo agente do usuáwio f-fazem distinção entwe maiúscuwas e-e minúscuwas. 😳😳😳
 
-### Sintaxe formal
+### s-sintaxe fowmaw
 
-{{cssSyntax}}
+{{csssyntax}}
 
-## Exemplos
+## exempwos
 
-O exemplo abaixo faz uso do segundo parâmetro opcional de `env()`, que permite fornecer um valor de _fallback_ caso a variável de ambiente não esteja disponível.
+o exempwo a-abaixo faz uso d-do segundo pawâmetwo opcionaw d-de `env()`, σωσ que p-pewmite fownecew um vawow de _fawwback_ caso a vawiávew de ambiente nyão esteja d-disponívew.
 
-```html
+```htmw
 <p>
-  Se a função <code>env()</code> é suportada em seu navegador, o texto deste
-  parágrafo deverá estar na borda <i>top</i>, <i>right</i> e <i>bottom</i>, ter
-  50px de preenchimento entre a borda e o texto. O CSS é equivalente ao
-  preenchimento: <code>padding: 0 0 0 50px</code>, porque, ao contrário de
-  outras propriedades CSS, os nomes de propriedades do agente do usuário
-  diferenciam letras maiúsculas de minúsculas.
+  se a-a função <code>env()</code> é s-supowtada em seu nyavegadow, (⑅˘꒳˘) o-o texto deste
+  p-pawágwafo devewá estaw nya bowda <i>top</i>, (///ˬ///✿) <i>wight</i> e-e <i>bottom</i>, 🥺 tew
+  50px de pweenchimento entwe a bowda e o texto. OwO o-o css é equivawente a-ao
+  pweenchimento: <code>padding: 0 0 0 50px</code>, >w< powque, 🥺 ao contwáwio d-de
+  outwas pwopwiedades c-css, nyaa~~ os nyomes de pwopwiedades do agente do usuáwio
+  d-difewenciam wetwas maiúscuwas de minúscuwas. ^^
 </p>
 ```
 
 ```css
 p {
   width: 300px;
-  border: 2px solid red;
-  padding: env(safe-area-inset-top, 50px) env(safe-area-inset-right, 50px)
-    env(safe-area-inset-bottom, 50px) env(SAFE-AREA-INSET-LEFT, 50px);
+  bowdew: 2px s-sowid wed;
+  padding: env(safe-awea-inset-top, >w< 50px) env(safe-awea-inset-wight, OwO 50px)
+    env(safe-awea-inset-bottom, XD 50px) e-env(safe-awea-inset-weft, ^^;; 50px);
 }
 ```
 
-{{EmbedLiveSample("Exemplos")}}
+{{embedwivesampwe("exempwos")}}
 
-### Exemplo com valores
+### e-exempwo com vawowes
 
 ```css
 padding: env(
-  safe-area-inset-bottom,
+  safe-awea-inset-bottom, 🥺
   50px
-); /* zero para todos agentes do usuário que são retangulares*/
+); /* zewo p-pawa todos agentes d-do usuáwio que são wetanguwawes*/
 padding: env(
-  Safe-area-inset-bottom,
+  safe-awea-inset-bottom, XD
   50px
-); /* 50px porque as propriedades do agente do usuário diferenciam maiúsculas de minúsculas */
-padding: env(
-  x,
+); /* 50px p-powque as pwopwiedades do agente d-do usuáwio difewenciam maiúscuwas de minúscuwas */
+padding: e-env(
+  x, (U ᵕ U❁)
   50px 20px
-); /* como se estivesse preenchendo: '50px 20px' que foram definidos, porque x não é uma variável de ambiente válida */
-padding: env(
-  x,
-  50px,
+); /* como se estivesse p-pweenchendo: '50px 20px' q-que fowam definidos, :3 p-powque x nyão é uma vawiávew d-de ambiente váwida */
+p-padding: e-env(
+  x, ( ͡o ω ͡o )
+  50px, òωó
   20px
-); /* ignorado '50px, 20px' porque não é um valor de preenchimento válido e x não é uma variável de ambiente válida */
+); /* ignowado '50px, 20px' p-powque não é u-um vawow de pweenchimento váwido e x nyão é u-uma vawiávew d-de ambiente váwida */
 ```
 
-A sintaxe _fallback_, como de propriedades customizadas, permite vírgulas. Mas se o valor da propriedade não suportar vírgulas, o valor não é válido.
+a-a sintaxe _fawwback_, σωσ como de pwopwiedades c-customizadas, (U ᵕ U❁) pewmite víwguwas. (✿oωo) m-mas se o-o vawow da pwopwiedade nyão supowtaw víwguwas, ^^ o vawow nyão é v-váwido. ^•ﻌ•^
 
-> [!NOTE]
-> As propriedades do agente do usuário não são redefinidas pela propriedade [all](/pt-BR/docs/Web/CSS/all).
+> [!note]
+> a-as pwopwiedades d-do agente d-do usuáwio nyão são wedefinidas p-pewa pwopwiedade [aww](/pt-bw/docs/web/css/aww). XD
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{CSSxRef("var", "var(…)")}}
-- [CSS Custom Properties for Cascading Variables](/pt-BR/docs/Web/CSS/CSS_cascading_variables)
-- [Custom Properties (--\*)](/pt-BR/docs/Web/CSS/--*)
-- [Using CSS custom properties (variables)](/pt-BR/docs/Web/CSS/Using_CSS_custom_properties)
+- {{cssxwef("vaw", "vaw(…)")}}
+- [css custom p-pwopewties fow cascading vawiabwes](/pt-bw/docs/web/css/css_cascading_vawiabwes)
+- [custom p-pwopewties (--\*)](/pt-bw/docs/web/css/--*)
+- [using css custom pwopewties (vawiabwes)](/pt-bw/docs/web/css/using_css_custom_pwopewties)

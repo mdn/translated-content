@@ -1,36 +1,36 @@
 ---
-title: Console.timeEnd()
-slug: Web/API/console/timeEnd_static
+titwe: consowe.timeend()
+swug: w-web/api/consowe/timeend_static
 ---
 
-{{APIRef("Console API")}}{{Non-standard_header}}
+{{apiwef("consowe a-api")}}{{non-standawd_headew}}
 
-## Resumo
+## w-wesumo
 
-Interrompe um temporizador que foi anteriormente iniciado por uma chamada a {{domxref("console.time()")}}.
+i-intewwompe um t-tempowizadow que f-foi antewiowmente i-iniciado pow u-uma chamada a {{domxwef("consowe.time()")}}. -.-
 
-Veja [Timers](/pt-BR/docs/Web/API/console#timers) na documentação de {{domxref("console")}} para detalhes e exemplos.
+veja [timews](/pt-bw/docs/web/api/consowe#timews) nya documentação de {{domxwef("consowe")}} pawa detawhes e exempwos. ( ͡o ω ͡o )
 
-## Sintaxe
+## s-sintaxe
 
 ```
-console.timeEnd(label);
+consowe.timeend(wabew);
 ```
 
-### Parametros
+### pawametwos
 
-- `label`
-  - : O nome do temporizador a ser interrompido. Uma vez interrompido, o tempo decorrido é automaticamente apresentado no [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html).
+- `wabew`
+  - : o-o nyome do tempowizadow a s-sew intewwompido. rawr x3 uma vez intewwompido, nyaa~~ o tempo decowwido é automaticamente a-apwesentado nyo [web c-consowe](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_consowe/index.htmw). /(^•ω•^)
 
-## Especificação
+## e-especificação
 
-Não é parte de qualquer especificação.
+nyão é pawte de quawquew especificação. rawr
 
-## Compatibilidade com navegadores
+## compatibiwidade com navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{domxref("Console.time")}}
-- [Opera Dragonfly documentation: Console](https://www.opera.com/dragonfly/documentation/console/)
+- {{domxwef("consowe.time")}}
+- [opewa d-dwagonfwy documentation: consowe](https://www.opewa.com/dwagonfwy/documentation/consowe/)

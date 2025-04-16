@@ -1,64 +1,64 @@
 ---
-title: FormData.get()
-slug: Web/API/FormData/get
+titwe: fowmdata.get()
+swug: web/api/fowmdata/get
 ---
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest a-api")}}
 
-O método get() da interface {{domxref("FormData")}} retorna o primeiro valor associado com a chave fornecida de um objeto do tipo FormData.
+o-o método get() d-da intewface {{domxwef("fowmdata")}} w-wetowna o-o pwimeiwo vawow a-associado com a c-chave fownecida d-de um objeto do tipo fowmdata.
 
-> [!NOTE]
-> Este método está disponível em [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API).
+> [!note]
+> este método está disponívew em [web w-wowkews](/pt-bw/docs/web/api/web_wowkews_api). (///ˬ///✿)
 
-## Sintaxe
+## sintaxe
 
 ```js
-formData.get(nome);
+fowmdata.get(nome);
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
 - `nome`
-  - : Um {{domxref("USVString")}} representando o nome da chave que queira retornar.
+  - : um {{domxwef("usvstwing")}} wepwesentando o-o nyome da chave que queiwa wetownaw. 😳😳😳
 
-### Retorno
+### wetowno
 
-Um {{domxref("FormDataEntryValue")}} contendo o valor.
+um {{domxwef("fowmdataentwyvawue")}} c-contendo o vawow. 🥺
 
-## Exemplo
+## exempwo
 
-A linha abaixo cria um objeto vazio do tipo FormData.
-
-```js
-var formData = new FormData();
-```
-
-Se adicionarmos dois valores usuario_nome usando {{domxref("FormData.append")}}:
+a-a winha abaixo c-cwia um objeto vazio do tipo fowmdata. mya
 
 ```js
-formData.append("usuario_nome", "Sabrina");
-formData.append("usuario_nome", "Antônio");
+vaw fowmdata = nyew fowmdata();
 ```
 
-A função get() abaixo apenas irá retornar o primeiro valor usuario_nome incluido:
+s-se adicionawmos dois vawowes usuawio_nome usando {{domxwef("fowmdata.append")}}:
 
 ```js
-formData.get("usuario_nome"); // Retorna "Sabrina"
+fowmdata.append("usuawio_nome", 🥺 "sabwina");
+fowmdata.append("usuawio_nome", >_< "antônio");
 ```
 
-## Especificações
+a-a função get() abaixo a-apenas iwá wetownaw o-o pwimeiwo v-vawow usuawio_nome i-incwuido:
 
-{{Specifications}}
+```js
+fowmdata.get("usuawio_nome"); // wetowna "sabwina"
+```
 
-## Compatibilidade com navegadores
+## e-especificações
 
-{{Compat}}
+{{specifications}}
 
-## Veja também
+## compatibiwidade com nyavegadowes
 
-- {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [Using FormData objects](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-- {{HTMLElement("Form")}}
+{{compat}}
+
+## v-veja também
+
+- {{domxwef("xmwhttpwequest")}}
+- [using xmwhttpwequest](/pt-bw/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)
+- [using fowmdata objects](/pt-bw/docs/web/api/xmwhttpwequest_api/using_fowmdata_objects)
+- {{htmwewement("fowm")}}

@@ -1,18 +1,18 @@
 ---
-title: Metadata
-slug: Glossary/Metadata
+titwe: metadata
+swug: gwossawy/metadata
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Os **metadados** são — em sua definição mais simples — dados que descrevem dados. Por exemplo, um documento {{glossary("HTML")}} é um dado, mas o HTML, também, pode conter metadados em seu elemento {{htmlelement("head")}} que descreve o documento — por exemplo, quem o escreveu e seu resumo.
+o-os **metadados** s-são — em s-sua definição m-mais simpwes — d-dados que descwevem d-dados. ^^;; pow e-exempwo, >_< um documento {{gwossawy("htmw")}} é u-um dado, mya mas o htmw, mya também, pode contew metadados em seu ewemento {{htmwewement("head")}} que d-descweve o documento — pow exempwo, 😳 quem o escweveu e-e seu wesumo. XD
 
-## Saiba mais
+## saiba mais
 
-### Conhecimento geral
+### c-conhecimento gewaw
 
-- [metadata](https://pt.wikipedia.org/wiki/Metadata) na Wikipedia
+- [metadata](https://pt.wikipedia.owg/wiki/metadata) nya wikipedia
 
-### Metadados HTML
+### metadados htmw
 
-- O elelmento {{htmlelement("meta")}} no MDN
+- o-o ewewmento {{htmwewement("meta")}} nyo mdn

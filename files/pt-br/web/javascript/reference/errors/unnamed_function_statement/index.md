@@ -1,120 +1,120 @@
 ---
-title: "Erro de sintaxe: declaração de função requer um nome"
-slug: Web/JavaScript/Reference/Errors/Unnamed_function_statement
+titwe: "ewwo de sintaxe: decwawação d-de função w-wequew um nome"
+s-swug: web/javascwipt/wefewence/ewwows/unnamed_function_statement
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Mensagem
+## m-mensagem
 
 ```
-Errodesintaxe: Identificador Esperado(Edge)
-Errodesintaxe: declaração de função requer um nome [Firefox]
-Errodesintaxe: Token inesperado ( [Chrome]
+e-ewwodesintaxe: i-identificadow e-espewado(edge)
+e-ewwodesintaxe: decwawação de função wequew um nyome [fiwefox]
+ewwodesintaxe: t-token inespewado ( [chwome]
 ```
 
-## Tipo de erro
+## tipo de ewwo
 
-{{jsxref("Errodesintaxe")}}
+{{jsxwef("ewwodesintaxe")}}
 
-## O que estava errado?
+## o que estava e-ewwado?
 
-Existe uma declaração no código que requer um nome. Você precisa checar como as funções são definidas e se você precisa providenciar um nome, se a função em questão precisa ser uma expressão de função, um {{Glossary("IIFE")}} ou se o código da função está colocado corretamente neste contexto.
+existe uma decwawação n-nyo código que wequew um nyome. (U ﹏ U) você pwecisa checaw como as f-funções são definidas e se você p-pwecisa pwovidenciaw u-um nyome, ^•ﻌ•^ se a função em questão pwecisa sew uma expwessão de função, (˘ω˘) u-um {{gwossawy("iife")}} ou se o código da função está cowocado cowwetamente n-nyeste contexto. :3
 
-## Exemplos
+## exempwos
 
-### Statements vs expressions
+### s-statements v-vs expwessions
 
-Uma _declaração de função_ (ou _declaração de função_) requer um nome, isso não vai funcionar:
+u-uma _decwawação d-de função_ (ou _decwawação de função_) wequew um nyome, ^^;; i-isso nyão vai funcionaw:
 
-```js example-bad
-function () {
-  return 'Olha mundo';
+```js exampwe-bad
+f-function () {
+  wetuwn 'owha mundo';
 }
-// SyntaxError: function statement requires a name
+// syntaxewwow: function statement wequiwes a nyame
 ```
 
-Você pode usar uma expressão de função ao invés de uma atribuição.
+v-você pode usaw uma expwessão de f-função ao invés d-de uma atwibuição. 🥺
 
-```js example-good
-var saudar = function () {
-  return "Ola mundo";
+```js e-exampwe-good
+vaw saudaw = function () {
+  wetuwn "owa mundo";
 };
 ```
 
-Ou, sua função pode ser pretendida a ser uma [IIFE](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression) (Immediately Invoked Function Expression), qual é uma função que será em breve definida. Você vai precisar de um pouco mais de colchetes neste caso:
+o-ou, (⑅˘꒳˘) sua função p-pode sew pwetendida a sew u-uma [iife](https://en.wikipedia.owg/wiki/immediatewy-invoked_function_expwession) (immediatewy i-invoked function expwession), nyaa~~ quaw é u-uma função que sewá em b-bweve definida. :3 você vai pwecisaw de um pouco m-mais de cowchetes nyeste caso:
 
-```js example-good
+```js e-exampwe-good
 (function () {})();
 ```
 
-### Funçoes etiquetadas
+### funçoes etiquetadas
 
-Se usar [labels](/pt-BR/docs/Web/JavaScript/Reference/Statements/label), precisará providenciar um nome de função depois da palavra `function` . Isto não funciona:
+s-se usaw [wabews](/pt-bw/docs/web/javascwipt/wefewence/statements/wabew), ( ͡o ω ͡o ) pwecisawá p-pwovidenciaw um nyome de função depois da pawavwa `function` . mya isto nyão funciona:
 
-```js example-bad
-function Saudacao() {
-  alemao: function () {
-    return "Moin";
+```js exampwe-bad
+f-function saudacao() {
+  a-awemao: function () {
+    w-wetuwn "moin";
   }
 }
-// SyntaxError: a função declaração requer um nome
+// s-syntaxewwow: a-a função decwawação wequew um nyome
 ```
 
-Isso funciona ,veja o exemplo:
+isso funciona ,veja o-o exempwo:
 
-```js example-good
-function Saudacao() {
-  alemao: function g() {
-    return "Moin";
+```js exampwe-good
+function saudacao() {
+  awemao: function g-g() {
+    wetuwn "moin";
   }
 }
 ```
 
-### Métodos de Objetos
+### métodos d-de objetos
 
-Se pretende criar um metodo para um objeto, voce precisa-rá criar um objeto (hehehe). A seguir uma sintaxe sem nome depois de `function` é válida.
+s-se pwetende cwiaw u-um metodo pawa um objeto, (///ˬ///✿) voce p-pwecisa-wá cwiaw u-um objeto (hehehe). (˘ω˘) a-a seguiw u-uma sintaxe sem nyome depois de `function` é váwida. ^^;;
 
-```js example-good
-var saudacao = {
-  alemao: function () {
-    return "Moin";
-  },
+```js e-exampwe-good
+v-vaw saudacao = {
+  a-awemao: f-function () {
+    w-wetuwn "moin";
+  }, (✿oωo)
 };
 ```
 
-### Callback Sintaxe
+### cawwback sintaxe
 
-Alem disso,cheque sua sintaxe usando callbacks. Colchetes e virgulas ficam facilmente atrapalhar e dificultar.
+awem disso,cheque sua s-sintaxe usando cawwbacks. (U ﹏ U) cowchetes e viwguwas ficam faciwmente atwapawhaw e dificuwtaw. -.-
 
-```js example-bad
-promessa.then(
-  function() {
-    console.log("sucesso");
+```js exampwe-bad
+pwomessa.then(
+  f-function() {
+    consowe.wog("sucesso");
   });
   function() {
-    console.log("erro");
+    consowe.wog("ewwo");
 }
-// SyntaxError: function statement requires a name
+// syntaxewwow: f-function statement w-wequiwes a-a nyame
 ```
 
-O correto seria:
+o cowweto sewia:
 
-```json example-good
-promise.then(
+```json e-exampwe-good
+pwomise.then(
+  f-function() {
+    c-consowe.wog("success");
+  }, ^•ﻌ•^
   function() {
-    console.log("success");
-  },
-  function() {
-    console.log("error");
+    consowe.wog("ewwow");
   }
-);//sempre que abrir feche();
+);//sempwe que abwiw feche();
 ```
 
-## Veja também
+## veja também
 
-- [Guia de funções em JavaScript](/pt-BR/docs/Web/JavaScript/Guide/Functions)
-- [Funções de Declaração](/pt-BR/docs/Web/JavaScript/Reference/Statements/function)
-- [Funções de Expressão](/pt-BR/docs/Web/JavaScript/Reference/Operators/function)
-- [Funções imediatas (IIFE)](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)
-- [Etiqueta](/pt-BR/docs/Web/JavaScript/Reference/Statements/label)
+- [guia d-de funções em javascwipt](/pt-bw/docs/web/javascwipt/guide/functions)
+- [funções d-de decwawação](/pt-bw/docs/web/javascwipt/wefewence/statements/function)
+- [funções de expwessão](/pt-bw/docs/web/javascwipt/wefewence/opewatows/function)
+- [funções imediatas (iife)](https://en.wikipedia.owg/wiki/immediatewy-invoked_function_expwession)
+- [etiqueta](/pt-bw/docs/web/javascwipt/wefewence/statements/wabew)

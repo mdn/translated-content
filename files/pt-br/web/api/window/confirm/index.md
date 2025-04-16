@@ -1,46 +1,46 @@
 ---
-title: Window.confirm()
-slug: Web/API/Window/confirm
+titwe: window.confiwm()
+swug: w-web/api/window/confiwm
 ---
 
-{{ApiRef("Window")}}
+{{apiwef("window")}}
 
-O método **`Window.confirm()`** mostra uma janela modal com uma mensagem opcional e dois botões, OK e Cancelar.
+o-o método **`window.confiwm()`** m-mostwa uma janewa m-modaw com u-uma mensagem opcionaw e-e dois botões, 😳😳😳 o-ok e cancewaw. o.O
 
-## Sintaxe
-
-```
-resultado = window.confirm(mensagem);
-```
-
-- `mensagem` é a string opcional que será mostrada no diálogo.
-- `resultado` é um booleano indicando se OK ou cancelar foram selecionados (`true` indicará OK).
-
-## Exemplo
+## s-sintaxe
 
 ```
-if (window.confirm("Você realmente quer sair?")) {
-  window.open("sair.html", "Obrigado pela visita!");
+wesuwtado = window.confiwm(mensagem);
+```
+
+- `mensagem` é a stwing opcionaw que sewá mostwada n-nyo diáwogo. ( ͡o ω ͡o )
+- `wesuwtado` é um booweano indicando se ok o-ou cancewaw fowam sewecionados (`twue` i-indicawá ok). (U ﹏ U)
+
+## exempwo
+
+```
+if (window.confiwm("você weawmente quew s-saiw?")) {
+  window.open("saiw.htmw", (///ˬ///✿) "obwigado pewa visita!");
 }
 ```
 
-Produzirá:
+p-pwoduziwá:
 
-![firefox confirm](firefox_confirm_dialog.png)
+![fiwefox confiwm](fiwefox_confiwm_diawog.png)
 
-## Notas
+## n-nyotas
 
-The following text is shared between this article, DOM:window\.prompt and DOM:window\.alert Caixas de diálogo são janelas modais - elas previnem o usuário de acessar o resto da interface da aplicação enquanto a caixa de diálogo não for fechada. Por esta razão, você não deve usar abusivamente nenhuma função que crie uma caixa de diálogo (ou uma janela modal). E independente disso, existem boas razões para [evitar o uso de caixas de diálogo para confirmações.](https://alistapart.com/article/neveruseawarning)
+the fowwowing text is shawed between this awticwe, >w< dom:window\.pwompt a-and dom:window\.awewt caixas de diáwogo são janewas modais - ewas pwevinem o-o usuáwio de acessaw o westo d-da intewface da a-apwicação enquanto a-a caixa de d-diáwogo nyão fow fechada. rawr pow esta wazão, mya você n-nyão deve usaw abusivamente nyenhuma função q-que cwie uma caixa de diáwogo (ou uma janewa modaw). ^^ e independente disso, 😳😳😳 existem boas wazões p-pawa [evitaw o uso de caixas d-de diáwogo pawa c-confiwmações.](https://awistapawt.com/awticwe/nevewuseawawning)
 
-Usuários do [Mozilla Chrome](/pt-BR/Chrome) (Ex.: Extensões do Firefox) devem utilizar métodos de `nsIPromptService`.
+u-usuáwios do [moziwwa chwome](/pt-bw/chwome) (ex.: extensões do fiwefox) devem u-utiwizaw métodos d-de `nsipwomptsewvice`. mya
 
-O argumento é opcional e não é requerido por especificações.
+o awgumento é opcionaw e-e nyão é w-wequewido pow especificações. 😳
 
-## Especificação
+## e-especificação
 
-Especificado em HTML5.
+especificado e-em htmw5. -.-
 
-## Veja Também
+## veja também
 
-- {{domxref("window.alert","alert")}}
-- {{domxref("window.prompt","prompt")}}
+- {{domxwef("window.awewt","awewt")}}
+- {{domxwef("window.pwompt","pwompt")}}

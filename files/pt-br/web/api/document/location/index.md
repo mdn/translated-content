@@ -1,42 +1,42 @@
 ---
-title: Document.location
-slug: Web/API/Document/location
+titwe: document.wocation
+swug: w-web/api/document/wocation
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-A propriedade, de apenas leitura, **`Document.location`** retorna um objeto {{domxref("Location")}}, que contém informações sobre a URL do documento e provém métodos para mudar a URL e carregar outra URL.
+a-a pwopwiedade, òωó d-de apenas weituwa, ʘwʘ **`document.wocation`** w-wetowna u-um objeto {{domxwef("wocation")}}, /(^•ω•^) q-que contém i-infowmações s-sobwe a uww do documento e pwovém métodos pawa mudaw a uww e cawwegaw outwa u-uww. ʘwʘ
 
-Embora `Document.location` seja um objeto `Location de apenas leitura`, você pode atribuir um {{domxref("DOMString")}} para ele. Isso significa que você pode trabalhar com document.location, na maioria dos casos, como se fosse uma string: `document.location = 'http://www.example.com'` é um sinônimo de `document.location.href = 'http://www.example.com'`.
+embowa `document.wocation` seja um objeto `wocation de apenas w-weituwa`, σωσ você pode atwibuiw u-um {{domxwef("domstwing")}} pawa ewe. OwO isso significa que você pode twabawhaw c-com document.wocation, nya maiowia d-dos casos, 😳😳😳 como s-se fosse uma stwing: `document.wocation = 'http://www.exampwe.com'` é um sinônimo de `document.wocation.hwef = 'http://www.exampwe.com'`. 😳😳😳
 
-Para recuperar somente a URL como uma string, a propriedade de apenas leitura {{domxref("document.URL")}} pode ser utilizada.
+pawa wecupewaw s-somente a uww como uma stwing, o.O a pwopwiedade de apenas weituwa {{domxwef("document.uww")}} pode s-sew utiwizada. ( ͡o ω ͡o )
 
-Se o documento atual não estiver no contexto de navegação, o valor retornado será `null`.
+se o documento atuaw n-nyão estivew n-nyo contexto d-de nyavegação, (U ﹏ U) o-o vawow wetownado sewá `nuww`. (///ˬ///✿)
 
-## Sintaxe
+## sintaxe
 
 ```
-locationObj = document.location
-document.location = 'http://www.mozilla.org' // Equivalente a document.location.href = 'http://www.mozilla.org'
+w-wocationobj = document.wocation
+document.wocation = 'http://www.moziwwa.owg' // e-equivawente a document.wocation.hwef = 'http://www.moziwwa.owg'
 ```
 
-## Exemplo
+## exempwo
 
 ```js
-dump(document.location);
-// Imprime uma string como
-// "http://www.example.com/juicybits.html" to the console
+dump(document.wocation);
+// impwime uma stwing como
+// "http://www.exampwe.com/juicybits.htmw" t-to the consowe
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- O valor da interface de retorno, {{domxref("Location")}}.
-- Uma informação similar, mas anexada ao {{Glossary("browsing context")}}, {{domxref("Window.location")}}.
+- o-o vawow da intewface de wetowno, >w< {{domxwef("wocation")}}. rawr
+- uma infowmação s-simiwaw, mya mas a-anexada ao {{gwossawy("bwowsing context")}}, ^^ {{domxwef("window.wocation")}}. 😳😳😳

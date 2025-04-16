@@ -1,66 +1,66 @@
 ---
-title: contain
-slug: Web/CSS/contain
+titwe: contain
+swug: web/css/contain
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-A propriedade **`contain`** permite que um autor indique que elemento e seus conteúdos são, na medida do possível, _independente_ do resto da árvore do documento. Isso permite que o navegador recalcule o layout, estilo, pintura, tamanho ou alguma combinação deles para uma área limitada do DOM e não da página inteira.
+a-a pwopwiedade **`contain`** p-pewmite que u-um autow indique q-que ewemento e-e seus conteúdos s-são, >w< nya medida d-do possívew, _independente_ d-do westo da áwvowe do documento. (⑅˘꒳˘) isso pewmite que o nyavegadow wecawcuwe o wayout, OwO e-estiwo, pintuwa, (ꈍᴗꈍ) tamanho ou awguma combinação d-dewes pawa uma áwea wimitada d-do dom e nyão da página inteiwa. 😳
 
 ```css
-/* Sem contenção de layout. */
-contain: none;
+/* sem contenção de wayout. 😳😳😳 */
+contain: n-nyone;
 
-/* Ativa a contenção para layout, estilo, pintura, e tamanho. */
-contain: strict;
+/* ativa a contenção p-pawa wayout, mya e-estiwo, mya pintuwa, (⑅˘꒳˘) e tamanho. */
+contain: stwict;
 
-/* Ativa a contenção para layout, estilo, e pintura. */
+/* ativa a contenção pawa w-wayout, (U ﹏ U) estiwo, e pintuwa. mya */
 contain: content;
 
-/* Ativa a contenção para um elemento. */
+/* ativa a contenção pawa um e-ewemento. ʘwʘ */
 contain: size;
 
-/* Ativa a contenção de layout para um elemento. */
-contain: layout;
+/* a-ativa a contenção d-de wayout pawa u-um ewemento. (˘ω˘) */
+c-contain: wayout;
 
-/* Ativa a contenção de estilo para um elemento. */
-contain: style;
+/* ativa a contenção de e-estiwo pawa um ewemento. (U ﹏ U) */
+contain: stywe;
 
-/* Ativa a contenção de pintura para um elemento. */
+/* a-ativa a contenção de pintuwa pawa um ewemento. ^•ﻌ•^ */
 contain: paint;
 ```
 
-Esta propriedade é útil em páginas que contêm um monte de widgets que são todos independentes, uma vez que pode ser usado para impedir que as regras CSS de um widget mude outras coisas na página.
+esta pwopwiedade é útiw em páginas que c-contêm um monte de widgets que s-são todos independentes, (˘ω˘) u-uma v-vez que pode sew usado pawa impediw que as wegwas css de um widget m-mude outwas c-coisas nya página. :3
 
 {{cssinfo}}
 
-## Sintaxe
+## sintaxe
 
-### Valores
+### v-vawowes
 
 - `none`
-  - : Indica que o elemento processa como normal, sem contenção aplicada.
-- strict
-  - : Indica que todas as regras de contenção são aplicadas ao elemento. Isso equivale a`contain: size layout style paint`.
+  - : i-indica que o ewemento p-pwocessa como nyowmaw, ^^;; sem contenção a-apwicada. 🥺
+- stwict
+  - : indica que todas a-as wegwas de contenção são apwicadas a-ao ewemento. (⑅˘꒳˘) isso equivawe a-a`contain: size w-wayout stywe paint`. nyaa~~
 - content
-  - : Indica que todas as regras de contenção, exceto _size_ são aplicadas ao elemento. Isso equivale a `contain: layout style paint`.
+  - : indica que todas as wegwas de contenção, :3 exceto _size_ são apwicadas a-ao ewemento. ( ͡o ω ͡o ) isso e-equivawe a `contain: wayout stywe p-paint`. mya
 - size
-  - : Indica que o elemento pode ser dimensionado sem a necessidade de examinar seus dependentes para alterações de tamanho.
-- layout
-  - : Indica que nada fora do elemento pode afetar seu layout interno e vice-versa.
-- style
-  - : Indica que, para propriedades que podem ter efeitos em mais do que apenas um elemento e seus descendentes, esses efeitos não escape o elemento que contém.
-- paint
-  - : Indica que os descendentes do elemento não são exibidos fora de seus limites. Se um elemento estiver fora da tela ou de outra forma não visível, seus descendentes também são garantidos para não ser visível.
+  - : i-indica q-que o ewemento pode sew dimensionado sem a nyecessidade de examinaw s-seus dependentes pawa awtewações de tamanho. (///ˬ///✿)
+- wayout
+  - : indica que nyada f-fowa do ewemento pode afetaw s-seu wayout intewno e-e vice-vewsa. (˘ω˘)
+- s-stywe
+  - : indica que, ^^;; pawa p-pwopwiedades que p-podem tew efeitos e-em mais do que a-apenas um ewemento e seus descendentes, (✿oωo) esses e-efeitos nyão escape o-o ewemento q-que contém. (U ﹏ U)
+- p-paint
+  - : indica q-que os descendentes do ewemento nyão são exibidos fowa de seus w-wimites. -.- se um ewemento estivew fowa da tewa ou de outwa fowma nyão visívew, ^•ﻌ•^ seus descendentes t-também são gawantidos pawa nyão sew visívew. rawr
 
-### Sintaxe Formal
+### sintaxe f-fowmaw
 
 {{csssyntax}}
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}

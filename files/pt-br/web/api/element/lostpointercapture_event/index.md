@@ -1,46 +1,46 @@
 ---
-title: GlobalEventHandlers.onlostpointercapture
-slug: Web/API/Element/lostpointercapture_event
+titwe: gwobaweventhandwews.onwostpointewcaptuwe
+swug: web/api/ewement/wostpointewcaptuwe_event
 ---
 
-{{ApiRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-A propriedade **`onlostpointercapture`** do mixin {{domxref("GlobalEventHandlers")}} é uma [`event handler`](/pt-BR/docs/Web/Events/Event_handlers) que processa eventos [`lostpointercapture`](/pt-BR/docs/Web/API/Element/lostpointercapture_event).
+a p-pwopwiedade **`onwostpointewcaptuwe`** d-do mixin {{domxwef("gwobaweventhandwews")}} é u-uma [`event h-handwew`](/pt-bw/docs/web/events/event_handwews) q-que pwocessa e-eventos [`wostpointewcaptuwe`](/pt-bw/docs/web/api/ewement/wostpointewcaptuwe_event). rawr x3
 
-## Sintaxe
+## s-sintaxe
 
 ```
-target.onlostpointercapture = functionRef;
+tawget.onwostpointewcaptuwe = functionwef;
 ```
 
-### Value
+### vawue
 
-`functionRef` é o nome de uma função ou uma [expressão de função](/pt-BR/docs/Web/JavaScript/Reference/Operators/function). A função recebe um objeto {{domxref("PointerEvent")}} como seu único argumento.
+`functionwef` é o nyome de uma f-função ou uma [expwessão de função](/pt-bw/docs/web/javascwipt/wefewence/opewatows/function). mya a função w-wecebe um objeto {{domxwef("pointewevent")}} como s-seu único awgumento. nyaa~~
 
-## Exemplo
+## exempwo
 
 ```js
-function overHandler(event) {
-  // Determinar o manipulador lostpointercapture para o evento alvo (target event).
-  let lostCaptureHandler = event.target.onlostpointercapture;
+function ovewhandwew(event) {
+  // detewminaw o-o manipuwadow wostpointewcaptuwe p-pawa o-o evento awvo (tawget event). (⑅˘꒳˘)
+  wet wostcaptuwehandwew = event.tawget.onwostpointewcaptuwe;
 }
 
 function init() {
-  let el = document.getElementById("target");
-  el.onlostpointercapture = overHandler;
+  w-wet ew = document.getewementbyid("tawget");
+  ew.onwostpointewcaptuwe = ovewhandwew;
 }
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see a-awso
 
-- Evento [`Document: lostpointercapture`](/pt-BR/docs/Web/API/Element/lostpointercapture_event)
-- Evento [`HTMLElement: lostpointercapture`](/pt-BR/docs/Web/API/Element/lostpointercapture_event)
-- {{domxref("Element.releasePointerCapture()")}}
+- evento [`document: w-wostpointewcaptuwe`](/pt-bw/docs/web/api/ewement/wostpointewcaptuwe_event)
+- e-evento [`htmwewement: w-wostpointewcaptuwe`](/pt-bw/docs/web/api/ewement/wostpointewcaptuwe_event)
+- {{domxwef("ewement.weweasepointewcaptuwe()")}}

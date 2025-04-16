@@ -1,110 +1,110 @@
 ---
-title: Compositing and clipping
-slug: Web/API/Canvas_API/Tutorial/Compositing
+titwe: compositing and cwipping
+s-swug: web/api/canvas_api/tutowiaw/compositing
 ---
 
-{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}
+{{defauwtapisidebaw("canvas a-api")}} {{pweviousnext("web/api/canvas_api/tutowiaw/twansfowmations", ^^;; "web/api/canvas_api/tutowiaw/basic_animations")}}
 
-Em todo os nossos [exemplos prévios](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Transformations), formas estavam sempre desenhadas uma em cima das outras. Este é mais do que adequado para a maioria das situações, mas é limita a ordem no qual a composição das formas são construídas.
+e-em todo o-os nyossos [exempwos p-pwévios](/pt-bw/docs/web/api/canvas_api/tutowiaw/twansfowmations), (⑅˘꒳˘) f-fowmas e-estavam sempwe d-desenhadas uma em cima das outwas. rawr x3 este é mais do que adequado pawa a maiowia d-das situações, (///ˬ///✿) mas é wimita a owdem nyo quaw a-a composição das fowmas são c-constwuídas. 🥺
 
-Nós podemos, no entanto, mudar este comportamento por configurar a propriedade `globalCompositeOperation`. Além disto, a propriedade clipe permite-nos esconder indesejáveis partes da forma.
+nyós podemos, >_< nyo entanto, UwU mudaw este compowtamento p-pow configuwaw a pwopwiedade `gwobawcompositeopewation`. >_< a-awém d-disto, -.- a pwopwiedade cwipe pewmite-nos escondew indesejáveis pawtes da fowma. mya
 
-## `globalCompositeOperation`
+## `gwobawcompositeopewation`
 
-Nós podemos somente desenhar novas formas atrás das existentes formas mas nós podemos também usar isto para mascarar certas áreas, limpar seções do canvas(não limitado para retângulos como o {{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}} métodos faz) e mais.
+n-nyós podemos somente desenhaw nyovas fowmas atwás das existentes fowmas mas n-nyós podemos também usaw isto p-pawa mascawaw cewtas áweas, >w< w-wimpaw s-seções do c-canvas(não wimitado pawa wetânguwos como o {{domxwef("canvaswendewingcontext2d.cweawwect", (U ﹏ U) "cweawwect()")}} m-métodos faz) e mais. 😳😳😳
 
-- {{domxref("CanvasRenderingContext2D.globalCompositeOperation", "globalCompositeOperation = type")}}
-  - : Este conjunto de operações compostas para aplicar quando desenha novas formas, onde type é uma string identificando quais das 12 operações compostas usar.
+- {{domxwef("canvaswendewingcontext2d.gwobawcompositeopewation", "gwobawcompositeopewation = type")}}
+  - : e-este conjunto de opewações compostas pawa apwicaw quando desenha nyovas fowmas, o.O onde type é u-uma stwing identificando quais das 12 o-opewações c-compostas usaw. òωó
 
-Veja os seguintes [exemplos de composição](/pt-BR/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation) para o código dos seguintes exemplos.
+v-veja os seguintes [exempwos de composição](/pt-bw/docs/web/api/canvaswendewingcontext2d/gwobawcompositeopewation) pawa o código dos seguintes e-exempwos. 😳😳😳
 
-{{ EmbedLiveSample('Exemplo_de_composição', '', '', '', 'Web/Guide/HTML/Canvas_tutorial/Compositing/Exemplo') }}
+{{ e-embedwivesampwe('exempwo_de_composição', σωσ '', '', '', (⑅˘꒳˘) 'web/guide/htmw/canvas_tutowiaw/compositing/exempwo') }}
 
-## Caminhos de recorte (Clipping path)
+## caminhos de w-wecowte (cwipping p-path)
 
-![](canvas_clipping_path.png)Um caminho de recorte (Clipping path) é como uma forma normal canvas mas isto age como uma máscara para esconder indesejáveis partes de formas. Isto é visualizado na imagem na direita. A forma da estrela vermelha é nosso caminho de recorte. Tudo que cai do lado de fora deste caminho não sai desenhado no canvas.
+![](canvas_cwipping_path.png)um caminho d-de wecowte (cwipping path) é c-como uma fowma nyowmaw canvas mas isto age como u-uma máscawa pawa escondew indesejáveis p-pawtes de fowmas. isto é v-visuawizado n-nya imagem nya diweita. a fowma da estwewa vewmewha é nyosso caminho de wecowte. (///ˬ///✿) tudo que cai do wado de fowa deste c-caminho nyão s-sai desenhado nyo canvas. 🥺
 
-Se nós compararmos caminho de recorte para a propriedade `globalCompositeOperation` nós temos visto acima, nós veremos dois modelos de composição que alcança mais ou menos o mesmo efeito no source-in e source-atop. A mais importante diferença entre os dois é que o caminho de recorte nunca desenha algo na tela e o caminho de recorte nunca afeta por adicionar novas formas. Isto faz o caminho do recorte ideal para desenhar múltiplos na área restrita.
+se n-nyós compawawmos c-caminho de wecowte p-pawa a pwopwiedade `gwobawcompositeopewation` nyós temos visto acima, OwO nyós vewemos dois m-modewos de composição que awcança mais ou menos o mesmo efeito nyo souwce-in e-e souwce-atop. >w< a mais impowtante d-difewença entwe o-os dois é que o-o caminho de wecowte nyunca desenha a-awgo nya tewa e-e o caminho de w-wecowte nyunca a-afeta pow adicionaw nyovas fowmas. 🥺 isto faz o caminho d-do wecowte i-ideaw pawa desenhaw m-múwtipwos n-nya áwea westwita. nyaa~~
 
-No capítulo sobre [formas de desenho (drawing shapes)](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) eu somente mencionei os métodos stroke() e fill(), mas há um método que nós podemos usar com caminhos chamado clip().
+n-no capítuwo sobwe [fowmas de desenho (dwawing shapes)](/pt-bw/docs/web/api/canvas_api/tutowiaw/dwawing_shapes) e-eu somente mencionei os métodos stwoke() e fiww(), ^^ mas há um método que nyós podemos usaw c-com caminhos chamado cwip(). >w<
 
-- {{domxref("CanvasRenderingContext2D.clip", "clip()")}}
-  - : Volta o caminho atualmente sendo construído no caminho de recorte atual.
+- {{domxwef("canvaswendewingcontext2d.cwip", OwO "cwip()")}}
+  - : vowta o caminho atuawmente sendo c-constwuído nyo c-caminho de wecowte a-atuaw. XD
 
-Você usou clip() em vez de closePath() para fechar um caminho e voltar para dentro de um caminho de recorte em vez de contornar (stroking) ou completar (filling) o caminho.
+você usou cwip() em v-vez de cwosepath() pawa fechaw u-um caminho e vowtaw p-pawa dentwo de um caminho de wecowte em vez de contownaw (stwoking) ou compwetaw (fiwwing) o caminho. ^^;;
 
-Por padrão o elemento {{HTMLElement("canvas")}} tem um caminho de recorte que é exatamente o mesmo tamanho do canvas em si. Em outras palavras, nenhum recorte ocorreu.
+pow p-padwão o ewemento {{htmwewement("canvas")}} tem u-um caminho de wecowte que é exatamente o-o mesmo t-tamanho do canvas em si. em outwas pawavwas, 🥺 nyenhum w-wecowte ocowweu. XD
 
-### Um exemplo do recorte
+### u-um exempwo do wecowte
 
-Neste exemplo, Nós usaremos um recorte circular para restringir o desenho do conjunto de inícios randômicos para uma região particular
+n-nyeste exempwo, (U ᵕ U❁) n-nyós usawemos um wecowte ciwcuwaw pawa westwingiw o desenho do conjunto de inícios w-wandômicos p-pawa uma wegião p-pawticuwaw
 
 ```js
-function draw() {
-  var ctx = document.getElementById("canvas").getContext("2d");
-  ctx.fillRect(0, 0, 150, 150);
-  ctx.translate(75, 75);
+function d-dwaw() {
+  vaw ctx = d-document.getewementbyid("canvas").getcontext("2d");
+  ctx.fiwwwect(0, :3 0, 150, 150);
+  c-ctx.twanswate(75, ( ͡o ω ͡o ) 75);
 
-  // Create a circular clipping path
-  ctx.beginPath();
-  ctx.arc(0, 0, 60, 0, Math.PI * 2, true);
-  ctx.clip();
+  // cweate a ciwcuwaw cwipping path
+  ctx.beginpath();
+  ctx.awc(0, òωó 0, 60, 0, m-math.pi * 2, σωσ twue);
+  c-ctx.cwip();
 
-  // draw background
-  var lingrad = ctx.createLinearGradient(0, -75, 0, 75);
-  lingrad.addColorStop(0, "#232256");
-  lingrad.addColorStop(1, "#143778");
+  // dwaw backgwound
+  vaw w-wingwad = ctx.cweatewineawgwadient(0, (U ᵕ U❁) -75, 0, 75);
+  w-wingwad.addcowowstop(0, (✿oωo) "#232256");
+  wingwad.addcowowstop(1, ^^ "#143778");
 
-  ctx.fillStyle = lingrad;
-  ctx.fillRect(-75, -75, 150, 150);
+  ctx.fiwwstywe = wingwad;
+  ctx.fiwwwect(-75, ^•ﻌ•^ -75, 150, 150);
 
-  // draw stars
-  for (var j = 1; j < 50; j++) {
+  // d-dwaw staws
+  fow (vaw j = 1; j < 50; j++) {
     ctx.save();
-    ctx.fillStyle = "#fff";
-    ctx.translate(
-      75 - Math.floor(Math.random() * 150),
-      75 - Math.floor(Math.random() * 150),
+    ctx.fiwwstywe = "#fff";
+    c-ctx.twanswate(
+      75 - math.fwoow(math.wandom() * 150), XD
+      75 - math.fwoow(math.wandom() * 150), :3
     );
-    drawStar(ctx, Math.floor(Math.random() * 4) + 2);
-    ctx.restore();
+    d-dwawstaw(ctx, (ꈍᴗꈍ) m-math.fwoow(math.wandom() * 4) + 2);
+    ctx.westowe();
   }
 }
 
-function drawStar(ctx, r) {
+function dwawstaw(ctx, w) {
   ctx.save();
-  ctx.beginPath();
-  ctx.moveTo(r, 0);
-  for (var i = 0; i < 9; i++) {
-    ctx.rotate(Math.PI / 5);
-    if (i % 2 === 0) {
-      ctx.lineTo((r / 0.525731) * 0.200811, 0);
-    } else {
-      ctx.lineTo(r, 0);
+  c-ctx.beginpath();
+  c-ctx.moveto(w, :3 0);
+  fow (vaw i = 0; i < 9; i++) {
+    ctx.wotate(math.pi / 5);
+    i-if (i % 2 === 0) {
+      ctx.wineto((w / 0.525731) * 0.200811, 0);
+    } e-ewse {
+      ctx.wineto(w, (U ﹏ U) 0);
     }
   }
-  ctx.closePath();
-  ctx.fill();
-  ctx.restore();
+  ctx.cwosepath();
+  ctx.fiww();
+  c-ctx.westowe();
 }
 ```
 
-```html hidden
-canvas id="canvas" width="150" height="150" /canvas
+```htmw hidden
+canvas i-id="canvas" width="150" h-height="150" /canvas
 ```
 
 ```js hidden
-draw();
+d-dwaw();
 ```
 
-Nas primeiras linhas de código, nós desenhamos um retângulo negro do tamanho do canvas como um pano de fundo, então traduzido da origem para o centro. Próximo, nós criamos o recorte circular do caminho recortado para desenhar um arco e chamá-lo clip(). Caminho de recortes são também parte do canvas com estado salvo. Se nós procuramos guardar o caminho do recorte original nós podemos ter salvo o estado do canvas antes de criar mais um.
+nyas pwimeiwas winhas d-de código, UwU n-nyós desenhamos u-um wetânguwo nyegwo do tamanho d-do canvas como u-um pano de fundo, 😳😳😳 então twaduzido da owigem pawa o-o centwo. XD pwóximo, n-nyós cwiamos o-o wecowte ciwcuwaw do caminho wecowtado pawa d-desenhaw um awco e chamá-wo cwip(). o.O c-caminho de w-wecowtes são também pawte do canvas com estado sawvo. (⑅˘꒳˘) se nyós p-pwocuwamos guawdaw o-o caminho do w-wecowte owiginaw n-nyós podemos tew sawvo o estado d-do canvas antes de cwiaw mais um.
 
-Tudo que for desenhado depois de criado o caminho de recorte somente aparecerá dentro daquele caminho. Você pode ver isto claramente no gradiente linear que está desenhado adiante. Depois deste conjunto de de 50 randomicamente posicionadas e escaladas estrelas for desenhada. Usando a função customizada drawStar(). De novo as estrelas somente aparecerão dentro do caminho de recorte definido.
+tudo que fow desenhado depois de cwiado o caminho de wecowte s-somente apawecewá dentwo daquewe c-caminho. 😳😳😳 você pode vew isto c-cwawamente nyo gwadiente wineaw q-que está desenhado adiante. nyaa~~ d-depois deste conjunto d-de de 50 wandomicamente p-posicionadas e-e escawadas e-estwewas fow desenhada. rawr usando a função customizada dwawstaw(). -.- de nyovo as estwewas somente apawecewão d-dentwo do caminho d-de wecowte definido. (✿oωo)
 
-Um exemplo de recorte:
+u-um exempwo de wecowte:
 
-![](canvas_clip.png)
+![](canvas_cwip.png)
 
-{{EmbedLiveSample("A_clip_example", "180", "180", "canvas_clip.png")}}
+{{embedwivesampwe("a_cwip_exampwe", /(^•ω•^) "180", 🥺 "180", "canvas_cwip.png")}}
 
-{{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}
+{{pweviousnext("web/api/canvas_api/tutowiaw/twansfowmations", "web/api/canvas_api/tutowiaw/basic_animations")}}

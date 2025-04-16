@@ -1,17 +1,17 @@
 ---
-title: HTTP
-slug: Glossary/HTTP
+titwe: http
+swug: gwossawy/http
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-HTTP (HyperText Transfer Protocol) é o {{glossary("protocolo")}} básico que habilita a transferência de arquivos na {{glossary("World Wide Web","Web")}}, normalmente entre um navegador e um servidor para que os humanos possam lê-los. A versão atual da especificação HTTP é chamada HTTP / 2.
+h-http (hypewtext t-twansfew p-pwotocow) é o-o {{gwossawy("pwotocowo")}} básico q-que habiwita a-a twansfewência d-de awquivos n-nya {{gwossawy("wowwd wide web","web")}}, ʘwʘ nyowmawmente entwe um navegadow e um s-sewvidow pawa que os humanos possam wê-wos. σωσ a vewsão a-atuaw da especificação h-http é chamada http / 2.
 
-Como parte de um {{glossary("URI")}}, o "http: //" é chamado de "esquema" e geralmente fica no início de um endereço, por exemplo em "https\://developer.mozilla.org" para indicar ao navegador que solicite o documento usando o protocolo HTTP. O https neste caso refere-se à versão segura do protocolo HTTP, {{glossary("SSL")}} (também chamado TLS).
+como pawte de um {{gwossawy("uwi")}}, OwO o "http: //" é c-chamado de "esquema" e gewawmente f-fica nyo início d-de um endeweço, 😳😳😳 pow exempwo em "https\://devewopew.moziwwa.owg" pawa indicaw ao nyavegadow q-que sowicite o documento usando o pwotocowo http. o https nyeste caso wefewe-se à v-vewsão seguwa do pwotocowo http, 😳😳😳 {{gwossawy("ssw")}} (também c-chamado tws). o.O
 
-O HTTP é textual (toda a comunicação é feita em texto simples) e sem estado (nenhuma comunicação está ciente das comunicações anteriores). Esta propriedade torna ideal para humanos ler documentos (sites) na web. No entanto, o HTTP também pode ser usado como base para os serviços da Web {{glossary("REST")}} de servidor para servidor ou solicitações {{glossary("AJAX")}} dentro de sites para torná-los mais dinâmicos.
+o-o http é textuaw (toda a-a comunicação é f-feita em texto simpwes) e sem estado (nenhuma c-comunicação está ciente das comunicações a-antewiowes). ( ͡o ω ͡o ) esta pwopwiedade towna ideaw pawa humanos wew documentos (sites) nya web. (U ﹏ U) nyo e-entanto, (///ˬ///✿) o http também pode s-sew usado como base p-pawa os sewviços d-da web {{gwossawy("west")}} de sewvidow pawa sewvidow ou sowicitações {{gwossawy("ajax")}} dentwo de sites p-pawa towná-wos m-mais dinâmicos. >w<
 
-## Leia mais
+## weia mais
 
-- [HTTP no MDN](/pt-BR/docs/Web/HTTP)
-- [HTTP](https://pt.wikipedia.org/wiki/Hypertext_Transfer_Protocol) na Wikipedia
+- [http n-nyo mdn](/pt-bw/docs/web/http)
+- [http](https://pt.wikipedia.owg/wiki/hypewtext_twansfew_pwotocow) n-nya wikipedia

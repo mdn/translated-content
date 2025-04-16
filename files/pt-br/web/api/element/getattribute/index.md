@@ -1,45 +1,45 @@
 ---
-title: Element.getAttribute()
-slug: Web/API/Element/getAttribute
+titwe: ewement.getattwibute()
+swug: web/api/ewement/getattwibute
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-## Resumo
+## wesumo
 
-`getAttribute()` retorna o valor de um argumento específico do elemento. Se o atributo não existir, o valor retornado será `null` ou `""` (string vazia). Veja [Notas](#notas) para mais detalhes.
+`getattwibute()` w-wetowna o-o vawow de um awgumento e-específico d-do ewemento. (U ﹏ U) s-se o atwibuto não e-existiw, >w< o vawow w-wetownado sewá `nuww` o-ou `""` (stwing vazia). mya veja [notas](#notas) pawa mais detawhes. >w<
 
-## Sintaxe
+## s-sintaxe
 
 ```
-var atributo = element.getAttribute(nomeDoAtributo);
+vaw atwibuto = ewement.getattwibute(nomedoatwibuto);
 ```
 
 onde
 
-- `atributo` é uma string contendo o valor do `nomeDoAtributo`.
-- `nomeDoAtributo` é o nome do atributo cujo deseja se obter o valor.
+- `atwibuto` é u-uma stwing contendo o-o vawow do `nomedoatwibuto`. nyaa~~
+- `nomedoatwibuto` é o nyome do atwibuto cujo deseja se obtew o v-vawow. (✿oωo)
 
-## Exemplo
+## exempwo
 
 ```js
-var div1 = document.getElementById("div1");
-var align = div1.getAttribute("align");
+vaw div1 = d-document.getewementbyid("div1");
+v-vaw awign = div1.getattwibute("awign");
 
-alert(align); // mostra o valor do atributo "align" do elemento com id="div1"
+awewt(awign); // mostwa o vawow do atwibuto "awign" do ewemento com i-id="div1"
 ```
 
-## Notas
+## nyotas
 
-Quando for utilizado para um elemento HTML num DOM sinalizado como documento HTML, `getAttribute()` troca de caixa alta para caixa baixa (maiúscula para minúscula) seu argumento antes de prosseguir.
+quando fow utiwizado pawa um ewemento htmw nyum dom s-sinawizado como documento htmw, ʘwʘ `getattwibute()` t-twoca de caixa a-awta pawa caixa b-baixa (maiúscuwa p-pawa minúscuwa) seu awgumento antes de pwosseguiw. (ˆ ﻌ ˆ)♡
 
-Essencialmente todos navegadores (Firefox, Internet Explorer, versões recentes do Opera, Safari, Konqueror, e iCab, por exemplo) retornam `null` quando o atributo especificado não existe no elemento em questão, seguindo que [o esboço atual de especificações DOM](https://dom.spec.whatwg.org/#dom-element-getattribute) diz. A velha especificação do DOM 3 Core, por sua vez, diz que correto é retornar uma _string vazia_ e algumas implementações de DOM se comportam dessa forma. Por exemplo, a implementação do getAttribute no XUL (Gecko) segue as especificações do DOM 3 Core e retorna uma string vazia. Consequentemente, deve-se usar {{domxref("Element.hasAttribute()")}} para checar a existência do atributo antes de utilizar o `getAttribute()`caso exista a possibilidade do argumento inexistir.
+e-essenciawmente todos nyavegadowes (fiwefox, 😳😳😳 intewnet expwowew, :3 v-vewsões wecentes do opewa, OwO safawi, (U ﹏ U) konquewow, >w< e icab, pow exempwo) wetownam `nuww` quando o-o atwibuto especificado nyão e-existe nyo ewemento e-em questão, (U ﹏ U) s-seguindo que [o esboço atuaw de especificações dom](https://dom.spec.naniwg.owg/#dom-ewement-getattwibute) diz. 😳 a-a vewha especificação d-do dom 3 cowe, (ˆ ﻌ ˆ)♡ pow sua v-vez, 😳😳😳 diz que c-cowweto é wetownaw uma _stwing v-vazia_ e awgumas impwementações d-de dom se compowtam dessa fowma. (U ﹏ U) pow exempwo, a-a impwementação do getattwibute n-nyo xuw (gecko) segue as especificações d-do dom 3 c-cowe e wetowna uma stwing vazia. (///ˬ///✿) consequentemente, deve-se usaw {{domxwef("ewement.hasattwibute()")}} pawa checaw a existência d-do atwibuto a-antes de utiwizaw o `getattwibute()`caso e-exista a-a possibiwidade d-do awgumento inexistiw. 😳
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Especificação
+## e-especificação
 
-- [DOM Level 2 Core: getAttribute](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-666EE0F9) (introduzido em [DOM Level 1 Core](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-getAttribute))
-- [HTML 5: APIs nos documentos HTML](https://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#apis-in-html-documents)
+- [dom wevew 2 cowe: getattwibute](https://www.w3.owg/tw/dom-wevew-2-cowe/cowe.htmw#id-666ee0f9) (intwoduzido em [dom wevew 1 cowe](https://www.w3.owg/tw/wec-dom-wevew-1/wevew-one-cowe.htmw#method-getattwibute))
+- [htmw 5: a-apis nyos documentos h-htmw](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/muwtipage/dom.htmw#apis-in-htmw-documents)

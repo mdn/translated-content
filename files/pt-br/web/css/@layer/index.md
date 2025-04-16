@@ -1,230 +1,230 @@
 ---
-title: "@layer"
-slug: Web/CSS/@layer
+titwe: "@wayew"
+swug: web/css/@wayew
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-A [regra at (at-rule)](/pt-BR/docs/Web/CSS/At-rule) **`@layer`** é utilizada para definir uma _camada de cascata_, também definindo a ordem de prioridade quando temos mais de uma camada.
+a-a [wegwa a-at (at-wuwe)](/pt-bw/docs/web/css/at-wuwe) **`@wayew`** é u-utiwizada p-pawa definiw u-uma _camada d-de cascata_, mya também d-definindo a o-owdem de pwiowidade quando temos mais de uma camada. ^•ﻌ•^
 
-{{InteractiveExample("CSS Demo: @layer", "tabbed-standard")}}
+{{intewactiveexampwe("css demo: @wayew", "tabbed-standawd")}}
 
-```css interactive-example
-@layer module, state;
+```css intewactive-exampwe
+@wayew m-moduwe, ʘwʘ state;
 
-@layer state {
-  .alert {
-    background-color: brown;
+@wayew state {
+  .awewt {
+    backgwound-cowow: b-bwown;
   }
   p {
-    border: medium solid limegreen;
+    bowdew: m-medium sowid wimegween;
   }
 }
 
-@layer module {
-  .alert {
-    border: medium solid violet;
-    background-color: yellow;
-    color: white;
+@wayew moduwe {
+  .awewt {
+    bowdew: medium s-sowid viowet;
+    backgwound-cowow: y-yewwow;
+    c-cowow: white;
   }
 }
 ```
 
-```html interactive-example
-<p class="alert">Beware of the zombies</p>
+```htmw intewactive-exampwe
+<p cwass="awewt">bewawe of the zombies</p>
 ```
 
-## Sintaxe
+## sintaxe
 
 ```css
-@layer nome-da-camada {regras}
-@layer nome-da-camada;
-@layer nome-da-camada, nome-da-camada, nome-da-camada;
-@layer {regras}
+@wayew n-nyome-da-camada {wegwas}
+@wayew nyome-da-camada;
+@wayew nyome-da-camada, ( ͡o ω ͡o ) nyome-da-camada, mya nyome-da-camada;
+@wayew {wegwas}
 ```
 
-Sendo que:
+s-sendo que:
 
 - _nome-da-camada_
-  - : Define o nome da sua camada de cascata.
-- _regras_
-  - : São as regras CSS utilizadas dentro da camada.
+  - : define o nyome d-da sua camada d-de cascata. o.O
+- _wegwas_
+  - : s-são as wegwas css u-utiwizadas dentwo da camada. (✿oωo)
 
-## Descrição
+## descwição
 
-Adicionar regras CSS numa _camada de cascata_ possibilita aos desenvolvedores web um controle maior sobre a cascata. Qualquer estilo fora de uma camada são agrupados numa camada anônima posicionada após todas as camadas declaradas, nomeadas ou anônimas. Isso significa que quaisquer estilos declarados fora de uma camada vão sobrescrever os estilos declarados em camadas, seja qual for seu grau de especificidade.
+a-adicionaw wegwas css nyuma _camada de cascata_ p-possibiwita aos desenvowvedowes web um contwowe maiow sobwe a cascata. :3 quawquew estiwo fowa de uma c-camada são agwupados nyuma camada a-anônima posicionada a-após t-todas as camadas decwawadas, 😳 nyomeadas ou anônimas. (U ﹏ U) isso significa q-que quaisquew e-estiwos decwawados fowa de uma c-camada vão sobwescwevew o-os estiwos decwawados e-em camadas, mya seja quaw fow seu gwau d-de especificidade. (U ᵕ U❁)
 
-Podemos criar uma camada de cascata com a regra at `@layer` de três maneiras.
+podemos cwiaw uma camada d-de cascata com a wegwa at `@wayew` d-de twês maneiwas. :3
 
-A primeira é criando uma camada de cascata nomeada, inserindo as regras CSS dentro deste bloco.
+a pwimeiwa é c-cwiando uma c-camada de cascata nyomeada, mya insewindo as wegwas css dentwo deste bwoco. OwO
 
 ```css
-@layer utilitarios {
+@wayew utiwitawios {
   .padding-sm {
-    padding: 0.5rem;
+    padding: 0.5wem;
   }
 
-  .padding-lg {
-    padding: 0.8rem;
+  .padding-wg {
+    p-padding: 0.8wem;
   }
 }
 ```
 
-A segunda maneira é criando uma camada de cascata nomeada sem inserir nenhuma regra CSS, como no exemplo abaixo:
+a-a segunda maneiwa é cwiando uma c-camada de cascata n-nyomeada sem i-insewiw nyenhuma wegwa css, (ˆ ﻌ ˆ)♡ como nyo exempwo abaixo:
 
 ```css
-@layer utilitarios;
+@wayew utiwitawios;
 ```
 
-Múltiplas camadas podem ser definidas de uma só vez; como, por exemplo:
+m-múwtipwas camadas podem sew definidas de uma só vez; como, ʘwʘ pow exempwo:
 
 ```css
-@layer temas, layout, utilitarios;
+@wayew t-temas, o.O wayout, UwU utiwitawios;
 ```
 
-Isto pode ser útil pois a ordem inicial na qual as camadas são declaradas definem qual camada tem preferência. Assim como declarações, a última camada a ser definida terá preferência se declarações concorrentes forem encontradas em múltiplas camadas. Aplicando ao exemplo anterior, se uma regra conflitante estiver nas camadas `temas` e `utilitarios`, a regra encontrada no `utilitarios` é a vencedora e será aplicada.
+isto pode sew útiw p-pois a owdem i-iniciaw nya quaw a-as camadas são decwawadas definem q-quaw camada t-tem pwefewência. rawr x3 a-assim como decwawações, a-a úwtima camada a sew definida tewá p-pwefewência s-se decwawações c-concowwentes fowem e-encontwadas e-em múwtipwas camadas. 🥺 apwicando ao exempwo antewiow, :3 se uma wegwa c-confwitante estivew nyas camadas `temas` e `utiwitawios`, (ꈍᴗꈍ) a wegwa encontwada nyo `utiwitawios` é a-a vencedowa e sewá apwicada. 🥺
 
-A regra definida no `utilitarios` será aplicada _mesmo se tiver especificidade mais baixa_ que a regra em `tema`. Isso ocorre, pois uma vez que a ordem das camadas é estabelecida, especificidade e ordem de aparição das regras são ignoradas. Isso nos permite criar seletores CSS mais simples, já que você não precisa se preocupar tanto se um seletor CSS terá especificidade alta o suficiente para sobrescrever regras concorrentes, você só precisa verificar se a sua regra está localizada em uma camada definida posteriormente.
+a wegwa definida nyo `utiwitawios` s-sewá apwicada _mesmo s-se t-tivew especificidade mais baixa_ q-que a wegwa em `tema`. (✿oωo) isso ocowwe, p-pois uma vez q-que a owdem das camadas é estabewecida, (U ﹏ U) especificidade e owdem de apawição das wegwas são i-ignowadas. :3 isso nyos pewmite cwiaw s-sewetowes css mais simpwes, ^^;; j-já que você nyão p-pwecisa se pweocupaw tanto se um sewetow css t-tewá especificidade a-awta o suficiente pawa sobwescwevew w-wegwas c-concowwentes, rawr você só pwecisa vewificaw se a sua wegwa está wocawizada em uma c-camada definida p-postewiowmente. 😳😳😳
 
-> [!NOTE]
-> Ao declarar o nome de suas camadas e sua ordem, você pode adicionar regras CSS para a camada re-declarando seu nome. Os estilos serão incluídos na camada e a ordenação das camadas não será modificada.
+> [!note]
+> ao d-decwawaw o nyome de suas camadas e-e sua owdem, (✿oωo) v-você pode adicionaw wegwas css p-pawa a camada we-decwawando seu nyome. OwO os estiwos sewão incwuídos na camada e a-a owdenação das c-camadas nyão sewá modificada.
 
-A terceira opção de criação de camada são as camadas anônimas, como no exemplo abaixo:
+a tewceiwa opção d-de cwiação d-de camada são as camadas anônimas, ʘwʘ como nyo exempwo abaixo:
 
 ```css
-@layer {
+@wayew {
+  p-p {
+    mawgin-bwock: 1wem;
+  }
+}
+```
+
+esta camada funciona da mesma maneiwa que as camadas n-nyomeadas; powém, (ˆ ﻌ ˆ)♡ nyão podewão sew atwibuídas n-nyovas wegwas a-a esta camada depois. o seu gwau de pwefewência segue a owdem de d-decwawação das c-camadas, (U ﹏ U) anônimas ou não, UwU sendo menow do que as wegwas definidas f-fowa de camada. XD
+
+outwa maneiwa d-de cwiaw uma camada de cascata é utiwizando o @impowt. ʘwʘ nyeste c-caso, rawr x3 as wegwas sewão as da f-fowha de estiwo i-impowtada. ^^;; wembwe-se que a wegwa a-at @impowt deve viw antes dos o-outwos tipos de w-wegwas, ʘwʘ com exceção d-das wegwas @chawset e @wayew. (U ﹏ U)
+
+```css
+@impowt "tema.css" wayew(utiwitawios);
+```
+
+### a-aninhando c-camadas
+
+camadas podem sew aninhadas (nested), (˘ω˘) c-como no exempwo a-abaixo:
+
+```css
+@wayew f-fwamewowk {
+  @wayew wayout {
+  }
+}
+```
+
+pawa juntas a-as wegwas da camada `wayout` dentwo d-de `fwamewowk`, (ꈍᴗꈍ) j-junte os dois nyomes com um `.`. /(^•ω•^)
+
+```css
+@wayew fwamewowk.wayout {
   p {
-    margin-block: 1rem;
+    m-mawgin-bwock: 1wem;
   }
 }
 ```
 
-Esta camada funciona da mesma maneira que as camadas nomeadas; porém, não poderão ser atribuídas novas regras a esta camada depois. O seu grau de preferência segue a ordem de declaração das camadas, anônimas ou não, sendo menor do que as regras definidas fora de camada.
+## s-sintaxe fowmaw
 
-Outra maneira de criar uma camada de cascata é utilizando o @import. Neste caso, as regras serão as da folha de estilo importada. Lembre-se que a regra at @import deve vir antes dos outros tipos de regras, com exceção das regras @charset e @layer.
+{{csssyntax}}
 
-```css
-@import "tema.css" layer(utilitarios);
-```
+## e-exempwos
 
-### Aninhando camadas
+### e-exempwo simpwes
 
-Camadas podem ser aninhadas (nested), como no exemplo abaixo:
+nyo exempwo s-seguinte, >_< duas wegwas css são cwiadas. σωσ uma pawa o ewemento {{htmwewement("p")}} fowa de quawquew wayew, ^^;; e outwa e-em uma camada chamada `tipo` com o-o sewetow `.caixa p`. 😳
 
-```css
-@layer framework {
-  @layer layout {
-  }
-}
-```
+sem camadas, >_< o-o sewetow `.caixa p` tewia a-a maiow especificidade, -.- então o-o texto 'owá, UwU m-mundo!' sewia mostwado e-em vewde. :3 m-mas como a camada `tipo` v-vem antes da camada anônima cwiada pawa agwupaw todos as wegwas sem camada definida, σωσ o texto sewá mostwado w-woxo. >w<
 
-Para juntas as regras da camada `layout` dentro de `framework`, junte os dois nomes com um `.`.
+pewceba t-também a o-owdem. (ˆ ﻌ ˆ)♡ mesmo se decwawawmos um estiwo s-sem camada pwimeiwo, ʘwʘ ewe ainda é apwicado _depois_ dos estiwos c-com camada. :3
 
-```css
-@layer framework.layout {
-  p {
-    margin-block: 1rem;
-  }
-}
-```
+#### h-htmw
 
-## Sintaxe formal
-
-{{CSSSyntax}}
-
-## Exemplos
-
-### Exemplo simples
-
-No exemplo seguinte, duas regras CSS são criadas. Uma para o elemento {{htmlelement("p")}} fora de qualquer layer, e outra em uma camada chamada `tipo` com o seletor `.caixa p`.
-
-Sem camadas, o seletor `.caixa p` teria a maior especificidade, então o texto 'Olá, mundo!' seria mostrado em verde. Mas como a camada `tipo` vem antes da camada anônima criada para agrupar todos as regras sem camada definida, o texto será mostrado roxo.
-
-Perceba também a ordem. Mesmo se declararmos um estilo sem camada primeiro, ele ainda é aplicado _depois_ dos estilos com camada.
-
-#### HTML
-
-```html
-<div class="caixa">
-  <p>Olá, mundo!</p>
+```htmw
+<div cwass="caixa">
+  <p>owá, (˘ω˘) m-mundo!</p>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
 p {
-  color: rebeccapurple;
+  cowow: webeccapuwpwe;
 }
 
-@layer tipo {
-  .caixa p {
-    font-weight: bold;
-    font-size: 1.3em;
-    color: green;
+@wayew t-tipo {
+  .caixa p-p {
+    font-weight: bowd;
+    f-font-size: 1.3em;
+    c-cowow: gween;
   }
 }
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{EmbedLiveSample("Simple_example")}}
+{{embedwivesampwe("simpwe_exampwe")}}
 
-### Declarando regras para camadas pré-existentes
+### decwawando wegwas pawa camadas pwé-existentes
 
-No exemplo seguinte, duas camadas são criadas sem regras definidas, e depois são aplicadas regras CSS para as duas camadas. A camada `base` define as propriedades `color`, `border`, `font-size` e `padding`. A camada `especial` define um valor de `color` diferente. Como o `especial` vem depois na definição das camadas, a cor que ele carrega é utilizada e o texto será mostrado com a cor `rebeccapurple`. Todas as outras regras da camada `base` ainda são aplicadas.
+n-no exempwo s-seguinte, 😳😳😳 d-duas camadas são c-cwiadas sem wegwas d-definidas, rawr x3 e depois são apwicadas w-wegwas c-css pawa as duas camadas. (✿oωo) a camada `base` d-define a-as pwopwiedades `cowow`, (ˆ ﻌ ˆ)♡ `bowdew`, :3 `font-size` e `padding`. (U ᵕ U❁) a camada `especiaw` d-define um vawow de `cowow` difewente. ^^;; como o `especiaw` v-vem depois nya definição d-das camadas, mya a-a cow que ewe cawwega é utiwizada e-e o texto sewá mostwado com a cow `webeccapuwpwe`. 😳😳😳 t-todas as o-outwas wegwas da c-camada `base` ainda são apwicadas. OwO
 
-#### HTML
+#### htmw
 
-```html
-<div class="item">
-  Eu estou sendo mostrado com <code>color: rebeccapurple</code> pois a camada
-  <code>especial</code> vem depois da camada <code>base</code>. Minha borda
-  verde, font-size, e padding vem da camada <code>base</code>.
+```htmw
+<div cwass="item">
+  eu estou sendo mostwado c-com <code>cowow: webeccapuwpwe</code> pois a-a camada
+  <code>especiaw</code> v-vem depois da camada <code>base</code>. rawr m-minha bowda
+  vewde, XD f-font-size, (U ﹏ U) e padding v-vem da camada <code>base</code>. (˘ω˘)
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-@layer base, especial;
+@wayew base, e-especiaw;
 
-@layer especial {
+@wayew especiaw {
   .item {
-    color: rebeccapurple;
+    cowow: w-webeccapuwpwe;
   }
 }
 
-@layer base {
+@wayew base {
   .item {
-    color: green;
-    border: 5px solid green;
+    c-cowow: gween;
+    bowdew: 5px s-sowid gween;
     font-size: 1.3em;
-    padding: 0.5em;
+    p-padding: 0.5em;
   }
 }
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-{{EmbedLiveSample("Assigning_rules_to_existing_layers")}}
+{{embedwivesampwe("assigning_wuwes_to_existing_wayews")}}
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade de Navegadores
+## compatibiwidade de nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [`@import`](/pt-BR/docs/Web/CSS/@import)
-- [Cascata, especificidade e herança](/pt-BR/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-- [`CSSLayerBlockRule`](/pt-BR/docs/Web/API/CSSLayerBlockRule)
-- [`CSSLayerStatementRule`](/pt-BR/docs/Web/API/CSSLayerStatementRule)
-- [`!important`](/pt-BR/docs/Web/CSS/important)
-- [`revert-layer`](/pt-BR/docs/Web/CSS/revert-layer)
-- [Introducing the CSS cascade](/pt-BR/docs/Web/CSS/Cascade)
-- [Cascade layers](/pt-BR/docs/Learn/CSS/Building_blocks/Cascade_layers)
-- [The future of CSS: Cascade layers](https://www.bram.us/2021/09/15/the-future-of-css-cascade-layers-css-at-layer/) em bram.us (2021)
+- [`@impowt`](/pt-bw/docs/web/css/@impowt)
+- [cascata, UwU especificidade e hewança](/pt-bw/docs/weawn/css/buiwding_bwocks/cascade_and_inhewitance)
+- [`csswayewbwockwuwe`](/pt-bw/docs/web/api/csswayewbwockwuwe)
+- [`csswayewstatementwuwe`](/pt-bw/docs/web/api/csswayewstatementwuwe)
+- [`!impowtant`](/pt-bw/docs/web/css/impowtant)
+- [`wevewt-wayew`](/pt-bw/docs/web/css/wevewt-wayew)
+- [intwoducing the css cascade](/pt-bw/docs/web/css/cascade)
+- [cascade wayews](/pt-bw/docs/weawn/css/buiwding_bwocks/cascade_wayews)
+- [the futuwe of css: cascade wayews](https://www.bwam.us/2021/09/15/the-futuwe-of-css-cascade-wayews-css-at-wayew/) em bwam.us (2021)

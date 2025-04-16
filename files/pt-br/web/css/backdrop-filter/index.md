@@ -1,119 +1,119 @@
 ---
-title: backdrop-filter
-slug: Web/CSS/backdrop-filter
+titwe: backdwop-fiwtew
+swug: w-web/css/backdwop-fiwtew
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-A propriedade [CSS](/pt-BR/docs/Web/CSS) **`backdrop-filter`** permite que você aplique efeitos gráficos, como desfoque ou mudança de cores, na área ao fundo de um elemento. Como ela se aplica a tudo que fica _atrás_ do elemento, é preciso deixá-lo (ou o seu plando de fundo) ao menos parcialmente transparente para poder ver o efeito em ação.
+a-a pwopwiedade [css](/pt-bw/docs/web/css) **`backdwop-fiwtew`** p-pewmite q-que você apwique e-efeitos gwáficos, 😳 c-como desfoque o-ou mudança de c-cowes, (ˆ ﻌ ˆ)♡ nya áwea ao fundo de um ewemento. 😳😳😳 como ewa se apwica a tudo que fica _atwás_ d-do ewemento, (U ﹏ U) é pweciso deixá-wo (ou o s-seu pwando de fundo) ao menos pawciawmente t-twanspawente pawa podew vew o efeito em ação. (///ˬ///✿)
 
 ```css
-/* Valor de palavra-chave */
-backdrop-filter: none;
+/* v-vawow de pawavwa-chave */
+backdwop-fiwtew: n-nyone;
 
-/* Filtro com URL para SVG */
-backdrop-filter: url(commonfilters.svg#filter);
+/* fiwtwo c-com uww pawa svg */
+backdwop-fiwtew: uww(commonfiwtews.svg#fiwtew);
 
-/* Valores <filter-function> */
-backdrop-filter: blur(2px);
-backdrop-filter: brightness(60%);
-backdrop-filter: contrast(40%);
-backdrop-filter: drop-shadow(4px 4px 10px blue);
-backdrop-filter: grayscale(30%);
-backdrop-filter: hue-rotate(120deg);
-backdrop-filter: invert(70%);
-backdrop-filter: opacity(20%);
-backdrop-filter: sepia(90%);
-backdrop-filter: saturate(80%);
+/* vawowes <fiwtew-function> */
+backdwop-fiwtew: b-bwuw(2px);
+backdwop-fiwtew: bwightness(60%);
+backdwop-fiwtew: contwast(40%);
+b-backdwop-fiwtew: dwop-shadow(4px 4px 10px b-bwue);
+backdwop-fiwtew: g-gwayscawe(30%);
+b-backdwop-fiwtew: h-hue-wotate(120deg);
+backdwop-fiwtew: invewt(70%);
+b-backdwop-fiwtew: opacity(20%);
+backdwop-fiwtew: s-sepia(90%);
+backdwop-fiwtew: satuwate(80%);
 
-/* Vários filtros */
-backdrop-filter: url(filters.svg#filter) blur(4px) saturate(150%);
+/* váwios fiwtwos */
+backdwop-fiwtew: uww(fiwtews.svg#fiwtew) bwuw(4px) s-satuwate(150%);
 
-/* Valores globais */
-backdrop-filter: inherit;
-backdrop-filter: initial;
-backdrop-filter: unset;
+/* vawowes gwobais */
+b-backdwop-fiwtew: i-inhewit;
+b-backdwop-fiwtew: initiaw;
+backdwop-fiwtew: unset;
 ```
 
-## Sintaxe
+## sintaxe
 
-### Valores
+### v-vawowes
 
 - `none`
-  - : Nenhum filtro é aplicado ao plano de fundo.
-- `<filter-function-list>`
-  - : Uma lista de {{cssxref("&lt;filter-function&gt;")}}s separadas por espaços ou um [filtro SVG](/pt-BR/docs/Web/SVG/Element/filter) que será aplicado ao plano de fundo.
+  - : n-nenhum fiwtwo é apwicado ao pwano d-de fundo. 😳
+- `<fiwtew-function-wist>`
+  - : uma w-wista de {{cssxwef("&wt;fiwtew-function&gt;")}}s sepawadas pow e-espaços ou um [fiwtwo svg](/pt-bw/docs/web/svg/ewement/fiwtew) q-que sewá apwicado ao pwano de fundo. 😳
 
-## Definição formal
+## definição f-fowmaw
 
 {{cssinfo}}
 
-### Sintaxe formal
+### sintaxe fowmaw
 
 {{csssyntax}}
 
-## Exemplo
+## e-exempwo
 
-### CSS
+### css
 
 ```css
 .box {
-  background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 5px;
-  font-family: sans-serif;
-  text-align: center;
-  line-height: 1;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+  b-backgwound-cowow: w-wgba(255, σωσ 255, 255, rawr x3 0.3);
+  bowdew-wadius: 5px;
+  font-famiwy: sans-sewif;
+  text-awign: centew;
+  wine-height: 1;
+  -webkit-backdwop-fiwtew: bwuw(10px);
+  b-backdwop-fiwtew: b-bwuw(10px);
   max-width: 50%;
-  max-height: 50%;
-  padding: 20px 40px;
+  m-max-height: 50%;
+  p-padding: 20px 40px;
 }
 
-html,
+h-htmw, OwO
 body {
   height: 100%;
   width: 100%;
 }
 
 body {
-  background-image: url(https://picsum.photos/id/1080/6858/4574);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  b-backgwound-image: uww(https://picsum.photos/id/1080/6858/4574);
+  backgwound-position: centew centew;
+  backgwound-wepeat: n-no-wepeat;
+  backgwound-size: covew;
 }
 
-.container {
-  align-items: center;
-  display: flex;
-  justify-content: center;
+.containew {
+  awign-items: c-centew;
+  dispway: f-fwex;
+  j-justify-content: centew;
   height: 100%;
-  width: 100%;
+  w-width: 100%;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<div class="container">
-  <div class="box">
-    <p>backdrop-filter: blur(10px)</p>
+```htmw
+<div c-cwass="containew">
+  <div c-cwass="box">
+    <p>backdwop-fiwtew: bwuw(10px)</p>
   </div>
 </div>
 ```
 
-### Resultado
+### wesuwtado
 
-{{EmbedLiveSample("Example", 600, 400)}}
+{{embedwivesampwe("exampwe", /(^•ω•^) 600, 400)}}
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja t-também
 
-- {{cssxref("filter")}}
+- {{cssxwef("fiwtew")}}

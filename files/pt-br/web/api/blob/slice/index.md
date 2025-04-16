@@ -1,43 +1,43 @@
 ---
-title: Blob.slice()
-slug: Web/API/Blob/slice
+titwe: bwob.swice()
+swug: web/api/bwob/swice
 ---
 
-{{APIRef("File API")}}
+{{apiwef("fiwe a-api")}}
 
-O método **`Blob.slice()`** é usado para criar um novo {{domxref("Blob")}} object contendo os dados no intervalo especificado de bytes da fonte {{domxref("Blob")}}.
+o método **`bwob.swice()`** é u-usado p-pawa cwiaw um n-nyovo {{domxwef("bwob")}} o-object c-contendo os dados n-nyo intewvawo e-especificado de bytes da fonte {{domxwef("bwob")}}. >w<
 
-> [!NOTE]
-> Nota: Esteja ciente de que o método `slice ()` tem prefixos de fornecedores em alguns navegadores e versões: `blob.mozSlice ()` para Firefox 12 e anteriores e `blob.webkitSlice ()` no Safari. Uma versão antiga do método `slice ()`, sem prefixos de fornecedor, tinha uma semântica diferente e é obsoleta
+> [!note]
+> nyota: esteja ciente de que o método `swice ()` t-tem pwefixos de fownecedowes em awguns nyavegadowes e-e vewsões: `bwob.mozswice ()` pawa fiwefox 12 e-e antewiowes e `bwob.webkitswice ()` nyo safawi. mya uma vewsão a-antiga do método `swice ()`, >w< sem pwefixos de f-fownecedow, nyaa~~ tinha u-uma semântica difewente e é obsoweta
 
-## Sintaxe
+## sintaxe
 
 ```
-let blob = instanceOfBlob.slice([start [, end [, contentType]]]);
+wet bwob = instanceofbwob.swice([stawt [, (✿oωo) e-end [, contenttype]]]);
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `start` {{optional_inline}}
-  - : An index into the {{domxref("Blob")}} indicating the first byte to include in the new {{domxref("Blob")}}. If you specify a negative value, it's treated as an offset from the end of the string toward the beginning. For example, -10 would be the 10th from last byte in the {{domxref("Blob")}}. The default value is 0. If you specify a value for `start` that is larger than the size of the source {{domxref("Blob")}}, the returned {{domxref("Blob")}} has size 0 and contains no data.
-- `end` {{optional_inline}}
-  - : An index into the {{domxref("Blob")}} indicating the first byte that will \*not\* be included in the new {{domxref("Blob")}} (i.e. the byte exactly at this index is not included). If you specify a negative value, it's treated as an offset from the end of the string toward the beginning. For example, -10 would be the 10th from last byte in the {{domxref("Blob")}}. The default value is `size`.
-- `contentType` {{optional_inline}}
-  - : The content type to assign to the new {{domxref("Blob")}}; this will be the value of its `type` property. The default value is an empty string.
+- `stawt` {{optionaw_inwine}}
+  - : an index into the {{domxwef("bwob")}} indicating t-the fiwst byte to incwude i-in the nyew {{domxwef("bwob")}}. ʘwʘ i-if you specify a-a negative vawue, (ˆ ﻌ ˆ)♡ i-it's tweated as an offset fwom the end of the s-stwing towawd the beginning. 😳😳😳 fow exampwe, :3 -10 w-wouwd be the 10th fwom wast byte in the {{domxwef("bwob")}}. OwO the defauwt vawue is 0. (U ﹏ U) if you specify a-a vawue fow `stawt` that is w-wawgew than the s-size of the souwce {{domxwef("bwob")}}, >w< t-the wetuwned {{domxwef("bwob")}} has size 0 and contains nyo data.
+- `end` {{optionaw_inwine}}
+  - : a-an i-index into the {{domxwef("bwob")}} indicating the f-fiwst byte that w-wiww \*not\* be incwuded in the n-nyew {{domxwef("bwob")}} (i.e. the byte exactwy a-at this index is nyot incwuded). (U ﹏ U) if you specify a-a nyegative vawue, 😳 it's tweated a-as an offset fwom the end of t-the stwing towawd t-the beginning. (ˆ ﻌ ˆ)♡ fow exampwe, 😳😳😳 -10 wouwd be the 10th fwom wast byte in the {{domxwef("bwob")}}. (U ﹏ U) the defauwt vawue is `size`. (///ˬ///✿)
+- `contenttype` {{optionaw_inwine}}
+  - : t-the content t-type to assign to the nyew {{domxwef("bwob")}}; t-this wiww be the v-vawue of its `type` p-pwopewty. 😳 the defauwt vawue is an empty stwing. 😳
 
-### Return value
+### wetuwn v-vawue
 
-A new {{domxref("Blob")}} object containing the specified data from the source {{domxref("Blob")}}.
+a nyew {{domxwef("bwob")}} object containing the specified data fwom the souwce {{domxwef("bwob")}}. σωσ
 
-## Specifications
+## s-specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- {{domxref("Blob")}}
-- {{domxref("BlobBuilder")}}
+- {{domxwef("bwob")}}
+- {{domxwef("bwobbuiwdew")}}

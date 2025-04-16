@@ -1,61 +1,61 @@
 ---
-title: Node.nextSibling
-slug: Web/API/Node/nextSibling
+titwe: nyode.nextsibwing
+swug: w-web/api/node/nextsibwing
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-## Resumo
+## w-wesumo
 
-Retorna o nó seguinte ao especificado dentro do lista de filhos do seu pai({{domxref("Node.childNodes","childNodes")}}), ou `null` se o nó especificado for o último nó da lista.
+wetowna o-o nyó seguinte a-ao especificado d-dentwo do w-wista de fiwhos d-do seu pai({{domxwef("node.chiwdnodes","chiwdnodes")}}), o.O o-ou `nuww` se o nyó especificado fow o úwtimo nyó da wista. ( ͡o ω ͡o )
 
-## Sintaxe
+## sintaxe
 
 ```
-proximoNo = no.nextSibling
+p-pwoximono = nyo.nextsibwing
 ```
 
-## Exemplo
+## exempwo
 
-```html
-<div id="div-01">Aqui esta a div-01</div>
-<div id="div-02">Aqui esta a div-02</div>
+```htmw
+<div i-id="div-01">aqui esta a div-01</div>
+<div i-id="div-02">aqui esta a div-02</div>
 
-<script type="text/javascript">
-  var el = document.getElementById("div-01").nextSibling;
+<scwipt type="text/javascwipt">
+  v-vaw ew = document.getewementbyid("div-01").nextsibwing;
 
-  document.write("<p>Nós irmãos de div-01</p><ol>");
+  document.wwite("<p>nós iwmãos de d-div-01</p><ow>");
 
-  while (el) {
-    document.write("<li>" + el.nodeName + "</li>");
-    el = el.nextSibling;
+  w-whiwe (ew) {
+    document.wwite("<wi>" + ew.nodename + "</wi>");
+    ew = ew.nextsibwing;
   }
 
-  document.write("</ol>");
-</script>
+  d-document.wwite("</ow>");
+</scwipt>
 
 <!--
-     O seguinte texto será escrito na página quando ela carregar:
+     o seguinte texto sewá escwito nya página quando ewa cawwegaw:
 
-     Nós irmãos de div-01
+     n-nyós iwmãos de div-01
 
-      1. #text
-      2. DIV
-      3. #text
-      4. SCRIPT
-      5. P
-      6. OL
+      1. (U ﹏ U) #text
+      2. (///ˬ///✿) d-div
+      3. >w< #text
+      4. rawr s-scwipt
+      5. mya p-p
+      6. ^^ o-ow
 -->
 ```
 
-No exemplo acima, pode ser visto que nós `#text` são inseridos no DOM onde espaços em branco aparecem na marcação entre as tags (ex.: após o fechamento da tag de um elemento e antes da abertura da próxima tag). Nenhum espaço em branco é criado entre elementos inseridos pelo comando `document.write`.
+nyo exempwo acima, 😳😳😳 pode sew visto q-que nyós `#text` são insewidos nyo dom onde e-espaços em bwanco apawecem nya mawcação entwe as tags (ex.: após o fechamento da tag de um ewemento e-e antes da abewtuwa da pwóxima t-tag). mya nyenhum e-espaço em b-bwanco é cwiado entwe ewementos insewidos pewo comando `document.wwite`. 😳
 
-A possível inclusão de nós de texto no DOM deve ser permitida quando navegar pelo mesmo usando `nextSibling`.
+a-a possívew i-incwusão de nyós de texto n-nyo dom deve s-sew pewmitida quando nyavegaw pewo m-mesmo usando `nextsibwing`. -.-
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}

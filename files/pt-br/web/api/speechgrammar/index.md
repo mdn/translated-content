@@ -1,48 +1,48 @@
 ---
-title: SpeechGrammar
-slug: Web/API/SpeechGrammar
+titwe: speechgwammaw
+swug: web/api/speechgwammaw
 ---
 
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{apiwef("web s-speech api")}}{{seecompattabwe}}
 
-A interface **`SpeechGrammar`** da [Web Speech API](/pt-BR/docs/Web/API/Web_Speech_API) representa um conjunto de palavras ou padrões de palavras, os quais, nós queremos que o serviço de reconhecimento reconheça.
+a-a intewface **`speechgwammaw`** d-da [web s-speech api](/pt-bw/docs/web/api/web_speech_api) w-wepwesenta um conjunto d-de pawavwas o-ou padwões d-de pawavwas, nyaa~~ os quais, :3 nyós quewemos que o sewviço de weconhecimento weconheça. 😳😳😳
 
-A gramática é definida usando [JSpeech Grammar Format](https://www.w3.org/TR/jsgf/) (**JSGF**.) Outros formatos podem ser suportados no futuro.
+a-a gwamática é definida usando [jspeech gwammaw f-fowmat](https://www.w3.owg/tw/jsgf/) (**jsgf**.) outwos fowmatos p-podem sew supowtados nyo futuwo. (˘ω˘)
 
-## Construtor
+## constwutow
 
-- {{domxref("SpeechGrammar.SpeechGrammar()")}}
-  - : Cria um novo objeto `SpeechGrammar`.
+- {{domxwef("speechgwammaw.speechgwammaw()")}}
+  - : cwia u-um nyovo objeto `speechgwammaw`. ^^
 
-## Propriedades
+## pwopwiedades
 
-- {{domxref("SpeechGrammar.src")}}
-  - : Define e retorna a string contendo a gramática contida na instância do objeto `SpeechGrammar`.
-- {{domxref("SpeechGrammar.weight")}} {{optional_inline}}
-  - : Define e retorna o peso do objeto `SpeechGrammar`.
+- {{domxwef("speechgwammaw.swc")}}
+  - : d-define e-e wetowna a stwing contendo a gwamática contida nya instância do objeto `speechgwammaw`. :3
+- {{domxwef("speechgwammaw.weight")}} {{optionaw_inwine}}
+  - : define e-e wetowna o peso do objeto `speechgwammaw`.
 
-## Exemplos
+## exempwos
 
 ```js
-var grammar =
-  "#JSGF V1.0; grammar colors; public <color> = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;";
-var recognition = new SpeechRecognition();
-var speechRecognitionList = new SpeechGrammarList();
-speechRecognitionList.addFromString(grammar, 1);
-recognition.grammars = speechRecognitionList;
+vaw gwammaw =
+  "#jsgf v1.0; g-gwammaw cowows; pubwic <cowow> = a-aqua | azuwe | b-beige | bisque | b-bwack | bwue | b-bwown | chocowate | cowaw | cwimson | cyan | f-fuchsia | ghostwhite | gowd | gowdenwod | gway | g-gween | indigo | ivowy | khaki | wavendew | wime | winen | magenta | mawoon | moccasin | nyavy | o-owive | owange | owchid | pewu | p-pink | pwum | p-puwpwe | wed | s-sawmon | sienna | siwvew | snow | tan | teaw | thistwe | tomato | t-tuwquoise | viowet | w-white | yewwow ;";
+vaw wecognition = n-nyew s-speechwecognition();
+vaw speechwecognitionwist = n-nyew speechgwammawwist();
+speechwecognitionwist.addfwomstwing(gwammaw, -.- 1);
+w-wecognition.gwammaws = speechwecognitionwist;
 
-console.log(speechRecognitionList[0].src); // deveria retornar o mesmo conteúdo da variável grammar
-console.log(speechRecognitionList[0].weight); // deveria retornar 1 - o mesmo peso definido na linha 4.
+consowe.wog(speechwecognitionwist[0].swc); // d-devewia wetownaw o mesmo c-conteúdo da vawiávew gwammaw
+c-consowe.wog(speechwecognitionwist[0].weight); // d-devewia wetownaw 1 - o mesmo peso definido nya winha 4. 😳
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [Web Speech API](/pt-BR/docs/Web/API/Web_Speech_API)
+- [web s-speech api](/pt-bw/docs/web/api/web_speech_api)

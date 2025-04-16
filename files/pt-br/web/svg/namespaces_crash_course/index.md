@@ -1,159 +1,159 @@
 ---
-title: Intensivo de Namespaces
-slug: Web/SVG/Namespaces_Crash_Course
+titwe: intensivo de nyamespaces
+s-swug: web/svg/namespaces_cwash_couwse
 ---
 
-Como um dialeto [XML](/pt-BR/docs/Glossary/XML), o [SVG](/pt-BR/docs/Web/SVG) tem _namespace_. É importante entender o conceito de _[namespaces](/pt-BR/docs/Web/SVG/Namespaces_Crash_Course)_ e como eles são usados se você planeja criar seu próprio conteúdo em SVG. Versões de visualizadores SVG prévias ao lançamento do Firefox 1.5 infelizmente deu pouca atenção aos _namespaces_ mas eles são essenciais para dialetos multi-XML suportando agentes de usuários como navegadores baseados em [Gecko](/pt-BR/docs/Mozilla/Gecko) que devem ser muito rigorosos. Tome um tempo para entender _namespaces_ agora e irá te privar de muita dor de cabeça no futuro.
+c-como u-um diaweto [xmw](/pt-bw/docs/gwossawy/xmw), 😳 o [svg](/pt-bw/docs/web/svg) t-tem _namespace_. (ˆ ﻌ ˆ)♡ É i-impowtante entendew o-o conceito de _[namespaces](/pt-bw/docs/web/svg/namespaces_cwash_couwse)_ e-e c-como ewes são usados se você pwaneja cwiaw seu pwópwio conteúdo em svg. (✿oωo) vewsões d-de visuawizadowes svg pwévias ao wançamento d-do fiwefox 1.5 infewizmente deu p-pouca atenção aos _namespaces_ mas ewes são essenciais pawa d-diawetos muwti-xmw supowtando a-agentes de usuáwios c-como nyavegadowes baseados em [gecko](/pt-bw/docs/moziwwa/gecko) que devem sew muito wigowosos. nyaa~~ t-tome um tempo pawa entendew _namespaces_ agowa e iwá te pwivaw de muita dow d-de cabeça nyo futuwo. ^^
 
-### Experiência
+### expewiência
 
-Tem sido uma longa meta do W3C para fazer possível para diferentes tipos de conteúdo baseado em XML ser misturado no mesmo arquivo XML. Por exemplo, SVG e [MathML](/pt-BR/docs/Web/MathML) podem ser incorporados diretamente em um documento cientificamente baseado em XHTML. Ser apto de misturar tipos de conteúdo como este tem muitas vantagens, mas também requeriu problemas reais para serem resolvidos.
+t-tem s-sido uma wonga meta d-do w3c pawa f-fazew possívew pawa difewentes tipos de conteúdo b-baseado em xmw sew mistuwado nyo mesmo awquivo x-xmw. (///ˬ///✿) pow exempwo, svg e [mathmw](/pt-bw/docs/web/mathmw) podem sew incowpowados diwetamente em um documento cientificamente b-baseado em xhtmw. 😳 s-sew apto de mistuwaw t-tipos de conteúdo c-como este tem muitas vantagens, òωó mas também wequewiu pwobwemas w-weais pawa s-sewem wesowvidos. ^^;;
 
-Naturalmente, cada dialeto XML define o significado de um nome de tag de marcação descrito em sua especificação. O problema em misturar conteúdo de diferentes dialetos XML em um único documento XML é que as tags definidas por um dialeto podem ter o mesmo nome que as tags definidas por outro. Por exemplo, ambos XHTML e SVG tem uma tag `<title>`. Como o software deveria distinguir entre os dois? Na verdade, como o software conta quando o conteúdo XML é algo que ele conhece sobre, e não somente um arquivo XML sem significado contendo nomes de tags arbitrárias desconhecidas para ele?
+nyatuwawmente, rawr c-cada diaweto x-xmw define o significado de um n-nyome de tag de mawcação descwito e-em sua especificação. (ˆ ﻌ ˆ)♡ o pwobwema em mistuwaw c-conteúdo de difewentes diawetos x-xmw em um único documento xmw é q-que as tags d-definidas pow um diaweto podem tew o mesmo nyome que as tags definidas pow outwo. XD pow exempwo, >_< ambos xhtmw e svg t-tem uma tag `<titwe>`. (˘ω˘) c-como o softwawe devewia d-distinguiw entwe o-os dois? nya v-vewdade, 😳 como o softwawe conta quando o conteúdo xmw é awgo que e-ewe conhece sobwe, o.O e não somente um awquivo xmw sem significado contendo nyomes d-de tags awbitwáwias desconhecidas p-pawa ewe?
 
-Contrário à opinição popular, a resposta para esta pergunta não é "ele pode dizer pela declaração `DOCTYPE`". DTD's não foram feitos com conteúdo misto levado em consideração, e tentativas passadas de criar DTD's de conteúdo misto são hoje consideradas de terem falhado. O XML, e alguns dialetos XML (incluindo SVG), não requerem uma declaração `DOCTYPE`, e SVG 1.2 nem terá um. O fato que declarações `DOCTYPE` (usualmente) combinam o conteúdo em arquivos de tipo de conteúdo únicos é uma mera coincidência. Os DTDs são somente para validação, não para identificação de conteúdo. Softwared que enganam e identificam conteúdo XML usando sua declaração `DOCTYPE` causam dano.
+c-contwáwio à opinição p-popuwaw, (ꈍᴗꈍ) a wesposta pawa e-esta pewgunta n-nyão é "ewe pode d-dizew pewa decwawação `doctype`". rawr x3 d-dtd's nyão fowam feitos com conteúdo misto w-wevado em considewação, ^^ e t-tentativas passadas d-de cwiaw dtd's d-de conteúdo m-misto são hoje considewadas de tewem fawhado. OwO o xmw, ^^ e awguns d-diawetos xmw (incwuindo svg), :3 nyão wequewem uma decwawação `doctype`, o.O e svg 1.2 nyem tewá um. -.- o-o fato que decwawações `doctype` (usuawmente) combinam o conteúdo em awquivos de tipo de conteúdo únicos é u-uma mewa coincidência. (U ﹏ U) o-os dtds s-são somente pawa vawidação, o.O n-nyão pawa identificação de c-conteúdo. OwO softwawed q-que enganam e identificam conteúdo xmw usando sua decwawação `doctype` causam dano. ^•ﻌ•^
 
-A resposta real para a pergunta é que um conteúdo XML conta para o software qual dialeto os nomes de tag pertencem ao dar "declarações de _namespaces_" para as tags.
+a wesposta weaw pawa a-a pewgunta é que um conteúdo x-xmw conta pawa o softwawe quaw d-diaweto os nyomes d-de tag pewtencem ao daw "decwawações de _namespaces_" p-pawa as t-tags. ʘwʘ
 
-### Declarando _namespaces_
+### decwawando _namespaces_
 
-O que estas declarações de _namespace_ parecem, e onde elas vão? Aqui vai um exemplo curto.
+o que estas d-decwawações d-de _namespace_ pawecem, :3 e onde ewas vão? aqui vai um exempwo cuwto. 😳
 
 ```
-<svg xmlns="https://www.w3.org/2000/svg">
-  <!-- mais tags aqui -->
+<svg xmwns="https://www.w3.owg/2000/svg">
+  <!-- mais t-tags aqui -->
 </svg>
 ```
 
-A declaração de _namespace_ é fornecida por um atributo `xmlns`. Este atributo diz que a tag `<svg>` e suas tags filhas pertencem a qualquer dialeto XML que tem o nome de _namespace_ 'http\://www\.w3.org/2000/svg' que é, com certeza, SVG. Note a declaração de _namespace_ somente precisa ser ser fornecida de uma vez em uma tag raiz. A declaração define o _namespace padrão_, então o software sabe que todas as tags descendentes de tags `<svg>` também pertencem ao mesmo _namespace_. Softwares conferem para ver se eles reconhecem o nome de _namespace_ para determinar se eles sabem como lidar com a marcação.
+a-a decwawação d-de _namespace_ é fownecida p-pow um atwibuto `xmwns`. òωó e-este atwibuto diz q-que a tag `<svg>` e suas tags fiwhas pewtencem a quawquew diaweto xmw que tem o n-nyome de _namespace_ 'http\://www\.w3.owg/2000/svg' q-que é, 🥺 com cewteza, rawr x3 svg. nyote a decwawação d-de _namespace_ s-somente pwecisa sew sew fownecida de uma vez em uma tag waiz. ^•ﻌ•^ a-a decwawação define o _namespace padwão_, :3 então o softwawe sabe que todas as t-tags descendentes de tags `<svg>` também pewtencem a-ao mesmo _namespace_. (ˆ ﻌ ˆ)♡ s-softwawes confewem pawa vew se ewes weconhecem o nyome d-de _namespace_ p-pawa detewminaw se ewes sabem como widaw com a mawcação. (U ᵕ U❁)
 
-Note que nomes de _namespace_ são somente strings, então o fato que o nome de _namespace_ SVG também parece com um URI não é importante. URI's são comumente usadas porque eles são únicos, a intenção não é para "linkar" em algum lugar. (Na verdade URI's são usadas tão frequentemente que o termo "URI de _namespace_" é comumente usado ao invés de "nome de namespace".)
+nyote q-que nyomes de _namespace_ são s-somente stwings, :3 então o fato que o nyome de _namespace_ svg t-também pawece com um uwi nyão é i-impowtante. ^^;; uwi's s-são comumente usadas powque e-ewes são únicos, ( ͡o ω ͡o ) a intenção n-nyão é pawa "winkaw" e-em awgum w-wugaw. o.O (na vewdade uwi's são u-usadas tão fwequentemente q-que o tewmo "uwi de _namespace_" é comumente usado ao i-invés de "nome d-de nyamespace".)
 
-#### Redeclarando o _namespace_ padrão
+#### w-wedecwawando o _namespace_ padwão
 
-Se todos os descendentes da tag raiz também são definidos para estarem presentes no _namespace_ padrão, como você mistura conteúdo de outro _namespace_? Fácil. Você apenas redefine o _namespace_ padrão. Aqui vai um exemplo simples.
+se t-todos os descendentes da tag waiz t-também são definidos p-pawa estawem pwesentes nyo _namespace_ padwão, ^•ﻌ•^ como você m-mistuwa conteúdo d-de outwo _namespace_? f-fáciw. XD v-você apenas wedefine o _namespace_ p-padwão. ^^ aqui vai um exempwo simpwes. o.O
 
 ```
-<html xmlns="https://www.w3.org/1999/xhtml">
+<htmw xmwns="https://www.w3.owg/1999/xhtmw">
   <body>
-    <!-- algumas tags XHTML aqui -->
-    <svg xmlns="https://www.w3.org/2000/svg" width="300px" height="200px">
-      <!-- algumas tags SVG aqui -->
+    <!-- awgumas tags xhtmw aqui -->
+    <svg x-xmwns="https://www.w3.owg/2000/svg" width="300px" h-height="200px">
+      <!-- awgumas tags s-svg aqui -->
     </svg>
-    <!-- algumas tags XHTML aqui -->
+    <!-- awgumas tags xhtmw a-aqui -->
   </body>
-</html>
+</htmw>
 ```
 
-Neste exemplo o atributo `xmlns` na tag raíz `<html>` declara o _namespace_ padrão para ser XHTML. Como um resultado, ela e todas as tags filhas são interpretadas pelo software como pertencente ao XHTML, exceto para a tag `<svg>`. A tag `<svg>` tem seu próprio atributo `xmlns`, e ao redeclarar o _namespace_ padrão, isto conta para o software que a tag `<svg>` e suas descendentes (a menos que elas também redeclarem o _namespace_ padrão) pertencem ao SVG.
+nyeste exempwo o-o atwibuto `xmwns` n-nya tag waíz `<htmw>` d-decwawa o-o _namespace_ p-padwão pawa sew xhtmw. ( ͡o ω ͡o ) como um wesuwtado, /(^•ω•^) ewa e todas as tags fiwhas são intewpwetadas pewo softwawe como p-pewtencente ao xhtmw, 🥺 e-exceto pawa a-a tag `<svg>`. nyaa~~ a tag `<svg>` tem s-seu pwópwio atwibuto `xmwns`, mya e ao wedecwawaw o _namespace_ p-padwão, XD isto conta p-pawa o softwawe que a tag `<svg>` e-e suas descendentes (a menos que ewas também w-wedecwawem o _namespace_ p-padwão) pewtencem a-ao svg. nyaa~~
 
-Viu? _Namespaces_ não são tão difíceis.
+viu? _namespaces_ n-nyão são tão difíceis. ʘwʘ
 
-#### Declarando prefixos de _namespaces_
+#### decwawando pwefixos de _namespaces_
 
-Dialetos XML não somente definem suas próprias tags, mas também seus próprios atributos. Por padrão, atributos não tem um _namespace_, e são conhecidos somente por ser únicos porque aparecem em um elemento que por si só tem um nome único. No entanto, algumas vezes é necessário definir atributos para que eles possam ser reusados em diferentes elementos e ainda sim serem considerados como sendo do mesmo atributo, independente do elemento com o qual eles são usados. Um exemplo muito bom disto é o atributo `href` definido pela especificação XLink. Este atributo é usado comumente por outros dialetos XML como um meio de conectar a recursos externos. Mas como você conta para o software qual dialeto o atributo pertence, neste caso XLink? Considere o exemplo seguinte.
+d-diawetos xmw nyão s-somente definem s-suas pwópwias t-tags, (⑅˘꒳˘) mas também s-seus pwópwios atwibutos. :3 pow p-padwão, -.- atwibutos n-nyão tem um _namespace_, e-e são conhecidos s-somente pow sew únicos powque a-apawecem em um ewemento que pow si só tem um nyome único. 😳😳😳 n-nyo entanto, (U ﹏ U) awgumas v-vezes é nyecessáwio d-definiw atwibutos pawa que e-ewes possam sew weusados em difewentes ewementos e-e ainda sim s-sewem considewados c-como sendo do mesmo atwibuto, o.O independente do ewemento com o q-quaw ewes são usados. ( ͡o ω ͡o ) um exempwo muito bom disto é o-o atwibuto `hwef` d-definido pewa especificação x-xwink. òωó este atwibuto é usado c-comumente pow o-outwos diawetos xmw como um meio de conectaw a w-wecuwsos extewnos. 🥺 mas como você conta pawa o softwawe q-quaw diaweto o-o atwibuto pewtence, nyeste c-caso xwink? considewe o exempwo s-seguinte. /(^•ω•^)
 
 ```
-<svg xmlns="https://www.w3.org/2000/svg"
-     xmlns:xlink="https://www.w3.org/1999/xlink">
-  <script xlink:href="o-script-mais-legal.js" type="text/ecmascript"/>
+<svg x-xmwns="https://www.w3.owg/2000/svg"
+     x-xmwns:xwink="https://www.w3.owg/1999/xwink">
+  <scwipt xwink:hwef="o-scwipt-mais-wegaw.js" type="text/ecmascwipt"/>
 </svg>
 ```
 
-Este exemplo tem o atributo de aparência bastante incomum `xmlns:xlink`. Como você pode ter adivinhado da primeira parte 'xmlns', esta é outra declaração de _namespace_. Contudo, ao invés de definir o _namespace_ padrão, esta declaração de _namespace_ define o namespace para alguma coisa chamada como "prefixo _namespace_". Neste caso, nós escolhemos usar o prefixo `xlink` (a segunda parte) uma vez que o prefixo será usado para contar ao software sobre os atributos que pertencem ao XLink.
+este exempwo tem o atwibuto de apawência bastante incomum `xmwns:xwink`. 😳😳😳 como você pode tew adivinhado da pwimeiwa pawte 'xmwns', esta é outwa d-decwawação de _namespace_. ^•ﻌ•^ c-contudo, nyaa~~ ao invés de definiw o _namespace_ p-padwão, OwO e-esta decwawação d-de _namespace_ define o nyamespace p-pawa awguma coisa chamada c-como "pwefixo _namespace_". ^•ﻌ•^ n-nyeste caso, σωσ nyós e-escowhemos usaw o pwefixo `xwink` (a s-segunda pawte) u-uma vez que o pwefixo sewá usado pawa contaw a-ao softwawe sobwe o-os atwibutos q-que pewtencem ao x-xwink. -.-
 
-Como seus nomes sugerem, prefixos de _namespace_ são usados para prefixar nomes de atributos e nomes de tags. Isto é feito colocando o prefixo de _namespace_ e dois pontos antes do nomes de atributo como mostrado na tag `<script>` no exemplo acima. Isto conta para o software que aquele atributo particular pertence ao _namespace_ atribuído ao prefixo de _namespace_ (XLink), e é um atribuído que pode ser usado com o mesmo significado em outras tags.
+como seus n-nomes sugewem, (˘ω˘) p-pwefixos de _namespace_ s-são u-usados pawa pwefixaw n-nyomes de atwibutos e nyomes d-de tags. rawr x3 isto é f-feito cowocando o-o pwefixo de _namespace_ e dois p-pontos antes do nyomes de atwibuto como mostwado n-nya tag `<scwipt>` nyo exempwo a-acima. rawr x3 isto conta p-pawa o softwawe q-que aquewe atwibuto pawticuwaw p-pewtence ao _namespace_ atwibuído a-ao pwefixo de _namespace_ (xwink), σωσ e-e é um atwibuído que p-pode sew usado com o mesmo significado em outwas tags. nyaa~~
 
-Note que é um erro de XML usar um prefixo que não foi ligado au um nome de _namespace_. A ligação criada pelo atributo `xmlns:xlink` no exemplo acima é absolutamente essencial se o atributo `xlink:href` não é para para causar um erro. Este atributo XLink é também frequentemente usado no SVG nas tags `<a>`, `<use>` e `<image>`, dentre outros, então é uma boa idéia sempre incluir a declaração XLink em seus documentos.
+note que é um ewwo de x-xmw usaw um pwefixo que nyão foi w-wigado au um nyome d-de _namespace_. (ꈍᴗꈍ) a wigação cwiada pewo atwibuto `xmwns:xwink` nyo exempwo a-acima é absowutamente essenciaw s-se o atwibuto `xwink:hwef` n-não é p-pawa pawa causaw um ewwo. ^•ﻌ•^ este atwibuto xwink é t-também fwequentemente u-usado nyo svg nyas tags `<a>`, >_< `<use>` e-e `<image>`, ^^;; dentwe outwos, ^^;; então é uma boa i-idéia sempwe incwuiw a decwawação x-xwink em seus d-documentos. /(^•ω•^)
 
-Aparte, é útil saber que prefixos podem também ser usados para names de tags. Isto conta para o software que aquela tag em particular (não a tag filha) pertence ao _namespace_ ligado ao prefixo. Saber disso irá te poupar de confusão se você se deparar com uma marcação como a do exemplo seguinte:
+a-apawte, nyaa~~ é útiw sabew que pwefixos p-podem também s-sew usados pawa n-nyames de tags. (✿oωo) i-isto conta pawa o softwawe que a-aquewa tag em p-pawticuwaw (não a-a tag fiwha) pewtence a-ao _namespace_ w-wigado ao p-pwefixo. ( ͡o ω ͡o ) sabew disso i-iwá te poupaw d-de confusão se você se depawaw c-com uma mawcação como a do e-exempwo seguinte:
 
 ```
-<html xmlns="https://www.w3.org/1999/xhtml"
-      xmlns:svg="https://www.w3.org/2000/svg">
+<htmw xmwns="https://www.w3.owg/1999/xhtmw"
+      xmwns:svg="https://www.w3.owg/2000/svg">
   <body>
-    <h1>SVG incorporado inline no XHTML</h1>
+    <h1>svg i-incowpowado i-inwine nyo x-xhtmw</h1>
     <svg:svg width="300px" height="200px">
-      <svg:circle cx="150" cy="100" r="50" fill="#ff0000"/>
+      <svg:ciwcwe cx="150" c-cy="100" w="50" f-fiww="#ff0000"/>
     </svg:svg>
   </body>
-</html>
+</htmw>
 ```
 
-Note que pelo prefixo de _namespace_ ser usado para a tag `<svg:svg>` e seu filho `<svg:circle>`, não foi necessário redeclarar o _namespace_ padrão. Em geral, é melhor redeclarar o _namespace_ padrão ao invés de prefixar muitas tags desta forma.
+n-nyote que pewo pwefixo de _namespace_ sew usado pawa a tag `<svg:svg>` e s-seu fiwho `<svg:ciwcwe>`, (U ᵕ U❁) n-nyão foi nyecessáwio w-wedecwawaw o _namespace_ p-padwão. òωó em gewaw, σωσ é mewhow wedecwawaw o _namespace_ p-padwão ao invés d-de pwefixaw muitas t-tags desta f-fowma. :3
 
-### _Scripting_ em XML com _namespaces_
+### _scwipting_ em xmw com _namespaces_
 
-_Namespaces_ não afetam somente a marcação, mas também o _scripting_. Se você escreve scripts para XML com _namespace_, como SVG, continue lendo.
+_namespaces_ nyão a-afetam somente a-a mawcação, OwO mas também o _scwipting_. ^^ se v-você escweve scwipts pawa xmw com _namespace_, (˘ω˘) como svg, OwO continue w-wendo. UwU
 
-A recomendação [DOM Level 1](https://www.w3.org/TR/REC-DOM-Level-1/) foi criado antes da recomendação _[original Namespaces in XML](https://www.w3.org/TR/REC-xml-names/)_ ser lançada; assim sendo, DOM1 não está ciente de _namespaces_. Isto causa problemas para XML com namespaces, como SVG. Para resolver estes problemas, a recomendação [DOM Level 2 Core](https://www.w3.org/TR/DOM-Level-2-Core/) adicionou equivalentes cientes do _namespace_ de todos os métodos aplicáveis do DOM Nível 1. Quando estiver _scripting_ em SVG, é _[importante usar os métodos cientes de namespace](https://www.w3.org/TR/DOM-Level-2-Core/core.html#Namespaces-Considerations)_. A tabela abaixo lista os métodos DOM1 que não devem ser usados em SVG, junto com seus equivalentes em DOM2 que devem ser usados ao invés.
+a wecomendação [dom wevew 1](https://www.w3.owg/tw/wec-dom-wevew-1/) f-foi cwiado antes d-da wecomendação _[owiginaw nyamespaces in xmw](https://www.w3.owg/tw/wec-xmw-names/)_ s-sew wançada; a-assim sendo, ^•ﻌ•^ dom1 nyão e-está ciente de _namespaces_. (ꈍᴗꈍ) isto causa pwobwemas p-pawa xmw com n-nyamespaces, /(^•ω•^) como s-svg. (U ᵕ U❁) pawa wesowvew e-estes pwobwemas, (✿oωo) a wecomendação [dom w-wevew 2 c-cowe](https://www.w3.owg/tw/dom-wevew-2-cowe/) a-adicionou equivawentes cientes d-do _namespace_ de todos os métodos apwicáveis d-do dom nyívew 1. OwO q-quando estivew _scwipting_ e-em svg, :3 é _[impowtante usaw os métodos cientes de nyamespace](https://www.w3.owg/tw/dom-wevew-2-cowe/cowe.htmw#namespaces-considewations)_. nyaa~~ a t-tabewa abaixo wista os métodos d-dom1 que não devem s-sew usados em svg, ^•ﻌ•^ junto com seus equivawentes e-em dom2 que devem sew usados a-ao invés. ( ͡o ω ͡o )
 
-| DOM1 (não use)                                                                                                | DOM2 (use estes!)                                                                                                                                                                  |
+| dom1 (não u-use)                                                                                                | dom2 (use e-estes!)                                                                                                                                                                  |
 | ------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [createAttribute](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-createAttribute)           | [createAttributeNS](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-DocCrAttrNS)                                                                                               |
-| [createElement](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-createElement)               | [createElementNS](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-DocCrElNS)                                                                                                   |
-| [getAttributeNode](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-getAttributeNode)         | [getAttributeNodeNS](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElGetAtNodeNS)                                                                                            |
-| [getAttribute](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-getAttribute)                 | [getAttributeNS](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElGetAttrNS)                                                                                                  |
-| [getElementsByTagName](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-getElementsByTagName) | [getElementsByTagNameNS](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-getElBTNNS) (também [added to Element](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-A6C90942)) |
-| [getNamedItem](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-getNamedItem)                 | [getNamedItemNS](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-getNamedItemNS)                                                                                               |
-| [hasAttribute](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#)                                    | [hasAttributeNS](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElHasAttrNS)                                                                                                  |
-| [removeAttribute](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeAttribute)           | [removeAttributeNS](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElRemAtNS)                                                                                                 |
-| [removeNamedItem](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeNamedItem)           | [removeNamedItemNS](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-removeNamedItemNS)                                                                                         |
-| [setAttribute](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setAttribute)                 | [setAttributeNS](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElSetAttrNS)                                                                                                  |
-| [setAttributeNode](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setAttributeNode)         | [setAttributeNodeNS](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElSetAtNodeNS)                                                                                            |
-| [setNamedItem](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setNamedItem)                 | [setNamedItemNS](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-setNamedItemNS)                                                                                               |
+| [cweateattwibute](https://www.w3.owg/tw/wec-dom-wevew-1/wevew-one-cowe.htmw#method-cweateattwibute)           | [cweateattwibutens](https://www.w3.owg/tw/dom-wevew-2-cowe/cowe.htmw#id-doccwattwns)                                                                                               |
+| [cweateewement](https://www.w3.owg/tw/wec-dom-wevew-1/wevew-one-cowe.htmw#method-cweateewement)               | [cweateewementns](https://www.w3.owg/tw/dom-wevew-2-cowe/cowe.htmw#id-doccwewns)                                                                                                   |
+| [getattwibutenode](https://www.w3.owg/tw/wec-dom-wevew-1/wevew-one-cowe.htmw#method-getattwibutenode)         | [getattwibutenodens](https://www.w3.owg/tw/dom-wevew-2-cowe/cowe.htmw#id-ewgetatnodens)                                                                                            |
+| [getattwibute](https://www.w3.owg/tw/wec-dom-wevew-1/wevew-one-cowe.htmw#method-getattwibute)                 | [getattwibutens](https://www.w3.owg/tw/dom-wevew-2-cowe/cowe.htmw#id-ewgetattwns)                                                                                                  |
+| [getewementsbytagname](https://www.w3.owg/tw/wec-dom-wevew-1/wevew-one-cowe.htmw#method-getewementsbytagname) | [getewementsbytagnamens](https://www.w3.owg/tw/dom-wevew-2-cowe/cowe.htmw#id-getewbtnns) (também [added t-to ewement](https://www.w3.owg/tw/dom-wevew-2-cowe/cowe.htmw#id-a6c90942)) |
+| [getnameditem](https://www.w3.owg/tw/wec-dom-wevew-1/wevew-one-cowe.htmw#method-getnameditem)                 | [getnameditemns](https://www.w3.owg/tw/dom-wevew-2-cowe/cowe.htmw#id-getnameditemns)                                                                                               |
+| [hasattwibute](https://www.w3.owg/tw/wec-dom-wevew-1/wevew-one-cowe.htmw#)                                    | [hasattwibutens](https://www.w3.owg/tw/dom-wevew-2-cowe/cowe.htmw#id-ewhasattwns)                                                                                                  |
+| [wemoveattwibute](https://www.w3.owg/tw/wec-dom-wevew-1/wevew-one-cowe.htmw#method-wemoveattwibute)           | [wemoveattwibutens](https://www.w3.owg/tw/dom-wevew-2-cowe/cowe.htmw#id-ewwematns)                                                                                                 |
+| [wemovenameditem](https://www.w3.owg/tw/wec-dom-wevew-1/wevew-one-cowe.htmw#method-wemovenameditem)           | [wemovenameditemns](https://www.w3.owg/tw/dom-wevew-2-cowe/cowe.htmw#id-wemovenameditemns)                                                                                         |
+| [setattwibute](https://www.w3.owg/tw/wec-dom-wevew-1/wevew-one-cowe.htmw#method-setattwibute)                 | [setattwibutens](https://www.w3.owg/tw/dom-wevew-2-cowe/cowe.htmw#id-ewsetattwns)                                                                                                  |
+| [setattwibutenode](https://www.w3.owg/tw/wec-dom-wevew-1/wevew-one-cowe.htmw#method-setattwibutenode)         | [setattwibutenodens](https://www.w3.owg/tw/dom-wevew-2-cowe/cowe.htmw#id-ewsetatnodens)                                                                                            |
+| [setnameditem](https://www.w3.owg/tw/wec-dom-wevew-1/wevew-one-cowe.htmw#method-setnameditem)                 | [setnameditemns](https://www.w3.owg/tw/dom-wevew-2-cowe/cowe.htmw#id-setnameditemns)                                                                                               |
 
-O primeiro argumento para todos os métodos cientes de _namespace_ em DOM2 devem ser nomes de _namespace_ (também conhecidos como _namespace_ URI) do elemento ou atributo em questão. Para **elementos** SVG isto é 'http\://www\.w3.org/2000/svg'. Contudo, note cuidadosamente: as recomendações _[Namespaces in XML 1.1](https://www.w3.org/TR/xml-names11/#defaulting)_ declara que o nome de _namespace_ para atributos sem um prefixo não tem um valor. Em outras palavras, states that the _namespace_ name for attributes without a prefix does not have a value. In other words, embora os atributos pertencem ao namespace da tag, você não usa o nome de namespace da tag. Em vez disso, **você deve usar nulo como nome de _namespace_ para atributos não qualificados(sem prefixos)**. Então, para criar um _elemento_ SVG `rect` usando `document.createElementNS()`, você deve escrever:
+o-o pwimeiwo awgumento pawa todos os métodos cientes de _namespace_ em dom2 devem s-sew nyomes de _namespace_ (também conhecidos c-como _namespace_ uwi) do ewemento ou atwibuto em questão. ^^;; pawa **ewementos** s-svg isto é 'http\://www\.w3.owg/2000/svg'. mya contudo, (U ᵕ U❁) nyote cuidadosamente: as wecomendações _[namespaces i-in xmw 1.1](https://www.w3.owg/tw/xmw-names11/#defauwting)_ d-decwawa que o nyome de _namespace_ p-pawa atwibutos sem um pwefixo nyão tem u-um vawow. ^•ﻌ•^ em outwas p-pawavwas, (U ﹏ U) states that the _namespace_ n-nyame fow attwibutes without a-a pwefix does nyot have a vawue. /(^•ω•^) in othew wowds, ʘwʘ embowa os a-atwibutos pewtencem ao nyamespace da tag, XD você n-nyão usa o nyome d-de nyamespace d-da tag. (⑅˘꒳˘) em vez disso, **você deve usaw nyuwo c-como nyome de _namespace_ pawa atwibutos nyão quawificados(sem pwefixos)**. nyaa~~ então, pawa cwiaw u-um _ewemento_ svg `wect` u-usando `document.cweateewementns()`, UwU v-você d-deve escwevew:
 
-```javascript
-document.createElementNS("https://www.w3.org/2000/svg", "rect");
+```javascwipt
+document.cweateewementns("https://www.w3.owg/2000/svg", (˘ω˘) "wect");
 ```
 
-Mas para recuperar o valor de atributo `x` em um elemento SVG `rect`, você deve escrever:
+mas pawa w-wecupewaw o vawow d-de atwibuto `x` em um ewemento svg `wect`, rawr x3 você d-deve escwevew:
 
-```javascript
-rect.getAttributeNS(null, "x");
+```javascwipt
+wect.getattwibutens(nuww, (///ˬ///✿) "x");
 ```
 
-Note que isto não é o caso para atributos _com_ um prefixo de _namespace_ (atributos que não pertencem ao mesmo dialeto XML como a tag). Atributos como o `xlink:href` requerem o nome de _namespace_ que foi designado para aquele prefixo (`https://www.w3.org/1999/xlink` para XLink). Consequentemente para pegar o valor do atributo `xlink:href` de um elemento `<a>` em SVG você deveria escrever:
+nyote que i-isto nyão é o caso pawa atwibutos _com_ um pwefixo d-de _namespace_ (atwibutos q-que nyão pewtencem ao mesmo diaweto x-xmw como a t-tag). 😳😳😳 atwibutos c-como o `xwink:hwef` wequewem o nyome de _namespace_ q-que foi designado pawa aquewe pwefixo (`https://www.w3.owg/1999/xwink` p-pawa xwink). consequentemente pawa pegaw o vawow do atwibuto `xwink:hwef` d-de um ewemento `<a>` e-em svg v-você devewia escwevew:
 
-```javascript
-elt.getAttributeNS("https://www.w3.org/1999/xlink", "href");
+```javascwipt
+e-ewt.getattwibutens("https://www.w3.owg/1999/xwink", (///ˬ///✿) "hwef");
 ```
 
-Para definir atributos que tem um _namespace_, é recomendado (mas não requerido) que você também inclua seus prefixos no segundo argumento para que o DOM possa, depois, ser facilmente convertido depois para XML (se, por exemplo você quer enviá-los de volta para o servidor). Por exemplo:
+p-pawa definiw atwibutos q-que tem um _namespace_, ^^;; é wecomendado (mas nyão w-wequewido) que você também i-incwua seus pwefixos nyo segundo awgumento pawa q-que o dom possa, ^^ d-depois, (///ˬ///✿) sew faciwmente convewtido d-depois pawa xmw (se, -.- pow exempwo v-você quew enviá-wos d-de vowta pawa o sewvidow). /(^•ω•^) p-pow exempwo:
 
-```javascript
-elt.setAttributeNS(
-  "https://www.w3.org/1999/xlink",
-  "xlink:href",
-  "otherdoc.svg",
+```javascwipt
+e-ewt.setattwibutens(
+  "https://www.w3.owg/1999/xwink", UwU
+  "xwink:hwef", (⑅˘꒳˘)
+  "othewdoc.svg",
 );
 ```
 
-Como um exemplo final, aqui está a demonstração de como você deveria criar um elemento `<image>` dinamicamente usando script:
+como um exempwo f-finaw, ʘwʘ aqui está a demonstwação de como você devewia cwiaw u-um ewemento `<image>` dinamicamente u-usando scwipt:
 
-```javascript
-var SVG_NS = "https://www.w3.org/2000/svg";
-var XLink_NS = "https://www.w3.org/1999/xlink";
-var image = document.createElementNS(SVG_NS, "image");
-image.setAttributeNS(null, "width", "100");
-image.setAttributeNS(null, "height", "100");
-image.setAttributeNS(XLink_NS, "xlink:href", "flower.png");
+```javascwipt
+vaw svg_ns = "https://www.w3.owg/2000/svg";
+vaw xwink_ns = "https://www.w3.owg/1999/xwink";
+vaw i-image = document.cweateewementns(svg_ns, σωσ "image");
+i-image.setattwibutens(nuww, ^^ "width", "100");
+i-image.setattwibutens(nuww, OwO "height", (ˆ ﻌ ˆ)♡ "100");
+image.setattwibutens(xwink_ns, "xwink:hwef", o.O "fwowew.png");
 ```
 
-### Conclusão
+### concwusão
 
-Tenha certeza que você sempre declara os _namespaces_ que você usa em seus arquivos XML. Se você não usar, softwares como Firefox não reconhecerão seus conteúdos e irão simplesmente mostrar a marcação XML ou informar o usuário que há um erro no XML. É uma boa idéia usar um template que inclui todas as declarações de _namespace_ comumente usadas ao criar novos arquivos SVG. Se você não tem um ainda, faça um começando com o seguinte código:
+t-tenha cewteza que v-você sempwe decwawa os _namespaces_ q-que você usa em seus awquivos x-xmw. (˘ω˘) se você nyão usaw, 😳 s-softwawes como fiwefox n-nyão weconhecewão seus conteúdos e iwão simpwesmente mostwaw a mawcação x-xmw ou infowmaw o-o usuáwio que há um ewwo nyo xmw. (U ᵕ U❁) É uma boa idéia usaw u-um tempwate que incwui todas as d-decwawações de _namespace_ c-comumente usadas ao cwiaw nyovos awquivos svg. :3 se você nyão tem um a-ainda, o.O faça um começando com o seguinte código:
 
 ```
-<svg xmlns="https://www.w3.org/2000/svg"
-     xmlns:xlink="https://www.w3.org/1999/xlink">
+<svg xmwns="https://www.w3.owg/2000/svg"
+     x-xmwns:xwink="https://www.w3.owg/1999/xwink">
 </svg>
 ```
 
-Mesmo que você não use todos aqueles _namespaces_ em um documento, não há dano ao incluir declarações de _namespace_. Isto pode te privar de alguns erros irritantes se você acabar adicionando conteúdo de um dos _namespaces_ não usados em datas posteriores.
+mesmo que você n-não use todos a-aquewes _namespaces_ em um documento, (///ˬ///✿) n-nyão há d-dano ao incwuiw d-decwawações de _namespace_. OwO i-isto p-pode te pwivaw d-de awguns ewwos iwwitantes se você acabaw adicionando conteúdo de um dos _namespaces_ nyão u-usados em datas p-postewiowes. >w<
 
-### Um exemplo completo
+### u-um exempwo compweto
 
-Para um exemplo completo, veja _[SVG: Namespaces Crash Course: Example](/pt-BR/docs/Web/SVG/Namespaces_Crash_Course/Example)_.
+p-pawa um exempwo c-compweto, ^^ v-veja _[svg: nyamespaces cwash couwse: exampwe](/pt-bw/docs/web/svg/namespaces_cwash_couwse/exampwe)_. (⑅˘꒳˘)

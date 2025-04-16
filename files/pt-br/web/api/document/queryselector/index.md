@@ -1,54 +1,54 @@
 ---
-title: Document.querySelector()
-slug: Web/API/Document/querySelector
+titwe: document.quewysewectow()
+swug: web/api/document/quewysewectow
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-## Sumário
+## s-sumáwio
 
-Retorna o primeiro elemento dentro do documento (usando ordenação em profundidade, pré-ordenada e transversal dos nós do documento) que corresponde ao grupo especificado de seletores.
+wetowna o-o pwimeiwo e-ewemento dentwo d-do documento (usando o-owdenação e-em pwofundidade, ʘwʘ p-pwé-owdenada e twansvewsaw dos nyós do documento) que cowwesponde ao gwupo e-especificado de sewetowes. σωσ
 
-## Sintaxe
+## sintaxe
 
 ```
-element = document.querySelector(selectors);
+ewement = d-document.quewysewectow(sewectows);
 ```
 
-Onde:
+onde:
 
-- `element` é um objeto {{ jsxref("Element")}}.
-- `selectors` é uma string que contém um ou mais seletores CSS separados por vírgulas.
+- `ewement` é um objeto {{ j-jsxwef("ewement")}}. OwO
+- `sewectows` é uma stwing que contém um ou mais sewetowes c-css sepawados pow víwguwas. 😳😳😳
 
-## Exemplo
+## e-exempwo
 
-Neste exemplo, o primeiro elemento no documento com a classe "`myclass`" é retornado:
+nyeste e-exempwo, 😳😳😳 o pwimeiwo ewemento nyo documento com a cwasse "`mycwass`" é wetownado:
 
 ```js
-var el = document.querySelector(".myclass");
+v-vaw ew = document.quewysewectow(".mycwass");
 ```
 
-## Notas
+## nyotas
 
-Retorna `null` se nenhum resultado for encontrado; caso contrário, retorna o primeiro elemento correspondente.
+wetowna `nuww` se nyenhum wesuwtado fow e-encontwado; caso contwáwio, w-wetowna o pwimeiwo e-ewemento cowwespondente.
 
-Se o seletor utilizado for um `ID` e este `ID` foi erroneamente utilizado várias vezes no documento, ele retorna somente o primeiro elemento correspondente.
+s-se o-o sewetow utiwizado fow um `id` e este `id` foi e-ewwoneamente utiwizado váwias vezes nyo documento, o.O e-ewe wetowna somente o pwimeiwo ewemento cowwespondente. ( ͡o ω ͡o )
 
-Gera uma exceção `SYNTAX_ERR` se o grupo de seletores utilizado for inválido.
+gewa uma exceção `syntax_eww` se o-o gwupo de sewetowes utiwizado fow i-inváwido. (U ﹏ U)
 
-`querySelector()` foi introduzido com a API de seletores.
+`quewysewectow()` f-foi intwoduzido c-com a api de sewetowes. (///ˬ///✿)
 
-## Compatibilidade dos navegadores
+## compatibiwidade dos nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Especificação
+## e-especificação
 
-- [Selectors API](https://www.w3.org/TR/selectors-api/)
+- [sewectows a-api](https://www.w3.owg/tw/sewectows-api/)
 
-## Veja também
+## veja t-também
 
-- {{domxref("document.querySelectorAll()")}}
-- {{domxref("element.querySelector()")}}
-- {{domxref("element.querySelectorAll()")}}
-- [Code snippets for querySelector](/pt-BR/docs/Code_snippets/QuerySelector)
+- {{domxwef("document.quewysewectowaww()")}}
+- {{domxwef("ewement.quewysewectow()")}}
+- {{domxwef("ewement.quewysewectowaww()")}}
+- [code s-snippets fow quewysewectow](/pt-bw/docs/code_snippets/quewysewectow)

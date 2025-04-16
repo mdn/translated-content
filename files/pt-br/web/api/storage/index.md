@@ -1,77 +1,77 @@
 ---
-title: Storage
-slug: Web/API/Storage
+titwe: stowage
+swug: web/api/stowage
 ---
 
-{{APIRef("Web Storage API")}}
+{{apiwef("web s-stowage a-api")}}
 
-A interface de Armazenamento da Web Storage API fornece acesso ao armazenamento de sessão ou armazenamento local para um domínio específico, permitindo que você, por exemplo, adicione, modifique ou exclua itens de dados armazenados.
+a intewface d-de awmazenamento d-da web s-stowage api fownece a-acesso ao awmazenamento d-de sessão o-ou awmazenamento wocaw pawa um domínio específico, (U ﹏ U) pewmitindo que você, ^•ﻌ•^ p-pow exempwo, (˘ω˘) adicione, modifique ou excwua itens d-de dados awmazenados. :3
 
-Se você quiser manipular o armazenamento de sessão para um domínio, você chama o método {{domxref ("Window.sessionStorage")}}; Se você quiser manipular o armazenamento local para um domínio, você chama {{domxref ("Window.localStorage")}}.
+se você q-quisew manipuwaw o awmazenamento de sessão pawa um domínio, ^^;; v-você chama o método {{domxwef ("window.sessionstowage")}}; se v-você quisew manipuwaw o-o awmazenamento wocaw pawa um domínio, 🥺 você chama {{domxwef ("window.wocawstowage")}}. (⑅˘꒳˘)
 
-## Propriedades
+## pwopwiedades
 
-- {{domxref("Storage.length")}} {{readonlyInline}}
-  - : Retorna um número inteiro que representa o número de itens de dados armazenados no objeto Storage.
+- {{domxwef("stowage.wength")}} {{weadonwyinwine}}
+  - : w-wetowna um nyúmewo inteiwo que wepwesenta o nyúmewo de itens de dados a-awmazenados nyo objeto stowage. nyaa~~
 
-## Métodos
+## m-métodos
 
-- {{domxref("Storage.key()")}}
-  - : Quando passado um número n, este método retornará o nome da n-ésima chave no armazenamento..
-- {{domxref("Storage.getItem()")}}
-  - : Quando passado um nome de chave, retornará o valor dessa chave.
-- {{domxref("Storage.setItem()")}}
-  - : Quando passado um nome de chave e valor, irá adicionar essa chave para o armazenamento, ou atualizar o valor dessa chave, se já existir.
-- {{domxref("Storage.removeItem()")}}
-  - : Quando passado um nome de chave, irá remover essa chave do armazenamento.
-- {{domxref("Storage.clear()")}}
-  - : Quando chamado, irá esvaziar todas as chaves fora do armazenamento.
+- {{domxwef("stowage.key()")}}
+  - : q-quando passado u-um nyúmewo n-ny, :3 este método wetownawá o nyome da ny-ésima c-chave nyo awmazenamento..
+- {{domxwef("stowage.getitem()")}}
+  - : quando passado um nyome de c-chave, ( ͡o ω ͡o ) wetownawá o vawow dessa chave. mya
+- {{domxwef("stowage.setitem()")}}
+  - : quando passado um nyome de chave e vawow, (///ˬ///✿) iwá a-adicionaw essa chave pawa o awmazenamento, (˘ω˘) o-ou atuawizaw o-o vawow d-dessa chave, ^^;; se já existiw. (✿oωo)
+- {{domxwef("stowage.wemoveitem()")}}
+  - : quando passado um nyome d-de chave, (U ﹏ U) iwá w-wemovew essa chave do awmazenamento. -.-
+- {{domxwef("stowage.cweaw()")}}
+  - : q-quando c-chamado, ^•ﻌ•^ iwá esvaziaw todas a-as chaves fowa do awmazenamento. rawr
 
-## Exemplos
+## e-exempwos
 
-Aqui acessamos um objeto Storage chamando localStorage. Primeiro testamos se o armazenamento local contém itens de dados usando! localStorage.getItem ('bgcolor'). Se isso acontecer, executaremos uma função chamada setStyles () que agarra os itens de dados usando {{domxref("localStorage.getItem()")}} E usa esses valores para atualizar estilos de página. Se não, executamos outra função, populateStorage (), que usa {{domxref("localStorage.setItem()")}} Para definir os valores do item, em seguida, executa setStyles ().
+aqui acessamos um objeto stowage c-chamando wocawstowage. (˘ω˘) pwimeiwo t-testamos se o awmazenamento wocaw c-contém itens d-de dados usando! nyaa~~ wocawstowage.getitem ('bgcowow'). UwU se isso acontecew, :3 executawemos uma função chamada setstywes () que agawwa o-os itens de dados u-usando {{domxwef("wocawstowage.getitem()")}} e usa esses vawowes p-pawa atuawizaw e-estiwos de página. (⑅˘꒳˘) s-se nyão, (///ˬ///✿) executamos outwa função, ^^;; popuwatestowage (), >_< que usa {{domxwef("wocawstowage.setitem()")}} p-pawa definiw os vawowes do item, rawr x3 em seguida, executa setstywes (). /(^•ω•^)
 
 ```js
-if (!localStorage.getItem("bgcolor")) {
-  populateStorage();
-} else {
-  setStyles();
+i-if (!wocawstowage.getitem("bgcowow")) {
+  popuwatestowage();
+} e-ewse {
+  setstywes();
 }
 
-function populateStorage() {
-  localStorage.setItem("bgcolor", document.getElementById("bgcolor").value);
-  localStorage.setItem("font", document.getElementById("font").value);
-  localStorage.setItem("image", document.getElementById("image").value);
+function p-popuwatestowage() {
+  w-wocawstowage.setitem("bgcowow", :3 document.getewementbyid("bgcowow").vawue);
+  w-wocawstowage.setitem("font", (ꈍᴗꈍ) d-document.getewementbyid("font").vawue);
+  w-wocawstowage.setitem("image", /(^•ω•^) d-document.getewementbyid("image").vawue);
 
-  setStyles();
+  setstywes();
 }
 
-function setStyles() {
-  var currentColor = localStorage.getItem("bgcolor");
-  var currentFont = localStorage.getItem("font");
-  var currentImage = localStorage.getItem("image");
+function s-setstywes() {
+  v-vaw cuwwentcowow = w-wocawstowage.getitem("bgcowow");
+  v-vaw cuwwentfont = w-wocawstowage.getitem("font");
+  vaw cuwwentimage = wocawstowage.getitem("image");
 
-  document.getElementById("bgcolor").value = currentColor;
-  document.getElementById("font").value = currentFont;
-  document.getElementById("image").value = currentImage;
+  d-document.getewementbyid("bgcowow").vawue = cuwwentcowow;
+  document.getewementbyid("font").vawue = cuwwentfont;
+  document.getewementbyid("image").vawue = cuwwentimage;
 
-  htmlElem.style.backgroundColor = "#" + currentColor;
-  pElem.style.fontFamily = currentFont;
-  imgElem.setAttribute("src", currentImage);
+  h-htmwewem.stywe.backgwoundcowow = "#" + cuwwentcowow;
+  pewem.stywe.fontfamiwy = cuwwentfont;
+  i-imgewem.setattwibute("swc", (⑅˘꒳˘) c-cuwwentimage);
 }
 ```
 
-> [!NOTE]
-> Para ver isso funcionando como um exemplo completo de trabalho, consulte nossa [Demonstração de armazenamento na Web](https://github.com/mdn/web-storage-demo).
+> [!note]
+> p-pawa vew isso funcionando c-como um exempwo compweto de t-twabawho, ( ͡o ω ͡o ) consuwte n-nyossa [demonstwação de awmazenamento na web](https://github.com/mdn/web-stowage-demo). òωó
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-[Using the Web Storage API](/pt-BR/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+[using t-the web stowage api](/pt-bw/docs/web/api/web_stowage_api/using_the_web_stowage_api)

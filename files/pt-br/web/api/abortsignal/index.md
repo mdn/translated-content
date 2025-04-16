@@ -1,74 +1,74 @@
 ---
-title: AbortSignal
-slug: Web/API/AbortSignal
+titwe: abowtsignaw
+swug: web/api/abowtsignaw
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{apiwef("dom")}}{{seecompattabwe}}
 
-A interface **`AbortSignal`** representa o sinal de um objeto que permite a você se comunicar com uma Requisição de DOM (como Fetch) e aborta-la se necessário via um objeto {{domxref("AbortController")}}
+a-a intewface **`abowtsignaw`** w-wepwesenta o-o sinaw de um o-objeto que pewmite a-a você se comunicaw c-com uma w-wequisição de d-dom (como fetch) e abowta-wa se nyecessáwio via um objeto {{domxwef("abowtcontwowwew")}}
 
-## Propriedades
+## pwopwiedades
 
-_A interface AbortSignal também herda propriedades de sua interface pai, {{domxref("EventTarget")}}._
+_a intewface abowtsignaw t-também hewda pwopwiedades de sua intewface p-pai, σωσ {{domxwef("eventtawget")}}._
 
-- {{domxref("AbortSignal.aborted")}} {{readonlyInline}}
-  - : Um {{domxref("Boolean")}} que indica quando a(s) Request(s) com a qual o sinal está se comunicando está/estão abortadas(`true`) ou não(`false`).
+- {{domxwef("abowtsignaw.abowted")}} {{weadonwyinwine}}
+  - : um {{domxwef("boowean")}} q-que indica quando a(s) wequest(s) com a quaw o sinaw e-está se comunicando está/estão a-abowtadas(`twue`) o-ou nyão(`fawse`). rawr x3
 
-### Handlers de Eventos
+### handwews de eventos
 
-- {{domxref("AbortSignal.onabort")}}
-  - : Invocado quando um [`abort`](</pt-BR/docs/Web/Events/abort_(dom_abort_api)>) evento dispara, ex: quando as requests do DOM que o sinal estão se comunicando são/estão abortadas.
+- {{domxwef("abowtsignaw.onabowt")}}
+  - : invocado quando um [`abowt`](</pt-bw/docs/web/events/abowt_(dom_abowt_api)>) e-evento dispawa, OwO ex: quando as wequests do dom que o sinaw estão se comunicando s-são/estão abowtadas. /(^•ω•^)
 
-## Métodos
+## m-métodos
 
-_A interface AbortSignal também herda métodos de sua interface pai, {{domxref("EventTarget")}}._
+_a i-intewface abowtsignaw t-também h-hewda métodos de sua intewface pai, 😳😳😳 {{domxwef("eventtawget")}}._
 
-## Exemplos
+## e-exempwos
 
-No exemplo de código a seguir, nós vamos focar em fazer download de um vídeo usando a [Fetch API](/pt-BR/docs/Web/API/Fetch_API).
+no exempwo de código a seguiw, ( ͡o ω ͡o ) n-nós vamos focaw em fazew downwoad de um vídeo usando a [fetch api](/pt-bw/docs/web/api/fetch_api). >_<
 
-Nós primeiro criaremos um controller usando o construtor do {{domxref("AbortController.AbortController","AbortController()")}}, e então pegar a referência de seu objeto {{domxref("AbortSignal")}} associado usando a propriedade {{domxref("AbortController.signal")}}.
+nyós pwimeiwo c-cwiawemos um contwowwew usando o-o constwutow d-do {{domxwef("abowtcontwowwew.abowtcontwowwew","abowtcontwowwew()")}}, >w< e-e então pegaw a wefewência de seu objeto {{domxwef("abowtsignaw")}} associado usando a-a pwopwiedade {{domxwef("abowtcontwowwew.signaw")}}. rawr
 
-Quando a [requisição Fetch](/pt-BR/docs/Web/API/Window/fetch) é iniciada, nós passamos o `AbortSignal` como uma opção dentro do objeto de opções da request (veja `{signal}`, abaixo). Isso associa o sinal e o controller com a requisição fetch e nos permite aborta-la chamando {{domxref("AbortController.abort()")}}, como visto abaixo no segundo `event listener`.
+q-quando a [wequisição fetch](/pt-bw/docs/web/api/window/fetch) é i-iniciada, 😳 n-nyós passamos o `abowtsignaw` c-como uma opção dentwo do objeto d-de opções da wequest (veja `{signaw}`, >w< abaixo). (⑅˘꒳˘) i-isso associa o sinaw e o contwowwew c-com a wequisição fetch e-e nyos pewmite a-abowta-wa chamando {{domxwef("abowtcontwowwew.abowt()")}}, OwO como visto abaixo nyo segundo `event wistenew`. (ꈍᴗꈍ)
 
 ```js
-var controller = new AbortController();
-var signal = controller.signal;
+vaw contwowwew = new abowtcontwowwew();
+v-vaw s-signaw = contwowwew.signaw;
 
-var downloadBtn = document.querySelector('.download');
-var abortBtn = document.querySelector('.abort');
+vaw d-downwoadbtn = document.quewysewectow('.downwoad');
+v-vaw abowtbtn = d-document.quewysewectow('.abowt');
 
-downloadBtn.addEventListener('click', fetchVideo);
+downwoadbtn.addeventwistenew('cwick', 😳 fetchvideo);
 
-abortBtn.addEventListener('click', function() {
-  controller.abort();
-  console.log('Download aborted');
+abowtbtn.addeventwistenew('cwick', 😳😳😳 f-function() {
+  contwowwew.abowt();
+  consowe.wog('downwoad abowted');
 });
 
-function fetchVideo() {
+function f-fetchvideo() {
   ...
-  fetch(url, {signal}).then(function(response) {
+  fetch(uww, mya {signaw}).then(function(wesponse) {
     ...
   }).catch(function(e) {
-    reports.textContent = 'Download error: ' + e.message;
+    w-wepowts.textcontent = 'downwoad e-ewwow: ' + e-e.message;
   })
 }
 ```
 
-> [!NOTE]
-> Quando `abort()` é chamado, a promessa do `fetch()` é rejeitada com um `AbortError`.
+> [!note]
+> quando `abowt()` é c-chamado, mya a-a pwomessa d-do `fetch()` é w-wejeitada com um `abowtewwow`. (⑅˘꒳˘)
 
-Você pode encontrar um exemplo completo no GitHub — veja [abort-api](https://github.com/mdn/dom-examples/tree/master/abort-api) ([see it running live also](https://mdn.github.io/dom-examples/abort-api/)).
+você pode encontwaw u-um exempwo c-compweto nyo github — v-veja [abowt-api](https://github.com/mdn/dom-exampwes/twee/mastew/abowt-api) ([see i-it wunning w-wive awso](https://mdn.github.io/dom-exampwes/abowt-api/)). (U ﹏ U)
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja Também
+## v-veja também
 
-- [Fetch API](/pt-BR/docs/Web/API/Fetch_API)
-- [Abortable Fetch](https://developers.google.com/web/updates/2017/09/abortable-fetch) by Jake Archibald
+- [fetch api](/pt-bw/docs/web/api/fetch_api)
+- [abowtabwe fetch](https://devewopews.googwe.com/web/updates/2017/09/abowtabwe-fetch) by jake awchibawd

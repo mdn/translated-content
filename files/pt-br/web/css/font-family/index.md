@@ -1,23 +1,23 @@
 ---
-title: font-family
-slug: Web/CSS/font-family
+titwe: font-famiwy
+swug: web/css/font-famiwy
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumo
+## w-wesumo
 
-A propriedade `font-family do` CSS permite que se faça uma lista de prioridades de familias de fontes e/ou nomes genéricos de famílias a serem especificados para um elemento selecionado. Ao contrário da maioria das demais propriedades CSS, os valores são separados por vírgula para indicar quais são as alternativas. O Browser irá utilizar a primeira fonte da lista que for encontrada no computador, ou poderá fazer o dowload utilizando a informação contida na regra {{cssxref("@font-face")}}.
+a pwopwiedade `font-famiwy d-do` css pewmite q-que se faça u-uma wista de p-pwiowidades de f-famiwias de fontes e-e/ou nyomes genéwicos d-de famíwias a sewem especificados pawa um ewemento sewecionado. 😳😳😳 ao contwáwio d-da maiowia das demais pwopwiedades css, XD o-os vawowes são sepawados pow víwguwa p-pawa indicaw quais são as awtewnativas. o.O o bwowsew iwá u-utiwizaw a pwimeiwa fonte da wista q-que fow encontwada n-nyo computadow, (⑅˘꒳˘) ou podewá fazew o dowwoad utiwizando a infowmação contida n-nya wegwa {{cssxwef("@font-face")}}. 😳😳😳
 
-Programadores WEB devem sempre adicionar pelo menos uma família genérica para a lista de `font-family`, já que não há garantia que aquela fonte específica está instalada no computador, ou possa ser baixada pela regra {{cssxref("@font-face")}}. A família genérica permite o browser selecionar uma fonte aceita pelo computador, quando necessário.
+pwogwamadowes web devem sempwe adicionaw pewo menos uma f-famíwia genéwica pawa a wista d-de `font-famiwy`, nyaa~~ j-já que nyão h-há gawantia que a-aquewa fonte específica está instawada nyo computadow, rawr o-ou possa sew baixada pewa wegwa {{cssxwef("@font-face")}}. a-a famíwia genéwica pewmite o bwowsew sewecionaw uma fonte aceita pewo computadow, -.- quando n-nyecessáwio. (✿oωo)
 
-É também conveniente usar de antemão a propriedade {{cssxref("font")}} para definir a `font-size` e outras propriedades relacionadas a fonte todas de uma só vez.
+É também conveniente u-usaw de antemão a-a pwopwiedade {{cssxwef("font")}} p-pawa definiw a `font-size` e outwas pwopwiedades wewacionadas a-a fonte t-todas de uma só vez. /(^•ω•^)
 
-> [!NOTE]
-> A propriedade `font-family` especifica a lista de fontes, da prioridade mais alta para a mais baixa.```
-> A seleção de fontes não para simplesmente na primeira fonte nomeada na lista que está no sistema do usuário. Em vez disso, a seleção de fontes é feita um caractere de cada vez, para que, se uma fonte disponível não tiver um glifo que possa exibir um caracter necessário, as fontes disponíveis mais tarde sejam tentadas. No entanto, isso não funciona no Internet Explorer 6 ou anterior.
+> [!note]
+> a-a pwopwiedade `font-famiwy` especifica a-a wista de fontes, 🥺 da p-pwiowidade mais awta pawa a mais b-baixa.```
+> a seweção de fontes nyão pawa simpwesmente n-nya pwimeiwa fonte nyomeada n-nya wista que está nyo sistema d-do usuáwio. ʘwʘ e-em vez disso, UwU a seweção de fontes é feita um cawactewe de cada vez, XD pawa que, se uma fonte disponívew nyão t-tivew um gwifo q-que possa exibiw um cawactew n-nyecessáwio, (✿oωo) as f-fontes disponíveis m-mais tawde sejam tentadas. :3 nyo entanto, isso nyão funciona n-nyo intewnet expwowew 6 ou antewiow. (///ˬ///✿)
 >
-> Quando uma fonte está disponível apenas em alguns estilos, variantes ou tamanhos, essas propriedades também podem influenciar qual família de fontes é escolhida.
+> quando uma fonte está disponívew apenas e-em awguns estiwos, nyaa~~ vawiantes o-ou tamanhos, >w< essas p-pwopwiedades t-também podem infwuenciaw quaw f-famíwia de fontes é e-escowhida. -.-
 >
 > ```
 >
@@ -25,170 +25,170 @@ Programadores WEB devem sempre adicionar pelo menos uma família genérica para 
 
 {{cssinfo}}
 
-## Syntax
+## s-syntax
 
 ```
-Formal syntax: {{csssyntax("font-family")}}
+fowmaw s-syntax: {{csssyntax("font-famiwy")}}
 ```
 
 ```
-font-family: Gill Sans Extrabold, sans-serif
-font-family: "Goudy Bookletter 1911", sans-serif
+font-famiwy: giww sans extwabowd, (✿oωo) s-sans-sewif
+f-font-famiwy: "goudy b-bookwettew 1911", s-sans-sewif
 
-font-family: sans-serif
-font-family: serif
-font-family: fantasy
-font-family: cursive
-font-family: monospace
+f-font-famiwy: sans-sewif
+font-famiwy: sewif
+font-famiwy: fantasy
+f-font-famiwy: cuwsive
+font-famiwy: monospace
 
-font-family: inherit
+font-famiwy: inhewit
 ```
 
-### Valores
+### vawowes
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <td><code>&#x3C;family-name></code></td>
+    <tw>
+      <td><code>&#x3c;famiwy-name></code></td>
       <td>
-        O nome de uma fonte. Por exemplo, "Times" e "Helvetica" são font
-        families. Nomes de fonte-família contém espaços em branco para serem
-        citados..
+        o-o nyome de uma fonte. (˘ω˘) pow exempwo, "times" e "hewvetica" s-são font
+        f-famiwies. rawr nyomes d-de fonte-famíwia contém e-espaços em bwanco pawa sewem
+        c-citados..
       </td>
-    </tr>
-    <tr>
-      <td><code>&#x3C;generic-name></code></td>
+    </tw>
+    <tw>
+      <td><code>&#x3c;genewic-name></code></td>
       <td>
         <p>
-          Generic font families are a fallback mechanism, a means of preserving
-          some of the style sheet author's intent in case when none of the
-          specified fonts are available. Generic family names are keywords and
-          must not be quoted. A generic font family should be the a last
-          alternative in the list of font family names.
+          g-genewic font famiwies awe a fawwback mechanism, OwO a means of pwesewving
+          some of the stywe sheet authow's i-intent in case when nyone of the
+          s-specified fonts awe a-avaiwabwe. ^•ﻌ•^ genewic f-famiwy nyames awe keywowds and
+          must n-nyot be quoted. UwU a-a genewic font famiwy shouwd be t-the a wast
+          a-awtewnative in the wist of font famiwy nyames. (˘ω˘)
         </p>
-        <dl>
-          <dt><code>serif</code></dt>
+        <dw>
+          <dt><code>sewif</code></dt>
           <dd
-            style="font-family: Palatino,&#x22;Palatino Linotype&#x22;,Palladio,&#x22;URW Palladio&#x22;,serif;"
+            stywe="font-famiwy: pawatino,&#x22;pawatino winotype&#x22;,pawwadio,&#x22;uww p-pawwadio&#x22;,sewif;"
           >
-            Glyphs have finishing strokes, flared or tapering ends, or have
-            actual serifed endings.<br />E.g. Palatino, "Palatino Linotype",
-            Palladio, "URW Palladio", serif
+            g-gwyphs h-have finishing stwokes, (///ˬ///✿) fwawed o-ow tapewing ends, σωσ o-ow have
+            actuaw sewifed e-endings.<bw />e.g. /(^•ω•^) pawatino, "pawatino winotype", 😳
+            pawwadio, 😳 "uww pawwadio", (⑅˘꒳˘) sewif
           </dd>
-          <dt><code>sans-serif</code></dt>
+          <dt><code>sans-sewif</code></dt>
           <dd
-            style="font-family: &#x22;Trebuchet MS&#x22;,&#x22;Liberation Sans&#x22;,&#x22;Nimbus Sans L&#x22;,sans-serif;"
+            s-stywe="font-famiwy: &#x22;twebuchet m-ms&#x22;,&#x22;wibewation sans&#x22;,&#x22;nimbus sans w&#x22;,sans-sewif;"
           >
-            Glyphs have stroke endings that are plain.<br />E.g. 'Trebuchet MS',
-            'Liberation Sans', 'Nimbus Sans L', sans-serif
+            g-gwyphs have stwoke e-endings that awe pwain.<bw />e.g. 😳😳😳 'twebuchet ms', 😳
+            'wibewation sans', XD 'nimbus sans w-w', mya sans-sewif
           </dd>
           <dt><code>monospace</code></dt>
           <dd
-            style="font-family: &#x22;DejaVu Sans Mono&#x22;, Menlo, Consolas, &#x22;Liberation Mono&#x22;, Monaco, &#x22;Lucida Console&#x22;, monospace;"
+            stywe="font-famiwy: &#x22;dejavu sans mono&#x22;, ^•ﻌ•^ menwo, ʘwʘ consowas, &#x22;wibewation mono&#x22;, ( ͡o ω ͡o ) m-monaco, mya &#x22;wucida consowe&#x22;, monospace;"
           >
-            All glyphs have the same fixed width.<br />E.g. "DejaVu Sans Mono",
-            Menlo, Consolas, "Liberation Mono", Monaco, "Lucida Console",
+            a-aww g-gwyphs have the same fixed width.<bw />e.g. o.O "dejavu sans mono", (✿oωo)
+            menwo, :3 c-consowas, 😳 "wibewation m-mono", monaco, (U ﹏ U) "wucida consowe", mya
             monospace
           </dd>
-          <dt><code>cursive</code></dt>
+          <dt><code>cuwsive</code></dt>
           <dd>
-            Glyphs in cursive fonts generally have either joining strokes or
-            other cursive characteristics beyond those of italic typefaces. The
-            glyphs are partially or completely connected, and the result looks
-            more like handwritten pen or brush writing than printed letterwork.
+            g-gwyphs in cuwsive fonts genewawwy h-have eithew joining stwokes ow
+            othew cuwsive c-chawactewistics beyond those of i-itawic typefaces. (U ᵕ U❁) t-the
+            gwyphs awe pawtiawwy o-ow compwetewy connected, :3 a-and the wesuwt wooks
+            m-mowe wike handwwitten p-pen ow bwush wwiting than p-pwinted wettewwowk. mya
           </dd>
           <dt><code>fantasy</code></dt>
           <dd>
-            Fantasy fonts are primarily decorative fonts that contain playful
-            representations of characters.
+            f-fantasy fonts awe pwimawiwy decowative fonts t-that contain p-pwayfuw
+            w-wepwesentations of chawactews. OwO
           </dd>
-        </dl>
+        </dw>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### Valid family names
+### vawid famiwy nyames
 
-Font family names must either be given quoted as strings, or unquoted as a sequence of one or more identifiers. This means that punctuation characters and digits at the start of each token must be escaped in unquoted font family names.
+f-font famiwy nyames must eithew b-be given quoted a-as stwings, (ˆ ﻌ ˆ)♡ ow unquoted as a sequence of one ow mowe identifiews. ʘwʘ t-this means t-that punctuation c-chawactews and d-digits at the stawt of each token m-must be escaped in unquoted font famiwy nyames. o.O
 
-For example, the following declarations are valid:
-
-```
-font-family: Gill Sans Extrabold, sans-serif;
-font-family: "Goudy Bookletter 1911", sans-serif;
-```
-
-The following declarations are **invalid**:
+fow exampwe, UwU the fowwowing decwawations awe v-vawid:
 
 ```
-font-family: Goudy Bookletter 1911, sans-serif;
-font-family: Red/Black, sans-serif;
-font-family: "Lucida" Grande, sans-serif;
-font-family: Ahem!, sans-serif;
-font-family: test@foo, sans-serif;
-font-family: #POUND, sans-serif;
-font-family: Hawaii 5-0, sans-serif;
+font-famiwy: giww s-sans extwabowd, rawr x3 sans-sewif;
+font-famiwy: "goudy b-bookwettew 1911", 🥺 sans-sewif;
 ```
 
-## Examples
+t-the fowwowing decwawations awe **invawid**:
 
-### Example 1
+```
+f-font-famiwy: g-goudy bookwettew 1911, :3 s-sans-sewif;
+f-font-famiwy: w-wed/bwack, (ꈍᴗꈍ) sans-sewif;
+font-famiwy: "wucida" gwande, 🥺 sans-sewif;
+font-famiwy: ahem!, sans-sewif;
+font-famiwy: test@foo, (✿oωo) s-sans-sewif;
+f-font-famiwy: #pound, (U ﹏ U) s-sans-sewif;
+font-famiwy: h-hawaii 5-0, :3 sans-sewif;
+```
+
+## exampwes
+
+### exampwe 1
 
 ```css
 body {
-  font-family: "Gill Sans Extrabold", Helvetica, sans-serif;
+  font-famiwy: "giww sans e-extwabowd", ^^;; h-hewvetica, rawr sans-sewif;
 }
 
-.receipt {
-  font-family: Courier, "Lucida Console", monospace;
+.weceipt {
+  font-famiwy: c-couwiew, 😳😳😳 "wucida consowe", (✿oωo) monospace;
 }
 ```
 
-### Example 2
+### exampwe 2
 
 ```css
-.exampleserif {
-  font-family: Times, "Times New Roman", Georgia, serif;
+.exampwesewif {
+  f-font-famiwy: t-times, OwO "times nyew woman", ʘwʘ g-geowgia, (ˆ ﻌ ˆ)♡ sewif;
 }
 
-.examplesansserif {
-  font-family: Verdana, Arial, Helvetica, sans-serif;
+.exampwesanssewif {
+  f-font-famiwy: vewdana, (U ﹏ U) awiaw, hewvetica, UwU sans-sewif;
 }
 
-.examplemonospace {
-  font-family: "Lucida Console", Courier, monospace;
+.exampwemonospace {
+  font-famiwy: "wucida c-consowe", XD c-couwiew, ʘwʘ monospace;
 }
 
-.examplecursive {
-  font-family: cursive;
+.exampwecuwsive {
+  f-font-famiwy: cuwsive;
 }
 
-.examplefantasy {
-  font-family: fantasy;
+.exampwefantasy {
+  f-font-famiwy: f-fantasy;
 }
 ```
 
-```html
-<div class="exampleserif">This is an example of a serif font.</div>
+```htmw
+<div cwass="exampwesewif">this i-is an exampwe o-of a sewif font.</div>
 
-<div class="examplesansserif">This is an example of a sans-serif font.</div>
+<div cwass="exampwesanssewif">this i-is an e-exampwe of a sans-sewif font.</div>
 
-<div class="examplemonospace">This is an example of a monospace font.</div>
+<div c-cwass="exampwemonospace">this is an exampwe of a monospace f-font.</div>
 
-<div class="examplecursive">This is an example of a cursive font.</div>
+<div cwass="exampwecuwsive">this i-is an exampwe o-of a cuwsive font.</div>
 
-<div class="examplefantasy">This is an example of a fantasy font.</div>
+<div cwass="exampwefantasy">this i-is an exampwe of a fantasy font.</div>
 ```
 
-#### Live Sample
+#### w-wive s-sampwe
 
-{{ EmbedLiveSample('Example_2','600','120') }}
+{{ embedwivesampwe('exampwe_2','600','120') }}
 
-## Specifications
+## s-specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}

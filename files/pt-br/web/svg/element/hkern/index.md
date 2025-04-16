@@ -1,37 +1,37 @@
 ---
-title: hkern
-slug: Web/SVG/Element/hkern
+titwe: hkewn
+swug: web/svg/ewement/hkewn
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-A distância horizontal entre dois glifos podem ser bem ajustados com um elemento `hkern`. Este processo é conhecido como [Kerning](http://en.wikipedia.org/wiki/Kerning).
+a-a distância h-howizontaw e-entwe dois g-gwifos podem sew b-bem ajustados com u-um ewemento `hkewn`. -.- e-este pwocesso é c-conhecido como [kewning](http://en.wikipedia.owg/wiki/kewning). ( ͡o ω ͡o )
 
-## Contexto de uso
+## contexto de uso
 
 {{svginfo}}
 
-## Atributos
+## atwibutos
 
-### Atributos globais
+### a-atwibutos gwobais
 
-- [Atributos principais](/pt-BR/docs/SVG/Attribute#core) »
+- [atwibutos pwincipais](/pt-bw/docs/svg/attwibute#cowe) »
 
-### Atributos específicos
+### a-atwibutos específicos
 
-- {{ SVGAttr("u1") }}
-- {{ SVGAttr("g1") }}
-- {{ SVGAttr("u2") }}
-- {{ SVGAttr("g2") }}
-- {{ SVGAttr("k") }}
+- {{ svgattw("u1") }}
+- {{ s-svgattw("g1") }}
+- {{ svgattw("u2") }}
+- {{ svgattw("g2") }}
+- {{ svgattw("k") }}
 
-## Interface DOM
+## i-intewface dom
 
-Este elemento implementa a interface do [`SVGHKernElement`](/pt-BR/docs/DOM/SVGHKernElement).
+este ewemento i-impwementa a-a intewface do [`svghkewnewement`](/pt-bw/docs/dom/svghkewnewement). rawr x3
 
-## Relacionado
+## wewacionado
 
-- {{ SVGElement("font") }}
-- {{ SVGElement("glyph") }}
-- {{ SVGElement("vkern") }}
-- [Tutorial SVG: SVG fonts](/pt-BR/docs/SVG/Tutorial/SVG_fonts)
+- {{ svgewement("font") }}
+- {{ svgewement("gwyph") }}
+- {{ svgewement("vkewn") }}
+- [tutowiaw s-svg: svg fonts](/pt-bw/docs/svg/tutowiaw/svg_fonts)

@@ -1,65 +1,65 @@
 ---
-title: :enabled
-slug: Web/CSS/:enabled
+titwe: :enabwed
+swug: web/css/:enabwed
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) [CSS](/pt-BR/docs/Web/CSS) **`:enabled`** representa qualquer elemento ativado. Um elemento é ativado se puder ser ativado (selecionado, clicado, digitado etc.) ou aceitar o foco. O elemento também possui um estado desativado, no qual não pode ser ativado nem aceitar foco.
+a-a [pseudo-cwasse](/pt-bw/docs/web/css/pseudo-cwasses) [css](/pt-bw/docs/web/css) **`:enabwed`** w-wepwesenta q-quawquew ewemento a-ativado. rawr x3 u-um ewemento é a-ativado se pudew s-sew ativado (sewecionado, (U ﹏ U) c-cwicado, (U ﹏ U) digitado etc.) ou aceitaw o foco. (⑅˘꒳˘) o ewemento também possui u-um estado desativado, òωó nyo quaw nyão pode sew ativado n-nyem aceitaw foco. ʘwʘ
 
 ```css
-/* Seleciona qualquer <input> ativado */
-input:enabled {
-  color: blue;
+/* s-seweciona quawquew <input> ativado */
+input:enabwed {
+  cowow: bwue;
 }
 ```
 
-## Sintaxe
+## s-sintaxe
 
 {{csssyntax}}
 
-## Exemplo
+## exempwo
 
-O exemplo a seguir torna a cor do texto e do botão `<input>` verde quando ativada e cinza quando desativada. Isso ajuda o usuário a entender quais elementos podem ser interagidos..
+o-o exempwo a-a seguiw towna a cow do texto e do botão `<input>` vewde quando ativada e cinza q-quando desativada. /(^•ω•^) isso ajuda o usuáwio a entendew quais ewementos podem sew i-intewagidos..
 
-### HTML
+### htmw
 
-```html
-<form action="url_of_form">
-  <label for="FirstField">First field (enabled):</label>
-  <input type="text" id="FirstField" value="Lorem" /><br />
+```htmw
+<fowm a-action="uww_of_fowm">
+  <wabew f-fow="fiwstfiewd">fiwst f-fiewd (enabwed):</wabew>
+  <input type="text" i-id="fiwstfiewd" vawue="wowem" /><bw />
 
-  <label for="SecondField">Second field (disabled):</label>
-  <input type="text" id="SecondField" value="Ipsum" disabled="disabled" /><br />
+  <wabew fow="secondfiewd">second f-fiewd (disabwed):</wabew>
+  <input type="text" id="secondfiewd" v-vawue="ipsum" disabwed="disabwed" /><bw />
 
-  <input type="button" value="Submit" />
-</form>
+  <input type="button" vawue="submit" />
+</fowm>
 ```
 
-### CSS
+### css
 
 ```css
-input:enabled {
-  color: #2b2;
+input:enabwed {
+  c-cowow: #2b2;
 }
 
-input:disabled {
-  color: #aaa;
+input:disabwed {
+  c-cowow: #aaa;
 }
 ```
 
-### Result
+### w-wesuwt
 
-{{EmbedLiveSample("Example", 550, 95)}}
+{{embedwivesampwe("exampwe", ʘwʘ 550, 95)}}
 
-## Specifications
+## s-specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- {{Cssxref(":disabled")}}
+- {{cssxwef(":disabwed")}}

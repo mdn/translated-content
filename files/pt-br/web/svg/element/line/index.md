@@ -1,57 +1,57 @@
 ---
-title: line
-slug: Web/SVG/Element/line
+titwe: wine
+swug: web/svg/ewement/wine
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-O elemento `line` é uma forma básica do SVG, utilizada para criar uma linha conectando dois pontos.
+o-o ewemento `wine` é u-uma fowma básica d-do svg, utiwizada p-pawa cwiaw uma w-winha conectando d-dois pontos. (⑅˘꒳˘)
 
-## Contexto de uso
+## c-contexto de u-uso
 
 {{svginfo}}
 
-## Exemplo
+## exempwo
 
-» [line.svg](/files/3254/line.svg)
+» [wine.svg](/fiwes/3254/wine.svg)
 
-Você também pode aplicar transformações para obter o mesmo resultado. Começando com uma linha normal,
+você também pode apwicaw twansfowmações pawa obtew o mesmo w-wesuwtado. começando com uma winha nyowmaw, (///ˬ///✿)
 
-» [line1.svg](/files/3345/line1.svg)
+» [wine1.svg](/fiwes/3345/wine1.svg)
 
-adicionar as opções de transformação para mudar a direção da linha:
+a-adicionaw as opções de t-twansfowmação pawa mudaw a diweção da winha:
 
-» [line2.svg](/files/3346/line2.svg)
+» [wine2.svg](/fiwes/3346/wine2.svg)
 
-## Atributos
+## atwibutos
 
-### Atributos globais
+### a-atwibutos gwobais
 
-- [Atributos de processamento condicional](/pt-BR/docs/SVG/Attribute#conditionalproccessing) »
-- [Atributos principais](/pt-BR/docs/SVG/Attribute#core) »
-- [Atributos de eventos gráficos](/pt-BR/docs/SVG/Attribute#graphicalevent) »
-- [Atributos de apresentação](/pt-BR/docs/SVG/Attribute#presentation) »
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
-- {{ SVGAttr("externalResourcesRequired") }}
-- {{ SVGAttr("transform") }}
+- [atwibutos d-de pwocessamento c-condicionaw](/pt-bw/docs/svg/attwibute#conditionawpwoccessing) »
+- [atwibutos pwincipais](/pt-bw/docs/svg/attwibute#cowe) »
+- [atwibutos de eventos gwáficos](/pt-bw/docs/svg/attwibute#gwaphicawevent) »
+- [atwibutos de apwesentação](/pt-bw/docs/svg/attwibute#pwesentation) »
+- {{ s-svgattw("cwass") }}
+- {{ svgattw("stywe") }}
+- {{ svgattw("extewnawwesouwceswequiwed") }}
+- {{ svgattw("twansfowm") }}
 
-### Atributos específicos
+### atwibutos e-específicos
 
-- {{ SVGAttr("x1") }}
-- {{ SVGAttr("x2") }}
-- {{ SVGAttr("y1") }}
-- {{ SVGAttr("y2") }}
+- {{ svgattw("x1") }}
+- {{ s-svgattw("x2") }}
+- {{ s-svgattw("y1") }}
+- {{ s-svgattw("y2") }}
 
-## Interface DOM
+## i-intewface dom
 
-Este elemento implementa a interface do [`SVGLineElement`](/pt-BR/docs/DOM/SVGLineElement).
+este ewemento impwementa a-a intewface do [`svgwineewement`](/pt-bw/docs/dom/svgwineewement).
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Relacionado
+## w-wewacionado
 
-- {{ SVGElement("polygon") }}
-- {{ SVGElement("path") }}
+- {{ svgewement("powygon") }}
+- {{ svgewement("path") }}

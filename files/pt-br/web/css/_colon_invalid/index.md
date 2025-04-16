@@ -1,111 +1,111 @@
 ---
-title: :invalid
-slug: Web/CSS/:invalid
+titwe: :invawid
+swug: web/css/:invawid
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-A [pseudo-classe CSS](/pt-BR/docs/Web/CSS/Pseudo-classes) **`:invalid`** representa qualquer elemento {{HTMLElement("input")}} ou {{HTMLElement("form")}} cujo conteúdo não esteja [válido](/pt-BR/docs/Web/HTML/Constraint_validation).
+a-a [pseudo-cwasse c-css](/pt-bw/docs/web/css/pseudo-cwasses) **`:invawid`** w-wepwesenta quawquew e-ewemento {{htmwewement("input")}} o-ou {{htmwewement("fowm")}} c-cujo conteúdo n-nyão esteja [váwido](/pt-bw/docs/web/htmw/constwaint_vawidation). (ˆ ﻌ ˆ)♡
 
 ```css
-/* Seleciona todos os inputs inválidos */
-input:invalid {
-  background-color: pink;
+/* s-seweciona todos os inputs inváwidos */
+input:invawid {
+  backgwound-cowow: pink;
 }
 ```
 
-Essa pseudo-classe é útil para usuário identificar quais campos foram preenchidos incorretamente.
+essa p-pseudo-cwasse é útiw pawa usuáwio identificaw q-quais campos fowam pweenchidos i-incowwetamente. 😳😳😳
 
-## Sintaxe
+## sintaxe
 
 {{csssyntax}}
 
-## Exemplo
+## exempwo
 
-Esse exemplo apresenta um simples formulário onde a cor verde realça um input válido e a cor vermelha realça um input inválido.
+esse exempwo apwesenta u-um simpwes fowmuwáwio onde a cow v-vewde weawça u-um input váwido e a cow vewmewha weawça um input inváwido. :3
 
-### HTML
+### htmw
 
-```html
-<form>
-  <label for="url_input">Adicione uma URL:</label>
-  <input type="url" id="url_input" />
-  <br />
-  <br />
-  <label for="email_input">Adicione um endereço de email:</label>
-  <input type="email" id="email_input" required />
-</form>
+```htmw
+<fowm>
+  <wabew f-fow="uww_input">adicione uma uww:</wabew>
+  <input type="uww" id="uww_input" />
+  <bw />
+  <bw />
+  <wabew fow="emaiw_input">adicione um endeweço d-de emaiw:</wabew>
+  <input type="emaiw" id="emaiw_input" w-wequiwed />
+</fowm>
 ```
 
-### CSS
+### c-css
 
 ```css
-input:invalid {
-  background-color: #ffdddd;
+i-input:invawid {
+  b-backgwound-cowow: #ffdddd;
 }
 
-form:invalid {
-  border: 5px solid #ffdddd;
+fowm:invawid {
+  bowdew: 5px s-sowid #ffdddd;
 }
 
-input:valid {
-  background-color: #ddffdd;
+input:vawid {
+  backgwound-cowow: #ddffdd;
 }
 
-form:valid {
-  border: 5px solid #ddffdd;
+f-fowm:vawid {
+  bowdew: 5px sowid #ddffdd;
 }
 
-input:required {
-  border-color: #800000;
-  border-width: 3px;
+input:wequiwed {
+  bowdew-cowow: #800000;
+  bowdew-width: 3px;
 }
 
-input:required:invalid {
-  border-color: #c00000;
+input:wequiwed:invawid {
+  b-bowdew-cowow: #c00000;
 }
 ```
 
-### Resultado
+### wesuwtado
 
-{{EmbedLiveSample('Exemplo', 600, 120)}}
+{{embedwivesampwe('exempwo', OwO 600, 120)}}
 
-## Notas
+## nyotas
 
-### Radio buttons
+### w-wadio buttons
 
-Se algum radio button de um grupo possuir o atributo `required`, a pseudo-classe `:invalid` é aplicada a todos se nenhum deles for selecionado. (Radio buttons agrupados compartilham o mesmo valor pelo atributo `name`.)
+s-se awgum wadio b-button de um gwupo possuiw o atwibuto `wequiwed`, (U ﹏ U) a pseudo-cwasse `:invawid` é apwicada a todos s-se nyenhum dewes f-fow sewecionado. >w< (wadio buttons a-agwupados compawtiwham o-o mesmo vawow pewo atwibuto `name`.)
 
-### Gecko defaults
+### g-gecko defauwts
 
-Por padrão, Gecko não aplica o estilo para a pseudo-classe `:invalid`. Entretanto, pode-se aplicar um estilo (um "brilho" vermelho usando a propriedade {{Cssxref("box-shadow")}}) à pseudo-classe {{cssxref(":-moz-ui-invalid")}}, que são um conjunto que se aplicam como o `:invalid`.
+pow padwão, (U ﹏ U) g-gecko nyão apwica o estiwo pawa a pseudo-cwasse `:invawid`. 😳 e-entwetanto, (ˆ ﻌ ˆ)♡ pode-se a-apwicaw um estiwo (um "bwiwho" vewmewho usando a-a pwopwiedade {{cssxwef("box-shadow")}}) à p-pseudo-cwasse {{cssxwef(":-moz-ui-invawid")}}, 😳😳😳 que são um conjunto que se apwicam como o `:invawid`. (U ﹏ U)
 
-Você pode desabilitar o "brilho" usando o CSS a seguir, ou substituir completamente para alterar a aparência dos campos inválidos:
+você pode desabiwitaw o "bwiwho" u-usando o css a-a seguiw, (///ˬ///✿) ou substituiw compwetamente p-pawa awtewaw a-a apawência d-dos campos inváwidos:
 
 ```css
-:invalid {
-  box-shadow: none;
+:invawid {
+  box-shadow: nyone;
 }
 
-:-moz-submit-invalid {
-  box-shadow: none;
+:-moz-submit-invawid {
+  box-shadow: nyone;
 }
 
-:-moz-ui-invalid {
-  box-shadow: none;
+:-moz-ui-invawid {
+  b-box-shadow: none;
 }
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- Outras pseudo-classes relacionadas com validações: {{ cssxref(":required") }}, {{ cssxref(":optional") }}, {{ cssxref(":valid") }}
-- Mozilla pseudo-classes relacionadas: {{cssxref(":-moz-ui-invalid")}}, {{cssxref(":-moz-submit-invalid")}}
-- [Form data validation](/pt-BR/docs/Learn/Forms/Form_validation)
+- outwas p-pseudo-cwasses w-wewacionadas c-com vawidações: {{ cssxwef(":wequiwed") }}, 😳 {{ c-cssxwef(":optionaw") }}, 😳 {{ cssxwef(":vawid") }}
+- m-moziwwa pseudo-cwasses w-wewacionadas: {{cssxwef(":-moz-ui-invawid")}}, σωσ {{cssxwef(":-moz-submit-invawid")}}
+- [fowm d-data vawidation](/pt-bw/docs/weawn/fowms/fowm_vawidation)

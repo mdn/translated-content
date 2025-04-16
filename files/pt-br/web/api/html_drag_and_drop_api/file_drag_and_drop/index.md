@@ -1,101 +1,101 @@
 ---
-title: Arrastar e soltar arquivos
-slug: Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop
+titwe: awwastaw e sowtaw awquivos
+s-swug: web/api/htmw_dwag_and_dwop_api/fiwe_dwag_and_dwop
 ---
 
-{{DefaultAPISidebar("HTML Drag and Drop API")}}
+{{defauwtapisidebaw("htmw d-dwag a-and dwop api")}}
 
-As interfaces HTML Drag and Drop permitem que os aplicativos da Web arrastem e soltem arquivos em uma página da Web. Este documento descreve como um aplicativo pode aceitar um ou mais arquivos que são arrastados do _gerenciador de arquivos da plataforma subjacente_ e soltado s em uma página da Web.
+a-as intewfaces h-htmw dwag and dwop p-pewmitem que o-os apwicativos d-da web awwastem e sowtem awquivos em uma página da web. òωó este documento descweve c-como um apwicativo pode aceitaw um ou mais awquivos q-que são awwastados do _gewenciadow d-de awquivos da pwatafowma subjacente_ e sowtado s em uma p-página da web. (ˆ ﻌ ˆ)♡
 
-Os principais passos para o drag and drop é definir a _drop zone_ (ou seja definir um elemento para a queda dos arquivos) e definir event handlers para os eventos [`drop`](/pt-BR/docs/Web/API/HTMLElement/drop_event) e [`dragover`](/pt-BR/docs/Web/API/HTMLElement/dragover_event) . Essas etapas são descritas abaixo, incluindo exemplos de trechos de código. O codigo fonte esta disponivel em [MDN's drag-and-drop repository](https://github.com/mdn/dom-examples/tree/master/drag-and-drop) (pull requests e/ou issues são bem-vindas).
+os pwincipais p-passos pawa o dwag a-and dwop é definiw a _dwop zone_ (ou seja definiw um ewemento pawa a queda d-dos awquivos) e definiw event handwews pawa os eventos [`dwop`](/pt-bw/docs/web/api/htmwewement/dwop_event) e [`dwagovew`](/pt-bw/docs/web/api/htmwewement/dwagovew_event) . -.- essas e-etapas são descwitas abaixo, :3 i-incwuindo exempwos d-de twechos de c-código. ʘwʘ o codigo f-fonte esta disponivew em [mdn's dwag-and-dwop w-wepositowy](https://github.com/mdn/dom-exampwes/twee/mastew/dwag-and-dwop) (puww wequests e/ou issues são bem-vindas). 🥺
 
-> [!NOTE]
-> Nota: {{domxref("HTML_Drag_and_Drop_API","HTML drag and drop")}}Define duas APIs diferentes para suportar arrastar e soltar arquivos. Uma API é a interface {{domxref("DataTransfer")}} e a segunda API é a interface {{domxref("DataTransferItem")}} e {{domxref("DataTransferItemList")}}. Este exemplo ilustra o uso de ambas as APIs (e não usa nehuma interface específica do Gecko).
+> [!note]
+> n-nyota: {{domxwef("htmw_dwag_and_dwop_api","htmw dwag and dwop")}}define duas apis difewentes pawa supowtaw awwastaw e sowtaw a-awquivos. >_< uma api é a intewface {{domxwef("datatwansfew")}} e-e a segunda api é a-a intewface {{domxwef("datatwansfewitem")}} e-e {{domxwef("datatwansfewitemwist")}}. ʘwʘ este exempwo iwustwa o uso de ambas as apis (e n-nyão usa n-nyehuma intewface específica do g-gecko). (˘ω˘)
 
-## Definindo a drop _zone_
+## definindo a-a dwop _zone_
 
-O elemento de destino do evento [`drop`](/pt-BR/docs/Web/API/HTMLElement/drop_event) precisa de um event handler global {{domxref("GlobalEventHandlers.ondrop","ondrop")}} O seguinte trecho de código mostra como isso é feito com um elemento: {{HTMLelement("div")}}
+o ewemento d-de destino do evento [`dwop`](/pt-bw/docs/web/api/htmwewement/dwop_event) pwecisa d-de um event handwew gwobaw {{domxwef("gwobaweventhandwews.ondwop","ondwop")}} o seguinte twecho d-de código mostwa como isso é f-feito com um ewemento: {{htmwewement("div")}}
 
-```html
-<div id="drop_zone" ondrop="dropHandler(event);">
-  <p>Drag one or more files to this Drop Zone ...</p>
+```htmw
+<div id="dwop_zone" o-ondwop="dwophandwew(event);">
+  <p>dwag o-one ow mowe fiwes to this dwop zone ...</p>
 </div>
 ```
 
-Normalmente, um aplicativo inclui um event handler [`dragover`](/pt-BR/docs/Web/API/HTMLElement/dragover_event) no elemento de destino do drop e esse manipulador desativará o comportamento de arraste padrão do navegador. Para adicionar esse handler, você precisa incluir um event handler global {{domxref("GlobalEventHandlers.ondragover","ondragover")}}:
+nyowmawmente, (✿oωo) um apwicativo incwui um event handwew [`dwagovew`](/pt-bw/docs/web/api/htmwewement/dwagovew_event) n-nyo e-ewemento de destino do dwop e e-esse manipuwadow d-desativawá o compowtamento d-de awwaste padwão do nyavegadow. (///ˬ///✿) pawa adicionaw esse h-handwew, você pwecisa incwuiw um event handwew gwobaw {{domxwef("gwobaweventhandwews.ondwagovew","ondwagovew")}}:
 
-```html
+```htmw
 <div
-  id="drop_zone"
-  ondrop="dropHandler(event);"
-  ondragover="dragOverHandler(event);">
-  <p>Drag one or more files to this Drop Zone ...</p>
+  id="dwop_zone"
+  o-ondwop="dwophandwew(event);"
+  ondwagovew="dwagovewhandwew(event);">
+  <p>dwag o-one ow mowe f-fiwes to this d-dwop zone ...</p>
 </div>
 ```
 
-Por fim, um aplicativo pode querer estilizar o elemento da drop zone para indicar visualmente que o elemento é uma drop zone. Neste exemplo, o elemento da drop zone usa o seguinte estilo:
+pow f-fim, rawr x3 um apwicativo p-pode quewew e-estiwizaw o ewemento d-da dwop zone pawa indicaw visuawmente que o-o ewemento é uma d-dwop zone. -.- nyeste e-exempwo, ^^ o ewemento d-da dwop z-zone usa o seguinte estiwo:
 
 ```css
-#drop_zone {
-  border: 5px solid blue;
+#dwop_zone {
+  bowdew: 5px sowid bwue;
   width: 200px;
-  height: 100px;
+  h-height: 100px;
 }
 ```
 
-> [!NOTE]
-> Nota: Observe que os eventos `dragstart` e `dragend` não são acionados ao arrastar um arquivo para o navegador do OS.
+> [!note]
+> nyota: obsewve que os eventos `dwagstawt` e `dwagend` nyão são acionados ao awwastaw u-um awquivo pawa o navegadow do os. (⑅˘꒳˘)
 
-## Processo de drop
+## pwocesso de dwop
 
-O evento [`drop`](/pt-BR/docs/Web/API/HTMLElement/drop_event) é acionado quando o usuário solta o(s) arquivo(s) no drop handler, se o navegador suportar a interface {{domxref("DataTransferItemList")}} o metodo {{domxref("DataTransferItem.getAsFile","getAsFile()")}} será usado para acessar cada arquivo; caso contrário, a interface {{domxref("DataTransfer")}} usara a propriedade {{domxref("DataTransfer.files","files")}} para acessar cada arquivo.
+o e-evento [`dwop`](/pt-bw/docs/web/api/htmwewement/dwop_event) é a-acionado quando o-o usuáwio sowta o(s) awquivo(s) n-nyo dwop handwew, nyaa~~ se o nyavegadow s-supowtaw a intewface {{domxwef("datatwansfewitemwist")}} o-o metodo {{domxwef("datatwansfewitem.getasfiwe","getasfiwe()")}} sewá usado pawa acessaw cada awquivo; caso contwáwio, /(^•ω•^) a intewface {{domxwef("datatwansfew")}} u-usawa a pwopwiedade {{domxwef("datatwansfew.fiwes","fiwes")}} p-pawa acessaw cada awquivo. (U ﹏ U)
 
-Este exemplo mostra como escrever o nome de cada arquivo arrastado, no console. Em um aplicativo real, um aplicativo pode querer processar um arquivo usando o {{domxref("File","File API")}}.
+e-este exempwo m-mostwa como escwevew o nyome de cada awquivo a-awwastado, 😳😳😳 nyo c-consowe. >w< em um apwicativo weaw, XD u-um apwicativo pode q-quewew pwocessaw um awquivo usando o {{domxwef("fiwe","fiwe api")}}. o.O
 
-Observe que neste exemplo, Qualquer item de arrasto que não seja um arquivo é ignorado.
+obsewve que nyeste exempwo, mya q-quawquew item d-de awwasto que n-nyão seja um awquivo é ignowado. 🥺
 
 ```js
-function dropHandler(ev) {
-  console.log("File(s) dropped");
+f-function d-dwophandwew(ev) {
+  consowe.wog("fiwe(s) d-dwopped");
 
-  // Impedir o comportamento padrão (impedir que o arquivo seja aberto)
-  ev.preventDefault();
+  // impediw o compowtamento padwão (impediw que o awquivo seja abewto)
+  e-ev.pweventdefauwt();
 
-  if (ev.dataTransfer.items) {
-    // Use a interface DataTransferItemList para acessar o (s) arquivo (s)
-    for (var i = 0; i < ev.dataTransfer.items.length; i++) {
-      // Se os itens soltos não forem arquivos, rejeite-os
-      if (ev.dataTransfer.items[i].kind === "file") {
-        var file = ev.dataTransfer.items[i].getAsFile();
-        console.log("... file[" + i + "].name = " + file.name);
+  i-if (ev.datatwansfew.items) {
+    // use a intewface datatwansfewitemwist p-pawa acessaw o-o (s) awquivo (s)
+    fow (vaw i = 0; i < ev.datatwansfew.items.wength; i++) {
+      // s-se os itens sowtos não fowem awquivos, ^^;; wejeite-os
+      if (ev.datatwansfew.items[i].kind === "fiwe") {
+        v-vaw fiwe = ev.datatwansfew.items[i].getasfiwe();
+        consowe.wog("... f-fiwe[" + i + "].name = " + f-fiwe.name);
       }
     }
-  } else {
-    // Use a interface DataTransfer para acessar o (s) arquivo (s)
-    for (var i = 0; i < ev.dataTransfer.files.length; i++) {
-      console.log(
-        "... file[" + i + "].name = " + ev.dataTransfer.files[i].name,
+  } ewse {
+    // use a intewface datatwansfew pawa acessaw o-o (s) awquivo (s)
+    f-fow (vaw i = 0; i < ev.datatwansfew.fiwes.wength; i++) {
+      consowe.wog(
+        "... f-fiwe[" + i + "].name = " + ev.datatwansfew.fiwes[i].name,
       );
     }
   }
 }
 ```
 
-## Impedir o evento de arrastar padrão do navegador
+## i-impediw o evento de awwastaw padwão do nyavegadow
 
-O seguinte event handler [`dragover`](/pt-BR/docs/Web/API/HTMLElement/dragover_event) chama {{domxref("Event.preventDefault","preventDefault()")}} para desativar o manipulador padrão de arrastar e soltar do navegador.
+o-o seguinte event handwew [`dwagovew`](/pt-bw/docs/web/api/htmwewement/dwagovew_event) c-chama {{domxwef("event.pweventdefauwt","pweventdefauwt()")}} p-pawa desativaw o manipuwadow p-padwão de awwastaw e sowtaw do n-nyavegadow. :3
 
 ```js
-function dragOverHandler(ev) {
-  console.log("File(s) in drop zone");
+f-function dwagovewhandwew(ev) {
+  c-consowe.wog("fiwe(s) in dwop z-zone");
 
-  // Impedir o comportamento padrão (impedir que o arquivo seja aberto)
-  ev.preventDefault();
+  // i-impediw o compowtamento padwão (impediw que o awquivo s-seja abewto)
+  e-ev.pweventdefauwt();
 }
 ```
 
-## Veja também
+## v-veja também
 
-- [HTML Drag and Drop API](/pt-BR/docs/Web/API/HTML_Drag_and_Drop_API)
-- [Drag Operations](/pt-BR/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [HTML5 Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)
+- [htmw dwag and dwop api](/pt-bw/docs/web/api/htmw_dwag_and_dwop_api)
+- [dwag o-opewations](/pt-bw/docs/web/api/htmw_dwag_and_dwop_api/dwag_opewations)
+- [htmw5 wiving standawd: d-dwag and dwop](https://htmw.spec.naniwg.owg/muwtipage/intewaction.htmw#dnd)

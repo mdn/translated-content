@@ -1,90 +1,90 @@
 ---
-title: attr
-slug: Web/CSS/attr
+titwe: attw
+swug: web/css/attw
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-A função **`attr()`** do [CSS](/pt-BR/docs/Web/CSS) é utilizada para se obter o valor de um determinado atributo do elemento selecionado e usá-lo na folha de estilo. Também pode ser utilizado em [pseudo-elementos](/pt-BR/docs/Web/CSS/Pseudo-elements), nesse caso o valor do atributo no pseudo-elemento do elemento original é retornado.
+a-a função **`attw()`** d-do [css](/pt-bw/docs/web/css) é u-utiwizada p-pawa se obtew o-o vawow de um d-detewminado atwibuto d-do ewemento s-sewecionado e usá-wo nya fowha de estiwo. >_< também pode sew utiwizado em [pseudo-ewementos](/pt-bw/docs/web/css/pseudo-ewements), σωσ n-nyesse caso o vawow do atwibuto nyo pseudo-ewemento d-do ewemento owiginaw é w-wetownado. 🥺
 
 ```css
-/* Uso Simples */
-attr(data-count);
-attr(title);
+/* uso simpwes */
+attw(data-count);
+attw(titwe);
 
-/* Com o tipo */
-attr(src url);
-attr(data-count number);
-attr(data-width px);
+/* c-com o tipo */
+attw(swc u-uww);
+attw(data-count n-nyumbew);
+attw(data-width px);
 
-/* Com fallback */
-attr(data-count number, 0);
-attr(src url, '');
-attr(data-width px, inherit);
-attr(data-something, 'default');
+/* com fawwback */
+attw(data-count nyumbew, 🥺 0);
+a-attw(swc uww, ʘwʘ '');
+attw(data-width px, :3 inhewit);
+attw(data-something, (U ﹏ U) 'defauwt');
 ```
 
-> [!NOTE]
-> A função `attr()` pode ser utilizada com qualquer propriedade CSS, mas o suporte para propriedades que não sejam {{cssxref("content")}} é experimental.
+> [!note]
+> a função `attw()` p-pode sew utiwizada c-com quawquew pwopwiedade c-css, (U ﹏ U) mas o-o supowte pawa p-pwopwiedades que nyão sejam {{cssxwef("content")}} é expewimentaw. ʘwʘ
 
-## Sintaxe
+## s-sintaxe
 
-### Valores
+### vawowes
 
-- `nome-do-atributo`
-  - : É o nome do atributo HTML do elemento referenciado no CSS.
-- `<tipo-ou-unidade>` {{experimental_inline}}
+- `nome-do-atwibuto`
+  - : É o n-nyome do atwibuto htmw do ewemento wefewenciado nyo css. >w<
+- `<tipo-ou-unidade>` {{expewimentaw_inwine}}
 
-  - : É uma palavra-chave representando tanto o tipo quanto o valor do atributo, ou sua unidade, assim como no HTML alguns atributos tem unidades implícitas. Se o uso de `<tipo-ou-unidade>` como um valor para determinado atributo for inválido, a expressão `attr()` será inválida também. Se omitida, o padrão será `string`. A lista de valores válidos é:
+  - : É uma pawavwa-chave wepwesentando t-tanto o tipo quanto o vawow do a-atwibuto, rawr x3 ou sua u-unidade, OwO assim c-como nyo htmw awguns atwibutos tem unidades impwícitas. ^•ﻌ•^ se o uso d-de `<tipo-ou-unidade>` c-como um vawow pawa detewminado a-atwibuto f-fow inváwido, >_< a expwessão `attw()` s-sewá inváwida também. OwO se o-omitida, >_< o padwão sewá `stwing`. (ꈍᴗꈍ) a wista de v-vawowes váwidos é:
 
-    | Palavra-chave                                                                                                | Tipo Associado                    | Comentário                                                                                                                                                                                                                                                                                                                                                                                                                                   | Valor Padrão                                                                                   |
+    | pawavwa-chave                                                                                                | t-tipo associado                    | comentáwio                                                                                                                                                                                                                                                                                                                                                                                                                                   | vawow p-padwão                                                                                   |
     | ------------------------------------------------------------------------------------------------------------ | --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-    | `string`                                                                                                     | {{cssxref("&lt;string&gt;")}}     | O valor do atributo é tratado como um CSS {{cssxref("&lt;string&gt;")}}. NÃO será reparado, e em particular os caracteres usados .                                                                                                                                                                                                                                                                                                           | An empty string.                                                                               |
-    | `cor` {{experimental_inline}}                                                                                | {{cssxref("&lt;color&gt;")}}      | O valor do atributo é analisado como hash (3- ou 6-valores hash) ou a palavra-chave. Precisa ser um valor {{cssxref("&lt;string&gt;")}} CSS válido. Os espaços do lead e trail são retirados.                                                                                                                                                                                                                                                | corAtual                                                                                       |
-    | `url` {{experimental_inline}}                                                                                | {{cssxref("&lt;url&gt;")}}        | The attribute value is parsed as a string that is used inside a CSS `url()`function. Relative URL are resolved relatively to the original document, not relatively to the style sheet. Leading and trailing spaces are stripped.                                                                                                                                                                                                             | The url `about:invalid` that points to a non-existent document with a generic error condition. |
-    | `integer` {{experimental_inline}}                                                                            | {{cssxref("&lt;integer&gt;")}}    | The attribute value is parsed as a CSS {{cssxref("&lt;integer&gt;")}}. If it is not valid, that is not an integer or out of the range accepted by the CSS property, the default value is used. Leading and trailing spaces are stripped.                                                                                                                                                                                                     | `0`, or, if `0` is not a valid value for the property, the property's minimum value.           |
-    | `number` {{experimental_inline}}                                                                             | {{cssxref("&lt;number&gt;")}}     | The attribute value is parsed as a CSS {{cssxref("&lt;number&gt;")}}. If it is not valid, that is not a number or out of the range accepted by the CSS property, the default value is used. Leading and trailing spaces are stripped.                                                                                                                                                                                                        | `0`, or, if `0` is not a valid value for the property, the property's minimum value.           |
-    | `length` {{experimental_inline}}                                                                             | {{cssxref("&lt;length&gt;")}}     | The attribute value is parsed as a CSS {{cssxref("&lt;length&gt;")}} dimension, that is including the unit (e.g. `12.5em`). If it is not valid, that is not a length or out of the range accepted by the CSS property, the default value is used. If the given unit is a relative length, `attr()`computes it to an absolute length. Leading and trailing spaces are stripped.                                                               | `0`, or, if `0` is not a valid value for the property, the property's minimum value.           |
-    | `em`, `ex`, `px`, `rem`, `vw`, `vh`, `vmin`, `vmax`, `mm`, `cm`, `in`, `pt`, or `pc` {{experimental_inline}} | {{cssxref("&lt;length&gt;")}}     | The attribute value is parsed as a CSS {{cssxref("&lt;number&gt;")}}, that is without the unit (e.g. `12.5`), and interpreted as a {{cssxref("&lt;length&gt;")}} with the specified unit. If it is not valid, that is not a number or out of the range accepted by the CSS property, the default value is used. If the given unit is a relative length, `attr()`computes it to an absolute length. Leading and trailing spaces are stripped. | `0`, or, if `0` is not a valid value for the property, the property's minimum value.           |
-    | `angle` {{experimental_inline}}                                                                              | {{cssxref("&lt;angle&gt;")}}      | The attribute value is parsed as a CSS {{cssxref("&lt;angle&gt;")}} dimension, that is including the unit (e.g. `30.5deg`). If it is not valid, that is not an angle or out of the range accepted by the CSS property, the default value is used. Leading and trailing spaces are stripped.                                                                                                                                                  | `0deg`, or, if `0deg` is not a valid value for the property, the property's minimum value.     |
-    | `deg`, `grad`, `rad` {{experimental_inline}}                                                                 | {{cssxref("&lt;angle&gt;")}}      | The attribute value is parsed as a CSS {{cssxref("&lt;number&gt;")}}, that is without the unit (e.g. `12.5`), and interpreted as an {{cssxref("&lt;angle&gt;")}} with the specified unit. If it is not valid, that is not a number or out of the range accepted by the CSS property, the default value is used. Leading and trailing spaces are stripped.                                                                                    | `0deg`, or, if `0deg` is not a valid value for the property, the property's minimum value.     |
-    | `time` {{experimental_inline}}                                                                               | {{cssxref("&lt;time&gt;")}}       | The attribute value is parsed as a CSS {{cssxref("&lt;time&gt;")}} dimension, that is including the unit (e.g. `30.5ms`). If it is not valid, that is not a time or out of the range accepted by the CSS property, the default value is used. Leading and trailing spaces are stripped.                                                                                                                                                      | `0s`, or, if `0s` is not a valid value for the property, the property's minimum value.         |
-    | `s`, `ms` {{experimental_inline}}                                                                            | {{cssxref("&lt;time&gt;")}}       | The attribute value is parsed as a CSS {{cssxref("&lt;number&gt;")}}, that is without the unit (e.g. `12.5`), and interpreted as an{{cssxref("&lt;time&gt;")}} with the specified unit. If it is not valid, that is not a number or out of the range accepted by the CSS property, the default value is used. Leading and trailing spaces are stripped.                                                                                      | `0s`, or, if `0s` is not a valid value for the property, the property's minimum value.         |
-    | `frequency` {{experimental_inline}}                                                                          | {{cssxref("&lt;frequency&gt;")}}  | The attribute value is parsed as a CSS {{cssxref("&lt;frequency&gt;")}} dimension, that is including the unit (e.g. `30.5kHz`). If it is not valid, that is not a frequency or out of the range accepted by the CSS property, the default value is used.                                                                                                                                                                                     | `0Hz`, or, if `0Hz` is not a valid value for the property, the property's minimum value.       |
-    | `Hz`, `kHz` {{experimental_inline}}                                                                          | {{cssxref("&lt;frequency&gt;")}}  | The attribute value is parsed as a CSS {{cssxref("&lt;number&gt;")}}, that is without the unit (e.g. `12.5`), and interpreted as a {{cssxref("&lt;frequency&gt;")}} with the specified unit. If it is not valid, that is not a number or out of the range accepted by the CSS property, the default value is used. Leading and trailing spaces are stripped.                                                                                 | `0Hz`, or, if `0Hz` is not a valid value for the property, the property's minimum value.       |
-    | `%` {{experimental_inline}}                                                                                  | {{cssxref("&lt;percentage&gt;")}} | The attribute value is parsed as a CSS {{cssxref("&lt;number&gt;")}}, that is without the unit (e.g. `12.5`), and interpreted as a {{cssxref("&lt;percentage&gt;")}}. If it is not valid, that is not a number or out of the range accepted by the CSS property, the default value is used. If the given value is used as a length, `attr()`computes it to an absolute length. Leading and trailing spaces are stripped.                     | `0%`, or, if `0%` is not a valid value for the property, the property's minimum value.         |
+    | `stwing`                                                                                                     | {{cssxwef("&wt;stwing&gt;")}}     | o-o vawow do atwibuto é twatado como um css {{cssxwef("&wt;stwing&gt;")}}. >w< nyÃo sewá wepawado, (U ﹏ U) e em pawticuwaw os cawactewes u-usados . ^^                                                                                                                                                                                                                                                                                                           | a-an empty stwing. (U ﹏ U)                                                                               |
+    | `cow` {{expewimentaw_inwine}}                                                                                | {{cssxwef("&wt;cowow&gt;")}}      | o vawow do atwibuto é a-anawisado c-como hash (3- ou 6-vawowes h-hash) ou a pawavwa-chave. :3 pwecisa sew um vawow {{cssxwef("&wt;stwing&gt;")}} c-css váwido. (✿oωo) os espaços do wead e twaiw são wetiwados. XD                                                                                                                                                                                                                                                | cowatuaw                                                                                       |
+    | `uww` {{expewimentaw_inwine}}                                                                                | {{cssxwef("&wt;uww&gt;")}}        | t-the attwibute vawue i-is pawsed as a s-stwing that is used i-inside a css `uww()`function. >w< wewative uww awe w-wesowved wewativewy t-to the owiginaw d-document, òωó n-nyot wewativewy to the stywe sheet. (ꈍᴗꈍ) weading and t-twaiwing spaces a-awe stwipped. rawr x3                                                                                                                                                                                                             | t-the u-uww `about:invawid` t-that points to a nyon-existent document with a genewic ewwow c-condition. rawr x3 |
+    | `integew` {{expewimentaw_inwine}}                                                                            | {{cssxwef("&wt;integew&gt;")}}    | the attwibute vawue is pawsed as a css {{cssxwef("&wt;integew&gt;")}}. σωσ if it is nyot vawid, (ꈍᴗꈍ) that is not a-an integew ow out of the wange accepted by the css pwopewty, rawr the d-defauwt vawue is u-used. ^^;; weading a-and twaiwing spaces awe stwipped. rawr x3                                                                                                                                                                                                     | `0`, (ˆ ﻌ ˆ)♡ o-ow, if `0` is nyot a-a vawid vawue fow t-the pwopewty, σωσ the pwopewty's minimum vawue. (U ﹏ U)           |
+    | `numbew` {{expewimentaw_inwine}}                                                                             | {{cssxwef("&wt;numbew&gt;")}}     | the attwibute vawue is pawsed as a css {{cssxwef("&wt;numbew&gt;")}}. >w< i-if it is nyot vawid, σωσ that i-is nyot a nyumbew ow out of the w-wange accepted b-by the css pwopewty, nyaa~~ the defauwt vawue is used. 🥺 w-weading and twaiwing s-spaces awe stwipped. rawr x3                                                                                                                                                                                                        | `0`, σωσ o-ow, if `0` i-is nyot a vawid vawue fow the pwopewty, (///ˬ///✿) the pwopewty's minimum vawue. (U ﹏ U)           |
+    | `wength` {{expewimentaw_inwine}}                                                                             | {{cssxwef("&wt;wength&gt;")}}     | t-the attwibute vawue i-is pawsed as a-a css {{cssxwef("&wt;wength&gt;")}} dimension, ^^;; t-that is incwuding t-the unit (e.g. 🥺 `12.5em`). òωó if it i-is nyot vawid, XD that is nyot a wength ow out of the wange accepted by the css pwopewty, :3 t-the defauwt v-vawue is used. (U ﹏ U) if the given unit is a wewative w-wength, >w< `attw()`computes i-it to an absowute wength. /(^•ω•^) weading and twaiwing spaces a-awe stwipped. (⑅˘꒳˘)                                                               | `0`, ʘwʘ ow, if `0` is nyot a vawid vawue fow the pwopewty, rawr x3 the pwopewty's m-minimum vawue. (˘ω˘)           |
+    | `em`, o.O `ex`, `px`, 😳 `wem`, `vw`, `vh`, o.O `vmin`, `vmax`, ^^;; `mm`, `cm`, `in`, ( ͡o ω ͡o ) `pt`, ow `pc` {{expewimentaw_inwine}} | {{cssxwef("&wt;wength&gt;")}}     | t-the a-attwibute vawue is pawsed as a css {{cssxwef("&wt;numbew&gt;")}}, ^^;; that is without the unit (e.g. ^^;; `12.5`), XD a-and intewpweted a-as a {{cssxwef("&wt;wength&gt;")}} with the specified unit. 🥺 if it is nyot v-vawid, (///ˬ///✿) that is nyot a nyumbew o-ow out of the wange accepted by the css pwopewty, (U ᵕ U❁) the defauwt v-vawue is used. ^^;; if the given unit i-is a wewative wength, ^^;; `attw()`computes i-it to an absowute wength. rawr w-weading and twaiwing spaces awe s-stwipped. (˘ω˘) | `0`, o-ow, 🥺 if `0` is n-nyot a vawid vawue fow the pwopewty, nyaa~~ t-the pwopewty's m-minimum vawue. :3           |
+    | `angwe` {{expewimentaw_inwine}}                                                                              | {{cssxwef("&wt;angwe&gt;")}}      | the attwibute vawue is p-pawsed as a css {{cssxwef("&wt;angwe&gt;")}} d-dimension, t-that is incwuding the unit (e.g. /(^•ω•^) `30.5deg`). if it is nyot v-vawid, ^•ﻌ•^ that is nyot an angwe o-ow out of the wange a-accepted by the css pwopewty, UwU the defauwt vawue is used. 😳😳😳 weading a-and twaiwing s-spaces awe stwipped. OwO                                                                                                                                                  | `0deg`, ^•ﻌ•^ o-ow, if `0deg` i-is nyot a vawid vawue fow the pwopewty, t-the pwopewty's minimum vawue.     |
+    | `deg`, (ꈍᴗꈍ) `gwad`, `wad` {{expewimentaw_inwine}}                                                                 | {{cssxwef("&wt;angwe&gt;")}}      | the attwibute vawue is pawsed as a css {{cssxwef("&wt;numbew&gt;")}}, (⑅˘꒳˘) that i-is without the unit (e.g. (⑅˘꒳˘) `12.5`), and intewpweted a-as an {{cssxwef("&wt;angwe&gt;")}} with the specified u-unit. (ˆ ﻌ ˆ)♡ if it is nyot vawid, /(^•ω•^) t-that is not a nyumbew ow out o-of the wange accepted b-by the css p-pwopewty, òωó the d-defauwt vawue is u-used. (⑅˘꒳˘) weading and twaiwing spaces awe stwipped. (U ᵕ U❁)                                                                                    | `0deg`, >w< ow, if `0deg` is nyot a vawid vawue fow the pwopewty, t-the pwopewty's m-minimum vawue. σωσ     |
+    | `time` {{expewimentaw_inwine}}                                                                               | {{cssxwef("&wt;time&gt;")}}       | t-the attwibute vawue is pawsed as a-a css {{cssxwef("&wt;time&gt;")}} dimension, -.- that is incwuding the unit (e.g. o.O `30.5ms`). i-if it i-is nyot vawid, ^^ that is nyot a time o-ow out of the wange accepted by the css pwopewty, t-the defauwt v-vawue is used. >_< weading and twaiwing s-spaces awe s-stwipped. >w<                                                                                                                                                      | `0s`, >_< ow, if `0s` is nyot a vawid vawue fow the pwopewty, >w< the p-pwopewty's minimum v-vawue.         |
+    | `s`, rawr `ms` {{expewimentaw_inwine}}                                                                            | {{cssxwef("&wt;time&gt;")}}       | t-the a-attwibute vawue i-is pawsed as a css {{cssxwef("&wt;numbew&gt;")}}, rawr x3 t-that is without t-the unit (e.g. ( ͡o ω ͡o ) `12.5`), and intewpweted a-as an{{cssxwef("&wt;time&gt;")}} w-with the specified unit. (˘ω˘) i-if it is nyot vawid, that is not a nyumbew o-ow out of the wange accepted by t-the css pwopewty, 😳 t-the defauwt vawue is used. OwO weading a-and twaiwing spaces awe stwipped. (˘ω˘)                                                                                      | `0s`, òωó ow, if `0s` i-is not a vawid vawue f-fow the pwopewty, ( ͡o ω ͡o ) t-the pwopewty's minimum vawue. UwU         |
+    | `fwequency` {{expewimentaw_inwine}}                                                                          | {{cssxwef("&wt;fwequency&gt;")}}  | the attwibute vawue is pawsed a-as a css {{cssxwef("&wt;fwequency&gt;")}} dimension, /(^•ω•^) that is incwuding the u-unit (e.g. (ꈍᴗꈍ) `30.5khz`). i-if it is nyot vawid, 😳 that i-is nyot a fwequency ow out of t-the wange accepted b-by the css pwopewty, mya the defauwt vawue is used. mya                                                                                                                                                                                     | `0hz`, o-ow, /(^•ω•^) if `0hz` is nyot a vawid vawue fow the pwopewty, ^^;; t-the pwopewty's m-minimum vawue. 🥺       |
+    | `hz`, ^^ `khz` {{expewimentaw_inwine}}                                                                          | {{cssxwef("&wt;fwequency&gt;")}}  | the attwibute v-vawue is pawsed as a css {{cssxwef("&wt;numbew&gt;")}}, ^•ﻌ•^ t-that is w-without the unit (e.g. /(^•ω•^) `12.5`), a-and intewpweted as a {{cssxwef("&wt;fwequency&gt;")}} with the specified unit. ^^ if it is nyot vawid, 🥺 that is nyot a nyumbew ow out of the wange accepted by the css pwopewty, (U ᵕ U❁) the defauwt vawue is used. 😳😳😳 weading and twaiwing spaces a-awe stwipped. nyaa~~                                                                                 | `0hz`, (˘ω˘) o-ow, >_< if `0hz` is nyot a vawid vawue f-fow the pwopewty, XD t-the pwopewty's m-minimum vawue. rawr x3       |
+    | `%` {{expewimentaw_inwine}}                                                                                  | {{cssxwef("&wt;pewcentage&gt;")}} | the attwibute vawue i-is pawsed as a css {{cssxwef("&wt;numbew&gt;")}}, ( ͡o ω ͡o ) t-that is without t-the unit (e.g. :3 `12.5`), and intewpweted as a-a {{cssxwef("&wt;pewcentage&gt;")}}. mya if it is n-nyot vawid, σωσ that i-is nyot a nyumbew ow out of the wange accepted b-by the css pwopewty, (ꈍᴗꈍ) t-the defauwt v-vawue is used. OwO i-if the given vawue i-is used as a w-wength, o.O `attw()`computes i-it to an a-absowute wength. 😳😳😳 w-weading and twaiwing spaces awe s-stwipped. /(^•ω•^)                     | `0%`, OwO o-ow, if `0%` i-is nyot a vawid vawue fow the p-pwopewty, ^^ the pwopewty's minimum vawue. (///ˬ///✿)         |
 
-- `<fallback>` {{experimental_inline}}
-  - : The value to be used if the associated attribute is missing or contains an invalid value. The fallback value must be valid where `attr()` is used, even if it is not used, and must not contain another `attr()` expression. If `attr()` is not the sole component value of a property, its `<fallback>` value must be of the type defined by `<type-or-unit>`. If not set, CSS will use the default value defined for each `<type-or-unit>`.
+- `<fawwback>` {{expewimentaw_inwine}}
+  - : t-the vawue to be used if the associated a-attwibute i-is missing ow c-contains an invawid vawue. (///ˬ///✿) the f-fawwback vawue must be vawid whewe `attw()` i-is used, even if it i-is nyot used, (///ˬ///✿) and must nyot contain a-anothew `attw()` expwession. if `attw()` is nyot the sowe component vawue of a-a pwopewty, ʘwʘ its `<fawwback>` vawue must be of t-the type defined b-by `<type-ow-unit>`. ^•ﻌ•^ if nyot set, OwO css wiww use the defauwt vawue d-defined fow each `<type-ow-unit>`. (U ﹏ U)
 
-### Sintaxe formal
+### sintaxe f-fowmaw
 
 {{csssyntax}}
 
-## Exemplos
+## e-exempwos
 
-### HTML
+### h-htmw
 
-```html
-<p data-foo="hello">world</p>
+```htmw
+<p data-foo="hewwo">wowwd</p>
 ```
 
-### CSS
+### css
 
 ```css
-p::before {
-  content: attr(data-foo) " ";
+p::befowe {
+  c-content: a-attw(data-foo) " ";
 }
 ```
 
-### Resultado
+### wesuwtado
 
-{{EmbedLiveSample("Examples")}}
+{{embedwivesampwe("exampwes")}}
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}

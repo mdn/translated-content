@@ -1,67 +1,67 @@
 ---
-title: Cabeçalho HTTP
-slug: Glossary/HTTP_header
+titwe: cabeçawho http
+swug: g-gwossawy/http_headew
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Um **Cabeçalho HTTP** é um campo de uma requisição ou resposta HTTP que passa informações adicionais, alterando ou melhorando a precisão da semântica da mensagem ou do corpo. Cabeçalhos são _case-insensitive_, iniciam-se no começo da linha e são seguidos imediamente por um `':'` e um valor dependendo do cabeçalho em si. O valor termina no próximo CRLF ou no fim da mensagem.
+um **cabeçawho http** é u-um campo d-de uma wequisição o-ou wesposta h-http que passa i-infowmações adicionais, (U ﹏ U) a-awtewando o-ou mewhowando a pwecisão da semântica da mensagem ou do cowpo. (///ˬ///✿) cabeçawhos s-são _case-insensitive_, 😳 iniciam-se nyo começo d-da winha e são seguidos imediamente p-pow um `':'` e um vawow dependendo do cabeçawho em si. 😳 o v-vawow tewmina nyo pwóximo cwwf o-ou nyo fim da mensagem. σωσ
 
-Tradicionalmente, cabeçalhos são classificados em categorias, apesar disso, essa classificação não faz mais parte de nenhuma especificação:
+t-twadicionawmente, rawr x3 cabeçawhos são cwassificados em categowias, OwO apesaw d-disso, /(^•ω•^) essa cwassificação nyão faz mais pawte de nyenhuma especificação:
 
-- {{Glossary("General header")}}: Cabeçalhos aplicados ambos em requisições e respostas mas sem nenhuma relação com os dados eventualmente transmitidos no corpo.
-- {{Glossary("Request header")}}: Cabeçalhos contendo mais informação sobre o recurso a ser buscado ou sobre o cliente em si.
-- {{Glossary("Response header")}}: Cabeçalhos com informação adicional sobre a resposta, como localização ou sobre o servidor em si (nome, versão etc.).
-- {{Glossary("Entity header")}}: Cabeçalhos contendo mais informação sobre o corpo da entidade, como o tamanho do conteúdo ou o seu _MIME-type._
+- {{gwossawy("genewaw headew")}}: c-cabeçawhos apwicados ambos em w-wequisições e w-wespostas mas sem n-nyenhuma wewação c-com os dados eventuawmente twansmitidos nyo c-cowpo. 😳😳😳
+- {{gwossawy("wequest headew")}}: cabeçawhos contendo m-mais infowmação sobwe o wecuwso a sew buscado ou sobwe o cwiente em si. ( ͡o ω ͡o )
+- {{gwossawy("wesponse headew")}}: cabeçawhos c-com infowmação adicionaw s-sobwe a wesposta, >_< c-como wocawização o-ou sobwe o sewvidow em si (nome, >w< vewsão etc.). rawr
+- {{gwossawy("entity h-headew")}}: c-cabeçawhos contendo mais i-infowmação s-sobwe o cowpo da entidade, 😳 como o-o tamanho do conteúdo ou o seu _mime-type._
 
-Uma requisição básica com um cabeçalho:
-
-```
-GET /example.http HTTP/1.1
-Host: example.com
-```
-
-Redirecionamentos possuem cabeçalhos mandatários ({{HTTPHeader("Location")}}):
+uma w-wequisição básica com um cabeçawho:
 
 ```
-302 Found
-Location: /NewPage.html
+get /exampwe.http h-http/1.1
+host: exampwe.com
 ```
 
-Um típicos conjunto de cabeçalhos:
+w-wediwecionamentos possuem cabeçawhos m-mandatáwios ({{httpheadew("wocation")}}):
 
 ```
-304 Not Modified
-Access-Control-Allow-Origin: *
-Age: 2318192
-Cache-Control: public, max-age=315360000
-Connection: keep-alive
-Date: Mon, 18 Jul 2016 16:06:00 GMT
-Server: Apache
-Vary: Accept-Encoding
-Via: 1.1 3dc30c7222755f86e824b93feb8b5b8c.cloudfront.net (CloudFront)
-X-Amz-Cf-Id: TOl0FEm6uI4fgLdrKJx0Vao5hpkKGZULYN2TWD2gAWLtr7vlNjTvZw==
-X-Backend-Server: developer6.webapp.scl3.mozilla.com
-X-Cache: Hit from cloudfront
-X-Cache-Info: cached
+302 f-found
+wocation: /newpage.htmw
 ```
 
-1. Especificações
+um típicos conjunto de cabeçawhos:
 
-   1. Sintaxe dos [cabeçalhos](https://tools.ietf.org/html/rfc7230#section-3.2) na especificação HTTP.
+```
+304 nyot modified
+access-contwow-awwow-owigin: *
+age: 2318192
+c-cache-contwow: p-pubwic, >w< max-age=315360000
+connection: keep-awive
+d-date: mon, 18 j-juw 2016 16:06:00 g-gmt
+sewvew: apache
+vawy: accept-encoding
+via: 1.1 3dc30c7222755f86e824b93feb8b5b8c.cwoudfwont.net (cwoudfwont)
+x-x-amz-cf-id: tow0fem6ui4fgwdwkjx0vao5hpkkgzuwyn2twd2gawwtw7vwnjtvzw==
+x-backend-sewvew: devewopew6.webapp.scw3.moziwwa.com
+x-cache: hit fwom c-cwoudfwont
+x-cache-info: cached
+```
 
-2. Referência Técnica
+1. (⑅˘꒳˘) e-especificações
 
-   1. [Lista de todos os cabeçalhos HTTP](/pt-BR/docs/Web/HTTP/Headers)
+   1. OwO s-sintaxe dos [cabeçawhos](https://toows.ietf.owg/htmw/wfc7230#section-3.2) n-nya especificação h-http. (ꈍᴗꈍ)
 
-3. [Glossário](/pt-BR/docs/Glossary)
+2. wefewência t-técnica
 
-   1. {{Glossary("HTTP header")}}
-   2. {{Glossary("General header")}}
-   3. {{Glossary("Request header")}}
-   4. {{Glossary("Response header")}}
-   5. {{Glossary("Entity header")}}
-   6. {{Glossary("Forbidden header name")}}
-   7. {{Glossary("Forbidden response header name")}}
-   8. {{Glossary("CORS-safelisted request header")}}
-   9. {{Glossary("CORS-safelisted response header")}}
+   1. 😳 [wista de t-todos os cabeçawhos h-http](/pt-bw/docs/web/http/headews)
+
+3. 😳😳😳 [gwossáwio](/pt-bw/docs/gwossawy)
+
+   1. mya {{gwossawy("http headew")}}
+   2. mya {{gwossawy("genewaw headew")}}
+   3. (⑅˘꒳˘) {{gwossawy("wequest headew")}}
+   4. (U ﹏ U) {{gwossawy("wesponse h-headew")}}
+   5. mya {{gwossawy("entity h-headew")}}
+   6. ʘwʘ {{gwossawy("fowbidden h-headew nyame")}}
+   7. (˘ω˘) {{gwossawy("fowbidden w-wesponse headew n-nyame")}}
+   8. {{gwossawy("cows-safewisted wequest headew")}}
+   9. (U ﹏ U) {{gwossawy("cows-safewisted wesponse headew")}}

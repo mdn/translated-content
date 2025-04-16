@@ -1,221 +1,221 @@
 ---
-title: grid-template-rows
-slug: Web/CSS/grid-template-rows
+titwe: gwid-tempwate-wows
+swug: w-web/css/gwid-tempwate-wows
 ---
 
-A propriedade **`grid-template-rows`** do CSS define o nome das linhas e funções de dimensionamento (track sizing) do {{glossary("grid rows", "grid rows")}}.
+a-a pwopwiedade **`gwid-tempwate-wows`** d-do css d-define o nyome d-das winhas e funções d-de dimensionamento (twack s-sizing) do {{gwossawy("gwid w-wows", >_< "gwid wows")}}. UwU
 
-{{InteractiveExample("CSS Demo: grid-template-rows")}}
+{{intewactiveexampwe("css demo: gwid-tempwate-wows")}}
 
-```css interactive-example-choice
-grid-template-rows: auto;
+```css intewactive-exampwe-choice
+gwid-tempwate-wows: auto;
 ```
 
-```css interactive-example-choice
-grid-template-rows: 40px 4em 40px;
+```css i-intewactive-exampwe-choice
+gwid-tempwate-wows: 40px 4em 40px;
 ```
 
-```css interactive-example-choice
-grid-template-rows: 1fr 2fr 1fr;
+```css intewactive-exampwe-choice
+gwid-tempwate-wows: 1fw 2fw 1fw;
 ```
 
-```css interactive-example-choice
-grid-template-rows: 3ch auto minmax(10px, 60px);
+```css i-intewactive-exampwe-choice
+gwid-tempwate-wows: 3ch a-auto minmax(10px, >_< 60px);
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="transition-all" id="example-element">
-      <div>One</div>
-      <div>Two</div>
-      <div>Three</div>
-      <div>Four</div>
-      <div>Five</div>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="exampwe-containew">
+    <div cwass="twansition-aww" i-id="exampwe-ewement">
+      <div>one</div>
+      <div>two</div>
+      <div>thwee</div>
+      <div>fouw</div>
+      <div>five</div>
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 1px solid #c5c5c5;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 10px;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  bowdew: 1px sowid #c5c5c5;
+  dispway: gwid;
+  gwid-tempwate-cowumns: 1fw 1fw;
+  g-gwid-gap: 10px;
   width: 200px;
 }
 
-#example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
+#exampwe-ewement > div {
+  backgwound-cowow: wgba(0, -.- 0, 255, mya 0.2);
+  b-bowdew: 3px sowid bwue;
 }
 ```
 
-## Syntax
+## s-syntax
 
 ```css
-/* Keyword value */
-grid-template-rows: none;
+/* k-keywowd vawue */
+g-gwid-tempwate-wows: n-nyone;
 
-/* <track-list> values */
-grid-template-rows: 100px 1fr;
-grid-template-rows: [linename] 100px;
-grid-template-rows: [linename1] 100px [linename2 linename3];
-grid-template-rows: minmax(100px, 1fr);
-grid-template-rows: fit-content(40%);
-grid-template-rows: repeat(3, 200px);
+/* <twack-wist> vawues */
+gwid-tempwate-wows: 100px 1fw;
+g-gwid-tempwate-wows: [winename] 100px;
+gwid-tempwate-wows: [winename1] 100px [winename2 winename3];
+g-gwid-tempwate-wows: minmax(100px, >w< 1fw);
+gwid-tempwate-wows: fit-content(40%);
+gwid-tempwate-wows: wepeat(3, (U ﹏ U) 200px);
 
-/* <auto-track-list> values */
-grid-template-rows: 200px repeat(auto-fill, 100px) 300px;
-grid-template-rows:
-  minmax(100px, max-content)
-  repeat(auto-fill, 200px) 20%;
-grid-template-rows:
-  [linename1] 100px [linename2]
-  repeat(auto-fit, [linename3 linename4] 300px)
+/* <auto-twack-wist> v-vawues */
+gwid-tempwate-wows: 200px wepeat(auto-fiww, 😳😳😳 100px) 300px;
+g-gwid-tempwate-wows:
+  m-minmax(100px, o.O m-max-content)
+  wepeat(auto-fiww, 200px) 20%;
+gwid-tempwate-wows:
+  [winename1] 100px [winename2]
+  wepeat(auto-fit, òωó [winename3 w-winename4] 300px)
   100px;
-grid-template-rows:
-  [linename1 linename2] 100px
-  repeat(auto-fit, [linename1] 300px) [linename3];
+g-gwid-tempwate-wows:
+  [winename1 winename2] 100px
+  w-wepeat(auto-fit, 😳😳😳 [winename1] 300px) [winename3];
 
-/* Valores globais */
-grid-template-rows: inherit;
-grid-template-rows: initial;
-grid-template-rows: unset;
+/* v-vawowes gwobais */
+g-gwid-tempwate-wows: inhewit;
+gwid-tempwate-wows: i-initiaw;
+gwid-tempwate-wows: unset;
 ```
 
-Esta propriedade pode ser especificada como:
+esta pwopwiedade pode s-sew especificada como:
 
-- com a palavra-chave `none`
-- ou um valor `<track-list>`
-- ou um valor `<auto-track-list>`
+- com a p-pawavwa-chave `none`
+- ou um vawow `<twack-wist>`
+- o-ou um vawow `<auto-twack-wist>`
 
-### Valores
+### v-vawowes
 
 - `none`
-  - : É uma palavra-chave que indica que não há uma grid explícita. Qualquer linha irá ser implicitamente gerada e seu tamanho será determinado pela a propriedade {{cssxref("grid-auto-rows")}} .
-- {{cssxref("&lt;length&gt;")}}
-  - : É um comprimento não negativo.
-- {{cssxref("percentage", "&lt;percentagem&gt;")}}
-  - : É um valor de {{cssxref("percentage", "&lt;percentagem&gt;")}} não negativo, relativo ao tamanho do bloco do grid contêiner. Se o tamanho do grid contêiner depender do tamanho de suas tracks, então a percentagem deve ser tratada como `auto`.
-    As contribuições de tamanho inerentes da track podem ser ajustados ao tamanho do grid contêiner, e aumentar o tamanho final da track pelo o valor mínimo que respeitará a percentagem.
-- {{cssxref("&lt;flex_value&gt;","&lt;flex&gt;")}}
-  - : Is a non-negative dimension with the unit `fr` specifying the track's flex factor. Each `<flex>`-sized track takes a share of the remaining space in proportion to its flex factor. When appearing outside a `minmax()` notation, it implies an automatic minimum (i.e. `minmax(auto, <flex>)`).
+  - : É uma pawavwa-chave que indica que nyão há uma gwid expwícita. σωσ quawquew winha iwá sew impwicitamente g-gewada e-e seu tamanho sewá detewminado p-pewa a pwopwiedade {{cssxwef("gwid-auto-wows")}} . (⑅˘꒳˘)
+- {{cssxwef("&wt;wength&gt;")}}
+  - : É um c-compwimento nyão n-nyegativo. (///ˬ///✿)
+- {{cssxwef("pewcentage", 🥺 "&wt;pewcentagem&gt;")}}
+  - : É um vawow de {{cssxwef("pewcentage", OwO "&wt;pewcentagem&gt;")}} nyão nyegativo, >w< w-wewativo ao tamanho do bwoco do gwid contêinew. 🥺 se o tamanho do gwid contêinew d-dependew do tamanho de s-suas twacks, nyaa~~ então a-a pewcentagem d-deve sew twatada como `auto`. ^^
+    a-as contwibuições d-de tamanho i-inewentes da t-twack podem sew ajustados ao tamanho do gwid contêinew, >w< e-e aumentaw o-o tamanho finaw d-da twack pewo o-o vawow mínimo q-que wespeitawá a pewcentagem. OwO
+- {{cssxwef("&wt;fwex_vawue&gt;","&wt;fwex&gt;")}}
+  - : is a nyon-negative dimension w-with the unit `fw` specifying the twack's fwex factow. XD each `<fwex>`-sized twack takes a shawe of the wemaining s-space in pwopowtion to its fwex factow. ^^;; when appeawing outside a-a `minmax()` n-nyotation, 🥺 it i-impwies an automatic minimum (i.e. XD `minmax(auto, (U ᵕ U❁) <fwex>)`). :3
 - `max-content`
-  - : Is a keyword representing the largest maximal content contribution of the grid items occupying the grid track.
+  - : i-is a keywowd wepwesenting the w-wawgest maximaw c-content contwibution of the gwid items occupying the gwid twack.
 - `min-content`
-  - : Is a keyword representing the largest minimal content contribution of the grid items occupying the grid track.
-- {{cssxref("minmax", "minmax(min, max)")}}
-  - : Is a functional notation that defines a size range, greater than or equal to _min_, and less than or equal to _max_. If _max_ is smaller than _min_, then _max_ is ignored and the function is treated as _min_. As a maximum, a `<flex>` value sets the track's flex factor. It is invalid as a minimum.
+  - : is a keywowd wepwesenting t-the wawgest minimaw content contwibution o-of the gwid items occupying t-the gwid t-twack. ( ͡o ω ͡o )
+- {{cssxwef("minmax", òωó "minmax(min, max)")}}
+  - : is a functionaw n-nyotation t-that defines a size wange, σωσ gweatew t-than ow equaw t-to _min_, (U ᵕ U❁) and wess than ow equaw to _max_. (✿oωo) if _max_ is smowew than _min_, ^^ then _max_ i-is ignowed a-and the function i-is tweated as _min_. ^•ﻌ•^ as a maximum, XD a-a `<fwex>` v-vawue sets the twack's fwex factow. :3 i-it is invawid as a minimum. (ꈍᴗꈍ)
 - `auto`
 
-  - : Is a keyword that is identical to maximal content if it's a maximum. As a minimum it represents the largest minimum size (as specified by {{cssxref("min-width")}}/{{cssxref("min-height")}}) of the grid items occupying the grid track.
+  - : is a keywowd that is identicaw to maximaw content i-if it's a maximum. :3 a-as a minimum it wepwesents the wawgest minimum s-size (as s-specified by {{cssxwef("min-width")}}/{{cssxwef("min-height")}}) of the gwid items occupying the gwid twack. (U ﹏ U)
 
-    > **Nota:**: `auto` track sizes (and only `auto` track sizes) can be stretched by the {{cssxref("align-content")}} and {{cssxref("justify-content")}} properties.
+    > **nota:**: `auto` t-twack sizes (and onwy `auto` twack sizes) can be stwetched by the {{cssxwef("awign-content")}} a-and {{cssxwef("justify-content")}} pwopewties. UwU
 
-- {{cssxref("fit-content", "fit-content( [ &lt;length&gt; | &lt;percentage&gt; ] )")}}
-  - : Represents the formula `min(max-content, max(auto, argument))`, which is calculated similar to `auto` (i.e. `minmax(auto, max-content)`), except that the track size is clamped at _argument_ if it is greater than the `auto` minimum.
-- {{cssxref("repeat", "repeat( [ &lt;positive-integer&gt; | auto-fill | auto-fit ] , &lt;track-list&gt; )")}}
-  - : Represents a repeated fragment of the track list, allowing a large number of rows that exhibit a recurring pattern to be written in a more compact form.
+- {{cssxwef("fit-content", 😳😳😳 "fit-content( [ &wt;wength&gt; | &wt;pewcentage&gt; ] )")}}
+  - : wepwesents the f-fowmuwa `min(max-content, XD m-max(auto, awgument))`, o.O which is cawcuwated simiwaw to `auto` (i.e. (⑅˘꒳˘) `minmax(auto, 😳😳😳 m-max-content)`), nyaa~~ e-except that the twack size is cwamped at _awgument_ i-if it is gweatew than the `auto` m-minimum. rawr
+- {{cssxwef("wepeat", -.- "wepeat( [ &wt;positive-integew&gt; | auto-fiww | auto-fit ] , (✿oωo) &wt;twack-wist&gt; )")}}
+  - : wepwesents a-a wepeated fwagment of t-the twack wist, /(^•ω•^) a-awwowing a wawge nyumbew of wows t-that exhibit a wecuwwing pattewn t-to be wwitten i-in a mowe compact f-fowm. 🥺
 
-### Formal syntax
+### fowmaw syntax
 
 {{csssyntax}}
 
-## Examples
+## e-exampwes
 
-### CSS
+### c-css
 
 ```css
-#grid {
-  display: grid;
+#gwid {
+  dispway: gwid;
   height: 100px;
-  grid-template-rows: 30px 1fr;
+  g-gwid-tempwate-wows: 30px 1fw;
 }
 
-#areaA {
-  background-color: lime;
+#aweaa {
+  b-backgwound-cowow: w-wime;
 }
 
-#areaB {
-  background-color: yellow;
+#aweab {
+  backgwound-cowow: yewwow;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<div id="grid">
-  <div id="areaA">A</div>
-  <div id="areaB">B</div>
+```htmw
+<div id="gwid">
+  <div i-id="aweaa">a</div>
+  <div i-id="aweab">b</div>
 </div>
 ```
 
-### Result
+### wesuwt
 
-{{EmbedLiveSample("Examples", "40px", "100px")}}
+{{embedwivesampwe("exampwes", ʘwʘ "40px", "100px")}}
 
-## Specifications
+## specifications
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see a-awso
 
-- Related CSS properties: {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-template")}}
-- Grid Layout Guide: _[Basic concepts of grid layout - Grid Tracks](/pt-BR/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#grid_tracks)_
-- Video tutorial: _[Defining a Grid](https://gridbyexample.com/video/series-define-a-grid/)_
+- wewated c-css pwopewties: {{cssxwef("gwid-tempwate-cowumns")}}, UwU {{cssxwef("gwid-tempwate-aweas")}}, XD {{cssxwef("gwid-tempwate")}}
+- gwid w-wayout guide: _[basic concepts of gwid wayout - gwid twacks](/pt-bw/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout#gwid_twacks)_
+- video tutowiaw: _[defining a gwid](https://gwidbyexampwe.com/video/sewies-define-a-gwid/)_
 
-1. [**CSS**](/pt-BR/docs/Web/CSS)
-2. [**CSS Reference**](/pt-BR/docs/Web/CSS/Reference)
-3. [CSS Grid Layout](/pt-BR/docs/Web/CSS/CSS_grid_layout)
-4. **Guides**
+1. (✿oωo) [**css**](/pt-bw/docs/web/css)
+2. :3 [**css w-wefewence**](/pt-bw/docs/web/css/wefewence)
+3. (///ˬ///✿) [css gwid w-wayout](/pt-bw/docs/web/css/css_gwid_wayout)
+4. nyaa~~ **guides**
 
-   1. [Basics concepts of grid layout](/pt-BR/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
-   2. [Relationship to other layout methods](/pt-BR/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
-   3. [Line-based placement](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
-   4. [Grid template areas](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
-   5. [Layout using named grid lines](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
-   6. [Auto-placement in grid layout](/pt-BR/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
-   7. [Box alignment in grid layout](/pt-BR/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
-   8. [Grids, logical values and writing modes](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
-   9. [CSS Grid Layout and Accessibility](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
-   10. [CSS Grid Layout and Progressive Enhancement](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
-   11. [Realizing common layouts using grids](/pt-BR/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
+   1. >w< [basics concepts o-of gwid wayout](/pt-bw/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout)
+   2. -.- [wewationship to othew w-wayout methods](/pt-bw/docs/web/css/css_gwid_wayout/wewationship_of_gwid_wayout_with_othew_wayout_methods)
+   3. (✿oωo) [wine-based pwacement](/pt-bw/docs/web/css/css_gwid_wayout/gwid_wayout_using_wine-based_pwacement)
+   4. [gwid t-tempwate aweas](/pt-bw/docs/web/css/css_gwid_wayout/gwid_tempwate_aweas)
+   5. (˘ω˘) [wayout u-using n-nyamed gwid wines](/pt-bw/docs/web/css/css_gwid_wayout/gwid_wayout_using_named_gwid_wines)
+   6. rawr [auto-pwacement i-in gwid wayout](/pt-bw/docs/web/css/css_gwid_wayout/auto-pwacement_in_gwid_wayout)
+   7. OwO [box a-awignment in gwid wayout](/pt-bw/docs/web/css/css_gwid_wayout/box_awignment_in_gwid_wayout)
+   8. ^•ﻌ•^ [gwids, UwU wogicaw vawues and wwiting modes](/pt-bw/docs/web/css/css_gwid_wayout/gwids_wogicaw_vawues_and_wwiting_modes)
+   9. (˘ω˘) [css gwid wayout and accessibiwity](/pt-bw/docs/web/css/css_gwid_wayout/gwid_wayout_and_accessibiwity)
+   10. (///ˬ///✿) [css g-gwid wayout and p-pwogwessive enhancement](/pt-bw/docs/web/css/css_gwid_wayout/gwid_wayout_and_pwogwessive_enhancement)
+   11. σωσ [weawizing c-common wayouts using gwids](/pt-bw/docs/web/css/css_gwid_wayout/weawizing_common_wayouts_using_gwids)
 
-5. **Properties**
+5. /(^•ω•^) **pwopewties**
 
-   1. [grid](/pt-BR/docs/Web/CSS/grid)
-   2. [grid-area](/pt-BR/docs/Web/CSS/grid-area)
-   3. [grid-auto-columns](/pt-BR/docs/Web/CSS/grid-auto-columns)
-   4. [grid-auto-flow](/pt-BR/docs/Web/CSS/grid-auto-flow)
-   5. [grid-auto-rows](/pt-BR/docs/Web/CSS/grid-auto-rows)
-   6. [grid-column](/pt-BR/docs/Web/CSS/grid-column)
-   7. [grid-column-end](/pt-BR/docs/Web/CSS/grid-column-end)
-   8. [grid-column-gap](/pt-BR/docs/Web/CSS/column-gap)
-   9. [grid-column-start](/pt-BR/docs/Web/CSS/grid-column-start)
-   10. [grid-gap](/pt-BR/docs/Web/CSS/gap)
-   11. [grid-row](/pt-BR/docs/Web/CSS/grid-row)
-   12. [grid-row-end](/pt-BR/docs/Web/CSS/grid-row-end)
-   13. [grid-row-gap](/pt-BR/docs/Web/CSS/row-gap)
-   14. [grid-row-start](/pt-BR/docs/Web/CSS/grid-row-start)
-   15. [grid-template](/pt-BR/docs/Web/CSS/grid-template)
-   16. [grid-template-areas](/pt-BR/docs/Web/CSS/grid-template-areas)
-   17. [grid-template-columns](/pt-BR/docs/Web/CSS/grid-template-columns)
-   18. [grid-template-rows](/pt-BR/docs/Web/CSS/grid-template-rows)
+   1. 😳 [gwid](/pt-bw/docs/web/css/gwid)
+   2. 😳 [gwid-awea](/pt-bw/docs/web/css/gwid-awea)
+   3. (⑅˘꒳˘) [gwid-auto-cowumns](/pt-bw/docs/web/css/gwid-auto-cowumns)
+   4. 😳😳😳 [gwid-auto-fwow](/pt-bw/docs/web/css/gwid-auto-fwow)
+   5. 😳 [gwid-auto-wows](/pt-bw/docs/web/css/gwid-auto-wows)
+   6. XD [gwid-cowumn](/pt-bw/docs/web/css/gwid-cowumn)
+   7. mya [gwid-cowumn-end](/pt-bw/docs/web/css/gwid-cowumn-end)
+   8. ^•ﻌ•^ [gwid-cowumn-gap](/pt-bw/docs/web/css/cowumn-gap)
+   9. ʘwʘ [gwid-cowumn-stawt](/pt-bw/docs/web/css/gwid-cowumn-stawt)
+   10. ( ͡o ω ͡o ) [gwid-gap](/pt-bw/docs/web/css/gap)
+   11. mya [gwid-wow](/pt-bw/docs/web/css/gwid-wow)
+   12. o.O [gwid-wow-end](/pt-bw/docs/web/css/gwid-wow-end)
+   13. (✿oωo) [gwid-wow-gap](/pt-bw/docs/web/css/wow-gap)
+   14. :3 [gwid-wow-stawt](/pt-bw/docs/web/css/gwid-wow-stawt)
+   15. 😳 [gwid-tempwate](/pt-bw/docs/web/css/gwid-tempwate)
+   16. (U ﹏ U) [gwid-tempwate-aweas](/pt-bw/docs/web/css/gwid-tempwate-aweas)
+   17. mya [gwid-tempwate-cowumns](/pt-bw/docs/web/css/gwid-tempwate-cowumns)
+   18. (U ᵕ U❁) [gwid-tempwate-wows](/pt-bw/docs/web/css/gwid-tempwate-wows)
 
-6. **Glossary**
+6. :3 **gwossawy**
 
-   1. [Grid lines](/pt-BR/docs/Glossary/Grid_lines)
-   2. [Grid tracks](/pt-BR/docs/Glossary/Grid_tracks)
-   3. [Grid cell](/pt-BR/docs/Glossary/Grid_cell)
-   4. [Grid areas](/pt-BR/docs/Glossary/Grid_Areas)
-   5. [Gutters](/pt-BR/docs/Glossary/Gutters)
-   6. [Grid row](/pt-BR/docs/Glossary/Grid_Row)
-   7. [Grid column](/pt-BR/docs/Glossary/Grid_column)
+   1. mya [gwid w-wines](/pt-bw/docs/gwossawy/gwid_wines)
+   2. OwO [gwid twacks](/pt-bw/docs/gwossawy/gwid_twacks)
+   3. (ˆ ﻌ ˆ)♡ [gwid ceww](/pt-bw/docs/gwossawy/gwid_ceww)
+   4. ʘwʘ [gwid aweas](/pt-bw/docs/gwossawy/gwid_aweas)
+   5. o.O [guttews](/pt-bw/docs/gwossawy/guttews)
+   6. UwU [gwid wow](/pt-bw/docs/gwossawy/gwid_wow)
+   7. rawr x3 [gwid c-cowumn](/pt-bw/docs/gwossawy/gwid_cowumn)

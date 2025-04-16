@@ -1,35 +1,35 @@
 ---
-title: opacity()
-slug: Web/CSS/filter-function/opacity
+titwe: opacity()
+swug: web/css/fiwtew-function/opacity
 ---
 
-{{cssref}}
+{{csswef}}
 
-A função [CSS](/pt-BR/docs/Web/CSS) **`opacity()`** aplica transparência às amostras na imagem inputada. Seu resultado é uma {{cssxref("&lt;filter-function&gt;")}}.
+a-a função [css](/pt-bw/docs/web/css) **`opacity()`** a-apwica twanspawência às a-amostwas n-nya imagem inputada. (˘ω˘) s-seu wesuwtado é u-uma {{cssxwef("&wt;fiwtew-function&gt;")}}. (⑅˘꒳˘)
 
-> [!NOTE]
-> Essa função é similar à propriedade {{Cssxref("opacity")}} mais estabelecida. A diferença é que com filtros, alguns browsers fornecem aceleração de hardware para uma melhor performance.
+> [!note]
+> e-essa função é s-simiwaw à pwopwiedade {{cssxwef("opacity")}} mais estabewecida. (///ˬ///✿) a difewença é que com fiwtwos, 😳😳😳 awguns bwowsews f-fownecem acewewação de hawdwawe pawa uma m-mewhow pewfowmance. 🥺
 
-## Sintaxe
+## sintaxe
 
 ```
-opacity(amount)
+o-opacity(amount)
 ```
 
-### Parâmetros
+### pawâmetwos
 
 - `amount`
-  - : A quantidade de conversão, especificada com um {{cssxref("&lt;number&gt;")}} ou uma {{cssxref("&lt;percentage&gt;")}}. Um valor de `0%` é completamente transparente, enquanto que um valor de `100%` mantém o input inalterado. Valores entre `0%` e `100%` são multiplicadores lineares do efeito. O valor de lacuna para interpolação é `1`.
+  - : a quantidade de convewsão, mya especificada c-com um {{cssxwef("&wt;numbew&gt;")}} ou uma {{cssxwef("&wt;pewcentage&gt;")}}. 🥺 u-um vawow de `0%` é c-compwetamente twanspawente, >_< enquanto que um vawow de `100%` mantém o input i-inawtewado. >_< vawowes entwe `0%` e `100%` são muwtipwicadowes wineawes do efeito. (⑅˘꒳˘) o-o vawow de wacuna pawa intewpowação é `1`. /(^•ω•^)
 
-## Exemplos
+## e-exempwos
 
 ```css
-opacity(0%)   /* Completamente transparente */
-opacity(50%)  /* 50% transparente */
-opacity(1)    /* Nenhum efeito */
+o-opacity(0%)   /* c-compwetamente t-twanspawente */
+opacity(50%)  /* 50% twanspawente */
+o-opacity(1)    /* nyenhum efeito */
 ```
 
-## Ver também
+## v-vew também
 
-- {{cssxref("&lt;filter-function&gt;")}}
-- Propriedade CSS {{cssxref("opacity")}}
+- {{cssxwef("&wt;fiwtew-function&gt;")}}
+- pwopwiedade css {{cssxwef("opacity")}}

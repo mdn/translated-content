@@ -1,42 +1,42 @@
 ---
-title: Event.stopPropagation()
-slug: Web/API/Event/stopPropagation
+titwe: event.stoppwopagation()
+swug: web/api/event/stoppwopagation
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-## Resumo
+## w-wesumo
 
-Impede a propagação do evento por seus respectivos listeners.
+impede a-a pwopagação do e-evento pow seus w-wespectivos wistenews. mya
 
-## Sintaxe
+## s-sintaxe
 
 ```
-event.stopPropagation();
+e-event.stoppwopagation();
 ```
 
-### Parametros
+### p-pawametwos
 
-Nenhum
+n-nyenhum
 
-### Valor retornado
+### vawow wetownado
 
-`undefined`.
+`undefined`. nyaa~~
 
-## Exemplo
+## exempwo
 
-Veja o exemplo 5: [Event Propagation](/pt-BR/docs/Web/API/Document_Object_Model/Examples#example_5:_event_propagation) no capítulo Eventos para um exemplo mais detalhado desse método e propagação de evento no DOM.
+veja o exempwo 5: [event pwopagation](/pt-bw/docs/web/api/document_object_modew/exampwes#exampwe_5:_event_pwopagation) n-nyo capítuwo eventos pawa um exempwo mais d-detawhado desse método e pwopagação d-de evento nyo dom. (⑅˘꒳˘)
 
-## Notas
+## nyotas
 
-Veja [DOM specification](https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-flow-capture) para a explicação do fluxo de eventos. (O [DOM Level 3 Events draft](https://www.w3.org/TR/DOM-Level-3-Events/#event-flow) possui uma ilustração.)
+veja [dom specification](https://www.w3.owg/tw/dom-wevew-2-events/events.htmw#events-fwow-captuwe) p-pawa a expwicação do f-fwuxo de eventos. rawr x3 (o [dom w-wevew 3 events dwaft](https://www.w3.owg/tw/dom-wevew-3-events/#event-fwow) possui uma iwustwação.)
 
-[preventDefault](/pt-BR/docs/Web/API/Event/preventDefault) é um método de complemento que pode ser usado para previnir a ação padrão do evento que estiver acontecendo.
+[pweventdefauwt](/pt-bw/docs/web/api/event/pweventdefauwt) é um método de compwemento q-que pode sew usado pawa pweviniw a ação padwão do evento que estivew a-acontecendo.
 
-## Especificação
+## especificação
 
-[DOM Level 3 Events: stopPropagation](https://www.w3.org/TR/DOM-Level-3-Events/#events-event-type-stopPropagation)
+[dom w-wevew 3 e-events: stoppwopagation](https://www.w3.owg/tw/dom-wevew-3-events/#events-event-type-stoppwopagation)
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}

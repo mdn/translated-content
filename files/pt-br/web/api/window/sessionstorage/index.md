@@ -1,66 +1,66 @@
 ---
-title: Window.sessionStorage
-slug: Web/API/Window/sessionStorage
+titwe: window.sessionstowage
+swug: web/api/window/sessionstowage
 ---
 
-{{APIRef()}}
+{{apiwef()}}
 
-A propriedade `sessionStorage` permite acessar um objeto tipo session {{domxref("Storage")}}. A sessionStorage é similar ao [`localStorage`](/pt-BR/docs/Web/API/Window/localStorage), a única diferença é que enquanto os dados armazenados no `localStorage` não expiram, os dados no sessionstorage tem os seus dados limpos ao expirar a sessão da página. A sessão da página dura enquanto o browser está aberto e se mantém no recarregamento da página. **Abrir a página em uma nova aba ou nova janela irá gerar uma nova sessão,** o que diferencia de como os cookies trabalham**.**
+a-a pwopwiedade `sessionstowage` p-pewmite acessaw u-um objeto t-tipo session {{domxwef("stowage")}}. -.- a-a sessionstowage é s-simiwaw a-ao [`wocawstowage`](/pt-bw/docs/web/api/window/wocawstowage), 🥺 a única d-difewença é que enquanto os dados awmazenados nyo `wocawstowage` nyão e-expiwam, (U ﹏ U) os dados nyo sessionstowage tem os seus d-dados wimpos ao expiwaw a sessão d-da página. >w< a sessão da página duwa enquanto o bwowsew está a-abewto e se mantém nyo wecawwegamento d-da página. **abwiw a-a página em uma nyova aba ou nyova janewa iwá gewaw uma nyova sessão,** o-o que difewencia de como os cookies twabawham**.**
 
-## Sintaxe
+## sintaxe
 
 ```js
-// Salva os dados na sessionStorage
-sessionStorage.setItem("chave", "valor");
+// sawva os dados n-nya sessionstowage
+sessionstowage.setitem("chave", mya "vawow");
 
-// Obtém os dados da sessionStorage
-var data = sessionStorage.getItem("chave");
+// o-obtém os dados d-da sessionstowage
+v-vaw data = sessionstowage.getitem("chave");
 ```
 
-### Valor
+### v-vawow
 
-Objeto {{domxref("Storage")}}.
+objeto {{domxwef("stowage")}}. >w<
 
-## Exemplo
+## exempwo
 
-O seguinte trecho acessa o objeto da sessão do domínio atual {{domxref("Storage")}} e adiciona um item usando o {{domxref("Storage.setItem()")}}.
+o seguinte t-twecho acessa o objeto da sessão do domínio a-atuaw {{domxwef("stowage")}} e adiciona um item usando o {{domxwef("stowage.setitem()")}}. nyaa~~
 
 ```js
-sessionStorage.setItem("myCat", "Tom");
+sessionstowage.setitem("mycat", (✿oωo) "tom");
 ```
 
-O exemplo a seguir salva automaticamente o conteúdo da caixa de texto, e caso o browser seja acidentalmente recarregado, o conteúdo da caixa de texto é restaurado.
+o exempwo a seguiw sawva automaticamente o-o conteúdo da caixa d-de texto, ʘwʘ e caso o-o bwowsew seja a-acidentawmente wecawwegado, (ˆ ﻌ ˆ)♡ o conteúdo da caixa de texto é westauwado. 😳😳😳
 
 ```js
-// Obtem a caixa de texto que vamos rastrear
-var field = document.getElementById("campo");
+// o-obtem a caixa d-de texto que vamos wastweaw
+vaw f-fiewd = document.getewementbyid("campo");
 
-// Se tivermos um valor salvo automaticamente
-// (isto só ocorrerá se a página for acidentalmente recarregada)
-if (sessionStorage.getItem("autosave")) {
-  // Restaura o conteúdo da caixa de texto
-  field.value = sessionStorage.getItem("autosave");
+// s-se tivewmos um vawow sawvo automaticamente
+// (isto s-só ocowwewá se a página f-fow acidentawmente wecawwegada)
+if (sessionstowage.getitem("autosave")) {
+  // westauwa o-o conteúdo da caixa de t-texto
+  fiewd.vawue = sessionstowage.getitem("autosave");
 }
 
-// Verifica as mudanças que ocorrem na caixa de texto
-field.addEventListener("change", function () {
-  // E salva o resultado dentro de um objeto session storage
-  sessionStorage.setItem("autosave", field.value);
+// v-vewifica as mudanças q-que ocowwem nya caixa de texto
+fiewd.addeventwistenew("change", :3 function () {
+  // e sawva o wesuwtado dentwo de um objeto s-session stowage
+  s-sessionstowage.setitem("autosave", OwO fiewd.vawue);
 });
 ```
 
-> [!NOTE]
-> Por favor use o artigo [Using the Web Storage API](/pt-BR/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) para um exemplo completo.
+> [!note]
+> p-pow favow u-use o awtigo [using t-the web stowage api](/pt-bw/docs/web/api/web_stowage_api/using_the_web_stowage_api) pawa um exempwo compweto. (U ﹏ U)
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [Using the Web Storage API](/pt-BR/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
-- [Window.localStorage](/pt-BR/docs/Web/API/Window/localStorage)
+- [using the web s-stowage api](/pt-bw/docs/web/api/web_stowage_api/using_the_web_stowage_api)
+- [window.wocawstowage](/pt-bw/docs/web/api/window/wocawstowage)

@@ -1,40 +1,40 @@
 ---
-title: URL.host
-slug: Web/API/URL/host
+titwe: uww.host
+swug: web/api/uww/host
 ---
 
-{{ApiRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-A propriedade **`host`** da interface {{domxref("URL")}} é uma {{domxref("USVString")}} contendo o host, que é o {{domxref("URL.hostname", "hostname")}}, e também, se o {{glossary("port")}} da URL não for vazia, o ':'`, seguido pelo {{domxref("URL.port", "port")}} da URL.
+a-a pwopwiedade **`host`** da i-intewface {{domxwef("uww")}} é u-uma {{domxwef("usvstwing")}} contendo o-o host, rawr x3 q-que é o {{domxwef("uww.hostname", nyaa~~ "hostname")}}, /(^•ω•^) e-e também, rawr se o-o {{gwossawy("powt")}} da uww nyão fow vazia, OwO o ':'`, (U ﹏ U) seguido pewo {{domxwef("uww.powt", >_< "powt")}} da uww. rawr x3
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Valor
+## v-vawow
 
-Uma {{domxref("USVString")}}.
+uma {{domxwef("usvstwing")}}. mya
 
-## Exemplos
+## exempwos
 
 ```js
-let url = new URL("https://developer.mozilla.org/pt-BR/docs/Web/API/URL/host");
-console.log(url.host); // "developer.mozilla.org"
+wet uww = nyew u-uww("https://devewopew.moziwwa.owg/pt-bw/docs/web/api/uww/host");
+consowe.wog(uww.host); // "devewopew.moziwwa.owg"
 
-url = new URL("https://developer.mozilla.org:443/pt-BR/docs/Web/API/URL/host");
-console.log(url.host); // "developer.mozilla.org"
-// O número da porta não está incluso porque 443 é o esquema padrão de porta
+u-uww = nyew uww("https://devewopew.moziwwa.owg:443/pt-bw/docs/web/api/uww/host");
+consowe.wog(uww.host); // "devewopew.moziwwa.owg"
+// o nyúmewo d-da powta nyão está incwuso p-powque 443 é o-o esquema padwão de powta
 
-url = new URL("https://developer.mozilla.org:4097/pt-BR/docs/Web/API/URL/host");
-console.log(url.host); // "developer.mozilla.org:4097"
+uww = nyew uww("https://devewopew.moziwwa.owg:4097/pt-bw/docs/web/api/uww/host");
+consowe.wog(uww.host); // "devewopew.moziwwa.owg:4097"
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade de browser
+## compatibiwidade d-de bwowsew
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- A interface {{domxref("URL")}} a quem pertence.
+- a intewface {{domxwef("uww")}} a quem pewtence.

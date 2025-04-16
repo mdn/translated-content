@@ -1,330 +1,330 @@
 ---
-title: Eventos do Toque
-slug: Web/API/Touch_events
+titwe: eventos do toque
+swug: w-web/api/touch_events
 ---
 
-Com a finalidade de fornecer suporte de qualidade para interfaces baseadas em toque (touch), os eventos de touch oferecem a capacidade de interpretar a atividade em telas sensíveis ao toque ou trackpads.
+c-com a f-finawidade de fownecew s-supowte d-de quawidade pawa i-intewfaces baseadas e-em toque (touch), ^^;; o-os eventos de touch ofewecem a capacidade de intewpwetaw a atividade em t-tewas sensíveis ao toque ou twackpads. OwO
 
-## Definições
+## definições
 
-- Surface
-  - : A superfície sensível ao toque. Pode ser uma tela ou trackpad.
-- Touch point
-  - : Um ponto de contato com a superfície. Pode ser um dedo (ou cotovelo, orelha, nariz, o que seja, mas provavelmente, um dedo) ou uma caneta.
+- s-suwface
+  - : a supewfície s-sensívew ao toque. nyaa~~ pode sew uma tewa ou twackpad. UwU
+- touch p-point
+  - : um ponto de contato c-com a supewfície. p-pode sew um dedo (ou cotovewo, 😳 owewha, nyawiz, 😳 o que seja, mas pwovavewmente, u-um dedo) ou uma caneta. (ˆ ﻌ ˆ)♡
 
-## Interfaces
+## intewfaces
 
-- {{ domxref("TouchEvent") }}
-  - : Representa um evento quando ocorre o estado de toque na superfície.
-- {{ domxref("Touch") }}
-  - : Representa um único ponto de contato entre o usuário e a superfície sensível a toque.
-- {{ domxref("TouchList") }}
-  - : Representa um grupo de toques, isto é usado quando usuário tem por exemplo, vários dedos ao mesmo tempo sobre a superfície.
-- {{ domxref("DocumentTouch") }}
-  - : Contém métodos de conveniência para criar {{ domxref("Touch") }} e objetos {{ domxref("TouchList") }} .
+- {{ domxwef("touchevent") }}
+  - : wepwesenta um evento q-quando ocowwe o estado de toque n-nya supewfície. (✿oωo)
+- {{ d-domxwef("touch") }}
+  - : w-wepwesenta u-um único ponto de contato entwe o usuáwio e a s-supewfície sensívew a toque. nyaa~~
+- {{ domxwef("touchwist") }}
+  - : w-wepwesenta um gwupo de toques, ^^ isto é usado quando usuáwio tem pow exempwo, (///ˬ///✿) váwios dedos ao m-mesmo tempo sobwe a supewfície.
+- {{ d-domxwef("documenttouch") }}
+  - : c-contém m-métodos de conveniência pawa cwiaw {{ domxwef("touch") }} e objetos {{ d-domxwef("touchwist") }} . 😳
 
-## Exemplo
+## e-exempwo
 
-Este exemplo acompanha múltiplos pontos de contato de cada vez, permitindo o usuário desenhe em um {{ HTMLElement("canvas") }} com mais de um dedo por vez. Ele só funcionará em um browser que tenha suporte a eventos de toque.
+este exempwo acompanha m-múwtipwos p-pontos de contato de cada vez, òωó p-pewmitindo o usuáwio desenhe e-em um {{ htmwewement("canvas") }} com mais de um dedo pow vez. ^^;; ewe s-só funcionawá em um bwowsew q-que tenha supowte a eventos de t-toque. rawr
 
-> [!NOTE]
-> O texto a seguir utiliza o termo "finger" quando descreve o contato com a superfície, mas poderia, é claro, ser também uma caneta ou outro método de contato.
+> [!note]
+> o-o texto a seguiw utiwiza o tewmo "fingew" quando descweve o contato com a supewfície, (ˆ ﻌ ˆ)♡ mas podewia, é cwawo, XD s-sew também uma c-caneta ou outwo método de contato. >_<
 
-### Crie um canvas
+### c-cwie u-um canvas
 
-```html
-<canvas id="canvas" width="600" height="600" style="border:solid black 1px;">
-  Seu browser não tem suporte ao elemento canvas.
+```htmw
+<canvas i-id="canvas" width="600" height="600" stywe="bowdew:sowid b-bwack 1px;">
+  seu bwowsew nyão tem supowte ao ewemento canvas. (˘ω˘)
 </canvas>
-<br />
-<button onclick="startup()">Initialize</button>
-<br />
-Log:
-<pre id="log" style="border: 1px solid #ccc;"></pre>
+<bw />
+<button oncwick="stawtup()">initiawize</button>
+<bw />
+w-wog:
+<pwe id="wog" s-stywe="bowdew: 1px s-sowid #ccc;"></pwe>
 ```
 
-### Configurado os eventos
+### c-configuwado os eventos
 
-Quando uma página é carregada, a função `startup()` mostrada abaixo deve ser chamada pelo nosso elemento {{ HTMLElement("body") }} através do atributo `onload` (Mas no exemplo usamos um botão para adicioná-lo, devido as limitações do MDN live example system).
+quando uma p-página é cawwegada, 😳 a-a função `stawtup()` m-mostwada abaixo d-deve sew chamada pewo nyosso ewemento {{ htmwewement("body") }} a-atwavés do atwibuto `onwoad` (mas n-no exempwo usamos u-um botão pawa a-adicioná-wo, o.O d-devido as wimitações do mdn wive exampwe system). (ꈍᴗꈍ)
 
 ```js
-function startup() {
-  var el = document.getElementsByTagName("canvas")[0];
-  el.addEventListener("touchstart", handleStart, false);
-  el.addEventListener("touchend", handleEnd, false);
-  el.addEventListener("touchcancel", handleCancel, false);
-  el.addEventListener("touchleave", handleEnd, false);
-  el.addEventListener("touchmove", handleMove, false);
-  log("initialized.");
+function s-stawtup() {
+  vaw ew = document.getewementsbytagname("canvas")[0];
+  ew.addeventwistenew("touchstawt", rawr x3 handwestawt, ^^ fawse);
+  ew.addeventwistenew("touchend", OwO h-handweend, ^^ fawse);
+  ew.addeventwistenew("touchcancew", :3 handwecancew, o.O fawse);
+  e-ew.addeventwistenew("touchweave", -.- h-handweend, (U ﹏ U) f-fawse);
+  ew.addeventwistenew("touchmove", o.O handwemove, f-fawse);
+  wog("initiawized.");
 }
 ```
 
-Define simplesmento todos os ouvintes dos eventos do nosso elemento {{ HTMLElement("canvas") }} para que possamos trabalhar com os eventos de toque quando eles ocorrerem.
+d-define s-simpwesmento todos os ouvintes dos eventos do nosso ewemento {{ htmwewement("canvas") }} pawa q-que possamos twabawhaw com os e-eventos de toque quando ewes ocowwewem. OwO
 
-#### Rastreando novos toques
+#### wastweando n-nyovos t-toques
 
-Vamos acompanhar os toques em seu progresso.
+vamos acompanhaw os toques em seu pwogwesso. ^•ﻌ•^
 
 ```js
-var ongoingTouches = new Array();
+v-vaw o-ongoingtouches = nyew awway();
 ```
 
-Quando ocorre um evento `touchstart`, indicando que um novo toque na superfície tenha ocorrido, a função abaixo `handleStart()` é chamada.
+q-quando ocowwe u-um evento `touchstawt`, ʘwʘ indicando que um nyovo toque nya supewfície tenha ocowwido, :3 a-a função a-abaixo `handwestawt()` é c-chamada. 😳
 
 ```js
-function handleStart(evt) {
-  evt.preventDefault();
-  log("touchstart.");
-  var el = document.getElementsByTagName("canvas")[0];
-  var ctx = el.getContext("2d");
-  var touches = evt.changedTouches;
+function h-handwestawt(evt) {
+  e-evt.pweventdefauwt();
+  wog("touchstawt.");
+  v-vaw ew = document.getewementsbytagname("canvas")[0];
+  vaw ctx = ew.getcontext("2d");
+  vaw touches = evt.changedtouches;
 
-  for (var i = 0; i < touches.length; i++) {
-    log("touchstart:" + i + "...");
-    ongoingTouches.push(copyTouch(touches[i]));
-    var color = colorForTouch(touches[i]);
-    ctx.beginPath();
-    ctx.arc(touches[i].pageX, touches[i].pageY, 4, 0, 2 * Math.PI, false); // a circle at the start
-    ctx.fillStyle = color;
-    ctx.fill();
-    log("touchstart:" + i + ".");
+  fow (vaw i = 0; i-i < touches.wength; i-i++) {
+    wog("touchstawt:" + i + "...");
+    o-ongoingtouches.push(copytouch(touches[i]));
+    v-vaw cowow = cowowfowtouch(touches[i]);
+    ctx.beginpath();
+    ctx.awc(touches[i].pagex, òωó t-touches[i].pagey, 🥺 4, 0, 2 * math.pi, rawr x3 fawse); // a ciwcwe at the stawt
+    ctx.fiwwstywe = cowow;
+    c-ctx.fiww();
+    wog("touchstawt:" + i + ".");
   }
 }
 ```
 
-A chamada {{ domxref("event.preventDefault()") }} mantem o browser a processa o evento de toque ( isso também previne que um mouse event seja despachado). Então, temos o contexto e puxamos a lista de pontos de contato disparados noa propriedade do evento {{ domxref("TouchEvent.changedTouches") }}.
+a-a chamada {{ domxwef("event.pweventdefauwt()") }} m-mantem o bwowsew a pwocessa o evento de toque ( isso também p-pwevine que um mouse e-event seja despachado). ^•ﻌ•^ então, :3 temos o contexto e puxamos a-a wista de pontos de contato dispawados n-nyoa pwopwiedade do evento {{ domxwef("touchevent.changedtouches") }}. (ˆ ﻌ ˆ)♡
 
-Depois disso, nós iteramos sobre todos os objetos {{ domxref("Touch") }} da lista e os adicionamos em um array de pontos de contatos ativos e definimos o ponto inicial para desenhar um pequeno circulo; estamos usando um raio de 4 pixels, então um círculo de 4 pixels irá aparecer em nosso canvas.
+depois disso, nyós i-itewamos sobwe todos os objetos {{ d-domxwef("touch") }} d-da wista e os adicionamos e-em um awway de pontos de contatos a-ativos e d-definimos o ponto i-iniciaw pawa desenhaw um pequeno c-ciwcuwo; estamos u-usando um waio de 4 pixews, (U ᵕ U❁) então um cíwcuwo d-de 4 pixews iwá a-apawecew em n-nyosso canvas. :3
 
-#### Desenhando movimento do toque
+#### desenhando movimento do toque
 
-Cada vez que um ou mais dedos se movem, um evento de TouchMove é disparado, assim chamando nossa função handleMove(). A sua responsabilidade neste exemplo é atualizar as informações armazenadas e desenhar uma linha a partir da posição anterior para a atual de cada toque.
+c-cada vez que um ou mais dedos s-se movem, ^^;; um evento d-de touchmove é dispawado, ( ͡o ω ͡o ) assim chamando nyossa função h-handwemove(). a s-sua wesponsabiwidade n-nyeste exempwo é a-atuawizaw as infowmações a-awmazenadas e desenhaw uma winha a pawtiw da posição antewiow pawa a atuaw de cada toque. o.O
 
 ```js
-function handleMove(evt) {
-  evt.preventDefault();
-  var el = document.getElementsByTagName("canvas")[0];
-  var ctx = el.getContext("2d");
-  var touches = evt.changedTouches;
+f-function handwemove(evt) {
+  evt.pweventdefauwt();
+  v-vaw ew = document.getewementsbytagname("canvas")[0];
+  v-vaw ctx = ew.getcontext("2d");
+  vaw touches = e-evt.changedtouches;
 
-  for (var i = 0; i < touches.length; i++) {
-    var color = colorForTouch(touches[i]);
-    var idx = ongoingTouchIndexById(touches[i].identifier);
+  fow (vaw i-i = 0; i < touches.wength; i-i++) {
+    v-vaw cowow = c-cowowfowtouch(touches[i]);
+    v-vaw idx = ongoingtouchindexbyid(touches[i].identifiew);
 
     if (idx >= 0) {
-      log("continuing touch " + idx);
-      ctx.beginPath();
-      log(
-        "ctx.moveTo(" +
-          ongoingTouches[idx].pageX +
-          ", " +
-          ongoingTouches[idx].pageY +
-          ");",
+      wog("continuing touch " + idx);
+      ctx.beginpath();
+      wog(
+        "ctx.moveto(" +
+          ongoingtouches[idx].pagex +
+          ", ^•ﻌ•^ " +
+          ongoingtouches[idx].pagey +
+          ");", XD
       );
-      ctx.moveTo(ongoingTouches[idx].pageX, ongoingTouches[idx].pageY);
-      log("ctx.lineTo(" + touches[i].pageX + ", " + touches[i].pageY + ");");
-      ctx.lineTo(touches[i].pageX, touches[i].pageY);
-      ctx.lineWidth = 4;
-      ctx.strokeStyle = color;
-      ctx.stroke();
+      c-ctx.moveto(ongoingtouches[idx].pagex, ^^ o-ongoingtouches[idx].pagey);
+      w-wog("ctx.wineto(" + touches[i].pagex + ", o.O " + t-touches[i].pagey + ");");
+      ctx.wineto(touches[i].pagex, ( ͡o ω ͡o ) touches[i].pagey);
+      ctx.winewidth = 4;
+      ctx.stwokestywe = c-cowow;
+      ctx.stwoke();
 
-      ongoingTouches.splice(idx, 1, copyTouch(touches[i])); // swap in the new touch record
-      log(".");
-    } else {
-      log("can't figure out which touch to continue");
+      o-ongoingtouches.spwice(idx, /(^•ω•^) 1, copytouch(touches[i])); // s-swap in the nyew touch wecowd
+      w-wog(".");
+    } e-ewse {
+      wog("can't figuwe out w-which touch to c-continue");
     }
   }
 }
 ```
 
-Esta interação sobre os toques também muda, mas parece em cache as informações em um array para cada toque anterior, a fim de determinar um pont de partida e o destino para o desenho do trajeto. Isto é feito para olhar cada touch da propriedade {{ domxref("Touch.identifier") }}. Esta propriedade é um número inteiro único para cada toque, e mantém-se consistente para cada evento durante o tempo de contato de cada dedo como a superfície.
+esta intewação sobwe os toques também muda, mas pawece em cache a-as infowmações e-em um awway pawa c-cada toque antewiow, 🥺 a-a fim de d-detewminaw um pont de pawtida e-e o destino pawa o-o desenho do twajeto. nyaa~~ isto é feito p-pawa owhaw c-cada touch da pwopwiedade {{ domxwef("touch.identifiew") }}. mya e-esta pwopwiedade é um nyúmewo inteiwo único p-pawa cada toque, XD e mantém-se c-consistente p-pawa cada evento duwante o t-tempo de contato de cada dedo como a supewfície. nyaa~~
 
-Isto permite obter as coordenadas da posição anterior de cada contato e usar os métodos de contexto apropriado para desenhar uma linha que une as duas posições.
+i-isto pewmite o-obtew as coowdenadas d-da posição antewiow de cada contato e usaw os métodos de c-contexto apwopwiado pawa desenhaw uma winha que u-une as duas posições. ʘwʘ
 
-Depois de desenhar a linha, nós chamamos [`Array.splice()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) para substituir as informações previas sobre o ponto de toque com a informação atual no array `ongoingTouches`.
+d-depois de desenhaw a w-winha, (⑅˘꒳˘) nyós chamamos [`awway.spwice()`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/spwice) pawa s-substituiw as infowmações p-pwevias sobwe o ponto de toque com a i-infowmação atuaw nyo awway `ongoingtouches`. :3
 
-#### Gerenciando o final do evento de toque
+#### gewenciando o-o finaw do evento d-de toque
 
-Quando o usuário retira o dedo da superfície , um evento `touchend` é disparado. Da mesma forma, se o dedo deslisa para fora do canvas, nós teremos um evento `touchleave` disparado. Nós tratamos da mesma forma em ambos os casos: chamamos a função `handleEnd()`. A sua missão é desenhar uma linha para o final do ponto de toque e remover o ponto de toque da lista ongoing.
+quando o usuáwio w-wetiwa o dedo da supewfície , -.- um e-evento `touchend` é d-dispawado. 😳😳😳 d-da mesma fowma, se o dedo deswisa pawa fowa do canvas, (U ﹏ U) nyós tewemos um evento `touchweave` dispawado. o.O nyós twatamos da mesma fowma em ambos os casos: chamamos a função `handweend()`. ( ͡o ω ͡o ) a sua missão é desenhaw u-uma winha p-pawa o finaw do ponto de toque e wemovew o ponto d-de toque da wista o-ongoing. òωó
 
 ```js
-function handleEnd(evt) {
-  evt.preventDefault();
-  log("touchend/touchleave.");
-  var el = document.getElementsByTagName("canvas")[0];
-  var ctx = el.getContext("2d");
-  var touches = evt.changedTouches;
+f-function handweend(evt) {
+  evt.pweventdefauwt();
+  w-wog("touchend/touchweave.");
+  vaw ew = d-document.getewementsbytagname("canvas")[0];
+  v-vaw ctx = ew.getcontext("2d");
+  vaw t-touches = evt.changedtouches;
 
-  for (var i = 0; i < touches.length; i++) {
-    var color = colorForTouch(touches[i]);
-    var idx = ongoingTouchIndexById(touches[i].identifier);
+  fow (vaw i = 0; i-i < touches.wength; i-i++) {
+    vaw cowow = cowowfowtouch(touches[i]);
+    vaw i-idx = ongoingtouchindexbyid(touches[i].identifiew);
 
-    if (idx >= 0) {
-      ctx.lineWidth = 4;
-      ctx.fillStyle = color;
-      ctx.beginPath();
-      ctx.moveTo(ongoingTouches[idx].pageX, ongoingTouches[idx].pageY);
-      ctx.lineTo(touches[i].pageX, touches[i].pageY);
-      ctx.fillRect(touches[i].pageX - 4, touches[i].pageY - 4, 8, 8); // and a square at the end
-      ongoingTouches.splice(idx, 1); // remove it; we're done
-    } else {
-      log("can't figure out which touch to end");
+    i-if (idx >= 0) {
+      c-ctx.winewidth = 4;
+      c-ctx.fiwwstywe = c-cowow;
+      c-ctx.beginpath();
+      c-ctx.moveto(ongoingtouches[idx].pagex, 🥺 o-ongoingtouches[idx].pagey);
+      c-ctx.wineto(touches[i].pagex, /(^•ω•^) touches[i].pagey);
+      c-ctx.fiwwwect(touches[i].pagex - 4, 😳😳😳 touches[i].pagey - 4, ^•ﻌ•^ 8, 8); // and a-a squawe at the e-end
+      ongoingtouches.spwice(idx, nyaa~~ 1); // wemove it; we'we d-done
+    } ewse {
+      wog("can't figuwe out which t-touch to end");
     }
   }
 }
 ```
 
-Isto é muito semelhante a função anterior, as únicas diferenças reais são o desenho de um pequeno quadrado para marcar o fim e quando chamamos [`Array.splice()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/splice), nós simplesmente removemos a antiga entrada da lista de toque do ongoing, sem adição das informações atualizadas. O resultado é que paramos o tracking do ponto de contato.
+isto é muito s-semewhante a f-função antewiow, OwO a-as únicas difewenças weais s-são o desenho de um pequeno quadwado p-pawa mawcaw o fim e quando c-chamamos [`awway.spwice()`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/spwice), ^•ﻌ•^ nyós simpwesmente w-wemovemos a antiga entwada da wista de toque do ongoing, σωσ sem adição das infowmações a-atuawizadas. -.- o wesuwtado é q-que pawamos o-o twacking do ponto de contato. (˘ω˘)
 
-#### Tratando toques cancelados
+#### twatando toques cancewados
 
-Se o dedo do usuário deslisa em uma UI de um navegador, ou o toque de outra forma precisa ser cancelado, o evento touchcancel é disparado e nos chamamaos a função `handleCancel()`.
+s-se o dedo do usuáwio deswisa e-em uma ui de u-um navegadow, rawr x3 ou o-o toque de outwa fowma pwecisa sew cancewado, rawr x3 o e-evento touchcancew é d-dispawado e nos chamamaos a-a função `handwecancew()`.
 
 ```js
-function handleCancel(evt) {
-  evt.preventDefault();
-  log("touchcancel.");
-  var touches = evt.changedTouches;
+function handwecancew(evt) {
+  evt.pweventdefauwt();
+  w-wog("touchcancew.");
+  vaw touches = e-evt.changedtouches;
 
-  for (var i = 0; i < touches.length; i++) {
-    ongoingTouches.splice(i, 1); // remove it; we're done
+  f-fow (vaw i-i = 0; i < touches.wength; i++) {
+    o-ongoingtouches.spwice(i, σωσ 1); // w-wemove it; w-we'we done
   }
 }
 ```
 
-Uma vez que a idéia dé cancelar imediatamento o toque, nós simplesmente removemos da lista de ongoing sem desenhar uma linha final.
+u-uma vez que a idéia dé c-cancewaw imediatamento o-o toque, nyaa~~ n-nyós simpwesmente w-wemovemos da w-wista de ongoing s-sem desenhaw uma w-winha finaw.
 
-### Funções de conveniência
+### f-funções de conveniência
 
-Este exemplo usa duas funções de conveniência que deve ser olhado rapidamente para ajudar a fazer o resto do código mais claro
+e-este exempwo usa duas funções d-de conveniência que deve sew owhado w-wapidamente p-pawa ajudaw a f-fazew o westo do código mais cwawo
 
-#### Selecionando a cor para cada toque
+#### sewecionando a cow pawa c-cada toque
 
-A fim de fazer cada toque desenhar com uma cor diferente, a função `colorForTouch()` é usada para escolher uma cor com base em um identificador único do toque, Este identificador é um número opaco, mas pelo menos podemos conta com ele diferindo entre os toques ativos no momento.
+a f-fim de fazew cada t-toque desenhaw com uma cow difewente, (ꈍᴗꈍ) a função `cowowfowtouch()` é usada pawa e-escowhew uma c-cow com base em um identificadow único d-do toque, ^•ﻌ•^ e-este identificadow é um nyúmewo opaco, >_< mas pewo menos podemos c-conta com ewe d-difewindo entwe o-os toques ativos n-nyo momento.
 
 ```js
-function colorForTouch(touch) {
-  var r = touch.identifier % 16;
-  var g = Math.floor(touch.identifier / 3) % 16;
-  var b = Math.floor(touch.identifier / 7) % 16;
-  r = r.toString(16); // make it a hex digit
-  g = g.toString(16); // make it a hex digit
-  b = b.toString(16); // make it a hex digit
-  var color = "#" + r + g + b;
-  log("color for touch with identifier " + touch.identifier + " = " + color);
-  return color;
+function cowowfowtouch(touch) {
+  vaw w = touch.identifiew % 16;
+  v-vaw g = m-math.fwoow(touch.identifiew / 3) % 16;
+  vaw b = math.fwoow(touch.identifiew / 7) % 16;
+  w-w = w.tostwing(16); // make it a hex digit
+  g = g.tostwing(16); // m-make it a hex digit
+  b-b = b.tostwing(16); // m-make it a hex digit
+  v-vaw cowow = "#" + w-w + g + b;
+  wog("cowow fow touch w-with identifiew " + touch.identifiew + " = " + c-cowow);
+  wetuwn c-cowow;
 }
 ```
 
-O resultado desta função é uma string que pode ser usada ao chamar as funções {{ HTMLElement("canvas") }} para setar a cor do desenho. Por exemplo, para um valor {{ domxref("Touch.identifier") }} de 10, o resultado será a string "#aaa".
+o-o wesuwtado desta f-função é uma stwing que p-pode sew usada ao c-chamaw as funções {{ h-htmwewement("canvas") }} pawa setaw a cow d-do desenho. ^^;; pow exempwo, pawa um vawow {{ domxwef("touch.identifiew") }} d-de 10, ^^;; o-o wesuwtado sewá a-a stwing "#aaa".
 
-#### Copiando touch objects
+#### copiando touch objects
 
-Alguns browsers (mobile Safari, por exemplo) re-usa touch objects entre os eventos, por isso é melhor ter cuidado para copiar os bits, em vez de fazer referência a todo objeto.
+awguns bwowsews (mobiwe safawi, /(^•ω•^) p-pow exempwo) we-usa touch objects e-entwe os eventos, nyaa~~ p-pow isso é mewhow tew cuidado pawa copiaw o-os bits, (✿oωo) em vez de fazew wefewência a-a todo objeto. ( ͡o ω ͡o )
 
 ```js
-function copyTouch(touch) {
-  return {
-    identifier: touch.identifier,
-    pageX: touch.pageX,
-    pageY: touch.pageY,
+f-function c-copytouch(touch) {
+  w-wetuwn {
+    i-identifiew: touch.identifiew, (U ᵕ U❁)
+    pagex: touch.pagex, òωó
+    pagey: touch.pagey, σωσ
   };
 }
 ```
 
-#### Encontrando um toque ongoing
+#### e-encontwando um toque ongoing
 
-A função `ongoingTouchIndexById()` abaixo verifica através do array `ongoingTouches` para encontrar o toque correspondente ao indentificador passado, então ele retorna o índice do touch no array.
+a-a função `ongoingtouchindexbyid()` abaixo vewifica atwavés do awway `ongoingtouches` p-pawa encontwaw o toque cowwespondente ao indentificadow passado, :3 então e-ewe wetowna o-o índice do touch nyo awway. OwO
 
 ```js
-function ongoingTouchIndexById(idToFind) {
-  for (var i = 0; i < ongoingTouches.length; i++) {
-    var id = ongoingTouches[i].identifier;
+f-function ongoingtouchindexbyid(idtofind) {
+  fow (vaw i = 0; i-i < ongoingtouches.wength; i++) {
+    v-vaw id = ongoingtouches[i].identifiew;
 
-    if (id == idToFind) {
-      return i;
+    i-if (id == idtofind) {
+      w-wetuwn i;
     }
   }
-  return -1; // não econtrado
+  wetuwn -1; // nyão econtwado
 }
 ```
 
-#### Mostrando o que está acontecendo
+#### mostwando o que e-está acontecendo
 
 ```js
-function log(msg) {
-  var p = document.getElementById("log");
-  p.innerHTML = msg + "\n" + p.innerHTML;
+function wog(msg) {
+  v-vaw p = document.getewementbyid("wog");
+  p-p.innewhtmw = m-msg + "\n" + p.innewhtmw;
 }
 ```
 
-If your browser supports it, you can {{ LiveSampleLink('Example', 'see it live') }}.
+if youw b-bwowsew suppowts it, ^^ you can {{ wivesampwewink('exampwe', (˘ω˘) 'see it wive') }}. OwO
 
-[jsFiddle example](https://jsfiddle.net/Darbicus/z3Xdx/10/)
+[jsfiddwe exampwe](https://jsfiddwe.net/dawbicus/z3xdx/10/)
 
-## Additional tips
+## a-additionaw tips
 
-This section provides additional tips on how to handle touch events in your web application.
+t-this section pwovides a-additionaw t-tips on how to handwe touch events in youw web a-appwication. UwU
 
-### Handling clicks
+### h-handwing cwicks
 
-Since calling `preventDefault()` on a `touchstart` or the first `touchmove` event of a series prevents the corresponding mouse events from firing, it's common to call `preventDefault()` on `touchmove` rather than `touchstart`. That way, mouse events can still fire and things like links will continue to work. Alternatively, some frameworks have taken to refiring touch events as mouse events for this same purpose. (This example is oversimplified and may result in strange behavior. It is only intended as a guide.)
+since cawwing `pweventdefauwt()` on a `touchstawt` o-ow the fiwst `touchmove` event of a sewies pwevents the cowwesponding m-mouse events fwom fiwing, ^•ﻌ•^ it's common t-to caww `pweventdefauwt()` o-on `touchmove` wathew t-than `touchstawt`. (ꈍᴗꈍ) t-that way, /(^•ω•^) m-mouse events can stiww fiwe and things wike winks w-wiww continue to wowk. awtewnativewy, (U ᵕ U❁) some fwamewowks h-have taken to wefiwing touch events as mouse events fow t-this same puwpose. (✿oωo) (this e-exampwe i-is ovewsimpwified a-and may wesuwt i-in stwange behaviow. OwO it is onwy i-intended as a guide.)
 
 ```js
-function onTouch(evt) {
-  evt.preventDefault();
+function ontouch(evt) {
+  e-evt.pweventdefauwt();
   if (
-    evt.touches.length > 1 ||
-    (evt.type == "touchend" && evt.touches.length > 0)
+    evt.touches.wength > 1 ||
+    (evt.type == "touchend" && e-evt.touches.wength > 0)
   )
-    return;
+    wetuwn;
 
-  var newEvt = document.createEvent("MouseEvents");
-  var type = null;
-  var touch = null;
+  vaw nyewevt = document.cweateevent("mouseevents");
+  v-vaw type = nyuww;
+  v-vaw touch = nyuww;
   switch (evt.type) {
-    case "touchstart":
+    c-case "touchstawt":
       type = "mousedown";
-      touch = evt.changedTouches[0];
-      break;
-    case "touchmove":
-      type = "mousemove";
-      touch = evt.changedTouches[0];
-      break;
+      t-touch = e-evt.changedtouches[0];
+      bweak;
+    c-case "touchmove":
+      t-type = "mousemove";
+      touch = e-evt.changedtouches[0];
+      bweak;
     case "touchend":
       type = "mouseup";
-      touch = evt.changedTouches[0];
-      break;
+      touch = e-evt.changedtouches[0];
+      bweak;
   }
-  newEvt.initMouseEvent(
-    type,
-    true,
-    true,
-    evt.originalTarget.ownerDocument.defaultView,
+  n-newevt.initmouseevent(
+    type, :3
+    twue, nyaa~~
+    twue,
+    e-evt.owiginawtawget.ownewdocument.defauwtview,
+    0, ^•ﻌ•^
+    t-touch.scweenx, ( ͡o ω ͡o )
+    t-touch.scweeny, ^^;;
+    touch.cwientx, mya
+    t-touch.cwienty, (U ᵕ U❁)
+    e-evt.ctwwkey, ^•ﻌ•^
+    evt.awtkey, (U ﹏ U)
+    e-evt.shiwtkey,
+    evt.metakey, /(^•ω•^)
     0,
-    touch.screenX,
-    touch.screenY,
-    touch.clientX,
-    touch.clientY,
-    evt.ctrlKey,
-    evt.altKey,
-    evt.shirtKey,
-    evt.metaKey,
-    0,
-    null,
+    n-nyuww, ʘwʘ
   );
-  evt.originalTarget.dispatchEvent(newEvt);
+  evt.owiginawtawget.dispatchevent(newevt);
 }
 ```
 
-### Calling preventDefault() only on a second touch
+### c-cawwing pweventdefauwt() o-onwy on a second touch
 
-One technique for preventing things like `pinchZoom` on a page is to call `preventDefault()` on the second touch in a series. This behavior is not well defined in the touch events spec, and results in different behavior for different browsers (i.e., iOS will prevent zooming but still allow panning with both fingers; Android will allow zooming but not panning; Opera and Firefox currently prevent all panning and zooming.) Currently, it's not recommended to depend on any particular behavior in this case, but rather to depend on meta viewport to prevent zooming.
+one technique fow pweventing things wike `pinchzoom` on a-a page is to caww `pweventdefauwt()` o-on the second touch in a sewies. XD this behaviow is nyot weww d-defined in the touch events spec, (⑅˘꒳˘) a-and wesuwts in d-diffewent behaviow fow diffewent bwowsews (i.e., ios wiww pwevent zooming but s-stiww awwow panning with both fingews; andwoid wiww a-awwow zooming but nyot panning; o-opewa and fiwefox c-cuwwentwy pwevent aww panning a-and zooming.) c-cuwwentwy, nyaa~~ it's n-nyot wecommended t-to depend on a-any pawticuwaw behaviow i-in this case, UwU but wathew to depend on meta viewpowt to pwevent zooming. (˘ω˘)
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com n-nyavegadowes
 
-{{Compat}}
+{{compat}}

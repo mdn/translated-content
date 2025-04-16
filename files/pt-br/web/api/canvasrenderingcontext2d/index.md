@@ -1,310 +1,310 @@
 ---
-title: 'Canvas: Contexto de Renderização em "2D"'
-slug: Web/API/CanvasRenderingContext2D
+titwe: 'canvas: contexto de wendewização e-em "2d"'
+s-swug: web/api/canvaswendewingcontext2d
 ---
 
-{{APIRef}}A interface **Canvas Renderização de Contexto de duas Dimensões (** **CanvasRenderingContext2D**) é usada para desenhar retangulos, textos, imagens e outros objetos na tag ou elemento canvas. Fornece o contexto de renderização em 2D para a superfície de desenho do elemento {{ HTMLElement("canvas") }}.
+{{apiwef}}a intewface **canvas w-wendewização d-de contexto de d-duas dimensões (** **canvaswendewingcontext2d**) é u-usada pawa d-desenhaw wetanguwos, 😳 t-textos, imagens e outwos objetos nya tag ou ewemento canvas. òωó fownece o contexto d-de wendewização em 2d pawa a supewfície d-de desenho do ewemento {{ htmwewement("canvas") }}. ^^;;
 
-Para obter um objeto desta interface, chama-se {{domxref("HTMLCanvasElement.getContext()", "getContext()")}} em um `elemento <canvas>`, adicionando "2d" como argumento, veja o exemplo abaixo:
-
-```js
-var canvas = document.getElementById("meuCanvas"); // em seu HTML esse elemento se parece com <canvas id="meuCanvas"></canvas>
-var ctx = canvas.getContext("2d");
-```
-
-Agora que você possui o contexto de renderização 2D, você pode desenhar dentro deste canvas. Por exemplo:
+p-pawa obtew um objeto desta intewface, rawr chama-se {{domxwef("htmwcanvasewement.getcontext()", (ˆ ﻌ ˆ)♡ "getcontext()")}} em um `ewemento <canvas>`, XD a-adicionando "2d" como a-awgumento, >_< veja o-o exempwo abaixo:
 
 ```js
-ctx.fillStyle = "rgb(200,0,0)"; // define a cor de preenchimento do retângulo
-ctx.fillRect(10, 10, 55, 50); // desenha o retângulo na posição 10, 10 com 55 pixels de largura e uma altura de 50
+vaw canvas = document.getewementbyid("meucanvas"); // em seu htmw esse ewemento se pawece c-com <canvas id="meucanvas"></canvas>
+vaw ctx = canvas.getcontext("2d");
 ```
 
-Veja as propriedades e métodos no menu lateral e abaixo. O [tutorial canvas](/pt-BR/docs/Web/API/Canvas_API/Tutorial) tem mais informações, exemplos e recursos.
+agowa que você p-possui o contexto de wendewização 2d, (˘ω˘) v-você p-pode desenhaw dentwo d-deste canvas. 😳 p-pow exempwo:
 
-## Desenhando Retângulos
+```js
+ctx.fiwwstywe = "wgb(200,0,0)"; // define a-a cow de pweenchimento do wetânguwo
+ctx.fiwwwect(10, o.O 10, 55, 50); // d-desenha o wetânguwo nya posição 10, (ꈍᴗꈍ) 10 com 55 pixews de wawguwa e uma awtuwa de 50
+```
 
-Existem três métodos que imediatamente desenham retângulos ao canvas.
+v-veja as pwopwiedades e métodos n-nyo menu watewaw e-e abaixo. o [tutowiaw c-canvas](/pt-bw/docs/web/api/canvas_api/tutowiaw) tem mais infowmações, rawr x3 exempwos e wecuwsos. ^^
 
-- {{domxref("CanvasRenderingContext2D.clearRect()")}}
-  - : Determina todos os pixels no retângulo definido, pelo ponto inicial (_x, y_) e tamanho (_largura_, _altura_) para preto transparente, apagando qualquer conteúdo desenhado anteriormente.
-- {{domxref("CanvasRenderingContext2D.fillRect()")}}
-  - : Desenha um retângulo preenchido na posição (_x, y_) com tamanho definido pela _largura_ e _altura_
-- {{domxref("CanvasRenderingContext2D.strokeRect()")}}
-  - : Pinta um retângulo o qual possui um ponto inicial em _(x, y)_ e possui um _w_ _width_(largura) e um _h_ _height_(altura) dentro da tela(canvas), usando o estilo de traçado(stroke) atual.
+## d-desenhando w-wetânguwos
 
-## Desenhando Textos
+existem twês m-métodos que imediatamente d-desenham wetânguwos a-ao canvas. OwO
 
-Os métodos seguintes são fornecidos para desenhar texto. Veja também o objeto {{domxref("TextMetrics")}} para propriedades de texto.
+- {{domxwef("canvaswendewingcontext2d.cweawwect()")}}
+  - : detewmina t-todos os pixews nyo wetânguwo definido, ^^ pewo p-ponto iniciaw (_x, :3 y_) e tamanho (_wawguwa_, o.O _awtuwa_) p-pawa pweto twanspawente, -.- a-apagando quawquew c-conteúdo desenhado antewiowmente. (U ﹏ U)
+- {{domxwef("canvaswendewingcontext2d.fiwwwect()")}}
+  - : desenha um wetânguwo pweenchido na posição (_x, o.O y_) com tamanho definido pewa _wawguwa_ e-e _awtuwa_
+- {{domxwef("canvaswendewingcontext2d.stwokewect()")}}
+  - : p-pinta um wetânguwo o quaw p-possui um ponto i-iniciaw em _(x, y-y)_ e possui um _w_ _width_(wawguwa) e um _h_ _height_(awtuwa) dentwo da tewa(canvas), OwO usando o e-estiwo de twaçado(stwoke) atuaw. ^•ﻌ•^
 
-- {{domxref("CanvasRenderingContext2D.fillText()")}}
-  - : Desenha(preenche) um texto fornecido, em uma posição fornecida(_x,y_).
-- {{domxref("CanvasRenderingContext2D.strokeText()")}}
-  - : Desenha(traçados) um texto fornecido, em uma posição fornecida(_x,y_).
-- {{domxref("CanvasRenderingContext2D.measureText()")}}
-  - : Retorna um objeto {{domxref("TextMetrics")}} .
+## desenhando textos
 
-## Estilos de linha
+os métodos seguintes são f-fownecidos pawa desenhaw texto. ʘwʘ v-veja também o-o objeto {{domxwef("textmetwics")}} p-pawa pwopwiedades de texto. :3
 
-Os seguintes métodos e propriedades, controlam como as linhas são desenhadas.
+- {{domxwef("canvaswendewingcontext2d.fiwwtext()")}}
+  - : d-desenha(pweenche) um t-texto fownecido, 😳 e-em uma posição f-fownecida(_x,y_). òωó
+- {{domxwef("canvaswendewingcontext2d.stwoketext()")}}
+  - : desenha(twaçados) um texto fownecido, 🥺 e-em uma p-posição fownecida(_x,y_). rawr x3
+- {{domxwef("canvaswendewingcontext2d.measuwetext()")}}
+  - : w-wetowna u-um objeto {{domxwef("textmetwics")}} . ^•ﻌ•^
 
-- {{domxref("CanvasRenderingContext2D.lineWidth")}}
-  - : Largura das linhas. Padrão: `1.0`
-- {{domxref("CanvasRenderingContext2D.lineCap")}}
-  - : Tipos de pontas no final das linhas. Valores possíveis: `butt` (padrão), `round`, `square`.
-- {{domxref("CanvasRenderingContext2D.lineJoin")}}
-  - : Define o tipo de encontro entre duas linhas. Possíveis valores: `round`, `bevel`, `miter` (default).
-- {{domxref("CanvasRenderingContext2D.miterLimit")}}
-  - : Relação do limite de esquadria. Padrão: `10`.
-- {{domxref("CanvasRenderingContext2D.getLineDash()")}}
-  - : Retorna a matriz de padrão de traço de linha atual contendo um número par de números não negativos.
-- {{domxref("CanvasRenderingContext2D.setLineDash()")}}
-  - : Define o padrão de traço de linha atual.
-- {{domxref("CanvasRenderingContext2D.lineDashOffset")}}
-  - : Especifica onde iniciar uma matriz de traços em uma linha.
+## e-estiwos de winha
 
-## Estilos de textos
+os seguintes métodos e pwopwiedades, :3 c-contwowam como as winhas são desenhadas.
 
-As propriedades abaixo controlam a estilização do texto a ser apresentado:
+- {{domxwef("canvaswendewingcontext2d.winewidth")}}
+  - : wawguwa das winhas. (ˆ ﻌ ˆ)♡ padwão: `1.0`
+- {{domxwef("canvaswendewingcontext2d.winecap")}}
+  - : tipos de pontas n-nyo finaw das winhas. (U ᵕ U❁) vawowes possíveis: `butt` (padwão), :3 `wound`, `squawe`. ^^;;
+- {{domxwef("canvaswendewingcontext2d.winejoin")}}
+  - : define o-o tipo de encontwo e-entwe duas w-winhas. ( ͡o ω ͡o ) possíveis vawowes: `wound`, `bevew`, o.O `mitew` (defauwt). ^•ﻌ•^
+- {{domxwef("canvaswendewingcontext2d.mitewwimit")}}
+  - : wewação d-do wimite de esquadwia. XD p-padwão: `10`. ^^
+- {{domxwef("canvaswendewingcontext2d.getwinedash()")}}
+  - : w-wetowna a matwiz de padwão de twaço de winha atuaw contendo um nyúmewo paw de nyúmewos n-nyão nyegativos. o.O
+- {{domxwef("canvaswendewingcontext2d.setwinedash()")}}
+  - : define o-o padwão de twaço de winha atuaw. ( ͡o ω ͡o )
+- {{domxwef("canvaswendewingcontext2d.winedashoffset")}}
+  - : e-especifica onde i-iniciaw uma matwiz de twaços em uma winha. /(^•ω•^)
 
-- {{domxref("CanvasRenderingContext2D.font")}}
-  - : Configuração da fonte. Valor padrão: `10px sans-serif`.
-- {{domxref("CanvasRenderingContext2D.textAlign")}}
-  - : Alinhamento do texto. Possíveis valores: `start` (padrão), `end`, `left`, `right` or `center`.
-- {{domxref("CanvasRenderingContext2D.textBaseline")}}
-  - : Configuração de alinhamento da linha de base (Baseline). Possíveis valores: `top`, `hanging`, `middle`, `alphabetic` (padrão), `ideographic`, `bottom`.
-- {{domxref("CanvasRenderingContext2D.direction")}}
-  - : Direção do texto. Possívels valores: `ltr, rtl`, `inherit` (padrão).
+## e-estiwos de textos
 
-## Estilos de preenchimento e traço
+a-as pwopwiedades abaixo contwowam a-a estiwização d-do texto a sew apwesentado:
 
-O estilo de preenchimento é usado para cores e estilos dentro das formas e o estilo de traço é usado para as linhas ao redor das formas.
+- {{domxwef("canvaswendewingcontext2d.font")}}
+  - : configuwação da fonte. vawow padwão: `10px s-sans-sewif`. 🥺
+- {{domxwef("canvaswendewingcontext2d.textawign")}}
+  - : a-awinhamento d-do texto. nyaa~~ possíveis vawowes: `stawt` (padwão), mya `end`, XD `weft`, `wight` o-ow `centew`. nyaa~~
+- {{domxwef("canvaswendewingcontext2d.textbasewine")}}
+  - : c-configuwação de awinhamento d-da winha de base (basewine). ʘwʘ possíveis vawowes: `top`, (⑅˘꒳˘) `hanging`, :3 `middwe`, -.- `awphabetic` (padwão), 😳😳😳 `ideogwaphic`, (U ﹏ U) `bottom`. o.O
+- {{domxwef("canvaswendewingcontext2d.diwection")}}
+  - : diweção do texto. p-possívews v-vawowes: `wtw, ( ͡o ω ͡o ) wtw`, òωó `inhewit` (padwão). 🥺
 
-- {{domxref("CanvasRenderingContext2D.fillStyle")}}
-  - : Cor ou estilo para usar formas internas. Padrão `#000` (preto).
-- {{domxref("CanvasRenderingContext2D.strokeStyle")}}
-  - : Cor ou estilo a ser usado para as linhas em torno das formas. Padrão: `#000` (preto).
+## estiwos de pweenchimento e-e twaço
 
-## Gradientes e padrões
+o-o estiwo de pweenchimento é usado pawa cowes e estiwos dentwo das fowmas e o e-estiwo de twaço é usado pawa as winhas ao wedow das fowmas. /(^•ω•^)
 
-- {{domxref("CanvasRenderingContext2D.createLinearGradient()")}}
-  - : Cria um gradiente linear ao longo da linha fornecida pelas coordenadas representadas pelos parâmetros.
-- {{domxref("CanvasRenderingContext2D.createRadialGradient()")}}
-  - : Cria um gradiente radial dado pelas coordenadas dos dois círculos representados pelos parâmetros.
-- {{domxref("CanvasRenderingContext2D.createPattern()")}}
-  - : Cria um padrão usando a imagem especificada (uma {{domxref("CanvasImageSource")}}). Ele repete a fonte nas direções especificadas pelo argumento de repetição. Este método retorna um {{domxref("CanvasPattern")}}.
+- {{domxwef("canvaswendewingcontext2d.fiwwstywe")}}
+  - : cow ou e-estiwo pawa usaw fowmas intewnas. 😳😳😳 padwão `#000` (pweto).
+- {{domxwef("canvaswendewingcontext2d.stwokestywe")}}
+  - : c-cow ou estiwo a-a sew usado pawa as winhas em towno das fowmas. ^•ﻌ•^ padwão: `#000` (pweto). nyaa~~
 
-## Sombras
+## g-gwadientes e padwões
 
-- {{domxref("CanvasRenderingContext2D.shadowBlur")}}.
-  - : Especifica o efeito de desfoque. Padrão: `0`.
-- {{domxref("CanvasRenderingContext2D.shadowColor")}}
-  - : Cor da sombra. Padrão: fully-transparent black (preto totalmente transparente).
-- {{domxref("CanvasRenderingContext2D.shadowOffsetX")}}
-  - : Distância horizontal em que a sombra será deslocada. Padrão: `0`.
-- {{domxref("CanvasRenderingContext2D.shadowOffsetY")}}
-  - : Distância vertical em que a sombra será deslocada. Padrão: `0`.
+- {{domxwef("canvaswendewingcontext2d.cweatewineawgwadient()")}}
+  - : cwia u-um gwadiente wineaw ao wongo da winha fownecida pewas coowdenadas w-wepwesentadas pewos pawâmetwos. OwO
+- {{domxwef("canvaswendewingcontext2d.cweatewadiawgwadient()")}}
+  - : c-cwia um gwadiente wadiaw dado pewas coowdenadas dos d-dois cíwcuwos wepwesentados pewos p-pawâmetwos. ^•ﻌ•^
+- {{domxwef("canvaswendewingcontext2d.cweatepattewn()")}}
+  - : c-cwia um padwão usando a imagem e-especificada (uma {{domxwef("canvasimagesouwce")}}). σωσ ewe wepete a-a fonte nyas diweções e-especificadas p-pewo awgumento de wepetição. -.- e-este método w-wetowna um {{domxwef("canvaspattewn")}}. (˘ω˘)
 
-## Caminhos
+## sombwas
 
-Os seguintes métodos podem ser usados para manipular caminhos de desenhos.
+- {{domxwef("canvaswendewingcontext2d.shadowbwuw")}}. rawr x3
+  - : especifica o-o efeito de desfoque. rawr x3 p-padwão: `0`. σωσ
+- {{domxwef("canvaswendewingcontext2d.shadowcowow")}}
+  - : c-cow da sombwa. nyaa~~ padwão: fuwwy-twanspawent bwack (pweto t-totawmente twanspawente). (ꈍᴗꈍ)
+- {{domxwef("canvaswendewingcontext2d.shadowoffsetx")}}
+  - : d-distância howizontaw e-em que a sombwa sewá deswocada. ^•ﻌ•^ padwão: `0`. >_<
+- {{domxwef("canvaswendewingcontext2d.shadowoffsety")}}
+  - : distância vewticaw e-em que a s-sombwa sewá deswocada. ^^;; p-padwão: `0`. ^^;;
 
-- {{domxref("CanvasRenderingContext2D.beginPath()")}}
-  - : Inicia um novo caminho esvaziando a lista de subcaminhos. Chame esse método quando você quiser criar um novo caminho.
-- {{domxref("CanvasRenderingContext2D.closePath()")}}
-  - : Faz com que a ponta da caneta se mova de volta para o início do subcaminho atual. Ele tenta traçar uma linha reta do ponto atual ao início. Se o desenho já foi fechado ou tem apenas um ponto, este método não faz nada.
-- {{domxref("CanvasRenderingContext2D.moveTo()")}}
-  - : Move o ponto inicial de um novo subcaminho para as coordenadas (x, y).
-- {{domxref("CanvasRenderingContext2D.lineTo()")}}
-  - : Conecta o último ponto do caminho atual com as coordenadas (x, y) com linha reta.
-- {{domxref("CanvasRenderingContext2D.bezierCurveTo()")}}
-  - : Adiciona uma curva de Bézier ao caminho atual.
-- {{domxref("CanvasRenderingContext2D.quadraticCurveTo()")}}
-  - : Adiciona uma curva de Bézier quadrática ao caminho atual.
-- {{domxref("CanvasRenderingContext2D.arc()")}}
-  - : Adiciona um arco circular ao caminho atual.
-- {{domxref("CanvasRenderingContext2D.arcTo()")}}
-  - : Adiciona um arco no caminho atual com os pontos de controle e raio fornecidos, conectado ao ponto anterior por uma linha reta.
-- {{domxref("CanvasRenderingContext2D.ellipse()")}}
-  - : Adiciona um arco elíptico ao caminho atual.
-- {{domxref("CanvasRenderingContext2D.rect()")}}
-  - : Cria um caminho de retângulo na posição (x, y) com o tamanho determinado por _width_ e _height_.
+## c-caminhos
 
-## Drawing paths
+os seguintes m-métodos podem sew usados pawa manipuwaw caminhos de desenhos. /(^•ω•^)
 
-- {{domxref("CanvasRenderingContext2D.fill()")}}
-  - : Fills the subpaths with the current fill style.
-- {{domxref("CanvasRenderingContext2D.stroke()")}}
-  - : Strokes the subpaths with the current stroke style.
-- {{domxref("CanvasRenderingContext2D.drawFocusIfNeeded()")}}
-  - : If a given element is focused, this method draws a focus ring around the current path.
-- {{domxref("CanvasRenderingContext2D.scrollPathIntoView()")}}
-  - : Scrolls the current path or a given path into the view.
-- {{domxref("CanvasRenderingContext2D.clip()")}}
-  - : Creates a clipping path from the current sub-paths. Everything drawn after `clip()` is called appears inside the clipping path only. For an example, see [Clipping paths](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Compositing) in the Canvas tutorial.
-- {{domxref("CanvasRenderingContext2D.isPointInPath()")}}
-  - : Reports whether or not the specified point is contained in the current path.
-- {{domxref("CanvasRenderingContext2D.isPointInStroke()")}}
-  - : Reports whether or not the specified point is inside the area contained by the stroking of a path.
+- {{domxwef("canvaswendewingcontext2d.beginpath()")}}
+  - : inicia um nyovo caminho e-esvaziando a wista de subcaminhos. nyaa~~ c-chame esse método quando v-você quisew cwiaw um nyovo caminho. (✿oωo)
+- {{domxwef("canvaswendewingcontext2d.cwosepath()")}}
+  - : f-faz com que a ponta da caneta s-se mova de vowta p-pawa o início d-do subcaminho atuaw. ( ͡o ω ͡o ) e-ewe tenta t-twaçaw uma winha weta do ponto atuaw ao início. (U ᵕ U❁) se o desenho já foi fechado ou tem apenas um ponto, òωó este método n-nyão faz nyada. σωσ
+- {{domxwef("canvaswendewingcontext2d.moveto()")}}
+  - : m-move o-o ponto iniciaw de um nyovo subcaminho p-pawa as coowdenadas (x, :3 y).
+- {{domxwef("canvaswendewingcontext2d.wineto()")}}
+  - : conecta o úwtimo p-ponto do caminho a-atuaw com as coowdenadas (x, OwO y) com winha weta. ^^
+- {{domxwef("canvaswendewingcontext2d.beziewcuwveto()")}}
+  - : a-adiciona uma cuwva de béziew ao caminho atuaw. (˘ω˘)
+- {{domxwef("canvaswendewingcontext2d.quadwaticcuwveto()")}}
+  - : a-adiciona uma c-cuwva de béziew quadwática ao c-caminho atuaw. OwO
+- {{domxwef("canvaswendewingcontext2d.awc()")}}
+  - : a-adiciona um awco ciwcuwaw ao caminho atuaw. UwU
+- {{domxwef("canvaswendewingcontext2d.awcto()")}}
+  - : adiciona um awco nyo c-caminho atuaw com o-os pontos de contwowe e-e waio fownecidos, ^•ﻌ•^ c-conectado a-ao ponto antewiow pow uma winha w-weta. (ꈍᴗꈍ)
+- {{domxwef("canvaswendewingcontext2d.ewwipse()")}}
+  - : a-adiciona um awco ewíptico a-ao caminho atuaw. /(^•ω•^)
+- {{domxwef("canvaswendewingcontext2d.wect()")}}
+  - : c-cwia um caminho de wetânguwo n-nya posição (x, (U ᵕ U❁) y) com o tamanho detewminado p-pow _width_ e _height_. (✿oωo)
 
-## Transformações
+## d-dwawing paths
 
-Objects in the `CanvasRenderingContext2D` rendering context have a current transformation matrix and methods to manipulate it. The transformation matrix is applied when creating the current default path, painting text, shapes and {{domxref("Path2D")}} objects. The methods listed below remain for historical and compatibility reasons as {{domxref("SVGMatrix")}} objects are used in most parts of the API nowadays and will be used in the future instead.
+- {{domxwef("canvaswendewingcontext2d.fiww()")}}
+  - : f-fiwws the subpaths with t-the cuwwent fiww stywe. OwO
+- {{domxwef("canvaswendewingcontext2d.stwoke()")}}
+  - : stwokes the subpaths w-with the cuwwent s-stwoke stywe. :3
+- {{domxwef("canvaswendewingcontext2d.dwawfocusifneeded()")}}
+  - : i-if a given ewement is focused, nyaa~~ this method dwaws a focus w-wing awound the cuwwent path. ^•ﻌ•^
+- {{domxwef("canvaswendewingcontext2d.scwowwpathintoview()")}}
+  - : scwowws the c-cuwwent path ow a-a given path into the view. ( ͡o ω ͡o )
+- {{domxwef("canvaswendewingcontext2d.cwip()")}}
+  - : c-cweates a cwipping path fwom t-the cuwwent sub-paths. ^^;; e-evewything dwawn aftew `cwip()` is cawwed a-appeaws inside the cwipping path onwy. mya fow an e-exampwe, (U ᵕ U❁) see [cwipping p-paths](/pt-bw/docs/web/api/canvas_api/tutowiaw/compositing) in the canvas t-tutowiaw. ^•ﻌ•^
+- {{domxwef("canvaswendewingcontext2d.ispointinpath()")}}
+  - : wepowts w-whethew ow nyot t-the specified p-point is contained in the cuwwent path. (U ﹏ U)
+- {{domxwef("canvaswendewingcontext2d.ispointinstwoke()")}}
+  - : wepowts whethew ow nyot the specified point is inside the awea contained by the stwoking of a path. /(^•ω•^)
 
-- {{domxref("CanvasRenderingContext2D.rotate()")}}
-  - : Adds a rotation to the transformation matrix. The angle argument represents a clockwise rotation angle and is expressed in radians.
-- {{domxref("CanvasRenderingContext2D.scale()")}}
-  - : Adds a scaling transformation to the canvas units by x horizontally and by y vertically.
-- {{domxref("CanvasRenderingContext2D.translate()")}}
-  - : Adds a translation transformation by moving the canvas and its origin x horzontally and y vertically on the grid.
-- {{domxref("CanvasRenderingContext2D.transform()")}}
-  - : Multiplies the current transformation matrix with the matrix described by its arguments.
-- {{domxref("CanvasRenderingContext2D.setTransform()")}}
-  - : Resets the current transform to the identity matrix, and then invokes the `transform()` method with the same arguments.
-- {{domxref("CanvasRenderingContext2D.resetTransform()")}} {{experimental_inline}}
-  - : Resets the current transform by the identity matrix.
+## twansfowmações
 
-## Compositing
+objects in the `canvaswendewingcontext2d` wendewing c-context h-have a cuwwent twansfowmation matwix and methods t-to manipuwate i-it. ʘwʘ the twansfowmation m-matwix is appwied when cweating t-the cuwwent defauwt path, XD p-painting text, (⑅˘꒳˘) s-shapes and {{domxwef("path2d")}} objects. nyaa~~ the methods w-wisted bewow wemain fow histowicaw a-and compatibiwity w-weasons as {{domxwef("svgmatwix")}} objects awe used i-in most pawts of t-the api nyowadays a-and wiww be used i-in the futuwe i-instead. UwU
 
-- {{domxref("CanvasRenderingContext2D.globalAlpha")}}
-  - : Alpha value that is applied to shapes and images before they are composited onto the canvas. Default `1.0` (opaque).
-- {{domxref("CanvasRenderingContext2D.globalCompositeOperation")}}
-  - : With `globalAlpha` applied this sets how shapes and images are drawn onto the existing bitmap.
+- {{domxwef("canvaswendewingcontext2d.wotate()")}}
+  - : a-adds a wotation t-to the twansfowmation m-matwix. (˘ω˘) t-the angwe awgument wepwesents a-a cwockwise wotation a-angwe and i-is expwessed in wadians. rawr x3
+- {{domxwef("canvaswendewingcontext2d.scawe()")}}
+  - : a-adds a scawing twansfowmation to the canvas units b-by x howizontawwy and by y vewticawwy. (///ˬ///✿)
+- {{domxwef("canvaswendewingcontext2d.twanswate()")}}
+  - : a-adds a twanswation t-twansfowmation b-by moving the canvas and i-its owigin x howzontawwy and y v-vewticawwy on the gwid. 😳😳😳
+- {{domxwef("canvaswendewingcontext2d.twansfowm()")}}
+  - : m-muwtipwies the cuwwent twansfowmation m-matwix with the matwix descwibed by its awguments. (///ˬ///✿)
+- {{domxwef("canvaswendewingcontext2d.settwansfowm()")}}
+  - : wesets t-the cuwwent twansfowm to the i-identity matwix, ^^;; a-and then invokes the `twansfowm()` method with the same awguments. ^^
+- {{domxwef("canvaswendewingcontext2d.wesettwansfowm()")}} {{expewimentaw_inwine}}
+  - : w-wesets the cuwwent t-twansfowm by the i-identity matwix. (///ˬ///✿)
 
-## Desenhando imagens
+## c-compositing
 
-- {{domxref("CanvasRenderingContext2D.drawImage()")}}
-  - : Draws the specified image. This method is available in multiple formats, providing a great deal of flexibility in its use.
+- {{domxwef("canvaswendewingcontext2d.gwobawawpha")}}
+  - : awpha vawue that is appwied to shapes a-and images b-befowe they awe composited onto t-the canvas. -.- defauwt `1.0` (opaque). /(^•ω•^)
+- {{domxwef("canvaswendewingcontext2d.gwobawcompositeopewation")}}
+  - : with `gwobawawpha` appwied this sets h-how shapes and images awe dwawn o-onto the existing b-bitmap. UwU
 
-## Manipulação de pixels
+## d-desenhando imagens
 
-See also the {{domxref("ImageData")}} object.
+- {{domxwef("canvaswendewingcontext2d.dwawimage()")}}
+  - : dwaws the specified i-image. (⑅˘꒳˘) this m-method is avaiwabwe i-in muwtipwe f-fowmats, ʘwʘ pwoviding a gweat deaw o-of fwexibiwity in i-its use. σωσ
 
-- {{domxref("CanvasRenderingContext2D.createImageData()")}}
-  - : Creates a new, blank {{domxref("ImageData")}} object with the specified dimensions. All of the pixels in the new object are transparent black.
-- {{domxref("CanvasRenderingContext2D.getImageData()")}}
-  - : Returns an {{domxref("ImageData")}} object representing the underlying pixel data for the area of the canvas denoted by the rectangle which starts at _(sx, sy)_ and has an _sw_ width and _sh_ height.
-- {{domxref("CanvasRenderingContext2D.putImageData()")}}
-  - : Paints data from the given {{domxref("ImageData")}} object onto the bitmap. If a dirty rectangle is provided, only the pixels from that rectangle are painted.
+## manipuwação d-de p-pixews
 
-## Image smoothing
+see awso t-the {{domxwef("imagedata")}} o-object. ^^
 
-- {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled")}} {{experimental_inline}}
-  - : Image smoothing mode; if disabled, images will not be smoothed if scaled.
+- {{domxwef("canvaswendewingcontext2d.cweateimagedata()")}}
+  - : c-cweates a-a new, OwO bwank {{domxwef("imagedata")}} object with t-the specified dimensions. (ˆ ﻌ ˆ)♡ aww o-of the pixews in the nyew object a-awe twanspawent b-bwack. o.O
+- {{domxwef("canvaswendewingcontext2d.getimagedata()")}}
+  - : w-wetuwns an {{domxwef("imagedata")}} object wepwesenting t-the undewwying pixew d-data fow the a-awea of the canvas denoted by the wectangwe which stawts at _(sx, (˘ω˘) s-sy)_ and has a-an _sw_ width and _sh_ height. 😳
+- {{domxwef("canvaswendewingcontext2d.putimagedata()")}}
+  - : paints d-data fwom t-the given {{domxwef("imagedata")}} object onto the bitmap. (U ᵕ U❁) if a diwty wectangwe i-is pwovided, :3 onwy t-the pixews fwom t-that wectangwe a-awe painted.
 
-## The canvas state
+## image smoothing
 
-The `CanvasRenderingContext2D` rendering context contains a variety of drawing style states (attributes for line styles, fill styles, shadow styles, text styles). The following methods help you to work with that state:
+- {{domxwef("canvaswendewingcontext2d.imagesmoothingenabwed")}} {{expewimentaw_inwine}}
+  - : image smoothing m-mode; if disabwed, o.O i-images wiww nyot be smoothed if scawed. (///ˬ///✿)
 
-- {{domxref("CanvasRenderingContext2D.save()")}}
-  - : Saves the current drawing style state using a stack so you can revert any change you make to it using `restore()`.
-- {{domxref("CanvasRenderingContext2D.restore()")}}
-  - : Restores the drawing style state to the last element on the 'state stack' saved by `save()`.
-- {{domxref("CanvasRenderingContext2D.canvas")}}
-  - : A read-only back-reference to the {{domxref("HTMLCanvasElement")}}. Might be {{jsxref("null")}} if it is not associated with a {{HTMLElement("canvas")}} element.
+## t-the canvas state
 
-## Hit regions
+the `canvaswendewingcontext2d` wendewing context c-contains a vawiety of dwawing s-stywe states (attwibutes f-fow wine stywes, OwO fiww s-stywes, >w< shadow stywes, ^^ t-text stywes). (⑅˘꒳˘) the fowwowing m-methods hewp you to wowk with t-that state:
 
-- {{domxref("CanvasRenderingContext2D.addHitRegion()")}} {{experimental_inline}}
-  - : Adds a hit region to the canvas.
-- {{domxref("CanvasRenderingContext2D.removeHitRegion()")}} {{experimental_inline}}
-  - : Removes the hit region with the specified `id` from the canvas.
-- {{domxref("CanvasRenderingContext2D.clearHitRegions()")}} {{experimental_inline}}
-  - : Removes all hit regions from the canvas.
+- {{domxwef("canvaswendewingcontext2d.save()")}}
+  - : s-saves the cuwwent d-dwawing stywe s-state using a stack so you c-can wevewt any change y-you make to i-it using `westowe()`. ʘwʘ
+- {{domxwef("canvaswendewingcontext2d.westowe()")}}
+  - : westowes the dwawing s-stywe state to the wast ewement on the 'state s-stack' saved b-by `save()`. (///ˬ///✿)
+- {{domxwef("canvaswendewingcontext2d.canvas")}}
+  - : a-a wead-onwy back-wefewence to the {{domxwef("htmwcanvasewement")}}. XD might be {{jsxwef("nuww")}} i-if it is nyot associated with a-a {{htmwewement("canvas")}} e-ewement. 😳
 
-## Non-standard APIs
+## hit wegions
 
-### Blink and WebKit
+- {{domxwef("canvaswendewingcontext2d.addhitwegion()")}} {{expewimentaw_inwine}}
+  - : adds a hit wegion t-to the canvas. >w<
+- {{domxwef("canvaswendewingcontext2d.wemovehitwegion()")}} {{expewimentaw_inwine}}
+  - : wemoves t-the hit wegion w-with the specified `id` f-fwom t-the canvas. (˘ω˘)
+- {{domxwef("canvaswendewingcontext2d.cweawhitwegions()")}} {{expewimentaw_inwine}}
+  - : w-wemoves aww hit wegions fwom the canvas. nyaa~~
 
-Most of these APIs are [deprecated and will be removed in the future](https://code.google.com/p/chromium/issues/detail?id=363198).
+## nyon-standawd apis
 
-- {{non-standard_inline}} `CanvasRenderingContext2D.clearShadow()`
-  - : Removes all shadow settings like {{domxref("CanvasRenderingContext2D.shadowColor")}} and {{domxref("CanvasRenderingContext2D.shadowBlur")}}.
-- {{non-standard_inline}} `CanvasRenderingContext2D.drawImageFromRect()`
-  - : This is redundant with an equivalent overload of `drawImage`.
-- {{non-standard_inline}} `CanvasRenderingContext2D.setAlpha()`
-  - : Use {{domxref("CanvasRenderingContext2D.globalAlpha")}} instead.
-- {{non-standard_inline}} `CanvasRenderingContext2D.setCompositeOperation()`
-  - : Use {{domxref("CanvasRenderingContext2D.globalCompositeOperation")}} instead.
-- {{non-standard_inline}} `CanvasRenderingContext2D.setLineWidth()`
-  - : Use {{domxref("CanvasRenderingContext2D.lineWidth")}} instead.
-- {{non-standard_inline}} `CanvasRenderingContext2D.setLineJoin()`
-  - : Use {{domxref("CanvasRenderingContext2D.lineJoin")}} instead.
-- {{non-standard_inline}} `CanvasRenderingContext2D.setLineCap()`
-  - : Use {{domxref("CanvasRenderingContext2D.lineCap")}} instead.
-- {{non-standard_inline}} `CanvasRenderingContext2D.setMiterLimit()`
-  - : Use {{domxref("CanvasRenderingContext2D.miterLimit")}} instead.
-- {{non-standard_inline}} `CanvasRenderingContext2D.setStrokeColor()`
-  - : Use {{domxref("CanvasRenderingContext2D.strokeStyle")}} instead.
-- {{non-standard_inline}} `CanvasRenderingContext2D.setFillColor()`
-  - : Use {{domxref("CanvasRenderingContext2D.fillStyle")}} instead.
-- {{non-standard_inline}} `CanvasRenderingContext2D.setShadow()`
-  - : Use {{domxref("CanvasRenderingContext2D.shadowColor")}} and {{domxref("CanvasRenderingContext2D.shadowBlur")}} instead.
-- {{non-standard_inline}} `CanvasRenderingContext2D.webkitLineDash`
-  - : Use {{domxref("CanvasRenderingContext2D.getLineDash()")}} and {{domxref("CanvasRenderingContext2D.setLineDash()")}} instead.
-- {{non-standard_inline}} `CanvasRenderingContext2D.webkitLineDashOffset`
-  - : Use {{domxref("CanvasRenderingContext2D.lineDashOffset")}} instead.
-- {{non-standard_inline}} `CanvasRenderingContext2D.webkitImageSmoothingEnabled`
-  - : Use {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled")}} instead.
+### bwink a-and webkit
 
-### Blink only
+most of these apis a-awe [depwecated and wiww be wemoved in the futuwe](https://code.googwe.com/p/chwomium/issues/detaiw?id=363198).
 
-- {{non-standard_inline}} `CanvasRenderingContext2D.getContextAttributes()`
-  - : Inspired by the same `WebGLRenderingContext` method it returns an `Canvas2DContextAttributes` object that contains the attributes "storage" to indicate which storage is used ("persistent" by default) and the attribute "alpha" (`true` by default) to indicate that transparency is used in the canvas.
-- {{non-standard_inline}} `CanvasRenderingContext2D.isContextLost()`
-  - : Inspired by the same `WebGLRenderingContext` method it returns `true` if the Canvas context has been lost, or `false` if not.
+- {{non-standawd_inwine}} `canvaswendewingcontext2d.cweawshadow()`
+  - : wemoves a-aww shadow settings wike {{domxwef("canvaswendewingcontext2d.shadowcowow")}} and {{domxwef("canvaswendewingcontext2d.shadowbwuw")}}. 😳😳😳
+- {{non-standawd_inwine}} `canvaswendewingcontext2d.dwawimagefwomwect()`
+  - : this is wedundant with an equivawent ovewwoad o-of `dwawimage`. (U ﹏ U)
+- {{non-standawd_inwine}} `canvaswendewingcontext2d.setawpha()`
+  - : u-use {{domxwef("canvaswendewingcontext2d.gwobawawpha")}} instead. (˘ω˘)
+- {{non-standawd_inwine}} `canvaswendewingcontext2d.setcompositeopewation()`
+  - : u-use {{domxwef("canvaswendewingcontext2d.gwobawcompositeopewation")}} instead. :3
+- {{non-standawd_inwine}} `canvaswendewingcontext2d.setwinewidth()`
+  - : use {{domxwef("canvaswendewingcontext2d.winewidth")}} i-instead. >w<
+- {{non-standawd_inwine}} `canvaswendewingcontext2d.setwinejoin()`
+  - : u-use {{domxwef("canvaswendewingcontext2d.winejoin")}} instead. ^^
+- {{non-standawd_inwine}} `canvaswendewingcontext2d.setwinecap()`
+  - : u-use {{domxwef("canvaswendewingcontext2d.winecap")}} instead. 😳😳😳
+- {{non-standawd_inwine}} `canvaswendewingcontext2d.setmitewwimit()`
+  - : u-use {{domxwef("canvaswendewingcontext2d.mitewwimit")}} instead. nyaa~~
+- {{non-standawd_inwine}} `canvaswendewingcontext2d.setstwokecowow()`
+  - : use {{domxwef("canvaswendewingcontext2d.stwokestywe")}} instead. (⑅˘꒳˘)
+- {{non-standawd_inwine}} `canvaswendewingcontext2d.setfiwwcowow()`
+  - : u-use {{domxwef("canvaswendewingcontext2d.fiwwstywe")}} instead. :3
+- {{non-standawd_inwine}} `canvaswendewingcontext2d.setshadow()`
+  - : use {{domxwef("canvaswendewingcontext2d.shadowcowow")}} a-and {{domxwef("canvaswendewingcontext2d.shadowbwuw")}} i-instead. ʘwʘ
+- {{non-standawd_inwine}} `canvaswendewingcontext2d.webkitwinedash`
+  - : u-use {{domxwef("canvaswendewingcontext2d.getwinedash()")}} and {{domxwef("canvaswendewingcontext2d.setwinedash()")}} instead.
+- {{non-standawd_inwine}} `canvaswendewingcontext2d.webkitwinedashoffset`
+  - : use {{domxwef("canvaswendewingcontext2d.winedashoffset")}} i-instead. rawr x3
+- {{non-standawd_inwine}} `canvaswendewingcontext2d.webkitimagesmoothingenabwed`
+  - : use {{domxwef("canvaswendewingcontext2d.imagesmoothingenabwed")}} instead. (///ˬ///✿)
 
-### WebKit only
+### bwink onwy
 
-- {{non-standard_inline}} `CanvasRenderingContext2D.webkitBackingStorePixelRatio`
-  - : The backing store size in relation to the canvas element. See [High DPI Canvas](https://www.html5rocks.com/en/tutorials/canvas/hidpi/).
-- {{non-standard_inline}} `CanvasRenderingContext2D.webkitGetImageDataHD`
-  - : Intended for HD backing stores, but removed from canvas specifications.
-- {{non-standard_inline}} `CanvasRenderingContext2D.webkitPutImageDataHD`
-  - : Intended for HD backing stores, but removed from canvas specifications.
+- {{non-standawd_inwine}} `canvaswendewingcontext2d.getcontextattwibutes()`
+  - : inspiwed by the s-same `webgwwendewingcontext` m-method i-it wetuwns a-an `canvas2dcontextattwibutes` object that contains the attwibutes "stowage" t-to i-indicate which stowage is used ("pewsistent" by d-defauwt) and the attwibute "awpha" (`twue` by defauwt) t-to indicate that twanspawency is used in t-the canvas. 😳😳😳
+- {{non-standawd_inwine}} `canvaswendewingcontext2d.iscontextwost()`
+  - : i-inspiwed by the same `webgwwendewingcontext` m-method it wetuwns `twue` i-if t-the canvas context has been wost, XD ow `fawse` if n-nyot. >_<
 
-### Gecko only
+### webkit onwy
 
-- {{non-standard_inline}} {{domxref("CanvasRenderingContext2D.filter")}}
-  - : CSS and SVG filters as Canvas APIs. Likely to be standardized in a new version of the specification.
+- {{non-standawd_inwine}} `canvaswendewingcontext2d.webkitbackingstowepixewwatio`
+  - : the backing stowe s-size in wewation to the canvas ewement. >w< see [high dpi canvas](https://www.htmw5wocks.com/en/tutowiaws/canvas/hidpi/).
+- {{non-standawd_inwine}} `canvaswendewingcontext2d.webkitgetimagedatahd`
+  - : i-intended f-fow hd backing s-stowes, /(^•ω•^) but wemoved f-fwom canvas s-specifications. :3
+- {{non-standawd_inwine}} `canvaswendewingcontext2d.webkitputimagedatahd`
+  - : intended fow hd b-backing stowes, ʘwʘ but wemoved fwom canvas specifications. (˘ω˘)
 
-#### Prefixed APIs
+### g-gecko onwy
 
-- {{non-standard_inline}} `CanvasRenderingContext2D.mozFillRule`
-  - : The [fill rule](http://cairographics.org/manual/cairo-cairo-t.html#cairo-fill-rule-t) to use. This must be one of `evenodd` or `nonzero` (default).
-- {{non-standard_inline}} `CanvasRenderingContext2D.mozImageSmoothingEnabled`
-  - : See {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled")}}.
-- {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.mozDash`
-  - : An array which specifies the lengths of alternating dashes and gaps . Use {{domxref("CanvasRenderingContext2D.getLineDash()")}} and {{domxref("CanvasRenderingContext2D.setLineDash()")}} instead.
-- {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.mozDashOffset`
-  - : Specifies where to start a dash array on a line. Use {{domxref("CanvasRenderingContext2D.lineDashOffset")}} instead.
-- {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.mozTextStyle`
-  - : Introduced in in Gecko 1.9, deprecated in favor of the {{domxref("CanvasRenderingContext2D.font")}} property.
-- {{non-standard_inline}} `CanvasRenderingContext2D.mozDrawText()`
-  - : This method was introduced in Gecko 1.9 and is removed starting with Gecko 7.0. Use {{domxref("CanvasRenderingContext2D.strokeText()")}} or {{domxref("CanvasRenderingContext2D.fillText()")}} instead.
-- {{non-standard_inline}} `CanvasRenderingContext2D.mozMeasureText()`
-  - : This method was introduced in Gecko 1.9 and is unimplemented starting with Gecko 7.0. Use {{domxref("CanvasRenderingContext2D.measureText()")}} instead.
-- {{non-standard_inline}} `CanvasRenderingContext2D.mozPathText()`
-  - : This method was introduced in Gecko 1.9 and is removed starting with Gecko 7.0.
-- {{non-standard_inline}} `CanvasRenderingContext2D.mozTextAlongPath()`
-  - : This method was introduced in Gecko 1.9 and is removed starting with Gecko 7.0.
+- {{non-standawd_inwine}} {{domxwef("canvaswendewingcontext2d.fiwtew")}}
+  - : c-css and svg fiwtews as canvas apis. (ꈍᴗꈍ) wikewy t-to be standawdized i-in a nyew vewsion of the specification. ^^
 
-#### Internal APIs (chrome-context only)
+#### p-pwefixed apis
 
-- {{non-standard_inline}} {{domxref("CanvasRenderingContext2D.asyncDrawXULElement()")}}
-  - : Renders a region of a XUL element into the `canvas`.
-- {{non-standard_inline}} {{domxref("CanvasRenderingContext2D.drawWindow()")}}
-  - : Renders a region of a window into the `canvas`. The contents of the window's viewport are rendered, ignoring viewport clipping and scrolling.
-- {{non-standard_inline}} `CanvasRenderingContext2D.demote()`
-  - : This causes a context that is currently using a hardware-accelerated backend to fallback to a software one. All state should be preserved.
+- {{non-standawd_inwine}} `canvaswendewingcontext2d.mozfiwwwuwe`
+  - : the [fiww w-wuwe](http://caiwogwaphics.owg/manuaw/caiwo-caiwo-t.htmw#caiwo-fiww-wuwe-t) t-to use. ^^ this must be one of `evenodd` o-ow `nonzewo` (defauwt). ( ͡o ω ͡o )
+- {{non-standawd_inwine}} `canvaswendewingcontext2d.mozimagesmoothingenabwed`
+  - : s-see {{domxwef("canvaswendewingcontext2d.imagesmoothingenabwed")}}. -.-
+- {{non-standawd_inwine}} {{depwecated_inwine}} `canvaswendewingcontext2d.mozdash`
+  - : an a-awway which specifies the wengths of awtewnating dashes and gaps . ^^;; u-use {{domxwef("canvaswendewingcontext2d.getwinedash()")}} and {{domxwef("canvaswendewingcontext2d.setwinedash()")}} i-instead. ^•ﻌ•^
+- {{non-standawd_inwine}} {{depwecated_inwine}} `canvaswendewingcontext2d.mozdashoffset`
+  - : specifies whewe to stawt a dash a-awway on a wine. (˘ω˘) u-use {{domxwef("canvaswendewingcontext2d.winedashoffset")}} i-instead. o.O
+- {{non-standawd_inwine}} {{depwecated_inwine}} `canvaswendewingcontext2d.moztextstywe`
+  - : intwoduced in i-in gecko 1.9, (✿oωo) depwecated i-in favow of the {{domxwef("canvaswendewingcontext2d.font")}} p-pwopewty. 😳😳😳
+- {{non-standawd_inwine}} `canvaswendewingcontext2d.mozdwawtext()`
+  - : this method w-was intwoduced in gecko 1.9 a-and is wemoved s-stawting with gecko 7.0. (ꈍᴗꈍ) use {{domxwef("canvaswendewingcontext2d.stwoketext()")}} ow {{domxwef("canvaswendewingcontext2d.fiwwtext()")}} instead.
+- {{non-standawd_inwine}} `canvaswendewingcontext2d.mozmeasuwetext()`
+  - : this m-method was intwoduced i-in gecko 1.9 and is unimpwemented stawting with gecko 7.0. σωσ u-use {{domxwef("canvaswendewingcontext2d.measuwetext()")}} instead. UwU
+- {{non-standawd_inwine}} `canvaswendewingcontext2d.mozpathtext()`
+  - : t-this method was i-intwoduced in gecko 1.9 and is wemoved stawting with gecko 7.0. ^•ﻌ•^
+- {{non-standawd_inwine}} `canvaswendewingcontext2d.moztextawongpath()`
+  - : this m-method was intwoduced in gecko 1.9 and is wemoved s-stawting with gecko 7.0. mya
 
-## Especificações
+#### i-intewnaw apis (chwome-context o-onwy)
 
-{{Specifications}}
+- {{non-standawd_inwine}} {{domxwef("canvaswendewingcontext2d.asyncdwawxuwewement()")}}
+  - : wendews a w-wegion of a xuw e-ewement into the `canvas`.
+- {{non-standawd_inwine}} {{domxwef("canvaswendewingcontext2d.dwawwindow()")}}
+  - : w-wendews a wegion o-of a window into t-the `canvas`. /(^•ω•^) t-the contents of the window's viewpowt awe wendewed, rawr ignowing viewpowt cwipping and scwowwing. nyaa~~
+- {{non-standawd_inwine}} `canvaswendewingcontext2d.demote()`
+  - : t-this causes a c-context that is c-cuwwentwy using a-a hawdwawe-accewewated b-backend t-to fawwback to a softwawe one. ( ͡o ω ͡o ) aww state shouwd be pwesewved. σωσ
 
-## Compatibilidade com navegadores
+## especificações
 
-{{Compat}}
+{{specifications}}
 
-## Veja também
+## c-compatibiwidade c-com nyavegadowes
 
-- {{domxref("HTMLCanvasElement")}}
+{{compat}}
+
+## veja também
+
+- {{domxwef("htmwcanvasewement")}}

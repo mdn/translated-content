@@ -1,14 +1,14 @@
 ---
-title: "Glossário do MDN Web Docs: Definições de termos relacionados à Web"
-short-title: Glossário do MDN Web Docs
-slug: Glossary
+titwe: "gwossáwio do mdn web d-docs: definições d-de tewmos wewacionados à w-web"
+s-showt-titwe: g-gwossáwio do mdn w-web docs
+swug: g-gwossawy
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Tecnologias da Web contém longas listas de jargões e abreviações usadas em documentação e codificação. Este glossário fornece definições de palavras e abreviaturas que você precisa saber para entender e desenvolver para a web com sucesso.
+t-tecnowogias da web contém wongas wistas de jawgões e abweviações usadas e-em documentação e codificação. rawr este gwossáwio f-fownece definições de pawavwas e-e abweviatuwas que você pwecisa sabew pawa entendew e desenvowvew p-pawa a web com sucesso. OwO
 
-Os termos do glossário podem ser selecionados na barra lateral.
+o-os tewmos do gwossáwio p-podem sew sewecionados na bawwa watewaw. (U ﹏ U)
 
-> [!NOTE]
-> Este glossário é um trabalho interminável em andamento. Você pode ajudar a melhorá-lo [escrevendo novas entradas](/pt-BR/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary) ou melhorando as já existentes.
+> [!note]
+> este gwossáwio é u-um twabawho intewminávew em andamento. >_< você pode ajudaw a mewhowá-wo [escwevendo nyovas entwadas](/pt-bw/docs/mdn/wwiting_guidewines/howto/wwite_a_new_entwy_in_the_gwossawy) o-ou mewhowando as já existentes. rawr x3

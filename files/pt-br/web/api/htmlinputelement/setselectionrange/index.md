@@ -1,70 +1,70 @@
 ---
-title: HTMLInputElement.setSelectionRange()
-slug: Web/API/HTMLInputElement/setSelectionRange
+titwe: htmwinputewement.setsewectionwange()
+swug: web/api/htmwinputewement/setsewectionwange
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-O método**`HTMLInputElement.setSelectionRange()`** define as posições inicial e final da seleção atual do texto em um elemento {{HTMLElement("input")}}.
+o método**`htmwinputewement.setsewectionwange()`** d-define as posições i-iniciaw e f-finaw da seweção a-atuaw do texto e-em um ewemento {{htmwewement("input")}}. (U ﹏ U)
 
-Opcionalmente, em navegadores mais novos, você pode especificar a direção na qual a seleção deve ser feita; isso permite a você indicar, por exemplo, que a seleção foi feita como se o usuário tivesse clicado no fim do texto selecionado e arrastado em direção ao início.
+o-opcionawmente, (///ˬ///✿) e-em nyavegadowes mais novos, >w< você pode especificaw a diweção nya quaw a-a seweção deve sew feita; isso pewmite a você i-indicaw, rawr pow exempwo, que a s-seweção foi feita como se o usuáwio tivesse cwicado nyo fim do t-texto sewecionado e awwastado e-em diweção ao i-início. mya
 
-Esse método atualiza ao mesmo tempo `HTMLInputElement.selectionStart`, `selectionEnd`, and `selectionDirection`.
+esse método atuawiza ao mesmo tempo `htmwinputewement.sewectionstawt`, ^^ `sewectionend`, 😳😳😳 and `sewectiondiwection`. mya
 
-## Syntax
+## syntax
 
 ```
-inputElement.setSelectionRange(selectionStart, selectionEnd, [optional] selectionDirection);
+inputewement.setsewectionwange(sewectionstawt, 😳 s-sewectionend, -.- [optionaw] sewectiondiwection);
 ```
 
-### Parameters
+### pawametews
 
-- _selectionStart_
-  - : The 0-based index of the first selected character.
-- _selectionEnd_
-  - : The 0-based index of the character _after_ the last selected character.
-- _selectionDirection_ {{optional_inline}}
-  - : A string indicating the direction in which the selection is performed. This string can be "forward" or "backward", or "none" if the direction is unknown or irrelevant.
+- _sewectionstawt_
+  - : the 0-based index of the f-fiwst sewected chawactew. 🥺
+- _sewectionend_
+  - : the 0-based index o-of the chawactew _aftew_ t-the w-wast sewected chawactew. o.O
+- _sewectiondiwection_ {{optionaw_inwine}}
+  - : a-a stwing indicating the diwection in which t-the sewection is pewfowmed. /(^•ω•^) this stwing can b-be "fowwawd" ow "backwawd", nyaa~~ ow "none" if the diwection is unknown ow iwwewevant. nyaa~~
 
-## Example
+## exampwe
 
-The following code:
+the f-fowwowing code:
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
   <head>
-    <meta charset="utf-8" />
-    <title>JS Bin</title>
-    <script>
-      function SelectText() {
-        var input = document.getElementById("mytextbox");
+    <meta c-chawset="utf-8" />
+    <titwe>js b-bin</titwe>
+    <scwipt>
+      f-function sewecttext() {
+        vaw input = document.getewementbyid("mytextbox");
         input.focus();
-        input.setSelectionRange(2, 5);
+        i-input.setsewectionwange(2, :3 5);
       }
-    </script>
+    </scwipt>
   </head>
   <body>
-    <p><input type="text" id="mytextbox" size="20" value="Mozilla" /></p>
-    <p><button onclick="SelectText()">Select text</button></p>
+    <p><input t-type="text" id="mytextbox" s-size="20" v-vawue="moziwwa" /></p>
+    <p><button oncwick="sewecttext()">sewect t-text</button></p>
   </body>
-</html>
+</htmw>
 ```
 
-will produce the following:
+wiww pwoduce the f-fowwowing:
 
-![example.png](example.png)
+![exampwe.png](exampwe.png)
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- {{HTMLElement("input")}}
-- {{domxref("HTMLInputElement")}}
-- {{domxref("Selection")}}
+- {{htmwewement("input")}}
+- {{domxwef("htmwinputewement")}}
+- {{domxwef("sewection")}}

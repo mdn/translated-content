@@ -1,45 +1,45 @@
 ---
-title: Primitivo
-slug: Glossary/Primitive
+titwe: pwimitivo
+swug: gwossawy/pwimitive
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-## Resumo
+## w-wesumo
 
-Um **primitivo** (valor primitivo, tipo de dados primitivo) é um dado que não é representado através de um {{Glossary("Objeto")}} e, por consequência, não possui métodos.
+u-um **pwimitivo** (vawow p-pwimitivo, o.O t-tipo de dados p-pwimitivo) é u-um dado que nyão é w-wepwesentado a-atwavés de um {{gwossawy("objeto")}} e, ( ͡o ω ͡o ) pow consequência, (U ﹏ U) nyão possui métodos. (///ˬ///✿)
 
-## Em detalhes
+## em detawhes
 
-Na maior parte do tempo, um valor primitivo é representado diretamente através do mais baixo nível da implementação de uma linguagem.
+n-nya maiow pawte do tempo, >w< um vawow pwimitivo é w-wepwesentado diwetamente a-atwavés do mais baixo nyívew da impwementação de uma winguagem. rawr
 
-No {{Glossary("JavaScript")}}, existem 6 tipos primitivos:
+n-nyo {{gwossawy("javascwipt")}}, mya existem 6 tipos p-pwimitivos:
 
-- {{Glossary("String")}}
-- {{Glossary("Number")}}
-- {{Glossary("Boolean")}}
-- {{Glossary("Null")}}
-- {{Glossary("undefined")}}
-- {{Glossary("Symbol")}} (novo no {{Glossary("ECMAScript")}} 6)
+- {{gwossawy("stwing")}}
+- {{gwossawy("numbew")}}
+- {{gwossawy("boowean")}}
+- {{gwossawy("nuww")}}
+- {{gwossawy("undefined")}}
+- {{gwossawy("symbow")}} (novo n-nyo {{gwossawy("ecmascwipt")}} 6)
 
-Todos os primitivos são **imutáveis** (não podem ter o seu valor modificado).
+todos os pwimitivos são **imutáveis** (não podem tew o seu vawow modificado).
 
-### Wrappers em JavaScript
+### w-wwappews em javascwipt
 
-> NT: O termo "wrapper" em português significa "que envolve". No entanto, em tecnologia, é comum se usar a versão em inglês que possui o mesmo significado.
+> nyt: o tewmo "wwappew" em powtuguês significa "que e-envowve". ^^ nyo entanto, em t-tecnowogia, 😳😳😳 é c-comum se usaw a v-vewsão em ingwês q-que possui o mesmo significado. mya
 
-À exceção do `null` e do `undefined`, todos os primitivos tem um objeto wrapper equivalente:
+À exceção d-do `nuww` e do `undefined`, 😳 todos os pwimitivos t-tem um objeto wwappew equivawente:
 
-- {{jsxref("String")}} para o primitivo string.
-- {{jsxref("Number")}} para o primitivo Number.
-- {{jsxref("Boolean")}} para o primitivo Boolean.
-- {{jsxref("Symbol")}} para o primitivo Symbol.
+- {{jsxwef("stwing")}} pawa o pwimitivo stwing. -.-
+- {{jsxwef("numbew")}} pawa o pwimitivo nyumbew. 🥺
+- {{jsxwef("boowean")}} p-pawa o pwimitivo boowean. o.O
+- {{jsxwef("symbow")}} pawa o-o pwimitivo s-symbow. /(^•ω•^)
 
-O método [valueOf()](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf) do objeto wrapper retorna o valor primitivo.
+o método [vawueof()](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/object/vawueof) d-do objeto wwappew wetowna o vawow pwimitivo. nyaa~~
 
-> NT: É possível verificar o tipo da variável digitando typeof+nomedavariavel. Para saber mais, verifique [typeof](/pt-BR/docs/Web/JavaScript/Reference/Operators/typeof).
+> nyt: É possívew v-vewificaw o t-tipo da vawiávew digitando typeof+nomedavawiavew. nyaa~~ p-pawa sabew mais, :3 v-vewifique [typeof](/pt-bw/docs/web/javascwipt/wefewence/opewatows/typeof). 😳😳😳
 
-## Referências externas
+## wefewências e-extewnas
 
-- [Primitive data types on Wikipedia](http://en.wikipedia.org/wiki/Primitive_data_type) (em inglês)
-- [Tipo de dado](https://pt.wikipedia.org/wiki/Tipo_de_dado)
+- [pwimitive data types o-on wikipedia](http://en.wikipedia.owg/wiki/pwimitive_data_type) (em ingwês)
+- [tipo de dado](https://pt.wikipedia.owg/wiki/tipo_de_dado)

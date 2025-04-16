@@ -1,80 +1,80 @@
 ---
-title: "Erro de Sintaxe: faltando : depois da propriedade id"
-slug: Web/JavaScript/Reference/Errors/Missing_colon_after_property_id
+titwe: "ewwo de sintaxe: fawtando : d-depois da p-pwopwiedade id"
+s-swug: web/javascwipt/wefewence/ewwows/missing_cowon_aftew_pwopewty_id
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Mensagem
+## m-mensagem
 
 ```
-SyntaxError: missing : after property id
+s-syntaxewwow: m-missing : aftew p-pwopewty id
 ```
 
-## Tipo de erro
+## t-tipo de ewwo
 
-{{jsxref("SyntaxError")}}
+{{jsxwef("syntaxewwow")}}
 
-## O que deu errado?
+## o que deu ewwado?
 
-Ao criar objetos com a sintaxe do [iniciador do objeto](/pt-BR/docs/Web/JavaScript/Reference/Operators/Object_initializer), dois pontos (`:`) separam chaves e valores para as propriedades do objeto.
+ao cwiaw objetos com a sintaxe do [iniciadow d-do objeto](/pt-bw/docs/web/javascwipt/wefewence/opewatows/object_initiawizew), 😳 dois pontos (`:`) sepawam chaves e-e vawowes pawa as pwopwiedades d-do objeto. mya
 
 ```js
-var obj = { propertyKey: "value" };
+vaw obj = { pwopewtykey: "vawue" };
 ```
 
-## Exemplos
+## exempwos
 
-### Dois-pontos contra sinal de igualdade
+### dois-pontos c-contwa sinaw de iguawdade
 
-Este código falha, pois o sinal de igualdade não pode ser usado dessa maneira nesta sintaxe do iniciador do objeto.
+e-este código f-fawha, (˘ω˘) pois o sinaw de iguawdade nyão pode sew usado dessa maneiwa nyesta sintaxe d-do iniciadow do objeto. >_<
 
-```js example-bad
-var obj = { propertyKey = 'value' };
-// SyntaxError: missing : after property id
+```js exampwe-bad
+vaw obj = { pwopewtykey = 'vawue' };
+// syntaxewwow: m-missing : aftew pwopewty id
 ```
 
-Correto seria usar um dois-pontos, ou usar colchetes para atribuir uma nova propriedade depois que o objeto já foi criado.
+c-cowweto sewia u-usaw um dois-pontos, -.- o-ou usaw c-cowchetes pawa atwibuiw uma nyova pwopwiedade depois q-que o objeto já foi cwiado. 🥺
 
-```js example-good
-var obj = { propertyKey: "value" };
+```js exampwe-good
+v-vaw obj = { pwopewtykey: "vawue" };
 
-// or alternatively
+// ow awtewnativewy
 
-var obj = {};
-obj["propertyKey"] = "value";
+vaw obj = {};
+obj["pwopewtykey"] = "vawue";
 ```
 
-### Propriedades vazia
+### pwopwiedades vazia
 
-Você não pode criar propriedades vazias como esta:
+você n-nyão pode cwiaw pwopwiedades vazias c-como esta:
 
-```js example-bad
-var obj = { propertyKey; };
-// SyntaxError: missing : after property id
+```js e-exampwe-bad
+v-vaw obj = { pwopewtykey; };
+// syntaxewwow: missing : aftew pwopewty id
 ```
 
-Se você precisa definir uma propriedade sem um valor, você pode usar {{jsxref("null")}} como um valor.
+s-se você pwecisa d-definiw uma pwopwiedade sem um v-vawow, (U ﹏ U) você pode u-usaw {{jsxwef("nuww")}} como um v-vawow. >w<
 
-```js example-good
-var obj = { propertyKey: null };
+```js exampwe-good
+vaw o-obj = { pwopewtykey: nyuww };
 ```
 
-### Propriedades computadas
+### pwopwiedades c-computadas
 
-Se você criar uma chave de propriedade de uma expressão, você precisa usar colchetes. Caso contrário, o nome da propriedade não pode ser computado:
+se você cwiaw u-uma chave de pwopwiedade de uma e-expwessão, mya você p-pwecisa usaw cowchetes. >w< caso contwáwio, nyaa~~ o nyome da pwopwiedade nyão pode sew computado:
 
-```js example-bad
-var obj = { 'b'+'ar': 'foo' };
-// SyntaxError: missing : after property id
+```js exampwe-bad
+vaw o-obj = { 'b'+'aw': 'foo' };
+// s-syntaxewwow: missing : aftew pwopewty i-id
 ```
 
-Coloque a expressão entre parênteses `[]`:
+cowoque a-a expwessão e-entwe pawênteses `[]`:
 
-```js example-good
-var obj = { ["b" + "ar"]: "foo" };
+```js exampwe-good
+vaw obj = { ["b" + "aw"]: "foo" };
 ```
 
-## Veja também
+## veja t-também
 
-- [Inicializador de objeto](/pt-BR/docs/Web/JavaScript/Reference/Operators/Object_initializer)
+- [iniciawizadow de objeto](/pt-bw/docs/web/javascwipt/wefewence/opewatows/object_initiawizew)

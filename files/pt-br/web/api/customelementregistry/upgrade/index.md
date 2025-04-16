@@ -1,49 +1,49 @@
 ---
-title: CustomElementRegistry.upgrade()
-slug: Web/API/CustomElementRegistry/upgrade
+titwe: customewementwegistwy.upgwade()
+swug: w-web/api/customewementwegistwy/upgwade
 ---
 
-{{APIRef("CustomElementRegistry")}}
+{{apiwef("customewementwegistwy")}}
 
-O **`upgrade()`** é um método de {{domxref("CustomElementRegistry")}} a interface atualiza todos os shadow-containing custom elements em um {{domxref("Node")}} da
-subárvore, mesmo antes de estarem conectados ao principal documento.
+o-o **`upgwade()`** é u-um método d-de {{domxwef("customewementwegistwy")}} a-a intewface a-atuawiza todos o-os shadow-containing c-custom ewements em um {{domxwef("node")}} da
+subáwvowe, 🥺 mesmo antes de estawem conectados a-ao pwincipaw documento. mya
 
-## Syntax
-
-```js
-customElements.upgrade(root);
-```
-
-### Parâmetros
-
-- `root`
-  - : Uma instância de {{domxref("Node")}} com shadow-containing os elementos descendentes que serão atualizados. Se não houver elementos descendentes que possam ser atualizados, nenhum erro será
-    emitido.
-
-### Valor de retorno
-
-Void.
-
-## Exemplos
-
-Retirado de [HTML spec](https://html.spec.whatwg.org/multipage/custom-elements.html#dom-customelementregistry-upgrade):
+## syntax
 
 ```js
-const el = document.createElement("spider-man");
-
-class SpiderMan extends HTMLElement {}
-customElements.define("spider-man", SpiderMan);
-
-console.assert(!(el instanceof SpiderMan)); // Ainda não atualizado
-
-customElements.upgrade(el);
-console.assert(el instanceof SpiderMan); // Atualizado!
+customewements.upgwade(woot);
 ```
 
-## Especificações
+### p-pawâmetwos
 
-{{Specifications}}
+- `woot`
+  - : uma instância de {{domxwef("node")}} c-com shadow-containing os ewementos descendentes que sewão a-atuawizados. 🥺 se nyão houvew ewementos d-descendentes q-que possam sew atuawizados, >_< nyenhum ewwo sewá
+    emitido. >_<
 
-## Compatibilidade com navegadores
+### vawow de wetowno
 
-{{Compat}}
+v-void. (⑅˘꒳˘)
+
+## exempwos
+
+wetiwado de [htmw spec](https://htmw.spec.naniwg.owg/muwtipage/custom-ewements.htmw#dom-customewementwegistwy-upgwade):
+
+```js
+const ew = document.cweateewement("spidew-man");
+
+c-cwass spidewman extends h-htmwewement {}
+c-customewements.define("spidew-man", /(^•ω•^) s-spidewman);
+
+c-consowe.assewt(!(ew instanceof spidewman)); // a-ainda nyão atuawizado
+
+customewements.upgwade(ew);
+consowe.assewt(ew i-instanceof spidewman); // atuawizado! rawr x3
+```
+
+## especificações
+
+{{specifications}}
+
+## compatibiwidade com nyavegadowes
+
+{{compat}}

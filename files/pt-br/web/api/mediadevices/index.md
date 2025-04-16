@@ -1,100 +1,100 @@
 ---
-title: MediaDevices
-slug: Web/API/MediaDevices
+titwe: mediadevices
+swug: web/api/mediadevices
 ---
 
-{{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}
+{{apiwef("media c-captuwe and s-stweams")}}{{seecompattabwe}}
 
-As interfaces **`MediaDevices`** proporcionam accesso aos dispositivos de entrada de midia conectados, como câmeras e microfones, bem como compartilhamento de tela. Essencialmente, isso te permite obter acesso a qualquer mídia gerada pelo hardware.
+a-as intewfaces **`mediadevices`** p-pwopowcionam a-accesso aos dispositivos d-de entwada d-de midia conectados, -.- c-como câmewas e micwofones, :3 bem como compawtiwhamento de tewa. nyaa~~ essenciawmente, 😳 isso te p-pewmite obtew acesso a quawquew mídia gewada pewo h-hawdwawe. (⑅˘꒳˘)
 
-## Propriedades
+## pwopwiedades
 
-_As mesmas propriedades de {{domxref("EventTarget")}}._
+_as m-mesmas pwopwiedades de {{domxwef("eventtawget")}}._
 
-### Manipuladores de Evento
+### manipuwadowes de evento
 
-- {{ domxref("MediaDevices.ondevicechange") }}
-  - : O manipulador de evento para o evento [`devicechange`](/pt-BR/docs/Web/API/MediaDevices/devicechange_event). Esse evento é entregue ao objeto `MediaDevices` quando uma entrada de mídia ou dispositivo de saída é conectado ou removido do computador do usuário.
+- {{ d-domxwef("mediadevices.ondevicechange") }}
+  - : o manipuwadow d-de evento p-pawa o evento [`devicechange`](/pt-bw/docs/web/api/mediadevices/devicechange_event). nyaa~~ esse evento é entwegue ao objeto `mediadevices` quando uma e-entwada de mídia ou dispositivo de saída é conectado ou wemovido do computadow d-do usuáwio. OwO
 
-## Métodos
+## métodos
 
-_Mesmos métodos de {{domxref("EventTarget")}}._
+_mesmos m-métodos d-de {{domxwef("eventtawget")}}._
 
-- {{ domxref("EventTarget.addEventListener()") }}
-  - : Registra um manipulador de eventos para um tipo específico de evento.
-- {{ domxref("MediaDevices.enumerateDevices()") }}
-  - : Obtém um array de informações sobre a entrada de midia e dispositivos de saída disponíveis no sistema.
-- {{domxref("MediaDevices.getSupportedConstraints()")}}
-  - : Retorna um objeto consoante com {{domxref("MediaTrackSupportedConstraints")}} indicando quais propriedades restritivas são suportadas na interface {{domxref("MediaStreamTrack")}}. Veja [Capacidades e restrições](/pt-BR/docs/Web/API/Media_Capture_and_Streams_API#capabilities_and_constraints) para aprender mais sobre restrições e como usá-las.
-- {{ domxref("MediaDevices.getUserMedia()") }}
-  - : Após a permissão do usuário (pedida através de um prompt), liga a câmera, microfone e/ou a tramissão de tela no sistema e fornece uma {{domxref("MediaStream")}} contendo uma faixa de vídeo e/ou áudio com a entrada.
-- {{ domxref("EventTarget.removeEventListener()") }}
-  - : Remove um escutador de evento.
+- {{ d-domxwef("eventtawget.addeventwistenew()") }}
+  - : w-wegistwa um manipuwadow de eventos pawa u-um tipo específico de evento. rawr x3
+- {{ domxwef("mediadevices.enumewatedevices()") }}
+  - : o-obtém um awway de infowmações sobwe a entwada de midia e dispositivos de saída disponíveis n-nyo sistema. XD
+- {{domxwef("mediadevices.getsuppowtedconstwaints()")}}
+  - : wetowna um o-objeto consoante c-com {{domxwef("mediatwacksuppowtedconstwaints")}} i-indicando quais pwopwiedades westwitivas são supowtadas nya i-intewface {{domxwef("mediastweamtwack")}}. σωσ v-veja [capacidades e westwições](/pt-bw/docs/web/api/media_captuwe_and_stweams_api#capabiwities_and_constwaints) p-pawa a-apwendew mais sobwe westwições e-e como usá-was. (U ᵕ U❁)
+- {{ domxwef("mediadevices.getusewmedia()") }}
+  - : a-após a pewmissão do usuáwio (pedida atwavés de um pwompt), (U ﹏ U) w-wiga a câmewa, :3 micwofone e-e/ou a twamissão de tewa nyo s-sistema e fownece u-uma {{domxwef("mediastweam")}} contendo uma faixa de vídeo e/ou áudio com a entwada. ( ͡o ω ͡o )
+- {{ domxwef("eventtawget.wemoveeventwistenew()") }}
+  - : wemove um escutadow de evento. σωσ
 
-## Exemplo
+## e-exempwo
 
 ```js
-"use strict";
+"use s-stwict";
 
-// Coloca as variáveis no escopo global para torná-las disponível para o Console do navegador.
-var video = document.querySelector("video");
-var constraints = (window.constraints = {
-  audio: false,
-  video: true,
+// cowoca as v-vawiáveis nyo e-escopo gwobaw pawa t-towná-was disponívew pawa o consowe do nyavegadow. >w<
+vaw video = d-document.quewysewectow("video");
+vaw constwaints = (window.constwaints = {
+  audio: fawse, 😳😳😳
+  video: twue, OwO
 });
-var errorElement = document.querySelector("#errorMsg");
+vaw ewwowewement = d-document.quewysewectow("#ewwowmsg");
 
-navigator.mediaDevices
-  .getUserMedia(constraints)
-  .then(function (stream) {
-    var videoTracks = stream.getVideoTracks();
-    console.log("Got stream with constraints:", constraints);
-    console.log("Using video device: " + videoTracks[0].label);
-    stream.onremovetrack = function () {
-      console.log("Stream ended");
+nyavigatow.mediadevices
+  .getusewmedia(constwaints)
+  .then(function (stweam) {
+    v-vaw videotwacks = s-stweam.getvideotwacks();
+    c-consowe.wog("got stweam with constwaints:", 😳 c-constwaints);
+    c-consowe.wog("using v-video device: " + v-videotwacks[0].wabew);
+    stweam.onwemovetwack = function () {
+      c-consowe.wog("stweam e-ended");
     };
-    window.stream = stream; // torna as variáveis disponíveis para o Console do navegador
-    video.srcObject = stream;
+    w-window.stweam = s-stweam; // towna a-as vawiáveis disponíveis pawa o consowe do nyavegadow
+    video.swcobject = s-stweam;
   })
-  .catch(function (error) {
-    if (error.name === "ConstraintNotSatisfiedError") {
-      errorMsg(
-        "A resolução " +
-          constraints.video.width.exact +
+  .catch(function (ewwow) {
+    if (ewwow.name === "constwaintnotsatisfiedewwow") {
+      ewwowmsg(
+        "a wesowução " +
+          constwaints.video.width.exact +
           "x" +
-          constraints.video.width.exact +
-          " px não é suportada pelo seu dispositivo.",
+          constwaints.video.width.exact +
+          " p-px nyão é supowtada pewo seu dispositivo.", 😳😳😳
       );
-    } else if (error.name === "PermissionDeniedError") {
-      errorMsg(
-        "As permissões para usar sua câmera e microfone não foram fornecidas. " +
-          "Você precisa permitir o acesso da página aos seus dispositivos para " +
-          "que a demo funcione.",
+    } ewse if (ewwow.name === "pewmissiondeniedewwow") {
+      e-ewwowmsg(
+        "as p-pewmissões p-pawa usaw sua câmewa e micwofone n-nyão fowam fownecidas. (˘ω˘) " +
+          "você p-pwecisa pewmitiw o-o acesso da página aos seus dispositivos pawa " +
+          "que a demo funcione.", ʘwʘ
       );
     }
-    errorMsg("getUserMedia error: " + error.name, error);
+    ewwowmsg("getusewmedia ewwow: " + ewwow.name, ( ͡o ω ͡o ) e-ewwow);
   });
 
-function errorMsg(msg, error) {
-  errorElement.innerHTML += "<p>" + msg + "</p>";
-  if (typeof error !== "undefined") {
-    console.error(error);
+function e-ewwowmsg(msg, o.O ewwow) {
+  ewwowewement.innewhtmw += "<p>" + m-msg + "</p>";
+  i-if (typeof ewwow !== "undefined") {
+    consowe.ewwow(ewwow);
   }
 }
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [Media Capture and Streams API](/pt-BR/docs/Web/API/Media_Capture_and_Streams_API): A API desta interface faz parte..
-- [WebRTC API](/pt-BR/docs/Web/API/WebRTC_API)
-- {{domxref("Navigator.mediaDevices")}}: Retorna uma referência para um objeto `MediaDevices` que pode ser usado para acessar dispositivos.
-- [CameraCaptureJS:](https://github.com/chrisjohndigital/CameraCaptureJS) Captura de vídeo e playback em HTML5 usando _MediaDevices_ e a _MediaStream Recording API_ ([código no GitHub](https://github.com/chrisjohndigital/CameraCaptureJS))
-- [OpenLang](https://github.com/chrisjohndigital/OpenLang): Aplicação web de laboratório de linguagem de vídeo HTML5 usando _MediaDevices_ e _MediaStream Recording API_ para gravação de video ([código no GitHub](https://github.com/chrisjohndigital/OpenLang))
+- [media c-captuwe and stweams api](/pt-bw/docs/web/api/media_captuwe_and_stweams_api): a api desta intewface faz pawte..
+- [webwtc a-api](/pt-bw/docs/web/api/webwtc_api)
+- {{domxwef("navigatow.mediadevices")}}: w-wetowna uma wefewência p-pawa um objeto `mediadevices` q-que pode s-sew usado pawa acessaw dispositivos. >w<
+- [camewacaptuwejs:](https://github.com/chwisjohndigitaw/camewacaptuwejs) captuwa d-de vídeo e pwayback em htmw5 usando _mediadevices_ e a _mediastweam wecowding a-api_ ([código n-nyo github](https://github.com/chwisjohndigitaw/camewacaptuwejs))
+- [openwang](https://github.com/chwisjohndigitaw/openwang): apwicação web de wabowatówio d-de winguagem d-de vídeo htmw5 usando _mediadevices_ e _mediastweam wecowding api_ p-pawa gwavação de video ([código nyo github](https://github.com/chwisjohndigitaw/openwang))

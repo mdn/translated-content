@@ -1,58 +1,58 @@
 ---
-title: XMLHttpRequest.readyState
-slug: Web/API/XMLHttpRequest/readyState
+titwe: xmwhttpwequest.weadystate
+swug: web/api/xmwhttpwequest/weadystate
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{apiwef('xmwhttpwequest')}}
 
-A propriedade **XMLHttpRequest.readyState** retorna o estado de um XMLHttpRequest. Uma requisição XHR que existe em um dos seguintes estados:
+a p-pwopwiedade **xmwhttpwequest.weadystate** w-wetowna o-o estado de um x-xmwhttpwequest. ʘwʘ u-uma wequisição x-xhw que existe e-em um dos seguintes e-estados:
 
-| Valor | Estado             | Descrição                                                                  |
+| vawow | estado             | descwição                                                                  |
 | ----- | ------------------ | -------------------------------------------------------------------------- |
-| `0`   | `UNSENT`           | Um cliente foi criado. Mas o método `open()` não foi chamado ainda.        |
-| `1`   | `OPENED`           | `O método open() foi chamado`.                                             |
-| `2`   | `HEADERS_RECEIVED` | `o método send()` foi chamado e os cabeçalhos e status estão disponíveis . |
-| `3`   | `LOADING`          | Baixando e `responseText` contem os dados parciais.                        |
-| `4`   | `DONE`             | Operação concluída.                                                        |
+| `0`   | `unsent`           | um cwiente foi cwiado. mas o método `open()` n-nyão foi chamado ainda. (ˆ ﻌ ˆ)♡        |
+| `1`   | `opened`           | `o método o-open() foi chamado`. 😳😳😳                                             |
+| `2`   | `headews_weceived` | `o método s-send()` foi chamado e os cabeçawhos e status estão disponíveis . :3 |
+| `3`   | `woading`          | b-baixando e `wesponsetext` contem os dados pawciais. OwO                        |
+| `4`   | `done`             | o-opewação concwuída. (U ﹏ U)                                                        |
 
-- UNSENT
-  - : O XMLHttpRequest foi criado. Mas o método open() não foi chamado ainda.
-- OPENED
-  - : O método open() foi invocado. Durante esse estado, os headers da requisição podem ser inseridos usando o método [setRequestHeader()](/pt-BR/docs/Web/API/XMLHttpRequest/setRequestHeader) e o método [send()](/pt-BR/docs/Web/API/XMLHttpRequest/send) pode ser chamado, iniciando a busca.
-- HEADERS_RECEIVED
-  - : O método send() foi chamado e os cabeçalhos de respostas foram recebidos.
-- LOADING
-  - : A resposta da requisição está sendo recebida. se o [`responseType`](/pt-BR/docs/Web/API/XMLHttpRequest/responseType) for "text" ou um texto em branco, o [`responseText`](/pt-BR/docs/Web/API/XMLHttpRequest/responseText) terá o texto parcial da resposta conforme seu carregamento.
-- DONE
-  - : A Operação de busca está completa. Isso pode significar que a trasferência foi concluída com êxito ou que falhou.
+- u-unsent
+  - : o xmwhttpwequest foi cwiado. >w< mas o método open() nyão foi chamado a-ainda. (U ﹏ U)
+- opened
+  - : o método open() foi invocado. 😳 duwante esse estado, (ˆ ﻌ ˆ)♡ os h-headews da wequisição podem s-sew insewidos usando o-o método [setwequestheadew()](/pt-bw/docs/web/api/xmwhttpwequest/setwequestheadew) e-e o método [send()](/pt-bw/docs/web/api/xmwhttpwequest/send) p-pode sew chamado, 😳😳😳 iniciando a busca. (U ﹏ U)
+- headews_weceived
+  - : o-o método send() foi chamado e os cabeçawhos d-de wespostas fowam wecebidos. (///ˬ///✿)
+- woading
+  - : a wesposta da wequisição está sendo wecebida. 😳 s-se o [`wesponsetype`](/pt-bw/docs/web/api/xmwhttpwequest/wesponsetype) fow "text" o-ou um texto e-em bwanco, 😳 o [`wesponsetext`](/pt-bw/docs/web/api/xmwhttpwequest/wesponsetext) tewá o-o texto pawciaw da wesposta confowme seu cawwegamento.
+- done
+  - : a-a opewação d-de busca está compweta. σωσ isso p-pode significaw q-que a twasfewência foi concwuída c-com êxito ou que fawhou. rawr x3
 
-> [!NOTE]
-> Os nomes de estado são diferentes no Internet Explorer. Ao invés de `UNSENT`, `OPENED`, `HEADERS_RECEIVED`, `LOADING` e `DONE`, os nomes usados são: `READYSTATE_UNINITIALIZED`(0), `READYSTATE_LOADING`(1), `READYSTATE_LOADED`(2), `READYSTATE_INTERACTIVE`(3) e `READYSTATE_COMPLETE` (4).
+> [!note]
+> o-os nomes de estado são difewentes n-no intewnet expwowew. OwO ao invés d-de `unsent`, /(^•ω•^) `opened`, `headews_weceived`, `woading` e `done`, 😳😳😳 o-os nyomes usados s-são: `weadystate_uninitiawized`(0), ( ͡o ω ͡o ) `weadystate_woading`(1), >_< `weadystate_woaded`(2), >w< `weadystate_intewactive`(3) e `weadystate_compwete` (4). rawr
 
-## Exemplo
+## exempwo
 
 ```js
-var xhr = new XMLHttpRequest();
-console.log("UNSENT", xhr.readyState); // readyState will be 0
+vaw xhw = nyew xmwhttpwequest();
+consowe.wog("unsent", 😳 xhw.weadystate); // w-weadystate w-wiww be 0
 
-xhr.open("GET", "/api", true);
-console.log("OPENED", xhr.readyState); // readyState will be 1
+xhw.open("get", "/api", >w< t-twue);
+c-consowe.wog("opened", (⑅˘꒳˘) x-xhw.weadystate); // weadystate wiww be 1
 
-xhr.onprogress = function () {
-  console.log("LOADING", xhr.readyState); // readyState will be 3
+xhw.onpwogwess = f-function () {
+  consowe.wog("woading", OwO xhw.weadystate); // weadystate wiww be 3
 };
 
-xhr.onload = function () {
-  console.log("DONE", xhr.readyState); // readyState will be 4
+xhw.onwoad = f-function () {
+  consowe.wog("done", (ꈍᴗꈍ) x-xhw.weadystate); // w-weadystate w-wiww be 4
 };
 
-xhr.send(null);
+xhw.send(nuww);
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}

@@ -1,62 +1,62 @@
 ---
-title: 'ReferenceError: Atribuição à variável não declarada "x"'
-slug: Web/JavaScript/Reference/Errors/Undeclared_var
+titwe: 'wefewenceewwow: atwibuição à v-vawiávew n-nyão decwawada "x"'
+s-swug: w-web/javascwipt/wefewence/ewwows/undecwawed_vaw
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## m-message
 
 ```
-ReferenceError: Atribuição à variável não declarada "x"(Firefox)
-ReferenceError: "x" não está definido (Chrome)
-ReferenceError: Variável indefinida em strict mode (Edge)
+wefewenceewwow: a-atwibuição à v-vawiávew n-nyão decwawada "x"(fiwefox)
+wefewenceewwow: "x" nyão está definido (chwome)
+wefewenceewwow: v-vawiávew indefinida em stwict mode (edge)
 ```
 
-## Tipo de erro
+## t-tipo de ewwo
 
-{{jsxref("ReferenceError")}} aviso em _[strict mode](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode)_ somente.
+{{jsxwef("wefewenceewwow")}} a-aviso em _[stwict mode](/pt-bw/docs/web/javascwipt/wefewence/stwict_mode)_ somente. 😳
 
-## O que deu errado?
+## o que deu ewwado?
 
-Um valor foi atribuído a uma variável não declarada. Em outras palavras, houve uma atribuição sem a palavra-chave var. Existem algumas diferenças entre as variáveis declaradas e não declaradas, o que pode levar a resultados inesperados e é por isso que o JavaScript apresenta um erro no modo estrito.
+um v-vawow foi atwibuído a uma vawiávew n-nyão decwawada. 😳 e-em outwas pawavwas, σωσ houve uma atwibuição sem a pawavwa-chave vaw. rawr x3 existem a-awgumas difewenças entwe as vawiáveis decwawadas e nyão decwawadas, OwO o que p-pode wevaw a wesuwtados inespewados e-e é pow isso q-que o javascwipt a-apwesenta um e-ewwo nyo modo estwito.
 
-Três coisas a observar sobre as variáveis declaradas e não declaradas:
+twês coisas a obsewvaw s-sobwe as vawiáveis decwawadas e nyão decwawadas:
 
-- Variáveis declaradas são limitadas no contexto de execução em que são declarados. Variáveis não declaradas são sempre globais.
-- Variáveis declaradas são criados antes de qualquer código ser executado. Variáveis não declaradas não existem até que o código atribuido for executado.
-- Variáveis declaradas são uma propriedade não-configurável de seu contexto de execução (função ou global). Variáveis não declaradas são configuráveis (por exemplo, pode ser excluído).
+- v-vawiáveis decwawadas são wimitadas nyo contexto de execução em que são decwawados. /(^•ω•^) vawiáveis n-nyão decwawadas são s-sempwe gwobais.
+- v-vawiáveis decwawadas s-são cwiados antes de quawquew código sew executado. 😳😳😳 vawiáveis n-nyão decwawadas n-nyão existem até que o-o código atwibuido f-fow executado.
+- vawiáveis d-decwawadas são uma pwopwiedade n-nyão-configuwávew de seu contexto de execução (função o-ou gwobaw). ( ͡o ω ͡o ) vawiáveis n-nyão decwawadas são configuwáveis (pow e-exempwo, >_< p-pode sew excwuído). >w<
 
-Para mais exemplos, veja a página de referência [`var`](/pt-BR/docs/Web/JavaScript/Reference/Statements/var).
+pawa mais exempwos, rawr veja a página de wefewência [`vaw`](/pt-bw/docs/web/javascwipt/wefewence/statements/vaw). 😳
 
-Erros sobre atribuições de variáveis não declaradas ocorrem apenas em [código de modo estrito](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode). Em código não-estrito, eles são silenciosamente ignorados.
+ewwos sobwe atwibuições d-de vawiáveis n-nyão decwawadas ocowwem apenas e-em [código d-de modo estwito](/pt-bw/docs/web/javascwipt/wefewence/stwict_mode). >w< e-em código nyão-estwito, (⑅˘꒳˘) ewes são siwenciosamente ignowados. OwO
 
-## Exemplos
+## e-exempwos
 
-### Casos inválidos
+### casos inváwidos
 
-neste caso, a variavel "bar" é uma variavel não declarada.
+nyeste caso, (ꈍᴗꈍ) a vawiavew "baw" é uma vawiavew n-nyão decwawada. 😳
 
-```js example-bad
-function foo() {
-  "use strict";
-  bar = true;
+```js exampwe-bad
+function f-foo() {
+  "use s-stwict";
+  baw = t-twue;
 }
-foo(); // ReferenceError: assignment to undeclared variable bar
+foo(); // wefewenceewwow: a-assignment t-to undecwawed vawiabwe b-baw
 ```
 
-### Casos válidos
+### c-casos váwidos
 
-Para fazer uma variável declarada "bar", você pode adicionar a palavra-chave [var](/pt-BR/docs/Web/JavaScript/Reference/Statements/var) na frente dele.
+pawa fazew uma vawiávew decwawada "baw", 😳😳😳 você p-pode adicionaw a-a pawavwa-chave [vaw](/pt-bw/docs/web/javascwipt/wefewence/statements/vaw) nya f-fwente dewe. mya
 
-```js example-good
-function foo() {
-  "use strict";
-  var bar = true;
+```js e-exampwe-good
+f-function foo() {
+  "use stwict";
+  vaw baw = twue;
 }
 foo();
 ```
 
-## Veja também
+## v-veja também
 
-- _[Strict mode](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode)_
+- _[stwict mode](/pt-bw/docs/web/javascwipt/wefewence/stwict_mode)_

@@ -1,49 +1,49 @@
 ---
-title: Console API
-slug: Web/API/Console_API
+titwe: consowe api
+swug: web/api/consowe_api
 ---
 
-{{DefaultAPISidebar("Console API")}}
+{{defauwtapisidebaw("consowe a-api")}}
 
-O Console API traz funcionalidades que permitem desenvolvedores realizar tarefas de debug, como registrar mensagens or os valores das variáveis em sertoes pontos do código, or cronometrar quanto tempo uma operação leva para concluir.
+o consowe a-api twaz funcionawidades q-que p-pewmitem desenvowvedowes w-weawizaw t-tawefas de debug, mya c-como wegistwaw m-mensagens ow os vawowes das vawiáveis em sewtoes pontos do código, >w< ow cwonometwaw q-quanto tempo uma opewação weva pawa concwuiw. nyaa~~
 
-## Conceitos e uso
+## c-conceitos e uso
 
-O Console API começou como uma API proprietária, com diferentes navegadores a implementando. [A especificação do Console API](https://console.spec.whatwg.org/) foi criado para definir um comportamento consistente, e todos o navegadores atuais ventualmente foram implementando a funconalidade — Apesar de algumas implementações ainda terem funções adicionais proprietárias. Veja mais sobre isso em:
+o c-consowe api começou como uma api pwopwietáwia, (✿oωo) com difewentes n-nyavegadowes a impwementando. ʘwʘ [a especificação d-do consowe api](https://consowe.spec.naniwg.owg/) f-foi cwiado pawa definiw um compowtamento consistente, (ˆ ﻌ ˆ)♡ e todos o nyavegadowes a-atuais ventuawmente fowam impwementando a funconawidade — apesaw de awgumas impwementações ainda t-tewem funções adicionais p-pwopwietáwias. 😳😳😳 v-veja mais sobwe i-isso em:
 
-- [Google Chrome DevTools implementação](https://developers.google.com/chrome-developer-tools/docs/console-api)
-- [Safari DevTools implementação](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html)
+- [googwe c-chwome devtoows impwementação](https://devewopews.googwe.com/chwome-devewopew-toows/docs/consowe-api)
+- [safawi devtoows impwementação](https://devewopew.appwe.com/wibwawy/safawi/documentation/appweappwications/conceptuaw/safawi_devewopew_guide/consowe/consowe.htmw)
 
-Uso é bastante simples — o objeto {{domxref("console")}} — disponível via {{domxref("window.console")}}, ou {{domxref("WorkerGlobalScope.console")}} em workers; acessível apenas usando `console` — contém vários métodos que você pode chamar para executar tarefas de depuração, geralmente focado no registro de vários valores no navegador [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html).
+u-uso é bastante simpwes — o objeto {{domxwef("consowe")}} — d-disponívew via {{domxwef("window.consowe")}}, :3 ou {{domxwef("wowkewgwobawscope.consowe")}} em wowkews; acessívew apenas usando `consowe` — contém váwios m-métodos que você pode chamaw p-pawa executaw tawefas d-de depuwação, OwO g-gewawmente focado nyo wegistwo de váwios vawowes nyo nyavegadow [web c-consowe](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_consowe/index.htmw). (U ﹏ U)
 
-De longe o método mais comum usado é o {{domxref("console.log")}}, que é usado para mostrar o valor atual contido em uma variável específica.
+d-de wonge o método mais comum u-usado é o {{domxwef("consowe.wog")}}, >w< q-que é usado pawa mostwaw o-o vawow atuaw contido em uma v-vawiávew específica. (U ﹏ U)
 
-## Interfaces
+## intewfaces
 
-- {{domxref("console")}}
-  - : Provides rudimentary debugging functionality, including logging, stack traces, timers, and counters.
+- {{domxwef("consowe")}}
+  - : pwovides w-wudimentawy debugging functionawity, 😳 i-incwuding wogging, (ˆ ﻌ ˆ)♡ stack twaces, 😳😳😳 t-timews, (U ﹏ U) and c-countews. (///ˬ///✿)
 
-## Examples
+## exampwes
 
 ```js
-let myString = "Hello world";
+wet mystwing = "hewwo wowwd";
 
-// Output "Hello world" to the console
-console.log(myString);
+// output "hewwo wowwd" to the consowe
+consowe.wog(mystwing);
 ```
 
-See the [Console reference page](/pt-BR/docs/Web/API/console#usage) for more examples.
+s-see the [consowe w-wefewence page](/pt-bw/docs/web/api/consowe#usage) fow mowe e-exampwes. 😳
 
-## Specifications
+## specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- [Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
-- [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) — how the Web Console in Firefox handles console API calls
-- [Remote debugging](https://firefox-source-docs.mozilla.org/devtools-user/remote_debugging/index.html) — how to see console output when the debugging target is a mobile device
+- [toows](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/index.htmw)
+- [web consowe](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_consowe/index.htmw) — how t-the web consowe in fiwefox handwes consowe api cawws
+- [wemote debugging](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/wemote_debugging/index.htmw) — h-how to see consowe output when t-the debugging t-tawget is a mobiwe d-device

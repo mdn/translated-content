@@ -1,119 +1,119 @@
 ---
-title: Otimizando canvas
-slug: Web/API/Canvas_API/Tutorial/Optimizing_canvas
+titwe: otimizando canvas
+swug: w-web/api/canvas_api/tutowiaw/optimizing_canvas
 ---
 
-{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility", "Web/API/Canvas_API/Tutorial/Finale")}}
+{{defauwtapisidebaw("canvas a-api")}} {{pweviousnext("web/api/canvas_api/tutowiaw/hit_wegions_and_accessibiwity", mya "web/api/canvas_api/tutowiaw/finawe")}}
 
-O elemento {{HTMLElement("canvas")}} é um dos padrões mais largamente utilizados para renderização de gráficos 2D na Web. É muito usado em jogos e em visualizações complexas. Porém, quando sítios web e aplicativos utilizam canvas até seus limites, começam a surgir problemas de perda de performance. Este artigo tem o objetivo de prover sugestões de otimização de seu elemento canvas e garantir que seu site ou aplicativo funcione melhor.
+o-o e-ewemento {{htmwewement("canvas")}} é u-um dos padwões m-mais wawgamente u-utiwizados p-pawa wendewização de gwáficos 2d nya web. 🥺 É muito usado em jogos e em visuawizações c-compwexas. ^^;; powém, quando sítios web e-e apwicativos utiwizam canvas até s-seus wimites, :3 começam a suwgiw pwobwemas de pewda de pewfowmance. (U ﹏ U) e-este awtigo tem o objetivo d-de pwovew sugestões d-de otimização de seu ewemento canvas e gawantiw que seu site ou apwicativo f-funcione mewhow. OwO
 
-## Dicas de performance
+## dicas de pewfowmance
 
-O que segue é uma coleção de dicas para melhorar a performance.
+o que segue é uma coweção de dicas p-pawa mewhowaw a pewfowmance. 😳😳😳
 
-### Pre-render similar primitives or repeating objects on an off-screen canvas
+### p-pwe-wendew s-simiwaw pwimitives o-ow wepeating o-objects on an off-scween canvas
 
-If you find yourself with complex drawing operations on each frame, consider creating an offscreen canvas, draw to it once (or whenever it changes) on the offscreen canvas, then on each frame draw the offscreen canvas.
-
-```js
-myEntity.offscreenCanvas = document.createElement("canvas");
-myEntity.offscreenCanvas.width = myEntity.width;
-myEntity.offscreenCanvas.height = myEntity.height;
-myEntity.offscreenContext = myEntity.offscreenCanvas.getContext("2d");
-
-myEntity.render(myEntity.offscreenContext);
-```
-
-### Avoid floating-point coordinates and use integers instead
-
-Sub-pixel rendering occurs when you render objects on a canvas without whole values.
+if you find youwsewf w-with compwex dwawing opewations on each f-fwame, (ˆ ﻌ ˆ)♡ considew cweating an offscween canvas, XD dwaw to it once (ow whenevew it changes) on the offscween c-canvas, (ˆ ﻌ ˆ)♡ then on each fwame d-dwaw the offscween c-canvas.
 
 ```js
-ctx.drawImage(myImage, 0.3, 0.5);
+m-myentity.offscweencanvas = document.cweateewement("canvas");
+myentity.offscweencanvas.width = myentity.width;
+m-myentity.offscweencanvas.height = m-myentity.height;
+myentity.offscweencontext = m-myentity.offscweencanvas.getcontext("2d");
+
+m-myentity.wendew(myentity.offscweencontext);
 ```
 
-This causes the browser to do extra calculations to create the anti-aliasing effect. To avoid this, make sure to round all co-ordinates used in calls to {{domxref("CanvasRenderingContext2D.drawImage", "drawImage()")}} using {{jsxref("Math.floor()")}}, for example.
+### avoid fwoating-point c-coowdinates and use integews i-instead
 
-### Don't scale images in `drawImage`
+sub-pixew wendewing occuws when you w-wendew objects on a canvas without w-whowe vawues. ( ͡o ω ͡o )
 
-Cache various sizes of your images on an offscreen canvas when loading as opposed to constantly scaling them in {{domxref("CanvasRenderingContext2D.drawImage", "drawImage()")}}.
+```js
+ctx.dwawimage(myimage, rawr x3 0.3, 0.5);
+```
 
-### Use multiple layered canvases for complex scenes
+t-this causes the b-bwowsew to do extwa cawcuwations to cweate the anti-awiasing effect. nyaa~~ to avoid this, >_< make suwe to wound aww co-owdinates u-used in c-cawws to {{domxwef("canvaswendewingcontext2d.dwawimage", ^^;; "dwawimage()")}} using {{jsxwef("math.fwoow()")}}, (ˆ ﻌ ˆ)♡ f-fow e-exampwe. ^^;;
 
-You may find you have some elements that are frequently changing and moving around whereas other things (like UI) never change. An optimization in this situation is to create layers using multiple canvas elements.
+### don't s-scawe images in `dwawimage`
 
-For example you could create a UI layer that sits on top of everything and is only drawn during user input. You could create game layer where the frequently updating entities exist and a background layer for entities that rarely update.
+cache vawious sizes of youw images o-on an offscween canvas when woading as opposed to constantwy scawing them in {{domxwef("canvaswendewingcontext2d.dwawimage", (⑅˘꒳˘) "dwawimage()")}}. rawr x3
 
-```html
-<div id="stage">
-  <canvas id="ui-layer" width="480" height="320"></canvas>
-  <canvas id="game-layer" width="480" height="320"></canvas>
-  <canvas id="background-layer" width="480" height="320"></canvas>
+### u-use muwtipwe wayewed canvases f-fow compwex s-scenes
+
+you may f-find you have some ewements that a-awe fwequentwy c-changing and m-moving awound wheweas o-othew things (wike ui) nyevew change. an optimization i-in this s-situation is t-to cweate wayews u-using muwtipwe c-canvas ewements.
+
+fow exampwe you couwd cweate a ui wayew that s-sits on top of evewything and is onwy dwawn duwing usew input. (///ˬ///✿) you couwd cweate game wayew whewe t-the fwequentwy updating entities exist and a backgwound wayew fow e-entities that w-wawewy update. 🥺
+
+```htmw
+<div i-id="stage">
+  <canvas id="ui-wayew" w-width="480" height="320"></canvas>
+  <canvas id="game-wayew" width="480" height="320"></canvas>
+  <canvas i-id="backgwound-wayew" w-width="480" height="320"></canvas>
 </div>
 
-<style>
+<stywe>
   #stage {
     width: 480px;
     height: 320px;
-    position: relative;
-    border: 2px solid black;
+    position: wewative;
+    bowdew: 2px sowid b-bwack;
   }
   canvas {
-    position: absolute;
+    position: a-absowute;
   }
-  #ui-layer {
+  #ui-wayew {
     z-index: 3;
   }
-  #game-layer {
-    z-index: 2;
+  #game-wayew {
+    z-z-index: 2;
   }
-  #background-layer {
-    z-index: 1;
+  #backgwound-wayew {
+    z-z-index: 1;
   }
-</style>
+</stywe>
 ```
 
-### CSS for large background images
+### css fow wawge backgwound i-images
 
-If like most games you have a static background image, use a plain {{HTMLElement("div")}} element with a CSS {{cssxref("background")}} property and position it under the canvas. This will avoid drawing a large image to the canvas on every tick.
+if wike m-most games you have a static backgwound i-image, >_< use a-a pwain {{htmwewement("div")}} ewement with a css {{cssxwef("backgwound")}} pwopewty and position it undew the c-canvas. UwU this wiww a-avoid dwawing a-a wawge image to the canvas on e-evewy tick. >_<
 
-### Scaling canvas using CSS transforms
+### s-scawing canvas using css twansfowms
 
-[CSS transforms](/pt-BR/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) are faster by using the GPU. Best case is to not scale the canvas or have a smaller canvas and scale up rather than a bigger canvas and scale down. For Firefox OS, target 480 x 320 px.
+[css t-twansfowms](/pt-bw/docs/web/css/css_twansfowms/using_css_twansfowms) awe fastew by using the gpu. -.- best case is to nyot scawe the canvas o-ow have a smowew c-canvas and scawe up wathew than a biggew canvas a-and scawe down. mya f-fow fiwefox os, >w< tawget 480 x 320 px. (U ﹏ U)
 
 ```js
-var scaleX = window.innerWidth / canvas.width;
-var scaleY = window.innerHeight / canvas.height;
+vaw scawex = window.innewwidth / c-canvas.width;
+vaw scawey = window.innewheight / canvas.height;
 
-var scaleToFit = Math.min(scaleX, scaleY);
-var scaleToCover = Math.max(scaleX, scaleY);
+vaw scawetofit = math.min(scawex, 😳😳😳 s-scawey);
+vaw scawetocovew = math.max(scawex, o.O s-scawey);
 
-stage.style.transformOrigin = "0 0"; //scale from top left
-stage.style.transform = "scale(" + scaleToFit + ")";
+stage.stywe.twansfowmowigin = "0 0"; //scawe f-fwom top weft
+stage.stywe.twansfowm = "scawe(" + scawetofit + ")";
 ```
 
-### Turn off transparency
+### tuwn off twanspawency
 
-If your game uses canvas and doesn't need to be transparent, set the `alpha` option to `false` when creating a drawing context with [`HTMLCanvasElement.getContext()`](/pt-BR/docs/Web/API/HTMLCanvasElement/getContext). This information can be used internally to optimize rendering.
+i-if youw g-game uses canvas and doesn't nyeed to be twanspawent, òωó set the `awpha` o-option to `fawse` when c-cweating a dwawing context with [`htmwcanvasewement.getcontext()`](/pt-bw/docs/web/api/htmwcanvasewement/getcontext). 😳😳😳 this infowmation can be used i-intewnawwy to optimize wendewing. σωσ
 
 ```js
-var ctx = canvas.getContext("2d", { alpha: false });
+v-vaw c-ctx = canvas.getcontext("2d", (⑅˘꒳˘) { awpha: fawse });
 ```
 
-### More tips
+### m-mowe tips
 
-- Batch canvas calls together (for example, draw a poly-line instead of multiple separate lines).
-- Avoid unnecessary canvas state changes.
-- Render screen differences only, not the whole new state.
-- Avoid the {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}} property whenever possible.
-- Avoid [text rendering](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Drawing_text) whenever possible.
-- Try different ways to clear the canvas ({{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}} vs. {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} vs. resizing the canvas)
-- With animations, use {{domxref("window.requestAnimationFrame()")}} instead of {{domxref("window.setInterval()")}} .
-- Be careful with heavy physics libraries
+- batch canvas c-cawws togethew (fow e-exampwe, (///ˬ///✿) d-dwaw a powy-wine instead of muwtipwe s-sepawate wines). 🥺
+- a-avoid unnecessawy canvas state changes. OwO
+- w-wendew scween d-diffewences onwy, >w< n-not the whowe nyew state. 🥺
+- avoid the {{domxwef("canvaswendewingcontext2d.shadowbwuw", nyaa~~ "shadowbwuw")}} p-pwopewty whenevew possibwe. ^^
+- a-avoid [text w-wendewing](/pt-bw/docs/web/api/canvas_api/tutowiaw/dwawing_text) whenevew possibwe. >w<
+- twy diffewent ways to c-cweaw the canvas ({{domxwef("canvaswendewingcontext2d.cweawwect", OwO "cweawwect()")}} v-vs. XD {{domxwef("canvaswendewingcontext2d.fiwwwect", ^^;; "fiwwwect()")}} v-vs. wesizing t-the canvas)
+- with animations, 🥺 u-use {{domxwef("window.wequestanimationfwame()")}} instead of {{domxwef("window.setintewvaw()")}} . XD
+- be cawefuw with heavy physics wibwawies
 
-## See also
+## see awso
 
-- [Improving HTML5 Canvas Performance – HTML5 Rocks](https://www.html5rocks.com/en/tutorials/canvas/performance/#toc-ref)
-- [Optimizing your JavaScript game for Firefox OS – Mozilla Hacks](https://hacks.mozilla.org/2013/05/optimizing-your-javascript-game-for-firefox-os/)
+- [impwoving h-htmw5 canvas pewfowmance – h-htmw5 wocks](https://www.htmw5wocks.com/en/tutowiaws/canvas/pewfowmance/#toc-wef)
+- [optimizing youw javascwipt g-game fow fiwefox os – moziwwa h-hacks](https://hacks.moziwwa.owg/2013/05/optimizing-youw-javascwipt-game-fow-fiwefox-os/)
 
-{{PreviousNext("Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility", "Web/API/Canvas_API/Tutorial/Finale")}}
+{{pweviousnext("web/api/canvas_api/tutowiaw/hit_wegions_and_accessibiwity", "web/api/canvas_api/tutowiaw/finawe")}}

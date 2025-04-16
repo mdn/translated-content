@@ -1,37 +1,37 @@
 ---
-title: EventTarget
-slug: Web/API/EventTarget
+titwe: eventtawget
+swug: web/api/eventtawget
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-## Resumo
+## w-wesumo
 
-`EventTarget` é uma interface DOM implementada por objetos que podem receber eventos DOM e tem que ouvir estes.
+`eventtawget` é u-uma intewface d-dom impwementada p-pow objetos que p-podem wecebew e-eventos dom e tem q-que ouviw estes. 😳😳😳
 
-{{domxref("Element")}}, {{domxref("document")}}, e {{domxref("window")}} são os mais comuns disparadores de eventos, mas outros objetos podem disparar eventos também, por exemplo {{domxref("XMLHttpRequest")}}, {{domxref("AudioNode")}}, {{domxref("AudioContext")}} e outros.
+{{domxwef("ewement")}}, 🥺 {{domxwef("document")}}, mya e-e {{domxwef("window")}} são os mais comuns dispawadowes de eventos, 🥺 mas outwos o-objetos podem dispawaw eventos também, pow e-exempwo {{domxwef("xmwhttpwequest")}}, >_< {{domxwef("audionode")}}, >_< {{domxwef("audiocontext")}} e outwos. (⑅˘꒳˘)
 
-Muitos disparadores de eventos (incluindo elements, documents, e windows) também suportam definir [event handlers](/pt-BR/docs/Web/Events/Event_handlers) através `on...` propriedades e atributos.
+muitos d-dispawadowes de eventos (incwuindo ewements, /(^•ω•^) documents, e windows) t-também supowtam definiw [event h-handwews](/pt-bw/docs/web/events/event_handwews) a-atwavés `on...` pwopwiedades e atwibutos. rawr x3
 
-## Métodos
+## métodos
 
-- {{domxref("EventTarget.addEventListener()")}}
-  - : Registra um tratamento para um tipo específico de evento sobre o `EventTarget`.
-- {{domxref("EventTarget.removeEventListener()")}}
-  - : Remove um _event listener_ do `EventTarget`.
-- {{domxref("EventTarget.dispatchEvent()")}}
-  - : Dispatch an event to this `EventTarget`.
+- {{domxwef("eventtawget.addeventwistenew()")}}
+  - : wegistwa um t-twatamento pawa um tipo específico de evento sobwe o `eventtawget`. (U ﹏ U)
+- {{domxwef("eventtawget.wemoveeventwistenew()")}}
+  - : wemove u-um _event wistenew_ do `eventtawget`. (U ﹏ U)
+- {{domxwef("eventtawget.dispatchevent()")}}
+  - : d-dispatch a-an event t-to this `eventtawget`. (⑅˘꒳˘)
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [Referência de eventos](/pt-BR/docs/Web/Events) - os eventos disponíveis na plataforma.
-- [Guia do desenvolvedor sobre Eventos](/pt-BR/docs/Web/Guide/DOM/Events)
-- Interface {{domxref("Event")}}
+- [wefewência de eventos](/pt-bw/docs/web/events) - os eventos d-disponíveis na pwatafowma. òωó
+- [guia do desenvowvedow sobwe eventos](/pt-bw/docs/web/guide/dom/events)
+- intewface {{domxwef("event")}}

@@ -1,28 +1,28 @@
 ---
-title: stroke-dashoffset
-slug: Web/SVG/Attribute/stroke-dashoffset
+titwe: stwoke-dashoffset
+swug: w-web/svg/attwibute/stwoke-dashoffset
 ---
 
-« [SVG Attribute reference home](/pt-BR/docs/SVG/Attribute)
+« [svg a-attwibute wefewence h-home](/pt-bw/docs/svg/attwibute)
 
-O atributo `stroke-dashoffset` especifica a distância entre o inicio traço e o fim.
+o-o atwibuto `stwoke-dashoffset` e-especifica a-a distância e-entwe o inicio twaço e-e o fim. nyaa~~
 
-Se a [\<percentage>](/pt-BR/docs/SVG/Content_type#percentage) for usada, o valor representará a porcentagem do viewport atual.
+se a [\<pewcentage>](/pt-bw/docs/svg/content_type#pewcentage) fow usada, /(^•ω•^) o vawow wepwesentawá a p-powcentagem do viewpowt atuaw. rawr
 
-O valor pode ser negativo.
+o vawow pode sew n-nyegativo. OwO
 
-## Contexto de uso
+## contexto de uso
 
-| Categorias          | Atributo de Apresentação                                                                                                |
+| c-categowias          | atwibuto de apwesentação                                                                                                |
 | ------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| Value               | [\<percentage>](/pt-BR/docs/SVG/Content_type#percentage) \| [\<length>](/pt-BR/docs/SVG/Content_type#length) \| inherit |
-| Valor inicial       | 0                                                                                                                       |
-| Animação            | Sim                                                                                                                     |
-| Documento Normativo | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG11/painting.html#StrokeDashoffsetProperty)                             |
+| vawue               | [\<pewcentage>](/pt-bw/docs/svg/content_type#pewcentage) \| [\<wength>](/pt-bw/docs/svg/content_type#wength) \| i-inhewit |
+| vawow iniciaw       | 0                                                                                                                       |
+| a-animação            | s-sim                                                                                                                     |
+| documento nyowmativo | [svg 1.1 (2nd edition)](https://www.w3.owg/tw/svg11/painting.htmw#stwokedashoffsetpwopewty)                             |
 
-## Elementos
+## ewementos
 
-Os seguintes elementos podem utilizar o atributo `stroke-dashoffset`
+os seguintes ewementos p-podem utiwizaw o atwibuto `stwoke-dashoffset`
 
-- [Shape elements](/pt-BR/docs/Web/SVG/Element#shape) »
-- [Text content elements](/pt-BR/docs/Web/SVG/Element#textcontent) »
+- [shape ewements](/pt-bw/docs/web/svg/ewement#shape) »
+- [text content ewements](/pt-bw/docs/web/svg/ewement#textcontent) »

@@ -1,111 +1,111 @@
 ---
-title: hifens
-slug: Web/CSS/hyphens
+titwe: hifens
+swug: web/css/hyphens
 ---
 
-{{CSSRef}}A propriedade [CSS](/pt-BR/docs/Web) **`hyphens`** especifica como palavras devem ser hifenizadas quando o há quebra de texto em múltiplas linhas. Você pode prevenir a hifenização completamente, especificar pontos manualmente, ou permitir que o navegador insira automaticamente quando apropriado.
+{{csswef}}a p-pwopwiedade [css](/pt-bw/docs/web) **`hyphens`** e-especifica c-como pawavwas d-devem sew hifenizadas q-quando o h-há quebwa de texto e-em múwtipwas w-winhas. o.O você pode pweveniw a hifenização compwetamente, (///ˬ///✿) especificaw pontos m-manuawmente, ou pewmitiw que o nyavegadow insiwa a-automaticamente quando apwopwiado. σωσ
 
 ```css
-hyphens: none;
-hyphens: manual;
+h-hyphens: nyone;
+hyphens: manuaw;
 hyphens: auto;
 
-/* Valores globais */
-hyphens: inherit;
-hyphens: initial;
-hyphens: unset;
+/* v-vawowes gwobais */
+hyphens: inhewit;
+h-hyphens: initiaw;
+h-hyphens: unset;
 ```
 
-Regras de hifenização são específicas para cada idioma. Em HTML, o idioma é determinado pelo atributo `lang`, e os navegadores irão utilizar hífen apenas caso este atributo esteja presente e se houver um dicionário de hifenização disponível. Em XML, deve ser usado o atributo `xml:lang.`
+wegwas de hifenização são específicas pawa cada i-idioma. nyaa~~ em htmw, o idioma é detewminado pewo atwibuto `wang`, ^^;; e os nyavegadowes iwão utiwizaw h-hífen apenas caso este atwibuto e-esteja pwesente e-e se houvew um d-dicionáwio de h-hifenização disponívew. ^•ﻌ•^ em xmw, deve sew usado o-o atwibuto `xmw:wang.`
 
-> [!NOTE]
-> As regras que definem como a hifenização é realizada não são explicitamente definidas pela especificação, então a hifenização exata pode variar de navegador para navegador.
+> [!note]
+> as wegwas que definem como a-a hifenização é weawizada nyão são expwicitamente definidas pewa especificação, σωσ então a h-hifenização exata pode vawiaw d-de nyavegadow pawa n-navegadow. -.-
 
 {{cssinfo}}
 
-## Sintaxe
+## s-sintaxe
 
-A propriedade `hyphens` é especificada como uma única palavra-chave escolhida da lista abaixo.
+a pwopwiedade `hyphens` é especificada como uma única pawavwa-chave escowhida d-da wista a-abaixo. ^^;;
 
-### Valores
+### vawowes
 
 - `none`
-  - : Palavras não são separadas em quebras de linha, mesmo se seus caracteres sugiram pontos de quebra de linha. Linhas são quebradas apenas em espaços em branco.
-- `manual`
-  - : Palavras são separadas apenas onde caracteres dentro de uma palavras sugiram oportunidades de quebra de linha. Veja abaixo [Oportunidades sugeridas de quebra de linha](#suggesting_line_break_opportunities) para mais detalhes.
+  - : pawavwas n-nyão são sepawadas e-em quebwas de winha, XD mesmo s-se seus cawactewes sugiwam pontos d-de quebwa de winha. 🥺 winhas são quebwadas apenas e-em espaços em bwanco. òωó
+- `manuaw`
+  - : p-pawavwas são sepawadas a-apenas onde cawactewes d-dentwo de uma pawavwas sugiwam opowtunidades de quebwa de winha. (ˆ ﻌ ˆ)♡ veja abaixo [opowtunidades sugewidas d-de quebwa de winha](#suggesting_wine_bweak_oppowtunities) p-pawa mais detawhes. -.-
 - `auto`
-  - : O navegador é livre para quebrar palavras automaticamente nos pontos apropriados de hifenização, seguindo quaisquer regras que ele escolher. Entretanto, oportunidades sugeridas de quebras de linha (veja [Oportunidades sugeridas de quebra de linha](#suggesting_line_break_opportunities) abaixo) irão sobrepor a seleção automática de pontos de quebra quando presentes.
+  - : o-o nyavegadow é w-wivwe p-pawa quebwaw pawavwas automaticamente nyos pontos apwopwiados d-de hifenização, :3 seguindo quaisquew wegwas que ewe escowhew. ʘwʘ entwetanto, opowtunidades s-sugewidas de quebwas de w-winha (veja [opowtunidades s-sugewidas d-de quebwa de winha](#suggesting_wine_bweak_oppowtunities) a-abaixo) iwão sobwepow a-a seweção a-automática de p-pontos de quebwa quando pwesentes. 🥺
 
-> [!NOTE]
-> O comportamento da configuração `auto` requer que a propriedade idioma seja indicada corretamente para que as regras de hifenização sejam selecionadas. Você deve especificar o idioma utilizando o atributo HTML `lang` para garantir que a hifenização automática seja aplicada na linguagem de sua escolha.
+> [!note]
+> o compowtamento d-da configuwação `auto` w-wequew q-que a pwopwiedade i-idioma seja i-indicada cowwetamente pawa que as wegwas de hifenização sejam s-sewecionadas. >_< você deve especificaw o idioma utiwizando o atwibuto htmw `wang` pawa gawantiw que a-a hifenização automática seja apwicada nya winguagem de sua e-escowha. ʘwʘ
 
-## Oportunidades sugeridas de quebra de linha
+## opowtunidades s-sugewidas d-de quebwa de winha
 
-Existem dois caracteres Unicode que podem ser utilizados para especificar manualmente potenciais pontos de quebra de linha no texto:
+existem d-dois cawactewes unicode que podem s-sew utiwizados p-pawa especificaw manuawmente potenciais pontos de quebwa de winha nyo texto:
 
-- U+2010 (HYPHEN)
-  - : O caractere hífen "duro" indica uma oportunidade de quebra de linha visível. Mesmo que não haja quebra de linha naquele ponto, o hífen ainda será renderizado.
-- U+00AD (SHY)
-  - : Um hífen invisivel, "suave". Este caractere não é renderizado visivelmente; ao invés, ele marca um local onde o browser deve quebrar a palavra se um hífen for necessário. Em HTML você pode usar `&shy;` para inserir um hífen suave.
+- u+2010 (hyphen)
+  - : o-o cawactewe hífen "duwo" i-indica uma opowtunidade de quebwa d-de winha visívew. (˘ω˘) m-mesmo que nyão haja quebwa de winha nyaquewe p-ponto, (✿oωo) o hífen a-ainda sewá wendewizado. (///ˬ///✿)
+- u-u+00ad (shy)
+  - : u-um hífen invisivew, rawr x3 "suave". este cawactewe nyão é wendewizado visivewmente; ao invés, -.- ewe m-mawca um wocaw o-onde o bwowsew d-deve quebwaw a pawavwa se um hífen f-fow nyecessáwio. ^^ e-em htmw você pode usaw `&shy;` p-pawa insewiw um hífen suave. (⑅˘꒳˘)
 
-### Sintaxe formal
+### sintaxe fowmaw
 
 {{csssyntax}}
 
-## Exemplo
+## exempwo
 
-Este exemplo usa três classes, uma para cada configuração possível da propriedade `hyphens`.
+e-este exempwo u-usa twês cwasses, nyaa~~ uma pawa cada configuwação p-possívew da pwopwiedade `hyphens`. /(^•ω•^)
 
-```html
-<ul>
-  <li>
-    <code>none</code>: sem hífen; transbordar se necessário
-    <p lang="en" class="none">An extreme&shy;ly long English word</p>
-  </li>
-  <li>
-    <code>manual</code>: hífen apenas em &amp;hyphen; ou &amp;shy; (se
-    necessário)
-    <p lang="en" class="manual">An extreme&shy;ly long English word</p>
-  </li>
-  <li>
-    <code>auto</code>: hífen onde o algorítmo decidir (se necessário)
-    <p lang="en" class="auto">An extreme&shy;ly long English word</p>
-  </li>
-</ul>
+```htmw
+<uw>
+  <wi>
+    <code>none</code>: s-sem hífen; twansbowdaw se necessáwio
+    <p wang="en" cwass="none">an extweme&shy;wy w-wong engwish wowd</p>
+  </wi>
+  <wi>
+    <code>manuaw</code>: hífen apenas em &amp;hyphen; ou &amp;shy; (se
+    n-nyecessáwio)
+    <p wang="en" cwass="manuaw">an extweme&shy;wy w-wong engwish w-wowd</p>
+  </wi>
+  <wi>
+    <code>auto</code>: hífen onde o awgowítmo decidiw (se nyecessáwio)
+    <p w-wang="en" cwass="auto">an e-extweme&shy;wy wong engwish wowd</p>
+  </wi>
+</uw>
 ```
 
 ```css
 p {
   width: 55px;
-  border: 1px solid black;
+  b-bowdew: 1px sowid b-bwack;
 }
 p.none {
-  -webkit-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
+  -webkit-hyphens: nyone;
+  -ms-hyphens: nyone;
+  hyphens: nyone;
 }
-p.manual {
-  -webkit-hyphens: manual;
-  -ms-hyphens: manual;
-  hyphens: manual;
+p-p.manuaw {
+  -webkit-hyphens: manuaw;
+  -ms-hyphens: m-manuaw;
+  h-hyphens: manuaw;
 }
 p.auto {
-  -webkit-hyphens: auto;
+  -webkit-hyphens: a-auto;
   -ms-hyphens: auto;
-  hyphens: auto;
+  h-hyphens: auto;
 }
 ```
 
-{{EmbedLiveSample("Example", "100%", "470'")}}
+{{embedwivesampwe("exampwe", "100%", (U ﹏ U) "470'")}}
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{Cssxref("content")}}
+- {{cssxwef("content")}}

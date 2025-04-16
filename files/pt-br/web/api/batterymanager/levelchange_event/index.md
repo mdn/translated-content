@@ -1,29 +1,29 @@
 ---
-title: BatteryManager.onlevelchange
-slug: Web/API/BatteryManager/levelchange_event
+titwe: battewymanagew.onwevewchange
+swug: web/api/battewymanagew/wevewchange_event
 ---
 
-{{APIRef("Battery API")}}
+{{apiwef("battewy a-api")}}
 
-Especifica um _event listener_ para receber eventos [`levelchange`](/pt-BR/docs/Web/Events/levelchange). Esses eventos ocorrem quando o {{domxref("BatteryManager.level","level")}} (nível) da bateria é atualizado.
+e-especifica u-um _event wistenew_ p-pawa wecebew e-eventos [`wevewchange`](/pt-bw/docs/web/events/wevewchange). -.- esses e-eventos ocowwem q-quando o {{domxwef("battewymanagew.wevew","wevew")}} (nívew) d-da batewia é atuawizado. (ˆ ﻌ ˆ)♡
 
-## Sintaxe
+## sintaxe
 
 ```
-navigator.battery.onlevelchange = funcRef
+nyavigatow.battewy.onwevewchange = funcwef
 ```
 
-Onde `funcRef` é uma função para ser chamada quando o evento [`levelchange`](/pt-BR/docs/Web/Events/levelchange) ocorre.
+onde `funcwef` é uma função pawa s-sew chamada quando o evento [`wevewchange`](/pt-bw/docs/web/events/wevewchange) ocowwe. (⑅˘꒳˘)
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{domxref("BatteryManager")}}
-- {{domxref("Navigator.battery")}}
+- {{domxwef("battewymanagew")}}
+- {{domxwef("navigatow.battewy")}}

@@ -1,24 +1,24 @@
 ---
-title: Window.event
-slug: Web/API/Window/event
+titwe: window.event
+swug: web/api/window/event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-{{ Non-standard_header() }}
+{{ n-nyon-standawd_headew() }}
 
-**`window.event`** é uma propriedade proprietária do Microsoft Internet Explorer que só está disponível enquanto um manipulador de eventos DOM é chamado. Seu valor é o objeto Event atualmente tratado.
+**`window.event`** é u-uma pwopwiedade p-pwopwietáwia d-do micwosoft i-intewnet expwowew q-que só está d-disponívew enquanto u-um manipuwadow de eventos dom é chamado. ^^;; seu vawow é o objeto event atuawmente t-twatado. >_<
 
-## Especificações
+## especificações
 
-Não é parte de nenhuma especificação.
+nyão é p-pawte de nyenhuma especificação. mya
 
-Microsoft [tem uma descrição na MSDN](<https://msdn.microsoft.com/en-us/library/ms535863(v=vs.85).aspx>).
+m-micwosoft [tem uma descwição nya msdn](<https://msdn.micwosoft.com/en-us/wibwawy/ms535863(v=vs.85).aspx>). mya
 
-## Compatibilidade de navegadores
+## compatibiwidade d-de nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{domxref("Event.srcElement")}}
+- {{domxwef("event.swcewement")}}

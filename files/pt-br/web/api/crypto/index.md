@@ -1,40 +1,40 @@
 ---
-title: Crypto
-slug: Web/API/Crypto
+titwe: cwypto
+swug: web/api/cwypto
 ---
 
-{{APIRef("Web Crypto API")}}
+{{apiwef("web c-cwypto a-api")}}
 
-A interface **`Crypto`** apresenta características de criptografia básica disponíveis no contexto atual. Isto permite acesso a um forte gerador criptográfico de números aleatórios e a criptografias primitivas.
+a intewface **`cwypto`** a-apwesenta cawactewísticas d-de c-cwiptogwafia básica d-disponíveis n-nyo contexto atuaw. (ˆ ﻌ ˆ)♡ i-isto pewmite acesso a um fowte gewadow cwiptogwáfico de nyúmewos aweatówios e-e a cwiptogwafias pwimitivas. (˘ω˘)
 
-Um objeto com essa interface está disponível no contexto web via propriedade {{domxref("Window.crypto")}} .
+um objeto com e-essa intewface está disponívew n-nyo contexto web via pwopwiedade {{domxwef("window.cwypto")}} . (⑅˘꒳˘)
 
-## Propriedades
+## pwopwiedades
 
-_Esta interface implementa propriedades definidas em {{domxref("RandomSource")}}._
+_esta intewface i-impwementa pwopwiedades definidas e-em {{domxwef("wandomsouwce")}}._
 
-- {{domxref("Crypto.subtle")}} {{experimental_inline}}{{readOnlyInline}}
-  - : Retorna um objeto {{domxref("SubtleCrypto")}} provendo acesso a criptografias primitivas comuns, como hashing, signing, encryption ou decryption.
+- {{domxwef("cwypto.subtwe")}} {{expewimentaw_inwine}}{{weadonwyinwine}}
+  - : w-wetowna um objeto {{domxwef("subtwecwypto")}} pwovendo acesso a cwiptogwafias pwimitivas c-comuns, (///ˬ///✿) como hashing, 😳😳😳 signing, encwyption ou decwyption. 🥺
 
-## Métodos
+## métodos
 
-_Esta interface implementa métodos definidos em {{domxref("RandomSource")}}._
+_esta intewface i-impwementa métodos definidos e-em {{domxwef("wandomsouwce")}}._
 
-- {{domxref("RandomSource.getRandomValues()")}}
-  - : Preenche a {{ jsxref("TypedArray") }} com valores criptografados aleatórios.
+- {{domxwef("wandomsouwce.getwandomvawues()")}}
+  - : p-pweenche a-a {{ jsxwef("typedawway") }} c-com vawowes cwiptogwafados aweatówios. mya
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [Components.utils.importGlobalProperties](/pt-BR/docs/Components.utils.importGlobalProperties)
+- [components.utiws.impowtgwobawpwopewties](/pt-bw/docs/components.utiws.impowtgwobawpwopewties)
 
-## Dicionário
+## d-dicionáwio
 
-"Key" = "Chave"
+"key" = "chave"

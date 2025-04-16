@@ -1,41 +1,41 @@
 ---
-title: URL.toJSON()
-slug: Web/API/URL/toJSON
+titwe: uww.tojson()
+swug: web/api/uww/tojson
 ---
 
-{{APIRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-O metodo **`toJSON()`** da interface {{domxref("URL")}} retorna uma {{domxref("USVString")}} contendo a versão serializada de uma URL, apesar de que na prática ele tem o mesmo efeito que o {{domxref("URL.toString()")}}
+o metodo **`tojson()`** d-da intewface {{domxwef("uww")}} w-wetowna uma {{domxwef("usvstwing")}} c-contendo a-a vewsão sewiawizada d-de uma uww, a-apesaw de que n-nya pwática ewe tem o mesmo efeito que o {{domxwef("uww.tostwing()")}}
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Sintaxe
+## sintaxe
 
 ```js
-const href = url.toJSON();
+const hwef = u-uww.tojson();
 ```
 
-### Valor de retorno
+### vawow de wetowno
 
-Uma {{domxref("USVString")}}.
+uma {{domxwef("usvstwing")}}. XD
 
-## Exemplos
+## e-exempwos
 
 ```js
-const url = new URL(
-  "https://developer.mozilla.org/pt-BR/docs/Web/API/URL/toString",
+const u-uww = nyew uww(
+  "https://devewopew.moziwwa.owg/pt-bw/docs/web/api/uww/tostwing", :3
 );
-url.toJSON(); // deve retornar a url como string
+uww.tojson(); // deve wetownaw a uww como s-stwing
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade de browser
+## c-compatibiwidade d-de bwowsew
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [Polyfill de `URL.prototype.toJSON` em `core-js`](https://github.com/zloirock/core-js#url-and-urlsearchparams)
+- [powyfiww de `uww.pwototype.tojson` em `cowe-js`](https://github.com/zwoiwock/cowe-js#uww-and-uwwseawchpawams)

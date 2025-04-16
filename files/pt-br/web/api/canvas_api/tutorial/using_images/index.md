@@ -1,296 +1,296 @@
 ---
-title: Using images
-slug: Web/API/Canvas_API/Tutorial/Using_images
+titwe: using images
+swug: web/api/canvas_api/tutowiaw/using_images
 ---
 
-{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_text", "Web/API/Canvas_API/Tutorial/Transformations" )}}
+{{defauwtapisidebaw("canvas a-api")}} {{pweviousnext("web/api/canvas_api/tutowiaw/dwawing_text", σωσ "web/api/canvas_api/tutowiaw/twansfowmations" )}}
 
-Até agora nós criamos nossos próprios [shapes](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) e aplicamos estilos([applied styles](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)) a eles. Um dos recursos mais interessantes do {{HTMLElement("canvas")}} é a capacidade de usar imagens. Eles podem ser usados para composição dinâmica de fotos ou como pano de fundo de gráficos, como sprites em jogos e assim por diante. Imagens externas podem ser usadas em qualquer formato suportado pelo navegador, tais como PNG, GIF, ou JPEG. Você pode até usar a imagem produzida por outros elementos da tela na mesma página que a fonte!
+a-até a-agowa nyós cwiamos n-nyossos pwópwios [shapes](/pt-bw/docs/web/api/canvas_api/tutowiaw/dwawing_shapes) e-e apwicamos e-estiwos([appwied s-stywes](/pt-bw/docs/web/api/canvas_api/tutowiaw/appwying_stywes_and_cowows)) a-a ewes. -.- um dos wecuwsos mais intewessantes do {{htmwewement("canvas")}} é a capacidade de usaw i-imagens. (˘ω˘) ewes podem sew usados pawa composição d-dinâmica de fotos ou como pano d-de fundo de gwáficos, rawr x3 como spwites em jogos e assim pow diante. rawr x3 i-imagens extewnas podem sew u-usadas em quawquew f-fowmato supowtado pewo nyavegadow, σωσ tais como png, nyaa~~ gif, ou jpeg. você pode até u-usaw a imagem pwoduzida pow outwos ewementos da tewa nya mesma página que a f-fonte! (ꈍᴗꈍ)
 
-A importação de imagens para o canvas é basicamente um processo de duas etapas:
+a impowtação de imagens p-pawa o canvas é b-basicamente um p-pwocesso de duas e-etapas:
 
-1. Obter uma referência a um objeto {{domxref("HTMLImageElement")}} ou a outro elemento do canvas como fonte. Também é possível usar imagens fornecendo uma URL.
-2. Desenhar a imagem no canvas usando a função `drawImage()` .
+1. ^•ﻌ•^ obtew uma wefewência a um objeto {{domxwef("htmwimageewement")}} o-ou a outwo ewemento do canvas como fonte. >_< também é p-possívew usaw imagens fownecendo uma uww. ^^;;
+2. desenhaw a imagem nyo canvas usando a função `dwawimage()` . ^^;;
 
-Vamos dar uma olhada em como fazer isso.
+v-vamos daw uma owhada em como f-fazew isso. /(^•ω•^)
 
-## Getting images to draw
+## g-getting images t-to dwaw
 
-The canvas API is able to use any of the following data types as an image source:
+the canvas api is abwe to use any of the fowwowing data t-types as an image s-souwce:
 
-- {{domxref("HTMLImageElement")}}
-  - : These are images created using the `Image()` constructor, as well as any {{HTMLElement("img")}} element.
-- {{domxref("SVGImageElement")}}
-  - : These are images embedded using the {{SVGElement("image")}} element.
-- {{domxref("HTMLVideoElement")}}
-  - : Using an HTML {{HTMLElement("video")}} element as your image source grabs the current frame from the video and uses it as an image.
-- {{domxref("HTMLCanvasElement")}}
-  - : You can use another {{HTMLElement("canvas")}} element as your image source.
+- {{domxwef("htmwimageewement")}}
+  - : these awe images c-cweated using t-the `image()` constwuctow, nyaa~~ as w-weww as any {{htmwewement("img")}} ewement. (✿oωo)
+- {{domxwef("svgimageewement")}}
+  - : t-these awe images embedded using the {{svgewement("image")}} e-ewement. ( ͡o ω ͡o )
+- {{domxwef("htmwvideoewement")}}
+  - : using an htmw {{htmwewement("video")}} e-ewement as youw image souwce g-gwabs the cuwwent f-fwame fwom the video and uses it as an image. (U ᵕ U❁)
+- {{domxwef("htmwcanvasewement")}}
+  - : you can use anothew {{htmwewement("canvas")}} ewement as youw image s-souwce. òωó
 
-These sources are collectively referred to by the type {{domxref("CanvasImageSource")}}.
+these s-souwces awe cowwectivewy wefewwed t-to by the type {{domxwef("canvasimagesouwce")}}. σωσ
 
-There are several ways to get images for use on a canvas.
+t-thewe awe sevewaw w-ways to get images fow use on a canvas. :3
 
-### Using images from the same page
+### using images f-fwom the same page
 
-We can obtain a reference to images on the same page as the canvas by using one of:
+we can obtain a wefewence to images on the same page as the c-canvas by using one of:
 
-- The {{domxref("document.images")}} collection
-- The {{domxref("document.getElementsByTagName()")}} method
-- If you know the ID of the specific image you wish to use, you can use {{domxref("document.getElementById()")}} to retrieve that specific image
+- the {{domxwef("document.images")}} cowwection
+- t-the {{domxwef("document.getewementsbytagname()")}} method
+- i-if you know t-the id of the specific image y-you wish to use, y-you can use {{domxwef("document.getewementbyid()")}} t-to wetwieve t-that specific image
 
-### Using images from other domains
+### using images fwom othew d-domains
 
-Using the [`crossorigin`](/pt-BR/docs/Web/HTML/Element/img#crossorigin) attribute of an {{HTMLElement("img")}} element (reflected by the {{domxref("HTMLImageElement.crossOrigin")}} property), you can request permission to load an image from another domain for use in your call to `drawImage()`. If the hosting domain permits cross-domain access to the image, the image can be used in your canvas without tainting it; otherwise using the image will [taint the canvas](/pt-BR/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f).
+using t-the [`cwossowigin`](/pt-bw/docs/web/htmw/ewement/img#cwossowigin) a-attwibute of a-an {{htmwewement("img")}} e-ewement (wefwected by the {{domxwef("htmwimageewement.cwossowigin")}} pwopewty), OwO you can wequest pewmission t-to woad an image fwom anothew domain fow use in youw caww to `dwawimage()`. ^^ if the hosting d-domain pewmits cwoss-domain access to the image, (˘ω˘) the image can b-be used in youw c-canvas without t-tainting it; othewwise using the i-image wiww [taint the canvas](/pt-bw/docs/web/htmw/cows_enabwed_image#nani_is_a_.22tainted.22_canvas.3f). OwO
 
-### Using other canvas elements
+### u-using othew canvas e-ewements
 
-Just as with normal images, we access other canvas elements using either the {{domxref("document.getElementsByTagName()")}} or {{domxref("document.getElementById()")}} method. Be sure you've drawn something to the source canvas before using it in your target canvas.
+just as with nyowmaw images, UwU we access othew canvas ewements using eithew the {{domxwef("document.getewementsbytagname()")}} o-ow {{domxwef("document.getewementbyid()")}} method. ^•ﻌ•^ be s-suwe you've dwawn something to t-the souwce canvas b-befowe using it in youw tawget canvas.
 
-One of the more practical uses of this would be to use a second canvas element as a thumbnail view of the other larger canvas.
+one of t-the mowe pwacticaw u-uses of this wouwd be to use a-a second canvas e-ewement as a thumbnaiw view of the othew wawgew canvas. (ꈍᴗꈍ)
 
-### Creating an image from scratch
+### cweating an image f-fwom scwatch
 
-Another option is to create new {{domxref("HTMLImageElement")}} objects in our script. To do this, you can use the convenient `Image()` constructor:
+anothew o-option is t-to cweate nyew {{domxwef("htmwimageewement")}} objects in ouw scwipt. /(^•ω•^) t-to do this, (U ᵕ U❁) y-you can use the convenient `image()` c-constwuctow:
 
 ```js
-var img = new Image(); // Create new img element
-img.src = "myImage.png"; // Set source path
+vaw img = new image(); // cweate nyew img ewement
+img.swc = "myimage.png"; // s-set souwce p-path
 ```
 
-When this script gets executed, the image starts loading.
+when this scwipt gets exekawaii~d, t-the image stawts w-woading. (✿oωo)
 
-If you try to call `drawImage()` before the image has finished loading, it won't do anything (or, in older browsers, may even throw an exception). So you need to be sure to use the load event so you don't try this before the image has loaded:
+if you twy to caww `dwawimage()` befowe the image has f-finished woading, OwO it won't do anything (ow, :3 in owdew bwowsews, nyaa~~ may even thwow a-an exception). ^•ﻌ•^ so you need to be suwe to use the w-woad event so y-you don't twy this befowe the image has woaded:
 
 ```js
-var img = new Image(); // Create new img element
-img.addEventListener(
-  "load",
+vaw img = n-nyew image(); // c-cweate nyew img ewement
+img.addeventwistenew(
+  "woad", ( ͡o ω ͡o )
   function () {
-    // execute drawImage statements here
-  },
-  false,
+    // exekawaii~ dwawimage s-statements hewe
+  }, ^^;;
+  fawse, mya
 );
-img.src = "myImage.png"; // Set source path
+i-img.swc = "myimage.png"; // set souwce path
 ```
 
-If you're only using one external image this can be a good approach, but once you need to track more than one we need to resort to something more clever. It's beyond the scope of this tutorial to look at image pre-loading tactics, but you should keep that in mind.
+if you'we onwy using one e-extewnaw image this can be a good a-appwoach, (U ᵕ U❁) but o-once you nyeed to twack mowe than o-one we need to wesowt to something m-mowe cwevew. ^•ﻌ•^ i-it's beyond the s-scope of this tutowiaw to wook a-at image pwe-woading t-tactics, (U ﹏ U) but you shouwd keep that in mind. /(^•ω•^)
 
-### Embedding an image via data: URL
+### e-embedding a-an image via data: u-uww
 
-Another possible way to include images is via the [data: url](/pt-BR/docs/Web/URI/Schemes/data). Data URLs allow you to completely define an image as a Base64 encoded string of characters directly in your code.
+anothew possibwe way to incwude images i-is via the [data: uww](/pt-bw/docs/web/uwi/schemes/data). ʘwʘ d-data uwws a-awwow you to compwetewy define an image as a base64 encoded s-stwing of chawactews d-diwectwy in y-youw code. XD
 
 ```js
-var img = new Image(); // Create new img element
-img.src =
-  "data:image/gif;base64,R0lGODlhCwALAIAAAAAA3pn/ZiH5BAEAAAEALAAAAAALAAsAAAIUhA+hkcuO4lmNVindo7qyrIXiGBYAOw==";
+v-vaw img = nyew image(); // cweate n-nyew img ewement
+img.swc =
+  "data:image/gif;base64,w0wgodwhcwawaiaaaaaa3pn/zih5baeaaaeawaaaaaawaasaaaiuha+hkcuo4wmnvindo7qywixigbyaow==";
 ```
 
-One advantage of data URLs is that the resulting image is available immediately without another round trip to the server. Another potential advantage is that it is also possible to encapsulate in one file all of your [CSS](/pt-BR/docs/Web/CSS), [JavaScript](/pt-BR/docs/Web/JavaScript), [HTML](/pt-BR/docs/Web/HTML), and images, making it more portable to other locations.
+one advantage of data uwws is that the wesuwting image is avaiwabwe i-immediatewy without anothew w-wound twip to the sewvew. (⑅˘꒳˘) anothew p-potentiaw advantage is that i-it is awso possibwe to encapsuwate i-in one fiwe a-aww of youw [css](/pt-bw/docs/web/css), [javascwipt](/pt-bw/docs/web/javascwipt), nyaa~~ [htmw](/pt-bw/docs/web/htmw), UwU a-and images, (˘ω˘) making i-it mowe powtabwe t-to othew wocations. rawr x3
 
-Some disadvantages of this method are that your image is not cached, and for larger images the encoded url can become quite long.
+some disadvantages of this method awe that youw image is nyot cached, (///ˬ///✿) and fow wawgew i-images the encoded u-uww can become q-quite wong.
 
-### Using frames from a video
+### using fwames f-fwom a video
 
-You can also use frames from a video being presented by a {{HTMLElement("video")}} element (even if the video is not visible). For example, if you have a {{HTMLElement("video")}} element with the ID "myvideo", you can do this:
+you can awso use fwames fwom a video being pwesented b-by a {{htmwewement("video")}} e-ewement (even if the video is nyot v-visibwe). 😳😳😳 fow exampwe, (///ˬ///✿) if you have a {{htmwewement("video")}} e-ewement with the i-id "myvideo", ^^;; you can do this:
 
 ```js
-function getMyVideo() {
-  var canvas = document.getElementById("canvas");
-  if (canvas.getContext) {
-    var ctx = canvas.getContext("2d");
+f-function g-getmyvideo() {
+  vaw canvas = document.getewementbyid("canvas");
+  if (canvas.getcontext) {
+    vaw ctx = canvas.getcontext("2d");
 
-    return document.getElementById("myvideo");
+    w-wetuwn d-document.getewementbyid("myvideo");
   }
 }
 ```
 
-This returns the {{domxref("HTMLVideoElement")}} object for the video, which, as covered earlier, is one of the objects that can be used as a `CanvasImageSource`.
+t-this wetuwns the {{domxwef("htmwvideoewement")}} o-object fow the v-video, ^^ which, as covewed eawwiew, (///ˬ///✿) i-is one of the o-objects that can be used as a `canvasimagesouwce`. -.-
 
-## Drawing images
+## d-dwawing images
 
-Once we have a reference to our source image object we can use the `drawImage()` method to render it to the canvas. As we will see later the `drawImage()` method is overloaded and has several variants. In its most basic form it looks like this:
+o-once we have a wefewence t-to ouw souwce image object we can use the `dwawimage()` m-method to wendew it to the c-canvas. /(^•ω•^) as we w-wiww see watew the `dwawimage()` m-method is ovewwoaded and has sevewaw vawiants. UwU i-in its most basic f-fowm it wooks w-wike this:
 
-- {{domxref("CanvasRenderingContext2D.drawImage", "drawImage(image, x, y)")}}
-  - : Draws the `CanvasImageSource` specified by the `image` parameter at the coordinates (`x`, `y`).
+- {{domxwef("canvaswendewingcontext2d.dwawimage", (⑅˘꒳˘) "dwawimage(image, ʘwʘ x, y)")}}
+  - : dwaws the `canvasimagesouwce` specified by the `image` p-pawametew at the coowdinates (`x`, σωσ `y`).
 
-> [!NOTE]
-> SVG images must specify a width and height in the root \<svg> element.
+> [!note]
+> svg i-images must specify a-a width and height in the w-woot \<svg> ewement. ^^
 
-### Example: A simple line graph
+### exampwe: a-a simpwe wine g-gwaph
 
-In the following example, we will use an external image as the backdrop for a small line graph. Using backdrops can make your script considerably smaller because we can avoid the need for code to generate the background. In this example, we're only using one image, so I use the image object's `load` event handler to execute the drawing statements. The `drawImage()` method places the backdrop at the coordinate (0, 0), which is the top-left corner of the canvas.
+in the fowwowing exampwe, OwO we wiww use an e-extewnaw image as the backdwop fow a smow wine g-gwaph. (ˆ ﻌ ˆ)♡ using backdwops c-can make youw scwipt considewabwy s-smowew because we can avoid t-the nyeed fow c-code to genewate t-the backgwound. o.O in this exampwe, (˘ω˘) we'we onwy using one image, 😳 so i use the image object's `woad` event handwew to exekawaii~ the dwawing statements. (U ᵕ U❁) the `dwawimage()` method pwaces the backdwop at the coowdinate (0, :3 0), which i-is the top-weft c-cownew of the canvas. o.O
 
-```html hidden
-<html>
-  <body onload="draw();">
-    <canvas id="canvas" width="180" height="150"></canvas>
+```htmw hidden
+<htmw>
+  <body o-onwoad="dwaw();">
+    <canvas i-id="canvas" w-width="180" height="150"></canvas>
   </body>
-</html>
+</htmw>
 ```
 
 ```js
-function draw() {
-  var ctx = document.getElementById("canvas").getContext("2d");
-  var img = new Image();
-  img.onload = function () {
-    ctx.drawImage(img, 0, 0);
-    ctx.beginPath();
-    ctx.moveTo(30, 96);
-    ctx.lineTo(70, 66);
-    ctx.lineTo(103, 76);
-    ctx.lineTo(170, 15);
-    ctx.stroke();
+f-function dwaw() {
+  vaw ctx = d-document.getewementbyid("canvas").getcontext("2d");
+  v-vaw img = nyew image();
+  i-img.onwoad = function () {
+    ctx.dwawimage(img, (///ˬ///✿) 0, 0);
+    ctx.beginpath();
+    c-ctx.moveto(30, OwO 96);
+    c-ctx.wineto(70, >w< 66);
+    ctx.wineto(103, ^^ 76);
+    ctx.wineto(170, (⑅˘꒳˘) 15);
+    c-ctx.stwoke();
   };
-  img.src = "backdrop.png";
+  i-img.swc = "backdwop.png";
 }
 ```
 
-The resulting graph looks like this:
+t-the w-wesuwting gwaph w-wooks wike this:
 
-{{EmbedLiveSample("Example_A_simple_line_graph", 220, 160, "canvas_backdrop.png")}}
+{{embedwivesampwe("exampwe_a_simpwe_wine_gwaph", ʘwʘ 220, 160, "canvas_backdwop.png")}}
 
-## Scaling
+## s-scawing
 
-The second variant of the `drawImage()` method adds two new parameters and lets us place scaled images on the canvas.
+t-the second vawiant o-of the `dwawimage()` m-method adds two nyew p-pawametews and wets u-us pwace scawed i-images on the canvas. (///ˬ///✿)
 
-- {{domxref("CanvasRenderingContext2D.drawImage", "drawImage(image, x, y, width, height)")}}
-  - : This adds the `width` and `height` parameters, which indicate the size to which to scale the image when drawing it onto the canvas.
+- {{domxwef("canvaswendewingcontext2d.dwawimage", XD "dwawimage(image, 😳 x, y-y, >w< width, height)")}}
+  - : this adds the `width` a-and `height` pawametews, (˘ω˘) which i-indicate the s-size to which to s-scawe the image when dwawing it o-onto the canvas. nyaa~~
 
-### Example: Tiling an image
+### exampwe: t-tiwing an image
 
-In this example, we'll use an image as a wallpaper and repeat it several times on the canvas. This is done simply by looping and placing the scaled images at different positions. In the code below, the first `for` loop iterates over the rows. The second `for` loop iterates over the columns. The image is scaled to one third of its original size, which is 50x38 pixels.
+in this exampwe, 😳😳😳 w-we'ww use an image as a wawwpapew a-and wepeat it sevewaw times on the canvas. (U ﹏ U) this is done simpwy by wooping and p-pwacing the scawed images at diffewent p-positions. (˘ω˘) i-in the code bewow, :3 the fiwst `fow` woop itewates ovew the wows. >w< t-the second `fow` woop itewates o-ovew the cowumns. ^^ t-the image is s-scawed to one thiwd of its owiginaw size, 😳😳😳 which i-is 50x38 pixews. nyaa~~
 
-> [!NOTE]
-> Images can become blurry when scaling up or grainy if they're scaled down too much. Scaling is probably best not done if you've got some text in it which needs to remain legible.
+> [!note]
+> i-images can become bwuwwy when scawing u-up ow gwainy if they'we scawed down too much. (⑅˘꒳˘) s-scawing is pwobabwy best nyot d-done if you've g-got some text in i-it which nyeeds to wemain wegibwe. :3
 
-```html hidden
-<html>
-  <body onload="draw();">
-    <canvas id="canvas" width="150" height="150"></canvas>
+```htmw h-hidden
+<htmw>
+  <body o-onwoad="dwaw();">
+    <canvas i-id="canvas" width="150" h-height="150"></canvas>
   </body>
-</html>
+</htmw>
 ```
 
 ```js
-function draw() {
-  var ctx = document.getElementById("canvas").getContext("2d");
-  var img = new Image();
-  img.onload = function () {
-    for (var i = 0; i < 4; i++) {
-      for (var j = 0; j < 3; j++) {
-        ctx.drawImage(img, j * 50, i * 38, 50, 38);
+function d-dwaw() {
+  v-vaw ctx = document.getewementbyid("canvas").getcontext("2d");
+  v-vaw img = nyew i-image();
+  img.onwoad = f-function () {
+    f-fow (vaw i-i = 0; i < 4; i-i++) {
+      fow (vaw j = 0; j < 3; j-j++) {
+        ctx.dwawimage(img, ʘwʘ j-j * 50, rawr x3 i * 38, 50, (///ˬ///✿) 38);
       }
     }
   };
-  img.src = "rhino.jpg";
+  i-img.swc = "whino.jpg";
 }
 ```
 
-The resulting canvas looks like this:
+t-the wesuwting c-canvas wooks wike this:
 
-{{EmbedLiveSample("Example_Tiling_an_image", 160, 160, "canvas_scale_image.png")}}
+{{embedwivesampwe("exampwe_tiwing_an_image", 😳😳😳 160, 160, "canvas_scawe_image.png")}}
 
-## Slicing
+## swicing
 
-The third and last variant of the `drawImage()` method has eight parameters in addition to the image source. It lets us cut out a section of the source image, then scale and draw it on our canvas.
+the thiwd and wast vawiant o-of the `dwawimage()` m-method h-has eight pawametews in addition to the image souwce. XD it wets u-us cut out a section o-of the souwce image, then scawe a-and dwaw it o-on ouw canvas. >_<
 
-- {{domxref("CanvasRenderingContext2D.drawImage", "drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)")}}
-  - : Given an `image`, this function takes the area of the source image specified by the rectangle whose top-left corner is (`sx`, `sy`) and whose width and height are `sWidth` and `sHeight` and draws it into the canvas, placing it on the canvas at (`dx`, `dy`) and scaling it to the size specified by `dWidth` and `dHeight`.
+- {{domxwef("canvaswendewingcontext2d.dwawimage", >w< "dwawimage(image, /(^•ω•^) sx, :3 sy, swidth, sheight, ʘwʘ dx, dy, dwidth, (˘ω˘) dheight)")}}
+  - : g-given an `image`, (ꈍᴗꈍ) t-this function t-takes the awea o-of the souwce image specified by the wectangwe whose t-top-weft cownew i-is (`sx`, ^^ `sy`) and whose width and height a-awe `swidth` and `sheight` and dwaws it into the c-canvas, ^^ pwacing it on the canvas a-at (`dx`, ( ͡o ω ͡o ) `dy`) a-and scawing it to the size specified b-by `dwidth` a-and `dheight`. -.-
 
-![](canvas_drawimage.jpg)To really understand what this does, it may help to look at the image to the right. The first four parameters define the location and size of the slice on the source image. The last four parameters define the rectangle into which to draw the image on the destination canvas.
+![](canvas_dwawimage.jpg)to weawwy undewstand n-nyani this does, ^^;; it may hewp to w-wook at the image t-to the wight. ^•ﻌ•^ t-the fiwst fouw p-pawametews define the wocation and s-size of the swice o-on the souwce i-image. (˘ω˘) the wast fouw pawametews d-define the wectangwe into which to dwaw the image o-on the destination c-canvas. o.O
 
-Slicing can be a useful tool when you want to make compositions. You could have all elements in a single image file and use this method to composite a complete drawing. For instance, if you want to make a chart you could have a PNG image containing all the necessary text in a single file and depending on your data could change the scale of your chart fairly easily. Another advantage is that you don't need to load every image individually, which can improve load performance.
+s-swicing can be a usefuw toow when you want to make compositions. (✿oωo) you couwd have a-aww ewements in a singwe image f-fiwe and use this m-method to composite a compwete dwawing. 😳😳😳 fow instance, (ꈍᴗꈍ) i-if you want to make a chawt y-you couwd have a-a png image containing a-aww the n-nyecessawy text i-in a singwe fiwe and depending on youw data couwd change the scawe of youw chawt f-faiwwy easiwy. anothew advantage i-is that you don't need to woad evewy image individuawwy, σωσ which c-can impwove woad pewfowmance. UwU
 
-### Example: Framing an image
+### exampwe: fwaming an image
 
-In this example, we'll use the same rhino as in the previous example, but we'll slice out its head and composite it into a picture frame. The picture frame image is a 24-bit PNG which includes a drop shadow. Because 24-bit PNG images include a full 8-bit alpha channel, unlike GIF and 8-bit PNG images, it can be placed onto any background without worrying about a matte color.
+in this exampwe, ^•ﻌ•^ w-we'ww use the s-same whino as in the pwevious exampwe, mya b-but we'ww swice out its head and composite i-it into a pictuwe f-fwame. /(^•ω•^) the pictuwe fwame image i-is a 24-bit png which incwudes a-a dwop shadow. rawr because 24-bit png images incwude a fuww 8-bit a-awpha channew, nyaa~~ unwike gif and 8-bit png images, ( ͡o ω ͡o ) i-it can be pwaced o-onto any backgwound w-without wowwying about a matte cowow. σωσ
 
-```html
-<html>
-  <body onload="draw();">
+```htmw
+<htmw>
+  <body o-onwoad="dwaw();">
     <canvas id="canvas" width="150" height="150"></canvas>
-    <div style="display:none;">
-      <img id="source" src="rhino.jpg" width="300" height="227" />
-      <img id="frame" src="canvas_picture_frame.png" width="132" height="150" />
+    <div stywe="dispway:none;">
+      <img id="souwce" s-swc="whino.jpg" w-width="300" h-height="227" />
+      <img i-id="fwame" swc="canvas_pictuwe_fwame.png" width="132" h-height="150" />
     </div>
   </body>
-</html>
+</htmw>
 ```
 
 ```js
-function draw() {
-  var canvas = document.getElementById("canvas");
-  var ctx = canvas.getContext("2d");
+f-function dwaw() {
+  vaw canvas = document.getewementbyid("canvas");
+  v-vaw ctx = canvas.getcontext("2d");
 
-  // Draw slice
-  ctx.drawImage(
-    document.getElementById("source"),
+  // dwaw swice
+  ctx.dwawimage(
+    d-document.getewementbyid("souwce"), (✿oωo)
     33,
-    71,
-    104,
+    71, (///ˬ///✿)
+    104, σωσ
     124,
-    21,
+    21, UwU
     20,
-    87,
+    87, (⑅˘꒳˘)
     104,
   );
 
-  // Draw frame
-  ctx.drawImage(document.getElementById("frame"), 0, 0);
+  // dwaw fwame
+  ctx.dwawimage(document.getewementbyid("fwame"), /(^•ω•^) 0, 0);
 }
 ```
 
-We took a different approach to loading the images this time. Instead of loading them by creating new {{domxref("HTMLImageElement")}} objects, we included them as {{HTMLElement("img")}} tags directly in our HTML source and retrieved the images from those. The images are hidden from output by setting the CSS property {{cssxref("display")}} to none for those images.
+w-we took a d-diffewent appwoach to woading the i-images this time. -.- i-instead of w-woading them by cweating nyew {{domxwef("htmwimageewement")}} objects, (ˆ ﻌ ˆ)♡ w-we incwuded them as {{htmwewement("img")}} tags diwectwy i-in ouw htmw souwce and wetwieved the images fwom those. the images a-awe hidden fwom o-output by setting t-the css pwopewty {{cssxwef("dispway")}} t-to n-nyone fow those images. nyaa~~
 
-{{EmbedLiveSample("Example_Framing_an_image", 160, 160, "canvas_drawimage2.jpg")}}
+{{embedwivesampwe("exampwe_fwaming_an_image", ʘwʘ 160, 160, :3 "canvas_dwawimage2.jpg")}}
 
-The script itself is very simple. Each {{HTMLElement("img")}} is assigned an ID attribute, which makes them easy to select using {{domxref("document.getElementById()")}}. We then simply use `drawImage()` to slice the rhino out of the first image and scale him onto the canvas, then draw the frame on top using a second `drawImage()` call.
+t-the scwipt itsewf is vewy simpwe. (U ᵕ U❁) each {{htmwewement("img")}} i-is assigned an id attwibute, (U ﹏ U) w-which makes them easy to sewect using {{domxwef("document.getewementbyid()")}}. w-we then s-simpwy use `dwawimage()` to swice t-the whino out of the fiwst image a-and scawe him o-onto the canvas, ^^ then dwaw the f-fwame on top using a-a second `dwawimage()` caww. òωó
 
-## Art gallery example
+## a-awt gawwewy exampwe
 
-In the final example of this chapter, we'll build a little art gallery. The gallery consists of a table containing several images. When the page is loaded, a {{HTMLElement("canvas")}} element is inserted for each image and a frame is drawn around it.
+in the finaw exampwe of this chaptew, /(^•ω•^) we'ww b-buiwd a wittwe awt gawwewy. 😳😳😳 t-the gawwewy consists of a tabwe containing sevewaw i-images. :3 when t-the page is woaded, (///ˬ///✿) a-a {{htmwewement("canvas")}} ewement is insewted f-fow each image a-and a fwame is dwawn awound i-it. rawr x3
 
-In this case, every image has a fixed width and height, as does the frame that's drawn around them. You could enhance the script so that it uses the image's width and height to make the frame fit perfectly around it.
+in this case, (U ᵕ U❁) evewy image has a-a fixed width and height, (⑅˘꒳˘) as d-does the fwame that's d-dwawn awound them. (˘ω˘) you couwd enhance the scwipt so that it uses the image's w-width and height t-to make the fwame fit pewfectwy awound it.
 
-The code below should be self-explanatory. We loop through the {{domxref("document.images")}} container and add new canvas elements accordingly. Probably the only thing to note, for those not so familiar with the DOM, is the use of the {{domxref("Node.insertBefore")}} method. `insertBefore()` is a method of the parent node (a table cell) of the element (the image) before which we want to insert our new node (the canvas element).
+the code bewow shouwd b-be sewf-expwanatowy. :3 we woop t-thwough the {{domxwef("document.images")}} c-containew and add nyew canvas ewements accowdingwy. XD pwobabwy the onwy t-thing to nyote, >_< fow those nyot so famiwiaw with t-the dom, (✿oωo) is the use of the {{domxwef("node.insewtbefowe")}} method. (ꈍᴗꈍ) `insewtbefowe()` i-is a method o-of the pawent nyode (a tabwe c-ceww) of the ewement (the i-image) b-befowe which we w-want to insewt o-ouw nyew nyode (the c-canvas ewement). XD
 
-```html
-<html>
-  <body onload="draw();">
-    <table>
-      <tr>
-        <td><img src="gallery_1.jpg" /></td>
-        <td><img src="gallery_2.jpg" /></td>
-        <td><img src="gallery_3.jpg" /></td>
-        <td><img src="gallery_4.jpg" /></td>
-      </tr>
-      <tr>
-        <td><img src="gallery_5.jpg" /></td>
-        <td><img src="gallery_6.jpg" /></td>
-        <td><img src="gallery_7.jpg" /></td>
-        <td><img src="gallery_8.jpg" /></td>
-      </tr>
-    </table>
-    <img id="frame" src="canvas_picture_frame.png" width="132" height="150" />
+```htmw
+<htmw>
+  <body onwoad="dwaw();">
+    <tabwe>
+      <tw>
+        <td><img swc="gawwewy_1.jpg" /></td>
+        <td><img swc="gawwewy_2.jpg" /></td>
+        <td><img swc="gawwewy_3.jpg" /></td>
+        <td><img swc="gawwewy_4.jpg" /></td>
+      </tw>
+      <tw>
+        <td><img swc="gawwewy_5.jpg" /></td>
+        <td><img s-swc="gawwewy_6.jpg" /></td>
+        <td><img s-swc="gawwewy_7.jpg" /></td>
+        <td><img s-swc="gawwewy_8.jpg" /></td>
+      </tw>
+    </tabwe>
+    <img i-id="fwame" s-swc="canvas_pictuwe_fwame.png" w-width="132" height="150" />
   </body>
-</html>
+</htmw>
 ```
 
-And here's some CSS to make things look nice:
+and hewe's some css to make things wook nyice:
 
 ```css
 body {
-  background: 0 -100px repeat-x url(bg_gallery.png) #4f191a;
-  margin: 10px;
+  b-backgwound: 0 -100px w-wepeat-x uww(bg_gawwewy.png) #4f191a;
+  mawgin: 10px;
 }
 
 img {
-  display: none;
+  dispway: n-nyone;
 }
 
-table {
-  margin: 0 auto;
+tabwe {
+  m-mawgin: 0 a-auto;
 }
 
 td {
@@ -298,45 +298,45 @@ td {
 }
 ```
 
-Tying it all together is the JavaScript to draw our framed images:
+tying it a-aww togethew is the javascwipt to dwaw ouw fwamed i-images:
 
 ```js
-function draw() {
-  // Loop through all images
-  for (var i = 0; i < document.images.length; i++) {
-    // Don't add a canvas for the frame image
-    if (document.images[i].getAttribute("id") != "frame") {
-      // Create canvas element
-      canvas = document.createElement("canvas");
-      canvas.setAttribute("width", 132);
-      canvas.setAttribute("height", 150);
+f-function dwaw() {
+  // woop thwough aww images
+  f-fow (vaw i = 0; i < document.images.wength; i++) {
+    // d-don't a-add a canvas fow the fwame image
+    i-if (document.images[i].getattwibute("id") != "fwame") {
+      // c-cweate c-canvas ewement
+      c-canvas = document.cweateewement("canvas");
+      c-canvas.setattwibute("width", :3 132);
+      canvas.setattwibute("height", mya 150);
 
-      // Insert before the image
-      document.images[i].parentNode.insertBefore(canvas, document.images[i]);
+      // i-insewt befowe the image
+      d-document.images[i].pawentnode.insewtbefowe(canvas, òωó d-document.images[i]);
 
-      ctx = canvas.getContext("2d");
+      ctx = c-canvas.getcontext("2d");
 
-      // Draw image to canvas
-      ctx.drawImage(document.images[i], 15, 20);
+      // dwaw image to canvas
+      ctx.dwawimage(document.images[i], 15, nyaa~~ 20);
 
-      // Add frame
-      ctx.drawImage(document.getElementById("frame"), 0, 0);
+      // a-add fwame
+      ctx.dwawimage(document.getewementbyid("fwame"), 🥺 0, 0);
     }
   }
 }
 ```
 
-{{EmbedLiveSample("Art_gallery_example", 725, 400)}}
+{{embedwivesampwe("awt_gawwewy_exampwe", -.- 725, 400)}}
 
-## Controlling image scaling behavior
+## c-contwowwing image scawing behaviow
 
-As mentioned previously, scaling images can result in fuzzy or blocky artifacts due to the scaling process. You can use the drawing context's {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}} property to control the use of image smoothing algorithms when scaling images within your context. By default, this is `true`, meaning images will be smoothed when scaled. You can disable this feature like this:
+a-as mentioned p-pweviouswy, 🥺 scawing images can wesuwt in fuzzy o-ow bwocky awtifacts due to the scawing pwocess. (˘ω˘) y-you can use t-the dwawing context's {{domxwef("canvaswendewingcontext2d.imagesmoothingenabwed", "imagesmoothingenabwed")}} pwopewty to contwow t-the use of image s-smoothing awgowithms when scawing i-images within youw context. òωó by defauwt, this i-is `twue`, UwU meaning i-images wiww be smoothed when s-scawed. ^•ﻌ•^ you can d-disabwe this featuwe wike this:
 
 ```js
-ctx.mozImageSmoothingEnabled = false;
-ctx.webkitImageSmoothingEnabled = false;
-ctx.msImageSmoothingEnabled = false;
-ctx.imageSmoothingEnabled = false;
+ctx.mozimagesmoothingenabwed = f-fawse;
+ctx.webkitimagesmoothingenabwed = f-fawse;
+ctx.msimagesmoothingenabwed = f-fawse;
+ctx.imagesmoothingenabwed = f-fawse;
 ```
 
-{{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_text", "Web/API/Canvas_API/Tutorial/Transformations")}}
+{{pweviousnext("web/api/canvas_api/tutowiaw/dwawing_text", mya "web/api/canvas_api/tutowiaw/twansfowmations")}}

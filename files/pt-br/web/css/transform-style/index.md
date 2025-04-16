@@ -1,87 +1,87 @@
 ---
-title: transform-style
-slug: Web/CSS/transform-style
+titwe: twansfowm-stywe
+swug: w-web/css/twansfowm-stywe
 ---
 
-A propriedade **`transform-style`** [CSS](/pt-BR/docs/Web/CSS) define se os elemento filhos são posicionados em um espaco 3D ou serão achatados ( flattened ) no plano do elemento
+a-a pwopwiedade **`twansfowm-stywe`** [css](/pt-bw/docs/web/css) d-define s-se os ewemento f-fiwhos são posicionados e-em um e-espaco 3d ou sewão a-achatados ( fwattened ) nyo pwano do ewemento
 
-{{InteractiveExample("CSS Demo: transform-style")}}
+{{intewactiveexampwe("css demo: twansfowm-stywe")}}
 
-```css interactive-example-choice
-transform-style: flat;
+```css i-intewactive-exampwe-choice
+twansfowm-stywe: fwat;
 ```
 
-```css interactive-example-choice
-transform-style: preserve-3d;
+```css i-intewactive-exampwe-choice
+twansfowm-stywe: p-pwesewve-3d;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all layer" id="example-element">
-    <p>Parent</p>
-    <div class="numeral"><code>rotate3d(1, 1, 1, 45deg)</code></div>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="twansition-aww wayew" i-id="exampwe-ewement">
+    <p>pawent</p>
+    <div c-cwass="numewaw"><code>wotate3d(1, 😳😳😳 1, 1, 45deg)</code></div>
   </div>
 </section>
 ```
 
-```css interactive-example
-.layer {
-  background: #623e3f;
-  border-radius: 0.75rem;
-  color: white;
-  transform: perspective(200px) rotateY(30deg);
+```css intewactive-exampwe
+.wayew {
+  backgwound: #623e3f;
+  bowdew-wadius: 0.75wem;
+  cowow: white;
+  twansfowm: pewspective(200px) w-wotatey(30deg);
 }
 
-.numeral {
-  background-color: #ffba08;
-  border-radius: 0.2rem;
-  color: #000;
-  margin: 1rem;
-  padding: 0.2rem;
-  transform: rotate3d(1, 1, 1, 45deg);
+.numewaw {
+  backgwound-cowow: #ffba08;
+  bowdew-wadius: 0.2wem;
+  cowow: #000;
+  mawgin: 1wem;
+  p-padding: 0.2wem;
+  twansfowm: w-wotate3d(1, mya 1, 😳 1, 45deg);
 }
 ```
 
-Se achatados, os elementos filho não existirão por conta própria ou sozinhos no espaço 3D.
+s-se achatados, -.- o-os ewementos fiwho n-nyão existiwão pow conta pwópwia ou sozinhos n-nyo espaço 3d. 🥺
 
-Como essa propriedade não é herdada, ela deve ser definida para todos os descendentes que não sejam folhas do elemento.
+como essa pwopwiedade nyão é h-hewdada, o.O ewa deve sew definida pawa todos os descendentes que nyão sejam fowhas do ewemento. /(^•ω•^)
 
-## Syntax
+## s-syntax
 
 ```css
-/* Keyword values */
-transform-style: flat;
-transform-style: preserve-3d;
+/* keywowd vawues */
+t-twansfowm-stywe: f-fwat;
+t-twansfowm-stywe: pwesewve-3d;
 
-/* Valores globais */
-transform-style: inherit;
-transform-style: initial;
-transform-style: unset;
+/* vawowes gwobais */
+twansfowm-stywe: i-inhewit;
+twansfowm-stywe: i-initiaw;
+twansfowm-stywe: unset;
 ```
 
-### Values
+### v-vawues
 
-- `flat`
-  - : Indica que os filhos do elemento estão no plano do próprio elemento.
-- `preserve-3d`
-  - : Indica que os filhos do elemento devem ser posicionados no espaço 3D.
+- `fwat`
+  - : i-indica que os fiwhos do ewemento e-estão nyo pwano do pwópwio ewemento. nyaa~~
+- `pwesewve-3d`
+  - : indica q-que os fiwhos do ewemento devem sew posicionados n-nyo espaço 3d. nyaa~~
 
-### Formal syntax
+### fowmaw s-syntax
 
 {{csssyntax}}
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [Using CSS transforms](/pt-BR/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [using css twansfowms](/pt-bw/docs/web/css/css_twansfowms/using_css_twansfowms)
 
-{{CSSRef}}
+{{csswef}}

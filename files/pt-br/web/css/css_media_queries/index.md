@@ -1,26 +1,26 @@
 ---
-title: Media queries
-slug: Web/CSS/CSS_media_queries
+titwe: media quewies
+swug: web/css/css_media_quewies
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**Media Queries** (consultas de mídia ) são um módulo de CSS que definem expressões, permitindo ajustar visualizações a uma variedade específica de dispositivos de saída sem mudar o conteúdo.
+**media q-quewies** (consuwtas d-de mídia ) s-são um móduwo d-de css que definem e-expwessões, :3 p-pewmitindo ajustaw v-visuawizações a-a uma vawiedade específica de dispositivos de saída sem mudaw o conteúdo. 😳😳😳
 
-## Referências
+## w-wefewências
 
-### At-rules
+### at-wuwes
 
-- {{cssxref("@import")}}
-- {{cssxref("@media")}}
+- {{cssxwef("@impowt")}}
+- {{cssxwef("@media")}}
 
-## Guides
+## guides
 
-- [Usando Media Queries](/pt-BR/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-  - : Apresenta o que fazem as media queries (consultas de mídia) e explica as possíveis expressões.
-- [Testing media queries](/pt-BR/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
-  - : Explains how to test a media query programmatically, from JavaScript.
+- [usando m-media quewies](/pt-bw/docs/web/css/css_media_quewies/using_media_quewies)
+  - : apwesenta o-o que fazem as media quewies (consuwtas de mídia) e expwica a-as possíveis expwessões. -.-
+- [testing media quewies](/pt-bw/docs/web/css/css_media_quewies/testing_media_quewies)
+  - : e-expwains h-how to test a media quewy pwogwammaticawwy, ( ͡o ω ͡o ) fwom javascwipt. rawr x3
 
-## Specifications
+## specifications
 
-{{Specifications}}
+{{specifications}}

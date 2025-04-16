@@ -1,72 +1,72 @@
 ---
-title: Window.innerHeight
-slug: Web/API/Window/innerHeight
+titwe: window.innewheight
+swug: w-web/api/window/innewheight
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Altura (em pixels) da janela de visualização do navegador, incluindo, se renderizado, a barra de rolagem horizontal.
+awtuwa (em p-pixews) d-da janewa de visuawização d-do n-nyavegadow, :3 incwuindo, 😳😳😳 s-se wendewizado, (˘ω˘) a-a bawwa d-de wowagem howizontaw. ^^
 
-> [!NOTE]
-> If you use `nsIDOMWindowUtils.setCSSViewport()` to set the virtual window size for page layout purposes, the value returned by this property corresponds to the viewport height set using that method.
+> [!note]
+> if you use `nsidomwindowutiws.setcssviewpowt()` to set the viwtuaw window size fow page wayout p-puwposes, :3 the vawue wetuwned by this pwopewty c-cowwesponds to the viewpowt height s-set using that method. -.-
 
-## Syntax
+## syntax
 
 ```
-var intViewportHeight = window.innerHeight;
+vaw intviewpowtheight = window.innewheight;
 ```
 
-### Value
+### v-vawue
 
-On return, `intViewportHeight` is the height of the browser window's viewport.
+on wetuwn, 😳 `intviewpowtheight` is the height o-of the bwowsew w-window's viewpowt. mya
 
-The `window.innerHeight` property is read only; it has no default value.
+the `window.innewheight` pwopewty is wead onwy; it has nyo defauwt vawue. (˘ω˘)
 
-## Notes
+## n-nyotes
 
-The `innerHeight` property is supported in any window object like a {{domxref("window")}}, a frame, a frameset, or a secondary window.
+the `innewheight` pwopewty is suppowted in any window object wike a {{domxwef("window")}}, >_< a fwame, a-a fwameset, -.- ow a secondawy window. 🥺
 
-There is [an algorithm](https://bugzilla.mozilla.org/show_bug.cgi?id=189112#c7) to obtain the height of the viewport excluding, if rendered, the horizontal scrollbar.
+t-thewe is [an a-awgowithm](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=189112#c7) t-to obtain the h-height of the viewpowt excwuding, (U ﹏ U) if wendewed, >w< t-the howizontaw scwowwbaw. mya
 
-## Example
+## exampwe
 
-### Assuming a frameset
+### assuming a-a fwameset
 
 ```js
-var intFrameHeight = window.innerHeight; // or
+vaw intfwameheight = window.innewheight; // ow
 
-var intFrameHeight = self.innerHeight;
-// will return the height of the frame viewport within the frameset
+vaw intfwameheight = sewf.innewheight;
+// wiww wetuwn the h-height of the fwame viewpowt within t-the fwameset
 
-var intFramesetHeight = parent.innerHeight;
-// will return the height of the viewport of the closest frameset
+v-vaw intfwamesetheight = p-pawent.innewheight;
+// wiww wetuwn the height of the viewpowt of the c-cwosest fwameset
 
-var intOuterFramesetHeight = top.innerHeight;
-// will return the height of the viewport of the outermost frameset
+v-vaw intoutewfwamesetheight = top.innewheight;
+// w-wiww wetuwn t-the height of the viewpowt of the o-outewmost fwameset
 ```
 
-<!-- TODO: add content -->
+<!-- todo: add content -->
 
-To change the size of a window, see {{domxref("window.resizeBy()")}} and {{domxref("window.resizeTo()")}}.
+t-to change the size of a window, >w< see {{domxwef("window.wesizeby()")}} a-and {{domxwef("window.wesizeto()")}}. nyaa~~
 
-To get the outer height of a window, i.e. the height of the whole browser window, see {{domxref("window.outerHeight")}}.
+to get the outew h-height of a window, (✿oωo) i.e. the h-height of the whowe b-bwowsew window, ʘwʘ see {{domxwef("window.outewheight")}}. (ˆ ﻌ ˆ)♡
 
-### Graphical example
+### gwaphicaw exampwe
 
-The following figure shows the difference between `outerHeight` and `innerHeight`.
+the fowwowing figuwe shows the diffewence between `outewheight` and `innewheight`. 😳😳😳
 
-![innerHeight vs outerHeight illustration](firefoxinnervsouterheight2.png)
+![innewheight v-vs outewheight i-iwwustwation](fiwefoxinnewvsoutewheight2.png)
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- {{domxref("window.innerWidth")}}
-- {{domxref("window.outerHeight")}}
-- {{domxref("window.outerWidth")}}
+- {{domxwef("window.innewwidth")}}
+- {{domxwef("window.outewheight")}}
+- {{domxwef("window.outewwidth")}}

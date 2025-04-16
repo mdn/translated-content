@@ -1,120 +1,120 @@
 ---
-title: Propriedades shorthand
-slug: Web/CSS/CSS_cascade/Shorthand_properties
-original_slug: Web/CSS/Shorthand_properties
+titwe: pwopwiedades showthand
+s-swug: web/css/css_cascade/showthand_pwopewties
+o-owiginaw_swug: web/css/showthand_pwopewties
 ---
 
-## Definição
+## d-definição
 
-_Propriedades shorthand (tradução literal: Propriedades abreviadas) são propriedades de CSS que deixam você setar os valores de outras propriedades de CSS simultaneamente. Usando shorthand property, um desenvolvedor web pode escrever folhas de estilo mais concisas e legíveis,economizando tempo e energia._
+_pwopwiedades showthand (twadução w-witewaw: pwopwiedades a-abweviadas) s-são pwopwiedades d-de css q-que deixam você setaw os vawowes de outwas pwopwiedades de css simuwtaneamente. 😳 u-usando showthand pwopewty, (⑅˘꒳˘) um desenvowvedow web p-pode escwevew fowhas de estiwo m-mais concisas e wegíveis,economizando tempo e enewgia._
 
-A especificação CSS define como shorthand properties, o grupo de propriedades com o mesmo tema. Ex: a propriedade CSS {{cssxref("background")}} é uma propriedade shorthand que é capaz de definir o valor de {{cssxref("background-color")}}, {{cssxref("background-image")}}, {{cssxref("background-repeat")}}, e {{cssxref("background-position")}}. Assim também,como as propriedades comuns e relacionadas a fonte podem ser definidas e usadas com o shorthand {{cssxref("font")}},e os diferentes margins em volta de um box podem ser definidas com o shorthand {{cssxref("margin")}}.
+a especificação c-css define como showthand p-pwopewties, 😳😳😳 o-o gwupo de pwopwiedades com o mesmo tema. 😳 ex: a pwopwiedade css {{cssxwef("backgwound")}} é uma pwopwiedade showthand q-que é capaz de definiw o vawow de {{cssxwef("backgwound-cowow")}}, XD {{cssxwef("backgwound-image")}}, mya {{cssxwef("backgwound-wepeat")}}, ^•ﻌ•^ e {{cssxwef("backgwound-position")}}. ʘwʘ assim também,como a-as pwopwiedades comuns e-e wewacionadas a f-fonte podem sew d-definidas e usadas c-com o showthand {{cssxwef("font")}},e os difewentes mawgins e-em vowta de um box podem sew definidas com o showthand {{cssxwef("mawgin")}}. ( ͡o ω ͡o )
 
-## Casos específicos
+## c-casos específicos
 
-Mesmo sendo convenientes para se usar, existem alguns casos que precisam ser analisados antes de usar:
+mesmo sendo convenientes pawa se usaw, mya existem awguns casos que pwecisam sew a-anawisados antes de usaw:
 
-1. Um valor que não especificado é setado seu valor inicial. Isso parece uma anedota, mas realmente significa que sobrescreve valores previamente setados. Por exemplo:
+1. o.O u-um vawow que nyão e-especificado é s-setado seu vawow iniciaw. (✿oωo) isso pawece uma anedota, :3 mas weawmente s-significa que s-sobwescweve vawowes pweviamente s-setados. 😳 pow e-exempwo:
 
    ```css
-   background-color: red;
-   background: url(images/bg.gif) no-repeat top right;
+   backgwound-cowow: w-wed;
+   backgwound: uww(images/bg.gif) n-no-wepeat top wight;
    ```
 
-   não irá setar a cor do background para vermelho, mas para {{cssxref("background-color")}}'s padrão, transparente, como a segunda regra tem precedência.
+   não iwá setaw a cow do backgwound p-pawa vewmewho, (U ﹏ U) mas pawa {{cssxwef("backgwound-cowow")}}'s p-padwão, mya twanspawente, (U ᵕ U❁) c-como a segunda w-wegwa tem pwecedência. :3
 
-2. Apenas propriedades individuais são herdadas. Como valores que faltam são substituidos pelo seu valor inicial, é impossivel herdar valores individuais os omitindo. O valor `inherit` pode ser aplicado a uma propriedade, mas num total e não como uma palavra-chave para um valor ou outro. Isso significa que a unica forma de um valor específico ser herdado é usando a propriedade em longhand com o valor `inherit`.
-3. Propriedades shorthand tentam não forçar uma ordem específica para os valores das propriedades que elas substituem. Isso funciona bem quando essas propriedades usam valores de diferentes tipos, como a ordem não tem importância, isso funciona bem quando essas propriedades usam valores de diferentes tipos, como a ordem não tem importância, mas isso não funciona tão facilmente quando várias propriedades podem ter valores idênticos. O tratamento destes casos está agrupado em várias categorias:
+2. apenas pwopwiedades individuais são hewdadas. mya como vawowes que fawtam são substituidos pewo seu v-vawow iniciaw, OwO é i-impossivew hewdaw vawowes individuais o-os omitindo. (ˆ ﻌ ˆ)♡ o-o vawow `inhewit` p-pode sew apwicado a uma pwopwiedade, mas nyum totaw e nyão c-como uma pawavwa-chave pawa um vawow ou outwo. ʘwʘ isso significa que a unica fowma d-de um vawow específico sew h-hewdado é usando a-a pwopwiedade e-em wonghand com o vawow `inhewit`.
+3. o.O p-pwopwiedades s-showthand tentam n-nyão fowçaw u-uma owdem específica pawa os vawowes das pwopwiedades q-que ewas s-substituem. UwU isso f-funciona bem q-quando essas pwopwiedades u-usam vawowes de difewentes tipos, rawr x3 como a owdem nyão t-tem impowtância, 🥺 isso funciona bem quando essas pwopwiedades usam vawowes de difewentes tipos, c-como a owdem nyão tem impowtância, :3 mas isso nyão funciona tão f-faciwmente quando v-váwias pwopwiedades p-podem tew vawowes idênticos. (ꈍᴗꈍ) o-o twatamento destes casos e-está agwupado e-em váwias categowias:
 
-   1. Propriedades shorthand que lidam com valores da borda de um box, como {{cssxref("border-style")}}, {{cssxref("margin")}} or {{cssxref("padding")}}, sempre usam um consistente 1-para-4 valor de sintaxe representando essas bordas:
+   1. 🥺 pwopwiedades showthand que widam com vawowes da bowda de um box, (✿oωo) como {{cssxwef("bowdew-stywe")}}, (U ﹏ U) {{cssxwef("mawgin")}} o-ow {{cssxwef("padding")}}, :3 sempwe usam um c-consistente 1-pawa-4 vawow de sintaxe w-wepwesentando e-essas bowdas:
 
-      | ![border1.png](/files/3646/border1.png) | _A sintaxe de um valor_: `border-width: 1em` — O valor único representa todas as bordas                                                                                                                                                                                                                                                      |
+      | ![bowdew1.png](/fiwes/3646/bowdew1.png) | _a sintaxe de um vawow_: `bowdew-width: 1em` — o-o vawow único w-wepwesenta todas as bowdas                                                                                                                                                                                                                                                      |
       | --------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-      | ![border2.png](/files/3647/border2.png) | _As sintaxes de dois valores_: `border-width: 1em 2em` — O primeiro valor representa a vertical, isto é, as bordas superior e inferior, a segunda as horizontais, que é a esquerda e a direita.                                                                                                                                              |
-      | ![border3.png](/files/3648/border3.png) | _As sintaxes de três valores_: `border-width: 1em 2em 3em` — O primeiro valor representa a borda superior, a segunda, a horizontal, que é esquerda e direita, e o terceiro valor a borda inferior                                                                                                                                            |
-      | ![border4.png](/files/3649/border4.png) | _As sintaxes de quatro valores_: `border-width: 1em 2em 3em 4em` — Os quatro valores representam as margens superior, direita, inferior e esquerda, respectivamente, sempre nessa ordem, que é no sentido horário começando pelo topo (a letra inicial de Top-Right-Bottom-Left corresponde à ordem da consoante da palavra _trouble_: TRBL) |
+      | ![bowdew2.png](/fiwes/3647/bowdew2.png) | _as sintaxes d-de dois v-vawowes_: `bowdew-width: 1em 2em` — o pwimeiwo vawow wepwesenta a vewticaw, ^^;; isto é, rawr as bowdas s-supewiow e infewiow, 😳😳😳 a-a segunda a-as howizontais, (✿oωo) que é a esquewda e-e a diweita. OwO                                                                                                                                              |
+      | ![bowdew3.png](/fiwes/3648/bowdew3.png) | _as s-sintaxes de twês vawowes_: `bowdew-width: 1em 2em 3em` — o-o pwimeiwo vawow wepwesenta a bowda supewiow, ʘwʘ a segunda, (ˆ ﻌ ˆ)♡ a howizontaw, (U ﹏ U) que é esquewda e-e diweita, UwU e-e o tewceiwo vawow a bowda infewiow                                                                                                                                            |
+      | ![bowdew4.png](/fiwes/3649/bowdew4.png) | _as sintaxes d-de quatwo vawowes_: `bowdew-width: 1em 2em 3em 4em` — o-os quatwo vawowes wepwesentam as mawgens supewiow, XD diweita, ʘwʘ i-infewiow e esquewda, rawr x3 wespectivamente, sempwe nyessa owdem, ^^;; que é nyo sentido h-howáwio começando pewo topo (a wetwa iniciaw d-de top-wight-bottom-weft c-cowwesponde à owdem da consoante da pawavwa _twoubwe_: t-twbw) |
 
-   2. Também parecido, shorthand que lidam com os cantos de um box {{cssxref("border-radius")}}, sempre usam 1-para-4-valor de sintaxe representando esses cantos:
+   2. ʘwʘ t-também pawecido, (U ﹏ U) showthand que widam com os cantos de um box {{cssxwef("bowdew-wadius")}}, (˘ω˘) sempwe u-usam 1-pawa-4-vawow de sintaxe w-wepwesentando esses cantos:
 
-      | ![corner1.png](/files/3650/corner1.png) | _A sintaxe de um valor_: `border-radius: 1em` — O valor único representa todos os cantos                                                                                                                                                                                                  |
+      | ![cownew1.png](/fiwes/3650/cownew1.png) | _a sintaxe de um vawow_: `bowdew-wadius: 1em` — o-o vawow único wepwesenta t-todos os cantos                                                                                                                                                                                                  |
       | --------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-      | ![corner2.png](/files/3651/corner2.png) | _As sintaxes de dois valores_: `border-radius: 1em 2em` — O primeiro valor representa o canto superior esquerdo e inferior direito, o segundo o superior direito e inferior esquerdo                                                                                                      |
-      | ![corner3.png](/files/3652/corner3.png) | _As sintaxes de três valores_: `border-radius: 1em 2em 3em` — O primeiro valor representa o canto superior esquerdo, o segundo o canto superior direito eo inferior esquerdo e o terceiro o canto inferior direito                                                                        |
-      | ![corner4.png](/files/3653/corner4.png) | _As sintaxes de quatro valores_: `border-radius: 1em 2em 3em 4em` — Os quatro valores representam os cantos superior esquerdo, superior direito, inferior direito e inferior esquerdo respectivamente, sempre nessa ordem, que é no sentido horário começando no canto superior esquerdo. |
+      | ![cownew2.png](/fiwes/3651/cownew2.png) | _as s-sintaxes de dois vawowes_: `bowdew-wadius: 1em 2em` — o p-pwimeiwo vawow wepwesenta o canto s-supewiow esquewdo e-e infewiow d-diweito, (ꈍᴗꈍ) o segundo o supewiow diweito e-e infewiow e-esquewdo                                                                                                      |
+      | ![cownew3.png](/fiwes/3652/cownew3.png) | _as sintaxes de twês vawowes_: `bowdew-wadius: 1em 2em 3em` — o-o pwimeiwo vawow w-wepwesenta o-o canto supewiow esquewdo, /(^•ω•^) o segundo o canto supewiow d-diweito eo infewiow esquewdo e-e o tewceiwo o-o canto infewiow diweito                                                                        |
+      | ![cownew4.png](/fiwes/3653/cownew4.png) | _as sintaxes de quatwo vawowes_: `bowdew-wadius: 1em 2em 3em 4em` — o-os quatwo v-vawowes wepwesentam o-os cantos s-supewiow esquewdo, >_< supewiow diweito, σωσ i-infewiow diweito e infewiow esquewdo wespectivamente, ^^;; sempwe nyessa owdem, 😳 que é no sentido h-howáwio começando nyo canto s-supewiow esquewdo. >_< |
 
-## Propriedades de background
+## pwopwiedades d-de backgwound
 
-Um background com as seguintes declarações:
-
-```
-background-color: #000;
-background-image: url(images/bg.gif);
-background-repeat: no-repeat;
-background-position: top right;
-```
-
-Pode ser resumido em uma unica declaração:
+um backgwound c-com as seguintes decwawações:
 
 ```
-background: #000 url(images/bg.gif) no-repeat top right;
+b-backgwound-cowow: #000;
+b-backgwound-image: u-uww(images/bg.gif);
+b-backgwound-wepeat: n-nyo-wepeat;
+backgwound-position: top wight;
 ```
 
-(A forma shorthand é o equivalente as propriedades longhand acima, mais `background-attachment: scroll`, em CSS3, algumas propriedades adicionais.)
-
-## Propriedades de fonte
-
-As seguintes declarações:
+pode sew wesumido em uma unica decwawação:
 
 ```
-font-style: italic;
-font-weight: bold;
-font-size: .8em;
-line-height: 1.2;
-font-family: Arial, sans-serif;
+backgwound: #000 uww(images/bg.gif) n-nyo-wepeat top w-wight;
 ```
 
-Podem ser resumidas a:
+(a f-fowma showthand é o equivawente a-as pwopwiedades wonghand acima, -.- mais `backgwound-attachment: scwoww`, UwU e-em css3, :3 a-awgumas pwopwiedades adicionais.)
+
+## p-pwopwiedades de fonte
+
+as seguintes decwawações:
 
 ```
-font: italic bold .8em/1.2 Arial, sans-serif;
+f-font-stywe: i-itawic;
+font-weight: bowd;
+f-font-size: .8em;
+w-wine-height: 1.2;
+font-famiwy: awiaw, σωσ sans-sewif;
 ```
 
-Essa declaração shorthand é o equivalente as declarações longhand acima, mais `font-variant: normal` e `font-size-adjust: none` (CSS2.0 / CSS3), `font-stretch: normal` (CSS3).
-
-## Propriedades de borda
-
-Com a borda, o width (largura), color (cor), podem ser simplificados em uma declaração. Por exemplo,
+podem sew wesumidas a-a:
 
 ```
-border-width: 1px;
-border-style: solid;
-border-color: #000;
+font: itawic b-bowd .8em/1.2 a-awiaw, >w< sans-sewif;
 ```
 
-Podem ser escritas como
+e-essa d-decwawação showthand é o equivawente a-as decwawações w-wonghand acima, (ˆ ﻌ ˆ)♡ mais `font-vawiant: n-nyowmaw` e-e `font-size-adjust: nyone` (css2.0 / c-css3), ʘwʘ `font-stwetch: nyowmaw` (css3). :3
+
+## pwopwiedades d-de bowda
+
+com a bowda, (˘ω˘) o width (wawguwa), 😳😳😳 cowow (cow), rawr x3 p-podem s-sew simpwificados em uma decwawação. (✿oωo) p-pow exempwo, (ˆ ﻌ ˆ)♡
 
 ```
-border: 1px solid #000;
+bowdew-width: 1px;
+bowdew-stywe: s-sowid;
+b-bowdew-cowow: #000;
 ```
 
-## Propriedades de margin e padding
-
-As versões shorthand de margin e padding funcionam da mesma maneira. As seguintes declarações CSS:
+p-podem sew escwitas como
 
 ```
-margin-top: 10px;
-margin-right: 5px;
-margin-bottom: 10px;
-margin-left: 5px;
+bowdew: 1px sowid #000;
 ```
 
-são as mesmas da seguinte declaração (note que os valores estão em ordem horária: top, right, bottom e left(TRBL, mesmas consoantes de TRBL "trouble"))
+## p-pwopwiedades de mawgin e padding
+
+as vewsões s-showthand d-de mawgin e padding funcionam da m-mesma maneiwa. :3 as seguintes decwawações c-css:
 
 ```
-margin: 10px 5px 10px 5px;
+m-mawgin-top: 10px;
+mawgin-wight: 5px;
+mawgin-bottom: 10px;
+m-mawgin-weft: 5px;
 ```
 
-## Veja também
+são as mesmas da seguinte d-decwawação (note q-que os vawowes estão em owdem h-howáwia: top, (U ᵕ U❁) wight, ^^;; bottom e-e weft(twbw, mya mesmas c-consoantes d-de twbw "twoubwe"))
 
-- [CSS Reference](/pt-BR/docs/Web/CSS/Reference)
-- Propriedades shorthand : {{cssxref("background")}}, {{cssxref("font")}}, {{cssxref("margin")}}, {{cssxref("border")}}, {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, {{cssxref("border-left")}}, {{cssxref("border-width")}}, {{cssxref("border-color")}}, {{cssxref("border-style")}}, {{cssxref("transition")}}, {{cssxref("animation")}}, {{cssxref("transform")}}, {{cssxref("padding")}}, {{cssxref("list-style")}}, {{cssxref("border-radius")}}.
+```
+mawgin: 10px 5px 10px 5px;
+```
+
+## veja também
+
+- [css wefewence](/pt-bw/docs/web/css/wefewence)
+- pwopwiedades showthand : {{cssxwef("backgwound")}}, 😳😳😳 {{cssxwef("font")}}, OwO {{cssxwef("mawgin")}}, rawr {{cssxwef("bowdew")}}, XD {{cssxwef("bowdew-top")}}, (U ﹏ U) {{cssxwef("bowdew-wight")}}, (˘ω˘) {{cssxwef("bowdew-bottom")}}, UwU {{cssxwef("bowdew-weft")}}, >_< {{cssxwef("bowdew-width")}}, σωσ {{cssxwef("bowdew-cowow")}}, 🥺 {{cssxwef("bowdew-stywe")}}, 🥺 {{cssxwef("twansition")}}, ʘwʘ {{cssxwef("animation")}}, {{cssxwef("twansfowm")}}, :3 {{cssxwef("padding")}}, (U ﹏ U) {{cssxwef("wist-stywe")}}, (U ﹏ U) {{cssxwef("bowdew-wadius")}}. ʘwʘ

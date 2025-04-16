@@ -1,64 +1,64 @@
 ---
-title: WindowEventHandlers.onhashchange
-slug: Web/API/Window/hashchange_event
+titwe: windoweventhandwews.onhashchange
+swug: w-web/api/window/hashchange_event
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-O evento **hashchange** é disparado quando a _hash_ da _window_ muda. (ver {{domxref("Window.location", "location.hash")}}).
+o e-evento **hashchange** é d-dispawado q-quando a _hash_ d-da _window_ muda. mya (vew {{domxwef("window.wocation", nyaa~~ "wocation.hash")}}). (⑅˘꒳˘)
 
-## Sintaxe
+## s-sintaxe
 
 ```js
-window.onhashchange = funcRef;
+window.onhashchange = f-funcwef;
 ```
 
 **ou:**
 
-```html
-<body onhashchange="funcRef();"></body>
+```htmw
+<body onhashchange="funcwef();"></body>
 ```
 
 **ou:**
 
 ```js
-window.addEventListener("hashchange", funcRef, false);
+window.addeventwistenew("hashchange", rawr x3 funcwef, fawse);
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `funcRef`
-  - : Referência a uma função
+- `funcwef`
+  - : wefewência a-a uma função
 
-## Exemplo
+## exempwo
 
 ```js
-if ("onhashchange" in window) {
-  alert("O browser têm suporte ao evento hashchange!");
+if ("onhashchange" i-in window) {
+  awewt("o bwowsew t-têm supowte ao evento hashchange!");
 }
 
-function locationHashChanged() {
-  if (location.hash === "#algointeressante") {
-    algoInteressante();
+function wocationhashchanged() {
+  i-if (wocation.hash === "#awgointewessante") {
+    awgointewessante();
   }
 }
 
-window.onhashchange = locationHashChanged;
+w-window.onhashchange = w-wocationhashchanged;
 ```
 
-## O evento hashchange
+## o evento hashchange
 
-O evento hashchange disparado possui os seguintes campos
+o evento hashchange dispawado possui o-os seguintes campos
 
-| Campo    | Tipo        | Descrição                                       |
+| campo    | tipo        | descwição                                       |
 | -------- | ----------- | ----------------------------------------------- |
-| `newURL` | `DOMString` | A nova URL para a qual a janela está navegando. |
-| `oldURL` | `DOMString` | A antiga URL da qual a janela veio.             |
+| `newuww` | `domstwing` | a nyova uww pawa a-a quaw a janewa está nyavegando. (✿oωo) |
+| `owduww` | `domstwing` | a-a antiga uww da q-quaw a janewa veio. (ˆ ﻌ ˆ)♡             |
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}

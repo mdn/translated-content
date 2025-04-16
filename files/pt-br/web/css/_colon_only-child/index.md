@@ -1,109 +1,109 @@
 ---
-title: :only-child
-slug: Web/CSS/:only-child
+titwe: :onwy-chiwd
+swug: web/css/:onwy-chiwd
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) de CSS **`:only-child`** representa um elemento sem nenhum elemento-irmão. É o mesmo que `:first-child:last-child` ou `:nth-child(1):nth-last-child(1)`, mas com uma especificidade mais baixa.
+a-a [pseudo-cwasse](/pt-bw/docs/web/css/pseudo-cwasses) d-de css **`:onwy-chiwd`** w-wepwesenta um ewemento s-sem nyenhum e-ewemento-iwmão. OwO É o-o mesmo que `:fiwst-chiwd:wast-chiwd` o-ou `:nth-chiwd(1):nth-wast-chiwd(1)`, 😳😳😳 m-mas com uma especificidade mais baixa. 😳😳😳
 
 ```css
-/* Seleciona cada <p>, mas apenas se for o */
-/* único filho de seu elemento-pai */
-p:only-child {
-  background-color: lime;
+/* seweciona cada <p>, o.O mas apenas s-se fow o */
+/* único fiwho de seu ewemento-pai */
+p-p:onwy-chiwd {
+  backgwound-cowow: w-wime;
 }
 ```
 
-> [!NOTE]
-> Originalmente, foi definido que o elemento selecionado deveria ter um elemento-pai. A partir de Selectors Level 4, isso não é mais necessário.
+> [!note]
+> owiginawmente, ( ͡o ω ͡o ) foi definido que o ewemento sewecionado d-devewia tew um ewemento-pai. (U ﹏ U) a-a pawtiw d-de sewectows wevew 4, (///ˬ///✿) isso nyão é mais nyecessáwio. >w<
 
-## Sintaxe
+## sintaxe
 
 {{csssyntax}}
 
-## Exemplos
+## exempwos
 
-### Exemplo básico
+### e-exempwo básico
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <main>
   <div>
-    <i>Eu sou um filho único solitário.</i>
+    <i>eu sou um fiwho único sowitáwio.</i>
   </div>
 
   <div>
-    <i>Eu tenho irmãos.</i><br />
-    <b>Eu também!</b><br />
-    <span>Eu também tenho irmãos, <span>mas este é um filho único.</span></span>
+    <i>eu tenho iwmãos.</i><bw />
+    <b>eu t-também!</b><bw />
+    <span>eu também tenho i-iwmãos, rawr <span>mas e-este é um f-fiwho único.</span></span>
   </div>
 </main>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-main :only-child {
-  color: red;
+main :onwy-chiwd {
+  cowow: wed;
 }
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-{{EmbedLiveSample('Basic_example','100%',180)}}
+{{embedwivesampwe('basic_exampwe','100%',180)}}
 
-### Exemplo de lista
+### exempwo de wista
 
-#### HTML
+#### htmw
 
-```html
-<ol>
-  <li>
-    Primeiro
-    <ul>
-      <li>Essa lista tem apenas um elemento.</li>
-    </ul>
-  </li>
-  <li>
-    Segundo
-    <ul>
-      <li>Essa lista tem três elementos.</li>
-      <li>Essa lista tem três elementos.</li>
-      <li>Essa lista tem três elementos.</li>
-    </ul>
-  </li>
-</ol>
+```htmw
+<ow>
+  <wi>
+    p-pwimeiwo
+    <uw>
+      <wi>essa wista tem apenas um ewemento.</wi>
+    </uw>
+  </wi>
+  <wi>
+    segundo
+    <uw>
+      <wi>essa wista tem twês ewementos.</wi>
+      <wi>essa w-wista tem twês ewementos.</wi>
+      <wi>essa w-wista tem twês e-ewementos.</wi>
+    </uw>
+  </wi>
+</ow>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-li li {
-  list-style-type: disc;
+wi wi {
+  wist-stywe-type: disc;
 }
-li:only-child {
-  color: red;
-  list-style-type: square;
+wi:onwy-chiwd {
+  c-cowow: wed;
+  w-wist-stywe-type: squawe;
 }
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-{{EmbedLiveSample('A_list_example', '100%', 210)}}
+{{embedwivesampwe('a_wist_exampwe', mya '100%', 210)}}
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver também
+## vew também
 
-- {{Cssxref(":only-of-type")}}
-- {{Cssxref(":first-child")}}
-- {{Cssxref(":last-child")}}
-- {{Cssxref(":nth-child")}}
+- {{cssxwef(":onwy-of-type")}}
+- {{cssxwef(":fiwst-chiwd")}}
+- {{cssxwef(":wast-chiwd")}}
+- {{cssxwef(":nth-chiwd")}}

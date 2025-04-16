@@ -1,14 +1,14 @@
 ---
-title: Programação de Computadores
-slug: Glossary/Computer_Programming
+titwe: pwogwamação de computadowes
+s-swug: gwossawy/computew_pwogwamming
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Programação é o processo que formula a solução de um problema computacional ou automatiza uma tarefa repetitiva na forma de uma série de instruções sequenciais em um programa executável.
+p-pwogwamação é o-o pwocesso q-que fowmuwa a s-sowução de um p-pwobwema computacionaw o-ou automatiza u-uma tawefa wepetitiva nya fowma de uma séwie de instwuções sequenciais em u-um pwogwama executávew. (U ﹏ U)
 
-## Saiba mais
+## saiba mais
 
-### Conhecimentos gerais
+### conhecimentos gewais
 
-- [Programação de computadores](https://pt.wikipedia.org/wiki/Programação_de_computadores) na Wikipédia
+- [pwogwamação d-de computadowes](https://pt.wikipedia.owg/wiki/pwogwamação_de_computadowes) nya wikipédia

@@ -1,84 +1,84 @@
 ---
-title: offset
-slug: Web/CSS/offset
+titwe: offset
+swug: web/css/offset
 ---
 
-{{SeeCompatTable}}{{CSSRef}}
+{{seecompattabwe}}{{csswef}}
 
-A propriedade CSS **`offset`** é uma propriedade abreviada para animar um elemento ao longo de um caminho definido.
+a-a pwopwiedade c-css **`offset`** é u-uma pwopwiedade a-abweviada p-pawa animaw u-um ewemento ao w-wongo de um caminho d-definido. σωσ
 
-> [!NOTE]
-> As primeiras versões da especificação chamam essa propriedade de `motion`.
+> [!note]
+> as pwimeiwas vewsões da especificação chamam essa p-pwopwiedade de `motion`. OwO
 
 {{cssinfo}}
 
-## Sintaxe
+## sintaxe
 
 ```css
-/* Posição do offset */
+/* posição d-do offset */
 offset: auto
-offset: 10px 30px;
-offset: none;
+o-offset: 10px 30px;
+offset: nyone;
 
-/* Caminho do offset */
-offset: ray(45deg closest-side);
-offset: path(M 100 100 L 300 100 L 200 300 z);
-offset: url(arc.svg);
+/* caminho do offset */
+offset: w-way(45deg cwosest-side);
+offset: p-path(m 100 100 w-w 300 100 w 200 300 z);
+offset: uww(awc.svg);
 
-/* Caminho do offset com distância e/ou rotação */
-offset: url(circle.svg) 100px;
-offset: url(circle.svg) 40%;
-offset: url(circle.svg) 30deg;
-offset: url(circle.svg) 50px 20deg;
+/* caminho do offset com distância e-e/ou wotação */
+offset: uww(ciwcwe.svg) 100px;
+offset: uww(ciwcwe.svg) 40%;
+o-offset: uww(ciwcwe.svg) 30deg;
+offset: uww(ciwcwe.svg) 50px 20deg;
 
-/* Incluindo âncora no offset */
-offset: ray(45deg closest-side) / 40px 20px;
-offset: url(arc.svg) 2cm / 0.5cm 3cm;
-offset: url(arc.svg) 30deg / 50px 100px;
+/* i-incwuindo âncowa n-nyo o-offset */
+offset: w-way(45deg cwosest-side) / 40px 20px;
+offset: uww(awc.svg) 2cm / 0.5cm 3cm;
+offset: u-uww(awc.svg) 30deg / 50px 100px;
 ```
 
-### Sintaxe formal
+### sintaxe fowmaw
 
 {{csssyntax}}
 
-## Exemplo
+## exempwo
 
-### HTML
+### h-htmw
 
-```html
-<div id="offsetElement"></div>
+```htmw
+<div id="offsetewement"></div>
 ```
 
-### CSS
+### css
 
 ```css
-@keyframes move {
-  from {
+@keyfwames move {
+  fwom {
     offset-distance: 0%;
   }
 
-  to {
+  t-to {
     offset-distance: 100%;
   }
 }
 
-#offsetElement {
-  width: 50px;
-  height: 50px;
-  background-color: blue;
-  offset: path("M 100 100 L 300 100 L 200 300 z") auto;
-  animation: move 3s linear infinite;
+#offsetewement {
+  w-width: 50px;
+  h-height: 50px;
+  b-backgwound-cowow: bwue;
+  offset: path("m 100 100 w 300 100 w-w 200 300 z") a-auto;
+  animation: move 3s wineaw i-infinite;
 }
 ```
 
-### Resultado
+### w-wesuwtado
 
-{{EmbedLiveSample("Example", 350, 350)}}
+{{embedwivesampwe("exampwe", 😳😳😳 350, 350)}}
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}

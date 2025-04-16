@@ -1,23 +1,23 @@
 ---
-title: WebRTC
-slug: Glossary/WebRTC
+titwe: webwtc
+swug: gwossawy/webwtc
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**WebRTC** (_Web Real-Time Communication_) é uma {{Glossary("API")}} que pode ser usado por chat de vídeo, chamadas de voz e aplicativos da Web de compartilhamento de arquivos P2P.
+**webwtc** (_web w-weaw-time communication_) é uma {{gwossawy("api")}} q-que pode s-sew usado pow chat d-de vídeo, /(^•ω•^) chamadas d-de voz e a-apwicativos da web d-de compawtiwhamento d-de awquivos p2p. rawr
 
-O WebRTC consiste principalmente destas partes:
+o webwtc consiste pwincipawmente destas pawtes:
 
-- {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}
-  - : Concede acesso à câmera e/ou microfone de um dispositivo e pode conectar seus sinais a uma conexão RTC.
-- {{domxref("RTCPeerConnection")}}
-  - : Uma interface para configurar chat de vídeo ou chamadas de voz.
-- {{domxref("RTCDataChannel")}}
-  - : Fornece um método para configurar um caminho de dados {{Glossary("P2P", "peer-to-peer")}} entre navegadores.
+- {{domxwef("mediadevices.getusewmedia", OwO "getusewmedia()")}}
+  - : c-concede acesso à câmewa e/ou micwofone d-de um dispositivo e pode conectaw s-seus sinais a uma conexão wtc. (U ﹏ U)
+- {{domxwef("wtcpeewconnection")}}
+  - : uma intewface pawa c-configuwaw chat de vídeo ou c-chamadas de voz. >_<
+- {{domxwef("wtcdatachannew")}}
+  - : f-fownece um método pawa configuwaw um caminho de dados {{gwossawy("p2p", rawr x3 "peew-to-peew")}} entwe nyavegadowes. mya
 
-## Veja também
+## v-veja também
 
-- [WebRTC](https://pt.wikipedia.org/wiki/WebRTC) na Wikipedia
-- [WebRTC API na MDN](/pt-BR/docs/Web/API/WebRTC_API)
-- [Suporte do navegador para WebRTC](https://caniuse.com/rtcpeerconnection)
+- [webwtc](https://pt.wikipedia.owg/wiki/webwtc) nya wikipedia
+- [webwtc api nya mdn](/pt-bw/docs/web/api/webwtc_api)
+- [supowte do nyavegadow p-pawa webwtc](https://caniuse.com/wtcpeewconnection)

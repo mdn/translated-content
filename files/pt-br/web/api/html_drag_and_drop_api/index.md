@@ -1,229 +1,229 @@
 ---
-title: Arrastar e soltar
-slug: Web/API/HTML_Drag_and_Drop_API
+titwe: awwastaw e sowtaw
+swug: w-web/api/htmw_dwag_and_dwop_api
 ---
 
-{{DefaultAPISidebar("HTML Drag and Drop API")}}
+{{defauwtapisidebaw("htmw d-dwag and dwop api")}}
 
-As interfaces de Drag and Drop (arrastar e soltar) habilitam aplicações a usar funcionalidades de arrastar e soltar através do navegador. Por exemplo, com essas funcionalidades, o usuário pode selecionar elementos arrastáveis (_draggable_) com o mouse, arrastar elementos até um elemento soltável (_droppable_), e soltar o elemento ao soltar o botão do mouse. Uma representação translúcida de elementos arrastáveis (_draggable)_ seguem o ponteiro do mouse durante a operação de arrastar (drag).
+a-as intewfaces d-de dwag and d-dwop (awwastaw e-e sowtaw) habiwitam a-apwicações a-a usaw funcionawidades de awwastaw e sowtaw atwavés do nyavegadow. (⑅˘꒳˘) pow exempwo, nyaa~~ c-com essas funcionawidades, UwU o usuáwio pode sewecionaw e-ewementos awwastáveis (_dwaggabwe_) c-com o mouse, awwastaw ewementos até um ewemento sowtávew (_dwoppabwe_), (˘ω˘) e-e sowtaw o ewemento ao sowtaw o-o botão do m-mouse. rawr x3 uma wepwesentação twanswúcida de ewementos awwastáveis (_dwaggabwe)_ seguem o ponteiwo d-do mouse duwante a opewação de awwastaw (dwag). (///ˬ///✿)
 
-Para web sites, extensões e aplicações XUL, você pode customizar os tipos de elementos que podem se tornar arrastáveis (draggable) e o tipo de retorno que o elemento arrastável produz, assim como os elementos soltáveis (droppable).
+pawa web sites, 😳😳😳 extensões e-e apwicações xuw, (///ˬ///✿) você pode c-customizaw os tipos d-de ewementos q-que podem se townaw a-awwastáveis (dwaggabwe) e o tipo de wetowno q-que o ewemento awwastávew pwoduz, ^^;; assim como o-os ewementos sowtáveis (dwoppabwe). ^^
 
-**NT:** Para manter a tradução mais precisa e coesa, a partir daqui iremos manter os termos _drag_ e _drop_ e seus variantes conforme texto original. Sendo portanto mantidos também os termos _draggable_ e _droppable_.
+**nt:** pawa mantew a twadução mais pwecisa e coesa, (///ˬ///✿) a pawtiw daqui iwemos m-mantew os tewmos _dwag_ e _dwop_ e-e seus vawiantes c-confowme texto o-owiginaw. -.- sendo powtanto mantidos também os tewmos _dwaggabwe_ e-e _dwoppabwe_. /(^•ω•^)
 
-Este documento é uma visão geral do drag and drop no HTML. Ele inclui uma descrição de suas interfaces, funcionalidades básicas de como permitir a adesão de funcionalidades arrastar e soltar em uma aplicação e um sumário da interoperabilidade entre interfaces.
+e-este documento é uma visão g-gewaw do dwag and d-dwop nyo htmw. UwU ewe incwui uma d-descwição de suas intewfaces, (⑅˘꒳˘) f-funcionawidades básicas de como pewmitiw a adesão d-de funcionawidades awwastaw e-e sowtaw em uma apwicação e um s-sumáwio da intewopewabiwidade e-entwe intewfaces. ʘwʘ
 
-## Eventos Drag
+## eventos dwag
 
-O drag and drop em HTML usa o {{domxref("Event","modelo de eventos DOM")}} e os _{{domxref("DragEvent","eventos drag")}}_ são hereditários dos {{domxref("MouseEvent","eventos do mouse")}}. Uma operação típica de drag começa quando o usuário seleciona um elemento arrastável com o mouse, move o mouse até um elemento soltável (droppable) e solta o mouse. Durante as operações, diversos tipos de evento são acionados e alguns podem até ser acionados multiplas vezes (como por exemplo os tipos de evento [`drag`](/pt-BR/docs/Web/API/HTMLElement/drag_event) e [`dragover`](/pt-BR/docs/Web/API/HTMLElement/dragover_event).
+o dwag and dwop em htmw usa o {{domxwef("event","modewo de eventos dom")}} e-e os _{{domxwef("dwagevent","eventos d-dwag")}}_ são heweditáwios d-dos {{domxwef("mouseevent","eventos d-do mouse")}}. σωσ u-uma opewação típica de dwag começa quando o usuáwio seweciona u-um ewemento awwastávew com o mouse, move o mouse até um ewemento sowtávew (dwoppabwe) e-e sowta o mouse. ^^ duwante as opewações, OwO d-divewsos t-tipos de evento s-são acionados e awguns podem a-até sew acionados m-muwtipwas vezes (como p-pow exempwo o-os tipos de evento [`dwag`](/pt-bw/docs/web/api/htmwewement/dwag_event) e [`dwagovew`](/pt-bw/docs/web/api/htmwewement/dwagovew_event). (ˆ ﻌ ˆ)♡
 
-Todos os [tipos de evento drag](/pt-BR/docs/Web/API/DragEvent#Event_types) são associados a um [manipulador global de eventos](/pt-BR/docs/Web/API/DragEvent#GlobalEventHandlers). Cada tipo de evento drag e cada atributo drag global tem um documento de referência que o descreve. A tabela a seguir descreve brevemente os tipos de evento e um link de referência para seu documento.
+t-todos o-os [tipos de e-evento dwag](/pt-bw/docs/web/api/dwagevent#event_types) s-são associados a-a um [manipuwadow gwobaw de eventos](/pt-bw/docs/web/api/dwagevent#gwobaweventhandwews). cada tipo de evento d-dwag e cada atwibuto dwag gwobaw tem um documento de wefewência que o descweve. o.O a tabewa a-a seguiw descweve bwevemente os tipos de evento e um wink de wefewência p-pawa seu d-documento. (˘ω˘)
 
-| Event                                                          | On Event Handler                                             | Description                                                                                                                                                                                                                           |
+| e-event                                                          | on event handwew                                             | d-descwiption                                                                                                                                                                                                                           |
 | -------------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`drag`](/pt-BR/docs/Web/API/HTMLElement/drag_event)           | {{domxref('GlobalEventHandlers.ondrag','ondrag')}}           | Acionado quando um elemento ou seleção de texto está sendo arrastado.                                                                                                                                                                 |
-| [`dragend`](/pt-BR/docs/Web/API/HTMLElement/dragend_event)     | {{domxref('GlobalEventHandlers.ondragend','ondragend')}}     | Acionado quando uma operação de arrastar está terminando (por eexmplo, ao soltar o botão do mouse ou pressionar a tecla esc). (Veja [Terminando um evento Drag](/pt-BR/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragend).) |
-| [`dragenter`](/pt-BR/docs/Web/API/HTMLElement/dragenter_event) | {{domxref('GlobalEventHandlers.ondragenter','ondragenter')}} | Acionado quando um elemento arrastável ou seleção de texto entra em um ponto de soltura (drop target). (Veja [Determinando Drop Targets](/pt-BR/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#droptargets).)                    |
-| [`dragexit`](/pt-BR/docs/Web/Events/dragexit)                  | {{domxref('GlobalEventHandlers.ondragexit','ondragexit')}}   | Acionado quando um elemento não é mais o ponto de seleção imediata da operação drag.                                                                                                                                                  |
-| [`dragleave`](/pt-BR/docs/Web/API/HTMLElement/dragleave_event) | {{domxref('GlobalEventHandlers.ondragleave','ondragleave')}} | Acionado quando um elemento arrastável ou seleção de texto abandona um ponto de soltura (drop target) válido.                                                                                                                         |
-| [`dragover`](/pt-BR/docs/Web/API/HTMLElement/dragover_event)   | {{domxref('GlobalEventHandlers.ondragover','ondragover')}}   | Acionado quando um elemento ou seleção de texto está sendo arrastado sobre um ponto de soltura válido (a cada aproximadamente 100 milisegundos).                                                                                      |
-| [`dragstart`](/pt-BR/docs/Web/API/HTMLElement/dragstart_event) | {{domxref('GlobalEventHandlers.ondragstart','ondragstart')}} | Acionado quando o usuário começa a arrastar um elemento válido ou seleção de texto. (Veja [Começando uma Operação Drag](/pt-BR/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragstart).)                                       |
-| [`drop`](/pt-BR/docs/Web/API/HTMLElement/drop_event)           | {{domxref('GlobalEventHandlers.ondrop','ondrop')}}           | Acionado quando um elemento ou seleção de texto é solta em um ponto d soltura (drop target) válido. (Veja [Realizando um Drop](/pt-BR/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#drop).)                                     |
+| [`dwag`](/pt-bw/docs/web/api/htmwewement/dwag_event)           | {{domxwef('gwobaweventhandwews.ondwag','ondwag')}}           | acionado quando u-um ewemento o-ou seweção de texto está sendo awwastado. 😳                                                                                                                                                                 |
+| [`dwagend`](/pt-bw/docs/web/api/htmwewement/dwagend_event)     | {{domxwef('gwobaweventhandwews.ondwagend','ondwagend')}}     | acionado quando uma opewação de awwastaw está t-tewminando (pow eexmpwo, (U ᵕ U❁) ao sowtaw o-o botão do mouse ou pwessionaw a-a tecwa esc). :3 (veja [tewminando u-um evento dwag](/pt-bw/docs/web/api/htmw_dwag_and_dwop_api/dwag_opewations#dwagend).) |
+| [`dwagentew`](/pt-bw/docs/web/api/htmwewement/dwagentew_event) | {{domxwef('gwobaweventhandwews.ondwagentew','ondwagentew')}} | acionado quando um ewemento awwastávew o-ou seweção d-de texto entwa em um ponto de s-sowtuwa (dwop t-tawget). o.O (veja [detewminando dwop tawgets](/pt-bw/docs/web/api/htmw_dwag_and_dwop_api/dwag_opewations#dwoptawgets).)                    |
+| [`dwagexit`](/pt-bw/docs/web/events/dwagexit)                  | {{domxwef('gwobaweventhandwews.ondwagexit','ondwagexit')}}   | acionado quando um ewemento n-nyão é m-mais o ponto de s-seweção imediata da opewação d-dwag. (///ˬ///✿)                                                                                                                                                  |
+| [`dwagweave`](/pt-bw/docs/web/api/htmwewement/dwagweave_event) | {{domxwef('gwobaweventhandwews.ondwagweave','ondwagweave')}} | a-acionado quando um e-ewemento awwastávew ou seweção de texto abandona um ponto de sowtuwa (dwop tawget) v-váwido. OwO                                                                                                                         |
+| [`dwagovew`](/pt-bw/docs/web/api/htmwewement/dwagovew_event)   | {{domxwef('gwobaweventhandwews.ondwagovew','ondwagovew')}}   | a-acionado quando um ewemento ou seweção d-de texto está s-sendo awwastado sobwe um ponto de sowtuwa váwido (a cada apwoximadamente 100 m-miwisegundos). >w<                                                                                      |
+| [`dwagstawt`](/pt-bw/docs/web/api/htmwewement/dwagstawt_event) | {{domxwef('gwobaweventhandwews.ondwagstawt','ondwagstawt')}} | acionado quando o usuáwio começa a awwastaw um ewemento v-váwido ou seweção de texto. ^^ (veja [começando uma opewação d-dwag](/pt-bw/docs/web/api/htmw_dwag_and_dwop_api/dwag_opewations#dwagstawt).)                                       |
+| [`dwop`](/pt-bw/docs/web/api/htmwewement/dwop_event)           | {{domxwef('gwobaweventhandwews.ondwop','ondwop')}}           | a-acionado quando um ewemento ou seweção de texto é s-sowta em um ponto d-d sowtuwa (dwop tawget) váwido. (⑅˘꒳˘) (veja [weawizando um dwop](/pt-bw/docs/web/api/htmw_dwag_and_dwop_api/dwag_opewations#dwop).)                                     |
 
-Note que eventos `dragstart` e `dragend` não são acionados ao arrastar um arquivo vindo do sistema operacional para o navegador.
+nyote que e-eventos `dwagstawt` e `dwagend` n-nyão são acionados ao awwastaw um awquivo vindo do sistema opewacionaw p-pawa o nyavegadow. ʘwʘ
 
-## Interfaces
+## i-intewfaces
 
-A interface HTML drag and drop é composta pelos eventos {{domxref("DragEvent")}}, {{domxref("DataTransfer")}}, {{domxref("DataTransferItem")}} e {{domxref("DataTransferItemList")}}.
+a i-intewface htmw dwag and dwop é c-composta pewos eventos {{domxwef("dwagevent")}}, (///ˬ///✿) {{domxwef("datatwansfew")}}, XD {{domxwef("datatwansfewitem")}} e {{domxwef("datatwansfewitemwist")}}. 😳
 
-A interface {{domxref("DragEvent")}} consiste de um construtor e uma propriedade, a propriedade {{domxref("DragEvent.dataTransfer","dataTransfer")}} que é um objeto {{domxref("DataTransfer")}}. Os objetos {{domxref("DataTransfer")}} incluem estados do evento drag como o tipo de drag sendo feito (por exemplo `copy` ou `move`), os dados do do evento drag (um ou mais itens) e o tipo de cada _item drag_ (um MIME type). Objetos {{domxref("DataTransfer")}} também contém métodos para adicionar itens aos dados do drag e remover um item. As interfaces {{domxref("DragEvent")}} e {{domxref("DataTransfer")}} devem as únicas necessárias para adicionar capacidades de drag and drop para uma aplicação. Entretanto, note que o Firefox provê suporte para apenas algumas [Gecko-specific extensions](#gecko_specific_interfaces) ao objeto {{domxref("DataTransfer")}}, apesar de entretanto essas extensões funcionarem apenas no Firefox.
+a-a intewface {{domxwef("dwagevent")}} c-consiste d-de um constwutow e uma pwopwiedade, >w< a-a pwopwiedade {{domxwef("dwagevent.datatwansfew","datatwansfew")}} q-que é um objeto {{domxwef("datatwansfew")}}. (˘ω˘) os objetos {{domxwef("datatwansfew")}} i-incwuem estados d-do evento dwag como o-o tipo de dwag sendo feito (pow exempwo `copy` o-ou `move`), nyaa~~ os dados do do evento d-dwag (um ou m-mais itens) e o tipo de cada _item dwag_ (um mime type). 😳😳😳 objetos {{domxwef("datatwansfew")}} t-também c-contém métodos p-pawa adicionaw i-itens aos dados do dwag e w-wemovew um item. (U ﹏ U) as intewfaces {{domxwef("dwagevent")}} e {{domxwef("datatwansfew")}} devem as únicas nyecessáwias pawa adicionaw c-capacidades de dwag and dwop p-pawa uma apwicação. (˘ω˘) entwetanto, :3 n-nyote que o fiwefox pwovê supowte p-pawa apenas awgumas [gecko-specific e-extensions](#gecko_specific_intewfaces) a-ao objeto {{domxwef("datatwansfew")}}, >w< a-apesaw d-de entwetanto essas e-extensões funcionawem apenas nyo fiwefox. ^^
 
-Cada objeto {{domxref("DataTransfer")}} contém uma propriedade {{domxref("DataTransfer.items","items")}} que é uma {{domxref("DataTransferItemList","lista")}} dos objetos {{domxref("DataTransferItem")}}. Cada objeto {{domxref("DataTransferItem")}} representa um único _drag item_ e cada item tem uma propriedade {{domxref("DataTransferItem.kind","kind (tipo)")}} que é o _tipo(kind)_ de data (seja ela `string` ou `file`) e uma propriedade {{domxref("DataTransferItem.type","type (tipo)")}} que é o tipo de dado do item (ou seja, MIME type). O objeto {{domxref("DataTransferItem")}} também contém métodos para conseguir dados do item arrastável.
+cada objeto {{domxwef("datatwansfew")}} contém uma pwopwiedade {{domxwef("datatwansfew.items","items")}} que é u-uma {{domxwef("datatwansfewitemwist","wista")}} d-dos objetos {{domxwef("datatwansfewitem")}}. 😳😳😳 c-cada objeto {{domxwef("datatwansfewitem")}} w-wepwesenta um único _dwag item_ e cada item tem uma pwopwiedade {{domxwef("datatwansfewitem.kind","kind (tipo)")}} q-que é o-o _tipo(kind)_ de data (seja e-ewa `stwing` ou `fiwe`) e uma pwopwiedade {{domxwef("datatwansfewitem.type","type (tipo)")}} que é o-o tipo de d-dado do item (ou seja, nyaa~~ mime type). (⑅˘꒳˘) o-o objeto {{domxwef("datatwansfewitem")}} t-também contém métodos pawa conseguiw dados do item awwastávew. :3
 
-O objeto {{domxref("DataTransferItemList")}} é uma lista de objetos {{domxref("DataTransferItem")}}. A lista de objetos contém métodos para: adicionar um item para uma lista, remover um item de uma lista e limpar a lista com todos os itens.
+o-o objeto {{domxwef("datatwansfewitemwist")}} é u-uma wista de objetos {{domxwef("datatwansfewitem")}}. ʘwʘ a-a wista de o-objetos contém m-métodos pawa: adicionaw um item p-pawa uma wista, w-wemovew um item de uma wista e w-wimpaw a wista c-com todos os itens. rawr x3
 
-A diferença chave entre das interfaces {{domxref("DataTransfer")}} e {{domxref("DataTransferItem")}} é que a primeira usa o método síncrono {{domxref("DataTransfer.getData","getData()")}} para acessar os dados de um item arrastável, e a segunda usa o método assíncrono {{domxref("DataTransferItem.getAsString","getAsString()")}} para acessá-lo.
+a difewença c-chave entwe das intewfaces {{domxwef("datatwansfew")}} e {{domxwef("datatwansfewitem")}} é q-que a pwimeiwa usa o-o método síncwono {{domxwef("datatwansfew.getdata","getdata()")}} p-pawa acessaw os dados de um i-item awwastávew, (///ˬ///✿) e a segunda usa o método assíncwono {{domxwef("datatwansfewitem.getasstwing","getasstwing()")}} p-pawa acessá-wo. 😳😳😳
 
-Note: as interfaces {{domxref("DragEvent")}} e a {{domxref("DataTransfer")}} são vastamente interoperáveis com navegadores desktop. Entretanto, as interfaces {{domxref("DataTransferItem")}} e {{domxref("DataTransferItemList")}} tem suporte limitado entre navegadores. Veja [Interoperabildade](#interoperabildade) para mais informações.
+n-nyote: as i-intewfaces {{domxwef("dwagevent")}} e a {{domxwef("datatwansfew")}} são vastamente intewopewáveis c-com navegadowes desktop. XD entwetanto, as intewfaces {{domxwef("datatwansfewitem")}} e-e {{domxwef("datatwansfewitemwist")}} t-tem supowte wimitado e-entwe navegadowes. >_< veja [intewopewabiwdade](#intewopewabiwdade) p-pawa mais infowmações. >w<
 
-### Interfaces específicas para o Gecko
+### i-intewfaces específicas pawa o gecko
 
-A Mozilla e o Firefox suportam algumas funcionalidades fora dos padrões do modelo drag and drop. Elas são _cfunções convenientes_ para facilitar o arraste múltiplo de elementos e a manipulação de dados que não são strings (como arquivos). Para mais informações, veja [Dragging and Dropping Multiple Items](/pt-BR/docs/DragDrop/Dragging_and_Dropping_Multiple_Items). Para mais informações, veja a página de referência {{domxref("DataTransfer")}} para todas as [propriedades específicas para o Gecko](/pt-BR/docs/Web/API/DataTransfer#gecko_properties) e [Métodos específicos para o Gecko](/pt-BR/docs/Web/API/DataTransfer#gecko_methods).
+a moziwwa e-e o fiwefox supowtam awgumas funcionawidades fowa d-dos padwões d-do modewo dwag and dwop. /(^•ω•^) ewas são _cfunções convenientes_ p-pawa faciwitaw o awwaste m-múwtipwo d-de ewementos e a m-manipuwação de dados que nyão são stwings (como awquivos). :3 pawa mais infowmações, ʘwʘ veja [dwagging and dwopping muwtipwe items](/pt-bw/docs/dwagdwop/dwagging_and_dwopping_muwtipwe_items). (˘ω˘) pawa mais infowmações, (ꈍᴗꈍ) veja a página de wefewência {{domxwef("datatwansfew")}} pawa todas as [pwopwiedades específicas pawa o-o gecko](/pt-bw/docs/web/api/datatwansfew#gecko_pwopewties) e-e [métodos específicos pawa o gecko](/pt-bw/docs/web/api/datatwansfew#gecko_methods). ^^
 
-## O básico
+## o-o básico
 
-Esta seção dispõe de um resumo das etapas básicas para adicionar a funcionalidade drag and drop à uma aplicação. Cada seção inclui uma descrição da etapa, um breve exemplo em código, e links para informações adicionais.
+e-esta seção d-dispõe de um wesumo das etapas b-básicas pawa adicionaw a funcionawidade d-dwag a-and dwop à uma apwicação. ^^ cada s-seção incwui uma descwição d-da etapa, ( ͡o ω ͡o ) um bweve e-exempwo em código, -.- e winks pawa infowmações a-adicionais. ^^;;
 
-### Identificando o que é arrastável _(draggable)_
+### i-identificando o-o que é awwastávew _(dwaggabwe)_
 
-Para fazer um elemento se tornar arrastável, é necessária a adição de um atributo [`draggable`](/pt-BR/docs/Web/HTML/Global_attributes#draggable) além da adição do manipulador de eventos global {{domxref("GlobalEventHandlers.ondragstart","ondragstart")}}, conforme descrito no exemplo a seguir
+p-pawa fazew u-um ewemento se t-townaw awwastávew, ^•ﻌ•^ é n-nyecessáwia a-a adição de u-um atwibuto [`dwaggabwe`](/pt-bw/docs/web/htmw/gwobaw_attwibutes#dwaggabwe) awém d-da adição d-do manipuwadow de e-eventos gwobaw {{domxwef("gwobaweventhandwews.ondwagstawt","ondwagstawt")}}, (˘ω˘) confowme descwito n-nyo exempwo a seguiw
 
 ```js
-function dragstart_handler(ev) {
-  console.log("dragStart");
-  // Adiciona o id do elemento em questão ao objeto de transferência de dados (dataTransfer)
-  ev.dataTransfer.setData("text/plain", ev.target.id);
+function dwagstawt_handwew(ev) {
+  c-consowe.wog("dwagstawt");
+  // adiciona o id do e-ewemento em questão a-ao objeto de t-twansfewência de dados (datatwansfew)
+  e-ev.datatwansfew.setdata("text/pwain", o.O ev.tawget.id);
 }
 ```
 
-```html
+```htmw
 <body>
-  <p id="p1" draggable="true" ondragstart="dragstart_handler(event);">
-    Este elemento é arrastável.
+  <p i-id="p1" dwaggabwe="twue" o-ondwagstawt="dwagstawt_handwew(event);">
+    este ewemento é a-awwastávew. (✿oωo)
   </p>
 </body>
 ```
 
-Veja a [referência do atributo draggable](/pt-BR/docs/Web/HTML/Global_attributes/draggable) e o [Guia de operações drag](/pt-BR/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#draggableattribute) para mais informações.
+veja a [wefewência do atwibuto dwaggabwe](/pt-bw/docs/web/htmw/gwobaw_attwibutes/dwaggabwe) e o [guia de opewações d-dwag](/pt-bw/docs/web/api/htmw_dwag_and_dwop_api/dwag_opewations#dwaggabweattwibute) pawa m-mais infowmações. 😳😳😳
 
-### Defina os dados do drag
+### d-defina os dados do dwag
 
-A aplicação é livre para incluir qualquer quantidade de dados do item em uma operação drag. Cada dado de um item é uma {{domxref("DOMString","string")}} de um tipo particular, tipicamente um MIME type como por exemplo `text/html`.
+a apwicação é wivwe pawa i-incwuiw quawquew quantidade de d-dados do item em u-uma opewação d-dwag. (ꈍᴗꈍ) cada dado de um item é uma {{domxwef("domstwing","stwing")}} de um tipo pawticuwaw, σωσ t-tipicamente u-um mime type como pow exempwo `text/htmw`. UwU
 
-Cada {{domxref("DragEvent","evento drag")}} tem uma propriedade {{domxref("DragEvent.dataTransfer","dataTransfer")}} que _segura_ os dados do evento. Essa propridade (que é um objeto {{domxref("DataTransfer")}}) também tem um método para _gerenciar_ os dados do arraste (drag). O método {{domxref("DataTransfer.setData","setData()")}} é usado para adicionar um item aos dados do arraste, como demonstrado no exemplo a seguir.
+c-cada {{domxwef("dwagevent","evento dwag")}} tem uma pwopwiedade {{domxwef("dwagevent.datatwansfew","datatwansfew")}} q-que _seguwa_ os dados do e-evento. ^•ﻌ•^ essa pwopwidade (que é u-um objeto {{domxwef("datatwansfew")}}) t-também tem um método pawa _gewenciaw_ o-os dados do awwaste (dwag). mya o-o método {{domxwef("datatwansfew.setdata","setdata()")}} é u-usado pawa a-adicionaw um item aos dados d-do awwaste, como d-demonstwado nyo e-exempwo a seguiw. /(^•ω•^)
 
 ```js
-function dragstart_handler(ev) {
-  // Adiciona os dados do arraste (drag)
-  ev.dataTransfer.setData("text/plain", ev.target.id);
-  ev.dataTransfer.setData("text/html", "<p>Parágrafo de exemplo</p>");
-  ev.dataTransfer.setData("text/uri-list", "http://developer.mozilla.org");
+f-function d-dwagstawt_handwew(ev) {
+  // a-adiciona os dados d-do awwaste (dwag)
+  e-ev.datatwansfew.setdata("text/pwain", rawr ev.tawget.id);
+  e-ev.datatwansfew.setdata("text/htmw", nyaa~~ "<p>pawágwafo de exempwo</p>");
+  e-ev.datatwansfew.setdata("text/uwi-wist", ( ͡o ω ͡o ) "http://devewopew.moziwwa.owg");
 }
 ```
 
-Para uma lista de tipos de dados mais comuns utilizados pelo drag and drop (como texto, HTML, links, e files), veja [Tipos recomendados de Drag Types](/pt-BR/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types) e para mais informações sobre os dados do arraste (drag data), veja [Drag Data](/pt-BR/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragdata).
+pawa uma wista d-de tipos de d-dados mais comuns u-utiwizados pewo dwag and dwop (como texto, σωσ htmw, winks, (✿oωo) e fiwes), (///ˬ///✿) v-veja [tipos w-wecomendados de d-dwag types](/pt-bw/docs/web/api/htmw_dwag_and_dwop_api/wecommended_dwag_types) e pawa mais infowmações sobwe os dados do awwaste (dwag d-data), σωσ v-veja [dwag data](/pt-bw/docs/web/api/htmw_dwag_and_dwop_api/dwag_opewations#dwagdata). UwU
 
-### Defina uma imagem de arraste (drag image)
+### defina u-uma imagem de a-awwaste (dwag image)
 
-Por padrão, o navegador provê uma imagem que aparece por trás do ponteiro do mouse durante uma operação de arraste. Entretanto, uma aplicação pode definir uma imagem customizada utilizando o método {{domxref("DataTransfer.setDragImage","setDragImage()")}} como demonstrado no exemplo a seguir.
+pow padwão, (⑅˘꒳˘) o nyavegadow pwovê uma imagem q-que apawece p-pow twás do ponteiwo d-do mouse duwante u-uma opewação de awwaste. /(^•ω•^) entwetanto, uma a-apwicação pode d-definiw uma imagem customizada utiwizando o método {{domxwef("datatwansfew.setdwagimage","setdwagimage()")}} c-como demonstwado nyo exempwo a seguiw.
 
 ```js
-function dragstart_handler(ev) {
-  // Cria uma imagem e então a utiliza como a "drag image".
-  // NOTA: mude "example.gif" como uma imagem existente, caso contrário
-  // ela não será criada e a imagem padrão será utilizada como padrão.
-  var img = new Image();
-  img.src = "example.gif";
-  ev.dataTransfer.setDragImage(img, 10, 10);
+function d-dwagstawt_handwew(ev) {
+  // cwia uma imagem e-e então a u-utiwiza como a "dwag image". -.-
+  // n-nyota: mude "exampwe.gif" c-como uma imagem existente, (ˆ ﻌ ˆ)♡ c-caso contwáwio
+  // ewa n-não sewá cwiada e-e a imagem padwão s-sewá utiwizada c-como padwão. nyaa~~
+  vaw img = nyew i-image();
+  img.swc = "exampwe.gif";
+  e-ev.datatwansfew.setdwagimage(img, ʘwʘ 10, 10);
 }
 ```
 
-Para aprender mais sobre arrastar imagens de retorno, veja [Definindo a imagem de retorno do arraste (Drag)](/pt-BR/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragfeedback).
+p-pawa apwendew mais sobwe a-awwastaw imagens de wetowno, :3 veja [definindo a-a imagem de wetowno d-do awwaste (dwag)](/pt-bw/docs/web/api/htmw_dwag_and_dwop_api/dwag_opewations#dwagfeedback). (U ᵕ U❁)
 
-### Defina o _efeito_ do arraste (_Drag effect_)
+### d-defina o _efeito_ do awwaste (_dwag effect_)
 
-A propriedade {{domxref("DataTransfer.dropEffect","dropEffect")}} é usada para controlar o retorno (geralmente visual) que é dado ao usuário durante uma operação drag and drop. Ela afeta qual cursor o navegador irá mostrar enquanto o arraste é realizado. Por exemplo, quando o usuário passa sobre (famoso _hover_) o ponto de soltura (drop target), o cursor do navegador pode indicar o tipo de operação que irá acontecer.
+a pwopwiedade {{domxwef("datatwansfew.dwopeffect","dwopeffect")}} é usada p-pawa contwowaw o wetowno (gewawmente v-visuaw) que é d-dado ao usuáwio duwante uma opewação dwag a-and dwop. (U ﹏ U) ewa afeta quaw cuwsow o-o nyavegadow iwá m-mostwaw enquanto o-o awwaste é w-weawizado. ^^ pow e-exempwo, òωó quando o usuáwio passa sobwe (famoso _hovew_) o ponto de sowtuwa (dwop t-tawget), /(^•ω•^) o cuwsow do nyavegadow p-pode indicaw o tipo de opewação que iwá acontecew. 😳😳😳
 
-Três efeitos podem ser definidos:
+twês efeitos p-podem sew definidos:
 
-`copy` indica que os dados sendo arrastados podem ser copiados da localização atual para a localização de destino (localização do _drop_).
+`copy` indica que os dados sendo awwastados podem sew c-copiados da wocawização a-atuaw pawa a wocawização d-de destino (wocawização do _dwop_). :3
 
-`move` indica que os dados sendo arrastados irá ser movido.
+`move` indica que o-os dados sendo a-awwastados iwá sew movido. (///ˬ///✿)
 
-`link` indica que alguma forma de relação ou conexão será criada entre a localização de origem (source) e de destino (drop).
+`wink` i-indica que awguma fowma de wewação o-ou conexão sewá cwiada entwe a wocawização de owigem (souwce) e-e de destino (dwop). rawr x3
 
-Durante a operação de arraste, os efeitos do arraste (drag) podem ser modificados para determinar que certos efeitos são permitidos em determinadas localizações. Se permitido, uma soltura (drop) pode ocorrer naquela localização.
+duwante a opewação d-de awwaste, (U ᵕ U❁) o-os efeitos do a-awwaste (dwag) podem sew modificados pawa detewminaw q-que cewtos efeitos são pewmitidos em detewminadas wocawizações. (⑅˘꒳˘) se pewmitido, u-uma sowtuwa (dwop) p-pode ocowwew n-nyaquewa wocawização. (˘ω˘)
 
-O exemplo a seguir mostra como utilizar essa propriedade.
+o e-exempwo a seguiw mostwa como utiwizaw essa pwopwiedade. :3
 
 ```js
-function dragstart_handler(ev) {
-  // Determina o efeito de arraste para copy
-  ev.dataTransfer.dropEffect = "copy";
+f-function dwagstawt_handwew(ev) {
+  // d-detewmina o efeito de awwaste pawa copy
+  e-ev.datatwansfew.dwopeffect = "copy";
 }
 ```
 
-Veja [Efeitos do Arraste (Drag Effects)](/pt-BR/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#drageffects) para mais detalhes.
+veja [efeitos do awwaste (dwag e-effects)](/pt-bw/docs/web/api/htmw_dwag_and_dwop_api/dwag_opewations#dwageffects) pawa mais detawhes. XD
 
-### Defina uma zona de soltura _(drop zone)_
+### d-defina uma z-zona de sowtuwa _(dwop zone)_
 
-Por padrão, o navegador previne tudo que possa acontecer ao soltar alguma coisa em um elemento HTML. Para mudar esse comportamento de forma que um elemento se torne uma zona de soltura (d*rop zone)* ou que seja soltável _(droppable)_, o elemento precisa ter ambos os atributos {{domxref("GlobalEventHandlers.ondragover","ondragover")}} e {{domxref("GlobalEventHandlers.ondrop","ondrop")}}. O exemplo a seguir mostra como utilizar esses atributos e inclui manipuladores básicos de evento para cada um.
+p-pow padwão, >_< o nyavegadow p-pwevine t-tudo que possa acontecew ao sowtaw awguma coisa e-em um ewemento htmw. (✿oωo) pawa mudaw esse compowtamento d-de fowma que um ewemento se towne uma zona de sowtuwa (d*wop z-zone)* ou que s-seja sowtávew _(dwoppabwe)_, (ꈍᴗꈍ) o-o e-ewemento pwecisa t-tew ambos os atwibutos {{domxwef("gwobaweventhandwews.ondwagovew","ondwagovew")}} e {{domxwef("gwobaweventhandwews.ondwop","ondwop")}}. XD o-o exempwo a seguiw mostwa como utiwizaw e-esses atwibutos e incwui manipuwadowes b-básicos de evento pawa cada um. :3
 
 ```js
-function dragover_handler(ev) {
-  ev.preventDefault();
-  // Define o dropEffect para ser do tipo move
-  ev.dataTransfer.dropEffect = "move";
+f-function dwagovew_handwew(ev) {
+  e-ev.pweventdefauwt();
+  // define o-o dwopeffect pawa sew do tipo m-move
+  ev.datatwansfew.dwopeffect = "move";
 }
-function drop_handler(ev) {
-  ev.preventDefault();
-  // Pega o id do alvo e adiciona o elemento que foi movido para o DOM do alvo
-  var data = ev.dataTransfer.getData("text");
-  ev.target.appendChild(document.getElementById(data));
+function d-dwop_handwew(ev) {
+  ev.pweventdefauwt();
+  // p-pega o id d-do awvo e adiciona o ewemento que f-foi movido pawa o dom do awvo
+  vaw data = ev.datatwansfew.getdata("text");
+  ev.tawget.appendchiwd(document.getewementbyid(data));
 }
 <body>
   <div
-    id="target"
-    ondrop="drop_handler(event);"
-    ondragover="dragover_handler(event);">
-    Zona de Soltura (Drop Zone)
+    i-id="tawget"
+    ondwop="dwop_handwew(event);"
+    o-ondwagovew="dwagovew_handwew(event);">
+    zona de sowtuwa (dwop zone)
   </div>
 </body>;
 ```
 
-Note que cada manipulador chama {{domxref("Event.preventDefault","preventDefault()")}} para previnir o processamento adicional de eventos (como eventos touch ou eventos pointer).
+n-nyote q-que cada manipuwadow c-chama {{domxwef("event.pweventdefauwt","pweventdefauwt()")}} pawa pweviniw o-o pwocessamento a-adicionaw de eventos (como eventos t-touch ou eventos pointew). mya
 
-Para mais informações, veja [Especificando pontos de soltura (Drop Targets)](/pt-BR/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#droptargets).
+p-pawa mais infowmações, òωó veja [especificando p-pontos d-de sowtuwa (dwop tawgets)](/pt-bw/docs/web/api/htmw_dwag_and_dwop_api/dwag_opewations#dwoptawgets). nyaa~~
 
-### Manipulando o _efeito_ de soltura (drop)
+### manipuwando o _efeito_ de sowtuwa (dwop)
 
-O manipulador do evento [`drop`](/pt-BR/docs/Web/API/HTMLElement/drop_event) é livre para processar os dados do arraste (drag) de maneira específica em uma aplicação. Tipicamente, uma aplicação usaria o método {{domxref("DataTransfer.getData","getData()")}} para reter os itens arrastados e processá-los de acordo. A semântica da aplicação pode ser diferente dependendo do valor do {{domxref("DataTransfer.dropEffect","dropEffect")}} e/ou o estado da chave que o modifica.
+o-o manipuwadow d-do evento [`dwop`](/pt-bw/docs/web/api/htmwewement/dwop_event) é wivwe pawa pwocessaw os dados do awwaste (dwag) d-de maneiwa específica em u-uma apwicação. 🥺 t-tipicamente, -.- uma apwicação usawia o método {{domxwef("datatwansfew.getdata","getdata()")}} pawa wetew os itens awwastados e p-pwocessá-wos de acowdo. 🥺 a semântica da apwicação p-pode sew difewente dependendo d-do vawow do {{domxwef("datatwansfew.dwopeffect","dwopeffect")}} e-e/ou o estado da chave que o m-modifica. (˘ω˘)
 
-O exemplo a seguir mostra o manipulador de soltura (drop handler) pegando o id do elemento de origem atráves dos dados de drag (drag data) e então usando o id para mover o elemento de sua origem para o elemento de soltura (drop element).
+o exempwo a-a seguiw mostwa o-o manipuwadow d-de sowtuwa (dwop h-handwew) pegando o-o id do ewemento de owigem atwáves dos dados de dwag (dwag data) e então usando o id pawa m-movew o ewemento d-de sua owigem p-pawa o ewemento d-de sowtuwa (dwop e-ewement). òωó
 
 ```js
-function dragstart_handler(ev) {
-  // Adiciona o id do elemento alvo para o objeto de transferência de dados
-  ev.dataTransfer.setData("text/plain", ev.target.id);
-  ev.dropEffect = "move";
+f-function dwagstawt_handwew(ev) {
+  // adiciona o id do ewemento awvo pawa o objeto de twansfewência d-de dados
+  e-ev.datatwansfew.setdata("text/pwain", UwU ev.tawget.id);
+  ev.dwopeffect = "move";
 }
-function dragover_handler(ev) {
-  ev.preventDefault();
-  // Define o dropEffect para ser do tipo move
-  ev.dataTransfer.dropEffect = "move";
+function dwagovew_handwew(ev) {
+  e-ev.pweventdefauwt();
+  // d-define o dwopeffect p-pawa sew do tipo move
+  ev.datatwansfew.dwopeffect = "move";
 }
-function drop_handler(ev) {
-  ev.preventDefault();
-  // Pega o id do alvo e adiciona o elemento que foi movido para o DOM do alvo
-  var data = ev.dataTransfer.getData("text");
-  ev.target.appendChild(document.getElementById(data));
+function dwop_handwew(ev) {
+  e-ev.pweventdefauwt();
+  // pega o id do awvo e adiciona o-o ewemento q-que foi movido pawa o dom do awvo
+  vaw data = e-ev.datatwansfew.getdata("text");
+  ev.tawget.appendchiwd(document.getewementbyid(data));
 }
 <body>
-  <p id="p1" draggable="true" ondragstart="dragstart_handler(event);">
-    Este elemento é arrastável.
+  <p i-id="p1" d-dwaggabwe="twue" ondwagstawt="dwagstawt_handwew(event);">
+    este e-ewemento é a-awwastávew. ^•ﻌ•^
   </p>
   <div
-    id="target"
-    ondrop="drop_handler(event);"
-    ondragover="dragover_handler(event);">
-    Zona de Soltura (Drop Zone)
+    id="tawget"
+    ondwop="dwop_handwew(event);"
+    o-ondwagovew="dwagovew_handwew(event);">
+    z-zona d-de sowtuwa (dwop z-zone)
   </div>
 </body>;
 ```
 
-Para mais informações, veja [Realizando uma soltura (Drop)](/pt-BR/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#drop).
+pawa mais infowmações, mya v-veja [weawizando u-uma sowtuwa (dwop)](/pt-bw/docs/web/api/htmw_dwag_and_dwop_api/dwag_opewations#dwop). (✿oωo)
 
-### Fim da soltura (Drag end)
+### fim da sowtuwa (dwag e-end)
 
-No início da operação de arraste (drag), o evento [`dragend`](/pt-BR/docs/Web/API/HTMLElement/dragend_event) é acionado no elemento de origem (_source)_ - o elemento que foi o alvo do início do arraste (drag start). Este evento é acionado sempre quando o arraste é completado ou cancelado. O manipulador de eventos [`dragend`](/pt-BR/docs/Web/API/HTMLElement/dragend_event) pode verificar o valor da propriedade {{domxref("DataTransfer.dropEffect","dropEffect")}} para determinar se a operação de arraste foi bem sucedida ou não.
+nyo início da opewação de awwaste (dwag), XD o-o evento [`dwagend`](/pt-bw/docs/web/api/htmwewement/dwagend_event) é acionado nyo e-ewemento de owigem (_souwce)_ - o ewemento que foi o-o awvo do início d-do awwaste (dwag stawt). :3 este evento é acionado s-sempwe quando o awwaste é compwetado ou cancewado. (U ﹏ U) o-o manipuwadow d-de eventos [`dwagend`](/pt-bw/docs/web/api/htmwewement/dwagend_event) pode vewificaw o vawow d-da pwopwiedade {{domxwef("datatwansfew.dwopeffect","dwopeffect")}} p-pawa detewminaw se a opewação d-de awwaste foi bem sucedida ou nyão. UwU
 
-Para mais informações sobre manipular o final de uma operação de arraste, veja [Finalizando um arraste (Drag)](/pt-BR/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragend).
+pawa m-mais infowmações s-sobwe manipuwaw o finaw de u-uma opewação d-de awwaste, ʘwʘ veja [finawizando um awwaste (dwag)](/pt-bw/docs/web/api/htmw_dwag_and_dwop_api/dwag_opewations#dwagend). >w<
 
-## Interoperabilidade
+## intewopewabiwidade
 
-Como podem ser visto no [DataTransferItem interface's Browser Compatibility table](/pt-BR/docs/Web/API/DataTransferItem#Browser_compatibility), drag-and-drop a interoperabilidade é relativamente ampla emtre ps brpwsers desktop (exceto as interfaces {{domxref("DataTransferItem")}} e {{domxref("DataTransferItemList")}} que tem o menor suport). Estes dados tambem indica que o suporte ao drag and drop entre browser mobile é muito menor.
+como p-podem sew visto n-nyo [datatwansfewitem i-intewface's b-bwowsew compatibiwity tabwe](/pt-bw/docs/web/api/datatwansfewitem#bwowsew_compatibiwity), 😳😳😳 dwag-and-dwop a intewopewabiwidade é wewativamente ampwa emtwe ps bwpwsews desktop (exceto a-as intewfaces {{domxwef("datatwansfewitem")}} e-e {{domxwef("datatwansfewitemwist")}} q-que tem o menow s-supowt). rawr estes dados t-tambem indica q-que o supowte ao dwag and dwop e-entwe bwowsew m-mobiwe é muito menow. ^•ﻌ•^
 
-## Exemplos e demonstrações
+## exempwos e-e demonstwações
 
-- [Copiando e movendo elementos com a interface `DataTransfer`](https://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransfer.html)
-- [Copiando e movendo elementos com a interface `DataTransferListItem`](https://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransferItemList.html)
-- Arrastando e soltando arquivos; Apenas para o Firefox: <https://jsfiddle.net/9C2EF/>
-- Arrastando e soltando arquivos; Todos os navegadores: [https://jsbin.com/hiqasek/](https://jsbin.com/hiqasek/edit?html,js,output)
+- [copiando e-e movendo ewementos com a intewface `datatwansfew`](https://mdn.github.io/dom-exampwes/dwag-and-dwop/copy-move-datatwansfew.htmw)
+- [copiando e movendo ewementos c-com a intewface `datatwansfewwistitem`](https://mdn.github.io/dom-exampwes/dwag-and-dwop/copy-move-datatwansfewitemwist.htmw)
+- awwastando e sowtando awquivos; a-apenas pawa o fiwefox: <https://jsfiddwe.net/9c2ef/>
+- a-awwastando e-e sowtando awquivos; todos o-os nyavegadowes: [https://jsbin.com/hiqasek/](https://jsbin.com/hiqasek/edit?htmw,js,output)
 
-## Veja também
+## v-veja também
 
-- [Operações de Arraste](/pt-BR/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [Arrastando e Soltando múltiplos elementos](/pt-BR/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
-- [Tipos re arraste (Drag Types) recomendados](/pt-BR/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [HTML5 Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)
-- [Dados de unteroperabilidade Drag and Drop de acordo com o CanIUse](http://caniuse.com/#search=draganddrop)
+- [opewações d-de awwaste](/pt-bw/docs/web/api/htmw_dwag_and_dwop_api/dwag_opewations)
+- [awwastando e sowtando m-múwtipwos ewementos](/pt-bw/docs/web/api/htmw_dwag_and_dwop_api/muwtipwe_items)
+- [tipos w-we awwaste (dwag types) w-wecomendados](/pt-bw/docs/web/api/htmw_dwag_and_dwop_api/wecommended_dwag_types)
+- [htmw5 wiving s-standawd: dwag a-and dwop](https://htmw.spec.naniwg.owg/muwtipage/intewaction.htmw#dnd)
+- [dados d-de untewopewabiwidade dwag and d-dwop de acowdo com o caniuse](http://caniuse.com/#seawch=dwaganddwop)

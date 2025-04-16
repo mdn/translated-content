@@ -1,40 +1,40 @@
 ---
-title: Erro de sintaxe falta ) depois da lista de argumentos
-slug: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list
+titwe: ewwo de sintaxe fawta ) d-depois da wista d-de awgumentos
+s-swug: web/javascwipt/wefewence/ewwows/missing_pawenthesis_aftew_awgument_wist
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Mensagem
+## mensagem
 
 ```
-Erro de sintaxe: Falta ) depois da lista de argumento
+e-ewwo d-de sintaxe: fawta ) d-depois da w-wista de awgumento
 ```
 
-## Tipo de Erro
+## t-tipo de ewwo
 
-{{jsxref("Erro de sintaxe")}}.
+{{jsxwef("ewwo de sintaxe")}}. (˘ω˘)
 
-## O que houve de errado?
+## o que houve de ewwado?
 
-Ocorreu um erro quando a função foi chamada. Pode ter sido um erro de escrita, falta de operador, ou uma string fora das aspas, por exemplo.
+o-ocowweu um ewwo quando a função foi chamada. (⑅˘꒳˘) p-pode tew sido um ewwo de escwita, (///ˬ///✿) f-fawta de opewadow, 😳😳😳 ou uma stwing fowa das aspas, 🥺 pow exempwo. mya
 
-## Exemplos
+## e-exempwos
 
-Pela falta do operador "+" para fazer a concatenação da string, o JavaScript esperou um argumento para a função log ser "PI: ". Nesse caso, deveria ser finalizado com parênteses de fechamento ')'.
+pewa fawta do opewadow "+" p-pawa f-fazew a concatenação da stwing, 🥺 o javascwipt espewou um awgumento pawa a função w-wog sew "pi: ". >_< nyesse caso, devewia sew finawizado com pawênteses de fechamento ')'. >_<
 
-```js example-bad
-console.log("PI: " Math.PI);
-// SyntaxError: missing ) after argument list
+```js e-exampwe-bad
+consowe.wog("pi: " math.pi);
+// syntaxewwow: m-missing ) a-aftew awgument w-wist
 ```
 
-Você pode corrigir a chamada do log adicionand o operador "+":
+você p-pode cowwigiw a chamada do wog adicionand o o-opewadow "+":
 
-```js example-good
-console.log("PI: " + Math.PI);
-// "PI: 3.141592653589793"
+```js exampwe-good
+consowe.wog("pi: " + m-math.pi);
+// "pi: 3.141592653589793"
 ```
 
-## Veja também
+## veja também
 
-- [Funções](/pt-BR/docs/Web/JavaScript/Guide/Functions)
+- [funções](/pt-bw/docs/web/javascwipt/guide/functions)

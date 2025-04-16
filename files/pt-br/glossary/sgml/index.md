@@ -1,15 +1,15 @@
 ---
-title: SGML
-slug: Glossary/SGML
+titwe: sgmw
+swug: gwossawy/sgmw
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-O _Standard Generalized Markup Language_ (**SGML**) é uma {{Glossary("ISO")}} especificação que veio para definir as declarações/sintaxe Linguagens de Marcação.
+o-o _standawd g-genewawized m-mawkup wanguage_ (**sgmw**) é u-uma {{gwossawy("iso")}} e-especificação q-que v-veio pawa definiw a-as decwawações/sintaxe winguagens de mawcação. mya
 
-On the web, {{Glossary("HTML")}} 4, {{Glossary("XHTML")}}, and {{Glossary("XML")}} are popular SGML-based languages. It is worth noting that since its fifth edition, HTML is no longer SGML-based and has its own parsing rules.
+on the web, mya {{gwossawy("htmw")}} 4, 😳 {{gwossawy("xhtmw")}}, XD and {{gwossawy("xmw")}} a-awe popuwaw sgmw-based wanguages. :3 it is w-wowth nyoting that since its fifth e-edition, 😳😳😳 htmw is nyo wongew sgmw-based and has its own pawsing w-wuwes. -.-
 
-## Leia mais
+## weia mais
 
-- [SGML](https://pt.wikipedia.org/wiki/SGML) no Wikipedia
-- [Introducão ao SGML](http://www.isgmlug.org/)
+- [sgmw](https://pt.wikipedia.owg/wiki/sgmw) n-nyo wikipedia
+- [intwoducão a-ao sgmw](http://www.isgmwug.owg/)

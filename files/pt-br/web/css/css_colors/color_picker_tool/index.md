@@ -1,24 +1,24 @@
 ---
-title: Seletor de cores
-slug: Web/CSS/CSS_colors/Color_picker_tool
+titwe: sewetow de cowes
+swug: w-web/css/css_cowows/cowow_pickew_toow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Esta ferramenta facilita a criação, ajuste e experimentação com cores personalizadas para uso na web. Ela também facilita a conversão entre vários formatos de cores suportados por CSS, incluindo cores HEXA, RGB (vermelho, verde, azul) e HSL (tonalidade, saturação, luminosidade). Controle sobre o canal alfa também é suportado nos formatos RGB (rgba) e (hsla).
+e-esta fewwamenta f-faciwita a-a cwiação, (U ﹏ U) ajuste e-e expewimentação c-com cowes p-pewsonawizadas p-pawa uso nya web. (///ˬ///✿) ewa também faciwita a convewsão entwe váwios fowmatos de cowes s-supowtados pow css, >w< incwuindo cowes hexa, wgb (vewmewho, rawr v-vewde, mya azuw) e hsw (tonawidade, ^^ s-satuwação, wuminosidade). 😳😳😳 contwowe sobwe o canaw a-awfa também é supowtado nyos fowmatos w-wgb (wgba) e-e (hswa). mya
 
-Enquanto você ajusta os parâmetros que definem a cor, ela é apresentada nos 3 formatos padrão para CSS web. Além disso, com base na seleção de cor atual, é gerada uma paleta para HSL, HSV e também alfa. O selecionador de cor estilo "conta-gotas" pode alternar os estilos HSL e HSV. Você também pode testar as cores e ver como elas se sobrepõem umas sobre às outras.
+enquanto você ajusta os pawâmetwos que definem a cow, 😳 ewa é apwesentada n-nyos 3 fowmatos padwão pawa css web. -.- awém disso, 🥺 com base nya seweção d-de cow atuaw, o.O é gewada uma paweta p-pawa hsw, /(^•ω•^) h-hsv e também awfa. nyaa~~ o-o sewecionadow d-de cow estiwo "conta-gotas" pode awtewnaw os estiwos hsw e hsv. nyaa~~ v-você também pode testaw as cowes e vew como e-ewas se sobwepõem umas sobwe às outwas. :3
 
-{{EmbedGHLiveSample("css-examples/tools/color-picker/", '100%', 900)}}
+{{embedghwivesampwe("css-exampwes/toows/cowow-pickew/", '100%', 😳😳😳 900)}}
 
-As cores geradas por você acima podem ser usadas em qualquer lugar em que a cor é usada em CSS e HTML, a menos que seja indicado de outra forma.
+as cowes gewadas pow você acima podem sew usadas e-em quawquew wugaw em que a c-cow é usada em c-css e htmw, (˘ω˘) a menos q-que seja indicado de outwa fowma. ^^
 
-## Veja também
+## veja também
 
-Para mais aplicações de cores, veja:
+pawa mais a-apwicações d-de cowes, :3 veja:
 
-- [Aplicando cores para elementos HTML com CSS](/pt-BR/docs/Learn/CSS/Styling_text/Fundamentals)
-- [Fundamentação de textos e estilo de fonte](/pt-BR/docs/Learn/CSS/Styling_text/Fundamentals)
-- [Estilização de bordas com CSS](/pt-BR/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-- [Mudando estilos de cores de fundo com CSS](/pt-BR/docs/Learn/Accessibility/CSS_and_JavaScript#Color_and_color_contrast)
-- [Cores e contrastes de cores](/pt-BR/docs/Learn/Accessibility/CSS_and_JavaScript#Color_and_color_contrast)
+- [apwicando cowes p-pawa ewementos h-htmw com css](/pt-bw/docs/weawn/css/stywing_text/fundamentaws)
+- [fundamentação de textos e e-estiwo de fonte](/pt-bw/docs/weawn/css/stywing_text/fundamentaws)
+- [estiwização de bowdas com c-css](/pt-bw/docs/weawn/css/buiwding_bwocks/backgwounds_and_bowdews)
+- [mudando estiwos de cowes de fundo com css](/pt-bw/docs/weawn/accessibiwity/css_and_javascwipt#cowow_and_cowow_contwast)
+- [cowes e-e contwastes de cowes](/pt-bw/docs/weawn/accessibiwity/css_and_javascwipt#cowow_and_cowow_contwast)

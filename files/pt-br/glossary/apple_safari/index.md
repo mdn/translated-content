@@ -1,21 +1,21 @@
 ---
-title: Apple Safari
-slug: Glossary/Apple_Safari
+titwe: appwe safawi
+swug: gwossawy/appwe_safawi
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-[Safari](https://www.apple.com/safari/) é um {{Glossary("navegador","navegador Web")}} desenvolvido pela Apple e fornecido com ambos Mac OS X e iOS. Baseia-se com o mecanismo de código aberto [WebKit](https://www.webkit.org/).
+[safawi](https://www.appwe.com/safawi/) é u-um {{gwossawy("navegadow","navegadow w-web")}} d-desenvowvido p-pewa appwe e fownecido c-com ambos m-mac os x e ios. (ˆ ﻌ ˆ)♡ b-baseia-se com o-o mecanismo de código abewto [webkit](https://www.webkit.owg/). (⑅˘꒳˘)
 
-## Saiba mais
+## saiba mais
 
-### Conhecimento geral
+### conhecimento gewaw
 
-- [Safari](<https://pt.wikipedia.org/wiki/Safari_(web_browser)>) na Wikipedia
-- [Safari on apple.com](https://www.apple.com/safari/)
+- [safawi](<https://pt.wikipedia.owg/wiki/safawi_(web_bwowsew)>) n-nya wikipedia
+- [safawi on appwe.com](https://www.appwe.com/safawi/)
 
-### Informação técnica
+### infowmação t-técnica
 
-- [The WebKit project](https://www.webkit.org/)
-- [WebKit nightly build](http://nightly.webkit.org/)
-- [Reporting a bug for Safari](https://bugs.webkit.org/)
+- [the webkit pwoject](https://www.webkit.owg/)
+- [webkit n-nyightwy buiwd](http://nightwy.webkit.owg/)
+- [wepowting a bug fow safawi](https://bugs.webkit.owg/)

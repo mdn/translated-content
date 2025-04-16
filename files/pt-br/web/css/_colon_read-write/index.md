@@ -1,94 +1,94 @@
 ---
-title: :read-write
-slug: Web/CSS/:read-write
+titwe: :wead-wwite
+swug: web/css/:wead-wwite
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) [CSS](/pt-BR/docs/Web/CSS) **`:read-write`** representa um elemento (como o `input` ou `textarea`) que é editável pelo usuário.
+a-a [pseudo-cwasse](/pt-bw/docs/web/css/pseudo-cwasses) [css](/pt-bw/docs/web/css) **`:wead-wwite`** w-wepwesenta um e-ewemento (como o-o `input` ou `textawea`) q-que é e-editávew pewo u-usuáwio. :3
 
 ```css
-input:read-write,
-textarea:read-write {
-  background-color: #bbf;
+i-input:wead-wwite, OwO
+textawea:wead-wwite {
+  backgwound-cowow: #bbf;
 }
 
-p:read-write {
-  background-color: #bbf;
+p:wead-wwite {
+  backgwound-cowow: #bbf;
 }
 ```
 
-## Sintaxe
+## s-sintaxe
 
 {{csssyntax}}
 
-## Exemplos
+## exempwos
 
-### Confirmando informações do formulário em controles read-only/read-write
+### confiwmando infowmações d-do fowmuwáwio em contwowes w-wead-onwy/wead-wwite
 
-Ao utilizar os controles de formulário `readonly` permite que o usuário verifique e verifique as informações que eles podem ter inserido em um formulário anterior (por exemplo: Detalhes de envio), enquanto ainda pode enviar as informações junto com o resto do formulário. Nós fazemos exatamente isso no exemplo abaixo.
+ao utiwizaw os contwowes de fowmuwáwio `weadonwy` pewmite que o u-usuáwio vewifique e vewifique as i-infowmações q-que ewes podem tew insewido em um fowmuwáwio antewiow (pow exempwo: detawhes de e-envio), (U ﹏ U) enquanto ainda pode enviaw as infowmações junto com o westo do fowmuwáwio. >w< n-nyós fazemos exatamente i-isso nyo exempwo a-abaixo. (U ﹏ U)
 
-A pseudo-classe `:read-only` _(:somente-leitura)_ é usada para remover todo o estilo que faz com que as entradas pareçam campos clicáveis, fazendo com que pareçam outro parágrafo _somente-leitura_. A pseudo-classe `:read-write` _(:leitura-escrita)_ por outro lado, é usado para fornecer um estilo mais agradável para a `<textarea>`.
+a pseudo-cwasse `:wead-onwy` _(:somente-weituwa)_ é usada p-pawa wemovew t-todo o estiwo que faz com que as entwadas paweçam c-campos cwicáveis, 😳 fazendo com que paweçam o-outwo pawágwafo _somente-weituwa_. (ˆ ﻌ ˆ)♡ a pseudo-cwasse `:wead-wwite` _(:weituwa-escwita)_ pow outwo wado, 😳😳😳 é usado pawa fownecew um estiwo mais agwadávew p-pawa a `<textawea>`. (U ﹏ U)
 
 ```css
-input:-moz-read-only,
-textarea:-moz-read-only,
-input:read-only,
-textarea:read-only {
-  border: 0;
-  box-shadow: none;
-  background-color: white;
+input:-moz-wead-onwy, (///ˬ///✿)
+t-textawea:-moz-wead-onwy, 😳
+i-input:wead-onwy, 😳
+t-textawea:wead-onwy {
+  bowdew: 0;
+  box-shadow: nyone;
+  backgwound-cowow: w-white;
 }
 
-textarea:-moz-read-write,
-textarea:read-write {
-  box-shadow: inset 1px 1px 3px #ccc;
-  border-radius: 5px;
+textawea:-moz-wead-wwite, σωσ
+t-textawea:wead-wwite {
+  box-shadow: i-inset 1px 1px 3px #ccc;
+  b-bowdew-wadius: 5px;
 }
 ```
 
-Você pode encontrar o código fonte completo em [readonly-confirmation.html](https://github.com/mdn/learning-area/blob/master/html/forms/pseudo-classes/readonly-confirmation.html) (disponível em inglês); isso torna assim:
+você p-pode encontwaw o código fonte c-compweto em [weadonwy-confiwmation.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/fowms/pseudo-cwasses/weadonwy-confiwmation.htmw) (disponívew em ingwês); isso towna assim:
 
-{{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/readonly-confirmation.html", '100%', 660)}}
+{{embedghwivesampwe("weawning-awea/htmw/fowms/pseudo-cwasses/weadonwy-confiwmation.htmw", rawr x3 '100%', OwO 660)}}
 
-### Estilizar controle não formal de read-write
+### e-estiwizaw contwowe n-nyão fowmaw de wead-wwite
 
-Este seletor não seleciona apenas {{htmlElement("input")}}/{{htmlElement("textarea")}} elementos - ele selecionará qualquer elemento que possa ser editado pelo usuário, como um {{htmlelement("p")}} elemento com [`contenteditable`](/pt-BR/docs/Web/HTML/Global_attributes#contenteditable) definido sobre ele.
+este s-sewetow nyão s-seweciona apenas {{htmwewement("input")}}/{{htmwewement("textawea")}} ewementos - ewe sewecionawá quawquew ewemento que possa sew editado pewo usuáwio, /(^•ω•^) como um {{htmwewement("p")}} e-ewemento c-com [`contenteditabwe`](/pt-bw/docs/web/htmw/gwobaw_attwibutes#contenteditabwe) definido sobwe ewe.
 
-```html
-<p contenteditable>Este parágrafo é editável; é read-write.</p>
+```htmw
+<p c-contenteditabwe>este p-pawágwafo é e-editávew; é wead-wwite.</p>
 
-<p>Este parágrafo não é editável; é read-only.</p>
+<p>este pawágwafo nyão é editávew; é w-wead-onwy.</p>
 ```
 
 ```css
 p {
   font-size: 150%;
   padding: 5px;
-  border-radius: 5px;
+  bowdew-wadius: 5px;
 }
 
-p:read-only {
-  background-color: red;
-  color: white;
+p:wead-onwy {
+  b-backgwound-cowow: wed;
+  c-cowow: white;
 }
 
-p:read-write {
-  background-color: lime;
+p-p:wead-wwite {
+  b-backgwound-cowow: wime;
 }
 ```
 
-{{EmbedLiveSample('Estilizar_controle_não_formal_de_read-write.', '100%', 400)}}
+{{embedwivesampwe('estiwizaw_contwowe_não_fowmaw_de_wead-wwite.', '100%', 😳😳😳 400)}}
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{cssxref(":read-only")}}
-- Atributo HTML [`contenteditable`](/pt-BR/docs/Web/HTML/Global_attributes#contenteditable).
+- {{cssxwef(":wead-onwy")}}
+- atwibuto htmw [`contenteditabwe`](/pt-bw/docs/web/htmw/gwobaw_attwibutes#contenteditabwe). ( ͡o ω ͡o )

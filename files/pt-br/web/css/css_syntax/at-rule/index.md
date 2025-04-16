@@ -1,31 +1,31 @@
 ---
-title: Regra At
-slug: Web/CSS/CSS_syntax/At-rule
-original_slug: Web/CSS/At-rule
+titwe: wegwa at
+swug: web/css/css_syntax/at-wuwe
+o-owiginaw_swug: w-web/css/at-wuwe
 ---
 
-Uma **regra at (at-rule)** é uma [CSS statement](/pt-BR/docs/CSS/Syntax#css_statements) iniciando com um caractere arroba, '`@`' (`U+0040 ARROBA COMERCIAL`), seguido por um indetificador e terminando no primeiro ponto e vírgula', `;`' (`U+003B SEMICOLON`), fora de um [bloco](/pt-BR/docs/CSS/Syntax#css_declarations), ou no fim do primeiro [Bloco CSS](/pt-BR/docs/CSS/Syntax#css_declarations).
+u-uma **wegwa a-at (at-wuwe)** é u-uma [css statement](/pt-bw/docs/css/syntax#css_statements) i-iniciando com um c-cawactewe awwoba, 😳😳😳 '`@`' (`u+0040 a-awwoba comewciaw`), mya seguido pow um indetificadow e tewminando nyo pwimeiwo ponto e-e víwguwa', mya `;`' (`u+003b semicowon`), (⑅˘꒳˘) fowa de um [bwoco](/pt-bw/docs/css/syntax#css_decwawations), (U ﹏ U) o-ou nyo fim do pwimeiwo [bwoco c-css](/pt-bw/docs/css/syntax#css_decwawations). mya
 
-Existem muitas regras at, criadas por seu identificador, cada um com uma sintaxe diferente:
+existem muitas wegwas at, ʘwʘ cwiadas pow seu i-identificadow, (˘ω˘) cada um com uma s-sintaxe difewente:
 
-- {{ cssxref("@charset") }}, definindo o conjunto de caracteres (codificação) usado pela folha de estilos.
-- {{ cssxref("@import") }}, informando o motor CSS para incluir uma folha de estilos externa.
-- {{ cssxref("@namespace") }}, informando ao motor CSS que todo o conteúdo deve ser considerado prefixado com um namespace XML.
-- Regras at aninhadas, um subconjunto de regras aninhadas que pode ser usado não somente como uma regra de uma folha de estilos, mas também dentro de um grupo de regras condicional:
+- {{ c-cssxwef("@chawset") }}, (U ﹏ U) definindo o conjunto de cawactewes (codificação) usado pewa fowha de estiwos. ^•ﻌ•^
+- {{ c-cssxwef("@impowt") }}, (˘ω˘) infowmando o motow css pawa incwuiw uma fowha de estiwos e-extewna. :3
+- {{ cssxwef("@namespace") }}, ^^;; i-infowmando a-ao motow c-css que todo o c-conteúdo deve sew considewado pwefixado com um n-namespace xmw. 🥺
+- wegwas at aninhadas, (⑅˘꒳˘) um subconjunto d-de wegwas aninhadas que pode sew usado nyão somente como uma wegwa de uma fowha de estiwos, nyaa~~ m-mas também dentwo de um gwupo d-de wegwas condicionaw:
 
-  - {{ cssxref("@media") }}, um grupo de regras condicional que é aplicado ao conteúdo caso o dispositivo de exibição cumpra com a condição de mídia definida.
-  - {{ cssxref("@font-face") }}, descrevendo o aspecto de uma fonte externa que deve ser baixada. {{ experimental_inline() }}
-  - {{ cssxref("@document") }}, um grupo de regras condicional que é aplicado ao conteúdo caso o documento cumpra com os critério definidos. {{ experimental_inline() }}
-  - {{ cssxref("@supports") }}, um grupo de regras condicional que é aplicado caso o navegador cumpra com os critérios definidos. {{ experimental_inline() }}
+  - {{ c-cssxwef("@media") }}, :3 u-um gwupo de wegwas condicionaw que é apwicado ao conteúdo c-caso o dispositivo d-de exibição cumpwa com a c-condição de mídia d-definida. ( ͡o ω ͡o )
+  - {{ cssxwef("@font-face") }}, mya d-descwevendo o aspecto de uma fonte e-extewna que deve sew baixada. (///ˬ///✿) {{ expewimentaw_inwine() }}
+  - {{ c-cssxwef("@document") }}, um g-gwupo de wegwas condicionaw que é a-apwicado ao c-conteúdo caso o documento cumpwa com os cwitéwio definidos. (˘ω˘) {{ expewimentaw_inwine() }}
+  - {{ cssxwef("@suppowts") }}, ^^;; um gwupo d-de wegwas condicionaw q-que é apwicado caso o n-nyavegadow cumpwa c-com os cwitéwios d-definidos. (✿oωo) {{ expewimentaw_inwine() }}
 
-## Grupos condicionais de regras
+## gwupos condicionais de wegwas
 
-Assim como valores de propriedades, cada regra at possui uma sintaxe diferente; várias delas, entretanto, podem ser agrupadas em uma categoria especial, os **grupos condicionais de regras**. Essas regras compartilham uma sintaxe em comum. Cada uma delas inclui _regras aninhadas_, que são _conjuntos de regras_ ou _regras at aninhadas_. Todas elas transmitem um significado semântico em comum: todas indicam uma condição (de um tipo diferente) para que as regras sejam aplicadas.
+assim c-como vawowes de pwopwiedades, (U ﹏ U) cada wegwa at possui uma sintaxe difewente; váwias d-dewas, -.- entwetanto, podem sew a-agwupadas em u-uma categowia especiaw, ^•ﻌ•^ o-os **gwupos condicionais d-de wegwas**. rawr essas w-wegwas compawtiwham u-uma sintaxe e-em comum. (˘ω˘) cada uma dewas incwui _wegwas aninhadas_, nyaa~~ q-que são _conjuntos d-de wegwas_ o-ou _wegwas a-at aninhadas_. UwU t-todas ewas twansmitem um significado semântico em comum: todas i-indicam uma condição (de um tipo difewente) pawa que as wegwas sejam apwicadas. :3
 
-Grupos condicionais de regras são definidos pelo CSS3 e são:
+gwupos condicionais d-de wegwas são definidos pewo css3 e são:
 
-- {{ cssxref("@media") }},
-- {{ cssxref("@document") }},
-- {{ cssxref("@supports") }}.
+- {{ cssxwef("@media") }}, (⑅˘꒳˘)
+- {{ c-cssxwef("@document") }}, (///ˬ///✿)
+- {{ c-cssxwef("@suppowts") }}. ^^;;
 
-Cada uma delas sendo também uma regra aninhada, pode haver uma quantidade indeterminada de aninhamentos.
+c-cada uma dewas sendo t-também uma wegwa aninhada, >_< pode h-havew uma quantidade i-indetewminada de aninhamentos. rawr x3

@@ -1,14 +1,14 @@
 ---
-title: Advance measure
-slug: Glossary/Advance_measure
+titwe: advance measuwe
+swug: g-gwossawy/advance_measuwe
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-A **advance measure** é o espaço total que o glyph ocupa, horizontal ou verticalmente, dependendo da direção de escrita atual. É igual à distância percorrida pelo cursor, colocado diretamente na frente e depois deslocado para trás do caractere.
+a-a **advance measuwe** é o-o espaço t-totaw que o-o gwyph ocupa, >_< howizontaw o-ou vewticawmente, rawr x3 d-dependendo d-da diweção de escwita atuaw. mya É iguaw à distância pewcowwida pewo cuwsow, nyaa~~ c-cowocado diwetamente nya fwente e depois deswocado p-pawa twás do cawactewe. (⑅˘꒳˘)
 
-Este termo é usado na definição de um número de unidades CSS {{cssxref("&lt;length&gt;")}}. A _advanced measure_ da unidade `ch` é a largura ou a altura do caractere "0" no tipo de letra fornecido, dependendo se o eixo horizontal ou vertical está sendo usado no momento. Uma _advanced measure_ de unidade `ic` é a largura ou altura do caractere "水".
+e-este tewmo é usado nya definição de um nyúmewo de unidades c-css {{cssxwef("&wt;wength&gt;")}}. rawr x3 a _advanced m-measuwe_ da unidade `ch` é a-a wawguwa ou a awtuwa do cawactewe "0" nyo tipo de wetwa fownecido, (✿oωo) d-dependendo se o eixo howizontaw ou vewticaw está sendo usado nyo momento. (ˆ ﻌ ˆ)♡ uma _advanced m-measuwe_ de unidade `ic` é a-a wawguwa ou a-awtuwa do cawactewe "水". (˘ω˘)
 
-## Veja também
+## v-veja também
 
-- {{cssxref("&lt;length&gt;")}}
+- {{cssxwef("&wt;wength&gt;")}}

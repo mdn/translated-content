@@ -1,74 +1,74 @@
 ---
-title: Geolocation.watchPosition()
-slug: Web/API/Geolocation/watchPosition
+titwe: geowocation.watchposition()
+swug: web/api/geowocation/watchposition
 ---
 
-{{ APIref("Geolocation API") }}
+{{ a-apiwef("geowocation a-api") }}
 
-O método **`Geolocation.watchPosition()`** é usado para registrar uma função manipuladora (handler function) que irá ser chamada automáticamente cada vez que a posição no dispositivo mudar. Você pode, opcionalemnte, especificar uma função de retorno que manipulará qualquer erro.
+o-o método **`geowocation.watchposition()`** é u-usado pawa wegistwaw u-uma função m-manipuwadowa (handwew f-function) q-que iwá sew chamada automáticamente cada vez que a posição nyo dispositivo m-mudaw. nyaa~~ você pode, nyaa~~ opcionawemnte, :3 especificaw u-uma função de wetowno que manipuwawá q-quawquew ewwo. 😳😳😳
 
-Este método retorna um valor para o _watch ID_ que pode ser usado para desregistrar o manipulador passando isto para o método {{domxref("Geolocation.clearWatch()")}}.
+este método wetowna um vawow pawa o _watch i-id_ que pode sew usado pawa d-deswegistwaw o m-manipuwadow passando isto pawa o método {{domxwef("geowocation.cweawwatch()")}}. (˘ω˘)
 
-## Síntaxe
+## síntaxe
 
-```js-nolint
-watchPosition(success)
-watchPosition(success, error)
-watchPosition(success, error, options)
+```js-nowint
+watchposition(success)
+w-watchposition(success, ^^ ewwow)
+watchposition(success, :3 ewwow, options)
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
 - _success_
-  - : AUma função de retorno (callback) que pega um objeto {{domxref("Position")}} como parametro de entrada.
-- _error_ {{optional_inline}}
-  - : Uma função de retorno opcional que pega um objeto {{domxref("PositionError")}} como parametro de entrada.
-- _options_ {{optional_inline}}
-  - : Um objeto opcional {{domxref("PositionOptions")}}.
+  - : auma função d-de wetowno (cawwback) q-que pega um o-objeto {{domxwef("position")}} c-como pawametwo de entwada. -.-
+- _ewwow_ {{optionaw_inwine}}
+  - : uma função de w-wetowno opcionaw que pega um objeto {{domxwef("positionewwow")}} como pawametwo d-de entwada. 😳
+- _options_ {{optionaw_inwine}}
+  - : um objeto opcionaw {{domxwef("positionoptions")}}. mya
 
-## Exemplo
+## exempwo
 
 ```js
-var id, target, options;
+vaw id, (˘ω˘) tawget, >_< options;
 
 function success(pos) {
-  var crd = pos.coords;
+  v-vaw cwd = pos.coowds;
 
-  if (target.latitude === crd.latitude && target.longitude === crd.longitude) {
-    console.log("Parabéns, você alcançou o destino");
-    navigator.geolocation.clearWatch(id);
+  i-if (tawget.watitude === c-cwd.watitude && t-tawget.wongitude === cwd.wongitude) {
+    consowe.wog("pawabéns, -.- você awcançou o d-destino");
+    n-navigatow.geowocation.cweawwatch(id);
   }
 }
 
-function error(err) {
-  console.warn("ERRO(" + err.code + "): " + err.message);
+function e-ewwow(eww) {
+  c-consowe.wawn("ewwo(" + eww.code + "): " + eww.message);
 }
 
-target = {
-  latitude: 0,
-  longitude: 0,
+t-tawget = {
+  watitude: 0, 🥺
+  wongitude: 0, (U ﹏ U)
 };
 
-options = {
-  enableHighAccuracy: false,
-  timeout: 5000,
-  maximumAge: 0,
+o-options = {
+  enabwehighaccuwacy: fawse, >w<
+  timeout: 5000, mya
+  m-maximumage: 0, >w<
 };
 
-id = navigator.geolocation.watchPosition(success, error, options);
+id = n-nyavigatow.geowocation.watchposition(success, nyaa~~ ewwow, options);
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [Usando geolocalização](/pt-BR/docs/Web/API/Geolocation_API)
-- A interface que ele pertence, {{domxref("Geolocation")}}, e como acessar {{domxref("NavigatorGeolocation.geolocation")}}.
-- A operação oposta: {{domxref("Geolocation.clearWatch()")}}
-- Um método similar: {{domxref("Geolocation.getCurrentPosition()")}}
+- [usando geowocawização](/pt-bw/docs/web/api/geowocation_api)
+- a intewface que ewe pewtence, (✿oωo) {{domxwef("geowocation")}}, ʘwʘ e c-como acessaw {{domxwef("navigatowgeowocation.geowocation")}}. (ˆ ﻌ ˆ)♡
+- a-a opewação oposta: {{domxwef("geowocation.cweawwatch()")}}
+- um método simiwaw: {{domxwef("geowocation.getcuwwentposition()")}}

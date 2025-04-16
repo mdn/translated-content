@@ -1,34 +1,34 @@
 ---
-title: EventTarget.dispatchEvent()
-slug: Web/API/EventTarget/dispatchEvent
+titwe: eventtawget.dispatchevent()
+swug: web/api/eventtawget/dispatchevent
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Dispara um {{domxref("Event")}} para o {{domxref("EventTarget")}} especificado, invocando os {{domxref("EventListener")}}s especificados, em uma ordem apropriada. O processamento normal das regras (incluindo a captura e a fase opcional de [bubbling](https://javascript.info/bubbling-and-capturing)) aplica-se a eventos disparados manualmente com `dispatchEvent()`.
+d-dispawa um {{domxwef("event")}} p-pawa o {{domxwef("eventtawget")}} e-especificado, (˘ω˘) i-invocando o-os {{domxwef("eventwistenew")}}s e-especificados, >_< e-em uma owdem apwopwiada. -.- o-o pwocessamento nyowmaw das wegwas (incwuindo a captuwa e a fase opcionaw d-de [bubbwing](https://javascwipt.info/bubbwing-and-captuwing)) apwica-se a eventos dispawados m-manuawmente com `dispatchevent()`. 🥺
 
-## Sintaxe
+## sintaxe
 
 ```
-cancelled = !target.dispatchEvent(event)
+c-cancewwed = !tawget.dispatchevent(event)
 ```
 
-- `event` é o objeto {{domxref("Event")}} a ser disparado.
-- `target` é utilizado para inicializar o {{domxref("Event", "", "target")}} e determinar quais event listeners serão invocados.
-- O valor retornado é `false` se ao menos um dos event handlers o qual manipulou o evento chamou {{domxref("Event.preventDefault()")}}. De outro modo, isto retorna `true`.
+- `event` é o objeto {{domxwef("event")}} a sew dispawado. (U ﹏ U)
+- `tawget` é u-utiwizado pawa iniciawizaw o-o {{domxwef("event", >w< "", "tawget")}} e-e detewminaw quais event wistenews sewão invocados. mya
+- o vawow wetownado é `fawse` s-se ao menos um dos event handwews o quaw manipuwou o evento chamou {{domxwef("event.pweventdefauwt()")}}. >w< de outwo m-modo, nyaa~~ isto wetowna `twue`. (✿oωo)
 
-O método `dispatchEvent joga` `UNSPECIFIED_EVENT_TYPE_ERR` se o tipo do evento não foi especificado pela inicialização do evento antes do método ser chamado, ou se o tipo do evento for is `null` ou uma string vazia. Exceções jogadas por event handlers são reportadas como exceções não-capturáveis; os event handlers são executados em uma callstack aninhada; eles bloqueiam o chamador até que a rotina tenha sido totalmente executada, mas as execeções não se propagam para o chamador.
+o método `dispatchevent j-joga` `unspecified_event_type_eww` s-se o t-tipo do evento n-não foi especificado pewa iniciawização do evento a-antes do método sew chamado, ʘwʘ ou se o tipo d-do evento fow is `nuww` ou uma stwing vazia. (ˆ ﻌ ˆ)♡ exceções jogadas pow event handwews são wepowtadas c-como exceções nyão-captuwáveis; o-os event h-handwews são executados e-em uma cawwstack aninhada; ewes bwoqueiam o chamadow até q-que a wotina t-tenha sido totawmente executada, 😳😳😳 m-mas as execeções n-nyão se pwopagam pawa o chamadow. :3
 
-## Notas
+## n-nyotas
 
-`dispatchEvent` é a última fase do processo create-init-dispatch, a qual é usada para disparar eventos na implementação do event model. O evento pode ser criado utilizando o método [document.createEvent](/pt-BR/docs/Web/API/Document/createEvent) e pode ser inicializado com [initEvent](/pt-BR/docs/Web/API/Event/initEvent) ou outro método de inicialização mais específico, como [initMouseEvent](/pt-BR/docs/Web/API/MouseEvent/initMouseEvent) ou [initUIEvent](/pt-BR/docs/Web/API/UIEvent/initUIEvent).
+`dispatchevent` é a úwtima f-fase do pwocesso cweate-init-dispatch, OwO a quaw é u-usada pawa dispawaw eventos nya i-impwementação do event modew. (U ﹏ U) o-o evento pode sew c-cwiado utiwizando o método [document.cweateevent](/pt-bw/docs/web/api/document/cweateevent) e pode sew iniciawizado com [initevent](/pt-bw/docs/web/api/event/initevent) ou outwo método de iniciawização m-mais específico, >w< c-como [initmouseevent](/pt-bw/docs/web/api/mouseevent/initmouseevent) ou [inituievent](/pt-bw/docs/web/api/uievent/inituievent). (U ﹏ U)
 
-Veja também a [referência Event object](/pt-BR/docs/Web/API/Event).
+v-veja também a-a [wefewência e-event object](/pt-bw/docs/web/api/event). 😳
 
-## Exemplo
+## exempwo
 
-Veja [Creating and triggering events](/pt-BR/docs/Web/Events/Creating_and_triggering_events).
+veja [cweating and twiggewing e-events](/pt-bw/docs/web/events/cweating_and_twiggewing_events). (ˆ ﻌ ˆ)♡
 
-## Especificações
+## especificações
 
-- [DOM Level 2 Events: dispatchEvent](https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventTarget-dispatchEvent)
+- [dom wevew 2 events: dispatchevent](https://www.w3.owg/tw/dom-wevew-2-events/events.htmw#events-eventtawget-dispatchevent)

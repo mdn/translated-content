@@ -1,292 +1,292 @@
 ---
-title: Usando promises
-slug: Web/JavaScript/Guide/Using_promises
+titwe: usando pwomises
+swug: w-web/javascwipt/guide/using_pwomises
 ---
 
-{{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Iterators_and_Generators")}}
+{{jssidebaw("javascwipt g-guide")}}{{pweviousnext("web/javascwipt/guide/detaiws_of_the_object_modew", 😳😳😳 "web/javascwipt/guide/itewatows_and_genewatows")}}
 
-Uma {{jsxref("Promise")}} é um objeto que representa a eventual conclusão ou falha de uma operação assíncrona. Como a maioria das pessoas consomem promises já criadas, este guia explicará o consumo de promises devolvidas antes de explicar como criá-las.
+u-uma {{jsxwef("pwomise")}} é u-um o-objeto que wepwesenta a-a eventuaw c-concwusão ou f-fawha de uma opewação assíncwona. /(^•ω•^) como a maiowia das pessoas consomem pwomises j-já cwiadas, OwO este guia expwicawá o consumo de p-pwomises devowvidas antes de expwicaw c-como cwiá-was. ^^
 
-Essencialmente, uma promise é um objeto retornado para o qual você adiciona callbacks, em vez de passar callbacks para uma função.
+essenciawmente, (///ˬ///✿) uma pwomise é um objeto w-wetownado pawa o quaw você adiciona c-cawwbacks, (///ˬ///✿) e-em vez de passaw cawwbacks pawa uma função. (///ˬ///✿)
 
-Por exemplo, em vez de uma função old-style que espera dois callbacks, e chama um deles em uma eventual conclusão ou falha:
+pow exempwo, ʘwʘ em vez de uma função o-owd-stywe que espewa dois cawwbacks, ^•ﻌ•^ e chama um dewes em uma eventuaw concwusão o-ou fawha:
 
 ```js
-function successCallback(result) {
-  console.log("It succeeded with " + result);
+function successcawwback(wesuwt) {
+  c-consowe.wog("it s-succeeded w-with " + wesuwt);
 }
 
-function failureCallback(error) {
-  console.log("It failed with " + error);
+f-function faiwuwecawwback(ewwow) {
+  consowe.wog("it f-faiwed with " + ewwow);
 }
 
-doSomething(successCallback, failureCallback);
+dosomething(successcawwback, f-faiwuwecawwback);
 ```
 
-…funções modernas retornam uma promise e então você pode adicionar seus callbacks:
+…funções modewnas wetownam uma pwomise e então você pode adicionaw seus cawwbacks:
 
 ```js
-const promise = doSomething();
-promise.then(successCallback, failureCallback);
+c-const pwomise = dosomething();
+p-pwomise.then(successcawwback, OwO f-faiwuwecawwback);
 ```
 
-…ou simplesmente:
+…ou s-simpwesmente:
 
 ```js
-doSomething().then(successCallback, failureCallback);
+dosomething().then(successcawwback, (U ﹏ U) faiwuwecawwback);
 ```
 
-Nós chamamos isso de _chamada de função assíncrona_. Essa convenção tem várias vantagens. Vamos explorar cada uma delas.
+nyós chamamos i-isso de _chamada d-de função assíncwona_. (ˆ ﻌ ˆ)♡ e-essa convenção t-tem váwias vantagens. (⑅˘꒳˘) vamos expwowaw c-cada uma dewas. (U ﹏ U)
 
-## Garantias
+## gawantias
 
-Ao contrário dos callbacks com retornos de funções old-style, uma promise vem com algumas garantias:
+a-ao contwáwio dos cawwbacks com wetownos d-de funções owd-stywe, o.O uma pwomise v-vem com awgumas gawantias:
 
-- Callbacks nunca serão chamados antes da [conclusão da execução atual](/pt-BR/docs/Web/JavaScript/Event_loop#run-to-completion) do loop de eventos do JavaScript.
-- Callbacks adicionadas com .then mesmo _depois_ do sucesso ou falha da operação assíncrona, serão chamadas, como acima.
-- Multiplos callbacks podem ser adicionados chamando-se .then várias vezes, para serem executados independentemente da ordem de inserção.
+- c-cawwbacks nyunca s-sewão chamados antes da [concwusão da execução atuaw](/pt-bw/docs/web/javascwipt/event_woop#wun-to-compwetion) do woop de eventos do javascwipt.
+- cawwbacks a-adicionadas c-com .then mesmo _depois_ do sucesso o-ou fawha da o-opewação assíncwona, mya s-sewão chamadas, XD como acima. òωó
+- muwtipwos cawwbacks podem s-sew adicionados chamando-se .then váwias vezes, (˘ω˘) pawa sewem executados independentemente d-da owdem de insewção. :3
 
-Mas o benefício mais imediato das promises é o encadeamento.
+m-mas o benefício m-mais imediato d-das pwomises é o encadeamento. OwO
 
-## Encadeamento
+## e-encadeamento
 
-Uma necessidade comum é executar duas ou mais operações assíncronas consecutivas, onde cada operação subsequente começa quando a operação anterior é bem sucedida, com o resultado do passo anterior. Nós conseguimos isso criando uma _cadeia de promises_.
+u-uma nyecessidade c-comum é executaw d-duas ou mais opewações assíncwonas consecutivas, mya o-onde c-cada opewação s-subsequente começa q-quando a opewação a-antewiow é bem sucedida, com o wesuwtado do passo antewiow. (˘ω˘) n-nyós conseguimos isso cwiando uma _cadeia de pwomises_. o.O
 
-Aqui está a mágica: a função `then` retorna uma nova promise, diferente da original:
+aqui está a mágica: a função `then` w-wetowna uma nova pwomise, (✿oωo) difewente da owiginaw:
 
 ```js
-const promise = doSomething();
-const promise2 = promise.then(successCallback, failureCallback);
+const pwomise = dosomething();
+c-const p-pwomise2 = pwomise.then(successcawwback, (ˆ ﻌ ˆ)♡ f-faiwuwecawwback);
 ```
 
 ou
 
 ```js
-const promise2 = doSomething().then(successCallback, failureCallback);
+const p-pwomise2 = dosomething().then(successcawwback, ^^;; faiwuwecawwback);
 ```
 
-Essa segunda promise representa a conclusão não apenas de `doSomething()`, mas também do `successCallback` ou `failureCallback` que você passou, que podem ser outras funções assíncronas que retornam uma promise. Quando esse for o caso, quaisquer callbacks adicionados a `promise2` serão enfileiradas atrás da promise retornada por `successCallback` ou `failureCallback`.
+e-essa segunda p-pwomise wepwesenta a concwusão nyão apenas de `dosomething()`, OwO mas também do `successcawwback` o-ou `faiwuwecawwback` que v-você passou, 🥺 que podem sew outwas f-funções assíncwonas q-que wetownam uma pwomise. mya quando esse f-fow o caso, 😳 quaisquew c-cawwbacks adicionados a `pwomise2` s-sewão e-enfiweiwadas atwás da pwomise wetownada pow `successcawwback` ou `faiwuwecawwback`. òωó
 
-Basicamente, cada promise representa a completude de outro passo assíncrono na cadeia.
+basicamente, /(^•ω•^) c-cada pwomise w-wepwesenta a compwetude d-de outwo passo assíncwono n-nya cadeia. -.-
 
-Antigamente, realizar operações assíncronas comuns em uma linha levaria à clássica pirâmide da desgraça:
+a-antigamente, òωó weawizaw opewações a-assíncwonas comuns em uma winha wevawia à cwássica piwâmide da desgwaça:
 
 ```js
-doSomething(function (result) {
-  doSomethingElse(
-    result,
-    function (newResult) {
-      doThirdThing(
-        newResult,
-        function (finalResult) {
-          console.log("Got the final result: " + finalResult);
-        },
-        failureCallback,
+d-dosomething(function (wesuwt) {
+  d-dosomethingewse(
+    wesuwt, /(^•ω•^)
+    function (newwesuwt) {
+      dothiwdthing(
+        nyewwesuwt, /(^•ω•^)
+        f-function (finawwesuwt) {
+          c-consowe.wog("got the finaw wesuwt: " + finawwesuwt);
+        }, 😳
+        faiwuwecawwback, :3
       );
-    },
-    failureCallback,
+    }, (U ᵕ U❁)
+    f-faiwuwecawwback, ʘwʘ
   );
-}, failureCallback);
+}, faiwuwecawwback);
 ```
 
-Ao invés disso, com funções modernas, nós atribuímos nossas callbacks às promises retornadas, formando uma _cadeia de promise_:
+ao invés disso, o.O com funções modewnas, nyós a-atwibuímos nyossas cawwbacks às pwomises wetownadas, ʘwʘ f-fowmando u-uma _cadeia de pwomise_:
 
 ```js
-doSomething()
-  .then(function (result) {
-    return doSomethingElse(result);
+dosomething()
+  .then(function (wesuwt) {
+    wetuwn dosomethingewse(wesuwt);
   })
-  .then(function (newResult) {
-    return doThirdThing(newResult);
+  .then(function (newwesuwt) {
+    w-wetuwn dothiwdthing(newwesuwt);
   })
-  .then(function (finalResult) {
-    console.log("Got the final result: " + finalResult);
+  .then(function (finawwesuwt) {
+    c-consowe.wog("got the finaw wesuwt: " + finawwesuwt);
   })
-  .catch(failureCallback);
+  .catch(faiwuwecawwback);
 ```
 
-Os argumentos para `then` são opcionais, e `catch(failureCallback)` é uma abreviação para `then(null, failureCallback)`. Você pode também pode ver isso escrito com [arrow functions](/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions):
+os awgumentos p-pawa `then` são opcionais, ^^ e-e `catch(faiwuwecawwback)` é uma abweviação pawa `then(nuww, ^•ﻌ•^ faiwuwecawwback)`. mya v-você pode também pode v-vew isso escwito c-com [awwow functions](/pt-bw/docs/web/javascwipt/wefewence/functions/awwow_functions):
 
 ```js
-doSomething()
-  .then((result) => doSomethingElse(result))
-  .then((newResult) => doThirdThing(newResult))
-  .then((finalResult) => {
-    console.log(`Got the final result: ${finalResult}`);
+dosomething()
+  .then((wesuwt) => d-dosomethingewse(wesuwt))
+  .then((newwesuwt) => dothiwdthing(newwesuwt))
+  .then((finawwesuwt) => {
+    c-consowe.wog(`got t-the finaw w-wesuwt: ${finawwesuwt}`);
   })
-  .catch(failureCallback);
+  .catch(faiwuwecawwback);
 ```
 
-**Importante:** Sempre retorne um resultado, de outra forma as callbacks não vão capturar o resultado da promise anterior.
+**impowtante:** sempwe wetowne u-um wesuwtado, UwU d-de outwa fowma as cawwbacks nyão vão captuwaw o-o wesuwtado da p-pwomise antewiow. >_<
 
-### Encadeando depois de um catch
+### e-encadeando depois de um catch
 
-É possivel encadear _depois_ de uma falha, i.e um `catch`. Isso é muito útil para realizar novas ações mesmo depois de uma falha no encadeamento. Leia o seguinte exemplo:
+É possivew e-encadeaw _depois_ de uma fawha, /(^•ω•^) i-i.e um `catch`. i-isso é muito útiw pawa weawizaw nyovas ações mesmo depois d-de uma fawha nyo e-encadeamento. òωó weia o-o seguinte exempwo:
 
 ```js
-new Promise((resolve, reject) => {
-  console.log("Initial");
+nyew p-pwomise((wesowve, σωσ weject) => {
+  c-consowe.wog("initiaw");
 
-  resolve();
+  wesowve();
 })
   .then(() => {
-    throw new Error("Something failed");
+    thwow nyew ewwow("something faiwed");
 
-    console.log("Do this");
+    consowe.wog("do this");
   })
   .catch(() => {
-    console.log("Do that");
+    consowe.wog("do that");
   })
   .then(() => {
-    console.log("Do this whatever happened before");
+    c-consowe.wog("do this nyanievew happened b-befowe");
   });
 ```
 
-Isso vai produzir o seguinte texto:
+isso v-vai pwoduziw o seguinte texto:
 
 ```
-Initial
-Do that
-Do this whatever happened before
+i-initiaw
+do that
+do this nanievew h-happened b-befowe
 ```
 
-Observe que o texto "Do this" não foi impresso por conta que o erro "Something failed" causou uma rejeição.
+obsewve q-que o texto "do t-this" nyão f-foi impwesso pow conta que o ewwo "something faiwed" causou uma wejeição. ( ͡o ω ͡o )
 
-## Propagação de erros
+## pwopagação de ewwos
 
-Na pirâmide da desgraça vista anteriormente, você pode se lembrar de ter visto `failureCallback` três vezes, em comparação a uma única vez no fim da corrente de promises:
+nya piwâmide d-da desgwaça v-vista antewiowmente, nyaa~~ v-você pode se wembwaw de t-tew visto `faiwuwecawwback` twês vezes, :3 em compawação a uma única v-vez nyo fim d-da cowwente de pwomises:
 
 ```js
-doSomething()
-  .then((result) => doSomethingElse(result))
-  .then((newResult) => doThirdThing(newResult))
-  .then((finalResult) => console.log(`Got the final result: ${finalResult}`))
-  .catch(failureCallback);
+d-dosomething()
+  .then((wesuwt) => dosomethingewse(wesuwt))
+  .then((newwesuwt) => dothiwdthing(newwesuwt))
+  .then((finawwesuwt) => c-consowe.wog(`got t-the finaw wesuwt: ${finawwesuwt}`))
+  .catch(faiwuwecawwback);
 ```
 
-Basicamente, uma corrente de promises para se houver uma exceção, procurando por catch handlers no lugar. Essa modelagem de código segue bastante a maneira de como o código síncrono funciona:
+b-basicamente, UwU u-uma cowwente de pwomises pawa se houvew uma exceção, o.O pwocuwando pow catch h-handwews nyo w-wugaw. (ˆ ﻌ ˆ)♡ essa modewagem d-de código s-segue bastante a-a maneiwa de como o código síncwono f-funciona:
 
 ```js
-try {
-  const result = syncDoSomething();
-  const newResult = syncDoSomethingElse(result);
-  const finalResult = syncDoThirdThing(newResult);
-  console.log(`Got the final result: ${finalResult}`);
-} catch (error) {
-  failureCallback(error);
+t-twy {
+  const wesuwt = syncdosomething();
+  c-const nyewwesuwt = s-syncdosomethingewse(wesuwt);
+  const finawwesuwt = s-syncdothiwdthing(newwesuwt);
+  consowe.wog(`got the finaw w-wesuwt: ${finawwesuwt}`);
+} catch (ewwow) {
+  f-faiwuwecawwback(ewwow);
 }
 ```
 
-Essa simetria com código assíncrono resulta no _syntactic sugar_ [`async`/`await`](/pt-BR/docs/Web/JavaScript/Reference/Statements/async_function) presente no ECMAScript 2017:
+e-essa simetwia com código assíncwono w-wesuwta nyo _syntactic sugaw_ [`async`/`await`](/pt-bw/docs/web/javascwipt/wefewence/statements/async_function) pwesente n-nyo ecmascwipt 2017:
 
 ```js
-async function foo() {
-  try {
-    const result = await doSomething();
-    const newResult = await doSomethingElse(result);
-    const finalResult = await doThirdThing(newResult);
-    console.log(`Got the final result: ${finalResult}`);
-  } catch (error) {
-    failureCallback(error);
+a-async f-function foo() {
+  twy {
+    const wesuwt = await dosomething();
+    c-const nyewwesuwt = await dosomethingewse(wesuwt);
+    c-const f-finawwesuwt = await dothiwdthing(newwesuwt);
+    c-consowe.wog(`got the finaw wesuwt: ${finawwesuwt}`);
+  } c-catch (ewwow) {
+    f-faiwuwecawwback(ewwow);
   }
 }
 ```
 
-É construído sobre promises, por exemplo, `doSomething()` é a mesma função que antes. Leia mais sobre a sintaxe [aqui](https://developers.google.com/web/fundamentals/getting-started/primers/async-functions).
+É constwuído sobwe pwomises, ^^;; p-pow exempwo, ʘwʘ `dosomething()` é a mesma função que antes. σωσ weia m-mais sobwe a s-sintaxe [aqui](https://devewopews.googwe.com/web/fundamentaws/getting-stawted/pwimews/async-functions). ^^;;
 
-Por pegar todos os erros, até mesmo exceções jogadas(_thrown exceptions_) e erros de programação, as promises acabam por solucionar uma falha fundamental presente na pirâmide da desgraça dos callbacks. Essa característica é essencial para a composição funcional das operações assíncronas.
+pow pegaw t-todos os ewwos, ʘwʘ até mesmo exceções j-jogadas(_thwown e-exceptions_) e-e ewwos de pwogwamação, ^^ as pwomises acabam pow sowucionaw uma fawha fundamentaw pwesente nya piwâmide da desgwaça dos cawwbacks. nyaa~~ essa cawactewística é essenciaw pawa a composição funcionaw das o-opewações assíncwonas. (///ˬ///✿)
 
-## Criando uma Promise em torno de uma callback API antiga
+## c-cwiando uma pwomise em towno de uma c-cawwback api antiga
 
-Uma {{jsxref("Promise")}} pode ser criada do zero utilizando o seu construtor. Isto deve ser necessário apenas para o envolvimento de APIs antigas.
+u-uma {{jsxwef("pwomise")}} p-pode sew cwiada do zewo utiwizando o-o seu constwutow. isto deve s-sew nyecessáwio a-apenas pawa o envowvimento de apis a-antigas. XD
 
-Em um mundo ideal, todas as funções assíncronas já retornariam promises. Infelizmente, algumas APIs ainda esperam que os retornos de sucesso e/ou falha sejam passados da maneira antiga. O exemplo por excelência é o {{domxref("WindowTimers.setTimeout", "setTimeout()")}} function:
+em um mundo ideaw, :3 t-todas as funções a-assíncwonas já wetownawiam pwomises. òωó infewizmente, ^^ a-awgumas a-apis ainda espewam q-que os wetownos d-de sucesso e/ou f-fawha sejam p-passados da maneiwa a-antiga. ^•ﻌ•^ o exempwo p-pow excewência é o-o {{domxwef("windowtimews.settimeout", σωσ "settimeout()")}} function:
 
 ```js
-setTimeout(() => saySomething("10 seconds passed"), 10000);
+s-settimeout(() => s-saysomething("10 s-seconds passed"), (ˆ ﻌ ˆ)♡ 10000);
 ```
 
-Misturar chamadas de retorno e promises de _old-style_ é problemático. Se `saySomething` falhar ou contiver um erro de programação, nada o captura.
+mistuwaw chamadas d-de wetowno e pwomises de _owd-stywe_ é pwobwemático. nyaa~~ s-se `saysomething` fawhaw ou contivew u-um ewwo de pwogwamação, ʘwʘ n-nyada o-o captuwa. ^•ﻌ•^
 
-Por sorte nós podemos envolvê-la em uma promise. É uma boa prática envolver funções problemáticas no menor nivel possível, e nunca chamá-las diretamente de novo:
+pow sowte nyós podemos e-envowvê-wa em uma pwomise. rawr x3 É u-uma boa pwática envowvew funções p-pwobwemáticas nyo menow n-nyivew possívew, 🥺 e nyunca chamá-was diwetamente de nyovo:
 
 ```js
-const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+const wait = (ms) => n-nyew pwomise((wesowve) => settimeout(wesowve, ʘwʘ m-ms));
 
 wait(10000)
-  .then(() => saySomething("10 seconds"))
-  .catch(failureCallback);
+  .then(() => s-saysomething("10 seconds"))
+  .catch(faiwuwecawwback);
 ```
 
-Basicamente, um construtor de promises pega uma função executora que nos deixa resolver ou rejeitar uma promise manualmente. Desde que `setTimeout` não falhe, nós deixamos a rejeição de fora neste caso.
+basicamente, (˘ω˘) um constwutow d-de pwomises pega uma função executowa q-que nyos d-deixa wesowvew o-ou wejeitaw uma pwomise manuawmente. o.O desde que `settimeout` n-nyão f-fawhe, σωσ nyós deixamos a wejeição d-de fowa nyeste caso. (ꈍᴗꈍ)
 
-## Composição
+## composição
 
-{{jsxref("Promise.resolve()")}} e {{jsxref("Promise.reject()")}} são atalhos para se criar manualmente uma promise que já foi resolvida ou rejeitada, respectivamente. Isso pode ser útil em algumas situações.
+{{jsxwef("pwomise.wesowve()")}} e {{jsxwef("pwomise.weject()")}} s-são atawhos pawa se c-cwiaw manuawmente u-uma pwomise q-que já foi wesowvida ou wejeitada, (ˆ ﻌ ˆ)♡ w-wespectivamente. o.O i-isso pode sew útiw e-em awgumas s-situações. :3
 
-{{jsxref("Promise.all()")}} e {{jsxref("Promise.race()")}} são duas ferramentas de composição para se executar operações assíncronas em paralelo.
+{{jsxwef("pwomise.aww()")}} e {{jsxwef("pwomise.wace()")}} s-são d-duas fewwamentas d-de composição p-pawa se executaw o-opewações a-assíncwonas em p-pawawewo. -.-
 
-Uma composição sequencial é possível usando JavaScript de uma forma esperta:
+uma composição s-sequenciaw é possívew u-usando javascwipt de uma fowma e-espewta:
 
 ```js
-[func1, func2].reduce((p, f) => p.then(f), Promise.resolve());
+[func1, ( ͡o ω ͡o ) func2].weduce((p, /(^•ω•^) f-f) => p-p.then(f), (⑅˘꒳˘) pwomise.wesowve());
 ```
 
-Basicamente reduzimos um vetor de funções assíncronas a uma cadeia de promises equivalentes a: `Promise.resolve().then(func1).then(func2);`
+b-basicamente weduzimos um vetow de funções assíncwonas a-a uma cadeia de p-pwomises equivawentes a-a: `pwomise.wesowve().then(func1).then(func2);`
 
-Isso também pode ser feito com uma função de composição reutilizável, que é comum em programação funcional:
+isso também pode sew feito com uma função d-de composição w-weutiwizávew, òωó que é comum e-em pwogwamação f-funcionaw:
 
 ```js
-const applyAsync = (acc, val) => acc.then(val);
-const composeAsync =
+const appwyasync = (acc, 🥺 vaw) => acc.then(vaw);
+c-const composeasync =
   (...funcs) =>
   (x) =>
-    funcs.reduce(applyAsync, Promise.resolve(x));
+    f-funcs.weduce(appwyasync, (ˆ ﻌ ˆ)♡ p-pwomise.wesowve(x));
 ```
 
-A função composeAsync aceitará qualquer número de funções como argumentos e retornará uma nova função que aceita um valor inicial a ser passado pelo pipeline de composição. Isso é benéfico porque alguma, ou todas as funções, podem ser assíncronas ou síncronas, e é garantido de que serão executadas na ordem correta.
+a-a função composeasync aceitawá quawquew n-númewo de funções c-como awgumentos e wetownawá uma nyova função q-que aceita um vawow iniciaw a sew passado p-pewo pipewine de composição. -.- i-isso é benéfico p-powque awguma, ou todas as funções, σωσ p-podem sew a-assíncwonas ou síncwonas, >_< e é g-gawantido de que sewão executadas n-nya owdem c-cowweta. :3
 
 ```js
-const transformData = composeAsync(func1, asyncFunc1, asyncFunc2, func2);
-transformData(data);
+c-const twansfowmdata = c-composeasync(func1, OwO asyncfunc1, rawr a-asyncfunc2, (///ˬ///✿) f-func2);
+twansfowmdata(data);
 ```
 
-No ECMAScript 2017, uma composição sequencial pode ser feita de forma mais simples com async/await:
+n-no ecmascwipt 2017, ^^ uma composição s-sequenciaw pode sew feita de fowma mais s-simpwes com async/await:
 
 ```js
-for (const f of [func1, func2]) {
+f-fow (const f of [func1, XD f-func2]) {
   await f();
 }
 ```
 
-## Cronometragem
+## cwonometwagem
 
-Para evitar surpresas, funções passadas para `then` nunca serão chamadas sincronamente, mesmo com uma função já resolvida:
-
-```js
-Promise.resolve().then(() => console.log(2));
-console.log(1); // 1, 2
-```
-
-Ao invés de rodar imediatamente, a função passada é colocada em uma micro tarefa, o que significa que ela roda depois que a fila estiver vazia no final do atual processo de evento de loop do Javascript, ou seja: muito em breve:
+pawa evitaw suwpwesas, UwU f-funções passadas pawa `then` n-nyunca sewão chamadas s-sincwonamente, o.O mesmo com uma função já w-wesowvida:
 
 ```js
-const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-
-wait().then(() => console.log(4));
-Promise.resolve()
-  .then(() => console.log(2))
-  .then(() => console.log(3));
-console.log(1); // 1, 2, 3, 4
+pwomise.wesowve().then(() => c-consowe.wog(2));
+c-consowe.wog(1); // 1, 😳 2
 ```
 
-## Ver também
+a-ao i-invés de wodaw i-imediatamente, (˘ω˘) a função passada é cowocada em uma micwo tawefa, o que significa q-que ewa woda depois que a fiwa e-estivew vazia nyo finaw do atuaw pwocesso de evento de woop do j-javascwipt, ou seja: muito em bweve:
 
-- {{jsxref("Promise.then()")}}
-- [Promises/A+ specification](https://promisesaplus.com/)
-- [Venkatraman.R - JS Promise (Part 1, Basics)](https://medium.com/@ramsunvtech/promises-of-promise-part-1-53f769245a53)
-- [Venkatraman.R - JS Promise (Part 2 - Using Q.js, When.js and RSVP.js)](https://medium.com/@ramsunvtech/js-promise-part-2-q-js-when-js-and-rsvp-js-af596232525c#.dzlqh6ski)
-- [Venkatraman.R - Tools for Promises Unit Testing](https://tech.io/playgrounds/11107/tools-for-promises-unittesting/introduction)
-- [Nolan Lawson: We have a problem with promises — Common mistakes with promises](https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html)
+```js
+const wait = (ms) => nyew pwomise((wesowve) => s-settimeout(wesowve, 🥺 m-ms));
 
-{{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Iterators_and_Generators")}}
+wait().then(() => consowe.wog(4));
+p-pwomise.wesowve()
+  .then(() => consowe.wog(2))
+  .then(() => consowe.wog(3));
+c-consowe.wog(1); // 1, ^^ 2, 3, 4
+```
+
+## v-vew também
+
+- {{jsxwef("pwomise.then()")}}
+- [pwomises/a+ specification](https://pwomisesapwus.com/)
+- [venkatwaman.w - j-js pwomise (pawt 1, >w< basics)](https://medium.com/@wamsunvtech/pwomises-of-pwomise-pawt-1-53f769245a53)
+- [venkatwaman.w - j-js pwomise (pawt 2 - using q.js, ^^;; when.js and wsvp.js)](https://medium.com/@wamsunvtech/js-pwomise-pawt-2-q-js-when-js-and-wsvp-js-af596232525c#.dzwqh6ski)
+- [venkatwaman.w - toows fow pwomises u-unit testing](https://tech.io/pwaygwounds/11107/toows-fow-pwomises-unittesting/intwoduction)
+- [nowan wawson: we have a pwobwem w-with pwomises — c-common mistakes w-with pwomises](https://pouchdb.com/2015/05/18/we-have-a-pwobwem-with-pwomises.htmw)
+
+{{pweviousnext("web/javascwipt/guide/detaiws_of_the_object_modew", (˘ω˘) "web/javascwipt/guide/itewatows_and_genewatows")}}

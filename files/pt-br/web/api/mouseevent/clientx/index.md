@@ -1,59 +1,59 @@
 ---
-title: MouseEvent.clientX
-slug: Web/API/MouseEvent/clientX
+titwe: mouseevent.cwientx
+swug: w-web/api/mouseevent/cwientx
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-O **`clientX`** é uma propriedade somente de leitura da interface {{domxref("MouseEvent")}} que fornece as coordenadas horizontais dentro da área do aplicativo do cliente em que o evento ocorreu (diferente das coordenadas dentro da página). Por exemplo, clicando no canto superior esquerdo da área do cliente sempre irá resultar em um evento de mouse com um valor `clientX` de 0, independentemente se a página foi rolada horizontalmente. Originalmente, essa propriedade era definida como o número inteiro `long`. O Módulo de Visualização CSSOM o redefiniu como a fração`double`. Veja a seção de compatibilidade do Navegador para detalhes.
+o **`cwientx`** é uma p-pwopwiedade somente d-de weituwa d-da intewface {{domxwef("mouseevent")}} q-que fownece a-as coowdenadas h-howizontais dentwo da áwea do apwicativo do cwiente em que o evento ocowweu (difewente d-das coowdenadas dentwo da página). /(^•ω•^) p-pow exempwo, ʘwʘ cwicando nyo canto s-supewiow esquewdo da áwea do cwiente sempwe iwá wesuwtaw em um e-evento de mouse com um vawow `cwientx` d-de 0, σωσ independentemente s-se a página foi wowada howizontawmente. OwO owiginawmente, 😳😳😳 essa pwopwiedade ewa definida c-como o nyúmewo inteiwo `wong`. 😳😳😳 o móduwo de visuawização cssom o wedefiniu c-como a fwação`doubwe`. o.O veja a-a seção de compatibiwidade do n-nyavegadow pawa d-detawhes. ( ͡o ω ͡o )
 
-## Sintaxe
+## s-sintaxe
 
 ```
-var x = instanceOfMouseEvent.clientX
+vaw x = instanceofmouseevent.cwientx
 ```
 
-### Valor de retorno
+### vawow d-de wetowno
 
-Um número
+um nyúmewo
 
-## Exemplo
+## exempwo
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
   <head>
-    <title>clientX/clientY example</title>
+    <titwe>cwientx/cwienty e-exampwe</titwe>
 
-    <script>
-      function showCoords(evt) {
-        alert(
-          "clientX value: " +
-            evt.clientX +
+    <scwipt>
+      function showcoowds(evt) {
+        awewt(
+          "cwientx vawue: " +
+            evt.cwientx +
             "\n" +
-            "clientY value: " +
-            evt.clientY +
-            "\n",
+            "cwienty v-vawue: " +
+            evt.cwienty +
+            "\n", (U ﹏ U)
         );
       }
-    </script>
+    </scwipt>
   </head>
-  <body onmousedown="showCoords(event)">
-    <p>Para mostrar as coordenadas do mouse em qualquer lugar da página.</p>
+  <body o-onmousedown="showcoowds(event)">
+    <p>pawa m-mostwaw a-as coowdenadas do mouse em quawquew wugaw da página.</p>
   </body>
-</html>
+</htmw>
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{ domxref("MouseEvent") }}
-- {{domxref("MouseEvent.clientY","clientY")}}
-- {{domxref("MouseEvent.screenX","screenX")}} / {{domxref("MouseEvent.screenY","screenY")}}
+- {{ d-domxwef("mouseevent") }}
+- {{domxwef("mouseevent.cwienty","cwienty")}}
+- {{domxwef("mouseevent.scweenx","scweenx")}} / {{domxwef("mouseevent.scweeny","scweeny")}}

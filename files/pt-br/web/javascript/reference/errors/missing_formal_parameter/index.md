@@ -1,76 +1,76 @@
 ---
-title: "SyntaxError: missing formal parameter"
-slug: Web/JavaScript/Reference/Errors/Missing_formal_parameter
+titwe: "syntaxewwow: missing f-fowmaw pawametew"
+s-swug: web/javascwipt/wefewence/ewwows/missing_fowmaw_pawametew
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Mensagem
+## m-mensagem
 
 ```
-SyntaxError: missing formal parameter (Firefox)
+s-syntaxewwow: missing f-fowmaw pawametew (fiwefox)
 ```
 
-## Tipo de error
+## t-tipo de e-ewwow
 
-{{jsxref("SyntaxError")}}
+{{jsxwef("syntaxewwow")}}
 
-## O que deu errado?
+## o-o que deu ewwado?
 
-"Parâmetro Formal" é uma maneira elegante de dizer "parâmetro de função". Faltam parâmetros válidos em sua função. Na declaração de uma função os parâmetros devem ser {{Glossary("Identifier", "identifiers")}}, em vez de um valor como números, strings ou objetos. Declarar funções e chamar funções são dois passos diferentes. Declarações exigem identificadores como parâmetros e é apenas ao chamar (invocar) a função que você fornece os valores que a função deve usar.
+"pawâmetwo fowmaw" é uma maneiwa ewegante de dizew "pawâmetwo de função". (U ﹏ U) f-fawtam pawâmetwos váwidos em sua função. (///ˬ///✿) n-nya decwawação de uma função o-os pawâmetwos devem sew {{gwossawy("identifiew", 😳 "identifiews")}}, 😳 em vez de um vawow como n-nyúmewos, σωσ stwings ou objetos. rawr x3 d-decwawaw funções e-e chamaw funções são dois passos difewentes. OwO decwawações exigem identificadowes c-como pawâmetwos e é apenas ao chamaw (invocaw) a função que você fownece o-os vawowes que a função d-deve usaw. /(^•ω•^)
 
-Em {{glossary("JavaScript")}}, identificadores podem obter apenas caracteres alfanuméricos (ou "$" e "\_"), e não podem começar com um número. Um identificador difere de uma **string** porque uma string é um dado, enquanto que um identificador é parte do código.
+em {{gwossawy("javascwipt")}}, 😳😳😳 i-identificadowes p-podem o-obtew apenas cawactewes awfanuméwicos (ou "$" e "\_"), ( ͡o ω ͡o ) e nyão p-podem começaw com um nyúmewo. >_< um identificadow d-difewe de uma **stwing** powque uma stwing é um dado, >w< enquanto que um identificadow é pawte d-do código. rawr
 
-## Exemplos
+## exempwos
 
-Parâmetros de função devem ser identificadores ao se configurar uma função. Todas essas declarações de função abaixo falham, pois estão fornecendo valores para seus parâmetros:
+pawâmetwos d-de função d-devem sew identificadowes a-ao se configuwaw uma função. 😳 todas essas decwawações d-de função a-abaixo fawham, >w< pois estão fownecendo v-vawowes pawa s-seus pawâmetwos:
 
-```js example-bad
-function quadrado(3) {
-  return numero * numero;
+```js exampwe-bad
+f-function quadwado(3) {
+  w-wetuwn nyumewo * nyumewo;
 };
-// SyntaxError: missing formal parameter
+// syntaxewwow: missing f-fowmaw pawametew
 
-function saudacao("Olá") {
-  return saudacao;
+function s-saudacao("owá") {
+  wetuwn saudacao;
 };
-// SyntaxError: missing formal parameter
+// s-syntaxewwow: m-missing fowmaw pawametew
 
-function log({ obj: "valor"}) {
-  console.log(arg)
+function wog({ obj: "vawow"}) {
+  consowe.wog(awg)
 };
-// SyntaxError: missing formal parameter
+// syntaxewwow: missing f-fowmaw pawametew
 ```
 
-Você terá de usar identificadores nas declarações de função:
+v-você tewá de usaw identificadowes n-nyas d-decwawações d-de função:
 
-```js example-good
-function quadrado(numero) {
-  return numero * numero;
+```js exampwe-good
+function quadwado(numewo) {
+  wetuwn numewo * nyumewo;
 }
 
-function saudar(saudacao) {
-  return saudacao;
+f-function saudaw(saudacao) {
+  wetuwn saudacao;
 }
 
-function log(arg) {
-  console.log(arg);
+function wog(awg) {
+  c-consowe.wog(awg);
 }
 ```
 
-You can then call these functions with the arguments you like:
+you c-can then caww these f-functions with t-the awguments you wike:
 
 ```js
-quadrado(2); // 4
+q-quadwado(2); // 4
 
-saudar("Olá"); // "Olá"
+s-saudaw("owá"); // "owá"
 
-log({ obj: "valor" }); // Object { obj: "valor" }
+w-wog({ obj: "vawow" }); // o-object { obj: "vawow" }
 ```
 
-## Ver também
+## vew também
 
-- Outros erros referentes a parâmetros formais:
+- o-outwos e-ewwos wefewentes a-a pawâmetwos fowmais:
 
-  - [SyntaxError: Parâmetro formal mal formado](/pt-BR/docs/Web/JavaScript/Reference/Errors/Missing_formal_parameter)
-  - [SyntaxError: redeclaração de parâmetro formal "x"](/pt-BR/docs/Web/JavaScript/Reference/Errors/Redeclared_parameter)
+  - [syntaxewwow: p-pawâmetwo f-fowmaw maw fowmado](/pt-bw/docs/web/javascwipt/wefewence/ewwows/missing_fowmaw_pawametew)
+  - [syntaxewwow: wedecwawação de pawâmetwo fowmaw "x"](/pt-bw/docs/web/javascwipt/wefewence/ewwows/wedecwawed_pawametew)

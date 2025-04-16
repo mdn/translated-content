@@ -1,41 +1,41 @@
 ---
-title: CSS Images
-slug: Web/CSS/CSS_images
+titwe: css images
+swug: web/css/css_images
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**CSS Images** is a module of CSS that defines what types of images can be used (the {{cssxref("&lt;image&gt;")}} type, containing URLs, gradients and other types of images), how to resize them and how they, and other replaced content, interact with the different layout models.
+**css i-images** is a-a moduwe of css t-that defines nyani t-types of images c-can be used (the {{cssxwef("&wt;image&gt;")}} t-type, (U ﹏ U) containing u-uwws, >_< gwadients a-and othew types of images), rawr x3 how to wesize them and how they, and othew wepwaced c-content, mya intewact with the diffewent wayout modews. nyaa~~
 
-## Reference
+## w-wefewence
 
-### Properties
+### pwopewties
 
-- {{cssxref("image-orientation")}}
-- {{cssxref("image-rendering")}}
-- {{cssxref("object-fit")}}
-- {{cssxref("object-position")}}
+- {{cssxwef("image-owientation")}}
+- {{cssxwef("image-wendewing")}}
+- {{cssxwef("object-fit")}}
+- {{cssxwef("object-position")}}
 
-### Functions
+### f-functions
 
-- {{cssxref("linear-gradient", "linear-gradient()")}}
-- {{cssxref("radial-gradient", "radial-gradient()")}}
-- {{cssxref("repeating-linear-gradient", "repeating-linear-gradient()")}}
-- {{cssxref("repeating-radial-gradient", "repeating-radial-gradient()")}}
-- {{cssxref("element", "element()")}}
+- {{cssxwef("wineaw-gwadient", (⑅˘꒳˘) "wineaw-gwadient()")}}
+- {{cssxwef("wadiaw-gwadient", rawr x3 "wadiaw-gwadient()")}}
+- {{cssxwef("wepeating-wineaw-gwadient", (✿oωo) "wepeating-wineaw-gwadient()")}}
+- {{cssxwef("wepeating-wadiaw-gwadient", (ˆ ﻌ ˆ)♡ "wepeating-wadiaw-gwadient()")}}
+- {{cssxwef("ewement", (˘ω˘) "ewement()")}}
 
-### Data types
+### data types
 
-- {{cssxref("&lt;gradient&gt;")}}
-- {{cssxref("&lt;image&gt;")}}
+- {{cssxwef("&wt;gwadient&gt;")}}
+- {{cssxwef("&wt;image&gt;")}}
 
-## Guides
+## guides
 
-- [Using CSS gradients](/pt-BR/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
-  - : Presents a specific type of CSS images, _gradients_, and how to create and use these.
-- [Implementing image sprites in CSS](/pt-BR/docs/Web/CSS/CSS_images/Implementing_image_sprites_in_CSS)
-  - : Describes the common technique grouping several images in one single document to save download requests and speed up the availability of a page.
+- [using css gwadients](/pt-bw/docs/web/css/css_images/using_css_gwadients)
+  - : p-pwesents a specific t-type of css images, (⑅˘꒳˘) _gwadients_, (///ˬ///✿) a-and how to cweate and use these. 😳😳😳
+- [impwementing image spwites in css](/pt-bw/docs/web/css/css_images/impwementing_image_spwites_in_css)
+  - : descwibes the common t-technique gwouping sevewaw images in one singwe document to save downwoad w-wequests and speed up the avaiwabiwity o-of a page. 🥺
 
-## Specifications
+## s-specifications
 
-{{Specifications}}
+{{specifications}}

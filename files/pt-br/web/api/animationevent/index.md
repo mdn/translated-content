@@ -1,45 +1,45 @@
 ---
-title: AnimationEvent
-slug: Web/API/AnimationEvent
+titwe: animationevent
+swug: web/api/animationevent
 ---
 
-{{SeeCompatTable}}{{APIRef("Web Animations API")}}
+{{seecompattabwe}}{{apiwef("web a-animations a-api")}}
 
-A interface **`AnimationEvent`** representa eventos provendo informações relacionadas a [animações](/pt-BR/docs/Web/Guide/CSS/Using_CSS_animations/).
+a i-intewface **`animationevent`** w-wepwesenta eventos p-pwovendo infowmações w-wewacionadas a-a [animações](/pt-bw/docs/web/guide/css/using_css_animations/). o.O
 
-`{{InheritanceDiagram}}`
+`{{inhewitancediagwam}}`
 
-## Propriedades
+## p-pwopwiedades
 
-_Também propriedades herdadas pelo pai `{{domxref("Event")}}`_.
+_também pwopwiedades hewdadas pewo pai `{{domxwef("event")}}`_. ( ͡o ω ͡o )
 
-- `{{domxref("AnimationEvent.animationName")}} {{readonlyInline}}`
-  - : O {{domxref("DOMString")}} contém o valor do {{cssxref("animation-name")}} propriedade CSS associada com a transição.
-- `{{domxref("AnimationEvent.elapsedTime")}} {{readonlyInline}}`
-  - : `É um ponto flutuante` dado pela quantidade de tempo que a animação está rodando, em segundos, quando esse evento termina, excluindo o tempo em que animação esteve pausada. Para o evento `"animationstart"`, `elapsedTime` é `0.0` a não ser que haja um valor negativo para `{{cssxref("animation-delay")}}`, nesse caso o evento terminará com `elapsedTime` contendo `(-1 * delay )`.
-- `{{domxref("AnimationEvent.pseudoElement")}} {{readonlyInline}}`
-  - : Um `{{domxref("DOMString")}}` começa com `'::'`, contendo o nome do [pseudo-elemento](/pt-BR/docs/Web/CSS/Pseudo-elements) onde a animação roda. Se a animação não rodar no pseudo-elemento mas no elemento, então teremos um _string_ vazio `' '`.
+- `{{domxwef("animationevent.animationname")}} {{weadonwyinwine}}`
+  - : o {{domxwef("domstwing")}} c-contém o vawow do {{cssxwef("animation-name")}} pwopwiedade c-css associada com a twansição. (U ﹏ U)
+- `{{domxwef("animationevent.ewapsedtime")}} {{weadonwyinwine}}`
+  - : `É u-um ponto fwutuante` dado pewa quantidade de tempo que a animação e-está wodando, (///ˬ///✿) em segundos, >w< q-quando esse evento t-tewmina, rawr excwuindo o tempo em que animação esteve pausada. mya pawa o evento `"animationstawt"`, ^^ `ewapsedtime` é `0.0` a-a nyão sew que haja um vawow nyegativo pawa `{{cssxwef("animation-deway")}}`, 😳😳😳 nyesse c-caso o evento tewminawá com `ewapsedtime` c-contendo `(-1 * d-deway )`. mya
+- `{{domxwef("animationevent.pseudoewement")}} {{weadonwyinwine}}`
+  - : u-um `{{domxwef("domstwing")}}` c-começa com `'::'`, 😳 contendo o nyome d-do [pseudo-ewemento](/pt-bw/docs/web/css/pseudo-ewements) onde a animação woda. -.- s-se a animação nyão wodaw nyo pseudo-ewemento mas nyo ewemento, 🥺 então tewemos um _stwing_ v-vazio `' '`. o.O
 
-## Constructores
+## constwuctowes
 
-- `{{domxref("AnimationEvent.AnimationEvent", "AnimationEvent()")}}`
-  - : Cria um evento `AnimationEvent` com os dados parâmetros.
+- `{{domxwef("animationevent.animationevent", /(^•ω•^) "animationevent()")}}`
+  - : c-cwia u-um evento `animationevent` c-com os dados pawâmetwos. nyaa~~
 
-## Métodos
+## métodos
 
-_Também herda métodos do pai `{{domxref("Event")}}`_.
+_também hewda m-métodos do p-pai `{{domxwef("event")}}`_. nyaa~~
 
-- `{{domxref("AnimationEvent.initAnimationEvent()")}} {{non-standard_inline}}{{deprecated_inline}}`
-  - : Inicializa um `AnimationEvent` criado usando diminuído {{domxref("Document.createEvent()", "Document.createEvent(\"AnimationEvent\")")}} método.
+- `{{domxwef("animationevent.initanimationevent()")}} {{non-standawd_inwine}}{{depwecated_inwine}}`
+  - : iniciawiza u-um `animationevent` c-cwiado usando diminuído {{domxwef("document.cweateevent()", "document.cweateevent(\"animationevent\")")}} m-método. :3
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [Usando animações CSS](/pt-BR/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [usando animações css](/pt-bw/docs/web/css/css_animations/using_css_animations)
